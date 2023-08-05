@@ -1,0 +1,9 @@
+loading_sdk/__init__.py,sha256=h3e3I8VR2SYjEHuM7HRqFOd4UrDBhtqG_GS6t-wYCOM,77
+loading_sdk/api.py,sha256=qFjYIZFGAoRi3SOycCvcqMyoAZIp2t0YEffBVgoxBZk,13869
+loading_sdk/settings.py,sha256=0kVB8xUmnbzgHY9V6ijSywCr9W2KjMcalnOSfawAyv4,285
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_api.py,sha256=3Pw3dM7A7JrikBshmJFaIfhph6QH5hgSLwDXFug88kw,143617
+python_loading_sdk-0.1.1.dist-info/LICENSE.md,sha256=XH9UVWZ2ydHJNRwW1mY2FkdMd_R1LcO6U25QZpCEWDQ,1065
+python_loading_sdk-0.1.1.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+python_loading_sdk-0.1.1.dist-info/METADATA,sha256=oOzJrOB66VmduL7QwapUtS6cIrCpD_cPznkwYEuatY0,448
+python_loading_sdk-0.1.1.dist-info/RECORD,,
