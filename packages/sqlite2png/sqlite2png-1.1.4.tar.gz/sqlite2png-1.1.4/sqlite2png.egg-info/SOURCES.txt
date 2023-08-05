@@ -1,0 +1,11 @@
+LICENSE.sqlalchemy_schemadisplay
+README.md
+pyproject.toml
+sqlite2png.py
+v140dev_sqlalchemy_schemadisplay.py
+sqlite2png.egg-info/PKG-INFO
+sqlite2png.egg-info/SOURCES.txt
+sqlite2png.egg-info/dependency_links.txt
+sqlite2png.egg-info/entry_points.txt
+sqlite2png.egg-info/requires.txt
+sqlite2png.egg-info/top_level.txt

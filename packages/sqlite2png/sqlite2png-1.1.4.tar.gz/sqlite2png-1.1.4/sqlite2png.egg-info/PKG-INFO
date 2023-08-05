@@ -1,0 +1,85 @@
+Metadata-Version: 2.1
+Name: sqlite2png
+Version: 1.1.4
+Summary: Command line tool to get a png diagram of SQLite DB
+Author-email: Anatoli Babenia <anatoli@rainforce.org>
+License: This is free and unencumbered software released into the public domain.
+        
+        Anyone is free to copy, modify, publish, use, compile, sell, or
+        distribute this software, either in source code form or as a compiled
+        binary, for any purpose, commercial or non-commercial, and by any
+        means.
+        
+        In jurisdictions that recognize copyright laws, the author or authors
+        of this software dedicate any and all copyright interest in the
+        software to the public domain. We make this dedication for the benefit
+        of the public at large and to the detriment of our heirs and
+        successors. We intend this dedication to be an overt act of
+        relinquishment in perpetuity of all present and future rights to this
+        software under copyright law.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+        EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+        MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+        IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+        OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+        ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+        OTHER DEALINGS IN THE SOFTWARE.
+        
+        For more information, please refer to <https://unlicense.org>
+        
+Project-URL: homepage, https://github.com/abitrolly/sqlite2png
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Database :: Front-Ends
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE.sqlalchemy_schemadisplay
+
+`sqlite2png` tool generates .png image of database schema.
+
+[![PyPI](https://img.shields.io/pypi/v/sqlite2png)](https://pypi.org/project/sqlite2png/)
+
+### Usage
+
+From checkout without installing (needs `sqlalchemy` and `pydot`).
+```bash
+./sqlite2png.py sqlite.db
+```
+The diagram is written into `db.png`.
+
+Install with pip and run as module.
+```bash
+pip install sqlite2png
+sqlite2png /usr/share/ibus-libpinyin/db/english.db
+```
+```
+sqlite:////usr/share/ibus-libpinyin/db/english.db
+writing db.png
+```
+
+![](examples/english.png)
+
+### About and examples
+
+`sqlite2png` is a CLI wrapper over
+[`sqlalchemy_schemadisplay`](https://github.com/fschulze/sqlalchemy_schemadisplay)
+lib by Florian Schulze, which uses `SQLAlchemy`, `pydot` and `graphviz`
+under the hood. `Graphviz-cairo` is also recommended to improve image quality.
+
+See [./examples](./examples).
+
+### Roadmap / Changelog
+
+* [ ] de-vendorize `sqlalchemy_schemadisplay` after it is released
+* [ ] output .png to stdout
+* [ ] option to show the image (needs PIL and image viewer)
+* [ ] option to diff the image
+* [ ] support full urls
+```
+    {py} postgres://user:pwd@host/database
+    {py} sqlite:////usr/share/my.db
+```
+* [x] (1.1.4) install command line script with `pip`
+* [x] (1.1.4) add example DB to the repo (uses some public DBs)
+* [x] reproducuble .png (seems like it already is)

@@ -1,0 +1,28 @@
+[project]
+name = "sqlite2png"
+version = "1.1.4"
+description = "Command line tool to get a png diagram of SQLite DB"
+readme = "README.md"
+license = {file = "UNLICENSE"}
+authors = [
+  {name="Anatoli Babenia", email="anatoli@rainforce.org"}
+]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Developers",
+  "Topic :: Database :: Front-Ends",
+  "Operating System :: OS Independent"
+]
+dependencies = [
+  "sqlalchemy",  # for opening database metadata
+  "pydot"        # for schemadisplay to lay out figures
+]
+
+[tool.setuptools]
+py-modules = ["sqlite2png", "v140dev_sqlalchemy_schemadisplay"]
+
+[project.urls]
+homepage = "https://github.com/abitrolly/sqlite2png"
+
+[project.scripts]
+sqlite2png = "sqlite2png:cli"
