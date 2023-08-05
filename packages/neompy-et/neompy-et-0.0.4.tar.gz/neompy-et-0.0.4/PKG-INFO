@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: neompy-et
+Version: 0.0.4
+Summary: Development tools for neomadas projects.
+Home-page: https://github.com/neomadas/neompy/
+Author: Sinek Dev Team
+Author-email: sinek-dev@unknown.pe
+License: BSD 3-Clause License
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 3.2
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# neompy
+
+## Description
+
+Sinek Development tools for internal projects with strong web development coupling.
+
+## Modules
+
+* _core_: runtime to improve development a testing
+* _ddd_: domain modeling tools
+* _management_: development tools
+
+## Contributors
+
+* @Fabwert
+
+

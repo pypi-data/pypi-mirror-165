@@ -1,0 +1,4 @@
+Django==4.0.3
+autopep8==1.5.7
+coverage==6.3.2
+isort==5.10.1
