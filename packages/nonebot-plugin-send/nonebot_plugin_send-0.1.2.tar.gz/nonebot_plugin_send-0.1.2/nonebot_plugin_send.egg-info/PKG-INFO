@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: nonebot-plugin-send
+Version: 0.1.2
+Summary: 一个基于nonebot的反馈通知插件
+Home-page: https://github.com/sena-nana/MutsukiBot/tree/main/nonebot-plugin-send
+Author: sena-nana
+Author-email: 851183156@qq.com
+License: MIT License
+Keywords: nonebot
+Platform: all
+License-File: LICENSE
