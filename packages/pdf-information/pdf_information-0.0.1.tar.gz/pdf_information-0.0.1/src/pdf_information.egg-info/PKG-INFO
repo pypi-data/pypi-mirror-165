@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: pdf-information
+Version: 0.0.1
+Summary: PDF Information
+Home-page: https://github.com/nymann/pdf-information
+Maintainer: Kristian Nymann Jakobsen
+Maintainer-email: kristian@nymann.dev
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Provides-Extra: all
+Provides-Extra: dev
+Provides-Extra: tests
+
+# PDF Information
+
+Maps output of `pdfinfo` to a dataclass.
+
+## Usage
+
+```py
+from pathlib import Path
+from  pdf_information import PDFInfo
+
+pdf_file = Path("pdf_files/some_file.pdf")
+pdf_info = PDFInfo.from_cmd(pdf_file=pdf_file)
+```
+
+## Development
+
+For help getting started developing check [DEVELOPMENT.md](DEVELOPMENT.md)
