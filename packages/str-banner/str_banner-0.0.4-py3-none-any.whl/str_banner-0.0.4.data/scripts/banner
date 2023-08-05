@@ -1,0 +1,3 @@
+#!python
+from str_banner import banner
+banner.main()
