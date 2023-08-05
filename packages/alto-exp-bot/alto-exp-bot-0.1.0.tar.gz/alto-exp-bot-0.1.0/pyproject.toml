@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "alto-exp-bot"
+version = "0.1.0"
+description = "Alto experience package LINE bot"
+authors = ["Mixchanawee <chanawee.janyakhantikul@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+Django = "^4.1"
+psycopg2-binary = "^2.9.3"
+azure-cosmos = "^4.3.0"
+pendulum = "^2.1.2"
+plotly = "^5.10.0"
+chart-studio = "^1.1.0"
+azure-servicebus = "^7.8.0"
+line_notify = "^0.1.4"
+azure-iot-hub = "^2.6.0"
+vincenty = "^0.1.4"
+boto3 = "^1.24.60"
+Pyrebase4 = "^4.5.0"
+pandas = "^1.4.3"
+opencv-python = "^4.6.0"
+djangorestframework = "^3.13.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
