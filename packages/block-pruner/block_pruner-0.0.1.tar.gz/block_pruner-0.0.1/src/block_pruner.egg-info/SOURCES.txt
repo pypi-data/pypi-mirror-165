@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/block_pruner/__init__.py
+src/block_pruner/__main__.py
+src/block_pruner/block_pruner.py
+src/block_pruner/match_str.py
+src/block_pruner/version.py
+src/block_pruner.egg-info/PKG-INFO
+src/block_pruner.egg-info/SOURCES.txt
+src/block_pruner.egg-info/dependency_links.txt
+src/block_pruner.egg-info/entry_points.txt
+src/block_pruner.egg-info/requires.txt
+src/block_pruner.egg-info/top_level.txt
