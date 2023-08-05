@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: trilog
+Version: 0.0.1
+Summary: Trigonometric and Logarithmic calculators.
+Home-page: 
+Author: Mudit Bhatnagar
+Keywords: calculator
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSES.txt
+
+This is a very useful trigonometric and logarithmic calculators.
+
+Change Log
+==========
+
+0.0.1 (27/08/2022)
+------------------
+-First Release
