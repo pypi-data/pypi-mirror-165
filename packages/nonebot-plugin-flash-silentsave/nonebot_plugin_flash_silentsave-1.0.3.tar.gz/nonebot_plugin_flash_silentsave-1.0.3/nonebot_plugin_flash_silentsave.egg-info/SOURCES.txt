@@ -1,0 +1,8 @@
+LICENSE
+setup.py
+nonebot_plugin_flash_silentsave/__init__.py
+nonebot_plugin_flash_silentsave.egg-info/PKG-INFO
+nonebot_plugin_flash_silentsave.egg-info/SOURCES.txt
+nonebot_plugin_flash_silentsave.egg-info/dependency_links.txt
+nonebot_plugin_flash_silentsave.egg-info/requires.txt
+nonebot_plugin_flash_silentsave.egg-info/top_level.txt
