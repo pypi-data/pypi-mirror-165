@@ -1,0 +1,10 @@
+block_pruner/__init__.py,sha256=hc5Y8BzcxKAHt2BQz13Y2lUawD99iNHuU41YlglG-WI,93
+block_pruner/__main__.py,sha256=LdyWxnan_GJ6T6QGNgAD8wbP23xw3tVM533KLfhraa0,1076
+block_pruner/block_pruner.py,sha256=YKtEKS9pKVu5Bf6nbaa_O0dhJhCgIzTacp7pxJiBOH8,1463
+block_pruner/match_str.py,sha256=X8Bea-rjLN2mXU2SuiRaCyoaWrh_lV5M5Wu3bdBdwPI,353
+block_pruner/version.py,sha256=4GZKi13lDTD25YBkGakhZyEQZWTER_OWQMNPoH_UM2c,22
+block_pruner-0.0.3.dist-info/METADATA,sha256=pXE-uPlJ5nFtR2vzo-ODSBoFAQ1pVtTAvC5IUZCWgxQ,1749
+block_pruner-0.0.3.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+block_pruner-0.0.3.dist-info/entry_points.txt,sha256=cpKK4_Mzlc3IifRwPLgOEV94kPuGU1c6Z3aW8Kjod3Q,59
+block_pruner-0.0.3.dist-info/top_level.txt,sha256=Yc9Z3boDCwhFjtCMUTZ5MxMHVV_nCIyb4zKJfcIcHq8,13
+block_pruner-0.0.3.dist-info/RECORD,,

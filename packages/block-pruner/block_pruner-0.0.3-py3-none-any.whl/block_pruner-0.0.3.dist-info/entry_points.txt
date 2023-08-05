@@ -1,0 +1,2 @@
+[console_scripts]
+block_pruner = block_pruner.__main__:app
