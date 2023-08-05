@@ -1,0 +1,56 @@
+#! /bin/bash
+
+RES="{\"resources\": [{}]}"
+touch resources.json
+echo $RES > resources.json
+
+git init
+pulumi init
+
+MAIN="import pulumi
+import pulumi_aws as aws
+import pulumi_awsx as awsx
+import json
+import traceback
+import importlib
+import BaseAWS
+
+with open (\"resources.json\", \"r\") as deployfile:
+    resources = json.load(deployfile)
+
+current_vpc = None
+current_ami = None
+
+for resource in resources[\"resources\"]:
+    try:
+        assert resource[\"module\"].startswith(\"pulumi_aws\") or resource[\"module\"].startswith(\"BaseAWS\")
+        module = importlib.import_module(resource[\"module\"])
+        resource_class = getattr(module, resource[\"resource_name\"])
+
+        if resource[\"req_vpc\"] and resource[\"req_ami\"]:
+            instance = resource_class(current_ami.ami.id, current_vpc, **resource[\"overrides\"])
+        elif resource[\"req_vpc\"]:
+            instance = resource_class(current_vpc, **resource[\"overrides\"])
+        elif resource[\"req_ami\"]:
+            instance = resource_class(current_ami.ami.id, **resource[\"overrides\"])
+        else:
+            instance = resource_class(**resource[\"overrides\"])
+
+        # set current vpc, ami (if applicable). this logic could probably be made a bit more complex
+        if resource[\"resource_name\"] == \"BaseAMI\":
+            current_ami = instance
+        elif resource[\"resource_name\"] == \"BaseVPC\":
+            current_vpc = instance
+
+        # add roles to a list of roles
+        roles = {}
+        if resource[\"resource_name\"] == \"Role\":
+            roles[resource[\"overrides\"][\resource_name\"]] = instance.arn
+
+        pulumi.export(resource[\"resource_name\"], instance)
+
+    except:
+        traceback.print_exc()
+        print(resource[\"module\"])"
+echo $MAIN > __main__.py
+
