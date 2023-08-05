@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: pvoutput
+Version: 0.0.10
+Summary: Interface to the PVOutput API
+License: MIT
+Author: yaleman
+Author-email: james@terminaloutcomes.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: aiohttp (>=3.8.1,<4.0.0)
+Requires-Dist: mkdocs-material[docs] (>=8.2.9,<9.0.0)
+Requires-Dist: mkdocs[docs] (>=1.3.0,<2.0.0)
+Requires-Dist: mkdocstrings[docs] (>=0.18.1,<0.20.0)
+Requires-Dist: requests (>=2.27.1,<3.0.0)
