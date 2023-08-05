@@ -1,0 +1,14 @@
+NBSapi/NBSapi.py,sha256=AQrYe26vJcCumoEBivgQXKc5rBS74ddrtAGGvIDzrjo,5756
+NBSapi/__init__.py,sha256=f27FEOOjAOuqXlP_UEsxaKkKXAALqxpeu4XhzN5e4i4,21
+NBSapi/tests/GetVoices.py,sha256=1NbuNr9JFVFnHKHXNUnr4tGLSn4XWhd7PqUQn2qlo64,305
+NBSapi/tests/Save_to_audio_file.py,sha256=FNw_6PTz_0E5WRQzZowM6K2g8-8g5NwBN_L3AS87H1g,176
+NBSapi/tests/SetVoice.py,sha256=075phCkqrrJEFWKGkPxWiWeR9GTvJAEjKgUXwhIW5G8,670
+NBSapi/tests/__init__.py,sha256=KVcE8K20KkMv6hpjvtlpD9v4UbCxilEBS-AqfO4WlcE,131
+NBSapi/tests/control_speaking.py,sha256=8SZS_8n95f4TPWsivypc5kdnMByPwHTeUQ4gbvgGVBU,882
+NBSapi/tests/speak_wait.py,sha256=Duh6mz0zADLmRvL8yyM6lWayjXgF2bqEB4DKQR7MRRM,154
+NBSapi/tests/speak_without_wait.py,sha256=ZdJq9ENgHKztU0e8AI1gwYtVItiqfL_QmuEoi3vuqRE,215
+NBSapi-0.5.dist-info/LICENSE.txt,sha256=jKvmU49XVAWYTmcKO4LXFX7COnuaiMbxPppixUnlUQ0,34610
+NBSapi-0.5.dist-info/METADATA,sha256=JI-h3BOJPGCOJLDE7t7JdivEepE7R5Ewdkrj6WdgvKk,3701
+NBSapi-0.5.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+NBSapi-0.5.dist-info/top_level.txt,sha256=u0hkdf5Ia5tWf_E6nQUBylZAVkd7jT3EXQwS60KPJes,7
+NBSapi-0.5.dist-info/RECORD,,
