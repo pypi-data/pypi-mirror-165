@@ -1,0 +1,14 @@
+vtk
+numpy
+xarray>=0.18.1
+netCDF4
+pandas
+pygdal==3.0.4.*
+dask[complete]
+pyvista>0.29
+rioxarray
+rasterio
+ninja
+netCDF4
+cftime
+pyproj
