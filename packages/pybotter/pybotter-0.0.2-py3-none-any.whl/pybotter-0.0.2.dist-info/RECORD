@@ -1,0 +1,9 @@
+pybot/__init__.py,sha256=-TjbSu_03NoGXYulmMucPbkuBgpPnEbunS9Gzuwf4AM,24
+pybot/pybot.py,sha256=htAVF4JWM0oCny3EW9m_w_S-LVFKY3eO9Wz_QgM7OW4,843
+testing/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+testing/testing.py,sha256=Idb6jawz6YV7tO-VXsd2RALlRjoDBUyuwNlrCxFeCu0,65
+pybotter-0.0.2.dist-info/LICENSE,sha256=tMncJ2HUAVF1e6RaLFMYKevM-koGHEj7HGY3BzmCUDo,1092
+pybotter-0.0.2.dist-info/METADATA,sha256=CmJaaJZl_-rd9n8tfmI6cBPUVqlrfRna9Kln1ojR9h8,1129
+pybotter-0.0.2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+pybotter-0.0.2.dist-info/top_level.txt,sha256=WXP_cjO0ZOa_f5_k8xk1ndKF2c2TLSQdo3ekYl_XhWs,14
+pybotter-0.0.2.dist-info/RECORD,,

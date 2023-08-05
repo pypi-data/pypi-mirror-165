@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: pybotter
+Version: 0.0.2
+Summary: This package contains functions for doing automation tasks
+Home-page: https://github.com/s3794510/pybotter
+Author: Cedrus Maize
+Author-email: walter.tungngo@gmail.com
+Keywords: python,opencv,mouse,keyboard,automation
+Classifier: Development Status :: 1 - Planning
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pywin32 (>=227)
+Requires-Dist: numpy (>=1.19)
+Requires-Dist: opencv-contrib-python (>=4.5)
+Requires-Dist: keyboard (>=0.13)
+Requires-Dist: pygame (>=2.1)
+Provides-Extra: dev
+
+# Pybotter: Program Automation Python Library
+Using Python
+Currently under development
+
+## Installation
+Run the following command to install:
+
+```python
+pip install pybotter
+```
+
+## Usage
+```python
+from pybot import PyBot
+
+# Define window name
+window_name = 'Leaf Blower Revolution'
+# Create PyBot object:
+bot = PyBot(window_name)
+```
+
+Sound effects obtained from https://www.zapsplat.com
