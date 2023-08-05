@@ -1,0 +1,10 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+__init__.py
+setup.py
+ravioli_guesser_game.egg-info/PKG-INFO
+ravioli_guesser_game.egg-info/SOURCES.txt
+ravioli_guesser_game.egg-info/dependency_links.txt
+ravioli_guesser_game.egg-info/top_level.txt

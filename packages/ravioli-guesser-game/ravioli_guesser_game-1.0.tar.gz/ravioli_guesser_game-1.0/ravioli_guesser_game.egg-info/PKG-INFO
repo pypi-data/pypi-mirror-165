@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: ravioli-guesser-game
+Version: 1.0
+Summary: A cool game to play with!
+Home-page: UNKNOWN
+Author: Ravioli
+Author-email: aaravrajup@gmail.com
+License: MIT
+Keywords: game
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+License-File: LICENCE.txt
+
+This is a guessing game that is cool and made by ravioli!
+
+Version 1.00 (27/09/2022)
+
+-First update
+
