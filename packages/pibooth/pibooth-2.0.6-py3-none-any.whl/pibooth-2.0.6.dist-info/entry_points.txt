@@ -1,0 +1,7 @@
+[console_scripts]
+pibooth = pibooth.booth:main
+pibooth-count = pibooth.scripts.count:main
+pibooth-diag = pibooth.scripts.diagnostic:main
+pibooth-fonts = pibooth.scripts.fonts:main
+pibooth-printcfg = pibooth.scripts.printer:main
+pibooth-regen = pibooth.scripts.regenerate:main

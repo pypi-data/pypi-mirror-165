@@ -1,0 +1,120 @@
+Metadata-Version: 2.1
+Name: pibooth
+Version: 2.0.6
+Summary: A photo booth application in pure Python for the Raspberry Pi.
+Home-page: https://github.com/pibooth/pibooth
+Download-URL: https://github.com/pibooth/pibooth/archive/2.0.6.tar.gz
+Author: Vincent Verdeil, Antoine Rousseaux
+License: MIT license
+Keywords: Raspberry Pi,camera,photobooth
+Platform: unix
+Platform: linux
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Other Environment
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Natural Language :: Danish
+Classifier: Natural Language :: Dutch
+Classifier: Natural Language :: English
+Classifier: Natural Language :: French
+Classifier: Natural Language :: German
+Classifier: Natural Language :: Hungarian
+Classifier: Natural Language :: Italian
+Classifier: Natural Language :: Norwegian
+Classifier: Natural Language :: Spanish
+Classifier: Topic :: Multimedia :: Graphics :: Capture :: Digital Camera
+Requires-Python: >=3.6
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: Pillow (>=8.3.1)
+Requires-Dist: pygame (>=1.9.6)
+Requires-Dist: pygame-menu (==4.0.7)
+Requires-Dist: pygame-vkeyboard (>=2.0.8)
+Requires-Dist: psutil (>=5.5.1)
+Requires-Dist: pluggy (>=0.13.1)
+Requires-Dist: gpiozero (>=1.5.1)
+Requires-Dist: picamera (>=1.13) ; platform_machine >= "armv0l" and platform_machine <= "armv9l"
+Requires-Dist: RPi.GPIO (>=0.7.0) ; platform_machine >= "armv0l" and platform_machine <= "armv9l"
+Provides-Extra: doc
+Requires-Dist: sphinx ; extra == 'doc'
+Requires-Dist: sphinx-rtd-theme ; extra == 'doc'
+Requires-Dist: sphinx-copybutton ; extra == 'doc'
+Provides-Extra: dslr
+Requires-Dist: gphoto2 (>=2.0.0) ; extra == 'dslr'
+Provides-Extra: printer
+Requires-Dist: pycups (>=1.9.73) ; extra == 'printer'
+Requires-Dist: pycups-notify (>=0.0.4) ; extra == 'printer'
+
+|Pibooth|
+
+|PythonVersions| |PypiPackage| |Downloads|
+
+The ``pibooth`` project provides a photobooth application *out-of-the-box* in pure Python
+for Raspberry Pi. Have a look to the `wiki <https://github.com/pibooth/pibooth/wiki>`_
+to discover some realizations from GitHub users, and don't hesitate to send us
+photos of your version.
+
+.. image:: https://raw.githubusercontent.com/pibooth/pibooth/master/docs/images/background_samples.png
+   :align: center
+   :alt: Settings
+
+Features
+--------
+
+* Interface available in Danish, Dutch, English, French, German, Hungarian, Norwegian and Spanish (customizable)
+* Capture from 1 to 4 photos and concatenate them in a final picture
+* Support all cameras compatible with gPhoto2, OpenCV and Raspberry Pi
+* Support for hardware buttons and lamps on Raspberry Pi GPIO
+* Fully driven from hardware buttons / keyboard / mouse / touchscreen
+* Auto-start at the Raspberry Pi startup
+* Animate captures from the last sequence during idle time
+* Store final pictures and the individual captures
+* Printing final pictures using CUPS server (printing queue indication)
+* Custom texts can be added on the final picture (customizable fonts, colors, alignments)
+* Custom background(s) and overlay(s) can be added on the final picture
+* All settings available in a configuration file (most common options in a graphical interface)
+* Highly customizable thanks to its plugin system, you can develop your own plugin
+
+Documentation
+-------------
+
+.. image:: https://raw.githubusercontent.com/pibooth/pibooth/master/docs/images/documentation.png
+   :align: center
+   :alt: Documentation
+   :target: https://pibooth.readthedocs.io/en/latest
+   :height: 200px
+
+Third-party plugins
+-------------------
+
+Third-party plugins can be found an GitHub or on `plugins on PyPI  <https://pypi.org/search/?q=pibooth>`_.
+Here is a short list:
+
+- `pibooth-lcd-display <https://pypi.org/project/pibooth-lcd-display>`_
+- `pibooth-neopixel_spi <https://github.com/peteoheat/pibooth-neopixel_spi>`_
+- `pibooth-telegram-upload <https://pypi.org/project/pibooth-telegram-upload>`_
+- `pibooth-s3-upload <https://pypi.org/project/pibooth-s3-upload>`_
+
+
+.. |Pibooth| image:: https://raw.githubusercontent.com/pibooth/pibooth/master/docs/pibooth.png
+   :align: middle
+
+.. |PythonVersions| image:: https://img.shields.io/badge/python-3.6+-red.svg
+   :target: https://www.python.org/downloads
+   :alt: Python 3.6+
+
+.. |PypiPackage| image:: https://badge.fury.io/py/pibooth.svg
+   :target: https://pypi.org/project/pibooth
+   :alt: PyPi package
+
+.. |Downloads| image:: https://img.shields.io/pypi/dm/pibooth?color=purple
+   :target: https://pypi.org/project/pibooth
+   :alt: PyPi downloads
+
+
