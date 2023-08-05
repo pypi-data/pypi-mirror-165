@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/card_scrnaseq_pipeline.egg-info/PKG-INFO
+src/card_scrnaseq_pipeline.egg-info/SOURCES.txt
+src/card_scrnaseq_pipeline.egg-info/dependency_links.txt
+src/card_scrnaseq_pipeline.egg-info/entry_points.txt
+src/card_scrnaseq_pipeline.egg-info/requires.txt
+src/card_scrnaseq_pipeline.egg-info/top_level.txt
