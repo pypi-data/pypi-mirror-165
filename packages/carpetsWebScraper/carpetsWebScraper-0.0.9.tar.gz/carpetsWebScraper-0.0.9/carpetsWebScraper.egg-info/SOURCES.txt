@@ -1,0 +1,8 @@
+setup.py
+carpetsWebScraper/__init__.py
+carpetsWebScraper/carpetsWebScraper.py
+carpetsWebScraper.egg-info/PKG-INFO
+carpetsWebScraper.egg-info/SOURCES.txt
+carpetsWebScraper.egg-info/dependency_links.txt
+carpetsWebScraper.egg-info/requires.txt
+carpetsWebScraper.egg-info/top_level.txt
