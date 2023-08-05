@@ -1,0 +1,15 @@
+aladhan/__init__.py,sha256=LB1HoF8eU6_SlsZ7rMPQ7vPDq5onF9H_ltvVpsHuJy8,520
+aladhan/__main__.py,sha256=oDbk0-QpTE-_mtENcRK-_4-44qhwdZk3dDFIpJuGQhQ,5780
+aladhan/client.py,sha256=FxtYpDr8gojXDdnbYqwkUSNezO8lOGOWyhZsUO0f8ns,26206
+aladhan/data_classes.py,sha256=cEtUtDqvwZr1HPGHz-NXrRNdoxOjxO4RHPqOaHGLvxk,31390
+aladhan/endpoints.py,sha256=LlrJSV4J4eGvXTWoa0Xfp-SJUU_SDG1-dU66UdKAf4k,1484
+aladhan/enums.py,sha256=qmMvpn3WZVeXwpMlfCZqaAuDzQl6i8Z1h_rApZVsxPo,533
+aladhan/exceptions.py,sha256=WniqtrQC85QyQDAtcuLPnP4yAoMkgYxu6dESvEr3i7s,2955
+aladhan/http.py,sha256=6nx7whmM0GTodzCDDxz1RmjxaX_8U2VZiSSFK-pjv9s,8775
+aladhan/methods.py,sha256=BvGMMseoyHaC40c8YzG8xJHIknJbD21W3kgZ2fxH6Ek,4184
+aladhan/types.py,sha256=toBUCwNtUCc9tf5DyLSaVRAeARcIP5cqmUhC2jKd9MI,3364
+aladhan.py-1.2.0.dist-info/LICENSE,sha256=iiejul36EIUFdxr7lNwo2hDJvra0NdKYh_ZbWdwQJAE,1063
+aladhan.py-1.2.0.dist-info/METADATA,sha256=_B5yE1WLcXVFUwGaroSe9jqh_z0uceJHq1WUk-a0q20,3399
+aladhan.py-1.2.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+aladhan.py-1.2.0.dist-info/top_level.txt,sha256=KempwjdzeTC9FvXt4z2du7V9mFr03qE3ert7bS4MaMw,8
+aladhan.py-1.2.0.dist-info/RECORD,,
