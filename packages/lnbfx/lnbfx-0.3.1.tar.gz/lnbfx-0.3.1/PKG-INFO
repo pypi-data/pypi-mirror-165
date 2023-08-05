@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: lnbfx
+Version: 0.3.1
+Summary: Manage bioinformatics pipelines.
+Author-email: Lamin Labs <laminlabs@gmail.com>
+Description-Content-Type: text/markdown
+Requires-Dist: nbproject
+Requires-Dist: sqlmodel
+Requires-Dist: lnschema_core>=0.5.0
+Requires-Dist: pre-commit ; extra == "dev"
+Requires-Dist: nox ; extra == "dev"
+Requires-Dist: pytest>=6.0 ; extra == "test"
+Requires-Dist: pytest-cov ; extra == "test"
+Project-URL: Home, https://github.com/laminlabs/lnbfx
+Provides-Extra: dev
+Provides-Extra: test
+
+[![pypi](https://img.shields.io/pypi/v/lnbfx?color=%2334D058&label=pypi%20package)](https://pypi.org/project/lnbfx)
+
+# lnbfx: Manage bioinformatics pipelines
+
+This package is in private beta at this moment!
+
+Follow https://twitter.com/laminlabs to learn about a first public release.
+
+For beta users: Read the [docs](https://lamin.ai/docs/lnbfx).
+
