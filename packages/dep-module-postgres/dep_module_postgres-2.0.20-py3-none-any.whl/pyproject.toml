@@ -1,0 +1,44 @@
+[tool.poetry]
+name = "dep-module-postgres"
+version = "2.0.20"
+description = ""
+authors = ["everhide <i.tolkachnikov@gmail.com>"]
+
+packages = [
+    { include = "dep_postgres" },
+    { include = "tests" },
+    { include = "pyproject.toml" },
+]
+
+
+[tool.poetry.dependencies]
+python = "3.9"
+dep-spec = "^2.0.20"
+asyncpg = "^0.26.0"
+SQLAlchemy = "^1.4.40"
+
+
+[tool.poetry.dev-dependencies]
+asgi-lifespan = "^1.0.1"
+pytest = "^7.1.2"
+pytest-asyncio = "^0.19.0"
+pytest-mock = "^3.8.2"
+pytest-mock-resources = "^2.4.4"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+addopts = '''
+    tests -s -vv -p no:warnings
+    --showlocals
+    --maxfail=1
+    --no-header
+    --disable-pytest-warnings
+'''
+
+asyncio_mode = 'auto'
+python_files = 'test_*.py tests_*.py'
+log_cli = 1
+log_level = 'ERROR'
