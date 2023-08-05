@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: TSDAL
+Version: 0.0.3
+Summary: 时空数据抽象库（TSDAL，Temporal and Spatial Data Abstraction Library)
+Author: runepic
+Author-email: 759515344@qq.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# TSDAL Package
+
+This is a simple example package.
+时空数据抽象库（TSDAL，Temporal and Spatial Data Abstraction Library)
+to write your content.
+##内容
+###1、分块
+split(tifDir, outPath, size):
+
+```
+Args:
+        tifDir: 分块影像(tif)所在文件夹，不能有中文
+        outPath: 输出的文件夹，不能有中文，如果文件夹不存在则会被创建
+        size: 定义切图的大小（矩形框）
+Returns:是否成功 
+``` 
+####example：
+```
+from TSDAL.funsplit import split
+from src.TSDAL import *
+inpath = "E:\pythonMSAL\data\inbig"
+outpath = "E:\pythonMSAL\data\outsmall"
+
+r=split(inpath, outpath, 256)
+print(r)
+```
+###2、块定义 
+Patch
+
+####function:
+#####expoortJson()
+输出json
+
+####example：
+```
+from TSDAL import patch
+
+import psycopg2
+# 测试分块类
+patch = patch.Patch()
+patch.setId("222")
+patch.setGridNum("00200,00200")
+patch.setFatherNode("辽河口")
+patch.setHref("./liaohe/0020000200.json")
+print(patch.expoortJson())```
