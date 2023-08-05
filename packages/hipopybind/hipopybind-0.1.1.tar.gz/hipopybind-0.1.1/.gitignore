@@ -1,0 +1,12 @@
+# CMake files
+*CMakeCache.txt
+*CMakeFiles
+*cmake_install.cmake
+*Makefile
+*build
+
+# Pip files
+*.egg-info/
+
+# Miscellaneous
+*.so
