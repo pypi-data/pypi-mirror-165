@@ -1,0 +1,10 @@
+aws-error-utils
+backoff
+beautifulsoup4
+fastapi
+mangum
+orjson
+passlib
+pydantic
+python-multipart
+requests
