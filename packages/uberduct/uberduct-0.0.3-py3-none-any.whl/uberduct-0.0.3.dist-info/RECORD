@@ -1,0 +1,12 @@
+uberduct/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+uberduct/uberduct.py,sha256=th_6i5H2Hjuh5TXmNr5hOVDBE2QIAEb1wjfinrn5B5M,526
+uberduct/dict/cmudict.dict,sha256=e-iE_8ShGvrD39YkAiNgfkrlLVGGcg-DLOXlrUIeMVE,3625496
+uberduct/dict/cmudict.phones,sha256=_7WIpeVWhHI1gsclbh0vn62xMAETktnlkjfHbjTCz9Y,382
+uberduct/dict/cmudict.symbols,sha256=QIzKroA2QcbXtia2KZlJMgwtvKlrIiD9P7F4h7AjsCc,281
+uberduct/dict/cmudict.vp,sha256=vTb1eNgOTs3WSxyHKQRYX7QAdukEL-d8O7cVEkBOYB8,1747
+uberduct-0.0.3.data/data/dict/cmudict.dict,sha256=e-iE_8ShGvrD39YkAiNgfkrlLVGGcg-DLOXlrUIeMVE,3625496
+uberduct-0.0.3.dist-info/LICENSE,sha256=vUzo5EFwpfn0gTEMqFxR3jxPhRpl5nm0DmA7FDvTVCo,1754
+uberduct-0.0.3.dist-info/METADATA,sha256=emkW19GWG3ALBVwUecpVFnZsuFa6-pgTrcuYpJMDX34,1907
+uberduct-0.0.3.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+uberduct-0.0.3.dist-info/top_level.txt,sha256=3aCVbo9vyQXMAxMBmPVV3qsnrt6NLXNck0pC9RbQMMU,9
+uberduct-0.0.3.dist-info/RECORD,,
