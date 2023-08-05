@@ -1,0 +1,8 @@
+MANIFEST.in
+README.md
+setup.py
+ofrak_capstone/__init__.py
+ofrak_capstone.egg-info/PKG-INFO
+ofrak_capstone.egg-info/SOURCES.txt
+ofrak_capstone.egg-info/dependency_links.txt
+ofrak_capstone.egg-info/top_level.txt
