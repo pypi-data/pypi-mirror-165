@@ -1,0 +1,9 @@
+LICENSE
+setup.py
+nonebot_plugin_groupmate_waifu/__init__.py
+nonebot_plugin_groupmate_waifu/utils.py
+nonebot_plugin_groupmate_waifu.egg-info/PKG-INFO
+nonebot_plugin_groupmate_waifu.egg-info/SOURCES.txt
+nonebot_plugin_groupmate_waifu.egg-info/dependency_links.txt
+nonebot_plugin_groupmate_waifu.egg-info/requires.txt
+nonebot_plugin_groupmate_waifu.egg-info/top_level.txt
