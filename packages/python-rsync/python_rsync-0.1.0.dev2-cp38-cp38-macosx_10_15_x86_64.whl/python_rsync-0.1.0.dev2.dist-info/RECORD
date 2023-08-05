@@ -1,0 +1,15 @@
+pyrsync/__init__.py,sha256=mk_ABMneiP7-Aggn9VdysCYy9znWKBhCp48QINfw57o,125
+pyrsync/backends/__init__.py,sha256=znh0WbbuF8Ofi04vIgH73Vhd310n5D0Hjx_R9mCLgnQ,887
+pyrsync/backends/cffi/__init__.py,sha256=u4-2gTe3w1TykSlERw6T-zCwV7wx2o3v3PxrlbQTBco,8392
+pyrsync/backends/cffi/_rsync_cffi.abi3.so,sha256=MF90YqOIgTCZCes2T3uAi46zjCwh0LRQms0MsLw0PcI,112536
+pyrsync/backends/cffi/build.py,sha256=PuKfROKOTl0wy5tLHrOOIEd4qqloxqey1tt45AU-IF8,26292
+pyrsync/backends/cffi/cbarg.h,sha256=33pYUFSyd17nmSNyIvHnOvMZwpTkahJh7NNhQAyHaIk,122
+pyrsync/backends/cython/__init__.py,sha256=ZiJrrOQ8YFocUfhTMH9X0y0zwIG-Cs1MOKXHx5E_wG4,114
+pyrsync/backends/cython/_rsync_cy.c,sha256=-SvUkf2YJuG910Iz8QevgY0hQsmXobe44k4nGtgnUaE,464562
+pyrsync/backends/cython/_rsync_cy.cpython-38-darwin.so,sha256=R2zmujmVUiYCQIJwdGpnYgW28cNYelJLUvkisHyYzUI,163360
+pyrsync/backends/cython/_rsync_cy.pyx,sha256=7cieTyy3Etil_DklUyb1g25I1exKnGrFBUuDaRWdyRM,10887
+pyrsync/backends/cython/rsync.pxd,sha256=uGIbAMhYi4fUkMoFkN86NWhvZ219FfZDZ5TuE4j1s9w,6864
+python_rsync-0.1.0.dev2.dist-info/METADATA,sha256=7onVQs9MpB4gabtfGZXDH2JkFp05eKmWRByWhc2OakQ,3241
+python_rsync-0.1.0.dev2.dist-info/WHEEL,sha256=41k1hP4gcfQ_taLS-KhXoYsmEkE_N3UuiTg4JwfERU8,110
+python_rsync-0.1.0.dev2.dist-info/top_level.txt,sha256=Z8gPvN_xPWuub1MqXKwz6W_0lfExvEUUFc_fGAb8jXE,8
+python_rsync-0.1.0.dev2.dist-info/RECORD,,
