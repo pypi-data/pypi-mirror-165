@@ -1,0 +1,121 @@
+#!python
+
+# ToolName   : ANYLINUX
+# Author     : NISHANT
+# Version    : 0.0.01
+# License    : MIT License
+# Copyright  : Nishant
+# Github     : https://github.com/Nishant2009/
+# Telegram   : https://t.me/lets_do_hacking
+# Description: This tool helps to install any linux environment in termux
+# Language   : Python
+
+# If you copy open source code, then give credit
+
+
+import os, time, socket, argparse
+from os import popen, system
+from time import sleep
+from subprocess import run
+
+version="0.0.01"
+# LOGO
+logo = f"""
+         ╔═════════════════════════════════════════════╗
+         ║       ╭━━━╮         ╭╮                      ║
+         ║       ┃╭━╮┃         ┃┃                      ║
+         ║       ┃┃ ┃┃╭━╮ ╭╮ ╭╮┃┃ ╭╮╭━╮ ╭╮╭╮╭╮╭╮       ║
+         ║       ┃╰━╯┃┃╭╮╮┃┃ ┃┃┃┃ ┣┫┃╭╮╮┃┃┃┃╰╋╋╯       ║
+         ║       ┃╭━╮┃┃┃┃┃┃╰━╯┃┃╰╮┃┃┃┃┃┃┃╰╯┃╭╋╋╮       ║
+         ║       ╰╯ ╰╯╰╯╰╯╰━╮╭╯╰━╯╰╯╰╯╰╯╰━━╯╰╯╰╯       ║
+         ║                ╭━╯┃                         ║
+         ║                ╰━━╯                         ║
+         ║                                             ║
+         ║      [BY : NISHANT ]                        ║
+         ║      [VERSION : {version}]                     ║
+         ╚═════════════════════════════════════════════╝
+"""
+
+# COLOUR PRINT
+def colour_print(n):
+    print(run(['colourfulprint'],input = n, capture_output = True, text = True ).stdout)
+
+# OPTIONS
+options = """
+           [1] UBUNTU		        [10] OPEN SUSE TUMBLEWEED
+           [2] DEBIAN	        	[11] ARCH LINUX
+           [3] KALI		        [12] BLACK ARCH
+           [4] KALI NETHUNTER	        [13] ALPINE
+           [5] PARROT SECURITY OS	[14] VOID LINUX
+           [6] BACKBOX
+           [7] FEDORAX                  [00] EXIT 
+           [8] CENT OS
+           [9] OPEN SUSE LEAP
+
+"""
+# MAIN
+def main():
+     system("""clear && toilet -f big "        ANYLINUX" | colourfulprint""")
+     colour_print(logo)
+     print("\033[0;92m" ,(options),"\033[00m")
+     select = input(run(['colourfulprint'],input = "Select : ", capture_output = True, text = True).stdout +'\033[93m')
+     if select == "01" or select == "1":
+       system("cd && pkg install wget openssl-tool proot -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Ubuntu/ubuntu.sh && bash ubuntu.sh ")
+     elif select == "02" or select == "2":
+       system("cd && pkg install wget openssl-tool proot -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Debian/debian.sh && bash debian.sh")
+     elif select == "03" or select == "3":
+       system("cd && pkg install wget openssl-tool proot -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Kali/kali.sh && bash kali.sh")
+     elif select == "04" or select == "4":
+       print("\nKali Nethunter image itself is around 1 GB and for this you must have 5GB of storage .\n\nDecompresaing the image require some time(Around 10 minutes) .\n\nNethunter image is not been updated more than a year, some component is broken,\n\nIf you want an up-to-date, personalized experience, choose normal kali distro instead .\n\n\n")
+       colour_print("[01] Continue\n[99] MAIN MENU\n[00] EXIT ")
+       choose=input(run(['colourfulprint'],input = "CHOOSE : ", capture_output = True, text = True).stdout+'\033[93m')
+       if choose=="00" or choose=="0":
+           colour_print("\nTHANKS FOR USING ANYLINUX !!!\n\n")
+           exit()
+       elif choose == "1" or choose =="01":
+           system("cd && pkg install wget openssl-tool proot -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Nethunter/nethunter.sh && bash nethunter.sh")
+       else:
+            main()
+     elif select == "05" or select == "5":
+       system("cd && pkg install wget openssl-tool proot -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Parrot/parrot.sh && bash parrot.sh7")
+     elif select == "06" or select == "6":
+       system("cd && pkg install wget openssl-tool proot -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/BackBox/backbox.sh && bash backbox.sh")
+     elif select == "07" or select == "7":
+       system("cd && pkg install wget openssl-tool proot tar -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Fedora/fedora.sh && bash fedora.sh")
+     elif select == "08" or select == "8":
+       system("cd && pkg install wget openssl-tool proot tar -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/CentOS/centos.sh && bash centos.sh")
+     elif select == "09" or select == "9":
+       system("cd && pkg install wget openssl-tool proot tar -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/openSUSE/Leap/opensuse-leap.sh && bash opensuse-leap.sh")
+     elif select == "10":
+       system("cd && pkg install wget openssl-tool proot tar -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/openSUSE/Tumbleweed/opensuse-tumbleweed.sh && bash opensuse-tumbleweed.sh")
+     elif select == "11":
+         print("\nARCH LINUX image itself is around 400 mb ,and after decompressing it needs Around 1.5 GB of storage .\n")
+         print("while extracting if any error comes like 'SCHILY.fflags' , its not harmful simply ignore it .\n")
+         print("Arch linux image is hosted on an external server, the link may be broken in some special case .\n\n\n")
+         colour_print("[01] Continue\n[99] MAIN MENU\n[00] EXIT ")
+         choose=input(run(['colourfulprint'],input = "CHOOSE : ", capture_output = True, text = True).stdout+'\033[93m')
+         if choose=="00" or choose=="0":
+             colour_print("\nTHANKS FOR USING ANYLINUX !!!\n\n")
+             exit()
+         elif choose == "1" or choose =="01":
+             system("cd && pkg install wget openssl-tool proot tar -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Arch/armhf/arch.sh && bash arch.sh")
+         else:
+             main()
+     elif select == "12":
+       system("cd && pacman-key --init && pacman-key --populate archlinuxarm && pacman -Sy --noconfirm curl && curl -O https://blackarch.org/strap.sh && chmod +x strap.sh && ./strap.sh")
+     elif select == "13":
+       system("cd && pkg install wget openssl-tool proot tar -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Alpine/alpine.sh && bash alpine.sh")
+     elif select == "14":
+       system("cd && pkg install wget openssl-tool proot tar -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Void/void.sh && bash void.sh")
+     elif select=="0" or select =="00":
+       colour_print("\nTHANKS FOR USING ANYLINUX !!!\n\n")
+       exit()
+     else :
+       print('\033[91m',"[X] WRONG INPUT","\033[00m")
+       sleep(2)
+       main()
+
+
+# START TOOL
+if __name__=="__main__":
+  main()
