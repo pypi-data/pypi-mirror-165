@@ -1,0 +1,85 @@
+Metadata-Version: 2.1
+Name: cr-nimble
+Version: 0.3.0
+Summary: Iterative algorithms for numerical linear algebra with JAX
+Home-page: https://carnotresearch.github.io/cr-nimble
+Author: CR-Suite Development Team
+Author-email: contact@carnotresearch.com
+License: Apache 2.0: http://www.apache.org/licenses/LICENSE-2.0
+Download-URL: https://github.com/carnotresearch/cr-nimble/archive/v0.3.0.tar.gz
+Project-URL: Issue Tracker, https://github.com/carnotresearch/cr-nimble/issues
+Keywords: Linear Algebra
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Multimedia
+Classifier: Topic :: Multimedia :: Video
+Classifier: Topic :: Scientific/Engineering :: Image Processing
+Classifier: Topic :: Scientific/Engineering :: Image Recognition
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: jax (>=0.3.14)
+Requires-Dist: jaxlib (>=0.3.14)
+Requires-Dist: numpy (>=1.20.0)
+Requires-Dist: scipy (>=1.6)
+Requires-Dist: matplotlib
+Requires-Dist: sympy (>=1.6)
+Requires-Dist: bitarray (>=2.6)
+Provides-Extra: dev
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: pytest-cov ; extra == 'test'
+
+# CR-Nimble
+
+`CR-Nimble` consists of fast linear algebra
+and signal processing routines.
+Most of the routines have been implemented using
+Google JAX. Thus, they can be easily run on
+a variety of hardware (CPU, GPU, TPU).
+
+Functionality includes:
+
+* Utility functions for working with vectors, matrices and arrays
+* Linear algebra functions
+* Digital signal processing functions
+* Data compression functions
+* Test data generation functions
+
+
+Installation
+
+```{shell}
+python -m pip install cr-nimble
+```
+
+Import
+
+```{python}
+import cr.nimble as crn
+```
+
+See [documentation](https://cr-nimble.readthedocs.io)
+for library usage.
+
+`CR-Nimble` is part of
+[CR-Suite](https://carnotresearch.github.io/cr-suite/).
+
+Related libraries:
+
+* [CR-Wavelets](https://cr-wavelets.readthedocs.io)
+* [CR-Sparse](https://cr-sparse.readthedocs.io)
+
+
+[![codecov](https://codecov.io/gh/carnotresearch/cr-nimble/branch/main/graph/badge.svg?token=PX1MGTZ7VL)](https://codecov.io/gh/carnotresearch/cr-nimble) 
+[![Unit Tests](https://github.com/carnotresearch/cr-nimble/actions/workflows/ci.yml/badge.svg)](https://github.com/carnotresearch/cr-nimble/actions/workflows/ci.yml)
+[![Documentation Status](https://readthedocs.org/projects/cr-nimble/badge/?version=latest)](https://cr-nimble.readthedocs.io/en/latest/?badge=latest)
+
+
