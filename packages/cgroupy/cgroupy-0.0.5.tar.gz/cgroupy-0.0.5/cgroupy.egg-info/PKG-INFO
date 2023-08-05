@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: cgroupy
+Version: 0.0.5
+Summary: cgroupy is a python module that provides a simple intrface for managing cgroups
+Home-page: https://github.com/morethanunpopular/cgroupy
+Author: Grant Campbell
+Author-email: stars.salvage.man@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+License-File: LICENSE.rst
+
+UNKNOWN
+
