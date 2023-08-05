@@ -1,0 +1,16 @@
+ktdg/__init__.py,sha256=mL9W44tgBii8C5klN-Pz5Tj4dFzK_gjt9lq3pbRRWXs,256
+ktdg/answers.py,sha256=eXGQzk0zpgEM2-hl7rtK9fzgBcN-V6L-eZ7dG2-nrR0,7320
+ktdg/cli.py,sha256=V1qHPy9V9HEVW9WLKwp1esEmDIFSU-p43_Bn3RsCU9U,1097
+ktdg/config.py,sha256=0q_POtILG7QSQzGHcodbIE7Ir67xD8wPAu9KYVskV6M,1504
+ktdg/distributions.py,sha256=muqyCjPBKFfJMYGrhHZU_i729fripZHXzmL7LktzMdg,3952
+ktdg/generation.py,sha256=xM9mjR0D-SHewQ4AwO5nN3Fit3aeKHeDC0atzKox9BQ,1419
+ktdg/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ktdg/questions.py,sha256=QRpFeNS6_63rGJzALdzy0NR1SieQ1APDrIwx6k1wrp0,5291
+ktdg/skills.py,sha256=I4esyIv7_9dbVwaxJejfSEp52YU_l1v45bzdGxFAzVo,2818
+ktdg/students.py,sha256=ciN4ddsImtWZaseDyH4jxESE4pi96oXF2hG8lXMaHkI,6591
+ktdg/utils.py,sha256=vVgttT-Ogk7kdP_tLR0xHuP-t8Vks4SniFF0HUrRHI8,1766
+ktdg-0.1.13.dist-info/entry_points.txt,sha256=nR7zMOGOlQdNkWLPCoyYLZlg718dW5LGrNgBVhOG6iU,41
+ktdg-0.1.13.dist-info/LICENSE,sha256=zVuoPDVI5iRx67V3XKAFhDYg3BiNWXnZOwnB-v092dw,1064
+ktdg-0.1.13.dist-info/WHEEL,sha256=lVrBD2vLZHy8-JOpVWUEVN4ITXZWS-4K7hnqZ-H1Poo,91
+ktdg-0.1.13.dist-info/METADATA,sha256=ctDT1iVaSGUZvJk0Yv6VPK0LhwRBoQzluxQBzUfa3xE,2614
+ktdg-0.1.13.dist-info/RECORD,,
