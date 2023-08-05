@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: pystochsim
+Version: 1.1.0
+Summary: Stochastic Simulation Methods
+Author: Lucas Amoudruz
+Author-email: amlucas@ethz.ch
+Requires-Python: >=3.6
+License-File: LICENSE
+
+Stochsim: Stochastic Simulation Methods
+
+A package for simulating stochastic processes described by reactions.
+Available algorithms include SSA, tau-leaping and R-leaping.
+
+github webpage: https://github.com/amlucas/stochsim
