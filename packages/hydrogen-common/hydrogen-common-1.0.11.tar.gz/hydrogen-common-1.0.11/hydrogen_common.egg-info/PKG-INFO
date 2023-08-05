@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: hydrogen-common
+Version: 1.0.11
+Summary: Shared common code for the hydrogen project
+Home-page: https://github.com/hydroframe-ml/hydrogen-common
+Author-email: wh3248@princeton.edu
+License: Apache
+Description: 
+        **hydrogen-service** contains shared common code
+        that are requied in other components of hydrogen.
+Platform: UNKNOWN
+Description-Content-Type: text/x-rst
