@@ -1,0 +1,7 @@
+dep_redis/__init__.py,sha256=_pI7_S3F8lQ0nDSq8RuZHVMpBlfO0QwKyzv2jXlW7aU,1664
+pyproject.toml,sha256=4vJ9ub5t4Ei9QptTRVUT2_YVyfIFUclBbe3CAHiCKpI,853
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_module.py,sha256=PiZPYOB02E8bRYluPLw3ydbJ5VjBeTfFfvfELV4szFY,112
+dep_module_redis-2.0.20.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+dep_module_redis-2.0.20.dist-info/METADATA,sha256=6XH1xnqV5ele0ABMG5tKLgFgPIhfcor_P_Rcoxg2KcE,346
+dep_module_redis-2.0.20.dist-info/RECORD,,
