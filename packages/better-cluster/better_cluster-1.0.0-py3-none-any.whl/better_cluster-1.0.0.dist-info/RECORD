@@ -1,0 +1,11 @@
+discord/ext/cluster/__init__.py,sha256=5eJFxLKIQ1CnluQYnJnCwCj4dZA4wlm_OHK0Tr4Q2PE,464
+discord/ext/cluster/client.py,sha256=OkIdFYa8pNLCqlwZgPxjKlz_0zv2msGgAwVtAdGs19o,2124
+discord/ext/cluster/cluster.py,sha256=z1zOKnYdICMAVBhvUZ1FfLrol4-ThX8yBlmo2VTdzXo,8281
+discord/ext/cluster/errors.py,sha256=CcnYhgWQmG6G1OFyOBfRkKmTbPE6ZGuVWCsvzO73Dxk,291
+discord/ext/cluster/objects.py,sha256=1FMeHBLCkT0qUhCrY0qlEAvysYjtgmjpL4HyBQYQZaw,1577
+discord/ext/cluster/shard.py,sha256=B2S8Voa5lGkW62lvv9eny0IV9LM54c6u75JJp8phfeo,6487
+better_cluster-1.0.0.dist-info/LICENSE,sha256=unooTE22o2jE3Yd2Q6UWjM6lEa5FYBB821A5o4loS5s,1071
+better_cluster-1.0.0.dist-info/METADATA,sha256=0nI357FxsELlB8Ldd1AXEYAkuteSMJnczsIigefwV5Q,3987
+better_cluster-1.0.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+better_cluster-1.0.0.dist-info/top_level.txt,sha256=fJkrNbR-_8ubMBUcDEJBcfkpECrvSEmMrNKgvLlQFoM,8
+better_cluster-1.0.0.dist-info/RECORD,,
