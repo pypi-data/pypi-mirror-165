@@ -1,0 +1,8 @@
+README.md
+setup.py
+pykv/__init__.py
+pykv/main.py
+pykv.egg-info/PKG-INFO
+pykv.egg-info/SOURCES.txt
+pykv.egg-info/dependency_links.txt
+pykv.egg-info/top_level.txt
