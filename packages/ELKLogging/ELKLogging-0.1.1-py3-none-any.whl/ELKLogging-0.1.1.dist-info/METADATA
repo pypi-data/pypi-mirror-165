@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: ELKLogging
+Version: 0.1.1
+Summary: Logging to Logstash/File/Stream
+Home-page: https://github.com/pyd0309/ELKLogger.git
+Author: YoungDo Park
+Author-email: pyd0309@gmail.com
+License: UNKNOWN
+Keywords: logging,logstash,ELK
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Requires-Dist: charset-normalizer (==2.0.12)
+Requires-Dist: dill (==0.3.4)
+Requires-Dist: idna (==3.3)
+Requires-Dist: parse (==1.19.0)
+Requires-Dist: psutil (==5.9.1)
+Requires-Dist: pymongo (==3.12.1)
+Requires-Dist: pyreadline (==2.1)
+Requires-Dist: requests (==2.26.0)
+Requires-Dist: urllib3 (==1.26.11)
+Requires-Dist: wincertstore (==0.2)
+
+UNKNOWN
+
+
