@@ -1,0 +1,4 @@
+[console_scripts]
+twootfeed = twootfeed.__main__:main
+twootfeed_create_mastodon_cli = twootfeed.utils.create_mastodon_client:cli
+twootfeed_init = twootfeed.utils.config:init_config
