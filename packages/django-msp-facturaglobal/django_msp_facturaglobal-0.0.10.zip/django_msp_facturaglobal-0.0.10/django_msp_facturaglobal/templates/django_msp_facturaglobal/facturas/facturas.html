@@ -1,0 +1,48 @@
+{% extends "django_msp_facturaglobal\base.html" %}
+{% block title %}Factura global{% endblock %}
+
+<!-- CSS Code -->
+{% block style_css %}{% endblock %}
+
+<!-- JavaScript Code -->
+{% block js_code %}
+{% include 'autocomplete_light/static.html' %}
+<script src="{{STATIC_URL}}django_msp_facturaglobal/js/documentos.factura.js"></script>
+{% endblock %}
+
+{% block breadcrumb %}{{ block.super }} <li class='active'> Facturas </li>  {% endblock %}
+{% block content %}  
+{% if microsip_version >= 2013 %}
+  <div class="page-header">
+    <form method="get" class="form-inline" action="/factura_global_app/ventas_por_facturar/" enctype='multipart/form-data'>{% csrf_token %}
+    <h2>Ventas sin Facturar </h2>
+       {{form.cliente}}<br>
+      {{ form.errors }}
+      {{ form.start_date }}
+      {{ form.end_date }}
+      <button type="submit" class="btn"><i class="glyphicon glyphicon-search"></i></button> 
+      <a href="#" class="btn btn-default" id="btn_generar_factura">Generar Factura global</a>
+    </form>
+  </div>
+
+<table class="table tableCell table-hover">
+<tbody>
+<tr>
+  <th><input type="checkbox" name="select_all" value=""/></th>
+  <th>Folio</th>
+  <th>Fecha</th>
+</tr>
+  {% for venta in ventas %}
+  <tr>
+    <td><input type="checkbox" name="venta" value="{{ venta.id}}"/></td>
+    <td>{{ venta.folio }}</td>
+    <td>{{ venta.fecha }}</td>
+  </tr>
+  {% endfor %}
+</tbody>
+</table>
+{% else %}
+  <div class="alert alert-danger" role="alert">Version de Microsip no compatible</div>
+{% endif %}
+ 
+{% endblock %}
