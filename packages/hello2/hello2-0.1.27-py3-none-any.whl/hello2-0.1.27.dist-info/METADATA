@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: hello2
+Version: 0.1.27
+Summary: A collection of useful tools!
+Author-email: Hejian <flystarhe@qq.com>
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: opencv-python
+Requires-Dist: Pillow
+Requires-Dist: scikit-image
+Requires-Dist: scikit-learn
+Requires-Dist: pycocotools
+Requires-Dist: simplejson
+Requires-Dist: onnx
+Requires-Dist: onnx-simplifier
+Requires-Dist: onnxruntime-gpu
+Requires-Dist: fiftyone >=0.16.5
+Requires-Dist: pyomniunwarp >=0.2.4
+Project-URL: Home, https://github.com/flystarhe/hello
+
+# Hello
+A collection of useful tools!
+
+```sh
+pip install -U hello2
+pip install -U hello2 -i https://pypi.org/simple
+pip install -U 'git+https://github.com/flystarhe/hello'
+```
+
+## hello.data
+- `python -m hello.data coco2yolo -h`
+    - COCO format to YOLOv5
+
+## hello.fiftyone
+- For examples: [hello/fiftyone/examples/](https://github.com/flystarhe/hello/blob/main/hello/fiftyone/examples)
+
+## hello.onnx
+- For examples: [hello/onnx/examples/](https://github.com/flystarhe/hello/tree/main/hello/onnx/examples)
+
+## hello.video
+- `python -m hello.video.clip -h`
+- `python -m hello.video.frames -h`
+
+## hello.x3m
+- `python -m hello.x3m preprocess -h`
+    - 为X3M量化步骤生成校准数据
+- `python -m hello.x3m config -h`
+    - 为X3M编译步骤生成配置文件
+
