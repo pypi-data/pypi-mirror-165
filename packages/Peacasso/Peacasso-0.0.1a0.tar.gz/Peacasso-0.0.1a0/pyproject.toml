@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "Peacasso" 
+authors = [
+  { name="Victor Dibia", email="victor.dibia@gmail.com" },
+]
+description = "Create with AI models"
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "transformers",
+    "scipy",
+    "ftfy",
+    "diffusers==0.2.4",
+    "torch",
+    "pydantic",
+    "uvicorn"
+]
+dynamic = ["version"]
+
+
+[tool.setuptools.dynamic]
+version = {attr = "peacasso.version.VERSION"}
+readme = {file = ["README.md"]}
+
+
+[tool.setuptools.packages.find] 
+include = ["mkdocs.yml","notebooks","docs","peacasso*"] 
+exclude = ["*.tests", "*.tests.*", "tests.*", "tests","peacasso/web/frontend/*"]
+
+
+[project.urls]
+"Homepage" = "https://github.com/victordibia/peacasso"
+"Bug Tracker" = "https://github.com/victordibia/peacasso/issues"
+
+[project.scripts]
+peacasso = "peacasso.cli:run"

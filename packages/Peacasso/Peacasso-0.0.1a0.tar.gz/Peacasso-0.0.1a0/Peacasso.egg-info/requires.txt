@@ -1,0 +1,7 @@
+transformers
+scipy
+ftfy
+diffusers==0.2.4
+torch
+pydantic
+uvicorn
