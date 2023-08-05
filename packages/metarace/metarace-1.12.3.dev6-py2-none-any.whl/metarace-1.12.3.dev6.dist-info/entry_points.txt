@@ -1,0 +1,5 @@
+[console_scripts]
+metarace = metarace.apploader:main
+roadmeet = metarace.roadmeet:main
+trackmeet = metarace.trackmeet:main
+
