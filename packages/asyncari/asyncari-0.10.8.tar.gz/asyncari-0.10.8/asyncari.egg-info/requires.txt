@@ -1,0 +1,6 @@
+anyio>=3.1.0
+asks>=2.2
+asyncswagger11
+asyncwebsockets
+attrs>=18
+trio>=0.11
