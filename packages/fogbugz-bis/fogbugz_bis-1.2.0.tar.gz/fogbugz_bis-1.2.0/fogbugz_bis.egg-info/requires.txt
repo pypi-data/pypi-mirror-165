@@ -1,0 +1,20 @@
+BeautifulSoup4
+lxml
+six
+
+[docs]
+sphinx
+jaraco.packaging>=9
+rst.linker>=1.9
+
+[testing]
+pytest>=6
+pytest-checkdocs>=2.4
+pytest-flake8
+flake8<5
+pytest-cov
+pytest-enabler>=1.3
+
+[testing:platform_python_implementation != "PyPy"]
+pytest-black>=0.3.7
+pytest-mypy>=0.9.1
