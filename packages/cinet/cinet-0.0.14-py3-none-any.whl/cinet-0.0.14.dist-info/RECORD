@@ -1,0 +1,11 @@
+cinet/__init__.py,sha256=X_JbQNXF52h7MYG8u3nbVta-WK3FpeltoAcZonNcGLY,154
+cinet/interfaces.py,sha256=HQ50zGNZJhTEO3SoGoSBcTqqLsqtspKNX8iNjX3VDJU,14336
+cinet/models.py,sha256=t-Y7BoKUGakmspSrA4h01Qp0qkdt_HTJrIpNHhgTL3Y,14057
+cinet/testing_utils/00_simple_train_test.py,sha256=pJX7sOpSRIBlR_-Z7RXoRnE9r9ddCu3HR8DUvotAx4M,1224
+cinet/testing_utils/01_hparam_tuning.py,sha256=3V2xhUYnWaVYwxJQdfujNo6ZOJGwcp3Wgz3qHhUeXw4,1981
+cinet/testing_utils/02_results_after_tuning.py,sha256=sdraLCBYuTbpmRrl2dCXeEDmve6cnVXVymmk4b-ch_A,2443
+cinet/utils.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cinet-0.0.14.dist-info/LICENSE,sha256=scEce2mIWijj4dNhrmY2PB3VzupOgmAxreW1sRtS8Zo,1076
+cinet-0.0.14.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+cinet-0.0.14.dist-info/METADATA,sha256=UehtQ_G3N15D9cngQGEnjt65wvRnXBaYdCKwLNttodU,3381
+cinet-0.0.14.dist-info/RECORD,,
