@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: ofrak-binary-ninja
+Version: 0.0.1
+Summary: OFRAK: unpack, modify, and repack binaries.
+Home-page: https://ofrak.com
+Author: Red Balloon Security
+License: UNKNOWN
+Description: ```
+           ____  ______ _____            _  __
+          / __ \|  ____|  __ \     /\   | |/ /
+         | |  | | |__  | |__) |   /  \  | ' / 
+         | |  | |  __| |  _  /   / /\ \ |  <  
+         | |__| | |    | | \ \  / ____ \| . \ 
+          \____/|_|    |_|  \_\/_/    \_\_|\_\
+        ```
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: Security
+Classifier: Topic :: Software Development :: Embedded Systems
+Classifier: Typing :: Typed
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown

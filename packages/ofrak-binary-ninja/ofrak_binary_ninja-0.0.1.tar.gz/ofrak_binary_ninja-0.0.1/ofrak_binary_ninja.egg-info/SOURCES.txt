@@ -1,0 +1,8 @@
+MANIFEST.in
+README.md
+setup.py
+ofrak_binary_ninja/__init__.py
+ofrak_binary_ninja.egg-info/PKG-INFO
+ofrak_binary_ninja.egg-info/SOURCES.txt
+ofrak_binary_ninja.egg-info/dependency_links.txt
+ofrak_binary_ninja.egg-info/top_level.txt
