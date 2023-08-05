@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: oceanai-py
+Version: 0.0.3
+Summary: Librería para conectarce a ocean protocol y poder crear IA
+Home-page: https://github.com/itrm-team/oceanai-py
+Author: ITRMachines
+Author-email: matteo.murcia@gmail.com
+License: MIT
+Description-Content-Type: text/markdown
+
+# oceanai-py
+Repository for the implementation of oceanai library in python version
