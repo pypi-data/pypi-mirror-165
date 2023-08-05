@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: 3-py
+Version: 1.1.5
+Summary: `.gitignore`-aware tree tool written in Python
+Home-page: https://github.com/excitoon/3
+Author: Vladimir Chebotarev
+Author-email: vladimir.chebotarev@gmail.com
+License: MIT
+Project-URL: Documentation, https://github.com/excitoon/3/blob/master/README.md
+Project-URL: Source, https://github.com/excitoon/3
+Project-URL: Tracker, https://github.com/excitoon/3/issues
+Description: # `3`
+        
+        `.gitignore`-aware tree tool written in Python.
+        
+        Example:
+        
+        ```
+        3
+        ```
+        
+        Output:
+        
+        ![](examples/3.png)
+        
+        ## Install
+        
+        ```
+        pip3 install 3-py
+        ```
+        
+        ### Compatibility
+        
+        If you are on Windows, install `colorama` in order to watch some colors.
+        
+Keywords: git,gitignore,tree
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development
+Classifier: Topic :: Terminals
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown

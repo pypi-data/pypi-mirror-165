@@ -1,0 +1,14 @@
+.gitignore
+3
+3.cmd
+LICENSE.md
+README.md
+pyproject.toml
+requirements.txt
+setup.py
+3_py.egg-info/PKG-INFO
+3_py.egg-info/SOURCES.txt
+3_py.egg-info/dependency_links.txt
+3_py.egg-info/requires.txt
+3_py.egg-info/top_level.txt
+examples/3.png
