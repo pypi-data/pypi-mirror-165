@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: tads
+Version: 0.1.3
+Summary: Tads is reserved for ...
+Home-page: https://git.jetbrains.space/scattered-systems/tads/py-tads.git
+License: MIT
+Author: FL03
+Author-email: jo3mccain@icloud.com
+Requires-Python: >=3.9,<3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: numpy
+Requires-Dist: openpyxl
+Requires-Dist: pandas
+Requires-Dist: python-multipart
+Requires-Dist: xlrd
+Project-URL: Repository, https://git.jetbrains.space/scattered-systems/tads/py-tads.git
+Description-Content-Type: text/x-rst
+
+

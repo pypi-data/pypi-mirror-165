@@ -1,0 +1,27 @@
+[tool.poetry]
+authors = ["FL03 <jo3mccain@icloud.com>"]
+classifiers = []
+description = "Tads is reserved for ..."
+homepage = ""
+keywords = []
+license = "MIT"
+name = "tads"
+readme = "README.rst"
+repository = "https://git.jetbrains.space/scattered-systems/tads/py-tads.git"
+version = "0.1.3"
+
+
+[tool.poetry.dependencies]
+numpy = "latest"
+openpyxl = "latest"
+pandas = "latest"
+python = ">=3.9,<3.11"
+python-multipart = "latest"
+xlrd = "latest"
+
+[tool.poetry.dev-dependencies]
+pytest = "latest"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
