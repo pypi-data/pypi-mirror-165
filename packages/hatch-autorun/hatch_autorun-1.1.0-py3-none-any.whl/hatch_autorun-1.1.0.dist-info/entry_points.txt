@@ -1,0 +1,2 @@
+[hatch]
+autorun = hatch_autorun.hooks

@@ -1,0 +1,8 @@
+hatch_autorun/__init__.py,sha256=2YJprupq71Qtt23AD9LVILXA8-Px4eWWGoDPcelcus8,96
+hatch_autorun/hooks.py,sha256=XrerklcP7SLcjK3_JrfjqKafmZf4FssgbzDOzYTbUh0,258
+hatch_autorun/plugin.py,sha256=8vVDy3k4l5__4uadeqSbtld6eW04TZKgAKFEFIl3Pbg,3180
+hatch_autorun-1.1.0.dist-info/METADATA,sha256=UUT4UKT9PwSX37Y4TppZkNxV17xvsgQYk7hqREW2Pq8,4854
+hatch_autorun-1.1.0.dist-info/WHEEL,sha256=09RFlvY3aVzvCNk4AXPZt-N-AI7GY_KktGsTb2IqIBU,86
+hatch_autorun-1.1.0.dist-info/entry_points.txt,sha256=3nHpd7xK7M_vG2RRLA2HcmgvVlMB9mBiBlfb2yGKYu0,38
+hatch_autorun-1.1.0.dist-info/licenses/LICENSE.txt,sha256=EXqlAG2EdVYvBEQqsG3SpMUBrzp3JV6uDe7x8MJJmho,1088
+hatch_autorun-1.1.0.dist-info/RECORD,,
