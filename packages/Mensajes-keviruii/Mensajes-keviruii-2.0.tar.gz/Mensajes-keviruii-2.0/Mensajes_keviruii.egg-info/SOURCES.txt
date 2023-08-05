@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+Mensajes_keviruii.egg-info/PKG-INFO
+Mensajes_keviruii.egg-info/SOURCES.txt
+Mensajes_keviruii.egg-info/dependency_links.txt
+Mensajes_keviruii.egg-info/requires.txt
+Mensajes_keviruii.egg-info/top_level.txt
+adios/__init__.py
+adios/despedidas.py
+hola/__init__.py
+hola/saludos.py
+tests/__init__.py
+tests/test_hola.py
