@@ -1,0 +1,5 @@
+[console_scripts]
+base=sqlite_clean.command:cli
+fix=sqlite_clean.command:fix
+lint=sqlite_clean.command:lint
+
