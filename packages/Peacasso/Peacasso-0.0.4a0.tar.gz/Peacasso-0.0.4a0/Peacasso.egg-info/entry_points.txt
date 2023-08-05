@@ -1,0 +1,2 @@
+[console_scripts]
+peacasso = peacasso.cli:run

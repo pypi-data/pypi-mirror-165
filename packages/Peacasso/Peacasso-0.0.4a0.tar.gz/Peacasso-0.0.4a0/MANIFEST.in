@@ -1,0 +1,2 @@
+recursive-include  peacasso/web/backend/ui *
+recursive-exclude  peacasso/web/frontend *
