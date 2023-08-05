@@ -1,0 +1,11 @@
+aiohttp
+pytz
+requests
+
+[async]
+aiohttp
+pytz
+
+[sync]
+requests
+pytz
