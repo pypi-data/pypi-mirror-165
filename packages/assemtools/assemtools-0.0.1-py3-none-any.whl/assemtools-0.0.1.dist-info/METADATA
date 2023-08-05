@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: assemtools
+Version: 0.0.1
+Home-page: https://github.com/xmyeen/assemtools
+Author: xmyeen
+Author-email: xmyeen@126.com
+Platform: all
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: wheel
+Requires-Dist: pywin32 ; sys_platform == "win32"
+
