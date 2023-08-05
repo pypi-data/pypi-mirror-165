@@ -1,0 +1,10 @@
+README.md
+setup.py
+bin/banner
+str_banner/__init__.py
+str_banner/banner.py
+str_banner.egg-info/PKG-INFO
+str_banner.egg-info/SOURCES.txt
+str_banner.egg-info/dependency_links.txt
+str_banner.egg-info/requires.txt
+str_banner.egg-info/top_level.txt
