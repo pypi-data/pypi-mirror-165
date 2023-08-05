@@ -1,0 +1,12 @@
+pgstats/__init__.py,sha256=OvmzYKeIIxjmcLbOo7Y9vbty8eFvNPhMA6mzTFPKLso,67
+pgstats/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pgstats/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pgstats/management/commands/snapshot_pgstats.py,sha256=HjpGwajxcjblT_Vq5jmMHTmUuLZSCSUZ9bwWmYJUdMA,319
+pgstats/migrations/0001_initial.py,sha256=5AgAOlT6CBXqegsjXZY2vYPI6-keMyp_gdJ6vY8D3_A,1704
+pgstats/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pgstats/models.py,sha256=nQLm7-TrzfSm-vv_LhXFNqF7oSx90hsqwMsojFV-uzQ,1630
+pgstats/version.py,sha256=1NY8VJOrkHuux1sFx2eqVAEXDoARrciOmW8_7G2Zo34,152
+django_pgstats-1.0.7.dist-info/LICENSE,sha256=bOsMPbrECIWYOAqsPawE7zdJ0aT9DbtpSCQQ8mRv0tA,1456
+django_pgstats-1.0.7.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+django_pgstats-1.0.7.dist-info/METADATA,sha256=WmzwCmIhO-4kxT7MQWEv5o8W5E5JQNwTjnfLrkiirT0,2623
+django_pgstats-1.0.7.dist-info/RECORD,,
