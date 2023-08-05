@@ -1,0 +1,6 @@
+setup.py
+prettyrequire.egg-info/PKG-INFO
+prettyrequire.egg-info/SOURCES.txt
+prettyrequire.egg-info/dependency_links.txt
+prettyrequire.egg-info/top_level.txt
+require/__init__.py
