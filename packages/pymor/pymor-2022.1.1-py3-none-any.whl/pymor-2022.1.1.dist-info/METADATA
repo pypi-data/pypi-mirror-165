@@ -1,0 +1,334 @@
+Metadata-Version: 2.1
+Name: pymor
+Version: 2022.1.1
+Summary: 
+Home-page: https://pymor.org
+Author: pyMOR developers
+Author-email: main.developers@pymor.org
+Maintainer: Rene Fritze
+Maintainer-email: rene.fritze@wwu.de
+License: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: qtpy (>2.0)
+Requires-Dist: packaging
+Requires-Dist: diskcache
+Requires-Dist: typer
+Requires-Dist: click
+Requires-Dist: scipy (>=1.3) ; python_version < "3.8"
+Requires-Dist: numpy (<1.24,>=1.17.5) ; python_version == "3.8"
+Requires-Dist: scipy (>=1.3.3) ; python_version == "3.8"
+Requires-Dist: numpy (<1.24,>=1.19.4) ; python_version >= "3.9"
+Requires-Dist: scipy (>=1.5.4) ; python_version >= "3.9"
+Provides-Extra: ci
+Requires-Dist: check-manifest (==0.48) ; extra == 'ci'
+Requires-Dist: check-reqs (==0.2.0) ; extra == 'ci'
+Requires-Dist: codecov (==2.1.12) ; extra == 'ci'
+Requires-Dist: docutils (==0.18.1) ; extra == 'ci'
+Requires-Dist: flake8-docstrings (==1.6.0) ; extra == 'ci'
+Requires-Dist: flake8-rst-docstrings (==0.2.6) ; extra == 'ci'
+Requires-Dist: hypothesis[numpy,pytest] (==6.48.2) ; extra == 'ci'
+Requires-Dist: pybind11 (==2.9.2) ; extra == 'ci'
+Requires-Dist: pypi-oldest-requirements (==2021.2.0) ; extra == 'ci'
+Requires-Dist: pyqt5-qt5 (==5.15.2) ; extra == 'ci'
+Requires-Dist: pyqt5 (==5.15.7) ; extra == 'ci'
+Requires-Dist: pytest (==7.1.2) ; extra == 'ci'
+Requires-Dist: pytest-cov (==3.0.0) ; extra == 'ci'
+Requires-Dist: pytest-memprof (==0.2.0) ; extra == 'ci'
+Requires-Dist: pytest-parallel (==0.1.1) ; extra == 'ci'
+Requires-Dist: pytest-regressions (==2.3.1) ; extra == 'ci'
+Requires-Dist: pytest-xdist (==2.5.0) ; extra == 'ci'
+Requires-Dist: readme-renderer[md] (==35.0) ; extra == 'ci'
+Requires-Dist: rstcheck (==6.0.0.post1) ; extra == 'ci'
+Requires-Dist: scikit-fem (==6.0.0) ; extra == 'ci'
+Requires-Dist: twine (==3.8.0) ; extra == 'ci'
+Provides-Extra: docs
+Requires-Dist: sphinx (>=5.0) ; extra == 'docs'
+Requires-Dist: matplotlib ; extra == 'docs'
+Requires-Dist: PySide2 (>=5.15.2.1) ; extra == 'docs'
+Requires-Dist: ipyparallel (>=6.2.5) ; extra == 'docs'
+Requires-Dist: python-slugify ; extra == 'docs'
+Requires-Dist: ipywidgets (<8,>7) ; extra == 'docs'
+Requires-Dist: sphinx-qt-documentation ; extra == 'docs'
+Requires-Dist: bash-kernel ; extra == 'docs'
+Requires-Dist: sphinx-material ; extra == 'docs'
+Requires-Dist: sphinxcontrib-bibtex ; extra == 'docs'
+Requires-Dist: sphinx-autoapi (>=1.8) ; extra == 'docs'
+Requires-Dist: myst-nb (>=0.16) ; extra == 'docs'
+Requires-Dist: qtpy (>2.0) ; extra == 'docs'
+Requires-Dist: packaging ; extra == 'docs'
+Requires-Dist: diskcache ; extra == 'docs'
+Requires-Dist: typer ; extra == 'docs'
+Requires-Dist: click ; extra == 'docs'
+Requires-Dist: scipy (>=1.3) ; (python_version < "3.8") and extra == 'docs'
+Requires-Dist: numpy (<1.24,>=1.17.5) ; (python_version == "3.8") and extra == 'docs'
+Requires-Dist: scipy (>=1.3.3) ; (python_version == "3.8") and extra == 'docs'
+Requires-Dist: numpy (<1.24,>=1.19.4) ; (python_version >= "3.9") and extra == 'docs'
+Requires-Dist: scipy (>=1.5.4) ; (python_version >= "3.9") and extra == 'docs'
+Provides-Extra: full
+Requires-Dist: pygments ; extra == 'full'
+Requires-Dist: qtpy (>2.0) ; extra == 'full'
+Requires-Dist: lxml ; extra == 'full'
+Requires-Dist: gmsh ; extra == 'full'
+Requires-Dist: pythreejs ; extra == 'full'
+Requires-Dist: pyevtk ; extra == 'full'
+Requires-Dist: pytest (==7.1.2) ; extra == 'full'
+Requires-Dist: sphinx (>=5.0) ; extra == 'full'
+Requires-Dist: torch ; extra == 'full'
+Requires-Dist: click ; extra == 'full'
+Requires-Dist: ipyparallel (>=6.2.5) ; extra == 'full'
+Requires-Dist: pillow ; extra == 'full'
+Requires-Dist: python-slugify ; extra == 'full'
+Requires-Dist: meshio (>=4.4) ; extra == 'full'
+Requires-Dist: diskcache ; extra == 'full'
+Requires-Dist: jupyter-client (>=7.0.6) ; extra == 'full'
+Requires-Dist: myst-nb (>=0.16) ; extra == 'full'
+Requires-Dist: pyopengl ; extra == 'full'
+Requires-Dist: sphinx-autoapi (>=1.8) ; extra == 'full'
+Requires-Dist: PySide2 (>=5.15.2.1) ; extra == 'full'
+Requires-Dist: sphinxcontrib-bibtex ; extra == 'full'
+Requires-Dist: sphinx-material ; extra == 'full'
+Requires-Dist: sympy ; extra == 'full'
+Requires-Dist: sphinx-qt-documentation ; extra == 'full'
+Requires-Dist: bash-kernel ; extra == 'full'
+Requires-Dist: jupyter-contrib-nbextensions ; extra == 'full'
+Requires-Dist: matplotlib ; extra == 'full'
+Requires-Dist: typer ; extra == 'full'
+Requires-Dist: ipython (>=5.0) ; extra == 'full'
+Requires-Dist: packaging ; extra == 'full'
+Requires-Dist: ipywidgets (<8,>7) ; extra == 'full'
+Requires-Dist: xmljson ; extra == 'full'
+Requires-Dist: dune-xt (>=2021.1.3) ; (platform_system == "Linux" and platform_machine == "x86_64") and extra == 'full'
+Requires-Dist: dune-gdt (>=2021.1.3) ; (platform_system == "Linux" and platform_machine == "x86_64") and extra == 'full'
+Requires-Dist: scipy (>=1.3.3) ; (python_version == "3.8") and extra == 'full'
+Requires-Dist: numpy (<1.24,>=1.17.5) ; (python_version == "3.8") and extra == 'full'
+Provides-Extra: io
+Requires-Dist: pyevtk ; extra == 'io'
+Requires-Dist: xmljson ; extra == 'io'
+Requires-Dist: meshio (>=4.4) ; extra == 'io'
+Requires-Dist: lxml ; extra == 'io'
+Requires-Dist: gmsh ; extra == 'io'
+
+![pyMOR Logo](./logo/pymor_logo.svg)
+
+pyMOR - Model Order Reduction with Python
+=========================================
+
+pyMOR is a software library for building model order
+reduction applications with the Python programming language. Implemented
+algorithms include reduced basis methods for parametric linear and non-linear
+problems, as well as system-theoretic methods such as balanced truncation or
+IRKA (Iterative Rational Krylov Algorithm).  All algorithms in pyMOR are
+formulated in terms of abstract interfaces for seamless integration with
+external PDE (Partial Differential Equation) solver packages.  Moreover, pure
+Python implementations of FEM (Finite Element Method) and FVM (Finite Volume
+Method) discretizations using the NumPy/SciPy scientific computing stack are
+provided for getting started quickly.
+
+[![PyPI](https://img.shields.io/pypi/pyversions/pymor.svg)](https://pypi.python.org/pypi/pymor)
+[![PyPI](https://img.shields.io/pypi/v/pymor.svg)](https://pypi.python.org/pypi/pymor)
+[![Docs](https://img.shields.io/endpoint?url=https%3A%2F%2Fdocs.pymor.org%2Fbadge.json)](https://docs.pymor.org/)
+[![DOI](https://zenodo.org/badge/9220688.svg)](https://zenodo.org/badge/latestdoi/9220688)
+[![GitLab Pipeline](https://zivgitlab.uni-muenster.de/pymor/pymor/badges/main/pipeline.svg)](https://zivgitlab.uni-muenster.de/pymor/pymor/commits/main)
+[![Conda Tests](https://github.com/pymor/pymor/actions/workflows/conda_tests.yml/badge.svg)](https://github.com/pymor/pymor/actions/workflows/conda_tests.yml)
+[![codecov](https://codecov.io/gh/pymor/pymor/branch/main/graph/badge.svg)](https://codecov.io/gh/pymor/pymor)
+
+License
+-------
+
+Copyright pyMOR developers and contributors. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
+following conditions are met:
+
+* Redistributions of source code must retain the above copyright notice, this list of conditions and the following
+  disclaimer.
+* Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following
+  disclaimer in the documentation and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+The following files contain source code originating from other open source software projects:
+
+* docs/source/pymordocstring.py  (sphinxcontrib-napoleon)
+* src/pymor/algorithms/genericsolvers.py (SciPy)
+
+See these files for more information.
+
+Citing
+------
+
+If you use pyMOR for academic work, please consider citing our
+[publication](https://doi.org/10.1137/15M1026614):
+
+    R. Milk, S. Rave, F. Schindler
+    pyMOR - Generic Algorithms and Interfaces for Model Order Reduction
+    SIAM J. Sci. Comput., 38(5), pp. S194--S216, 2016
+
+Installation via pip
+--------------------
+
+We recommend installation of pyMOR in a [virtual environment](https://virtualenv.pypa.io/en/latest/).
+
+pyMOR can easily be installed with the [pip](https://pip.pypa.io/en/stable/)
+command:
+
+    pip install --upgrade pip  # make sure that pip is reasonably new
+    pip install pymor[full]
+
+(Please note that pip versions prior to 21.1 might have problems resolving all dependencies)
+
+This will install the latest release of pyMOR on your system with most optional
+dependencies.
+For Linux we provide binary wheels, so no further system packages should
+be required. Use
+
+    pip install pymor
+
+for an installation with minimal dependencies.
+There are some optional packages not included with `pymor[full]`
+because they need additional setup on your system:
+
+* for support of MPI distributed models and parallelization of greedy algorithms
+  (requires MPI development headers and a C compiler):
+
+      pip install mpi4py
+
+* dense matrix equation solver for system-theoretic MOR methods, required for
+  H-infinity norm calculation (requires OpenBLAS headers and a Fortran
+  compiler):
+
+      pip install slycot
+
+* dense and sparse matrix equation solver for system-theoretic MOR methods
+  (other backends available):
+  * from [source](https://gitlab.mpi-magdeburg.mpg.de/mess/cmess-releases)
+    (recommended)
+  * using a [wheel](https://www.mpi-magdeburg.mpg.de/projects/mess)
+
+If you are not operating in a virtual environment, you can pass the optional `--user`
+argument to pip. pyMOR will then only be installed for your
+local user, not requiring administrator privileges.
+
+To install the latest development version of pyMOR, execute
+
+    pip install git+https://github.com/pymor/pymor#egg=pymor[full]
+
+which will require that the [git](https://git-scm.com/) version control system is
+installed on your system.
+
+From time to time, the main branch of pyMOR undergoes major changes and things
+might break (this is usually announced in our [discussion forum](https://github.com/pymor/pymor/discussions)),
+so you might prefer to install pyMOR from the current release branch:
+
+    pip install git+https://github.com/pymor/pymor@2022.1.x#egg=pymor[full]
+
+Release branches will always stay stable and will only receive bugfix commits
+after the corresponding release has been made.
+
+Installation via conda
+----------------------
+
+pyMOR can be installed using `conda` by running
+
+    conda install -c conda-forge pymor
+
+Documentation
+-------------
+
+Documentation is available [online](https://docs.pymor.org/)
+or you can build it yourself from inside the root directory of the pyMOR source tree
+by executing:
+
+    make docs
+
+This will generate HTML documentation in `docs/_build/html`.
+
+Useful Links
+------------
+
+* [Latest Changelog](https://docs.pymor.org/latest/release_notes/all.html)
+* [Getting Started](https://docs.pymor.org/latest/getting_started.html)
+* [Dependencies](https://github.com/pymor/pymor/blob/2022.1.x/requirements.txt)
+
+External PDE solvers
+--------------------
+
+pyMOR has been designed with easy integration of external PDE solvers
+in mind.
+
+A basic approach is to use the solver only to generate high-dimensional
+system matrices which are then read by pyMOR from disk (`pymor.discretizers.disk`).
+Another possibility is to steer the solver via an appropriate network
+protocol.
+
+Whenever possible, we recommend to recompile the solver as a
+Python extension module which gives pyMOR direct access to the solver without
+any communication overhead. A basic example using
+[pybind11](https://github.com/pybind/pybind11) can be found in
+`src/pymordemos/minimal_cpp_demo`. Moreover,
+we provide bindings for the following solver libraries:
+
+* [FEniCS](https://fenicsproject.org)
+
+    MPI-compatible wrapper classes for dolfin linear algebra data structures are
+    shipped with pyMOR (`pymor.bindings.fenics`).
+    For an example see `pymordemos.thermalblock`, `pymordemos.thermalblock_simple`.
+    It is tested using FEniCS version 2019.1.0.
+
+* [deal.II](https://dealii.org)
+
+    Python bindings and pyMOR wrapper classes can be found
+    [here](https://github.com/pymor/pymor-deal.II).
+
+* [NGSolve](https://ngsolve.org)
+
+    Wrapper classes for the NGSolve finite element library are shipped with pyMOR
+    (`pymor.bindings.ngsolve`).
+    For an example see `pymordemos.thermalblock_simple`.
+    It is tested using NGSolve version v6.2.2104.
+
+Do not hesitate to contact
+[us](https://github.com/pymor/pymor/discussions) if you
+need help with the integration of your PDE solver.
+
+External Matrix Equation Solvers
+--------------------------------
+
+pyMOR also provides bindings to matrix equation solvers (in `pymor.bindings`),
+which are needed for the system-theoretic methods and need to be installed
+separately. Bindings for the following solver libraries are included:
+
+* [Py-M.E.S.S.](https://www.mpi-magdeburg.mpg.de/projects/mess)
+
+    The Matrix Equation Sparse Solver library is intended for solving large sparse matrix equations (`pymor.bindings.pymess`).
+
+* [Slycot](https://github.com/python-control/Slycot)
+
+    Python wrapper for the Subroutine Library in Systems and Control Theory (SLICOT) is also used for Hardy norm computations (`pymor.bindings.slycot`).
+
+Environments for pyMOR Development and Tests
+-----------------------------------------------
+
+Please see the [Developer Documentation](https://docs.pymor.org/latest/developer_docs.html).
+
+Contact
+-------
+
+Should you have any questions regarding pyMOR or wish to contribute,
+do not hesitate to contact us via our GitHub discussions forum:
+
+<https://github.com/pymor/pymor/discussions>
