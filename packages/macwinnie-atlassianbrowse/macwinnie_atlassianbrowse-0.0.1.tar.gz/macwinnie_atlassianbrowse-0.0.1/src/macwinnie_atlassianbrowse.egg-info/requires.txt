@@ -1,0 +1,6 @@
+macwinnie_pyhelpers
+pandas
+args
+requests
+selenium
+beautifulsoup4
