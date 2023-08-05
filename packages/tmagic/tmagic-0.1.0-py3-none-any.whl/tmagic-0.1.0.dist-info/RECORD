@@ -1,0 +1,10 @@
+tmagic/__init__.py,sha256=icb2JRiyRsM-Bi_iJWuF6aQOYTjWxizSluOOsSYFTZ4,127
+tmagic/exercise.py,sha256=RD5R4pOD1TXrhDTGwsbOXAZq6yegEUyglAvT-J8QE7w,5030
+tmagic/harness.py,sha256=oDiGwUFSnEwSgCwkF9s-7M_Gkf5jpo_IUHemFWR7ds4,2563
+tmagic/pyharness.py,sha256=A8gZgYDqFXy-KLWqZy7Nj3n0UZ0Ci7E5HUY0LOGTqHo,4332
+tmagic/rharness.py,sha256=hmt-Lr_m5PAH_xifUkoBtrJfuzrDlH9RqQDYaGq4k2E,6944
+tmagic-0.1.0.dist-info/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+tmagic-0.1.0.dist-info/METADATA,sha256=lXB7iKZHZ44g6S5qMtqubhnhX6jCq8YvFR3JkuU0ObE,4226
+tmagic-0.1.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+tmagic-0.1.0.dist-info/top_level.txt,sha256=mZBrtOd8FnGES1zLxIjS9i9HAfb7dLlQHwk2LcG8i-o,7
+tmagic-0.1.0.dist-info/RECORD,,
