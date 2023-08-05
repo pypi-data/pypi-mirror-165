@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: geopmpy
+Version: 2.0.0
+Summary: GEOPM - Global Extensible Open Power Manager
+Home-page: https://geopm.github.io
+Author: Christopher Cantalupo <christopher.m.cantalupo@intel.com>, Brad Geltz <brad.geltz@intel.com>
+License: BSD-3-Clause
+Download-URL: http://download.opensuse.org/repositories/home:/cmcantalupo:/geopm/
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Natural Language :: English
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: System :: Distributed Computing
+Classifier: Topic :: System :: Hardware :: Symmetric Multi-processing
+Classifier: Topic :: System :: Power (UPS)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.6
+License-File: COPYING
+License-File: AUTHORS
+Requires-Dist: cffi (>=1.15.0)
+Requires-Dist: cycler (>=0.11.0)
+Requires-Dist: natsort (>=8.1.0)
+Requires-Dist: numpy (>=1.19.5)
+Requires-Dist: pandas (>=1.1.5)
+Requires-Dist: psutil (>=5.9.0)
+Requires-Dist: pyyaml (>=6.0.0)
+Requires-Dist: setuptools (>=59.6.0)
+Requires-Dist: tables (>=3.7.0)
+Requires-Dist: geopmdpy
+
+The python front end to the GEOPM runtime.  Includes scripts for
+launching the runtime and postprocessing the output data.
+
