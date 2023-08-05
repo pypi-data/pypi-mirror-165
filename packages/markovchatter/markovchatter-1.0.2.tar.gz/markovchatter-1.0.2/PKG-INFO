@@ -1,0 +1,155 @@
+Metadata-Version: 2.1
+Name: markovchatter
+Version: 1.0.2
+Summary: Easy Markov chain text generator.
+Home-page: https://bitbucket.org/emptypage/markovchatter/
+Author: Masaaki Shibata
+Author-email: mshibata@emptypage.jp
+License: MIT
+Keywords: markov,chain,text
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Markovchatter
+
+Easy Markov chain text generator. (CLI / Web API)
+
+Developed on: [emptypage / markovchatter — Bitbucket](https://bitbucket.org/emptypage/markovchatter/)
+
+## Table of contents
+
+- [Install](#install)
+- [Usage](#usage)
+  - [Use as a command](#use-as-a-command)
+  - [Run as a Web API server](#run-as-a-web-api-server)
+  - [Options details](#options-details)
+- [Docker image](#docker-image)
+- [License](#license)
+- [Thanks](#thanks)
+
+## Install
+
+```
+pip install markovchatter
+```
+
+This installs The `markovchatter` Python module and the `markovchatter` command line program. You can run the program like both
+
+```
+$ python3 -m markovchatter ...
+```
+
+and
+
+```
+$ markovchatter ...
+```
+
+
+## Usage
+
+### Use as a command
+
+```
+usage: markovchatter run [-h] [-l] [-d] file [file ...]
+
+positional arguments:
+  file              text file(s) to learn
+
+options:
+  -h, --help        show this help message and exit
+  -l, --new-line    files are in new-line text format
+  -d, --no-divider  join words without spaces
+```
+
+Example:
+
+```
+$ markovchatter run source.txt
+Enim ut sem nulla pharetra diam sit amet risus nullam eget felis eget nunc scelerisque viverra.
+```
+
+(Of course, the output text is depends on your source.)
+
+### Run as a Web API server
+
+```
+usage: markovchatter.py server [-h] [-l] [-d] [-p PORT] file [file ...]
+
+positional arguments:
+  file                  text file(s) to learn
+
+options:
+  -h, --help            show this help message and exit
+  -l, --new-line        files are in new-line text format
+  -d, --no-divider      join words without spaces
+  -p PORT, --port PORT  listen port number [8080]
+```
+
+Start the server:
+
+```
+$ markovchatter server source.txt
+ * Serving Flask app 'markovchatter'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://...:8080
+ Press CTRL+C to quit
+```
+
+And send `GET` request to `http://hostname:port/text` in another terminal:
+
+```
+$ curl http://localhost:8080/text
+Cursus sit amet consectetur adipiscing elit ut aliquam purus sit amet nisl suscipit adipiscing bibendum est.
+```
+
+(The response text is depends on your source, again.)
+
+### Options details
+
+#### Files
+
+The files given to the program is the source text file, which contain sentences it uses as the model. They are normally well-punctuationed text which terminates its sentence with a dot ('.').
+
+If your source text is not suitable for the style; e.g. languages doesn't use dots for its period, you can use new-line format text file with `--new-line` option. See option details bellow.
+
+#### `-l`, `--new-line`
+
+If this option is set, given files are treated as new-line formatted text; which has each sentence on a newline. This is suitable for languages that doesn't use dot (".") for its sentence period.
+
+The feature comes from a library implementation:
+
+> Markovify works best with large, well-punctuated texts. If your text does not use .s to delineate sentences, put each sentence on a newline, and use the markovify.NewlineText class instead of markovify.Text class.
+>
+> &mdash; [jsvine/markovify: A simple, extensible Markov chain generator.](https://github.com/jsvine/markovify)
+
+When the option is set, marcovchatter uses `markovify.NewlineText` class instead of `markovify.Text` as described above.
+
+#### `-d`, `--no-divider`
+
+The markovify library suppose languages that separate words with spaces, and its output is in the same way too. This is annoying when the language doesn't use spaces for its [word divider](https://en.wikipedia.org/wiki/Word_divider). When the option is set, markovchatter joins words *without* spaces; which is more suitable for languages like Japanese.
+
+## Docker image
+
+The image containing Linux that the library is already installed is also [availabe on Docker Hub](https://hub.docker.com/r/emptypage/markovchatter).
+
+```
+$ docker run --rm -v $(pwd)/text:/etc/markovchatter emptypage/markovchatter run /etc/markovchatter/dict.txt
+Vel fringilla est ullamcorper eget nulla facilisi cras fermentum odio eu feugiat pretium nibh ipsum consequat.
+```
+
+Notice that the image doesn't contain any source text file so you have to explicitly mount it and specify its path as an argument.
+
+## License
+
+MIT. See LICENSE.
+
+## Thanks
+
+This program uses [markovify by Jeremy Singer-Vine](https://github.com/jsvine/markovify) and [Flask by Armin Ronacher](https://flask.palletsprojects.com/en/2.2.x/). Thank you for these libraries and its developers.

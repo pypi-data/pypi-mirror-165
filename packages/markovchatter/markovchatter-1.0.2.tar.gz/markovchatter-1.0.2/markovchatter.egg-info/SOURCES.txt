@@ -1,0 +1,11 @@
+LICENSE
+README.md
+markovchatter.py
+pyproject.toml
+setup.cfg
+markovchatter.egg-info/PKG-INFO
+markovchatter.egg-info/SOURCES.txt
+markovchatter.egg-info/dependency_links.txt
+markovchatter.egg-info/entry_points.txt
+markovchatter.egg-info/requires.txt
+markovchatter.egg-info/top_level.txt
