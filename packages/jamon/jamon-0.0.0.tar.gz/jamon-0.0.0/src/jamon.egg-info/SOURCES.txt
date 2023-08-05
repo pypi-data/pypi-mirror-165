@@ -1,0 +1,10 @@
+LICENSE
+README.rst
+pyproject.toml
+setup.cfg
+setup.py
+src/jamon.egg-info/PKG-INFO
+src/jamon.egg-info/SOURCES.txt
+src/jamon.egg-info/dependency_links.txt
+src/jamon.egg-info/requires.txt
+src/jamon.egg-info/top_level.txt

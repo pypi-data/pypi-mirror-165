@@ -1,0 +1,3 @@
+numpy>=1.22.3
+xarray>=2022.6.0
+xtensors>=0.0.5
