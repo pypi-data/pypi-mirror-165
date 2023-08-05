@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: ghsu
+Version: 0.1.0
+Summary: An automated Github account setup tool.
+Home-page: http://packages.python.org/ghsu
+Author: Karime Maamari
+Author-email: maamari@usc.edu
+License: MIT
+Keywords: github account setup
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.6
+License-File: LICENSE
+
+UNKNOWN
+

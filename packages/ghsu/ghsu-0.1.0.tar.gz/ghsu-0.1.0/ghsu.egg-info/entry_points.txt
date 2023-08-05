@@ -1,0 +1,5 @@
+[console_scripts]
+ghsu = ghsu.ghsu:main
+ghsurepo = ghsu.ghsu:create_repo
+ghsussh = ghsu.ghsu:set_ssh
+
