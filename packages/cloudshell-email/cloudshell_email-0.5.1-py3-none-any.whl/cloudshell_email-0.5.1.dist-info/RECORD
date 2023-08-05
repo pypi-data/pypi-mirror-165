@@ -1,0 +1,15 @@
+cloudshell/__init__.py,sha256=dByFIWyaplDqvXUB4hdVAqSR5A9VLc6wQAYlBeQRw2Q,75
+cloudshell/email/__init__.py,sha256=RpVNEyQVpupChjJqFpP0WsBiI920UZd9yv2uzfCKR_Q,155
+cloudshell/email/constants.py,sha256=g7hLCutiKy-ymsQk8uYK1ztiMUeaHra3P96Ldo0bbfY,928
+cloudshell/email/email_config.py,sha256=w9ffacHvzRllXqgGpo99RorK08wPfx8lSKSfBMb8I8E,2350
+cloudshell/email/email_helpers.py,sha256=CLZVoLHFDydISbzTWgfCweLG98GCCTONsPH4s8EXQok,1136
+cloudshell/email/email_service.py,sha256=m0j2bZCnH4d8wbBiA--f0SDxEpamxlLP7p1eKFTOXrQ,10644
+cloudshell/email/email_templates/default_error.htm,sha256=GeUMV_SmXUAkgzQca2iQr8ibx9j8Q3zgy1OFFWw0lRw,4250
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/test_email_config.py,sha256=DIL0Uih0B2bmtjgbXKCh09KnSCA4s1krkmfyFPiCVnc,5931
+test/test_email_service.py,sha256=wU2bLC7-DK-7gwcrlSabRq1-qq8MrvOvWFjJyI7_L6k,22442
+test/test_helpers.py,sha256=HiqGMSsfpOTjtI_nJCJWOUSb54uFilV4a3zhKVgn27I,1795
+cloudshell_email-0.5.1.dist-info/METADATA,sha256=abD5acKc52V0Un37_VpIPJDItjDcVl9599bjXwFGss8,535
+cloudshell_email-0.5.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+cloudshell_email-0.5.1.dist-info/top_level.txt,sha256=dfxrWcgGUXZfwTaho1pzRqeRbPeZNTYVvJEPK2u7fBU,16
+cloudshell_email-0.5.1.dist-info/RECORD,,
