@@ -1,0 +1,2 @@
+[console_scripts]
+pdf_information = pdf_information.__main__:main
