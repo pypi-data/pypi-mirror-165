@@ -1,0 +1,10 @@
+numpy
+scipy
+h5py
+xyz_py>=5.0.0
+angmom_suite>=1.10.0
+hpc_suite
+matplotlib
+findiff
+gaussian_suite>=1.8.0
+phonopy
