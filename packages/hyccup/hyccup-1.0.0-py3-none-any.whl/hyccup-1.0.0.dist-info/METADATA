@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: hyccup
+Version: 1.0.0
+Summary: A port of Clojure Hiccup for Hy
+Home-page: https://github.com/Arkelis/hyccup
+License: MIT
+Keywords: template,html,hiccup,hy
+Author: Guillaume Fayard
+Author-email: guillaume.fayard@pycolore.fr
+Requires-Python: >=3.9,<3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: astor (>=0.8.1,<0.9.0)
+Requires-Dist: hy (==0.24.0)
+Requires-Dist: hyrule
+Requires-Dist: toolz (>=0.11.1,<0.12.0)
+Project-URL: Documentation, https://hyccup.pycolore.fr
+Project-URL: Repository, https://github.com/Arkelis/hyccup
+Description-Content-Type: text/markdown
+
+# Hyccup
+
+[![PyPi](https://img.shields.io/pypi/v/hyccup?label=PyPi)](https://pypi.org/project/hyccup/)
+[![Python Version](https://img.shields.io/pypi/pyversions/hyccup?label=Python)](https://pypi.org/project/hyccup/)
+[![CI](https://github.com/Arkelis/hyccup/actions/workflows/ci.yml/badge.svg)](https://github.com/Arkelis/hyccup/actions/workflows/ci.yml)
+[![CD](https://github.com/Arkelis/hyccup/actions/workflows/cd.yml/badge.svg)](https://github.com/Arkelis/hyccup/actions/workflows/cd.yml)
+
+Hyccup is a port of [Hiccup](https://github.com/weavejester/hiccup)
+for [Hy](https://github.com/hylang/hy), a Lisp embed in Python.
+
+It allows you to represent HTML into data structure and to dump it.
+
+```hy
+=> (import hyccup.core [html])
+=> (html ['div {'class "my-class" 'id "my-id"} "Hello Hyccup"])
+"<div class=\"my-class\" id=\"my-id\">Hello Hyccup</div>"
+```
+
+Hyccup can also be used in Python:
+
+```pycon
+>>> from hyccup.core import html
+>>> html(['div', {'class': 'my-class', 'id': 'my-id'}, 'Hello Hyccup'])
+'<div class="my-class" id="my-id">Hello Hyccup</div>'
+```
+
+More information in the [documentation](https://hyccup.pycolore.fr).
+
