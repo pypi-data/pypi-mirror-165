@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README
+pyproject.toml
+setup.py
+src/uberduct/__init__.py
+src/uberduct/uberduct.py
+src/uberduct.egg-info/PKG-INFO
+src/uberduct.egg-info/SOURCES.txt
+src/uberduct.egg-info/dependency_links.txt
+src/uberduct.egg-info/top_level.txt
+src/uberduct/dict/cmudict.dict
+src/uberduct/dict/cmudict.phones
+src/uberduct/dict/cmudict.symbols
+src/uberduct/dict/cmudict.vp
