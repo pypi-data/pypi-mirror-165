@@ -1,0 +1,7 @@
+midiutil
+numpy
+matplotlib
+seaborn
+deap
+aenum
+pytest
