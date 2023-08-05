@@ -1,0 +1,7 @@
+# These entries are in LAMMPS "metal" units:
+#   H = eV*Angstroms^eta; Zi, Zj = |e| (e = electronic charge);
+#   r1s, r4s, rc, r0, xi = Angstroms;
+#   D = eV*Angstroms^4; W = eV*Angstroms^6; B = eV;
+#   other quantities are unitless
+#
+# element1  element2  element3
