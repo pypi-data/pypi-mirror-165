@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+fastbm25/__init__.py
+fastbm25/fastbm25.py
+fastbm25.egg-info/PKG-INFO
+fastbm25.egg-info/SOURCES.txt
+fastbm25.egg-info/dependency_links.txt
+fastbm25.egg-info/top_level.txt
