@@ -1,0 +1,7 @@
+dep_postgres/__init__.py,sha256=JS-SIxQfEQSjvafVPZgQ7mJqy-5QSo07GB4ATcd7LB4,3965
+pyproject.toml,sha256=UElRzOG1_tzPYqwfygCCKuCwE-83jJwrRhtwMfJXlMs,850
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_dep_module_postgres.py,sha256=deD9wqEw1z70w4bHmUNw-oVafX15RZVrjstEhd-myWI,100
+dep_module_postgres-0.4.17.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+dep_module_postgres-0.4.17.dist-info/METADATA,sha256=cdgeZqyqiRxE2vyGcMlXhPVO3GMOi_c4PM3DzF4wNOo,385
+dep_module_postgres-0.4.17.dist-info/RECORD,,
