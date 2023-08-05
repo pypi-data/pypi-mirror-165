@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: napari-jflowcyte
+Version: 0.0.8
+Summary: A plugin to read, write, gate, and compensate flow cytometry (fcs) files.
+Home-page: https://github.com/jayunruh/napari_jflowcyte
+Author: Jay Unruh
+License: GNU GPLv2
+Requires-Python: >=3.6
+Requires-Dist: matplotlib
+Requires-Dist: napari
+Requires-Dist: numpy
+Requires-Dist: numba
+Requires-Dist: pandas
+Requires-Dist: magicgui
+
