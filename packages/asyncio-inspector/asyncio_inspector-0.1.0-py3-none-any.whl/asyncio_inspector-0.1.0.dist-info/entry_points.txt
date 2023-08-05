@@ -1,0 +1,2 @@
+[console_scripts]
+asyncio_inspector = asyncio_inspector.__main__:main
