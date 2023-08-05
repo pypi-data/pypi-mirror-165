@@ -1,0 +1,14 @@
+Click>=6.0
+scml>=0.5.5
+torch
+pulp
+xgboost
+
+[:python_version < "3.7"]
+dataclasses
+
+[:sys_platform != "darwin"]
+tensorflow
+
+[:sys_platform == "darwin"]
+tensorflow-macos
