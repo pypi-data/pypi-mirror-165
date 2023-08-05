@@ -1,0 +1,6 @@
+[console_scripts]
+comtool-i18n = COMTool.i18n:cli_main
+
+[gui_scripts]
+comtool = COMTool.Main:main
+
