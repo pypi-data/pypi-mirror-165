@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+YBestwishes/__init__.py
+YBestwishes/wish.py
+YBestwishes.egg-info/PKG-INFO
+YBestwishes.egg-info/SOURCES.txt
+YBestwishes.egg-info/dependency_links.txt
+YBestwishes.egg-info/top_level.txt
