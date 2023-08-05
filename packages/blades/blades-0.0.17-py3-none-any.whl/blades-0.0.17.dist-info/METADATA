@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: blades
+Version: 0.0.17
+Summary: Blades: A simulator for Byzantine-robust federated Learning with Attacks and Defenses Experimental Simulation
+Home-page: https://bladesteam.github.io/
+Author: Blades Team
+Author-email: shenghui.li@it.uu.se
+License: MIT license
+Keywords: Federated learning
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+License-File: LICENSE.md
+Requires-Dist: torch (>=1.10.2)
+Requires-Dist: torchvision (>=0.11.3)
+Requires-Dist: numpy (>=1.19.4)
+Requires-Dist: scipy (>=1.5.4)
+Requires-Dist: ray (>=1.0.0)
+Requires-Dist: sklearn (>=0.0)
+Requires-Dist: scikit-learn (>=1.0.2)
+Requires-Dist: matplotlib (>=3.4.1)
+Requires-Dist: requests (>=2.27.1)
+Requires-Dist: setuptools (~=58.0.4)
+
+UNKNOWN
+
