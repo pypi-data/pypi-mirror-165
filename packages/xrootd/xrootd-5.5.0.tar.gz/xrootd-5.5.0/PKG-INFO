@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: xrootd
+Version: 5.5.0
+Summary: XRootD with Python bindings
+Home-page: http://xrootd.org
+Author: XRootD Developers
+Author-email: xrootd-dev@slac.stanford.edu
+License: LGPLv3+
+Platform: UNKNOWN
+License-File: LICENSE
+License-File: COPYING
+License-File: COPYING.BSD
+License-File: COPYING.LGPL
+
+XRootD with Python bindings
+
