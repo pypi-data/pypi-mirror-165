@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: PyThaiTTS
+Version: 0.1.1
+Summary: Open Source Thai Text-to-speech library in Python
+Home-page: https://github.com/pythainlp/pythaitts
+Author: Wannaphong
+Author-email: wannaphong@yahoo.com
+License: Apache Software License 2.0
+Project-URL: Documentation, https://github.com/pythainlp/pythaitts
+Project-URL: Source, https://github.com/pythainlp/pythaitts
+Project-URL: Bug Reports, https://github.com/pythainlp/pythaitts/issues
+Keywords: Thai,NLP,natural language processing,text analytics,text processing,localization,computational linguistics,text-to-speech
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Text Processing
+Classifier: Topic :: Text Processing :: General
+Classifier: Topic :: Text Processing :: Linguistic
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# PyThaiTTS
+Open Source Thai Text-to-speech library in Python
+
+License: [Apache-2.0 License](https://github.com/PyThaiNLP/pythaitts/blob/main/LICENSE)
+
+## Install
+
+Install by pip:
+
+> pip install pythaitts
+
+## Usage
+
+```python
+from pythaitts import TTS
+
+tts = TTS()
+file = tts.tts("ภาษาไทย ง่าย มาก มาก") # It will get temp file path.
+wave = tts.tts("ภาษาไทย ง่าย มาก มาก",return_type="waveform") # It will get waveform.
+```
+
+You can see more at [https://pythainlp.github.io/PyThaiTTS/](https://pythainlp.github.io/PyThaiTTS/).

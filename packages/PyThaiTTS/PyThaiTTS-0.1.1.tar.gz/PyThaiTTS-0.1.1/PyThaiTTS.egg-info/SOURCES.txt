@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+PyThaiTTS.egg-info/PKG-INFO
+PyThaiTTS.egg-info/SOURCES.txt
+PyThaiTTS.egg-info/dependency_links.txt
+PyThaiTTS.egg-info/not-zip-safe
+PyThaiTTS.egg-info/requires.txt
+PyThaiTTS.egg-info/top_level.txt
+pythaitts/__init__.py
+pythaitts/pretrained/__init__.py
+pythaitts/pretrained/khanomtan_tts.py
