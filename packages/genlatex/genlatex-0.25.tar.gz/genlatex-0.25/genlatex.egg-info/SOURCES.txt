@@ -1,0 +1,16 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+genlatex/__init__.py
+genlatex/convertOldStyle.py
+genlatex/formatters.py
+genlatex/genLatex.py
+genlatex/texData.py
+genlatex.egg-info/PKG-INFO
+genlatex.egg-info/SOURCES.txt
+genlatex.egg-info/dependency_links.txt
+genlatex.egg-info/entry_points.txt
+genlatex.egg-info/not-zip-safe
+genlatex.egg-info/requires.txt
+genlatex.egg-info/top_level.txt
