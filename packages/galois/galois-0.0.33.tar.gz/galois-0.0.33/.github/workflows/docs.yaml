@@ -1,0 +1,33 @@
+name: Docs
+
+on:
+  # push:
+  #   branches:
+  #     - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+
+      - name: Upgrade pip
+        run: python3 -m pip install --upgrade pip
+
+      - name: Install the documentation dependencies
+        run: python3 -m pip install -r docs/requirements.txt
+
+      - name: Install the `galois` package
+        run: python3 -m pip install .
+
+      - name: Run Sphinx to build docs
+        run: sphinx-build -b dirhtml -v docs/ docs/build/
