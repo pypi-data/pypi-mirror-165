@@ -1,0 +1,16 @@
+LICENSE
+README.rst
+setup.py
+tofipa/__init__.py
+tofipa/_btclient.py
+tofipa/_cli.py
+tofipa/_combinator.py
+tofipa/_config.py
+tofipa/_errors.py
+tofipa/_location.py
+tofipa.egg-info/PKG-INFO
+tofipa.egg-info/SOURCES.txt
+tofipa.egg-info/dependency_links.txt
+tofipa.egg-info/entry_points.txt
+tofipa.egg-info/requires.txt
+tofipa.egg-info/top_level.txt
