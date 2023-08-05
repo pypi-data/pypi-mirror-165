@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: concordance
+Version: 0.0.2
+Summary: Dilbilimcilerin ihtiyaçları doğrultusunda geliştirilen concordance aracı
+Home-page: UNKNOWN
+Author: İlker Atagün
+Author-email: <ilker.atagun@gmail.com>
+License: UNKNOWN
+Keywords: python,nlp,linguistics,concordance
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+Requires-Dist: click (==7.1.2)
+Requires-Dist: joblib (==1.0.1)
+Requires-Dist: nltk (==3.5)
+Requires-Dist: pandas
+Requires-Dist: regex (==2020.11.13)
+Requires-Dist: tqdm (==4.59.0)
+
+Concordance aranan sözcüğün önündeki ve arkasındaki dört sözcüğe bakıp excel dosyasına aktaran fonksiyon 
+
+
