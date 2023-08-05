@@ -1,0 +1,4 @@
+requests==2.26.0
+marshmallow-dataclass==8.5.3
+marshmallow-enum==1.5.1
+marshmallow==3.14.1
