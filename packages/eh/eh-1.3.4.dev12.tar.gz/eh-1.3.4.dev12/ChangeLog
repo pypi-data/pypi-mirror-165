@@ -1,0 +1,69 @@
+CHANGES
+=======
+
+* Pinning the requirements
+* Updated tests to meet coverage requirements
+* Added selective topics in the eh config
+* Fixed unit tests
+* Removed stray print
+* Version 1.4.3
+* Added fuzzywuzzy and meta search
+
+1.3.3
+-----
+
+* Version 1.3.3
+* Fixed the separator bug again
+* Fixed separator bug
+* Removed /subjects requirement on repos
+
+v1.3.0
+------
+
+* Releasing 1.3.0
+* Updated readme for new multi-repo support
+* Added travis
+* Adding unit tests and some docs
+* Started refactor project
+* Version 1.2.4 - updated docs
+* Updated readme and list outputs
+* Updated to 1.2.2
+* Updated list format + summaries
+* Fixed missing arg bug
+* Added subdirectory support
+* Updated eh.md
+* Updated readme
+* Updated changelog?
+* Added autocomplete and docs for it
+* Python 3 support
+* Updated list to be sorted
+* Markdown description
+* Fixed description
+* set to version 1.0.0
+* Updated readme
+* Updated changelog
+* Fixed pyyaml security issue
+* Updated changelog and tags
+* updated version
+* Removed eh poop
+* Allowed MD comment format for subject header
+* Updated list method and readme
+* Updated cli help for update
+* Updated cli help
+* Updated readme
+* Updated eh help
+* Added subject support from common repo
+* Adding some help for pypi
+* Added find
+* Added grep reminder
+* Fixed the docker and vim subjects
+* Added new vim and docker subjects
+* Removed readme.rst and added readme.md
+* Created help and updated readme
+* Fixed bash subject markdown due to mdv bug
+* Changed the way that subjects are loaded and made
+* Renamed project to eh
+* Set version to 0.1.0
+* Added bash contrib subject
+* Initial commit
+* Initial commit
