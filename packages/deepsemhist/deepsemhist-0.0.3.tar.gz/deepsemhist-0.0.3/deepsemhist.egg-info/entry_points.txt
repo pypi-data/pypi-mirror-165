@@ -1,0 +1,4 @@
+[console_scripts]
+segpatch = deepsemhist.segpatch:main
+segslide = deepsemhist.segslide:main
+

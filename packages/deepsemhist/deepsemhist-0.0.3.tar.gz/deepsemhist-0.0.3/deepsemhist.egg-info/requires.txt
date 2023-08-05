@@ -1,0 +1,7 @@
+numpy
+joblib
+Pillow
+matplotlib
+seaborn
+pandas
+pyrsistent
