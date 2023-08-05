@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: Mathician
+Version: 1.4.8
+Summary: Math package
+Home-page: https://github.com/ArjunSharda/Mathician
+Author: Arjun Sharda
+Author-email: sharda.aj17@gmail.com
+License: MIT
+Keywords: mathician
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+License-File: LICENSE.txt
+
+Mathician is a Python package, free, and is a simple plugin for math. It has simple math functions for the package.
+
+Change Log
+
+Version 1.4.8
+
