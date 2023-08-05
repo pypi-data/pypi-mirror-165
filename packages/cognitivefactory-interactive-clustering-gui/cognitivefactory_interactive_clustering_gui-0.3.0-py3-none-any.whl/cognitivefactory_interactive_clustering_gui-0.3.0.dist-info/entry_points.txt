@@ -1,0 +1,3 @@
+[console_scripts]
+cognitivefactory-interactive-clustering-gui=cognitivefactory.interactive_clustering_gui.cli:main
+
