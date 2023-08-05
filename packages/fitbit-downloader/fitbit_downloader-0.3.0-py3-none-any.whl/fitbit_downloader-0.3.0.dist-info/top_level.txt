@@ -1,0 +1,3 @@
+examples
+fitbit_downloader
+tests
