@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: dqueue
+Version: 0.1.1
+Summary: python通用延迟消息队列
+Home-page: https://github.com/mic1on/delay_queue
+Keywords: 延迟队列,消息队列
+Author: miclon
+Author-email: jcnd@163.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: AMQPStorm (>=2.10.5,<3.0.0)
+Requires-Dist: redis (>=4.3.4,<5.0.0)
+Description-Content-Type: text/markdown
+
+# delay_queue
+
+Warning！！！
