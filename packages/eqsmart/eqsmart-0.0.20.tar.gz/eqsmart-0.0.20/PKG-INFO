@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: eqsmart
+Version: 0.0.20
+Summary: 微服务框架
+Home-page: https://github.com/enqiangjing/eqsmart
+Author: enqiang
+Author-email: enqiangjing@163.com
+License: GPL-2.0
+Keywords: eqsmart,微服务,eqlink
+Platform: any
+License-File: LICENSE
+
+http server, 支持解析文件上传的post请求
