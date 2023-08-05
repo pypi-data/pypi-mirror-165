@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: msur-packages
+Version: 1.0.2
+Home-page: https://github.com/Photon94/msur-services.git
+Author: Photon94
+Author-email: 299792458.photon.94@gmail.com
+License: MIT
+Project-URL: Source, https://github.com/Photon94/msur-services.git
+License-File: LICENSE
+
+
+MSU Robotics Team services
+
+Package provide services for working msur-packages `msur-packages`_
+
+.. _msur-packages: https://github.com/Photon94/msur-packages.git
