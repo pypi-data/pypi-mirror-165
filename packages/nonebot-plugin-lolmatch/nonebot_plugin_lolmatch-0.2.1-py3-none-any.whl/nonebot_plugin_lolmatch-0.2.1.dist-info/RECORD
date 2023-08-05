@@ -1,0 +1,9 @@
+nonebot_plugin_lolmatch/__init__.py,sha256=_PYk0Ed8-gJDSCy4-tRFevqpikyTziK7sJxJizGPsYY,6345
+nonebot_plugin_lolmatch/data_source.py,sha256=zqgdOouv2EJtXdPr0yLP4Lc0KK4Fty3bMHW8Q3mnlKM,15547
+nonebot_plugin_lolmatch/model.py,sha256=yjjptahC0lyRxVFJ5nefv-GaC7Jfe3p2D6EOo_Pl1Iw,825
+nonebot_plugin_lolmatch/short.css,sha256=UwkaJ-Lv4_VXJERDZQgep9vCO796HEIzihlsld27oeU,10393
+nonebot_plugin_lolmatch/template.py,sha256=VBDvjYR_gvRqjMWDOM3A3hHaxOcyIt7Yuma-EEcM57U,39815
+nonebot_plugin_lolmatch-0.2.1.dist-info/LICENSE,sha256=hDPbfNPbtlDLvEHG6sUV5ph5Af0NQsXRqVS5tfPT4Po,1089
+nonebot_plugin_lolmatch-0.2.1.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+nonebot_plugin_lolmatch-0.2.1.dist-info/METADATA,sha256=-mVi5TuSv55V4cW5M0EK_aypEGvGNWtivfb309gedQA,2832
+nonebot_plugin_lolmatch-0.2.1.dist-info/RECORD,,
