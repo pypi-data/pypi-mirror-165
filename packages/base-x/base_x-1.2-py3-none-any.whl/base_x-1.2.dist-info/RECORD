@@ -1,0 +1,17 @@
+src/basex/__init__.py,sha256=dHZauoyFtNQuGcVmKy6MZqVm-dmPzM1Yc0mTzd0RAeA,4773
+src/basex/alphabet.py,sha256=LHnJz1W2JFNBgKTxoffaKsw78VJlsuy2IhiDN3vNmPY,617
+src/basex/base11.py,sha256=c5NPZGC2Ph1_yNPXBU_6sgUNVCwc-eWvWxLjywtKXUM,92
+src/basex/base2.py,sha256=q6ybeProlg1E4Ed2jIv02NdeNQechjfTrstnhQy10Fw,89
+src/basex/base32.py,sha256=sBlrEFuRef2PxdySNWNkYrZrXD8xitvlzFVjEKgJBcY,92
+src/basex/base32z.py,sha256=mxvrJXnYAwzWeo4vhOMxlQYipWb7yiwDPgJ1CcZ1Bzg,95
+src/basex/base36.py,sha256=HvrYVzI6QAvZjvwebgJUXBcuK7bCzZlmOpvORsQCe3o,92
+src/basex/base58.py,sha256=2wiTXf297AYuETOhSyagoREMiSaBVpYEVL9PLYrNokI,92
+src/basex/base62.py,sha256=8sdUjyWCeVb4GK3wUV_izd04Mjccrh8wbFta8uN4rEE,92
+src/basex/base64.py,sha256=0RUjm__iTxCEn1bl5wXxOonNJ-QEKq02SNR3RilSCXk,92
+src/basex/base67.py,sha256=0uZcWbjSUR5ckDXKSaJ1VaF8uYP-GR13FKT2OL-rz20,92
+src/basex/base8.py,sha256=gcUghYphPY7YvRtxFyQD6TNdP75Ef1s2G6VZ6D663y4,90
+base_x-1.2.dist-info/METADATA,sha256=VlhcxiyjjynbMPPBpJs_RV61HbOo1AAbuJiXFIOOyM0,3155
+base_x-1.2.dist-info/WHEEL,sha256=09RFlvY3aVzvCNk4AXPZt-N-AI7GY_KktGsTb2IqIBU,86
+base_x-1.2.dist-info/licenses/AUTHORS,sha256=I-uJO7tu5_x7RoA7-TjXFmi3VKfEg0DLnMF63O-OeDE,58
+base_x-1.2.dist-info/licenses/LICENSE,sha256=HlfhwCDY5miqpQOcajWMtwZgisa_oHZ4BBi3PpUCO2U,1061
+base_x-1.2.dist-info/RECORD,,
