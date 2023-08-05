@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: uselessmodule
+Version: 1.0.8.post3
+Summary: Don't use this module, it's useless.
+Home-page: UNKNOWN
+Author: koreann
+Author-email: pgw9486@kakao.com
+License: UNKNOWN
+Platform: UNKNOWN
+
+Warning : Maker's country doesn't use English, so maker is not good at English.
+
+Commands
+
+deletestr(a,b) : delete b from a.
+
+deletesymbol(a) : delete symbol from a.
+
+add(a,b) : If type a and b is int or float, this will plus a and b.But if a or b is str, this will add text.
+
+lastdigit(a) : This will returns you last digit of a.nndellastobj(a) : This will delete last object of a.
+
+average(a) : This will returns you average of a.nnmode(a) : This will returns you mode of a.
+
+median(a) : This will returns you median of a.
+
+deviation(a) : This will returns you devitation of a.
+
+variance(a) : This will returns you variance of a.
+
+standdevia(a) : This will returns you standard deviation of a.
+
+triangle(a,b) : This will returns you the area of ab. This is also same with a×b/2.
+
+square(a,b) : This will returns you the area of ab. This is also same with a×b.
+
+circle(a) : This will returns you the area of a. You have to insert half radius at a. This is also same with a*a*pi.
+
+sphere(a) : This will returns you the area of sphere. You have to insert half radius at a. This is also same with a*a*pi/3*4.
+
