@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: watermark-painter
+Version: 0.0.3
+Summary: Add Image or Text Watermark to Documents
+Home-page: https://github.com/HostenWang/watermark-painter
+Author: HostenWang
+Author-email: hostenwang@foxmail.com
+Maintainer: 
+Maintainer-email: 
+License: Apache License, Version 2.0
+Keywords: windows office word python image watermark
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Win32 (MS Windows)
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Microsoft
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Office/Business :: Office Suites
+Classifier: Topic :: Text Editors :: Word Processors
+Description-Content-Type: text/markdown
+Requires-Dist: pywin32 (>=304)
+
+# watermark-painter
+
+add image watermark to documents
+
+## Dependence
+
+| name   | value                  | comment |
+| ------ | ---------------------- | ------- |
+| OS     | Windows                |         |
+| Office | Above Office 2007 Base |         |
+| Python | 3                      |         |
+
+## Usage
+
+install from pip
+```shell
+pip install watermark-painter
+```
+
+use in code
+```python
+img_filepath = 'd:\\home\\hosten\\pictures\\mark.png'
+doc_filepath = 'd:\\home\\hosten\\documents\\aboutme.docx'
+wp = WatermarkPainter(img_filepath)
+wp.draw_on_doc(doc_filepath)
+```
