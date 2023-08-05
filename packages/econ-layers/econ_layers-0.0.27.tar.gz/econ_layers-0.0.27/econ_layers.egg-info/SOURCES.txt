@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+econ_layers/__init__.py
+econ_layers/callbacks.py
+econ_layers/econ_layers.py
+econ_layers/layers.py
+econ_layers/utilities.py
+econ_layers.egg-info/PKG-INFO
+econ_layers.egg-info/SOURCES.txt
+econ_layers.egg-info/dependency_links.txt
+econ_layers.egg-info/not-zip-safe
+econ_layers.egg-info/requires.txt
+econ_layers.egg-info/top_level.txt
