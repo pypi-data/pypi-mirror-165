@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: pytest-api-soup
+Version: 0.0.1
+Summary: A modern python boilerplate.
+Author: Indi Harrington
+Author-email: indigoharrington@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
