@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+agc/agc.py
+agc/agc.egg-info/PKG-INFO
+agc/agc.egg-info/SOURCES.txt
+agc/agc.egg-info/dependency_links.txt
+agc/agc.egg-info/requires.txt
+agc/agc.egg-info/top_level.txt
