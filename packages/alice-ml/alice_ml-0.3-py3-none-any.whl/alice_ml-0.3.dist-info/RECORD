@@ -1,0 +1,11 @@
+alice_ml/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+alice_ml/features.py,sha256=vbvipUnq2JqoXYkzOK_8bhGyYpl9B4cO41w_2VnQWx8,8673
+alice_ml/models.py,sha256=vLe1Hl13aqlUQxMKprbRARusbwA-OPiH-MaBzvq75ps,805
+alice_ml/preprocessing.py,sha256=fQrhYQ_bA4fhvEpzYqma3pVYvmox9N3CFgcTC6zWggk,12372
+alice_ml/utils.py,sha256=Z2PGaKJP4tGSAJuUsHdY9dbGOyRAnz1VYw4MMbXNTfg,698
+alice_ml/vis.py,sha256=leAXcjHxXgkmFoR0XU8zIgdRsgoUCo3ugEiOpyABWL8,2283
+alice_ml-0.3.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+alice_ml-0.3.dist-info/METADATA,sha256=70qATZ9gdm0l6Ds3cLk1fu3yZdV-DpMNxXwSqVtucds,275
+alice_ml-0.3.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+alice_ml-0.3.dist-info/top_level.txt,sha256=NvlIxAzG4ROVpxREz7Re4_gBTWMIGLz_TT-k6eGxgko,9
+alice_ml-0.3.dist-info/RECORD,,
