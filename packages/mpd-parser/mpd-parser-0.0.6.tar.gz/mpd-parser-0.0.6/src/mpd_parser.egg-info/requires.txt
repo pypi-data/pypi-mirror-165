@@ -1,0 +1,6 @@
+lxml
+
+[dev]
+pylint
+pytest
+mpegdash
