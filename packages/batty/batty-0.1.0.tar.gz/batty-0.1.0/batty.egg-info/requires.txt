@@ -1,0 +1,7 @@
+numpy
+juliacall
+uncertainties
+awkward
+pygtc
+tqdm
+corner
