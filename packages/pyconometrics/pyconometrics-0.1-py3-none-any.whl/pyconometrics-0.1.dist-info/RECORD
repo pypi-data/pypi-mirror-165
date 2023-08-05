@@ -1,0 +1,9 @@
+pyconometrics/__init__.py,sha256=pqoPmlRNSmT2mno5SPZcRsoAAAjVnYYZshRg9RJebRI,81
+pyconometrics/data.py,sha256=uWgDRrM39brT8mI9-VjvQw-namSdFrczhNpdXNYkHxY,1100
+pyconometrics/ma.py,sha256=pZ9acK1sPODPAZqSFNTA7B6TY_LY7Y8TDqv4k6QyMkM,5737
+pyconometrics/metric.py,sha256=OjXnP3rnhVLsVH6cdwjPIwRjwDRMYXOC0KFTpXNcwMs,2901
+pyconometrics/model.py,sha256=lekEj328p8Aa_ejooh22a06f2LJYtR6Nmu2kd0YwGfQ,2361
+pyconometrics-0.1.dist-info/METADATA,sha256=KVQ6kxOMXPBW_8mCOuhyXWYHRk9SOtxmlhr6H1aI-Hs,3897
+pyconometrics-0.1.dist-info/WHEEL,sha256=09RFlvY3aVzvCNk4AXPZt-N-AI7GY_KktGsTb2IqIBU,86
+pyconometrics-0.1.dist-info/licenses/LICENSE,sha256=tev0--BOB6Uir6Ar80woj1xqUKd5mu3jaILqCN8ygpg,1092
+pyconometrics-0.1.dist-info/RECORD,,
