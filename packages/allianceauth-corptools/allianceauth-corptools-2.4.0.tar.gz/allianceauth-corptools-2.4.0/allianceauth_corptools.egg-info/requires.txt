@@ -1,0 +1,5 @@
+allianceauth>=2.9.0
+django-esi>=2.0.0
+django-model-utils
+networkx
+django-ninja>=0.19.1
