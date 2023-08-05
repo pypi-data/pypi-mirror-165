@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: testscribe
+Version: 0.0.1a1
+Summary: Unit test automation tool
+Author: Ray Yang
+Author-email: ruiguo@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: PyYAML (>=5.2)
+Requires-Dist: typer
+Description-Content-Type: text/markdown
+
+# TestScribe for Python
+
+Unit test made easy
+
+A tool to make python unit testing easier by automating the boring and repetitive parts.
+
+
