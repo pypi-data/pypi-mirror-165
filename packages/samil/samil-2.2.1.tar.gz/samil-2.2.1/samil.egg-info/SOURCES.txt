@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+samil/__init__.py
+samil/cli.py
+samil/influx.py
+samil/inverter.py
+samil/inverterutil.py
+samil/pvoutput.py
+samil/statustypes.py
+samil.egg-info/PKG-INFO
+samil.egg-info/SOURCES.txt
+samil.egg-info/dependency_links.txt
+samil.egg-info/entry_points.txt
+samil.egg-info/requires.txt
+samil.egg-info/top_level.txt
