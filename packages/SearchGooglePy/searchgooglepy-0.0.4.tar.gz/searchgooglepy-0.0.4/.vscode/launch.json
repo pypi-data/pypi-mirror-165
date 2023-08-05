@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "name": "DebugPy: Debug SearchGooglePy test file.",
+            "type": "python",
+            "request": "launch",
+            "program": "test.py",
+            "console": "integratedTerminal",
+        }
+    ]
+}

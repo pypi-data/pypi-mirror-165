@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="icon" href="./assets/icon/icon_32.svg">
+    <title>SearchGooglePy</title>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <button class="navbar-btns" id="home_btn">Home</button>
+        <button class="navbar-btns" id="credits_btn">Credits</button>
+        <button class="navbar-btns" id="install_btn">Install</button>
+        <button class="navbar-btns" id="use_btn">Use</button>
+    </nav>
+    <h1 class="main-title" id="main_title">    <img src="./assets/icon/icon_48.svg" alt="">SearchGooglePy</h1>
+    <div class="project-desc" id="project_desc">
+        <p class="paragraphs">SearchGooglePy is a simple (un-official) Google Search API under python.</p>
+    </div>
+    <div class="documentation-desc" id="documentation_desc">
+        <p class="paragraphs">This page will help you to <a href="#install">install</a> and get a <a href="#use">quick start</a></p>
+    </div>
+    <section id="install">
+        <h2 class="sections-titles">Install</h2>
+        <p class="paragraphs">To install SearchGooglePy follow the steps behavior:</p>
+        <h3 class="sections-titles">Windows:</h3>
+        <ul>
+            <li>Open the <tt>Command Prompt</tt> or the <tt>Powershell</tt> app.</li>
+        </ul>
+        <ul>
+            <li>type on your prompt the command behavior:</li>
+        </ul>
+        <pre><a style="color: rgb(255, 255, 0)">pip</a> <a style="color: rgb(0, 115, 255);">install</a> SearchGooglePy</pre>
+        <h3 class="sections-titles">Linux / MacOS:</h3>
+        <ul>
+            <li>Open the <tt>Shell</tt></li>
+        </ul>
+        <ul>
+            <li>type on your prompt the command behavior:</li>
+        </ul>
+        <pre>python3 <a style="color: rgb(0, 115, 255);">-</a>m <a style="color: rgb(255, 255, 0);">pip</a> <a style="color: rgb(0, 115, 255);">install</a> SearchGooglePy</pre>
+    </section>
+    <section id="use">
+        <h2 class="sections-titles">Use</h2>
+        <p class="paragraphs">A quick piece of code to get a quick start:</p>
+        <pre><a style="color: rgb(197, 134, 192);">import</a> <a style="color: rgb(0, 255, 0);">searchgpy</a><br><br><a style="color: rgb(0, 115, 255);">google_search_engine</a> = <a style="color: rgb(0, 255, 0);">searchgpy</a>.<a style="color: rgb(0, 255, 0);">GoogleSearchEngine</a><a style="color: rgb(255, 255, 0);">()</a><br><a style="color: rgb(0, 115, 255);">google_search_engine</a>.<a style="color: rgb(255, 255, 0);">search_text(</a><a style="color: rgb(206 145 120);">'Hello World !'</a><a style="color: rgb(255, 255, 0);">)</a></pre>
+        <p class="paragraphs">This piece of code will search on google the sentence : <tt>Hello World !</tt>. Take a look at the <a href="https://boubajoker.github.io/SearchGooglePy/?Link=Table_Of_Content">Table of Content</a> for more content !</p>
+    </section>
+    <section id="table_of_content">
+        <h2 class="sections-titles">Table Of Content</h2>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td><a>SearchGooglePy</a></td>
+                <td><p>The SuperClass that initialize the module.</p></td>
+            </tr>
+            <tr>
+                <td><a>search_text</a></td>
+                <td><p>The <tt>search_text</tt> function is the function that is used to search on Google's (<tt>www.google.com</tt>) web-engine.</p></td>
+            </tr>
+            <tr>
+                <td><a>search_img</a></td>
+                <td><p>The <tt>search_img</tt> function has the role to search images on Google's (<tt>www.google.com</tt>) web-engine.</p></td>
+            </tr>
+            <tr>
+                <td><a>search_news</a></td>
+                <td><p>The <tt>search_news</tt> function has the role to search news on Google's (<tt>www.google.com</tt>) web-engine.</p></td>
+            </tr>
+        </table>
+    </section>
+    <footer>
+        <h2>SearchGooglePy</h2>
+        <p class="paragraphs">!WARNNING!: This isn't an official google web-site it is just an API under python.</p>
+    </footer>
+    <script src="./JS/navbar.js"></script>
+    <script src="./JS/app.js"></script>
+</body>
+</html>
