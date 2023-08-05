@@ -1,0 +1,1063 @@
+"""
+SoftWare Heritage persistent Identifier
+"""
+scalar SWHID
+
+"""
+ISO-8601 encoded date string
+"""
+scalar DateTime
+
+"""
+Content identifier in the form hash-type:hash-value
+"""
+scalar ContentHash
+
+"""
+Object with an id
+"""
+interface Node {
+  """
+  Id of the object. This is for caching purpose and
+  should not be used outside the GraphQL API
+  """
+  id: ID!
+}
+
+"""
+SWH merkle node object with a SWHID
+"""
+interface MerkleNode {
+  """
+  SWHID of the object
+  """
+  swhid: SWHID!
+}
+
+"""
+Information about pagination
+"""
+type PageInfo {
+  """
+  Cursor to request the next page in the connection
+  """
+  endCursor: String
+
+  """
+  Are there more pages in the connection?
+  """
+  hasNextPage: Boolean!
+}
+
+"""
+Binary strings; different encodings
+"""
+type BinaryString {
+  """
+  Utf-8 encoded value, any non Unicode character will be replaced
+  """
+  text: String
+
+  """
+  base64 encoded value
+  """
+  base64: String
+}
+
+
+"""
+Connection to origins
+"""
+type OriginConnection {
+  """
+  List of origin edges
+  """
+  edges: [OriginEdge]
+
+  """
+  List of origin objects
+  """
+  nodes: [Origin]
+
+  """
+  Information for pagination
+  """
+  pageInfo: PageInfo!
+
+  """
+  Total number of origin objects in the connection
+  """
+  totalCount: Int
+}
+
+"""
+Edge in origin connection
+"""
+type OriginEdge {
+  """
+  Cursor to request the next page after the item
+  """
+  cursor: String!
+
+  """
+  Origin object
+  """
+  node: Origin
+}
+
+"""
+A software origin object
+"""
+type Origin implements Node {
+  """
+  Unique identifier
+  """
+  id: ID!
+
+  """
+  Origin URL
+  """
+  url: String!
+
+  """
+  Connection to all the visit objects for the origin
+  """
+  visits(
+    """
+    Returns the first _n_ elements from the list
+    """
+    first: Int!
+
+    """
+    Returns the page after this cursor
+    """
+    after: String
+  ): VisitConnection!
+
+  """
+  Latest visit object for the origin
+  """
+  latestVisit: Visit
+
+  """
+  Connection to all the snapshots for the origin
+  """
+  snapshots(
+    """
+    Returns the first _n_ elements from the list
+    """
+    first: Int!
+
+    """
+    Returns the page after this cursor
+    """
+    after: String
+  ): SnapshotConnection
+}
+
+"""
+Connection to origin visits
+"""
+type VisitConnection {
+  """
+  List of visit edges
+  """
+  edges: [VisitEdge]
+
+  """
+  List of visit objects
+  """
+  nodes: [Visit]
+
+  """
+  Information for pagination
+  """
+  pageInfo: PageInfo!
+
+  """
+  Total number of visit objects in the connection
+  """
+  totalCount: Int
+}
+
+"""
+Edge in origin visit connection
+"""
+type VisitEdge {
+  """
+  Cursor to request the next page after the item
+  """
+  cursor: String!
+
+  """
+  Visit object
+  """
+  node: Visit
+}
+
+"""
+An origin visit object
+"""
+type Visit implements Node {
+  """
+  Unique identifier
+  """
+  id: ID!
+
+  """
+  Visit number for the origin
+  """
+  visitId: Int
+
+  """
+  Visit date ISO-8601 encoded
+  """
+  date: DateTime!
+
+  """
+  Type of the origin visited. Eg: git/hg/svn/tar/deb
+  """
+  type: String
+
+  """
+  Connection to all the status objects for the visit
+  """
+  status(
+    """
+    Returns the first _n_ elements from the list
+    """
+    first: Int
+
+    """
+    Returns the page after this cursor
+    """
+    after: String
+  ): VisitStatusConnection
+
+  """
+  Latest status object for the Visit
+  """
+  latestStatus: VisitStatus
+}
+
+"""
+Connection to visit status
+"""
+type VisitStatusConnection {
+  """
+  List of visit status edges
+  """
+  edges: [VisitStatusEdge]
+
+  """
+  List of visit status objects
+  """
+  nodes: [VisitStatus]
+
+  """
+  Information for pagination
+  """
+  pageInfo: PageInfo!
+
+  """
+  Total number of visit status objects in the connection
+  """
+  totalCount: Int
+}
+
+"""
+Edge in visit status connection
+"""
+type VisitStatusEdge {
+  """
+  Cursor to request the next page after the item
+  """
+  cursor: String!
+
+  """
+  Visit status object
+  """
+  node: VisitStatus
+}
+
+"""
+A visit status object
+"""
+type VisitStatus {
+  """
+  Status string of the visit (either full, partial or ongoing)
+  """
+  status: String!
+
+  """
+  ISO-8601 encoded date string
+  """
+  date: DateTime!
+
+  """
+  Snapshot object
+  """
+  snapshot: Snapshot
+
+  """
+  Type of the origin visited. Eg: git/hg/svn/tar/deb
+  """
+  type: String
+}
+
+"""
+Connection to snapshots
+"""
+type SnapshotConnection {
+  """
+  List of snapshot edges
+  """
+  edges: [SnapshotEdge]
+
+  """
+  List of snapshot objects
+  """
+  nodes: [Snapshot]
+
+  """
+  Information for pagination
+  """
+  pageInfo: PageInfo!
+
+  """
+  Total number of snapshot objects in the connection
+  """
+  totalCount: Int
+}
+
+"""
+Edge in snapshot connection
+"""
+type SnapshotEdge {
+  """
+  Cursor to request the next page after the item
+  """
+  cursor: String!
+
+  """
+  Snapshot object
+  """
+  node: Snapshot
+}
+
+"""
+A snapshot object
+"""
+type Snapshot implements MerkleNode & Node {
+  """
+  Unique identifier
+  """
+  id: ID!
+
+  """
+  SWHID of the snapshot object
+  """
+  swhid: SWHID!
+
+  """
+  Connection to all the snapshot branches
+  """
+  branches(
+    """
+    Returns the first _n_ elements from the list
+    """
+    first: Int!
+
+    """
+    Returns the page after this cursor
+    """
+    after: String
+
+    """
+    Filter by branch target types
+    """
+    types: [BranchTargetType]
+
+    """
+    Filter by branch name
+    """
+    nameInclude: String
+  ): BranchConnection
+}
+
+"""
+Connection to snapshot branches
+"""
+type BranchConnection {
+  """
+  List of branch edges
+  """
+  edges: [BranchConnectionEdge]
+
+  """
+  List of branch objects
+  """
+  nodes: [Branch]
+
+  """
+  Information for pagination
+  """
+  pageInfo: PageInfo!
+
+  """
+  Total number of branch objects in the connection
+  """
+  totalCount: Int
+}
+
+"""
+Edge in snapshot branch connection
+"""
+type BranchConnectionEdge {
+  """
+  Cursor to request the next page after the item
+  """
+  cursor: String!
+
+  """
+  Branch object
+  """
+  node: Branch
+}
+
+"""
+A user object
+"""
+type Person {
+  """
+  User's email address
+  """
+  email: BinaryString
+
+  """
+  User's name
+  """
+  name: BinaryString
+
+  """
+  User's full name
+  """
+  fullname: BinaryString
+}
+
+"""
+Possible branch target objects
+"""
+union BranchTarget = Revision | Release | Branch | Content | Directory | Snapshot
+
+"""
+Possible Branch target types
+"""
+enum BranchTargetType {
+  revision
+  release
+  alias
+  content
+  directory
+  snapshot
+}
+
+"""
+A snapshot branch object
+"""
+type Branch {
+  """
+  Branch name
+  """
+  name: BinaryString
+
+  """
+  Type of Branch target
+  """
+  type: BranchTargetType
+
+  """
+  Branch target object
+  """
+  target: BranchTarget
+}
+
+"""
+Connection to revisions
+"""
+type RevisionConnection {
+  """
+  List of revision edges
+  """
+  edges: [RevisionEdge]
+
+  """
+  List of revision objects
+  """
+  nodes: [Revision]
+
+  """
+  Information for pagination
+  """
+  pageInfo: PageInfo!
+
+  """
+  Total number of revision objects in the connection
+  """
+  totalCount: Int
+}
+
+"""
+Edge in revision connection
+"""
+type RevisionEdge {
+  """
+  Cursor to request the next page after the item
+  """
+  cursor: String!
+
+  """
+  Revision object
+  """
+  node: Revision
+}
+
+"""
+A revision object
+"""
+type Revision implements MerkleNode & Node {
+  """
+  Unique identifier
+  """
+  id: ID!
+
+  """
+  SWHID of the revision object
+  """
+  swhid: SWHID!
+
+  """
+  Message associated to the revision
+  """
+  message: BinaryString
+
+  """
+  """
+  author: Person
+
+  """
+  """
+  committer: Person
+
+  """
+  Revision date ISO-8601 encoded
+  """
+  date: DateTime
+
+  """
+  Type of the revision, eg: git/hg
+  """
+  type: String
+
+  """
+  The unique directory object that revision points to
+  """
+  directory: Directory
+
+  """
+  Connection to all the parents of the revision
+  """
+  parents(
+    """
+    Returns the first _n_ elements from the list
+    """
+    first: Int
+
+    """
+    Returns the page after this cursor
+    """
+    after: String
+  ): RevisionConnection
+
+  """
+  Connection to all the revisions heading to this one
+  aka the commit log
+  """
+  revisionLog(
+    """
+    Returns the first _n_ elements from the list
+    """
+    first: Int!
+
+    """
+    Returns the page after the cursor
+    """
+    after: String
+  ): RevisionConnection
+}
+
+"""
+Possible release target objects
+"""
+union ReleaseTarget = Release | Revision | Directory | Content
+
+"""
+Possible release target types
+"""
+enum ReleaseTargetType {
+  release
+  revision
+  content
+  directory
+}
+
+"""
+A release object
+"""
+type Release implements MerkleNode & Node {
+  """
+  Unique identifier
+  """
+  id: ID!
+
+  """
+  SWHID of the release object
+  """
+  swhid: SWHID!
+
+  """
+  The name of the release
+  """
+  name: BinaryString
+
+  """
+  The message associated to the release
+  """
+  message: BinaryString
+
+  """
+  """
+  author: Person
+
+  """
+  Release date ISO-8601 encoded
+  """
+  date: DateTime
+
+  """
+  Type of release target
+  """
+  targetType: ReleaseTargetType
+
+  """
+  Release target object
+  """
+  target: ReleaseTarget
+}
+
+"""
+Connection to directory entries
+"""
+type DirectoryEntryConnection {
+  """
+  List of directory entry edges
+  """
+  edges: [DirectoryEntryEdge]
+
+  """
+  List of directory entry objects
+  """
+  nodes: [DirectoryEntry]
+
+  """
+  Information for pagination
+  """
+  pageInfo: PageInfo!
+
+  """
+  Total number of directory entry objects in the connection
+  """
+  totalCount: Int
+}
+
+"""
+Edge in directory entry connection
+"""
+type DirectoryEntryEdge {
+  """
+  Cursor to request the next page after the item
+  """
+  cursor: String!
+
+  """
+  Directory entry object
+  """
+  node: DirectoryEntry
+}
+
+"""
+Possible directory entry target objects
+"""
+union DirectoryEntryTarget = Directory | Content
+
+"""
+Possible directory entry types
+"""
+enum DirectoryEntryType {
+  dir
+  file
+  rev
+}
+
+"""
+A directory entry object
+"""
+type DirectoryEntry {
+  """
+  The directory entry name
+  """
+  name: BinaryString
+
+  """
+  Directory entry object type; can be file, dir or rev
+  """
+  type: DirectoryEntryType
+
+  """
+  Directory entry target object
+  """
+  target: DirectoryEntryTarget
+}
+
+"""
+A directory object
+"""
+type Directory implements MerkleNode & Node {
+  """
+  Unique identifier
+  """
+  id: ID!
+
+  """
+  SWHID of the directory object
+  """
+  swhid: SWHID!
+
+  """
+  Connection to the directory entries
+  """
+  entries(
+    """
+    Returns the first _n_ elements from the list
+    """
+    first: Int
+
+    """
+    Returns the page after this cursor
+    """
+    after: String
+  ): DirectoryEntryConnection
+}
+
+"""
+An object with different content checksums
+"""
+type ContentChecksum {
+  blake2s256: String
+  sha1: String
+  sha1_git: String
+  sha256: String
+}
+
+"""
+Object with different content data representations
+"""
+type ContentData {
+  """
+  URL to download the file data
+  """
+  url: String
+}
+
+type ContentFileType {
+  """
+  Detected content encoding
+  """
+  encoding: String
+
+  """
+  Detected MIME type of the content
+  """
+  mimetype: String
+}
+
+type ContentLanguage {
+  """
+  Detected programming language if any
+  """
+  lang: String
+}
+
+type ContentLicense {
+  """
+  Array of strings containing the detected license names
+  """
+  licenses: [String]
+}
+
+"""
+A content object
+"""
+type Content implements MerkleNode & Node {
+  """
+  Unique identifier
+  """
+  id: ID!
+
+  """
+  SWHID of the content object
+  """
+  swhid: SWHID!
+
+  """
+  Checksums for the content
+  """
+  checksum: ContentChecksum
+
+  """
+  Length of the content in bytes
+  """
+  length: Int
+
+  """
+  Content status, visible or hidden
+  """
+  status: String
+
+  """
+  File content
+  """
+  data: ContentData
+
+  """
+  Information about the content MIME type
+  """
+  fileType: ContentFileType
+
+  """
+  Information about the programming language used in the content
+  """
+  language: ContentLanguage
+
+  """
+  Information about the license of the content
+  """
+  license: ContentLicense
+}
+
+"""
+Connection to SearchResults
+"""
+type SearchResultConnection {
+  """
+  List of SearchResult edges
+  """
+  edges: [SearchResultEdge]
+
+  """
+  List of SearchResult objects
+  """
+  nodes: [SearchResult]
+
+  """
+  Information for pagination
+  """
+  pageInfo: PageInfo!
+
+  """
+  Total number of result objects in the connection
+  """
+  totalCount: Int
+}
+
+"""
+Edge in SearchResult connection
+"""
+type SearchResultEdge {
+  """
+  Cursor to request the next page after the item
+  """
+  cursor: String!
+
+  """
+  SearchResult object
+  """
+  node: SearchResult
+}
+
+union SearchResultTarget = Origin | Revision | Release | Content | Directory | Snapshot
+
+enum SearchResultTargetType {
+  origin
+  revision
+  release
+  content
+  directory
+  snapshot
+}
+
+"""
+A SearchResult object
+"""
+type SearchResult {
+  """
+  Result target type
+  """
+  type: SearchResultTargetType
+
+  """
+  Result target object
+  """
+  target: SearchResultTarget
+}
+
+"""
+The query root of the GraphQL interface.
+"""
+type Query {
+  """
+  Get an origin with its url
+  """
+  origin(
+    """
+    URL of the Origin
+    """
+    url: String!
+  ): Origin
+
+  """
+  Get a Connection to all the origins
+  """
+  origins(
+    """
+    Returns the first _n_ elements from the list
+    """
+    first: Int!
+
+    """
+    Returns the page after the cursor
+    """
+    after: String
+
+    """
+    Filter origins with a URL pattern
+    """
+    urlPattern: String
+  ): OriginConnection
+
+  """
+  Get the visit object with an origin URL and a visit id
+  """
+  visit(
+    """
+    URL of the origin
+    """
+    originUrl: String!
+
+    """
+    Visit id to get
+    """
+    visitId: Int!
+  ): Visit
+
+  """
+  Get the snapshot with a SWHID
+  """
+  snapshot(
+    """
+    SWHID of the snapshot object
+    """
+    swhid: SWHID!
+  ): Snapshot
+
+  """
+  Get the revision with a SWHID
+  """
+  revision(
+    """
+    SWHID of the revision object
+    """
+    swhid: SWHID!
+  ): Revision
+
+  """
+  Get the release with a SWHID
+  """
+  release(
+    """
+    SWHID of the release object
+    """
+    swhid: SWHID!
+  ): Release
+
+  """
+  Get the directory with a SWHID
+  """
+  directory(
+    """
+    SWHID of the directory object
+    """
+    swhid: SWHID!
+  ): Directory
+
+  """
+  Get the content with a SWHID
+  """
+  content(
+    """
+    SWHID of the content object
+    """
+    swhid: SWHID!
+  ): Content
+
+  """
+  Get the content by one or more hashes
+  Use multiple hashes for an accurate result
+  """
+  contentByHash(
+    """
+    List of hashType:hashValue strings
+    """
+    checksums: [ContentHash]!
+  ): Content
+
+  """
+  Resolve the given SWHID to an object
+  """
+  resolveSwhid(
+    """
+    SWHID to look for
+    """
+    swhid: SWHID!
+  ): SearchResultConnection!
+
+  """
+  Search in SWH
+  """
+  search(
+    """
+    String to search for
+    """
+    query: String!
+
+    """
+    Returns the first _n_ elements from the list
+    """
+    first: Int!
+
+    """
+    Returns the page after the cursor
+    """
+    after: String
+  ): SearchResultConnection!
+}
