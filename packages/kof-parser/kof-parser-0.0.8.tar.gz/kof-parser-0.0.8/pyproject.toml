@@ -1,0 +1,53 @@
+[tool.black]
+line-length = 120
+exclude = '''
+/(
+    \.git
+  | venv
+  | \.venv
+  | env
+  | \.env
+  | _build
+  | build
+  | dist
+)/
+'''
+
+[tool.poetry]
+name = "kof-parser"
+version = "0.0.8"
+description = "A KOF file parser. Follows Norkart's KOF 2.0 specification from 2005."
+license = "MIT"
+authors = ["Jostein Leira <jostein@leira.net>", "Magnus Mariero <magnus@neate.no>"]
+maintainers = ["Jostein Leira <jostein@leira.net>", "Magnus Mariero <magnus@neate.no>"]
+readme = "README.md"
+homepage = "https://ngi.no"
+repository = "https://github.com/norwegian-geotechnical-institute/kof-parser"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: GIS",
+]
+packages = [
+    { include = "kof_parser", from="src" },
+]
+
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pydantic = "^1.9.0"
+coordinate-projector = "^0.0.4"
+cchardet = "^2.1.7"
+
+[tool.poetry.dev-dependencies]
+black = "*"
+pytest = "*"
+pytest-cov = "*"
+mypy = "*"
+bandit = "*"
+safety = "*"
+pip-licenses = "*"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
