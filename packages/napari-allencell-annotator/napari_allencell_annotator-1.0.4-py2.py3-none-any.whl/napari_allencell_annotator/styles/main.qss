@@ -1,0 +1,16 @@
+QFrame {
+    min-width = 200px;
+    max-width = 600px
+}
+
+QWidget {
+
+    font-size: 18px
+}
+
+QDialog {
+    font-size: 18px;
+}
+QLabel {
+    font-size: 20px;
+}
