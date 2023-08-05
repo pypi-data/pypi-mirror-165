@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: dwanimes
+Version: 0.1.3
+Summary: Download your anime
+Home-page: https://github.com/jbuendia1y/download-animes
+Author: jbuendia1y (Joaquín Buendía)
+License: UNKNOWN
+Keywords: download,anime
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+![PyPI](https://img.shields.io/pypi/v/dwanimes?color=blue&label=Version&logo=python&style=for-the-badge)
+
+# Download animes
+
+Download any anime from the web with only one command in your PC.
+
+## Instalation
+
+Execute command:
+
+```bash
+pip install dwanimes
+```
+
+## To use CLI
+
+```bash
+dw-animes --help
+dw-animes --name spy-x-family --chapter 1
+```
+
+## To use library
+
+```py
+import pydwanimes
+
+# Directory to save animes
+directory = "/home/my-user/Videos"
+
+# Compose optional loading class
+loading = pydwanimes.loading.tqdm_loading.TqdmLoading()
+
+# Compose site class
+config = {
+    "directory": directory,
+    "loading": loading,
+}
+site = pydwanimes.sites.anime_fenix.AnimeFenix(config)
+
+# Download anime chapter
+site.download_multimedia("spy-x-family", 1)
+```
+
+
