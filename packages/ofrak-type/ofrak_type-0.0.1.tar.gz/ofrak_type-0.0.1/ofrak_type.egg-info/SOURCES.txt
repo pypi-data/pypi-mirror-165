@@ -1,0 +1,8 @@
+MANIFEST.in
+README.md
+setup.py
+ofrak_type/__init__.py
+ofrak_type.egg-info/PKG-INFO
+ofrak_type.egg-info/SOURCES.txt
+ofrak_type.egg-info/dependency_links.txt
+ofrak_type.egg-info/top_level.txt
