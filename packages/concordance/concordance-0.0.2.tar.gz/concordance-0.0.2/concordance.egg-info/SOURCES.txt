@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+concordance/__init__.py
+concordance/concordance.py
+concordance/main.py
+concordance/normalize.py
+concordance.egg-info/PKG-INFO
+concordance.egg-info/SOURCES.txt
+concordance.egg-info/dependency_links.txt
+concordance.egg-info/requires.txt
+concordance.egg-info/top_level.txt
