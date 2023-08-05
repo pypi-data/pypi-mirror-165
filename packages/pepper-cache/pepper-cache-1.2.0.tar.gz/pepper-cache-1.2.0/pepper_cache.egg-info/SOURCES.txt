@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+pepper_cache/__init__.py
+pepper_cache/cache.py
+pepper_cache.egg-info/PKG-INFO
+pepper_cache.egg-info/SOURCES.txt
+pepper_cache.egg-info/dependency_links.txt
+pepper_cache.egg-info/top_level.txt
