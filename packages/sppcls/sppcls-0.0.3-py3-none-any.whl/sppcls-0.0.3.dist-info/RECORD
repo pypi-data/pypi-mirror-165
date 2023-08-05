@@ -1,0 +1,10 @@
+__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sppcls/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sppcls/sppcls.py,sha256=XMq9ey54UspZn_ENRkRufB1DEO6OV4jzcj6ZEXyR79Q,1790
+tokenise/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tokenise/tokenise.py,sha256=OpD_N108ljuPI_9_pxakCBLpq_6BU5K-LDZUZMMssis,1741
+sppcls-0.0.3.dist-info/LICENSE,sha256=oy8Fb0W0LQzAi8q096Kjx7XT7DgtUmt4wvE4VQ_mr-M,1091
+sppcls-0.0.3.dist-info/METADATA,sha256=aiPGNc5SDOMAkZoGbedJ7VDfUG18AhA31MwXCOSUFpI,2806
+sppcls-0.0.3.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+sppcls-0.0.3.dist-info/top_level.txt,sha256=CAc_haiJ3xacGdzas8h--C4OM-xjCMyR2nb3fbIVhZY,25
+sppcls-0.0.3.dist-info/RECORD,,
