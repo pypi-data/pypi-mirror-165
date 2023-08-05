@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: plaid2
+Version: 0.0.7
+Summary: Lumache - Python library for cooks and food lovers.
+Author-email: Graziella <kurtwolfbuilds@gmail.com>
+Requires-Python: >=3.6
+Requires-Dist: requests>=2.18.4
