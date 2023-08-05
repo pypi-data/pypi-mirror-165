@@ -1,0 +1,2 @@
+PyQt5>=5.8
+pyqt-find-text-widget>=0.0.1
