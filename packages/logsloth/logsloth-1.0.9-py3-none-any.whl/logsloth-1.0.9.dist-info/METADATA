@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: logsloth
+Version: 1.0.9
+Summary: logsloth.py python logger
+Home-page: https://github.com/HyundongHwang/logsloth
+Author: hhd2002
+Author-email: h2d2002@naver.com
+License: UNKNOWN
+Keywords: logsloth.py,hhd2002,utility
+Platform: UNKNOWN
+Requires-Python: >=3
+Requires-Dist: colorama
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: requests
+Requires-Dist: tabulate
+Requires-Dist: threaded
+Requires-Dist: maya
+
+UNKNOWN
+
+
