@@ -1,0 +1,14 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+main.py
+requirements.txt
+setup.py
+docs/build/html/_sources/index.rst.txt
+docs/source/conf.py
+src/tiffextract/__init__.py
+tiffextract.egg-info/PKG-INFO
+tiffextract.egg-info/SOURCES.txt
+tiffextract.egg-info/dependency_links.txt
+tiffextract.egg-info/top_level.txt

@@ -1,0 +1,1 @@
+Reads the ZSensor Trace from an IBW file. Extracts the four images contained within an IBW file, saves them as TIFFs. Also saves metadata in associated CSV file. Extracts the metadata from the provided ibw file to the specified directory. Checks to see if there are any subdirectories in the specified directory. Checks to see if directory contains an IBW file.
