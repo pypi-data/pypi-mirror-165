@@ -1,0 +1,12 @@
+scikit-learn
+tensorflow
+matplotlib
+mlflow
+pandas
+huggingface_hub
+datasets
+
+[dev]
+black
+isort
+pip-tools
