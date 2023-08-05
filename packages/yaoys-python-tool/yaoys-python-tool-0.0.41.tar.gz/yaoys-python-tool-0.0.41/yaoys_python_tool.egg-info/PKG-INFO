@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: yaoys-python-tool
+Version: 0.0.41
+Summary: python工具类
+Home-page: https://github.com/yaoysyao/PythonTools.git
+Author: YaoYuanshuai
+Author-email: yys9508@qq.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+此工具类致力于封装一些常用的python代码，目前支持log日志，progress进度条，mysql数据库操作，雪花算法唯一id，时间工具类等方法
