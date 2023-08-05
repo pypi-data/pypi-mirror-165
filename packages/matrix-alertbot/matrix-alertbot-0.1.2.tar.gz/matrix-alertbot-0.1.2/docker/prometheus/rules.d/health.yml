@@ -1,0 +1,11 @@
+groups:
+  - name: Health
+    rules:
+      - alert: Instance Up
+        for: 30s
+        expr: up == 1
+        labels:
+          severity: critical
+        annotations:
+          description: 'Instance {{ $labels.instance }} is up'
+          summary: 'Instance is up'

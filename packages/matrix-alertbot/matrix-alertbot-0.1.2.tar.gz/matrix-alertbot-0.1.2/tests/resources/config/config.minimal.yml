@@ -1,0 +1,32 @@
+# Welcome to the sample config file
+# Below you will find various config sections and options
+# Default values are shown
+
+# Options for connecting to the bot's Matrix account
+matrix:
+  # The Matrix User ID of the bot account
+  user_id: "@fakes_user:matrix.example.com"
+  # Matrix account password (optional if access token used)
+  user_password: "password"
+  # Matrix account access token (optional if password used)
+  #user_token: ""
+  # The URL of the homeserver to connect to
+  url: https://matrix.example.com
+  allowed_rooms:
+    - "!abcdefgh:matrix.example.com"
+
+webhook:
+  address: 0.0.0.0
+  port: 8080
+
+alertmanager:
+  url: http://localhost:9093
+
+cache:
+  # The path to a directory for caching alerts and silences
+  path: "data/cache"
+
+storage:
+  # The path to a directory for internal bot storage
+  # containing encryption keys, sync tokens, etc.
+  path: "data/store"

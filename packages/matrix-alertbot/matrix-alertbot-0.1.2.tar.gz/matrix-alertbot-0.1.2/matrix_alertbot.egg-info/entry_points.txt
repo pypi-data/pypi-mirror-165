@@ -1,0 +1,2 @@
+[console_scripts]
+matrix-alertbot = matrix_alertbot.main:main

@@ -1,0 +1,35 @@
+# PyCharm
+.idea/
+.vscode/
+
+# Python virtualenv environment folders
+env/
+env3/
+.env/
+.venv/
+
+# Bot local files
+*.db
+store/
+cache/
+
+# Config file
+config.yaml
+
+# Alertmanager config file
+alertmanager.yml
+
+# Python
+__pycache__/
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+_version.py
+
+# Config file
+config.yaml
+
+# Log files
+*.log

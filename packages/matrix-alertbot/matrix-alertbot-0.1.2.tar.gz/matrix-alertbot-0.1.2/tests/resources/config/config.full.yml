@@ -1,0 +1,59 @@
+# Welcome to the sample config file
+# Below you will find various config sections and options
+# Default values are shown
+
+# The string to prefix messages with to talk to the bot in group chats
+command_prefix: "!alert"
+
+# Options for connecting to the bot's Matrix account
+matrix:
+  # The Matrix User ID of the bot account
+  user_id: "@fakes_user:matrix.example.com"
+  # Matrix account password (optional if access token used)
+  user_password: "password"
+  # Matrix account access token (optional if password used)
+  #user_token: ""
+  # The URL of the homeserver to connect to
+  url: https://matrix.example.com
+  # The device ID that is **non pre-existing** device
+  # If this device ID already exists, messages will be dropped silently in encrypted rooms
+  device_id: ABCDEFGHIJ
+  # What to name the logged in device
+  device_name: fake_device_name
+  allowed_rooms:
+    - "!abcdefgh:matrix.example.com"
+  allowed_reactions: [🤫, 😶, 🤐]
+
+webhook:
+  socket: matrix-alertbot.socket
+
+alertmanager:
+  url: http://localhost:9093
+
+cache:
+  # The path to a directory for caching alerts and silences
+  path: "data/cache"
+
+storage:
+  # The path to a directory for internal bot storage
+  # containing encryption keys, sync tokens, etc.
+  path: "data/store"
+
+template:
+  path: "data/templates"
+
+# Logging setup
+logging:
+  # Logging level
+  # Allowed levels are 'INFO', 'WARNING', 'ERROR', 'DEBUG' where DEBUG is most verbose
+  level: DEBUG
+  # Configure logging to a file
+  file_logging:
+    # Whether logging to a file is enabled
+    enabled: true
+    # The path to the file to log to. May be relative or absolute
+    filepath: fake.log
+  # Configure logging to the console output
+  console_logging:
+    # Whether logging to the console is enabled
+    enabled: false

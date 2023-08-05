@@ -1,0 +1,51 @@
+version: '3.1' # specify docker-compose version
+
+volumes:
+  # Set up with `docker volume create ...`. See docker/README.md for more info.
+  matrix-alertbot:
+    external: true
+
+networks:
+  matrix-alertbot:
+    name: matrix-alertbot
+
+services:
+  prometheus:
+    image: prom/prometheus
+    restart: always
+    networks:
+      - matrix-alertbot
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+      - ./prometheus/rules.d:/etc/prometheus/rules.d
+
+  alertmanager:
+    image: prom/alertmanager
+    depends_on:
+      - prometheus
+    restart: always
+    networks:
+      - matrix-alertbot
+    volumes:
+      - ./alertmanager/alertmanager.yml:/etc/alertmanager/alertmanager.yml
+
+  # Runs from the latest release
+  matrix-alertbot:
+    image: neutrinet/matrix-alertbot
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    depends_on:
+      - alertmanager
+    restart: always
+    networks:
+      - matrix-alertbot
+    volumes:
+      - matrix-alertbot:/data
+    # Used for allowing connections to homeservers hosted on the host machine
+    # (while docker host mode is still broken on Linux).
+    #
+    # Defaults to 127.0.0.1 and is set in docker/.env
+    extra_hosts:
+      - "localhost:${HOST_IP_ADDRESS}"
+

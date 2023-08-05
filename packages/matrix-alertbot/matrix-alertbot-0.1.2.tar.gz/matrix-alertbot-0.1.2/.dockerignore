@@ -1,0 +1,22 @@
+# PyCharm
+.idea/
+.vscode/
+
+# Python virtualenv environment folders
+env/
+env3/
+.env/
+.venv/
+
+# Git
+.git
+
+# Python
+__pycache__/
+*.egg-info/
+.mypy_cache
+build/
+dist/
+
+# Storage
+data/

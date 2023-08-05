@@ -1,0 +1,9 @@
+#!/usr/bin/env python3
+
+try:
+    from matrix_alertbot import main
+
+    # Run the main function of the bot
+    main.main()
+except ImportError as e:
+    print("Unable to import matrix_alertbot.main:", e)
