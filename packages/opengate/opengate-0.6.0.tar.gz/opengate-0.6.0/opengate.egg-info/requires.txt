@@ -1,0 +1,17 @@
+opengate_core==0.6.0
+gatetools
+tqdm
+colored
+click
+python-box
+anytree
+numpy
+itk
+uproot
+sphinx
+scipy
+sphinx_pdj_theme
+matplotlib
+myst-parser
+GitPython
+colorlog
