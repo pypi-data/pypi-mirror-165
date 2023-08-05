@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: pymosa-mimosa26-interpreter
+Version: 1.1.0
+Summary: Interpreter for Mimosa26 raw data recorded with pymosa DAQ
+Home-page: https://github.com/SiLab-Bonn/pymosa_mimosa26_interpreter
+Author: Yannick Dieter, Toko Hirono, Jens Janssen, David-Leon Pohl, Pascal Wolf
+Author-email: dieter@physik.uni-bonn.de, hirono@physik.uni-bonn.de, janssen@physik.uni-bonn.de, pohl@physik.uni-bonn.de, wolf@physik.uni-bonn.de
+Maintainer: Yannick Dieter, Toko Hirono, Jens Janssen, David-Leon Pohl, Pascal Wolf
+Maintainer-email: dieter@physik.uni-bonn.de, hirono@physik.uni-bonn.de, janssen@physik.uni-bonn.de, pohl@physik.uni-bonn.de, wolf@physik.uni-bonn.de
+License: BSD 3-Clause License
+Keywords: mimosa26,test-beam,pixel,telescope
+Platform: any
+Requires-Python: >=2.7
+License-File: LICENSE.txt
+
+UNKNOWN
+
