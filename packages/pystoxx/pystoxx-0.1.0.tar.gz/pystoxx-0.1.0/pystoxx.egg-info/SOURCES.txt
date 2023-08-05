@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+pystoxx/__init__.py
+pystoxx.egg-info/PKG-INFO
+pystoxx.egg-info/SOURCES.txt
+pystoxx.egg-info/dependency_links.txt
+pystoxx.egg-info/requires.txt
+pystoxx.egg-info/top_level.txt
