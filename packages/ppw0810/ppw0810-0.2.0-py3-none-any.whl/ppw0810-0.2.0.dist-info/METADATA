@@ -1,0 +1,80 @@
+Metadata-Version: 2.1
+Name: ppw0810
+Version: 0.2.0
+Summary: Skeleton project created by Python Project Wizard (ppw).
+Home-page: https://github.com/zillionare/ppw0810
+License: MIT
+Author: aaron yang
+Author-email: aaron_yang@jieyu.ai
+Requires-Python: >=3.7.1,<4.0
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Provides-Extra: dev
+Provides-Extra: doc
+Provides-Extra: test
+Requires-Dist: black (>=22.3.0,<23.0.0); extra == "test"
+Requires-Dist: fire (==0.4.0)
+Requires-Dist: flake8 (==4.0.1); extra == "test"
+Requires-Dist: flake8-docstrings (>=1.6.0,<2.0.0); extra == "test"
+Requires-Dist: isort (==5.10.1); extra == "test"
+Requires-Dist: livereload (>=2.6.3,<3.0.0)
+Requires-Dist: mike (>=1.1.2,<2.0.0); extra == "doc"
+Requires-Dist: mkdocs (>=1.2.3,<2.0.0); extra == "doc"
+Requires-Dist: mkdocs-autorefs (>=0.3.1,<0.4.0); extra == "doc"
+Requires-Dist: mkdocs-include-markdown-plugin (>=3.2.3,<4.0.0); extra == "doc"
+Requires-Dist: mkdocs-material (>=8.1.11,<9.0.0); extra == "doc"
+Requires-Dist: mkdocs-material-extensions (>=1.0.3,<2.0.0)
+Requires-Dist: mkdocstrings (>=0.18.0,<0.19.0); extra == "doc"
+Requires-Dist: pip (>=22.0.3,<23.0.0); extra == "dev"
+Requires-Dist: pre-commit (>=2.17.0,<3.0.0); extra == "dev"
+Requires-Dist: pyreadline (>=2.1,<3.0)
+Requires-Dist: pytest (>=7.0.1,<8.0.0); extra == "test"
+Requires-Dist: pytest-cov (>=3.0.0,<4.0.0); extra == "test"
+Requires-Dist: toml (>=0.10.2,<0.11.0); extra == "dev"
+Requires-Dist: tox (>=3.24.5,<4.0.0); extra == "dev"
+Requires-Dist: twine (>=3.8.0,<4.0.0); extra == "dev"
+Requires-Dist: virtualenv (>=20.13.1,<21.0.0); extra == "dev"
+Description-Content-Type: text/markdown
+
+# ppw0810
+
+
+<p align="center">
+<a href="https://pypi.python.org/pypi/ppw0810">
+    <img src="https://img.shields.io/pypi/v/ppw0810.svg"
+        alt = "Release Status">
+</a>
+
+<a href="https://github.com/zillionare/ppw0810/actions">
+    <img src="https://github.com/zillionare/ppw0810/actions/workflows/main.yml/badge.svg?branch=release" alt="CI Status">
+</a>
+
+<a href="https://zillionare.github.io/ppw0810/">
+    <img src="https://img.shields.io/website/https/zillionare.github.io/ppw0810/index.html.svg?label=docs&down_message=unavailable&up_message=available" alt="Documentation Status">
+</a>
+
+</p>
+
+
+Skeleton project created by Python Project Wizard (ppw)
+
+
+* Free software: MIT
+* Documentation: <https://zillionare.github.io/ppw0810/>
+
+
+## Features
+
+* TODO
+
+## Credits
+
+This package was created with the [ppw](https://zillionare.github.io/python-project-wizard) tool. For more information, please visit the [project page](https://zillionare.github.io/python-project-wizard/).
+
