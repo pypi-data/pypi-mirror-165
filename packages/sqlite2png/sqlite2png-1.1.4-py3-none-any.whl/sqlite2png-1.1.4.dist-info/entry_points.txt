@@ -1,0 +1,2 @@
+[console_scripts]
+sqlite2png = sqlite2png:cli
