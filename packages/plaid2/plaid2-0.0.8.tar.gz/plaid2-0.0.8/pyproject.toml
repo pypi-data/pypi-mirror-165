@@ -1,0 +1,22 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "plaid2"
+authors = [{name = "Graziella", email = "kurtwolfbuilds@gmail.com"}]
+version = "0.0.8"
+description = "Lumache - Python library for cooks and food lovers."
+dependencies = [
+    "requests>=2.18.4",
+]
+requires-python = ">=3.6"
+
+[project.optional-dependencies]
+
+[tool]
+[tool.pdm]
+[tool.pdm.dev-dependencies]
+dev = [
+    "mypy>=0.720",
+]
