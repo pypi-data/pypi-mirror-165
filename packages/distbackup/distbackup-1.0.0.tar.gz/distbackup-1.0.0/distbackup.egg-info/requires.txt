@@ -1,0 +1,5 @@
+argcomplete>=2.0.0
+psutil>=5.9.0
+
+[hashcopy]
+hashcopy>=1.0.5
