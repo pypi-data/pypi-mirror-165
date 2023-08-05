@@ -1,0 +1,11 @@
+__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+event_data.py,sha256=vhXECR8K5vgl19bg0wAW5upKE6xQf4PF1_-xeUxs-Fs,6819
+sppcls/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sppcls/sppcls.py,sha256=xt4nj7Nv9E3Pg69pxHVpJvg5c47PQSrrBr8ukuhvCro,1952
+tokenise/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tokenise/tokenise.py,sha256=OpD_N108ljuPI_9_pxakCBLpq_6BU5K-LDZUZMMssis,1741
+sppcls-0.0.4.dist-info/LICENSE,sha256=oy8Fb0W0LQzAi8q096Kjx7XT7DgtUmt4wvE4VQ_mr-M,1091
+sppcls-0.0.4.dist-info/METADATA,sha256=ee57A-ruF7IB7LBLE-pEz6K4AbiSaMlz6MvN0CHEcOY,2881
+sppcls-0.0.4.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+sppcls-0.0.4.dist-info/top_level.txt,sha256=8z26T-xaEhXqa3eUVWO9QDGPDjcZzJAJNdtrdYBRxRo,36
+sppcls-0.0.4.dist-info/RECORD,,
