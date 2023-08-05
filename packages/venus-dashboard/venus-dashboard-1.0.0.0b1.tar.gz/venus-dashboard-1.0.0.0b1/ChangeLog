@@ -1,0 +1,24 @@
+CHANGES
+=======
+
+1.0.0.0b1
+---------
+
+* Add log search slog index view
+* Add log search bar charts
+* Add pagination component to log search list
+* Adapt to new venusclient
+* Add venusclient install process
+* Remove python-venusclient temporarily
+* Fix copyright of the files
+* update README
+* Fix where long\_description\_content\_type is placed
+* Remove python v3.10 support
+* Add venus menu
+* Add log search function code
+* change gerrit remove address
+* add supported python version
+* \* initial commit
+* add .gitignore file
+* .zuul.yaml: add Zuul support to new repo
+* Added .gitreview
