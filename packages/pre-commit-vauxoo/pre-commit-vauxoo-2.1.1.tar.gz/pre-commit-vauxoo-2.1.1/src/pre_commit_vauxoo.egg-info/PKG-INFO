@@ -1,0 +1,141 @@
+Metadata-Version: 2.1
+Name: pre-commit-vauxoo
+Version: 2.1.1
+Summary: pre-commit script to run automatically the configuration and variables custom from Vauxoo
+Home-page: https://github.com/Vauxoo/pre-commit-vauxoo
+Author: Vauxoo
+Author-email: info@vauxoo.com
+License: LGPL-3.0-or-later
+Project-URL: Documentation, https://pre-commit-vauxoo.readthedocs.io/
+Project-URL: Changelog, https://pre-commit-vauxoo.readthedocs.io/en/latest/changelog.html
+Project-URL: Issue Tracker, https://github.com/Vauxoo/pre-commit-vauxoo/issues
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Utilities
+Requires-Python: >=3.5
+License-File: LICENSE
+License-File: AUTHORS.rst
+
+========
+Overview
+========
+
+
+
+pre-commit script to run automatically the configuration and variables custom from Vauxoo
+
+* Free software: GNU Lesser General Public License v3 or later (LGPLv3+)
+
+Installation
+============
+
+Using pypi
+
+    pip install -U pre-commit-vauxoo
+
+Using github directly
+
+    pip install -U git+https://github.com/Vauxoo/pre-commit-vauxoo.git@main
+
+Usage
+=====
+
+Run pre-commit-vauxoo command in git repository where you want to run our lints
+
+The autofixes are disabled by default you can use the following option to enable it
+
+  pre-commit-vauxoo -f
+
+Full --help command result:
+
+::
+
+  Usage: pre-commit-vauxoo [OPTIONS] [PATHS]...
+
+    PATHS are the specific filenames to run hooks on. Also, it can be defined
+    using environment variable INCLUDE_LINT separated by commas [default:
+    Current directory]
+
+  Options:
+    -w, --overwrite BOOLEAN         Overwrite configuration files. If True,
+                                    existing configuration files into the
+                                    project will be overwritten. If False, then
+                                    current files will be used, if they exist.
+                                    Use environment variable
+                                    PRECOMMIT_OVERWRITE_CONFIG_FILES separated
+                                    by commas  [default: True]
+    -x, --exclude-autofix PATH      Exclude paths on which to run the autofix
+                                    pre-commit configurationUse environment
+                                    variable EXCLUDE_AUTOFIX separated by commas
+    -l, --exclude-lint PATH         Paths to exclude checks. Use environment
+                                    variable EXCLUDE_LINT separated by commas.
+    -d, --disable-pylint-checks <columns>
+                                    Pylint checks to disable, separated by
+                                    commas. Use environment variable
+                                    DISABLE_PYLINT_CHECKS
+    -f, --autofix                   Run pre-commit with autofix configuration to
+                                    change the source code. Overwrite -c option
+                                    to '-c mandatory -c optional -c fix' Use
+                                    environment variable PRECOMMIT_AUTOFIX
+    -c, --config [mandatory|optional|fix|all]
+                                    Pre-commit configuration file to run hooks.
+                                    *Mandatory: Stable hooks that needs to be
+                                    fixed (Affecting build status). *Optional:
+                                    Optional hooks that could be fixed later.
+                                    (No affects build status). *Fix: Hooks auto
+                                    fixing source code (Affects build status).
+                                    *All: All configuration files to run hooks
+                                    [default: mandatory, optional]
+    --help                          Show this message and exit.
+
+
+.. Documentation
+.. =============
+
+
+.. https://pre-commit-vauxoo.readthedocs.io/
+
+
+Development
+===========
+
+To run all the tests run::
+
+    tox
+
+Note, to combine the coverage data from all the tox environments run:
+
+.. list-table::
+    :widths: 10 90
+    :stub-columns: 1
+
+    - - Windows
+      - ::
+
+            set PYTEST_ADDOPTS=--cov-append
+            tox
+
+    - - Other
+      - ::
+
+            PYTEST_ADDOPTS=--cov-append tox
+
+
+Changelog
+=========
+
+1.0.0 (2022-06-28)
+------------------
+
+* First release on PyPI.
