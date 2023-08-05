@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: lammps-simulator
+Version: 1.0
+Summary: Python interface for running LAMMPS input scripts
+Home-page: http://github.com/evenmn/lammps-simulator
+Author: Even Marius Nordhagen
+Author-email: evenmn@fys.uio.no
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
