@@ -1,0 +1,4 @@
+include *.txt
+recursive-include cloudshell/email *.htm
+include *.md
+global-include *.ini
