@@ -1,0 +1,6 @@
+fire
+pyyaml
+redis
+tabulate
+GPUtil
+psutil
