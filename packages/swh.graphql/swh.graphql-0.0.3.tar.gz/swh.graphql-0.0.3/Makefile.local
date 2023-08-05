@@ -1,0 +1,32 @@
+# should be provided by the ci build
+TAG=latest
+IMAGE_NAME=softwareheritage/graphql:$(TAG)
+# ci build should provide the right label
+IMAGE_LABEL=dummy
+# can be overridden by ci
+REGISTRY_URL=registry-1.docker.io
+
+.PHONY: run-dev
+run-dev:
+	export SWH_CONFIG_FILENAME=config/dev.yml; uvicorn swh.graphql.server:make_app_from_configfile --reload --factory
+
+.PHONY: run-dev-stable
+run-dev-stable:
+	export SWH_CONFIG_FILENAME=config/dev.yml; uvicorn swh.graphql.server:make_app_from_configfile --factory
+
+.PHONY: run-wsgi
+run-wsgi:
+	export SWH_CONFIG_FILENAME=config/staging.yml; gunicorn --workers=2 'swh.graphql.server:make_app_from_configfile()'
+
+.PHONY: run-dev-docker
+run-dev-docker:
+	docker-compose -f docker-compose.yml -f docker-compose-dev.yml up --build
+
+.PHONY: run-wsgi-docker
+run-wsgi-docker:
+	docker-compose -f docker-compose.yml -f docker-compose-staging.yml up --build
+
+.PHONY: update-desktop6
+update-desktop6:
+	git pull origin master
+	docker-compose -f docker-compose.yml -f docker-compose-staging.yml restart

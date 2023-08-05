@@ -1,0 +1,11 @@
+storage:
+  cls: remote
+  url: http://webapp.internal.staging.swh.network:5002
+
+search:
+  cls: remote
+  url: http://webapp.internal.staging.swh.network:5010
+
+debug: yes
+
+server-type: wsgi

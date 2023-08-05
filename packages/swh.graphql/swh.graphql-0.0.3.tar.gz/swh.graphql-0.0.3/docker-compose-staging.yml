@@ -1,0 +1,8 @@
+version: "3.4"
+
+services:
+  app:
+    dns: 192.168.100.29
+    environment:
+      - SWH_CONFIG_FILENAME=config/staging.yml
+    command: gunicorn --bind=0.0.0.0:8000 --workers=2 'swh.graphql.server:make_app_from_configfile()'

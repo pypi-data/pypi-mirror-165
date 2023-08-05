@@ -1,0 +1,11 @@
+storage:
+  cls: remote
+  url: http://moma.internal.softwareheritage.org:5002
+
+search:
+  cls: remote
+  url: http://moma.internal.softwareheritage.org:5010
+
+debug: yes
+
+server-type: asgi
