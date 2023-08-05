@@ -1,0 +1,30 @@
+from pathlib import Path
+from setuptools import setup, find_packages
+import os
+
+
+with open("requirements.txt", encoding="utf-8") as f:
+    requirements = f.read().splitlines()
+
+os.system("chmod a+x init.sh examples/*")
+
+setup(
+    name="tmpproject",
+    packages=find_packages(
+        exclude=["*.tests", "*.tests.*", "tests.*", "tests", "*.trainable_sampling*"]
+    ),
+    version="0.0.2",
+    description="A Library for active learning. Supports text classification and sequence tagging tasks.",
+    author="Tsvigun A., Sanochkin L., Kuzmin G., Larionov D., and Dr Shelmanov A.",
+    license="MIT",
+    long_description=open("README.md").read(),
+    long_description_content_type="text/markdown",
+    keywords="NLP active AL deep learning transformer pytorch PLASM UPS",
+    install_requires=requirements,
+    include_package_data=True,
+    setup_requires=["pytest-runner"],
+    tests_require=["pytest==7.1.2"],
+    test_suite="tests",
+)
+
+os.system("./init.sh")
