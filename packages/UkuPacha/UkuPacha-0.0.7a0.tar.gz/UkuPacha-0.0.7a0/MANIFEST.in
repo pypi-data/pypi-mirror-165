@@ -1,0 +1,2 @@
+recursive-include ukupacha/ *.py
+recursive-include ukupacha/ *.*
