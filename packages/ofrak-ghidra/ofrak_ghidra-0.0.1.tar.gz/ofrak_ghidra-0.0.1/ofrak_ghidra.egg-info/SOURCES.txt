@@ -1,0 +1,8 @@
+MANIFEST.in
+README.md
+setup.py
+ofrak_ghidra/__init__.py
+ofrak_ghidra.egg-info/PKG-INFO
+ofrak_ghidra.egg-info/SOURCES.txt
+ofrak_ghidra.egg-info/dependency_links.txt
+ofrak_ghidra.egg-info/top_level.txt
