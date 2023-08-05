@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: pennylane-ket
+Version: 0.1.0
+Summary: Ket PennyLane plugin
+License: Apache-2.0
+Author: Evandro Chagas Ribeiro da Rosa
+Author-email: ev.crr97@gmail.com
+Requires-Python: >=3.7
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: PennyLane (>=0.25.1,<0.26.0)
+Requires-Dist: ket-lang (>=0.4,<0.5)
+Description-Content-Type: text/markdown
+
+# Ket PennyLane plugin
+
+## Install 
+
+
+```shell 
+pip install pennylane-ket
+```
+
+or
+
+```shell 
+pip install git+https://gitlab.com/quantuloop/pennylane-ket.git
+```
+
+## Example
+
+```python
+import pennylane as qml
+dev = qml.device('ket', wires=2)
+```
