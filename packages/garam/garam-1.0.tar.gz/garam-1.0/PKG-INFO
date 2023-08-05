@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: garam
+Version: 1.0
+Summary: Garam, for arrays too big for memory. A dictionary / list that is stored on the disk for ram intensive operations.
+Home-page: https://github.com/Shrimp33/garam
+Author: Jun Ru Chen
+Author-email: junru.chen.2007@gmail.com
+License: MIT
+Download-URL: https://github.com/Shrimp33/garam/archive/refs/tags/v1.0.tar.gz
+Description: UNKNOWN
+Keywords: disk,dictionaries,lists
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Database
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
