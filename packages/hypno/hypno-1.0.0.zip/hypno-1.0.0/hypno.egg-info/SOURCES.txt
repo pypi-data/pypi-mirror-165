@@ -1,0 +1,16 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+hypno/__init__.py
+hypno/__main__.py
+hypno/hypno.py
+hypno/injection.c
+hypno.egg-info/PKG-INFO
+hypno.egg-info/SOURCES.txt
+hypno.egg-info/dependency_links.txt
+hypno.egg-info/entry_points.txt
+hypno.egg-info/not-zip-safe
+hypno.egg-info/requires.txt
+hypno.egg-info/top_level.txt
