@@ -1,0 +1,16 @@
+bz3/__init__.py,sha256=9SH0avHTb75NlgYteREghq9PrzOC9OGI7fFTfcjc8dA,219
+bz3/bz3.py,sha256=TmyH2jHhjbCNJ3exOcNNiYm32LmnPEYnBuG47tCHgpY,10518
+bz3/compression.py,sha256=FsVLavgooiGQwUUEY1yVx1HUKnZj35zTkKx1Jb8TV-0,5366
+bz3/backends/__init__.py,sha256=FFUNh62MLJKmbC-xUznPM6-pLbZg0pDoBoW5hPNJ0bU,703
+bz3/backends/cffi/__init__.py,sha256=NRmcKQC-aFQSinJy6czHEvYgXUyx3Y-eiAMTBdhj4eI,14567
+bz3/backends/cffi/_bz3_cffi.pypy38-pp73-darwin.so,sha256=Op2ZcjL0b6CUDJSTXSBaWTy-pixPxfZuTIkp55-K1Xo,86776
+bz3/backends/cffi/build.py,sha256=8N0ueWEqf9O46i4BOgM13Fcug7tgza7lfKp4o9A3Gf4,3700
+bz3/backends/cython/__init__.py,sha256=LY98K0Pxc6IML_FaiVldV0pV0fTjr459w4zMHGZfswk,216
+bz3/backends/cython/_bz3_cy.c,sha256=6xZd6SP2RNUF_xKgu52Em7xEz1LdlcYBSQT7feBZNPY,1085824
+bz3/backends/cython/_bz3_cy.pypy38-pp73-darwin.so,sha256=H62ZGdowQCVrJpBAtJhWykUSJtpwq1uzX35LgHlDcJg,233696
+bz3/backends/cython/_bz3_cy.pyx,sha256=TV5j3jQ9YZUSrZAWGEAuoj8hqHVaskLe6cdcMUJFGyQ,15520
+bz3/backends/cython/bzip3.pxd,sha256=wmcZwqHqtXPYS7nfODCXAcQRTVgE4d5CWs4L7GOLKjQ,1690
+bzip3-0.0.4.dist-info/METADATA,sha256=ZWl11IU3FmXkBJbNuVC2TrBmuslFltR1Tq5OHodS8Pw,3554
+bzip3-0.0.4.dist-info/WHEEL,sha256=eMXieGdYIPAvPgWZuPjv3Y7MrdPX-HD5sJnupwu3tEk,116
+bzip3-0.0.4.dist-info/top_level.txt,sha256=ko8So6pdpxW18e5QcjoL-fwOc9ePcBemwRlxqS15Mto,4
+bzip3-0.0.4.dist-info/RECORD,,
