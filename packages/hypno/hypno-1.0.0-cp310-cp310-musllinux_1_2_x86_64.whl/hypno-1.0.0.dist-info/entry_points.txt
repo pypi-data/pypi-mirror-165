@@ -1,0 +1,2 @@
+[console_scripts]
+hypno = hypno.__main__:main
