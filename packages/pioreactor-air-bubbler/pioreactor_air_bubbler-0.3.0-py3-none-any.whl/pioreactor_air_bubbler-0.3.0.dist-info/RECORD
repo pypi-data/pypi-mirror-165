@@ -1,0 +1,10 @@
+pioreactor_air_bubbler/__init__.py,sha256=FiLziXqwC2oJc2d1VIzdp5a3yBi0TYRAs5FXiisHUSg,103
+pioreactor_air_bubbler/additional_config.ini,sha256=SwknIdOptXbKOCVs7V3Jx1aJXKmEK8iAr2TLy7FeRSE,177
+pioreactor_air_bubbler/air_bubbler.py,sha256=FoILk5-484aPX0684fV34Hd9OQJaz25Yje3ZtPsd2Do,2339
+pioreactor_air_bubbler/ui/contrib/jobs/pioreactor_bubbler.yaml,sha256=CvktTaJmg0y_k3lIYljbwBli2FXfNFo2DCbxQRXVLv4,362
+pioreactor_air_bubbler-0.3.0.dist-info/LICENSE,sha256=RTnFva3sXKEPtRcFEvpWgg6NqscwpXrZ0ckNz9x2tlo,1079
+pioreactor_air_bubbler-0.3.0.dist-info/METADATA,sha256=9_y12Q3P6bMKRSTknqL3fw7Jg6MdFyeA2-KiRfbKoYc,983
+pioreactor_air_bubbler-0.3.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+pioreactor_air_bubbler-0.3.0.dist-info/entry_points.txt,sha256=10H2Ax_zhgKxn7uelK789C_S7vUoU7Cga-mJ9ciWce4,69
+pioreactor_air_bubbler-0.3.0.dist-info/top_level.txt,sha256=MpkKwzvdPmBuHha3uMMqfEbYvxQkiWADjrYk4kTMIZ4,23
+pioreactor_air_bubbler-0.3.0.dist-info/RECORD,,
