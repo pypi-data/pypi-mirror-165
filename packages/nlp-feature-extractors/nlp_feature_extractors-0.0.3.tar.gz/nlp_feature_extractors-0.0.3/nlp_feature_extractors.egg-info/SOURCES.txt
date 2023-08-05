@@ -1,0 +1,13 @@
+README.md
+setup.py
+nlp_feature_extractors/__init__.py
+nlp_feature_extractors/attribute_extractors.py
+nlp_feature_extractors.egg-info/PKG-INFO
+nlp_feature_extractors.egg-info/SOURCES.txt
+nlp_feature_extractors.egg-info/dependency_links.txt
+nlp_feature_extractors.egg-info/requires.txt
+nlp_feature_extractors.egg-info/top_level.txt
+nlp_feature_extractors/data/__init__.py
+nlp_feature_extractors/data/female-words.txt
+nlp_feature_extractors/data/male-words.txt
+nlp_feature_extractors/data/neutral-words.txt
