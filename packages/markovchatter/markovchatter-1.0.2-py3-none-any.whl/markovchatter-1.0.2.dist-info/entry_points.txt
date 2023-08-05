@@ -1,0 +1,2 @@
+[console_scripts]
+markovchatter = markovchatter:main
