@@ -1,0 +1,4 @@
+termcolor
+opencv-python
+tabulate
+torch

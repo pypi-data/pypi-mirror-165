@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: torch-frame
+Version: 1.6.4
+Summary: 用于深度学习快速实现代码的框架
+Home-page: https://github.com/darknli/Pytorch-Frame/tree/main/torch_frame
+Author: Darkn Lxs
+Author-email: 1187220556@qq.com
+License: UNKNOWN
+Description: 见readme
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
