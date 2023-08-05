@@ -1,0 +1,8 @@
+LICENSE
+README.rst
+setup.py
+package_sure_pypitest.egg-info/PKG-INFO
+package_sure_pypitest.egg-info/SOURCES.txt
+package_sure_pypitest.egg-info/dependency_links.txt
+package_sure_pypitest.egg-info/requires.txt
+package_sure_pypitest.egg-info/top_level.txt
