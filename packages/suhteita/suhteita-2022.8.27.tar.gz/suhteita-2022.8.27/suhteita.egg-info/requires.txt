@@ -1,0 +1,17 @@
+atlassian-python-api>=3.27.0
+robotframework>=5.0.1
+wrapt>=1.14.1
+
+[:python_version < "3.11"]
+tomli
+
+[dev]
+black
+coverage
+flake8
+hypothesis
+mypy
+pytest
+pytest-cov
+pytest-flake8
+types-jmespath
