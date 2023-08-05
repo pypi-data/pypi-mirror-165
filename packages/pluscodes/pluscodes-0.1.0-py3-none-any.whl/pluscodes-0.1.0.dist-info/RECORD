@@ -1,0 +1,16 @@
+pluscodes/__init__.py,sha256=_pGQhPmTLt4ITSn0uVJXR_P9V0vb01nRlFGrwy42x74,2012
+pluscodes/base.py,sha256=DFLTqqhFqmSm1GXyevhTJsHX_wAunX5OPJdSHXUIg1A,2927
+pluscodes/code.py,sha256=Wj_oohYVNBpQ0YG3tomk1FZqf0140vnVOaXLggfc-fk,1944
+pluscodes/decoder.py,sha256=gJ1tMOWHc53Rd4-clrg0rEO5DDLnX9zOiiMlNZHP8wM,3698
+pluscodes/encoder.py,sha256=JQ6w-RMNhMwyBM2Ktpl9EjPa4Qq4olhJSRW9z1mY-O4,5167
+pluscodes/geo.py,sha256=9yZLLb-SoIkDHiv3NgQPFNzXHvCHofq-5GAx_DeRt9g,1913
+pluscodes/transformer.py,sha256=h-um1KQ_DNkkdwUEHEkeCTg3oiG1tcX1vcEHZI3ToLk,6357
+pluscodes/types.py,sha256=tgM9ic0zU9R_mCorq1YM3YIRr2-51rr_Je_DqxestRc,62
+pluscodes/validator.py,sha256=goMcMov26tsJXo24BuLo1rkSWKU4ItgTWGaQqVCWfYk,3226
+pluscodes/vendored/__init__.py,sha256=MrsbKBstCJJE6TRfKPTxoeXx__mNyNhuxJw3eMhsp00,109
+pluscodes/vendored/olc.py,sha256=16jGJhx0F1KC4PtIAI6HHjR-oEl-rV9m83NIoWvlE7E,22720
+pluscodes-0.1.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+pluscodes-0.1.0.dist-info/METADATA,sha256=hCfDXRTh1LVxrz3FeIhM8JCjYa0dRDbufEAhl5pqwxQ,2209
+pluscodes-0.1.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+pluscodes-0.1.0.dist-info/top_level.txt,sha256=IVzjuvL75rFgdNBONW-Z1ZK1koGQSIqUIH5rPhfKOlQ,10
+pluscodes-0.1.0.dist-info/RECORD,,
