@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: pybracket
+Version: 1.0.0
+Summary: Add brackets and good semicolons to Python
+Home-page: https://github.com/donno2048/pybracket
+Author: Elisha Hollander
+Author-email: just4now666666@gmail.com
+License: MIT
+Project-URL: Documentation, https://github.com/donno2048/pybracket#readme
+Project-URL: Bug Reports, https://github.com/donno2048/pybracket/issues
+Project-URL: Source Code, https://github.com/donno2048/pybracket
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# pybracket
+
+Add brackets and good semicolons to Python
+
+## Installation
+
+### From PyPI
+
+#### On Linux
+
+```sh
+sudo pip3 install pybracket
+```
+
+#### On Windows
+
+```bat
+pip install pybracket
+```
+
+### From GitHub
+
+#### On Linux
+
+```sh
+sudo pip3 install git+https://github.com/donno2048/pybracket
+```
+
+#### On Windows
+
+```bat
+pip install git+https://github.com/donno2048/pybracket
+```
+
+## Usage
+
+See [example.py](./example.py) (no need for anything except just running `python3 example.py`)
+
+Or if you don't want the `# coding: brackets` at the beginning you could just run `pybracket file.py` or `python3 -m pybracket file.py`

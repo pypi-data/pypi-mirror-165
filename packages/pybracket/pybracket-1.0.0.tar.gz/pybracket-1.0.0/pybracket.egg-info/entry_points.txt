@@ -1,0 +1,2 @@
+[console_scripts]
+pybracket = pybracket.__main__:main

@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+pybracket/__init__.py
+pybracket/__main__.py
+pybracket.egg-info/PKG-INFO
+pybracket.egg-info/SOURCES.txt
+pybracket.egg-info/dependency_links.txt
+pybracket.egg-info/entry_points.txt
+pybracket.egg-info/not-zip-safe
+pybracket.egg-info/top_level.txt
