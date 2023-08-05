@@ -1,0 +1,17 @@
+pghistory/__init__.py,sha256=9eLsQ3qpWT4u_h-hE74ywTJL0D08_65VbZFb2-7OhYg,887
+pghistory/apps.py,sha256=5MBwEFi6VmOOcjAXuS0MQohBFug2WUdSdvtWDjLst3o,1126
+pghistory/constants.py,sha256=2FXT9UVCTvzMlaFp7PlyUbMuITpBS3XJQp83s4XEFvs,17
+pghistory/core.py,sha256=rzSL6ooWF8WL88uPAfX1ycRtl3FD-vOZd6WvA5vSIrE,13325
+pghistory/middleware.py,sha256=DOwngXjfakv37eZNxnMBs2AP7uromUhYcaQTARku4kY,1335
+pghistory/migrations/0001_initial.py,sha256=0QBYgBa5d4OpNR75aVQTuSUy8iJcWYp57yoP4kz1f4s,946
+pghistory/migrations/0002_aggregateevent.py,sha256=Xb7AM9q9lmxXberSpm19i3RlRP_E7sv4UCBvfDrry40,1431
+pghistory/migrations/0003_auto_20201023_1636.py,sha256=kGebRX6wPwMtPRJc8Q_rKU9mxV6GCeYtT4nuTQWvTcM,422
+pghistory/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pghistory/models.py,sha256=yPqd5MJaEpvFOh3IXOUiO_T0-CJviisGwea6RWUaKYA,21680
+pghistory/tracking.py,sha256=lxZm02seZlScpx0nDuNzTnv4f5MTMwHG6u1yY5vohR0,4472
+pghistory/trigger.py,sha256=z-0qZstx3t2M-b7jpbvagtSIrJaQrCQbO-IHSLTL_KI,2132
+pghistory/version.py,sha256=AFcT3Hh1nhiluIK8G3-oH_fv04tvewzDzJqFhDWgywA,154
+django_pghistory-2.1.0.dist-info/LICENSE,sha256=bOsMPbrECIWYOAqsPawE7zdJ0aT9DbtpSCQQ8mRv0tA,1456
+django_pghistory-2.1.0.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+django_pghistory-2.1.0.dist-info/METADATA,sha256=ba7OG88NUTQt_D6ACm-TiGRyG-yYhwACBpOVaor3ULI,4040
+django_pghistory-2.1.0.dist-info/RECORD,,
