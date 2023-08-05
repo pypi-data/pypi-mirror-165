@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: robonav
+Version: 0.0.3
+Summary: A simple robot runner
+Author: LiveByTheCode (Archer EarthX)
+Author-email: <archerearthx@gmail.com>
+Keywords: python,textx,dsl,robot,state machine
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+A package that allows to control a robot using custom language.
