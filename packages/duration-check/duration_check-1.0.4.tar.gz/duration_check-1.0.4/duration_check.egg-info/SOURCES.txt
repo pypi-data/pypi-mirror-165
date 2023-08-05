@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+duration_check/__init__.py
+duration_check/decorator.py
+duration_check/exception.py
+duration_check.egg-info/PKG-INFO
+duration_check.egg-info/SOURCES.txt
+duration_check.egg-info/dependency_links.txt
+duration_check.egg-info/top_level.txt
