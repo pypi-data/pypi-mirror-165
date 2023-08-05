@@ -1,0 +1,18 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-3.20/Modules/BasicConfigVersion-ExactVersion.cmake.in
+C:/Program Files/CMake/share/cmake-3.20/Modules/CMakeDependentOption.cmake
+C:/Program Files/CMake/share/cmake-3.20/Modules/CMakePackageConfigHelpers.cmake
+C:/Program Files/CMake/share/cmake-3.20/Modules/CheckCXXCompilerFlag.cmake
+C:/Program Files/CMake/share/cmake-3.20/Modules/CheckCXXSourceCompiles.cmake
+C:/Program Files/CMake/share/cmake-3.20/Modules/FindDoxygen.cmake
+C:/Program Files/CMake/share/cmake-3.20/Modules/FindGit.cmake
+C:/Program Files/CMake/share/cmake-3.20/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-3.20/Modules/FindPackageMessage.cmake
+C:/Program Files/CMake/share/cmake-3.20/Modules/GNUInstallDirs.cmake
+C:/Program Files/CMake/share/cmake-3.20/Modules/WriteBasicConfigVersionFile.cmake
+Z:/TeamCity/work/283bde3fda0d76e7/thirdparty/range-v3/CMakeLists.txt
+Z:/TeamCity/work/283bde3fda0d76e7/thirdparty/range-v3/Version.cmake
+Z:/TeamCity/work/283bde3fda0d76e7/thirdparty/range-v3/cmake/ranges_env.cmake
+Z:/TeamCity/work/283bde3fda0d76e7/thirdparty/range-v3/cmake/ranges_flags.cmake
+Z:/TeamCity/work/283bde3fda0d76e7/thirdparty/range-v3/cmake/ranges_options.cmake
+Z:/TeamCity/work/283bde3fda0d76e7/thirdparty/range-v3/version.hpp.in
