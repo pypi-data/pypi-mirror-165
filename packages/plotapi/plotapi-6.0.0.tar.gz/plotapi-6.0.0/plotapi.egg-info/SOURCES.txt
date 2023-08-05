@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+plotapi/__init__.py
+plotapi.egg-info/PKG-INFO
+plotapi.egg-info/SOURCES.txt
+plotapi.egg-info/dependency_links.txt
+plotapi.egg-info/not-zip-safe
+plotapi.egg-info/top_level.txt
