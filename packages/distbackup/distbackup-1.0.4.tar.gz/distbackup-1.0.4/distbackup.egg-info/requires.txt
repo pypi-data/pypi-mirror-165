@@ -1,0 +1,6 @@
+argcomplete>=2.0.0
+psutil>=5.9.0
+ktpanda_modules>=1.0.15
+
+[:platform_system == "Linux"]
+hashcopy>=1.0.5
