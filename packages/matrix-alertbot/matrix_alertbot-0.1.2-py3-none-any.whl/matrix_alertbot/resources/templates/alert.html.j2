@@ -1,0 +1,5 @@
+<font color="#{{ color }}">
+  <b>[{{ emoji }} {{ status | upper }}]</b>
+</font> <a href="{{ url }}">{{ labels.alertname }}</a>
+{% if 'job' in labels %} ({{ labels.job }}){% endif %}<br/>
+{{ description }}
