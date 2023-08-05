@@ -1,0 +1,14 @@
+drf_standardized_errors/__init__.py,sha256=A1CIEdB8HVJfF91OWQPjVMhSVJ3h_gFLZxOy8LzxTbs,71
+drf_standardized_errors/apps.py,sha256=Gb1IhvG1tG0yd_VvZxvxXBDq9zP7vE1Z_xvPAggq56o,167
+drf_standardized_errors/formatter.py,sha256=pQ2bMQe4u_nPFfN2tIZijhgRzRGGqkRSit7YUygdQ_0,4494
+drf_standardized_errors/handler.py,sha256=kdpz7lTNG-E-XpWwJienEGuzc3Ltrq5C-VBNoKm0woA,5456
+drf_standardized_errors/openapi.py,sha256=oBAKh2VnoN30RgP4_QWkK_C2U-gkXJHVk7AZh6WVgIk,12495
+drf_standardized_errors/openapi_hooks.py,sha256=s48f6a27VwfGAN5c61PQM0-U8Vg3P0lSAeG0Uj7FXzo,8482
+drf_standardized_errors/openapi_serializers.py,sha256=sMrHPL761XP6H6jaMZls4UBKPAIav1OBitYKkRBEvHM,5054
+drf_standardized_errors/openapi_utils.py,sha256=SnITbyE9_CdVnQrNo4z55xb8UZuAj4lw_59PBGLTfvY,19313
+drf_standardized_errors/settings.py,sha256=H8K9rlQj1X0gZ82MIDlwkzofsljdRhUUC5LnWLm1KqQ,3001
+drf_standardized_errors/types.py,sha256=_j0MRgQQIwiMuw9vonUQtfW14i8KM_Gvv8tIg8zb7z4,610
+drf_standardized_errors-0.12.0.dist-info/LICENSE,sha256=46MUW-aasX5AepcDpjAJ9pnO1SPRhWeV7dZ3EUu3mY8,1101
+drf_standardized_errors-0.12.0.dist-info/WHEEL,sha256=4TfKIB_xu-04bc2iKz6_zFt-gEFEEDU_31HGhqzOCE8,81
+drf_standardized_errors-0.12.0.dist-info/METADATA,sha256=WqYQvvLZq_TCoMwMAtTyZ_DM5E6HsqcMpu0X-ieCz0k,5173
+drf_standardized_errors-0.12.0.dist-info/RECORD,,
