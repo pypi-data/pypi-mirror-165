@@ -1,0 +1,11 @@
+genlatex/__init__.py,sha256=DMCqVN05wH9N_Mr6YZeCwKLR3_h0HIy9mhoo4rZDir8,215
+genlatex/convertOldStyle.py,sha256=e28cjPrLJnJIijntwXKcTX9Go1O4ZCOwgijWfiBWJco,670
+genlatex/formatters.py,sha256=DasMwNYro7HkcwqDVaQ04lZnoZru6hUTTlj3ld8kMFw,2447
+genlatex/genLatex.py,sha256=x7lMB44q1RkT3z7jp73irkLlcqTlJQmJ6c492vb5E6A,4790
+genlatex/texData.py,sha256=HI7lC30XQKymRB7SdyGC7nd1ldb-9GKszdNngyRAXS4,969
+genlatex-0.25.dist-info/LICENSE.txt,sha256=ukEi8E0PKq1dQGTXHUflg3rppLymwAhr7il9x-0nPgg,1062
+genlatex-0.25.dist-info/METADATA,sha256=v6_wuUeOkz1roxC_kXm0anK3HFQkKIjmOQ-eCfcyO5c,3162
+genlatex-0.25.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+genlatex-0.25.dist-info/entry_points.txt,sha256=iy4GNFg02Z02eXBblti1n4V-WdWLMBLicoV2ct3cWm0,53
+genlatex-0.25.dist-info/top_level.txt,sha256=kvtWz4zOzV852W2Jra3s6uxQBts7lSuqCc1HM8fPbRU,9
+genlatex-0.25.dist-info/RECORD,,
