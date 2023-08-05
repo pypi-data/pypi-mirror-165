@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: easyencryption
+Version: 0.1.4
+Summary: A very easy way to encrypt data.
+Home-page: https://github.com/BlazenBoi/easyencryption/issues
+Author: Blazen
+Author-email: contact@fireballbot.com
+License: MIT
+Project-URL: Discord Server, https://discord.com/invite/mPU3HybBs9
+Project-URL: Bug Tracker, https://github.com/BlazenBoi/easyencryption/issues
+Project-URL: Source, https://github.com/BlazenBoi/easyencryption
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Internet
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: setuptools (>=42)
+Requires-Dist: cryptography
+Requires-Dist: pycryptodomex
+Requires-Dist: pycryptodome
+Requires-Dist: wheel
+
+In Progress...
+
+
+We offer a simple way to encrypt data. We have 3 different ways of doing this.<br />
+
+Fernet - Cryptographys algorithm that contains "symmetric ciphers, message digests, and key derivation functions" (pypi.org), this is pretty basic encryption.<br />
+AES256 - It is the "current encryption standard" (idera.com), it can slow down slower processors but should be fine on most systems.<br />
+Public Key - It uses a pair of keys (public and private) to encrypt data. It encrypts the data with the public key, but the data can only be unencrypted with the private key.<br />
+
+This is a very simple library that I made for one of my projects, so there might be bugs please report these in the github issues. Although it might be simple it is pretty powerful.<br />
+
+**WARNING** Don't delete the .key files or you cant unencrypt the data that you have encrypted with that key.<br />
+
+# Information
+
+[![Python](https://img.shields.io/pypi/pyversions/dislash.py.svg)](https://pypi.python.org/pypi/easyencryption)
+[![PyPi](https://img.shields.io/pypi/v/easyencryption.svg)](https://pypi.org/project/easyencryption)
+
+# Downloads
+
+[![Downloads](https://pepy.tech/badge/easyencryption)](https://pepy.tech/project/easyencryption)
+[![Downloads](https://pepy.tech/badge/easyencryption/month)](https://pepy.tech/project/easyencryption)
+![Downloads](https://pepy.tech/badge/easyencryption/week)
