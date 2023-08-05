@@ -1,0 +1,63 @@
+version: '3.9'
+
+# External network
+networks:
+  caddyweb:
+    external: true
+
+% if backend:
+volumes:
+  mongodb-data:
+% endif
+
+services:
+  % if backend:
+  ${app_name}-db:
+    image: mongo:latest
+    container_name: ${app_name}-db
+    command: mongod --port 27018
+    ports:
+      - 27018:27018
+    volumes:
+      - mongodb-data:/data/${app_name}-db
+    # environment:
+    #   MONGO_INITDB_ROOT_USERNAME: root
+    #   MONGO_INITDB_ROOT_PASSWORD: example
+    #   ME_CONFIG_MONGODB_ADMINUSERNAME: root
+    #   ME_CONFIG_MONGODB_ADMINPASSWORD: example
+    #   ME_CONFIG_MONGODB_SERVER: mongo
+    restart: unless-stopped
+    networks:
+      - caddyweb
+
+  # FastAPI backend
+  fuapp-backend:
+    build:
+      context: ./backend
+    depends_on:
+      - ${app_name}-db
+    ports:
+      - "8000:8000"
+    stop_signal: SIGINT
+    command: uvicorn backend.main:app --reload --host 0.0.0.0 --port 8000
+    environment:
+      PYTHONPATH: .
+      BASE_ENVIRONMENT: prod
+    volumes:
+      - '.:/ubuntu:delegated'
+    networks:
+      - caddyweb
+  % endif
+
+  # # Vue frontend
+  fuapp-frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "3000:3000"
+    stdin_open: true
+    volumes:
+      - ./frontend:/var/lib/frontend
+    command: bash -c "cd /frontend && quasar build && quasar serve dist/spa --history --port 3000"
+    networks:
+      - caddyweb

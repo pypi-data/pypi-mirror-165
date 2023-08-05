@@ -1,0 +1,7 @@
+uvicorn
+fastapi
+% if auth:
+fastapi-users[mongodb]
+% endif
+pylint
+pytest

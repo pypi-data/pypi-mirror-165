@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: fastidius
+Version: 0.0.14
+Summary: A full stack web app creator with FastAPI
+Home-page: https://github.com/johnckealy/fastidius
+Author: John Kealy
+Author-email: johnckealy.dev@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: click (==8.0.4)
+Requires-Dist: fabric
+Requires-Dist: mako
+Requires-Dist: setuptools
+Requires-Dist: twine
+Requires-Dist: typer
+Requires-Dist: uvicorn
+
+# Fastidius
+
+
+Fastidius is a CLI tool for creating [FastAPI](https://fastapi.tiangolo.com) backends, with integrations for deploying to DigitalOcean via Github.
+
+
+## Installation
+
+```
+pip install fastidius
+```
+
+## Usage
+
+To initialize a new project, run
+
+```
+fastidius create
+```
+
+This will take you through a few setup instructions.
+If you have any issues, you might need to set
+your python path:
+```
+export PYTHONPATH=.
+```
+
+
