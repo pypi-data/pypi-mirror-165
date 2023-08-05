@@ -1,0 +1,7 @@
+lupo/__init__.py,sha256=c8EPY_2EjI5aV3JclGgsL5tQSTQ01l11K2uzxmhb32E,36
+lupo/core/lupo_window.py,sha256=H5ILyW1r1Em-odF7ZGozvxhdz9x97FjCDEvY42NIy6g,357
+lupo/core/osx/osx_window_manager.py,sha256=1v32DeyNPlv9NRyHKxLdZFckggjhwpLvpk7EktW7pbI,762
+lupo-0.0.2.dist-info/METADATA,sha256=H0c63ThUkRKzQe4uqjuu_V4SIUJQrPBf8l1gXnaUNmE,628
+lupo-0.0.2.dist-info/WHEEL,sha256=09RFlvY3aVzvCNk4AXPZt-N-AI7GY_KktGsTb2IqIBU,86
+lupo-0.0.2.dist-info/licenses/LICENSE,sha256=vwKV7mNAcCt1N_oNdt5Qhljg-R6n30xyI6fb-JYnzG0,1061
+lupo-0.0.2.dist-info/RECORD,,
