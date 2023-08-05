@@ -1,0 +1,7 @@
+jinja2
+markdown
+pymdown-extensions
+pyyaml
+yamllint
+jsonlint
+pykwalify
