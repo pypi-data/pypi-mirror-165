@@ -1,0 +1,18 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "StegoSaurusPy"
+version = "1.1"
+authors = [
+  { name="reddust9", email="" },
+]
+description = "Using steganography to hide binary data in other files"
+readme = "README.md"
+license = { file="LICENSE.txt" }
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
