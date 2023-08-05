@@ -1,0 +1,47 @@
+[tool.poetry]
+name = "cryton-cli"
+version = "2022.2.0-alpha.3"
+description = "Command line interface for Cryton Core"
+authors = [
+    "Ivo Nutár <nutar@ics.muni.cz>",
+    "Milan Boháček <bohacek@ics.muni.cz>",
+    "Jiří Rája <raja@ics.muni.cz>",
+    "Andrej Tomči <tomci@ics.muni.cz>"
+]
+maintainers = [
+    "Jiří Rája <raja@ics.muni.cz>",
+    "Milan Boháček <bohacek@ics.muni.cz>"
+]
+license = "MIT"
+homepage = "https://gitlab.ics.muni.cz/beast-public/cryton"
+repository = "https://gitlab.ics.muni.cz/beast-public/cryton/cryton-cli"
+documentation = "https://beast-public.gitlab-pages.ics.muni.cz/cryton/cryton-documentation/"
+keywords = [
+    "cryton", "cli", "client"
+]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+PyYAML = "~6.0"
+Jinja2 = "~3.0.3"
+pyfiglet = "~0.8.post1"
+termcolor = "~1.1.0"
+requests = "~2.27.0"
+click = "~8.1.2"
+tzlocal = "~4.1"
+pytz = "~2021.3"
+python-dotenv = "~0.20.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "~6.2.5"
+pytest-cov = "~3.0.0"
+pytest-mock = "~3.6.1"
+requests-mock = "~1.9.3"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+cryton-cli = 'cryton_cli.lib.cli:cli'
