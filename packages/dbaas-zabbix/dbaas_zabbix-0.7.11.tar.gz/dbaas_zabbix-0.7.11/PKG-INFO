@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: dbaas_zabbix
+Version: 0.7.11
+Summary: A Zabbix Integration for DBaaS.
+Home-page: https://github.com/globocom/dbaas-zabbix
+Author: Felippe Raposo
+Author-email: raposo.felippe@gmail.com
+License: BSD
+Description: UNKNOWN
+Keywords: dbaas_zabbix
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
