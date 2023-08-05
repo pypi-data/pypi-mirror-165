@@ -1,0 +1,16 @@
+termspark/__init__.py,sha256=eSrhjxf6yMqwHfoK7K5NhFj3zuy-9k7ApdiQwasqOGM,41
+termspark/termspark.py,sha256=GouLW4-8YlvHGDP2bzblqshAw2k_w7EvHzmiKSFKtXs,5304
+termspark/helpers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+termspark/helpers/existenceChecker.py,sha256=4uk5m6YzlAb6aFaAexJCvR5fiUGfESZ4zrE3hAeP7y0,160
+termspark/painter/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+termspark/painter/painter.py,sha256=pIziTU1P8yjG7buc7KYqnE57KcPUF9gx-VRqrZaFkMQ,1169
+termspark/painter/constants/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+termspark/painter/constants/fore.py,sha256=pSPJlulJzNIAa4kGcurgx5tnQVdZi0fwIio6wpwDwC8,401
+termspark/painter/constants/highlight.py,sha256=8QsKdo2glmaa71y-jxpx1zuSift1azhJbaKCDcNUZgk,417
+termspark/structurer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+termspark/structurer/structurer.py,sha256=KIp4O47PGalrOAT4IqEWzSUo_1arpjkKLQO8yb_EhE8,603
+termspark-0.0.12.dist-info/LICENSE,sha256=3IUEB1xZn2fPA8T8bci5VzoJ7eaw7QY6Rs3OOaCGEjw,1093
+termspark-0.0.12.dist-info/METADATA,sha256=v9Lxygbc5Ou2un5j87V-gV4IwgR-kgtoLo0wVroRm4A,4113
+termspark-0.0.12.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+termspark-0.0.12.dist-info/top_level.txt,sha256=BMOwCvPvkl5L4MJVv-fREo9PrfcAO45Nrd-otkp4bsc,10
+termspark-0.0.12.dist-info/RECORD,,
