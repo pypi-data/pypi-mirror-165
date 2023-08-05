@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: refpapers
+Version: 1.0.1
+Summary: refpapers - Manage and search bibliography from the command line
+Author: Stig-Arne Grönroos
+Author-email: stig.gronroos@gmail.com
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Scientific/Engineering
+Requires-Dist: PyYAML==5.4.1
+Requires-Dist: Unidecode==1.3.2
+Requires-Dist: arxiv==1.4.2
+Requires-Dist: click==8.0.1
+Requires-Dist: crossrefapi==1.5.0
+Requires-Dist: delegator.py==0.1.1
+Requires-Dist: prompt-toolkit==3.0.19
+Requires-Dist: pydantic==1.8.2
+Requires-Dist: rich==10.6.0
+Requires-Dist: scholarly==1.5.1
+Requires-Dist: whoosh==2.7.4

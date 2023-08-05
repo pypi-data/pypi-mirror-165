@@ -1,0 +1,3 @@
+[console_scripts]
+refpapers=refpapers:cli
+
