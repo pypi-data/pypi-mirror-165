@@ -1,0 +1,26 @@
+{
+    "created": 1661627778.6544025,
+    "duration": 0.633202314376831,
+    "exitcode": 0,
+    "root": "C:\\Users\\el_to\\Documents\\GitAblaze\\dbcontroller",
+    "environment": {
+        "Python": "3.10.6",
+        "Platform": "Windows-10-10.0.19044-SP0",
+        "Packages": {
+            "pytest": "7.1.2",
+            "py": "1.11.0",
+            "pluggy": "1.0.0"
+        },
+        "Plugins": {
+            "asyncio": "0.19.0",
+            "anyio": "3.6.1",
+            "json-report": "1.5.0",
+            "metadata": "2.0.2"
+        }
+    },
+    "summary": {
+        "passed": 23,
+        "total": 23,
+        "collected": 23
+    }
+}
