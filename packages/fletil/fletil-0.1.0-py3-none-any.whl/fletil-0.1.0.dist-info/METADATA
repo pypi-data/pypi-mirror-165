@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: fletil
+Version: 0.1.0
+Summary: A CLI for the Flet framework.
+Home-page: https://gitlab.com/skeledrew/fletil
+License: MIT
+Keywords: flet,cli
+Author: Andrew Phillips
+Author-email: skeledrew@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development
+Classifier: Topic :: Utilities
+Requires-Dist: fire (>=0.4.0,<0.5.0)
+Requires-Dist: flet (>=0.1.52,<0.2.0)
+Requires-Dist: loguru (>=0.6.0,<0.7.0)
+Requires-Dist: watchdog (>=2.1.9,<3.0.0)
+Project-URL: Repository, https://gitlab.com/skeledrew/fletil
+Description-Content-Type: text/markdown
+
+# Fletil
+A CLI for the Flet framework.
+
+## Features
+- Exposes the standard run options for a Flet app.
+- Implements basic "restart" functionality: reloads the targeted source file whenever changes are saved, but makes no attempt to preserve running state.
+
+## Installing
+- From PyPI: `$ pip install fletil`. Note this also installs `Flet` if it isn't present.
+- From GitLab (NOTE: development is managed by Poetry):
+  + git clone https://gitlab.com/skeledrew/fletil.git
+  + cd fletil
+  + poetry install
+
+## Usage
+Help is available via `$ fletil --help`.
+
+## Known Limitations
+- The `restart` option currently only works with a single source file. Doing filesystem operations on another source file in the folder being watched (or a subfolder) will likely lead to undefined behavior.
+
+## License
+MIT.
+
