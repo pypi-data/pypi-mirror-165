@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: devo-model-manager
+Version: 1.8.6
+Summary: Devo Model Manager API
+Home-page: 
+Author-email: machine.learning@devo.com
+Keywords: Swagger,Devo Model Manager API
+License-File: LICENSE
+
+    Devo API for machine learning  # noqa: E501
+    
