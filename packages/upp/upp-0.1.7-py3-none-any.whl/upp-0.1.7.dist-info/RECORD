@@ -1,0 +1,17 @@
+upp/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+upp/decode.py,sha256=oHMpEkFBIOZ5ZSvj--c3QojbrtJt748Sl2hXq2iz2Qs,32953
+upp/upp.py,sha256=L8Z9gAMHgXKDpnFCCYAQCBbKQjrJV77WCzbN6fJDZNo,13993
+upp/atom_gen/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+upp/atom_gen/atom.py,sha256=bYb7x5VwDxFYSED-M51NItZdMx6iD-KbtPFFaEun45Y,3800
+upp/atom_gen/atombios.py,sha256=cIkqHYlzfflUp-C05zZYk_wD8HiBCGgslbvv25Q1mCE,255185
+upp/atom_gen/pptable_v1_0.py,sha256=4fP-y8Oi37WQFdb7aZBkANIEjum8fOWXf8y7x7_zbnw,30254
+upp/atom_gen/smu_v11_0_7_navi20.py,sha256=dBF6wj3uDo5W-xiITsiThWj-BlpYbqmv2Rs1yxNpDY8,19839
+upp/atom_gen/smu_v11_0_navi10.py,sha256=M6kl5ETITkaVyzAofeYsTbfw6L-e6ktfbnsZ-XDPdW8,17949
+upp/atom_gen/vega10_pptable.py,sha256=AOqf1JklWb6abnUOsLDa5kic6K_V12m_tjlWwykJRrg,30177
+upp/atom_gen/vega20_pptable.py,sha256=f0j8znDCXv-hxt3BuZZXFlFt8jtRIuX2V4IJ9qVZrBw,17598
+upp-0.1.7.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+upp-0.1.7.dist-info/METADATA,sha256=xesYRwJ4JTM9qhmCgS7VQmwfDNM-vDRrTS14foi-9CI,6400
+upp-0.1.7.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+upp-0.1.7.dist-info/entry_points.txt,sha256=YGQfxeG_wp0Dr7637mXrraSwAPuZMHKQkhQwWck6P5g,37
+upp-0.1.7.dist-info/top_level.txt,sha256=AAihtDF2K91sLWdcAZlnvRZELA-VCbc13G8kTiQ2iMc,17
+upp-0.1.7.dist-info/RECORD,,
