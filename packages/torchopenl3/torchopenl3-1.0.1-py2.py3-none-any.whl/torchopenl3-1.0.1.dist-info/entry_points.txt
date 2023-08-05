@@ -1,0 +1,2 @@
+[console_scripts]
+torchopenl3 = torchopenl3.cli:main
