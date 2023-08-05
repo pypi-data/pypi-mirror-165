@@ -1,0 +1,3 @@
+[console_scripts]
+timer-bot = src.timer_bot:main
+
