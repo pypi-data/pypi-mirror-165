@@ -1,0 +1,107 @@
+%YAML 1.2
+---
+version: '1.0'
+
+packages:
+  tpds-core:
+    description: "TPDS Core Services"
+    source:
+      pypi:
+        - tpds-core
+  tpds-application:
+    description: "TPDS Standalone Application"
+    source:
+      pypi:
+        - tpds-application
+  tpds-application-root:
+    description: "TPDS Application Resources"
+    source:
+      pypi:
+        - tpds-application-root
+  tpds-boards:
+    description: "TPDS Development Board Resources"
+    source:
+      pypi:
+        - tpds-boards
+  tpds-helper:
+    description: "TPDS Support Services"
+    source:
+      pypi:
+        - tpds-helper
+  tpds-manifest:
+    description: "TPDS Package Metadata"
+    source:
+      pypi:
+        - tpds-manifest
+  tpds-voila-template:
+    description: "TPDS Voila Template for Jupyter Notebooks"
+    source:
+      pypi:
+        - tpds-voila-template
+
+extensions:
+  tpds-extension-avnet-iotconnect:
+    description: "Microchip(SPG) Trust Platform Usecase for Avnet IoTConnect"
+    source:
+      pypi:
+        - tpds-extension-avnet-iotconnect
+
+  tpds-extension-cec17xx-support:
+    description: "Microchip(SPG) Trust Platform - CEC17xx Device Support"
+    source:
+      pypi:
+        - tpds-extension-cec17xx-support
+
+  tpds-extension-cryptoquantique-quarklink:
+    description: "Microchip(SPG) Trust Platform - Cryptoquantique Quarklink Usecase"
+    source:
+      pypi:
+        - tpds-extension-cryptoquantique-quarklink
+
+  tpds-extension-ecc608-sip-support:
+    description: "Microchip(SPG) Trust Platform - ECC608 SIP Device Support"
+    source:
+      pypi:
+        - tpds-extension-ecc608-sip-support
+
+  tpds-extension-spg-asym-auth:
+    description: "Microchip(SPG) Trust Platform Usecase Asymmetric Authentication"
+    source:
+      pypi:
+        - tpds-extension-spg-asym-auth
+
+  tpds-extension-spg-cloud-connect:
+    description: "Microchip(SPG) Trust Platform - Cloud Connection Usecases"
+    source:
+      pypi:
+        - tpds-usecase-spg-cloud-connect
+
+  tpds-extension-spg-fw-validation:
+    description: "Microchip(SPG) Trust Platform - Firmware Validation Usecase"
+    source:
+      pypi:
+        - tpds-extension-spg-fw-validation
+
+  tpds-extension-spg-ip-protection:
+    description: "Microchip(SPG) Trust Platform - IP Protection Usecase"
+    source:
+      pypi:
+        - tpds-extension-spg-ip-protection
+
+  tpds-extension-spg-public-key-rotation:
+    description: "Microchip(SPG) Trust Platform - Public Key Rotation Usecase"
+    source:
+      pypi:
+        - tpds-extension-spg-public-key-rotation
+
+  tpds-extension-spg-symmetric-auth:
+    description: "Microchip(SPG) Trust Platform - Symmetric Authentication Usecase"
+    source:
+      pypi:
+       - tpds-extension-spg-symmetric-auth
+
+  tpds-extension-wpc-transmitter:
+    description: "Microchip(SPG) Trust Platform WPC Configurator for Power Transmitters"
+    source:
+      pypi:
+        - tpds-extension-wpc-transmitter
