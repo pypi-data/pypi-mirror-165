@@ -1,0 +1,45 @@
+[tool.poetry]
+name = "lug"
+version = "0.1.1"
+description = "lug"
+authors = [
+    "Bryce Cai <bryce@trytoolchest.com>",
+    "Justin Herr <justin@trytoolchest.com>",
+    "Noah Lebovic <security@trytoolchest.com",
+]
+license = "Apache-2.0"
+readme = "README.md"
+homepage = "https://github.com/trytoolchest/"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+packages = [
+    { include = "lug" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+toolchest-client = "^0.9.31"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.4"
+flake8 = "^4.0.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[[tool.poetry.source]]
+name = "pypi-public"
+url = "https://pypi.org/simple/"
+
+[[tool.poetry.source]]
+name = "prod-pypi"
+url = "https://upload.pypi.org/legacy/"
+secondary = true
+
+[[tool.poetry.source]]
+name = "test-pypi"
+url = "https://test.pypi.org/legacy/"
+secondary = true
