@@ -1,0 +1,10 @@
+setup.py
+fesnd_probability/Binomialdistribution.py
+fesnd_probability/Gaussiandistribution.py
+fesnd_probability/Generaldistribution.py
+fesnd_probability/__init__.py
+fesnd_probability.egg-info/PKG-INFO
+fesnd_probability.egg-info/SOURCES.txt
+fesnd_probability.egg-info/dependency_links.txt
+fesnd_probability.egg-info/not-zip-safe
+fesnd_probability.egg-info/top_level.txt
