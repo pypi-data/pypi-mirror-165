@@ -1,0 +1,4 @@
+[console_scripts]
+tv-html=tvpy.main:tv_html
+tv-json=tvpy.main:tv_json
+
