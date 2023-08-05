@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: nonebot-plugin-groupmate-waifu
+Version: 1.0.1
+Summary: 娶群友
+Home-page: https://github.com/KarisAya/nonebot_plugin_groupmate_waifu
+Author: karisaya
+Author-email: 1048827424@qq.com
+License: MIT license
+Platform: all
+License-File: LICENSE
+Requires-Dist: nonebot2
+Requires-Dist: nonebot-adapter-onebot
+Requires-Dist: nonebot-plugin-apscheduler
+Requires-Dist: nonebot-plugin-imageutils
+
+UNKNOWN
+
