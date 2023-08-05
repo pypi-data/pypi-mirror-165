@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+applesoss/__init__.py
+applesoss/applesoss.py
+applesoss/applesoss_utils.py
+applesoss/edgetrigger_centroids.py
+applesoss/edgetrigger_utils.py
+applesoss/plotting.py
+applesoss.egg-info/PKG-INFO
+applesoss.egg-info/SOURCES.txt
+applesoss.egg-info/dependency_links.txt
+applesoss.egg-info/requires.txt
+applesoss.egg-info/top_level.txt

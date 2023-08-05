@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: applesoss
+Version: 0.1.1
+Summary: A Producer of ProfiLEs for SOSS
+Home-page: https://github.com/radicamc/APPLESOSS
+Author: Michael Radica
+Author-email: michael.radica@umontreal.ca
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.10
+License-File: LICENSE
+
+UNKNOWN
+
