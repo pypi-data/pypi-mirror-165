@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: tiffextract
+Version: 0.0.1
+Summary: Converts AFM images with the raw format file .ibw into .tif images from each AFM channel used in the measurement
+Home-page: https://engineering.case.edu/centers/sdle/
+Author: Roger French(ORCID:000000-0002-6162-0532), Liangyi Huang(ORCID:0000-0003-0845-3293), Will Oltjen(ORCID:0000-0003-0380-1033),Arafath Nihar, Jiqi Liu(ORCiD: 0000-0003-2016-4160), Justin Glynn, Kehley Coleman, Harsha Nandan Madiraju
+Author-email: roger.french@case.edu, lxh442@case.edu, wco3@case.edu,axn392@case.edu,jxl1763@case.edu,jpg90@case.edu, kac196@case.edu, hxm434@case.edu
+License: BSD License (BSD-3)
+Keywords: AFM,conversion,automated,.ibw to .tif
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Programming Language :: Python :: 3.8
+License-File: LICENCE.txt
+
