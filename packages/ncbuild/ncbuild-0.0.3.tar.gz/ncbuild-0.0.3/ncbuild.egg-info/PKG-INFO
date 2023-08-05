@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: ncbuild
+Version: 0.0.3
+Summary: Used for generating netCDF files compliant with CF Conventions or ACDD
+Home-page: https://github.com/jenochjones/ncbuild
+Author: J Enoch Jones
+Author-email: jonenochjones@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+#NCBUILD
+
+##Building CF Compliant netCDF files
+
+###Installation
+<p>To install ncbuild run "pip install ncbild" in your terminal.</p>
+
+###Documentation and Demos
+<p>Read the documentation here: url</p>
+<p>Try a demo hosted in a Google Collaboratory Notebook</p>
