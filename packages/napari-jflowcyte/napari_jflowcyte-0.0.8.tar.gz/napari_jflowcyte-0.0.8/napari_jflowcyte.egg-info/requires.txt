@@ -1,0 +1,6 @@
+matplotlib
+napari
+numpy
+numba
+pandas
+magicgui
