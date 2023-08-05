@@ -1,0 +1,13 @@
+colorama
+doit
+
+[docs]
+sphinx
+sphinx_rtd_theme
+docutils<0.18
+
+[tests]
+flake8
+pytest
+pytest-cov
+twine

@@ -1,0 +1,2 @@
+[doit.REPORTER]
+doit_interface = doit_interface.reporters:DoitInterfaceReporter
