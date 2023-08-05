@@ -1,0 +1,15 @@
+plover_word_tray/config_ui.py,sha256=IG6nECA65zB6Uf9GzeFFLHhFtOBNTxKQjQJJhxhK89g,4183
+plover_word_tray/pseudo.py,sha256=hnSJjH_dIE0fgG0BYIoynjBL-qnNlM3gYEBcqKyceno,7596
+plover_word_tray/resources_rc.py,sha256=yIQyn4ikYCChLbe3Xf9XMHMohiHng9jzsflZIT-pDig,13641
+plover_word_tray/sorting.py,sha256=Oq6HjjukDVMVnq7t6UeQiq3N1mWOW0od20d0WuS0ojQ,3149
+plover_word_tray/word_tray_config.py,sha256=9PciGSsRMJKWdbj60xj3HGBDgNNNbpeR9rDQDJJ5v4I,689
+plover_word_tray/word_tray_macros.py,sha256=FVvJNCLIFW0fcgVAcXq9M6tiK7jixASEJoc7uqbRmB0,439
+plover_word_tray/word_tray_suggestions.py,sha256=FES-4YdX4Nx0hIfkylZ9fuhNPIktJzPqMmBEWO52bqU,9986
+plover_word_tray/word_tray_ui.py,sha256=7vrsR4zblk1TwYGR9UOmD11q72euzMz4pAbeSNhyZXI,6276
+plover_word_tray-0.0.10.dist-info/LICENSE.txt,sha256=Lbh_Y2mZSlzpfjO3UihFFHcUKgHh0-t_oDXBXu5V6iI,1050
+plover_word_tray-0.0.10.dist-info/METADATA,sha256=e0MgbAyS3bgQd9-GmfBOnlt4CTBvLFUMp7hsC7g9Vqg,5004
+plover_word_tray-0.0.10.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+plover_word_tray-0.0.10.dist-info/entry_points.txt,sha256=0qVtd5W9_26is0aWSh6tgVXBC5IgDzzdBtUoCs9V564,289
+plover_word_tray-0.0.10.dist-info/top_level.txt,sha256=1WzR5n4XLAlEH8V7fr0j4bukAPfm15WYcKk1wuk2MLg,17
+plover_word_tray-0.0.10.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+plover_word_tray-0.0.10.dist-info/RECORD,,

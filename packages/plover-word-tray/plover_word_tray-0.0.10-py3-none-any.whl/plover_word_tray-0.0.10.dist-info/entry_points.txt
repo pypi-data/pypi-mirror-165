@@ -1,0 +1,7 @@
+[plover.gui.qt.tool]
+word_tray = plover_word_tray.word_tray_suggestions:WordTraySuggestions
+
+[plover.macro]
+wt_next_page = plover_word_tray.word_tray_macros:next_page
+wt_prev_page = plover_word_tray.word_tray_macros:prev_page
+wt_reload = plover_word_tray.word_tray_macros:word_tray_reload
