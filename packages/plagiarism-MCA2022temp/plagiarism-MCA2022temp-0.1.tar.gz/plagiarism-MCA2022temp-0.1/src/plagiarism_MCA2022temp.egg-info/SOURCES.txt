@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/plagiarism_MCA2022temp.egg-info/PKG-INFO
+src/plagiarism_MCA2022temp.egg-info/SOURCES.txt
+src/plagiarism_MCA2022temp.egg-info/dependency_links.txt
+src/plagiarism_MCA2022temp.egg-info/requires.txt
+src/plagiarism_MCA2022temp.egg-info/top_level.txt
+src/plagy/__init__.py
+src/plagy/plagy.py
