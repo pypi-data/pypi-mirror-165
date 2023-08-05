@@ -1,0 +1,20 @@
+
+[:platform_system == "Darwin"]
+psutil>=2.0.0
+appscript>=1.0.1
+
+[:platform_system == "Windows"]
+pywin32>=224
+
+[all]
+Jinja2
+pandas
+matplotlib
+plotly
+flask
+requests
+pdfrw
+
+[reports]
+Jinja2
+pdfrw
