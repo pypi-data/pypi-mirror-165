@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: spm-tools
+Version: 0.1.1
+Summary: A package to process and analyse scanning probe microscopy data.
+Author: Tom Vincent
+Author-email: TomVincentCode@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# spm-tools
+
+A set of Python tools to process and analyse scanning probe microscopy (SPM) data.
+
+
