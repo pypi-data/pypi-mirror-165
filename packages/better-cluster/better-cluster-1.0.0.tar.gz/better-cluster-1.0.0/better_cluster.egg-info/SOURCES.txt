@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+better_cluster.egg-info/PKG-INFO
+better_cluster.egg-info/SOURCES.txt
+better_cluster.egg-info/dependency_links.txt
+better_cluster.egg-info/top_level.txt
+discord/ext/cluster/__init__.py
+discord/ext/cluster/client.py
+discord/ext/cluster/cluster.py
+discord/ext/cluster/errors.py
+discord/ext/cluster/objects.py
+discord/ext/cluster/shard.py
