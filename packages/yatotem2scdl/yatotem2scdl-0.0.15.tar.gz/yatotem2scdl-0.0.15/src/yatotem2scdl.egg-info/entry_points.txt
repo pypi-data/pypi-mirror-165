@@ -1,0 +1,2 @@
+[console_scripts]
+yatotem2scdl = yatotem2scdl.main:main

@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/yatotem2scdl/__init__.py
+src/yatotem2scdl/conversion.py
+src/yatotem2scdl/data_structures.py
+src/yatotem2scdl/exceptions.py
+src/yatotem2scdl/main.py
+src/yatotem2scdl/planDeCompte-vide.xml
+src/yatotem2scdl.egg-info/PKG-INFO
+src/yatotem2scdl.egg-info/SOURCES.txt
+src/yatotem2scdl.egg-info/dependency_links.txt
+src/yatotem2scdl.egg-info/entry_points.txt
+src/yatotem2scdl.egg-info/requires.txt
+src/yatotem2scdl.egg-info/top_level.txt
+src/yatotem2scdl/xsl/totem2xmlcsv.xsl

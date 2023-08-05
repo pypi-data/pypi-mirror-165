@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "yatotem2scdl"
+version = "0.0.15"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = ["lxml"]
+
+[project.scripts]
+yatotem2scdl = "yatotem2scdl.main:main"
+
+
+[project.optional-dependencies]
+dev = ["build", "black", "mypy", "pytest", "pytest-watch", "csv-diff", "twine"]
+
+[tool.setuptools]
+include-package-data = true
+
+
+[tool.setuptools.packages.find]
+where = ["src"]
+[tool.setuptools.package-data]
+yatotem2scdl = ["xsl/**", "planDeCompte-vide.xml"]

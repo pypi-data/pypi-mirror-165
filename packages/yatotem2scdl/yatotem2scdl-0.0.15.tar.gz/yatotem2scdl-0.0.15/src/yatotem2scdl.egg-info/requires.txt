@@ -1,0 +1,10 @@
+lxml
+
+[dev]
+build
+black
+mypy
+pytest
+pytest-watch
+csv-diff
+twine
