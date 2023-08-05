@@ -1,0 +1,6 @@
+[console_scripts]
+modelator=modelator.cli:app
+
+[pytest11]
+pytest-modelator=modelator.pytest
+
