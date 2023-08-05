@@ -1,0 +1,59 @@
+[tool.poetry]
+name = "humiocli"
+version = "0.9.0"
+description = "Command line interface for interacting with the Humio API using the humioapi library"
+authors = ["Jostein Haukeli"]
+repository = "https://github.com/gwtwod/humiocli"
+readme = "README.md"
+
+packages = [
+    { include = "humiocli" }
+]
+
+[tool.poetry.dependencies]
+python = ">=3.8"
+tzlocal = "^2.1"
+snaptime = "^0.2.4"
+pendulum = "^2.1.2"
+pytz = "^2018.9"
+structlog = "^20.2.0"
+pandas = "^1.1.1"
+pygments = "^2.6.1"
+click = "^7.1.2"
+tabulate = "^0.8.8"
+chardet = "^4.0.0"
+colorama = "^0.4.4"
+humioapi = "^0.11.0"
+ipykernel = {version = "^5.4.3", optional = true}
+Pygments = "^2.8.0"
+
+[tool.poetry.dev-dependencies]
+black = { version = "*", allow-prereleases = true }
+pylint = "^2.6.0"
+flake8 = "^3.8.3"
+
+[tool.poetry.scripts]
+hc = "humiocli.cli:cli"
+
+[tool.dephell.main]
+from = {format = "poetry", path = "pyproject.toml"}
+to = {format = "setuppy", path = "setup.py"}
+
+[tool.black]
+line-length = 120
+target-version = ['py38', 'py39', 'py310']
+include = '\.pyi?$'
+exclude = '''
+(/(
+    \.eggs
+  | \.git
+  | \.venv
+  | _?build
+  | dist
+)/
+  | setup\.py
+)
+'''
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
