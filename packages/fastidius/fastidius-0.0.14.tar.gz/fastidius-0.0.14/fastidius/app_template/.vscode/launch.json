@@ -1,0 +1,19 @@
+{
+    "configurations": [
+        {
+            "name": "Python: FastAPI",
+            "type": "python",
+            "request": "launch",
+            "module": "uvicorn",
+            "args": [
+                "backend.main:app"
+            ],
+            "env": {
+                "BASE_ENVIRONMENT": "dev",
+                "PYTHONPATH": "."
+            },
+            "jinja": true,
+            "justMyCode": true
+        }
+    ]
+}

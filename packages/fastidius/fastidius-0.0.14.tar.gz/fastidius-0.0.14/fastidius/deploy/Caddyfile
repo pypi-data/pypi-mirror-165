@@ -1,0 +1,11 @@
+
+
+{
+    email example@hello.com
+    acme_ca https://acme-staging-v02.api.letsencrypt.org/directory
+    local_certs
+}
+
+website.johnkealy.com {
+    reverse_proxy whatever-frontend:3000
+}
