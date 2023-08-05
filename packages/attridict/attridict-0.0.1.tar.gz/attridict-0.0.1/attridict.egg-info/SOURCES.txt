@@ -1,0 +1,9 @@
+LICENSE
+README.md
+attridict.py
+setup.py
+tests.py
+attridict.egg-info/PKG-INFO
+attridict.egg-info/SOURCES.txt
+attridict.egg-info/dependency_links.txt
+attridict.egg-info/top_level.txt
