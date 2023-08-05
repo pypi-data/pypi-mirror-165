@@ -1,0 +1,5 @@
+setup.py
+Nelson_Test_Package.egg-info/PKG-INFO
+Nelson_Test_Package.egg-info/SOURCES.txt
+Nelson_Test_Package.egg-info/dependency_links.txt
+Nelson_Test_Package.egg-info/top_level.txt
