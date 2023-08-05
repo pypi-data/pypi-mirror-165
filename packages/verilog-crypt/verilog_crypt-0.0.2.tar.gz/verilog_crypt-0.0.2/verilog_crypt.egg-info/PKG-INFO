@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: verilog-crypt
+Version: 0.0.2
+Summary: verilog crypt package
+Home-page: UNKNOWN
+Author: author
+Author-email: author@innochip.com
+License: UNKNOWN
+Description: This is a package which provided python apis to crypt verilog language!
+Platform: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
