@@ -1,0 +1,15 @@
+fastcore>=1.5.19
+execnb>=0.1.2
+astunparse
+ghapi>=1.0.1
+PyYAML
+
+[:python_version=="3.7"]
+asttokens
+
+[dev]
+nbdev-numpy
+nbdev-stdlib
+pandas
+matplotlib
+black
