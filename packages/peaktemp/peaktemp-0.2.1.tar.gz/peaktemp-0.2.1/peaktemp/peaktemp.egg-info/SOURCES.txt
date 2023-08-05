@@ -1,0 +1,9 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+peaktemp/peaktemp.egg-info/PKG-INFO
+peaktemp/peaktemp.egg-info/SOURCES.txt
+peaktemp/peaktemp.egg-info/dependency_links.txt
+peaktemp/peaktemp.egg-info/requires.txt
+peaktemp/peaktemp.egg-info/top_level.txt

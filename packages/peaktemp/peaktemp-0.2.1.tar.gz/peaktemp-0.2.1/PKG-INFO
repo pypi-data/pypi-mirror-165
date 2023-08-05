@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: peaktemp
+Version: 0.2.1
+Summary: Implementation of the Western Interstate Energy Board's peak temperature forecasting tool, using CMIP6 climate projection models from the Copernicus Climate Data Store (CDS) and NOAA's Integrated Surface Database (ISD).
+Home-page: https://github.com/jakehofgard/peaktemp
+Author: Jake Hofgard
+Author-email: whofgard@stanford.edu
+License: MIT
+Keywords: climate,temperature,forecasting,peak load
+Platform: UNKNOWN
+Requires-Python: >=3.8
+License-File: LICENSE.txt
+
+UNKNOWN
+
