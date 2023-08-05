@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: douya
+Version: 0.0.1a0
+Author: xmyeen@163.com
+Author-email: xmyeen@163.com
+Platform: all
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS :: MacOS X
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: attrbox
+Requires-Dist: concurrent-log-handler
+Requires-Dist: croniter
+Requires-Dist: toml
+Provides-Extra: db_lite
+Requires-Dist: pony ; extra == 'db_lite'
+Provides-Extra: db_postgresql
+Requires-Dist: sqlalchemy[postgresql_psycopg2cffi] ; extra == 'db_postgresql'
+Provides-Extra: tests
+Requires-Dist: pytest ; extra == 'tests'
+Requires-Dist: pytest-cov ; extra == 'tests'
+Requires-Dist: flake8 ; extra == 'tests'
+Requires-Dist: attrbox ; extra == 'tests'
+Requires-Dist: concurrent-log-handler ; extra == 'tests'
+Requires-Dist: croniter ; extra == 'tests'
+Requires-Dist: toml ; extra == 'tests'
+Requires-Dist: sanic ; extra == 'tests'
+Requires-Dist: pony ; extra == 'tests'
+Requires-Dist: sqlalchemy[postgresql_psycopg2cffi] ; extra == 'tests'
+Provides-Extra: web
+Requires-Dist: sanic ; extra == 'web'
+
+# douya
+豆芽
+
+## 发行版测试
+| 发行版                      |  依赖 |
+| -------------------------- | -----------------------|
+| pypy3.9-v7.3.9-linux64     | setuptools <= 6.8.2    |
