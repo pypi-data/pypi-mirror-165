@@ -1,0 +1,15 @@
+LICENSE.md
+README.md
+fig.py
+setup.cfg
+setup.py
+fig_converter.egg-info/PKG-INFO
+fig_converter.egg-info/SOURCES.txt
+fig_converter.egg-info/dependency_links.txt
+fig_converter.egg-info/requires.txt
+fig_converter.egg-info/top_level.txt
+figconverter/__init__.py
+figconverter/reader.py
+figconverter/text_style.py
+figconverter/utils.py
+figconverter/writer.py
