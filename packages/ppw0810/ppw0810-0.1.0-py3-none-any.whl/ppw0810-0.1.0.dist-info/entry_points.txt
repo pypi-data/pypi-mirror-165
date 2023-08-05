@@ -1,0 +1,3 @@
+[console_scripts]
+ppw0810=ppw0810.cli:main
+
