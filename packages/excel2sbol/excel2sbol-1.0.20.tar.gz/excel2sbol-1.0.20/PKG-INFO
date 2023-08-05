@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: excel2sbol
+Version: 1.0.20
+Summary: convert excel resources into sbol
+Home-page: https://github.com/SynBioDex/Excel-to-SBOL/
+Maintainer: Jet Mante
+Maintainer-email: jet.mante@colorado.edu
+License: BSD 3-clause
+
+This library is a collection of functions used to convert an excel template into SBOL libraries and compositions.
