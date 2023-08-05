@@ -1,0 +1,9 @@
+FlaskSaml/FlaskSP.py,sha256=70m9FysU2yA37FKquJjQ_itVM8d3zcAHEYB8Rs_-gkQ,11677
+FlaskSaml/__init__.py,sha256=82GBC-gsqs6iQbiFehqMuWBKoRyBC9LDy7Q1D8ymfiY,29
+FlaskSaml/flask_utils.py,sha256=m8XTTjhWmqYBSJRbh3-fXwIiHEZoKyyutJJ9q5V-L0o,783
+FlaskSaml/reqID.py,sha256=omrbs-i6Hzed4G_Gm7SER-uTG8iqfw4BG2gx-Rhb7aQ,2062
+FlaskSamlSP-22.8.28.dist-info/LICENSE.txt,sha256=IsKhNAExnuxGLWUOpUYTEH0JttGV2QexZXW-ttXs0YE,1067
+FlaskSamlSP-22.8.28.dist-info/METADATA,sha256=prB8L7uK8gy_uVl9M2UFOg-CUy9UHPUnQemXKThO--s,1159
+FlaskSamlSP-22.8.28.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+FlaskSamlSP-22.8.28.dist-info/top_level.txt,sha256=wgSGTyShN8ackaxHclin2CxZBHX3LwduzmUuj7ZLDr8,10
+FlaskSamlSP-22.8.28.dist-info/RECORD,,
