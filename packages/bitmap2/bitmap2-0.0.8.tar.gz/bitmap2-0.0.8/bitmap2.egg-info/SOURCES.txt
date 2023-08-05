@@ -1,0 +1,11 @@
+LICENSE.md
+MANIFEST.in
+README.md
+setup.py
+bitmap2.egg-info/PKG-INFO
+bitmap2.egg-info/SOURCES.txt
+bitmap2.egg-info/dependency_links.txt
+bitmap2.egg-info/top_level.txt
+src/__init__.py
+src/bitmap.py
+test/test_bitmap.py
