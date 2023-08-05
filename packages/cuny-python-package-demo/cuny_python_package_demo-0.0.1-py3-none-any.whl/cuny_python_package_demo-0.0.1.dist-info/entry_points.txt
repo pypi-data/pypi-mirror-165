@@ -1,0 +1,2 @@
+[console_scripts]
+cunyue_python_package_demo = cunyue_python_package_demo.app:entry_point
