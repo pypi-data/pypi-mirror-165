@@ -1,0 +1,12 @@
+README.md
+setup.py
+rarbgcli/__init__.py
+rarbgcli/download_tesseract.py
+rarbgcli/get_chrome_driver.py
+rarbgcli/rarbgcli.py
+rarbgcli.egg-info/PKG-INFO
+rarbgcli.egg-info/SOURCES.txt
+rarbgcli.egg-info/dependency_links.txt
+rarbgcli.egg-info/entry_points.txt
+rarbgcli.egg-info/requires.txt
+rarbgcli.egg-info/top_level.txt
