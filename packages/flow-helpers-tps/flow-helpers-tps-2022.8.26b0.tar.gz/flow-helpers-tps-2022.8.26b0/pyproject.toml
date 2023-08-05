@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "flow-helpers-tps"
+version = "2022.08.26b"
+description = "Handy helpers for ETL and API interfacing."
+readme = "README.md"
+license = "MIT"
+include = ["LICENSE"]
+authors = ["joshliu3 <jliu@theparkingspot.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+botocore = "*"
+pandas = "*"
+flatdict = "*"
+SQLAlchemy = "*"
+pysftp = "*"
+office365 = "*"
+google-api-python-client = "*"
+httplib2 = "*"
+pendulum = "*"
+boto3 = "*"
+uuid = "*"
+google = "*"
+facebook-business = "*"
+cryptography = "*"
+poetry = "^1.1.15"
+
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
