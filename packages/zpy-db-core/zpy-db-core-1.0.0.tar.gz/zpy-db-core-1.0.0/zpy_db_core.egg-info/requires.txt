@@ -1,0 +1,4 @@
+zpy-api-core
+mysql-connector-python
+cx-Oracle
+psycopg2
