@@ -1,0 +1,51 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "ksync"
+authors = [{name = "Erinn Looney-Triggs", email = "erinn.looneytriggs@gmail.com"}]
+readme = "README.md"
+license = {file = "LICENSE"}
+classifiers = [
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3"
+]
+dynamic = ["version", "description"]
+requires-python = ">=3.9"
+
+[project.urls]
+Home = "https://github.com/erinn/ksync/"
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "bumpver",
+    "pep8",
+    "pip-tools",
+    "pylint"
+]
+test = [
+    "pytest",
+    "pytest-cov",
+    "pytest-mock"
+]
+
+[tool.pytest.ini_options]
+pythonpath = [
+  "src"
+]
+
+[tool.bumpver]
+current_version = "0.2.1"
+version_pattern = "MAJOR.MINOR.PATCH"
+commit_message = "bump version {old_version} -> {new_version}"
+commit = true
+tag = true
+push = false
+
+[tool.bumpver.file_patterns]
+"src/ksync/__init__.py" = [
+    '^__version__ = "{version}"$'
+]
