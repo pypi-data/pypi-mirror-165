@@ -1,0 +1,10 @@
+pyinjector/pyinjector.py,sha256=6tFPcjzMAnAV4ECcUk4zCObVE9PohMBBJ_TJwXtsWPU,3943
+pyinjector/libinjector.cpython-37m-x86_64-linux-gnu.so,sha256=DewmTqPxh28oKZtkrf46IoppS-qlCPq2_XAOvh911wQ,95232
+pyinjector/__main__.py,sha256=fejvsE1772HG1hBe2IzLgsNnPaf6dW5dAd1iW2u4fWo,686
+pyinjector/__init__.py,sha256=-vFL4KHUTI2xS177E6YAdXSXlBiFkNqLRPElFpbm78k,58
+pyinjector-1.1.0.dist-info/top_level.txt,sha256=aRHHF-GOMEf_i94jw6CEmTmtXCBZbxp_KzC2x_Jt1GQ,11
+pyinjector-1.1.0.dist-info/WHEEL,sha256=6BSRu74P-IAfjDfThg5o2lMcQi0nIjDWYT82bDsCg8k,225
+pyinjector-1.1.0.dist-info/METADATA,sha256=lZ10DffEWGsaZPRY5vzLsraqVjFtjSp7qlGC_Yi6cVQ,2537
+pyinjector-1.1.0.dist-info/entry_points.txt,sha256=XBtBo4ip7bF8419ph48wZfvwuuwm-bXQJ3Rt8gXk6CE,52
+pyinjector-1.1.0.dist-info/RECORD,,
+pyinjector-1.1.0.dist-info/LICENSE,sha256=uWMiTSyfaXYaCmltnVDyC-IeeLafXAMXJ01Kn5C-Dng,1092
