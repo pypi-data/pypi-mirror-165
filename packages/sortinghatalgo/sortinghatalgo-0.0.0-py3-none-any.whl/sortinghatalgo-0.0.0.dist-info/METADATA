@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: sortinghatalgo
+Version: 0.0.0
+Summary: A small example package
+Author-email: Alex Lucchesi <lucchesia7@gmail.com>
+Requires-Python: >=3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+
+## Sorting Algorithms
+A sample python package deployment utility for personal use
