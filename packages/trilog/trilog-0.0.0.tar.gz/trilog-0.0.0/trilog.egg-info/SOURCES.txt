@@ -1,0 +1,10 @@
+CHANGELOG.txt
+LICENSES.txt
+MANIFEST.in
+README.txt
+setup.py
+Calculators/trilog.py
+trilog.egg-info/PKG-INFO
+trilog.egg-info/SOURCES.txt
+trilog.egg-info/dependency_links.txt
+trilog.egg-info/top_level.txt
