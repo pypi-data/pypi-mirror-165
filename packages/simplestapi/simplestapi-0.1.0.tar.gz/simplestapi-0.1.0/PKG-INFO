@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: simplestapi
+Version: 0.1.0
+Summary: SimpleAPI is a minimalistic, unopinionated web framework for Python, inspired by FastAPI & Flask
+Home-page: https://github.com/adhamsalama/simpleapi
+License: MIT
+Author: Adham Salama
+Author-email: adham.salama@zohomail.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: pydantic (>=1.9.2,<2.0.0)
+Project-URL: Bug Tracker, https://github.com/adhamsalama/simpleapi/issues
+Project-URL: Repository, https://github.com/adhamsalama/simpleapi
