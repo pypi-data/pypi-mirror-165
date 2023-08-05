@@ -1,0 +1,9 @@
+sphinx_autoissues/__init__.py,sha256=DsNbAZf8r8z0-y0S5Y4jHCNPu8i0erkHXGo481M53Q4,11383
+sphinx_autoissues/issuetracker.css,sha256=0rBeQx9LvCPWyh4JfbYq6ME-SklccqJti0634fPQGVk,200
+sphinx_autoissues/resolvers.py,sha256=hMkSLMRy8hShRUJZ8iBB7FOqoiwSPK310KRz5gqC5Ww,4457
+sphinx_autoissues/types.py,sha256=4H1QiEflrHCdPzT0k8qdhul0PS-_J-wedwPENkVhPY4,2096
+sphinx_autoissues/utils.py,sha256=OvXfULvsjfOngzxmHljF6zPpnIfhGDPjh0jZ5Ofzn2A,426
+sphinx_autoissues-0.0.1a1.dist-info/LICENSE,sha256=lxy1CmvKvUY5v3dK2ZJexS0rTbNKgDxwGcQoXz2JXkI,1517
+sphinx_autoissues-0.0.1a1.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+sphinx_autoissues-0.0.1a1.dist-info/METADATA,sha256=W9y6XU4XRR-Uhd1cBIUwPxkp59bwqCQWWOyaWEydta0,6229
+sphinx_autoissues-0.0.1a1.dist-info/RECORD,,
