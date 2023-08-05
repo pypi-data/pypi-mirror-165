@@ -1,0 +1,706 @@
+"""
+Helper classes are meant to provide a convenient user API for specific
+configurations. They allow a separation of "viztool-specific" API and the glue
+application objects.
+
+See also https://github.com/spacetelescope/jdaviz/issues/104 for more details
+on the motivation behind this concept.
+"""
+import re
+import warnings
+
+import numpy as np
+import astropy.units as u
+from astropy.wcs.wcsapi import BaseHighLevelWCS
+from glue.core import HubListener
+from glue.core.edit_subset_mode import NewMode
+from glue.core.message import SubsetCreateMessage, SubsetDeleteMessage
+from glue.core.subset import Subset, MaskSubsetState
+
+from jdaviz.app import Application
+from jdaviz.core.events import SnackbarMessage
+
+__all__ = ['ConfigHelper', 'ImageConfigHelper']
+
+
+class ConfigHelper(HubListener):
+    """The Base Helper Class.
+    Provides shared abstracted helper methods to the user.
+
+    Subclasses should set ``_default_configuration`` if they are meant to be
+    used with a specific configuration.
+
+    Parameters
+    ----------
+    app : `~jdaviz.app.Application` or `None`
+        The application object, or if `None`, creates a new one based on the
+        default configuration for this helper.
+    verbosity : {'debug', 'info', 'warning', 'error'}
+        Verbosity of the popup messages in the application.
+    history_verbosity : {'debug', 'info', 'warning', 'error'}
+        Verbosity of the history logger in the application.
+    """
+    _default_configuration = 'default'
+
+    def __init__(self, app=None, verbosity='warning', history_verbosity='info'):
+        if app is None:
+            self.app = Application(configuration=self._default_configuration)
+        else:
+            self.app = app
+        self.app.verbosity = verbosity
+        self.app.history_verbosity = history_verbosity
+
+        # give a reference from the app back to this config helper.  These can be accessed from a
+        # viewer via viewer.jdaviz_app and viewer.jdaviz_helper
+        # if the helper has already been set, this is probably a nested viz tool. Don't overwrite
+        if not hasattr(self.app, '_jdaviz_helper'):
+            self.app._jdaviz_helper = self
+
+        self.app.hub.subscribe(self, SubsetCreateMessage,
+                               handler=lambda msg: self._propagate_callback_to_viewers('_on_subset_create', msg)) # noqa
+        self.app.hub.subscribe(self, SubsetDeleteMessage,
+                               handler=lambda msg: self._propagate_callback_to_viewers('_on_subset_delete', msg)) # noqa
+
+    def _propagate_callback_to_viewers(self, method, msg):
+        # viewers don't have access to the app/hub to subscribe to messages, so we'll
+        # catch all messages here and pass them on to each of the viewers that
+        # have the applicable method implemented.
+        for viewer in self.app._viewer_store.values():
+            if hasattr(viewer, method):
+                getattr(viewer, method)(msg)
+
+    def load_data(self, data, parser_reference=None, **kwargs):
+        self.app.load_data(data, parser_reference=parser_reference, **kwargs)
+
+    @property
+    def fitted_models(self):
+        """
+        Returns the fitted model parameters.
+
+        Returns
+        -------
+        parameters : dict
+            dict of Quantity arrays, or None.
+        """
+
+        return self.app.fitted_models
+
+    def get_models(self, models=None, model_label=None, x=None, y=None):
+        """
+        Loop through all models and output models of the label model_label.
+        If x or y is set, return model_labels of those (x, y) coordinates.
+        If x and y are None, print all models regardless of coordinates.
+
+        Parameters
+        ----------
+        models : dict
+            A dict of models, with the key being the label name and the value
+            being an `astropy.modeling.CompoundModel` object. Defaults to
+            `fitted_models` if no parameter is provided.
+        model_label : str
+            The name of the model that will be found and returned. If it
+            equals default, every model present will be returned.
+        x : int
+            The x coordinate of the model spaxels that will be returned.
+        y : int
+            The y coordinate of the model spaxels that will be returned.
+
+        Returns
+        -------
+        selected_models : dict
+            Dictionary of the selected models.
+        """
+        selected_models = {}
+        # If models is not provided, use the app's fitted models
+        if not models:
+            models = self.fitted_models
+
+        # Loop through all keys in the dict models
+        for label in models:
+            # Prevent "Model 2" from being returned when model_label is "Model"
+            if model_label is not None:
+                if label.split(" (")[0] != model_label:
+                    continue
+
+            # If no label was provided, use label name without coordinates.
+            if model_label is None and " (" in label:
+                find_label = label.split(" (")[0]
+            # If coordinates are not present, just use the label.
+            elif model_label is None:
+                find_label = label
+            else:
+                find_label = model_label
+
+            # If x and y are set, return keys that match the model plus that
+            # coordinate pair. If only x or y is set, return keys that fit
+            # that value for the appropriate coordinate.
+            if x is not None and y is not None:
+                find_label = r"{} \({}, {}\)".format(find_label, x, y)
+            elif x:
+                find_label = r"{} \({}, .+\)".format(find_label, x)
+            elif y:
+                find_label = r"{} \(.+, {}\)".format(find_label, y)
+
+            if re.search(find_label, label):
+                selected_models[label] = models[label]
+
+        return selected_models
+
+    def get_model_parameters(self, models=None, model_label=None, x=None, y=None):
+        """
+        Convert each parameter of model inside models into a coordinate that
+        maps the model name and parameter name to a `astropy.units.Quantity`
+        object.
+
+        Parameters
+        ----------
+        models : dict
+            A dictionary where the key is a model name and the value is an
+            `astropy.modeling.CompoundModel` object.
+        model_label : str
+            Get model parameters for a particular model by inputting its label.
+        x : int
+            The x coordinate of the model spaxels that will be returned from
+            get_models.
+        y : int
+            The y coordinate of the model spaxels that will be returned from
+            get_models.
+
+        Returns
+        -------
+        :dict: a dictionary of the form
+            {model name: {parameter name: [[`astropy.units.Quantity`]]}}
+            for 3d models or
+            {model name: {parameter name: `astropy.units.Quantity`}} where the
+            Quantity object represents the parameter value and unit of one of
+            spaxel models or the 1d models, respectively.
+        """
+        if models and model_label:
+            models = self.get_models(models=models, model_label=model_label, x=x, y=y)
+        elif models is None and model_label:
+            models = self.get_models(model_label=model_label, x=x, y=y)
+        elif models is None:
+            models = self.fitted_models
+
+        param_dict = {}
+        parameters_cube = {}
+        param_x_y = {}
+        param_units = {}
+
+        for label in models:
+            # 3d models take the form of "Model (1,2)" so this if statement
+            # looks for that style and separates out the pertinent information.
+            if " (" in label:
+                label_split = label.split(" (")
+                model_name = label_split[0] + "_3d"
+                x = int(label_split[1].split(", ")[0])
+                y = int(label_split[1].split(", ")[1][:-1])
+
+                # x and y values are added to this dict where they will be used
+                # to convert the models of each spaxel into a single
+                # coordinate in the parameters_cube dictionary.
+                if model_name not in param_x_y:
+                    param_x_y[model_name] = {'x': [], 'y': []}
+                if x not in param_x_y[model_name]['x']:
+                    param_x_y[model_name]['x'].append(x)
+                if y not in param_x_y[model_name]['y']:
+                    param_x_y[model_name]['y'].append(y)
+
+            # 1d models will be handled by this else statement.
+            else:
+                model_name = label
+
+            if model_name not in param_dict:
+                param_dict[model_name] = list(models[label].param_names)
+
+        # This adds another dictionary as the value of
+        # parameters_cube[model_name] where the key is the parameter name
+        # and the value is either a 2d array of zeros or a single value, depending
+        # on whether the model in question is 3d or 1d, respectively.
+        for model_name in param_dict:
+            if model_name in param_x_y:
+                x_size = len(param_x_y[model_name]['x'])
+                y_size = len(param_x_y[model_name]['y'])
+
+                parameters_cube[model_name] = {x: np.zeros(shape=(x_size, y_size))
+                                               for x in param_dict[model_name]}
+            else:
+                parameters_cube[model_name] = {x: 0
+                                               for x in param_dict[model_name]}
+
+        # This loop handles the actual placement of param.values and
+        # param.units into the parameter_cubes dictionary.
+        for label in models:
+            if " (" in label:
+                label_split = label.split(" (")
+                model_name = label_split[0] + "_3d"
+
+                # If the get_models method is used to build a dictionary of
+                # models and a value is set for the x or y parameters, that
+                # will mean that only one x or y value is present in the
+                # models.
+                if len(param_x_y[model_name]['x']) == 1:
+                    x = 0
+                else:
+                    x = int(label_split[1].split(", ")[0])
+
+                if len(param_x_y[model_name]['y']) == 1:
+                    y = 0
+                else:
+                    y = int(label_split[1].split(", ")[1][:-1])
+
+                param_units[model_name] = {}
+
+                for name in param_dict[model_name]:
+                    param = getattr(models[label], name)
+                    parameters_cube[model_name][name][x][y] = param.value
+                    param_units[model_name][name] = param.unit
+            else:
+                model_name = label
+                param_units[model_name] = {}
+
+                # 1d models do not have anything set of param.unit, so the
+                # return_units and input_units properties need to be used
+                # instead, depending on the type of parameter `name` is.
+                for name in param_dict[model_name]:
+                    param = getattr(models[label], name)
+                    parameters_cube[model_name][name] = param.value
+                    param_units[model_name][name] = param.unit
+
+        # Convert values of parameters_cube[key][param_name] into u.Quantity
+        # objects that contain the appropriate unit set in
+        # param_units[key][param_name]
+        for key in parameters_cube:
+            for param_name in parameters_cube[key]:
+                parameters_cube[key][param_name] = u.Quantity(
+                    parameters_cube[key][param_name],
+                    param_units[key].get(param_name, None))
+
+        return parameters_cube
+
+    def show(self, loc="inline", title=None):  # pragma: no cover
+        """Display the Jdaviz application.
+
+        Parameters
+        ----------
+        loc : str
+            The display location determines where to present the viz app.
+            Supported locations:
+
+            "inline": Display the Jdaviz application inline in a notebook.
+            Note this is functionally equivalent to displaying the cell
+            ``viz.app`` in the notebook.
+
+            "sidecar": Display the Jdaviz application in a separate JupyterLab window from the
+            notebook, the location of which is decided by the 'anchor.' right is the default
+
+                Other anchors:
+
+                * ``sidecar:right`` (The default, opens a tab to the right of display)
+                * ``sidecar:tab-before`` (Full-width tab before the current notebook)
+                * ``sidecar:tab-after`` (Full-width tab after the current notebook)
+                * ``sidecar:split-right`` (Split-tab in the same window right of the notebook)
+                * ``sidecar:split-left`` (Split-tab in the same window left of the notebook)
+                * ``sidecar:split-top`` (Split-tab in the same window above the notebook)
+                * ``sidecar:split-bottom`` (Split-tab in the same window below the notebook)
+
+                See `jupyterlab-sidecar <https://github.com/jupyter-widgets/jupyterlab-sidecar>`_
+                for the most up-to-date options.
+
+            "popout": Display the Jdaviz application in a detached display. By default, a new
+            window will open. Browser popup permissions required.
+
+                Other anchors:
+
+                * ``popout:window`` (The default, opens Jdaviz in a new, detached popout)
+                * ``popout:tab`` (Opens Jdaviz in a new, detached tab in your browser)
+
+        title : str, optional
+            The title of the sidecar tab.  Defaults to the name of the
+            application; e.g., "specviz".
+
+            NOTE: Only applicable to a "sidecar" display.
+
+        Notes
+        -----
+        If "sidecar" is requested in the "classic" Jupyter notebook, the app will appear inline,
+        as only JupyterLab has a mechanism to have multiple tabs.
+        """
+        from IPython import get_ipython
+        from IPython.display import display
+
+        # Check if the user is running Jdaviz in the correct environments.
+        # If not, provide a friendly msg to guide them!
+        cur_shell_name = get_ipython().__class__.__name__
+        if cur_shell_name != 'ZMQInteractiveShell':
+            raise RuntimeError("\nYou are currently running Jdaviz from an unsupported "
+                               f"shell ({cur_shell_name}). Jdaviz is intended to be run within a "
+                               "Jupyter notebook, or directly from the command line.\n\n"
+                               "To run from Jupyter, call <your viz>.show() from a notebook cell.\n"
+                               "To see how to run from the command line, run: "
+                               "'jdaviz --help' outside of Python.\n\n"
+                               "To learn more, see our documentation at: "
+                               "https://jdaviz.readthedocs.io")
+
+        if loc == "inline":
+            display(self.app)
+
+        elif loc.startswith('sidecar'):
+            from sidecar import Sidecar
+
+            # Use default behavior if loc is exactly 'sidecar', else split anchor from the arg
+            anchor = None if loc == 'sidecar' else loc.split(':')[1]
+
+            # If title unset, default to the viz config
+            title = self.app.config if title is None else title
+
+            scar = Sidecar(anchor=anchor, title=title)
+            with scar:
+                display(self.app)
+
+        elif loc.startswith('popout'):
+            anchor = None if loc == 'popout' else loc.split(':')[1]
+
+            # Default behavior (no anchor specified): display popout in new window
+            if anchor in (None, 'window'):
+                self.app.popout_button.open_window()
+            elif anchor == "tab":
+                self.app.popout_button.open_tab()
+            else:
+                raise ValueError("Unrecognized popout anchor")
+
+        else:
+            raise ValueError(f"Unrecognized display location: {loc}")
+
+    def show_in_sidecar(self, anchor=None, title=None):  # pragma: no cover
+        """
+        Preserved for backwards compatibility
+        Shows Jdaviz in a sidecar with the default anchor: right
+        """
+        warnings.warn('show_in_sidecar has been replaced with show(loc="sidecar")',
+                      DeprecationWarning)
+        location = 'sidecar' if anchor is None else f"sidecar:{anchor}"
+        return self.show(loc=location, title=title)
+
+    def show_in_new_tab(self, title=None):  # pragma: no cover
+        """
+        Preserved for backwards compatibility
+        Shows Jdaviz in a sidecar in a new tab to the right
+        """
+        warnings.warn('show_in_new_tab has been replaced with show(loc="sidecar:tab-after")',
+                      DeprecationWarning)
+        return self.show(loc="sidecar:tab-after", title=title)
+
+
+class ImageConfigHelper(ConfigHelper):
+    """`ConfigHelper` that uses an image viewer as its primary viewer.
+    For example, Imviz and Cubeviz.
+    """
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        # NOTE: The first viewer must always be there and is an image viewer.
+        self._default_viewer = self.app.get_viewer_by_id(f'{self.app.config}-0')
+
+    @property
+    def default_viewer(self):
+        """Default viewer instance. This is typically the first viewer
+        (e.g., "imviz-0" or "cubeviz-0")."""
+        return self._default_viewer
+
+    def load_regions_from_file(self, region_file, region_format='ds9', max_num_regions=20,
+                               **kwargs):
+        """Load regions defined in the given file.
+        See :ref:`regions:regions_io` for supported file formats.
+        See :meth:`load_regions` for how regions are loaded.
+
+        Parameters
+        ----------
+        region_file : str
+            Path to region file.
+
+        region_format : {'crtf', 'ds9', 'fits'}
+            See :meth:`regions.Regions.get_formats`.
+
+        max_num_regions : int or `None`
+            Maximum number of regions to read from the file, starting
+            from top of the file. Default is first 20 regions that
+            can be successfully loaded. If `None`, it will load everything.
+
+        kwargs : dict
+            See :meth:`load_regions`.
+
+        Returns
+        -------
+        bad_regions : list of (obj, str) or `None`
+            See :meth:`load_regions`.
+
+        """
+        from regions import Regions
+        raw_regs = Regions.read(region_file, format=region_format)
+        return self.load_regions(raw_regs, max_num_regions=max_num_regions, **kwargs)
+
+    def load_regions(self, regions, max_num_regions=None, refdata_label=None,
+                     return_bad_regions=False, **kwargs):
+        """Load given region(s) into the viewer.
+        WCS-to-pixel translation and mask creation, if needed, is relative
+        to the image defined by ``refdata_label``. Meanwhile, the rest of
+        the Subset operations are based on reference image as defined by Glue.
+
+        .. note:: Loading too many regions will affect performance.
+
+        A valid region can be loaded into one of the following categories:
+
+        * An interactive Subset, as if it was drawn by hand. This is
+          always done for supported shapes. Its label will be
+          ``'Subset N'``, where ``N`` is an integer.
+        * A masked Subset that will display on the image but cannot be
+          modified once loaded. This is done if the shape cannot be
+          made interactive. Its label will be ``'MaskedSubset N'``,
+          where ``N`` is an integer.
+
+        Parameters
+        ----------
+        regions : list of obj
+            A list of region objects. A region object can be one of the following:
+
+            * Astropy ``regions`` object
+            * ``photutils`` apertures (limited support until ``photutils``
+              fully supports ``regions``)
+            * Numpy boolean array (shape must match data)
+
+        max_num_regions : int or `None`
+            Maximum number of regions to load, starting from top of the list.
+            Default is to load everything.
+
+        refdata_label : str or `None`
+            Label of data to use for sky-to-pixel conversion for a region, or
+            mask creation. Data must already be loaded into Jdaviz.
+            If `None`, defaults to the reference data in the default viewer.
+            Choice of this data is particularly important when sky or masked
+            region is involved.
+
+        return_bad_regions : bool
+            If `True`, return the regions that failed to load (see ``bad_regions``);
+            This is useful for debugging. If `False`, do not return anything (`None`).
+
+        kwargs : dict
+            Extra keywords to be passed into the region's ``to_mask`` method.
+            **This is ignored if the region can be made interactive or
+            if a Numpy array is given.**
+
+        Returns
+        -------
+        bad_regions : list of (obj, str) or `None`
+            If requested (see ``return_bad_regions`` option), return a
+            list of ``(region, reason)`` tuples for region objects that failed to load.
+            If all the regions loaded successfully, this list will be empty.
+            If not requested, return `None`.
+
+        """
+        from photutils.aperture import (CircularAperture, SkyCircularAperture,
+                                        EllipticalAperture, SkyEllipticalAperture,
+                                        RectangularAperture, SkyRectangularAperture)
+        from regions import (Regions, CirclePixelRegion, CircleSkyRegion,
+                             EllipsePixelRegion, EllipseSkyRegion,
+                             RectanglePixelRegion, RectangleSkyRegion)
+        from jdaviz.core.region_translators import regions2roi, aperture2regions
+
+        # If user passes in one region obj instead of list, try to be smart.
+        if not isinstance(regions, (list, tuple, Regions)):
+            regions = [regions]
+
+        n_loaded = 0
+        bad_regions = []
+
+        # To keep track of masked subsets.
+        msg_prefix = 'MaskedSubset'
+        msg_count = _next_subset_num(msg_prefix, self.app.data_collection.subset_groups)
+
+        # Subset is global but reference data is viewer-dependent.
+        if refdata_label is None:
+            data = self.default_viewer.state.reference_data
+        else:
+            data = self.app.data_collection[refdata_label]
+
+        # TODO: Make this work for data cube.
+        # https://github.com/glue-viz/glue-astronomy/issues/75
+        has_wcs = data_has_valid_wcs(data, ndim=2)
+
+        for region in regions:
+            if isinstance(region, (SkyCircularAperture, SkyEllipticalAperture,
+                                   SkyRectangularAperture, CircleSkyRegion,
+                                   EllipseSkyRegion, RectangleSkyRegion)) and not has_wcs:
+                bad_regions.append((region, 'Sky region provided but data has no valid WCS'))
+                continue
+
+            # photutils: Convert to regions shape first
+            if isinstance(region, (CircularAperture, SkyCircularAperture,
+                                   EllipticalAperture, SkyEllipticalAperture,
+                                   RectangularAperture, SkyRectangularAperture)):
+                region = aperture2regions(region)
+
+            # regions: Convert to ROI.
+            # NOTE: Out-of-bounds ROI will succeed; this is native glue behavior.
+            if isinstance(region, (CirclePixelRegion, CircleSkyRegion,
+                                   EllipsePixelRegion, EllipseSkyRegion,
+                                   RectanglePixelRegion, RectangleSkyRegion)):
+                state = regions2roi(region, wcs=data.coords)
+
+                # TODO: Do we want user to specify viewer? Does it matter?
+                self.app.session.edit_subset_mode._mode = NewMode
+                self.default_viewer.apply_roi(state)
+                self.app.session.edit_subset_mode.edit_subset = None  # No overwrite next iteration # noqa
+
+            # Last resort: Masked Subset that is static (if data is not a cube)
+            elif data.ndim == 2:
+                im = None
+                if hasattr(region, 'to_pixel'):  # Sky region: Convert to pixel region
+                    if not has_wcs:
+                        bad_regions.append((region, 'Sky region provided but data has no valid WCS'))  # noqa
+                        continue
+                    region = region.to_pixel(data.coords)
+
+                if hasattr(region, 'to_mask'):
+                    try:
+                        mask = region.to_mask(**kwargs)
+                        im = mask.to_image(data.shape)  # Can be None
+                    except Exception as e:  # pragma: no cover
+                        bad_regions.append((region, f'Failed to load: {repr(e)}'))
+                        continue
+
+                elif (isinstance(region, np.ndarray) and region.shape == data.shape
+                        and region.dtype == np.bool_):
+                    im = region
+
+                if im is None:
+                    bad_regions.append((region, 'Mask creation failed'))
+                    continue
+
+                # NOTE: Region creation info is thus lost.
+                try:
+                    subset_label = f'{msg_prefix} {msg_count}'
+                    state = MaskSubsetState(im, data.pixel_component_ids)
+                    self.app.data_collection.new_subset_group(subset_label, state)
+                    msg_count += 1
+                except Exception as e:  # pragma: no cover
+                    bad_regions.append((region, f'Failed to load: {repr(e)}'))
+                    continue
+
+            else:
+                bad_regions.append((region, 'Mask creation failed'))
+                continue
+
+            n_loaded += 1
+            if max_num_regions is not None and n_loaded >= max_num_regions:
+                break
+
+        n_reg_in = len(regions)
+        n_reg_bad = len(bad_regions)
+        if n_loaded == 0:
+            snack_color = "error"
+        elif n_reg_bad > 0:
+            snack_color = "warning"
+        else:
+            snack_color = "success"
+        self.app.hub.broadcast(SnackbarMessage(
+            f"Loaded {n_loaded}/{n_reg_in} regions, max_num_regions={max_num_regions}, "
+            f"bad={n_reg_bad}", color=snack_color, timeout=8000, sender=self.app))
+
+        if return_bad_regions:
+            return bad_regions
+
+    def get_interactive_regions(self):
+        """Return spatial regions that can be interacted with in the viewer.
+        This does not return masked regions added via :meth:`load_regions`.
+
+        Unsupported region shapes will be skipped. When that happens,
+        a red snackbar message will appear on display.
+
+        Returns
+        -------
+        regions : dict
+            Dictionary mapping interactive region names to respective Astropy
+            ``regions`` objects.
+
+        """
+        regions = {}
+        failed_regs = set()
+
+        # Subset is global, so we just use default viewer.
+        for lyr in self.default_viewer.layers:
+            if (not hasattr(lyr, 'layer') or not isinstance(lyr.layer, Subset)
+                    or lyr.layer.ndim not in (2, 3)):
+                continue
+
+            subset_data = lyr.layer
+            subset_label = subset_data.label
+
+            # TODO: Remove this when Jdaviz support round-tripping, see
+            # https://github.com/spacetelescope/jdaviz/pull/721
+            if not subset_label.startswith('Subset'):
+                continue
+
+            try:
+                region = subset_data.data.get_selection_definition(
+                    subset_id=subset_label, format='astropy-regions')
+            except (NotImplementedError, ValueError):
+                failed_regs.add(subset_label)
+            else:
+                regions[subset_label] = region
+
+        if len(failed_regs) > 0:
+            self.app.hub.broadcast(SnackbarMessage(
+                f"Failed to get regions: {', '.join(sorted(failed_regs))}",
+                color="error", timeout=8000, sender=self.app))
+
+        return regions
+
+    # See https://github.com/glue-viz/glue-jupyter/issues/253
+    def _apply_interactive_region(self, toolname, from_pix, to_pix):
+        """Mimic interactive region drawing.
+        This is for internal testing only.
+        """
+        self.app.session.edit_subset_mode._mode = NewMode
+        tool = self.default_viewer.toolbar.tools[toolname]
+        tool.activate()
+        tool.interact.brushing = True
+        tool.interact.selected = [from_pix, to_pix]
+        tool.interact.brushing = False
+        self.app.session.edit_subset_mode.edit_subset = None  # No overwrite next iteration
+
+    # TODO: Make this public API?
+    def _delete_region(self, subset_label):
+        """Delete region given the Subset label."""
+        all_subset_labels = [s.label for s in self.app.data_collection.subset_groups]
+        if subset_label not in all_subset_labels:
+            return
+        i = all_subset_labels.index(subset_label)
+        subset_grp = self.app.data_collection.subset_groups[i]
+        self.app.data_collection.remove_subset_group(subset_grp)
+
+    # TODO: Make this public API?
+    def _delete_all_regions(self):
+        """Delete all regions."""
+        for subset_grp in self.app.data_collection.subset_groups:  # should be a copy
+            self.app.data_collection.remove_subset_group(subset_grp)
+
+
+def data_has_valid_wcs(data, ndim=None):
+    """Check if given glue Data has WCS that is compatible with APE 14."""
+    status = hasattr(data, 'coords') and isinstance(data.coords, BaseHighLevelWCS)
+    if ndim is not None:
+        status = status and data.coords.world_n_dim == ndim
+    return status
+
+
+def _next_subset_num(label_prefix, subset_groups):
+    """Assumes ``prefix i`` format.
+    Does not go back and fill in lower but available numbers. This is consistent with Glue.
+    """
+    labels = [sg.label.split(' ')[1] for sg in subset_groups
+              if sg.label.startswith(label_prefix)]
+    if len(labels) == 0:
+        return 1
+    return max(map(int, labels)) + 1
