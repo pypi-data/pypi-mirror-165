@@ -1,0 +1,15 @@
+README.md
+setup.cfg
+setup.py
+physicellloader.egg-info/PKG-INFO
+physicellloader.egg-info/SOURCES.txt
+physicellloader.egg-info/dependency_links.txt
+physicellloader.egg-info/requires.txt
+physicellloader.egg-info/top_level.txt
+plotting/__init__.py
+plotting/anim_svg.py
+plotting/anim_svg_cycle.py
+plotting/anim_svg_substrate.py
+plotting/cells3D_fury.py
+test/test_single.py
+test/test_timeseries.py
