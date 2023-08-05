@@ -1,0 +1,8 @@
+climateserv/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+climateserv/api.py,sha256=YF7ac7JTb1jJYHIMvaBRcMeK00aGQsIthtNGLc5ZpKM,16731
+climateserv/request_utilities.py,sha256=UplDTu-F81aHT3pJI8PJDwyQ9SC3VE_N9VP0yoKESdo,8352
+climateserv-0.0.22.dist-info/LICENSE,sha256=E1u-zKlrEpFcZucdnv5hu0kZ956c0J5mTtguNoNpogQ,1840
+climateserv-0.0.22.dist-info/METADATA,sha256=nioG8ax8Ng9CiyKVoAajlXGIk8zN8NMC70MXCM9Zh3o,4146
+climateserv-0.0.22.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+climateserv-0.0.22.dist-info/top_level.txt,sha256=Q36vokpuydh1JiD0t3Pyww5L4X_QkSzdbtqxIL8I6UY,12
+climateserv-0.0.22.dist-info/RECORD,,
