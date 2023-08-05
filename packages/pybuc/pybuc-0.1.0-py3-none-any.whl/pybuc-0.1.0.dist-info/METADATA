@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: pybuc
+Version: 0.1.0
+Summary: Fast estimation of Bayesian structural time series models via Gibbs sampling.
+License: BSD 3-Clause
+Author: Devin D. Garcia
+Requires-Python: >=3.9,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: matplotlib (>=3.5.3,<4.0.0)
+Requires-Dist: numba (>=0.56.0,<0.57.0)
+Requires-Dist: pandas (>=1.4.3,<2.0.0)
