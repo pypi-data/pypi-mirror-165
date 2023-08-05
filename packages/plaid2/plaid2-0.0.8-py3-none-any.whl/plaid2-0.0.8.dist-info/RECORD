@@ -1,0 +1,6 @@
+plaid2/__init__.py,sha256=0QwKH_ME_smPcMdeZ4mSuiEboBHX407upfZvP80Ldl4,178
+plaid2/async_client.py,sha256=sYuoyrqmwKbbAMgLCIwe7vv6aiBhNdClHOtNJEwYTyQ,100
+plaid2/client.py,sha256=fXfkiwmoQ7LKQXMBnazEMUK5InX8xlakwJ5n4clf8JU,118
+plaid2-0.0.8.dist-info/WHEEL,sha256=4TfKIB_xu-04bc2iKz6_zFt-gEFEEDU_31HGhqzOCE8,81
+plaid2-0.0.8.dist-info/METADATA,sha256=q4FbIaylXqLWuzQau6LFRNrgNWRIUr5vKBYdqK6V1SQ,217
+plaid2-0.0.8.dist-info/RECORD,,
