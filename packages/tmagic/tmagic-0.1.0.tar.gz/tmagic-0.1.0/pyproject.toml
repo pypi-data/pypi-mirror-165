@@ -1,0 +1,31 @@
+[project]
+name = "tmagic"
+version = "0.1.0"
+authors = [
+    { name = "András Aszódi", email="andras.aszodi@vbcf.ac.at" },
+]
+description = "IPython custom cell magic to test Python and R code snippets typed into notebook cells."
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "ipython >= 6.0",
+    "rpy2 >= 3.4"
+]
+
+[project.urls]
+"Homepage" = "https://www.interquadrat.eu/aa/software.php"
+
+[build-system]
+requires = [
+    "setuptools>=42",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
+[tool.setuptools]
+packages = ["tmagic", ]
