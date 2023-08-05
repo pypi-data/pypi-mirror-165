@@ -1,0 +1,3 @@
+graft common
+global-include *.pyx
+global-include *.pxd

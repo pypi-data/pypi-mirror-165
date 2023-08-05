@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: wf-pycocotools
+Version: 2.0.1.4
+Summary: Forked version of the cocodataset's pycocotools modified to install from pypi without manual intervention
+Home-page: https://github.com/WildflowerSchools/cocoapi
+Author: Piotr Dollar, Tsung-Yi Lin, Benjamin Jaffe-Talberg
+Author-email: ben.talberg@wildflowerschools.org
+License: UNKNOWN
+Platform: UNKNOWN
+
+UNKNOWN
+
