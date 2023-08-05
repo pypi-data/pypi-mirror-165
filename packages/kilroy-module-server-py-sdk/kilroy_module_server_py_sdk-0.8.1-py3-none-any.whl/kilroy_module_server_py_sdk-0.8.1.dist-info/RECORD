@@ -1,0 +1,11 @@
+kilroy_module_server_py_sdk/__init__.py,sha256=eHw6tMsTu9_Ek2ho2DbsbrwZWnnmerxCCriFmVULFkE,509
+kilroy_module_server_py_sdk/metrics.py,sha256=o_LbWfYLqAkDAiOhQWDfUao-vX6OtQUwUfBm_a7WsVg,1304
+kilroy_module_server_py_sdk/module.py,sha256=BUBw3-KSZI6XAY6l7wyuVvylg7ztSuLypjBa0l_qyco,1170
+kilroy_module_server_py_sdk/resources/__init__.py,sha256=_wezS5TKy-o2hQfQak0vUBf27KjqF5KOy-jVODFFTTE,1573
+kilroy_module_server_py_sdk/server.py,sha256=eL6RpZeGW2rX48LT5HZr5l04A-LPT9Xa7JbUGHaYFu8,856
+kilroy_module_server_py_sdk/service.py,sha256=qJAPux05riaYm8IyOlX045nrjnpqCIWlrhmLk6EzDB4,16932
+kilroy_module_server_py_sdk/state.py,sha256=0IeI7-nzDsWcAUl3HWoULvXNKs6z3tgemEzzPe-TNO8,174
+kilroy_module_server_py_sdk-0.8.1.dist-info/LICENSE,sha256=jX4FG3WEtoz7iCbng5k7DLrQhDMs0fDnD2vGC6hQU_A,1063
+kilroy_module_server_py_sdk-0.8.1.dist-info/WHEEL,sha256=N0LZrBtofpkS5mJXgVHTCEy52Sam4D6PHQWC8HnMeTs,83
+kilroy_module_server_py_sdk-0.8.1.dist-info/METADATA,sha256=bFYiyIUGuAh84HHEqjQD1mC4KJF2AJ3R4H8ZDTciNTw,1582
+kilroy_module_server_py_sdk-0.8.1.dist-info/RECORD,,
