@@ -1,0 +1,9 @@
+README.md
+setup.py
+src/webdriver_helper/__init__.py
+src/webdriver_helper/upload_by_drop.js
+src/webdriver_helper.egg-info/PKG-INFO
+src/webdriver_helper.egg-info/SOURCES.txt
+src/webdriver_helper.egg-info/dependency_links.txt
+src/webdriver_helper.egg-info/requires.txt
+src/webdriver_helper.egg-info/top_level.txt
