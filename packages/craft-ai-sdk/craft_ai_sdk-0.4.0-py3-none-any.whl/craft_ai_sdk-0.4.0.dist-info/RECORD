@@ -1,0 +1,10 @@
+craft_ai_sdk/__init__.py,sha256=h7lMC9PBjKWDlzc4ocrWIzqHR2Hhz52QG8ckGSq_8JM,128
+craft_ai_sdk/exceptions.py,sha256=d8ScWUDyAS8ldRj1h7Tmd4Q4PioXzsS_DMiesHVtBgA,1114
+craft_ai_sdk/sdk.py,sha256=H7piva3xBzi0HJh_ZxIETTEt_vSgNzaeuof46Y1xBQs,24480
+craft_ai_sdk/utils.py,sha256=vWt3q-AUH-pGjvod_pujRtx5DtCrrerWMVp4FxBU4tQ,3982
+documentation.pdf,sha256=G0evtbbYlFO62M6z5KGUBYKdrGxjUmj-epJcF0ZIoq4,238656
+craft_ai_sdk-0.4.0.dist-info/entry_points.txt,sha256=zm35jeBDfW8CSA-mvr-yCgFqG1GzE3Lmok-xPSQzkVI,301
+craft_ai_sdk-0.4.0.dist-info/LICENSE,sha256=_2oYRJic9lZK05LceuJ9aZZw5mPHYc1WQhJiVS-oGFU,10754
+craft_ai_sdk-0.4.0.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+craft_ai_sdk-0.4.0.dist-info/METADATA,sha256=rpvdOgKTr5dctXbD8uTEz2J5ZEILYpvINglII3Zwzss,1496
+craft_ai_sdk-0.4.0.dist-info/RECORD,,
