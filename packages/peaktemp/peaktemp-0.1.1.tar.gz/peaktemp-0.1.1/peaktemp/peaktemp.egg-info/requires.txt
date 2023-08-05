@@ -1,0 +1,10 @@
+matplotlib
+pandas
+numpy
+seaborn
+cdsapi
+xarray
+xgboost
+scikit-learn
+datetime
+geopy

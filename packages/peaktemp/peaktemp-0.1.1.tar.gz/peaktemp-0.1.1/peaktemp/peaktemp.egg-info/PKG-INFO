@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: peaktemp
+Version: 0.1.1
+Summary: UNKNOWN
+Home-page: https://github.com/jakehofgard/peaktemp
+Author: Jake Hofgard
+Author-email: whofgard@stanford.edu
+License: MIT
+Keywords: climate,temperature,forecasting,peak load
+Platform: UNKNOWN
+Requires-Python: >=3.8
+License-File: LICENSE.txt
+
+UNKNOWN
+
