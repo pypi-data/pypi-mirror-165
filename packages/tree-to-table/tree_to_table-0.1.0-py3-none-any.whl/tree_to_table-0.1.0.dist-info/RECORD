@@ -1,0 +1,17 @@
+tree_to_table/__init__.py,sha256=AFqXkOGz_NSgLOzHGWoq0ULJzN9rxQhID61iGI2dScE,50
+tree_to_table/mappers/__init__.py,sha256=c-I3VUyHwJYc_xW-JE3Hkd_dEp8UxyoaJejDwAgT4-k,157
+tree_to_table/mappers/base.py,sha256=7Z1yjh_VEEkdcx5PH0izxpkiaMcPN_o0Ohe3hFmF4A8,1298
+tree_to_table/mappers/mappers.py,sha256=QmpoXwKxWGWWut94vqdzApyqBqwnoCl3PjT76kkOFMk,2314
+tree_to_table/sqlalchemy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tree_to_table/sqlalchemy/column.py,sha256=adPrEALmoyOVRjNzDL3_biB6WJ6O56jj7t6M_hfE5v8,668
+tree_to_table/sqlalchemy/transforms.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tree_to_table/table/__init__.py,sha256=nN2BDcpsq9yLNxtaueE3l9J1HAdzyESyVbXCZ9JaGQM,33
+tree_to_table/table/table.py,sha256=f7sQxfcNboJdR0g5PIn6h7P8OaMEE95w1C7IqN9cEe0,593
+tree_to_table/test.py,sha256=Fdb1yp9pB8XS2GGFTHKftKcpMBjfrmJLUA_3pRZnMkQ,1151
+tree_to_table/transforms/__init__.py,sha256=qJs9qmL2EsfgIkJ81YXoKJL9duAar9fOUXNWgYpT3dA,104
+tree_to_table/transforms/base.py,sha256=EyjOC1ciSDecrdZqxqwLwyR7kkG37UdwnOkAVmFjt4Y,428
+tree_to_table/transforms/transforms.py,sha256=QOCx_957Mv_C_tBH5kEsNHdmrprjgF06GQus4W_H9zo,2766
+tree_to_table-0.1.0.dist-info/LICENSE,sha256=nFy3pjcCBF3VIfBOmytvjs2lldzhJnStguHm0porgX4,1070
+tree_to_table-0.1.0.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+tree_to_table-0.1.0.dist-info/METADATA,sha256=reb83I-avbYCrIsY7g20WhBi3ajhdq6ulv9TaEsx-K4,658
+tree_to_table-0.1.0.dist-info/RECORD,,
