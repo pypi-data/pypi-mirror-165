@@ -1,0 +1,10 @@
+setup.py
+ueli_calculation/Divide3.py
+ueli_calculation/GeneralCalculation.py
+ueli_calculation/Multiply3.py
+ueli_calculation/__init__.py
+ueli_calculation.egg-info/PKG-INFO
+ueli_calculation.egg-info/SOURCES.txt
+ueli_calculation.egg-info/dependency_links.txt
+ueli_calculation.egg-info/not-zip-safe
+ueli_calculation.egg-info/top_level.txt
