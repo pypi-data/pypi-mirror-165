@@ -1,0 +1,16 @@
+goes2go/NEW.py,sha256=f2l7CnJHDSDuSAP8Fp9aSixmL8LmuSbqWH_8s8iBjM8,8030
+goes2go/__init__.py,sha256=Qx2ukFPhuO5pkfOqVadkklFNo5yQzGIeQvVaLgzShiY,3195
+goes2go/accessors.py,sha256=03pdL6U9wxm0XI1viGP3dlK6mrAjx9wh9wqJ7KbgxT0,42246
+goes2go/data.py,sha256=H-vh_93eVXQO_fALDDbw6Y0TfTSxP4wYfswaD3FLUt8,21888
+goes2go/product_table.txt,sha256=qZolf1H9fgpJTb6IgNRX9UyRnTyw-2kgvpp2zayONIQ,6798
+goes2go/rgb.py,sha256=bKV9Qwwke1oYOlDqZbRnaU5mrtPUPUJpj_wdySI5yBQ,36217
+goes2go/tools.py,sha256=HUdCmLAR1umAtF9A8O4p9qKTLS3LDrEzPIAi_1WrPsI,6775
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_abi.py,sha256=Lo4ldNIXH-kOlgkieJklUf400keywyns09QnzgAysBY,318
+tests/test_data.py,sha256=MdjPrfy34o11sx7voQZip28awActXASnpm9yPAQ49Xc,2861
+tests/test_glm.py,sha256=hmxQ7k9vQ-qAFSUeMKzor2sFkzxXDtgdi-8XNmyHyOg,348
+goes2go-2022.8.26.dist-info/LICENSE,sha256=aXOFQRsNkYfAPJV_UESPjypWj_bTzAWFTBGzb9_AGbI,1097
+goes2go-2022.8.26.dist-info/METADATA,sha256=zoaeqto52zacclTFjqcBuoO8HXD9TwMpkwbGm2z2YNw,7129
+goes2go-2022.8.26.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+goes2go-2022.8.26.dist-info/top_level.txt,sha256=5Q27RpotIYLYy4AUhp9szUTV4v-SPcSnHjYAtggCC4c,14
+goes2go-2022.8.26.dist-info/RECORD,,
