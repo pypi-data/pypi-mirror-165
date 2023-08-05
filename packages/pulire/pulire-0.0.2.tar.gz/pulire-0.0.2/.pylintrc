@@ -1,0 +1,5 @@
+[MESSAGE CONTROL]
+disable=too-few-public-methods
+
+[BASIC]
+good-names=df,s,i
