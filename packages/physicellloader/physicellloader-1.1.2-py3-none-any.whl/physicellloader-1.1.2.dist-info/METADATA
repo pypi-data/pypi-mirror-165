@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: physicellloader
+Version: 1.1.2
+Summary: Python data loader for PhysiCell digital snapshots.
+Home-page: https://github.com/PhysiCell-Tools/python-loader
+Author: Randy Heiland
+Author-email: epbucher@iu.edu
+Project-URL: Bug Reports, https://github.com/PhysiCell-Tools/python-loader/issues
+Project-URL: Funding, http://www.mathcancer.org/
+Project-URL: Say Thanks!, http://physicell.org/
+Project-URL: Source, https://github.com/PhysiCell-Tools/python-loader
+Keywords: physicell,python3,data analysis
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.6, <4
+Description-Content-Type: text/markdown
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: pandas
+
+# python-loader
+Python data loader for PhysiCell digital snapshots.
+Rf. http://www.mathcancer.org/blog/python-loader/
+
+Additional scripts for plotting PhysiCell output can be found in the `plotting` directory.
+You can copy these into your PhysiCell `output` directory and run them there. They require the `scipy` and `matplotlib` Python modules, so we recommend installing the Anaconda Python 3.x distribution (https://www.anaconda.com/distribution/).
+
+
+### release notes:
++ version 1.1.2 (2022-08-26): pip installable release derived from PhysiCell-Tools python-loader release 1.1.0 (2022-07-20).
++ version 1.1.0 (2022-05-09): release compatible with pre-v1.10.x of PhysiCell
++ version 1.0.1 (2020-01-25): time-series related bug fix
++ version 1.0.0 (2019-09-28): first public release!
