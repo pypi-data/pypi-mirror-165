@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: macwinnie-atlassianbrowse
+Version: 0.0.3
+Summary: Selenium assisted implementation to execute actions on Atlassian tools.
+Home-page: https://github.com/macwinnie/python-atlassian-browse
+Author: macwinnie
+Author-email: dev@macwinnie.me
+License: AGPL-3.0-or-later
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: macwinnie-pyhelpers
+Requires-Dist: pandas
+Requires-Dist: args
+Requires-Dist: requests
+Requires-Dist: selenium
+Requires-Dist: beautifulsoup4
+
+# Python Atlassian Browse
+
+This toolset allows you to easily browse Atlassian tools like Jira and Confluence – e.g in dockerized environments.
+
+The detailled documentation can be found at [GitHub](https://macwinnie.github.io/python-atlassian-browse).
