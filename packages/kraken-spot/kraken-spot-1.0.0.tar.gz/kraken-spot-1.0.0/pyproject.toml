@@ -1,0 +1,54 @@
+[tool.poetry]
+name = "kraken-spot"
+version = "1.0.0"
+description = "A library for interacting with the Kraken Spot API"
+authors = ["Kevin Bradwick <kevinbradwick@gmail.com>"]
+license = "MIT"
+keywords = ["kraken", "crypto"]
+readme = "README.md"
+homepage = "https://github.com/kevbradwick/kraken-spot"
+repository = "https://github.com/kevbradwick/kraken-spot"
+include = ["LICENSE"]
+
+[tool.bumpver]
+current_version = "1.0.0"
+version_pattern = "MAJOR.MINOR.PATCH"
+commit_message = "Bump version {old_version} -> {new_version}"
+commit = true
+tag = true
+push = false
+
+[tool.bumpver.file_patterns]
+"pyproject.toml" = ['current_version = "{version}"', 'version = "{version}"']
+"kraken_spot/__init__.py" = ["{version}"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+requests = "^2.28.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.1.2"
+black = "^22.6.0"
+isort = "^5.10.1"
+coverage = {extras = ["toml"], version = "^6.4.4"}
+autoflake = "^1.4"
+bumpver = "^2022.1118"
+
+[tool.black]
+line-length = 88
+target-version = ["py37"]
+
+[tool.coverage.run]
+source_pkgs = ['kraken_spot']
+
+[tool.coverage.html]
+title = "Kraken Spot Coverage"
+
+[tool.pytest.ini_options]
+markers = [
+    "integration: runs integration tests (deselect with '-m \"not integration\""
+]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
