@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: python-etl-pipeline
+Version: 0.0.1
+Summary: Pyhton ETL data science pipeline
+Home-page: https://github.com/MihaiBlebea/etl_pipeline
+Author: Mihai Blebea
+Author-email: mihaiserban.blebea@gmail.com
+License: MIT
+Keywords: python etl pipeline date date-science data-engineer
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: cron-converter
+Requires-Dist: openpyxl
+Requires-Dist: pandas
+Requires-Dist: requests
+
+# ETL Pipeline
+
