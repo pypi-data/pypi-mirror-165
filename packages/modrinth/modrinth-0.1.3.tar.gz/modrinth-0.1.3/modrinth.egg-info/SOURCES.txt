@@ -1,0 +1,7 @@
+pyproject.toml
+modrinth/__init__.py
+modrinth.egg-info/PKG-INFO
+modrinth.egg-info/SOURCES.txt
+modrinth.egg-info/dependency_links.txt
+modrinth.egg-info/requires.txt
+modrinth.egg-info/top_level.txt
