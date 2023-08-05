@@ -1,0 +1,7 @@
+[console_scripts]
+eh = eh.cli:main
+eh_autocomplete = eh.autocomplete:main
+
+[eh.subject_extensions]
+built_in_subjects = eh.built_in_subject
+
