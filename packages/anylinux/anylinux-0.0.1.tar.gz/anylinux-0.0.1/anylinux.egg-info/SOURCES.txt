@@ -1,0 +1,9 @@
+LICENSE
+README.md
+anylinux
+setup.py
+anylinux.egg-info/PKG-INFO
+anylinux.egg-info/SOURCES.txt
+anylinux.egg-info/dependency_links.txt
+anylinux.egg-info/requires.txt
+anylinux.egg-info/top_level.txt
