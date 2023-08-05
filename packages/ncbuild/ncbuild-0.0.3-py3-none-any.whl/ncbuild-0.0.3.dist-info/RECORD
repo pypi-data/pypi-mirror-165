@@ -1,0 +1,17 @@
+ncbuild/__init__.py,sha256=1cFIA30ngFgcqvkN4mrxtBGIcMvLCnilInqj0CVljzg,218
+ncbuild/_attribute_values.py,sha256=WEsmiV43x2hWtHAOcm5K9wO2ib0UhKSMHk1YRHnTyw4,16765
+ncbuild/_classes.py,sha256=ESp5GJCiPCrGmGBgzsta4lQV2ohS2hr2T-sdpZfQuUs,6611
+ncbuild/_constants.py,sha256=7alWjXL0xR0eGG0fTtrbMKkgkFD1yGPc_rwdV40xSxU,32404
+ncbuild/_create_dataset.py,sha256=94LzvcUudpb4xRZMWwssL5_rOBuQB1h3w_bsgQcsIl8,2150
+ncbuild/_create_nc.py,sha256=yMAD11esfdXcExntOGxozeyCwr48OX0MpmMVDDBmdS0,5845
+ncbuild/_create_ncml.py,sha256=m8UvJ4bzIbraoljDzKEOihD-KZG0YJpHLVqRL4MVkn4,8272
+ncbuild/_grid_mapping.py,sha256=tw0S5_W7gwdkbb4EmLKqtv1MVKyTVImNSSvDYtu4pHw,4781
+ncbuild/_ncml_comments.py,sha256=WlLEQ1QSIdkYPwZk2eH2OiHq1YguMSkG3srWX3fvJa0,3201
+ncbuild/_variable_identification.py,sha256=KVDmPcpNPcGGyVYeFukC-xR7aq1Op_bJiuyOciiJRw0,8329
+ncbuild/cf-area-type-table.xml,sha256=ezuyWEFBwIrZeZ_sZuab0hE4FE3RbshICjiBKBS8Pa0,12822
+ncbuild/cf-standard-name-table.xml,sha256=TCm1rXD2QWrSw1mByg-c3r-Kq5Ad5bfoJqlAzwb5uuQ,4047491
+ncbuild-0.0.3.dist-info/LICENSE,sha256=jvTvhqWGcunLAqzb4E_suzaulsTd6rel2UvzL7YUvgE,1072
+ncbuild-0.0.3.dist-info/METADATA,sha256=up0g5x8cYQag-r4-Uk6Oyo1-mxso2AhcZWV2xfjdiJ0,711
+ncbuild-0.0.3.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+ncbuild-0.0.3.dist-info/top_level.txt,sha256=nHX6MEqJ1u6zcZgoXYOZu4c5W4ynkVoxdoxlYw2uiiE,8
+ncbuild-0.0.3.dist-info/RECORD,,
