@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: mtxp
+Version: 0.0.91
+Summary: The funniest joke in the world
+Home-page: http://github.com/storborg/funniest
+Author: Flying Circus
+Author-email: flyingcircus@example.com
+License: MIT
+Keywords: funniest joke comedy flying circus
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Text Processing :: Linguistic
+Requires-Dist: python-dotenv
+Requires-Dist: requests (>=2.26.0)
+Requires-Dist: flask
+Requires-Dist: pyyaml
+Requires-Dist: celery
+
+long_description
+
