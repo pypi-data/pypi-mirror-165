@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/TSDAL/__init__.py
+src/TSDAL/funsplit.py
+src/TSDAL/msal.py
+src/TSDAL/patch.py
+src/TSDAL.egg-info/PKG-INFO
+src/TSDAL.egg-info/SOURCES.txt
+src/TSDAL.egg-info/dependency_links.txt
+src/TSDAL.egg-info/top_level.txt
