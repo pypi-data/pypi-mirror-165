@@ -1,0 +1,10 @@
+LICENSE.rst
+README.md
+README.rst
+setup.cfg
+setup.py
+cgroupy/__init__.py
+cgroupy.egg-info/PKG-INFO
+cgroupy.egg-info/SOURCES.txt
+cgroupy.egg-info/dependency_links.txt
+cgroupy.egg-info/top_level.txt
