@@ -1,0 +1,14 @@
+wyhash/__init__.py,sha256=hZDU0RE1WVXL_yl_RtnOP8_abNKeV--Lge_9AhVSmTU,135
+wyhash/backends/__init__.py,sha256=vA029bMaNwjpxNyZbHI84uXZSDnGEKdQhYuyFPLYFPo,472
+wyhash/backends/cffi/__init__.py,sha256=kcrJzZiSdijfzLf1-j-Xvb7bSoGYpVaEQjXQZUyM86U,731
+wyhash/backends/cffi/_hash_cffi.abi3.so,sha256=CnnPVWeFKJdR1LPZnGNoMphzLnmqQ1iqhbdN0icYhac,22192
+wyhash/backends/cffi/build.py,sha256=2kViDNdV9WtJxTShS7nL9edJOuzX-JJVSFnEtZo47t0,656
+wyhash/backends/cython/__init__.py,sha256=A-hDAI96ymr6iVs1U2vhqRK4WBGIqoWIahQRjR_2WGE,128
+wyhash/backends/cython/_hash_cy.c,sha256=47HxWZQfnQ-JjA39rn1zQcRYVKsI1Jz4V90oWlk4Pe8,793345
+wyhash/backends/cython/_hash_cy.cpython-37m-x86_64-linux-gnu.so,sha256=xppPG3nr5m9hf_v0-lHmhbUK3c_A6ag8CNwlqep_AfY,210864
+wyhash/backends/cython/_hash_cy.pyx,sha256=qatQ1W1P06tx9eVGYiAdUw5YtjyNu3a5nWJRB_K76aY,855
+wyhash/backends/cython/wyhash.pxd,sha256=-APWqslJXO3mfjnpyfhcst2sl1dTurA9j-hpbGi3gnQ,466
+wyhash-0.1.0.dist-info/METADATA,sha256=MooydM240BIrFXTifs2_mWBmRRP2cyIUMVbDu3MsepU,1054
+wyhash-0.1.0.dist-info/WHEEL,sha256=a8-lE8CDY3fTc-2Q7EKZhl4GYCxX5tnur3ksQusxWu4,104
+wyhash-0.1.0.dist-info/top_level.txt,sha256=NJuhV9So2VY2HKljkdnNa34CAbhL3G4MUIFy859SkNg,7
+wyhash-0.1.0.dist-info/RECORD,,
