@@ -1,0 +1,12 @@
+betterdicts/VERSION.py,sha256=zrcTwxP3SA3F1Js78afrfeaZeJr8w2hLtFtEZoUqUmg,22
+betterdicts/__init__.py,sha256=TWLiRLkEOMFUs85QhCIbn0TnF5FnPkxpiZM_Wl1Vukk,276
+betterdicts/betterdict.py,sha256=0v53HwwB4fGw_TQvRXmGkkGY99rI_ElUnZnNXQIdUeA,14652
+betterdicts/codeio.py,sha256=usEhSzFWbJfSFZ0Sn72n6u45HW2NVmupN9wRMHHbMqI,584
+betterdicts/dynamic_dict.py,sha256=DM2Hpe6XiFAYHTWioRA32ZqekUlqN4EXyRS4ynZ4_ps,1941
+betterdicts/jsdict.py,sha256=YfIOFNWnLfF7hDfWY9OTiY9YLGqOlu1p2y1bYW2OWsg,1902
+betterdicts/number_dict.py,sha256=YrK7fmCB3AMHD4Wi2GjWhwXy3MLay4XwwuI-5vFOyew,5413
+betterdicts/persistent.py,sha256=t0u0BxGup0QnhEFNpqMbAwdGf55mPmk-6-VTMo6Pr0g,2835
+betterdicts-0.4.2.dist-info/LICENSE.txt,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+betterdicts-0.4.2.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+betterdicts-0.4.2.dist-info/METADATA,sha256=VEcRSFQsOVvVdO38ukuHEDlVXq6NPJ5tylMyu-48fW8,15421
+betterdicts-0.4.2.dist-info/RECORD,,
