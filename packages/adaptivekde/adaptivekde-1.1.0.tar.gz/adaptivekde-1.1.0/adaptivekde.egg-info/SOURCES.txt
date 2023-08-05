@@ -1,0 +1,11 @@
+LICENSE.txt
+README.txt
+setup.py
+adaptivekde/__init__.py
+adaptivekde/sshist.py
+adaptivekde/sskernel.py
+adaptivekde/ssvkernel.py
+adaptivekde.egg-info/PKG-INFO
+adaptivekde.egg-info/SOURCES.txt
+adaptivekde.egg-info/dependency_links.txt
+adaptivekde.egg-info/top_level.txt
