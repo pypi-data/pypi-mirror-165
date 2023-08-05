@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+src/napari_quoll/__init__.py
+src/napari_quoll/_widget.py
+src/napari_quoll/napari.yaml
+src/napari_quoll.egg-info/PKG-INFO
+src/napari_quoll.egg-info/SOURCES.txt
+src/napari_quoll.egg-info/dependency_links.txt
+src/napari_quoll.egg-info/entry_points.txt
+src/napari_quoll.egg-info/requires.txt
+src/napari_quoll.egg-info/top_level.txt
+src/napari_quoll/_tests/__init__.py
+src/napari_quoll/_tests/test_widget.py
