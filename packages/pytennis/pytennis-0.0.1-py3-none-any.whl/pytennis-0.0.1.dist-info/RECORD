@@ -1,0 +1,10 @@
+pytennis/__init__.py,sha256=sXLh7g3KC4QCFxcZGBTpG2scR7hmmBsMjq6LqRptkRg,22
+pytennis/_modidx.py,sha256=xsyUssqWGptj7UZt623fpj6mTuMhV8R_C6xr5a1eEjk,7138
+pytennis/_nbdev.py,sha256=eLEg1MCl04diM7it-8R9O4KMJrgJRkbSAYDyDjp5uV4,294
+pytennis/core.py,sha256=pgrACd5YIoVY9qy6p3ZgWTs5v4pK6ycj5UYxz6gHs7M,25442
+pytennis/data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytennis/data/external.py,sha256=Ktq7PWpCKQAazV4B_43QVV2OmEnuWu4-RWF8GXrPDrY,2511
+pytennis-0.0.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+pytennis-0.0.1.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+pytennis-0.0.1.dist-info/METADATA,sha256=ayMj5HYZJH8x-M5MH7HFFhm5SbDBenwGx71sEQPIK6c,333
+pytennis-0.0.1.dist-info/RECORD,,

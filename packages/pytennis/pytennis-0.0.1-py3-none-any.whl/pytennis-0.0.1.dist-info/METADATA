@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: pytennis
+Version: 0.0.1
+Summary: 
+Author: Robert Seidl
+Author-email: robertseidl425@gmail.com
+Requires-Python: >=3.8,<3.9
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: fastdownload (>=0.0.7,<0.0.8)
+Requires-Dist: portray (>=1.5.2,<2.0.0)
