@@ -1,0 +1,15 @@
+ngstrefftz_avx2.libs/libngfem-468264a7.so,sha256=1vIE-x5sruPwawe86-QScpocmhqwJ19d63CTEQ1lwlk,51116656
+ngstrefftz_avx2.libs/libngbla-cd99d292.so,sha256=N2AXc1rW7-TWIF7IKcbktC0CWl9nDhPP474N_R_OaEg,2685360
+ngstrefftz_avx2.libs/libngla-3b13180d.so,sha256=hDBbEqtV0fBfUo_cysQB1VCsGVZtj7kmts1GFTixQFE,17660848
+ngstrefftz_avx2.libs/libngcomp-e80a2a6b.so,sha256=Y4eRUrxGMaiQWL2oNvWXtulXjl54e86nZ77_lZ249ic,42982184
+ngstrefftz_avx2.libs/libngstd-57a9590a.so,sha256=VtEP5cabp7Z4uX180m2joILurS0yQx1m1TEL8-ea0Go,602352
+ngstrefftz_avx2.libs/_pytents-3620a351.so,sha256=ngvKbIaAWUETwLJbj8dnCDrm1L6bNEK1W5eI5kkJ-e8,984648
+ngstrefftz_avx2.libs/libsolve-f59dd157.so,sha256=cRehMij2aKyzCCWGPpGjtryKtMqYFwLoxkX5Zuc427k,2252608
+ngstents/_pytents.so,sha256=o4--0P0cvjN2CooP1Pwlmz2hA5PizvUj-YmsM9EwfiI,932064
+ngstrefftz_avx2-0.1.2.dist-info/top_level.txt,sha256=RJWbWe-9IWuNX-ODcWrL391ku8ukbc-0Md1mdiqWvao,25
+ngstrefftz_avx2-0.1.2.dist-info/WHEEL,sha256=FNUt4eBsrBVn_Yc5KG3aXtKE40X3uNZrbGLNCbVxyFw,148
+ngstrefftz_avx2-0.1.2.dist-info/METADATA,sha256=GjfLeu9w65-RiyNX4fb_EY5ikd43T6cob3hTxyAUQEk,677
+ngstrefftz_avx2-0.1.2.dist-info/RECORD,,
+ngstrefftz_avx2-0.1.2.dist-info/LICENSE,sha256=6or154nLLU6bELzjh0mCreFjt0m2v72zLi3yHE0QbeE,7650
+ngstrefftz/_trefftz.so,sha256=Ha7Aq6DVEL7jDwwA14BGglwGMwE2YmPZxGJ45jqgWQM,3889136
+ngstrefftz/__init__.py,sha256=6SHYdYB400CFZiZATzFX-twBY40xNSry-8T9AWYwi6g,1688
