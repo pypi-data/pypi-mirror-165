@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: TSDAL
+Version: 0.0.2
+Summary: 时空数据抽象库（TSDAL，Temporal and Spatial Data Abstraction Library)
+Author: runepic
+Author-email: 759515344@qq.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# TSDAL Package
+
+This is a simple example package.
+时空数据抽象库（TSDAL，Temporal and Spatial Data Abstraction Library)
+to write your content.
