@@ -1,0 +1,10 @@
+conaction/__init__.py,sha256=0w_zFKjvZkYyGWzhOjkSq4IgwmmymRsgBFuQkPI5M90,71
+conaction/estimators.py,sha256=JN5Ck9Yw3mcfRaDLnNvqINoXofRAiDjn5Mx2I5ndut8,28394
+conaction/numparam.py,sha256=i76l_kfjC0NVLrU2PqT_geZI9ARLHW5Me4hbWtKFo4k,11944
+conaction/sampling.py,sha256=yLkLcMytN-Td1rZm10_w-YBD-SmBq5L3Jaq7cixxaUI,5535
+conaction/symparam.py,sha256=oFOireDp3jWL-Mz4ThdRDutJFaLiOalogBGC_H0QHwQ,19293
+conaction-0.0.42.dist-info/LICENSE,sha256=slGYeGt_ZkAFBYDLbqp7D71vj5DD4zriX3Wb_7UCrl8,1520
+conaction-0.0.42.dist-info/METADATA,sha256=yVTsFFt7ZmnXuCMw85X7o0BNy9P9ozLsgJemqS-ndsQ,3113
+conaction-0.0.42.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+conaction-0.0.42.dist-info/top_level.txt,sha256=WVGcI0bfkZSocSxWXqRzrSqibEYS4nJHK8np4nWTsc8,10
+conaction-0.0.42.dist-info/RECORD,,
