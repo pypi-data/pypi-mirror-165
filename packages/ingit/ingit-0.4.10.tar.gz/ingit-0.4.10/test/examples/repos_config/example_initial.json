@@ -1,0 +1,28 @@
+{
+  "description": "ingit repositories configuration file",
+  "ingit-version": "0.4.0",
+  "repos": [
+    {
+      "name": "argunparse",
+      "remotes": {
+        "host": "${EXAMPLE_PROJECTS_PATH}/argunparse",
+        "mirror": "${EXAMPLE_PROJECTS_PATH}/argunparse"
+      },
+      "tags": ["python"]
+    },
+    {
+      "name": "transpyle",
+      "remotes": {
+        "host": "${EXAMPLE_PROJECTS_PATH}/transpyle"
+      },
+      "tags": ["python", "transpilation"]
+    },
+    {
+      "name": "typed-astunparse",
+      "remotes": {
+        "host": "${EXAMPLE_PROJECTS_PATH}/typed-astunparse"
+      },
+      "tags": ["python", "transpilation"]
+    }
+  ]
+}
