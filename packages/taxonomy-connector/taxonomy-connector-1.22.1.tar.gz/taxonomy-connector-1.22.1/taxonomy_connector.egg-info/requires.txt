@@ -1,0 +1,13 @@
+Django
+djangorestframework
+django-model-utils
+django-solo
+pytz
+edx-rest-api-client
+edx-django-utils
+celery
+algoliasearch
+django-ses
+beautifulsoup4
+django-choices
+django-filter
