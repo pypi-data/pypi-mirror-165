@@ -1,0 +1,4 @@
+tinydb
+orjson
+blosc2
+mypy
