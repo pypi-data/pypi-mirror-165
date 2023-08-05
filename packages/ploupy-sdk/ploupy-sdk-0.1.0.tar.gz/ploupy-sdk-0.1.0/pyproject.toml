@@ -1,0 +1,35 @@
+# pyproject.toml
+
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ploupy-sdk"
+version = "0.1.0"
+description = "SDK for writing bots in ploupy.plouc314.ch"
+readme = "README.md"
+authors = [
+    { name = "Alexandre Goumaz", email = "alexandre.goumaz@plouc314.ch" },
+]
+license = { file = "LICENSE" }
+classifiers = [
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+]
+dependencies = [
+    "requests",
+    "toml >= 0.10.2",
+    "numpy >= 1.22.4",
+    "python-socketio[asyncio_client] >= 5.7.1",
+    "pydantic >= 1.9.0",
+    "pyjwt >= 2.4.0",
+    "colorlog >= 6.6.0",
+    "scipy >= 1.7.3",
+]
+requires-python = ">=3.10"
+
+[project.urls]
+Homepage = "https://github.com/Plouc314/ploupy-python-sdk"
