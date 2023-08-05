@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+entryutils/__init__.py
+entryutils/lib2.py
+entryutils/main.py
+entryutils.egg-info/PKG-INFO
+entryutils.egg-info/SOURCES.txt
+entryutils.egg-info/dependency_links.txt
+entryutils.egg-info/requires.txt
+entryutils.egg-info/top_level.txt
+entryutils/queries/createaccount.txt
+entryutils/queries/login.txt
