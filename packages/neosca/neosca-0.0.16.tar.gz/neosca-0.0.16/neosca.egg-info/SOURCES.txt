@@ -1,0 +1,17 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+neosca/__init__.py
+neosca/__main__.py
+neosca/main.py
+neosca.egg-info/PKG-INFO
+neosca.egg-info/SOURCES.txt
+neosca.egg-info/dependency_links.txt
+neosca.egg-info/entry_points.txt
+neosca.egg-info/top_level.txt
+neosca/utils/__init__.py
+neosca/utils/analyzer.py
+neosca/utils/structures.py
+neosca/utils/tree2tex.py
+neosca/utils/writer.py
