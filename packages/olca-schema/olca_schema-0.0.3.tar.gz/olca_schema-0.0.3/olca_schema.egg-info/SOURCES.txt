@@ -1,0 +1,9 @@
+README.md
+setup.py
+olca_schema/__init__.py
+olca_schema/schema.py
+olca_schema/zipio.py
+olca_schema.egg-info/PKG-INFO
+olca_schema.egg-info/SOURCES.txt
+olca_schema.egg-info/dependency_links.txt
+olca_schema.egg-info/top_level.txt
