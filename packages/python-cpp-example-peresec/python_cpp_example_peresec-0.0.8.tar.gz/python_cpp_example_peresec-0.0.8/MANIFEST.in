@@ -1,0 +1,4 @@
+include CMakeLists.txt
+graft lib
+include src/python_cpp_example/*.hpp
+include src/python_cpp_example/*.cpp

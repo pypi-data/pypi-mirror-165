@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: python-cpp-example-peresec
+Version: 0.0.8
+Summary: Testing a custom extension module
+Home-page: https://github.com/jamescalam/aesthetic_ascii
+Author: Scrot Scratch
+Author-email: scratch@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Python CPP Example
+
+Test hybrid python-cpp package (an extension module).
+
+## Instructions
+
+1. Install:
+
+```
+pip install package_name
+```
+
+2. Import the extension module:
+
+```python
+from aesthetic_ascii import synthesize
+
+# initialize drive object (to generate visuals)
+drive = synthesize.Drive()
+# generate a ASCII visual (dark_mode optional)
+drive.generate(dark_mode=True)
+# save to png
+drive.to_png('aesthetic.png')
+```
+
+3. Call the funk
