@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/MKE_PyPI_test.egg-info/PKG-INFO
+src/MKE_PyPI_test.egg-info/SOURCES.txt
+src/MKE_PyPI_test.egg-info/dependency_links.txt
+src/MKE_PyPI_test.egg-info/top_level.txt
+src/mke/__init__.py
