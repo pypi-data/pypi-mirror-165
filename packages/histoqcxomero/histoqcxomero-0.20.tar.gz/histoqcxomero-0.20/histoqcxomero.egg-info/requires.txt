@@ -1,0 +1,13 @@
+dill
+importlib-resources
+matplotlib
+numpy
+omero-py
+scikit-image
+scikit-learn
+scipy
+
+[tests]
+pytest
+pytest-cov
+requests
