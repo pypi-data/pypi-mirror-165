@@ -1,0 +1,135 @@
+Metadata-Version: 2.1
+Name: rubato
+Version: 0.2.0
+Summary: A lightweight, developer-first game engine built for Python.
+Home-page: https://github.com/rubatopy/rubato
+Author: Martin Chaperot, Yamm Elnekave, Tomer Sedan
+Author-email: m.artin.chapino@gmail.com
+License: MIT
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: PySDL2 (==0.9.11)
+
+# <img src="https://github.com/rubatopy/rubato/blob/main/docs/source/_static/logo.png?raw=true" alt="logo" width="160"/> <br> rubato
+
+[![GitHub](https://img.shields.io/github/license/rubatopy/rubato?style=flat-square)](https://www.gnu.org/licenses/gpl-3.0.html)
+[![PyPI](https://img.shields.io/pypi/v/rubato?style=flat-square)](https://pypi.org/project/rubato/)
+[![PyPI - Downloads](https://img.shields.io/pypi/dm/rubato?style=flat-square)](https://pypi.org/project/rubato/)
+[![GitHub Release Date](https://img.shields.io/github/release-date/rubatopy/rubato?style=flat-square)](https://github.com/rubatopy/rubato/releases)
+[![GitHub Build Status](https://img.shields.io/github/workflow/status/rubatopy/rubato/Build?style=flat-square)](https://github.com/rubatopy/rubato/actions/workflows/build.yml)
+[![GitHub Docs Status](https://img.shields.io/github/workflow/status/rubatopy/rubato/Docs?label=docs&style=flat-square)](https://rubatopy.github.io/)
+
+Rubato is a modern 2D game engine for python. Accurate fixed-step physics simulations, robust scene and game object management, event listener system and more all come prepackaged.
+
+Rubato is built developer-first. From intricate rigidbody simulations to 2D games, Rubato streamlines development for beginners and the poweruser. And all that finally with some legible documentation.
+
+Rubato has now completed the transition to SDL2. The final PyGame-based release was 1.2, and is considered depricated. This has allowed us to implement more complex features not supported by PyGame such as antialiasing and hardware acceleration. If you would like to read more about PySDL2 or need to utilize its underlying functionality in your project, you can read the python wrapper documentation [here](https://pysdl2.readthedocs.io/en/0.9.11/) and the base C++ SDL wiki [here](https://wiki.libsdl.org).
+
+_Wondering about the name? Rubato is a music term that indicates a phrase that should be performed expressively and freely. We aim to harness that same freedom, bringing a fresh, modern take on game developement in python to a variety of users regardless of their coding background._
+
+### Get started [here](https://rubatopy.github.io/).
+
+_Credit to [@ArksDigital](https://twitter.com/ArksDigital) for the dino animation used in the demos and in the tutorial. ([itch page](https://arks.itch.io/dino-characters))_
+
+
+# Changelog
+
+## [v2.0.0] - April 5, 2022
+
+### Added
+
+-   Sound class rewritten
+-   Spritesheet support
+-   A full UI system
+-   Text
+-   Quick draw functions in `Display`
+
+### Changed
+
+-   Ported to PySDL2 from pygame
+-   Moved all window management from `Game` to `Display`
+-   Made classes that only need one instance static classes
+-   Rectangle implementation is now distinct from polygons
+-   Rename sprite to game object
+-   `Input.key_pressed()` can now take in an arbitrary number of arguments
+
+### Removed
+
+-   Default sprite images
+
+## [v1.2.0] - March 15, 2022
+
+### Added
+
+-   Proper 2d physics without angular velocity and torque
+-   Circle collision
+-   Groups are back
+
+### Changed
+
+-   Updated default image import to actually work properly
+-   Hitboxes can now be colored in. This replaces the old Rectangle class
+-   Hitboxes are now created like all other components (as in they use a options dictionary)
+-   Collision now happen automatically
+
+### Removed
+
+-   Rectangle class
+
+### Fixed
+
+-   Animations are now independent from FPS
+
+## [v1.1.0] - March 01, 2022
+
+### Added
+
+-   Sound system
+
+### Changed
+
+-   Switched to a component based system (similar to Unity)
+
+### Removed
+
+-   Removed Groups because they were deemed useless
+-   Physics for now
+
+## [v1.0.0] - Feb 01, 2022
+
+### Added
+
+-   Full Documentation through docstrings and through website
+-   Loader for images. (Can load entire folders)
+-   Custom errors
+-   A full color implementation
+-   Added continuous integration
+-   Text can be drawn onto surfaces
+
+### Changed
+
+-   A more complete color implementation
+-   New time system
+-   Switched to GPL-3.0 License
+-   Lots of linting
+-   Move default options to their own area
+
+### Fixed
+
+-   Many many bugs
+
+## [v0.0.1] - Nov 03, 2021
+
+### Added
+
+-   Basic framework for everything
+-   Sprites, Scenes, Main game object
+-   Rigidbody implementation
+
+[unreleased]: https://github.com/rubatopy/rubato/tree/main
+[v2.0.0]: https://github.com/rubatopy/rubato/tree/v2.0.0
+[v1.2.0]: https://github.com/rubatopy/rubato/tree/v1.2.0
+[v1.1.0]: https://github.com/rubatopy/rubato/tree/v1.1.0
+[v1.0.0]: https://github.com/rubatopy/rubato/tree/v1.0.0
+[v0.0.1]: https://github.com/rubatopy/rubato/tree/v0.0.1
