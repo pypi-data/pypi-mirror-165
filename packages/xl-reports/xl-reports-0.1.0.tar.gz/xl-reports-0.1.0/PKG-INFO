@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: xl-reports
+Version: 0.1.0
+Summary: 
+License: MIT
+Author: Dustin Sampson
+Author-email: dustin@sparkgeo.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: mypy (>=0.971,<0.972)
+Requires-Dist: openpyxl (>=3.0.10,<4.0.0)
