@@ -1,0 +1,8 @@
+MANIFEST.in
+README.txt
+setup.py
+anania/anania.py
+simpletest1.egg-info/PKG-INFO
+simpletest1.egg-info/SOURCES.txt
+simpletest1.egg-info/dependency_links.txt
+simpletest1.egg-info/top_level.txt
