@@ -1,0 +1,17 @@
+Metadata-Version: 1.2
+Name: human_security
+Version: 1.0
+Summary: Provides easy to use API the RSA and AES
+Home-page: https://github.com/mdipierro/human_security
+Author: Massimo Di Pierro
+Author-email: massimo.dipierro@gmail.com
+Maintainer: Massimo Di Pierro
+Maintainer-email: massimo.dipierro@gmail.com
+License: BSD
+Description: 
+        Package that contains the ranking algorithms used by the EVote software (@2008-2022)
+        
+Platform: any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
