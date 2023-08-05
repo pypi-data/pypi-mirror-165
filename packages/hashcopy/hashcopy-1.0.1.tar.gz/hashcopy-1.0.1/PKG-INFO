@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: hashcopy
+Version: 1.0.1
+Summary: Copy a file in the most efficient way possible while generating a SHA256 hash of the data
+Home-page: https://ktpanda.org/software/hashcopy
+Author-email: Katie Rust <katie@ktpanda.org>
+Project-URL: Homepage, https://ktpanda.org/software/hashcopy/
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: POSIX :: Linux
+License-File: LICENSE
