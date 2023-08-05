@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "ducks"
+version = "0.4.5"
+description = "Provides Dex, a Python container for indexing objects of any type."
+authors = ["Theo Walker <theo.ca.walker@gmail.com>"]
+license = "MIT"
+repository = "https://github.com/manimino/ducks/"
+documentation = "https://pypi.org/project/ducks/"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+cykhash = "^2.0.0"
+numpy = "^1.14"
+readerwriterlock = "^1.0.9"
+sortednp = "^0.4.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
