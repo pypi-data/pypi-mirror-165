@@ -1,0 +1,3 @@
+[console_scripts]
+buffy-server = buffy.buffyserver.main:start_buffy_server_cli
+buffy-server-build-api-doc = buffy.buffyserver.main:build_api_doc
