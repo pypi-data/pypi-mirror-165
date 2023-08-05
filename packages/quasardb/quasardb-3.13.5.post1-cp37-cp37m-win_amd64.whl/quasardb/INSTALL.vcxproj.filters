@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="Z:\TeamCity\work\283bde3fda0d76e7\build\temp.win-amd64-cpython-37\Release\CMakeFiles\959c7cddee3bd8811a8499a17c8c9d90\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{2932D899-1EA3-35B7-98EF-CA1D2ABD17B6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
