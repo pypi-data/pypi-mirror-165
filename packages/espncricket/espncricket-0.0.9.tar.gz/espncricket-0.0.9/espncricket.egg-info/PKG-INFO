@@ -1,0 +1,78 @@
+Metadata-Version: 2.1
+Name: espncricket
+Version: 0.0.9
+Summary: ESPN Cricinfo Scraper
+Home-page: https://github.com/SanketPatole/ESPN-Statsguru-Scraper
+Author: Sanket Patole
+Author-email: snkt.pat2@gmail.com
+Project-URL: Bug Reports, https://github.com/SanketPatole/ESPN-Statsguru-Scraper/issues
+Project-URL: Funding, https://donate.pypi.org
+Project-URL: Say Thanks!, http://saythanks.io/to/example
+Project-URL: Source, https://github.com/SanketPatole/ESPN-Statsguru-Scraper/
+Keywords: espn,cricinfo,cricket
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.6, <4
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# ESPN-Statsguru-Scraper
+
+
+## Introduction
+
+An easy-to-use python scraper to pull all-time cricket statistics from ESPN Cricinfo.
+
+
+## Prerequisites
+
+### Python requirements
+
+* You need to install Python with version 3.4 or more. You can find the latest version of Python at https://www.python.org/downloads/
+
+* Install the library as follows.
+
+```
+pip install espncricket
+```
+
+## How to run the code
+
+```
+import espncricket.ESPN as ESPN
+
+df = ESPN().get_score()
+print(df.head())
+```
+
+### By default it returns Test batting statistics for men only.
+### But, you can also tweak following parameters to get custom results of your own choice.
+
+* match_type='ODI_Women'
+* data_type='bowling'
+* view_type="series"
+* number_of_pages=10
+
+```
+
+ESPN_object = ESPN(match_type='ODI_Women', data_type='bowling', view_type="series")
+odi_batting_scores_for_women_per_series_with_10_pages_only = ESPN_object.get_score(number_of_pages)
+```
+
+* After successful execution, a pandas dataframe object is returned.
+
+
+## License Information
+
+Please refer "LICENSE" file to know the license details.
+Before reusing the code, please take a written permission from me.
+You can contact me at sanketpatole1994@outlook.com
+
