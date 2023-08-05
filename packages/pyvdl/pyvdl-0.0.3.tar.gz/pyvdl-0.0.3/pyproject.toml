@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "pyvdl"
+version = "0.0.3"
+authors = [
+  { name="Kolya142", email="trim.fears_0k@icloud.com " },
+]
+description = "vectors draw lib"
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/Kolya142/vectors-draw-lib"
+"Bug Tracker" = "https://github.com/Kolya142/vectors-draw-lib/issues"

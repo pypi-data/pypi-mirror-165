@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/pyvdl/__init__.py
+src/pyvdl/libs.py
+src/pyvdl/other.py
+src/pyvdl.egg-info/PKG-INFO
+src/pyvdl.egg-info/SOURCES.txt
+src/pyvdl.egg-info/dependency_links.txt
+src/pyvdl.egg-info/top_level.txt
