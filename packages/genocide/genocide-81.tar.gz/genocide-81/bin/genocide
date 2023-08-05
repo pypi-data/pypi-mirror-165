@@ -1,0 +1,97 @@
+#!/usr/bin/env python3
+# This file is placed in the Public Domain.
+# pylint: disable=E1101,E0611,C0116,C0413,C0411,W0406
+
+
+"shell"
+
+
+import os
+import readline
+import sys
+import termios
+
+
+from genocide.hdl import Client, Event, docmd, parse, scan
+from genocide.obj import Wd
+from genocide.irc import IRC
+from genocide.rss import Fetcher
+
+
+from genocide import bsc, dbg, irc, log, mdl, rss, tdo
+from genocide.irc import Config
+
+Config.nick = "genocide"
+Config.channel = "#genocide"
+Config.realname = "Prosecutor. Court. Reconsider OTP-CR-117/19."
+Config.username = "genocide"
+
+
+Wd.workdir = os.path.expanduser("~/.genocide")
+
+
+scan(bsc)
+scan(dbg)
+scan(irc)
+scan(log)
+scan(mdl)
+scan(rss)
+scan(tdo)
+
+
+class CLI(Client):
+
+    @staticmethod
+    def raw(txt):
+        print(txt)
+
+
+class Console(CLI):
+
+    @staticmethod
+    def handle(event):
+        Client.handle(event)
+        event.wait()
+
+    def poll(self):
+        event = Event()
+        event.txt = input("> ")
+        event.orig = repr(self)
+        return event
+
+
+def wrap(func):
+    fds = sys.stdin.fileno()
+    gotterm = True
+    try:
+        old = termios.tcgetattr(fds)
+    except termios.error:
+        gotterm = False
+    readline.redisplay()
+    try:
+        func()
+    except (EOFError, KeyboardInterrupt):
+        print("")
+    finally:
+        if gotterm:
+            termios.tcsetattr(fds, termios.TCSADRAIN, old)
+
+
+def main():
+    txt = ' '.join(sys.argv[1:])
+    cfg = parse(txt)
+    if cfg.txt:
+        cli = CLI()
+        docmd(cli, cfg.otxt)
+    elif "c" in cfg.opts:
+        bot = IRC()
+        bot.start()
+        fetcher = Fetcher()
+        fetcher.start()
+        mdl.init()
+        csl = Console()
+        csl.start()
+        csl.forever()
+
+
+wrap(main)

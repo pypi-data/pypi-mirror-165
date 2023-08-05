@@ -1,0 +1,48 @@
+#!/usr/bin/env python3
+# pylint: disable=E1101,E0611,C0116,C0115,C0413,R0903
+# This file is placed in the Public Domain.
+
+
+"bot"
+
+
+import sys
+
+
+from bot.hdl import Client, docmd, parse, scan
+from bot.irc import Config
+from bot.obj import Wd
+
+Config.nick = "genocide"
+Config.channel = "#genocide"
+Config.realname = "Prosecutor. Court. Reconsider OTP-CR-117/19."
+Config.username = "genocide"
+
+
+Wd.workdir = "/var/lib/genocide/"
+
+
+from bot import bsc, irc, log, rss, tdo
+
+
+scan(bsc)
+scan(irc)
+scan(log)
+scan(rss)
+scan(tdo)
+
+
+class CLI(Client):
+
+    @staticmethod
+    def raw(txt):
+        print(txt)
+
+
+def main():
+    cfg = parse(" ".join(sys.argv[1:]))
+    cli = CLI()
+    docmd(cli, cfg.otxt)
+
+
+main()
