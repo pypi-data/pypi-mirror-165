@@ -1,0 +1,4 @@
+[console_scripts]
+repo-data=github_repo_traffic.data:main
+repo-readme=github_repo_traffic.readme:main
+

@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: github-repo-traffic
+Version: 2.0.0
+Summary: 
+Author: Will Humphlett
+Author-email: will@humphlett.net
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: PyGithub (>=1.55,<2.0)
+Requires-Dist: asciichartpy (>=1.5.25,<2.0.0)
+Requires-Dist: pandas (>=1.4.3,<2.0.0)
+Requires-Dist: python-dotenv (>=0.20.0,<0.21.0)
