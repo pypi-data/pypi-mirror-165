@@ -1,0 +1,13 @@
+yatotem2scdl/__init__.py,sha256=m6XEjU1YrAwmC-Xd6vbWf0DwzaW99BnMo8DOb-PYSiA,411
+yatotem2scdl/conversion.py,sha256=hL5PsxhR51vxgVKsBJRiN4ZnGgKMxIQjGRnyWXhSJ3A,10341
+yatotem2scdl/data_structures.py,sha256=1PZSbMbeiVFEVf7SBseb7iz7xDCpMD2QW6lzZ25q1ro,3160
+yatotem2scdl/exceptions.py,sha256=_iNFpYk0Kpn_xJY3cTQvq8ljcCZFJfIhQGK5u30SMAo,2497
+yatotem2scdl/main.py,sha256=u3ZLQujxuCgMaDVVyvt4nMJhslbxa4Q9gyKhmZKZWEw,1628
+yatotem2scdl/planDeCompte-vide.xml,sha256=WMLFbEfkbnG3T9p6kLagkv4LY8vjL0pZiI1TBpd6spk,156
+yatotem2scdl/xsl/totem2xmlcsv.xsl,sha256=pk1St51BY0cHDMgP9lcdPbgYKRRnsUsv4J58ysmltkQ,7510
+yatotem2scdl-0.0.15.dist-info/LICENSE,sha256=pAZXnNE2dxxwXFIduGyn1gpvPefJtUYOYZOi3yeGG94,1068
+yatotem2scdl-0.0.15.dist-info/METADATA,sha256=dx4k6e4Sxs4vruOZlCegiP20owjrXYfmYkGsjV7THME,2064
+yatotem2scdl-0.0.15.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+yatotem2scdl-0.0.15.dist-info/entry_points.txt,sha256=Pv4j4d2I1WS6sJcWO7Ibkugt_pj560JFYshsJoeF67s,56
+yatotem2scdl-0.0.15.dist-info/top_level.txt,sha256=JMrXfKlN0R1d_R431s1advOSAZ4gAeMLyd02mbfWxzU,13
+yatotem2scdl-0.0.15.dist-info/RECORD,,
