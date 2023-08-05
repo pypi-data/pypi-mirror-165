@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: gb-chat-server
+Version: 0.1.0
+Summary: GeekBrains Server
+Home-page: UNKNOWN
+Author: Ivan Ivanov
+Author-email: iv.iv@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: PyQt5
+Requires-Dist: sqlalchemy
+Requires-Dist: pycryptodome
+Requires-Dist: pycryptodomex
+
+UNKNOWN
+
