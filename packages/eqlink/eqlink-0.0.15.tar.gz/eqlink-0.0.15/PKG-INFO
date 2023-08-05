@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: eqlink
+Version: 0.0.15
+Summary: 注册中心
+Home-page: https://github.com/enqiangjing/eqlink
+Author: enqiang
+Author-email: enqiangjing@163.com
+License: GPL-2.0
+Keywords: eqlink,Registration Center,eqsmart
+Platform: any
+License-File: LICENSE
+
+服务启动配置增加默认值
+
