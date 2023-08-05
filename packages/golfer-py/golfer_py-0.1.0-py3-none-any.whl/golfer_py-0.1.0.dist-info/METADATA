@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: golfer-py
+Version: 0.1.0
+Summary: Tool to shorten Python code
+Author: nahco314
+Author-email: nahco3_ta@yahoo.co.jp
+License: MIT
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+Pythonコードをなるべく短縮します。
+
+可読性は一切失われます。計算量をオーダーレベルで悪化させることはありませんが、誤差レベルで遅くなるかもしれません。
