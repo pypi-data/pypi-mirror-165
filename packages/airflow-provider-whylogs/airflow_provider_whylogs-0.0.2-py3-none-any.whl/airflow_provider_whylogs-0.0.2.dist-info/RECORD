@@ -1,0 +1,9 @@
+whylogs_provider/__init__.py,sha256=7TwRFcBj5WyZ9IB1Kg4U1kTSWczzL1nmY6z81x5p2cM,283
+whylogs_provider/operators/__init__.py,sha256=MzrjclLky9cgHwptTIhYP2J-__m9CurBUlKSjH3eLTs,228
+whylogs_provider/operators/whylogs.py,sha256=ktfMedx_Y_Njb5XmT9A-KXi87kFRkeNS5ww2VuCG6Eg,7890
+airflow_provider_whylogs-0.0.2.dist-info/LICENSE,sha256=QwcOLU5TJoTeUhuIXzhdCEEDDvorGiC6-3YTOl4TecE,11356
+airflow_provider_whylogs-0.0.2.dist-info/METADATA,sha256=mpqsjq3d6b_etBxBHdlNgo5-3MqE57WvifpsBKEIMsE,3962
+airflow_provider_whylogs-0.0.2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+airflow_provider_whylogs-0.0.2.dist-info/entry_points.txt,sha256=LCX1Ol7zqHLkSkHkl9DJCslqe3QZa-OlZin1OBa308w,86
+airflow_provider_whylogs-0.0.2.dist-info/top_level.txt,sha256=xTaW9Xe3z1SWX_b0lW7YmV3IGb-Y62ELtXGuuEPzlr0,17
+airflow_provider_whylogs-0.0.2.dist-info/RECORD,,
