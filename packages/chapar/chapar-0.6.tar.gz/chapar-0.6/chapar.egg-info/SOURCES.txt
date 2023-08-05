@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+chapar/__init__.py
+chapar/__main__.py
+chapar/message_broker.py
+chapar/schema_repo.py
+chapar.egg-info/PKG-INFO
+chapar.egg-info/SOURCES.txt
+chapar.egg-info/dependency_links.txt
+chapar.egg-info/entry_points.txt
+chapar.egg-info/requires.txt
+chapar.egg-info/top_level.txt
