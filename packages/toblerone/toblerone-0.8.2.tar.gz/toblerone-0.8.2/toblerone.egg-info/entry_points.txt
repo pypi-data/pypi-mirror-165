@@ -1,0 +1,2 @@
+[console_scripts]
+toblerone = toblerone.__main__:main
