@@ -1,0 +1,10 @@
+shareloc_utils/VERSION,sha256=MkieQSRYhap8g_FXsqpxkHxmpZWoz8fjK7QangEIo7Q,27
+shareloc_utils/__init__.py,sha256=gPi_6rp6nt5JGxZxWYM-MTBH-MyZfVfZ8pX1lVcLb5Y,32
+shareloc_utils/batch_download.py,sha256=bvqYqSnfwjTFPwVwGat9tnFiKVAsFPjr3EUE8A7qtmg,9611
+shareloc_utils/formats.py,sha256=JF775xA9mMNB4XhXbOeVRWF9Bet1PEFQ6_HsaB4PsvU,5164
+shareloc_utils/smlm_file.py,sha256=Ov7hBB52a9dVsun2jJ8E0lx6LChZpAwGRCKDzM4OdQk,6958
+shareloc_utils-0.1.9.dist-info/LICENSE,sha256=fG3ZtSMz7w0GKXOdJ95adGOdWlSCC_J6_z7Op4qI49A,1079
+shareloc_utils-0.1.9.dist-info/METADATA,sha256=EjcgzkpfSMplXBD3XNn-YXlz3ZRRfLSeRL6noF89Xt0,5195
+shareloc_utils-0.1.9.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+shareloc_utils-0.1.9.dist-info/top_level.txt,sha256=m5abN4TmDK4kT6eHHorg7sAjyN0jwrZO2eczvW0t76Y,15
+shareloc_utils-0.1.9.dist-info/RECORD,,
