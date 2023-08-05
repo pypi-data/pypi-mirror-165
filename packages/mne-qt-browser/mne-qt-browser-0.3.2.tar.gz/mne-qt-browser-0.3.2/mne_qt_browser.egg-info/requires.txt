@@ -1,0 +1,16 @@
+numpy
+scipy
+matplotlib
+qtpy
+scooby
+mne>=0.24
+pyqtgraph>=0.12.3
+colorspacious
+darkdetect
+qdarkstyle
+
+[:platform_system == "Darwin"]
+pyopengl
+
+[opengl]
+pyopengl

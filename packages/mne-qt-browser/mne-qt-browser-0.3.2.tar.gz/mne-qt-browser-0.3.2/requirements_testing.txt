@@ -1,0 +1,9 @@
+pytest
+pytest-qt
+pytest-cov
+pytest-timeout
+pooch
+tqdm
+sklearn  # for testing ICA
+pytest-harvest
+pytest-error-for-skips
