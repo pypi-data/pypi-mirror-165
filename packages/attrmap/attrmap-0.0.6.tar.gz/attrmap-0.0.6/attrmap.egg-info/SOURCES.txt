@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+attrmap/__init__.py
+attrmap/attrmap.py
+attrmap/utils.py
+attrmap.egg-info/PKG-INFO
+attrmap.egg-info/SOURCES.txt
+attrmap.egg-info/dependency_links.txt
+attrmap.egg-info/not-zip-safe
+attrmap.egg-info/requires.txt
+attrmap.egg-info/top_level.txt
