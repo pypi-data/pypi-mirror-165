@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: cmem-plugin-kafka
+Version: 1.0.0
+Summary: Send messages from Apache Kafka
+Home-page: https://github.com/eccenca/cmem-plugin-kafka
+License: Apache-2.0
+Keywords: eccenca Corporate Memory,plugin,kafka-producer
+Author: eccenca
+Author-email: cmempy-developer@eccenca.com
+Requires-Python: >=3.9,<4.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Plugins
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: cmem-plugin-base (>=2.1.0,<3.0.0)
+Requires-Dist: confluent-kafka (==1.8.2)
+Requires-Dist: confluent-kafka @ https://files.pythonhosted.org/packages/fb/16/d04dded73439266a3dbcd585f1128483dcf509e039bacd93642ac5de97d4/confluent-kafka-1.8.2.tar.gz ; sys_platform == "darwin"
+Requires-Dist: defusedxml (>=0.7.1,<0.8.0)
+Description-Content-Type: text/markdown
+
+# cmem-plugin-kafka
+
+This eccenca Corporate Memory plugin allows for sending messages to Apache Kafka.
+
+
