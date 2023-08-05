@@ -1,0 +1,23 @@
+Copyright (c) 2022 Xia Jiang
+
+
+Acknowledgements:
+
+If you use mbil-py package in your work, please acknowledge the Jiang's Artificial Intelligence Research Lab situated in University of Pittsburgh, supported by DOD grant W81XWH1910495 through the Breast Cancer Research Program, in any papers, presentations, or other dissemination of your work.
+
+License Agreements
+
+This software package is open-source and released under a dual licensing model. For non-profit institutions, the software is available under the GNU General Public License (GPL) v2 license. For-profit organizations that intend to commercialize any modified versions of the software will be able to purchase a commercial license on a case-by-case basis. The GPL license permits individuals to modify the source code and to share modifications with other colleagues/investigators. Specifically, it permits the dissemination and commercialization of enhanced or customized versions as well as incorporation of the software or its pieces into other license-compatible software packages, as long as modifications or enhancements are made open source.
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+By using software provided by the the Jiang's Artificial Intelligence Research Lab, you agree that no warranties of any kind are made by either the Jiang's Artificial Intelligence Research Lab or the University of Pittsburgh with respect to the data provided by the software or any use thereof, and the universities hereby disclaim the implied warranties of merchantability, fitness for a particular purpose, and non-infringement. The university and the lab shall not be liable for any claims, losses, or damages of any kind arising from the data provided by the software or any use thereof.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
