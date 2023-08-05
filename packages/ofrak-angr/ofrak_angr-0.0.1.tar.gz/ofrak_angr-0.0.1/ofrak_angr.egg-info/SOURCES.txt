@@ -1,0 +1,8 @@
+MANIFEST.in
+README.md
+setup.py
+ofrak_angr/__init__.py
+ofrak_angr.egg-info/PKG-INFO
+ofrak_angr.egg-info/SOURCES.txt
+ofrak_angr.egg-info/dependency_links.txt
+ofrak_angr.egg-info/top_level.txt
