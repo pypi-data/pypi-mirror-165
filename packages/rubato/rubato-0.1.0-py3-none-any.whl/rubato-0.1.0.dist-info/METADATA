@@ -1,0 +1,119 @@
+Metadata-Version: 2.1
+Name: rubato
+Version: 0.1.0
+Summary: A lightweight, developer-first game engine built for Python.
+Home-page: https://github.com/tinmarr/rubato
+Author: Martin Chaperot, Yamm Elnekave, Tomer Sedan
+Author-email: m.artin.chapino@gmail.com
+License: MIT
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: astroid (==2.9.3)
+Requires-Dist: isort (==5.10.1)
+Requires-Dist: lazy-object-proxy (==1.7.1)
+Requires-Dist: mccabe (==0.6.1)
+Requires-Dist: numpy (==1.22.1)
+Requires-Dist: platformdirs (==2.4.1)
+Requires-Dist: pygame (==2.1.2)
+Requires-Dist: pylint (==2.12.2)
+Requires-Dist: toml (==0.10.2)
+Requires-Dist: wrapt (==1.13.3)
+Requires-Dist: yapf (==0.32.0)
+
+# ![logo](./docs/source/_static/logo_small.png) <br> rubato
+
+[![GitHub](https://img.shields.io/github/license/rubatopy/rubato?style=flat-square)](https://www.gnu.org/licenses/gpl-3.0.html)
+[![PyPI](https://img.shields.io/pypi/v/rubato?style=flat-square)](https://pypi.org/project/rubato/)
+[![PyPI - Downloads](https://img.shields.io/pypi/dm/rubato?style=flat-square)](https://pypi.org/project/rubato/)
+[![GitHub Release Date](https://img.shields.io/github/release-date/rubatopy/rubato?style=flat-square)](https://github.com/rubatopy/rubato/releases)
+[![GitHub Build Status](https://img.shields.io/github/workflow/status/rubatopy/rubato/Build?style=flat-square)](https://github.com/rubatopy/rubato/actions/workflows/build.yml)
+[![GitHub Docs Status](https://img.shields.io/github/workflow/status/rubatopy/rubato/Docs?label=docs&style=flat-square)](https://rubatopy.github.io/)
+
+Rubato is a modern 2D game engine for python. Accurate fixed-step physics simulations, robust scene and sprite management, event listener system and more all come prepackaged.
+
+Fundamentally, Rubato is built developer-focused. From intricate rigidbody simulations to 2D games, Rubato streamlines development for beginners and the poweruser. And all that finally with some legible documentation.
+
+Rubato currently relies on PyGame for underlying functionality, but we are actively working to depreciate this with SDL2. This will reduce overhead and remedy some nasty PyGame quirks. On older Rubato versions PyGame can still be accessed, but keep in mind porting to newer versions may break code.
+
+_Wondering about the name? Rubato is a music term that indicates a phrase that should be performed expressively and freely. We aim to bring a fresh, modern take on game developement in python to a variety of users regardless of their coding background._
+
+### Get started [here](https://rubatopy.github.io/).
+
+
+# Changelog
+
+## [v1.2.0] - March 15, 2022
+
+### Added
+
+-   Proper 2d physics without angular velocity and torque
+-   Circle collision
+-   Groups are back
+
+### Changed
+
+-   Updated default image import to actually work properly
+-   Hitboxes can now be colored in. This replaces the old Rectangle class
+-   Hitboxes are now created like all other components (as in they use a options dictionary)
+-   Collision now happen automatically
+
+### Removed
+
+-   Rectangle class
+
+### Fixed
+
+-   Animations are now independent from FPS
+
+## [v1.1.0] - March 01, 2022
+
+### Added
+
+-   Sound system
+
+### Changed
+
+-   Switched to a component based system (similar to Unity)
+
+### Removed
+
+-   Removed Groups because they were deemed useless
+-   Physics for now
+
+## [v1.0.0] - Feb 01, 2022
+
+### Added
+
+-   Full Documentation through docstrings and through website
+-   Loader for images. (Can load entire folders)
+-   Custom errors
+-   A full color implementation
+-   Added continuous integration
+-   Text can be drawn onto surfaces
+
+### Changed
+
+-   A more complete color implementation
+-   New time system
+-   Switched to GPL-3.0 License
+-   Lots of linting
+-   Move default options to their own area
+
+### Fixed
+
+-   Many many bugs
+
+## [v0.0.1] - Nov 03, 2021
+
+### Added
+
+-   Basic framework for everything
+-   Sprites, Scenes, Main game object
+-   Rigidbody implementation
+
+[unreleased]: https://github.com/rubatopy/rubato/tree/main
+[v1.2.0]: https://github.com/rubatopy/rubato/tree/v1.2.0
+[v1.1.0]: https://github.com/rubatopy/rubato/tree/v1.1.0
+[v1.0.0]: https://github.com/rubatopy/rubato/tree/v1.0.0
+[v0.0.1]: https://github.com/rubatopy/rubato/tree/v0.0.1
