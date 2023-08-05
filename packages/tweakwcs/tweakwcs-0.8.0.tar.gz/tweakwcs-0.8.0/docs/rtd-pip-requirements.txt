@@ -1,0 +1,10 @@
+setuptools
+numpy
+astropy
+numpydoc
+sphinx
+sphinx-automodapi
+sphinx-rtd-theme
+stsci-rtd-theme
+sphinx-astropy
+graphviz
