@@ -1,0 +1,9 @@
+clioedb/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+clioedb/mydb.py,sha256=43UTJSAeSr2I6uvfhKo2z1GhTjCOB1R84hUe3YCJhQE,2689
+clioedb/mydbconn.py,sha256=KKgSqmCRJ7qxuCPTg4_GNp_t_ALQzMsKAYugYMdqaOg,2738
+clioedb/utils.py,sha256=U38kqOJ-e4ZXlizbM8k5gpk5850g9RlX9xmJAypRFZA,2266
+clioedb-1.7.dist-info/LICENSE,sha256=JM6Ys40GOk-M1HFlIkhWAaahmLh1AKopWTOHIs_poR0,35817
+clioedb-1.7.dist-info/METADATA,sha256=U-RUyxRmg1yZ3eCItj3lwP0eEu2THKL8NYCfKyHDoOI,988
+clioedb-1.7.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+clioedb-1.7.dist-info/top_level.txt,sha256=p4ocrB62yYnptdMuqms67sO9zWRpaeSC_nbKTGNgZL8,8
+clioedb-1.7.dist-info/RECORD,,
