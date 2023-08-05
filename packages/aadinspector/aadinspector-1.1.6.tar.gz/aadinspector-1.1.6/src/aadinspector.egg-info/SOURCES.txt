@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/aadinspector/__init__.py
+src/aadinspector/b2c_jwt_inspector.py
+src/aadinspector.egg-info/PKG-INFO
+src/aadinspector.egg-info/SOURCES.txt
+src/aadinspector.egg-info/dependency_links.txt
+src/aadinspector.egg-info/requires.txt
+src/aadinspector.egg-info/top_level.txt
