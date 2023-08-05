@@ -1,0 +1,10 @@
+README.md
+setup.py
+MoralisSDK/__init__.py
+MoralisSDK/api.py
+MoralisSDK.egg-info/PKG-INFO
+MoralisSDK.egg-info/SOURCES.txt
+MoralisSDK.egg-info/dependency_links.txt
+MoralisSDK.egg-info/requires.txt
+MoralisSDK.egg-info/top_level.txt
+test/test.py
