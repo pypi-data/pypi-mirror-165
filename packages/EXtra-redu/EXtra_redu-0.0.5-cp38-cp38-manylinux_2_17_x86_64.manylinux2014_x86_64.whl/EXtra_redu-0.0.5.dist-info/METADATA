@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: EXtra-redu
+Version: 0.0.5
+Summary: Tools for XFEL data quality estimation and data reduction
+Home-page: https://git.xfel.eu/dataAnalysis/data-reduction
+Author: European XFEL GmbH
+Author-email: da-support@xfel.eu
+Maintainer: Egor Sobolev
+License: BSD-3-Clause
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: euxfel-bunch-pattern (>=0.6)
+Requires-Dist: extra-data (>=1.9.1)
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: pytest-cov ; extra == 'test'
+Requires-Dist: mock ; extra == 'test'
+
+# EXtra-redu
+
+Tools for XFEL data quality estimation and data reduction
+
+
