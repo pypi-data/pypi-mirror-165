@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: robotframework-ghareports
+Version: 0.0.4
+Summary: Simple github action summary report for robotframework
+Home-page: https://github.com/rasjani/robotframework-ghareports
+Author: Jani Mikkonen
+Author-email: jani.mikkonen@gmail.com
+License: GPLV3
+Description: Simple github action summary report for robotframework
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Quality Assurance
+Classifier: Topic :: Software Development :: Testing
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
