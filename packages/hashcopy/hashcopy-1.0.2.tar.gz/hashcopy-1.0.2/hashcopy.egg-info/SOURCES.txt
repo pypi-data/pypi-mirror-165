@@ -1,0 +1,10 @@
+LICENSE
+README.md
+hashcopy.c
+pyproject.toml
+setup.py
+hashcopy.egg-info/PKG-INFO
+hashcopy.egg-info/SOURCES.txt
+hashcopy.egg-info/dependency_links.txt
+hashcopy.egg-info/top_level.txt
+junk/example.py

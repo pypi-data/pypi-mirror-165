@@ -1,0 +1,35 @@
+hashcopy
+========
+
+This module contains one class, `HashCopier`, which will copy data from an input file to
+an output file with minimal memory copying, while computing a SHA256 hash of the data. It
+can also be used without an output file if you just want the hash.
+
+This module works by mapping the entire source file into memory using `mmap`, then using
+`madvise` to tell the system that we will be reading sequentially. When `.update()` is
+called, it will hash a certain amount of data (default: 4MB) directly from the memory
+mapping, then (if an output file descriptor was passed). it will call `write` to write
+that data to the output file. Then, it will call `madvise(..., MADV_DONTNEED)` to tell the
+system that we no longer need this data, reducing the number of resident pages.
+
+Because this module depends on mapping the entire source file, it will likely fail on
+32-bit systems if the size of the file exceeds the usable address space.
+
+Installation
+------------
+
+
+
+Example
+-------
+
+```
+from pathlib import Path
+from hashcopy import HashCopier
+
+with Path('hashcopy.c').open('rb') as inputfp, Path('output.c').open('wb') as outputfp:
+    with HashCopier(inputfp.fileno(), outputfp.fileno()) as hasher:
+        while (bytes_copied := hasher.update()) > 0:
+            print(f'hashed {bytes_copied} bytes')
+        print(f'hash result = {hasher.finalize().hex()}')
+```
