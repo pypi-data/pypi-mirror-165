@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+textra.py
+textra.egg-info/PKG-INFO
+textra.egg-info/SOURCES.txt
+textra.egg-info/dependency_links.txt
+textra.egg-info/entry_points.txt
+textra.egg-info/requires.txt
+textra.egg-info/top_level.txt
