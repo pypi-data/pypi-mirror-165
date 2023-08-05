@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+tests/__init__.py
+yb-wishes/__init__.py
+yb_wishes.egg-info/PKG-INFO
+yb_wishes.egg-info/SOURCES.txt
+yb_wishes.egg-info/dependency_links.txt
+yb_wishes.egg-info/top_level.txt
