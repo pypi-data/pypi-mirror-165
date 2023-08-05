@@ -1,0 +1,58 @@
+[tool.poetry]
+name = "bigquery-frame"
+version = "0.3.3"
+description = "A DataFrame API for Google BigQuery"
+authors = ["FurcyPin"]
+license = "Apache-2.0"
+keywords = ["BigQuery", "DataFrame"]
+readme = "README.md"
+homepage = "https://github.com/FurcyPin/bigquery-frame"
+repository = "https://github.com/FurcyPin/bigquery-frame"
+
+[tool.poetry.dependencies]
+python = ">=3.7.1,<3.11"
+google-cloud-bigquery = "^3.3.1"
+google-cloud-bigquery-storage = "^2.14.1"
+tabulate = "^0.8.10"
+tqdm = "^4.64.0"
+
+[tool.poetry.dev-dependencies]
+black = "^22.6.0"
+isort = "^5.10.1"
+flake8 = "^5.0.4"
+mypy = "^0.971"
+bandit = "^1.7.4"
+safety = "^2.1.1"
+pytest = "^7.1.2"
+pytest-cov = "^3.0.0"
+pipdeptree = "2.2.1"
+
+# Dependencies used by DataFrame.toPandas()
+pandas = "~1.3.5"
+pyarrow = "~9.0.0"
+db-dtypes = "^1.0.3"
+
+
+[build-system]
+requires = ["poetry-core==1.1.14"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 120
+
+[tool.isort]
+profile = "black"
+known_first_party = "bigquery_frame"
+
+
+[tool.pytest.ini_options]
+addopts = [
+    "-ra",
+    "--cov=bigquery_frame",
+    "--doctest-modules"
+]
+
+testpaths = [
+    "bigquery_frame",
+    "tests"
+]
