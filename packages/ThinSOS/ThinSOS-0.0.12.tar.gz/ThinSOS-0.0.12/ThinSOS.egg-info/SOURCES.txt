@@ -1,0 +1,15 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+ThinSOS.egg-info/PKG-INFO
+ThinSOS.egg-info/SOURCES.txt
+ThinSOS.egg-info/dependency_links.txt
+ThinSOS.egg-info/requires.txt
+ThinSOS.egg-info/top_level.txt
+thinsos/__init__.py
+thinsos/core.py
+thinsos/util.py
+thinsos/tests/__init__.py
+thinsos/tests/test_sos.py
