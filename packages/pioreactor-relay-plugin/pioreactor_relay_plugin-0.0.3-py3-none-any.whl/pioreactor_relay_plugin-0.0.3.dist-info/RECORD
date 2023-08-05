@@ -1,0 +1,10 @@
+pioreactor_relay_plugin/__init__.py,sha256=nzaA-lKGw3qkVWG-sUeDh3T3kL9Qn6uk055B38nfLKI,53
+pioreactor_relay_plugin/additional_config.ini,sha256=EoWin3bFR8Lw2d15R9q22L--k5JrJE_l4icqZnPLyQs,97
+pioreactor_relay_plugin/relay.py,sha256=g-5IRuCfUtaAeeZjzglB9m1FDYZ1xIML8VFLG5OFqYM,2532
+pioreactor_relay_plugin/ui/contrib/jobs/13_relay.yaml,sha256=0vNFlmSSRQvxB0ol5a2uynXza_T7LblqGxWsS3L6988,465
+pioreactor_relay_plugin-0.0.3.dist-info/LICENSE.txt,sha256=FG05DxfeNbVcerLjdkN6IQHSkI22i2nvm6OikHfpNpY,1055
+pioreactor_relay_plugin-0.0.3.dist-info/METADATA,sha256=cULJzy_8RhoKUMISJvXUZwNBlVQCculvMlTW7QRVNUk,842
+pioreactor_relay_plugin-0.0.3.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+pioreactor_relay_plugin-0.0.3.dist-info/entry_points.txt,sha256=eoInJCHltj2GDoz1keQngjmowbJ8e1OHV6b8si2G5x4,71
+pioreactor_relay_plugin-0.0.3.dist-info/top_level.txt,sha256=ycPmfjvugfCgM68hl_LSwxvU5fKcmHeDoY0ZKS1HKNM,24
+pioreactor_relay_plugin-0.0.3.dist-info/RECORD,,

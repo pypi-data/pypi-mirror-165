@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: pioreactor-relay-plugin
+Version: 0.0.3
+Summary: Turn your add-on (light source, pump) on or off.
+Home-page: https://github.com/kellytr/pioreactor-relay-plugin
+Author: Kelly Tran
+Author-email: kelly@pioreactor.com
+License: MIT
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+
+# Pioreactor relay plugin
+
+This relay plugin allows the user to turn on or off any add-on piece on their Pioreactor at a specific channel (as stated in the Configuration).
+
+When installed, under _Manage_, there will be a new _Activities_ option called _Relay_. Editable settings include _Set relay on_, where 1 would turn the function on, and 0 will turn it off. 
+
+## Installation instructions 
+
+Install from the Pioreactor plugins web interface or the command line. 
+
+```
+pio install-plugin pioreactor-relay-plugin
+```
