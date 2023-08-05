@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+./hippo/Test.py
+./hippo/__init__.py
+hippo_dev.egg-info/PKG-INFO
+hippo_dev.egg-info/SOURCES.txt
+hippo_dev.egg-info/dependency_links.txt
+hippo_dev.egg-info/top_level.txt

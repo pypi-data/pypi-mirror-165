@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: hippo-dev
+Version: 0.0.1
+Summary: UNKNOWN
+Home-page: https://idea-org.github.io/
+Author: Ben Pearce
+Author-email: benjamin.j.pearce@outlook.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# hippo
+
