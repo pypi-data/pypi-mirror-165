@@ -1,0 +1,3 @@
+[console_scripts]
+jlidtdefaultconfig = jsonloggeriso8601datetime.__init__:printDefaultConfig
+jlidtexample = jsonloggeriso8601datetime.__init__:example
