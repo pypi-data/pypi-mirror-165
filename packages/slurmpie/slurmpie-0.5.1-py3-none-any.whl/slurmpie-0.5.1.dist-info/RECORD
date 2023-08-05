@@ -1,0 +1,10 @@
+slurmpie/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+slurmpie/slurmpie.py,sha256=rxvqcZXBy-y8xCMTmDrc9wtGxcHeSzTT12vN0TSFAhc,21117
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_jobs.py,sha256=fE8bNzwIqwNeY3NWbPqsTV_ibbVkYSOKGVV8cbBft_Y,8994
+tests/test_pipeline.py,sha256=UnmqToJwBSEy8CF3wLVYZH8y6TGtEUq16Z6HHdsIr6s,5010
+slurmpie-0.5.1.dist-info/LICENSE,sha256=EY60qvn387aBKtG1ispvEYP-7sAecWoKs0MFZjJPPCo,1065
+slurmpie-0.5.1.dist-info/METADATA,sha256=FFaqQOuJviIuIKz558nhWK5_hfDMAb_EXTTCzZpkkUI,1335
+slurmpie-0.5.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+slurmpie-0.5.1.dist-info/top_level.txt,sha256=GOVE0b_rw_Cu3cm4-i8Z0oZ4yyR91Xj3RBNqB3um1LY,15
+slurmpie-0.5.1.dist-info/RECORD,,
