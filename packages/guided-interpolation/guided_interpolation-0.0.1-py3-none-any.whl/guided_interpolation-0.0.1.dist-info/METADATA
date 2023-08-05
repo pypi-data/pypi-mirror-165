@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: guided-interpolation
+Version: 0.0.1
+Summary: A Python repository for 2D and 3D horizon-guided interpolation
+Home-page: https://github.com/fabiojdf/guided_interpolation
+Author: Fábio Júnior
+Author-email: fabiojdf@id.uff.br
+Classifier: Intended Audience :: Science/Research
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Requires-Dist: numpy
+Requires-Dist: scipy
+
+# guided-interpolation
+A Python repository for 2D and 3D horizons-guided interpolation
+
+- Interpolação de propriedades contínuas: IWD, Krig,
+- Interpolação de propriedades discretas: IK
+
+- Simulações sequenciais de propriedades contínuas: SGS
+- Simulações sequenciais de propriedades discretas: SIS
+
+## Installation
+
+You can install with `pip`:
+
+    pip install guided_interpolation
+
+## Documentation
+
+Coming soon!
+
+# Contributing
+
+Please see [CONTRIBUTING.md](CONTRIBUTING.md).
