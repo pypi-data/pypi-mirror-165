@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: jsonbp
+Version: 0.9.2
+Summary: JSON Python Deserializer
+Home-page: https://github.com/vottini/jsonbp
+Author: Gustavo Venturini
+Author-email: gustavo.c.venturini@gmail.com
+License: MIT
+Keywords: json,deserialization
+Platform: any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+
+# jsonbp
+
+**jsonbp** (JSON BluePrint) is a library to validate and deserialize JSON into Python based on a schema.  
+jsonbp uses its own domain language to define a schema.
+
+

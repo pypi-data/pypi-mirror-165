@@ -1,0 +1,4 @@
+
+class JsonViolation(Exception):
+	pass
+
