@@ -1,0 +1,3 @@
+[console_scripts]
+opmcli = opmcli_tool:run
+

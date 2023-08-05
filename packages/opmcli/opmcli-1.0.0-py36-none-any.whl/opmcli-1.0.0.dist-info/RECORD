@@ -1,0 +1,14 @@
+opmcli_tool.py,sha256=9NuiRnzyN_jUugAEueglPQvhnkcX7l7BLNp-aaEnF18,59
+opmcli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+opmcli/attributes.py,sha256=14ohtmzZCHKRpY_a5KxIhSg4F5yatZIILk_hZxKyMiE,439
+opmcli/helper.py,sha256=77IcASpTXoYs8rd6AgHy2szbwRKdGfnxKAfiTzFK28I,2148
+opmcli/index.py,sha256=7g12b0jbZtd8RMDjrSBe08l5oo-vD8i5nPdWnY00XII,58345
+opmcli/node.py,sha256=BjuJ9VClZHZdRyQ7CAGEP9G_YdTcssDXEt6CRxWTbV0,75154
+opmcli/opensearch_api.py,sha256=23exV5T8-EMVdqO_hjfTscV5J-5QEwENdmeWSaSNnm8,10076
+opmcli/opmcli.py,sha256=RRtOu9RvaEsMf411YtaqKBgaYaUTu5KshW0YK3k51qI,6643
+opmcli-1.0.0.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+opmcli-1.0.0.dist-info/METADATA,sha256=5_Sr3WXJLKR-1dh3kwt734MF8KDzsTRW9OH57RoKMSU,504
+opmcli-1.0.0.dist-info/WHEEL,sha256=pqI-DBMA-Z6OTNov1nVxs7mwm6Yj2kHZGNp_6krVn1E,92
+opmcli-1.0.0.dist-info/entry_points.txt,sha256=a9w1nrI_TrT9Bi_S7C5Of0wZIG02c31DC4eV7wKUSDc,44
+opmcli-1.0.0.dist-info/top_level.txt,sha256=qmfh95qedglvOsIyBRJvc9wRULqshxLR8TZq8S3tLIw,19
+opmcli-1.0.0.dist-info/RECORD,,

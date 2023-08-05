@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: opmcli
+Version: 1.0.0
+Summary: A CLI tool for opensearch performance monitoring
+Home-page: https://github.com/eslam-gomaa/opcli
+Author: Eslam Gomaa
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: tabulate
+Requires-Dist: rich
+Requires-Dist: opensearch-py
+Requires-Dist: argparse
+Requires-Dist: pyperclip
+
+UNKNOWN
+
+
