@@ -1,0 +1,15 @@
+geninstaller/__init__.py,sha256=26KazOA-QzLRdelm5Nqq1IztB8kXTFgkIxym7SvO1Js,132
+geninstaller/cmd.py,sha256=8SBd0-8OPhRRhXvglsT5A8jR5V31whkL1vV_tzN24B4,2338
+geninstaller/core.py,sha256=DlxZUJrUOrsuvt2ji__Qcbz34yp0koFwiDiVG-S2m6k,2531
+geninstaller/helpers.py,sha256=aWVTZHKbzn4QZGwl0DkYTJ3C9ls_kEQO2SgShf4rsiI,4905
+geninstaller/ploppers.py,sha256=RxMhwTW17qjyy5GlIs2AASeYTgeNB3zbhjI7w7PAlGM,520
+geninstaller/plop/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+geninstaller/plop/database/gi_db.sqlite3,sha256=zLU6nVn-Gu82PwsIqZLSLITv5H5dkmTCplsIYYGH408,20480
+geninstaller/plop/installer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+geninstaller/plop/installer/installer,sha256=wBafYOHWsLLVG6zpohC2XwjRBeS6BpxBAT4c7jc7FYU,5459
+geninstaller-1.1.2.dist-info/LICENSE.md,sha256=_i5mNJrKujxac84DaCjxQufpnwWeHFmODE5NBJucxi0,1069
+geninstaller-1.1.2.dist-info/METADATA,sha256=9j0ZTpnGSi8oaIHF4otVdsfWulUPkrt2dTCMlBVCA2c,2002
+geninstaller-1.1.2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+geninstaller-1.1.2.dist-info/entry_points.txt,sha256=fBpqOXrPQBkKsKu1vqrol-STiBzWOOiJnzhScZa7Cjc,55
+geninstaller-1.1.2.dist-info/top_level.txt,sha256=gPjEilBtRRek-YLPAlBNt2YIGKrIel3cyH775fNoj9s,13
+geninstaller-1.1.2.dist-info/RECORD,,
