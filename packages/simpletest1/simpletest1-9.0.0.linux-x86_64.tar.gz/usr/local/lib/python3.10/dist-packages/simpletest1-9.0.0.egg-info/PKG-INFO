@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: simpletest1
+Version: 9.0.0
+Summary: it will check for the sub domains
+Home-page: UNKNOWN
+Author: Anania belay
+Author-email: hackeranania@gmail.com
+License: MIT
+Description: this is test 12334s
+Keywords: calculator
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Microsoft :: Windows
