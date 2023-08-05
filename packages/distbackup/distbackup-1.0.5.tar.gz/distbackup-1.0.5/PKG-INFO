@@ -1,0 +1,84 @@
+Metadata-Version: 2.1
+Name: distbackup
+Version: 1.0.5
+Summary: A backup manager which can back up a large set of files to a number of offline disks
+Author: Katie Rust
+Author-email: katie@ktpanda.org
+License: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+License-File: LICENSE
+
+Distbackup
+==========
+
+Distbackup is a tool that can back up a large set of files to a number of offline
+disks. Only one backup disk needs to be connected at a time for distbackup to operate on
+it. Distbackup will attempt to distribute redundant copies of files across the backup
+disks, as long as there is room.
+
+Installation
+------------
+
+Distbackup can be installed using PIP:
+
+```
+python3 -m pip install distbackup
+```
+
+Distbackup uses `argcomplete` to assist with tab completion in your shell. To enable it
+(for `bash`), run:
+
+```
+mkdir -p ~/.local/share/bash-completion/completions/
+register-python-argcomplete --shell bash dsb > ~/.local/share/bash-completion/completions/dsb
+```
+
+Argcomplete also supports `tcsh` and `fish`. Run `register-python-argcomplete --help` for
+more info.
+
+How it works
+------------
+
+Distbackup maintains a database (SQLite) which contains metadata about every file in the
+source set, including its name, last modified date, and a SHA256 hash of its
+contents. The hash is then used to uniquely identify an "object", which is then copied to
+one or more backup disks, along with a copy of the database itself.  The files on this
+backup disk are stored only by their hash, so a restore requires reading the database to
+reconstruct the original file structure.
+
+The file structure on the backup disk looks like this:
+
+```
+├── distbackup-disk.json
+├── distbackup,sqlite
+├── distbackup-objects
+│   ├── 000
+│   │   ├── 0005e3d2a9216a465148b424de67297ad5ce65b95289294f3ef53c856ca55088
+│   │   └── 000c00bad31d126b054c6ec7f3e02b27c0f9a4d579f987d3c4f879cee1bacb81
+│   ├── 004
+│   │   ├── 0046066f500854ebc1eb5d679a7164235de42efdf4dfbacff70d9bdb5a2d65db
+│   │   └── 004cf775fda2783974afc1599c33b77228f04f7c053760f4a9552927207a064e
+│   ├── 007
+│   │   ├── 00702164a628a9e65266f4aafec2e1faebc42f0cc2145408a74c3feae39bef6d
+│   │   └── 0077c553ae28326ef59c06e3743a6ddf5e046d9482eb9becfa8e06ff5bd37e2e
+│   ├── 008
+│   │   └── 0083cc2e1d1d989795d02aa47d4dd42b9f90b644d025cece0ab3c953b3a4fa09
+.
+.
+.
+```
+
+Since objects are identified by their hash, their contents are immutable. This means that
+if a source file changes, it will have a new hash and therefore refer to a new object.
+
+Distbackup works with one backup disk at a time. First, it will delete any orphaned
+objects (i.e. files that have been deleted or changed on the source), then it will copy
+any new objects to the disk, and then, if it still has room, it will try to make redundant
+copies of objects that have already been copied to other disks. It may delete redundant
+objects off the disk to make room, as long as the overall redundancy is not reduced. For
+example, if there is an object which already has one copy on another disk, it may decide
+to delete an object that has two copies on other disks to make room for a second copy of
+the first object.
