@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+tkhtmlview/__init__.py
+tkhtmlview/html_parser.py
+tkhtmlview.egg-info/PKG-INFO
+tkhtmlview.egg-info/SOURCES.txt
+tkhtmlview.egg-info/dependency_links.txt
+tkhtmlview.egg-info/requires.txt
+tkhtmlview.egg-info/top_level.txt
