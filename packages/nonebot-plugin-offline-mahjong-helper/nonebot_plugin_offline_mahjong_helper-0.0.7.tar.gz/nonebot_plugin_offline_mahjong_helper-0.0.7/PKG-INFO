@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: nonebot_plugin_offline_mahjong_helper
+Version: 0.0.7
+Summary: 基于nonebot2可约桌、算点、查询的面麻助手。
+Home-page: https://github.com/Nranphy/nonebot_plugin_offline_mahjong_helper
+Author: Nranphy
+Author-email: 3102002900@qq.com
+License: UNKNOWN
+Description: 基于nonebot2可约桌、算点、查询的面麻助手。
+Keywords: nonebot,mahjong
+Platform: UNKNOWN
