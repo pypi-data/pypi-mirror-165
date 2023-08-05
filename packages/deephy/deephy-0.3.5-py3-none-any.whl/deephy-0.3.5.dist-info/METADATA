@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: deephy
+Version: 0.3.5
+Author-email: Matt Groth <mjgroth@mit.edu>
+Project-URL: Homepage, https://github.com/mgroth0/deephy
+Project-URL: Bug Tracker, https://github.com/mgroth0/deephy/issues
+Requires-Dist: cbor2
+Requires-Dist: numpy
+
