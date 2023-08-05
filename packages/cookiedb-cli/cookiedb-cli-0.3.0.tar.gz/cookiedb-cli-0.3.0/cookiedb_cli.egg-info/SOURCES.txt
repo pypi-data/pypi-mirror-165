@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+cookiedb_cli.egg-info/PKG-INFO
+cookiedb_cli.egg-info/SOURCES.txt
+cookiedb_cli.egg-info/dependency_links.txt
+cookiedb_cli.egg-info/entry_points.txt
+cookiedb_cli.egg-info/requires.txt
+cookiedb_cli.egg-info/top_level.txt
+cookiedbcli/__init__.py
+cookiedbcli/dbcli.py
+cookiedbcli/exceptions.py
+cookiedbcli/main.py
