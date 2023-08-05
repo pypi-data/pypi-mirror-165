@@ -1,0 +1,15 @@
+making_with_code_cli/cli.py,sha256=W4HuvM46NbgJeW3Wb89kKABPx76MR3sYcMU-BuzHWKk,5416
+making_with_code_cli/cli_setup.py,sha256=_FATSP1eicx4kCloB16I1a4tUUUjjkl4So9Pk4Zm3-g,15345
+making_with_code_cli/curriculum.py,sha256=TeJ_S_gANgEBJ2sFbpr6cvKrH0e6e82KFiXnLB5pmKw,255
+making_with_code_cli/git_backend/__init__.py,sha256=46P_Qwxh1LUkIav2iUuYH0RUz4XCtkHlw_CbKeDGx1o,213
+making_with_code_cli/git_backend/base_backend.py,sha256=jkte77-nrj09Vwn87ogZwE3Ht2MXi_q4HmP0SgxdmSw,2674
+making_with_code_cli/git_backend/github_backend.py,sha256=lJiRkH-iNpcGQIHXyQD5IhKuxVffpOW3rUNyh8CcRmQ,3834
+making_with_code_cli/git_backend/github_org_backend.py,sha256=akGF7te6dll7zS_19jS6H0HurmG8YjnJJenEeP22hpo,4218
+making_with_code_cli/helpers.py,sha256=n1ZT5Gfg3997qMVC7sAqXeWmVxjVNKL2h_tHjfuZ41k,266
+making_with_code_cli/mwc_api.py,sha256=CJdShq3GJMKljR8KSbn722U8ea8TC9I76maZ0QahjPU,2285
+making_with_code_cli/settings.py,sha256=lujCgWJ1bFzdMIoS3-hKXT1JqgHS3CZ8TMylBVD5HuQ,1325
+making_with_code_cli/styles.py,sha256=Xa4eNoHBZMy75kduRUC-2jJe81875MyUc8NC4dbVloo,1479
+making_with_code_cli-0.0.59.dist-info/entry_points.txt,sha256=XnS9X6fVIRhBnRwWh7cSi4AKG5rDUqVGeH9EPKKNdVg,52
+making_with_code_cli-0.0.59.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+making_with_code_cli-0.0.59.dist-info/METADATA,sha256=8n3HmuIJ-T729prirfskJXszNFIrjd4KxeVhmqaZLdo,2095
+making_with_code_cli-0.0.59.dist-info/RECORD,,
