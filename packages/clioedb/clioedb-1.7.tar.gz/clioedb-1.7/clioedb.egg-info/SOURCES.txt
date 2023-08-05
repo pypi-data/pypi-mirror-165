@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+clioedb/__init__.py
+clioedb/mydb.py
+clioedb/mydbconn.py
+clioedb/utils.py
+clioedb.egg-info/PKG-INFO
+clioedb.egg-info/SOURCES.txt
+clioedb.egg-info/dependency_links.txt
+clioedb.egg-info/top_level.txt
