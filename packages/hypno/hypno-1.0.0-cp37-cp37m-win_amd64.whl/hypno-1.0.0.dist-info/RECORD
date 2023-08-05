@@ -1,0 +1,10 @@
+hypno/__init__.py,sha256=_81yULMhTzTMBjmiMONXhA00GlBbxeH8bGtjooK6GRo,52
+hypno/__main__.py,sha256=A8LQL2FQOM77lUnbacPn7iQ4ddkCj_8HIHxDjIMBU-k,675
+hypno/hypno.py,sha256=wLAxbrhlpW5dB-c94uXPPMTM4CoSJjOegXbWpZAj2zY,2217
+hypno/injection.cp37-win_amd64.pyd,sha256=4NKGuKiIcythfLVIG-D_D56iqy2o1FyY47bYAnLM7bg,71168
+hypno-1.0.0.dist-info/LICENSE.txt,sha256=uWMiTSyfaXYaCmltnVDyC-IeeLafXAMXJ01Kn5C-Dng,1092
+hypno-1.0.0.dist-info/METADATA,sha256=lg7_yBxMjcEAxIZnQpkyycs63GwdTDYOQsgSEVYQvAs,2376
+hypno-1.0.0.dist-info/WHEEL,sha256=OmDKD3JmZjhMu_YdpkiJDfFL1rf8n9nexhWCGhSBGVE,101
+hypno-1.0.0.dist-info/entry_points.txt,sha256=MSZWEblkPB5q6ohlWTLxy_4fT7WHE2Oy76QbEaBorUI,47
+hypno-1.0.0.dist-info/top_level.txt,sha256=WMWaW8_HvPaDQEBvB4yNkOjtzzWgzLiNLKv91NQ3jkQ,6
+hypno-1.0.0.dist-info/RECORD,,
