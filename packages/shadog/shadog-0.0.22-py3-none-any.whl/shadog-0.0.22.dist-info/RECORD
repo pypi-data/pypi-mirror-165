@@ -1,0 +1,9 @@
+shadog/__init__.py,sha256=s5GvNHWH8z9TDlKumW6cmLEjkUOzKa8my5TMItlnZmM,57
+shadog/crypto.py,sha256=FcJ5IiEGufmWnUrAWrA_3WFV0orcOv-WdtLHbT5ceGM,212
+stringoline/__init__.py,sha256=aLszQ8Vu6YTxcKGmD4i2zTOh5cEoU6D70umMunSNpv4,64
+stringoline/crypto.py,sha256=FcJ5IiEGufmWnUrAWrA_3WFV0orcOv-WdtLHbT5ceGM,212
+shadog-0.0.22.dist-info/LICENSE.txt,sha256=Z_R0qA8dBa_UBMGgM1fEedm0wV7CBqwIBaBEOu4iT5w,1077
+shadog-0.0.22.dist-info/METADATA,sha256=Z7DzL0BuGoMbIJFzVRON4Xfn7f5XhP9bmOdmtIkam-A,811
+shadog-0.0.22.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+shadog-0.0.22.dist-info/top_level.txt,sha256=kPOHPJtpKhM5UZarCsk3mOP65UzzFWP7BWC7sho8xpw,7
+shadog-0.0.22.dist-info/RECORD,,
