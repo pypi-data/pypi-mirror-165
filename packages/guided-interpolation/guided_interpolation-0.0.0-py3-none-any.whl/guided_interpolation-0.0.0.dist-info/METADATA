@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: guided-interpolation
+Version: 0.0.0
+License-File: LICENSE.md
+Requires-Dist: requests
+Requires-Dist: importlib-metadata ; python_version < "3.8"
+
