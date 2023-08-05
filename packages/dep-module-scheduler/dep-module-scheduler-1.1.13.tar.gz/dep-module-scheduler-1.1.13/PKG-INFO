@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: dep-module-scheduler
+Version: 1.1.13
+Summary: 
+Author: everhide
+Author-email: i.tolkachnikov@gmail.com
+Requires-Python: >=3.9,<3.10
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: APScheduler (>=3.9.1,<4.0.0)
+Requires-Dist: dep-spec (>=1.2.13,<2.0.0)
