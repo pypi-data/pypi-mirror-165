@@ -1,0 +1,4 @@
+dash>=2.6.1
+openpyxl>=3.0.10
+statsmodels>=0.13.2
+waitress>=2.1.2

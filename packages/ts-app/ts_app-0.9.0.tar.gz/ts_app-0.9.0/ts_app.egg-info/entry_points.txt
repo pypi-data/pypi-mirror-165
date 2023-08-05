@@ -1,0 +1,2 @@
+[console_scripts]
+ts_app = ts_app:_run_in_cli
