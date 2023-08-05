@@ -1,0 +1,70 @@
+Metadata-Version: 2.1
+Name: python education tools
+Version: 0.6.0
+Summary: Python Education Tools for Teaching
+Home-page: https://github.com/liluqun
+Author: Prof.Luqun Li
+Author-email: liluqun@gmail.com
+Project-URL: Bug Tracker, https://github.com/liluqun
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# Prof.Li's Python Education Tools
+## 道法自然
+## **pip install -U python-education-tools**
+**sample code as follows:**
+`````
+本书作者Prof.Luqun Li团队自主开发的教材配套工具Python Education Tools模块已经发布在pypi .org网站。模块的URL链接为：https://pypi.org/project/python-education-tools/
+
+模块的安装：
+     pip install -U python-education-tools
+     模块安装后对应的安装包为 pet.data.* 、pet.textbook1.*等。今后会不断扩充相关教学工具，所有工具包的根目录是pet，pet是Python Education Tools 首字母的缩写。
+
+Pet相关模块的使用：
+
+1.	趣谈编程之道：
+与Python编程之禅import this对应，本模块也提供了编程趣谈：
+import  pet.dao   或者 import pet.that
+Just for Fun！！！
+
+2.	提供教材配套的案例下载（运行以下2行Python代码）：
+from pet.data import load_data
+load_data.download_textbook1()
+
+即可将教学案例下载到桌面教学案例目录。
+
+3.	教材相关的，样本数据加载：
+from pet.data import load_data
+
+df1 = load_data.load_data('ip_address.xlsx')
+'''
+输入：st.xls -某高校研究生初试成绩。返回：dataframe
+输入：ip_address.xlsx  -ip地址分类。返回：dataframe
+输入：subway.xlsx  -上海地铁线路数据。返回：dataframe
+输入：ddj.txt -道德经文本。返回：字符串。
+输入：tyjhzz.txt-《太乙金华宗旨》。返回：字符串。
+今后将陆续增加数据文件
+'''
+print(load_data.votes) #投票文本数据
+print(load_data.cookies ) #某cookies数据
+4.	伪数据的随机生成：
+    以下2个函数可以随机生成相关数据。
+dffs = load_data.generate_sr(rows=100)
+'''
+生成一个Series对象，对象内数据条数默认40条，可任意设置。
+'''
+dfff = load_data.generate_df(rows=200)
+'''
+生成一个dataframe对象，对象内数据条数默认40条，可任意设置。shape是（n，13），n为数据条数
+'''
+
+
+
+`````
+
+
+
+![hah](https://img2.baidu.com/it/u=4192375754,1241799193&fm=253&fmt=auto&app=138&f=JPEG?w=333&h=500)
