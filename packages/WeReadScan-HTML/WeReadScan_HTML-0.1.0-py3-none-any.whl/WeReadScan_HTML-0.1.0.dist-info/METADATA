@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: WeReadScan-HTML
+Version: 0.1.0
+Summary: WeRead HTML Downloader
+Home-page: https://github.com/Algebra-FUN/WeReadScan/tree/html-variant
+Author: Algebra-FUN
+Author-email: g.creator.fan@gmail.com
+License: GPL Licence
+Keywords: weread,get,html,convert,selenium
+Platform: window
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pillow
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: selenium
+
+# WeReadScan (html-scan variant)
+
+![GitHub last commit](https://img.shields.io/github/last-commit/Algebra-FUN/WeReadScan) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Algebra-FUN/WeReadScan) ![GitHub top language](https://img.shields.io/github/languages/top/Algebra-FUN/WeReadScan)
+
+## About
+
+This branch is a html-scan variant of WeReadScan, integrating script developed by [Sec-ant](https://github.com/Sec-ant).
+
+Thanks for [Sec-ant](https://github.com/Sec-ant), this variant of WeReadScan can be more efficient.
+
+More detail about Sec-ant's project, you can visit https://github.com/Sec-ant/weread-scraper
+      
+
+
