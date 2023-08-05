@@ -1,0 +1,17 @@
+odoo_launcher/__init__.py,sha256=VrvvjKeiTovLlibpumO7F9nGONTS9vCtxooJOdVUN4g,170
+odoo_launcher/__main__.py,sha256=6vaiP9FPsBF_0NDKb7r3t_jA6-81zu63laUq6o38Gx0,3647
+odoo_launcher/api.py,sha256=50wiVaF63QWYnlUXYWZaoJryu_b3aQ6mEDyrkLETgXw,8514
+odoo_launcher/config_section.py,sha256=J1bLRczPjZaHBYOBmKO0sdpfzxzM0XRBH4PffjCf49w,15799
+odoo_launcher/exceptions.py,sha256=IdKwtVaIZZ77DaBY2oLAPeq_dYZgrzgrcgSWLT-sMwQ,386
+odoo_launcher/launcher.py,sha256=1sOM5Oo3WQOEjzD9-wlvjKSyJAgox-gbcFQOsKze3Ak,7240
+odoo_launcher/mapper.py,sha256=n7P-t4NguzzZxoMBF-ARY0__20RD3vMV93NTfpKvQ4A,6299
+odoo_launcher/odoo_config_maker.py,sha256=jVhngkvaeX2Cla58oSKVoN9w2rFWVeDSBpVojbUTMKI,8326
+odoo_launcher/odoo_modules/ndp_server/__init__.py,sha256=Y51abKc77F5zEUtQyehUC9c1SaSy4h9fiTfZAsEbwa4,18
+odoo_launcher/odoo_modules/ndp_server/__manifest__.py,sha256=vk0d3dutbtoPOh4dr7LGVk7fzif8EiHo-IfoizezE1g,333
+odoo_launcher/odoo_modules/ndp_server/cli/__init__.py,sha256=h_o4J0OhA1gIO_tg5oH3ulYdkpoDFpN2xNHAsh4H5Qs,24
+odoo_launcher/odoo_modules/ndp_server/cli/cloud_monkey_patch.py,sha256=QHAkwcsNaXkcLbLHGGOW5ezDjiXVDhQFKcWmIKKHwI4,4932
+odoo_launcher/odoo_modules/ndp_server/cli/ndpserver.py,sha256=k9XfMg4zPcpVLTvNyWq5HTBwTlbXtFye8IvGG54un9w,1478
+odoo_launcher-2.0.0a0.dist-info/METADATA,sha256=lGaBibcrNgIP06WdVlHmbS0z9cJ2w5wmYV743zne9Vs,720
+odoo_launcher-2.0.0a0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+odoo_launcher-2.0.0a0.dist-info/top_level.txt,sha256=ioR0HGq357mUGZjPFv9EsS5f6myxoKgTreT2MA-Izos,14
+odoo_launcher-2.0.0a0.dist-info/RECORD,,
