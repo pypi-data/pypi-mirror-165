@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: modrinth
+Version: 0.1.3
+Summary: Interact with Modrinth's Labrinth API through Python.
+Author-email: Beta Pictoris <beta@ozx.me>
+Project-URL: Homepage, https://github.com/BetaPictoris/modrinth.py
+Keywords: minecraft,modrinth,modrinth-api,labrinth
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Provides-Extra: dev
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: bumpver ; extra == 'dev'
+Requires-Dist: isort ; extra == 'dev'
+Requires-Dist: pip-tools ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+
