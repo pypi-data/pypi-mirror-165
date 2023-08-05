@@ -1,0 +1,17 @@
+mylassi_xyz_lib/__init__.py,sha256=fuETl1lrS8w-CkbTd2PYGhRU5STe_uvX_pk44wYLbqc,155
+mylassi_xyz_lib/api_client.py,sha256=DUZk-F3fzkB9heaj3UvvBypOLWLCXSrdLXIhUMSvpc4,2474
+mylassi_xyz_lib/schemas/__init__.py,sha256=fC_eihbVqTqlKZRYuMd6eBsfc2Cr31RDgdkXbMRzFm8,1343
+mylassi_xyz_lib/schemas/apiv2.py,sha256=f7eXNmfhXiRGj7IRZtsxOQTHgLukdiuD0Ld0jzZ0UQ8,502
+mylassi_xyz_lib/schemas/documents.py,sha256=FAr5BLTSjsiH5Ly4WUl13k-F-He8nq3UcqQeUQKcLLE,2709
+mylassi_xyz_lib/schemas/lesson_page_elements.py,sha256=Mjv51YRoW0lpmGWC0B4GXzyjYUK820oWdbAEQj1s84I,2342
+mylassi_xyz_lib/schemas/lesson_pages.py,sha256=Rc-QitEExHWRvrMW-4ZFTf9N8AEN51ukQkP9kDI7lc4,1114
+mylassi_xyz_lib/schemas/lessons.py,sha256=9_d12mBS7of2u3ZZ0fMXtaqX9_8rE3d-flI-Rac8unM,1926
+mylassi_xyz_lib/schemas/tags.py,sha256=9ysUa-s0sxp1gYzNG7hfOajV1M9oxVwD8ejEA7f994Y,690
+mylassi_xyz_lib/schemas/users.py,sha256=S2DiUOkpW1Cen1qlK9EX_NTiDwKosqLCUtcH6NK7OmA,349
+mylassi_xyz_lib/services/__init__.py,sha256=X47960Rtw-zwDg8h4cAwAfTIcdsDI4v59EM29CS9UlE,77
+mylassi_xyz_lib/services/document_service.py,sha256=9vrlfgpFSw_MvxmbzlaY13Ltrf9w28eodQWqDwi3COU,1198
+mylassi_xyz-0.27.0.dist-info/METADATA,sha256=gP4nPAwmHxxOaTiHaWLrhFZwmjCywpYcnUj2u89mUqQ,556
+mylassi_xyz-0.27.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+mylassi_xyz-0.27.0.dist-info/entry_points.txt,sha256=eqGnTHtEVMYwfXVk1Z9MhC8O2N8wuqAbr0lisLmrkxs,20
+mylassi_xyz-0.27.0.dist-info/top_level.txt,sha256=S7Tvk7tfutMegqd8052wqNAvKVl2ymtSugvX1TBIMlo,65
+mylassi_xyz-0.27.0.dist-info/RECORD,,
