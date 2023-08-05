@@ -1,0 +1,46 @@
+[build-system]
+requires = ["flit_core >=3.7,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "aiojobs-fork"
+version = "1.0.1"
+description = "aiojobs maintained fork"
+author = "Aaron Crespo (original package author is Andrew Svetlov)"
+author-email = "jon.farrel@protonmail.com"
+home-page = "https://gitlab.com/open-source-packages/aiojobs"
+requires=[
+    "async-timeout >= 4.0.0"
+]
+requires-python=">=3.6"
+description-file="README.rst"
+classifiers = [
+    "License :: OSI Approved :: Apache Software License",
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Framework :: AsyncIO",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Software Development",
+]
+
+[project.optional-dependencies]
+aiohttp = [
+    "aiohttp >= 3.8.0"
+]
+
+[tool.flit.module]
+name = "aiojobs"
+
+
+[tool.towncrier]
+package = "aiojobs"
+filename = "CHANGES.rst"
+directory = "CHANGES/"
+title_format = "{version} ({project_date})"
+issue_format = "`#{issue} <https://gitlab.com/open-source-packages/aiojobs/-/issues/{issue}>`_"
