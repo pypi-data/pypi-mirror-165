@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: memory-py
+Version: 0.0.1
+Summary: Approximate memory usage profiler
+Home-page: https://github.com/excitoon/memory
+Author: Vladimir Chebotarev
+Author-email: vladimir.chebotarev@gmail.com
+License: MIT
+Project-URL: Documentation, https://github.com/excitoon/memory/blob/master/README.md
+Project-URL: Source, https://github.com/excitoon/memory
+Project-URL: Tracker, https://github.com/excitoon/memory/issues
+Description: Approximate memory usage profiler.
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown

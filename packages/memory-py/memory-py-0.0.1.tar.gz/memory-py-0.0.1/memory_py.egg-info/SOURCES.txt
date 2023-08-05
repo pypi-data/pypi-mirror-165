@@ -1,0 +1,13 @@
+.gitignore
+LICENSE.md
+README.md
+memory
+memory.cmd
+pyproject.toml
+requirements.txt
+setup.py
+memory_py.egg-info/PKG-INFO
+memory_py.egg-info/SOURCES.txt
+memory_py.egg-info/dependency_links.txt
+memory_py.egg-info/requires.txt
+memory_py.egg-info/top_level.txt
