@@ -1,0 +1,282 @@
+# toybox.py
+
+[![MIT License](https://img.shields.io/github/license/toyboxpy/toybox.py)](https://spdx.org/licenses/MIT.html) [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/toyboxpy.svg)](https://python.org) [![PyPI - Version](https://img.shields.io/pypi/v/toyboxpy.svg)](https://pypi.org/project/toyboxpy) [![Python package](https://github.com/toyboxpy/toybox.py/actions/workflows/python-package.yml/badge.svg)](https://github.com/toyboxpy/toybox.py/actions/workflows/python-package.yml)
+
+A **Lua** and **C** dependency management system for the [**Playdate**](https://play.date) **SDK**.
+
+**toybox.py** lets you easily use, create and share **Lua** and **C** extensions, called **toyboxes**, for any **Playdate** project. It handles all dependencies between **toyboxes** automatically and provides precise versioning for each **toybox**.
+
+The main website for the project is at [**toyboxpy.io**](https://toyboxpy.io), there is also a [**blog**](https://toyboxpy.io/blog) and you can join the community around the project on its [**discussions**](https://github.com/toyboxpy/toybox.py/discussions) forum.
+
+You can also follow the project on [**Mastodon**](https://mastodon.social/@toyboxpy) or [**Twitter**](https://twitter.com/toyboxpy).
+
+Playdate is a registered trademark of [**Panic**](https://panic.com).
+
+-----
+
+**Table of Contents**
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Boxfile format](#boxfileformat)
+- [Using Lua toyboxes](#usingluatoyboxes)
+- [Using C toyboxes](#usingctoyboxes)
+- [Creating your own toyboxes](#creatingyourowntoyboxes)
+- [License](#license)
+
+### Installation
+
+**toybox.py** is a pure python project and it requires at least [Python](https://python.org) 3.7 and access to the [git](https://git-scm.com) command line tool.
+
+**toybox.py** is currently in **beta** and, although it should work on other platforms, it's only been tested on **macOS** so far. If you are able to help test and maintain the project on **Linux** or **Windows**, please [reach out](https://github.com/toyboxpy/toybox.py/discussions/1).
+
+It's not recommended to use the version of **Python**, if any, installed on your system. Instead you should [install a more recent](https://toyboxpy.io/blog/installing-python) version of **Python** locally for your user so that any modifications you make won't affect your entire computer.
+
+You can install **toybox.py** by typing the following in a terminal window:
+
+```console
+pip install toyboxpy
+```
+
+### Usage
+
+**toybox.py** supports various commands, sometimes with one extra argument:
+
+```console
+toybox <command> <argument>
+```
+
+The following commands are supported:
+
+```console
+help                      - Show a help message.
+version                   - Get the Toybox version.
+info                      - Describe your dependency set.
+add <dependency>          - Add a new dependency.
+remove <dependency>       - Remove a dependency.
+update                    - Update all the dependencies.
+update <dependency>       - Update a single dependency.
+```
+
+For example, you can add a dependency on the `modplayer` **toybox** and update everything as follows:
+
+```console
+toybox add github.com/DidierMalenfant/modplayer.git
+toybox update
+```
+
+**toybox.py** should always be run from your project's root directory. Since **toybox.py** does create and modify files in your project's folder, it's recommended to use it only on version-controlled projects so that you can back-track any unwanted changes.
+
+### Boxfile format
+
+**toybox.py** creates and uses a local file at the root of your project's directory named `Boxfile`. You can use the `add` and `remove` commands to modify it or edit the file directly as long as you use the correct format. It should be a [json](https://www.json.org/json-en.html) file formatted like this:
+
+```
+{
+    "dependency_url": "version",
+    "dependency_url": "version"
+}
+```
+
+The `dependency_url` should either be the full url to a **git** repository which contains the **toybox**, such as `https://github.com/DidierMalenfant/modplayer.git` or any of the short forms below, which all point to the same repository:
+
+```
+https://github.com/DidierMalenfant/modplayer
+github.com/DidierMalenfant/modplayer
+DidierMalenfant/modplayer
+```
+
+**toyboxes** do not need to be hosted on [Github](https://github.com) but, as shown above, if the server url is omitted then Github is assumed.
+
+The `version` parameter allows you to select a specific or a range of versions for the **toybox** but also lets you specify a branch when, for example, using a development version of a given **toybox**. By default, this is set to `'default'` which means the `HEAD` of the default branch for the repository.
+
+To require a specific version, just set `version` to a full 3 digit [semver](https://semver.org) such as `'1.4.12'`.
+
+You can also require a specific minor version with `'1.4'` or a specific major version with `'1'`. In that case, the latest version with the given minor or major version numbers will be used which allows a developer using your **toybox** to stay up to date with bug fixes or new features without risking an API change from breaking the project's.
+
+If you would like to fine tune your version requirement even more, you can instead use up to two comparaison operators in the `version` argument. For example `'>1.2.3 <=3.0.0'`. Keep in mind that, here too, full 3 digits [semver](https://semver.org) version numbers should be used. Major or minor versions can be still used in combination with comparaisons. For example, a version requirement like `'3 <3.9.0'` results in all versions higher or equal to `3.0.0` but less than `3.9.0`. Supported comparaison operators are `>`, `<`, `>=`, `<=`.
+
+Finally you can request a specific branch for the **toybox** just by using the name of the branch, as in `'develop'`.
+
+### Using Lua toyboxes
+
+Any **toybox** will be installed in a subfolder named `toyboxes` at the root folder of your project. If any of the **toyboxes** provides **Lua** code, a file named `toyboxes.lua` will be created in that folder. All you need to do to start using your **toyboxes** is import that file anywhere in your project.
+
+Assuming you are using the standard [project structure](https://sdk.play.date/1.12.2/Inside%20Playdate.html#_structuring_your_project) suggested by the **Playdate SDK** and have your **Lua** source files in a subfolder named `source` then you can do this by adding this import statement in any file that uses the **toyboxes**:
+
+```lua
+import '../toyboxes/toyboxes.lua'
+```
+
+Note that due to a bug in the `pdc` app used by the **Playdate SDK** to process source files, the `.lua` extension is required here. Once this bug is fixed, this will no longer be needed.
+
+Also note that some **toyboxes** may provide both **Lua** and **C** code.
+
+### Using C toyboxes
+
+Any **toybox** will be installed in a subfolder named `toyboxes` at the root folder of your project. If any of the **toyboxes** provides **C** code, a file named `toyboxes.mk` and a file named `toyboxes.h` will be created in that folder.
+
+Assuming your makefile is in your project's root folder, you will need to include this makefile in your own before you include the **Playdate** SDK's common makefile:
+
+```make
+include toyboxes/toyboxes.mk
+
+...
+
+include $(SDK)/C_API/buildsupport/common.mk
+```
+
+You will then need to call the **toyboxes** init macro `REGISTER_TOYBOXES` during the `kEventInitLua` event and pass it a `PlaydateAPI*`:
+
+```c
+#include "toyboxes.h"
+
+#include "pd_api.h"
+
+int eventHandler(PlaydateAPI* playdate, PDSystemEvent event, uint32_t arg)
+{
+    if(event == kEventInitLua) {
+        REGISTER_TOYBOXES(playdate)
+    }
+    
+    return 0;
+}
+```
+
+If you don't know how to setup your project to use **C** extensions, you can check out the [modplayer-sample](https://github.com/DidierMalenfant/modplayer-sample) project which is a simple project using a **C** extension from a **toybox**.
+
+Note that some **toyboxes** may provide both **C** and **Lua** code.
+
+### Creating your own toyboxes
+
+Of course the best part of **toybox.py** is that anyone can create, distribute and maintain their own **toyboxes** for others to use. All you need it a **git** repo (which can be located anywhere on the internet) and to make sure that some of your code is laid out in a way that **toybox** can process and understand.
+
+For starters, the name of your **git** repo will be the name **toybox** uses for a lot of things. It's better not to use the name of an existing **toybox** as this could cause clashes with future **toybox.py** features (i.e. search for **toyboxes** on the **toyboxpy.io** website or add your **toybox** to a potential future registry of **toyboxes**).
+
+**toyboxes** can provide **Lua** methods, either written in **Lua** or in **C** as extensions to the **Lua** language, or **C** methods that can be used by others when writing their own **C** code for the **Playdate**. Your **toybox** can provide just one, two or all of these types of extensions.
+
+Versionning for **toyboxes** is done via tags in the git repo for your **toybox**. Those tags should be a full 3 digit [semver](https://semver.org) and can have a `v` prefix or not. For example `v2.3.0` is correct, `v2.3` is not. The most important part for users of your **toybox** is to make sure that you only fix issues when incrementing a patch version, that you only add new functionality when incrementing a minor version and that you always increment the major version when adding things to your **toybox** that may break things for your users (removing deprecated methods for example).
+
+It's usually a good idea, rather than provide a swiss-army knife type of **toybox**, to try and make sure **toyboxes** provide one service and do it well. Split different functionality into separate **toyboxes** so developers can only add the ones they need.
+
+**toyboxes** can depend on other **toyboxes**. All you need is to add a `Boxfile` in the root directory of your **toybox** and it will be taken care of automatically when resolving dependencies. It's good practice, during development for example, to not resolve that dependency directly in your project folder. You could end up committing the resulting **toyboxes** folder which would be redundant when others use your **toybox**. You can instead, create a test project which adds your **toybox**. Resolving the dependencies for that test project will import your **toybox** and any ones it depends on.
+
+A **Lua** **toybox** can depend on a **C** **toybox** and a **C** **toybox** can depend on another **C** **toybox**. If you need a **Lua** **toybox** to depend on another **Lua** **toybox**, you'll need to the following in your **toybox**'s import statements:
+
+```lua
+#import '../../../../toyboxes.lua'
+```
+
+If you need only one **toybox** and it is one of your own, hosted on the same git account and server, then this can work too:
+
+```lua
+#import '../MyOtherToybox/MyOtherToybox.lua'
+```
+
+Try to make sure that **toyboxes** don't cross-depend on each other (**A** require **B** and **B** also requires **A**) as this is usually a sign of some API design issues and can complicate things in the long run.
+
+It's not required but it's always a good idea to add a word about **toybox.py** in the README.md of your **toybox** repo so developers know what it contains and how to use it:
+
+```console
+**MyPdPi** is a [**Playdate**](https://play.date) **toybox** which lets you calculate Pi to an infinite number of decimals.
+
+You can add it to your **Playdate** project by installing [**toybox.py**](https://toyboxpy.io), going to your project folder in a Terminal window and typing:
+
+    toybox add https://github.com/MyUsername/MyPdPi
+
+This **toybox** contains both **Lua** and **C** toys for you to play with.
+```
+
+You can also add a nice [![Toybox Compatible](https://img.shields.io/badge/toybox.py-compatible-brightgreen)](https://toyboxpy.io) badge like this:
+
+```
+[![Toybox Compatible](https://img.shields.io/badge/toybox.py-compatible-brightgreen)](https://toyboxpy.io)
+```
+
+#### Creating a Lua toybox
+
+Creating a **Lua** **toybox** is as simple as adding one **Lua** file at the root to your project's repo or in a subfolder named `source` or `Source`. That file can be named `import.lua` or the same as your project and must contain all the import statements required to use your **toybox**. For example, the fictional `MyPdPi` **toybox**, if written in **Lua**, would contain one file named `MyPdPi.lua` which would look like this:
+
+```lua
+--
+--  MyPdPi - Calculate Pi to an infinite number of decimals.
+--
+
+import "math"
+import "picalc"
+import "utils"
+```
+
+The source code itself in your **toybox** can be laid out any way you want (additional `Source` subfolder, etc...) as long as this file imports all the other files correctly.
+
+#### Creating a C toybox
+
+Creating a **C** **toybox** is almost as simple and requires three things. First you need to create a makefile for your **toybox** in the root folder of your project and name it after your project. Once again, if the fictional `MyPdPi` **toybox** was written in **C**, it would contain one file named `MyPdPi.mk` which would look like this: 
+
+```make
+#
+#  MyPdPi - Calculate Pi to an infinite number of decimals.
+#
+
+# -- Find out more about where this file is relative to the Makefile including it
+_RELATIVE_FILE_PATH := $(lastword $(MAKEFILE_LIST))
+_RELATIVE_DIR := $(subst /$(notdir $(_RELATIVE_FILE_PATH)),,$(_RELATIVE_FILE_PATH))
+
+# -- Add us as an include search folder only if it's not already there
+uniq = $(if $1,$(firstword $1) $(call uniq,$(filter-out $(firstword $1),$1)))
+UINCDIR := $(call uniq, $(UINCDIR) $(_RELATIVE_DIR))
+
+# -- Add our source files.
+SRC := $(SRC) \
+       $(_RELATIVE_DIR)/MyPdPi/MyPdPi.c
+```
+
+The first section is very important and makes sure that the makefile is relocatable, i.e. can work no matter where the includer's makefile is located. The second part adds the root folder of your **toybox** as an include path. The last section adds the source files that need to be compiled for your **toybox**. Don't forget the `$(SRC)` on the first line to make sure that any previous sources files from other **toyboxes** are included.
+
+The use of `:=` instead of `=` is also very important here as it force make to resolve the value right here and there, instead of when it is used and could have been overwritten by another **toybox** at that point.
+
+Source code for your project should be located in a subfolder named after your project, in our case `MyPdPi`, and it should contain an include header named after your project, i.e. `MyPdPi.h` which, at a minimum, looks like this:
+
+```c
+/*
+*  MyPdPi - Calculate Pi to an infinite number of decimals.
+*/
+
+#ifndef MYPDPI_H
+#define MYPDPI_H
+
+#include "pd_api.h"
+
+// -- Globals
+extern PlaydateAPI* pd;
+
+// -- toybox registration function
+void register_MyPdPi(PlaydateAPI* playdate);
+
+#endif
+```
+
+As shown above, your **toybox** header file needs to declare at least one function and that's the function called during the `kEventInitLua` event. The name of that function needs to be `register_<toybox_name>` and take a `PlaydateAPI* playdate` as an argument. If you're registering extensions to the **Lua** language this is where that would take place.
+
+You can also declare any other functions your **toybox** exposes or include any other header files that may be needed. If your **toybox** is just providing **C** code for other projects and doesn't require any particular initialisation you can leave this method empty or just grab the `PlaydateAPI*` for future use elsewhere in your code, like so:
+
+```c
+/*
+ *  MyPdPi - Calculate Pi to an infinite number of decimals.
+ */
+ 
+#include "MyPdPi/MyPdPi.h"
+
+// -- Globals
+PlaydateAPI* pd = NULL;
+
+// -- toybox registration function
+void register_MyPdPi(PlaydateAPI* playdate)
+{
+    pd = playdate;
+}
+```
+
+## License
+
+**toybox.py** is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
