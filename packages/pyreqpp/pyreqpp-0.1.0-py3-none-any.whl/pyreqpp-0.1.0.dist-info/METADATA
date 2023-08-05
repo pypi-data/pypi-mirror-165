@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: pyreqpp
+Version: 0.1.0
+Summary: Takes requirements.txt file without module versions and annotates it with the latest set of module versions that won't result in build/runtime errors.
+Home-page: https://github.com/sudomaze/pyreqpp
+License: MIT
+Author: sudomaze
+Author-email: sudomaze@gmail.com
+Requires-Python: >=3.8.13,<4.0.0
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: tomlkit (>=0.11.4,<0.12.0)
+Requires-Dist: typer (>=0.6.1,<0.7.0)
+Project-URL: Repository, https://github.com/sudomaze/pyreqpp

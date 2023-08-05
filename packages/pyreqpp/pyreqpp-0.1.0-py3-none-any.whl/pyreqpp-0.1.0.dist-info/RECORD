@@ -1,0 +1,8 @@
+pyreqpp/__init__.py,sha256=FuvorQenzIktSLVCrzU3Ot_qAeR5bvNxq7skBhJ3aSY,1143
+pyreqpp/__main__.py,sha256=6OfXTGGbToVVXLzhJjITr9U7RcA3vK5rOE8HtLK6Fi0,115
+pyreqpp/cli.py,sha256=_5p0sVJhYm-zWWSCd5KLVUFO6nZA8R7gcoP6wmGnEWI,1095
+pyreqpp/utils/__init__.py,sha256=SI-vosdKO7UoLe9nU2VhBpPbs1aDHFJRBQnj51jahgs,22
+pyreqpp/utils/run.py,sha256=soEUC1Wvyk2P75N0cXRW23uydMVcnXe_4LG3Yab5Dvc,3222
+pyreqpp-0.1.0.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+pyreqpp-0.1.0.dist-info/METADATA,sha256=groL7TZE36BU1bJDe9xzq2Xu9rw-MGBqCWIzHjCcEoU,1010
+pyreqpp-0.1.0.dist-info/RECORD,,
