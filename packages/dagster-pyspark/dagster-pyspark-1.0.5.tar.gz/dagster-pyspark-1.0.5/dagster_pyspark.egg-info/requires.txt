@@ -1,0 +1,8 @@
+dagster==1.0.5
+dagster_spark==1.0.5
+
+[:python_version < "3.8"]
+pyspark>=2.0.2
+
+[:python_version >= "3.8"]
+pyspark>=3.0.0
