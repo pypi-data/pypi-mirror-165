@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "geeda"
+version = "0.0.1"
+description = "General EDA Framework for Pandas DataFrames"
+authors = ["Jason Zhang <jasonjzhang17@gmail.com>"]
+readme = "README.md"
+license = "LICENSE"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[tool.poetry.dependencies]
+python = ">=3.8,<3.12"
+pandas = "^1.4.3"
+scipy = "^1.9.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.1.2"
+black = "^22.6.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[project.urls]
+"Homepage" = "https://github.com/jjz17/geeda"
+"Bug Tracker" = "https://github.com/jjz17/geeda/issues"
