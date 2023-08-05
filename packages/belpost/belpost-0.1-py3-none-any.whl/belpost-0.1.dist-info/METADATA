@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: belpost
+Version: 0.1
+Summary: get information about posts
+Author: A. Random Developer
+Author-email: author@example.com
+Keywords: sample,setuptools,development
+Requires-Python: >=3.7, <4
+Description-Content-Type: text/markdown
+Requires-Dist: beautifulsoup4 (>=4.9.3)
+
+Получение данных о посылке по треку с сайта belpost.by
+```
+import belpost
+track = belpost.Track('track-name') 
+
+# get last status
+print(track.status())
+
+# get all in text format
+print(track.get_all())
+
+# raw data
+print(track.items)
+```
