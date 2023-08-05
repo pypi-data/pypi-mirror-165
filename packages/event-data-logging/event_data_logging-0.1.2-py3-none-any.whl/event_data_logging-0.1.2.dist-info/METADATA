@@ -1,0 +1,172 @@
+Metadata-Version: 2.1
+Name: event-data-logging
+Version: 0.1.2
+Summary: Data writers with optional timestamps for logging of events
+Home-page: https://github.com/maimonlab/event_data_logging
+Author: Thomas Mohren
+Author-email: tlmohren@gmail.com
+License: MIT license
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: coverage ; extra == 'test'
+
+# event_data_logging
+
+Save events to json or csv files. This package comes in 4 flavors:
+
+- CSVWriter
+- StampedCSVWriter
+- JSONWriter
+- StampedJSONWriter
+
+The StampedWriters will add a leading entry with the current timestamp to your event or line. The default format is in seconds with fraction of a second as decimal numbers. Alternatlively you can save the timestamps as nanoseconds instead.
+
+Readme content:
+
+- [Install](#install)
+- [Usage](#usage)
+- [Developing](#developing)
+- [ros2 message handling](#rosmessage)
+
+<a name=install></a>
+
+## Install
+
+Install from PYPI
+
+    pip install event_data_logging
+
+Alternatively, install from github
+
+    pip install git+https://git@github.com/maimonlab/event_data_logging.git
+
+<a name=usage></a>
+
+## Usage
+
+### JSON example without timestamps
+
+```python
+from event_data_logging.json_writer import JSONWriter
+test_events = [
+    {"bar_color": [1, 2, 3]},
+    {"bar_width_degrees": 10},
+    {"example_float": 0.1},
+]
+filename = "data/json_data.json"
+writer = JSONWriter(filename)
+for event in test_events:
+    writer.save_event(event)
+```
+
+This would create the file `data/json_data.json` with content:
+
+```
+[
+{"bar_color": [1, 2, 3]},
+{"bar_width_degrees": 10},
+{"example_float": 0.1}
+]
+```
+
+### JSON example with timestamp
+
+```python
+from event_data_logging.json_writer import StampedJSONWriter
+test_events = [
+    {"bar_color": [1, 2, 3]},
+    {"bar_width_degrees": 10},
+    {"example_float": 0.1},
+]
+filename = "data/stamped_json_data.json"
+writer = StampedJSONWriter(filename)
+for event in test_events:
+    writer.save_event(event)
+```
+
+This would create the file `data/stamped_json_data.json` with content:
+
+```
+[
+{"timestamp": 1661201947.0682852, "bar_color": [1, 2, 3]},
+{"timestamp": 1661201947.0683577, "bar_width_degrees": 10},
+{"timestamp": 1661201947.0684075, "example_float": 0.1}
+]
+```
+
+### CSV example with nanosecond timestamp
+
+```python
+from event_data_logging.csv_writer import StampedCSVWriter, TimestampModes
+filename = "data/csv_data.csv"
+xyz_header = ["x", "y", "z"]
+csv_writer = StampedCSVWriter(
+    filename, header=xyz_header, timestamp_mode=TimestampModes.NANOSECONDS
+)
+for i in range(3):
+    line = [
+        str(10 * i + 1),
+        str(10 * i + 2),
+        str(10 * i + 3),
+    ]
+    csv_writer.save_line(line)
+```
+
+This will give the file `data/csv_data.csv` with the following content:
+
+```
+timestamp,x,y,z
+1661110000123456789,1,2,3
+1661110001123456789,11,12,13
+1661110002123456789,21,22,23
+```
+
+## Developing
+
+<a name=developing></a>
+
+To install the testing dependencies, install with
+
+    pip install -e .[test]
+
+You can run the tests with pytest, and check the coverage. To do so, use the following commands:
+
+    coverage run -m pytest
+
+The coverage report prints to the terminal with:
+
+    coverage report
+
+This report shows how much of all the code is actually run during the test.
+
+### Uploading to pypi
+
+Build the distribution
+
+    python3 -m build
+
+Upload the distribution to pypi
+
+    python3 -m twine upload --repository testpypi dist/* --verbose
+
+<a name=rosmessage></a>
+
+### ros2_message_handling using outside dependencies
+
+In our lab, this package is mainly used to save ros2 data, and thus turning ros2 messages to dictionaries is very common. The ros2_message_handling module therefore requires some ros2 packages to be installed, and is outside of the scope of most uses.
+
+_The `test_ros2_message_handling.py` will thus fail in environments without ROS2.
+\_We will likely remove this module before the stable release. the ros2_message handling should be integrated in it's own ros packages_
