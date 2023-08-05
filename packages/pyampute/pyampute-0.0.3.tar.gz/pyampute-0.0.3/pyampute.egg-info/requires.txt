@@ -1,0 +1,11 @@
+pandas
+numpy>=1.19.0
+scipy
+matplotlib>=3.4.0
+scikit-learn
+
+[docs]
+sphinx
+pydata-sphinx-theme
+sphinx-autodoc-typehints
+sphinx-gallery
