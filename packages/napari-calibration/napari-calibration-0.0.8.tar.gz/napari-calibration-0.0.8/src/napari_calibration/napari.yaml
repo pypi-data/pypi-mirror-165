@@ -1,0 +1,21 @@
+name: napari-calibration
+display_name: napari Calibration
+contributions:
+  commands:
+    - id: napari-calibration.ImageForm
+      python_name: napari_calibration.Image_widget:ImageForm
+      title: Open data with napari Calibration
+    - id: napari-calibration.CalibrationForm
+      python_name: napari_calibration.calibration_widget:CalibrationForm
+      title: Calibrate camera with napari
+    - id: napari-calibration.say_hi
+      title: Say hello, world!
+      python_name: napari_hello:show_hello_message
+  widgets:
+    - command: napari-calibration.ImageForm
+      display_name: Get picture widget
+    - command: napari-calibration.CalibrationForm
+      display_name: Calibration widget
+    - command: napari-calibration.say_hi  # note, same as command.id above
+      display_name: Hello World
+      autogenerate: true
