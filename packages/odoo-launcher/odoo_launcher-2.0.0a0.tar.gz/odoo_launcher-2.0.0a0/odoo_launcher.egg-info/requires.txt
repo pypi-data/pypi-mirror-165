@@ -1,0 +1,4 @@
+addons-installer<3,>=2.1
+checksumdir<2,>=1.2.0
+maintenance-server<2,>=1.2.1
+typing-extensions<5,>=4.3.0

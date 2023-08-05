@@ -1,0 +1,36 @@
+[tool.black]
+line-length = 120
+
+[tool.isort]
+profile = "black"
+skip_gitignore = true
+skip = "__init__.py"
+
+[tool.autoflake]
+# return error code if changes are needed
+check = false
+# make changes to files instead of printing diffs
+in-place = true
+# drill down directories recursively
+recursive = true
+# exclude file/directory names that match these comma-separated globs
+# exclude = "<GLOBS>"
+# by default, only unused standard library imports are removed; specify a comma-separated list of additional
+# modules/packages
+# imports = "<IMPORTS>"
+# expand wildcard star imports with undefined names; this only triggers if there is only one star import in
+# the file; this is skipped if there are any uses of `__all__` or `del` in the file
+expand-star-imports = true
+# remove all unused imports (not just those from the standard library)
+remove-all-unused-imports = true
+# exclude __init__.py when removing unused imports
+ignore-init-module-imports = true
+# remove all duplicate keys in objects
+remove-duplicate-keys = true
+# remove unused variables
+remove-unused-variables = true
+# print more verbose logs (larger numbers are more verbose)
+verbose = 3
+
+[tool.flakeheaven]
+base = "https://gitlab.ndp-systemes.fr/odoo-addons/ci-files/-/raw/master/jobs/.pre/base_flakeheaven.toml"

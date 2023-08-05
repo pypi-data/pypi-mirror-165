@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: odoo_launcher
+Version: 2.0.0a0
+Summary: Create config compatible with Odoo
+Home-page: https://gitlab.ndp-systemes.fr/python-libs/odoo_launcher
+Author: Alexis Pasquier, NDP Systemes
+Author-email: opensource@ndp-systemes.fr
+License: GPLv3
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.8
