@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: picohttp
+Version: 0.0.4
+Summary: A very minimal HTTP server
+Author-email: Joe Buehl <jbuehl@buehltech.com>
+Project-URL: Homepage, https://github.com/jbuehl/picohttp
+Project-URL: Bug Tracker, https://github.com/jbuehl/picohttp/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: Internet :: WWW/HTTP :: HTTP Servers
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# picohttp - A very minimal HTTP server
+
+This is a limited HTTP server that is useful for closed systems where the behavior is constrained and well defined, such as an internal REST API.
