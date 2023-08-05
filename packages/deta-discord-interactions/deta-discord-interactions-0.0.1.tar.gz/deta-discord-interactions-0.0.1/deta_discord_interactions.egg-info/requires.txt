@@ -1,0 +1,4 @@
+requests
+PyNaCl
+requests-toolbelt
+deta
