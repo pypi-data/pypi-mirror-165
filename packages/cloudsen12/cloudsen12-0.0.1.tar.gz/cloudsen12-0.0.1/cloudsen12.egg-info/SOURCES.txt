@@ -1,0 +1,8 @@
+README.md
+setup.py
+cloudsen12/__init__.py
+cloudsen12.egg-info/PKG-INFO
+cloudsen12.egg-info/SOURCES.txt
+cloudsen12.egg-info/dependency_links.txt
+cloudsen12.egg-info/requires.txt
+cloudsen12.egg-info/top_level.txt
