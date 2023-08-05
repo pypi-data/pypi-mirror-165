@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: ntchat
+Version: 0.1.4
+Summary: About Conversational RPA SDK for Chatbot Makers
+Home-page: https://github.com/smallevilbeast/ntchat
+Author: evilbeast
+Author-email: 784615627@qq.com
+License: MIT
+Keywords: wechat ntchat pywechat rebot
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyee
+Requires-Dist: xcgui
+
+UNKNOWN
+
