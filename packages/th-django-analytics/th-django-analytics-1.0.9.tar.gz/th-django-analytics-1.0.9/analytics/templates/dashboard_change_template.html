@@ -1,0 +1,14 @@
+{% extends 'admin/change_form.html' %}
+
+{% load i18n static %}
+
+{% block submit_buttons_bottom %}
+
+<div class="submit-row" style="align-items: flex-start; justify-content: flex-start; display: flex; flex-direction: row;">
+    <input type="submit" value="ACESSAR" name="_view">
+    <input type="submit" value="PROCESSAR DADOS" name="_processData">
+</div>
+
+{{ block.super }}
+
+{% endblock %}
