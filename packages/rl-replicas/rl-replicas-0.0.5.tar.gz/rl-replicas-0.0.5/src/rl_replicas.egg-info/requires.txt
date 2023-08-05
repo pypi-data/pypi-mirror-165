@@ -1,0 +1,5 @@
+gym
+numpy
+scipy
+torch>=1.4.0
+tensorboard
