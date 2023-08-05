@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "videocdn_tv"
+version = "0.1.8"
+description = "Реализация Api для сервиса VideoCDN.tv"
+authors = ["Your Name <you@example.com>"]
+license = "MIT"
+readme = 'README.md'
+repository = 'https://github.com/odi1n/VideoCDN'
+documentation = "https://github.com/odi1n/VideoCDN/blob/master/README.md"
+keywords = ['videocdn', 'videocdn-tv']
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pydantic = "^1.9.2"
+requests = "2.26.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
