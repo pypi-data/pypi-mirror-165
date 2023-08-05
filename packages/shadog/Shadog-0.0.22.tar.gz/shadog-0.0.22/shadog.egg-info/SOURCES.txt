@@ -1,0 +1,11 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+shadog/__init__.py
+shadog/crypto.py
+shadog.egg-info/PKG-INFO
+shadog.egg-info/SOURCES.txt
+shadog.egg-info/dependency_links.txt
+shadog.egg-info/top_level.txt
