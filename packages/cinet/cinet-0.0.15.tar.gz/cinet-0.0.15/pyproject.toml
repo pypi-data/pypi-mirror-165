@@ -1,0 +1,43 @@
+[tool.poetry]
+name = "cinet"
+version = "0.0.15"
+description = "Scikit-Learn interface for CINET PyTorch siamese neural network"
+authors = ["Christopher Eeles", "Kevin Tabatabaei"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+ray = "^1.13.0"
+torch = "^1.11.0"
+pytorch-lightning = "^1.6.4"
+numpy = "^1.23.0"
+pandas = "^1.4.3"
+lifelines = "^0.27.1"
+sklearn = "^0.0"
+tabulate = "^0.8.10"
+ConfigSpace = "^0.5.0"
+
+[tool.poetry.dev-dependencies]
+sphinx-autoapi = "^1.9.0"
+sphinx-rtd-theme = "^1.0.0"
+myst-nb = "^0.16.0"
+Sphinx = "^5.1.1"
+pytest = "^7.1.2"
+sphinx-paramlinks = "^0.5.4"
+pytest-cov = "^3.0.0"
+python-semantic-release = "^7.31.4"
+[tool.semantic_release]
+version_variable = "pyproject.toml:version" # version location
+branch = "master"                             # branch to make releases of
+changelog_file = "CHANGELOG.md"             # changelog file
+build_command = "poetry build"              # build dists
+dist_path = "dist/"                         # where to put dists
+upload_to_release = true                    # auto-create GitHub release
+upload_to_pypi = false                      # don't auto-upload to PyPI
+remove_dist = false                         # don't remove dists
+patch_without_tag = true                    # patch release by default
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
