@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: nonebot-plugin-ykt
+Version: 0.1.2
+Summary: 一个基于nonebot的雨课堂自动签到插件
+Home-page: https://github.com/sena-nana/MutsukiBot/tree/main/nonebot-plugin-ykt
+Author: sena-nana
+Author-email: 851183156@qq.com
+License: MIT License
+Keywords: nonebot,yuketang,playwright
+Platform: all
