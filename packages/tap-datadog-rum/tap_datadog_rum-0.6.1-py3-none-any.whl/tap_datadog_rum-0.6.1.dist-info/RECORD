@@ -1,0 +1,9 @@
+tap_datadog_rum/__init__.py,sha256=UNYI0P9HFXwq_WW_0IIdnHMGBpgu6SuUL4aCEY6B1Ds,4253
+tap_datadog_rum/api_client.py,sha256=bxoXUOiIfzBxIw1CKFtyUGxS91BQSor5k8gdqHO7mHI,5733
+tap_datadog_rum/schema_builder.py,sha256=47pq8RjdwHeLzwAj9pLndkX7MAAH7dRb3aBi6y5kZ40,3478
+tap_datadog_rum-0.6.1.dist-info/LICENSE,sha256=IL06W_w1sWpfzE993Taq0ZJtQeovauBYukLIXj2OaBo,32387
+tap_datadog_rum-0.6.1.dist-info/METADATA,sha256=j-XICdlP2URqHI2UuOVxg5UNZi0dwSxzaPSY5qNbbQg,1689
+tap_datadog_rum-0.6.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+tap_datadog_rum-0.6.1.dist-info/entry_points.txt,sha256=hCQ9SN3QI6m8NpkxCV-2Jivs1rH6FsbXFYLUeaJFjIM,57
+tap_datadog_rum-0.6.1.dist-info/top_level.txt,sha256=2Y8bwFjjEEBFiJMMlftQpMQ3J7dzqg84_97Xgc8wseg,16
+tap_datadog_rum-0.6.1.dist-info/RECORD,,
