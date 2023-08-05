@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: abby
+Version: 0.0.7
+Summary: Seamless A/B testing with Abby.
+Home-page: https://github.com/farhanreynaldo/abby
+Author: Farhan Reynaldo
+Author-email: farhanreynaldo@gmail.com
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: numpy==1.21.6
+Requires-Dist: pandas==1.3.5
+Requires-Dist: scipy==1.7.3
+Requires-Dist: tqdm==4.64.0
+Requires-Dist: pytest >=6.2.4,<7.0.0 ; extra == "test"
+Requires-Dist: pytest-cov >=2.12.0,<4.0.0 ; extra == "test"
+Requires-Dist: mypy ==0.910 ; extra == "test"
+Requires-Dist: flake8 >=3.8.3,<4.0.0 ; extra == "test"
+Requires-Dist: black == 22.3.0 ; extra == "test"
+Requires-Dist: isort >=5.0.6,<6.0.0 ; extra == "test"
+Provides-Extra: test
+
+# abby
+
+> AB testing for Python
+
+Abby is a python library package for A/B testing for human. Abby aims to make A/B testing easy and accessible to anyone.
+
+[![PyPI Version][pypi-image]][pypi-url]
+[![Build Status][build-image]][build-url]
+
+<!-- Badges -->
+
+[pypi-image]: https://img.shields.io/pypi/v/abby
+[pypi-url]: https://pypi.org/project/abby/
+[build-image]: https://github.com/farhanreynaldo/abby/actions/workflows/test.yml/badge.svg
+[build-url]: https://github.com/farhanreynaldo/abby/actions/workflows/test.yml
+
