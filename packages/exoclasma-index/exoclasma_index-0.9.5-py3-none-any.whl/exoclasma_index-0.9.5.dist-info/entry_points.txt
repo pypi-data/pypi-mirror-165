@@ -1,0 +1,2 @@
+[console_scripts]
+exoclasma-index = exoclasma_index.exoclasma_index:main

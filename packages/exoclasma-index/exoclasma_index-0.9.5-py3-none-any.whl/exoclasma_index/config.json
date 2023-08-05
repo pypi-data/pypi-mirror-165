@@ -1,0 +1,9 @@
+{
+	"Enzymes": {
+		"HindIII": "AAGCTT",
+		"DpnII": "GATC",
+		"MboI": "GATC",
+		"Sau3AI": "GATC",
+		"Arima": "GA(([ACGT]T)|(TC))"
+	}
+}
