@@ -1,0 +1,15 @@
+README.rst
+setup.py
+nbrshell/__init__.py
+nbrshell/exec_shell_script.py
+nbrshell/exec_shell_script_fn.py
+nbrshell/nbrshell_common.py
+nbrshell/pbrun_as.py
+nbrshell/pbrun_as_fn.py
+nbrshell/pbrun_as_oracle.py
+nbrshell/pbrun_as_oracle_fn.py
+nbrshell.egg-info/PKG-INFO
+nbrshell.egg-info/SOURCES.txt
+nbrshell.egg-info/dependency_links.txt
+nbrshell.egg-info/requires.txt
+nbrshell.egg-info/top_level.txt
