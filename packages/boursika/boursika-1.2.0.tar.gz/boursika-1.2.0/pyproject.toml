@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "boursika"
+version = "1.2.0"
+description = "client for boursika-engine platform"
+authors = ["Mahdi Sadeghi <mail2mahsad@gmail.com>"]
+license = "MIT"
+homepage = "http://docs.boursika-engine.ir"
+documentation = "http://docs.boursika-engine.ir"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+requests = "^2"
+websocket-client = "^1"
+pandas = "^1"
+jdatetime = "^3"
+python-dateutil = "^2"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
