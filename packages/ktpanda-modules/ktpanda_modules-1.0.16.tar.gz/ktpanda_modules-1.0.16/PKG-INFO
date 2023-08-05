@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: ktpanda_modules
+Version: 1.0.16
+Summary: A collection of miscellaneous utility modules
+Author-email: Katie Rust <katie@ktpanda.org>
+License: Copyright (C) 2022 Katie Rust (katie@ktpanda.org)
+        
+        Permission is hereby granted, free of charge, to any person obtaining
+        a copy of this software and associated documentation files (the
+        "Software"), to deal in the Software without restriction, including
+        without limitation the rights to use, copy, modify, merge, publish,
+        distribute, sublicense, and/or sell copies of the Software, and to
+        permit persons to whom the Software is furnished to do so, subject to
+        the following conditions:
+        
+        The above copyright notice and this permission notice shall be
+        included in all copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+        EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+        MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+        IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+        CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+        TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+        SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+        
+Project-URL: Homepage, https://ktpanda.org/software/ktpanda_modules/
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+ktpanda_modules
+===============
+
+A collection of helper modules by PinkPandaKatie (https://ktpanda.org)
+
+
+threadpool
+----------
+
+Maintains a pool of threads which can execute jobs.
+
+
+object_pool
+-----------
+
+Maintains a pool of objects which can be checked out as needed by different threads.
+
+
+hotload
+-------
+
+A class which can reload its methods from a module when it detects changes.
+
+
+sqlite_helper
+-------------
+
+A wrapper class for an SQLite database that includes schema versioning and
+various helper methods.
