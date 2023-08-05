@@ -1,0 +1,15 @@
+ytdlp_plugins/__init__.py,sha256=eg594L_k2dzrh1BZdJ8GDLNEigkR0Lhes0nDBsin630,6913
+ytdlp_plugins/__main__.py,sha256=gGlo9NpvnV-aIpvDAOnZNKwutDSqRBZve4kW2n9aZNo,321
+ytdlp_plugins/_helper.py,sha256=3mczZxGJYnld28D_Mv27mhXFgXfhnXJ3rhTia68qWKA,12064
+ytdlp_plugins/ast_utils.py,sha256=EdWVtYAqng3YqucZVEneMjWiIBWGvCmrUGkSawVGUew,3488
+ytdlp_plugins/generic.py,sha256=bIyU1TSUQRotoeIJfnwAPnwnX15Lo1mz2WPLvgQLll8,4365
+ytdlp_plugins/patching.py,sha256=jzyYRU1aUxJlJubP96HcoAZqNCIFurGOLNnOLt95i9w,4764
+ytdlp_plugins/probe.py,sha256=h_n_5r9aRnQWRThO_kUA6qNxp5H480QXPpxDL5gpprs,7564
+ytdlp_plugins/test_download.py,sha256=lg43UEubYtiBNAZyzsxhbxGVCcJ6Q282I0dgJMz38Lw,14654
+ytdlp_plugins/utils.py,sha256=ScHWBBS0hb1CKWZdBQda9x3g1x2TBiknV_597C17T5k,2633
+ytdlp_plugins-2022.8.26.dist-info/LICENSE,sha256=8Bl77UGlO95Tuu1FjTzqAPr-UU_A11XBQdPct1-E3qE,1236
+ytdlp_plugins-2022.8.26.dist-info/METADATA,sha256=C5duFaC3xq0J0owo_G-HFUm2xCd19v4nGpUPFeWF79s,3511
+ytdlp_plugins-2022.8.26.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+ytdlp_plugins-2022.8.26.dist-info/entry_points.txt,sha256=oso5TkoF0BkVIXAoepbaXOWRmsDl9qQEuxBTRjD-AXM,62
+ytdlp_plugins-2022.8.26.dist-info/top_level.txt,sha256=_0kGqUQql5dCoZhi_2pep-8Kcx-ODuL8vl26FKsHPns,14
+ytdlp_plugins-2022.8.26.dist-info/RECORD,,

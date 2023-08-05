@@ -1,0 +1,2 @@
+[console_scripts]
+ytdlp-plugins = ytdlp_plugins.__main__:main
