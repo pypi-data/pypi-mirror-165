@@ -1,0 +1,8 @@
+cumulusci_stripe/__init__.py,sha256=3Kw1tdGF2jJo_FF3ikjf8do-u6QjUFZNaP20ICJm-os,462
+cumulusci_stripe/cumulusci.yml,sha256=VJx67X9EoI5sSRxNPZkKLd6vGnDoyr1RioghEN0eLZY,646
+cumulusci_stripe/example.py,sha256=m80Z9xlCdvY6EGTL6DFHqZUZiCv-qAF17Eylh6ZJC1o,313
+cumulusci_stripe/tasks.py,sha256=bqPvCevAknpqOkGidKUmyo2FGA7GZ8TXrrunkUc1f_0,3126
+cumulusci_stripe-0.1.0.dist-info/LICENSE,sha256=UDAQGxzD8Q3XRJxwOp50nxTZDpQUMRhiV4xui8S9Ljc,1514
+cumulusci_stripe-0.1.0.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+cumulusci_stripe-0.1.0.dist-info/METADATA,sha256=a4CfFAC4NdQTgWAJgVahtb8S7M_o17_DIZe4NwvqUcA,13858
+cumulusci_stripe-0.1.0.dist-info/RECORD,,
