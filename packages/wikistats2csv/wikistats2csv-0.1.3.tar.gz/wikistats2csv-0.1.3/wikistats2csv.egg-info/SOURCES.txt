@@ -1,0 +1,16 @@
+LICENSE.md
+README.md
+setup.py
+wikistats2csv/__init__.py
+wikistats2csv/content.py
+wikistats2csv/contributing.py
+wikistats2csv/custom_argparse.py
+wikistats2csv/helper.py
+wikistats2csv/reading.py
+wikistats2csv/wikistats2csv.py
+wikistats2csv.egg-info/PKG-INFO
+wikistats2csv.egg-info/SOURCES.txt
+wikistats2csv.egg-info/dependency_links.txt
+wikistats2csv.egg-info/entry_points.txt
+wikistats2csv.egg-info/requires.txt
+wikistats2csv.egg-info/top_level.txt

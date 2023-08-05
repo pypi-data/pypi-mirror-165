@@ -1,0 +1,2 @@
+[console_scripts]
+wikistats2csv = wikistats2csv.wikistats2csv:main
