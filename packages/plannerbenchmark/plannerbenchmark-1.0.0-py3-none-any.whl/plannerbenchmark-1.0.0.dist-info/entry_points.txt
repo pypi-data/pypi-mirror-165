@@ -1,0 +1,4 @@
+[console_scripts]
+post_process=plannerbenchmark.exec.post_processor:main
+runner=plannerbenchmark.exec.runner:main
+
