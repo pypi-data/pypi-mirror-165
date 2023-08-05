@@ -1,0 +1,7 @@
+simple_dmarc_parser/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+simple_dmarc_parser/dmarc_parser.py,sha256=OT8puZZnqbrtBuQ9oV7htgmfYYka0JBXq_D6PeyQqsI,7952
+simple_dmarc_parser-1.0.3.dist-info/entry_points.txt,sha256=mKhpadq4x9KV84zB3XwZYOT-3OeWQQEo0g8Tnie_H-U,77
+simple_dmarc_parser-1.0.3.dist-info/LICENSE,sha256=zVB7WOh6anEBXZ1bIqe6IxEW6P6TQCXAgBAwwgfeAv0,1090
+simple_dmarc_parser-1.0.3.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+simple_dmarc_parser-1.0.3.dist-info/METADATA,sha256=vKo4GRy9BCEFvJx-KRw6bFuHScPauo9ytboACB4C-Po,3692
+simple_dmarc_parser-1.0.3.dist-info/RECORD,,
