@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: mke-pypi-test
+Version: 0.1.2
+Summary: MKE PyPI (Python Package Index)
+Home-page: https://github.com/ziap/mke
+Author: Bùi Huy Giáp
+Author-email: 67962871+ziap@users.noreply.github.com
+Project-URL: Documentation, https://github.com/ziap/mke#readme
+Project-URL: Bug Reports, https://github.com/ziap/mke/issues
+Project-URL: Source Code, https://github.com/ziap/mke
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Education
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Natural Language :: Vietnamese
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# MKE PyPI test
