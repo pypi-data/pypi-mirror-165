@@ -1,0 +1,9 @@
+Robot:
+    commands+=Command
+;
+Command:
+    direction=Direction
+;
+Direction:
+    'initial' | 'left' | 'right' | 'up' | 'down'
+;
