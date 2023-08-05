@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+deli/__init__.py
+deli/__version__.py
+deli/interface.py
+deli.egg-info/PKG-INFO
+deli.egg-info/SOURCES.txt
+deli.egg-info/dependency_links.txt
+deli.egg-info/top_level.txt
