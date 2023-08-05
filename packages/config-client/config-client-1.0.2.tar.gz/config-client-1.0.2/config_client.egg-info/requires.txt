@@ -1,0 +1,15 @@
+attrs>=21.3.0
+glom>=19.2.0
+requests>=2.22.0
+
+[all]
+cleo>=0.7.6
+portray
+rich
+
+[cli]
+cleo>=0.7.6
+rich
+
+[docs]
+portray

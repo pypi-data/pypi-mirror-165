@@ -1,0 +1,2 @@
+[console_scripts]
+main = config.__main__:application.run [cli]
