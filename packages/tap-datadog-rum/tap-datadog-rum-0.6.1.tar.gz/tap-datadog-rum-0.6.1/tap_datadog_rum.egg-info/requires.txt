@@ -1,0 +1,5 @@
+singer-python
+datadog-api-client>=2.2
+datadog-api-client<3
+genson>=1.2.2
+genson<2.0
