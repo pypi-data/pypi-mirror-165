@@ -1,0 +1,15 @@
+mindbox/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mindbox/activation_layer.py,sha256=lYTKCAD0ULOZMqpButl1j3AhLglFXysDBS7q63ag6FQ,744
+mindbox/activations.py,sha256=vTJ3oJlSZkuVY3ZoYlfT5tQfgPhEODrX4WeXeE5EkYA,2486
+mindbox/console.py,sha256=odla2ZXEAwVZVJkRzVkvVKoUEIK9qwMcvjq6NRZ1Pao,395
+mindbox/core.py,sha256=oCFqzti-94KsmOJPZNKeMftA40hOVtBtH5K7S_uuR9o,8104
+mindbox/fully_connected_layer.py,sha256=YO4H7NYTmU1rYUyNJXjg8_DokZdb5k4yKKY-Kie2Zw0,1147
+mindbox/layer.py,sha256=LgxJHky5aT5HNsDilYp2Q6jc0WsFu_kwezU0Xj99GPM,420
+mindbox/losses.py,sha256=iMTKgJmUheBw-KcPFT_Fw2ZT38FuNqJqPHaz-_AND1U,1260
+mindbox/network.py,sha256=ts3aW2gExGwCLgPK32Jztn35fMVe3Sfl3Ni-VTLxQKI,3912
+mindbox/usage.py,sha256=wFByhAuft7wl31vI19vsFr-wy4WiyBkcbRNhxoZlBj0,135
+mindbox-0.1.1.dist-info/LICENSE,sha256=oOgEYAW-5lwMfadY_MFl5hJXC5aS4Ont9jid1waq_Jo,1099
+mindbox-0.1.1.dist-info/METADATA,sha256=Wls8TwrtQ4u1eT-HQHISncxnBKsZKP8X1sjNlGl6WAc,237
+mindbox-0.1.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+mindbox-0.1.1.dist-info/top_level.txt,sha256=yPTabOJCRZxhR-2naCQGisBri64u0aGSMDGfaKjUkYY,8
+mindbox-0.1.1.dist-info/RECORD,,

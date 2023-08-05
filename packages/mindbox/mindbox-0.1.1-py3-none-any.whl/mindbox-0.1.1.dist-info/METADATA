@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: mindbox
+Version: 0.1.1
+Summary: A minimal, beginner-friendly Neural Networks library 🤖
+Home-page: UNKNOWN
+Author: appvoid
+License: MIT
+Platform: UNKNOWN
+License-File: LICENSE
+Requires-Dist: numpy
+
+UNKNOWN
+
