@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: nonebot_plugin_magiadice
+Version: 0.1.2
+Summary: 一个基于nonebot的跑团LOG插件
+Home-page: https://github.com/sena-nana/MutsukiBot/tree/main/nonebot-plugin-magiadice
+Author: sena-nana
+Author-email: 851183156@qq.com
+License: MIT License
+Keywords: nonebot,trpg,notion
+Platform: all
+License-File: LICENSE
