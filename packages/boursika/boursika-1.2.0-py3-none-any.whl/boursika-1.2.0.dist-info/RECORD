@@ -1,0 +1,12 @@
+boursika/__init__.py,sha256=Hspb09-nWw0FhnE1E7prqwZrjxvXessKSUvTry2JimQ,114
+boursika/config.py,sha256=RryRpLAPat_hDICPooVc93oLmooiJOeirFzs4MzFKNY,63
+boursika/enums.py,sha256=nDHSszwy9GW9O58eB3l-XvzmAvmsFXcYYRTglle2FMU,76
+boursika/errors.py,sha256=MFXJOBvFGL5lgXRFA6a4xOl5Hie4W8Gc2K6Hya7Hkag,133
+boursika/predictors.py,sha256=rJSTJTMuvBb6syKz9U3lYLltPMubHMdlMmt_QCekBUE,1846
+boursika/providers.py,sha256=QBJGc-maGrGpoiI3W5jwZ_hbcPwGmm4h9vO_dWnLnQ0,1747
+boursika/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+boursika/utils/date_helpers.py,sha256=bz1NkRcsqMrUHRtrSQNdUuGxuqnlqRiqLm3owNZlg7Y,1537
+boursika-1.2.0.dist-info/LICENSE,sha256=DLCI9NsjT4liH6qq6a0cASbjcXqmlkbwLQT6I122dE4,1076
+boursika-1.2.0.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+boursika-1.2.0.dist-info/METADATA,sha256=eSBBlVP1ye-eVgtP0s6f_U7NNavTmpNHJ3xarKXaJ8k,726
+boursika-1.2.0.dist-info/RECORD,,
