@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.cfg
+multirotor.egg-info/PKG-INFO
+multirotor.egg-info/SOURCES.txt
+multirotor.egg-info/dependency_links.txt
+multirotor.egg-info/requires.txt
+multirotor.egg-info/top_level.txt
