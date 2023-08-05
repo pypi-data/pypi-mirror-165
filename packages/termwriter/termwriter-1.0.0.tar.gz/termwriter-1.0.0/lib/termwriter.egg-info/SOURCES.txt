@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+lib/termwriter/__init__.py
+lib/termwriter/jsonrenderer.py
+lib/termwriter/termrenderer.py
+lib/termwriter/widgets.py
+lib/termwriter.egg-info/PKG-INFO
+lib/termwriter.egg-info/SOURCES.txt
+lib/termwriter.egg-info/dependency_links.txt
+lib/termwriter.egg-info/top_level.txt
+test/test.py
+test/test2.py
