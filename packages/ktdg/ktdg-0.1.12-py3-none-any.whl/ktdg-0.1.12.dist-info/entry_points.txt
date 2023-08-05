@@ -1,0 +1,3 @@
+[console_scripts]
+ktdg=ktdg.cli:run_cli
+
