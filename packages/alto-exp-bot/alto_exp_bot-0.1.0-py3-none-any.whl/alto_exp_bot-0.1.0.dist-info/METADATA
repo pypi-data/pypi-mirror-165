@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: alto-exp-bot
+Version: 0.1.0
+Summary: Alto experience package LINE bot
+Author: Mixchanawee
+Author-email: chanawee.janyakhantikul@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: Django (>=4.1,<5.0)
+Requires-Dist: Pyrebase4 (>=4.5.0,<5.0.0)
+Requires-Dist: azure-cosmos (>=4.3.0,<5.0.0)
+Requires-Dist: azure-iot-hub (>=2.6.0,<3.0.0)
+Requires-Dist: azure-servicebus (>=7.8.0,<8.0.0)
+Requires-Dist: boto3 (>=1.24.60,<2.0.0)
+Requires-Dist: chart-studio (>=1.1.0,<2.0.0)
+Requires-Dist: djangorestframework (>=3.13.1,<4.0.0)
+Requires-Dist: line_notify (>=0.1.4,<0.2.0)
+Requires-Dist: opencv-python (>=4.6.0,<5.0.0)
+Requires-Dist: pandas (>=1.4.3,<2.0.0)
+Requires-Dist: pendulum (>=2.1.2,<3.0.0)
+Requires-Dist: plotly (>=5.10.0,<6.0.0)
+Requires-Dist: psycopg2-binary (>=2.9.3,<3.0.0)
+Requires-Dist: vincenty (>=0.1.4,<0.2.0)
