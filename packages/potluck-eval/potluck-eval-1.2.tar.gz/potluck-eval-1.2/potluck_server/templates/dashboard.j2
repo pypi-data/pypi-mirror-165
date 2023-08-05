@@ -1,0 +1,423 @@
+{# vim: set shiftwidth=2 tabstop=2 syntax=html: #}
+{% extends "base.j2" %}
+
+{% block main_content %}
+<h2>Dashboard</h2>
+
+<div class="toc">
+  Quick links:
+  {% for pset in task_info.psets%}
+    <a
+     class="toc_link"
+     href="#{{pset.id}}"
+     title="Jump to {{pset.id}}"
+     tabindex="0"
+    >{{pset.id}}</a>
+    {% if not loop.last %}&nbsp;|&nbsp;{% endif %}
+  {% endfor %}
+</div>
+
+<div class="global_controls">
+  <label for="enable_validation">
+    <input id="enable_validation" type="checkbox" checked>
+    Validate inputs (turn off only if necessary)
+  </label>
+</div>
+
+<h3>Exercises (submit by running test code)</h3>
+<div class="exercises">
+  {% for egroup in task_info.exercises %}
+    <details class="egroup phase-{{egroup.phase}} status-{{egroup.status}}">
+      <summary
+       title="{{egroup.group}} is {{egroup.status}} (click to show details)"
+      >
+        {% if egroup.status == "unreleased" %}
+          🕓
+        {% elif egroup.status == "pending" %}
+          ⋯
+        {% elif egroup.status == "incomplete" %}
+          ✗
+        {% elif egroup.status == "partial" %}
+          ~
+        {% elif egroup.status == "complete" %}
+          ✓
+        {% elif egroup.status == "perfect" %}
+          ✓
+        {% endif %}
+      </summary>
+      {{egroup.desc}}
+      <a target="blank" href="{{egroup.url}}">
+        (show me the {{egroup.group}} exercises)
+      </a>
+      <ul>
+        {% for eid in egroup.exercises %}
+          {% set exercise = egroup.exercises[eid] %}
+          <li
+           class="exercise status-{{exercise.status}}"
+          >
+            <a
+             href="{{url_for(
+               'route_exercise',
+               course=course,
+               semester=semester,
+               target_user=effective_user,
+               eid=eid
+             )}}"
+             target="blank"
+             title="{{eid}} is {{exercise.status}} (click for detailed results)"
+            >
+              {% if exercise.status == "complete" %}
+                ✓
+              {% elif exercise.status == "partial" %}
+                ⋯
+              {% elif exercise.status == "incomplete" %}
+                ✗
+              {% elif exercise.status == "unsubmitted" %}
+                .
+              {% endif %}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </details>
+  {% endfor %}
+</div>
+
+<h3>Projects (submit using these forms)</h3>
+<ul class="psets">
+  {% for pset in task_info.psets %}
+    {% set ps_state = pset.status.state %}
+    {% if ps_state in ("unreleased", "released") %}
+      {% set sub_phase="initial" %}
+    {% elif ps_state in ("under_review", "revisable") %}
+      {% set sub_phase="revision" %}
+    {% elif ps_state == "final" %}
+      {% set sub_phase="belated" %}
+    {% else %} {# "unknown", etc. #}
+      {% set sub_phase="invalid" %}
+    {% endif %}
+    <li class="pset status-{{ps_state}}" id="{{pset.id}}">
+      <a
+       class='psid'
+       {% if ps_state != "unreleased" %}
+         href="{{pset.url}}"
+         title="Click to view the {{pset.id}} instructions"
+       {% else %}
+         title="{{pset.id}}"
+       {% endif %}
+       tabindex="0"
+       aria-describedby="{{pset.id}}-timing"
+      >{{pset.id}}</a>
+      <div class="timing">
+        {% if is_admin %}
+          <a
+           href="{{url_for(
+             'route_gradesheet',
+             course=course,
+             semester=semester,
+             psid=pset.id
+           )}}"
+           title="View the grade sheet for this problem set."
+           tabindex="0"
+          >Gradesheet</a>
+        {% endif %}
+        <div class="grouper" id="{{pset.id}}-timing">
+          {{ due_at(pset.status) }}
+          {{ countdown(pset.status) }}
+        </div>
+        {% if ps_state in ("unreleased", "released") %}
+          {% if pset.status.initial_extension != 0 %}
+            <span class="extension_taken">
+              (You have
+              {{pset.status.initial_extension|a_an}}
+              {{pset.status.initial_extension}}‑hour extension
+              on the initial deadline)
+            </span>
+          {% elif ps_state == "released" %}
+            <a
+             class="extension_button action_link"
+             href="{{url_for(
+               'route_extension',
+               course=course,
+               semester=semester,
+               psid=pset.id
+             )}}"
+             title="Take an extension on {{pset.id}}"
+             tabindex="0"
+            >Take an extension</a>
+          {% endif %}
+        {% elif ps_state in ("under_review", "revisable") %}
+          {% if pset.status.revision_extension != 0 %}
+            <span class="extension_taken">
+              (You have
+              {{pset.status.revision_extension|a_an}}
+              {{pset.status.revision_extension}}‑hour extension
+              on the revision deadline)
+            </span>
+          {#
+          Uncomment (and further develop) here to allow taking extensions
+          on the revision deadline
+          {% elif ps_state == "revisable" %}
+            <a
+             class="extension_button action_link"
+             href="{{url_for(
+               'route_extension',
+               course=course,
+               semester=semester,
+               psid=pset.id,
+               phase='revision'
+             )}}"
+             title="Take a revision extension on {{pset.id}}"
+             tabindex="0"
+            >Take a revision extension</a>
+          #}
+          {% endif %}
+        {% endif %}
+      </div>
+      <ul class="tasks">
+        {% for task in pset.tasks %}
+          {# TODO: Add extension request UI #}
+
+          {# Figure out whether the base task, revision, or belated
+          submission is relevant #}
+          {% set rev_task = task.revision %}
+          {% set bel_task = task.belated %}
+          {% set pool_status = task.pool_status %} {# same across phases #}
+          {% if ps_state in ("unreleased", "released", "under_review") %}
+            {# ps state is too early for revisions #}
+            {% set submission_status = task.submission_status %}
+            {% set warnings = task.warnings %}
+          {% elif bel_task and bel_task.submission_status != "unsubmitted" %}
+            {# Belated submissions take priority over revisions because
+            they must have arrived more recently. #}
+            {% set submission_status = bel_task.submission_status %}
+            {% set warnings = bel_task.warnings %}
+          {% elif rev_task and rev_task.submission_status != "unsubmitted" %}
+            {# There's a revision which isn't unsubmitted #}
+            {% set submission_status = rev_task.submission_status %}
+            {% set warnings = rev_task.warnings %}
+          {% else %}
+            {# There's no belated or revision submission, but we're in a
+            phase where one should be relevant; use the initial status as
+            a backup, which might be 'unsubmitted'. #}
+            {% set submission_status = task.submission_status %}
+            {% set warnings = task.warnings %}
+          {% endif %}
+
+          {# Compute your current grade #}
+          {% set grade_str = task|task_combined_grade|grade_string %}
+          {% set timeliness_matters =
+             config.get("TIMELINESS_POINTS", 0) > 0 %}
+          {% set timeliness_str =
+             task|task_timeliness_points|timeliness_string %}
+
+          {% if
+            ps_state in ("revisable", "final")
+        and grade_str == "unknown"
+          %}
+            {% set full_grade = 0 %}
+            {% set grade_str = "0&nbsp;/&nbsp;100" %}
+          {% endif %}
+
+          <li
+           class="task {{submission_status}} pool-{{pool_status}}"
+           id="{{pset.id}}-{{task.id}}"
+          >
+            <div class="controls">
+              <span
+               class="task_label"
+               id="{{pset.id}}-{{task.id}}-status"
+              >
+                <span
+                 class="submission_status"
+                 title="{{task.submission_desc}}"
+                 aria-label="{{task.submission_desc}}"
+                >
+                  <span aria-hidden="true">
+                    {{task.submission_icon}}
+                  </span>
+                </span>
+                &nbsp;
+                {% if sub_phase in ("revision", "belated", "invalid") %}
+                  <span
+                   class="revision_status"
+                   title="revision {{rev_task.submission_desc}}"
+                   aria-label="revision {{rev_task.submission_desc}}"
+                  >
+                    <span aria-hidden="true">
+                      {{rev_task.submission_icon}}
+                    </span>
+                  </span>
+                {% endif %}
+                <br>
+                <a
+                 {% if ps_state != "unreleased" %}
+                   href="{{task.url}}"
+                   title="Click to view the {{pset.id}} {{task.id}} instructions"
+                 {% else %}
+                   title="{{pset.id}} {{task.id}}"
+                 {% endif %}
+                 aria-describedby="{{pset.id}}-{{task.id}}-status"
+                 tabindex="0"
+                >
+                  {{task.title}}
+                </a>
+              </span>
+              {% include 'pset_submission_form.j2' %}
+              <ul class="feedback_items">
+                {% if ps_state in ("revisable", "final", "unknown") %}
+                  <li class="feedback_grade" tabindex="0">
+                    <!-- tabindex here insures that tabbing through the
+                      page speaks this important information -->
+                    Your grade:
+                    <span class="grade_value">{{ grade_str|safe }}</span>
+                    {% if timeliness_matters %}
+                      <br>
+                      Timeliness points:
+                      <span class="timeliness_value"
+                       >{{ timeliness_str|safe }}</span>
+                    {% endif %}
+                  </li>
+                {% endif %}
+                <li class="feedback_item">
+                  <a
+                   href="{{url_for(
+                     'route_starter_zip',
+                     course=course,
+                     semester=semester,
+                     taskid=task.id
+                   )}}"
+                   class="feedback_link action_link"
+                   tabindex="0"
+                  >Download starter files</a>
+                </li>
+                <li class="feedback_item">
+                  <a
+                   {% if ps_state != "unreleased" %}
+                   href="{{url_for(
+                     'route_feedback',
+                     course=course,
+                     semester=semester,
+                     target_user=effective_user,
+                     phase="initial",
+                     psid=pset.id,
+                     taskid=task.id
+                   )}}"
+                   class="feedback_link action_link"
+                   {% else %}
+                   class="feedback_link action_link disabled_link"
+                   title="Available once the problem set is released."
+                   {% endif %}
+                   tabindex="0"
+                  >View initial feedback</a>
+                </li>
+                <li class="feedback_item">
+                  <a
+                   {% if ps_state in ("revisable", "final") %}
+                   href="{{url_for(
+                     'route_feedback',
+                     course=course,
+                     semester=semester,
+                     target_user=effective_user,
+                     phase="revision",
+                     psid=pset.id,
+                     taskid=task.id
+                   )}}"
+                   class="feedback_link action_link"
+                   {% else %}
+                   class="feedback_link action_link disabled_link"
+                   title="Available once the revision period starts."
+                   {% endif %}
+                   tabindex="0"
+                  >View revision feedback</a>
+                </li>
+                {% if
+                   bel_task and bel_task.submission_status != "unsubmitted"
+                %}
+                  <li class="feedback_item">
+                    <a
+                     href="{{url_for(
+                       'route_feedback',
+                       course=course,
+                       semester=semester,
+                       target_user=effective_user,
+                       phase="belated",
+                       psid=pset.id,
+                       taskid=task.id
+                     )}}"
+                     class="feedback_link action_link"
+                     tabindex="0"
+                    >View belated feedback</a>
+                  </li>
+                {% endif %}
+                <li class="feedback-item">
+                  <a
+                   {% if ps_state == "final" %}
+                   href="{{url_for(
+                     'route_solution',
+                     course=course,
+                     semester=semester,
+                     psid=pset.id,
+                     taskid=task.id
+                   )}}"
+                   class="solution_link action_link"
+                   {% else %}
+                   class="solution_link action_link disabled_link"
+                   title="Available once the revision period is over."
+                   {% endif %}
+                   tabindex="0"
+                  >View solution</a>
+                </li>
+              </ul>
+            </div>
+            <ul class="messages">
+              {# Skip (old) messages if we're in-flight #}
+              {% if submission_status != "inflight" %}
+                {# show only the first warning on the dashboard #}
+                {% if warnings|length > 0 %}
+                  <li class="warning">
+                    {{ warnings|first|safe }}
+                  </li>
+                {% endif %}
+              {% endif %}
+              {% if ps_state == "final" %}
+                <li>
+                  All deadlines for this task have passed.
+                </li>
+                {% if submission_status == "unsubmitted" %}
+                  {% if pool_status == "unsubmitted" %}
+                    <li class="warning">
+                      You did not submit this task.
+                    </li>
+                  {% else %}
+                    <li>
+                      You did not submit this task, but that's fine
+                      because you did submit an alternate task.
+                    </li>
+                  {% endif %}
+                {% endif %}
+              {% elif ps_state == "revisable" %}
+                {% if submission_status == "unsubmitted" %}
+                  {% if pool_status == "unsubmitted" %}
+                    <li class="warning">
+                      You have not submitted this task (you can still
+                      submit a revision to improve your grade).
+                    </li>
+                  {% else %}
+                    <li>
+                      You have not submitted this task, although you did
+                      submit an alternate task. You could still submit a
+                      revision for this task if you wanted to.
+                    </li>
+                  {% endif %}
+                {% endif %}
+              {% endif %}
+            </ul>
+          </li> <!-- end of task -->
+        {% endfor %}
+      </ul> <!-- end of tasks list for this pset -->
+    </li> <!-- end of pset -->
+  {% endfor %}
+</ul> <!-- end of psets list -->
+
+{% endblock %}
