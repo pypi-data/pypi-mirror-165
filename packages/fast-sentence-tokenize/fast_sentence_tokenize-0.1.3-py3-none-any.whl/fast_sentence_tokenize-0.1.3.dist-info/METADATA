@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: fast-sentence-tokenize
+Version: 0.1.3
+Summary: Fast and Efficient Sentence Tokenization
+Author: Craig Trim
+Author-email: craigtrim@gmail.com
+Requires-Python: ==3.8.5
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: baseblock
+Requires-Dist: nltk
+Requires-Dist: spacy (==3.3)
