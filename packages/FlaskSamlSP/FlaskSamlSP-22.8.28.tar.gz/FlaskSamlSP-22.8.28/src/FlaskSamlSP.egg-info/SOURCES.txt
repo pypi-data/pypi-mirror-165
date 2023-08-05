@@ -1,0 +1,13 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.cfg
+src/FlaskSaml/FlaskSP.py
+src/FlaskSaml/__init__.py
+src/FlaskSaml/flask_utils.py
+src/FlaskSaml/reqID.py
+src/FlaskSamlSP.egg-info/PKG-INFO
+src/FlaskSamlSP.egg-info/SOURCES.txt
+src/FlaskSamlSP.egg-info/dependency_links.txt
+src/FlaskSamlSP.egg-info/requires.txt
+src/FlaskSamlSP.egg-info/top_level.txt

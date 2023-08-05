@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: FlaskSamlSP
+Version: 22.8.28
+Summary: A SAML Service Provider Blueprint for Flask Applications
+Home-page: https://github.com/Glocktober/FlaskSamlSP
+Author: gunville
+Author-email: rk13088@yahoo.com
+Project-URL: repo, https://github.com/Glocktober/FlaskSamlSP.git
+Project-URL: overview, https://github.com/Glocktober/FlaskSamlSP/blob/master/README.md
+Keywords: 'saml2 flask'
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# FlaskSamlSP
+
+**FlaskSamlSP** is a Python module for the [Flask web framework.](https://palletsprojects.com/p/flask/) providing [an implementation of a SAML *Service Provider* for **Flask** web apps](docs/READMESP.md). This permits bottle apps to authenticated with a SAML Identity Provider (IdP).  
+
+The goal of this module is to provide easy to use tools for using SAML identity management platforms in Flask apps.
