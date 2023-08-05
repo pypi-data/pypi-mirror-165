@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="16"
+   height="16"
+   fill="currentColor"
+   class="bi bi-lock-fill"
+   viewBox="0 0 16 16"
+   version="1.1"
+   id="svg51"
+   sodipodi:docname="logo-light.svg"
+   inkscape:version="1.1.1 (c3084ef, 2021-09-22)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs55" />
+  <sodipodi:namedview
+     id="namedview53"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="1"
+     inkscape:cx="-174.5"
+     inkscape:cy="7.5"
+     inkscape:window-width="1312"
+     inkscape:window-height="1081"
+     inkscape:window-x="1966"
+     inkscape:window-y="128"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg51" />
+  <path
+     d="m 8,-48 a 16,16 0 0 1 16,16 V 0 H -8 V -32 A 16,16 0 0 1 8,-48 Z M 32,0 v -32 a 24,24 0 0 0 -48,0 V 0 a 16,16 0 0 0 -16,16 v 40 a 16,16 0 0 0 16,16 H 32 A 16,16 0 0 0 48,56 V 16 A 16,16 0 0 0 32,0 Z"
+     id="path49"
+     style="stroke-width:8" />
+</svg>
