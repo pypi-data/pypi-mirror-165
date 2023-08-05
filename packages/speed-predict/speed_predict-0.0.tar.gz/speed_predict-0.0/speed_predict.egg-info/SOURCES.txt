@@ -1,0 +1,11 @@
+setup.cfg
+setup.py
+speed_predict/Binomialdistribution.py
+speed_predict/Gaussiandistribution.py
+speed_predict/Generaldistribution.py
+speed_predict/__init__.py
+speed_predict.egg-info/PKG-INFO
+speed_predict.egg-info/SOURCES.txt
+speed_predict.egg-info/dependency_links.txt
+speed_predict.egg-info/not-zip-safe
+speed_predict.egg-info/top_level.txt
