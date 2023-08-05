@@ -1,0 +1,17 @@
+wpreddit/__init__.py,sha256=DgRAnhPAalLXCD84gGb2d3lhIMc4_JbUk7C34RD66XM,100
+wpreddit/config.py,sha256=Cf26dj3QBxoQOcu6Is4ZoiXCIfZ9JdhPMxWVwZZkxOU,7693
+wpreddit/connection.py,sha256=dxiJcBIiEumrafbkQB_hIuInAsvIqaUFH6G-KUQreXE,2541
+wpreddit/download.py,sha256=hnab1yaFToayWZnjiaiZ6T_pdK0ySmNHXO6dgwv15Cs,3352
+wpreddit/main.py,sha256=Irjh9MVbIM3ExtD2Mp3ku_LUP24GLYdQRhLFpIyh-c0,2848
+wpreddit/reddit.py,sha256=thnncMVa-2mba3FGFXjTc4QvKHW8DO9CsZvUXCo1h4g,5161
+wpreddit/wallpaper.py,sha256=O2njxal85bjajjxxioXgnIy0zsHPmCOnJG9JGVAbhag,6794
+wpreddit/conf_files/linux-autostart.desktop,sha256=L441SiabQEhd_XJ7OnPgCDxT1ltfxxd8W7odU3j3Yws,193
+wpreddit/conf_files/unix.conf,sha256=Jv5KU3QkC0QTlqWz3ldBf_czr-x6dRRnCT-BbaYAquk,486
+wpreddit/conf_files/windows.conf,sha256=9zF8V1xd5_FYGNa8L-wlALxcqgNPOvzCkl_GMoVmPOk,365
+wpreddit/fonts/Cantarell-Regular.otf,sha256=5INfyoS75372-PwNE2m2fTbxcBT8dS9w329OFGkx0K4,69088
+rewal-3.2.3.dist-info/LICENSE.txt,sha256=WJ7YI-moTFb-uVrFjnzzhGJrnL9P2iqQe8NuED3hutI,35141
+rewal-3.2.3.dist-info/METADATA,sha256=Bbcgm3qZhBQp6d4HB6FU0-vQ6zaPTkfQHgYSVffwOoE,6991
+rewal-3.2.3.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+rewal-3.2.3.dist-info/entry_points.txt,sha256=Oyxn1r8aaeTLnzaH7McXKlMAwzeZjn0l58L098HjqBU,45
+rewal-3.2.3.dist-info/top_level.txt,sha256=d29fzTSZAyNZ46_PTqdNLHm1ZGT82oCdLQ9E4qq9OV0,9
+rewal-3.2.3.dist-info/RECORD,,
