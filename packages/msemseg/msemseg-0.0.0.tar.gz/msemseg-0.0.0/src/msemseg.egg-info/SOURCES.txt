@@ -1,0 +1,10 @@
+LICENSE
+README.rst
+pyproject.toml
+setup.cfg
+setup.py
+src/msemseg.egg-info/PKG-INFO
+src/msemseg.egg-info/SOURCES.txt
+src/msemseg.egg-info/dependency_links.txt
+src/msemseg.egg-info/requires.txt
+src/msemseg.egg-info/top_level.txt
