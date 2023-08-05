@@ -1,0 +1,9 @@
+strict_fields/__init__.py,sha256=JJ5MLwThGvmv3ReLZhZfGkXiUY41A3hAC9go41NF8G4,486
+strict_fields/apps.py,sha256=VO4PdrDx0HiVg_dTHNvlQTFkIDDjG-9ZBYFhc96IM88,3033
+strict_fields/fields.py,sha256=3TwQDkEBHpLT7z6zGy0Xf_73nryujF_txP_6dCJd-dU,2900
+strict_fields/helpers.py,sha256=wSPqq5p6uzpzj8OKLbX9YzxEB2jVqYoVPYCZnFIUeV4,990
+strict_fields/version.py,sha256=DSG90ZWIXUgseZXEU0xYLvA2RHXU1vACF-uvq2cxVEk,158
+django_strict_fields-1.0.6.dist-info/LICENSE,sha256=bOsMPbrECIWYOAqsPawE7zdJ0aT9DbtpSCQQ8mRv0tA,1456
+django_strict_fields-1.0.6.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+django_strict_fields-1.0.6.dist-info/METADATA,sha256=YN1-s-1puyRLbRX_LmMlhyrG4-vXhGPk_E3XwQPLSCg,2130
+django_strict_fields-1.0.6.dist-info/RECORD,,
