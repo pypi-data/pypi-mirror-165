@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: py-ipfs-pubsub
+Version: 0.0.2
+Summary: Pubsub client for python, since ipfshttpclient pubsub isn't compatibe with the newer versions of ipfs
+Author: @ZachisGit
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests (>=2.23.0)
+Requires-Dist: py-multibase (>=1.0.3)
+
+# py-ipfs-pubsub
+Pubsub client for python, since ipfshttpclient pubsub isn't compatibe with the newer versions of ipfs
+
+    http://github.com/ZachisGit/py-ipfs-pubsub
+
+# Install
+
+    pip3 install py-ipfs-pubsub
+
+# Example
+
+```python
+import pubsub
+
+
+# Topic specific callback
+def on_sub_test(data,seqno,topic_ids,cid):
+
+	print ("New Message:",cid)
+	print (data)
+	print ("")
+
+
+# Subscribe - pubsub.sub(endpoint, topic, callback)
+pubsub.sub("/dns/127.0.0.1/tcp/5001/http","mytopic",on_sub_test)
+
+# Publish 10x
+for i in range(10):
+	# Publish - pubsub.pub(endpoint, topic, str/bytes message)
+	pubsub.pub("/dns/127.0.0.1/tcp/5001/http","mytopic","Hello World!")
+	input("")
+
+# Unsubscribe from topic - pubsub.unsub(topic)
+pubsub.unsub("mytopic")
+```
