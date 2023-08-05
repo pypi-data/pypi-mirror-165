@@ -1,0 +1,38 @@
+noctiluca.io package
+====================
+
+Submodules
+----------
+
+noctiluca.io.hdf5 module
+------------------------
+
+.. automodule:: noctiluca.io.hdf5
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+noctiluca.io.load module
+------------------------
+
+.. automodule:: noctiluca.io.load
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+noctiluca.io.write module
+-------------------------
+
+.. automodule:: noctiluca.io.write
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: noctiluca.io
+   :members:
+   :undoc-members:
+   :show-inheritance:

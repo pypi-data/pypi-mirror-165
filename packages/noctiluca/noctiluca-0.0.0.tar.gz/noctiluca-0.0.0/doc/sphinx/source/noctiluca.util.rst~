@@ -1,0 +1,38 @@
+noctiluca.util package
+======================
+
+Submodules
+----------
+
+noctiluca.util.clean module
+---------------------------
+
+.. automodule:: noctiluca.util.clean
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+noctiluca.util.mcmc module
+--------------------------
+
+.. automodule:: noctiluca.util.mcmc
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+noctiluca.util.parallel module
+------------------------------
+
+.. automodule:: noctiluca.util.parallel
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: noctiluca.util
+   :members:
+   :undoc-members:
+   :show-inheritance:
