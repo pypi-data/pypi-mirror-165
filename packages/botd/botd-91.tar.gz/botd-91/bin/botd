@@ -1,0 +1,69 @@
+#!/usr/bin/env python3
+# pylint: disable=E1101,E0611,C0116,C0115,C0413,R0903
+# This file is placed in the Public Domain.
+
+
+"BOTD - 24/7 channel daemon"
+
+
+import os
+import signal
+import sys
+import termios
+import time
+
+
+from bot.hdl import scancls
+from bot.obj import Wd
+from bot.irc import Config
+
+
+Config.channel = "#botd"
+Config.nick = "botd"
+Config.realname = "BOTD - 24/7 channel daemon"
+Config.username = "botd"
+
+
+Wd.workdir = "/var/lib/botd"
+
+
+from bot import irc, log, rss, tdo
+
+
+scancls(irc)
+scancls(log)
+scancls(rss)
+scancls(tdo)
+
+
+def daemon():
+    pid = os.fork()
+    if pid != 0:
+        os._exit(0)
+    os.setsid()
+    os.umask(0)
+    si = open("/dev/null", 'r')
+    so = open("/dev/null", 'a+')
+    se = open("/dev/null", 'a+')
+    os.dup2(si.fileno(), sys.stdin.fileno())
+    os.dup2(so.fileno(), sys.stdout.fileno())
+    os.dup2(se.fileno(), sys.stderr.fileno())
+
+
+def signal_HUP(sig, frame):
+    print("signal 15 called")
+    sys.stdout.flush()
+
+
+#signal.signal(signal.SIGHUP, signal_HUP)
+
+
+def main():
+    #daemon()
+    irc.init()
+    rss.init()
+    while 1:
+        time.sleep(1.0)
+
+
+main()
