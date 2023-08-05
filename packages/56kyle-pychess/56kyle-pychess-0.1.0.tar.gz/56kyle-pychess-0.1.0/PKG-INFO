@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: 56kyle-pychess
+Version: 0.1.0
+Summary: A python chess engine
+License: MIT
+Keywords: chess
+Author: kyle
+Author-email: 56kyleoliver@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Games/Entertainment :: Board Games
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: numpy (>=1.23.2,<2.0.0)
