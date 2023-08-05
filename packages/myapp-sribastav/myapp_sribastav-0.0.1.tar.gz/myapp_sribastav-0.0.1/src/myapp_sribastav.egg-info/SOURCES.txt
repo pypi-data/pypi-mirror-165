@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/myapp_sribastav/__init__.py
+src/myapp_sribastav/example.py
+src/myapp_sribastav.egg-info/PKG-INFO
+src/myapp_sribastav.egg-info/SOURCES.txt
+src/myapp_sribastav.egg-info/dependency_links.txt
+src/myapp_sribastav.egg-info/top_level.txt
