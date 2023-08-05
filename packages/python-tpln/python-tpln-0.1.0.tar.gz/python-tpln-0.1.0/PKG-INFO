@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: python-tpln
+Version: 0.1.0
+Summary: 
+Author: Dylan
+Author-email: dylan.robins@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: asyncio (>=3.4.3,<4.0.0)
+Requires-Dist: matplotlib (>=3.5.3,<4.0.0)
+Requires-Dist: networkx (>=2.8.5,<3.0.0)
+Requires-Dist: pygraphviz (>=1.10,<2.0)

@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "python-tpln"
+version = "0.1.0"
+description = ""
+authors = ["Dylan <dylan.robins@gmail.com>"]
+packages = [
+    {include = "tpln"}
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+networkx = "^2.8.5"
+matplotlib = "^3.5.3"
+pygraphviz = "^1.10"
+asyncio = "^3.4.3"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.5"
+black = "^22.6.0"
+pylint = "^2.15.0"
+pytest-cov = "^3.0.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
