@@ -1,0 +1,15 @@
+syngo/__init__.py,sha256=3-3Nou8wQr_xfYL1ZVBpSvKFqa06mLu72bfUbXGa-g4,2529
+syngo/admin.py,sha256=VWlhkFyPcKZz6ThllvIz1NT1yhDC-eBsdDWtpsuuhO0,65
+syngo/apps.py,sha256=l7KxR9GCTPYQaWlEO4tDVuzp6LkWeb00nJbQ0xe39BQ,142
+syngo/migrations/0001_initial.py,sha256=nGqOegrhjqosj_F_GYFazSX3QjvC5YwTgJ7AQhuOgxY,742
+syngo/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+syngo/models.py,sha256=bYJjap_a_Oyw8NL1E5NWoX-8Dzfmw4bVeQHcgzS8pBI,728
+syngo/templates/syngo/base.html,sha256=4561zu0Py2uiYF7T4fYe6uL13SDqOUCE-cBL-RB0nRw,173
+syngo/templates/syngo/check.html,sha256=tUn7ofYcLRpKjRkQ59ctevHroL4c0tJ_euukD3gEz20,264
+syngo/templates/syngo/success.html,sha256=n4dAlPkWuUgU7Y3Z_uP-OwVsCWvmdRxqU52_L25_1pE,162
+syngo/tests.py,sha256=iyri7Kxz3IrpNyYqitIlVJePgcJ3UExcTd1bD8puDc4,1827
+syngo/urls.py,sha256=hdRMRHF5G-0ZT_s2NCSwLmUfo7LtfwSbq1J6-_7d4Ms,479
+syngo/views.py,sha256=nA3dZWBBEXLJWm5FH6alVi48Uqn9fSoJrCi1_GYRi0k,614
+syngo-0.2.0.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+syngo-0.2.0.dist-info/METADATA,sha256=OgMUc3Tnmn0tGvVc9KM7pDtkaZei7BNAt2Sbhos4E_g,2064
+syngo-0.2.0.dist-info/RECORD,,

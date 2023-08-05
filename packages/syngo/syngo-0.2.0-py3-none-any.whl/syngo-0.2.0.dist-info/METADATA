@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: syngo
+Version: 0.2.0
+Summary: Manage Synapse from Django
+Home-page: https://github.com/nim65s/syngo
+License: BSD-2-Clause
+Author: Guilhem Saurel
+Author-email: guilhem.saurel@laas.fr
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: Django (>=3.2,<4.0)
+Requires-Dist: captcha (>=0.4,<0.5)
+Requires-Dist: httpx (>=0.23.0,<0.24.0)
+Project-URL: Repository, https://github.com/nim65s/syngo.git
+Project-URL: changelog, https://github.com/nim65s/syngo/blob/main/CHANGELOG.md
+Description-Content-Type: text/markdown
+
+# SynGo
+
+[![Tests](https://github.com/nim65s/syngo/actions/workflows/test.yml/badge.svg)](https://github.com/nim65s/syngo/actions/workflows/test.yml)
+[![Lints](https://github.com/nim65s/syngo/actions/workflows/lint.yml/badge.svg)](https://github.com/nim65s/syngo/actions/workflows/lint.yml)
+[![Release](https://github.com/nim65s/syngo/actions/workflows/release.yml/badge.svg)](https://pypi.org/project/syngo/)
+[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/nim65s/syngo/main.svg)](https://results.pre-commit.ci/latest/github/nim65s/syngo/main)
+
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![codecov](https://codecov.io/gh/nim65s/syngo/branch/main/graph/badge.svg?token=BLGISGCYKG)](https://codecov.io/gh/nim65s/syngo)
+[![Maintainability](https://api.codeclimate.com/v1/badges/a0783da8c0461fe95eaf/maintainability)](https://codeclimate.com/github/nim65s/syngo/maintainability)
+[![PyPI version](https://badge.fury.io/py/syngo.svg)](https://badge.fury.io/py/syngo)
+
+Manage Synapse from Django
+
+## Install
+
+```
+python3 -m pip install syngo
+```
+
+## Unit tests
+
+```
+docker-compose -f test.yml up --exit-code-from tests --force-recreate --build
+```
+

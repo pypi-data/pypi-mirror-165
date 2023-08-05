@@ -1,0 +1,12 @@
+{% extends "syngo/base.html" %}
+
+{% block content %}
+
+<img alt="captcha" src="{{ captcha.image.url }}" />
+<form method="post">
+  {% csrf_token %}
+  <input type="text" id="guess" name="guess" required><br>
+  <input type="submit" value="OK">
+</form>
+
+{% endblock %}
