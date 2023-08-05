@@ -1,0 +1,15 @@
+.gitignore
+README.md
+pyproject.toml
+setup.cfg
+.github/scripts/release.py
+.github/workflows/publish.yml
+.github/workflows/release.yml
+src/cuny_python_package_demo.egg-info/PKG-INFO
+src/cuny_python_package_demo.egg-info/SOURCES.txt
+src/cuny_python_package_demo.egg-info/dependency_links.txt
+src/cuny_python_package_demo.egg-info/entry_points.txt
+src/cuny_python_package_demo.egg-info/top_level.txt
+src/cunyue_python_package_demo/__init__.py
+src/cunyue_python_package_demo/app.py
+src/cunyue_python_package_demo/helloworld.py
