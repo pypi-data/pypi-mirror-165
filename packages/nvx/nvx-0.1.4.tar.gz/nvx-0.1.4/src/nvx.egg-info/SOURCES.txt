@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/nvx/__init__.py
+src/nvx/main.py
+src/nvx.egg-info/PKG-INFO
+src/nvx.egg-info/SOURCES.txt
+src/nvx.egg-info/dependency_links.txt
+src/nvx.egg-info/entry_points.txt
+src/nvx.egg-info/top_level.txt
