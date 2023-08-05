@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: textra
+Version: 0.1
+Summary: Machine translation for everyone
+Home-page: https://github.com/GitHub30/textra
+Author: TexTra
+Author-email: funaox@gmail.com
+License: MIT
+Project-URL: Bug Tracker, https://github.com/GitHub30/textra/issues
+Keywords: TexTra translation python
+Platform: any
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Utilities
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# textra
+Machine translation for everyone
