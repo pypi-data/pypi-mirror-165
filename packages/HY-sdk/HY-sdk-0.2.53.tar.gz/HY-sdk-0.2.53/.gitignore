@@ -1,0 +1,19 @@
+# 忽略虚拟环境
+venv
+# 忽略pycharm的idea
+.idea
+# 忽略pycache
+**/__pycache__
+dist/
+build/
+HY_sdk.egg-info/
+# 忽略模型文件
+.onnx
+*.bat
+# 忽略配置文件
+*.json
+# 忽略文本文件
+*.txt
+# 忽略jpg
+*.jpg
+*.swp
