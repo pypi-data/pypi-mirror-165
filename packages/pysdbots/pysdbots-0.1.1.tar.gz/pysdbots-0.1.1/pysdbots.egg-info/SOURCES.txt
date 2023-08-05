@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+pysdbots/__init__.py
+pysdbots/pysdbots.py
+pysdbots.egg-info/PKG-INFO
+pysdbots.egg-info/SOURCES.txt
+pysdbots.egg-info/dependency_links.txt
+pysdbots.egg-info/requires.txt
+pysdbots.egg-info/top_level.txt
