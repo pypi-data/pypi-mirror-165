@@ -1,0 +1,9 @@
+filestorage_predeployed/__init__.py,sha256=qstWZJDzPIE0yCdq_DE0sTm36xW-8CCyYfz3C9FdJzc,216
+filestorage_predeployed/address.py,sha256=x-D4zwx0jvBcvW4Qv9xuiKUH_MQBs0bDROx6ZU-jgaE,270
+filestorage_predeployed/filestorage_generator.py,sha256=847jgngo_PcfGFAfRyDmBn9dZBD7KUXSWQsPdzs0NbM,3322
+filestorage_predeployed/artifacts/FileStorage.json,sha256=uTmLlM1eJ77qt7bovTQGsZNN8Z_2QH83ZLUEP7o6r-4,141811
+filestorage_predeployed/artifacts/FileStorage.meta.json,sha256=Tjn8RrmwKNkI9B1Vci2dZAkFknL5AyO95NKEUrjF6hI,97057
+filestorage_predeployed-1.1.0.dev4.dist-info/METADATA,sha256=VSY_m69TMDXOELdEQPg3x_jdAye9cQ8ip5GJEnOJLB8,890
+filestorage_predeployed-1.1.0.dev4.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+filestorage_predeployed-1.1.0.dev4.dist-info/top_level.txt,sha256=RW5VLc3bPhXRv-YZxpXM0NqLvmx09NJ4PDgv-IrS4OI,24
+filestorage_predeployed-1.1.0.dev4.dist-info/RECORD,,
