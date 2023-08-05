@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: dep-module-mongo
+Version: 1.3.14
+Summary: 
+Author: everhide
+Author-email: i.tolkachnikov@gmail.com
+Requires-Python: >=3.9,<3.10
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: beanie (>=1.11.9,<2.0.0)
+Requires-Dist: dep-spec (>=1.2.14,<2.0.0)
