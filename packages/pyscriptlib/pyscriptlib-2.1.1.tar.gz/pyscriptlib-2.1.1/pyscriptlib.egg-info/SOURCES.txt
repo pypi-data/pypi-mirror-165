@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+pyscriptlib/__init__.py
+pyscriptlib/example_script.py
+pyscriptlib/utils.py
+pyscriptlib.egg-info/PKG-INFO
+pyscriptlib.egg-info/SOURCES.txt
+pyscriptlib.egg-info/dependency_links.txt
+pyscriptlib.egg-info/top_level.txt
