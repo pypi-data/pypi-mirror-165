@@ -1,0 +1,9 @@
+molecule>=3.4.0
+pyyaml>=5.1
+jmespath
+lxml
+netaddr
+
+[test]
+molecule[test]
+pytest-helpers-namespace
