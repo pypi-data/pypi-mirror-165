@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=42.0"]
+build-backend = "setuptools.build_meta"
+
+#[project]
+#name = "TSDAL"
+#version = "0.0.1"
+#authors = [
+#  { name="runepic", email="759515344@qq.com" },
+#]
+#description = "A small example package:时空数据抽象库（TSDAL，Temporal and Spatial Data Abstraction Library)"
+#readme = "README.md"
+#license = { file="LICENSE" }
+#requires-python = "3.9"
+#classifiers = [
+#    "Programming Language :: Python :: 3",
+#    "License :: OSI Approved :: MIT License",
+#    "Operating System :: Win Independent",
+#]
+#
+#[project.urls]
+#"Homepage" = "https://gi"
+#"Bug Tracker" = "https://gi"
