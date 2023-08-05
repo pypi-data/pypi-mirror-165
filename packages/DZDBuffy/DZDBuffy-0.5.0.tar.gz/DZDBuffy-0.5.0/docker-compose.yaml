@@ -1,0 +1,18 @@
+version: "3.7"
+
+services:
+  redis:
+    image: redis:alpine
+    container_name: buffy_redis
+    restart: always
+    command: redis-server --save 12 1 --loglevel warning
+    volumes:
+      - ${PWD}/buffy-server-cache/redis:/data
+  buffy-server:
+    image: registry-gl.connect.dzd-ev.de:443/dzdpythonmodules/buffy:prod
+    container_name: buffy_server
+    restart: always
+    ports:
+      - 8008:8008
+    volumes:
+      - ${PWD}/buffy-server-cache/buffy-server:/data

@@ -1,0 +1,33 @@
+site_name: Buffy Docs
+site_dir: public
+nav:
+  - Start: "index.md"
+  - "Python Client":
+      - "Examples": "BuffyPyClient-examples.md"
+      - "API": "BuffyPyClient.md"
+  - "Server":
+      - "Deploy": "server-deploy.md"
+      - "REST API": "buffyserver-api.md"
+  - Models:
+      - "ReCachingStrategies": "BuffyReCachingStrategies.md"
+      - "Response": "Response.md"
+      - "ResponseDownloadStats": "ResponseDownloadStats.md"
+  - Advanced Docs:
+      - "Buffy Architecture": "dev-architecture.md"
+theme:
+  name: material
+#  features:
+#    - toc.integrate
+plugins:
+  - autorefs
+  - mkdocstrings
+  - render_swagger
+markdown_extensions:
+  # https://squidfunk.github.io/mkdocs-material/reference/code-blocks/
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - toc:
+      permalink: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
