@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+src/sphinx_test_cases/__init__.py
+src/sphinx_test_cases/autodoc_test.py
+src/sphinx_test_cases/tests.py
+src/sphinx_test_cases.egg-info/PKG-INFO
+src/sphinx_test_cases.egg-info/SOURCES.txt
+src/sphinx_test_cases.egg-info/dependency_links.txt
+src/sphinx_test_cases.egg-info/requires.txt
+src/sphinx_test_cases.egg-info/top_level.txt
