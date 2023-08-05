@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: hikari-sake
+Version: 1.0.3a1
+Summary: A distributed asynchronous cache standard designed for Hikari.
+Keywords: hikari
+Author-email: Faster Speeding <lucina@lmbyrne.dev>
+Requires-Python: >=3.8.0,<3.12
+Description-Content-Type: text/markdown
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Communications :: Chat
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Classifier: Typing :: Typed
+Requires-Dist: aioredis~=2.0
+Requires-Dist: hikari~=2.0.0.dev104
+Requires-Dist: hikari-tanjun>=2.4.1a1, <3.0.0 ; extra == "tanjun"
+Project-URL: changelog, https://github.com/FasterSpeeding/Sake/blob/master/CHANGELOG.md
+Project-URL: documentation, https://fasterspeeding.github.io/Sake/
+Project-URL: homepage, https://github.com/FasterSpeeding/Sake
+Project-URL: repository, https://github.com/FasterSpeeding/Sake
+Provides-Extra: tanjun
+
+# Sake
+
+A distributed asynchronous cache interface (plus several implementations) designed for use with Hikari.
+
+# Installation
+
+You can install Sake from PyPI using the following command.
+
+```
+python -m pip install hikari-sake -U
+```
+
+# Support
+
+[Hikari's support guild](https://discord.gg/hikari) provides for support for Sake.
+
+# Quick Usage.
+
+For usage see the the [documentation](https://fasterspeeding.github.io/Sake/) and
+[examples](https://github.com/FasterSpeeding/Sake/tree/master/examples) .
+
