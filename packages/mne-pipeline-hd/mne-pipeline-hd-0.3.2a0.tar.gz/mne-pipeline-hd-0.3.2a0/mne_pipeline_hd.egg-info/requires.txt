@@ -1,0 +1,14 @@
+PyQt5
+qtpy
+darkdetect
+qdarkstyle
+mne
+mne-connectivity
+mne-qt-browser
+autoreject
+h5io
+vtk
+psutil
+
+[:sys_platform == "darwin"]
+pyobjc-framework-Cocoa
