@@ -1,0 +1,17 @@
+ormdantic/__init__.py,sha256=OC20KbwbbnzmWgebUW9GFqNQfE0KCCwogdnqsGxHwzg,167
+ormdantic/orm.py,sha256=-mObFVWsGwDwA5WindzjbaNE4xTc4YNzyRUOSUOI3sw,7276
+ormdantic/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ormdantic/table.py,sha256=60IoTru8oeygo1PxifqmITMQF39iqvETJjevPuInBPE,1420
+ormdantic/generator/__init__.py,sha256=tX-AbobxJ7S9QDwKnFwThodN9ybR4hnLV5H4hwJtQS8,174
+ormdantic/generator/_crud.py,sha256=Hzj3pDz50qW-0Dpqfjga2_EYzX9UAg5j7NbBdajx0dk,19849
+ormdantic/generator/_table.py,sha256=EcF5vXDhjljPQedjJu-yCKFNRaVl8tJDLMMPadDf_RQ,6834
+ormdantic/handler/__init__.py,sha256=DJIpKbmRmnHtOFPWEL0JKNZ1TiUJvvbtRsF-hJF1nzI,564
+ormdantic/handler/errors.py,sha256=RIeJkFIIEbTn5l9ElpIUizivRmudMP8I0nxo9Iccuag,1807
+ormdantic/handler/helper.py,sha256=jcP2VUMpNsLDeDTF3a8ZCZ30M1CBhgbN1n4BuufvOD0,587
+ormdantic/handler/snake.py,sha256=pVqmpngPn1j_f3eVMIyEK71hARONUmZangppX3sSmxU,1300
+ormdantic/types/__init__.py,sha256=6jItqbdQ107Eqv-MT1No7vGrOtZgtKGt5ebJLmhOhGc,123
+ormdantic/types/base.py,sha256=sjYd3Qb2Wt2iRYKRoLYY2_1Dt89rOrtPf3fogeeiHwM,110
+ormdantic-1.2.0.dist-info/LICENSE,sha256=VO5dwbZJpTzdaMj7h6f5DAXrPYfzt0CGk5pEN9Y-vvo,1070
+ormdantic-1.2.0.dist-info/WHEEL,sha256=4TfKIB_xu-04bc2iKz6_zFt-gEFEEDU_31HGhqzOCE8,81
+ormdantic-1.2.0.dist-info/METADATA,sha256=IQEpT77c5C-b9e5HXJqGTYi41cWmwII1LJQJQQfI1v8,10353
+ormdantic-1.2.0.dist-info/RECORD,,
