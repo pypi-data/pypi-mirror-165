@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup-magiadice.py
+nonebot-plugin-magiadice/__init__.py
+nonebot-plugin-magiadice/dice.py
+nonebot-plugin-magiadice/log.py
+nonebot-plugin-magiadice/logger.py
+nonebot_plugin_magiadice.egg-info/PKG-INFO
+nonebot_plugin_magiadice.egg-info/SOURCES.txt
+nonebot_plugin_magiadice.egg-info/dependency_links.txt
+nonebot_plugin_magiadice.egg-info/requires.txt
+nonebot_plugin_magiadice.egg-info/top_level.txt
