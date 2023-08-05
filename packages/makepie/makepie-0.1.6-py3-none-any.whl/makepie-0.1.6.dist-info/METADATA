@@ -1,0 +1,109 @@
+Metadata-Version: 2.1
+Name: makepie
+Version: 0.1.6
+Summary: An attempt to replace/improve GNU/make with a python package
+Project-URL: Homepage, https://github.com/titouanlacombe/makepie
+Project-URL: Bug Tracker, https://github.com/titouanlacombe/makepie/issues
+Project-URL: Documentation, https://github.com/titouanlacombe/makepie/blob/main/README.md
+Author: Titouan Lacombe
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# Makepie
+
+An attempt to replace/improve GNU/make with a python package
+
+Warning: This package is FAR from production ready, use at your own risk
+
+Note: Makepie is (not yet) a substitution for a build system, it's a way to easily create targets accessible via cli that have complex behavior with the goal to manage projects
+
+## Why choose Makepie instead of make
+
+- Cross platform thanks to python
+- Support for args and kwargs in target call: allow for easy code reuse, smaller/cleaner make
+- No need to learn a new language (if you already know python)
+- Little to zero overhead
+- Syntax similar to make: easy to migrate
+- User as access to all python features (asyncio, multiprocessing...) which can make the build process faster and cleaner
+
+## Basic example
+
+```py
+from src.makepie import *
+makepie_load()
+
+cc = "clang"
+ccFlags = "main.cpp -o main.o"
+
+@cache(cache_files=["main.o"], dependencies=["**/*.cpp", "**/*.hpp"])
+def build():
+	new_version = "0.1"
+	log("Building "+new_version+"...")
+	sh(f"{cc} {ccFlags}")
+	return new_version
+
+def test(ver):
+	log("Testing "+ver+"...")
+	success = sh("...")
+	return success
+
+def upload(ver):
+	log("Uploading "+ver+"...")
+
+@default()
+def deploy():
+	ver = build()
+	
+	if not test(ver):
+		log.error("tests failed, aborting")
+		return 1
+
+	upload(ver)
+	return 0
+```
+
+Inside your cli launch a deploy with just: `makepie`
+
+To see more example go to the examples directory, or look at the make.py of this project for a concrete use case
+
+## Install
+
+Install package: `python3 -m pip install makepie`
+
+### Command shortcut
+
+Make an alias if you want a shortcut to launch makepie:
+- Linux: `alias makepie="python3 -m makepie"`
+- Windows: `doskey makepie=python3 -m makepie` TODO: test on windows
+
+If you want the alias to be permanent put it in your .bashrc, or other corresponding file depending on your shell/operating system
+
+## Documentation
+
+The documentation doesn't exist yet so I recommend looking at the source code, there isn't a lot.
+
+## Configuration
+
+Makepie can be configured by passing kwargs in makepie_load(), for example: makepie_load(DEBUG=True)
+
+- CONFIG_NAME: description (example)
+- DEBUG: quick way to troubleshoot bugs (True)
+- ENV_FILE: path to the env file, each of it's value will be loaded in env (".env")
+- MAKEPIELOG_LEVEL: level of the makepie logs (logging.INFO)
+- MAKEPIELOG_FORMAT: format of the makepie logs ("%(message)s")
+- LOG_LEVEL: level of the user log (logging.INFO)
+- LOG_FORMAT: format of the user log ("%(message)s")
+- PRINT_STREAM_NAME: printing stream names (stdout/stderr) when a shell command send output
+- MAX_READ_SIZE: TODO
+- POLL_INTERVAL: TODO
+
+## Troubleshoot
+
+Use the DEBUG or MAKEPIELOG_LEVEL config, if the error comes from makepie itself please file an issue.
+
+## Contributing
+
+See Contributing.md

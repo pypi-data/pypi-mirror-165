@@ -1,0 +1,3 @@
+
+class MakepieException(Exception):
+	pass
