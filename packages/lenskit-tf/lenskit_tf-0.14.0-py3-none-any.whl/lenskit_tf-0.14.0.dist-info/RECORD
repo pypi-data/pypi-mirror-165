@@ -1,0 +1,10 @@
+lenskit_tf/__init__.py,sha256=mYKZaY7srV-a64zUcAbpwQlpARsbKw4wuWWwRjiEaf8,791
+lenskit_tf/_pt.py,sha256=7Ld_DfAyA8yy2c8xSjBdegS6xc8zkZnoKelMh0l0B5g,1164
+lenskit_tf/biasedmf.py,sha256=Uj6eSG42b_WghMuY2LhdsVVwAjllDG51NGWq3X5BMQE,5446
+lenskit_tf/bpr.py,sha256=Ljl4cljjSDfa3_SjyCri77-KNQnVWkhzLN5HqScIbYs,8958
+lenskit_tf/ibmf.py,sha256=4u2GNOEHa9DSjFbiPcQA_DavTlTdaoWhPsYo23HIUSU,8269
+lenskit_tf/util.py,sha256=MTpX5Z7OQUnHkyO1ySRo2rlZ6RgWeRQOKlq53htgOL8,958
+lenskit_tf-0.14.0.dist-info/LICENSE.md,sha256=iOLPHpWWa1-bEDP0rRfbrBE_fChD8xTSsJjp9Ba9Mrk,1073
+lenskit_tf-0.14.0.dist-info/WHEEL,sha256=jPMR_Dzkc4X4icQtmz81lnNY_kAsfog7ry7qoRvYLXw,81
+lenskit_tf-0.14.0.dist-info/METADATA,sha256=NsioTEVydI7-Q6UNFpZjg76pxoAjZSoGM9XP8cc0ypU,1374
+lenskit_tf-0.14.0.dist-info/RECORD,,
