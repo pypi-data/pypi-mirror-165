@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=65", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hashcopy"
+version = "1.0.4"
+authors = [
+    { name="Katie Rust", email="katie@ktpanda.org" }
+]
+description = "Copy a file in the most efficient way possible while generating a SHA256 hash of the data"
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX",
+    "Operating System :: POSIX :: Linux"
+]
+
+[project.urls]
+"Homepage" = "https://ktpanda.org/software/hashcopy/"
