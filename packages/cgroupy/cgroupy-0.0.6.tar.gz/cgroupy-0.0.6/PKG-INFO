@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: cgroupy
+Version: 0.0.6
+Summary: cgroupy is a python module that provides a simple intrface for managing cgroups
+Home-page: https://github.com/morethanunpopular/cgroupy
+Author: Grant Campbell
+Author-email: stars.salvage.man@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.rst
+
+# cgroupy
+cgroupy is a python module that provides a simple intrface for managing cgroups
+
+# Installation
+You can install `cgroupy` using pip:
+
+```
+pip install cgroupy
+```
+
+# Usage
+```
+>>> from cgroupy import cgroup
+>>> c = cgroup(1000,1000,'test')
+>>> c.setup()
+>>> c.execute('sleep 100', join=False)
+[]
+>>> c.execute('sleep 100', join=False)
+[]
+>>> c.tasks
+{'8177', '8181'}
+>>> c.teardown()
+```
+
+`with` syntax is also supported for automated setup and teardown:
+
+```
+>>> with cgroup(1000,1000,'test') as c:
+...   c.execute('echo hello world')
+... 
+hello world
+```
+
+
