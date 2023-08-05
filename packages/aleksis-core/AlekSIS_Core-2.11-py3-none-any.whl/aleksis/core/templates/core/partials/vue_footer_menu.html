@@ -1,0 +1,10 @@
+{# -*- engine:django -*- #}
+
+{% for item in FOOTER_MENU.items.all %}
+  <v-btn text rounded href="{{ item.url }}" color="white" class="ma-2">
+    {% if item.icon %}
+      <v-icon left>mdi-{{ item.icon }}</v-icon>
+    {% endif %}
+    {{ item.name }}
+  </v-btn>
+{% endfor %}
