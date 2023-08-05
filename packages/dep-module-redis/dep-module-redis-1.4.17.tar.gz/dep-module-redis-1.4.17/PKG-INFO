@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: dep-module-redis
+Version: 1.4.17
+Summary: 
+Author: everhide
+Author-email: i.tolkachnikov@gmail.com
+Requires-Python: >=3.9,<3.10
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: aioredis[hiredis] (>=2.0.1,<3.0.0)
+Requires-Dist: dep-spec (>=1.5.17,<2.0.0)
