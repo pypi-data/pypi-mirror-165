@@ -1,0 +1,72 @@
+Metadata-Version: 2.1
+Name: flow-helpers-tps
+Version: 2022.8.25
+Summary: Handy helpers for ETL and API interfacing.
+License: MIT
+Author: joshliu3
+Author-email: jliu@theparkingspot.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: SQLAlchemy
+Requires-Dist: boto3
+Requires-Dist: botocore
+Requires-Dist: cryptography
+Requires-Dist: facebook-business
+Requires-Dist: flatdict
+Requires-Dist: google
+Requires-Dist: google-api-python-client
+Requires-Dist: httplib2
+Requires-Dist: office365
+Requires-Dist: pandas
+Requires-Dist: pendulum
+Requires-Dist: poetry (>=1.1.15,<2.0.0)
+Requires-Dist: pysftp
+Requires-Dist: uuid
+Description-Content-Type: text/markdown
+
+# flow-helpers
+
+Handy helpers for ETLs and API interfacing.
+
+## APIs & Transformations
+* Bing Webmaster Tools
+* Firebase
+* Google Analytics (Universal Analytics)
+* Google BigQuery
+* Google Cloud Storage
+* Google Drive
+* Google Sheets
+* Google SearchAds 360
+* Impact
+* Journera
+* Listen360
+* ScrapingHub
+* Sharepoint
+
+## Data Transfers
+* SFTP
+* AWS S3
+* MSSQL
+* Snowflake
+
+## Other
+* Time
+* Files
+
+## Handy Notes for working with Poetry & Test PyPI
+* create test account on test.pypi.org and get token
+* using poetry, run `poetry config repositories.test-pypi https://test.pypi.org/legacy/`
+* then add token using `poetry config pypi-token.test-pypi <token>`
+* use `poetry version patch` to autoincrement new release
+  * can also use `poetry version minor` or `poetry version major` as appropriate
+* use `poetry build` to build the dist files
+* use `poetry publish --build -r test-pypi` to build dist files and publish to the Test PyPI repo
+
+## Internal Reference for production pypi
+* create account on pypi.org, get api token
+* using poetry, run `poetry config pypi-token.pypi <token>` to add token
+* use `poetry publish --build` to build dist files and publish to actual PyPI repo
