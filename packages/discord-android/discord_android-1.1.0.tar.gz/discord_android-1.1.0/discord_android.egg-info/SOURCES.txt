@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+discord_android/__init__.py
+discord_android/identify.py
+discord_android.egg-info/PKG-INFO
+discord_android.egg-info/SOURCES.txt
+discord_android.egg-info/dependency_links.txt
+discord_android.egg-info/top_level.txt

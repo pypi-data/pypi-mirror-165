@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: discord-android
+Version: 1.1.0
+Summary: Make your discord.py bots appear as if they are on a phone.
+Home-page: https://github.com/Dev-himangshu147/discord_android
+Author: himangshu
+Author-email: himangshu@abcd.com
+License: MIT License
+Description: UNKNOWN
+Keywords: discord.py,discord android,discord android status,discord bot mobile status,discord mobile bot status
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10

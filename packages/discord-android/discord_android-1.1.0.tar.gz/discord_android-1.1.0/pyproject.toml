@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "discord_android_activity"
+version = "0.0.1"
+authors = [
+  { name="Dev-himangshu147", email="himansgshu1478@gmail.com" },
+]
+description = "A package for android phone status for discord bot"
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+# /discord_android_activity
+[project.urls]
+"Homepage" = "https://github.com/Dev-himansgshu147/"
+"Bug Tracker" = "https://github.com/Dev-himangshu147/ssues"
