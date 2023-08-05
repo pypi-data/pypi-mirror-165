@@ -1,0 +1,110 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+import argparse
+import sys
+from datetime import datetime
+
+from dotenv import load_dotenv
+
+from inaturalist.github_actions_strategy import github_actions_strategy
+from inaturalist.scraper import InaturalistPhotoScraper
+
+
+def _opts() -> argparse.Namespace:
+    """Parses command line arguments."""
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-t',
+                        '--taxon-id',
+                        help='Taxon id',
+                        type=int,
+                        required=True)
+    parser.add_argument('-o',
+                        '--output-dir',
+                        help='Output directory',
+                        type=str)
+    parser.add_argument('-p',
+                        '--resume-from-page',
+                        help='Page to resume from',
+                        type=int,
+                        default=0)
+    parser.add_argument('-P',
+                        '--stop-at-page',
+                        help='Page to stop at',
+                        type=int)
+    parser.add_argument('-u',
+                        '--resume-from-uuid-index',
+                        help='UUID index to resume from',
+                        type=int,
+                        default=0)
+    parser.add_argument('--upload-to-s3',
+                        help='Upload to a S3-compatible bucket',
+                        action='store_true')
+    parser.add_argument('-O',
+                        '--one-page-only',
+                        help='Terminate after completing a single page',
+                        action='store_true')
+    parser.add_argument('-r',
+                        '--results-per-page',
+                        help='Number of results per page',
+                        type=int,
+                        default=200)
+    parser.add_argument('-s',
+                        '--start-year',
+                        help='Year to start from '
+                        '(only relevant when number of observations > 10,000)',
+                        type=int,
+                        default=2008)
+    parser.add_argument('-e',
+                        '--end-year',
+                        help='Year to stop at '
+                        '(only relevant when number of observations > 10,000)',
+                        type=int,
+                        default=datetime.today().year)
+    parser.add_argument('-Y',
+                        '--one-year-only',
+                        help='Terminate after completing a single year',
+                        action='store_true')
+    parser.add_argument('--check-multiple-buckets',
+                        help='Check multiple buckets for existing files',
+                        type=str)
+    parser.add_argument('-g',
+                        '--github-actions-strategy',
+                        help='Get optimal github actions strategy for the '
+                        'pages and years per workflow run',
+                        action='store_true')
+    return parser.parse_args()
+
+
+def main() -> None:
+    """Main function."""
+    args = _opts()
+
+    if args.check_multiple_buckets:
+        args.check_multiple_buckets = args.check_multiple_buckets.split(',')
+
+    if args.github_actions_strategy:
+        github_actions_strategy(taxon_id=args.taxon_id,
+                                start_year=args.start_year,
+                                end_year=args.end_year)
+        sys.exit(0)
+
+    scraper = InaturalistPhotoScraper(
+        taxon_id=args.taxon_id,
+        output_dir=args.output_dir,
+        resume_from_page=args.resume_from_page,
+        stop_at_page=args.stop_at_page,
+        resume_from_uuid_index=args.resume_from_uuid_index,
+        upload_to_s3=args.upload_to_s3,
+        one_page_only=args.one_page_only,
+        results_per_page=args.results_per_page,
+        start_year=args.start_year,
+        end_year=args.end_year,
+        one_year_only=args.one_year_only,
+        check_multiple_buckets=args.check_multiple_buckets)
+    scraper.run()
+
+
+if __name__ == '__main__':
+    load_dotenv()
+    main()
