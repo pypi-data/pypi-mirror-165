@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: secretset
+Version: 0.1.0
+Summary: Command line program to anonymize data.
+License: MIT
+Author: Chris Pryer
+Author-email: cnpryer@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: click (>=8.1.3,<9.0.0)
+Requires-Dist: openpyxl (>=3.0.10,<4.0.0)
+Requires-Dist: pandas (>=1.4.3,<2.0.0)
+Description-Content-Type: text/markdown
+
+[![ci](https://github.com/cnpryer/secretset/workflows/ci/badge.svg)](https://github.com/cnpryer/secretset/actions)
+[![PyPI Latest Release](https://img.shields.io/pypi/v/secretset.svg)](https://pypi.org/project/secretset/)
+
+# secretset
+
+Command line interface to anonymize data.
+
+## Installation
+
+```console
+$ pip install secretset
+```
+
+## Usage
+
+For information on commands available run `secretset --help`.
+
+### Compatible sources
+
+- Excel
+- CSV
+
+### Anonymize files
+
+You can anonymize files using:
+
+```
+$ secretset file.xlsx --target col1
+```
+
+### Anonymize multiple files
+
+You can anonymize multiple related files using:
+
+```
+$ secretset file1.xlsx file2.csv \
+    --align col1 \
+    --target col2 \
+    --target col3
+```
+
