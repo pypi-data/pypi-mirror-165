@@ -1,0 +1,3 @@
+[console_scripts]
+rpi-backlight = rpi_backlight.cli:main
+rpi-backlight-gui = rpi_backlight.gui:main
