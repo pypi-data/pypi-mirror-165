@@ -1,0 +1,7 @@
+
+[test]
+numpy
+pytest
+pytest-cov
+graphviz
+particle
