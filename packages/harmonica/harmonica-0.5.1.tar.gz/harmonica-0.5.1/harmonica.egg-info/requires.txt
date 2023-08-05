@@ -1,0 +1,13 @@
+numpy
+pandas
+scipy
+scikit-learn
+numba
+pooch>=0.7.0
+xarray
+verde>=1.5.0
+xrft
+
+[visualizations]
+pyvista
+vtk>=9
