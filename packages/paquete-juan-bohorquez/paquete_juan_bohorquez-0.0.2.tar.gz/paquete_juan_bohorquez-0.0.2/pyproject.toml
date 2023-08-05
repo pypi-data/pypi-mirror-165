@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "paquete_juan_bohorquez"
+version = "0.0.2"
+authors = [
+  { name="Juan José Bohórquez", email="juan.bohorquezr@usantotomas.edu.co" },
+]
+description = "A small example package"
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/juanjose1919/paquete_juan_bohorquez"
+"Bug Tracker" = "https://github.com/juanjose1919/paquete_juan_bohorquez/issues"
