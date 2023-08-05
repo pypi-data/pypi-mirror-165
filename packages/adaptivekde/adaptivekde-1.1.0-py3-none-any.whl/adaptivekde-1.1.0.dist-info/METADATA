@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: adaptivekde
+Version: 1.1.0
+Summary: Optimal fixed or locally adaptive kernel density estimation
+Home-page: https://github.com/cooperlab/AdaptiveKDE
+Author: Lee A.D. Cooper
+Author-email: cooperle@gmail.com
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+License-File: LICENSE.txt
+
