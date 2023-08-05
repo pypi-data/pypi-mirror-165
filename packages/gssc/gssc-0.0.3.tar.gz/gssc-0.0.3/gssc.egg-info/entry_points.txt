@@ -1,0 +1,2 @@
+[console_scripts]
+gssc_infer = gssc.command.com_infer:main

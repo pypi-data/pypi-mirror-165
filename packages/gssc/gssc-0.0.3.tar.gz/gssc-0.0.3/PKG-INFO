@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: gssc
+Version: 0.0.3
+Summary: Greifswald Sleep Stage Classifier for automatic detection of sleep stages in polysomnographies.
+Home-page: https://github.com/jshanna100/gssc
+Maintainer: Jevri Hanna
+Maintainer-email: jevri.hanna@gmail.com
+License: GNU Affero General Public License
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering
+Classifier: Operating System :: Unix
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS
+Requires-Python: >=3.7
+License-File: LICENSE
