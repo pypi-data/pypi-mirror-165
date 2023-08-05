@@ -1,0 +1,8 @@
+mytweets/__init__.py,sha256=IMjkMO3twhQzluVTo8Z6rE7Eg-9U79_LGKMcsWLKBkY,22
+mytweets/api/__init__.py,sha256=tLbooBnKG4VohuZtSGAzX-E4uxMuAaQJ3y2bzZL6Rpw,87
+mytweets/api/bookmarks.py,sha256=n8QC-XHoZKqI9-tBttwOEg8bgi37RKala-BGGT7PEw4,6133
+mytweets/api/likes.py,sha256=0Ec_yKM3Ecnd2KMEfevI2bYwOEYgr2QHr3tOpNHyikw,3623
+mytweets/api/user_id.py,sha256=jrKieTz7o2CmeSStClSL-lwi6WiE8EPs9S8wihlnqtQ,3479
+mytweets-0.1.0.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+mytweets-0.1.0.dist-info/METADATA,sha256=1wBshH60ATOKaJ23GCHmpQcjpzpL-OnDtF-6WolA38A,435
+mytweets-0.1.0.dist-info/RECORD,,
