@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: gitignorefile
+Version: 1.0.3
+Summary: A spec-compliant `.gitignore` parser for Python
+Home-page: https://github.com/excitoon/gitignorefile
+Author: Vladimir Chebotarev
+Author-email: vladimir.chebotarev@gmail.com
+License: MIT
+Project-URL: Documentation, https://github.com/excitoon/gitignorefile/blob/master/README.md
+Project-URL: Source, https://github.com/excitoon/gitignorefile
+Project-URL: Tracker, https://github.com/excitoon/gitignorefile/issues
+Description: A spec-compliant `.gitignore` parser for Python.
+Keywords: git,gitignore
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Version Control :: Git
+Classifier: Topic :: Text Processing :: Filters
+Description-Content-Type: text/markdown
