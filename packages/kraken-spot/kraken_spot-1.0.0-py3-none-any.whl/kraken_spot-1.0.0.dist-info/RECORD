@@ -1,0 +1,12 @@
+LICENSE,sha256=XaIQLBr9D-b6PoCLRvy21gPY54OQWaoIHhbTmGpfppU,1053
+kraken_spot/__init__.py,sha256=Nc0gqyIzKbPMeWMnzPAF6kao4jMorZESJB1_jjoOM_E,57
+kraken_spot/auth.py,sha256=vcNWgBrYkxZTjqgR-OsAhNMlNDcU1Wp471S367e_x6A,971
+kraken_spot/client.py,sha256=akD9xG8yTnFOyXzdDD-KOXwCb-Ui02Xi_c58TGroPqE,1247
+kraken_spot/errors.py,sha256=kKpW7I6jiwXok7ykusg0H7L_phKQxmvaZnr-3iJuKew,81
+kraken_spot/http.py,sha256=_TYXMjBbX6kZzJY5cqutb4T81NcJVPCEVcUYKrd3ToA,1342
+kraken_spot/private.py,sha256=BsmO419UZcGs83Bt0feQY7rQiea1gb7qSc2R4Gczn5I,16139
+kraken_spot/public.py,sha256=GT6q7RMukzUSOOjTYiwx11tPx47N_Vd8cyUJvz6_jMs,3260
+kraken_spot-1.0.0.dist-info/LICENSE,sha256=XaIQLBr9D-b6PoCLRvy21gPY54OQWaoIHhbTmGpfppU,1053
+kraken_spot-1.0.0.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+kraken_spot-1.0.0.dist-info/METADATA,sha256=qSaAHU5obxZf2sFoSRMwJNW4cST7Qi0TygXBhMw-QFU,1852
+kraken_spot-1.0.0.dist-info/RECORD,,
