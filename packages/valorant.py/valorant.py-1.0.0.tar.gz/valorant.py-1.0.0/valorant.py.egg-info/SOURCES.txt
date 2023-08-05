@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+valorant/__init__.py
+valorant.py.egg-info/PKG-INFO
+valorant.py.egg-info/SOURCES.txt
+valorant.py.egg-info/dependency_links.txt
+valorant.py.egg-info/requires.txt
+valorant.py.egg-info/top_level.txt
