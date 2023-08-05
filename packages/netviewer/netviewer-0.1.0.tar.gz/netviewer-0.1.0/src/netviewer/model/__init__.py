@@ -1,0 +1,2 @@
+IP = str
+MAC = str
