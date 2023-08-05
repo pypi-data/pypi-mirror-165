@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "syngo"
+version = "0.2.0"
+description = "Manage Synapse from Django"
+authors = ["Guilhem Saurel <guilhem.saurel@laas.fr>"]
+license = "BSD-2-Clause"
+readme = "README.md"
+homepage = "https://github.com/nim65s/syngo"
+repository = "https://github.com/nim65s/syngo.git"
+
+[tool.poetry.urls]
+changelog = "https://github.com/nim65s/syngo/blob/main/CHANGELOG.md"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+Django = "^3.2"
+captcha = "^0.4"
+httpx = "^0.23.0"
+
+[tool.poetry.dev-dependencies]
+coverage = "^6.4.4"
+black = "^22.6.0"
+flake8 = "^5.0.4"
+pre-commit = "^2.20.0"
+ipython = "^7.0.0"
+
+[tool.black]
+target-version = ['py37']
+
+[tool.coverage.run]
+source = ["syngo"]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
