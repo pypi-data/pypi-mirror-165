@@ -1,0 +1,3 @@
+[console_scripts]
+loga=loganalyst.cli:cli
+
