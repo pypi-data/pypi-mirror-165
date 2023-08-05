@@ -1,0 +1,1 @@
+nonebot_plugin_offline_mahjong_helper
