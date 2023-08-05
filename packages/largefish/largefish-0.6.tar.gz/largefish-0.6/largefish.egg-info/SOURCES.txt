@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+largefish/__init__.py
+largefish/largefish.py
+largefish.egg-info/PKG-INFO
+largefish.egg-info/SOURCES.txt
+largefish.egg-info/dependency_links.txt
+largefish.egg-info/top_level.txt
