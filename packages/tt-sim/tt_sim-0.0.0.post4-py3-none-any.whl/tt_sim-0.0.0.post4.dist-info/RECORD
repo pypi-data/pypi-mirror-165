@@ -1,0 +1,11 @@
+tt_sim/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tt_sim/core/bike.py,sha256=cxKe5ZqaERHU4LObz6hn5QiS4Z4nnoa_LkdXITp0z8g,231
+tt_sim/core/critical_power.py,sha256=BhfYnkeut-r_0xs6keoYXQ1fse5u2bNG35IeFxY2Gyk,2593
+tt_sim/core/rider.py,sha256=Eh4vAt7AJlA3m8jUYEb-PkY8p-NXMbH4Yk4RA9kmMXk,3729
+tt_sim/core/simulation.py,sha256=8ZCC-h85Lb8WGsAYByLlfXoHFIUXMtEK56kMkFwWMj4,6818
+tt_sim/core/stage.py,sha256=hXmbmzPJ9k9y_3Ug0w2voAurH3JJu02EdiS59dnp4Js,3705
+tt_sim/core/wind.py,sha256=UI2UlNvwXKOni5c5nJRWD05rWbgRgxKoJACQdlRFAbc,361
+tt_sim-0.0.0.post4.dist-info/LICENSE,sha256=ecekotFb4p47EvC3fKnIX3uL_4A-QCvuzZMAI4OissY,1065
+tt_sim-0.0.0.post4.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+tt_sim-0.0.0.post4.dist-info/METADATA,sha256=UoFGlXMSJ9oM65o4M5gTdBf-sSM5pknZJh-TS7iEGyo,436
+tt_sim-0.0.0.post4.dist-info/RECORD,,
