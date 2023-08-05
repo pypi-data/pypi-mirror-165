@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+loadstar_sensors_interface/__about__.py
+loadstar_sensors_interface/__init__.py
+loadstar_sensors_interface/cli.py
+loadstar_sensors_interface/loadstar_sensors_interface.py
+loadstar_sensors_interface.egg-info/PKG-INFO
+loadstar_sensors_interface.egg-info/SOURCES.txt
+loadstar_sensors_interface.egg-info/dependency_links.txt
+loadstar_sensors_interface.egg-info/entry_points.txt
+loadstar_sensors_interface.egg-info/requires.txt
+loadstar_sensors_interface.egg-info/top_level.txt
