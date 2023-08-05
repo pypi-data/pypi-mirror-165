@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: pdf-information
+Version: 0.0.1
+Summary: PDF Information
+Home-page: https://github.com/nymann/pdf-information
+Maintainer: Kristian Nymann Jakobsen
+Maintainer-email: kristian@nymann.dev
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Provides-Extra: all
+Requires-Dist: isort ; extra == 'all'
+Requires-Dist: wemake-python-styleguide ; extra == 'all'
+Requires-Dist: mypy ; extra == 'all'
+Requires-Dist: black ; extra == 'all'
+Requires-Dist: nitpick ; extra == 'all'
+Requires-Dist: add-trailing-comma ; extra == 'all'
+Requires-Dist: pytest ; extra == 'all'
+Requires-Dist: pytest-cov ; extra == 'all'
+Requires-Dist: pytest-mock ; extra == 'all'
+Provides-Extra: dev
+Requires-Dist: isort ; extra == 'dev'
+Requires-Dist: wemake-python-styleguide ; extra == 'dev'
+Requires-Dist: mypy ; extra == 'dev'
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: nitpick ; extra == 'dev'
+Requires-Dist: add-trailing-comma ; extra == 'dev'
+Provides-Extra: tests
+Requires-Dist: pytest ; extra == 'tests'
+Requires-Dist: pytest-cov ; extra == 'tests'
+Requires-Dist: pytest-mock ; extra == 'tests'
+
+# PDF Information
+
+Maps output of `pdfinfo` to a dataclass.
+
+## Usage
+
+```py
+from pathlib import Path
+from  pdf_information import PDFInfo
+
+pdf_file = Path("pdf_files/some_file.pdf")
+pdf_info = PDFInfo.from_cmd(pdf_file=pdf_file)
+```
+
+## Development
+
+For help getting started developing check [DEVELOPMENT.md](DEVELOPMENT.md)
