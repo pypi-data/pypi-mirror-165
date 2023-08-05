@@ -1,0 +1,2 @@
+class UtilBase:
+    pass
