@@ -1,0 +1,10 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+README.txt
+setup.py
+superbipapteam/__init__.py
+superbipapteam.egg-info/PKG-INFO
+superbipapteam.egg-info/SOURCES.txt
+superbipapteam.egg-info/dependency_links.txt
+superbipapteam.egg-info/top_level.txt
