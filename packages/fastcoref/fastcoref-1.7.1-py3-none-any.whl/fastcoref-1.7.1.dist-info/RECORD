@@ -1,0 +1,15 @@
+fastcoref/__init__.py,sha256=IabzZQJcUS72Dpn6C_EwVt0ZcGRgox9cpUgGvr1Voy8,42
+fastcoref/f_coref.py,sha256=tW9MnGV3n1K6M21hXGfMK-PwkxleiOL5TI7SSV9Tndg,8316
+fastcoref/coref_models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fastcoref/coref_models/modeling_fcoref.py,sha256=lTnSbpVAQznn3tqBQXi1jUjMDocrOS53Uvr9o_2N_IY,15046
+fastcoref/coref_models/modeling_lingmess.py,sha256=SQtN1xRU6ftf71Lj4Y3IiHjBNcc6F9KuqGcACkHcKlg,19557
+fastcoref/utilities/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fastcoref/utilities/collate.py,sha256=ltb1k391p-67kNgEep-ZVz4hAItBzQKlujJkBVhwa0I,3433
+fastcoref/utilities/consts.py,sha256=nyQarc9JxYTeNQXJ9-KcJpLHBMd2MkoeCx0uNO1VHsc,951
+fastcoref/utilities/coref_dataset.py,sha256=xHcChmON0j2mDZjubHDikytXYhP6afxNb_SuGMD2U78,4675
+fastcoref/utilities/util.py,sha256=hULhTRswYV9_IutnQKRtFBCLVrjW8n2k3_3a6jWOHB4,5688
+fastcoref-1.7.1.dist-info/LICENSE,sha256=2kSJhceTNiIKK3uoFtvIGKGTZlEgJ4dw9Ophajh4l0Y,1070
+fastcoref-1.7.1.dist-info/METADATA,sha256=XKX3KqcRYZLkddux02jlvnKJz3Er6agNtRnXqjai9LI,4693
+fastcoref-1.7.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+fastcoref-1.7.1.dist-info/top_level.txt,sha256=jkMZK56IXLyRukpP5h6zQtiiBytKjPdpnt_z9yP5P2U,10
+fastcoref-1.7.1.dist-info/RECORD,,
