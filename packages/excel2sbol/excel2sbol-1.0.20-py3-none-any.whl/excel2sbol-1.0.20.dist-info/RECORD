@@ -1,0 +1,13 @@
+excel2sbol/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+excel2sbol/comp_column_functions.py,sha256=H5lPjM2N8iVa-2KAkX_6f_OBh5EZsI3wDPxaCzUVUUE,25753
+excel2sbol/comp_column_functions2.py,sha256=SzcaIIKc5LAuut3QK1hG2mijod2a0P914UUOBe7Q0Fo,8885
+excel2sbol/compiler.py,sha256=TuhlAhhEKF7UHYMYLEL2dY8lhJTsX1YvhMR3ViLzJrw,17696
+excel2sbol/converter.py,sha256=LfIj7pTaKQNkcntWGVhRbjkoKL3io5vfJBHCllgTYR8,1296
+excel2sbol/helper_functions.py,sha256=Hvbr7_2qcLVSawGHq4cpCnsweKk2ja3xqNcZGtku318,3628
+excel2sbol/lookup_compiler.py,sha256=0tArxrj8-wuAJoAvHohmgWbsg97FKgf5pLu5Xljgvsk,3507
+excel2sbol/temp.py,sha256=2loFGD3RYHUL0glAlAkAfHc7VrLEhoPdgCZlBdIbaK8,389
+excel2sbol/temp3.py,sha256=XYIHnZ1Ne6NCk87vQqMmyxE4YzVqXgJ-AwYN9aBZRY8,657
+excel2sbol-1.0.20.dist-info/METADATA,sha256=jOnlnKh1NaaRh7FZSgNOlRnqLRU3UQMSLiq1QmNqkWo,651
+excel2sbol-1.0.20.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+excel2sbol-1.0.20.dist-info/top_level.txt,sha256=n30XbZSw7XCMIbJYHh_u7uD5-MePvKLYsCJ_pB3mzN4,11
+excel2sbol-1.0.20.dist-info/RECORD,,
