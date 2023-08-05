@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+robotframework_timer.egg-info/PKG-INFO
+robotframework_timer.egg-info/SOURCES.txt
+robotframework_timer.egg-info/dependency_links.txt
+robotframework_timer.egg-info/not-zip-safe
+robotframework_timer.egg-info/requires.txt
+robotframework_timer.egg-info/top_level.txt
+src/Timer/__init__.py
+src/Timer/version.py
