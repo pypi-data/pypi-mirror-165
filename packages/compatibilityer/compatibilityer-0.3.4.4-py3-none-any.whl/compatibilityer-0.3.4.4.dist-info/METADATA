@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: compatibilityer
+Version: 0.3.4.4
+Summary: Tool to convert Python code to work with older versions
+Author: nahco314
+Author-email: nahco3_ta@yahoo.co.jp
+License: MIT
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+Python3.11などの新しいバージョンのコードを、古いバージョンで動作するように変換するツールです。
+
+あくまでも動作するように小手先の変換を施すだけであって、複雑なパターンの変換や厳密な等価性が必要な場合には使用できません。
+また、当然ですが可読性はある程度失われます。
+
+具体的には、以下のような変換を行います。
+- 代入や関数定義の型アノテーションを文字列リテラルに置き換える
+- 旧バージョンに存在しない要素の `from typing import` を削除する
+- `alias: TypeAlias = SomeType` という形の `TypeAlias` の定義をする代入文の右辺を文字列リテラルに置き換える
+- match文をif文に変換する(複雑なものには未対応)
