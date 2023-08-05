@@ -1,0 +1,21 @@
+[tool.poetry]
+authors = ["Craig Trim <craigtrim@gmail.com>"]
+description = "Fast and Efficient Sentence Tokenization"
+name = "fast-sentence-tokenize"
+version = "0.1.3"
+
+[tool.poetry.dependencies]
+baseblock = "*"
+nltk = "*"
+python = "3.8.5"
+spacy = "3.3"
+
+[tool.poetry.dev-dependencies]
+autopep8 = "*"
+en-core-web-sm = {path = "resources/lib/en_core_web_sm-3.3.0.tar.gz"}
+plac = "*"
+pytest = "*"
+
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core>=1.0.0"]
