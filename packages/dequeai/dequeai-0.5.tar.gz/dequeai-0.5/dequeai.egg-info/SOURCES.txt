@@ -1,0 +1,15 @@
+setup.py
+deque/__init__.py
+deque/datatypes.py
+deque/deque_config.py
+deque/deque_environment.py
+deque/deque_run.py
+deque/parsing_service.py
+deque/redis_services.py
+deque/rest_connect.py
+deque/util.py
+dequeai.egg-info/PKG-INFO
+dequeai.egg-info/SOURCES.txt
+dequeai.egg-info/dependency_links.txt
+dequeai.egg-info/requires.txt
+dequeai.egg-info/top_level.txt
