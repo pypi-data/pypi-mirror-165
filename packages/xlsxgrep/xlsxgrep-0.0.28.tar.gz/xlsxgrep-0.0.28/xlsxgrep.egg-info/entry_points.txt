@@ -1,0 +1,2 @@
+[console_scripts]
+xlsxgrep = xlsxgrep.xlsxgrep:main

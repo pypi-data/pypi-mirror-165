@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+xlsxgrep/__init__.py
+xlsxgrep/xlsxgrep.py
+xlsxgrep.egg-info/PKG-INFO
+xlsxgrep.egg-info/SOURCES.txt
+xlsxgrep.egg-info/dependency_links.txt
+xlsxgrep.egg-info/entry_points.txt
+xlsxgrep.egg-info/requires.txt
+xlsxgrep.egg-info/top_level.txt
