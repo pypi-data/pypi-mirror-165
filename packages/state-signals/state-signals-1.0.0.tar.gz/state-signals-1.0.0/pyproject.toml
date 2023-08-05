@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "state-signals"
+version = "1.0.0"
+description = "Package for easy management of state/event signal publishing, subscribing, and responding"
+
+license = "GPL-3.0-only"
+
+authors = [
+    "Mustafa Eyceoz <meyceoz@redhat.com>"
+]
+
+readme = 'README.md'
+
+repository = "https://github.com/distributed-system-analysis/state-signals"
+homepage = "https://github.com/distributed-system-analysis/state-signals"
+
+keywords = ['state', 'event', 'signal', 'publish', 'subscribe']
+
+[tool.poetry.dependencies]
+python = "^3.6"
+redis = "^3.5"
+dataclasses = { version = "^0.6", python = "~3.6" }
