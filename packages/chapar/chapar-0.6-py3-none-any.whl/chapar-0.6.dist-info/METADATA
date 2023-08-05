@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: chapar
+Version: 0.6
+Summary: A custom made wrapper for message broker
+Author: Sed Medy
+Author-email: sed.medy@gmail.com
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+Requires-Dist: pulsar-client
+
+A custom made wrapper for Apache Pulsar messaging service...
