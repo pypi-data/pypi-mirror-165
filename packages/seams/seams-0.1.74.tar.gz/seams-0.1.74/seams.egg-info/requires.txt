@@ -1,0 +1,7 @@
+requests
+tempfile
+json
+traceback
+argparse
+msal
+dotenv
