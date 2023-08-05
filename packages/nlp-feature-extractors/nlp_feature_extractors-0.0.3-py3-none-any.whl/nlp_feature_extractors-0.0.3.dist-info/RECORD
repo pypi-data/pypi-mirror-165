@@ -1,0 +1,10 @@
+nlp_feature_extractors/__init__.py,sha256=-mCRxGSMyc7JoC4tU9WR3stn8jwbac-mnc1159G3ZKY,72
+nlp_feature_extractors/attribute_extractors.py,sha256=uczj6GJJLuWITnWap2yVoylItGU5BmIdvRCAEQBCYcE,6135
+nlp_feature_extractors/data/__init__.py,sha256=-mCRxGSMyc7JoC4tU9WR3stn8jwbac-mnc1159G3ZKY,72
+nlp_feature_extractors/data/female-words.txt,sha256=V1U-OX5z3oiy9zoLeM7orl1kuIUvd-9g9Dsi9A_sLUc,22
+nlp_feature_extractors/data/male-words.txt,sha256=9FP_MXz2hWyD8-bexf4ovXHf_p3hgS3U_zISW7FNVVc,20
+nlp_feature_extractors/data/neutral-words.txt,sha256=-Se2tFRVAU5ZecoCs1qz4xWODqq3rCg-Xai--qxLGiU,28
+nlp_feature_extractors-0.0.3.dist-info/METADATA,sha256=0mNZ1g3ocE6ZmcdwJU6VuLqrXteBNsXrvXdJxu5wlrw,1391
+nlp_feature_extractors-0.0.3.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+nlp_feature_extractors-0.0.3.dist-info/top_level.txt,sha256=pQuLXiHMEWQbjFj0rZNf2F4d9cArwDwWDWHKHBMSa_8,23
+nlp_feature_extractors-0.0.3.dist-info/RECORD,,
