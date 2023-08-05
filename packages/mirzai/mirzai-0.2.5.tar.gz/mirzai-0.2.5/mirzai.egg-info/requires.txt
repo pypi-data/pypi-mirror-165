@@ -1,0 +1,12 @@
+numpy
+pandas
+fastcore
+scipy
+matplotlib>=3.5.1
+scikit-learn
+torch
+torchvision
+tqdm
+captum
+
+[dev]
