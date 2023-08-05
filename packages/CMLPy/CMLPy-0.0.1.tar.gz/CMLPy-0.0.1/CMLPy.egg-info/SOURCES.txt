@@ -1,0 +1,10 @@
+LICENCE.txt
+MANIFEST.in
+README.md
+setup.py
+CMLPy/__init__.py
+CMLPy.egg-info/PKG-INFO
+CMLPy.egg-info/SOURCES.txt
+CMLPy.egg-info/dependency_links.txt
+CMLPy.egg-info/requires.txt
+CMLPy.egg-info/top_level.txt

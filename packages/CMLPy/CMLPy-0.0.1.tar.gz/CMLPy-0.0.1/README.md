@@ -1,0 +1,1 @@
+An in house python library to speed up pandas usage by making functions for repeating tasks.

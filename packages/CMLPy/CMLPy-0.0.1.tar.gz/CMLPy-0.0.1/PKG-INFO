@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: CMLPy
+Version: 0.0.1
+Summary: CMLPy is a Python package for speeding up pandas usage.
+Home-page: 
+Author: Sam Varley
+Author-email: 
+License: MIT
+Keywords: pandas
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+License-File: LICENCE.txt
+
+An in house python library to speed up pandas usage by making functions for repeating tasks.
+
+Change Log
+==========
+
+0.0.1 (26/08/2022)
+------------------
+- First Release
