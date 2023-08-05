@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+advanced_cart/__init__.py
+advanced_cart/apps.py
+advanced_cart/cart.py
+advanced_cart/tests.py
+django_advanced_cart.egg-info/PKG-INFO
+django_advanced_cart.egg-info/SOURCES.txt
+django_advanced_cart.egg-info/dependency_links.txt
+django_advanced_cart.egg-info/requires.txt
+django_advanced_cart.egg-info/top_level.txt
