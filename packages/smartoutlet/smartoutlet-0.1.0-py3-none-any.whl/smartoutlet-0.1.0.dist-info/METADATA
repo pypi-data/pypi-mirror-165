@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: smartoutlet
+Version: 0.1.0
+Summary: Collection of utilities for interfacing with various PDUs and smart outlets.
+Home-page: https://github.com/DragonMinded/smartoutlet
+Author: DragonMinded
+Author-email: dragonminded@dragonminded.com
+License: Public Domain
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: pysnmplib
+
+# smartoutlet
+Collection of utilities for interfacing with various PDUs and smart outlets. Meant to be used alongside home automation scripts or Home Assistant with the "command_line" platform.
