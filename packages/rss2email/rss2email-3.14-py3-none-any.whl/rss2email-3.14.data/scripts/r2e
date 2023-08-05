@@ -1,0 +1,5 @@
+#!python
+
+import rss2email.main
+
+rss2email.main.run()
