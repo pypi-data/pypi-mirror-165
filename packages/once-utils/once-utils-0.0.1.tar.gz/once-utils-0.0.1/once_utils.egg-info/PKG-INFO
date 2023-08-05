@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: once-utils
+Version: 0.0.1
+Summary: Simplest utils.
+Home-page: https://github.com/Mingyueyixi/once-utils
+Author: Lu
+Author-email: Mingyueyixi@hotmail.com
+License: MIT Licence
+Keywords: pip,once-utils
+Platform: any
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+
+A lib with simple style.
