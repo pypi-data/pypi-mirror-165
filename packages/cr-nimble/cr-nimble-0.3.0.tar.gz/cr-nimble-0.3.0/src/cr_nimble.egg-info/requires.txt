@@ -1,0 +1,13 @@
+jax>=0.3.14
+jaxlib>=0.3.14
+numpy>=1.20.0
+scipy>=1.6
+matplotlib
+sympy>=1.6
+bitarray>=2.6
+
+[dev]
+
+[test]
+pytest
+pytest-cov
