@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: aiojobs-fork
+Version: 1.0.2
+Summary: aiojobs maintained fork
+Author-email: "Aaron Crespo (fork author)" <jon.farrel@protonmail.com>, "Andrew Svetlov (original creator)" <example@mail.com>
+Requires-Python: >=3.6
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Framework :: AsyncIO
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Software Development
+Requires-Dist: async-timeout >= 4.0.0
+Requires-Dist: aiohttp >= 3.8.0 ; extra == "aiohttp"
+Project-URL: Documentation, https://aiojobs.readthedocs.io/en/stable/
+Project-URL: Source, https://gitlab.com/open-source-packages/aiojobs
+Provides-Extra: aiohttp
