@@ -1,0 +1,9 @@
+LICENSE
+README.rst
+setup.py
+sure_pypi_test/__init__.py
+sure_pypi_test/main.py
+sure_pypi_test.egg-info/PKG-INFO
+sure_pypi_test.egg-info/SOURCES.txt
+sure_pypi_test.egg-info/dependency_links.txt
+sure_pypi_test.egg-info/top_level.txt
