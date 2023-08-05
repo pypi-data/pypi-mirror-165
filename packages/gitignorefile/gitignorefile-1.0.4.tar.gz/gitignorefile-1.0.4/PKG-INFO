@@ -1,0 +1,101 @@
+Metadata-Version: 2.1
+Name: gitignorefile
+Version: 1.0.4
+Summary: A spec-compliant `.gitignore` parser for Python
+Home-page: https://github.com/excitoon/gitignorefile
+Author: Vladimir Chebotarev
+Author-email: vladimir.chebotarev@gmail.com
+License: MIT
+Project-URL: Documentation, https://github.com/excitoon/gitignorefile/blob/master/README.md
+Project-URL: Source, https://github.com/excitoon/gitignorefile
+Project-URL: Tracker, https://github.com/excitoon/gitignorefile/issues
+Description: # `gitignorefile`
+        
+        ![CI](https://github.com/excitoon/gitignorefile/workflows/CI/badge.svg)
+        [![PyPI version](https://badge.fury.io/py/gitignorefile.svg)](https://badge.fury.io/py/gitignorefile)
+        
+        A spec-compliant `.gitignore` parser for Python.
+        
+        ## Installation
+        
+        ```
+        pip3 install gitignorefile
+        ```
+        
+        ## Usage
+        
+        ### `gitignorefile.parse()`
+        
+        Parse single `.gitignore` file. Suppose `/home/michael/project/.gitignore` contains the following:
+        
+        ```
+        __pycache__/
+        *.py[cod]
+        ```
+        
+        Then:
+        
+        ```python3
+        import gitignorefile
+        
+        matches = gitignorefile.parse("/home/michael/project/.gitignore")
+        matches("/home/michael/project/main.py") # False
+        matches("/home/michael/project/main.pyc") # True
+        matches("/home/michael/project/dir/main.pyc") # True
+        matches("/home/michael/project/__pycache__") # True
+        ```
+        
+        ### `gitignorefile.ignore()`
+        
+        `shutil.copytree()` ignore function which checks if file is ignored by any `.gitignore` in the directory tree.
+        
+        Example:
+        
+        ```python3
+        import shutil
+        import gitignorefile
+        
+        shutil.copytree("/source", "/destination", ignore=gitignorefile.ignore())
+        ```
+        
+        ### `gitignorefile.ignored()`
+        
+        Checks if file is ignored by any `.gitignore` in the directory tree.
+        
+        ```python3
+        import gitignorefile
+        
+        gitignorefile.ignored("/home/michael/project/main.py") # False
+        ```
+        
+        ### `gitignorefile.Cache`
+        
+        Caches `.gitignore` rules discovered in the directory tree.
+        
+        ```python3
+        import gitignorefile
+        
+        matches = gitignorefile.Cache()
+        matches("/home/michael/project/main.py") # False
+        matches("/home/michael/project/main.pyc") # True
+        matches("/home/michael/project/dir/main.pyc") # True
+        matches("/home/michael/project/__pycache__") # True
+        ```
+        
+        ## Credits
+        
+        - https://github.com/snark/ignorance/ by Steve Cook
+        - https://github.com/mherrmann/gitignore_parser by Michael Herrmann
+        - https://github.com/bitranox/igittigitt by Robert Nowotny
+        
+Keywords: git,gitignore
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Version Control :: Git
+Classifier: Topic :: Text Processing :: Filters
+Description-Content-Type: text/markdown

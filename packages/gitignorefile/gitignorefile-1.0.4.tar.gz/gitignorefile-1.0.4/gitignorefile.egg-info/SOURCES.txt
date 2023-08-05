@@ -1,0 +1,17 @@
+.gitignore
+LICENSE.md
+README.md
+pyproject.toml
+requirements.txt
+setup.py
+.github/workflows/ci.yml
+gitignorefile/__init__.py
+gitignorefile.egg-info/PKG-INFO
+gitignorefile.egg-info/SOURCES.txt
+gitignorefile.egg-info/dependency_links.txt
+gitignorefile.egg-info/top_level.txt
+tests/__init__.py
+tests/test_cache.py
+tests/test_ignore.py
+tests/test_ignored.py
+tests/test_match.py
