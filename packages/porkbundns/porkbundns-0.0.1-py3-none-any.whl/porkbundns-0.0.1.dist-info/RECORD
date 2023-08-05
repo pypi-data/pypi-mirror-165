@@ -1,0 +1,8 @@
+porkbundns/main.py,sha256=bLT1QRybSIULkO5t_n8PapXsnE6uxh4ACQEp_lQOwN4,185
+porkbundns/dns/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+porkbundns/dns/dns_types.py,sha256=KQDo1YwUcukXFV9xCiyT-nUh13f_JuWfQ23b5Zf7io8,88
+porkbundns/dns/manage_records.py,sha256=sh93SiE5ZkqJ2KsG_8F9dKbQpw_KiOEEZ053oS6g9lA,2266
+porkbundns-0.0.1.dist-info/METADATA,sha256=pBgOuxWG3YOmNh3-BTmu7ZvwocVQP1nDTQ0ey9GECWs,2242
+porkbundns-0.0.1.dist-info/WHEEL,sha256=09RFlvY3aVzvCNk4AXPZt-N-AI7GY_KktGsTb2IqIBU,86
+porkbundns-0.0.1.dist-info/licenses/LICENSE,sha256=AsWdjVyxOFh52HDBkpJ2uH78jF_nNJnGa2BlZj3J0_k,1067
+porkbundns-0.0.1.dist-info/RECORD,,
