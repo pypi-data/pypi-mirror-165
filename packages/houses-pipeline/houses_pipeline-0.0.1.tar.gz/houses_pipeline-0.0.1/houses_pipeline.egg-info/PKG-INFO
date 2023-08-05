@@ -1,0 +1,97 @@
+Metadata-Version: 2.1
+Name: houses-pipeline
+Version: 0.0.1
+Summary: Houses pipeline for preprocessing and training a model
+Home-page: https://github.com/nshahpazov/houses-ds-project
+Author: Nikola Shahpazov
+Author-email: nshahpazov@gmail.com
+License: BSD 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.9.2
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+License-File: LICENSE
+
+
+# Houses Data Science Pipeline
+
+This is a Houses Data Science pipeline produced from an analysis you can see as
+steps in notebooks/
+
+
+## Requirements
+
+* conda
+
+## Installation
+
+Run the following to install the project as a python package
+
+```bash
+pip install houses_pipeline
+```
+
+## Starting and exploring the project
+
+```bash
+conda create -f environment.yml
+conda activate houses
+```
+
+## Building the package
+
+```bash
+python setup.py bdist_wheel
+```
+
+
+## Pipeline steps
+
+#### Fetch the dataset
+
+```bash
+./houses_pipeline/fetch/fetch_dataset.sh data/raw
+```
+
+Or simply a one-liner of
+
+```bash
+kaggle competitions download -c house-prices-advanced-regression-techniques -p data/raw ;
+unzip -o data/raw/*.zip -d data/raw/
+```
+
+#### Preprocess
+
+* python houses_pipeline/preprocess data/raw/train.csv data/interim/train.csv
+
+#### Data Splitting
+
+* Not Yet Implemented
+
+#### Model Training
+* Not Yet Implemented
+
+
+### Running tests
+
+```bash
+conda develop .
+pytest
+```
+
+## Usage
+
+
+## Contributing\Developing
+
+```bash
+pip install -e .[dev]
+```
+
