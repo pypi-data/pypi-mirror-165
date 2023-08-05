@@ -1,0 +1,92 @@
+Metadata-Version: 2.1
+Name: django-limmer
+Version: 0.0.0
+Summary: TODO
+Home-page: UNKNOWN
+Author: Alex Fischer
+Author-email: alex@quadrant.net
+License: UNKNOWN
+Description: UNDER DEVELOPMENT. USE AT YOUR OWN DISCRETION.
+        
+        # LIMMER: Lazy IMage ManipulatER
+        
+        Creates thumbnails at image request time, _not_ page request / template rendering time. 
+        Works with both static files and media files.
+        
+        This approach is way more flexible. For example, you can pass a source-url to js, and js can create thumbnails of arbitrary sizes.
+        
+        Our goal is to be much more than a thumbnail generator. We aim to support many common kinds of image manipulation.
+        
+        ## Philosophy
+        Do one thing and it do it well. Our goal is to do on-request image manipulation, and that's it. We don't cache images, and we don't do any request authorization. Anyone can ask for any thumbnail of any of your static/media images.
+        
+        ### Caching
+        We don't do _any_ caching of thumbnails. We generate on every request. However, we set proper caching headers (with ETags), and handle conditional requests (If-None-Match) properly. This will automatically cause browsers to cache images, and it makes it trivial to add caching via your web server, or the django caching framework.
+        
+        ### Authorization
+        TODO
+        
+        ## Installation:
+        
+        ### settings.py:
+        ```py
+        # These are here to protect agains user-error more than DOS attack
+        # ie. CMS widget that lets user input size, and they accidentally enter too many zeroes
+        LIMMER_MAX_WIDTH = 6000
+        LIMMER_MAX_HEIGHT = 3000
+        
+        LIMMER_BASE_URL = None
+        ```
+        #### LIMMER_MAX_WIDTH/LIMMER_MAX_HEIGHT
+        the maximum output width/height
+        LIMMER_MAX_HEIGHT: the maximum output height
+        
+        #### LIMMER_BASE_URL
+        Used when constructing image urls. If you're running your site under multiple domains, they are likely serving the same static/media files. They should always be requested from the same host, to improve caching performance.
+        
+         If you leave as `None`, the behaviour depends on whether or not you have multiple ALLOWED_HOSTS.
+        
+        If you do not have multiple ALLOWED_HOSTS, generated image urls will be site-relative ('/xyz').
+        
+        If you do have multiple ALLOWED_HOSTS, generated image urls will be protocol-relative, using the first listed ALLOWED_HOST ('//my_first_allowed_host.com/xyz').
+        
+        
+        ### urls.py:
+        ```py
+        
+        from django.urls import include, path
+        import django_limmer as dlim
+        
+        urlpatterns = [
+            path('arbitrary_prefix/<path:source>', dlim.image_view, name='django_limmer')
+        ]
+        ```
+        
+        The `<path:source>` suffix is necessary, as is `name="django_limmer"`.
+        
+        `arbitrary_prefix/` can be whatever you want.
+        
+        Feel free to wrap `dlim.image_view` with any caching/authorization decorators you want.
+        
+        ## Usage
+        
+        All of our public functions/features are listed in `__init__.py`.
+        
+        
+        
+        ## TODO:
+        - run: tox (verify that the tests are working)
+        - verify setup.py
+        
+        When you are ready to build and push to pypi/remote repo (after running tests):
+        - update version number
+        - update RELEASE_NOTES.md
+        - commit everything to git
+        - run build_and_push
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
