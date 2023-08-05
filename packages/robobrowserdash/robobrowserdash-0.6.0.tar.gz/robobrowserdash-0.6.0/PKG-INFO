@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: robobrowserdash
+Version: 0.6.0
+Summary: [Robobrowser Fork] Your friendly neighborhood web scraper
+Home-page: https://github.com/jmcarp/robobrowser
+Author: Joshua Carp
+Author-email: jm.carp@gmail.com
+License: MIT
+Keywords: robobrowser
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.8
+License-File: LICENSE
+License-File: NOTICE
