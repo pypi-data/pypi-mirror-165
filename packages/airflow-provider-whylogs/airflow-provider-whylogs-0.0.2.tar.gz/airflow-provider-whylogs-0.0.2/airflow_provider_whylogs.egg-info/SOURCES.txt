@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+airflow_provider_whylogs.egg-info/PKG-INFO
+airflow_provider_whylogs.egg-info/SOURCES.txt
+airflow_provider_whylogs.egg-info/dependency_links.txt
+airflow_provider_whylogs.egg-info/entry_points.txt
+airflow_provider_whylogs.egg-info/requires.txt
+airflow_provider_whylogs.egg-info/top_level.txt
+whylogs_provider/__init__.py
+whylogs_provider/operators/__init__.py
+whylogs_provider/operators/whylogs.py
