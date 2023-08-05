@@ -1,0 +1,3 @@
+[console_scripts]
+netviewer=netviewer.__main__:run
+
