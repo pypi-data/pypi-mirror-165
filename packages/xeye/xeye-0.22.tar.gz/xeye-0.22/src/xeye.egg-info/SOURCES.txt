@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/xeye/__init__.py
+src/xeye/datapipe.py
+src/xeye.egg-info/PKG-INFO
+src/xeye.egg-info/SOURCES.txt
+src/xeye.egg-info/dependency_links.txt
+src/xeye.egg-info/requires.txt
+src/xeye.egg-info/top_level.txt
