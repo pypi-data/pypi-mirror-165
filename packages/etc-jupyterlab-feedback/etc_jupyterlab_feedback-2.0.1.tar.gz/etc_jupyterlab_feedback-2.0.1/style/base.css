@@ -1,0 +1,11 @@
+/*
+    See the JupyterLab Developer Guide for useful CSS Patterns:
+
+    https://jupyterlab.readthedocs.io/en/stable/developer/css.html
+*/
+
+.etc-feedback-part {
+    font-size: 1.2em;
+    font-weight: bold;
+    color:red;
+}
