@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "pytennis"
+version = "0.0.1"
+description = ""
+authors = ["Robert Seidl <robertseidl425@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.8, <3.9"
+portray = "^1.5.2"
+fastdownload = "^0.0.7"
+
+[tool.poetry.dev-dependencies]
+jupyter = "^1.0.0"
+jupyterlab = "^3.0.7"
+nbdev = "^1.1.12"
+plotly = "^4.14.3"
+pandas = "^1.2.1"
+kedro = "^0.17.0"
+pydantic = "^1.7.3"
+tqdm = "^4.58.0"
+portray = "^1.5.2"
+twine = "^3.3.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
