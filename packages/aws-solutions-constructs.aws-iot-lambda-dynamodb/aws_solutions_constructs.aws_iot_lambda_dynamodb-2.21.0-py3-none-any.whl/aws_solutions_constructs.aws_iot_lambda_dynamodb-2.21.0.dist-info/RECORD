@@ -1,0 +1,9 @@
+aws_solutions_constructs/aws_iot_lambda_dynamodb/__init__.py,sha256=T-toDBV_LcSN0l9SYRr6G6uQh2zMymlf1rxxSVWcXLg,17090
+aws_solutions_constructs/aws_iot_lambda_dynamodb/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+aws_solutions_constructs/aws_iot_lambda_dynamodb/_jsii/__init__.py,sha256=p3PPNH2iUTI0Gwztn6Z6vsF-0A7lHM0DsarnhhfZ2W8,608
+aws_solutions_constructs/aws_iot_lambda_dynamodb/_jsii/aws-iot-lambda-dynamodb@2.21.0.jsii.tgz,sha256=wfTsDcRxPUMtgN1C7dxDNyskfvcyusl12tDsCpGqgeA,101313
+aws_solutions_constructs.aws_iot_lambda_dynamodb-2.21.0.dist-info/LICENSE,sha256=wnT4A3LZDAEpNzcPDh8VCH0i4wjvmLJ86l3A0tCINmw,10279
+aws_solutions_constructs.aws_iot_lambda_dynamodb-2.21.0.dist-info/METADATA,sha256=QqfpY_M_psq-zEZ4D0GP6h8i6-c6oRPc1CA8Hk32zYM,8599
+aws_solutions_constructs.aws_iot_lambda_dynamodb-2.21.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+aws_solutions_constructs.aws_iot_lambda_dynamodb-2.21.0.dist-info/top_level.txt,sha256=hi3us_KW7V1ocfOqVsNq1o3w552jCEgu_KsCckqYWsg,25
+aws_solutions_constructs.aws_iot_lambda_dynamodb-2.21.0.dist-info/RECORD,,
