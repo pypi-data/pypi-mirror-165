@@ -1,0 +1,7 @@
+[allowed]
+reg
+wire
+
+[forbidden]
+input
+output
