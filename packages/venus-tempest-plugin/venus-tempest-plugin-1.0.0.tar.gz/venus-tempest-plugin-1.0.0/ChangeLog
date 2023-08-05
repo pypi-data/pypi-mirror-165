@@ -1,0 +1,27 @@
+CHANGES
+=======
+
+1.0.0
+-----
+
+* create delete single device profile by name
+* change the .mailmap format
+* add python3.7 support in setup.cfg
+* Update README
+* Remove python v3.10 support
+* change gerrit remote address
+* add supported python version
+* Replace deprecated UPPER\_CONSTRAINTS\_FILE variable
+* setup.cfg: Replace dashes with underscores
+* change descibe of the project
+* remove py37
+* update gitignore
+* Update Readme.rst
+* Add init README.rst
+* ADD init Installation.rst
+* Add CONTRIBUTING.rst
+* add gitignore
+* update services
+* Initial the venus-tempest-plugin code
+* .zuul.yaml: add Zuul support to new repo
+* Added .gitreview
