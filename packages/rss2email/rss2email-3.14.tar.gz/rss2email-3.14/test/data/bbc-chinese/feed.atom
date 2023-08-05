@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"
+      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+      xmlns:dc="http://purl.org/dc/elements/1.1/"
+      xmlns:dcterms="http://purl.org/dc/terms/"
+      xmlns:media="http://search.yahoo.com/mrss/">
+   <id>http://www.bbc.co.uk/zhongwen/simp/index.xml</id>
+   <title xml:lang="zh-Hans">bbcchinese.com | 主页</title>
+   <updated>2013-01-23T21:03:24+00:00</updated>
+   <link rel="self" href="http://www.bbc.co.uk/zhongwen/simp/index.xml"/>
+   <author>
+      <name>BBC Chinese</name>
+      <email>chinese@bbc.co.uk</email>
+      <uri>http://www.bbcchinese.com</uri>
+   </author>
+   <generator>http://www.bbcchinese.com</generator>
+   <category xml:lang="zh-Hans" term="chinese_simplified" label="chinese_simplified"/>
+   <category xml:lang="zh-Hans" term="homepage" label="主页"/>
+   <logo>http://www.bbc.co.uk/zhongwen/simp/images/gel/rss_logo.gif</logo>
+   <rights xml:lang="zh-Hans">版权归英国广播公司所有2013</rights>
+   <entry>
+      <id>tag:www.bbcchinese.com,2013-01-23:22535477</id>
+      <dc:identifier>22535477</dc:identifier>
+      <updated>2013-01-23T20:55:42+00:00</updated>
+      <published>2013-01-23T20:40:21+00:00</published>
+      <category xml:lang="zh-Hans" term="chinese_simplified" label="chinese_simplified"/>
+      <category xml:lang="zh-Hans" term="world" label="国际新闻"/>
+      <rights>restricted</rights>
+      <title xml:lang="zh-Hans">白宫提名艾伦为北约最高司令官</title>
+      <summary xml:lang="zh-Hans">美国白宫称，将提名驻阿富汗美军司令官约翰‧艾伦为北约最高司令官。艾伦曾因受指称同一女性有“不当”邮件来往而被调查。</summary>
+      <dc:subject>美国，北约，国防部，驻阿富汗美军司令官，中央情报局，婚外情</dc:subject>
+      <link rel="alternate" type="text/html" title="story"
+            href="http://www.bbc.co.uk/zhongwen/simp/world/2013/01/130123_us_genallen_nato.shtml">
+         <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" media="handheld"
+                     title="mobile-story"
+                     type="text/html"
+                     href="http://www.bbc.co.uk/zhongwen/simp/mobile/world/2013/01/130123_us_genallen_nato.shtml"/>
+         <media:content>
+            <media:thumbnail url="http://wscdn.bbc.co.uk/worldservice/ic/106x60/wscdn.bbc.co.uk/worldservice/assets/images/2012/11/13/121113234459_general_john_allen_01.jpg"
+                             width="106"
+                             height="60">
+               <img alt="" width="106" height="60"
+                    src="http://wscdn.bbc.co.uk/worldservice/ic/106x60/wscdn.bbc.co.uk/worldservice/assets/images/2012/11/13/121113234459_general_john_allen_01.jpg"/>
+            </media:thumbnail>
+            <media:thumbnail url="http://wscdn.bbc.co.uk/worldservice/assets/images/2012/11/13/121113234459_general_john_allen_01.jpg"
+                             width="144"
+                             height="81">
+               <img alt="艾伦将军" width="144" height="81"
+                    src="http://wscdn.bbc.co.uk/worldservice/assets/images/2012/11/13/121113234459_general_john_allen_01.jpg"/>
+            </media:thumbnail>
+         </media:content>
+      </link>
+      <link rel="related" type="text/html" title="story"
+            href="http://www.bbc.co.uk/zhongwen/simp/rolling_news/2013/01/130123_rolling_us_allen_investigation.shtml">
+         <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="related" media="handheld"
+                     title="mobile-story"
+                     type="text/html"
+                     href="http://www.bbc.co.uk/zhongwen/simp/mobile/rolling_news/2013/01/130123_rolling_us_allen_investigation.shtml"/>
+         <media:content/>
+      </link>
+      <link rel="related" type="text/html" title="story"
+            href="http://www.bbc.co.uk/zhongwen/simp/world/2012/11/121113_us_allen_latest.shtml">
+         <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="related" media="handheld"
+                     title="mobile-story"
+                     type="text/html"
+                     href="http://www.bbc.co.uk/zhongwen/simp/mobile/world/2012/11/121113_us_allen_latest.shtml"/>
+         <media:content>
+            <media:thumbnail url="http://wscdn.bbc.co.uk/worldservice/ic/106x60/wscdn.bbc.co.uk/worldservice/assets/images/2012/11/13/121113075728_john_allen_patreous_144x81_getty_nocredit.jpg"
+                             width="106"
+                             height="60">
+               <img alt="" width="106" height="60"
+                    src="http://wscdn.bbc.co.uk/worldservice/ic/106x60/wscdn.bbc.co.uk/worldservice/assets/images/2012/11/13/121113075728_john_allen_patreous_144x81_getty_nocredit.jpg"/>
+            </media:thumbnail>
+            <media:thumbnail url="http://wscdn.bbc.co.uk/worldservice/assets/images/2012/11/13/121113075728_john_allen_patreous_144x81_getty_nocredit.jpg"
+                             width="144"
+                             height="81">
+               <img alt="彼得雷乌斯与艾伦" width="144" height="81"
+                    src="http://wscdn.bbc.co.uk/worldservice/assets/images/2012/11/13/121113075728_john_allen_patreous_144x81_getty_nocredit.jpg"/>
+            </media:thumbnail>
+         </media:content>
+      </link>
+      <link rel="related" type="text/html" title="story"
+            href="http://www.bbc.co.uk/zhongwen/simp/rolling_news/2012/11/121113_rolling_allen_investigate.shtml">
+         <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="related" media="handheld"
+                     title="mobile-story"
+                     type="text/html"
+                     href="http://www.bbc.co.uk/zhongwen/simp/mobile/rolling_news/2012/11/121113_rolling_allen_investigate.shtml"/>
+         <media:content/>
+      </link>
+   </entry>
+   <entry>
+      <id>tag:www.bbcchinese.com,2013-01-23:22535346</id>
+      <dc:identifier>22535346</dc:identifier>
+      <updated>2013-01-23T20:50:57+00:00</updated>
+      <published>2013-01-23T20:18:24+00:00</published>
+      <category xml:lang="zh-Hans" term="chinese_simplified" label="chinese_simplified"/>
+      <category xml:lang="zh-Hans" term="world" label="国际新闻"/>
+      <rights>restricted</rights>
+      <title xml:lang="zh-Hans">国际货币基金组织称全球经济恢复放缓</title>
+      <summary xml:lang="zh-Hans">国际货币基金组织（IMF）警告说，尽管各国政府采取措施刺激经济，但全球经济恢复速度正在减弱。</summary>
+      <dc:subject>世界银行， 报告， 经济发展</dc:subject>
+      <link rel="alternate" type="text/html" title="story"
+            href="http://www.bbc.co.uk/zhongwen/simp/world/2013/01/130123_imf_world_economy.shtml">
+         <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" media="handheld"
+                     title="mobile-story"
+                     type="text/html"
+                     href="http://www.bbc.co.uk/zhongwen/simp/mobile/world/2013/01/130123_imf_world_economy.shtml"/>
+         <media:content>
+            <media:thumbnail url="http://wscdn.bbc.co.uk/worldservice/ic/106x60/wscdn.bbc.co.uk/worldservice/assets/images/2012/07/19/120719194038_global_econonmy_crisis_144x81_getty_nocredit.jpg"
+                             width="106"
+                             height="60">
+               <img alt="" width="106" height="60"
+                    src="http://wscdn.bbc.co.uk/worldservice/ic/106x60/wscdn.bbc.co.uk/worldservice/assets/images/2012/07/19/120719194038_global_econonmy_crisis_144x81_getty_nocredit.jpg"/>
+            </media:thumbnail>
+            <media:thumbnail url="http://wscdn.bbc.co.uk/worldservice/assets/images/2012/07/19/120719194038_global_econonmy_crisis_144x81_getty_nocredit.jpg"
+                             width="144"
+                             height="81">
+               <img alt="工厂" width="144" height="81"
+                    src="http://wscdn.bbc.co.uk/worldservice/assets/images/2012/07/19/120719194038_global_econonmy_crisis_144x81_getty_nocredit.jpg"/>
+            </media:thumbnail>
+         </media:content>
+      </link>
+      <link rel="related" type="text/html" title="story"
+            href="http://www.bbc.co.uk/zhongwen/simp/world/2013/01/130116_worldbank_report.shtml">
+         <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="related" media="handheld"
+                     title="mobile-story"
+                     type="text/html"
+                     href="http://www.bbc.co.uk/zhongwen/simp/mobile/world/2013/01/130116_worldbank_report.shtml"/>
+         <media:content>
+            <media:thumbnail url="http://wscdn.bbc.co.uk/worldservice/ic/106x60/wscdn.bbc.co.uk/worldservice/assets/images/2012/07/13/120713112050_world_bank_144x81_bbc_nocredit.jpg"
+                             width="106"
+                             height="60">
+               <img alt="" width="106" height="60"
+                    src="http://wscdn.bbc.co.uk/worldservice/ic/106x60/wscdn.bbc.co.uk/worldservice/assets/images/2012/07/13/120713112050_world_bank_144x81_bbc_nocredit.jpg"/>
+            </media:thumbnail>
+            <media:thumbnail url="http://wscdn.bbc.co.uk/worldservice/assets/images/2012/07/13/120713112050_world_bank_144x81_bbc_nocredit.jpg"
+                             width="144"
+                             height="81">
+               <img alt="世行标志" width="144" height="81"
+                    src="http://wscdn.bbc.co.uk/worldservice/assets/images/2012/07/13/120713112050_world_bank_144x81_bbc_nocredit.jpg"/>
+            </media:thumbnail>
+         </media:content>
+      </link>
+      <link rel="related" type="text/html" title="story"
+            href="http://www.bbc.co.uk/zhongwen/simp/rolling_news/2013/01/130102_rolling_imf_us.shtml">
+         <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="related" media="handheld"
+                     title="mobile-story"
+                     type="text/html"
+                     href="http://www.bbc.co.uk/zhongwen/simp/mobile/rolling_news/2013/01/130102_rolling_imf_us.shtml"/>
+         <media:content/>
+      </link>
+      <link rel="related" type="text/html" title="story"
+            href="http://www.bbc.co.uk/zhongwen/simp/rolling_news/2012/11/121109_rolling_oecd_shift.shtml">
+         <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="related" media="handheld"
+                     title="mobile-story"
+                     type="text/html"
+                     href="http://www.bbc.co.uk/zhongwen/simp/mobile/rolling_news/2012/11/121109_rolling_oecd_shift.shtml"/>
+         <media:content/>
+      </link>
+   </entry>
+</feed>

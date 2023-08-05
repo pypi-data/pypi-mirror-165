@@ -1,0 +1,61 @@
+SENT BY: "Software Carpentry - Latest Comments: Hans-Martin" <user@rss2email.invalid>
+MIME-Version: 1.0
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+From: "Software Carpentry - Latest Comments: Hans-Martin" <user@rss2email.invalid>
+To: a@b.com
+Subject: Re: Who Wants To Write a Little Code?
+Date: Sat, 17 Nov 2012 11:21:26 -0000
+Message-ID: <...@dev.null.invalid>
+User-Agent: rss2email/...
+List-ID: <test.localhost>
+List-Post: NO (posting not allowed on this list)
+X-RSS-Feed: data/disqus/feed.rss
+X-RSS-ID: 82a71554e460103fdd7350c4ae84f7518386d4f8
+X-RSS-URL: http://software-carpentry.org/2012/11/who-wants-to-write-a-little-code/#comment-713578641
+
+This and previous discussions of the empirical results on learning outcomes
+have left me wondering in how far this depends on students demographics. I can
+see that "media work best" is true for undergrads and high school students,
+but it seems to me that for (post-) PhD's the important metric would be
+closeness of the material to the area in which they will apply things. Has
+there been a study on the SWC target crowd that I have missed?
+
+Speaking of myself, I have never needed to manipulate an image while I am
+doing some form of data munging all the time. Had the SWC material been
+presented primarily in terms of image manipulation, most likely I would not
+have given it a second, deeper look.
+
+
+
+URL: http://software-carpentry.org/2012/11/who-wants-to-write-a-little-code/#comment-713578641
+
+SENT BY: "Software Carpentry - Latest Comments: Greg Wilson" <user@rss2email.invalid>
+MIME-Version: 1.0
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+From: "Software Carpentry - Latest Comments: Greg Wilson" <user@rss2email.invalid>
+To: a@b.com
+Subject: Re: Who Wants To Write a Little Code?
+Date: Sat, 17 Nov 2012 14:01:27 -0000
+Message-ID: <...@dev.null.invalid>
+User-Agent: rss2email/...
+List-ID: <test.localhost>
+List-Post: NO (posting not allowed on this list)
+X-RSS-Feed: data/disqus/feed.rss
+X-RSS-ID: a52375ec78a988241fe9864a2243d4d910538d52
+X-RSS-URL: http://software-carpentry.org/2012/11/who-wants-to-write-a-little-code/#comment-713578640
+
+@Hans-Martin  
+That's a really good point: no, we don't have anything that specifically
+studies our target cohort. What we *do* know is that for their younger-by-
+five-years selves, the visual feedback of programming with images makes a
+difference: for example, being able to see that you've colored the top half of
+the image red instead of the top-left triangle is a powerful aid to debugging,
+and more visceral than the equivalent text output. But I agree, manipulating
+text (particularly reading and analyzing data files) is an important hook
+too...
+
+
+
+URL: http://software-carpentry.org/2012/11/who-wants-to-write-a-little-code/#comment-713578640

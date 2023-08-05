@@ -1,0 +1,45 @@
+Run tests with::
+
+  $ cd ./test
+  $ python -m unittest
+
+… from the root of the project.
+
+Which looks for any ``*/feed.*`` files and processes them using each
+``*.config`` file in the feed's directory.  The output messages are
+saved (not mailed) and compared with the expected output for that
+feed/config pair.  For example, with a directory structure like::
+
+  test
+  |-- data
+  |   |-- allthingsrss
+  |   |   |-- 1.config
+  |   |   |-- 1.expected
+  |   |   |-- 2.config
+  |   |   |-- 2.expected
+  |   |   `-- feed.atom
+  |   `-- otherfeed
+  |       |-- a.config
+  |       |-- a.expected
+  |       |-- b.config
+  |       |-- b.expected
+  |       `-- feed.rss
+  |-- README
+  `-- test.py
+
+``test.py`` will parse:
+
+* ``feed.atom`` after loading ``1.config`` and compare the output with
+  ``1.expected``.
+* ``feed.atom`` after loading ``2.config`` and compare the output with
+  ``2.expected``.
+* ``feed.rss`` after loading ``a.config`` and compare the output with
+  ``a.expected``.
+* ``feed.rss`` after loading ``b.config`` and compare the output with
+  ``b.expected``.
+
+Various other tests are also run, run test.py with the `-v`/`--verbose` option to
+see exactly which tests are being run:
+
+  $ cd ./test
+  $ python -m unittest --verbose
