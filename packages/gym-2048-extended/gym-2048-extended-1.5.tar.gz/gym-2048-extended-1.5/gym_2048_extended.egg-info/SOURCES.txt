@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.rst
+requirements.txt
+setup.py
+gym_2048/__init__.py
+gym_2048/env.py
+gym_2048/game.py
+gym_2048/test.py
+gym_2048_extended.egg-info/PKG-INFO
+gym_2048_extended.egg-info/SOURCES.txt
+gym_2048_extended.egg-info/dependency_links.txt
+gym_2048_extended.egg-info/requires.txt
+gym_2048_extended.egg-info/top_level.txt
