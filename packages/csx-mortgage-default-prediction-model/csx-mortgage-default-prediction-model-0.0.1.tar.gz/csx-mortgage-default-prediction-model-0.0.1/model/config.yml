@@ -1,0 +1,211 @@
+# Package Overview
+package_name: mortgage_default_prediction_model
+
+# Data Files
+training_data_file: train.csv
+test_data_file: test.csv
+
+# Variables
+# The variable we are attempting to predict (sale price)
+target: loan_default
+
+pipeline_name: model
+pipeline_save_file: model_output_v
+
+features:
+  - AP001
+  - AP002
+  - AP003
+  - AP004
+  - AP006
+  - AP007
+  - AP008
+  - AP009
+  - TD001
+  - TD002
+  - TD005
+  - TD006
+  - TD009
+  - TD010
+  - TD013
+  - TD014
+  - TD015
+  - TD022
+  - TD023
+  - TD024
+  - TD025
+  - TD026
+  - TD027
+  - TD028
+  - TD029
+  - TD055
+  - CR004
+  - CR005
+  - CR009
+  - CR012
+  - CR015
+  - CR017
+  - CR018
+  - CR019
+  - PA022
+  - PA023
+  - PA028
+  - PA029
+  - PA030
+  - PA031
+  - CD008
+  - CD018
+  - CD071
+  - CD072
+  - CD088
+  - CD100
+  - CD101
+  - CD106
+  - CD107
+  - CD108
+  - CD113
+  - CD114
+  - CD115
+  - CD117
+  - CD118
+  - CD120
+  - CD121
+  - CD123
+  - CD130
+  - CD131
+  - CD132
+  - CD133
+  - CD135
+  - CD136
+  - CD137
+  - CD152
+  - CD153
+  - CD160
+  - CD162
+  - CD164
+  - CD166
+  - CD167
+  - CD169
+  - CD170
+  - CD172
+  - CD173
+  - MB005
+  - MB007
+  # this one is only to calculate temporal variable:
+  - AP005
+
+# set train/test split
+test_size: 0.1
+
+# to set the random seed
+random_state: 0
+
+# categorical variables
+categorical_vars:
+  - AP006
+  - MB007
+  - AP005_year
+  - AP005_month
+  - AP005_day_of_week
+  - AP005_day_of_month
+
+datetime_vars:
+  - AP005
+
+feature_creation_1:
+  - CD107
+  - CD106
+
+feature_creation_2:
+  - CD108
+  - CD106
+
+feature_creation_3:
+  - CD172
+  - CD121
+
+feature_creation_4:
+  - CD169
+  - CD118
+
+feature_creation_5:
+  - CD166
+  - CD115
+
+numerical_vars:
+  - AP001
+  - AP002
+  - AP003
+  - AP004
+  - AP007
+  - AP008
+  - AP009
+  - TD001
+  - TD002
+  - TD005
+  - TD006
+  - TD009
+  - TD010
+  - TD013
+  - TD014
+  - TD015
+  - TD022
+  - TD023
+  - TD024
+  - TD025
+  - TD026
+  - TD027
+  - TD028
+  - TD029
+  - TD055
+  - CR004
+  - CR005
+  - CR009
+  - CR012
+  - CR015
+  - CR017
+  - CR018
+  - CR019
+  - PA022
+  - PA023
+  - PA028
+  - PA029
+  - PA030
+  - PA031
+  - CD008
+  - CD018
+  - CD071
+  - CD072
+  - CD088
+  - CD100
+  - CD101
+  - CD106
+  - CD107
+  - CD108
+  - CD113
+  - CD114
+  - CD115
+  - CD117
+  - CD118
+  - CD120
+  - CD121
+  - CD123
+  - CD130
+  - CD131
+  - CD132
+  - CD133
+  - CD135
+  - CD136
+  - CD137
+  - CD152
+  - CD153
+  - CD160
+  - CD162
+  - CD164
+  - CD166
+  - CD167
+  - CD169
+  - CD170
+  - CD172
+  - CD173
+  - MB005
