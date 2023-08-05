@@ -1,0 +1,2 @@
+[napari.manifest]
+napari-quoll = napari_quoll:napari.yaml

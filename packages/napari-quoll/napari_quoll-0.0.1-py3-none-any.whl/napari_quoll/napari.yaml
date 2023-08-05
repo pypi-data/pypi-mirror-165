@@ -1,0 +1,10 @@
+name: napari-quoll
+display_name: napari Quoll
+contributions:
+  commands:
+    - id: napari-quoll.make_quoll_widget
+      python_name: napari_quoll._widget:quoll_oneimgfrc
+      title: Make Quoll widget
+  widgets:
+    - command: napari-quoll.make_quoll_widget
+      display_name: Quoll

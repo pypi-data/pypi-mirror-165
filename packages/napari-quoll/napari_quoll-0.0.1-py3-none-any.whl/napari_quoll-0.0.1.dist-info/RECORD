@@ -1,0 +1,11 @@
+napari_quoll/__init__.py,sha256=eMA80vbh8QhnxFj-o6N_PA_7HySC-_5JNDFUShH3ly4,97
+napari_quoll/_widget.py,sha256=TByZSOcUoL97N_g_FGSp9_gCwX7eXa8j922qeNpj0zU,2490
+napari_quoll/napari.yaml,sha256=QTXc90kmffkiP-j4k_XIC65Bc2bn-_a4bmRGzGfsqfI,294
+napari_quoll/_tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+napari_quoll/_tests/test_widget.py,sha256=09BjKye80ubkS-Atxkyewdjq6TlzCTsFzZQceabXLWs,774
+napari_quoll-0.0.1.dist-info/LICENSE,sha256=ILFVyE-dUVB6kn2w45KEAPo7yRjaTbs6T5n1owgCsbA,11560
+napari_quoll-0.0.1.dist-info/METADATA,sha256=fsUBy1etfxxCvjMlucik3ixNC71Z9b0PfjD5cuynBRI,4814
+napari_quoll-0.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+napari_quoll-0.0.1.dist-info/entry_points.txt,sha256=sEJIRzhhXn19Jt3Dq-elsMRggIC9JEEB6qaf4aUqphk,58
+napari_quoll-0.0.1.dist-info/top_level.txt,sha256=3ry7xGAOA6eEF6DZSS4orwMPd74TZpSfA4gyMxoXi6s,13
+napari_quoll-0.0.1.dist-info/RECORD,,
