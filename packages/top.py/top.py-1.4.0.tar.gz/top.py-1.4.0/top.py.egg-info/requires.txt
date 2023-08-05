@@ -1,0 +1,7 @@
+
+[docs]
+sphinx
+sphinx-rtd-dark-mode
+
+[tests]
+pytest
