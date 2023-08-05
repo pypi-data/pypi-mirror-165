@@ -1,0 +1,11 @@
+tads/__init__.py,sha256=UIkZCJMyVzq-TfsgKX6VaV_6WdMBoeJQcxMQbTu3tk8,64
+tads/__main__.py,sha256=EDA1yE2pL6PgXmbgrPIesTxaHapMFG4O2OfbMcqHBCI,350
+tads/actors/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tads/actors/documents/__init__.py,sha256=6TbrebBVSAmAbn6BzGi0QbySP9Xwv_XDUoJ5tXfOJYc,124
+tads/actors/documents/docproc.py,sha256=2-W3uuI1BBYmLXKkUa9gX_vL4syklL7hgzBh1WLxeN0,2403
+tads/actors/documents/utils.py,sha256=s5cZ-4QCPruWMBJ8xwsnWQuT1rM3seQjIv7iVQFCpqg,1348
+tads/core/__init__.py,sha256=v24Fd-v6qIlsUUaJYDaTLs8tyHQBnazzxIhOuLj4Ki0,28
+tads/core/interface.py,sha256=903HvoBST2MxSmKNfuMRjus55CjIKXnUj3A6p7i3UU4,2706
+tads-0.1.3.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+tads-0.1.3.dist-info/METADATA,sha256=9xI9n_BVATvxTncG_VXLIuVVxADceCq8Su__NQV5RYE,692
+tads-0.1.3.dist-info/RECORD,,
