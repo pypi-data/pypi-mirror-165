@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=62", "setuptools_scm[toml]>=7"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools_scm]
+version_scheme = "python-simplified-semver"
+local_scheme = "no-local-version"
+
+[tool.isort]
+multi_line_output = 3
+combine_as_imports = true
+line_length = 88
+profile = "black"
+
+[tool.black]
+line-length = 88
+
+[tool.coverage.report]
+exclude_lines = ["\\.\\.\\.", "pragma: no cover", "@overload"]
+
+[project]
+name = "pyZFC"
+authors = [
+    { name = "Yuanhao 'Nyoeghau' Chen", email = "nyoeghau@nyoeghau.com" },
+]
+description = "(ZFC) set-theoretic definition of natural numbers."
+dynamic = ["version"]
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+dependencies = []
+classifiers = [
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Development Status :: 3 - Alpha",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.optional-dependencies]
+lint = ["black==22.6.0", "flake8==4.0.1", "isort==5.10.1", "mypy==0.971"]
+unittest = ["coverage[toml]"]
+
+[project.urls]
+"Homepage" = "https://github.com/edward-martyr/ZFC"
+"Source" = "https://github.com/edward-martyr/ZFC"
+"Bug Tracker" = "https://github.com/edward-martyr/ZFC/issues"
