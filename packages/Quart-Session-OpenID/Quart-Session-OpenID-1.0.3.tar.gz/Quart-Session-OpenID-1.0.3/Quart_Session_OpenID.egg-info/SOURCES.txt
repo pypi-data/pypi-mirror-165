@@ -1,0 +1,16 @@
+CHANGELOG.md
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+Quart_Session_OpenID.egg-info/PKG-INFO
+Quart_Session_OpenID.egg-info/SOURCES.txt
+Quart_Session_OpenID.egg-info/dependency_links.txt
+Quart_Session_OpenID.egg-info/not-zip-safe
+Quart_Session_OpenID.egg-info/requires.txt
+Quart_Session_OpenID.egg-info/top_level.txt
+quart_session_openid/__init__.py
+quart_session_openid/openid.py
+quart_session_openid/utils.py

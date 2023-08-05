@@ -1,0 +1,8 @@
+Quart>=0.10.0
+aiohttp
+aiofiles
+aioredis
+pyjwt
+python-jose[cryptography]
+quart-session
+packaging
