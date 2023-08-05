@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.py
+pythonsay.egg-info/PKG-INFO
+pythonsay.egg-info/SOURCES.txt
+pythonsay.egg-info/dependency_links.txt
+pythonsay.egg-info/top_level.txt
+scr/draws.py
+scr/pythonsay.py
