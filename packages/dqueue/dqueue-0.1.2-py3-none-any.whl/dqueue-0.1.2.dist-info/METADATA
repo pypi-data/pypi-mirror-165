@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: dqueue
+Version: 0.1.2
+Summary: python通用延迟消息队列
+Home-page: https://github.com/mic1on/delay_queue
+Keywords: 延迟队列,消息队列
+Author: miclon
+Author-email: jcnd@163.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: AMQPStorm (>=2.10.5,<3.0.0)
+Requires-Dist: redis (>=4.3.4,<5.0.0)
+Description-Content-Type: text/markdown
+
+
+## Usage
+
+> pip install dqueue
+
+## Example
+### Memory Queue
+
+```python
+# memory queue
+import threading
+
+from dqueue.queues import MemoryQueue
+from dqueue.item import Item
+
+queue = MemoryQueue()
+
+# 模拟不同延迟发布消息
+def publisher():
+    for i in range(10):
+        item = Item(data=f'hello {i}')
+        queue.add(item, i * 1000)
+
+# 模拟消费端取延迟消息
+def consumer():
+    while True:
+        messages = queue.get(block=10 * 1000)
+        for msg in messages:
+            print('message:', msg)
+
+
+threading.Thread(target=publisher).start()
+threading.Thread(target=consumer).start()
+```
+
+### Redis Queue
+
+You can continue with the example above and Just change the declare.
+
+```python
+from dqueue.queues import RedisQueue
+
+queue = RedisQueue()
+
+# same code
+```
