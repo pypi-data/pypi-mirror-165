@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <style>$css</style>
+    <title>Family Parkrun Summary</title>
+    <script>
+      function show(tab) {
+        for (let i of document.getElementsByClassName("tab")) {
+          i.style.display = "none";
+        }
+        document.getElementById(tab).style.display = "block";
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Family Parkrun Summary</h1>
+    $content
+    <script>
+      show("recent");
+    </script>
+  </body>
+</html>
