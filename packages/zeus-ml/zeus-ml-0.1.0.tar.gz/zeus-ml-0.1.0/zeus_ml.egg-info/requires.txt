@@ -1,0 +1,10 @@
+torch
+numpy
+pandas==1.4.2
+scikit-learn
+pynvml
+
+[dev]
+pylint==2.14.5
+black==22.6.0
+pydocstyle==6.1.1
