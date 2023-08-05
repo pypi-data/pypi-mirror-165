@@ -1,0 +1,44 @@
+# https://setuptools.pypa.io/en/latest/build_meta.html
+
+[build-system]
+requires = ["setuptools>=45", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[tools.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+mypkg = ["**/*.txt", "**/*.csv", "**/*.json"]
+
+
+[project]
+name = "prepars"
+version = "0.0.4"
+authors = [
+  { name="Mahdi Akhi", email="mahdiakhy@gmail.com" },
+  { name="Amir Pourmand", email="pourmand1376@gmail.com" },
+  { name="Pouya Khani", email="pouya.khani11@gmail.com" }
+]
+description = "The prePars is a Python package for NLP preprocessing on Persian Language."
+
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.0"
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    
+]
+
+[project.urls]
+"Homepage" = "https://github.com/pam-lab/PrePars/"
+"Bug Tracker" = "https://github.com/pam-lab/PrePars/issues"
+
