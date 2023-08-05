@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+src/colorprt/_Colorprt.py
+src/colorprt/__init__.py
+src/colorprt/_vars.py
+src/colorprt/default.py
+src/colorprt.egg-info/PKG-INFO
+src/colorprt.egg-info/SOURCES.txt
+src/colorprt.egg-info/dependency_links.txt
+src/colorprt.egg-info/top_level.txt
+test/test.py
