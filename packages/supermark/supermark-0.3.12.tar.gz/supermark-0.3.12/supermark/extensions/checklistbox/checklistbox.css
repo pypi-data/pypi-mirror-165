@@ -1,0 +1,32 @@
+div.checklistbox {
+  width: 18rem;
+  float: right;
+  padding: 10px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  background-color: #EFF7FF;
+  border-radius: 0px;
+  border-top: 6px solid #00509e
+  }
+  
+div.checklistbox::before { 
+  content: "Checklist:";
+  font-weight: bold;
+  padding: 0px 0 12px 0;
+  display: block;
+  color: #00509e;
+  }
+
+div.checklistbox ul li:before {
+  content: '\f26a';
+  font-family: bootstrap-icons !important;
+  float: left;
+  margin-left: -1.5em;
+  color: #00509e;
+  line-height: 1.5rem;
+}
+
+
+div.checklistbox ul {
+  list-style-type: none;
+}

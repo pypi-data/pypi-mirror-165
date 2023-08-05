@@ -1,0 +1,85 @@
+table.coursetable td {
+  font-size:0.6rem;
+}
+
+table.coursetable a {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: black;
+}
+
+table.coursetable th {
+  background-color: #F7F9F9;
+  text-align: left;
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+
+table.coursetable th.year p {
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #BEBEBE;
+  line-height: 0.8em;
+}
+
+table.coursetable td {
+  width:22%;
+  background-color: #cfdaf1;
+  text-align: center;
+}
+
+table.coursetable td.e1 {
+  background-color: #cfdaf1;
+}
+
+table.coursetable td.e1e {
+  background: repeating-linear-gradient(
+    45deg,
+    #ffffff00,
+    #ffffff00 10px,
+    #ffffff88 10px,
+    #ffffff88 20px
+  ), #cfdaf1;
+}
+
+table.coursetable td.e2 {
+  background-color: #ebf0c4;
+}
+
+table.coursetable td.e2e {
+  background: repeating-linear-gradient(
+    45deg,
+    #ffffff00,
+    #ffffff00 10px,
+    #ffffff88 10px,
+    #ffffff88 20px
+  ), #ebf0c4;
+}
+
+table.coursetable td.e3 {
+  background-color: #fdd9b5;
+}
+
+table.coursetable td.e3e {
+  background: repeating-linear-gradient(
+    45deg,
+    #ffffff00,
+    #ffffff00 10px,
+    #ffffff88 10px,
+    #ffffff88 20px
+  ), #fdd9b5;
+}
+
+table.coursetable td.e4 {
+  background-color: #e3bcda;
+}
+
+table.coursetable td.e4e {
+  background: repeating-linear-gradient(
+    45deg,
+    #ffffff00,
+    #ffffff00 10px,
+    #ffffff88 10px,
+    #ffffff88 20px
+  ), #e3bcda;
+}
