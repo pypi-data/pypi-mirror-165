@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+django_email_verification/__init__.py
+django_email_verification/apps.py
+django_email_verification/confirm.py
+django_email_verification/errors.py
+django_email_verification/token.py
+django_email_verification/urls.py
+django_email_verification/views.py
+django_email_verification.egg-info/PKG-INFO
+django_email_verification.egg-info/SOURCES.txt
+django_email_verification.egg-info/dependency_links.txt
+django_email_verification.egg-info/requires.txt
+django_email_verification.egg-info/top_level.txt
