@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+pywellbeing/__init__.py
+pywellbeing/amm.py
+pywellbeing/examples.py
+pywellbeing.egg-info/PKG-INFO
+pywellbeing.egg-info/SOURCES.txt
+pywellbeing.egg-info/dependency_links.txt
+pywellbeing.egg-info/requires.txt
+pywellbeing.egg-info/top_level.txt
+test/test_examples.py
