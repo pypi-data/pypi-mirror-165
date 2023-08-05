@@ -1,0 +1,8 @@
+doc/sphinx/*
+tests/coverage
+dist/
+
+examples # For now just ignore, refine when examples exist
+
+# Unignores
+doc/sphinx/document_module.vim
