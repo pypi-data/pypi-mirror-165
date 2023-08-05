@@ -1,0 +1,11 @@
+zdb/__init__.py,sha256=yxR8jElZ9PogzWvaSRaaOl-6BUPaF7LoOJGq68LOO8M,1277
+zdb/utils.py,sha256=4DgOpNOG1cCQr5-ItrX3pDMhKCK46s7lGyhaik-VtzY,1831
+zdb/commons/__init__.py,sha256=JPPvxXsUXaPXQbfryR8tqJitPHNmIQj8KPqsbsKiTCw,5365
+zdb/mysql/__init__.py,sha256=ldSY1FWG1A1kwEKuj0urAJMOv07sVTio4GAqUykORQM,10919
+zdb/oracle/__init__.py,sha256=N0E1LitGVMccZVR_n7YNxrGiWTaLKXjv6TAbPDjsGto,13935
+zdb/postgresql/__init__.py,sha256=LPdv2_0a-NC9HukPuAmvzQOTHbmxdeKGIKtIvpn3vpI,7795
+zpy_db_core-1.0.0.dist-info/LICENSE,sha256=RBhg5hIyHCQyj9Hd6pdx4QVzRdIfplLdnbuNB0fm2H4,1093
+zpy_db_core-1.0.0.dist-info/METADATA,sha256=RwskBomo2GhDnBisofZWTrX7a7pCWZqlgl6X765-Zgs,4206
+zpy_db_core-1.0.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+zpy_db_core-1.0.0.dist-info/top_level.txt,sha256=j062dWrroLmX_BZLVbJXgdPEW4RifUKxyg34HncTISs,4
+zpy_db_core-1.0.0.dist-info/RECORD,,
