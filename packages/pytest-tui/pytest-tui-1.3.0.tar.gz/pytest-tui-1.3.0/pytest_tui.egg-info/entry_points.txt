@@ -1,0 +1,7 @@
+[console_scripts]
+tui = pytest_tui.__main__:tui_run
+tuiconf = pytest_tui.__main__:tui_config
+tuih = pytest_tui.html1:main
+
+[pytest11]
+pytest_tui = pytest_tui.plugin
