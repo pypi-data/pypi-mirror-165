@@ -1,0 +1,2 @@
+[signup]
+_ = signup.signup:main
