@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: borsodi-database-model
+Version: 0.1.0
+Summary: Database table models for the Borsodi project.
+Author: Pintér Tamás
+Author-email: tamas.pinter@dyntell.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: sqlalchemy (==1.3.18)
