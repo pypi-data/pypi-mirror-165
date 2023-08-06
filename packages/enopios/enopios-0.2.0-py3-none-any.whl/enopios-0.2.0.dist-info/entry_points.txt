@@ -1,0 +1,3 @@
+[console_scripts]
+enopios=enopios.__main__:app
+
