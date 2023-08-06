@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: frappe-predict
+Version: 0.1
+Summary: Feature RAnkers to Predict classification PerformancE of binary classifiers
+Home-page: https://github.com/tommyippoz/FRAPPE
+Author: Tommaso Zoppi
+Author-email: tommaso.zoppi@unifi.it
+Keywords: machine learning,feature ranking,binary classification
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# FRAPPE
+
+Python library that exercises Feature RAnkers to Predict classification PerformancE of binary classifiers
