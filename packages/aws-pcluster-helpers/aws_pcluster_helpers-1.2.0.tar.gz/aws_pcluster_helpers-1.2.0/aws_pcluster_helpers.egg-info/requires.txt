@@ -1,0 +1,12 @@
+devtools
+colorlog
+pydantic
+boto3
+boto3-stubs[essential]
+datasize
+humanize
+rich-click
+pandas
+cookiecutter
+prefect<2,>=1
+pendulum
