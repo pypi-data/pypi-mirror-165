@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: clsa-research
+Version: 0.1.0
+Author: CLSA
+Author-email: no-reply@clsa.com
+Requires-Python: >= 3.9.10, < 3.10
+Requires-Dist: build
+Requires-Dist: pip-tools
+Requires-Dist: pre-commit
+Requires-Dist: twine
+
