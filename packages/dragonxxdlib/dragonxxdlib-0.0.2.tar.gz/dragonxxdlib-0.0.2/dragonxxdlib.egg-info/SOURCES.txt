@@ -1,0 +1,10 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+setup.py
+dragonxxdlib/__init__.py
+dragonxxdlib.egg-info/PKG-INFO
+dragonxxdlib.egg-info/SOURCES.txt
+dragonxxdlib.egg-info/dependency_links.txt
+dragonxxdlib.egg-info/top_level.txt

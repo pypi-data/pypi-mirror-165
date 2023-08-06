@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: dragonxxdlib
+Version: 0.0.2
+Summary: Download from tik tok and youtube and facebook
+Home-page: UNKNOWN
+Author: yassen waly
+Author-email: 
+License: MIT
+Keywords: Download from tik tok and youtube and facebook
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+License-File: LICENCE.txt
+
+Download from tiktok and youtube and facebook
+
+Change Log
+==========
+
+0.0.2 (28/8/2022)
+-------------------
+- second edition
+
