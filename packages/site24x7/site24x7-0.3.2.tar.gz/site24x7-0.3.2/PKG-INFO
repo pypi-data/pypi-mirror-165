@@ -1,0 +1,119 @@
+Metadata-Version: 2.1
+Name: site24x7
+Version: 0.3.2
+Summary: plugin integration tool
+Author-email: Renas Mirkan Kilic <mirkanbaba1@gmail.com>
+License: Copyright (c) 2018 The Python Packaging Authority
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+Project-URL: Homepage, https://github.com/pypa/sampleproject
+Project-URL: Bug Tracker, https://github.com/pypa/sampleproject/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+## system argument requirements
+```python
+server            = sys.argv[1]
+database          = sys.argv[2]
+username          = sys.argv[3]
+password          = sys.argv[4]
+driverLocation    = sys.argv[5] 
+query             = sys.argv[6] # EXEC sql command to execute
+thisPluginName    = sys.argv[7]
+```
+
+## example input
+```bash
+python main.py localhost testdb sa password /usr/local/lib/python3.6/dist-packages/pyodbc/drivers/pyodbc.so "select * from testtable" testplugin
+```
+
+## what is expected query(EXEC) input and expected output?
+```js
+const rows = database.exec(query); 
+console.log(rows);
+// [(0, 'key', 'value'), (1, 'dev', 'renas'), ...rows]
+
+const fs = require('fs');
+console.log(fs.readFileSync('/tmp/testplugin.cache', 'utf8'))
+// {
+//     "plugin_version": "2",
+//     "heartbeat_required": "true",
+//     "CPU": 100,
+//     "server": "localhost",
+//     "database": "testdb",
+//     "driverLocation": "/usr/local/lib/python3.6/dist-packages/pyodbc/drivers/pyodbc.so",
+//     "query": "select * from testtable",
+//     "thisPluginName": "testplugin",
+//     "key": "value",
+//     "dev": "renas"
+// }
+```
+
+# HOW-TOs
+
+## how to see how many plugin this server has on site24x7.com
+- 48 plugins on 06
+- 111 plugins on 05 # this SERVER also did not let me install 3 diffirent plugins on site24x7.com
+```js
+await page.goto('https://site24x7.com/plugins/');
+await page.evaulate(()=>{
+    return document.querySelectorAll(".cursor.ng-scope").length;
+}).then(result=>{
+    console.log(result);
+}).catch(error=>{
+    console.log(error);
+}).finally(()=>{
+    browser.close();
+}).then(()=>{
+    console.log('done');
+});
+```
+
+## jenkins run command
+```bash
+if pip3 list | grep -F site24x7; then
+    echo "site24x7 is installed"
+else
+    echo "site24x7 is not installed, installing it right now..."
+    pip3 install site24x7 --force-reinstall
+fi
+
+server="localhost" 
+database="testdb" 
+username="sa" 
+password="password" 
+driverLocation="/usr/local/lib/python3.6/dist-packages/pyodbc/drivers/pyodbc.so"
+query="""select * from testtable" 
+thisPluginName="TRY6"
+
+mkdir /opt/site24x7/monagent/plugins/$thisPluginName
+touch /opt/site24x7/monagent/plugins/$thisPluginName/$thisPluginName.py
+
+python main.py $server $database $username $password $driverLocation $query $thisPluginName
+```
+
+## how to check if site24x7_plugin_helper is installed
+```bash
+ls '/usr/local/lib/python3.7/dist-packages/site24x7_plugin_helper/'
+```
