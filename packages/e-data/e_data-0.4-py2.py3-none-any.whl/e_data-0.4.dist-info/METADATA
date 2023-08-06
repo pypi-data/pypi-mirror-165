@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: e-data
+Version: 0.4
+Summary: Python library for managing spanish energy data from various web providers
+Home-page: https://github.com/uvejota/python-edata
+Author: VMG
+Author-email: vmayorg@outlook.es
+License: GPLv3
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: pandas
+Requires-Dist: python-dateutil
+Requires-Dist: holidays
+
+
+# python-edata
+
