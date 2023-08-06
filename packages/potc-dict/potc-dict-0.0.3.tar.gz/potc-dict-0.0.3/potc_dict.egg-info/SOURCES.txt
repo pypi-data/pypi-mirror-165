@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+potc_dict/__init__.py
+potc_dict/plugin.py
+potc_dict.egg-info/PKG-INFO
+potc_dict.egg-info/SOURCES.txt
+potc_dict.egg-info/dependency_links.txt
+potc_dict.egg-info/entry_points.txt
+potc_dict.egg-info/requires.txt
+potc_dict.egg-info/top_level.txt
+potc_dict/config/__init__.py
+potc_dict/config/meta.py
+test/test_plugin.py
