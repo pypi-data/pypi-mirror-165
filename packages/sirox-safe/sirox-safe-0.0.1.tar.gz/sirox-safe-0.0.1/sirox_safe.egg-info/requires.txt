@@ -1,0 +1,2 @@
+safe-eth-py==4.4.0
+requests
