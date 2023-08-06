@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: python-search
+Version: 0.5.8
+Summary: Build your knowledge database in python and retrieve it efficiently
+Author: Jean Carlo Machado
+Author-email: machado.c.jean@gmail.com
+Requires-Python: >=3.8,<3.11
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Provides-Extra: all
+Requires-Dist: PySimpleGUI (>=4.60.1,<5.0.0)
+Requires-Dist: PyYAML (>=6.0,<7.0)
+Requires-Dist: certifi (>=2022.6.15,<2023.0.0)
+Requires-Dist: colorama (>=0.4.5,<0.5.0)
+Requires-Dist: fastapi (>=0.79.0,<0.80.0)
+Requires-Dist: fire (>=0.4.0,<0.5.0)
+Requires-Dist: kafka-python (>=2.0.2,<3.0.0)
+Requires-Dist: matplotlib (>=3.5.2,<4.0.0)
+Requires-Dist: mlflow-skinny (>=1,<2)
+Requires-Dist: msgpack-numpy (>=0.4.8,<0.5.0)
+Requires-Dist: numpy (>=1.23.0,<1.24.0)
+Requires-Dist: pandas (>=1.4.3,<2.0.0)
+Requires-Dist: pdoc3 (>=0.10.0,<0.11.0)
+Requires-Dist: personal-grimoire (==1.6)
+Requires-Dist: pydantic (>=1.9.1,<2.0.0)
+Requires-Dist: pyspark (>=3.3.0,<4.0.0); extra == "all"
+Requires-Dist: redis (>=4.3.4,<5.0.0)
+Requires-Dist: scipy (>=1.8.1)
+Requires-Dist: sentence-transformers (>=2.2.2,<3.0.0)
+Requires-Dist: uvicorn (>=0.18.2,<0.19.0)
+Requires-Dist: xgboost (>=1.6.1,<2.0.0)
