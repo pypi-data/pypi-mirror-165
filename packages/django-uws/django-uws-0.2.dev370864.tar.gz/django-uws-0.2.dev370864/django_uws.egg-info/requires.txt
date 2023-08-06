@@ -1,0 +1,5 @@
+Celery
+Django>=3.2
+djangorestframework
+requests
+validators

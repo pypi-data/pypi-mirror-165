@@ -1,0 +1,144 @@
+Metadata-Version: 2.1
+Name: django-uws
+Version: 0.2.dev370864
+Summary: Django implementation of the IVOA UWS pattern.
+Home-page: https://git.astron.nl/astron-sdc/django-uws
+License: Apache License 2.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 3
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Astronomy
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Django Universal Worker Service
+
+Django implementation of the IVOA UWS pattern.
+
+The Universal Worker Service (UWS) pattern defines how to manage asynchronous execution of jobs on a service. Any application of the pattern defines a family of related services with a common service contract. Possible uses of the pattern are also described.
+
+Url: https://www.ivoa.net/documents/UWS/
+DOI: 10.5479/ADS/bib/2016ivoa.spec.1024H
+
+## Installation
+
+Django UWS is available via Pypi:
+
+```bash
+pip install django-uws
+```
+
+## Django Quick start
+
+1. add `uws` to your `INSTALLED_APPS` setting likes this:
+```python
+    INSTALLED_APPS = [
+        ...
+        'uws',
+        ...
+    ]
+```
+Additionally you may want to set the following settings:
+```python
+CELERY_TIMEZONE = "Europe/Amsterdam"
+CELERY_USE_UTC = True
+# Recommended to use an environment variable to set the broker URL.
+CELERY_BROKER_URL = os.getenv("CELERY_BROKER_URL", "amqp://guest@localhost:5672")
+```
+
+2. Include the uws URLconf in your project urls.py like this:
+```python
+    ...
+    path('uws/', include('uws.urls')),  # 'uws/' can be replaced by the name of your service if necessary.
+    ...
+```
+
+3. Run `python manage.py migrate uws` to create the UWS models.
+    Optionally: `python manage.py migrate uws --database uws` by specifying
+```python
+    DATABASE_ROUTERS = [
+    ...
+    "uws.database_router.UWSDatabaseRouter",
+    ...
+    ]
+```
+    and a `uws` entry in your `DATABASES` setting
+
+
+4. Add Celery configuration
+    Create a `celery.py` file in the Django `<project>` folder (next to `settings.py`, `wsgi.py` etc.) with the following content:
+```python
+import os
+
+from celery import Celery
+
+# Set the default Django settings module for the 'celery' program.
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "project.default_settings")
+
+app = Celery("project") # Change to something related to your Service
+
+app.config_from_object("django.conf:settings", namespace="CELERY")
+
+app.autodiscover_tasks()
+
+```
+
+## Worker configuration
+
+The worker configuration still uses a Django project layout and can be merged with an existing Django application serving the API or as a standalone worker instance. Setting it up is similar to the steps for the api:
+
+1. Create a `workers` (or similarly named) directory to store the code for your workers
+
+2. Create worker files. An example would be:
+```python
+from uws.classes import UWSJob
+from uws.client import Client
+from uws.workers import Worker
+
+class Echo(Worker):
+    """A worker echoing all parameters"""
+
+    def __init__(self):
+        self._type = "echo"
+
+    def run(self, job: UWSJob, job_token: str, client: Client) -> None:
+        data = [{"key": p.key, "value": p.value} for p in job.parameters]
+        client.add_results(job.jobId, data, job_token)
+```
+
+3. Set the following Django settings (if not already present):
+```python
+CELERY_TIMEZONE = "Europe/Amsterdam"
+CELERY_USE_UTC = True
+CELERY_BROKER_URL = os.getenv("CELERY_BROKER_URL", "amqp://guest@localhost:5672")
+
+# Classes of available workers
+UWS_WORKERS = ["workers.echo.Echo"]
+# Web path to UWS api, recommended to use an environment variable
+UWS_HOST = os.getenv("UWS_HOST", "https://example.com/uws/")
+```
+
+## Contributing
+
+For developer access to this repository, please send a message on the [ESAP channel on Rocket Chat](https://chat.escape2020.de/channel/esap).
+
+## License
+
+This project is licensed under the Apache License version 2.0.
