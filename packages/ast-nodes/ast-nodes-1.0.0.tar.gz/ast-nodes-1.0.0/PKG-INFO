@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: ast-nodes
+Version: 1.0.0
+Summary: Extensible Python AST nodes
+Home-page: https://github.com/tristanlatr/ast-nodes
+Author: Various contributors
+License: GNU LESSER GENERAL PUBLIC LICENSE Version 2.1
+Description: # AST-Nodes
+        
+        Extensible Python AST nodes
+        
+Keywords: static code analysis,python,abstract syntax tree
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Provides-Extra: test
+Provides-Extra: docs
