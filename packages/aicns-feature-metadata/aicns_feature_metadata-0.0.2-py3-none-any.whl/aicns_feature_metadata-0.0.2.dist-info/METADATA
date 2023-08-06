@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: aicns-feature-metadata
+Version: 0.0.2
+Summary: Feature metadata fetching library package in AICNS project
+Home-page: https://github.com/Youngmin-An/aicns-feature-metadata
+Author: Youngmin An
+Author-email: youngmin.develop@gmail.com
+License: Apache License 2.0
+Platform: UNKNOWN
+License-File: LICENSE
+Requires-Dist: mongoengine (==0.24.2)
+
+UNKNOWN
+
