@@ -1,0 +1,13 @@
+alation/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+alation/cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+alation/cli/main.py,sha256=4x8DAMPJ4z6LxJC8lB2f05QGJwGLX51gbULR8FFKRYE,1431
+alation/cli/command_modules/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+alation/cli/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+alation/cli/core/auth.py,sha256=-vZUfdx1dxNqBkQGxe1BlPJU5NTBpNcDg7pqcyLZm_s,195
+alation_cli-0.0.1.dist-info/DESCRIPTION.rst,sha256=G3POVE12Ms_ElKP4vvBLHZ0oQYliQymr7DdaSgYiCsQ,373
+alation_cli-0.0.1.dist-info/METADATA,sha256=1LFd-i7wtOQcS_crvlMLpFm3DtqgNpfdMvcLbkClNmM,1429
+alation_cli-0.0.1.dist-info/RECORD,,
+alation_cli-0.0.1.dist-info/WHEEL,sha256=Vlaj2XNMTTJ893zWX-JvKeZUIs7q5E7d7Gise2Vouzc,97
+alation_cli-0.0.1.dist-info/entry_points.txt,sha256=8H4tkC__1SLNq-4i3SiyE-CQQ9zuse221eMrXKca_vg,46
+alation_cli-0.0.1.dist-info/metadata.json,sha256=8jYq0b4bTRa4WfY9Mkg21JUslz4eNqr927abkfSMWrs,1114
+alation_cli-0.0.1.dist-info/top_level.txt,sha256=F7095YHbdm5d7j8dWfe37hgj732ytmqy7FQVRqYQAO4,13

@@ -1,0 +1,48 @@
+Metadata-Version: 2.0
+Name: alation-cli
+Version: 0.0.1
+Summary: Alation Command-Line Tools
+Home-page: https://github.com/jojitech/alation-cli
+Author: Shawn McGough
+Author-email: smcgough@jojitech.com
+License: UNKNOWN
+Project-URL: Documentation, https://github.com/jojitech/alation-cli
+Project-URL: Funding, https://github.com/sponsors/ShawnMcGough
+Project-URL: Source, https://github.com/jojitech/alation-cli
+Project-URL: Tracker, https://github.com/jojitech/alation-cli/issues
+Keywords: alation api cli
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+
+Alation CLI
+===================
+
+*Alation CLI*, a command line experience for the Alation API.
+Pre-alpha planning stages, do not install.
+
+Usage
+=====
+.. code-block:: console
+
+    $ al [ command ] {parameters}
+
+
+Getting Started
+=====================
+
+For usage and help content, pass in the ``-h`` parameter, for example:
+
+.. code-block:: console
+
+   $ al [ command ] -h
+
+
