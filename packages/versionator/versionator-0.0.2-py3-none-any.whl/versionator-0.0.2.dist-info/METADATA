@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: versionator
+Version: 0.0.2
+Summary: A tool for managing Python packages
+Home-page: https://ktpanda.org/software/versionator
+Author: Katie Rust
+Author-email: katie@ktpanda.org
+License: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: argcomplete (>=2.0.0)
+
+versionator
+===========
+
+A tool for managing Python packages:
+
+* Increment or set the version number
+* Auto-update changelog based on commit messages, with option to edit
+* Make a version commit
+* Tag the commit with the version
+* Push to origin
+* Build the package
+* Install locally using pip
+* Publish using twine
+
+This is primarily made for my own projects, but it could be useful for others.
