@@ -1,0 +1,76 @@
+Metadata-Version: 2.1
+Name: sh-crypt
+Version: 1.1.0
+Summary: Simple symmetric encryption and decryption (ECB) for text
+Author-email: Steven HELLEC <steven.hellc@live.fr>
+License: MIT license
+Project-URL: Source, https://github.com/steven1909/sh-crypt.git
+Project-URL: PyPI, https://pypi.org/project/sh-crypt/
+Keywords: encryption,decryption,cipher,AES,ECB,crypto,cryptography
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Topic :: Security :: Cryptography
+Classifier: Topic :: Security
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: cryptography (>=37.0.4)
+
+# SH Crypt
+
+[![PyPI Latest Release](https://img.shields.io/pypi/v/sh-crypt.svg)](https://pypi.org/project/sh-crypt/)
+[![License](https://img.shields.io/pypi/l/sh-crypt.svg)](https://github.com/steven1909/sh-crypt/blob/master/LICENSE)
+[![codecov](https://codecov.io/gh/steven1909/sh-crypt/branch/master/graph/badge.svg?token=EU0M1RS2NI)](https://codecov.io/gh/steven1909/sh-crypt)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/steven1909/sh-crypt/tree/master.svg?style=shield)](https://dl.circleci.com/status-badge/redirect/gh/steven1909/sh-crypt/tree/master)
+
+## A simple symetric encyption decryption algorithm
+## About
+
+SH Crypt is base on library cryptography algorithm and use more specifically the Electronic Code Book (ECB) for symetric encryption and decryption.
+
+Here are some code example to use the library.
+
+## Generate a key, encrypt and decrypt text
+
+```python
+from sh_crypt import GenKeySH, CryptSH
+import random as rnd
+
+# Create key generatore
+seed = rnd.randint(1, 1e12)
+key_gen = GenKeySH(seed)
+
+key = key_gen.gen_sym_key(path_store="mykey.txt")
+# Ex : 'e169344ae15719669ed2fecea1ac4773'
+
+password = "Hello World !!"
+
+crypt = CryptSH(key)
+
+encrypt_password = crypt.encrypt_password(password)
+# Ex : '469feb93adc2af609a98e6b7cee859bb'
+
+crypt.decrypt_password(encrypt_password)
+# 'Hello World !!'
+```
+
+As you can see in the example, you can store your generated key in a text file and reuse it later, with the ```path_store``` argument.
+
+## Install
+You can install sh-crypt with [pip](https://pypi.org/project/sh-crypt/):
+
+```python
+pip install sh-crypt
+```
+
+or download the [sh-crypt source](https://github.com/steven1909/sh-crypt/tree/master), choose your version, and install with the command:
+
+```python
+python setup.py install
+```
