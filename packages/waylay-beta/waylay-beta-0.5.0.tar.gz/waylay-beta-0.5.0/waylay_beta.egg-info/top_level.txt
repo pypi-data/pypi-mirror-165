@@ -1,0 +1,9 @@
+bin
+cov_report
+cov_report_all
+doc
+my_notes
+stat
+test
+tmp
+waylay

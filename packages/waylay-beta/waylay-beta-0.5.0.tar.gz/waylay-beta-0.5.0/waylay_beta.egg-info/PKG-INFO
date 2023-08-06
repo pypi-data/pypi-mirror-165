@@ -1,0 +1,110 @@
+Metadata-Version: 2.1
+Name: waylay-beta
+Version: 0.5.0
+Summary: beta release of the Waylay Python SDK
+Home-page: https://docs-io.waylay.io/#/api/sdk/python
+Author: Waylay
+Author-email: info@waylay.io
+License: ISC
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Provides-Extra: dev-3.7
+Provides-Extra: dev-3.8
+Provides-Extra: dev-3.9
+Provides-Extra: dev-3.10
+Provides-Extra: byoml-pytorch-1.8
+Provides-Extra: byoml-pytorch
+Provides-Extra: byoml-pytorch-1.5
+Provides-Extra: byoml-pytorch-1.4
+Provides-Extra: byoml-sklearn-0.24
+Provides-Extra: byoml-sklearn
+Provides-Extra: byoml-sklearn-0.22
+Provides-Extra: byoml-xgboost-1.3
+Provides-Extra: byoml-xgboost
+Provides-Extra: byoml-xgboost-1.0
+Provides-Extra: byoml-tensorflow-2.4
+Provides-Extra: byoml-tensorflow
+Provides-Extra: byoml-tensorflow-2.1
+Provides-Extra: byoml-custom-1.0
+Provides-Extra: byoml-custom
+License-File: LICENSE.txt
+
+
+# waylay-beta
+
+This Python SDK helps you to connect with the REST APIs of the Waylay Platform.
+
+It provides a selection of services and utilities, focused on supporting our data science users:
+* importing and querying _timeseries_ data.
+* uploading your own _machine learning models_ for usage in the _Waylay Rule Engine_
+* provisioning waylay _resources_ and _resource types_.
+
+The SDK is optimised for interactive usage in [Jupyter Notebooks](https://jupyter.org/).
+
+## Prerequisites
+This package requires a python runtime `3.7` or higher (validated up to `3.10`). 
+For datascience purposes you typically want to prepare an anaconda environment:
+```bash
+conda create --name my_waylay_env python=3.8
+conda activate my_waylay_env
+conda install jupyter
+pip install waylay-beta
+jupyter notebook 
+```
+
+## Installation
+
+```bash
+pip install waylay-beta
+```
+
+### BYOML dependencies
+
+If you want to prepare BYOML models ([Enterprise](http://docs.waylay.io/#/features/byoml/)|[IO](http://docs-io.waylay.io/#/features/byoml/)), _extra_ dependency configurations are available, that will check or install framework-specific dependencies.
+
+Either for a specific runtime:
+> byoml-xgboost-1.3, byoml-sklearn-0.24, byoml-xgboost-1.0, byoml-pytorch-1.4, byoml-custom-1.0, byoml-tensorflow-2.1, byoml-pytorch-1.5, byoml-pytorch-1.8, byoml-sklearn-0.22, byoml-tensorflow-2.4
+
+or for the default runtime of one of the supported frameworks:
+> byoml-sklearn, byoml-tensorflow, byoml-custom, byoml-pytorch, byoml-xgboost
+
+E.g. to install with sklearn dependencies for byoml:
+```bash
+pip install waylay-beta['byoml-sklearn-0.24']
+```
+or
+```bash
+pip install waylay-beta['byoml-sklearn']
+```
+
+In some cases (e.g. older framework versions) it might be needed to use the same python version
+when serializing models. Check the supported python version with calls such as:
+```python
+> waylay_client.byoml.runtimes.get('byoml-pytorch-1.8')
+{'framework': 'pytorch', 'framework_version': '1.8', 'name': 'byoml-pytorch-1.8', 'python_version': '3.7'}
+```
+
+## Quickstart
+
+* Login to the waylay console, and get hold of an _API key, API secret_ pair \[*>Settings>Authentication keys*\] 
+  > `[Enterprise]` [https:://console.waylay.io](https://console.waylay.io/administration/settings/keys) <br>
+  > `[IO]` [https:://console-io.waylay.io](https://console-io.waylay.io/administration/settings/keys)
+
+* Create an SDK client
+  ```python
+  from waylay import WaylayConfig, WaylayClient
+  waylay_client = WaylayClient.from_profile()
+  ```
+  On first usage, this will prompt for a gateway endpoint,
+  > `[Enterprise]` api.waylay.io (default)<br> 
+  > `[IO]` api-io.waylay.io
+
+  and your _API key/API secret_ credentials. 
+
+For more details see 
+> `[Enterprise]` [https://docs.waylay.io](https://docs.waylay.io/api/sdk/python/)<br>
+> `[IO]` [https://docs-io.waylay.io](https://docs-io.waylay.io/#/api/sdk/python)
+
+## Usage Examples
+See [demo notebooks](https://github.com/waylayio/demo-general/tree/master/python-sdk) for the usage examples supported in the current release.
