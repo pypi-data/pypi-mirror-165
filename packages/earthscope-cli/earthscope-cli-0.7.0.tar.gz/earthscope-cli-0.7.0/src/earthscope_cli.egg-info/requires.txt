@@ -1,0 +1,12 @@
+pyjwt==2.4.0
+typer[all]==0.6.1
+requests==2.28.1
+earthscope-sdk
+
+[dev]
+black
+bumpver
+build
+pytest
+twine
+pip-tools
