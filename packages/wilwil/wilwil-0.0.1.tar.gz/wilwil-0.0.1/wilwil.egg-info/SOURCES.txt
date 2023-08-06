@@ -1,0 +1,7 @@
+MANIFEST.in
+README.txt
+setup.py
+wilwil.egg-info/PKG-INFO
+wilwil.egg-info/SOURCES.txt
+wilwil.egg-info/dependency_links.txt
+wilwil.egg-info/top_level.txt
