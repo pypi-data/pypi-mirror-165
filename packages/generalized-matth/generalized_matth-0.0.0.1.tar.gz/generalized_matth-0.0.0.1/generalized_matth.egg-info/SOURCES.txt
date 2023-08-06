@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+setup.py
+generalized_matth/__init__.py
+generalized_matth/matt_funct.py
+generalized_matth/tests.py
+generalized_matth.egg-info/PKG-INFO
+generalized_matth.egg-info/SOURCES.txt
+generalized_matth.egg-info/dependency_links.txt
+generalized_matth.egg-info/top_level.txt
