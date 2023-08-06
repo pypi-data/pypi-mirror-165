@@ -1,0 +1,12 @@
+modelingtools/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+modelingtools/evaluationtools.py,sha256=9bqdGCQsI4P2KAGtuUjuKFpNV5XPoVMxdlTazBBJZUc,5937
+modelingtools/testingtools.py,sha256=9SZVZZ816i4MgRrswuMIEcPeThKcLuWgEnkm2VWYeT8,6952
+modelingtools/trainingtools.py,sha256=ygybgdeTNP_gAtBsL7tEGGXM3z3QYBop5VLhzRzIEAE,4786
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_evaluationtools.py,sha256=h62hjpg03rOcgdIFC6s4nmaq0eWrCqz40swARPFfIgA,1172
+tests/test_trainingtools.py,sha256=kO487AzZfYcuvPN9YJZ51D0fGVWni1Uyf8YYhxjj-ro,2546
+modelingtools-0.3.0.dist-info/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+modelingtools-0.3.0.dist-info/METADATA,sha256=_9AsTw-r_ODDlyGbqmV0JSq0tICiSZYCB_hBnj1_D_g,2231
+modelingtools-0.3.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+modelingtools-0.3.0.dist-info/top_level.txt,sha256=L2fDjtcgJd2Uoe84CdJhcwB-oYTCekyeXkkTUU8OQpk,20
+modelingtools-0.3.0.dist-info/RECORD,,
