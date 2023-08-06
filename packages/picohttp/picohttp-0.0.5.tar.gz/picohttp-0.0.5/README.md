@@ -1,0 +1,97 @@
+# picohttp - A minimal HTTP server
+
+This is an HTTP 1.0 server framework that is useful for supporting applications where the behavior is constrained and relatively simple.
+
+An application can define a server that listens for HTTP requests on a designated port, parses the request, and passes the request to a handler that is implemented by the application.  The request handler can access the parsed elements of the request and pass elements to the response.  When the handler returns, the server builds the HTTP response and sends it to the client.
+
+The TCP connection from a client is closed after the response is sent.  Persistent HTTP 1.1 connections are not supported.  Every request is handled in a separate thread unless the server is instantiated with threads=False.  The server will start immediately unless it is instantiated with start=False, in which case the start() function must be called.  When the server starts it will block indefinitely unless it is instantiated with block=False.
+
+The server does not attempt to validate any of the elements of the request or response, it just passes them to and from the request handler.  Any method, header, or status code may be used whether it is valid or not.  It is the responsibility of the request handler to perform any validation that may be required.  The server does require a valid Content-Length header if there is data present in the body of the request, otherwise the data will be ignored.
+
+If the request handler does not assign a value to the response status code, it is assumed to be 200.  A Content-Length header is automatically added in the response to indicate the length of the response data.
+
+### Specification
+
+class `HttpServer(port, handler, args=(), threads=True, start=True, block=True)`
+
+    port
+        The port to listen on.
+
+    handler
+        The function defined to be the request handler.
+
+    args
+        A tuple containing optional additional arguments to be passed to the request handler
+
+    threads
+        If True handle each request in a separate thread, otherwise process them sequentially.
+
+    start
+        If True immediately start the server, otherwise the start() function must be called.
+
+    block
+        If True the server will block indefinitely when it is started, otherwise the function starting it will return.
+
+    start()
+        Start the server if it was instantiated with start=False.
+
+class `HttpRequest(method, path, query, protocol, headers, data)`
+
+    method
+        The HTTP method contained in the request.
+
+    path
+        A list of strings that were parsed from the hier-part of the HTTP request URI.
+
+    query
+        A dictionary containing keywords and values parsed from the query part of the HTTP request URI.
+
+    protocol
+        The HTTP protocol version contained in the request.
+
+    headers
+        A dictionary containing keywords and values of the request headers.
+
+    data
+        The data contained in the request body if present.
+
+class `HttpResponse(protocol, status, headers, data)`
+
+    protocol
+        The response HTTP protocol version (Default: HTTP/1.0)
+
+    status
+        The response status code (Default: 200)
+
+    headers
+        A dictionary containing additional response headers.
+
+    data
+        Data to be sent in the response body.
+
+The application must define a function to handle requests that is passed to the HttpServer object when it is instantiated.  Two positional arguments are required.  Additional arguments may be defined and the values for these are passed to the HttpServer object.
+
+`def requestHandler(request, response[, args, ...])`
+
+    request
+        A HttpRequest object containing elements parsed from an HTTP request.
+
+    response
+        A HttpResponse object that the request handler will populate to form the HTTP response.
+
+
+### Examples
+This is a very simple application.
+```
+from picohttp import *
+
+def requestHandler(request, response):
+    if request.path[0] == "hello":
+        response.data = "Hello world!"
+    elif request.path[0] == "goodbye":
+        response.data = "Goodbye cruel world"
+    else:
+        response.status = 404
+
+httpServer = HttpServer(8080, requestHandler)
+```
