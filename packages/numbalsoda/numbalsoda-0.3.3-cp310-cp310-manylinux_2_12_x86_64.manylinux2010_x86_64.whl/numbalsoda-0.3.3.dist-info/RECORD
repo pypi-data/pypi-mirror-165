@@ -1,0 +1,15 @@
+numbalsoda-0.3.3.dist-info/top_level.txt,sha256=dWxEuRQxUprOcml1BgbRxWrI8c6kGmUjcHb9-hJw7kU,11
+numbalsoda-0.3.3.dist-info/WHEEL,sha256=Fl_cHiQB3sjYFtzigPxrVDCZdYg4En2WEIOnSNenSMk,146
+numbalsoda-0.3.3.dist-info/METADATA,sha256=m95WmROnmzbmQt2ZcMkvcBk14VWlINPdpHcGlroyKrw,4638
+numbalsoda-0.3.3.dist-info/RECORD,,
+numbalsoda-0.3.3.dist-info/LICENSE.txt,sha256=S7D5W-ZQfOI101QWO90uiIkBZZVFhkBxqPJqyVYZ4tM,1070
+numbalsoda.libs/libgfortran-2e0d59d6.so.5.0.0,sha256=oj0CJ-MJIF4LU9y6QOWX4-PPjsDurhRs-ZZlDFGtuHA,2260064
+numbalsoda.libs/libz-eb09ad1d.so.1.2.3,sha256=Occ38Rdxpnqlv4lgkj2inrjERnLkx0ig9Kb0Ce5GMQ4,92080
+numbalsoda.libs/libquadmath-2d0c479f.so.0.0.0,sha256=nw_dV1mLMDFbFsMwYHIwErTgu6dsMaBajxJfe8TohIA,263992
+numbalsoda/libdop853.so,sha256=R7fgSW5DWZVm7oATwobKGjy-v0toe2hAsJEa8sGQ2ec,59184
+numbalsoda/driver.py,sha256=5DcvvKkdPxBEl9WvkbuCr2w1-AzLHSg1Fmn-21NPdJQ,1724
+numbalsoda/liblsoda.so,sha256=e66prjQ5bie2smwpq9ak-wcREyem4Blz9waSbV_LWZ8,66360
+numbalsoda/libsolve_ivp.so,sha256=bsNwf1yZtnizcdW8Xy6rW-le1gtDYQicmx_HFWkTs3E,80176
+numbalsoda/driver_dop853.py,sha256=L-j2Dbnco3iCY1Hlmaxz-U50FcwmYbj_ztORG5JcXMw,1181
+numbalsoda/__init__.py,sha256=ugcqHMrl7xjCoC8bx6zstofHkGb_g_MghgMF7_6S4Ls,146
+numbalsoda/driver_solve_ivp.py,sha256=GB8rshRDcBRjjOYEhp7hEyFB2I4EMPphcJS3KBhUOdU,6233
