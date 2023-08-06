@@ -1,0 +1,9 @@
+README.rst
+def_main.py
+pyproject.toml
+setup.cfg
+setup.py
+def_main.egg-info/PKG-INFO
+def_main.egg-info/SOURCES.txt
+def_main.egg-info/dependency_links.txt
+def_main.egg-info/top_level.txt

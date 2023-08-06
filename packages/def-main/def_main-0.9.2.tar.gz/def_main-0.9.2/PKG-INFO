@@ -1,0 +1,94 @@
+Metadata-Version: 2.1
+Name: def_main
+Version: 0.9.2
+Summary: A simple definition of main
+Home-page: https://github.com/rec/def_main
+Author: Tom Ritchford
+Author-email: tom@swirly.com
+License: MIT
+Keywords: main function
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Utilities
+
+========================================================
+``def_main``: a tiny decorator to define main
+========================================================
+
+Define a Python main function in one step - no more `__main__`!
+
+For any non-trivial projects, use typer and dtyper instead!
+
+How to install
+==================
+
+Use ``pip``:
+
+.. code-block:: bash
+
+    pip install def_main
+
+Usage examples
+==================
+
+Without an return code
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+    import def_main
+
+    @def_main
+    def main(*argv):
+        print('hello,', *argv)
+
+
+means precisely the same as:
+
+.. code-block:: python
+
+    def main(*argv):
+        print('hello,', *argv)
+
+
+    if __name__ == '__main__':
+        import sys
+
+        main(sys.argv[1:])
+
+With a return code
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+
+    import def_main
+
+    @def_main
+    def main(*argv):
+        print('hello,', *argv)
+        return argv
+
+
+means precisely the same as:
+
+.. code-block:: python
+
+    def main(*argv):
+        print('hello,', *argv)
+        return argv
+
+
+    if __name__ == '__main__':
+        import sys
+
+        returncode = main(sys.argv[1:])
+        sys.exit(returncode)
+
+
