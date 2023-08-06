@@ -1,0 +1,9 @@
+LICENSE_APACHE
+README.md
+setup.py
+stringth/__init__.py
+stringth/funcs.py
+stringth.egg-info/PKG-INFO
+stringth.egg-info/SOURCES.txt
+stringth.egg-info/dependency_links.txt
+stringth.egg-info/top_level.txt
