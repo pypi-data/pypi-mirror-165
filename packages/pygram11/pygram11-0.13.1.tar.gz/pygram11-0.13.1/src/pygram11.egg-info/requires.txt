@@ -1,0 +1,7 @@
+numpy
+
+[complete]
+pytest
+
+[test]
+pytest
