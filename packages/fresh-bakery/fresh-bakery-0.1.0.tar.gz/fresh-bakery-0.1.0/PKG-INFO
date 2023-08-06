@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: fresh-bakery
+Version: 0.1.0
+Summary: Bake your dependencies stupidly simple!
+License: MIT
+Author: Dmitry Makarov
+Author-email: mit.makaroff@gmail.com
+Requires-Python: >=3.6.2,<3.11
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
+
+
