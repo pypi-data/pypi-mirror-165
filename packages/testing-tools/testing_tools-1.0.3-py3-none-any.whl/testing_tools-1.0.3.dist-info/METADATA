@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: testing-tools
+Version: 1.0.3
+Summary: Improper readme for description parsing.
+Home-page: UNKNOWN
+Author: (c) Fondation Vallet - Benin Excellence
+Author-email: adkevinkpakpo@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: black (>=22.6.0)
+Requires-Dist: flake8 (>=5.0.3)
+Requires-Dist: jupyter (>=1.0.0)
+Requires-Dist: nbformat (>=5.4.0)
+Requires-Dist: pip-tools (>=6.6.0)
+Requires-Dist: pytest (>=6.2.4)
+Requires-Dist: testbook (>=0.4.2)
+Requires-Dist: tqdm (>=4.64.0)
+
+# testing_tools
+
+Tools to test notebooks:
+- they are commited without outputs
+- they run from end to end without error.
+
+
