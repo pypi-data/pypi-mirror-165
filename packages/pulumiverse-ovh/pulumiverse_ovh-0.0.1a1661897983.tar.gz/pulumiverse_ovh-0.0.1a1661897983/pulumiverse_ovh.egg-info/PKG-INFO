@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: pulumiverse-ovh
+Version: 0.0.1a1661897983
+Summary: A Pulumi package for creating and managing OVH cloud resources.
+Home-page: https://www.pulumi.com
+License: Apache-2.0
+Project-URL: Repository, https://github.com/pulumiverse/pulumi-ovh
+Description: UNKNOWN
+Keywords: pulumi ovh category/cloud
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
