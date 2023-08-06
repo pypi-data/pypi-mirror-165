@@ -1,0 +1,35 @@
+# Build the distribution:
+#   flit build
+# Upload it to PyPi
+#   flit publish
+
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "licence"
+description = "License texts and header strings."
+# Also update the version in `licence/licence.py`!
+version = "0.0.1"
+authors = [
+  {name="Stephan Helma", email="s.p.helma@gmx.net"}]
+readme = "README.md"
+license = {file="LICENSE"}
+keywords = [
+    "license", "osi"]
+# f-strings and ordered dictionaries were introduced in Python 3.7
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)",
+    "Operating System :: OS Independent",
+    "Development Status :: 4 - Beta"]
+dependencies = []
+
+#[project.gui-scripts]
+#[project.entry-points]
+
+[project.urls]
+Homepage = "https://codeberg.org/sph/licence"
+Issues = "https://codeberg.org/sph/licence/issues"
