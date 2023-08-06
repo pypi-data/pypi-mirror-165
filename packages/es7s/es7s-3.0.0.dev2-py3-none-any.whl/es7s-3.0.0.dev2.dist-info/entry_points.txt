@@ -1,0 +1,2 @@
+[console_scripts]
+es7s = es7s.__main__:main
