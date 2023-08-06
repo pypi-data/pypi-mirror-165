@@ -1,0 +1,14 @@
+ltp/__init__.py,sha256=QE2Ar0zNkjPdwU0BfyC-VWnHO4Fl8DSmjGH8e8JvyyY,158
+ltp/generic.py,sha256=GmqRTAFpC2Ol_yTZvQyvPHxTNcLXeGA3h87IOUgmWKI,4455
+ltp/interface.py,sha256=MXS9KQgtbXHATAuWqyZ2nXKwe4fo5Rq0vu2Smvzj038,6181
+ltp/legacy.py,sha256=x1WdEqRUuEhU1NKa-i2cMCSiUFpToZIX5Mzu7dNM-Js,5459
+ltp/mixin.py,sha256=nsgmpQVO1t2QIGYutZFWjkKvX1GKmqaecZeBvRDDvaI,7078
+ltp/module.py,sha256=LQIGmxkDeGEjg7LweBX2Er0XcFI7UemEvr_eZGY22JU,2300
+ltp/nerual.py,sha256=QB6lhq__SxA_ajielk9rej3LMzSFYepGQmf13v5bpeA,20470
+ltp/utils.py,sha256=tZMBejsrG4cnW4RjvDHys8Cyri3I_bSZ9aH9ReSAe44,123
+ltp-4.2.7.dist-info/LICENSE,sha256=rrVxEnRUPDEsE9RrdKTG89fYS5M8V0O0nhzdadK90JA,683
+ltp-4.2.7.dist-info/METADATA,sha256=p6CTyP3DKbVgBDgsfCLCNEAoS4Djx1dPRMinEyn_pNY,10788
+ltp-4.2.7.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+ltp-4.2.7.dist-info/top_level.txt,sha256=mwCqF27ioK_DTVnV-qTt5V_QGs7-Gl_jFdygdWNGrwg,4
+ltp-4.2.7.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+ltp-4.2.7.dist-info/RECORD,,
