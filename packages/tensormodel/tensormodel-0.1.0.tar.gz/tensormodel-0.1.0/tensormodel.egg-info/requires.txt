@@ -1,0 +1,3 @@
+linora>=1.4.0
+opencv-python>=4.5.0
+tensorflow>=2.8.0

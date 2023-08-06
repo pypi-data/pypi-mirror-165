@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: tensormodel
+Version: 0.1.0
+Summary: Deep learning application collection.
+Home-page: https://github.com/Hourout/tensormodel
+Author: JinQing Lee
+Author-email: hourout@163.com
+License: Apache License Version 2.0
+Description: # tensormodel
+        Deep learning application collection
+        
+Keywords: machine-learning,image,text,data-science,deep-learning,model
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Description-Content-Type: text/markdown

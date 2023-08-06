@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+tensormodel/__init__.py
+tensormodel.egg-info/PKG-INFO
+tensormodel.egg-info/SOURCES.txt
+tensormodel.egg-info/dependency_links.txt
+tensormodel.egg-info/not-zip-safe
+tensormodel.egg-info/requires.txt
+tensormodel.egg-info/top_level.txt
+tensormodel/nsfw/__init__.py
+tensormodel/nsfw/_nsfw.py
