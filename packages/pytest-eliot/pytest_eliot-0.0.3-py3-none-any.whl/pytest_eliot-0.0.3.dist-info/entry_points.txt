@@ -1,0 +1,2 @@
+[pytest11]
+eliot = pytest_eliot.plugin
