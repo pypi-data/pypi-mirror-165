@@ -1,0 +1,85 @@
+Metadata-Version: 2.1
+Name: taskiq-redis
+Version: 0.0.4
+Summary: Redis integration for taskiq
+Home-page: https://github.com/taskiq-python/taskiq-redis
+Keywords: taskiq,tasks,distributed,async,redis,result_backend
+Author: taskiq-team
+Author-email: taskiq@norely.com
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: redis (>=4.2.0,<5.0.0)
+Requires-Dist: taskiq (>=0,<1)
+Project-URL: Repository, https://github.com/taskiq-python/taskiq-redis
+Description-Content-Type: text/markdown
+
+# TaskIQ-Redis
+
+Taskiq-redis is a plugin for taskiq that adds a new broker and result backend based on redis.
+
+# Installation
+
+To use this project you must have installed core taskiq library:
+```bash
+pip install taskiq
+```
+This project can be installed using pip:
+```bash
+pip install taskiq-redis
+```
+
+# Usage
+
+Let's see the example with the redis broker and redis async result:
+```python
+import asyncio
+
+from taskiq_redis.redis_broker import RedisBroker
+from taskiq_redis.redis_backend import RedisAsyncResultBackend
+
+
+redis_async_result = RedisAsyncResultBackend(
+    url="redis://localhost:6379",
+)
+
+broker = RedisBroker(
+    url="redis://localhost:6379",
+    result_backend=redis_async_result,
+)
+
+
+@broker.task
+async def best_task_ever() -> None:
+    """Solve all problems in the world."""
+    await asyncio.sleep(5.5)
+    print("All problems are solved!")
+
+
+async def main():
+    task = await my_async_task.kiq()
+    print(await task.get_result())
+
+
+asyncio.run(main())
+```
+
+## RedisBroker configuration
+
+RedisBroker parameters:
+* `url` - url to redis.
+* `task_id_generator` - custom task_id genertaor.
+* `result_backend` - custom result backend.
+* `queue_name` - name of the pub/sub channel in redis.
+* `max_connection_pool_size` - maximum number of connections in pool.
+
+## RedisAsyncResultBackend configuration
+
+RedisAsyncResultBackend parameters:
+* `url` - url to redis.
+
