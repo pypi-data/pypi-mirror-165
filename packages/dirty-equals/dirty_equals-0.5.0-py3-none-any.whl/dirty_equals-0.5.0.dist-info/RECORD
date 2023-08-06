@@ -1,0 +1,17 @@
+dirty_equals/__init__.py,sha256=AB7-dR1nMWYBB9qkfDFRvliVd1NrylXQfnDbBOtcPXg,1652
+dirty_equals/_base.py,sha256=vp3AxvB45EFLy7qxn4d3az2FtIKeQTIYrEy3JMj9ca8,7122
+dirty_equals/_boolean.py,sha256=HqTrKrO2ypiCdpnj9lQqEiOYUZLgAtR_gTvOdzmeuAg,2416
+dirty_equals/_datetime.py,sha256=TS4T_zV7DWHiygbcVFddrYslgnCbuR8_4BpdTGTwLbs,11188
+dirty_equals/_dict.py,sha256=-ngknh-2b5N7l2Pzb2dCjVOvck92ryTu2qseCxWHdFE,8276
+dirty_equals/_inspection.py,sha256=rPAKqQZHqHfnXRz8XAuOt57QrNji6YA0XAA_WZo7DLk,6543
+dirty_equals/_numeric.py,sha256=sDSumqKieNN1BAmdpS21dz6qwMZgQkgZHICIP4pCzUE,11099
+dirty_equals/_other.py,sha256=UeLHSLXAhPQaX72QG41-8KMNl0kW-P3XuwKQ4SfTNAg,7052
+dirty_equals/_sequence.py,sha256=__C3p-KEi1aEQ4KgZQyngs9H8w4GrwI1x4O3H5Lkz30,10120
+dirty_equals/_strings.py,sha256=jLblwj4t2EvvHm-JeAPXr-s8M6N013i-l-vacBuKjjU,5212
+dirty_equals/_utils.py,sha256=MTwiu74DmqTR6nrVTvo3pQDBFkbv2gbM7fpdvHSPKZA,1134
+dirty_equals/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dirty_equals/version.py,sha256=_CvQ7YNV9f06vbh7XClPxwD1FMT4g7Cv2DpLWmJVpTA,18
+dirty_equals-0.5.0.dist-info/METADATA,sha256=K1wMCLJYpXOWsiS4OJB0WOrhBcuNkuXArraYqR-azgc,6756
+dirty_equals-0.5.0.dist-info/WHEEL,sha256=09RFlvY3aVzvCNk4AXPZt-N-AI7GY_KktGsTb2IqIBU,86
+dirty_equals-0.5.0.dist-info/licenses/LICENSE,sha256=Kv3TDVS01itvSIprzBVG6E7FBh8T9CCcA9ASNIeDeVo,1080
+dirty_equals-0.5.0.dist-info/RECORD,,
