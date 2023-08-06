@@ -1,0 +1,32 @@
+name: cadquery
+channels:
+  - cadquery
+  - conda-forge
+  - defaults
+dependencies:
+  - python>=3.8
+  - ipython
+  - ocp=7.5.3
+  - vtk=9.0.1
+  - pyparsing>=2.1.9
+  - sphinx=5.0.1
+  - sphinx_rtd_theme
+  - black=19.10b0
+  - click=8.0.4
+  - mypy
+  - codecov
+  - pytest
+  - pytest-cov
+  - ezdxf
+  - ipython
+  - typing_extensions
+  - nptyping=2.0.1
+  - nlopt
+  - path
+  - casadi
+  - pip
+  - pip:
+    - "--install-option=\"--no-deps\""
+    - "--editable=."
+    - sphinxcadquery
+    - multimethod>=1.7,<2.0
