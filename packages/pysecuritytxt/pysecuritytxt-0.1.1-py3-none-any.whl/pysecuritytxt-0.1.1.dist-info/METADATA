@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: pysecuritytxt
+Version: 0.1.1
+Summary: Python CLI and module for querying security.txt files on domains.
+Home-page: https://github.com/Lookyloo/pysecuritytxt
+License: BSD-3-Clause
+Author: Raphaël Vinot
+Author-email: raphael.vinot@circl.lu
+Requires-Python: >=3.8,<4.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Telecommunications Industry
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Internet
+Classifier: Topic :: Security
+Provides-Extra: docs
+Requires-Dist: Sphinx (>=5.1.1,<6.0.0); extra == "docs"
+Requires-Dist: requests (>=2.28.1,<3.0.0)
+Project-URL: Documentation, https://pysecuritytxt.readthedocs.io/en/latest/index.html
+Project-URL: Repository, https://github.com/Lookyloo/pysecuritytxt
+Description-Content-Type: text/markdown
+
+# Python client and module for querying .well-known/security.txt files
+
+Give it a domain, it tries to fetch the security.txt file
+
+## Installation
+
+```bash
+pip install pysecuritytxt
+```
+
+## Usage
+
+### Command line
+
+You can use the `pysecuritytxt` command:
+
+```bash
+usage: pysecuritytxt [-h] [-p] url_or_domain
+
+Try to get a security.txt file
+
+positional arguments:
+  url_or_domain  Try to get the file from there.
+
+options:
+  -h, --help     show this help message and exit
+  -p, --parse    Parse the response, returns dict
+```
+
+### Library
+
+See [API Reference]()
+
