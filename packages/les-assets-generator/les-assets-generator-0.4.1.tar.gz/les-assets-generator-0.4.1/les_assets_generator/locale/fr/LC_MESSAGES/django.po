@@ -1,0 +1,125 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-08-15 00:23+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: app/admin.py:23
+msgid "example url"
+msgstr "url d'exemple"
+
+#: app/admin.py:28
+msgid "Can't determine example URL for now"
+msgstr "Impossible de déterminer un url d'exemple pour le moment"
+
+#: app/models.py:15 app/models.py:83
+msgid "name"
+msgstr "nom"
+
+#: app/models.py:16 app/models.py:81
+msgid "font"
+msgstr "police"
+
+#: app/models.py:17
+msgid "font url"
+msgstr "url de la police"
+
+#: app/models.py:24 app/models.py:32
+msgid "You must fill font url or font upload"
+msgstr "Vous devez remplir l'url de la font ou la téléverser"
+
+#: app/models.py:38
+msgid "title"
+msgstr "titre"
+
+#: app/models.py:39
+msgid "picture"
+msgstr "image"
+
+#: app/models.py:40
+msgid "picture url"
+msgstr "url de l'image"
+
+#: app/models.py:41
+msgid "authentication required"
+msgstr "authentification requise"
+
+#: app/models.py:50 app/models.py:71
+msgid "You must fill picture url or picture upload"
+msgstr "Vous devez remplir l'url de l'image ou la téléverser"
+
+#: app/models.py:64
+msgid "asset"
+msgstr "asset"
+
+#: app/models.py:65 app/models.py:78
+msgid "assets"
+msgstr "assets"
+
+#: app/models.py:84
+msgid "color"
+msgstr "couleur"
+
+#: app/models.py:85
+msgid "font size"
+msgstr "taille de la police"
+
+#: app/models.py:88
+msgid "mandatory"
+msgstr "obligatoire"
+
+#: app/models.py:98
+msgid "parameter"
+msgstr "paramètre"
+
+#: app/models.py:99
+msgid "parameters"
+msgstr "paramètres"
+
+#: app/views.py:34
+#, python-format
+msgid "Missing GET parameter %s"
+msgstr "Paramètre GET manquant %s"
+
+#: app/views.py:40
+#, python-format
+msgid "Font %s not supported"
+msgstr "Police %s non supportée"
+
+#: assets_generator/settings/base.py:144
+msgid "English"
+msgstr "Anglais"
+
+#: assets_generator/settings/base.py:145
+msgid "French"
+msgstr "Français"
+
+#: assets_generator/urls.py:22
+msgid "Lyon e-Sport assets generator admin"
+msgstr "Lyon e-Sport assets generator admin"
+
+#: assets_generator/urls.py:23
+msgid "Assets generator"
+msgstr "Assets generator"
+
+#: assets_generator/urls.py:24
+msgid "admin"
+msgstr "admin"
+
+#: templates/admin/login.html:14
+msgid "Login via Google"
+msgstr "Se connecter avec Google"
