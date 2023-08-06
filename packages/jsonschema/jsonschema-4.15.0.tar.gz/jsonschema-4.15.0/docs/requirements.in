@@ -1,0 +1,8 @@
+file:.#egg=jsonschema
+furo
+lxml
+sphinx
+sphinx-autoapi
+sphinx-autodoc-typehints
+sphinx-json-schema-spec
+sphinxcontrib-spelling
