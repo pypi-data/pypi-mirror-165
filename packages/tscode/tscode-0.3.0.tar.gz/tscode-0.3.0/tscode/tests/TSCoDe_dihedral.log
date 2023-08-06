@@ -1,0 +1,123 @@
+
+     _____________________________________________________     
+    /            ___  __   __   __   __   ___             \    
+   /____________  |  /__` /  ` /  \ |  \ |__  _____________\   
+  /               |  .__/ \__, \__/ |__/ |___               \  
+ /                                                           \ 
+(            Transition State Conformational Docker           )
+ \                       Version 0.1.0                       / 
+  \                                                         / 
+   \    Nicolo' Tampellini - nicolo.tampellini@yale.edu    /  
+    \_____________________________________________________/    
+
+--> Parsed keywords are:
+    NEB KCAL=0
+
+--> Calculation options used were:
+    - calculator                : XTB
+    - kcal_thresh               : 0.0
+    - neb                       : True
+    - optimization              : True
+    - rmsd                      : 0.2
+    - theory_level              : GFN2-xTB
+
+--> C2F2H4.xyz - performing a scan of dihedral angle with indices [3 0 1 5]
+
+
+--> Pre-optimizing input structure (GFN2-xTB via XTB)
+--> Performing relaxed scans (conformer 1/1)
+
+  > Preliminary scan (clockwise)
+        Step 1/36 - converged - 0 iterations (0.17 s)
+        Step 2/36 - converged - 0 iterations (0.071 s)
+        Step 3/36 - converged - 4 iterations (0.344 s)
+        Step 4/36 - converged - 0 iterations (0.071 s)
+        Step 5/36 - converged - 5 iterations (0.42 s)
+        Step 6/36 - converged - 1 iterations (0.141 s)
+        Step 7/36 - converged - 5 iterations (0.414 s)
+        Step 8/36 - converged - 1 iterations (0.14 s)
+        Step 9/36 - converged - 4 iterations (0.351 s)
+        Step 10/36 - converged - 0 iterations (0.071 s)
+        Step 11/36 - converged - 5 iterations (0.416 s)
+        Step 12/36 - converged - 1 iterations (0.143 s)
+        Step 13/36 - converged - 5 iterations (0.412 s)
+        Step 14/36 - converged - 1 iterations (0.139 s)
+        Step 15/36 - converged - 1 iterations (0.141 s)
+        Step 16/36 - converged - 4 iterations (0.346 s)
+        Step 17/36 - converged - 0 iterations (0.073 s)
+        Step 18/36 - converged - 4 iterations (0.346 s)
+        Step 19/36 - converged - 0 iterations (0.071 s)
+        Step 20/36 - converged - 4 iterations (0.347 s)
+        Step 21/36 - converged - 0 iterations (0.07 s)
+        Step 22/36 - converged - 4 iterations (0.348 s)
+        Step 23/36 - converged - 1 iterations (0.138 s)
+        Step 24/36 - converged - 4 iterations (0.345 s)
+        Step 25/36 - converged - 0 iterations (0.075 s)
+        Step 26/36 - converged - 1 iterations (0.141 s)
+        Step 27/36 - converged - 3 iterations (0.275 s)
+        Step 28/36 - converged - 4 iterations (0.348 s)
+        Step 29/36 - converged - 1 iterations (0.138 s)
+        Step 30/36 - converged - 3 iterations (0.276 s)
+        Step 31/36 - converged - 0 iterations (0.073 s)
+        Step 32/36 - converged - 1 iterations (0.139 s)
+        Step 33/36 - converged - 2 iterations (0.208 s)
+        Step 34/36 - converged - 0 iterations (0.073 s)
+        Step 35/36 - converged - 5 iterations (0.412 s)
+        Step 36/36 - converged - 0 iterations (0.071 s)
+Preliminary scan (clockwise) - completed (7.825 s)
+No suitable peaks found.
+
+
+  > Preliminary scan (counterclockwise)
+        Step 1/36 - converged - 0 iterations (0.093 s)
+        Step 2/36 - converged - 0 iterations (0.076 s)
+        Step 3/36 - converged - 5 iterations (0.413 s)
+        Step 4/36 - converged - 0 iterations (0.073 s)
+        Step 5/36 - converged - 5 iterations (0.416 s)
+        Step 6/36 - converged - 0 iterations (0.071 s)
+        Step 7/36 - converged - 1 iterations (0.139 s)
+        Step 8/36 - converged - 2 iterations (0.208 s)
+        Step 9/36 - converged - 0 iterations (0.071 s)
+        Step 10/36 - converged - 2 iterations (0.206 s)
+        Step 11/36 - converged - 4 iterations (0.345 s)
+        Step 12/36 - converged - 0 iterations (0.071 s)
+        Step 13/36 - converged - 5 iterations (0.413 s)
+        Step 14/36 - converged - 0 iterations (0.071 s)
+        Step 15/36 - converged - 0 iterations (0.071 s)
+        Step 16/36 - converged - 3 iterations (0.277 s)
+        Step 17/36 - converged - 0 iterations (0.071 s)
+        Step 18/36 - converged - 5 iterations (0.417 s)
+        Step 19/36 - converged - 0 iterations (0.071 s)
+        Step 20/36 - converged - 4 iterations (0.345 s)
+        Step 21/36 - converged - 0 iterations (0.071 s)
+        Step 22/36 - converged - 4 iterations (0.343 s)
+        Step 23/36 - converged - 0 iterations (0.074 s)
+        Step 24/36 - converged - 5 iterations (0.414 s)
+        Step 25/36 - converged - 1 iterations (0.141 s)
+        Step 26/36 - converged - 4 iterations (0.352 s)
+        Step 27/36 - converged - 1 iterations (0.143 s)
+        Step 28/36 - converged - 4 iterations (0.348 s)
+        Step 29/36 - converged - 0 iterations (0.073 s)
+        Step 30/36 - converged - 5 iterations (0.421 s)
+        Step 31/36 - converged - 1 iterations (0.143 s)
+        Step 32/36 - converged - 2 iterations (0.209 s)
+        Step 33/36 - converged - 3 iterations (0.279 s)
+        Step 34/36 - converged - 0 iterations (0.074 s)
+        Step 35/36 - converged - 2 iterations (0.208 s)
+        Step 36/36 - converged - 3 iterations (0.28 s)
+Preliminary scan (counterclockwise) - completed (7.558 s)
+No suitable peaks found.
+
+
+--> Dihedral embed did not find any suitable maxima above the set threshold
+    (0.0 kcal/mol) during the scan procedure. Observe the
+    generated energy plot and try lowering the threshold value (KCAL keyword).
+
+--> Program termination: No candidates found - Total time 18.291 s
+    Sorry, the program did not find any reasonable TS structure. Are you sure the input indexes and pairings were correct? If so, try these tips:
+    - If no structure passes the compenetration check, the SHRINK keyword may help (see documentation).
+    - Similarly, enlarging the spacing between atom pairs with the DIST keyword facilitates the embed.
+    - If no structure passes the fitness check, try adding a solvent with the SOLVENT keyword.
+    - Impose less strict compenetration rejection criteria with the CLASHES keyword.
+    - Generate more structures with higher STEPS and ROTRANGE values.
+
