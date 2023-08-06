@@ -1,0 +1,2 @@
+[console_scripts]
+diameter-synthesis = diameter_synthesis.cli:cli

@@ -1,0 +1,69 @@
+{
+    "additionalProperties": false,
+    "properties": {
+        "features": {
+            "additionalProperties": false,
+            "description": "Features from NeuroM",
+            "patternProperties": {
+                ".*": {
+                    "additionalProperties": false,
+                    "description": "These properties can be used to filter features by value",
+                    "type": "object",
+                    "properties": {
+                        "apical": {
+                            "type": "number"
+                        },
+                        "basal": {
+                            "type": "number"
+                        },
+                        "axon": {
+                            "type": "number"
+                        }
+                    }
+                }
+            }
+        },
+        "models": {
+            "description": "The diameter models",
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "n_samples": {
+            "description": "The number of samples used to build the diameters",
+            "type": "integer",
+            "minimum": 1
+        },
+        "seed": {
+            "description": "The random seed used",
+            "type": "integer"
+        },
+        "taper": {
+            "additionalProperties": false,
+            "properties": {
+                "max": {
+                    "type": "number"
+                },
+                "max_residual": {
+                    "type": "number"
+                },
+                "min": {
+                    "type": "number"
+                },
+                "zeros": {
+                    "type": "number"
+                }
+            }
+        },
+        "terminal_threshold": {
+            "type": "number"
+        },
+        "trunk_max_tries": {
+            "type": "number"
+        }
+    },
+    "type": "object",
+    "title": "Diametrizer config",
+    "description": "The config used to diametrize a cell"
+}
