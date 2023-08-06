@@ -1,0 +1,5 @@
+[console_scripts]
+kgcl-apply=kgcl_schema.kgcl:cli
+kgcl-diff=kgcl_schema.kgcl_diff:cli
+kgcl-parse=kgcl_schema.grammar.parser:cli
+
