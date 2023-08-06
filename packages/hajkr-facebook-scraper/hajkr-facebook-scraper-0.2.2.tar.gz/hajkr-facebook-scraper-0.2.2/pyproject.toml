@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "hajkr-facebook-scraper"
+version = "0.2.2"
+description = ""
+authors = ["Tadej Hribar"]
+
+[tool.poetry.scripts]
+hajkr-facebook-scraper = 'hajkr_facebook_scraper.__main__:run'
+
+[tool.poetry.dependencies]
+python = ">=3.6,<4.0"
+facebook-scraper = "^0.2"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
