@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: ni-measurement-generator
+Version: 0.8.8
+Summary: A utility for generating Python measurement service projects that use the ni_measurement_service
+Author: NI
+Author-email: opensource@ni.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: Mako (>=1.2.1,<2.0.0)
+Requires-Dist: click (>=8.1.3,<9.0.0)
