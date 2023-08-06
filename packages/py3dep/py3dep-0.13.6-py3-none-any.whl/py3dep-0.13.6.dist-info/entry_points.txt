@@ -1,0 +1,2 @@
+[console_scripts]
+py3dep = py3dep.cli:cli
