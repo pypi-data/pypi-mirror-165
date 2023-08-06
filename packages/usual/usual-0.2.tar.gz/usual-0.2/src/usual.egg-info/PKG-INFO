@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: usual
+Version: 0.2
+Summary: Save all your repeated imports and their configurations at one place
+Home-page: https://github.com/lisrael1/usual
+Author: Lior Israeli
+Author-email: israelilior@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/lisrael1/usual/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+Put all your repeated imports at one place and load them with one import.
+
+Installation:
+```bash
+pip install usual
+```
+
+Usage:
+```python
+from usual.ds import *
+
+# now you can use pandas as it's loaded from the 'usual' package
+pd.DataFrame()
+```
+```
+loading C:\Users\israelil\Downloads\my_things\pypi\usual\src\usual\ds.py (you can change it!)
+setting pandas defaults
+done
+```
+
+There is also usual.basic and you can add more as you wish
+
+Note that this is not a good practice for projects, just for small local scripts...
+
+
