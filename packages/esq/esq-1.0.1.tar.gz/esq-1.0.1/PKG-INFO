@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: esq
+Version: 1.0.1
+Summary: A python package that provides graph API for elasticsearch and makes it easier to query data from elasticsearch without writing any queries.
+Home-page: https://github.com/scottydelta/esq
+Author: Vikash Bajaj
+Author-email: esq@vikashbajaj.com
+License: GNU General Public License v3
+Keywords: esq
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: AUTHORS.md
+
+# esq
+
+[![Build Status](https://img.shields.io/pypi/v/esq.svg)](https://pypi.python.org/pypi/esq) [![[pypi]](https://github.com/scottydelta/esq/actions/workflows/python-publish.yml/badge.svg)](https://github.com/scottydelta/esq/actions/workflows/python-publish.yml) [![Documentation Status](https://readthedocs.org/projects/esq/badge/?version=latest)](https://esq.readthedocs.io/en/latest/?version=latest)
+
+[Install](<#quick install>) - [Usage](#usage)
+
+A python package that provides GraphQL API for Elasticsearch and makes it easier to query data from without writing complex queries.
+
+## Quick Install
+
+    pip install esq
+
+## Usage
+
+```python
+from esq import Esq
+from elasticsearch import Elasticsearch
+
+
+# init your Elasticsearch client object here
+es_client = Elasticsearch()
+
+# init your Esq object here
+esq = Esq(es_client)
+
+# now you can start making queries
+
+```
+
+
+
+
+# History
+
+#### 1.0.1 (2022-08-30)
+* Fix Docs and add content README.
+
+#### 1.0.0 (2022-08-30)
+* First release on PyPI.
