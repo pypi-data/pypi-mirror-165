@@ -1,0 +1,39 @@
+[build-system]
+requires = ["wheel", "setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.black]
+line-length = 120
+include = ".*pyi?$"
+target-version = ["py39"]
+
+[tool.isort]
+profile = "black"
+
+[tool.pytest]
+testpaths = ["tests"]
+required_plugins = ["pytest-asyncio"]
+
+[tool.pyright]
+include = ["tanchi"]
+
+[tool.mypy]
+strict = true
+warn_unreachable = true
+warn_return_any = false
+
+# for pyright
+warn_unused_ignores = false
+warn_redundant_casts = false
+
+[tool.coverage.report]
+exclude_lines = [
+    "^if __name__ == ['\"]__main__['\"]:$",
+    "^\\s*raise$",
+    "^\\s*pass$",
+    "^\\s*\\.\\.\\.$",
+    "^\\s*@abc.abstractmethod$",
+    "^\\s*if typing.TYPE_CHECKING:$",
+    "^\\s*if not typing.TYPE_CHECKING:$",
+    "^\\s*if sys.version_info [<>=]+ \\(\\d+, \\d+\\):$"
+]
