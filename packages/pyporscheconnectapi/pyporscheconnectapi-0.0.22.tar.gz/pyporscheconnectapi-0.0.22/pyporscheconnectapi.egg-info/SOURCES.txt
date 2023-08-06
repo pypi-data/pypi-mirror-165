@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+pyporscheconnectapi/__init__.py
+pyporscheconnectapi/cli.py
+pyporscheconnectapi/client.py
+pyporscheconnectapi/connection.py
+pyporscheconnectapi/exceptions.py
+pyporscheconnectapi.egg-info/PKG-INFO
+pyporscheconnectapi.egg-info/SOURCES.txt
+pyporscheconnectapi.egg-info/dependency_links.txt
+pyporscheconnectapi.egg-info/entry_points.txt
+pyporscheconnectapi.egg-info/requires.txt
+pyporscheconnectapi.egg-info/top_level.txt
