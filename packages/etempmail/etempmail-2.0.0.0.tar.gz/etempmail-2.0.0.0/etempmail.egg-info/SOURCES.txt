@@ -1,0 +1,10 @@
+README.md
+setup.py
+etempmail/TempMail.py
+etempmail/TempMailException.py
+etempmail/__init__.py
+etempmail.egg-info/PKG-INFO
+etempmail.egg-info/SOURCES.txt
+etempmail.egg-info/dependency_links.txt
+etempmail.egg-info/requires.txt
+etempmail.egg-info/top_level.txt
