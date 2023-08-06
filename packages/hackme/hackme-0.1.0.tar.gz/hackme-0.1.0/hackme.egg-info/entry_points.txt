@@ -1,0 +1,2 @@
+[console_scripts]
+hackme = hackmeapp:main
