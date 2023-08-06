@@ -1,0 +1,15 @@
+ovds_utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ovds_utils/exceptions.py,sha256=f6NyiXzUXA5V6elab45dnZ4wuP6AJWa27eoy2eRJ4Ao,93
+ovds_utils/logging.py,sha256=pEhH9egqcRJAKE33C2Zqn3Ko-MI82CQ9BxIkk345Lvw,477
+ovds_utils/metadata.py,sha256=7Y00S8CFT7flPyKZOpQXOCqLffyr4mtdNy931RFmh6E,1971
+ovds_utils/vds.py,sha256=NUTMlcLuG2u-83esR01bMkwBVHPb-TbBnhCo7IQy3Ww,18246
+ovds_utils/ovds/__init__.py,sha256=Uht4F5w0wURpK4tP5rDcVB4TjEfHYEUweH0kdC9GX6I,283
+ovds_utils/ovds/copy.py,sha256=ZJFRlBjrtPI7XvXakzy7qkIq_xlUV2YAdiTW4rxUb1Q,861
+ovds_utils/ovds/enums.py,sha256=xAFYRWHfVMZf8VXFQtj_3YUY78gN3HVC1Wjh4AWGaAs,2020
+ovds_utils/ovds/utils.py,sha256=wbLh5Vkp83x5bVgH8nGmJSYfVRwBwNHe6vBWV7pdoGU,6408
+ovds_utils/ovds/writing.py,sha256=ZdlM5m2YjhmnaQQp8IONMJvZ8nmimuPX98irdskoaNA,11584
+ovds_utils-0.1.11.dist-info/LICENSE,sha256=Xz_WP2dJJwc4peiNGRytl8_MF3fEznh_Aa2fyGxFBh8,1073
+ovds_utils-0.1.11.dist-info/METADATA,sha256=mHjpS3fu79pOklqPUzh5m2MQb3OtM0DgUcOjl9QR-a4,2926
+ovds_utils-0.1.11.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+ovds_utils-0.1.11.dist-info/top_level.txt,sha256=CIGHnI8WVceZCb3InHl4Ig6uclpJIBVJLkrSiLhWgZ4,11
+ovds_utils-0.1.11.dist-info/RECORD,,
