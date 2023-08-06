@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: anypoint
+Version: 0.3.0
+Summary: anypoint, a python api client for the mulesoft anypoint APIs
+Author-email: dlopes7 <davidribeirolopes@gmail.com>
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: requests==2.28.1
+Project-URL: Home, https://github.com/dlopes7/anypoint-api-python-client
