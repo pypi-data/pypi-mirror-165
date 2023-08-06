@@ -1,0 +1,3 @@
+class ConfigInvaidError(Exception):
+    pass
+
