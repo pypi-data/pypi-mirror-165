@@ -1,0 +1,1 @@
+from .mission_naming import generate
