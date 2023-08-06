@@ -1,0 +1,3 @@
+[console_scripts]
+flow_federate_cli = flow_federate_cli.flow_cli:flow_cli
+flow_server_cli = flow_server_cli.flow_cli:flow_cli

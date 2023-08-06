@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: iflearner-flow-client
+Version: 0.1.2
+Summary: Iflearner Flow Client, include flow_server_sdk, flow_federate_client, flow_server_cli, flow_federate_cli
+Home-page: https://github.com/iflytek/iflearner-flow
+Author: The iFLYTEK Turing Group
+License: Apache License 2.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# Iflearner Flow Client
+Interactive tools for `Iflearner Flow`, including `flow sdk` and `flow cli`
+
+### 安装
+You can execute the following command to quickly install:
+```shell
+pip install iflearner-flow-client
+```
+After the installation is complete, you can refer to the sdk package for interface calls,
+and you can also directly use the compiled cli tools `flow_federate_cli` and `flow_server_cli` to operate.
+
+## Usage tutorial
+### SDK
+- [Flow Server SDK](https://iflytek.github.io/iflearner-flow/api/flow_server_sdk)
+- [Flow Federate SDK](https://iflytek.github.io/iflearner-flow/api/flow_federate_sdk)
+
+### CLI
+- [Flow Server CLI](https://iflytek.github.io/iflearner-flow/api/flow_server_cli)
+- [Flow Federate CLI](https://iflytek.github.io/iflearner-flow/api/flow_federate_cli)
