@@ -1,0 +1,203 @@
+Metadata-Version: 2.1
+Name: crc-ct
+Version: 1.2.0
+Summary: C and Python CRC calculations module.
+Author: Adam Karpierz
+Author-email: adam@karpierz.net
+Maintainer: Adam Karpierz
+Maintainer-email: adam@karpierz.net
+License: zlib/libpng License ; https://opensource.org/licenses/Zlib
+Project-URL: Homepage, https://pypi.org/project/crc-ct/
+Project-URL: Documentation, https://crc-ct.readthedocs.io/
+Project-URL: Download, https://pypi.org/project/crc-ct/
+Project-URL: Source, https://github.com/karpierz/crc-ct
+Project-URL: Issues, https://github.com/karpierz/crc-ct/issues
+Keywords: crc-ct,crc
+Platform: any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: zlib/libpng License
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: Polish
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Programming Language :: Python :: Implementation :: Stackless
+Classifier: Programming Language :: C
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: <4.0.0,>=3.7.0
+Description-Content-Type: text/x-rst; charset=UTF-8
+License-File: LICENSE
+Requires-Dist: setuptools (>=63.2.0)
+Requires-Dist: pkg-about (>=1.0.7)
+Provides-Extra: doc
+Requires-Dist: docutils (<0.19,>=0.14) ; extra == 'doc'
+Requires-Dist: Sphinx (>=4.5.0) ; extra == 'doc'
+Requires-Dist: sphinx-tabs (>=3.4.1) ; extra == 'doc'
+Requires-Dist: sphinx-copybutton (>=0.5.0) ; extra == 'doc'
+Requires-Dist: sphinxcontrib-spelling (>=7.6.0) ; extra == 'doc'
+Requires-Dist: restructuredtext-lint (>=1.4.0) ; extra == 'doc'
+Requires-Dist: nbsphinx (>=0.8.9) ; extra == 'doc'
+Provides-Extra: test
+Requires-Dist: deepdiff (>=5.8.1) ; extra == 'test'
+
+crc-ct
+======
+
+C and Python (ctypes/cffi-based) CRC calculations module.
+
+Overview
+========
+
+TBD...
+
+`PyPI record`_.
+
+`Documentation`_.
+
+Usage
+-----
+
+TBD...
+
+Installation
+============
+
+Prerequisites:
+
++ Python 3.7 or higher
+
+  * https://www.python.org/
+  * 3.7 is a primary test environment.
+
++ pip and setuptools
+
+  * https://pypi.org/project/pip/
+  * https://pypi.org/project/setuptools/
+
+To install run:
+
+  .. parsed-literal::
+
+    python -m pip install --upgrade |package|
+
+Development
+===========
+
+Prerequisites:
+
++ Development is strictly based on *tox*. To install it run::
+
+    python -m pip install --upgrade tox
+
+Visit `development page`_.
+
+Installation from sources:
+
+clone the sources:
+
+  .. parsed-literal::
+
+    git clone |respository| |package|
+
+and run:
+
+  .. parsed-literal::
+
+    python -m pip install ./|package|
+
+or on development mode:
+
+  .. parsed-literal::
+
+    python -m pip install --editable ./|package|
+
+License
+=======
+
+  | Copyright (c) 1994-2022 Adam Karpierz
+  | Licensed under the zlib/libpng License
+  | https://opensource.org/licenses/Zlib
+  | Please refer to the accompanying LICENSE file.
+
+Authors
+=======
+
+* Adam Karpierz <adam@karpierz.net>
+
+.. |package| replace:: crc-ct
+.. |package_bold| replace:: **crc-ct**
+.. |respository| replace:: https://github.com/karpierz/crc-ct.git
+.. _development page: https://github.com/karpierz/crc-ct
+.. _PyPI record: https://pypi.org/project/crc-ct/
+.. _Documentation: https://crc-ct.readthedocs.io/
+
+Changelog
+=========
+
+1.2.0 (2022-08-02)
+------------------
+- Add support for Python 3.10 and 3.11
+- Add support for PyPy 3.7, 3.8 and 3.9
+- Setup update (currently based mainly on pyproject.toml).
+
+1.1.0 (2022-01-10)
+------------------
+- Drop support for Python 3.6.
+- Copyright year update.
+- Setup update.
+
+1.1.0rc4 (2021-07-20)
+---------------------
+- Setup general update and improvement.
+
+1.1.0rc3 (2020-10-18)
+---------------------
+- Add support for Python 3.9.
+- Drop support for Python 3.5.
+- General update and cleanup.
+- Fixed docs setup.
+
+1.0.0rc9 (2020-01-16)
+---------------------
+- Fix for missing include stddef.h (for size_t) in crc.h
+- Another fixes for gcc/Linux.
+- Added ReadTheDocs config file.
+- Setup update.
+
+1.0.0rc6 (2019-11-13)
+---------------------
+- Drop support for Python2.
+- Add support for Python 3.8.
+- Setup update and cleanup.
+
+1.0.0rc2 (2019-05-19)
+---------------------
+- C API has been changed in one place: crc_finalize() -> crc_final().
+- Python API has been changed. It is now finally established in the
+  folowing way; crc.name instead of crc.crc_name in most of cases.
+- Python doc-strings update.
+- Fix for error in Python definition of crc.predefined_models.
+- Python tests have been improved, enhanced and fixed.
+- Changes and fixes for support of Python2.
+- Minor setup improvement.
+
+1.0.0b2 (2019-05-13)
+--------------------
+- Python tests have been added.
+- Minor setup improvements.
+
+1.0.0b1 (2019-05-12)
+--------------------
+- Firt beta release.
+
+0.0.1 (2017-05-09)
+------------------
+- Initial release for Python.
