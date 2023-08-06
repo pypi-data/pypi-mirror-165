@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+url_converter/__init__.py
+url_converter.egg-info/PKG-INFO
+url_converter.egg-info/SOURCES.txt
+url_converter.egg-info/dependency_links.txt
+url_converter.egg-info/top_level.txt

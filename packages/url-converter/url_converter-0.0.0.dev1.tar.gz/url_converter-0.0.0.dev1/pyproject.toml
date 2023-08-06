@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "url_converter"
+version = "0.0.0.dev1"
+authors = [
+  { name = "Curt Gilman", email = "curt@gilm.net" },
+]
+description = "Provides a base class for implementing simple URL converters."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.7"
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/curt/python-url-converter"
+"Bug Tracker" = "https://github.com/curt/python-url-converter/issues"
