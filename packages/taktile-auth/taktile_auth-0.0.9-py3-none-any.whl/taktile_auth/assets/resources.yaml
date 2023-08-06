@@ -1,0 +1,44 @@
+organization:
+  org_id: wildcard
+deployment_artifacts:
+  org_id: wildcard
+  repository_id: wildcard
+  branch: partial_wildcard
+deployment:
+  org_id: wildcard
+  repository_id: wildcard
+  branch: partial_wildcard
+endpoint:
+  org_id: wildcard
+  repository_id: wildcard
+  branch: partial_wildcard
+  endpoint: partial_wildcard
+runtime_artifacts:
+  org_id: wildcard
+cluster:
+  org_id: wildcard
+flow:
+  # read: can read information about a flow (view nodes, sample data, config)
+  # write: can update information about a flow (view nodes, sample data, config)
+  # delete: can delete a flow
+  org_id: wildcard
+flow_service:
+  # read: can see the flow status (e.g. published), schema, and routing options
+  # write: can update the flow status (e.g. publish), change schema, and routing behaviour
+  # delete: can delete/archive a flow service
+  org_id: wildcard
+flow_endpoint:
+  # read: can access Swagger docs but not call flow api endpoints
+  # write: can call flow api endpoints
+  # delete: n/a
+  org_id: wildcard
+connect_provider:
+  # read: can view which providers are configured
+  # write: can configure new providers. This includes updating secrets for this provider
+  # delete: can delete provider configurations.
+  org_id: wildcard
+connect_resource:
+  # read: can view the results of calls to external providers
+  # write: can request (and thereby create resources in storage for) connect resources (e.g. reports)
+  # delete: can delete resource (results) from storage. Relevant in the context of GDPR.
+  org_id: wildcard
