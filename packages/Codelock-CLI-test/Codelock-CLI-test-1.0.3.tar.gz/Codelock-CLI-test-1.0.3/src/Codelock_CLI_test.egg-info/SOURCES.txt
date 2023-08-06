@@ -1,0 +1,12 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+src/Codelock_CLI_test.egg-info/PKG-INFO
+src/Codelock_CLI_test.egg-info/SOURCES.txt
+src/Codelock_CLI_test.egg-info/dependency_links.txt
+src/Codelock_CLI_test.egg-info/entry_points.txt
+src/Codelock_CLI_test.egg-info/requires.txt
+src/Codelock_CLI_test.egg-info/top_level.txt
+src/codelock/__init__.py
+src/codelock/cdcli.py
