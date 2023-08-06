@@ -1,0 +1,2 @@
+[mkdocs.plugins]
+timetoread = mkdocs_timetoread_plugin.plugin:TimeToRead
