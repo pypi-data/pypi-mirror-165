@@ -1,0 +1,9 @@
+README.md
+setup.py
+kydlib/__init__.py
+kydlib/kydlib.py
+kydlib.egg-info/PKG-INFO
+kydlib.egg-info/SOURCES.txt
+kydlib.egg-info/dependency_links.txt
+kydlib.egg-info/requires.txt
+kydlib.egg-info/top_level.txt
