@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: ebrains-kg-core
+Version: 0.9.10
+Home-page: https://github.com/HumanBrainProject/kg-core-python
+Author: EBRAINS
+Author-email: kg@ebrains.eu
+Keywords: EBRAINS,Knowledge Graph,KG
+License-File: LICENSE
+
+This is a client library to access the EBRAINS KG core API via python.
