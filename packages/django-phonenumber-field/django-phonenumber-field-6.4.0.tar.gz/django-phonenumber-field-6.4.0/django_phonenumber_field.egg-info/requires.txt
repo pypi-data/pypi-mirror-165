@@ -1,0 +1,7 @@
+Django>=3.2
+
+[phonenumbers]
+phonenumbers>=7.0.2
+
+[phonenumberslite]
+phonenumberslite>=7.0.2
