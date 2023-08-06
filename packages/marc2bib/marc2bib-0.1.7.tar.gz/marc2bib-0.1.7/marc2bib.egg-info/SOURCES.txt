@@ -1,0 +1,9 @@
+LICENSE
+README.rst
+setup.py
+marc2bib.egg-info/PKG-INFO
+marc2bib.egg-info/SOURCES.txt
+marc2bib.egg-info/dependency_links.txt
+marc2bib.egg-info/not-zip-safe
+marc2bib.egg-info/requires.txt
+marc2bib.egg-info/top_level.txt
