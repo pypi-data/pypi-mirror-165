@@ -1,0 +1,91 @@
+Metadata-Version: 2.1
+Name: AutoStrEnum
+Version: 0.0.4
+Summary: # AutoStrEnum
+Home-page: https://github.com/PttCodingMan/AutoStrEnum
+Author: CodingMan
+Author-email: pttcodingman@gmail.com
+License: UNKNOWN
+Keywords: enum
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# AutoStrEnum
+
+This project defines an extended `Enum` class.  
+It can automatically assign the value to your Enum member, and the value is just the same as the member name!  
+And when you print it, you won't see the Enum name in front of the class member.
+
+## Install
+
+```shell
+pip install AutoStrEnum
+```
+
+## Demo
+
+```python
+from enum import auto
+
+from AutoStrEnum import AutoStrEnum
+
+
+class Fruit(AutoStrEnum):
+    BANANA = auto()
+    WATERMELON = auto()
+    DURIAN = auto()
+
+
+class MagicFruit(AutoStrEnum):
+    BANANA = auto()
+    WATERMELON = auto()
+    DURIAN = auto()
+
+
+if __name__ == '__main__':
+    print(Fruit, MagicFruit)
+    print(Fruit.BANANA, Fruit.WATERMELON, Fruit.DURIAN)
+
+    print('should be True:', Fruit.BANANA in Fruit)
+    print('should be True:', Fruit.BANANA is Fruit.BANANA)
+    print('should be True:', Fruit.BANANA == Fruit.BANANA)
+    print('should be True:', isinstance(Fruit.BANANA, Fruit))
+    print('should be False:', isinstance(Fruit.BANANA, str))
+    print('should be False:', isinstance(Fruit.BANANA, MagicFruit))
+    print('should be False:', isinstance(False, Fruit))
+
+    # We also can use as dict key!
+    test_dict = {
+        Fruit: {
+            Fruit.BANANA: 2,
+            Fruit.DURIAN: 10,
+            Fruit.WATERMELON: 0
+        }}
+
+    print(test_dict)
+```
+
+```shell
+$ python demo.py
+Fruit MagicFruit
+BANANA WATERMELON DURIAN
+should be True: True
+should be True: True
+should be True: True
+should be True: True
+should be False: False
+should be False: False
+should be False: False
+{Fruit: {BANANA: 2, DURIAN: 10, WATERMELON: 0}}
+```
+
+

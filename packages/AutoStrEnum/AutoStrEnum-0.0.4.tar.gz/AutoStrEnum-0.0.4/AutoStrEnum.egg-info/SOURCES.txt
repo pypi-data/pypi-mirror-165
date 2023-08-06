@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+AutoStrEnum/__init__.py
+AutoStrEnum/auto_string_enum.py
+AutoStrEnum.egg-info/PKG-INFO
+AutoStrEnum.egg-info/SOURCES.txt
+AutoStrEnum.egg-info/dependency_links.txt
+AutoStrEnum.egg-info/requires.txt
+AutoStrEnum.egg-info/top_level.txt
