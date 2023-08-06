@@ -1,0 +1,7 @@
+setup.cfg
+setup.py
+dist_lulik.egg-info/PKG-INFO
+dist_lulik.egg-info/SOURCES.txt
+dist_lulik.egg-info/dependency_links.txt
+dist_lulik.egg-info/not-zip-safe
+dist_lulik.egg-info/top_level.txt
