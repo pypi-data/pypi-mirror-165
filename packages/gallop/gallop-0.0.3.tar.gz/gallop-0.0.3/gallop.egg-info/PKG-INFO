@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: gallop
+Version: 0.0.3
+Home-page: https://github.com/raynardj/gallop
+License: GPLv3+
+Project-URL: Documentation, https://github.com/raynardj/gallop
+Project-URL: Tracker, https://github.com/raynardj/gallop/issues
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# gallop
+🐎 New level of python develop. Source code from [github](https://github.com/raynardj/gallop)
+
+> More dynamic in design, more configuration driven
+
+[![PyPI version](https://img.shields.io/pypi/v/gallop)](https://pypi.org/project/gallop/)
+![License](https://img.shields.io/github/license/raynardj/forgebox)
+[![Test](https://github.com/raynardj/gallop/actions/workflows/test.yml/badge.svg)](https://github.com/raynardj/gallop/actions/workflows/test.yml)
+[![pypi build](https://github.com/raynardj/gallop/actions/workflows/publish.yml/badge.svg)](https://github.com/raynardj/gallop/actions/workflows/publish.yml)
+
+## Install
+```shell
+pip install gallop
+```
+
+## Configuration Management
+```python
+from gallop.config import BaseConfig
+
+config = BaseConfig(a=1)
+config.a = 2
+config.b = 3
+
+config.to_json("some/path.json")
+config.to_yaml("some/path.yaml")
+```
+## Related project
+> From the same lead author
+* Python [category](https://github.com/raynardj/category) management accelerated with Rust
+* Data science basic toolset [forgebox](https://github.com/raynardj/forgebox)
