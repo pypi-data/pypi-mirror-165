@@ -1,0 +1,58 @@
+---
+common:
+  # before_commands will be executed in each pane before doing anything else. Use this e.g. for
+  #   - sourcing an environment
+  #   - ssh-ing to another machine
+  before_commands:
+    - echo "This is a catmux window :)" # before commands can be specified global and per window
+
+  # The default window will be the one displayed when first connecting to the tmux session
+  default_window: some_other_window
+parameters:
+  # Parameters specified here can be used below and they can be overwritten at runtime
+  show_layouts: false # This parameter is used together with the if flag below
+  replacement_param: world\! # Parameters can also be used as replacement templates
+
+# Everything will be opened in windows. Windows can have multiple splits.
+windows:
+  - name: tiled
+    if: show_layouts # this window will only be started when the 'show_layouts' parameter is true
+    layout: tiled # One can use the default layouts specified by tmux
+    splits:
+      - commands:
+        - echo "catmux with multiple commands"
+        - echo "hello ${replacement_param}"
+      - commands:
+        - echo "1"
+      - commands:
+        - echo "2"
+      - commands:
+        - echo "3"
+      - commands:
+        - echo "4"
+  - name: left-right
+    if: show_layouts
+    layout: even-horizontal
+    splits:
+      - commands:
+        - echo "left"
+      - commands:
+        - echo "right"
+  - name: top-bottom
+    if: show_layouts
+    layout: even-vertical
+    splits:
+      - commands:
+        - echo "top"
+      - commands:
+        - echo "bottom"
+  - name: no_split
+    unless: show_layouts # This window will only be displayed if 'show_layouts' is false
+    # If just one split is desired, just skip it and write the commands directly
+    commands:
+      - echo "hello ${replacement_param}"
+    delay: 1 # Use this to wait before starting the next window
+  - name: some_other_window
+    commands:
+      - echo "You landed in your default_window"
+      - echo "hello ${replacement_param}"
