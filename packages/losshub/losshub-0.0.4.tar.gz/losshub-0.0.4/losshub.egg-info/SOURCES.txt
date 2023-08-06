@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+losshub/__init__.py
+losshub/losses.py
+losshub.egg-info/PKG-INFO
+losshub.egg-info/SOURCES.txt
+losshub.egg-info/dependency_links.txt
+losshub.egg-info/requires.txt
+losshub.egg-info/top_level.txt
