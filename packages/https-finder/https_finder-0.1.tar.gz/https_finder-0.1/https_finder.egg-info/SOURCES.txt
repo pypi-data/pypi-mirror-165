@@ -1,0 +1,8 @@
+setup.cfg
+setup.py
+https_finder/EasyHttpsFinder.py
+https_finder.egg-info/PKG-INFO
+https_finder.egg-info/SOURCES.txt
+https_finder.egg-info/dependency_links.txt
+https_finder.egg-info/not-zip-safe
+https_finder.egg-info/top_level.txt
