@@ -1,0 +1,11 @@
+prefix=/project/simplepyble/build/lib.linux-aarch64-cpython-310
+exec_prefix=/project/simplepyble/build/lib.linux-aarch64-cpython-310
+libdir=/project/simplepyble/build/lib.linux-aarch64-cpython-310/lib64
+includedir=/project/simplepyble/build/lib.linux-aarch64-cpython-310/include
+
+Name: SimpleBLE
+Description: "The ultimate fully-fledged cross-platform library for Bluetooth Low Energy (BLE)."
+Version: 0.5.0
+Libs: -L${libdir} -lsimpleble 
+Cflags: -I${includedir}
+Conflicts:
