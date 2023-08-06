@@ -1,0 +1,17 @@
+scikit-learn
+dionysus
+numpy
+pyclustering
+pymatgen
+diode
+loguru
+click
+
+[docs]
+sphinx
+furo
+sphinx-click
+sphinx-autodoc-typehints
+sphinx_automodapi
+sphinx_copybutton
+sphinxcontrib-katex

@@ -1,0 +1,3 @@
+[console_scripts]
+moleculetda = moleculetda.cli:main
+
