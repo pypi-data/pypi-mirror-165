@@ -1,0 +1,3 @@
+[console_scripts]
+qrogue = qrogue.qrogue:start_qrogue
+

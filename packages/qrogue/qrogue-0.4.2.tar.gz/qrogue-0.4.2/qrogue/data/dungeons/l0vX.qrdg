@@ -1,0 +1,56 @@
+Qrogue<
+Name = "Lesson X: title"
+Description = Speaker "0" ""
+NO_TELEPORTER
+
+// Introduced Concepts:
+// 
+
+[Robot]
+2 qubits [ *xgate ]
+circuit_space = 2
+maxenergy = 100
+
+[Layout]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| __ .. __ .. __ .. oh .. __ .. __ .. __ |
+| ..    ..    ..    ==    ..    ..    .. |
+| __ .. __ .. __ .. SR .. __ .. __ .. __ |
+| ..    ..    ..    ..    ..    ..    .. |
+| __ .. __ .. __ .. __ .. __ .. __ .. __ |
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[Custom Rooms]
+
+oh (Wild):
+#############
+# _ _ _ _ _ #
+# _ _ _ _ _ #
+# _ _ _ _ _ #
+# _ _ _ _ _ #
+# _ _ _ _ _ #
+#############
+
+
+[Hallways]
+11 (locked; ; )
+
+[StateVector Pools]
+custom
+*myStvPool [ [0j, -0j, -1j, +0], [0.5, -.5j, +.5, 0.5j ] ]
+
+default random [ [.707, +0, -0 + 4j, .707j] ]
+
+[Reward Pools]
+custom 
+*energySmall [energy 10]
+*energyBig [energy 20]
+
+default *energySmall
+
+
+[Messages]
+// highlight text by encapsulating it in "//02abcd//" where "abcd" is the text to highlight and "02" one of the available styles: 01 is for tiles, 02 is for game objects, 03 for actions, 04 for keys on the keyboard and 05 for other words
+// speaker: 0 = Examiner, 1 = Scientist, 2 = System, 3 = Player
+
+>Qrogue

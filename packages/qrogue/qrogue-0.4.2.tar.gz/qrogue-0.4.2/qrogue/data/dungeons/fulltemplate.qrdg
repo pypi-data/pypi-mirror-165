@@ -1,0 +1,156 @@
+// This is a comment. It will be ignored by the program but is very helpful for explaining things or writing down thoughts for later. A comment always starts with "//", can start at an arbitrary position in a line and will stop at the end of the line.
+
+Qrogue<
+Name = "Full Template - x+x!"
+
+[Robot]
+2 qubits [ *hgate, *xgate, *CxGate, *h ]
+
+[Layout]
+// a combination of two letters references a room described below under [Custom Rooms]
+// a combination of two numbers references a hallway described below under [Hallways] to connect two rooms with each other
+// == describes the most basic hallway (no locks or anything special, just a closed door that opens as soon as you step onto it)
+// __ is a space holder for rooms so you can define e.g. a "U" structure like the one from "oh" to "uu" below
+// .. is a space holder for hallways so you can skip connections between rooms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| __ .. cc 14 dd 11 oh .. __ .. uu .. __ |
+| ..    13    ..    ==    ..    ..    .. |
+| __ .. bb 33 aa 11 SR 22 fe == ui .. __ |
+| ..    ..    ==    ..    ..    ..    .. |
+| __ .. __ .. aa .. __ .. __ .. __ .. __ |
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// here is how an empty layout looks so you can copy it to create your own (don't forget to remove the "//" and add a SpawnRoom SR!)
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//| __ .. __ .. __ .. __ .. __ .. __ .. __ |
+//| ..    ..    ..    ..    ..    ..    .. |
+//| __ .. __ .. __ .. __ .. __ .. __ .. __ |
+//| ..    ..    ..    ..    ..    ..    .. |
+//| __ .. __ .. __ .. __ .. __ .. __ .. __ |
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[Custom Rooms]
+// Rooms consist of an id (combination of two letters) that is referenced from within the layout followed by their type in paranthesis (currently not important, just use "Wild" for now). After that comes the room layout. Here you can place different tiles (see below) on the 5x5 grid of the room. If not all 5 spots per row are filled the remaining spots on the right will be empty. Same for the bottom most rows if there are empty rows. There needs to be one whitespace " " between every tile. Often you can or have to define some additional parameters per tile. These additional parameters are set in the detailed tile-description below the room layout. Since tiles don't have ids but only a certain type the first description of a certain type is used for the first occurrence of this tile type, the second description for the second occurrence and so on. The order here is top to bottom before left to right.
+
+// Tiles (parameters will be described below where we define them):
+// - "digits" describe puzzles
+// - "_" describes a floor tile which is just a blank space (basically the tile equivalent to the above mentioned "__" and "..")
+// - "o" describe an obstacle tile that simply blocks the player from stepping onto it
+// - "c" describe collectible tiles to give collectibles (keys, coins, gates, qubits, ...) to the player
+// - "r" 
+// - "$" 
+// - "m" describe message tiles to show a message to the player
+// - "t" describe trigger tiles to trigger in-game events
+
+// Note: you will often see "*abcde" below. These are references to parts defined somewhere else (e.g. messages, event ids). Naturally, it is recommended to give every reference a unique and meaningful name although several references can have the same name as long as their type differs (e.g. you can define a StateVector pool *aa, a reward pool *aa, a message *aa and an event *aa). References always start with a "*" followed by an arbitrary number of letters and digits. Keep in mind that references are not casesensitive and using capital letters only improves readability of references (e.g. "*thisIsAVeryLongReference" is the same as "*thisisaverylongreference" but the latter is harder to read).
+
+aa (Wild):
+#############
+# t m _ _ _ #
+# 0 1 2 3 4 #
+# 5 6 7 8 9 #
+# _ o c _ r #
+# r $ _ _ $ #
+#############
+t *eventToTrigger3four	// we need to specify the event we want to trigger with *eventId
+m *msgRef				// we need to specify a reference to the message we want to show (see [Messages] below)
+0 *stv					// puzzles need a reference to a StateVector pool (see [StateVector Pools] below) to receive a target for the player to reach
+1 *stv *reward			// a reference to a reward pool (see [Reward Pools] below) to be able to give the player a reward for solving the puzzle is also recommended since not stating it will simply pull a reward from the default reward pool
+7 *aDifferentStateVectorPool *aDifferentRewardPool		// the order of the different tile types (also including the different digits for puzzles) doesn't matter
+2 *stv *reward tutorial *tutpuzzle1		// optionally we can define a message that shows up after we switched to the puzzle screen via the keyword "tutorial" followed by a reference to a message (see [Messages] below)
+3 *stv *reward trigger *testEvent		// also optionally we can define an in-game event that is triggered after we solve the puzzle via the keyword "trigger" followed by *eventId
+4 *stv trigger *defaultRewardPool		// different combinations of the optional parameters are allowed
+5 *stv *reward tutorial *tut1x1 *trigger *tut1x1Event	// of course also all optionals at once are allowed
+//6 *stv trigger *event21 tutorial *illegalOrder		// however, the order of the optionals is fixed so you cannot switch it up
+// Not defining 8 here is not a problem at all. It will simply create 8 based on the default StateVector pool and default reward pool
+9 *finalStv *finalRw
+// o has no parameters
+r 7 *riddleStv *riddleReward	// we need to specify a state vector pool and reward pool to draw from and also the number of attempts the player gets for this riddle
+r 7 [0, 0, 1, 0] gate *Y		// alternatively we can also specify the state vector and reward directly
+$ 1 *shopPool 		// we need to specify a reward pool and an the number of items we want to offer in the shop (i.e. number of collectibles to draw from the reward pool)
+$ 1 [coin 1, key 1]	// alternatively to specifying a reward pool a list of available collectibles can be stated directly
+
+// now let's have a look at a different room
+dd (Wild):
+#############
+# 0 0 1 1 1 #
+# _ 2 5 5 5 #
+# 7 2 5 5 5 #
+# 6 7 _ _ 9 #
+# 7 3 8 4 8 #
+#############
+// in this room we placed a lot of puzzles (digits)
+// reminder of Puzzle parameters: puzzle_id, state vector pool, reward pool (optional but highly recommended), tutorial message (optional), trigger event (optional)
+0 *stv *reward tutorial *tutpuzzle1 trigger *eventToTrigger1
+0 *stv *reward tutorial *ohADifferent0		// if we specify multiple 0s the first specification will be for the first 0, the second one for the second 0, ...; counting top to bottom, left to right
+1 *stv1 trigger *yetAnotherEvent
+1 *stv
+// the remaining 1 TODO
+// by skipping 2, 3, 4 we tell the game to use default values
+5 *stv5 *reward5 
+6 *stv *reward tutorial *helptextFight	// we can also reference HelpTexts directly
+6 *stv *reward trigger *gameOver		// overspecification of a tile (e.g. we only have one 6 but define 2) is ignored
+
+oh (Wild):
+#############
+# _ _ _ _ _ #
+# _ _ _ _ _ #
+# _ _ _ _ _ #
+# _ _ _ _ _ #
+# _ _ _ _ _ #
+#############
+c *key 2 
+0 *stv *rewards
+
+c *coin 5; t *8093 		// nothing happens if we specify a trigger that is not used
+r [1, -0, +0, 0j] *hp
+$ *mixedPool 3
+c *key 1
+
+cc (visible Wild):
+#############
+#     _     #
+#     _     #
+# _ _ 0 _ _ #
+#     _     #
+#     _     #
+#############
+
+
+[Hallways]
+01 (locked; ; )
+22 (closed; ; )
+11 (closed; one way East permanent; )
+12 (event *sawShop; ; )
+13 (event *sawShop; one way West; )
+
+[StateVector Pools]
+custom
+*stv [ [1, 0, 0, 0] ]
+*stv1 [ [0, 0, 1, 0] ]
+*stv5 [ [0, 0, 0, 0, 1] ]	// an invalid state vector will trigger a warning and the default one will be used instead
+*myStvPool [ [0j, -0j, -1j, +0], [0.5, -.5j, +.5, 0.5j] ];  
+            default rewards: random *defaultStvRewardPool
+*inexactStv [ [.707, +0, -0 + 0j, .707j] ]	// magnitudes of the complex numbers don't have to add up exactly to 1, a small tolerance makes it more convenient to define
+*riddleStv [ [1, 0, 0, 0] ]
+
+default random [ [1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1] ]	// elements of lists have to be separated with ","
+
+[Reward Pools]
+custom 
+*key [key 1]
+*keyRandom [key 1, key 2, key 3, key 4]
+*shopPool [coin 2, key 1]
+*reward [key 1, coin 2, gate *X, coin 3, key 2]
+*riddleReward [gate *H]
+
+*myRewardPool [key 2, coin 3, gate *H, gate *x, gate *CxGate]
+*defaultStvRewardPool [coin 2, key 1]
+
+default ordered *myRewardPool	// default pools can not only be defined explicitely (like you saw for the default StateVector Pool) but also implicitely via reference!
+
+[Messages]
+*tutpuzzle1 "This is an example message that is shown after you step onto a puzzle and started solving it."
+*ohADifferent0 "You can define multiple instances of the same puzzle id!"
+
+>Qrogue
