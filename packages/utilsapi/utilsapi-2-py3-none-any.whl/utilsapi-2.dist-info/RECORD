@@ -1,0 +1,9 @@
+utilsapi/__init__.py,sha256=bSRg9HCgwJZbcxDnI5VxeiOjxTkbpU-IaAmrhREcWPQ,21
+utilsapi/api.py,sha256=QE4yLSCdVFX3YilvyP3qKFylxjR2206xN2p6o8FhDMg,31
+utilsapi/static/__init__.py,sha256=Q_YMpHkMmG4glF73lZsCXSsiLzdMpBhnRpFam1-7VNY,47
+utilsapi/static/funcs.py,sha256=DLoAsYP7L7XynYp3ZSSnCsvCPXI3QEZj05gva90o7eI,21
+utilsapi/static/values.py,sha256=GLbrt7rRqR_IJSqu3Rqo01AbPfxtLukQQpxamcq7OWE,13
+utilsapi-2.dist-info/METADATA,sha256=m0LuD7qJyTufa8lx8FwNz5cvwAo8mV3JAuf1_KjyNdE,507
+utilsapi-2.dist-info/WHEEL,sha256=ewwEueio1C2XeHTvT17n8dZUJgOvyCWCt0WVNLClP9o,92
+utilsapi-2.dist-info/top_level.txt,sha256=VwQIa6zzwYB5bOmDf688IFcNHG-AUjkl0Khkrnk0ZN8,9
+utilsapi-2.dist-info/RECORD,,
