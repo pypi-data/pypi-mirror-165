@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/windows_metadata/__init__.py
+src/windows_metadata/windows_details.py
+src/windows_metadata.egg-info/PKG-INFO
+src/windows_metadata.egg-info/SOURCES.txt
+src/windows_metadata.egg-info/dependency_links.txt
+src/windows_metadata.egg-info/requires.txt
+src/windows_metadata.egg-info/top_level.txt
