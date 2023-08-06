@@ -1,0 +1,5 @@
+config-version: 1
+name: dbt_opengauss
+version: 1.0
+
+macro-paths: ["macros"]
