@@ -1,0 +1,2 @@
+[console_scripts]
+i2b2rls = i2b2rls.i2b2fire:main
