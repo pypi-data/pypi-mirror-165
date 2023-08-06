@@ -1,0 +1,65 @@
+Metadata-Version: 2.1
+Name: simple-print
+Version: 1.0.0
+Summary: A simple function that will help you with debugging.
+Home-page: https://github.com/Sobolev5/simple-print/
+Author: Sobolev Andrey
+Author-email: email.asobolev@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: termcolor (==1.1.0)
+Requires-Dist: executing (==0.8.1)
+Requires-Dist: asttokens (==2.0.5)
+
+# simple-print
+
+A simple function that will help you with debugging.
+
+```no-highlight
+https://github.com/Sobolev5/simple-print
+```
+
+# How to use it
+
+To install run:
+```no-highlight
+pip install simple-print
+```
+
+
+Add the following line at the top of your file:
+```python
+from simple_print import sprint 
+```
+
+
+And simple print your variables:
+```python
+sprint(master)    
+sprint(master, c="red") # colors: grey, red, green, yellow, blue, magenta, cyan, white. 
+sprint(master, c="red", b="on_white") # backgrounds: on_grey, on_red, on_green, on_yellow, on_blue, on_magenta, on_cyan
+sprint(master, c="blue", b="on_white", a="bold") # attributes: bold, dark, underline, blink, reverse, concealed
+sprint(f"master {master}", c="white", b="on_red", a="bold", s=True) # for f strings (any strings)
+sprint(master, c="red", b="on_white", a="bold", p=True) # with full path to file
+my_string = sprint(master, r=True) # return as string
+my_string = sprint(master, r=True, p=True) # return as string with path
+```
+
+
+Open your development console and see the result:
+
+![](https://github.com/Sobolev5/simple-print/blob/master/screenshots/screenshot.png)
+
+That's all.
+
+## P.S.
+Try my free service for developers [Workhours.space](https://workhours.space/). 
+It's time tracker with simple interface, powerful functionality such as automatic payroll calculation, 
+telegram bot timer, easy web2 and web3 auth and more. Enjoy. 
+
