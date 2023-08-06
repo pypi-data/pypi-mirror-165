@@ -1,0 +1,14 @@
+numpy
+scipy
+gsw
+matplotlib
+cmocean
+
+[dev]
+build
+twine
+black
+mypy
+sphinx
+sphinx-toolbox
+sphinx-paramlinks
