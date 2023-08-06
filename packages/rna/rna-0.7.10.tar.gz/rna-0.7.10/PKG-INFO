@@ -1,0 +1,105 @@
+Metadata-Version: 2.1
+Name: rna
+Version: 0.7.10
+Summary: Basic and essential code building blocks of all pythons
+Home-page: https://gitlab.mpcdf.mpg.de/dboe/rna
+Author: Daniel Böckenhoff
+Author-email: dboe@ipp.mpg.de
+License: MIT License
+Project-URL: Documentation, https://rna_docs.readthedocs.io
+Project-URL: Source, https://gitlab.mpcdf.mpg.de/dboe/rna
+Description: =====================
+        Introduction to `rna`
+        =====================
+        
+        
+        .. pypi
+        .. image:: https://img.shields.io/pypi/v/rna.svg
+            :target: https://pypi.python.org/pypi/rna
+        
+        .. ci
+            .. image:: https://img.shields.io/travis/dboe/rna.svg
+                :target: https://travis-ci.com/dboe/rna
+        .. image:: https://gitlab.mpcdf.mpg.de/dboe/rna/badges/master/pipeline.svg
+            :target: https://gitlab.mpcdf.mpg.de/dboe/rna/commits/master
+        
+        .. coverage
+        .. image:: https://gitlab.mpcdf.mpg.de/dboe/rna/badges/master/coverage.svg
+            :target: https://gitlab.mpcdf.mpg.de/dboe/rna/commits/master
+        
+        .. readthedocs
+        .. image:: https://readthedocs.org/projects/rna-docs/badge/?version=latest
+            :target: https://rna-docs.readthedocs.io/en/latest/?badge=latest
+            :alt: Documentation Status
+        
+        .. pyup crosschecks your dependencies. Github is default, gitlab more complicated: https://pyup.readthedocs.io/en/latest/readme.html#run-your-first-update 
+            .. image:: https://pyup.io/repos/github/dboe/rna/shield.svg
+                :target: https://pyup.io/repos/github/dboe/rna/
+                :alt: Updates
+        
+        .. image:: https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white
+           :target: https://github.com/pre-commit/pre-commit
+           :alt: pre-commit
+        
+        
+        Basic and essential code building blocks of all pythons
+        
+        
+        Licensed under the ``MIT License``
+        
+        Resources
+        ---------
+        
+        * Source code: https://gitlab.mpcdf.mpg.de/dboe/rna
+        * Documentation: https://rna_docs.readthedocs.io
+        * Pypi: https://pypi.python.org/pypi/rna
+        
+        
+        Features
+        --------
+        
+        The following features should be highlighted:
+        
+        * TODO
+        
+        MIT License
+        
+        Copyright (c) 2022, Daniel Böckenhoff
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Keywords: plotting,matplotlib,pyqtgraph,backend,logging,path,argparse
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.5
+Description-Content-Type: text/x-rst
+Provides-Extra: all
+Provides-Extra: dev
+Provides-Extra: docs
+Provides-Extra: test
+Provides-Extra: pyqtgraph
