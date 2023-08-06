@@ -1,0 +1,25 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "similarity_check"
+version = "0.0.11"
+authors = [
+  { name="meshari", email="meshari34343@gmail.com" },
+]
+description = "package for measuring the similarity of two texts"
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies  = [
+    "sentence_transformers",
+    "gensim",
+    "pyemd",
+    "pandas"
+]
