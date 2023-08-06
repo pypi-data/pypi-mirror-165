@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+PypStat/_PyStats.py
+PypStat/__init__.py
+PypStat/errors.py
+PypStat/utilities.py
+PypStat.egg-info/PKG-INFO
+PypStat.egg-info/SOURCES.txt
+PypStat.egg-info/dependency_links.txt
+PypStat.egg-info/entry_points.txt
+PypStat.egg-info/requires.txt
+PypStat.egg-info/top_level.txt
