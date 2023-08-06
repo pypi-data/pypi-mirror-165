@@ -1,0 +1,14 @@
+inorbit/__init__.py,sha256=naB7okqgULI52_usHsarxD_owRepmPvurvM49KMgVvQ,875
+inorbit/cli.py,sha256=znw_EtlteNO6AQQJpSU5FdKNsxgzef7jvfy1pGsCp8c,15459
+inorbit/client.py,sha256=v9puAji3W2cNuY2RDIlhtpuXDJQ45WJ61xQnFWTycfY,6555
+inorbit/constants.py,sha256=hG__KrClDvLXxdosPL-5cgP9wQ8IkaafaquoieI2Acs,104
+inorbit/exceptions.py,sha256=zx3H3SWOxLduXVpegNBybaFban8aIzV2ZGpdEhGf-lE,560
+tests/__init__.py,sha256=NklUV8vSc2e6u9u51vZ7zIGQesaJRb000KbyeJ4TIHs,59
+tests/test_client.py,sha256=QVu9iHnyD0J2G3X33zFDrVoP947WLlKvFJ3QkoH0ZyM,5841
+tests/test_robots_cli.py,sha256=ZzdmVs7feQAsfd2Lh1XLd8veSKzR5mLuRBoI7v_W9Yo,10478
+inorbit_cli-0.12.0.dist-info/LICENSE,sha256=llr7wWESaVzpN1Z4eZFhpi8KGKb2SkL2aiuM61R6LMg,4028
+inorbit_cli-0.12.0.dist-info/METADATA,sha256=ffhj-fkLUfY3XXoJk6x086lwdNwJFA-nSUuuQKZbPSo,1774
+inorbit_cli-0.12.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+inorbit_cli-0.12.0.dist-info/entry_points.txt,sha256=o_KMl6O_fbVm-bR7T2J6jBt_Z87VubrN77jzI95ywDw,65
+inorbit_cli-0.12.0.dist-info/top_level.txt,sha256=0FHphlRdYaSFfbQLukT3OFEMraoUbC2uJRniEjQ5Abs,14
+inorbit_cli-0.12.0.dist-info/RECORD,,
