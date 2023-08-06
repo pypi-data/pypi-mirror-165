@@ -1,0 +1,7 @@
+README.md
+setup.py
+filterbox.egg-info/PKG-INFO
+filterbox.egg-info/SOURCES.txt
+filterbox.egg-info/dependency_links.txt
+filterbox.egg-info/requires.txt
+filterbox.egg-info/top_level.txt

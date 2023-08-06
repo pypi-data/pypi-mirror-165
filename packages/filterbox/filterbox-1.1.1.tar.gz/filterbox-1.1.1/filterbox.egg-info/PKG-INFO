@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: filterbox
+Version: 1.1.1
+Summary: filterbox is now ducks
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 7 - Inactive
+Description-Content-Type: text/markdown
+
+# filterbox is now ducks
+
+This package has been renamed. Use `pip install ducks` instead.
+
+New package: https://pypi.org/project/ducks/
+
+
