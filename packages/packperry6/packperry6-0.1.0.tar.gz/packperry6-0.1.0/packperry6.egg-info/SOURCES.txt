@@ -1,0 +1,7 @@
+README.md
+setup.py
+packperry6/__init__.py
+packperry6.egg-info/PKG-INFO
+packperry6.egg-info/SOURCES.txt
+packperry6.egg-info/dependency_links.txt
+packperry6.egg-info/top_level.txt
