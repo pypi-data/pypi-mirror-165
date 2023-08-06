@@ -1,0 +1,3 @@
+[console_scripts]
+rdsline = rdsline.cli:main
+
