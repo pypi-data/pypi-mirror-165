@@ -1,0 +1,94 @@
+VERSION 10.2.1
+'{{input.comment}}'
+'{{input.bhdata_path}}'
+'{{input.cadata_path}}'
+'{{input.iron_path}}'
+
+&OPTION
+{{convert_flag_dct_to_str(input.flags)}}
+{# GLOBAL2DOPTION #}
+{{convert_bottom_header_table_to_str(block_df=input.global2doption, keyword="GLOBAL2DOPTION")}}
+{# GLOBAL3D #}
+{{convert_bottom_header_table_to_str(block_df=input.global3d, keyword="GLOBAL3D")}}
+{# BLOCK #}
+{{convert_bottom_header_table_to_str(block_df=input.block, keyword="BLOCK")}}
+{# BLOCKOPTION #}
+{{convert_bottom_header_table_to_str(block_df=input.blockoption, keyword="BLOCKOPTION")}}
+{# BLOCK3D #}
+{{convert_bottom_header_table_to_str(block_df=input.block3d, keyword="BLOCK3D")}}
+{# LEAD #}
+{{convert_bottom_header_table_to_str(block_df=input.lead, keyword="LEAD")}}
+{# BRICK #}
+{{convert_bottom_header_table_to_str(block_df=input.brick, keyword="BRICK")}}
+{# IRONYOKE #}
+{{convert_bottom_header_table_to_str(block_df=input.iron_yoke, keyword="IRONYOKE")}}
+{# EXTRUSION #}
+{{convert_bottom_header_table_to_str(block_df=input.extrusion, keyword="EXTRUSION")}}
+{# PERMANENTMAG2 #}
+{{convert_bottom_header_table_to_str(block_df=input.permanentmag2, keyword="PERMANENTMAG2")}}
+{# PERMANENTMAG1 #}
+{{convert_bottom_header_table_to_str(block_df=input.permanentmag1, keyword="PERMANENTMAG1")}}
+{# LAYER #}
+{{convert_bottom_header_table_to_str(block_df=input.layer, keyword="LAYER", line_suffix=" /")}}
+{# ALGO #}
+{{convert_bottom_header_table_to_str(block_df=input.algo, keyword="ALGO", header_suffix=" /")}}
+{# DESIGN #}
+{{convert_bottom_header_table_to_str(block_df=input.design, keyword="DESIGN", line_suffix=" /")}}
+{# EULER #}
+{{convert_bottom_header_table_to_str(block_df=input.euler, keyword="EULER")}}
+{% if input.peak.empty %}{# PEAK #}
+{{convert_bottom_header_table_to_str(block_df=input.peak, keyword="PEAK")}}
+{% else %}
+{{convert_table_to_str(block_df=input.peak, keyword="PEAK", header_suffix=str(input.peak.shape[1]))}}
+{% endif %}{# TIMETABLE2 #}
+{{convert_bottom_header_table_to_str(block_df=input.timetable2, keyword="TIMETABLE2")}}
+{# TIMETABLE1 #}
+{{convert_bottom_header_table_to_str(block_df=input.timetable1, keyword="TIMETABLE1")}}
+{# EDDY #}
+{{convert_bottom_header_table_to_str(block_df=input.eddy, keyword="EDDY", header_suffix=" /")}}
+{# EDDYOPTIONS #}
+{{convert_bottom_header_table_to_str(block_df=input.eddyoptions, keyword="EDDYOPTIONS")}}
+{# QUENCHG #}
+{{convert_bottom_header_table_to_str(block_df=input.quenchg, keyword="QUENCHG")}}
+{# QUENCHEN #}
+{{convert_bottom_header_table_to_str(block_df=input.quenchen, keyword="QUENCHEN")}}
+{# QUENCHTM #}
+{{convert_bottom_header_table_to_str(block_df=input.quenchtm, keyword="QUENCHTM")}}
+{# QUENCHP #}
+{{convert_bottom_header_table_to_str(block_df=input.quenchp, keyword="QUENCHP")}}
+{# QUENCHS #}
+{{convert_bottom_header_table_to_str(block_df=input.quenchs, keyword="QUENCHS")}}
+{% if not input.quench0d.empty %}{# QUENCH0D #}
+{{convert_bottom_header_table_to_str(block_df=input.quench0d, keyword="QUENCH0D")}}
+{% endif %}{# HARMONICTABLE #}
+{{convert_bottom_header_table_to_str(block_df=input.harmonictable, keyword="HARMONICTABLE")}}
+{% if not input.matrf.empty %}{# MATRF #}
+{{convert_bottom_header_table_to_str(block_df=input.matrf, keyword="MATRF", header_suffix="1")}}
+{% endif %}{# LINEFIELD #}
+{{convert_bottom_header_table_to_str(block_df=input.linefield, keyword="LINEFIELD")}}
+{# HARMONICOPTION #}
+{{convert_bottom_header_table_to_str(block_df=input.harmonicoption, keyword="HARMONICOPTION")}}
+{# GRAPH #}
+{{convert_bottom_header_table_to_str(block_df=input.graph, keyword="GRAPH")}}
+{# GRAPHOPTION #}
+{{convert_bottom_header_table_to_str(block_df=input.graphoption, keyword="GRAPHOPTION")}}
+{# PLOT2D #}
+{{convert_bottom_header_table_to_str(block_df=input.plot2d, keyword="PLOT2D", line_suffix=" /")}}
+{# PLOT2DOPTION #}
+{{convert_bottom_header_table_to_str(block_df=input.plot2doption, keyword="PLOT2DOPTION")}}
+{# PLOT3D #}
+{{convert_bottom_header_table_to_str(block_df=input.plot3d, keyword="PLOT3D")}}
+{# PLOT3DOPTION #}
+{{convert_bottom_header_table_to_str(block_df=input.plot3doption, keyword="PLOT3DOPTION")}}
+{# OBJECTIVE #}
+{{convert_bottom_header_table_to_str(block_df=input.objective, keyword="OBJECTIVE")}}
+{% if not input.ansysoptions.empty %}{# ANSYSOPTIONS #}
+ANSYSOPTIONS /
+    {{input.ansysoptions["scale1"]}}
+  scale
+    {{input.ansysoptions["scale2"]}}
+  scale
+
+             {{input.ansysoptions["ang1"]}}            {{input.ansysoptions["ang2"]}}            {{input.ansysoptions["offx"]}}            {{input.ansysoptions["offy"]}}
+          ang1         ang2         offx         offy
+{% endif %}
