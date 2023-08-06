@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+Youtube_Video_Audio_Downloader.egg-info/PKG-INFO
+Youtube_Video_Audio_Downloader.egg-info/SOURCES.txt
+Youtube_Video_Audio_Downloader.egg-info/dependency_links.txt
+Youtube_Video_Audio_Downloader.egg-info/requires.txt
+Youtube_Video_Audio_Downloader.egg-info/top_level.txt
+youtube_va_downloader/__init__.py
+youtube_va_downloader/__main__.py
+youtube_va_downloader/download_video.py
+youtube_va_downloader/format_display.py
+youtube_va_downloader/icon.ico
+youtube_va_downloader/search_video.py
+youtube_va_downloader/set_up.py
+youtube_va_downloader/youtube_downloader.py
