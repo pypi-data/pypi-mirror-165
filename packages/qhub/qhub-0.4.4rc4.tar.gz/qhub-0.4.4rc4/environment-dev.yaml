@@ -1,0 +1,23 @@
+name: qhub-dev
+channels:
+  - conda-forge
+dependencies:
+  - ruamel.yaml
+  - cloudflare
+  - auth0-python
+  - pydantic
+  - pynacl
+  - bcrypt
+  - python-kubernetes
+  - rich
+  # dev dependencies
+  - flake8 ==3.8.4
+  - black ==22.3.0
+  - twine
+  - pytest
+  - diagrams
+  - jhub-client
+
+  # deployment/integration tests dependencies
+  - dask-gateway
+  - python-kubernetes
