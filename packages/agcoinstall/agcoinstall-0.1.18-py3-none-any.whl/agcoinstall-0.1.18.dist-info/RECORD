@@ -1,0 +1,15 @@
+agcoinstall/__init__.py,sha256=HdgqDrcnL9hDLxTzWA-eZyW5TFlCyJNHNmn_15Nitw0,20
+agcoinstall/__main__.py,sha256=liBzsSVu81bX1mDCXQNgBKzlILEXrVTCV-wIeyNx1GU,32364
+agcoinstall/agcoinstall.log,sha256=oBeb1dzSwJNfq5oNoywrUXhyOaOYollKVsPpYMqo0v8,16570
+agcoinstall/data/images/auc_install_finish.png,sha256=lnu9GtG8qUREHD-xe7ztIY4fhZ7Wocx0uiGukCMhHiA,390
+agcoinstall/data/images/yes.png,sha256=dIJjCLlnGxAH-U_V6va6zzQiCFSJzd9r2oaY107O8UM,406
+agcoinstall/data/SontheimCertificate1.cer,sha256=wkU5nYpRc95YIRf-cwQMyIe_fAlVuhPRS5JH0dlNSqM,1428
+agcoinstall/data/SontheimCertificate2.cer,sha256=AzOC2aZNWet9fNf7pR7l3E6Y5LwYVoJIsBJeDOGY7Ng,1306
+agcoinstall/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+agcoinstall/request_test.py,sha256=UO6i3VHz9Xm7wpIdVKUA_5O3kXLd1VfvH-rHZKQnhU8,545
+agcoinstall/test.py,sha256=tnkKmB_AgxyPtcDjvpa7hTj3KxFYimCnCNNfdY1ufF0,731
+agcoinstall-0.1.18.dist-info/entry_points.txt,sha256=TpzFtYCHbFdXi2UYsHi2UhMJ_4B3KY6S_RArUkngnvM,57
+agcoinstall-0.1.18.dist-info/LICENSE.rst,sha256=a19M9H65sTh7Y5Rtzt2u75qPigowWKneftjdFAaZYs0,1107
+agcoinstall-0.1.18.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+agcoinstall-0.1.18.dist-info/METADATA,sha256=TXpyN_qKWF9kUyeMtGh_MaHElGrOVITodiS_y06FB0Y,3704
+agcoinstall-0.1.18.dist-info/RECORD,,
