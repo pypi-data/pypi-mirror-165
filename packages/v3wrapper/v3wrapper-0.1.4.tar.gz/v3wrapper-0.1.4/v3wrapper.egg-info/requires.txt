@@ -1,0 +1,8 @@
+requests
+pandas
+pytz
+holidays
+openpyxl
+matplotlib
+xlsxwriter
+anytree
