@@ -1,0 +1,11 @@
+README.md
+setup.py
+aip-login/__init__.py
+aip-login/aiplogin.py
+aip-login/test_login.py
+aiplogin.egg-info/PKG-INFO
+aiplogin.egg-info/SOURCES.txt
+aiplogin.egg-info/dependency_links.txt
+aiplogin.egg-info/not-zip-safe
+aiplogin.egg-info/requires.txt
+aiplogin.egg-info/top_level.txt
