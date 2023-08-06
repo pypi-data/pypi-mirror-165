@@ -1,0 +1,3 @@
+[console_scripts]
+pythonplus = python_plus.compiler:from_file
+
