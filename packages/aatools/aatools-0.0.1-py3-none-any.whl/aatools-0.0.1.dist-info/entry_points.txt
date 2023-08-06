@@ -1,0 +1,2 @@
+[nbdev]
+aatools = aatools._modidx:d
