@@ -1,0 +1,17 @@
+Metadata-Version: 1.2
+Name: dashfilebrowser
+Version: 0.1.1
+Summary: File browser a Dash app. Load text file into textarea for Grammarly.
+Home-page: https://github.com/ravinderbhattoo/dashfilebrowser
+Author: Ravinder Bhattoo
+Author-email: 
+License: MIT
+Download-URL: https://github.com/ravinderbhattoo/dashfilebrowser/archive/0.1.1.tar.gz
+Description: UNKNOWN
+Keywords: Browser,Grammar,Dash app
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6

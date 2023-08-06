@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+dashfilebrowser/__init__.py
+dashfilebrowser/filebrowser.py
+dashfilebrowser.egg-info/PKG-INFO
+dashfilebrowser.egg-info/SOURCES.txt
+dashfilebrowser.egg-info/dependency_links.txt
+dashfilebrowser.egg-info/requires.txt
+dashfilebrowser.egg-info/top_level.txt
