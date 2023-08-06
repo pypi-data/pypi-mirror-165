@@ -1,0 +1,2 @@
+coverage==6.4.4
+vcrpy==4.2.0
