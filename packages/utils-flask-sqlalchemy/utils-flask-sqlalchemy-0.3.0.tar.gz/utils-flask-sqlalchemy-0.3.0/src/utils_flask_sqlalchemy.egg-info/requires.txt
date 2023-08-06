@@ -1,0 +1,13 @@
+flask
+flask-sqlalchemy
+flask-migrate
+marshmallow
+python-dateutil
+
+[tests]
+pytest
+geoalchemy2
+shapely
+jsonschema
+flask-marshmallow
+marshmallow-sqlalchemy
