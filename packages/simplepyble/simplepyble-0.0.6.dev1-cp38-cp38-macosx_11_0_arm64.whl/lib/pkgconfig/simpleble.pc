@@ -1,0 +1,11 @@
+prefix=/Users/runner/work/SimpleBLE/SimpleBLE/simplepyble/build/lib.macosx-11.0-arm64-cpython-38
+exec_prefix=/Users/runner/work/SimpleBLE/SimpleBLE/simplepyble/build/lib.macosx-11.0-arm64-cpython-38
+libdir=/Users/runner/work/SimpleBLE/SimpleBLE/simplepyble/build/lib.macosx-11.0-arm64-cpython-38/lib
+includedir=/Users/runner/work/SimpleBLE/SimpleBLE/simplepyble/build/lib.macosx-11.0-arm64-cpython-38/include
+
+Name: SimpleBLE
+Description: "The ultimate fully-fledged cross-platform library for Bluetooth Low Energy (BLE)."
+Version: 0.5.0
+Libs: -L${libdir} -lsimpleble 
+Cflags: -I${includedir}
+Conflicts:
