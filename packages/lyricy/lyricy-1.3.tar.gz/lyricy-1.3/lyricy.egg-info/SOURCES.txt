@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+lyricy/__init__.py
+lyricy/__main__.py
+lyricy/classes.py
+lyricy/cli.py
+lyricy/providers.py
+lyricy.egg-info/PKG-INFO
+lyricy.egg-info/SOURCES.txt
+lyricy.egg-info/dependency_links.txt
+lyricy.egg-info/entry_points.txt
+lyricy.egg-info/requires.txt
+lyricy.egg-info/top_level.txt
+test/__init__.py
+test/test_lyricy.py
