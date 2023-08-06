@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: tinxy
+Version: 0.2.3
+Summary: Tinxy Package
+Home-page: https://github.com/arevindh/tinxy
+Author: Siddhu
+Author-email: me@siddhu.dev
+Project-URL: Documentation, https://github.com/arevindh/tinxy
+Project-URL: Bug Reports, https://github.com/arevindh/tinxy/issues
+Project-URL: Source Code, https://github.com/arevindh/tinxy
+Keywords: Tinxy,tinxy.in
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: js2py
+Requires-Dist: asyncio
+Requires-Dist: requests
+Requires-Dist: simplejson
+Provides-Extra: dev
+Requires-Dist: check-manifest ; extra == 'dev'
+
+# Tinxy Package 
+
+Used for authenticating with tinxy.in
