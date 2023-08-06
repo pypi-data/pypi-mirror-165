@@ -1,0 +1,6 @@
+
+[converter]
+multimethod>=1.8
+
+[socks]
+PySocks!=1.5.7,>=1.5.6
