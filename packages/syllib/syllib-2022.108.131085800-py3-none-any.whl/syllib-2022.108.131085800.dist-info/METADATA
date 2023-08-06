@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: syllib
+Version: 2022.108.131085800
+Summary: suyiyi's package
+Home-page: https://github.com/a-suyiyi/syllib
+Author: suyiyi
+Author-email: 3274719101@qq.com
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+
