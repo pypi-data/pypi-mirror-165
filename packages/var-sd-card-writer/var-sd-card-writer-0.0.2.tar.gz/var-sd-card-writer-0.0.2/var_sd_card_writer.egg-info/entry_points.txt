@@ -1,0 +1,3 @@
+[console_scripts]
+var-sd-card-writer = writer.varwriter:main
+
