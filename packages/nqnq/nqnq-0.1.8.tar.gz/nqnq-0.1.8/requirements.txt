@@ -1,0 +1,9 @@
+# build
+build
+twine
+
+# running
+requests
+six
+pyhwp
+pandas

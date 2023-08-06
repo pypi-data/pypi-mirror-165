@@ -1,0 +1,4 @@
+requests
+six
+pyhwp
+pandas
