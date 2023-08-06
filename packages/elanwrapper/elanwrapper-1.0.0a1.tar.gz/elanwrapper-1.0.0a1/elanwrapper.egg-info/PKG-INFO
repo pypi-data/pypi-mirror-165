@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: elanwrapper
+Version: 1.0.0a1
+Author: PALAT Labs
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+## `elanwrapper`
+
+A convenient interface for writing elan files. This package relies on [`pympi-ling`](asdf) for basically all the serializing/deserialzing going on under the hood.
+
+### Installation
+
+```bash
+pip install elanwrapper
+```
+
+### Reading
+
+(readme todo)
+
+### Writing
+
+(readme todo)
+
+#### Preference files
+
+(readme todo)

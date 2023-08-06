@@ -1,0 +1,15 @@
+README.md
+setup.py
+elanwrapper/__init__.py
+elanwrapper/conflicts.py
+elanwrapper/preferences.py
+elanwrapper/segments.py
+elanwrapper/wrapper.py
+elanwrapper.egg-info/PKG-INFO
+elanwrapper.egg-info/SOURCES.txt
+elanwrapper.egg-info/dependency_links.txt
+elanwrapper.egg-info/requires.txt
+elanwrapper.egg-info/top_level.txt
+tests/__init__.py
+tests/test_elan_file.py
+tests/test_timeline.py
