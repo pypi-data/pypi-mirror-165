@@ -1,0 +1,4 @@
+paho-mqtt
+django
+channels
+python-dotenv
