@@ -1,0 +1,7 @@
+###### Requirements without Version Specifiers ######
+nbsphinx
+numpydoc
+sphinx_bootstrap_theme
+sphinx>=3.1
+wheel>=0.35.1
+setuptools==57.5.0
