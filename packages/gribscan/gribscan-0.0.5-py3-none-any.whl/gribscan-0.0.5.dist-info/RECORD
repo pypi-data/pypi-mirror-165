@@ -1,0 +1,13 @@
+gribscan/__init__.py,sha256=ZHT9TZr0ATkVwCSlC1NMpqZ6PiTFmXdw0I6Dl3NyKz0,123
+gribscan/aeccodec.py,sha256=_9lYRFCwnFbr9uAFr6sHy2Y0iGd5fQgkQkWLwWwlfLU,5301
+gribscan/gribscan.py,sha256=kaRqByt3q341JxO5mNhfNWrV37fr3dsFA0ED8MsrQPM,17074
+gribscan/gridutils.py,sha256=gdie91wqFDM3RoaTK6YVBZul-Bjygg_9KpZ-J9RyKiM,1383
+gribscan/magician.py,sha256=FOOceXUxFGS11mAaoCT12RXSbMRG3TIYTqUzW86-NXQ,4154
+gribscan/rawgribcodec.py,sha256=bEcTrsqzqZwHyrdE-HaWm0tkQtgoECqB-PCYGVFSiwo,637
+gribscan/tools.py,sha256=gU8rVAmv7NoPJVbLhuDMLvMJvARB4u51rM5BpdtbOTE,1532
+gribscan-0.0.5.dist-info/LICENSE,sha256=UuBFIuMQNQpaCXQe1Nj9uE7iCnObxQ94Fw7ImXgwK98,1078
+gribscan-0.0.5.dist-info/METADATA,sha256=hpVrdL8e39PjzDUqGr4S1BY7idNOAltzCsCZ1_W7eYo,1653
+gribscan-0.0.5.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+gribscan-0.0.5.dist-info/entry_points.txt,sha256=iQSljez0iiwlhTsyyRz8yJRZ9tQbsVTUy1thl4QmHA0,261
+gribscan-0.0.5.dist-info/top_level.txt,sha256=_AWfb2CIjreTBgszW7IjtZvHSkoq8ip9KZpJbvftvUI,9
+gribscan-0.0.5.dist-info/RECORD,,
