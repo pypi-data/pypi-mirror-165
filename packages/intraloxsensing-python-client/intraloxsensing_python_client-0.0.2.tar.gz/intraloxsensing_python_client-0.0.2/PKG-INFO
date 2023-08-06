@@ -1,0 +1,5 @@
+Metadata-Version: 2.1
+Name: intraloxsensing_python_client
+Version: 0.0.2
+Summary: This package is used in python to ease the process of configuring datasets and uploading data to the Intralox Sensing Portal.
+Author: Jason Daming
