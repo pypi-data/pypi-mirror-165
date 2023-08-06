@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: pogrep
+Version: 0.1.3
+Summary: Find translations examples by grepping in .po files.
+Author-email: Julien Palard <julien@palard.fr>
+License: MIT License
+Project-URL: Homepage, https://github.com/JulienPalard/pogrep
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown; charset=UTF-8
+License-File: LICENSE
+Requires-Dist: regex
+Requires-Dist: polib
+Requires-Dist: tabulate
+
+# pogrep
+
+Searches for string in po files. *popgrep* supports various *GNU grep* options
+to ease its use.
+
+## Pogrep is part of poutils!
+
+[Poutils](https://pypi.org/project/poutils) (`.po` utils) is a metapackage to easily install useful Python tools to use with po files
+and `pogrep` is a part of it! Go check out [Poutils](https://pypi.org/project/poutils) to discover the other tools!
+
+## Examples
+
+Print usage: `pogrep --help`
+
+Find how 'flavors' has already been translated: search recursively in the
+current directory, show the names of the matching files, excluding the venv
+directory which contains a virtual env:
+
+`pogrep --recursive --line-number --exclude-dir venv flavor `
+
+Search the word 'typo' in traductions, but not in sources:
+
+`pogrep --recursive --translation --no-source --word-regexp typo `
+
+
+## Contributing
+
+Please test your contribution using `tox -p auto`.
