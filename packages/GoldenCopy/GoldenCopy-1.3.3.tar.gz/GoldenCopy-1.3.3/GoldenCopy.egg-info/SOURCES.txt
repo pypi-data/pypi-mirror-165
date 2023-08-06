@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+goldencopy.py
+setup.cfg
+setup.py
+GoldenCopy.egg-info/PKG-INFO
+GoldenCopy.egg-info/SOURCES.txt
+GoldenCopy.egg-info/dependency_links.txt
+GoldenCopy.egg-info/entry_points.txt
+GoldenCopy.egg-info/requires.txt
+GoldenCopy.egg-info/top_level.txt
