@@ -1,0 +1,9 @@
+plone.base
+setuptools
+Unidecode>=1.0.22
+zope.globalrequest
+
+[test]
+plone.app.contenttypes[testing]
+plone.app.testing
+zope.testing
