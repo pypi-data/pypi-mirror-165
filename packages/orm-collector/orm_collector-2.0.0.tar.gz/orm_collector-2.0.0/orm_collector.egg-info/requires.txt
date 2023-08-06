@@ -1,0 +1,15 @@
+networktools
+basic_logtools
+validators
+shapely
+psycopg2-binary
+sqlalchemy>=1.3.17
+geoalchemy2
+ujson
+fastapi
+fastapi-cache2
+django
+click
+aioredis
+rich
+aioredis==^2.0.1

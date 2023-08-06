@@ -1,0 +1,6 @@
+recursive-include orm_collector/ *.py
+recursive-include orm_collector/ *.json
+include first_install_gdal.sh
+include gitignore
+include VERSION
+recursive-include orm_collector/sql *.sql

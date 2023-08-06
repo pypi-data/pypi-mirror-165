@@ -1,0 +1,7 @@
+{
+    "dbname":"nombre database",
+    "dbuser":"nombre de usuario",
+    "dbpass":"password para el usuario",
+    "dbhost":"host de database",
+    "dbport":"puerto de database"
+}

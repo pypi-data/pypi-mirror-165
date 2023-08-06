@@ -1,0 +1,4 @@
+ALTER TABLE station ADD COLUMN active BOOLEAN;
+UPDATE station SET active = 't';
+ALTER TABLE station ALTER COLUMN active SET NOT NULL;
+ALTER TABLE station ALTER COLUMN active SET DEFAULT TRUE;

@@ -1,0 +1,6 @@
+[console_scripts]
+orm_create_db = orm_collector.scripts.create_db:run_crear_schema
+orm_load_data = orm_collector.scripts.load_data:load_data_orm
+orm_show_data = orm_collector.scripts.show_data:show_data
+orm_vars = orm_collector.scripts.create_db:show_envvars
+

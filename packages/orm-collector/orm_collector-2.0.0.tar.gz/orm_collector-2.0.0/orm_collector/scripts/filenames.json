@@ -1,0 +1,9 @@
+{
+    "protocol": "protocol.csv",
+    "dbdata": "dbdata.csv",
+    "dbtype": "dbtype.csv",
+    "server": "server.csv",
+    "dbserver": "dbserver.csv",
+    "network":"network.csv",
+    "station": "station.csv"
+}
