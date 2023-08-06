@@ -1,0 +1,9 @@
+pixivery/__init__.py,sha256=dHuoY6voK7np1A7oRzw1xyBy7CK9_KBAc4FCKW29uRQ,21
+pixivery/client.py,sha256=ReLUwQhaJGfu-48S2fjaspBGRH7cDAmMb94PZvRIMM4,789
+pixivery/error.py,sha256=ZyyQIVywrrT7j9o3R-1sFsRNQSmlX9v3EnlCaPOPtKg,85
+pixivery/http.py,sha256=e0bAIFIdSoMZb8JQWbyibvbt2by9-AOxFeq_x3FlIAk,2208
+pixivery/utils.py,sha256=Amy0nmsHnkZI7mx_J2isxk2pdELXe9-2AlDQqVfT1JI,54
+pixivery-1.0.0.dist-info/METADATA,sha256=dnoJpp9e3gTRYibJjx2xn_1Wvi8y0e2JX8xyT2uu_TA,610
+pixivery-1.0.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+pixivery-1.0.0.dist-info/top_level.txt,sha256=8ICtHpUEvUxLn8-78H1QmIJ-L4z1s-wc8dZyhsHQXjs,9
+pixivery-1.0.0.dist-info/RECORD,,

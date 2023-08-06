@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: pixivery
+Version: 1.0.0
+Summary: 픽시브(랭킹, 검색) 크롤링 라이브러리
+Home-page: https://github.com/VoidAsMad/Pixivery
+Author: VoidAsMad
+Author-email: voidasmad@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# Pixivery
+[Github](https://github.com/VoidAsMad/Pixivery)
+## Install
+```py
+$ pip install pixivery
+```
+
+## Example
+```py
+from pixivery import client
+
+client = client.Pixiv()
+print(client.get_ranking()) #limit = 1~50
+print(client.get_artwork('100807849'))
+```
+
+이슈는 언제든지 환영입니다!
+
