@@ -1,0 +1,2 @@
+[nbdev]
+nbdev_hellow_world = nbdev_hellow_world._modidx:d
