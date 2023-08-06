@@ -1,0 +1,13 @@
+dataclass_utils/VERSION.py,sha256=JGnAqfJascCxCeW2HUmSEq-6cTv1v4JA85VtarqlsUk,23
+dataclass_utils/__init__.py,sha256=JHW2nw6Oa4bfXLF5I3GyfZINtvkT43Skyl8hg-0GfDs,920
+dataclass_utils/_internal/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dataclass_utils/_internal/shared.py,sha256=8xuOTQWrERAtXVTL_LOHMPg_9IWgXDeEjEIf655Y33Q,180
+dataclass_utils/error.py,sha256=9G_mRpJzSg_RR6s0Nj5ErP87oaayvYKXAT48hfj7VTM,1880
+dataclass_utils/into_dataclass.py,sha256=ZuPpJ7M3LP9wCKq9lAUoNvMHhVw-2Q3S3e6S5utTHlk,5744
+dataclass_utils/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dataclass_utils/type_checker.py,sha256=6xbAR1CqHl8sNbxSZb2T3l3lmazVbOgHB3I0OcptveQ,5386
+dataclass_utils/typing.py,sha256=BohAd48OUGUXtUh-XGv7kqqepnnl_Om2OF77ytHsSkw,89
+dataclass_utils-0.7.23.dist-info/LICENSE,sha256=7j3iCZR3PdH-lAEc60sY3rqXDOvn60cQ5Su0191AjbA,11337
+dataclass_utils-0.7.23.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+dataclass_utils-0.7.23.dist-info/METADATA,sha256=SDmI8qwGRMxcV_5DF1RUf2Yfz-s6xq7smQaMCJHlEVk,442
+dataclass_utils-0.7.23.dist-info/RECORD,,
