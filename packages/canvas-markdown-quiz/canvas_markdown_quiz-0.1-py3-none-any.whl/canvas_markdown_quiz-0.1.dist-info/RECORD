@@ -1,0 +1,11 @@
+cvs/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cvs/command_line.py,sha256=wFvfv4eA3YTyhSJ7tsS5soSWQlQic86GbTk3GtRlzDg,336
+cvs/default.py,sha256=l3641wRbRnXR8J8-U-QIqPYLfZtWi4LNhOS-KrmCti8,4944
+cvs/generate.py,sha256=xqOQRkbbHAo6gd4bLxzEWRYJtdgSm2mFceiMZkyg6OA,3821
+cvs/initialize.py,sha256=0azyobdJMCXVh5PagqlA3c7-CN-lRWfUrpmmkQGj3Bo,2735
+canvas_markdown_quiz-0.1.dist-info/LICENSE,sha256=LK6DhQNUiSEKRlZSfm-bAnmAyWM4uqFblWWDN3g8eNQ,1066
+canvas_markdown_quiz-0.1.dist-info/METADATA,sha256=lL-V36sySwys6KfZFq4heo9Mq4tQinRXLAXcJ0aNbwk,484
+canvas_markdown_quiz-0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+canvas_markdown_quiz-0.1.dist-info/entry_points.txt,sha256=6rMf5mO9LbGvJwZ5EvET1VBAAFfjuTsXY86rV4TZdls,55
+canvas_markdown_quiz-0.1.dist-info/top_level.txt,sha256=fsMlwK-MvjRIa-88XFDJaMGYYkRtmFwTBKt0eU-nWO0,4
+canvas_markdown_quiz-0.1.dist-info/RECORD,,

@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: canvas-markdown-quiz
+Version: 0.1
+Summary: Markdown support for canvas quiz
+Home-page: https://github.com/linsyking/canvas-markdown-quiz
+Author: linsyking
+Author-email: linsy_king@sjtu.edu.cn
+License: MIT License
+Keywords: canvas-lms,markdown
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Markdown
+Requires-Dist: mdx-math-img (>=0.9)
+Requires-Dist: pyyaml
+Requires-Dist: canvasapi
+Requires-Dist: pick
+
