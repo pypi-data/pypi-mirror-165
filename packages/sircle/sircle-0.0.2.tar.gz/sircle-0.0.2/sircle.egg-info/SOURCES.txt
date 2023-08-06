@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+sircle/__init__.py
+sircle/base.py
+sircle.egg-info/PKG-INFO
+sircle.egg-info/SOURCES.txt
+sircle.egg-info/dependency_links.txt
+sircle.egg-info/entry_points.txt
+sircle.egg-info/requires.txt
+sircle.egg-info/top_level.txt
