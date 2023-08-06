@@ -1,0 +1,5 @@
+requests
+pyjwt
+
+[cli]
+python-slugify
