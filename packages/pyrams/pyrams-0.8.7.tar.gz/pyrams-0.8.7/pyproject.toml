@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta" 
+
+[project]
+name = "pyrams"
+version = "0.8.7"
+dependencies = [
+    'metpy',
+    'pandas',
+    'numpy',
+    'tqdm',
+    'xarray>=v2022.03.0',
+    'pint>=0.18',
+    'pint-xarray>=0.3',
+    'cf-xarray>=0.7.4',
+    'matplotlib',
+    'shapely',
+    'netCDF4',
+]
