@@ -1,0 +1,12 @@
+setup.py
+src/mgp_common/__init__.py
+src/mgp_common/config.py
+src/mgp_common/japanese.py
+src/mgp_common/string_utils.py
+src/mgp_common/video.py
+src/mgp_common/vocadb.py
+src/mgp_common.egg-info/PKG-INFO
+src/mgp_common.egg-info/SOURCES.txt
+src/mgp_common.egg-info/dependency_links.txt
+src/mgp_common.egg-info/requires.txt
+src/mgp_common.egg-info/top_level.txt
