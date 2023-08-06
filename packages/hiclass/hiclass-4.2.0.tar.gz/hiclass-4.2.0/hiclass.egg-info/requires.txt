@@ -1,0 +1,7 @@
+networkx
+numpy
+scikit-learn
+protobuf<4.0
+
+[ray]
+ray>=1.11.0
