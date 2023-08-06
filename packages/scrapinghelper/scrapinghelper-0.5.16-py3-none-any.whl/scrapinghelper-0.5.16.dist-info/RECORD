@@ -1,0 +1,15 @@
+scrapinghelper/__init__.py,sha256=ma4aa6j_9UJhV5Z4IgB-RGyF56EHF7YU-VUqQLtGPyw,1068
+scrapinghelper/logging.py,sha256=IqqC7EFpOTi50ZjhhsH-gXarxXIaYZgFBOOgVBA8DDA,1308
+scrapinghelper/proxy.py,sha256=2ChJb62kIreud45yD0RHiuvqR64Z4FzTysACPZghbvQ,12314
+scrapinghelper/scraper.py,sha256=zrrUKIdFsmcXkAc6awVdoQcP6Trn_YCcIe7W6i8tqqI,18073
+scrapinghelper/url.py,sha256=_sznZCcsNhJ82PTKeVUTC9duqaogdHEO4kn8FdncU38,13787
+scrapinghelper/user_agents.py,sha256=IqrN67Iq0LPQOo8VLkzQlstdLuLiOVMkaB0hqO44Ohk,2308
+scrapinghelper/utils.py,sha256=5J05R-xn13tMpLZN7Pqqkzs4C5un-0zzLv3pyzUqU5I,31837
+scrapinghelper/versions.py,sha256=NMQBtejQAVj9ECbJ7jG2DvUq2mCJmo8T0Rjz79hSVxs,75
+scrapinghelper/data/20000 User Agents.csv,sha256=-6t2Aq-4SvxvjM1_E9I3M9YjdGI276bkXzkcH3jiZqE,2726867
+scrapinghelper/data/LICENSE,sha256=0MJ5-8pYbyT-zytKVyyVzqamIX0UrXPMAY6zJWcFlYU,14562
+scrapinghelper-0.5.16.dist-info/LICENSE,sha256=56Se6nY3_l30xFuZDFX1THfaataxgy3S5_JnHK0d-_E,1079
+scrapinghelper-0.5.16.dist-info/METADATA,sha256=4IQjlxiEgZvuQKBRyRDH7PDFBvv8Vs52ABDZ4neWEIk,22100
+scrapinghelper-0.5.16.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+scrapinghelper-0.5.16.dist-info/top_level.txt,sha256=LWYUk3o8onu7gZEeheVcyHwKujPMEEY64pMMT4UBj3Y,15
+scrapinghelper-0.5.16.dist-info/RECORD,,
