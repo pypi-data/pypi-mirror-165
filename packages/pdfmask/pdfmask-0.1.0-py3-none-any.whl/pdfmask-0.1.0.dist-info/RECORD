@@ -1,0 +1,9 @@
+pdfmask/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pdfmask/mask.py,sha256=630gfXTrjreHcZPS2TvLPStwg3h5HwYqexLGZN8BhQ8,1452
+pdfmask/mask_gen.py,sha256=W4-PWeNLnlSoCGxnx1jtQudyPW5439dadBn6x_3ni3E,1348
+pdfmask-0.1.0.dist-info/LICENSE,sha256=vMZrVYn5mqIas5BS_-bQSOYSod57Roho2eRaNf_lW5c,1523
+pdfmask-0.1.0.dist-info/METADATA,sha256=u1qGt65UOmRmJ57gIXHN1UYa-l95oTyJbNEATYuJKRM,405
+pdfmask-0.1.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+pdfmask-0.1.0.dist-info/entry_points.txt,sha256=wBYqBDnSY5W0wa2hVxwh1scKD4VUerQYVk3dGG5KZ_I,83
+pdfmask-0.1.0.dist-info/top_level.txt,sha256=c58l6v1ZXsg-0lkm4NE-4SweBCcIIBzct8ujoNqch7c,8
+pdfmask-0.1.0.dist-info/RECORD,,
