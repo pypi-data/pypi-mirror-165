@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: pysarar
+Version: 0.0.1.dev0
+Summary: An estimator for SARAR(R,S) models
+Home-page: https://github.com/kiss-oliver/pysarar
+Author: Oliver Kiss
+Author-email: pysarar@okiss.aleeas.com
+License: MIT
+Keywords: TSLS,two stage least squares,GMM,spatial econometrics,econometrics,method of moments,spatial models,estimator
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.9
+License-File: LICENSE
