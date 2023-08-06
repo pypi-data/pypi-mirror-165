@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: nodeweb
+Version: 1.0.3
+Summary: 这是一个可以搭建web服务器的库，使用前需安装nodejs
+Home-page: UNKNOWN
+Author: zhoufangfang
+Author-email: xczff001@163.com
+Maintainer: zhoufangfang
+Maintainer-email: xczff001@163.com
+License: UNKNOWN
+Keywords: web,nodejs
+Platform: UNKNOWN
+Requires-Python: >=3
+
+UNKNOWN
+
