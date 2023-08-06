@@ -1,0 +1,12 @@
+gcp/bigquery.py,sha256=ngDkj5CYNTX-dFNZsUt5owjPDkhRcgttl6kiSlu5M7k,19819
+gcp/gcs.py,sha256=cb-Msa4B52g2M8lfh1n94JupBznbUy9T-jlcquZYT7w,6960
+utils/mailer.py,sha256=iM3rUyt4-TzdELVljBHPHV94OIHV_MgUYqpRZOMmT_c,3074
+utils/slacker.py,sha256=OLbSf0jRL_VkogesuhlaCjOXo8gQahe0_iDdWCAERsg,2623
+utils/yaml2wdl.py,sha256=H6Qwt-K45zCnSbOuNdAakc0K8f-4ZUuL1nVxm6CQ6Ls,2783
+stanford_wdl_kit-1.2.2.dist-info/METADATA,sha256=gjtWy4yUPWUAhnAjHPn3aGAT6aanqroxz61CyZnPNfU,2071
+stanford_wdl_kit-1.2.2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+stanford_wdl_kit-1.2.2.dist-info/entry_points.txt,sha256=bEXyioEVC7chOOIBJVxE2uzuyWfkhWQCJq1CLNzy6Fk,149
+stanford_wdl_kit-1.2.2.dist-info/namespace_packages.txt,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+stanford_wdl_kit-1.2.2.dist-info/top_level.txt,sha256=Ka5lc058C0OATKW4UFPzTvdsW7SAkhKd6FXcTyZkfJw,10
+stanford_wdl_kit-1.2.2.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+stanford_wdl_kit-1.2.2.dist-info/RECORD,,
