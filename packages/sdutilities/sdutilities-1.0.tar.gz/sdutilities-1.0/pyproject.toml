@@ -1,0 +1,14 @@
+[build-system]
+requires = [
+    "setuptools>=42",
+    "pandas >= 1.2.3",
+    "numpy >= 1.16.5",
+    "census >= 0.8.15",
+    "us >= 2.0.2",
+    "sqlalchemy >= 1.3.9",
+    "matplotlib >= 3.1.1",
+    "setuptools >= 50.3.0",
+    "boto3 >= 1.17.43",
+    "botocore >= 1.19.52"
+]
+build-backend = "setuptools.build_meta"
