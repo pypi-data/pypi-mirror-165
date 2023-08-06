@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: mwa_vcstools
+Version: 2.7.1
+Summary: Scripts used to process the Murchison Widefield Array's Voltage Capture System data
+Home-page: https://github.com/CIRA-Pulsars-and-Transients-Group/vcstools.git
+Requires-Python: >=3.7
+License-File: LICENSE
