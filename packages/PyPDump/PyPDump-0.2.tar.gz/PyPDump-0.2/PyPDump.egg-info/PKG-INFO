@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: PyPDump
+Version: 0.2
+Summary: inoffical wrapper for ProcDump https://docs.microsoft.com/en-us/sysinternals/downloads/procdump
+Author: hansalemao
+Author-email: <aulasparticularesdealemaosp@gmail.com>
+Keywords: procdump,memory,debug,windbg
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+
+
+Inofficial Pyton wrapper for [ProcDump - Windows Sysinternals | Microsoft Docs](https://docs.microsoft.com/en-us/sysinternals/downloads/procdump)
+
+Very easy to use:
+
+```python
+    dumpfile = r"C:\MiniDumpWithFullMemoryx.dmp"
+    pid = 16544
+    createdump = True
+    if createdump:
+        erg = (
+            ProcDump(executeable=r"C:\Program Files\procdump.exe")
+            .o()
+            .ma()
+            .add_own_parameter_or_option(f"{pid}")
+            .add_target_file_or_folder([dumpfile])
+            .run()
+        )
+
+        )
+
+
+```
