@@ -1,0 +1,12 @@
+starlark_go-0.1.1.dist-info/top_level.txt,sha256=EX1pxSBSU53KBHj0pQF4Oq3lcBBNB3nYU7bX_5xPADk,36
+starlark_go-0.1.1.dist-info/WHEEL,sha256=tcHunuE4GtldHhEQgq2Ayqfv5z497HVr7yC3qVoml6g,217
+starlark_go-0.1.1.dist-info/METADATA,sha256=xbeBNs9u2Gx6LrLRu-SxYHRsohHCOXyYOON-jzry8nU,3082
+starlark_go-0.1.1.dist-info/RECORD,,
+starlark_go-0.1.1.dist-info/LICENSE,sha256=z-f3j4Bf-7GG4vd_ZW24a-MJ1GwUbVSMTRoJWeWSqoI,11341
+starlark_go/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+starlark_go/errors.py,sha256=93gTwo24wLTitu2DFHcoXGArlfmRQdFIVW1HjK1riic,3941
+starlark_go/scmversion.py,sha256=nkpJWNhZG088UIilJnK3QfQPp4tSBCY0YZSjDD_cLMY,176
+starlark_go/starlark_go.cpython-310-i386-linux-gnu.so,sha256=S3WL0QES4HE9wMU0jVExVD_AfGkNKuYWV48otBnzJoQ,2961100
+starlark_go/starlark_go.cpython-310-i386-linux-gnu.h,sha256=U1fO1iz_eNLf31r__s-kqDtHuiO1k6uaJc5iyzu1Xcs,3066
+starlark_go/starlark_go.pyi,sha256=g_hJ8UsXY4_Tzlw3z3opjUHURpmwqkhlGLaFSgTxkWg,1208
+starlark_go/__init__.py,sha256=kfZitWyl_kliH5owmpC-vGTwgVYNs0ZOi0h5IpUykUs,450
