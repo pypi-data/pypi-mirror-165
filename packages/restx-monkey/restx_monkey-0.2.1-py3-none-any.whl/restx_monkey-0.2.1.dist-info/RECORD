@@ -1,0 +1,9 @@
+restx_monkey/__init__.py,sha256=pFwB2X8_xa5EggDjVP0fl4DQ_Ybkst1iaS3R-xXGW-w,2672
+restx_monkey/restx_api.py,sha256=XVADR45L2b4_3c0MLBefIVPVZIR0DklrO09OZQ-hosg,773
+restx_monkey/restx_reqparser.py,sha256=v2Qvj_C2PO1vIugDGO83u4V5P7o-fBQrsocirtvU5lI,2423
+restx_monkey/werkzeug_routing.py,sha256=lqfMz14Sgxgm7Emr-7nXQL8XhK8yaiVwnNeaDDazOXc,1617
+restx_monkey-0.2.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+restx_monkey-0.2.1.dist-info/METADATA,sha256=BII7lVdjlFwygZy7haVbW5w2QwKb8_mDQIXY2peUQg4,2176
+restx_monkey-0.2.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+restx_monkey-0.2.1.dist-info/top_level.txt,sha256=tZh1BtSHdaERtDeXiVPdOSvnOnAU4pOpkIrOHsZWM3U,13
+restx_monkey-0.2.1.dist-info/RECORD,,
