@@ -1,0 +1,4 @@
+#!python
+
+import hashedpass.main
+hashedpass.main.main()
