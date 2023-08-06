@@ -1,0 +1,105 @@
+Metadata-Version: 2.1
+Name: eddington
+Version: 0.0.24.dev2
+Summary: Open source, easy to use, data fitting platform.
+Home-page: https://github.com/EddLabs/eddington
+Author: Sagi Shadur
+Author-email: saroad2@gmail.com
+Maintainer: Sagi Shadur
+Maintainer-email: saroad2@gmail.com
+License: Apache License
+Keywords: laboratory,fitting,data
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development
+Classifier: Topic :: Utilities
+Requires-Python: >=3.8
+Description-Content-Type: text/x-rst; charset=UTF-8
+License-File: LICENSE
+Requires-Dist: click (>=8.1.3)
+Requires-Dist: prettytable (>=3.4.0)
+Requires-Dist: scipy (>=1.9.1)
+Requires-Dist: numpy (>=1.23.2)
+Requires-Dist: sympy (>=1.11)
+Requires-Dist: openpyxl (>=3.0.10)
+Requires-Dist: matplotlib (>=3.5.3)
+Requires-Dist: types-mock (>=4.0.15)
+
+.. image:: https://github.com/EddLabs.png
+   :width: 72px
+
+Eddington
+=========
+
+.. image:: https://img.shields.io/pypi/pyversions/eddington.svg
+   :target: https://pypi.python.org/pypi/eddington
+   :alt: Python Versions
+
+.. image:: https://img.shields.io/pypi/v/eddington.svg
+   :target: https://pypi.python.org/pypi/eddington
+   :alt: PyPI Version
+
+.. image:: https://img.shields.io/pypi/status/eddington.svg
+   :target: https://pypi.python.org/pypi/eddington
+   :alt: Maturity
+
+.. image:: https://img.shields.io/pypi/l/eddington.svg
+   :target: https://github.com/EddLabs/eddington/blob/master/LICENSE
+   :alt: License
+
+.. image:: https://github.com/EddLabs/eddington/workflows/CI/badge.svg?branch=master
+   :target: https://github.com/EddLabs/eddington/actions
+   :alt: Build Status
+
+.. image:: https://badges.gitter.im/EddLabs/developers.svg
+   :target: https://gitter.im/EddLabs/developers
+   :alt: Chat on Gitter
+
+*Eddington* is a user-friendly data fitting platform for common uses, based on
+open-source libraries such as *numpy*, *scipy*, and *matplotlib*.
+*Eddington* can be integrated with python code as a library, can be used as a CLI and
+has an easy to use GUI.
+
+.. note::
+
+    *Eddington* is in early stages of development. Therefore, its API might change in
+    order to introduce new features and make *Eddington* the best data fitting platform
+    there is. We appreciate your patience.
+
+Installation
+------------
+
+In order to install eddington use::
+
+   pip install eddington
+
+Documentation
+-------------
+
+Documentation for Eddington can be found on `Read The Docs`_.
+
+Community
+---------
+
+You can talk to the community through the `EddLabs/developers`_ channel on Gitter.
+
+Contributing
+------------
+
+If you experience problems with Eddington, `log them on GitHub`_.
+
+If you want to contribute code, please `fork the code`_ and `submit a pull request`_.
+
+.. _Read The Docs: https://eddington.readthedocs.io
+.. _EddLabs/developers: https://gitter.im/EddLabs/developers
+.. _log them on Github: https://github.com/EddLabs/eddington/issues
+.. _fork the code: https://github.com/EddLabs/eddington
+.. _submit a pull request: https://github.com/EddLabs/eddington/pulls
