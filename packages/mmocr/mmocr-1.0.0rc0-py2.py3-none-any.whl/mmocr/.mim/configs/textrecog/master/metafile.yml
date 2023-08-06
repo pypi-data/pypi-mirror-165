@@ -1,0 +1,52 @@
+Collections:
+  - Name: MASTER
+    Metadata:
+      Training Data: OCRDataset
+      Training Techniques:
+        - Adam
+      Epochs: 12
+      Batch Size: 512
+      Training Resources: 4x Tesla A100
+      Architecture:
+        - ResNet31-GCAModule
+        - MASTERDecoder
+    Paper:
+      URL: https://arxiv.org/abs/1910.02562
+      Title: "MASTER: Multi-Aspect Non-local Network for Scene Text Recognition"
+    README: configs/textrecog/master/README.md
+
+Models:
+  - Name: master_resnet31_12e_st_mj_sa
+    In Collection: MASTER
+    Config: configs/textrecog/master/master_resnet31_12e_st_mj_sa.py
+    Metadata:
+      Training Data:
+        - SynthText
+        - SynthAdd
+        - Syn90k
+    Results:
+      - Task: Text Recognition
+        Dataset: IIIT5K
+        Metrics:
+          word_acc:
+      - Task: Text Recognition
+        Dataset: SVT
+        Metrics:
+          word_acc:
+      - Task: Text Recognition
+        Dataset: ICDAR2013
+        Metrics:
+          word_acc:
+      - Task: Text Recognition
+        Dataset: ICDAR2015
+        Metrics:
+          word_acc:
+      - Task: Text Recognition
+        Dataset: SVTP
+        Metrics:
+          word_acc:
+      - Task: Text Recognition
+        Dataset: CT80
+        Metrics:
+          word_acc:
+    Weights:

@@ -1,0 +1,40 @@
+Collections:
+- Name: PSENet
+  Metadata:
+    Training Data: ICDAR2015 SCUT-CTW1500
+    Training Techniques:
+      - Adam
+    Training Resources: 1x NVIDIA A100-SXM4-80GB
+    Architecture:
+      - ResNet
+      - FPNF
+      - PSEHead
+  Paper:
+    URL: https://arxiv.org/abs/1806.02559.pdf
+    Title: 'Shape Robust Text Detection with Progressive Scale Expansion Network'
+  README: configs/textdet/psenet/README.md
+
+Models:
+  - Name: psenet_resnet50_fpnf_600e_ctw1500
+    In Collection: PSENet
+    Config: configs/textdet/psenet/psenet_resnet50_fpnf_600e_ctw1500.py
+    Metadata:
+      Training Data: CTW1500
+    Results:
+      - Task: Text Detection
+        Dataset: CTW1500
+        Metrics:
+          hmean-iou: 0.7793
+    Weights: https://download.openmmlab.com/mmocr/textdet/psenet/psenet_resnet50_fpnf_600e_ctw1500/psenet_resnet50_fpnf_600e_ctw1500_20220825_221459-7f974ac8.pth
+
+  - Name: psenet_resnet50_fpnf_600e_icdar2015
+    In Collection: PSENet
+    Config: configs/textdet/psenet/psenet_resnet50_fpnf_600e_icdar2015.py
+    Metadata:
+      Training Data: ICDAR2015
+    Results:
+      - Task: Text Detection
+        Dataset: ICDAR2015
+        Metrics:
+          hmean-iou: 0.7998
+    Weights:

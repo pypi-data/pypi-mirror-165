@@ -1,0 +1,98 @@
+Collections:
+- Name: SAR
+  Metadata:
+    Training Data: OCRDataset
+    Training Techniques:
+      - Adam
+    Training Resources: 48x GeForce GTX 1080 Ti
+    Epochs: 5
+    Batch Size: 3072
+    Architecture:
+      - ResNet31OCR
+      - SAREncoder
+      - ParallelSARDecoder
+  Paper:
+    URL: https://arxiv.org/pdf/1811.00751.pdf
+    Title: 'Show, Attend and Read:A Simple and Strong Baseline for Irregular Text Recognition'
+  README: configs/textrecog/sar/README.md
+
+Models:
+  - Name: sar_resnet31_parallel-decoder_5e_st-sub_mj-sub_sa_real
+    In Collection: SAR
+    Config: configs/textrecog/sar/sar_resnet31_parallel-decoder_5e_st-sub_mj-sub_sa_real.py
+    Metadata:
+      Training Data:
+        - ICDAR2011
+        - ICDAR2013
+        - ICDAR2015
+        - COCO text
+        - IIIT5K
+        - SynthText
+        - SynthAdd
+        - Syn90k
+    Results:
+      - Task: Text Recognition
+        Dataset: IIIT5K
+        Metrics:
+          word_acc:
+      - Task: Text Recognition
+        Dataset: SVT
+        Metrics:
+          word_acc:
+      - Task: Text Recognition
+        Dataset: ICDAR2013
+        Metrics:
+          word_acc:
+      - Task: Text Recognition
+        Dataset: ICDAR2015
+        Metrics:
+          word_acc:
+      - Task: Text Recognition
+        Dataset: SVTP
+        Metrics:
+          word_acc:
+      - Task: Text Recognition
+        Dataset: CT80
+        Metrics:
+          word_acc:
+    Weights:
+
+  - Name: sar_resnet31_sequential-decoder_5e_st-sub_mj-sub_sa_real
+    In Collection: SAR
+    Config: configs/textrecog/sar/sar_resnet31_sequential-decoder_5e_st-sub_mj-sub_sa_real.py
+    Metadata:
+      Training Data:
+        - ICDAR2011
+        - ICDAR2013
+        - ICDAR2015
+        - COCO text
+        - IIIT5K
+        - SynthText
+        - SynthAdd
+        - Syn90k
+    Results:
+      - Task: Text Recognition
+        Dataset: IIIT5K
+        Metrics:
+          word_acc:
+      - Task: Text Recognition
+        Dataset: SVT
+        Metrics:
+          word_acc:
+      - Task: Text Recognition
+        Dataset: ICDAR2013
+        Metrics:
+          word_acc:
+      - Task: Text Recognition
+        Dataset: ICDAR2015
+        Metrics:
+          word_acc:
+      - Task: Text Recognition
+        Dataset: SVTP
+        Metrics:
+          word_acc:
+      - Task: Text Recognition
+        Dataset: CT80
+        Metrics:
+          word_acc:
+    Weights:
