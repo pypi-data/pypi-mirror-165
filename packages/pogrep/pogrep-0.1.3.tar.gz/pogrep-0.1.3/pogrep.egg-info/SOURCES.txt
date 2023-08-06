@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pogrep.py
+pyproject.toml
+pogrep.egg-info/PKG-INFO
+pogrep.egg-info/SOURCES.txt
+pogrep.egg-info/dependency_links.txt
+pogrep.egg-info/entry_points.txt
+pogrep.egg-info/requires.txt
+pogrep.egg-info/top_level.txt
