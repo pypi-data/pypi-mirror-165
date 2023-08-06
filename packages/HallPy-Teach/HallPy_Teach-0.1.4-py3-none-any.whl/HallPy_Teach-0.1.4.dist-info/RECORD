@@ -1,0 +1,11 @@
+HallPy_Teach/__init__.py,sha256=GykasSiZSn30K3FTTZ0ip_qe0Qgokvl6eJYHqnEDaqs,13710
+HallPy_Teach/constants.py,sha256=cjWJawD279kCMZb9U2P5U9XaqyyprI_KKfhvVIStCvQ,530
+HallPy_Teach/helper.py,sha256=OMDtXweC7ZofHq5Y6-z7rR__YU63UwGOlREhxyNGyjA,14505
+HallPy_Teach/experiments/__init__.py,sha256=D8kS0q2OdrzGzm9ceXmGfnWWqZrlImuFA7yC7RFNmak,7543
+HallPy_Teach/experiments/curieWeiss.py,sha256=Xw7HO9JAKEhPzs-QInb1K9eaw_eiP7Er5mW3hVOS3R4,9970
+HallPy_Teach/experiments/hallEffect.py,sha256=WO-GtePnMhh9vj7bgElFcC5J7bVsxuwDp5xdNyImz44,17708
+HallPy_Teach-0.1.4.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+HallPy_Teach-0.1.4.dist-info/METADATA,sha256=G104rXiuvHEmRvAZ-PBuWax3toQ6BZfNgkx66wM9Sxw,1282
+HallPy_Teach-0.1.4.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+HallPy_Teach-0.1.4.dist-info/top_level.txt,sha256=3RHRnx744JBYu24NT0oYrjJruLueqTA2KZG5VKUpCeU,13
+HallPy_Teach-0.1.4.dist-info/RECORD,,
