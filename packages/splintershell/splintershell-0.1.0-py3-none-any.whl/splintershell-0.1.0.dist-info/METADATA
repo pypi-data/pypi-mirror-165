@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: splintershell
+Version: 0.1.0
+Summary: A package for blending shellcodes into network traffic using unsupervised learning
+Home-page: https://github.com/one2blame/splintershell
+Author: one2blame
+Author-email: contactme@one2bla.me
+License: MIT License
+Keywords: shellcode,machine,learning,network,packet,capture
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Security
+Classifier: Topic :: System :: Networking :: Firewalls
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: loguru (>=0.6.0)
+Requires-Dist: sklearn (>=0.0)
+Requires-Dist: scapy (>=2.4.5)
+
+# splintershell
