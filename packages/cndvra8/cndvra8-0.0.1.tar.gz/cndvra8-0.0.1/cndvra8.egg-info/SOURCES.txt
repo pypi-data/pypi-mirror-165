@@ -1,0 +1,12 @@
+README.md
+setup.py
+cndvra8/VERSION
+cndvra8/__init__.py
+cndvra8/__version__.py
+cndvra8/_base.py
+cndvra8/vra8.py
+cndvra8.egg-info/PKG-INFO
+cndvra8.egg-info/SOURCES.txt
+cndvra8.egg-info/dependency_links.txt
+cndvra8.egg-info/not-zip-safe
+cndvra8.egg-info/top_level.txt

@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: cndvra8
+Version: 0.0.1
+Summary: The definitive tools to manage vra8 from API
+Home-page: https://changendevops.com
+Author: Denis FABIEN
+Author-email: denis.fabien@changendevops.com
+License: MIT/X11
+Project-URL: Documentation, https://changendevops.com
+Project-URL: Source, https://gitlab.com/changendevops/cndvra8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# VRA8 lib
+
+## JUST A DRAFT ! NOT COMPLETE
