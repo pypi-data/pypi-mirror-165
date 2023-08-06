@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: shakenbreak
+Version: 1.0.2
+Summary: Package to generate and analyse distorted defect structures, in order to identify ground-state and metastable defect configurations.
+Home-page: https://github.com/SMTG-UCL/ShakeNBreak
+Author: Irea Mosquera-Lois, Seán R. Kavanagh
+Author-email: irea.lois.20@ucl.ac.uk, sean.kavanagh.19@ucl.ac.uk
+Maintainer: Irea Mosquera-Lois, Seán R. Kavanagh
+Maintainer-email: irea.lois.20@ucl.ac.uk, sean.kavanagh.19@ucl.ac.uk
+License: MIT
+Keywords: chemistry pymatgen dft defects structure-searching distortions symmetry-breaking
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Topic :: Scientific/Engineering :: Chemistry
+Classifier: Topic :: Scientific/Engineering :: Physics
+Description-Content-Type: text/markdown
+Provides-Extra: tests
+Provides-Extra: docs
+Provides-Extra: pdf
+License-File: LICENSE
+
+Python package to automatise the process of defect structure searching. It employs chemically-guided bond distortions to locate ground-state and metastable structures of point defects in solid materials. Read the [docs](https://shakenbreak.readthedocs.io/en/latest/index.html) for more info.
+
