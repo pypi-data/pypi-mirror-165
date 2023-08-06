@@ -1,0 +1,3 @@
+[console_scripts]
+torchtree = torchtree.torchtree:main
+torchtree-cli = torchtree.cli.cli:main

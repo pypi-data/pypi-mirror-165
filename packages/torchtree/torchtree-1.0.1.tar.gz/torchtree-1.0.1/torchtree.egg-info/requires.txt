@@ -1,0 +1,12 @@
+dendropy
+numpy>=1.7
+torch>=1.9
+
+[dev]
+black
+flake8
+isort
+pylint
+
+[test]
+pytest
