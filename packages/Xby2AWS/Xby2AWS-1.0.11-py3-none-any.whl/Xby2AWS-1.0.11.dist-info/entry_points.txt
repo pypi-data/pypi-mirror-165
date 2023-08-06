@@ -1,0 +1,3 @@
+[console_scripts]
+help = help.bat
+init = init.bat
