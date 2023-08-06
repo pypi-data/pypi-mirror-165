@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+./pdfsak
+./pdfsak.bat
+./pdfsak_version.py
+pdfsak.egg-info/PKG-INFO
+pdfsak.egg-info/SOURCES.txt
+pdfsak.egg-info/dependency_links.txt
+pdfsak.egg-info/top_level.txt
