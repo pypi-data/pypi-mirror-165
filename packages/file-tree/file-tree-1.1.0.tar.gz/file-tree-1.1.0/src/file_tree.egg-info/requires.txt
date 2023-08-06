@@ -1,0 +1,6 @@
+numpy
+xarray
+pandas
+parse
+rich
+textual
