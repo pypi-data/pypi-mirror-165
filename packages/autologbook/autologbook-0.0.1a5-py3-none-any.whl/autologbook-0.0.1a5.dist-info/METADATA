@@ -1,0 +1,234 @@
+Metadata-Version: 2.1
+Name: autologbook
+Version: 0.0.1a5
+Summary: A python toolkit for the automatic generation of elog entries of SEM analysis.
+Project-URL: Homepage, https://github.com/abulgher/autologbook
+Author-email: Antonio Bulgheroni <antonio.bulgheroni@gmail.com>
+License: Copyright (c) 2018 The Python Packaging Authority
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9.7
+Requires-Dist: markdown>=3.3.7
+Requires-Dist: pillow>=9.1.1
+Requires-Dist: py-elog>=1.3.11
+Requires-Dist: pyqt5>=5.9.2
+Requires-Dist: pyyaml>=6.0
+Requires-Dist: tenacity>=8.0.1
+Requires-Dist: tifffile>=2022.5.4
+Requires-Dist: watchdog>=2.1.9
+Requires-Dist: yattag>=1.13.12
+Description-Content-Type: text/markdown
+
+[![Build Python application](https://github.com/abulgher/autologbook/actions/workflows/python-app.yml/badge.svg)](https://github.com/abulgher/autologbook/actions/workflows/python-app.yml)
+[![Upload Python Package](https://github.com/abulgher/autologbook/actions/workflows/python-publish.yml/badge.svg)](https://github.com/abulgher/autologbook/actions/workflows/python-publish.yml)
+[![PEP8](https://img.shields.io/badge/code%20style-pep8-green.svg)](https://www.python.org/dev/peps/pep-0008/)
+
+# AUTOLOGBOOK
+
+A python toolkit for the automatic generation of elog entries of SEM analysis.
+
+## Features
+- Set a **watchdog** to keep monitoring the status of a project folder. Every new image added to the folder is automatically included in the logbook.
+- The script can automatically recognize the origin of the TIFF images. If coming from a FEI/Thermofisher microscope then the specific tags are decoded and included in the logbook.
+- A thumbnail png and a full size png copy of all images are also created in order to have easier access from web-browser.
+- It connects to the JRC eLog server where the automatically generated protocol entry is uploaded.
+- Mirroring option. It is common to have microscope pictures saved locally on the microscope PC and also mirrored on a remote computer. In order for the autologbook to work, the project folder must be on a specific network share that is reachable by the web-server. To facilitate this task, the user can save the images locally and, if the mirroring option is activated, they will be copied directly to the remote data-server. At the moment there are two possible engines implemented neither perfect but getting there. More details in the dedicated section below.
+
+## Object orientation
+
+There are four basic elements in this project:
+1. ``The HTMLObject`` is a very simple subclass of the python object. It is featuring four class members corresponding to the *doc*, *tag*, *text* and *line* of the [``yattag``](https://www.yattag.org/). It also has some generic methods to generate and reset the HTML content of Doc. All objects deriving from a HTMLObject can produce HTML code.
+2. The ``Protocol`` is the basic class describing an experimental protocol. It contains a list of samples, a list of attachments and it has a protocol number, name and responsible.
+3. The ``Sample`` is as simple as a collection of ``MicroscopePicture``s.
+4. And finally, the most important: the ``MicroscopePicture`` that is actually the crucial point around which the whole protocol documentation is based on. This is characterized by a dictionary containing all important parameters of the images.
+
+### The inheritance tree of the Protocol
+As said above, the basic Protocol is an almost empty class which cannot be used directly. It is meant as a prototype for all possible ways an analysis protocol can be implemented.
+
+It's first  daughter class is the **ELOGProtocol**, that is actually implementing the possibility to transfer its content to a running eLog server. This is accomplished thanks to the ``elog`` package provided by [PSI](https://github.com/paulscherrerinstitute/py_elog).
+
+Going down the derivative tree we find the **QuattroELOGProtocol**. This is a specialization of the *ELOGProtocol* because it includes the handling of navigation pictures that other microscopes do not have. The **VersaELOGProtocol** is another specialization of the *ELOGProtocol* very similar to the QuattroELOGProtocol but for the navigation images that are not present.
+
+### The inheritance tree of the MicroscopePicture.
+In a similar way we have an inheritance tree for the **MicroscopePicture**.
+Each MicroscopePicture and its subclasses must have a unique ID that is used for example in the Protocol Editor to establish a relation between each entry and the YAML customization file.
+
+It's first daughter is the **FEIPicture**. The idea is to read the FEI specific tags contained in the TIFF file via the ``tifffile`` [package](https://pypi.org/project/tifffile/). Actually not all the tags are added to the image parameters, but only the few that are relevant for the protocol generation.
+
+Generated from the *FEIPicture*, we have the **QuattroFEIPicture** and the **VersaFEIPicture** where the ID is retrieved from the file name if it follows a standard naming convention.
+
+### The mirroring engine
+As mentioned above, it is common to have the microscope pictures saved locally on the microscope or support PC, but in order to share them with the customers and to make the preparation of the automatic logbook entry possible they must be copied on a shared network resource. To facilitate this task, this module offers an integrated mirroring watchdog running with two possible engines.
+1. **watchdog**. Following exactly the same structure of the the automatic logbook generator, this *other watchdog* is monitoring the local folder and mirroring it to the destination folder. The two watchdogs, the mirroring and the automatic logbook generator, are working in asynchrouns mode and totally indenpendently in two separate threads. This can lead to problem, for example it is possible that a file still being copied by the mirroring worker is accessed by the autologbook worker generating an error. To avoid all these clashing issues, [``tenacity``](https://tenacity.readthedocs.io/en/latest/) is used. The stability of this approach has been tested and resulted in a rather robust approach.
+2. **robocopy**. This is a shell external [command](https://docs.microsoft.com/it-it/windows-server/administration/windows-commands/robocopy) that is copying all files from one location to another and that can be run in daemon mode. Compare to the watchdog is by far more stable but it suffers from three main limitations:
+    - **Every one minute**. robocopy is executing the copy with a minimum interval of 1 minutes
+    - **No removal**. By the way robocopy is working it can remove files from the destination folder, but it is not possible to protect some files from removal. For example, all png converted images available only on the network shares will be deleted by robocopy. For this reason, the deletion of extra-files have been removed. In practical terms it means that if you delete a file from the local disc, you need to delete it as well, *manually*, from the network share.
+    - **Last copy**. When you stop the watchdog, it is possible that you still have some uncopied files to be transferred (this is because of the 1 minute delay). This files will be copied as last thing but they may not be noticed by the automatic logger because its thread was already closed. To avoid this problem, always leave the watchdog for some minutes after the last acquisition
+
+The user can select which mirroring engine to use, using the *-m engine* option from the command line. The default is **watchdog**. From the *Settings* menu, it is also possible to directly select the mirroring engine also after the start of the GUI and without any interaction with the command line.
+
+## Protocol editor and customization
+The role of the autologbook package is to build a protocol for the analysis session. The automatic procedure is sorting all acquried elements (navigation and microscope pictures, pdf reports...) in a standard form, but the microscope operator or the final user may want to costumize the protocol comments adding some extra information. The best way would be to edit the output HTML page directly on the ELOG server, but this is not possible during the analysis itself, because as soon as a new element is added to the protocol, autologbook will regenerate the complete HTML content and replace it to the existing one on the server. In other words, all modifications made on the HTML directly on the ELOG page while the autologbook watchdog is running, will be sooner or later lost.
+A possible solution is to wait until the end of the analysis session before starting doing all the customizations, but this is for sure not really handy.
+The solution adopted by the autologbook to let the user customize his protocol is via the ``ProtocolEditor`` dialog. It is activated during the execution of the watchdog by pressing the corresponding push button on the main window.
+The protocol editor window is featuring on the left side a TreeView widget where the protocol structure is shown always completed expanded. On the right side, there is a preview widget where thumbnails of images are shown and three text fields for caption, description and extra.
+The protocol data model is divided according to sections and samples as in the following scheme:
+   - Introduction
+   - Navigation images
+      - NavImg 1
+      - NavImg 2
+      - ...
+   - Samples
+      - Sample 1
+         - Subsample 1.1
+            - SubSample1.1Img 1
+            - SubSample1.1Img 2
+         - Sample1Img 1
+         - Sample1Img 2
+      - Sample 2
+         - Sample2Img 1
+         - Sample2Img 2
+         - ...
+      - ...
+   - Conclusion
+
+Selecting an item from the tree view, the corresponding information are displayed on the right side. For all images it is possible to add a caption along with the description and the extra field available for all items. The user can use simple markdown styling in the description and the extra field. Not all markdown elements will be available, but a great part of it.
+When the selected element of the tree is changed, the introduced values are automatically stored in memory and will be used by the autologbook in the next update. Clicking on the Update button, or equivalently pressing CTRL+S, all customization will be saved to the protocol yaml file. This file change will trigger the autologbook watchdog to generate immediately a regeneration of the protocol.
+
+## Configuration settings
+All parameters allowing the proper fucntioning of the tool can be configured either via a configuration file or directly in the GUI via the ConfigurationEditorDialog.
+The configuration file (\*.ini) is parsed with the ``ConfigParser`` module.
+If started on the command line, the user can select which configuration file to use using the option *-c* or *--conf-file*.
+
+An experiment file (\*.exp) is also a configuration file where an additional section ``'GUI'`` is added and that contains all the values of the various widgets. In this way the same protocol can be regenerated in a few mouse clicks.
+
+# Installation
+Installation of the **AUTOLOGBOOK** is extremely easy and it is based on ``pip``. The procedure to follow is slightly different if you intend to just to use the package or if you want to work on its development.
+Both approaches are described here below.
+
+## Ready to use installation
+If you follow this procedure you won't be able to modify the package source and you will just use it as it is or include it in your package as a library.
+The best approach is to isolate all your installations in a separate enviroment so not to corrupt any other working tools.
+```bat
+rem Generate a fresh environment
+python -m venv autologenv
+cd autologenv
+rem Activate the enviroment
+Scripts\activate.bat
+rem Just install latest autologbook version from PIP
+pip install autologbook
+```
+
+For running, autologbook needs that a few dependencies to be fullfilled. You don't have to worry about this because pip is taking care of the task, but here below a list of requirements is reported just for you to know.
+
+### Requirements
+The autologbook package has been developed with python 3.9.7. In principle it should be working also with other versions but it was never tested.
+Here is a list of packages needed for execution of the autologbook package
+  - elog v1.3.13
+  - yattag v1.13.12
+  - pyqt v5.9.2
+  - markdown v3.3.4
+  - passlib v1.7.4
+  - tenacity v8.0.1
+  - watchdog v2.1.3
+  - urllib3 v1.26.7
+  - pillow v8.4.0
+  - PyYAML v6.0
+
+### A note about **elog**.
+The official package developed by PSI is only available for conda installation. I have created a fork of the original repository and made all the changes to have it available also as a standalone python package available on PyPI. For the moment I'm the mainteiner of this package, but as soon as PSI will accept my PR, I will be gladly transfer the ownership.
+
+Version >= v1.3.13 is required because it contains a [bug fix](https://github.com/paulscherrerinstitute/py_elog/pull/33) that is still to be merged with the PSI repository and that fixes a bug caused by the deletion of the last entry of a logbook.
+
+## Install in development mode
+Pip allows you to install a package in development mode so that you can have it install in your environment but at the same time you can keep to modify its source.
+Here is a simplified procedure.
+```bat
+rem Generate a fresh environment
+python -m venv autologenv
+cd autologenv
+Scripts\activate.bat
+rem Get the source code from GitHub
+git clone https://github.com/abulgher/autologbook.git
+rem Install the requirements for development purpose
+pip install -r autologbook\requirements-dev.txt
+rem Install the package in development mode
+pip install -e autologbook
+```
+
+## Execution
+To run the autologbook module you just need to activate your python enviroment and enter the commands as here below.
+```bat
+rem Create a dedicated enviroment if you don't have it already
+py -m venv myenv
+cd myenv
+rem Activate your python enviroment
+Scripts\activate.bat
+rem Install the autologbook module
+pip install autologbook
+rem Start the GUI
+python -m autologbook
+```
+
+Using ``python -m autologbook -h``, you can get a list of command line options and flags to be used.
+
+# The ELOG counter part
+autologbook is posting logbook entries to ELOG and while the connection details (hostname, port, username...) and the microscope specific logbook are parameters that can be adjusted by the user via the configuration file, the logbook structure is hardcoded and cannot be modified without having to recode large fraction of the code.
+
+The expected logbook structure is shown in this image:
+![elog-counterpart](https://user-images.githubusercontent.com/12378877/185389752-1056e6e7-2d7d-4c0e-9930-4df179ab9c0f.PNG)
+When creating a dedicated logbook for a microscope to be used with autologbook, its structure must reflect this image and can also be copied from this elog configuration file snippet:
+```
+Theme = default
+Comment = Logbook of Quattro analyses
+Time format = %Y-%m-%d %H:%M:%S
+Date format = %Y-%m-%d
+Display mode = summary
+Summary lines = 0
+Reverse Sort = 1
+
+;------------- Define here all the attributes -------------------
+Attributes = Operator, Creation date, Protocol ID, Project, Customer,
+Required attributes = Operator, Protocol ID, Project, Customer
+
+
+;---------- OPERATOR
+Preset Operator = $long_name
+Subst Operator = $long_name
+
+;---------- CREATION DATE
+Type Creation date = date
+Preset Creation date = $date
+
+;---------- Protocol ID
+Comment Protocol ID = Please provide the numeric digits of the protocol
+
+;---------- Project
+Comment Project = Please provide the project name (usually the second part of the folder name)
+
+;---------- Customer
+Comment Customer = Please provide the customer name (usually the third part of the folder name)
+
+List display = ID, Creation date,  Operator,  Protocol ID, Project, Customer
+Link display = ID
+Quick filter = Protocol ID, Project, Customer
+```
