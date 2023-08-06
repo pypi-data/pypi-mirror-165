@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+jackified.egg-info/PKG-INFO
+jackified.egg-info/SOURCES.txt
+jackified.egg-info/dependency_links.txt
+jackified.egg-info/top_level.txt

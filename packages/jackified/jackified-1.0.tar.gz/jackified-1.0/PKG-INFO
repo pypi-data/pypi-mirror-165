@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: jackified
+Version: 1.0
+Summary: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+License-File: LICENSE
+
+<bound method Path.read_text of PosixPath('README.md')>
+
