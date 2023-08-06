@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: deepqt
+Version: 0.1.0
+Summary: attr: deepqt.__description__
+License: GPLv3
+Keywords: deepl,deepl api,qt,pyside6
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Microsoft :: Windows
+License-File: LICENSE
+Requires-Dist: deepl
+Requires-Dist: logzero
+Requires-Dist: PySide6
+Requires-Dist: xdg
+Requires-Dist: pandas
+Requires-Dist: pyexcel-odsr
+Requires-Dist: openpyxl
+Requires-Dist: python-version (>"3.10")
+
