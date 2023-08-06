@@ -1,0 +1,73 @@
+Metadata-Version: 2.1
+Name: django_search_arrayfield
+Version: 1.2.1
+Summary: Dynamic Search in Array Field in Django Admin# django_search_arrayfield
+Home-page: https://github.com/The-Tarzan-Way/django_search_arrayfield
+Author: Arshan Ahmad , Shivaank Tripathi
+Author-email: <arshan@thetarzanway.com>
+Keywords: python,django_better_admin,dynamic_search,dynamic-search,django-admin
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+
+A package that allows Dynamic Search in Array Field in Django Admin# django_search_arrayfield
+
+## Quickstart
+
+Install Django better admin ArrayField:
+
+    pip install django-search-arrayfield
+
+Add it to your \`INSTALLED\_APPS\`:
+
+```python
+INSTALLED_APPS = (
+    ...
+    'django_search_arrayfield',
+    ...
+)
+```
+## Usage
+`django_search_arrayfield` provide dyanimic search in text boxes provides by `django_better_admin_arrayfield`,
+
+
+Import it like below and use it in your model class definition.
+```python
+from django_search_arrayfield.models.fields import ArrayField as SearchArrayField
+```
+as is use to aviod any unneccary conflict with django-better-admin
+
+
+Import DynamicArrayMixin like below
+```python
+from django_search_arrayfield.admin.mixins import DynamicArrayMixin
+```
+
+In your admin class add `DynamicArrayMixin`:
+    ...
+```python
+class MyModelAdmin(admin.ModelAdmin, DynamicArrayMixin):
+```
+
+Inside your admin class add this line:
+    ...
+```python
+change_form_template = 'abc.html'
+```
+`abc.html` is a file which will add that javascript file(`def.js`) in which function with name RouteToFunction is present
+```javascript
+<script src="{% static 'js/def.js' %}" ></script>
+```
+
+Inside `def.js` file  add a function with name RouteToFunction which will get the input-id of the text box selected 
+```javascript
+function RouteToFunction(input_id){
+}
+```
+
+That's it.
