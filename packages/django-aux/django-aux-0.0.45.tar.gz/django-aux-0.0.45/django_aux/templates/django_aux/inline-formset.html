@@ -1,0 +1,41 @@
+{% extends extend_str %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+{% if header %}<h1> {{ header }} </h1>
+<hr>{% endif %}
+{% if sub_header %}<h2> {{ sub_header }} </h2>
+<hr>{% endif %}
+
+
+<form method="post" enctype="multipart/form-data">{% csrf_token %}
+    {% if form_helper %}
+    {% crispy form form_helper %}
+    {% else %}
+    {% crispy form %}
+    {% endif %}
+    {% for fd in factories %}
+    <h5>{{ fd.header }}</h5>
+    {% if fd.helper %}
+    {% crispy fd.factory fd.helper %}
+    {% else %}
+    {% crispy fd.factory %}
+    {% endif %}
+    {% endfor %}
+    <div class="row ml-2">
+        {% if add_lines_btn %}
+        <div class="form-actions m-2">
+            <input type="submit" name="addlines" value="Add Lines" class="btn btn-primary" id="submit-addline">
+        </div>
+        {% endif %}
+        <div class="form-actions m-2">
+            <input type="submit" name="save" value="Save" class="btn btn-primary" id="submit-save">
+        </div>
+        <div class="form-actions m-2">
+            <input class="btn btn-primary btn-warning" name="cancel" type="submit" value="Cancel"
+                onclick="history.back()">
+        </div>
+    </div>
+</form>
+
+{% endblock content %}
