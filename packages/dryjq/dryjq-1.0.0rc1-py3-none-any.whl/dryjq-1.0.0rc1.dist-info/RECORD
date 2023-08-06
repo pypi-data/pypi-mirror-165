@@ -1,0 +1,14 @@
+dryjq/__init__.py,sha256=9ltN6Fpul2xy9jYr8oDJQby_XSsbZ2MhmEQDogzW66c,544
+dryjq/__main__.py,sha256=tARNXKPyu5thZTZJvEuqYcyBhTlUWvMYvXgU1gP9bAw,1778
+dryjq/access.py,sha256=SWkmcEah-CYU0NdFTz6UQLpha2P_9rzui12sZbmJiBc,10155
+dryjq/commandline.py,sha256=F971Ow6LwM6I8wtB9n4zGrtGxwtwtenoPKrP1HOaG4I,10823
+dryjq/commons.py,sha256=FXOBFuaFeELotHOHeOSaCFj3n1Q9mOkysFTs5mHRToE,2837
+dryjq/convert.py,sha256=IgY35AB-p-o1b8BZ5-3KznQJ5U3Btc1J5ehQsyW07fI,1556
+dryjq/queries.py,sha256=ZbVgnoIBNjkw8OVg8o3m6ytj4zjbmzLN7trPjON1PxQ,23539
+dryjq/streams.py,sha256=zd0te2gVt7PoFyTb2rJtcmdBdXDDitwBGssqkkCju4E,6188
+dryjq-1.0.0rc1.dist-info/LICENSE,sha256=9UTqjKqVwoTtS9ckihwC8gAnamYFMvyBpXV7xVrb7Ow,1075
+dryjq-1.0.0rc1.dist-info/METADATA,sha256=dqapm2-_VeabxFO-a7uqPSuIj_ZebdQ02QcvVT3w6CE,4024
+dryjq-1.0.0rc1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+dryjq-1.0.0rc1.dist-info/entry_points.txt,sha256=57l-dRezOpvQlTUheOQuVVdpoYJbq9K2al4xr8cvJQ0,81
+dryjq-1.0.0rc1.dist-info/top_level.txt,sha256=BpJrxPQSpjw9TkpJw1vJQPySI-X6LgJBeYEHVeMMG8U,6
+dryjq-1.0.0rc1.dist-info/RECORD,,
