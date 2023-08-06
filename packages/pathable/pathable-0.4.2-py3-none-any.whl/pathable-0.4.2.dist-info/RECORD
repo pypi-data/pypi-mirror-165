@@ -1,0 +1,11 @@
+pathable/__init__.py,sha256=cvbcG-4eU1kHetwpIGeM9J0YG0I-j_V46FG880GqAxo,515
+pathable/accessors.py,sha256=dKdpYcmn8vhSFtgGmuw6AING6F8BOPGDftKsN4AVs-Y,1524
+pathable/dataclasses.py,sha256=VXcHWnsdlXcQat7g6NN3D3eel3uMSBGXMnA8DdM1kMI,165
+pathable/parsers.py,sha256=WT6vlEQJGsZ2WRu5RO253Thc7SdJgnrQooQkpoEnDEs,1490
+pathable/paths.py,sha256=X1h5WN6vv8Bon3XyC-lymRGUmxoFQ7ciiHbUZQLodo8,7083
+pathable/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pathable/types.py,sha256=RI60Osh-QR5XjmHcXTzAFQcrSSh2tUS9Wx3moGoaftk,81
+pathable-0.4.2.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+pathable-0.4.2.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+pathable-0.4.2.dist-info/METADATA,sha256=eov6XpG2cgrAv3tNCkPhBtgrLBarz0od2E3xD8SERmo,1638
+pathable-0.4.2.dist-info/RECORD,,
