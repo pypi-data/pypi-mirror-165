@@ -1,0 +1,5 @@
+mysql:
+  host: "192.168.187.169"
+  port: 3306
+  user: "issd"
+  passwd: "Qwewsx123!"
