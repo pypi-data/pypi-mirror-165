@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+scrapy_tor_proxy_rotator.egg-info/PKG-INFO
+scrapy_tor_proxy_rotator.egg-info/SOURCES.txt
+scrapy_tor_proxy_rotator.egg-info/dependency_links.txt
+scrapy_tor_proxy_rotator.egg-info/requires.txt
+scrapy_tor_proxy_rotator.egg-info/top_level.txt
+tor_ip_rotator/__init__.py
+tor_ip_rotator/middlewares.py
+tor_ip_rotator/tor_controller.py
