@@ -1,0 +1,11 @@
+__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyexql/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyexql/__main__.py,sha256=gFo_z8KIxKuyQrMo9-YCiTFeuf9om_OVH4vw37hzgB8,177
+pyexql/main.py,sha256=IUYB4G_7d3jMN-pOGfpGG4JB41yy4y1zsAk-Umaqn0Y,303
+pyexql/run.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyexql/validate.py,sha256=gU0dJxU0qJhbV7nFeoc-ovw5LaChiMRk7oYMuhLNPc0,561
+pyexql-0.0.1.dist-info/METADATA,sha256=bZc9176X1kouFRQ1UEkqFTA-tnKnGNZXWFoGBo-exmg,822
+pyexql-0.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+pyexql-0.0.1.dist-info/entry_points.txt,sha256=3eYbXEukGk8PsaoJu9B84vbGmBDmaNeIHzXCjBLLDYY,48
+pyexql-0.0.1.dist-info/top_level.txt,sha256=AxZ9Jny0KyS8rrp8c_6f6Xnnjfn4haqNkytq5E3t1OE,16
+pyexql-0.0.1.dist-info/RECORD,,
