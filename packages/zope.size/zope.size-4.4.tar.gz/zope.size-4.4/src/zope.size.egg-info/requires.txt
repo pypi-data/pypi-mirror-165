@@ -1,0 +1,17 @@
+setuptools
+zope.interface
+zope.i18nmessageid
+
+[docs]
+Sphinx
+repoze.sphinx.autointerface
+
+[test]
+zope.component[zcml]
+zope.configuration
+zope.security[zcml]
+
+[zcml]
+zope.component[zcml]
+zope.configuration
+zope.security[zcml]
