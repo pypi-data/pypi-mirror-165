@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: qcs-sdk-python
+Version: 0.1.0
+Summary: Python bindings to qcs-sdk-rust
+Keywords: pyquil,SDK,Rigetti,Quil,Quantum
+License: Apache-2.0
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Project-URL: Source Code, https://github.com/rigetti/qcs-sdk-rust
+
+
