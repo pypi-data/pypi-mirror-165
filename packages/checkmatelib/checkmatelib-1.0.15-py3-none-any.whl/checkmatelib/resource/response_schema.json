@@ -1,0 +1,52 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+
+    "title": "Checkmate response object",
+    "$comment": "This schema only enforces the parts we care about and lets the rest drift.",
+
+    "type": "object",
+    "required": ["data", "links"],
+    "additionalProperties": true,
+
+    "properties": {
+        "data": {
+            "type": "array",
+            "minItems": 1,
+
+            "items": {
+                "type": "object",
+                "required": ["id"],
+                "additionalProperties": true,
+
+                "properties": {
+                    "id": {"type": "string"}
+                }
+            }
+        },
+        "links": {
+            "type": "object",
+            "required": ["html"],
+            "additionalProperties": true,
+
+            "properties": {
+                "html": {"type": "string", "format": "uri"}
+            }
+        }
+    },
+
+    "examples": [
+        {
+            "data": [
+                {
+                    "type": "reason",
+                    "id": "malicious",
+                    "attributes": {"severity": "mandatory"}
+                }
+            ],
+            "meta": {"maxSeverity": "mandatory"},
+            "links": {
+                "html": "http://checkmate.example.com/view_error"
+            }
+        }
+    ]
+}
