@@ -1,0 +1,2 @@
+[console_scripts]
+echelle_spectra = echelle_spectra.echelle_spectra_gui:start
