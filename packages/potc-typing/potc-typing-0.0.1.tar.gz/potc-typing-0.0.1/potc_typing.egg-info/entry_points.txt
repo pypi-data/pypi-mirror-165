@@ -1,0 +1,2 @@
+[potc_plugin]
+potc_typing = potc_typing.plugin:__rules__

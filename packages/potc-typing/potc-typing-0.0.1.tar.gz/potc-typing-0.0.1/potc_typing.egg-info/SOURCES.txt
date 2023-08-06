@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+potc_typing/__init__.py
+potc_typing/plugin.py
+potc_typing.egg-info/PKG-INFO
+potc_typing.egg-info/SOURCES.txt
+potc_typing.egg-info/dependency_links.txt
+potc_typing.egg-info/entry_points.txt
+potc_typing.egg-info/requires.txt
+potc_typing.egg-info/top_level.txt
+potc_typing/config/__init__.py
+potc_typing/config/meta.py
+test/test_plugin.py
