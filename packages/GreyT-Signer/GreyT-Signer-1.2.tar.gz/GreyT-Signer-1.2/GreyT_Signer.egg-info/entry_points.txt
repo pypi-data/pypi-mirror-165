@@ -1,0 +1,3 @@
+[console_scripts]
+greyt = greyt_signer:execute
+

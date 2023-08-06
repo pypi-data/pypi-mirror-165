@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: GreyT-Signer
+Version: 1.2
+Summary: Package to interact with greyt HR.
+Home-page: UNKNOWN
+Author: Abhay Raghuvanshi
+Author-email: abhayaman669@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.8
