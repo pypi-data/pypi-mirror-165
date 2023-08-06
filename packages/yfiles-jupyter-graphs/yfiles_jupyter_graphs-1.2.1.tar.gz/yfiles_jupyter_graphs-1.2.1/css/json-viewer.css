@@ -1,0 +1,45 @@
+.graph-widget .data-entry:first-child {
+  margin-top: 0;
+}
+
+.graph-widget .data-entry {
+  margin: 12px 6px 12px 0;
+  padding: 5px 10px;
+  background-color: #f7f7f7;
+  border-radius: 6px 0 0 6px;
+  border-left: 5px solid #000;
+  font-family: monospace;
+  box-shadow: 0 2px 1px -1px rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 1px 3px 0 rgba(0,0,0,.12);
+}
+
+.graph-widget .data-entry.node {
+  border-left: 5px solid #17bebb;
+}
+
+.graph-widget .data-entry.edge {
+  border-left: 5px solid #094c4b;
+}
+
+.graph-widget .data-entry.error {
+  border-left: 5px solid #F44336;
+}
+
+.graph-widget .data-entry > .jv-light-con {
+  background: none;
+}
+
+.graph-widget .data-entry > .jv-light-con > .jv-light-current {
+  padding: 0;
+}
+
+.graph-widget .data-entry .jv-light-current {
+  line-height: 20px
+}
+
+.graph-widget .data-entry .jv-light-folder {
+  top: 7px;
+}
+
+.graph-widget .jv-light-con * {
+  user-select: none;
+}
