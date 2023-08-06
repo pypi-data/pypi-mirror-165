@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+pydantic_redis/__init__.py
+pydantic_redis/abstract.py
+pydantic_redis/config.py
+pydantic_redis/model.py
+pydantic_redis/store.py
+pydantic_redis.egg-info/PKG-INFO
+pydantic_redis.egg-info/SOURCES.txt
+pydantic_redis.egg-info/dependency_links.txt
+pydantic_redis.egg-info/requires.txt
+pydantic_redis.egg-info/top_level.txt
+test/test_pydantic_redis.py
