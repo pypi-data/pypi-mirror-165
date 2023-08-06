@@ -1,0 +1,26 @@
+[package]
+name = "curved"
+version = "0.1.2"
+authors = ["Matthew Schubert <matthew.schubert@shoobs.net>"]
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+numpy = ">= 0.14"
+ndarray = ">= 0.15"
+
+[dependencies.pyo3]
+version = ">= 0.14"
+features = ["extension-module"]
+
+[dev-dependencies]
+ndarray-rand = "0.14"
+ndarray-stats = ">= 0.5"
+criterion = { version = "0.3" }
+pprof = { version = "0.4", features = ["criterion", "flamegraph"] }
+
+[[bench]]
+name = "rdp"
+harness = false
