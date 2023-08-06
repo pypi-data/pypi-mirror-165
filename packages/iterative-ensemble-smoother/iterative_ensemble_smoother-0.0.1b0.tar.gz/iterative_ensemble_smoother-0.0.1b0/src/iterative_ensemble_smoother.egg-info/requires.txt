@@ -1,0 +1,17 @@
+numpy
+
+[dev]
+pytest
+pytest-snapshot
+tox
+pre-commit
+matplotlib
+scipy
+
+[doc]
+sphinx
+sphinx-rtd-theme
+nbsphinx
+sphinxcontrib.bibtex
+matplotlib
+jupytext
