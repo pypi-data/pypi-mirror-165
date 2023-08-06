@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: lztyj
+Version: 0.0.1
+Summary: print str lztyj
+Author: lzt.tyj99
+Author-email: lzt5120417@163.com
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# study Package
+This is a simple study package.
+print a str.
