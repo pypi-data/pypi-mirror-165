@@ -1,0 +1,15 @@
+cbn_banks/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cbn_banks/__version__.py,sha256=4746GFndd_PIykii0Mbm0Z-Xzqvcj7HOSAXSQsIGQ8k,65
+cbn_banks/bank.py,sha256=ytRYYfg9w-J3cjybKdUCzHn3tRxOVBGV3tNSOdhg0lQ,829
+cbn_banks/database/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cbn_banks/database/db.py,sha256=QVL8SKEalW6Lh7hjJBl1S4LRKahNBrdOHs28zLLlvl8,5271
+nigeria_banks/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nigeria_banks/__version__.py,sha256=4746GFndd_PIykii0Mbm0Z-Xzqvcj7HOSAXSQsIGQ8k,65
+nigeria_banks/bank.py,sha256=CNqK-my0uYhFi1y0-BvQz_X3s80Ayu5cG8WezwYYU-Y,811
+nigeria_banks/database/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nigeria_banks/database/db.py,sha256=KkTVVeCP-0NA6udKP-cpztcnInWyGNF4-UsIOQgGZR8,9469
+nigeria_banks-0.1.0.dist-info/LICENSE,sha256=mPQQv3FMTTgn1zQcjgvphU9Opb7VxkwPl0hYBpS3qZI,1070
+nigeria_banks-0.1.0.dist-info/METADATA,sha256=CyK_wgHaoooyOpI4OoITCmFydBEVboOubPkeKn6q828,2075
+nigeria_banks-0.1.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+nigeria_banks-0.1.0.dist-info/top_level.txt,sha256=sx5F098z87YT_8-y9xFtXoo6tchfb9BGhvkVsjvGMzs,24
+nigeria_banks-0.1.0.dist-info/RECORD,,
