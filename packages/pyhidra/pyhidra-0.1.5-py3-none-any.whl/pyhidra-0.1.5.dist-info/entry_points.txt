@@ -1,0 +1,6 @@
+[console_scripts]
+pyhidra = pyhidra.__main__:main
+
+[gui_scripts]
+pyhidraw = pyhidra.gui:gui
+
