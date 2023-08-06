@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+pyprusalink/__init__.py
+pyprusalink.egg-info/PKG-INFO
+pyprusalink.egg-info/SOURCES.txt
+pyprusalink.egg-info/dependency_links.txt
+pyprusalink.egg-info/requires.txt
+pyprusalink.egg-info/top_level.txt
+pyprusalink.egg-info/zip-safe
