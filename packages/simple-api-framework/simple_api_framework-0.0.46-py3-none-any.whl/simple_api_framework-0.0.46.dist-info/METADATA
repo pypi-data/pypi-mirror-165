@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: simple-api-framework
+Version: 0.0.46
+Summary: Simple async API framework
+Author: Ihor Maiorov
+Author-email: ihor.maioroff@gmail.com
+License: MIT
+Keywords: tornado,api,simple-api
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: tornado (>=6.2)
+Requires-Dist: python-dotenv (>=0.20.0)
+Requires-Dist: python-magic (>=0.4.27)
+Requires-Dist: aioredis (>=2.0.1)
+Requires-Dist: aiopg (>=1.3.4)
+Requires-Dist: psycopg2-binary (>=2.9.3)
+Requires-Dist: motor (>=3.0.0)
+Requires-Dist: ddtrace (>=1.3.2)
+Requires-Dist: datadog (>=0.44.0)
+Requires-Dist: sentry-sdk (>=1.9.4)
+
+
+This package contains simple async API framework, based on Tornado.
+
+Sources can be found on GitHub: https://github.com/ihormaioroff/simple-api-framework
