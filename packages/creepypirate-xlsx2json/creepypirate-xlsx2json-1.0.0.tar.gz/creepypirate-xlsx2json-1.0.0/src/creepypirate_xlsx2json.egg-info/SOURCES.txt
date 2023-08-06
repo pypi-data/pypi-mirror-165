@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/creepypirate_xlsx2json.egg-info/PKG-INFO
+src/creepypirate_xlsx2json.egg-info/SOURCES.txt
+src/creepypirate_xlsx2json.egg-info/dependency_links.txt
+src/creepypirate_xlsx2json.egg-info/requires.txt
+src/creepypirate_xlsx2json.egg-info/top_level.txt
+src/xlsx2json/__init__.py
+src/xlsx2json/__main__.py
+src/xlsx2json/config.toml
+src/xlsx2json/feed.py
+src/xlsx2json/viewer.py
