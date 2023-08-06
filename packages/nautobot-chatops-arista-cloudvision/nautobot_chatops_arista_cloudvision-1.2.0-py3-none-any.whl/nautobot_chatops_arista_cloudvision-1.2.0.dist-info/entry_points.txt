@@ -1,0 +1,3 @@
+[nautobot.workers]
+cloudvision=nautobot_chatops_arista_cloudvision.worker:cloudvision_chatbot
+
