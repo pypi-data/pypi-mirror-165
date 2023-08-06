@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: poetry-babel-plugin
+Version: 0.2.0
+Summary: Babel plugin for poetry
+License: MIT
+Keywords: poetry,babel
+Author: Stepan Henek
+Author-email: stepan@henek.name
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Localization
+Requires-Dist: babel (>=2.10.1,<3.0.0)
+Requires-Dist: poetry (>=1.2.0,<1.3.0)
+Project-URL: Documentation, https://github.com/shenek/poetry-babel-plugin/blob/master/README.md
