@@ -1,0 +1,17 @@
+objectrest==1.2.*
+pydantic==1.9.*
+pytz==2022.1.*
+python-dotenv==0.20.*
+packaging==21.3.*
+typing-extensions
+
+[dev]
+black
+flake8
+isort
+pytest-cov==3.*
+pytest-vcr==1.*
+pytest==7.*
+types-requests
+types-urllib3
+vcrpy==4.*
