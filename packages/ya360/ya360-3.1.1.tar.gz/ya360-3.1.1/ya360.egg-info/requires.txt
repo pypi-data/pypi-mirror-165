@@ -1,0 +1,2 @@
+yandex_oauth>=1.1.2
+yandex_360>=1.3.0
