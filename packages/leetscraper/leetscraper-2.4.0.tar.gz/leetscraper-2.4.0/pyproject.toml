@@ -1,0 +1,29 @@
+[build-system]
+requires = [
+    "setuptools >= 51.0.0",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
+
+[tool.black]
+line-length = 100
+target-version = ['py37']
+
+[tool.docformatter]
+in-place = true
+recursive = true
+wrap-summaries = 100
+wrap-descriptions = 100
+
+[tool.mypy]
+python_version = 3.7
+warn_unused_ignores = true
+show_error_codes = true
+disable_error_code = ['import', 'arg-type', 'attr-defined', 'union-attr', 'call-arg', 'assignment']
+
+[tool.pylint.main]
+fail-under = 9.0
+py-version = [3, 7]
+
+[tool.pylint.'MESSAGES CONTROL']
+disable = ['import-error', 'broad-except', 'duplicate-code']
