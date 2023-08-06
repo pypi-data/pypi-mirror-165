@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: pytrify
+Version: 0.1.0a2
+Summary: A library for making Python objects immutable
+License: MIT
+Author: Mike Salvatore
+Author-email: mike.s.salvatore@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Utilities
