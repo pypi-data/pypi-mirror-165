@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+pyfigure/__init__.py
+pyfigure/types.py
+pyfigure.egg-info/PKG-INFO
+pyfigure.egg-info/SOURCES.txt
+pyfigure.egg-info/dependency_links.txt
+pyfigure.egg-info/requires.txt
+pyfigure.egg-info/top_level.txt

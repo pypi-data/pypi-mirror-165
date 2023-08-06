@@ -1,0 +1,36 @@
+[project]
+name = "pyfigure"
+description = "Generate configuration files for classes."
+version = "2.7.1"
+authors = [
+    { name = "Stefan Nešić" }
+]
+
+requires-python = ">=3.6"
+license = {file = "LICENSE.txt"}
+readme = "README.md"
+
+
+
+keywords = ["classes", "configuration"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+#package_dir = {"": "src"}
+#packages = find_packages(where="src")
+
+dependencies = [
+    "tomlkit",
+    "typeguard",
+    "superdict"
+]
+
+[project.urls]
+repository = "https://gitlab.com/Soumeh/pyfigure"
+
+[build-system]
+requires = ["setuptools >= 40.6.0", "wheel"]
+build-backend = "setuptools.build_meta"
