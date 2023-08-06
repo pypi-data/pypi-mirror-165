@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: finetuner-stubs
+Version: 0.0.1b0
+Summary: The finetuner-stubs package includes the interface of finetuner.runner.
+Home-page: https://github.com/jina-ai/finetuner.fit/
+Download-URL: https://github.com/jina-ai/finetuner.fit/tags
+Author: Jina AI
+Author-email: team-finetuner@jina.ai
+License: Proprietary
+Project-URL: Source, https://github.com/jina-ai/finetuner.fit/
+Project-URL: Tracker, https://github.com/jina-ai/finetuner.fit/issues
+Keywords: jina neural-search neural-network deep-learning pretraining fine-tuning pretrained-models triplet-loss metric-learning siamese-network few-shot-learning
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Environment :: Console
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.7.0
+Description-Content-Type: text/markdown
