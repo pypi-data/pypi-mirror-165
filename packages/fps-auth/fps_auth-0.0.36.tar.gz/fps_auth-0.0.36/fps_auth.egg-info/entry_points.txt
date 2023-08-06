@@ -1,0 +1,11 @@
+[fps_config]
+fps-auth = fps_auth.config
+
+[fps_router]
+fps-auth = fps_auth.routes
+
+[jupyverse_auth]
+User = fps_auth.models:UserRead
+current_user = fps_auth.backends:current_user
+update_user = fps_auth.backends:update_user
+websocket_auth = fps_auth.backends:websocket_auth

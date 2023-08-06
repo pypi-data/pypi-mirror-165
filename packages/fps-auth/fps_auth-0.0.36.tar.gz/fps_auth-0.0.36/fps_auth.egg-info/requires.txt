@@ -1,0 +1,5 @@
+fps[uvicorn]>=0.0.17
+fps-lab
+fps-login
+aiosqlite
+fastapi-users[oauth,sqlalchemy]<11,>=10.1.4
