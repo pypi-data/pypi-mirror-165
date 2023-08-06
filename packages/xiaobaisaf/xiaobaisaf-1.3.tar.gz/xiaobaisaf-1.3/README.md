@@ -1,0 +1,226 @@
+# simlpe_automation_framework
+
+### 介绍
+    simple_automation_framework(简称：SAF)
+    使用最简单的模式就可以实现需要功能和测试效果，也是xiaobaiauto2的简化版
+    SAF继承了selenium、requests/httpx、appium、loguru、xiaobaiauto2、飞书机器人、钉钉机器人、企业微信机器人（暂时不支持）、禅道提单API
+    
+
+### 软件架构
+    xiaobaiauo2的简化版
+
+### 版本注意
+    尽量使用Python 3.9.* 版本
+    防止某些库出现不兼容问题，导致功能不可使用
+
+### 安装教程
+```commandline
+pip config set global.index-url https://pypi.douban.com/simple    注：将pip源修改为国内源
+pip install saf
+```
+
+### 使用说明
+- 优先修改saf/data/config.py中飞书/钉钉的webhook
+```python
+class feishu(object):
+    @staticmethod
+    def webhook():
+        return 'https://open.feishu.cn/open-apis/bot/v2/hook/xxxx'
+
+class dingding(object):
+    @staticmethod
+    def webhook():
+        return 'https://oapi.dingtalk.com/robot/send?access_token=xxxxxxxx'
+```
+- conftest.py（保持此文件与用例文件在同目录下）
+```python
+# filename = conftest.py
+from saf.utils.sendMsgUtils import robotSendMessage
+import pytest
+
+@pytest.mark.hookwrapper
+def pytest_runtest_makereport(item):
+    """
+    :param item:
+    """
+    outcome = yield
+    report = outcome.get_result()
+    if report.outcome == 'failed':
+        # 调用机器人发送执行结果
+        robotSendMessage(robot_name='feishu', msg=f'测试脚本：{report.nodeid.split("::")[0]}\n测试用例：{report.nodeid.split("::")[1]}\n测试结果：{report.outcome}')
+        # robotSendMessage(robot_name='dingding', msg=f'测试脚本：{report.nodeid.split("::")[0]}\n测试用例：{report.nodeid.split("::")[1]}\n测试结果：{report.outcome}')
+        # robotSendMessage(robot_name='feishu,dingding', msg=f'测试脚本：{report.nodeid.split("::")[0]}\n测试用例：{report.nodeid.split("::")[1]}\n测试结果：{report.outcome}')
+```
+- 用例文件
+```python
+# fielname = test_xiaobai_auto_script.py
+
+def setup_module():
+    ''' 用例脚本执行之前需要准备的信息 '''
+    ...
+
+def teardown_module():
+    ''' 用例脚本执行之后需要清除的信息 '''
+
+def setup_function():
+    ''' 初始化测试用例执行之前状态信息 '''
+    ...
+
+def teardown_function():
+    ''' 清除测试用例执行之后所产生的信息 '''
+    ...
+
+def test_yewu_name_a():
+    ''' 用例函数
+        需要针对业务场景的测试步骤的实现
+            1、UI测试就是定位需要操作的界面节点然后执行操作
+            2、API测试就是执行相关接口实现接口的功能
+        需要针对每次的结果添加断言进行判断处理
+    '''
+
+def test_yewu_name_b():
+    ''' 用例函数
+        需要针对业务场景的测试步骤的实现
+            1、UI测试就是定位需要操作的界面节点然后执行操作
+            2、API测试就是执行相关接口实现接口的功能
+        需要针对每次的结果添加断言进行判断处理
+    '''
+```
+```python
+# filename = test_xiaobai_allure_shop.py
+# JDK与Allure已安装且配置好环境变量（若不知道可以查看公众号：小白科技之窗）
+import pytest
+import allure
+
+@allure.feature('下单')
+class Test_order():
+    @allure.story('登录')
+    def test_login(self):
+        ''' 登录 '''
+        with allure.step('输入账户'):
+            assert True
+        with allure.step('输入密码'):
+            assert True
+        with allure.step('点击登录'):
+            assert True
+
+    @allure.story('搜索商品')
+    def test_search(self):
+        ''' 搜索商品 '''
+        with allure.step('搜索框输入：苹果'):
+            assert True
+        with allure.step('点击搜索按钮'):
+            assert False
+'''
+# 执行脚本
+pytest test_xiaobai_allure_shop.py --alluredir=../data
+
+# 打开报告
+allure serve ../data
+或者
+allure generate -c -o ../report ../data
+allure open ../report
+'''
+```
+
+### saf>1.1 使用禅道API，测试失败自动提单
+- 需要在禅道后台>>二次开发>>应用>>添加应用>>创建开启免密的应用 
+- 需要将上一步所生成数据【代号】与【密钥】写入到`saf/data/config.py`中zenTao相关的参数位置
+  ```python
+  # filename = saf/data/config.py
+  import hashlib
+  import time
+  class zenTao(object):
+      '''
+      参考禅道接口文档：
+      https://www.zentao.net/book/zentaopmshelp/integration-287.html
+      '''
+      @staticmethod
+      def baseURL():
+          ''' 禅道的根路径 '''
+          return 'http://192.168.254.133/zentao'
+   
+      @staticmethod
+      def account():
+          ''' 后台-》二次开发-》应用-》免密登录的账户名 '''
+          return '开启密钥的账户名称，例如管理员：admin'
+   
+      @staticmethod
+      def getCode():
+          ''' 后台-》二次开发-》应用-》创建-》代号 '''
+          return '复制生成应用的代号字符串'
+    
+      @staticmethod
+      def getKey():
+          ''' 后台-》二次开发-》应用-》创建-》密钥 '''
+          return '复制生成应用的密钥字符串'
+    
+      @staticmethod
+      def getTime():
+          ''' 获取时间戳 ，默认即可，无需修改'''
+          return int(time.time())
+    
+      @staticmethod
+      def getToken():
+          ''' 获取token： md5($code + $key + $time) ，默认即可，无需修改'''
+          _md5 = hashlib.md5(f'{zenTao.getCode()}{zenTao.getKey()}{zenTao.getTime()}'.encode('utf-8'))
+          return _md5.hexdigest()
+  ```
+- 用例同目录下创建`conftest.py`pytest的配置文件
+  ```python
+  # filename = conftest.py
+  from saf.utils.submitBugUtils import addZenTaoBUG
+  import pytest
+    
+  @pytest.mark.hookwrapper
+  def pytest_runtest_makereport(item, call):
+    """
+    :param item:
+    """
+    outcome = yield
+    report = outcome.get_result()
+    if report.outcome == 'failed':
+        doc = item.function.__doc__
+        doc = str(doc).replace('\n', '<br>')
+        addZenTaoBUG(title=item.function.__name__,
+                          steps=f'{doc}预期结果：passed<br>测试结果：{report.outcome}')
+    
+  ```
+- 用例文件正常编写，正常运行即可
+
+### saf>1.0 拷贝web自动化模板到D:\autoProject目录下
+```commandline
+
+xiaobaicmd -t web -d D:\autoProject
+```
+
+
+### 参与贡献
+[selenium官网文档](https://www.selenium.dev/documentation/, "selenium官网文档")
+
+[requests官网文档](https://requests.readthedocs.io/en/latest/, "requests官网文档")
+
+[appium官网](http://appium.io/, "appium官网")
+
+[loguru官方文档](https://loguru.readthedocs.io/en/stable/overview.html, "loguru官方文档")
+
+[xiaobaiauto2帮助文档](https://pypi.org/project/xiaobaiauto2/, "xiaobaiauto2帮助文档")
+
+[Allure帮助文档](https://docs.qameta.io/allure, "Allure帮助文档")
+
+[飞书机器人获取WebHook](https://open.feishu.cn/document/ukTMukTMukTM/ucTM5YjL3ETO24yNxkjN?lang=zh-CN, "飞书机器人获取WebHook")
+
+[钉钉机器人获取WebHook](https://open.dingtalk.com/document/group/custom-robot-access, "钉钉机器人获取WebHook")
+
+[163邮箱配置](http://help.163.com/09/1223/14/5R7P3QI100753VB8.html, "163邮箱配置")
+
+[QQ邮箱配置](https://service.mail.qq.com/cgi-bin/help?subtype=1&id=28&no=369, "QQ邮箱配置")
+
+### 更新日志
+
+| version | info                 |
+|---------|----------------------|
+| 1.0     | 基本实现web自动化模板功能       |
+| 1.1     | fix上个版本的BUG          |
+| 1.2     | 新增allure报告库及封装禅道提单接口 |
+| 1.3     | 新增allure报告库及封装禅道提单接口 |
