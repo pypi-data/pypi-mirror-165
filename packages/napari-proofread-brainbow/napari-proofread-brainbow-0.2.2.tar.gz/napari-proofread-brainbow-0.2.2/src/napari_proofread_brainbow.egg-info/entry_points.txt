@@ -1,0 +1,2 @@
+[napari.manifest]
+napari-proofread-brainbow = napari_proofread_brainbow:napari.yaml
