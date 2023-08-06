@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: greenplum-python-fork
+Version: 1.0.0b5
+Summary: Python interface for Greenplum and Postgres
+Author-email: greenplum-python@vmware.com
+Maintainer-email: greenplum-python@vmware.com
+License: Apache Software License
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+License-File: LICENSE
