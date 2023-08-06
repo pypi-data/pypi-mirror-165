@@ -1,0 +1,3 @@
+[console_scripts]
+makros=makros.cli:cli
+
