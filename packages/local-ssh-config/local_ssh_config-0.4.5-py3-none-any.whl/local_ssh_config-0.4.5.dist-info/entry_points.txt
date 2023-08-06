@@ -1,0 +1,5 @@
+[console_scripts]
+local-ssh-config=local_ssh_config.__main__:main
+local_ssh_config=local_ssh_config.__main__:main
+lsc=local_ssh_config.__main__:main
+
