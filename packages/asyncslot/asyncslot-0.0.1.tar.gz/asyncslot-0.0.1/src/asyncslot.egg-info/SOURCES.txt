@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/asyncslot/__init__.py
+src/asyncslot/_base_events.py
+src/asyncslot/_selector_events.py
+src/asyncslot.egg-info/PKG-INFO
+src/asyncslot.egg-info/SOURCES.txt
+src/asyncslot.egg-info/dependency_links.txt
+src/asyncslot.egg-info/requires.txt
+src/asyncslot.egg-info/top_level.txt
