@@ -1,0 +1,100 @@
+# General configuration
+# ----------------
+# Uncomment to change values:
+# log-level: DEBUG  # Application logging level: INFO, WARN, ERROR, DEBUG
+# log-file: /tmp/i2b2rls.log  # Log to file - Off by default
+# changeby-user: i2b2rls  # Will appear in database entries at changeby_user
+# wildfly-container: i2b2-wildfly  # Name of wildfly docker container
+# wildfly-datasources: /opt/jboss/wildfly/standalone/deployments/  # Path to datasources in container
+
+# Project configuration
+# ----------------------
+projects:
+  # Default project
+  # ----------------
+  # Configure everything that applies to all projects.
+  # All values can be overridden by explicitly setting them in a project
+  default:
+    domain: i2b2demo  # i2b2 domain
+    owner: "@"
+    # Default project roles for project members
+    default-project-roles: [USER, EDITOR, DATA_OBFSC, DATA_PROT, MANAGER]
+    ldap:  # LDAP Settings used in i2b2pm.pm_user_params
+      authentication-method: LDAP  # LDAP / LDAPS
+      connection-url: ldap.example.com  # LDAP Server
+      distinguished-name: uid=  # Field to user for login
+      search-base: ou=people,dc=example,dc=org  # Where to find users
+      security-authentication: simple  # Auth mechanism (none/simple/sasl)
+
+    # Cells
+    # ------
+    # i2b2 cells register your Datasources for wildfly
+    pm:  # Project Management cell, here are the user & project settings
+      host: i2b2-pg  # Server address
+      port: 5432  # Postgres port
+      database: i2b2  # Database of project management
+      admin-user: i2b2  # Role for creating users, projects, user_roles etc.
+      admin-pass: demouser  # Password of user above
+    crc:  # Data repository cell for observation_facts, pat_dimensions etc.
+      # No pool & jndi is configured, these are set on project level
+      host: i2b2-pg  # Database which holds crc data
+      port: 5432  # Port of postgres server
+      database: i2b2  # Database of datasource
+      schema: i2b2demodata  # Data Repository schema
+      admin-user: i2b2  # Admin role for creating postgres roles
+      admin-pass: demouser  # Password for admin role
+      driver: postgresql-42.2.8.jar  # Override wildfly postgres driver
+    ont:  # Ontology Cell
+      schema: i2b2metadata
+      pool-name: OntologyDemoDS
+      jndi-name: java:/OntologyDemoDS
+    work:  # Workplace Cell
+      schema: i2b2workdata
+      pool-name: WorkPlaceDemoDS
+      jndi-name: java:/WorkPlaceDemoDS
+    im:  # Identity Management Cell
+      schema: i2b2imdata
+      pool-name: IMDemoDS
+      jndi-name: java:/IMDemoDS
+
+  # Example project
+  rlsdemo:  # Project_id / Name of Project
+    project-path: /rlsdemo  # i2b2 internal path of project
+    name: RLS Demo Project  # Human-readable name shown at login
+    crc:  # Name of Cell to configure
+      host: i2b2-pg  # Database which holds crc data
+      port: 5432  # Port of postgres server
+      database: i2b2  # Database of datasource
+      schema: i2b2demodata  # Schema in target database
+      admin-user: i2b2  # PG admin role that creates the Datasource role
+      admin-pass: demouser  # Password for admin user
+      ds-user: rlsuser  # Role name for RLS datasource connection
+      ds-pass: rlsuserpass  # Password of RLS role
+      # If true run role setup from template script,
+      # else look for 'roles/rlsuser/main.sql' and execute it (default)
+      sql-dir: rlsuser
+      pg-vars:  # Add variables to the psql client context. Use underscores in keys!
+        # SQL query filter for user_observation_policy. Can be list or string
+        provider_filter:
+          - LCS-I2B2:D000109060
+          - LCS-I2B2:D000109061
+    members:  # List of frontend users that can login to the project
+      rls:  # Username
+        password: demouser  # Login password
+        fullname: RLS Demo User  # Users full name
+        email: demouser@example.com  # User email address
+        project-roles: [USER, DATA_OBFSC, MANAGER]
+        ldap:
+          search-base: ou=department,ou=people,dc=example,dc=org  # Where to find users
+      demo:
+      test:
+        ldap:
+
+  # Minimal example
+  mini:
+    crc:
+      ds-user: mini
+      ds-pass: minipass
+      # Add variables to the psql client context. Use underscores in keys!
+      pg-vars:
+        provider_filter: LCS-I2B2:D000109075
