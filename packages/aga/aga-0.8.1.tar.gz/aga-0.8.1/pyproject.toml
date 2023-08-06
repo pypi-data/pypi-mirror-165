@@ -1,0 +1,91 @@
+[tool.poetry]
+name = "aga"
+version = "0.8.1"
+description = "aga grades assignments"
+authors = ["Riley Shahar <riley.shahar@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/nihilistkitten/aga"
+repository = "https://github.com/nihilistkitten/aga"
+documentation = "https://aga.readthedocs.io"
+
+[tool.poetry.dependencies]
+dataclasses-json = "^0.5.6"
+dill = "^0.3.4"
+gradescope-utils = "^0.4.0"
+python = "^3.10.0"
+typer = {extras = ["all"], version = "^0.6.1"}
+dacite = "^1.6.0"
+toml = "^0.10.2"
+types-toml = "^0.10.8"
+
+[tool.poetry.dev-dependencies]
+black = "^22.3.0"
+codecov = "^2.1.12"
+coverage = {extras = ["toml"], version = "^5.5"}
+flake8 = "^4.0.1"
+flake8-black = "^0.2.3"
+flake8-bugbear = "^21.9.1"
+mypy = "^0.910"
+mypy-ls = "^0.5.1"
+myst-parser = "^0.15.2"
+nox = "^2021.6.12"
+nox-poetry = "^0.8.6"
+pydocstyle = "^6.1.1"
+pylint = "^2.13.9"
+pyls-flake8 = "^0.4.0"
+pyls-isort = "^0.2.2"
+pytest = "^6.2.5"
+pytest-cov = "^2.12.1"
+pytest-lazy-fixture = "^0.6.3"
+pytest-mock = "^3.6.1"
+python-lsp-black = "^1.0.0"
+python-lsp-server = {extras = ["mccabe", "pydocstyle", "flake8"], version = "^1.4.1"}
+sphinx = "^4.2.0"
+sphinx-autodoc-typehints = "^1.12.0"
+sphinx-click = "^3.0.1"
+sphinx-rtd-theme = "^1.0.0"
+
+[tool.poetry.scripts]
+aga = "aga.cli:aga_app"
+
+[tool.pytest.ini_options]
+filterwarnings = ["ignore:'autocompletion' is renamed to 'shell_complete':DeprecationWarning"]
+markers = ["slow: marks tests as slow (ignored by default, select with `-m slow` CLI option)"]
+
+[tool.coverage.paths]
+source = ["src", "*/site-packages"]
+
+[tool.coverage.run]
+branch = true
+source = ["aga"]
+omit = ["src/aga/gradescope/resources/setup.py", "src/aga/prize.py"]
+
+[tool.coverage.report]
+show_missing = true
+exclude_lines = [
+  "pragma: no cover",
+  "if TYPE_CHECKING:"
+]
+
+[tool.mypy]
+mypy_path = "src"
+strict = true
+warn_unused_ignores = false
+
+[tool.pylint.MASTER]
+disable = ["no-else-return"]
+
+[tool.pylint.format]
+max-line-length = 88
+good-names = ["i", "j", "k", "s", "x", "y", "_", "ui"]
+
+[tool.pydocstyle]
+convention = "numpy"
+
+[tool.isort]
+profile = "black"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
