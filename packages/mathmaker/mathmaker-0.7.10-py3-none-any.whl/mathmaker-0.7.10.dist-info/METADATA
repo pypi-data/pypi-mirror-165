@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: mathmaker
+Version: 0.7.10
+Summary: Mathmaker creates automatically elementary maths exercises and their (detailed) answers.
+License: GPL-3.0-or-later
+Author: Nicolas Hainaux
+Author-email: nh.techn@posteo.net
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: intspan (>=1.6.1,<2.0.0)
+Requires-Dist: mathmakerlib (>=0.7.10,<0.8.0)
+Requires-Dist: polib (>=1.1.1,<2.0.0)
+Requires-Dist: python-daemon (>=2.3.1,<3.0.0)
+Requires-Dist: ruamel.yaml (>=0.17.21,<0.18.0)
