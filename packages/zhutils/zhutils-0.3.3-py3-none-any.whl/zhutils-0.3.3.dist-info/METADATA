@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: zhutils
+Version: 0.3.3
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: forget2save
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: torch (>=1.7)
+Requires-Dist: torchvision (>=0.8)
+Requires-Dist: seaborn
+
+UNKNOWN
+
