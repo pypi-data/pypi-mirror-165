@@ -1,0 +1,13 @@
+packaging
+absl-py
+tensorflow_datasets
+
+[examples]
+tensorflow_datasets
+matplotlib
+
+[tests]
+flake8
+isort
+black
+pytest
