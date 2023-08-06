@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel", "ubiops"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "duckduckgoose"
+version = "1.0.1"
+description = "Client library for the DuckDuckGoose/DeepDetector API"
+readme = "README.md"
+authors = [{ name = "DuckDuckGoose", email = "info@duckduckgoose.nl" }]
+# license = { file = "LICENSE" }
+classifiers = [
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+]
+keywords = ["deepfake", "api", "detection"]
+dependencies = [
+    "ubiops",
+]
+requires-python = ">=3.5"
+
+[project.urls]
+Homepage = "https://deepdetector.docs.duckduckgoose.ai/"
