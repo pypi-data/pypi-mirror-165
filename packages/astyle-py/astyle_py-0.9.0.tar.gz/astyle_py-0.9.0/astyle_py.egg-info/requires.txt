@@ -1,0 +1,6 @@
+wasmtime==0.40.0
+PyYAML==6.0.0
+
+[dev]
+pytest
+types-PyYAML
