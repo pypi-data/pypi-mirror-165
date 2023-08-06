@@ -1,0 +1,50 @@
+package: 
+  name: pykat
+  version: {{ environ['CONDA_PYKAT_VERSION'] }}
+
+source:
+  git_rev: {{ environ['CONDA_BUILD_VERSION'] }}
+  git_url: ../../../
+    
+build:
+  noarch: python
+  script: python setup.py install --single-version-externally-managed --record record.txt
+      
+requirements:
+  run:
+    - python
+    - numpy
+    - six
+    - scipy
+    - matplotlib
+    - finesse >=2.3
+    - h5py
+    - tabulate
+    - click
+  build:
+    - python
+    - setuptools
+    - numpy
+    - six
+    - scipy
+    - matplotlib
+    - finesse >=2.3
+    
+test:
+  requires:
+    - finesse >=2.3
+    - six
+    - python
+    - numpy
+    - six
+    - scipy
+    - matplotlib
+    - h5py
+    
+  imports:
+    - pykat
+    
+about:
+  home: www.gwoptics.org/pykat
+  license: GPL2
+  license_file: LICENSE.txt

@@ -1,0 +1,18 @@
+Latest changes can be view at https://git.ligo.org/finesse/pykat/-/commits/master
+
+
+Version-1.2.91
+
+Stop officially supporting for Python 2.7 and 3.5 (Using pykat with these version might still probably work but you may get errors with newer packages who have also dropped support, such as Click)
+
+
+
+PyKat-1.1.297
+
+Adding in A+ model and files
+
+pykat.ifo plot_strain_sensitivity now returns the kat object that it runs to get the plot
+
+Plotting is now done using Matplotlib styles now
+
+Pykat can be run without having Finesse installed now

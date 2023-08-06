@@ -1,0 +1,17 @@
+S1FC      2
+S1FC1     2
+S1SMA     2
+PH30E/M   10
+PH50E/M   10
+CF125-P5  4
+SM1A9     1
+SM1A10    1
+SM1L05    1
+TR40/M-P5 2
+TR50/M-P5 3
+BHM1      2
+SM1S10    1
+RLA300/M  2
+RLA075/M  2
+RC4       2
+RC1       2
