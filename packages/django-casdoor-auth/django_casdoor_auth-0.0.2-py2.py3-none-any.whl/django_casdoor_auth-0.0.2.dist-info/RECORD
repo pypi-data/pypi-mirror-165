@@ -1,0 +1,17 @@
+__init__.py,sha256=cgcd7pRtSXLBlPO3FTWNMB59QbIJCaql-JI5phTGoN0,250
+apps.py,sha256=UKpx9F4lv0EdW-AZNpRlPfKcT_1YJT_OduBfWMqhTXc,776
+tests.py,sha256=p1bwJbR_nFqJjyfOygNEO5nXSrU3Ku0A3g2O8oZ74c0,27
+urls.py,sha256=WX9Wz_Iv6sqASoQrGuRCsMKBCWj74pY8zLuOHFh8Z4s,818
+user.py,sha256=tX2cicMDN5XAjNouiiRmdI7owbkTPdb0LLTobkfh3uU,1041
+views.py,sha256=1M5dpvw2A9fp9H5DWv7G-crPdJ3z1AfOVh4iuikKJvQ,1847
+casdoor_auth/__init__.py,sha256=xe7NiCDAIWSVgMrdlU-vZll0OBcrIao8PLH8JZuv8FM,30
+casdoor_auth/apps.py,sha256=UKpx9F4lv0EdW-AZNpRlPfKcT_1YJT_OduBfWMqhTXc,776
+casdoor_auth/tests.py,sha256=p1bwJbR_nFqJjyfOygNEO5nXSrU3Ku0A3g2O8oZ74c0,27
+casdoor_auth/urls.py,sha256=uqZi1QWO3yE_UlblhE4WMfy0XkQwAl8AnraXvrcJm-E,199
+casdoor_auth/user.py,sha256=wUX3gNtO37WfuWQPUig9BKl0izGUQlye94INlsrA8wc,428
+casdoor_auth/views.py,sha256=1M5dpvw2A9fp9H5DWv7G-crPdJ3z1AfOVh4iuikKJvQ,1847
+django_casdoor_auth-0.0.2.dist-info/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+django_casdoor_auth-0.0.2.dist-info/METADATA,sha256=Rz3xMW6xFUeZupdDFhUPyDf0U-YrvhDhdhPqNxxWxp0,3757
+django_casdoor_auth-0.0.2.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+django_casdoor_auth-0.0.2.dist-info/top_level.txt,sha256=LGvhKvvkMRXwKrgijpcDpbe4NEJ3N2a6qv_mNqE1r2M,13
+django_casdoor_auth-0.0.2.dist-info/RECORD,,
