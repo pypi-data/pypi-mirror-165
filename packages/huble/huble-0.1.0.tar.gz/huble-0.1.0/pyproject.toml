@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "huble"
+version = "0.1.0"
+description = ""
+authors = ["Rugz007 <rugvedsomwanshi007@gmail.com>"]
+readme = "README.md"
+packages = [{include = "huble", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+scikit-learn = "^1.1.2"
+pandas = "^1.4.4"
+black = "^22.8.0"
+Jinja2 = "^3.1.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
