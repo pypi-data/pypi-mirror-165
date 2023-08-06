@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: paper-cli
+Version: 0.2.3
+Requires-Dist: requests
+Requires-Dist: rich
+
+tool to easyly get paper

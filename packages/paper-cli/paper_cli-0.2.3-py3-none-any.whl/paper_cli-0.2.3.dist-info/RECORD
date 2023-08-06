@@ -1,0 +1,11 @@
+papercli/__init__.py,sha256=gsajwCwtzOCUMJ5vSPbEPyvvGVcD2Q8_IRYHubXASaA,75
+papercli/__main__.py,sha256=cGRufIJks5WhLsa2sGXtEN13h6JrUL6glWB_r9YUiQk,104
+papercli/api.py,sha256=iMiS7Moh1A1uyrQ65935bztDLqfgwVhYmfwmpRmLtqE,2125
+papercli/papercli.py,sha256=mPpVkq7DkEvVEaXECC1XLAlFv66bFSjLavNmg9KY1J0,5074
+papercli/save.py,sha256=xX7_QYKflMp6td8sCGTldWhvRj9FXQFLjN2ZbRp6_N8,158
+papercli/textgen.py,sha256=bVz3LAmxNVnNgm8MgGpSVUhvASvLfkU-utNQSd5hddU,2903
+paper_cli-0.2.3.dist-info/METADATA,sha256=9HnOHlUNSRr_vtFNzX4R3uU4T6mnLirkn5QPOXGXj4s,123
+paper_cli-0.2.3.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+paper_cli-0.2.3.dist-info/entry_points.txt,sha256=dgz7H7riFaP1j_RM-MgZgNNZhp7W2S6YKc-nRkZfF9s,57
+paper_cli-0.2.3.dist-info/top_level.txt,sha256=dWQsnWnSvbh8ivbq6M6RW2ZZaNyVjFDFVHt5LGQIUlo,9
+paper_cli-0.2.3.dist-info/RECORD,,
