@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: moydomjkh
+Version: 0.0.2
+Summary: api для работы с порталом https://newlk.erconline.ru/
+Home-page: https://github.com/yusinv/moydomjkh
+Author: @yusinv
+Author-email: yusinv@gmail.com
+License: MIT
+Keywords: moydomjkh
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: requests
+Requires-Dist: argparse
+
+# API для работы с порталом https://newlk.erconline.ru/
+###### Установка 
+`pip install moydomjkh`
+###### Доступные функции: 
+* Авторизация на портле 
+* Получение базовой информации клиента с портала, которая нужна для последующих вызовов
+* Получение списка переданных ранее показаний
+* Получение списка оплат
+* Передача показаний за текущий месяц
