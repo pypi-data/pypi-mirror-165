@@ -1,0 +1,8 @@
+crayons
+fortnitepy==3.6.5
+BenBotAsync
+FortniteAPIAsync
+uvloop
+sanic==21.6.2
+colorama
+aiohttp
