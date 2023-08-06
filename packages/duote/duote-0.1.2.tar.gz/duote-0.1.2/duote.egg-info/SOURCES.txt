@@ -1,0 +1,10 @@
+setup.py
+crawler/__init__.py
+crawler/article.py
+crawler/question.py
+duote.egg-info/PKG-INFO
+duote.egg-info/SOURCES.txt
+duote.egg-info/dependency_links.txt
+duote.egg-info/top_level.txt
+web/__init__.py
+web/func.py
