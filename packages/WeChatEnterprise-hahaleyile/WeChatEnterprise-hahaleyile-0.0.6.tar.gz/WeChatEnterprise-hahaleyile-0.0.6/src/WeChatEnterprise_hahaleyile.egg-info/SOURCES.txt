@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/__init__.py
+src/WeChatEnterprise/__init__.py
+src/WeChatEnterprise/API/SendMsg.py
+src/WeChatEnterprise/API/__init__.py
+src/WeChatEnterprise_hahaleyile.egg-info/PKG-INFO
+src/WeChatEnterprise_hahaleyile.egg-info/SOURCES.txt
+src/WeChatEnterprise_hahaleyile.egg-info/dependency_links.txt
+src/WeChatEnterprise_hahaleyile.egg-info/requires.txt
+src/WeChatEnterprise_hahaleyile.egg-info/top_level.txt

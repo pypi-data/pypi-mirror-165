@@ -1,0 +1,34 @@
+[build-system]
+requires = [
+    "setuptools>=42",
+    "wheel",
+    "redis",
+    "requests"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "WeChatEnterprise-hahaleyile"
+version = "0.0.6"
+description = "WeChatEnterpriseApi"
+readme = "README.md"
+requires-python = ">=3.6"
+authors = [
+  {email = "hahaleyile@126.com"},
+  {name = "Kevin Zhu"}
+]
+maintainers = [
+  {name = "Kevin Zhu", email = "hahaleyile@126.com"}
+]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3"
+]
+
+dependencies = [
+    "redis",
+    "requests"
+]
+
+[project.urls]
+repository = "https://github.com/hahaleyile/WeChatEnterprise"
