@@ -1,0 +1,11 @@
+pyqai/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyqai/deploy.py,sha256=1xCpieMgjVGI44MT4O5zIQ9ToI3p5ErQUO9LLst8YXM,15761
+pyqai/getDeployments.py,sha256=JUePVKkNahEs-J2x2RRQbbElEYcQmpRsqN7gEGlcHkM,1623
+pyqai/logs.py,sha256=WEHuQUPRpYph9tnlcqZ3BajD5lPzOuoKXL9Fj9z1Gas,1777
+pyqai/pods.py,sha256=He9jsdEmCUVRoUYQlaPYCxnYRpVKopMj9TsNi0vT7uI,1627
+pyqai-0.3.0.dist-info/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+pyqai-0.3.0.dist-info/METADATA,sha256=YO-VvPtzslc4Is2EZxkDW64vvWTs9myQLZd_-MmIMDs,1953
+pyqai-0.3.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+pyqai-0.3.0.dist-info/entry_points.txt,sha256=JBtM10lp006DByz7BA0h6K-yoJjII5JxjY3u4KnqEgg,155
+pyqai-0.3.0.dist-info/top_level.txt,sha256=oOE1US4H7prSjuHaWpcBuho0DHEd--U1J_3ccEvJ-VY,6
+pyqai-0.3.0.dist-info/RECORD,,
