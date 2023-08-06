@@ -1,0 +1,12 @@
+maco/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+maco/base_test.py,sha256=EEdFsJgg5hegcV0CZddiKfgP7WDg9U8N_R3b-rp1GQU,1429
+maco/cli.py,sha256=v_2tXnzv_bcYZ_Hd5q4HA37f7plnlF5rYnnkgO-ovT8,6114
+maco/collector.py,sha256=Kp-w_IPFnB9m96c5292a9KVyhHqckCyZujynC_9xS8w,5598
+maco/extractor.py,sha256=o7JTPvmQzZxxIqxI3-HiMvrKY2ycZ650aleDfKQg1nw,2801
+maco/model.py,sha256=MXa4wCCqVSAi6Jo7WLvcAVZg-UhRilyAbz11jhzcu4w,17942
+maco-1.0.2.dist-info/LICENSE.md,sha256=gMSjshPhXvV_F1qxmeNkKdBqGWkd__fEJf4glS504bM,1478
+maco-1.0.2.dist-info/METADATA,sha256=hxKBtJhxQAs0Y32c1Is_qo7wEAbG_pGhRuTMgdcy83A,172
+maco-1.0.2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+maco-1.0.2.dist-info/entry_points.txt,sha256=TpcwG1gedIg8Y7a9ZOv8aQpuwEUftCefDrAjzeP-o6U,39
+maco-1.0.2.dist-info/top_level.txt,sha256=JTYRldTIdoZJHXQU2LH0AKgD6Hm_azz5f_kOLuBorFU,5
+maco-1.0.2.dist-info/RECORD,,
