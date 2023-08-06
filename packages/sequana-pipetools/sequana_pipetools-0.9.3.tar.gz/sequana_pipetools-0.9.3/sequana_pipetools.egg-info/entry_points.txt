@@ -1,0 +1,4 @@
+[console_scripts]
+sequana_completion = sequana_pipetools.completion:main
+sequana_slurm_status = sequana_pipetools.slurm:main
+
