@@ -1,0 +1,93 @@
+Metadata-Version: 2.1
+Name: daxs
+Version: 2022.1rc0
+Summary: Data Analysis for X-ray Spectroscopy
+Home-page: https://gitlab.esrf.fr/spectroscopy/daxs
+Author: ESRF
+Author-email: marius.retegan@esrf.fr
+License: MIT
+Project-URL: Source, https://gitlab.esrf.fr/spectroscopy/daxs
+Project-URL: Documentation, https://spectrscopy.gitlab-pages.esrf.fr/daxs
+Project-URL: Tracker, https://gitlab.esrf.fr/spectroscopy/daxs/issues
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: matplotlib
+Requires-Dist: numpy (>=1.20.0)
+Requires-Dist: scipy
+Requires-Dist: silx
+Requires-Dist: ruamel.yaml
+Provides-Extra: dev
+Requires-Dist: black[jupyter] (>=21.9b0) ; extra == 'dev'
+Requires-Dist: build ; extra == 'dev'
+Requires-Dist: pylint ; extra == 'dev'
+Requires-Dist: twine ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: pytest-cov ; extra == 'dev'
+Provides-Extra: doc
+Requires-Dist: ipykernel ; extra == 'doc'
+Requires-Dist: nbsphinx ; extra == 'doc'
+Requires-Dist: nbsphinx-link ; extra == 'doc'
+Requires-Dist: sphinx ; extra == 'doc'
+Requires-Dist: sphinx-copybutton ; extra == 'doc'
+Requires-Dist: sphinx-rtd-theme ; extra == 'doc'
+
+# Data Analysis for X-ray Spectroscopy
+
+## Installation
+
+You can install the development version using:
+`python3 -m pip install [--ignore-installed] https://gitlab.esrf.fr/spectroscopy/daxs/-/archive/main/daxs-main.tar`
+
+The `--ignore-installed` argument **is required** if you want to upgrade an
+existing installation.
+
+It is best if you install the library in a virtual environment to avoid messing
+up other Python packages. See [the official
+documentation](https://docs.python.org/3/tutorial/venv.html) on how to create
+and use virtual environments.
+
+## Usage at the ESRF
+
+### Scripts and command line
+
+To use the library on the computing cluster, follow the steps below.
+
+1. Login on the front-end: `ssh -Y slurm-nice-devel`
+2. Ask for resources: `srun --pty bash`
+3. Load the spectroscopy module: `module load conda; module load spectroscopy`.
+  The command loads a Python virtual environment that contains the latest version
+  of the library.
+4. Print the version of the library to test that everything went smoothly:
+  `python -c "import daxs; print(daxs.__version__)"`
+
+If all went well, you should be able to use the library in your scripts.
+
+### JupyterHub
+
+You can also use the library in a Jupyter Notebook. Follow steps 1-3
+from above. Next, install the kernel by running `kernel-install`.
+
+After, connect to <https://jupyter-slurm.esrf.fr> and start a server on
+the Intel partition. On the right-hand side, press *New*. The Python
+environment should be in the list, as shown in the image below. Select
+it to create a new Jupyter Notebook.
+
+![image](https://gitlab.esrf.fr/spectroscopy/daxs/-/raw/main/doc/images/jupyter.png)
+
+Run `kernel-remove` to remove the kernel. Alternatively, you can use the
+`jupyter kernelspec` command to manage the kernels.
+
+While this simplifies the usage, you will not be able to add Python packages to
+the virtual environment. If you want to use additional packages not present in
+the environment, the best approach is to install the library in your home
+directory, in a virtual environment.
+
+## Documentation
+
+The documentation can be found at
+<https://spectroscopy.gitlab-pages.esrf.fr/daxs>.
