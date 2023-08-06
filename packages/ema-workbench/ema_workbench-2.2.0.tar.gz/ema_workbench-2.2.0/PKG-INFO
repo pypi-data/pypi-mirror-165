@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: ema_workbench
+Version: 2.2.0
+Summary: exploratory modelling in Python
+Home-page: https://github.com/quaquel/EMAworkbench
+Author: Jan Kwakkel
+Author-email: j.h.kwakkel@tudelft.nl
+License: BSD 3-Clause
+Project-URL: Documentation, https://emaworkbench.readthedocs.io/
+Project-URL: Tracker, https://github.com/quaquel/EMAworkbench/issues
+Platform: Linux
+Platform: Mac OS X
+Platform: Windows
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+License-File: LICENSE.md
+
+Project Documentation: https://emaworkbench.readthedocs.io/
