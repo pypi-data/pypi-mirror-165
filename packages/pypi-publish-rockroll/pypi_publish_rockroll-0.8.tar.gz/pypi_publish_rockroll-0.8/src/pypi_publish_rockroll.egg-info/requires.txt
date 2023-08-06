@@ -1,0 +1,6 @@
+pandas
+nltk
+spacy==3.0.0
+en_core_web_sm==3.0.0
+flair
+stanza
