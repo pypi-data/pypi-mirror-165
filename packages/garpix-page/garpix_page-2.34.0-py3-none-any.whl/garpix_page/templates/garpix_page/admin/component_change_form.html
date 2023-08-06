@@ -1,0 +1,41 @@
+{% extends 'admin/change_form.html' %}
+
+{% load static %}
+
+{% block extrastyle %}
+{{ block.super }}
+
+<link rel="stylesheet" href="{% static 'css/admin/clone_styles.css' %}">
+<script src="{% static 'js/admin/clone.js' %}"></script>
+
+{% endblock %}
+
+{% block object-tools %}
+{{ block.super }}
+<div class="submit-row">
+    {{ object }}
+    <a href="#openModal" class="default submit-row-new_choice button">Клонировать компонент</a>
+</div>
+
+<div id="openModal" class="modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Клонирование</h3>
+                <a href="#modal-close" title="Close" class="modal-close">×</a>
+            </div>
+            <div class="modal-body">
+                <form action="full_clone/" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="component__title">Введите новое название (опционально):</label><br>
+                        <input type="text" class="form-control" id="component__title" name="title">
+                    </div>
+                    <input type="submit" class="default submit-row-new_choice" value="Клонировать">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
