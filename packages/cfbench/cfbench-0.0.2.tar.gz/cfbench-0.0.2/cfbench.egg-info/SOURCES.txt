@@ -1,0 +1,24 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+cfbench/__init__.py
+cfbench/benchmark_template_row_instance.py
+cfbench/cfbench.py
+cfbench.egg-info/PKG-INFO
+cfbench.egg-info/SOURCES.txt
+cfbench.egg-info/dependency_links.txt
+cfbench.egg-info/requires.txt
+cfbench.egg-info/top_level.txt
+cfbench/cfg/OHConverter.py
+cfbench/cfg/__init__.py
+dataset_data/External Dataset Treatment.ipynb
+dataset_data/__init__.py
+dataset_data/generate_experiment_data.py
+dataset_data/constants/__init__.py
+dataset_data/constants/var_types.py
+model_data/External Data Model Generator.ipynb
+model_data/External Model Analysis.ipynb
+model_data/all_params.txt
+model_data/best_params.txt
+model_data/model_performance_analysis.xlsx
