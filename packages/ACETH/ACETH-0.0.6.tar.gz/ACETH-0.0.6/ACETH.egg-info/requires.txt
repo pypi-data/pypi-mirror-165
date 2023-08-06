@@ -1,0 +1,7 @@
+emoji
+numpy
+pandas
+sklearn
+tensorflow
+torch
+transformers
