@@ -1,0 +1,100 @@
+[build-system]
+requires = [
+    "hatchling>=1.8.0",
+]
+build-backend = "hatchling.build"
+
+[project]
+name = "re-patterns"
+description = "python regular expressions for humans"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.9"
+authors = [
+    { name = "Sven Siegmund", email = "sven.siegmund@gmail.com" },
+]
+keywords = [
+    "expressions",
+    "re",
+    "regex",
+    "regular",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: End Users/Desktop",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Operating System :: MacOS :: MacOS X",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: OS Independent",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3.9",
+    "Topic :: Software Development",
+]
+dependencies = []
+dynamic = [
+    "version",
+]
+
+[project.urls]
+Homepage = "https://github.com/Nagidal/re_patterns"
+
+[tool.hatch.version]
+path = "src/re_patterns/__about__.py"
+
+[tool.hatch.envs.default]
+dependencies = [
+    "pytest",
+    "pytest-cov",
+    "twine",
+    "wheel",
+]
+
+[tool.hatch.envs.default.scripts]
+cov = "pytest --cov-report=term-missing --cov-config=pyproject.toml --cov=src/re_patterns --cov=tests"
+no-cov = "cov --no-cov"
+
+[tool.hatch.envs.style]
+dependencies = [
+    "black",
+    "isort",
+]
+
+[tool.hatch.envs.style.scripts]
+fmt = [
+    "isort .",
+    "black .",
+]
+
+[tool.hatch.envs.docs]
+dependencies = [
+    "pdoc3"
+]
+
+[tool.hatch.envs.docs.scripts]
+build = "pdoc --html --output-dir docs re_patterns"
+serve = "pdoc --http : re_patterns"
+
+[[tool.hatch.envs.test.matrix]]
+python = ["39", "310", "311"]
+
+[tool.coverage.run]
+branch = true
+parallel = true
+omit = [
+  "src/re_patterns/__about__.py",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+  "no cov",
+  "if __name__ == .__main__.:",
+  "if TYPE_CHECKING:",
+]
+
+[tool.black]
+    line-length = 102
+
