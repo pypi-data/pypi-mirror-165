@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: extract-from-url
+Version: 0.3.0
+Summary: Download and extract files on-the-fly (ZIP files too)
+Home-page: https://github.com/frafra/extract-from-url
+License: GPL-3.0+
+Keywords: libarchive-c
+Author: Francesco Frassinelli
+Author-email: francesco.frassinelli@nina.no
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: fs (>=2.0.0)
+Requires-Dist: libarchive-c (>=1.0)
+Project-URL: Repository, https://github.com/frafra/extract-from-url
+Description-Content-Type: text/x-rst
+
+.. image:: https://img.shields.io/pypi/v/extract_from_url.svg
+    :target: https://pypi.org/project/extract_from_url/
+
+Description
+===========
+    
+Take advantage of `libarchive <https://libarchive.org/>`_ to download and extract files without having to store the archive first. Works with ZIP files too!
+
+It supports `pyfilesystem2 <https://www.pyfilesystem.org/>`_ in order to save the files to cloud services, remote resource, as well as local directories.
+
+Dependencies
+============
+
+1. `libarchive-c <https://pypi.org/project/libarchive-c/>`_ which requires ``libarchive-devel`` or ``libarchive-dev`` to be built
+2. `tqdm <https://pypi.org/project/tqdm/>`_ for progress bars (optional)
+
+You can use `poetry <https://poetry.eustace.io/>`_ or `pip <https://pip.pypa.io/>`_ to install the dependencies.
+
+Usage
+=====
+
+As standalone program
+---------------------
+
+Please see ``cli.py --help``
+
+As library
+----------
+
+Available as package on `PyPI <https://pypi.org/project/extract-from-url/>`_.
+
