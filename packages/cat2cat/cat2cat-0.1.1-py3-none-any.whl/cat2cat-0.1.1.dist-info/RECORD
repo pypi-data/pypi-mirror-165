@@ -1,0 +1,16 @@
+CHANGELOG.md,sha256=pnmU4c9MQImS-6ZfhsEJuUITtm153BRJxvVKdegwDPY,71
+cat2cat/__init__.py,sha256=Qo0br30kncUx1yPY7ewzyru66BlmB6JJYqF-Ix6s_Hc,168
+cat2cat/cat2cat.py,sha256=RD7gPAyWBn-hnAhAo9D2Q57G4HZ2_HrTUyiPLRwN4Oo,7703
+cat2cat/cat2cat_utils.py,sha256=qGAAXyA-J8KI74rbEBB9SC_qIUf04WbZ34Vx83LV8LA,4938
+cat2cat/data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cat2cat/data/occup.pkl,sha256=uvsuf64nTtwnhMJSOZpjkvO9pDDqmSlTkpnBw81rfQM,6086331
+cat2cat/data/occup_small.pkl,sha256=P6tEJVon0okxV52y173XHTPnT3Sb0FdXDBbabD7JdbE,705584
+cat2cat/data/trans.pkl,sha256=c2KyELUnBf3bWZ8S0bhOEavVnq8dteWR2kAsVUjIol4,34051
+cat2cat/data/verticals.pkl,sha256=vlY2L_YjlnHwX8gk0Dhj2Y2oMsRWUSmODgeyN72Z9Uc,4988
+cat2cat/dataclass.py,sha256=ONx4M-mpac8myuTCeOj8tLoy0_dJq8Fltvq1S6eRI6o,5197
+cat2cat/datasets.py,sha256=Z6sOXWY7G3bGe_26klJoHuIa2T8DUq14uDIwIbnbmG0,1619
+cat2cat/mappings.py,sha256=YyP-i8UiLv2ozKILwB7iI2Mu1O8cvfLtOkmJQEmodkE,4788
+cat2cat-0.1.1.dist-info/LICENSE,sha256=FqFSqqfeWePVUgsdcLZQTF1YPo8d8P6Aiz0D0KyoiwI,1074
+cat2cat-0.1.1.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+cat2cat-0.1.1.dist-info/METADATA,sha256=vPckoI9Sq0dGeFizG6qxU5A1SNe_o4UMfhP2ll9hb44,2981
+cat2cat-0.1.1.dist-info/RECORD,,
