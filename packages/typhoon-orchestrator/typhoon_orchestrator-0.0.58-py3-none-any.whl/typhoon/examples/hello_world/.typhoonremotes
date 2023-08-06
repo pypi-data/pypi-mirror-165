@@ -1,0 +1,5 @@
+[test]
+aws-profile=my-profile
+use-name-as-suffix=true
+metadata-db-url=dynamodb:Host=dynamodb.us-west-1.amazonaws.com;Region=us-west-1
+s3-bucket=dag-deployment-bucket
