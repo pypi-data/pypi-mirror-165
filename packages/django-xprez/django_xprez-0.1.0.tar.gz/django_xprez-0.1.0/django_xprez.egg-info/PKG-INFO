@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: django-xprez
+Version: 0.1.0
+Summary: Django CMS for presentation websites
+Home-page: https://www.s-cape.cz
+Author: Michal Májský, Martin Kappel, Jakub Dolejšek, Michal Tilsch - s-cape.cz & mimatik.com
+Author-email: michal.majsky@s-cape.cz
+License: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+License-File: LICENSE
