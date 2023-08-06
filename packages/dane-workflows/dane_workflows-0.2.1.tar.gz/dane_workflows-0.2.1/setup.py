@@ -1,0 +1,35 @@
+# -*- coding: utf-8 -*-
+from setuptools import setup
+
+packages = \
+['dane_workflows', 'dane_workflows.util']
+
+package_data = \
+{'': ['*']}
+
+install_requires = \
+['dane>=0.3.2,<0.4.0',
+ 'pika>=1.2.1,<2.0.0',
+ 'requests>=2.28.0,<3.0.0',
+ 'slack-sdk>=3.18.1,<4.0.0',
+ 'types-PyYAML>=6.0.10,<7.0.0',
+ 'yacs>=0.1.8,<0.2.0']
+
+setup_kwargs = {
+    'name': 'dane-workflows',
+    'version': '0.2.1',
+    'description': 'Library providing batch upload & monitoring for (DANE) processing environments',
+    'long_description': '# Introduction\n\nPython library for creating "processing workflows" that use [DANE environments](https://github.com/beeldengeluid/dane-environments), which in a nutshell offer, depending on the setup of each environment, an API for some kind of multi-media processing, e.g.:\n\n* Automatic Speech Recognition\n* Named Entity Extraction\n* Computer Vision algorithms\n* Any kind of Machine Learning algorithm\n\nThis Python library is however not limited to using [DANE](https://github.com/CLARIAH/DANE), but cannot also be used to hook up any API that does something with generating certain data from certain input data.\n\n# Achitecture\n\nThe following image illustrates the dane-workflows architecture:\n\n![Image](architecture.png)\n\nThe following section details more about concepts illustrated in the image.\n\n# Definition of a workflow\n\nA workflow is able to iteratively:\n- obtain input/source data from a `DataProvider`\n- send it to a `ProcessingEnvironment` (e.g. DANE environment)\n- wait for the processing environment to complete its work\n- obtain results from the processing environment\n- pass results to an `Exporter`, which typically reconsiles the processed data with the source data     \n\nAs mentioned in the definition of a workflow, this Python library works with the following components/concepts:\n\n## TaskScheduler\n\nMain process that handles all the steps described in the [Definition of a workflow]()\n\n## StatusHandler\n\nKeeps track of the workflow status, esuring recovery after crashes. By default the status is persisted to a SQLite database file, using the `SQLiteStatusHandler` but other implementations can be made by subclassing `StatusHandler`. \n\n## StatusMonitor\n\n**Note**: This component is currently implemented and not yet available. \n\nRuns on top of the StatusHandler database and visualises the overall progress of a workflow in a human-readable manner (e.g. show the % of successfully/failed processed items)\n\n## DataProvider\n\nIteratively called by the `TaskScheduler` to obtain a new batch of source data. No default implementations are available (yet), since there are many possible ways one would want to supply data to a system. Simply subclass from `DataProvider` to have full control over your input flow.\n\n## DataProcessingEnvironment\n\nIteratively called by the `TaskScheduler` to submit batches of data to an (external) processing environment. Also takes care of obtaining the output of finished processes from such an environment.\n\nThis library contains a full implementation, `DANEEnvironment`, for interacting with [DANE environments](https://github.com/beeldengeluid/dane-environments), but other environments/APIs can be supported by subclassing from `ProcessingEnvironment`.\n\n## Exporter\n\nCalled by the `TaskScheduler` with output data from a processing environment. No default implementation is available (yet), since this is typically the most use-case sensitive part of any workflow, meaning you should decide what to do with the output data (by subclassing `Exporter`).\n\n# Getting started\n\n## Prerequisites\n\n* Python >= 3.8 <= 3.10\n* [Poetry](https://python-poetry.org/)\n\n## Installation\n\nInstall via pypi.org, using e.g.\n\n```\npip install dane-workflows\n```\n\n### local development\n\nRun `poetry install`. After completion run:\n\n```\npoetry shell\n```\n\nTo test the contents of this repository works well, run:\n\n```\n./scripts/check-project.sh\n```\n\nTODO finalise\n\n# Usage\n\nAfter installing dane-workflows in your local environment, you can run an example workflow with:\n\n```\npython main.py\n```\n\nThis example script uses `config-example.yml` to configure and run a workflow using the following implementations:\n\n- **DataProvider**: ExampleDataProvider (with two dummy input documents)\n- **DataProcessingEnvironment**: ExampleDataProcessingEnvironment (mocks processing environment)\n- **StatusHandler**: SQLiteStatusHandler (writes output to `./proc_stats/all_stats.db`)\n- **Exporter**: ExampleExporter (does nothing with results)\n\nTo setup a workflow for your own purposes, consider the following:\n\n## What data do I want to process?\n\nWe\'ve provided the `ExampleDataProvider` to easily feed a workflow with a couple of files (via config.`yml`). This is mostly for testing out your workflow.\n\nMostly likely you\'ll need to implement your own `DataProvider` by subclassing it. This way you can e.g. load your input data from a database, spreadsheet or whatever else you need.\n\n## Which processing environment will I use?\n\nSince this project is developed to at least interface with running [DANE environments](https://github.com/beeldengeluid/dane-environments) we\'ve provided `DANEEnvironment` as a default implementation of `DataProcessingEnvironment`.\n\nIn case you\'d like to call any other tool for processing your data, you\'re required to implement a subclass of `DataProcessingEnvironment`.\n\n## What I will I do with the output of the processing environment?\n\nAfter your `DataProcessingEnvironment` has processed a batch of items from your `DataProvider` the `TaskScheduler` hands over the output data to your subclass of `Exporter`. \n\nSince this is the most use-case dependant part of any workflow, we do not provide any useful default implementation. \n\nNote: `ExampleExporter` is only used as a placeholder for tests or dry runs.\n\n# Roadmap\n\n- [x] Implement more advanced recovery\n- [x] Add example workflows (refer in README)\n- [x] Finalise initial README\n- [ ] Add [Python docstring](https://www.askpython.com/python/python-docstring)\n\nSee the [open issues](https://github.com/beeldengeluid/dane-workflows/issues) for a full list of proposed features, known issues and user questions.\n\n\n# License\nDistributed under the MIT License. See `LICENSE.txt` for more information.\n\n\n# Contact\nUse the [issue tracker](https://github.com/beeldengeluid/dane-workflows/issues) for any questions concerning this repository\n\nProject Link: https://github.com/beeldengeluid/dane-workflows\n\nCodemeta.json requirements: https://github.com/CLARIAH/clariah-plus/blob/main/requirements/software-metadata-requirements.md',
+    'author': 'jblom',
+    'author_email': 'jblom@beeldengeluid.nl',
+    'maintainer': None,
+    'maintainer_email': None,
+    'url': 'https://github.com/beeldengeluid/dane-workflows',
+    'packages': packages,
+    'package_data': package_data,
+    'install_requires': install_requires,
+    'python_requires': '>=3.10,<4.0',
+}
+
+
+setup(**setup_kwargs)
