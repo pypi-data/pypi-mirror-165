@@ -1,0 +1,53 @@
+import subprocess
+from pathlib import Path
+import yaml
+import snakemake
+import pathlib
+
+
+PROJECT_DIR = Path(config['project_path'])
+RESOURCES_DIR = PROJECT_DIR / "resources"
+INPUT_DATA = config['data']
+SNAKE_DIR = Path(workflow.basedir)
+SCRIPT_DIR = SNAKE_DIR / "scripts"
+
+
+# overwrite config with project specific file
+configfile: Path(config['project_path']) / "config.yaml"
+
+
+# Ensure log directory exists. Required for cluster job submission.
+Path("logs").mkdir(exist_ok=True)
+
+
+include: "rules/combine.smk"
+include: "rules/align.smk"
+include: "rules/tree.smk"
+include: "rules/phytest.smk"
+include: "rules/dynamicbeast.smk"
+include: "rules/beast.smk"
+
+
+report: "report/workflow-report.rst"
+
+
+onstart:
+    # Print some environment info
+    print("Input data:")
+    for path in INPUT_DATA:
+        print(f"- {path}")
+    print("Workflow paths:")
+    print(f"\tsnakefile ➡  {workflow.snakefile}")
+    print(f"\tworking directory ➡  {workflow.basedir}")
+
+    print("Environment:")
+    shell = lambda cmd: subprocess.run(cmd, shell=True, stdout=subprocess.PIPE).stdout.decode().rstrip()
+    print(f"\t{shell('python --version'):20s} ➡  {shell('which python')}")
+    print(f"\t{shell('conda --version'):20s} ➡  {shell('which conda')}")
+    print(f"\t{' '.join(('snakemake', shell('snakemake --version'))):20s} ➡  {shell('which snakemake')}")
+
+
+rule all:
+    input:
+        expand(rules.beast.output, id=config['id']),
+        f"results/tree/{config['id']}-tree.svg",
