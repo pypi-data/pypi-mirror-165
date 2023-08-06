@@ -1,0 +1,95 @@
+Metadata-Version: 2.1
+Name: sphinx-watch
+Version: 0.1.0
+Summary: Helper CLI for Sphinx to realtime build
+Home-page: https://github.com/attakei-lab/sphinx-watch
+License: Apache-2.0
+Author: Kazuya Takei
+Author-email: myself@attakei.net
+Requires-Python: >=3.6,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Sphinx
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Documentation :: Sphinx
+Classifier: Topic :: Internet :: WWW/HTTP :: Site Management
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Documentation
+Requires-Dist: Sphinx
+Requires-Dist: click
+Requires-Dist: watchdog
+Project-URL: Repository, https://github.com/attakei-lab/sphinx-watch
+Description-Content-Type: text/x-rst
+
+============
+sphinx-watch
+============
+
+This is CLI tool for Documentation eXperimence with Sphinx.
+
+Overview
+========
+
+``sphinx-watch`` provides these features for user local environment.
+
+* Build document of Sphinx when source files are changed by users
+* HTTP server to publish built documentation using ``http.server``
+
+Installation
+============
+
+Uploaded PyPI
+
+.. code-block::
+
+   pip install sphinx-watch
+
+Usage
+=====
+
+Build only
+
+.. code-block:: console
+
+   sphinx-watch source build html
+
+Run HTTP server
+
+.. code-block:: console
+
+   sphinx-watch source build html --http
+
+Specify port by running HTTP server
+
+.. code-block:: console
+
+   sphinx-watch source build html --http --port 8080
+
+Development
+===========
+
+This uses ``poetry`` and ``pre-commit``
+
+.. code-block:: console
+
+   git clone
+   cd sphinx-watch
+   poetry install
+   pre-commit install
+
+License
+=======
+
+Apache License 2.0
+

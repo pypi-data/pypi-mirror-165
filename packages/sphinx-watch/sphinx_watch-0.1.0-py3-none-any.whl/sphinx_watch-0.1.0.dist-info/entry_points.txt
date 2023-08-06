@@ -1,0 +1,3 @@
+[console_scripts]
+sphinx-watch=sphinx_watch.cli:main
+
