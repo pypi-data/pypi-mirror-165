@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: jsonvjson
+Version: 0.0.1
+Summary: Find differences between two json files
+Home-page: UNKNOWN
+Author: Devidutta Sutar
+Author-email: <dev20sap@gmail.com>
+License: UNKNOWN
+Keywords: python,json,compare
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+
+A package that compares two input json files and returns the differences.
+

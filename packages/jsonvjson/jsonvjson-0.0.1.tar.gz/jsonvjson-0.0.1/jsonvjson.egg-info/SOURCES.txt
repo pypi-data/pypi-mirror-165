@@ -1,0 +1,7 @@
+setup.py
+json_compr/__init__.py
+json_compr/jsonvjson.py
+jsonvjson.egg-info/PKG-INFO
+jsonvjson.egg-info/SOURCES.txt
+jsonvjson.egg-info/dependency_links.txt
+jsonvjson.egg-info/top_level.txt
