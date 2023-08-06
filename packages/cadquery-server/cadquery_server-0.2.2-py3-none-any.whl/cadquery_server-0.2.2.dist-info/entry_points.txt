@@ -1,0 +1,3 @@
+[console_scripts]
+cq-server=cq_server.cli:main
+
