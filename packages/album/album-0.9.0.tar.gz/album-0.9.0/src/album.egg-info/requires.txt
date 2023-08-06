@@ -1,0 +1,13 @@
+pyyaml>=5.4.1
+validators>=0.18.2
+gitpython>=3.1.13
+requests>=2.25.1
+pexpect>=4.8.0
+album-runner>=0.5.1
+jsonschema>=4.0.0
+colorlog>=6.6.0
+packaging>=21.3
+pre-commit>=2.20.0
+
+[:platform_system == "Windows"]
+pywin32>=304
