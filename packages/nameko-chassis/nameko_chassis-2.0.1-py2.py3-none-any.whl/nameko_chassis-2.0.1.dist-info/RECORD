@@ -1,0 +1,13 @@
+nameko_chassis/__init__.py,sha256=wAxkK8w13vqoF47A8iqWdSlIgRRXmZiQ0R4wePZfzhs,22
+nameko_chassis/debug.py,sha256=vqPk4oCwNl4qQ9KLaZgBqAgPwpzjKdKjsb8ql1chXtY,2661
+nameko_chassis/dependencies.py,sha256=1KbSvlOOLSoGOdf1V4sHquExzxm9UnJJKnLQbu0adkk,2222
+nameko_chassis/discovery.py,sha256=E3W5cuwlYcMdZ0kPF5KMSFVVLSD2PLBec0jZdW_LKyY,938
+nameko_chassis/health.py,sha256=xvK2eZZUGpTbuXH6QPOAwtT00PoLqKnC6CduvRZAiRU,1617
+nameko_chassis/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nameko_chassis/service.py,sha256=zhMqHbNvNyEk6GFyAxquxvtpzu_GSduW_TWFBL6kqvI,5233
+nameko_chassis-2.0.1.dist-info/AUTHORS.rst,sha256=nwEyx8IcP5liekrUne2wVZN_Yd0JZEpfvLwGjVdWyGc,76
+nameko_chassis-2.0.1.dist-info/LICENSE,sha256=LtgXJqgP7_5vZ10NLNk-qe3HqHSTZ1B1RdXC1NOpOAI,581
+nameko_chassis-2.0.1.dist-info/METADATA,sha256=DE284f0JwE0D01byJ1c7eMk3AEeJZfQ4nQ5HIoJ_Ml4,10971
+nameko_chassis-2.0.1.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+nameko_chassis-2.0.1.dist-info/top_level.txt,sha256=J5n9hCsk-6l5IqWFMKJHZFD-FL_xsRGxko8bT0vMPps,15
+nameko_chassis-2.0.1.dist-info/RECORD,,
