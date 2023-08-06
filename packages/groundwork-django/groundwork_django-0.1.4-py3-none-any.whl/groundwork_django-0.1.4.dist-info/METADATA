@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: groundwork-django
+Version: 0.1.4
+Summary: An integrated Django and Javascript framework for people who build tools for organisers.
+Home-page: https://groundwork.commonknowledge.coop/
+License: GNU GPL v3.0
+Author: Common Knowledge
+Author-email: hello@commonknowledge.coop
+Requires-Python: >=3.9,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: djangorestframework-camel-case (>=1.2.0,<2.0.0)
+Requires-Dist: djangorestframework-dataclasses (>=1.0.0,<2.0.0)
+Requires-Dist: schedule (>=1.1.0,<2.0.0)
+Project-URL: Repository, https://github.com/commonknowledge/groundwork
+Description-Content-Type: text/markdown
+
+# Groundwork
+
+An integrated Django and Javascript framework for people who build tools for organisers.
+
+For more information, check out [the documentation site](https://groundwork.commonknowledge.coop/).
+
+Work on this project kindly supported by [Rosa-Luxemburg-Stiftung](https://www.rosalux.de).
+
