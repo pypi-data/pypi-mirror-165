@@ -1,0 +1,40 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_rev_jm = {'jm/wave': 'jmwave',
+ 'jmac': 'jesse_mccartney',
+ 'jmagick': 'imagemagick',
+ 'jmaia': 'japan_marine_accident_inquiry_agency',
+ 'jmann': 'jason_popson',
+ 'jmarr': 'johnny_marr',
+ 'jmath666': 'douche',
+ 'jmba': 'journal_of_the_marine_biological_association_of_the_united_kingdom',
+ 'jmbg': 'unique_master_citizen_number',
+ 'jmbras': 'journal_of_the_malaysian_branch_of_the_royal_asiatic_society',
+ 'jmchs': 'judge_memorial_catholic_high_school',
+ 'jmet': 'joint_management_entrance_test',
+ 'jmhs': 'john_marshall_high_school',
+ 'jmic': 'national_defense_intelligence_college',
+ 'jmir': 'journal_of_medical_internet_research',
+ 'jmis': 'journal_of_management_information_systems',
+ 'jmit': 's._j._m._institute_of_technology',
+ 'jmjb': 'jagrata_muslim_janata_bangladesh',
+ 'jmke': 'j.m.k.e.',
+ 'jmke.': 'j.m.k.e.',
+ 'jmlr': 'journal_of_machine_learning_research',
+ 'jmls': 'john_marshall_law_school',
+ 'jmmanuel': 'talmud_jmmanuel',
+ 'jmml': 'juvenile_myelomonocytic_leukemia',
+ 'jmmmm': 'jan_jesenius',
+ 'jmol': 'judgment_as_a_matter_of_law',
+ 'jmonkeyengine': 'jmonkey_engine',
+ 'jmpt': 'journal_of_manipulative_and_physiological_therapeutics',
+ 'jmri': 'java_model_railroad_interface',
+ 'jmsb': 'john_molson_school_of_business',
+ 'jmsc': 'japan_midi_standards_committee',
+ 'jmsdf': 'japan_maritime_self-defense_force',
+ 'jmsfz': 'resident_identity_card',
+ 'jmucc': 'john_molson_undergraduate_case_competition'}
+        

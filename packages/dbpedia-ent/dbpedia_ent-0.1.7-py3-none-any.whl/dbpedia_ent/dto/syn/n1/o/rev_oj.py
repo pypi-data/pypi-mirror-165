@@ -1,0 +1,40 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_rev_oj = {'oj287': 'oj_287',
+ 'ojacket': 'orange_jackets',
+ 'ojackets': 'orange_jackets',
+ 'ojaharju': 'jorma_ojaharju',
+ 'ojahl': 'ontario_junior_a_hockey_league',
+ 'ojal': 'organisation_of_young_free_algerians',
+ 'ojam': 'amman_civil_airport',
+ 'ojansivu': 'kunto_ojansivu',
+ 'ojec': 'official_journal_of_the_european_union',
+ 'oject': 'object',
+ 'ojection': 'objection',
+ 'ojeu': 'official_journal_of_the_european_union',
+ 'ojfc': 'oxhey_jets_f.c.',
+ 'ojfs': 'veritas_file_system',
+ 'ojhl': 'ontario_junior_hockey_league',
+ 'ojhopath': 'chakma_script',
+ 'ojibwa': 'ojibwe',
+ 'ojibwas': 'ojibwe',
+ 'ojibway': 'ojibwe',
+ 'ojimi': 'ojime',
+ 'ojjdp': 'office_of_juvenile_justice_and_delinquency_prevention',
+ 'ojls': 'ottawa_japanese_language_school',
+ 'ojmiakon': 'oymyakon',
+ 'ojmjakon': 'oymyakon',
+ 'ojmyakon': 'oymyakon',
+ 'ojnb': 'new_brunswick_youth_orchestra',
+ 'ojoi': 'junior_optimist_octagon_international',
+ 'ojok': 'david_oyite-ojok',
+ 'ojrd': 'orphanet',
+ 'ojri': 'ojhri_camp',
+ 'ojuelos': 'ojuelos_de_jalisco',
+ 'ojukwu': 'chukwuemeka_odumegwu_ojukwu',
+ 'ojuzu': 'buddhist_prayer_beads',
+ 'ojyarumaru': 'ojarumaru'}
+        

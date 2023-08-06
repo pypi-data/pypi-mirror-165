@@ -1,0 +1,40 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_rev_xm = {'xm107/m107_barrett_rifle': 'barrett_m82',
+ 'xm110_sniper_rifle': 'm110_semi-automatic_sniper_system',
+ 'xm25_sniper_rifle': 'm25_sniper_rifle',
+ 'xm8_armament_subsystem': 'u.s._helicopter_armament_subsystems',
+ 'xm_comedy_150': 'xm_comedy',
+ 'xm_extreme_talk': 'extreme_talk',
+ 'xm_satellite_radio/footprints': 'xm_satellite_radio',
+ 'xm_sirius_merger': 'sirius_xm_radio',
+ 'xm_sports_nation': 'sirius_xm_sports_nation',
+ 'xmas_lemmings_1991': 'christmas_lemmings',
+ 'xmas_lemmings_1992': 'christmas_lemmings',
+ 'xmas_port_scan': 'christmas_tree_packet',
+ 'xmas_tree_attack': 'christmas_tree_packet',
+ 'xmas_tree_cluster': 'ngc_2264',
+ 'xmen_origins_wolverine': 'x-men_origins:_wolverine',
+ 'xml_certified_professional': 'xml_certification_program',
+ 'xml_data_reduced': 'xdr_schema',
+ 'xml_digital_signature': 'xml_signature',
+ 'xml_enabled_networking': 'xml-enabled_networking',
+ 'xml_forms_architecture': 'xfa',
+ 'xml_management_system': 'xml_database',
+ 'xml_master_basic': 'xml_certification_program',
+ 'xml_master_professional': 'xml_certification_program',
+ 'xml_native_database': 'xml_database',
+ 'xml_paper_specification': 'open_xml_paper_specification',
+ 'xml_query_language': 'xquery',
+ 'xml_tag_set': 'xml',
+ 'xml_template_processor': 'xml_template_engine',
+ 'xml_template_system': 'web_template_system',
+ 'xml_topic_maps': 'topic_maps',
+ 'xml_transformation_languages': 'xml_transformation_language',
+ 'xml_web_services': 'web_service',
+ 'xms_mail_server': 'xms_e-mail_application_server',
+ 'xmucane_and_xpiayoc': 'xmucane_and_xpiacoc'}
+        

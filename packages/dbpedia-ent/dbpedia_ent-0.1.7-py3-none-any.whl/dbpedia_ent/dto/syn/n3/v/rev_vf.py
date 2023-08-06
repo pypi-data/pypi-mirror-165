@@ -1,0 +1,40 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_rev_vf = {'vf-103_jolly_rogers': 'vfa-103',
+ 'vf-17_jolly_rogers': 'vfa-103',
+ 'vf-211_fighting_checkmates': 'vfa-211',
+ 'vf-41_black_aces': 'vfa-41',
+ 'vf-61_jolly_rogers': 'vfa-103',
+ 'vf-84_jolly_rogers': 'vf-84',
+ 'vf_display_tube': 'vacuum_fluorescent_display',
+ 'vf_of_hohenlohe-langenburg': 'prince_victor_of_hohenlohe-langenburg',
+ 'vfa-103_jolly_rogers': 'vfa-103',
+ 'vfa-211_fighting_checkmates': 'vfa-211',
+ 'vfa-41_black_aces': 'vfa-41',
+ 'vfa-87_golden_warriors': 'vfa-87',
+ 'vfb-einheit_zu_pankow': 'vfb_einheit_zu_pankow',
+ 'vfb_leipzig_ii': 'lokomotive_leipzig',
+ 'vfb_marathon_remscheid': 'fc_remscheid',
+ 'vfb_oldenburg_ii': 'vfb_oldenburg',
+ 'vfb_stuttgart_amateure': 'vfb_stuttgart_ii',
+ 'vfc-12_fighting_omars': 'vfc-12',
+ 'vfl_05_heide': 'heider_fc',
+ 'vfl_07_neustadt': 'tbvfl_neustadt-wildenheid',
+ 'vfl_96_halle': 'vfl_halle_1896',
+ 'vfl_bochum_1848': 'vfl_bochum',
+ 'vfl_bochum_ii': 'vfl_bochum',
+ 'vfl_grand_final': 'afl_grand_final',
+ 'vfl_halle_96': 'vfl_halle_1896',
+ 'vfl_players_association': 'afl_players_association',
+ 'vfl_wolfsburg_ii': 'vfl_wolfsburg',
+ 'vfr_aalen_ii': 'vfr_aalen',
+ 'vfr_schlesien_breslau': 'sv_blitz_breslau',
+ 'vfr_terminal_chart': 'terminal_area_chart',
+ 'vfr_wormatia_worms': 'wormatia_worms',
+ 'vfw-fokker_vak_191': 'vfw_vak_191b',
+ 'vfw_fokker_614': 'vfw-fokker_614',
+ 'vfw_senior_championship': 'greater_kansas_city_golf_classic'}
+        

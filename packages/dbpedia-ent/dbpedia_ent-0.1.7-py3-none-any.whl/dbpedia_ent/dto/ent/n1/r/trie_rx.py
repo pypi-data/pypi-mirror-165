@@ -1,0 +1,38 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_trie_rx = {'_': ['rx-250-lpn',
+       'rx12874',
+       'rx-king',
+       'rx400h',
+       'rx1950',
+       'rx-79g',
+       'rx-505',
+       'rx-79',
+       'rx-24',
+       'rx100',
+       'rx-3',
+       'rx1e',
+       'rx-7',
+       'rx-8',
+       'rx1',
+       'rx2',
+       'rx4',
+       'rx8',
+       'rx3',
+       'rx5',
+       'rx7'],
+ 'a': ['rxall', 'rxart', 'rxao'],
+ 'b': ['rxbandits', 'rxbot', 'rxbar'],
+ 'f': ['rxfp4', 'rxfp3', 'rxfp2', 'rxfp1'],
+ 'i': ['rxinl'],
+ 'j': ['rxj185635-3754', 'rxj185635-375', 'rxj1242-11', 'rxj1856', 'rxj'],
+ 'l': ['rxlist'],
+ 'n': ['rxnorm', 'rxnl', 'rxn'],
+ 'p': ['rxpgonline', 'rxpao', 'rxpg', 'rxp'],
+ 'q': ['rxqual'],
+ 'r': ['rxr-gamma', 'rxr-alpha', 'rxr-beta', 'rxra', 'rxrb', 'rxrg', 'rxr'],
+ 't': ['rxte'],
+ 'v': ['rxvt-unicode', 'rxvt']}

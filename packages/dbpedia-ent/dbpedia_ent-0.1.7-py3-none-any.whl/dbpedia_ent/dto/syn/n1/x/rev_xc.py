@@ -1,0 +1,42 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_rev_xc = {'xc-105': 'boeing_xb-15',
+ 'xc-120': 'xc-120_packplane',
+ 'xc-142': 'ltv_xc-142',
+ 'xc-142a': 'ltv_xc-142',
+ 'xc-99': 'convair_xc-99',
+ 'xc/9001': 'bmc_ado17',
+ 'xc/9002': 'bmc_ado16',
+ 'xc/9003': 'mini',
+ 'xc3s100e': 'xilinx',
+ 'xc3s250e': 'xilinx',
+ 'xc60': 'volvo_xc60',
+ 'xc70': 'volvo_v70',
+ 'xc90': 'volvo_xc90',
+ 'xcalibur': 'excalibur',
+ 'xcap': 'xml_configuration_access_protocol',
+ 'xcdp': 'xbox_community_developer_program',
+ 'xcdroast': 'x-cd-roast',
+ 'xcel': 'xcel_energy',
+ 'xcerts': 'the_xcerts',
+ 'xcg-16a': 'general_airborne_transport_xcg-16',
+ 'xch-62a': 'boeing_vertol_xch-62',
+ 'xchange': 'x-change',
+ 'xciter': 'dokken',
+ 'xckd': 'xkcd',
+ 'xclan': 'x-clan',
+ 'xclipboard': 'x_window_selection',
+ 'xcmd': 'hypertalk',
+ 'xcom': 'x-com',
+ 'xconsortium': 'x_window_system',
+ 'xcor': 'xcor_aerospace',
+ 'xcore': 'xcore_xs1-g4',
+ 'xcore86': 'vortex86',
+ 'xcp-aurora': 'extended_copy_protection',
+ 'xcritic': 'dvd_talk',
+ 'xcutsel': 'x_window_selection',
+ 'xcytrin': 'motexafin_gadolinium'}
+        

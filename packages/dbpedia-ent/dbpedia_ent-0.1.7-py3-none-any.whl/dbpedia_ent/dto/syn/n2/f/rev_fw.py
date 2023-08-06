@@ -1,0 +1,43 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_rev_fw = {'fw_187': 'focke-wulf_fw_187',
+ 'fw_189': 'focke-wulf_fw_189',
+ 'fw_190': 'focke-wulf_fw_190',
+ 'fw_190a': 'focke-wulf_fw_190',
+ 'fw_191': 'focke-wulf_fw_191',
+ 'fw_200': 'focke-wulf_fw_200',
+ 'fw_58': 'focke-wulf_fw_58',
+ 'fw_61': 'focke-wulf_fw_61',
+ 'fw_bain': 'f._w._bain',
+ 'fw_bateson': 'f._w._bateson',
+ 'fw_boutique': 'wags_boutique',
+ 'fw_campbell': 'francis_maule_campbell',
+ 'fw_cats': 'fort_worth_cats',
+ 'fw_champion': 'f._w._champion',
+ 'fw_esterhazy': 'ferdinand_walsin_esterhazy',
+ 'fw_farrar': 'frederic_william_farrar',
+ 'fw_harvey': 'f._w._harvey',
+ 'fw_hirst': 'francis_wrigley_hirst',
+ 'fw_jordan': 'f._w._jordan',
+ 'fw_lanchester': 'frederick_w._lanchester',
+ 'fw_maitland': 'frederic_william_maitland',
+ 'fw_meacham': 'f._w._meacham',
+ 'fw_moorman': 'f._w._moorman',
+ 'fw_murnau': 'f._w._murnau',
+ 'fw_olin': 'franklin_w._olin',
+ 'fw_pomeroy': 'f._w._pomeroy',
+ 'fw_sanderson': 'frederick_william_sanderson',
+ 'fw_taylor': 'frederick_winslow_taylor',
+ 'fw_walbank': 'f._w._walbank',
+ 'fw_warre-cornish': 'francis_warre_warre-cornish',
+ 'fw_went': 'frits_warmolt_went',
+ 'fw_williams': 'f._w._williams',
+ 'fw_winterbotham': 'f._w._winterbotham',
+ 'fw_woolworth': 'f._w._woolworth_company',
+ 'fwa_academy': 'frontier_wrestling_alliance',
+ 'fwon_lespwa': 'lespwa',
+ 'fws_craig': 'f._w._s._craig'}
+        

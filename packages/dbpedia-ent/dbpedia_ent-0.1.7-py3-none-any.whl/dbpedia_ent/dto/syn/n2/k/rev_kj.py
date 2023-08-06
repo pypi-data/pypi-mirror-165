@@ -1,0 +1,40 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_rev_kj = {'kj_52': 'kj-52',
+ 'kj_bishop': 'k._j._bishop',
+ 'kj_choi': 'choi_kyung-ju',
+ 'kj_five-tweezy': 'kj-52',
+ 'kj_fivetweezy': 'kj-52',
+ 'kj_gabrielsson': 'k._j._gabrielsson',
+ 'kj_hippensteel': 'k._j._hippensteel',
+ 'kj_matsui': 'k._j._matsui',
+ 'kj_miller': 'kara_miller',
+ 'kj_noons': 'karl_james_noons',
+ 'kj_parker': 'k._j._parker',
+ 'kj_popma': 'k._j._popma',
+ 'kj_singh': 'k._j._singh',
+ 'kj_yesudas': 'k._j._yesudas',
+ 'kjeld_irgens': 'kjeld_stub_irgens',
+ 'kjeld_neilsen': 'kjeld_nielsen',
+ 'kjell-erik_olsen': 'kjell_erik_killi_olsen',
+ 'kjell_aronsen': 'oslolosen',
+ 'kjell_falls': 'kjelfossen',
+ 'kjell_fjalset': 'kjell_fjalsett',
+ 'kjell_sandved': 'kjell_bloch_sandved',
+ 'kjell_storeide': 'kjell_a._storeide',
+ 'kjeller_hauk': 'hannover_cl.v',
+ 'kjellin_syndrome': 'hereditary_spastic_paraplegia',
+ 'kjellman_gun': 'kjellman_machine_gun',
+ 'kjerstin_erickson': 'forge_program',
+ 'kjetil_haraldstad': 'kjetil-vidar_haraldstad',
+ 'kjetil_lie': 'kjetil_aleksander_lie',
+ 'kjhk_lawrence': 'kjhk',
+ 'kjo_fm': 'kkjo-fm',
+ 'kjolen_mountains': 'scandinavian_mountains',
+ 'kjsl_am': 'kjsl',
+ 'kjustendil_province': 'kyustendil_province',
+ 'kjv_bible': 'authorized_king_james_version'}
+        
