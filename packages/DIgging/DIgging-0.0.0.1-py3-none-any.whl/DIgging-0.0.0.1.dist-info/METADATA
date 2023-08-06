@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: DIgging
+Version: 0.0.0.1
+Summary: Decision AI searching and optimization platform
+Author: OpenDILab Contributors
+License: Apache License, Version 2.0
+Keywords: searching
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: torch (<=1.10)
+Requires-Dist: di-engine (<0.4.1)
+Requires-Dist: scikit-learn (>=0.18.0)
+Requires-Dist: protobuf (<=3.20.1)
+Provides-Extra: doc
+Requires-Dist: sphinx (>=2.2.1) ; extra == 'doc'
+Requires-Dist: sphinx-rtd-theme (~=0.4.3) ; extra == 'doc'
+Requires-Dist: enum-tools ; extra == 'doc'
+Requires-Dist: sphinx-toolbox ; extra == 'doc'
+Requires-Dist: recommonmark ; extra == 'doc'
+Requires-Dist: sphinx-multiversion (~=0.2.4) ; extra == 'doc'
+Provides-Extra: style
+Requires-Dist: yapf (==0.29.0) ; extra == 'style'
+Requires-Dist: flake8 (~=3.5) ; extra == 'style'
+Provides-Extra: test
+Requires-Dist: pytest (~=6.2.5) ; extra == 'test'
+Requires-Dist: pytest-cov (~=3.0.0) ; extra == 'test'
+Requires-Dist: pytest-mock (~=3.6.1) ; extra == 'test'
+Requires-Dist: pytest-xdist (>=1.34.0) ; extra == 'test'
+Requires-Dist: pytest-rerunfailures (~=10.2) ; extra == 'test'
+Requires-Dist: pytest-timeout (~=2.0.2) ; extra == 'test'
+Requires-Dist: pytest-benchmark (~=3.4.0) ; extra == 'test'
+
+DIgging: 
