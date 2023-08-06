@@ -1,0 +1,9 @@
+tweepy==4.10.0
+selenium==4.3.0
+webdriver-manager==3.5.4
+free-proxy==1.0.6
+freeproxy==1.0.2
+fp==0.2
+fake-useragent==0.1.11
+twine==4.0.1
+wheel==0.36.2
