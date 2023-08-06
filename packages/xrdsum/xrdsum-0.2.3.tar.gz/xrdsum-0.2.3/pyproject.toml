@@ -1,0 +1,126 @@
+[build-system]
+requires = ["flit_core >=3.4"]
+build-backend = "flit_core.buildapi"
+
+
+[project]
+name = "xrdsum"
+authors = [
+    { name = "Luke Kreczko", email = "kreczko@cern.ch" },
+]
+maintainers = [
+    { name = "The GridPP Collaboration", email = "kreczko@cern.ch" },
+]
+license = { file = "LICENSE" }
+
+description = "Package for retrieving and calculating checksums for XRootD"
+readme = "README.md"
+
+requires-python = ">=3.8"
+
+classifiers = [
+    "License :: OSI Approved :: BSD License",
+    "Topic :: Scientific/Engineering",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: BSD License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Development Status :: 1 - Planning",
+]
+
+dynamic = ["version"]
+
+dependencies = [
+    "codetiming",
+    "typer >= 0.4.0",
+    "rich >=10.12.0",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest >=6",
+]
+dev = [
+    "pytest >=6",
+]
+docs = [
+    "Sphinx>=4.0",
+     "myst_parser>=0.13",
+    "sphinx-book-theme>=0.1.0",
+    "sphinx_copybutton",
+]
+hdfs = [
+    "pyhdfs>=0.3.1",
+]
+# cannot put it on pypi with this.
+# we would need to move cephsum to pypi first.
+# cephfs = [
+#     "cephsum @ git+https://github.com/snafus/cephsum.git@master",
+# ]
+
+[project.urls]
+homepage = "https://github.com/BristolComputing/xrdsum"
+
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = ["-ra", "--showlocals", "--strict-markers", "--strict-config"]
+xfail_strict = true
+filterwarnings = ["error"]
+testpaths = [
+    "tests",
+]
+
+
+[tool.mypy]
+files = "src"
+python_version = "3.8"
+warn_unused_configs = true
+
+disallow_any_generics = true
+disallow_subclassing_any = true
+disallow_untyped_calls = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+# [[tool.mypy.overrides]] not working, setting this to false instead
+disallow_untyped_decorators = false
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_return_any = true
+no_implicit_reexport = true
+strict_equality = true
+show_error_codes = true
+
+[[tool.mypy.overrides]]
+module = "typer.*"
+implicit_reexport = true
+
+[tool.isort]
+profile = "black"
+known_third_party = ["typer", "click"]
+
+
+[tool.pylint]
+master.py-version = "3.8"
+master.ignore-paths= ["src/xrdsum/_version.py"]
+reports.output-format = "colorized"
+similarities.ignore-imports = "yes"
+messages_control.disable = [
+  "design",
+  "fixme",
+  "line-too-long",
+  "wrong-import-position",
+]
+
+[project.scripts]
+xrdsum = "xrdsum.cli:main"
+
+[tool.flit.external-data]
+directory = "scripts"
