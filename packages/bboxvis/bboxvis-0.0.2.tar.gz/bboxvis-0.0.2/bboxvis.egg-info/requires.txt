@@ -1,0 +1,8 @@
+matplotlib>=3.5.1
+numba>=0.55.1
+PyQt5>=5.15.4
+vispy==0.9.6
+pyzmq==22.3.0
+scipy
+pyqtwebengine<5.13
+loguru

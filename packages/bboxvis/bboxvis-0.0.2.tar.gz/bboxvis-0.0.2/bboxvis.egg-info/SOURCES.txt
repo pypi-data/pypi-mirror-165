@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+bboxvis/__init__.py
+bboxvis/gui.py
+bboxvis/tools.py
+bboxvis.egg-info/PKG-INFO
+bboxvis.egg-info/SOURCES.txt
+bboxvis.egg-info/dependency_links.txt
+bboxvis.egg-info/requires.txt
+bboxvis.egg-info/top_level.txt
+bboxvis/examples/simple_vis.py
