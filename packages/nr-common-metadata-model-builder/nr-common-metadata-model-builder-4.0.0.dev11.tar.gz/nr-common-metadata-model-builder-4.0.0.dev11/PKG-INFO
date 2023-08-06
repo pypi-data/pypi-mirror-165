@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: nr-common-metadata-model-builder
+Version: 4.0.0.dev11
+Summary: OARepo model builder extension for NR common metadata records
+Home-page: https://github.com/NarodniRepozitar/nr-common-metadata
+Author: CESNET
+Author-email: bauer@cesnet.cz
+License: MIT
+Keywords: National Repository common model builder plugin Invenio
+Platform: any
+Classifier: Development Status :: 5 - Production/Stable
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+<!--
+ Copyright (c) 2022 Miroslav Bauer
+
+ This software is released under the MIT License.
+ https://opensource.org/licenses/MIT
+-->

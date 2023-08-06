@@ -1,0 +1,1 @@
+oarepo-model-builder>=0.9.24
