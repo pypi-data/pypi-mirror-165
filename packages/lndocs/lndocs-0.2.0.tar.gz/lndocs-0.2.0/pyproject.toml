@@ -1,0 +1,43 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "lndocs"
+authors = [{name = "Lamin Labs", email = "laminlabs@gmail.com"}]
+readme = "README.md"
+dynamic = ["version", "description"]
+dependencies = [
+    "ablog",
+    "dirsync",
+    "myst-parser==0.18.0",
+    "myst-nb==0.16.0",
+    "sphinxext-opengraph",
+    "sphinx-autodoc-typehints",
+    "docutils==0.17.1",  # this is mostly because of the double footnote brackets https://github.com/sphinx-doc/sphinx/issues/10522
+    "pydata-sphinx-theme==0.9.0",
+    "markdown",
+]
+
+[project.urls]
+Home = "https://github.com/laminlabs/lndocs"
+
+[project.optional-dependencies]
+dev = [
+    "pre-commit",
+    "nox",
+]
+test = [
+    "pytest>=6.0",
+]
+
+[project.scripts]
+lndocs = "lndocs.__main__:main"
+
+[tool.black]
+preview = true
+
+[tool.pytest.ini_options]
+testpaths = [
+    "tests",
+]

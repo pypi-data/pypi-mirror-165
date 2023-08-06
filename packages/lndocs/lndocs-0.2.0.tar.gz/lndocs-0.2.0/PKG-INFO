@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: lndocs
+Version: 0.2.0
+Summary: Lamin site generator.
+Author-email: Lamin Labs <laminlabs@gmail.com>
+Description-Content-Type: text/markdown
+Requires-Dist: ablog
+Requires-Dist: dirsync
+Requires-Dist: myst-parser==0.18.0
+Requires-Dist: myst-nb==0.16.0
+Requires-Dist: sphinxext-opengraph
+Requires-Dist: sphinx-autodoc-typehints
+Requires-Dist: docutils==0.17.1
+Requires-Dist: pydata-sphinx-theme==0.9.0
+Requires-Dist: markdown
+Requires-Dist: pre-commit ; extra == "dev"
+Requires-Dist: nox ; extra == "dev"
+Requires-Dist: pytest>=6.0 ; extra == "test"
+Project-URL: Home, https://github.com/laminlabs/lndocs
+Provides-Extra: dev
+Provides-Extra: test
+
+# lndocs: Lamin site generator
+
+This is a command line tool. Install via:
+
+```
+pip install git+https://github.com/laminlabs/lndocs.git
+```
+
+And then build your documentation by calling the tool in the root of your project repository.
+
+```
+lndocs
+```
+
+The basis for this is largely Sphinx. More explanation to come.
+
