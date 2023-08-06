@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+AutoMapDB.egg-info/PKG-INFO
+AutoMapDB.egg-info/SOURCES.txt
+AutoMapDB.egg-info/dependency_links.txt
+AutoMapDB.egg-info/entry_points.txt
+AutoMapDB.egg-info/not-zip-safe
+AutoMapDB.egg-info/requires.txt
+AutoMapDB.egg-info/top_level.txt
+automapdb/__init__.py
+automapdb/cli.py
+automapdb/db.py
+automapdb/manager.py
+automapdb/mapper.py
+automapdb/utils.py
