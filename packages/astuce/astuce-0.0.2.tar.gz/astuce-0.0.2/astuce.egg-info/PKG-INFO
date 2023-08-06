@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: astuce
+Version: 0.0.2
+Summary: AST inference utilities.
+Home-page: https://github.com/tristanlatr/astuce
+Author: Various contributors
+License: GNU LESSER GENERAL PUBLIC LICENSE Version 2.1
+Keywords: static code analysis,python,abstract syntax tree
+Requires-Python: >=3.7.2
+Description-Content-Type: text/markdown
+Provides-Extra: test
+Provides-Extra: docs
+License-File: LICENSE
+
+# astuce
+
+AST inference utilities (Work in progress).
+
+[Read the documentation](https://tristanlatr.github.io/astuce).
+
+Acknowledgement: This is a devired work from [astroid](https://github.com/PyCQA/astroid) as well as from [griffe](https://github.com/mkdocstrings/griffe).

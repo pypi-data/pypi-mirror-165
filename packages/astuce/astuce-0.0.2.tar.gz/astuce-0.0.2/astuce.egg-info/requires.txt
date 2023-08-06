@@ -1,0 +1,13 @@
+attrs
+
+[:python_version < "3.8"]
+cached_property
+
+[docs]
+pydoctor
+
+[test]
+attrs
+coverage
+pytest
+astor
