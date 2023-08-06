@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: namefile
+Version: 0.1.0
+Summary: Pydantic to CLI
+Author: wangyuxin
+Author-email: wangyuxin@mokahr.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: packaging (>=21.3,<22.0)
+Description-Content-Type: text/markdown
+
+# namefile
+
+ 
+
+## Usage
+
+### conda env
+
+```shell
+conda env create
+```
+
+### poetry
+```shell
+poetry install
+```
+
+
+### Makefile
+
+```shell
+# 帮助文档
+make help
+# 格式化代码
+make style
+# 静态检查
+make lint
+...
+```
+
+
