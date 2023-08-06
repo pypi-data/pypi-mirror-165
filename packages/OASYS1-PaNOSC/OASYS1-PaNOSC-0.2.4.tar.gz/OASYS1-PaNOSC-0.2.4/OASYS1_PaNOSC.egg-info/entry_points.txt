@@ -1,0 +1,9 @@
+[oasys.addons]
+Shadow PaNOSC = orangecontrib.panosc.shadow
+
+[oasys.menus]
+panoscoasysmenu = orangecontrib.panosc.menu
+
+[oasys.widgets]
+Shadow PaNOSC Extension = orangecontrib.panosc.shadow.widgets.extension
+
