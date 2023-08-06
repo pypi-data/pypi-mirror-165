@@ -1,0 +1,402 @@
+Metadata-Version: 2.1
+Name: biomaj-download
+Version: 3.2.10
+Summary: BioMAJ download service
+Home-page: http://biomaj.genouest.org
+Author: Olivier Sallou
+Author-email: olivier.sallou@irisa.fr
+License: UNKNOWN
+Download-URL: http://biomaj.genouest.org
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.6, <4
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: biomaj-core
+Requires-Dist: biomaj-zipkin
+Requires-Dist: pycurl
+Requires-Dist: ftputil
+Requires-Dist: tenacity
+Requires-Dist: simpleeval
+Requires-Dist: py-bcrypt
+Requires-Dist: pika (==0.13.0)
+Requires-Dist: redis
+Requires-Dist: PyYAML
+Requires-Dist: flask
+Requires-Dist: python-consul
+Requires-Dist: prometheus-client (>=0.0.18)
+Requires-Dist: protobuf
+Requires-Dist: requests
+Requires-Dist: humanfriendly
+Requires-Dist: python-irodsclient
+
+# About
+
+[![PyPI version](https://badge.fury.io/py/biomaj-download.svg)](https://badge.fury.io/py/biomaj-download)
+
+Microservice to manage the downloads of biomaj.
+
+A protobuf interface is available in biomaj_download/message/message_pb2.py to exchange messages between BioMAJ and the download service.
+Messages go through RabbitMQ (to be installed).
+
+Python3 support only, python2 support is dropped
+
+# Protobuf
+
+To compile protobuf, in biomaj_download/message:
+
+    protoc --python_out=. downmessage.proto
+
+# Development
+
+    flake8 --ignore E501 biomaj_download/\*.py biomaj_download/download
+
+# Test
+
+To run the test suite, use:
+
+    LOCAL_IRODS=0 pytest -v tests/biomaj_tests.py
+
+This command skips the test that need a local iRODS server.
+
+Some test might fail due to network connection. You can skip them with:
+
+    NETWORK=0 pytest -v tests/biomaj_tests.py
+
+
+# Run
+
+## Message consumer:
+
+    export BIOMAJ_CONFIG=path_to_config.yml
+    python bin/biomaj_download_consumer.py
+
+## Web server
+
+If package is installed via pip, you need a file named *gunicorn_conf.py* containing somehwhere on local server:
+
+    def worker_exit(server, worker):
+        from prometheus_client import multiprocess
+        multiprocess.mark_process_dead(worker.pid)
+
+If you cloned the repository and installed it via python setup.py install, just refer to the *gunicorn_conf.py* in the cloned repository.
+
+
+    export BIOMAJ_CONFIG=path_to_config.yml
+    rm -rf ..path_to/prometheus-multiproc
+    mkdir -p ..path_to/prometheus-multiproc
+    export prometheus_multiproc_dir=..path_to/prometheus-multiproc
+    gunicorn -c gunicorn_conf.py biomaj_download.biomaj_download_web:app
+
+Web processes should be behind a proxy/load balancer, API base url /api/download
+
+Prometheus endpoint metrics are exposed via /metrics on web server
+
+# Retrying
+
+A common problem when downloading a large number of files is the handling of temporary failures (network issues, server too busy to answer, etc.).
+Since version 3.1.2, `biomaj-download` uses the [Tenacity library](https://github.com/jd/tenacity) which is designed to handle this.
+This mechanism is configurable through 2 downloader-specific options (see [Download options](#download-options)): **stop_condition** and **wait_policy**.
+
+When working on python code, you can pass instances of Tenacity's `stop_base` and `wait_base` respectively.
+This includes classes defined in Tenacity or your own derived classes.
+
+For bank configuration those options also parse strings read from the configuration file.
+This parsing is based on the [Simple Eval library](https://github.com/danthedeckie/simpleeval).
+The rules are straightforward:
+
+  * All concrete stop and wait classes defined in Tenacity (i.e. classes inheriting from `stop_base` and `wait_base` respectively) can be used
+    by calling their constructor with the expected parameters.
+    For example, the string `"stop_after_attempt(5)"` will create the desired object.
+	Note that stop and wait classes that need no argument must be used as constants (i.e. use `"stop_never"` and not `"stop_never()"`).
+	Currently, this is the case for `"stop_never"` (as in Tenacity) and `"wait_none"` (this slightly differs from Tenacity where it is `"wait_none()"`).
+  * You can use classes that allow to combine other stop conditions (namely `stop_all` and `stop_any`) or wait policies (namely `wait_combine`).
+  * Operator `+` can be used to add wait policies (similar to `wait_combine`).
+  * Operators `&` and `|` can be used to compose stop conditions (similar to `wait_all` and `wait_none` respectively).
+
+However, in this case, you can't use your own conditions.
+The complete list of stop conditions is:
+
+* `stop_never` (although its use is discouraged)
+* `stop_after_attempt`
+* `stop_after_delay`
+* `stop_when_event_set`
+* `stop_all`
+* `stop_any`
+
+The complete list of wait policies is:
+
+* `wait_none`
+* `wait_fixed`
+* `wait_random`
+* `wait_incrementing`
+* `wait_exponential`
+* `wait_random_exponential`
+* `wait_combine`
+* `wait_chain`
+
+Please refer to [Tenacity doc](https://tenacity.readthedocs.io/en/latest/) for their meaning and their parameters.
+
+Examples (inspired by Tenacity doc):
+
+  * `"wait_fixed(3) + wait_random(0, 2)"` and `"wait_combine(wait_fixed(3), wait_random(0, 2))"` are equivalent and will wait 3 seconds + up to 2 seconds of random delay
+  * `"wait_chain(*([wait_fixed(3) for i in range(3)] + [wait_fixed(7) for i in range(2)] + [wait_fixed(9)]))"` will wait 3s for 3 attempts, 7s for the next 2 attempts and 9s for all attempts thereafter (here `+` is the list concatenation).
+  * `"wait_none + wait_random(1,2)"` will wait between 1s and 2s (since `wait_none` doesn't wait).
+  * `"stop_never | stop_after_attempt(5)"` will stop after 5 attempts (since `stop_never` never stops).
+
+Note that some protocols (e.g. FTP) classify errors as temporary or permanent (for example trying to download inexisting file).
+More generally, we could distinguish permanent errors based on error codes, etc. and not retry in this case.
+However in our experience, so called permanent errors may well be temporary.
+Therefore downloaders always retry whatever the error.
+In some cases, this is a waste of time but generally this is worth it.
+
+# Host keys
+
+When using the `sftp` protocol, `biomaj-download` must check the host key.
+Those keys are stored in a file (for instance `~/.ssh/known_hosts`).
+
+Two options are available to configure this:
+
+  - **ssh_hosts_file** which sets the file to use
+  - **ssh_new_host** which sets what to do for a new host
+
+When the host and the key are found in the file, the connection is accepted.
+If the host is found but the key missmatches, the connection is rejected
+(this usually indicates a problem or a change of configuration on the remote server).
+When the host is not found, the decision depends on the value of **ssh_new_host**:
+
+  - `reject` means that the connection is rejected
+  - `accept` means that the connection is accepted
+  - `add` means that the connection is accepted and the key is added to the file
+
+See the description of the options in [Download options](#download-options).
+
+# Download options
+
+Since version 3.0.26, you can use the `set_options` method to pass a dictionary of downloader-specific options.
+The following list shows some options and their effect (the option to set is the key and the parameter is the associated value):
+
+  * **stop_condition**:
+    * parameter: an instance of Tenacity `stop_base` or a string (see [Retrying](#retrying)).
+    * downloader(s): all (except `LocalDownload`).
+    * effect: sets the condition on which we should stop retrying to download a file.
+    * default: `stop_after_attempt(3)` (i.e. stop after 3 attempts).
+    * note: introduced in version 3.2.1.
+  * **wait_policy**:
+    * parameter: an instance of Tenacity `wait_base` or a string (see [Retrying](#retrying)).
+    * downloader(s): all (except `LocalDownload`).
+    * effect: sets the wait policy between download attempts.
+    * default: `wait_fixed(3)` (i.e. wait 3 seconds between attempts).
+    * note: introduced in version 3.2.1.
+  * **skip_check_uncompress**:
+    * parameter: bool.
+    * downloader(s): all (except `LocalDownload`).
+    * effect: if true, don't test the archives after download.
+    * default: false (i.e. test the archives).
+  * **ssl_verifyhost**:
+    * parameter: bool.
+    * downloader(s): `CurlDownload` (and derived classes: `DirectFTPDownload`, `DirectHTTPDownload`).
+    * effect: if false, don't check that the name of the remote server is the same than in the SSL certificate.
+    * default: true (i.e. check host name).
+    * note: it's generally a bad idea to disable this verification. However some servers are badly configured. See [here](https://curl.haxx.se/libcurl/c/CURLOPT_SSL_VERIFYHOST.html) for the corresponding cURL option.
+  * **ssl_verifypeer**:
+    * parameter: bool.
+    * downloader(s): `CurlDownload` (and derived classes: `DirectFTPDownload`, `DirectHTTPDownload`).
+    * effect: if false, don't check the authenticity of the peer's certificate.
+    * default: true (i.e. check authenticity).
+    * note: it's generally a bad idea to disable this verification. However some servers are badly configured. See [here](https://curl.haxx.se/libcurl/c/CURLOPT_SSL_VERIFYPEER.html) for the corresponding cURL option.
+  * **ssl_server_cert**:
+    * parameter: path of the certificate file.
+    * downloader(s): `CurlDownload` (and derived classes: `DirectFTPDownload`, `DirectHTTPDownload`).
+    * effect: use the certificate(s) in this file to verify the peer with.
+    * default: use OS certificates.
+    * note: see [here](https://curl.haxx.se/libcurl/c/CURLOPT_CAINFO.html) for the corresponding cURL option.
+    * parameter: int.
+    * downloader(s): `CurlDownload` (and derived classes: `DirectFTPDownload`, `DirectHTTPDownload`).
+    * effect: sets the interval, in seconds, that the operating system will wait between sending keepalive probes.
+    * default: cURL default (60s at the time of this writing).
+    * note: see [here](https://curl.haxx.se/libcurl/c/CURLOPT_TCP_KEEPINTVL.html) for the corresponding cURL option.
+  * **ftp_method**:
+    * parameter: one of `default`, `multicwd`, `nocwd`, `singlecwd` (case insensitive).
+    * downloader(s): `CurlDownload` (and derived classes: `DirectFTPDownload`, `DirectHTTPDownload`) - only used for `FTP(S)`.
+    * effect: sets the method used to reach a file on a FTP(S) server (`nocwd` and `singlecwd` are usually faster but not always supported).
+    * default: `default` (which is `multicwd` at the time of this writing as in cURL).
+    * note: see [here](https://curl.haxx.se/libcurl/c/CURLOPT_FTP_FILEMETHOD.html) for the corresponding cURL option; introduced in version 3.1.2.
+  * **ssh_hosts_file**:
+    * parameter: path of the known hosts file.
+    * downloader(s): `CurlDownload` (and derived classes: `DirectFTPDownload`, `DirectHTTPDownload`) - only used for `SFTP`.
+    * effect: sets the file used to read/store host keys for `SFTP`.
+    * default: `~/.ssh/known_hosts` (where `~` is the home directory of the current user).
+    * note: see [here](https://curl.haxx.se/libcurl/c/CURLOPT_SSH_KNOWNHOSTS.html) for the corresponding cURL option and the option below; introduced in version 3.2.1.
+  * **ssh_new_host**:
+    * parameter: one of `reject`, `accept`, `add`.
+    * downloader(s): `CurlDownload` (and derived classes: `DirectFTPDownload`, `DirectHTTPDownload`) - only used for `SFTP`.
+    * effect: sets the policy to use for an unknown host.
+    * default: `reject` (i.e. refuse new hosts - you must add them in the file for instance with `ssh` or `sftp`).
+    * note: see [here](https://curl.haxx.se/libcurl/c/CURLOPT_SSH_KEYFUNCTION.html) for the corresponding cURL option and the option above; introduced in version 3.2.1.
+  * *allow_redirections*:
+    * parameter: bool.
+    * downloader(s): `CurlDownload` (and derived classes: `DirectFTPDownload`, `DirectHTTPDownload`) - only used for `HTTPS(S)`.
+    * effect: sets the policy for `HTTP` redirections.
+    * default: `true` (i.e. follow redirections).
+    * note: see [here](https://curl.haxx.se/libcurl/c/CURLOPT_FOLLOWLOCATION.html) for the corresponding cURL option; introduced in version 3.2.3.
+
+Those options can be set in bank properties.
+See file `global.properties.example` in [biomaj module](https://github.com/genouest/biomaj).
+
+
+3.2.10:
+  Regenerate proto messages
+
+3.2.9:
+  Replace nose by pytest for unit testing
+
+3.2.8:
+  Accept 257 error code for ftp
+
+3.2.7
+  Normalize pyyaml setup with other biomaj components
+
+3.2.6:
+  Disabled test with tenacity, compat.make_retry_state removed from lib
+
+3.2.5:
+  Fix regex handling for **/*
+
+3.2.4:
+  #39 directhttp download issues
+    biomaj sends file name instead of file dict, workaround this
+  #28 CurlDownload crashses if cURL doesn't support SFTP
+  Minor python doc and error message updates
+  Suppress yaml warnings
+
+3.2.3:
+  #30: raise errors when something in list() fail
+  DirectHTTP(s)/DirectFTP(s): do not raise error on list step as HEAD may not be supported
+  #35: allow redirections (closes #33)
+
+3.2.2:
+  #31 fix URL with multiple slashes
+  Update demo password for ftps web site tests
+  Remove python2 support
+
+3.2.1:
+  #26 Accept new keys for SFTP servers  (Closes #25)
+  Strip extra slash characters in remote file list (due to regexp parsing)
+  #20 Add a configurable mechanism to retry download when it fails
+  #24 Speed up IRODDownload
+  Introduce a method to perform configuration before network methods. Adapt implementation of generic methods and subclasses.
+  Resolve bug when the parser analyse also the Message Of The Day when it wants only list of file. (#23)
+
+3.1.2:
+  #18 Add a protocol option to set CURLOPT_FTP_FILEMETHOD
+  #19 Rename protocol options to options
+  Fix copy of production files instead of download when files are in subdirectories
+
+3.1.1:
+  #17 Support MDTM command in directftp
+
+3.1.0:
+  #16 Don't change name after download in DirectHTTPDownloader
+  PR #7 Refactor downloaders (*WARNING* breaks API)
+
+3.0.27:
+  Fix previous release broken with a bug in direct protocols
+
+3.0.26:
+  Change default download timeout to 1h
+  #12 Allow FTPS protocol
+  #14 Add mechanism for protocol specific options
+
+3.0.25:
+  Allow to use hardlinks in LocalDownload
+
+3.0.24:
+  Remove debug logs
+
+3.0.23:
+  Support spaces in remote file names
+
+3.0.22:
+  Fix **/* remote.files parsing
+
+3.0.21:
+  Fix traefik labels
+
+3.0.20:
+  Update pika dependency release
+  Add tags for traefik support
+
+3.0.19:
+  Check archives after download
+  Fix python regexps syntax (deprecation)
+
+3.0.18:
+  Rename protobuf and use specific package to avoid conflicts
+
+3.0.17:
+  Regenerate protobuf message desc, failing on python3
+
+3.0.16:
+  Add missing req in setup.py
+
+3.0.15:
+  Fix progress download control where could have infinite loop
+  Add irods download
+
+3.0.14:
+  Allow setup of local_endpoint per service, else use default local_endpoint
+
+3.0.13:
+  In rate limiting, add progress vs total of download
+  Fix rate limiting submission
+
+3.0.12:
+  Add retry in case of session creation failure
+  disable web thread logging
+
+3.0.11:
+  Display progress of download by percent of downloads
+  In case of contact error in downloadclient, retry connection
+
+3.0.10:
+  Feature #3: Add rate limiting option to limit number of parallel downloads for a client
+
+3.0.9:
+  Add host in prometheus stats
+  Fix #2: allow setting http.group.file.size or http.group.file.date to -1 if not avalaible in http(s) page for regexp
+
+3.0.8:
+  Fix prometheus stats
+  Add consul supervision
+
+3.0.7:
+  Change size type to int64
+
+3.0.6:
+  Fix download_or_copy to avoid downloading a file  existing in a previous production directory
+
+3.0.4:
+  Fixes on messages
+
+3.0.3:
+  Fix management of timeout leading to a crash when using biomaj.download parameter.
+
+3.0.2:
+  set rabbitmq parameter optional
+
+3.0.1:
+  add missing README etc.. in package
+
+3.0.0:
+  move download management out of biomaj main package
+
+
