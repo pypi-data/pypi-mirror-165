@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+cogie.egg-info/PKG-INFO
+cogie.egg-info/SOURCES.txt
+cogie.egg-info/dependency_links.txt
+cogie.egg-info/not-zip-safe
+cogie.egg-info/requires.txt
+cogie.egg-info/top_level.txt
