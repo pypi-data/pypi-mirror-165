@@ -1,0 +1,10 @@
+README.md
+setup.py
+code_mixed_text_toolkit/__init__.py
+code_mixed_text_toolkit/data.py
+code_mixed_text_toolkit/dummy.py
+code_mixed_text_toolkit.egg-info/PKG-INFO
+code_mixed_text_toolkit.egg-info/SOURCES.txt
+code_mixed_text_toolkit.egg-info/dependency_links.txt
+code_mixed_text_toolkit.egg-info/requires.txt
+code_mixed_text_toolkit.egg-info/top_level.txt
