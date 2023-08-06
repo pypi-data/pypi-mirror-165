@@ -1,0 +1,8 @@
+LICENSE
+setup.py
+manage/不良语句撤回.py
+manage/群管理系统.py
+nonebot2_manage.egg-info/PKG-INFO
+nonebot2_manage.egg-info/SOURCES.txt
+nonebot2_manage.egg-info/dependency_links.txt
+nonebot2_manage.egg-info/top_level.txt
