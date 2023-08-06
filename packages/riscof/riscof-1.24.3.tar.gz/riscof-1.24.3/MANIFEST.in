@@ -1,0 +1,7 @@
+recursive-include riscof/Templates *
+
+recursive-exclude riscof/__pycache__ *.pyc
+
+include LICENSE
+include README.rst
+include riscof/requirements.txt
