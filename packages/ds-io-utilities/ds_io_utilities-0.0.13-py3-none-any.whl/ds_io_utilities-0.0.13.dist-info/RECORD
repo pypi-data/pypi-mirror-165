@@ -1,0 +1,12 @@
+dsioutilities/__init__.py,sha256=03azAZMgx-WLnq8L4vvWizIwg3kemVRSEZOuRPgUCe0,72
+dsioutilities/dataset.py,sha256=jODfHLUq2hDW7C2xk9wXOkPoQ8sW7rOmAihxmkDAcG4,1099
+dsioutilities/utils.py,sha256=U2cdZ6qinr9wEv7Qbbc3F7W5ZSK_ml9hLQx9XXLMdMc,377
+dsioutilities/tabular/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dsioutilities/tabular/filesystem.py,sha256=AK_0paisCbvJqgiem-gfIgRtGCNzndqGhgPyp_N8s2Q,96
+dsioutilities/tabular/hive.py,sha256=W9AQUp6GMTk7Pi_pLcs133ckQKlLCCotgaEmxlphYkQ,737
+dsioutilities/tabular/minio.py,sha256=SpNzIJa2lDFNV6mbOscSNsRyugwI71kxbkIKianwACk,3228
+dsioutilities/tabular/tabular.py,sha256=wGYSrVuxZTd9FN2D54cfFpxXodR5DpbCvqZh5DVi0zM,471
+ds_io_utilities-0.0.13.dist-info/METADATA,sha256=Z9GK4JFbcIS5oqDCRcuTsvmsSNmBuroAMradhrIgNhU,587
+ds_io_utilities-0.0.13.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+ds_io_utilities-0.0.13.dist-info/top_level.txt,sha256=rhP_GujeEBMdUKI3ZfUv9RjuTykOl5bpMO5cl95q5dg,14
+ds_io_utilities-0.0.13.dist-info/RECORD,,
