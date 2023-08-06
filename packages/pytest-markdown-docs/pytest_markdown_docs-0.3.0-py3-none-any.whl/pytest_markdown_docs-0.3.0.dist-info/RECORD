@@ -1,0 +1,9 @@
+LICENSE,sha256=6elhl6Sf_kfw2ru8mPXqbCPZdB1OfGxFxp4dLbsRgPo,1062
+pytest_markdown_docs/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytest_markdown_docs/hooks.py,sha256=NLXuRtFdjoT_-88d3mdZOs1GOmASSsght6o-uqItj3s,93
+pytest_markdown_docs/plugin.py,sha256=_e7BDskGBmbpasvp-aS4O-APo3dKaIJPy6MspMWLizs,8085
+pytest_markdown_docs-0.3.0.dist-info/entry_points.txt,sha256=ySbCKZyQrlRPkN789gVLiXaAsKL-CnVsmh5TkxbrjuE,61
+pytest_markdown_docs-0.3.0.dist-info/LICENSE,sha256=6elhl6Sf_kfw2ru8mPXqbCPZdB1OfGxFxp4dLbsRgPo,1062
+pytest_markdown_docs-0.3.0.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+pytest_markdown_docs-0.3.0.dist-info/METADATA,sha256=Y0Osl9A4SPkOv7KbGD_c5nE0jZAewblIDi1wLQe9yOc,5028
+pytest_markdown_docs-0.3.0.dist-info/RECORD,,
