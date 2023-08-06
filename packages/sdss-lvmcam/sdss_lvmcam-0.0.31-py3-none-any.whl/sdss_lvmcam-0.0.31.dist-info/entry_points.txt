@@ -1,0 +1,8 @@
+[console_scripts]
+container_autotuner=container:autotuner
+container_build=container:build
+container_isRunning=container:isRunning
+container_start=container:start
+container_stop=container:stop
+lvmcam=lvmcam.__main__:lvmcam
+
