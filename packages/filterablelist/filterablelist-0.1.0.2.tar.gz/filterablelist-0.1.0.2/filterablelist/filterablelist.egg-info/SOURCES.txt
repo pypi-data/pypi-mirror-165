@@ -1,0 +1,8 @@
+LICENSE.txt
+setup.cfg
+setup.py
+filterablelist/filterablelist.py
+filterablelist/filterablelist.egg-info/PKG-INFO
+filterablelist/filterablelist.egg-info/SOURCES.txt
+filterablelist/filterablelist.egg-info/dependency_links.txt
+filterablelist/filterablelist.egg-info/top_level.txt
