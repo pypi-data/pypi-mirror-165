@@ -1,0 +1,7 @@
+cjio>=0.7.5
+click>=8.1
+pyproj>=3.1
+
+[develop]
+pytest
+tox

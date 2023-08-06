@@ -1,0 +1,2 @@
+[console_scripts]
+cityjson2jsonfg = cityjson2jsonfg.cli:main_cmd
