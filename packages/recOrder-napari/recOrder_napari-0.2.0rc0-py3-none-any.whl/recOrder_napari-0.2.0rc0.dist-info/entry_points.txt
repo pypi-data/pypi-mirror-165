@@ -1,0 +1,10 @@
+[console_scripts]
+recOrder = recOrder.scripts.cli:help
+recOrder.convert = recOrder.scripts.cli:convert
+recOrder.reconstruct = recOrder.scripts.cli:reconstruct
+recorder = recOrder.scripts.cli:help
+recorder.convert = recOrder.scripts.cli:convert
+recorder.reconstruct = recOrder.scripts.cli:reconstruct
+
+[napari.manifest]
+recOrder = recOrder:napari.yaml
