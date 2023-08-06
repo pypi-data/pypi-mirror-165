@@ -1,0 +1,17 @@
+client/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+client/achievement/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+client/achievement/watchmen_achievement_client.py,sha256=b4i3EZjFhwNOZpw4V4YqA5ajwR0AODYwEVi64gv398o,3007
+client/index.py,sha256=i9miWmLNoZkwpDvgv13IHXXD_lBSaAWuKRGj01pHIQY,1529
+client/ml/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+client/ml/model/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+client/ml/model/factor_type.py,sha256=yDv4AXDxXvu0G15JLvDftCS2eYcPiN97NH9K78fjFaw,2019
+client/ml/model/notebook.py,sha256=Ri-FPNWGM5ML-_iAqb2rwrc5ZEHqpTH-Plya5D8ZVCA,189
+client/ml/pd/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+client/ml/pd/untils.py,sha256=wNnJsl4n8Vqcud56CrFaFRREFaLM8pPmoinfIr3ZHeY,869
+client/ml/unitls.py,sha256=92m9KQFG5azyfeiB4-7R33rDJcYuXaK2FVf_4StSd5Q,841
+client/sdk/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+client/sdk/watchmen/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+client/sdk/watchmen/sdk.py,sha256=A9jM4deVDlmVeQq5_mOAM1B-fDkOWuLtfZsgdTOxuqo,4189
+watchmen_ml_python_sdk-0.1.16.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+watchmen_ml_python_sdk-0.1.16.dist-info/METADATA,sha256=gTNxqPQwQ7lsCxCZe2Hbx5BqcKZeFpwc-eXhAjbf1zA,476
+watchmen_ml_python_sdk-0.1.16.dist-info/RECORD,,
