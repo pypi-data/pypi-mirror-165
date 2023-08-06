@@ -1,0 +1,144 @@
+[tool.poetry]
+name = "gdptools"
+version = "0.0.22-dev0"
+description = "Gdptools"
+authors = ["Richard McDonald <rmcd@usgs.gov>"]
+license = "LICENSE.md"
+readme = "README.md"
+homepage = "https://code.usgs.gov/wma/nhgf/toolsteam/gdptools"
+repository = "https://code.usgs.gov/wma/nhgf/toolsteam/gdptools"
+documentation = "https://gdptools.readthedocs.io"
+packages = [
+    { include = "gdptools", from = "src" },
+    { include = "_pygeoapi_process", from = "src"},
+    { include = "tests", format = "sdist"}
+]
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "Programming Language :: Python :: 3.9",
+]
+
+[tool.poetry.urls]
+Changelog = "https://code.usgs.gov/wma/nhgf/toolsteam/gdptools/releases"
+
+[tool.poetry.dependencies]
+python = "<3.10,>=3.9"
+click = "<8"
+pygeoapi = "^0.11.0"
+geopandas = "^0.11.1"
+pygeos = "^0.13.0"
+Shapely = "^1.8.4"
+numpy = "^1.22.4"
+dask = "^2022.6.0"
+pandas = "^1.4.2"
+xarray = "^2022.3.0"
+netCDF4 = "^1.5.8"
+scipy = "^1.8.1"
+Pydap = "^3.2.2"
+zarr = "^2.11.3"
+cftime = "^1.6.0"
+rasterio = "^1.2.10"
+rasterstats = "^0.16.0"
+pyproj = "^3.3.1"
+intake = "^0.6.5"
+pystac = "^1.4.0"
+requests = "^2.28.0"
+MetPy = "^1.3.0"
+rioxarray = "^0.11.1"
+attr = "^0.3.2"
+attrs = "^21.4.0"
+pydantic = "^1.9.2"
+
+
+[tool.poetry.dev-dependencies]
+advbumpversion = "^1.2.0"
+pytest = "^6.2.4"
+coverage = {extras = ["toml"], version = "^5.4"}
+safety = "^1.10.3"
+mypy = ">=0.960"
+typeguard = "^2.12.1"
+xdoctest = {extras = ["colors"], version = "^0.15.5"}
+sphinx = "^4.1.2"
+sphinx-autobuild = "^2021.3.14"
+pre-commit = "^2.13.0"
+flake8 = "^3.9.2"
+black = "^20.8b1"
+flake8-bandit = ">=3.0.0"
+flake8-bugbear = "^21.4.3"
+flake8-docstrings = "^1.6.0"
+flake8-rst-docstrings = "^0.2.3"
+pep8-naming = "^0.12.0"
+darglint = "^1.8.0"
+reorder-python-imports = "^2.6.0"
+pre-commit-hooks = "^4.0.1"
+sphinx-rtd-theme = ">=0.5.2"
+sphinx-click = "^3.0.1"
+Pygments = "^2.9.0"
+poetry2conda = "^0.3.0"
+nox = "^2021.10.1"
+nox_poetry = "^0.8.6"
+types-all = "^1.0.0"
+nbconvert = "^6.4.4"
+bandit = "1.7.3"
+ipykernel = "^6.12.1"
+matplotlib = "^3.5.1"
+myst-parser = "^0.17.0"
+docutils = ">=0.17"
+nbstripout = "^0.5.0"
+
+
+[tool.poetry.scripts]
+gdptools = "gdptools.__main__:main"
+
+[tool.poetry2conda]
+name = "gdptools"
+
+[tool.black]
+line-length = 88
+target-version = ["py38"]
+
+[tool.coverage.paths]
+source = ["src", "*/site-packages"]
+
+[tool.coverage.run]
+branch = true
+source = ["gdptools"]
+
+[tool.coverage.report]
+show_missing = true
+fail_under = 100
+
+[tool.mypy]
+check_untyped_defs = true
+disallow_any_generics = true
+disallow_incomplete_defs = true
+disallow_subclassing_any = true
+disallow_untyped_calls = true
+disallow_untyped_decorators = true
+disallow_untyped_defs = true
+no_implicit_optional = true
+no_implicit_reexport = true
+pretty = true
+show_column_numbers = true
+show_error_codes = true
+show_error_context = true
+strict_equality = true
+warn_redundant_casts = true
+warn_return_any = true
+warn_unreachable = true
+warn_unused_configs = true
+warn_unused_ignores = true
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "tests.*"
+warn_unused_ignores = false
+
+[[tool.mypy.overrides]]
+module = "noxfile"
+warn_unreachable = false
+disallow_untyped_decorators = false
+
+[build-system]
+requires = ["poetry_core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
