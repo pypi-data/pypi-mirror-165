@@ -1,0 +1,14 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[packages]
+Cython = "*"
+Jinja2 = "*"
+pkgconfig = "*"
+pytest = "*"
+sphinx = "*"
+sphinx-multiversion = "*"
+tox = "*"
+wheel = "*"
