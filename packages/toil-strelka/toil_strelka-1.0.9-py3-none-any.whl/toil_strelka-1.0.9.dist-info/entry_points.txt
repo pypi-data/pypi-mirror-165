@@ -1,0 +1,2 @@
+[console_scripts]
+toil_strelka = toil_strelka.cli:main
