@@ -1,0 +1,2 @@
+[console_scripts]
+hat-manager = hat.manager.main:main
