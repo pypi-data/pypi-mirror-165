@@ -1,0 +1,11 @@
+spoc/__init__.py,sha256=LnaPu6ODurwvTv3ET_VQ10RnqH_jVaaWLLlJzWPpw7I,480
+spoc/app.py,sha256=7R17Ex5-ko4_GpftzwDx4ltpHjQIt4z0exhxT6NRBBk,2019
+spoc/core.py,sha256=6g-KwA1C_zhFhymw3gT6sPKjwznwdhNGHsXHpDGkssQ,2310
+spoc/get_spoc.py,sha256=CVc3otCVNRQRmZH1ynyni2djqyt56ffuepR2SNld2bw,1008
+spoc/singleton.py,sha256=8OIhwS3CUbQCdVq8LFs-n3qccmO6pzEMz0hVImFkC3s,450
+spoc/tools.py,sha256=Uw5lVoDTy6aeoKbBU6HrM2eE4-q9RsfWnlFnxxx3yVs,331
+spoc/types.py,sha256=rU-peb0L0Z5Q6-4XM14ZKFf9JZ8WmSG62WnA8FbM1XM,705
+spoc-0.1.0.dist-info/WHEEL,sha256=g_UdFZqm-k6b0W64OcndB0YT_D2mFFPAYBj7-_YsSPA,87
+spoc-0.1.0.dist-info/METADATA,sha256=TGNwaw8w4d_QDQOTGK2YSS5JVSyRD5fIBxUVTdDmdc0,200
+spoc-0.1.0.dist-info/license_files/LICENSE,sha256=-P8pg4zWBLL03qD_ZLIyVWkEQNS3MglOOdgRQ4BxffA,1084
+spoc-0.1.0.dist-info/RECORD,,
