@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+src/squic/__init__.py
+src/squic/squic.py
+src/squic.egg-info/PKG-INFO
+src/squic.egg-info/SOURCES.txt
+src/squic.egg-info/dependency_links.txt
+src/squic.egg-info/requires.txt
+src/squic.egg-info/top_level.txt

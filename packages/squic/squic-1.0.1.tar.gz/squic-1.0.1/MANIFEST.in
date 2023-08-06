@@ -1,0 +1,2 @@
+include src/squic/*.so
+include src/squic/*.dylib
