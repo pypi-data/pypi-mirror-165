@@ -1,0 +1,95 @@
+# This file contains all the default configuration options.
+
+[test]
+# Configuration related to formatting and execution of test cases.
+
+# The separator for test case name generation.
+name_sep = ","
+
+# The format string for generating test case names.
+#
+# Supported format specifiers:
+#  - `args`: a separated list of the test case arguments, i.e. `0,3`
+#  - `kwargs`: a separated list of the test case keyword arguments, i.e. `x=0,y=3`
+#  - `sep`: a copy of the separator if there are both arguments and keyword arguments,
+#           empty otherwise 
+name_fmt = "Test on {args}{sep}{kwargs}."
+
+# The format string for generating failure messages.
+#
+# Supported format specifiers:
+#  - `input`: a formatted repr of the test case inputs.
+#  - `output`: the repr of the student submission's output.
+#  - `expected`: the repr of the golden solution's output.
+#  - `diff` if a diff is available (i.e. the output is a string), a text diff.
+#  - `diff_explanation`: if a diff is available, the value of diff_explanation_msg, else empty.
+failure_msg = "Your submission didn't give the output we expected. We checked it with {input} and got {output}, but we expected {expected}.{diff_explanation}{diff}"
+
+# The format string for generating error messages.
+#
+# Supported format specifiers:
+#  - `type`: the kind of python error, e.g. NameError.
+#  - `message`: the error message.
+#  - `traceback`: the error traceback.
+error_msg = "A python {type} occured while running your submission: {message}.\n\nHere's what was running when it happened:{traceback}."
+
+# The message to print if `check_stdout` is true and the stdouts differ.
+# 
+# Supported format specifiers:
+#  - `input`: a formatted repr of the test case inputs.
+#  - `output`: the repr of the student submission's output.
+#  - `expected`: the repr of the golden solution's output.
+#  - `diff` a text diff.
+#  - `diff_explanation`: the value of diff_explanation_msg.
+stdout_differ_msg = "Your submission printed something different from what we expected. We checked it with {input}.{diff_explanation}{diff}"
+
+diff_explanation_msg = "\n\nHere's a detailed look at the difference between the strings. Lines starting with `-` are what we got from you, lines starting with `+` are what we expected, and `_`s in lines starting with `?` denote characters that are different. Be wary for spaces, which don't show up well in this format.\n\n"
+
+[submission]
+# Configuration related to student submissions.
+
+# The global message to show if any tests failed.
+failed_tests_msg = "It looks like some tests failed; take a look and see if you can fix them!"
+
+# The global message to show if any hidden tests failed.
+failed_hidden_tests_msg = "Some of those tests were hidden tests, for which you won't know the inputs. In the real world, we don't always know exactly how or why our code is failing. Try to test edge cases and see if you can find the bugs!"
+
+# The global message to show if no tests failed.
+no_failed_tests_msg = "Great work! Looks like you're passing all the tests."
+
+[loader]
+# Configuration related to rerors loading student submissions.
+
+# The message to show on errors that prevented the submission from being run.
+#
+# Supported format specifiers:
+#  - `message`: the error message.
+import_error_msg = "Looks like there's a python error in your code that prevented us from running tests: {message}. Please fix this error, test your code again, and then resubmit."
+
+# The message to show if there's no symbol with the right name located.
+#
+# Supported format specifiers:
+#  - `name`: the expected symbol name.
+no_match_msg = "It looks like you didn't include the right object; we were looking for something named `{name}`. Please resumbit with the correct name."
+
+# The message to show if there's multiple symbols matching the expected name, i.e. in multiple submitted files.
+#
+# Supported format specifiers:
+#  - `name`: the expected symbol name.
+too_many_matches_msg = "It looks like multiple files you submitted have objects named `{name}`; unfortunately, we can't figure out which one is supposed to be the real submission. Please remove all but one of them and resumbit."
+
+# The message to show if no script is found.
+no_script_error_msg = "It looks like you didn't upload a python script. Please make sure your script ends in `.py`."
+
+# The message to show if multiple scripts are found.
+multiple_scripts_error_msg = "It looks like you uploaded multiple python scripts. Please make sure you only upload one file ending in `.py`."
+
+
+[problem]
+# Configration for problem settings.
+
+# If true, check that the stdout of the problem and submission both match.
+check_stdout = false
+
+# If true, test case arguments will be interpreted as outputs for successive calls of `input()`.
+mock_input = false
