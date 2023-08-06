@@ -1,0 +1,5 @@
+#!python3
+from firewall import main
+
+if __name__ == '__main__':
+    main.run_firewall(__file__)

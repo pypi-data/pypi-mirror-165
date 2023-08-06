@@ -1,0 +1,48 @@
+#!python3
+
+import sys
+import re
+import time
+import os
+import argparse
+import subprocess
+import traceback
+import asyncio
+from pathlib import Path
+
+from firewall import command
+
+async def main():
+    p = argparse.ArgumentParser(description='Firewall control utility')
+    p.add_argument('command', nargs='*', metavar='CMD', help='Command to run')
+    p.add_argument('-s', '--socket', action='append', default=[], metavar='PATH', help='path to control socket')
+    args = p.parse_args()
+
+    socks = ['/var/run/firewall-control', '/var/run/firewall-user-control']
+    if args.socket:
+        socks = args.socket
+
+    ctrl = None
+    last_err = None
+    for path in socks:
+        try:
+            ctrl = command.Client(Path(path))
+            await ctrl.connect()
+            break
+        except OSError as err:
+            ctrl = None
+            last_err = err
+
+    if not ctrl:
+        print("could not connect to socket: {last_err}", file=sys.stderr)
+    
+    status, data = await ctrl.send_command(*args.command)
+    if data.endswith('\n'):
+        data = data[:-1]
+        
+    print(f'status = {status}')
+    print(data)
+
+if __name__ == '__main__':
+    asyncio.run(main())
+
