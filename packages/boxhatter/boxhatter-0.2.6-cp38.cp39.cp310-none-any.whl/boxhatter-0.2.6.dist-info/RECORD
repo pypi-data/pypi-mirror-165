@@ -1,0 +1,16 @@
+boxhatter/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+boxhatter/__main__.py,sha256=3DuBMnNAl3rS8hENkxgTgLKkjTZUFpwKrwGJpPG4HP8,124
+boxhatter/backend.py,sha256=fR01uZYUPtugl8co_tj2uDKLfV0M_AFCvI4_OrGT_Xw,5165
+boxhatter/common.py,sha256=T8uS2Fu7YQhglfeEEYFJWejJMi-vKHuhv_GUE_G3WWY,771
+boxhatter/json_schema_repo.json,sha256=ITrkBbfISNVgbHSqSSX0rSR1AraN2NvHxikEgge9tIE,1866
+boxhatter/main.py,sha256=EpqSQe7BWSeyPk56uIXrlROSM-9E6fs0QL66uf_jTiQ,6368
+boxhatter/server.py,sha256=3NYsQmLHcpgsEoAsdolvwzhZAt2nd_lMuXXKIb_zPTM,8925
+boxhatter/ui.py,sha256=LNrbk3HGLhmXGPWbTcmeXhOSEpTXi6Go-SiAK7xYsNY,11892
+boxhatter/ui/main.css,sha256=jnHK9DsIVoZ7qPano5Ose3xKmvXe5mOrlluCINZ2q4c,1100
+boxhatter-0.2.6.dist-info/LICENSE,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+boxhatter-0.2.6.dist-info/METADATA,sha256=57suaKlDr1xcglhlchVzt4i-IQgW9JueZuf9MaS9364,3828
+boxhatter-0.2.6.dist-info/WHEEL,sha256=J6o_EVcUhZ99gpCSeF2DGIW9mETC6p0M-27vXCgDo6E,132
+boxhatter-0.2.6.dist-info/entry_points.txt,sha256=8TAgMJ3_YI3_TFKqB_hYtiTFQ852527kKxUgTAQL9GU,50
+boxhatter-0.2.6.dist-info/top_level.txt,sha256=vgU14BQQSqUI7DChlitLGZJ_rMwAqEqiwmTt2U_EPvk,10
+boxhatter-0.2.6.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+boxhatter-0.2.6.dist-info/RECORD,,

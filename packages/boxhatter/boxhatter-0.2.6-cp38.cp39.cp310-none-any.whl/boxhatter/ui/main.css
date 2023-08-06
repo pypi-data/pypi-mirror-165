@@ -1,0 +1,59 @@
+html, body, button, input {
+  font-family: sans-serif;
+  font-size: 12pt;
+}
+
+body {
+  margin: 1rem auto;
+  width: 920px;
+}
+body .commits > table {
+  width: 100%;
+  border: 1px solid rgb(158, 158, 158);
+  border-spacing: 0;
+}
+body .commits > table thead {
+  background-color: rgb(224, 224, 224);
+}
+body .commits > table tbody td {
+  border-top: 1px solid rgb(158, 158, 158);
+}
+body .commits > table th, body .commits > table td {
+  padding: 0.2rem;
+}
+body .commits > table .col-change {
+  width: 12rem;
+  text-align: center;
+}
+body .commits > table .col-status {
+  width: 7rem;
+  text-align: center;
+}
+body .commit {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-gap: 0.5rem;
+}
+body .commit label {
+  font-weight: 600;
+  justify-self: right;
+}
+body .commit form {
+  display: inline;
+}
+body .pagination {
+  display: grid;
+  grid-template-areas: "previous next";
+  padding: 0.5rem 1rem 0rem 1rem;
+}
+body .pagination > .previous {
+  grid-area: previous;
+}
+body .pagination > .next {
+  grid-area: next;
+  justify-self: end;
+}
+body .run, body .clear {
+  margin: 1rem 0;
+  text-align: right;
+}

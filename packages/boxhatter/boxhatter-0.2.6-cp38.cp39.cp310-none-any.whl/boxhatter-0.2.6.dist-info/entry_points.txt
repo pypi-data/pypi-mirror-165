@@ -1,0 +1,2 @@
+[console_scripts]
+boxhatter = boxhatter.main:main
