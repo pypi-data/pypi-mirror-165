@@ -1,0 +1,9 @@
+rich
+PyQt5
+executor
+pyyaml
+matplotlib
+
+[test]
+faker
+lorem-text
