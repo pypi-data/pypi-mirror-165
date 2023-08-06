@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+src/simple_git_changelog/__init__.py
+src/simple_git_changelog/__main__.py
+src/simple_git_changelog/main.py
+src/simple_git_changelog.egg-info/PKG-INFO
+src/simple_git_changelog.egg-info/SOURCES.txt
+src/simple_git_changelog.egg-info/dependency_links.txt
+src/simple_git_changelog.egg-info/entry_points.txt
+src/simple_git_changelog.egg-info/top_level.txt
