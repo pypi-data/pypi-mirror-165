@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+BiliDown.egg-info/PKG-INFO
+BiliDown.egg-info/SOURCES.txt
+BiliDown.egg-info/dependency_links.txt
+BiliDown.egg-info/entry_points.txt
+BiliDown.egg-info/requires.txt
+BiliDown.egg-info/top_level.txt
+bilidown/__init__.py
+bilidown/__main__.py
