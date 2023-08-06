@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+basicdweet/__init__.py
+basicdweet.egg-info/PKG-INFO
+basicdweet.egg-info/SOURCES.txt
+basicdweet.egg-info/dependency_links.txt
+basicdweet.egg-info/requires.txt
+basicdweet.egg-info/top_level.txt
