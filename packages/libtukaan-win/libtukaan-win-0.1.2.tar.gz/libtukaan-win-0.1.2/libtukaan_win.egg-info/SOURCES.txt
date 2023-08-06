@@ -1,0 +1,8 @@
+setup.py
+libtukaan/__init__.py
+libtukaan/serif.py
+libtukaan/win/libserif_x64.dll
+libtukaan_win.egg-info/PKG-INFO
+libtukaan_win.egg-info/SOURCES.txt
+libtukaan_win.egg-info/dependency_links.txt
+libtukaan_win.egg-info/top_level.txt
