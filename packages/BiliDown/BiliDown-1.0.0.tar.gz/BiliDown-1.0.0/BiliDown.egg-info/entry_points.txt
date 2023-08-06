@@ -1,0 +1,3 @@
+[console_scripts]
+bilidown = bilidown.__main__:main
+
