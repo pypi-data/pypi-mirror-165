@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: jdiff
+Version: 0.0.1
+Summary: A light-weight library to compare structured output from network devices show commands.
+Home-page: https://github.com/networktocode/jdiff
+License: Apache-2.0
+Keywords: json,diff,network
+Author: Network to Code, LLC
+Author-email: info@networktocode.com
+Requires-Python: >=3.7.0,<4.0.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: deepdiff (>=5.5.0,<6.0.0)
+Requires-Dist: jmespath (>=0.10.0,<0.11.0)
+Project-URL: Repository, https://github.com/networktocode/jdiff
+Description-Content-Type: text/markdown
+
+# jdiff
+
+`jdiff` is a lightweight Python library allowing you to examine structured data. `jdiff` provides an interface to intelligently compare JSON data objects and test for the presence (or absence) of keys. You can also examine and compare corresponding key-values.
+
+The library heavily relies on [JMESPath](https://jmespath.org/) for traversing the JSON object and finding the values to be evaluated. More on that [here](#customized-jmespath).
+
+## Installation 
+
+Install from PyPI:
+
+```
+pip install jdiff
+```
+
+## Use cases
+
+`jdiff` has been developed around diffing and testing structured data returned from APIs and other Python modules and libraries (such as TextFSM). Our primary use case is the examination of structured data returned from networking devices. However, we found the library fits other use cases where structured data needs to be operated on, and is especially useful when working or dealing with data returned from APIs.
+
+## Documentation
+
+Documentation is hosted on Read the Docs at [jdiff Documentation](https://jdiff.readthedocs.io/).
