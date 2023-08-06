@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: TCObservability
+Version: 1.0.2
+Summary: A lib to easily add observality to Google cloud functions
+Author: Maycon Guimaraes
+Author-email: maycon.guimaraes@tc.com.br
+License-File: LICENSE.txt
