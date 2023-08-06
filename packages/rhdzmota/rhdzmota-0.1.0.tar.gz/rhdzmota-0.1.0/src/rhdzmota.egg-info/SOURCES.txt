@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+setup.py
+bin/rhdzmota
+src/rhdzmota/VERSION
+src/rhdzmota.egg-info/PKG-INFO
+src/rhdzmota.egg-info/SOURCES.txt
+src/rhdzmota.egg-info/dependency_links.txt
+src/rhdzmota.egg-info/requires.txt
+src/rhdzmota.egg-info/top_level.txt
