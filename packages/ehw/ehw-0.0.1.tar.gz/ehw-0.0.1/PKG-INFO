@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: ehw
+Version: 0.0.1
+Summary: eons hardware
+Home-page: https://github.com/eons-dev/bin_ehw
+Author: eons
+Author-email: support@eons.llc
+Project-URL: Bug Tracker, https://github.com/eons-dev/bin_ehw/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# eons hardware
+
+![build](https://github.com/eons-dev/bin_ehw/actions/workflows/python-package.yml/badge.svg)
+
+docs coming soon
