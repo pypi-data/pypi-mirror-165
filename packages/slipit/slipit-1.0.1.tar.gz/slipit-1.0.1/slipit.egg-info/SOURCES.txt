@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+bin/slipit
+slipit/__init__.py
+slipit/archive_provider.py
+slipit.egg-info/PKG-INFO
+slipit.egg-info/SOURCES.txt
+slipit.egg-info/dependency_links.txt
+slipit.egg-info/requires.txt
+slipit.egg-info/top_level.txt
+slipit/provider/__init__.py
+slipit/provider/compressed_tar_provider.py
+slipit/provider/tar_provider.py
+slipit/provider/zip_provider.py
