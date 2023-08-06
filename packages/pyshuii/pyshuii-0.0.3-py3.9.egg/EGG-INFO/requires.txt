@@ -1,0 +1,8 @@
+cosmpy
+web3
+asyncio
+aiohttp
+
+[dev]
+
+[test]
