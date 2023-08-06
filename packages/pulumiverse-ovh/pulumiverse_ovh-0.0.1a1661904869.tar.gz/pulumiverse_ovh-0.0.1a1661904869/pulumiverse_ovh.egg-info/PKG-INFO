@@ -1,0 +1,69 @@
+Metadata-Version: 2.1
+Name: pulumiverse-ovh
+Version: 0.0.1a1661904869
+Summary: A Pulumi package for creating and managing OVH cloud resources.
+Home-page: https://www.pulumi.com
+License: Apache-2.0
+Project-URL: Repository, https://github.com/pulumiverse/pulumi-ovh
+Description: # Ovh Resource Provider
+        
+        The Ovh Resource Provider lets you manage cloud resources for [Ovh](http://ovh.com) resources.
+        
+        ## Installing
+        
+        This package is available for several languages/platforms:
+        
+        ### Node.js (JavaScript/TypeScript)
+        
+        To use from JavaScript or TypeScript in Node.js, install using either `npm`:
+        
+        ```bash
+        npm install @pulumiverse/ovh
+        ```
+        
+        or `yarn`:
+        
+        ```bash
+        yarn add @pulumiverse/ovh
+        ```
+        
+        ### Python
+        
+        To use from Python, install using `pip`:
+        
+        ```bash
+        pip install pulumiverse_ovh
+        ```
+        
+        ### Go
+        
+        To use from Go, use `go get` to grab the latest version of the library:
+        
+        ```bash
+        go get github.com/pulumiverse/pulumi-ovh/sdk/go/...
+        ```
+        
+        ### .NET
+        
+        To use from .NET, install using `dotnet add package`:
+        
+        ```bash
+        dotnet add package Pulumiverse.Ovh
+        ```
+        
+        ## Configuration
+        
+        The following configuration points are available for the `Ovh` provider:
+        
+        - `ovh:endpoint` (environment: `OVH_ENDPOINT`) - the Ovh endpoint, such `ovh-us`
+        - `ovh:applicationKey` (environment: `OVH_APPLICATION_KEY`) - the Ovh application key
+        - `ovh:applicationSecret` (environment: `OVH_APPLICATION_SECRET`) - the Ovh application secret
+        - `ovh:consumerKey` (environment: `OVH_CONSUMER_KEY`) - the Ovh consumer key
+        
+        ## Reference
+        
+        For detailed reference documentation, please visit [the Pulumi registry](https://www.pulumi.com/registry/packages/ovh/api-docs/).
+        
+Keywords: pulumi ovh category/cloud
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
