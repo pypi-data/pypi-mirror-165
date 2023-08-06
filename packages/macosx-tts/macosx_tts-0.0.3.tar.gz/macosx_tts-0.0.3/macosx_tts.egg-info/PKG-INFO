@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: macosx-tts
+Version: 0.0.3
+Summary: macosx_tts is a ali tts driver for unitts engine
+Home-page: https://github.com/yumoqing/macosx_tts
+Author: yumoqing
+Author-email: yumoqing@gmail.com
+Platform: any
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+
+# macosx_tts
+use pyobjus to call the macosx's tts engine, because the pyttsx3's macosx driver using pyobjc api can not works with plyer togather
