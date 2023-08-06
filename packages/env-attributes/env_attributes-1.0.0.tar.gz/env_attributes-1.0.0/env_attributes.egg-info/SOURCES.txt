@@ -1,0 +1,9 @@
+README.md
+setup.py
+env_attributes/__init__.py
+env_attributes/environment.py
+env_attributes.egg-info/PKG-INFO
+env_attributes.egg-info/SOURCES.txt
+env_attributes.egg-info/dependency_links.txt
+env_attributes.egg-info/requires.txt
+env_attributes.egg-info/top_level.txt
