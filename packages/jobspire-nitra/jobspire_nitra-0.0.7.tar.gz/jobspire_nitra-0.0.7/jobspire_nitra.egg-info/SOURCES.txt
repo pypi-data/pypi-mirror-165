@@ -1,0 +1,11 @@
+LICENSE
+README.md
+README.rst
+setup.py
+jobspire_nitra/__init__.py
+jobspire_nitra/main.py
+jobspire_nitra.egg-info/PKG-INFO
+jobspire_nitra.egg-info/SOURCES.txt
+jobspire_nitra.egg-info/dependency_links.txt
+jobspire_nitra.egg-info/requires.txt
+jobspire_nitra.egg-info/top_level.txt
