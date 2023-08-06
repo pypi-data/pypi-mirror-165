@@ -1,0 +1,2 @@
+jupyter_core>=4.11.1
+nbconvert>=7.0.0
