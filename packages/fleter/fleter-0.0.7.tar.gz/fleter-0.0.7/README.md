@@ -1,0 +1,88 @@
+# fleter
+一个flet的扩展组件库，提供一些常用组件及功能。
+
+## SwichThemeButton
+用于快速切换窗口主题的图标按钮组件。
+
+### 常规
+![](SwichThemeButton.gif)
+```python
+import flet
+import fleter
+
+def main(page: flet.Page):
+    swich_theme_button = fleter.SwichThemeButton(page)
+    page.add(
+        swich_theme_button
+    )
+    page.update()
+
+flet.app(target=main)
+```
+
+### 无系统主题选项
+![](SwichThemeButton-None-System.gif)
+```python
+import flet
+import fleter
+
+def main(page: flet.Page):
+    swich_theme_button = fleter.SwichThemeButton(page, has_system=False)
+    page.add(
+        swich_theme_button
+    )
+    page.update()
+
+flet.app(target=main)
+```
+
+## HeaderBar
+用于快速设置窗口标题栏。
+
+### 常规
+```python
+import flet
+import fleter
+
+
+def build(page: flet.Page):
+    titlebar = fleter.HeaderBar(page, title="Hello World")
+    page.add(
+        titlebar
+    )
+    page.update()
+
+flet.app(target=build)
+```
+
+### 标题栏靠左-切换主题按钮
+![](HeaderBar-Title-Left.gif)
+```python
+import flet
+import fleter
+
+
+def build(page: flet.Page):
+    titlebar = fleter.HeaderBar(page, title="Hello World", title_align="left")
+    titlebar.controls.insert(1, fleter.SwichThemeButton(page))
+    page.add(
+        titlebar
+    )
+    page.update()
+
+flet.app(target=build)
+```
+
+## ComboBox
+用于简化Dropdown的开发过程，option可以使用列表设置，如`["Hello", "World"]`。
+```python
+import flet
+import fleter
+
+
+def build(page: flet.Page):
+    page.add(fleter.ComboBox(options=["Hello", "World"]))
+    page.update()
+
+flet.app(target=build)
+```
