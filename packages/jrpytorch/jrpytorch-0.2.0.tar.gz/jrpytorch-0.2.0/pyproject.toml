@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "jrpytorch"
+version = "0.2.0"
+description = "Jumping Rivers: PyTorch with Python"
+authors = ["Jumping Rivers <info@jumpingrivers.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.8"
+torch = "^1.12.1"
+torchvision = "^0.13.1"
+matplot = "^0.1.9"
+visdom = "^0.1.8"
+scikit-learn = "^1.1.2"
+pandas = "^1.4.3"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
