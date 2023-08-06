@@ -1,0 +1,15 @@
+tiffslide/__init__.py,sha256=jSndvv8h9Ai7rT-6qaLYJ8QoqmUKSeKLAFtLXy-ZsXI,2734
+tiffslide/_compat.py,sha256=4CzP2czilB9Xv-JeiEyYiGITtZOTLUvN6SRGKe8kpLw,3892
+tiffslide/_kerchunk.py,sha256=3D5GW-tFeHdOny9k1UqO2R-gdFMCFisKi_rueF-kTvw,5006
+tiffslide/_pycompat.py,sha256=xaEs4QJ_FT5T_DipB4PDw5U4Xu5QgWbgMIPcLfplmxc,4770
+tiffslide/_types.py,sha256=QO0CFTgndc-nWxtXMm6GdoH74ouUnEWRACd_DzZFLXA,2295
+tiffslide/_version.py,sha256=QuERKkjlvDi4vRsrGHa7kkNV8ephc_qK8gsK-nomr2k,176
+tiffslide/_zarr.py,sha256=Fhor1FaK8-_hN9uyjfwMuOMCDShLzkewCN1J0cyaTlc,13154
+tiffslide/deepzoom.py,sha256=YkRyBguXLGZrr609FtXSg8qLvEtKOaZvcnBEWZ0dJbM,11942
+tiffslide/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tiffslide/tiffslide.py,sha256=kWQJ1o24p7KVkY4rjZ2WDu8RyLGwmCpbanngK0BfwDo,31383
+tiffslide-1.8.0.dist-info/LICENSE,sha256=pHtDjx_HaEh4gGabOocx0jM325nw6p5pLy2PPP-6uAY,1548
+tiffslide-1.8.0.dist-info/METADATA,sha256=7tdjqL7R2ZifttH8p1OJYFG-G771H7AgkbBT9906y0g,9990
+tiffslide-1.8.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+tiffslide-1.8.0.dist-info/top_level.txt,sha256=17qWqBGZeNcLz6F6M9R4CHgF9HG9MA8Ij60IjtNoHEc,10
+tiffslide-1.8.0.dist-info/RECORD,,
