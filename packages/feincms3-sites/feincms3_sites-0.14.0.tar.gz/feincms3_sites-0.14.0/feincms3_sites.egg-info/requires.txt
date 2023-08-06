@@ -1,0 +1,6 @@
+Django>=3.2
+feincms3>=1.0
+
+[tests]
+coverage
+feincms3[all]
