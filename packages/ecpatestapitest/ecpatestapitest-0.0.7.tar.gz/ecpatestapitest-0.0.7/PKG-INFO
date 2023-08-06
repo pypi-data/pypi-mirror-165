@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: ecpatestapitest
+Version: 0.0.7
+Summary: A small example package
+Author: Example Author
+Author-email: author@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# test
+ 
+only test.
+ 
+- test 1
+- test 2
+- test 3
