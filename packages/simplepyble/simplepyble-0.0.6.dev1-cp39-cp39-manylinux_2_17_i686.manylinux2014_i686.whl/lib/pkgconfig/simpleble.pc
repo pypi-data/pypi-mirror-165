@@ -1,0 +1,11 @@
+prefix=/project/simplepyble/build/lib.linux-i686-cpython-39
+exec_prefix=/project/simplepyble/build/lib.linux-i686-cpython-39
+libdir=/project/simplepyble/build/lib.linux-i686-cpython-39/lib
+includedir=/project/simplepyble/build/lib.linux-i686-cpython-39/include
+
+Name: SimpleBLE
+Description: "The ultimate fully-fledged cross-platform library for Bluetooth Low Energy (BLE)."
+Version: 0.5.0
+Libs: -L${libdir} -lsimpleble 
+Cflags: -I${includedir}
+Conflicts:
