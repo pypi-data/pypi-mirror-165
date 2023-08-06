@@ -1,0 +1,117 @@
+[tool.poetry]
+name = "nautobot-secrets-providers"
+version = "v1.3.0"
+description = "Nautobot Secrets Providers Plugin."
+authors = ["Network to Code, LLC <opensource@networktocode.com>"]
+license = "Apache-2.0"
+readme = "README.md"
+homepage = "https://github.com/nautobot/nautobot-plugin-secrets-providers"
+repository = "https://github.com/nautobot/nautobot-plugin-secrets-providers"
+keywords = ["nautobot", "nautobot-plugin"]
+include = [
+    "LICENSE",
+    "README.md",
+]
+packages = [
+    { include = "nautobot_secrets_providers" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+# Pin this to the lowest supported version of Nautobot
+nautobot = "~1.2.1"
+
+#
+# Optional dependencies installed as extras
+# 
+
+# AWS SDK for Python (always keep in sync w/ dev dependency)
+boto3 = { version = "~1.19.5", optional = true }
+# HashiCorp Vault API Client (always keep in sync w/ dev dependency)
+hvac = { version = "~0.11.0", optional = true }
+# Thycotic Secret Server (always keep in sync w/ dev dependency)
+python-tss-sdk = {version = "~1.2.0", optional = true}
+
+
+[tool.poetry.dev-dependencies]
+bandit = "*"
+black = "*"
+boto3 = "~1.19.5"  # (always keep in sync w/ optional dependency)
+coverage = "~6.2"
+django-debug-toolbar = "*"
+flake8 = ">=3.9.2"
+hvac = "~0.11.0"  # (always keep in sync w/ optional dependency)
+invoke = "*"
+moto = "~2.2.11"
+mkdocs = "*"
+pydocstyle = "*"
+pylint = "*"
+pylint-django = "*"
+python-tss-sdk = "~1.2.0"  # (always keep in sync w/ optional dependency)
+requests-mock = "~1.9.3"
+yamllint = "*"
+
+[tool.poetry.extras]
+all = ["boto3", "hvac", "python-tss-sdk"]
+aws = ["boto3"]
+hashicorp = ["hvac"]
+nautobot = ["nautobot"]
+thycotic = ["python-tss-sdk"]
+
+[tool.black]
+line-length = 120
+target-version = ['py37']
+include = '\.pyi?$'
+exclude = '''
+(
+  /(
+      \.eggs         # exclude a few common directories in the
+    | \.git          # root of the project
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | _build
+    | buck-out
+    | build
+    | dist
+  )/
+  | settings.py     # This is where you define files that should not be stylized by black
+                     # the root of the project
+)
+'''
+
+[tool.pylint.master]
+# Include the pylint_django plugin to avoid spurious warnings about Django patterns
+load-plugins="pylint_django"
+
+[tool.pylint.basic]
+# No docstrings required for private methods (Pylint default), or for test_ functions, or for inner Meta classes.
+no-docstring-rgx="^(_|test_|Meta$)"
+# Don't lint the test config
+ignore = ["nautobot_config.py"]
+
+[tool.pylint.messages_control]
+# Line length is enforced by Black, so pylint doesn't need to check it.
+# Pylint and Black disagree about how to format multi-line arrays; Black wins.
+disable = """,
+    line-too-long,
+    bad-continuation,
+    """
+
+[tool.pylint.miscellaneous]
+# Don't flag TODO as a failure, let us commit with things that still need to be done in the code
+notes = """,
+    FIXME,
+    XXX,
+    """
+
+[build-system]
+requires = ["poetry_core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+testpaths = [
+    "tests"
+]
+addopts = "-vv --doctest-modules"
