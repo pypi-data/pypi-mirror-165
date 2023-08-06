@@ -1,0 +1,3 @@
+[console_scripts]
+empowercli=cli.main:app
+
