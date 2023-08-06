@@ -1,0 +1,9 @@
+README.md
+setup.py
+discord_profile_search/__init__.py
+discord_profile_search/main.py
+discord_profile_search.egg-info/PKG-INFO
+discord_profile_search.egg-info/SOURCES.txt
+discord_profile_search.egg-info/dependency_links.txt
+discord_profile_search.egg-info/requires.txt
+discord_profile_search.egg-info/top_level.txt
