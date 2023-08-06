@@ -1,0 +1,4 @@
+Django>=4.0.6
+util_demian>=0.0.3
+django-compressor>=4.0
+django-libsass>=0.9

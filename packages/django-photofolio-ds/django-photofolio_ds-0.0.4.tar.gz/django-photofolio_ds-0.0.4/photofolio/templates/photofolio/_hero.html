@@ -1,0 +1,15 @@
+
+
+<section id="hero" class="hero d-flex flex-column justify-content-center align-items-center" data-aos="fade" data-aos-delay="1500">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6 text-center">
+        {% autoescape off %}
+        <h2>{{ hero.title }}</h2>
+        <p>{{ hero.desc }}</p>
+        {% endautoescape %}
+        <a href="{% url 'photofolio:about' %}" class="btn-get-started">About Me</a>
+      </div>
+    </div>
+  </div>
+</section>
