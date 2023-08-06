@@ -1,0 +1,11 @@
+aio_clients/__init__.py,sha256=kT6pO3wkyYmVaHDE2oBKNnRdAXZ7I20uKbVW5RRU78c,88
+aio_clients/client.py,sha256=u032pKRIR_e-rR0lZ_KT5U1dJ_2w4pIEvD4hXvS9b30,4364
+aio_clients/exceptions.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aio_clients/multipart/__init__.py,sha256=b0FX2A7IIMtN2-HjBKfse76O3RdkoyIKpo48ubjAQ5g,54
+aio_clients/multipart/main.py,sha256=ZtMyGqna96_qK_SOpxXc8X1covFsHez7IdSPQLKclJI,380
+aio_clients/multipart/struct.py,sha256=gMWJFg9Et8wpWfSOW8_EgyydgH-Z6OlNul_7WlaOWGk,414
+aio_clients/struct.py,sha256=9IsqPCCph7lWSyS23CjlewfX_D-s4xoAd-HGQEktn78,544
+aio_clients-0.1.0b7.dist-info/LICENSE,sha256=RC9biQnuele0t3WjsW9LCQ5DeEi5HTGPV2Y8HjjbvzU,1067
+aio_clients-0.1.0b7.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+aio_clients-0.1.0b7.dist-info/METADATA,sha256=UnWXPAMwrVNUUDi2sViCHA--ZALiAkrTxVeF2Q1AloE,2087
+aio_clients-0.1.0b7.dist-info/RECORD,,
