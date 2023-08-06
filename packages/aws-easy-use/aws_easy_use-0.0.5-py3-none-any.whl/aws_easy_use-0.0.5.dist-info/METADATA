@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: aws-easy-use
+Version: 0.0.5
+Summary: AWS boto3 wrapper. Make it easier and intuitive to use.
+Home-page: https://github.com/imaging8896/aws-easy-use
+Author: Ted Chen
+Author-email: imaging8896@gmail.com
+License: MIT
+Project-URL: Source, https://github.com/imaging8896/aws-easy-use
+Classifier: Development Status :: 1 - Planning
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: System Administrators
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: boto3 (>=1.24.28)
+
+# aws-easy-use
+![CI](https://github.com/imaging8896/aws-easy-use/actions/workflows/push_any_branch.yml/badge.svg?branch=master)
+![Release](https://github.com/imaging8896/aws-easy-use/actions/workflows/push_release_tag.yml/badge.svg)
+
+AWS boto3 wrapper. Make it easier and intuitive to use.
