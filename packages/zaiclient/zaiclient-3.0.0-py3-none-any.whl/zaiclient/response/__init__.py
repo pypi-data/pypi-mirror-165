@@ -1,0 +1,2 @@
+from zaiclient.response.EventLoggerResponse import EventLoggerResponse
+from zaiclient.response.RecommendationResponse import RecommendationResponse
