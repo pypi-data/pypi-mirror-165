@@ -1,0 +1,8 @@
+reciprocalspaceship
+matplotlib
+seaborn
+
+[dev]
+pytest
+pytest-xdist
+pytest-runner
