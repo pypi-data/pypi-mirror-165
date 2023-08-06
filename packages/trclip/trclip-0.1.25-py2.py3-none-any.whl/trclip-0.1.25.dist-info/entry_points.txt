@@ -1,0 +1,2 @@
+[console_scripts]
+trclip = trclip.cli:main
