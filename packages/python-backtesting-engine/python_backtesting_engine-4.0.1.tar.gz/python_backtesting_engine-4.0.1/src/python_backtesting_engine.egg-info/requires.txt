@@ -1,0 +1,8 @@
+setuptools
+easygui
+matplotlib
+numpy
+pandas
+scipy
+requests
+PySimpleGUI
