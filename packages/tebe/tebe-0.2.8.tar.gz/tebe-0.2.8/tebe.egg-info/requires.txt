@@ -1,0 +1,8 @@
+pyqt5>=5.6
+pyqtwebengine
+sphinx
+rst2pdf
+docutils
+recommonmark
+mistune==0.8.4
+pillow

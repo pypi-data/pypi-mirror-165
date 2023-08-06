@@ -1,0 +1,2 @@
+[console_scripts]
+tebe = tebe.__main__:main
