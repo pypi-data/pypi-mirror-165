@@ -1,0 +1,12 @@
+import unittest
+
+import tinxy
+
+class TestSimple(unittest.TestCase):
+
+    def test_add(self):
+        self.assertEqual((5+6), 11)
+
+
+if __name__ == '__main__':
+    unittest.main()

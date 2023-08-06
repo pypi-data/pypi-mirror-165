@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/tinxy/__init__.py
+src/tinxy/tinxy.py
+src/tinxy/tinxycloud.py
+src/tinxy.egg-info/PKG-INFO
+src/tinxy.egg-info/SOURCES.txt
+src/tinxy.egg-info/dependency_links.txt
+src/tinxy.egg-info/requires.txt
+src/tinxy.egg-info/top_level.txt
+tests/test_tinxy.py
