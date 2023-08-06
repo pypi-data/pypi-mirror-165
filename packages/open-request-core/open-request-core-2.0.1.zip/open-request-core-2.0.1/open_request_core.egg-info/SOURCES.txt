@@ -1,0 +1,16 @@
+.gitignore
+LICENSE
+README.md
+setup.py
+open_request_core/__init__.py
+open_request_core/aioclient.py
+open_request_core/client.py
+open_request_core/client2.py
+open_request_core/exception.py
+open_request_core/request.py
+open_request_core/response.py
+open_request_core.egg-info/PKG-INFO
+open_request_core.egg-info/SOURCES.txt
+open_request_core.egg-info/dependency_links.txt
+open_request_core.egg-info/requires.txt
+open_request_core.egg-info/top_level.txt
