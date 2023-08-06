@@ -1,0 +1,8 @@
+SunSip/__init__.py
+SunSip/__main__.py
+SunSip/setup.py
+SunSip.egg-info/PKG-INFO
+SunSip.egg-info/SOURCES.txt
+SunSip.egg-info/dependency_links.txt
+SunSip.egg-info/requires.txt
+SunSip.egg-info/top_level.txt
