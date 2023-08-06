@@ -1,0 +1,32 @@
+# base image is templated in (default: python:3.8-slim)
+
+# Run the custom dagster cloud pre install script if available
+COPY *dagster_cloud_pre_install.sh /dagster_cloud_pre_install.sh
+RUN if [ -f "dagster_cloud_pre_install.sh" ]; then \
+        ./dagster_cloud_pre_install.sh; \
+    fi
+
+RUN pip install --upgrade pip
+
+# This is to enable Docker caching - if setup.py exists, we install the dependencies before
+#   copying all other files
+COPY *setup.py /setup.py
+RUN if [ -f "setup.py" ]; then \
+        pip install .; \
+    fi
+
+WORKDIR /opt/dagster/app
+COPY . /opt/dagster/app
+
+# Install the rest of dependencies in case there is a requirements.txt
+RUN if [ -f "requirements.txt" ]; then \
+        pip install -r requirements.txt; \
+    fi
+
+# Run the custom dagster cloud post install script if available
+RUN if [ -f "dagster_cloud_post_install.sh" ]; then \
+        ./dagster_cloud_post_install.sh; \
+    fi
+
+# Make sure dagster-cloud is installed. Fail early here if not.
+RUN dagster-cloud --version
