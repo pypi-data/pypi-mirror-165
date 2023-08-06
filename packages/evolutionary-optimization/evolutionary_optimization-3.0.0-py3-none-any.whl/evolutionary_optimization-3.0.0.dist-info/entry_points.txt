@@ -1,0 +1,3 @@
+[console_scripts]
+run_evolution=evolutionary_optimization.main:run_evolutionary_alg
+
