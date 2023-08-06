@@ -1,0 +1,14 @@
+odoo/addons/event_registration_mail_compose/README.rst,sha256=CAVOQL1TrcOFNtH-hq7l2mJNYSuC93esWmv60CoO-oM,3020
+odoo/addons/event_registration_mail_compose/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+odoo/addons/event_registration_mail_compose/__manifest__.py,sha256=sNPnTsvTvJVTuemssHyXHeOQB7du_EsjFBxk1xYcUcg,600
+odoo/addons/event_registration_mail_compose/i18n/event_registration_mail_compose.pot,sha256=8gIdhZpuq8LcF1xJ-c72JEzR9AXOwejLQXF1XYEnJ4E,555
+odoo/addons/event_registration_mail_compose/i18n/fr.po,sha256=_KHqeT6KWXhXAMoskTpeZbg0BLK2fXOnsJeAd2lNhRM,741
+odoo/addons/event_registration_mail_compose/readme/CONTRIBUTORS.rst,sha256=-EAAPyWmvl-PexY7t0MYSgGF5y7H0yC6rFGh_yfUfwA,101
+odoo/addons/event_registration_mail_compose/readme/DESCRIPTION.rst,sha256=x4rarJyTl9tYePcByfxZz0c9aSksxRLae6qrC-7lYNE,77
+odoo/addons/event_registration_mail_compose/static/description/icon.png,sha256=6xBPJauaFOF0KDHfHgQopSc28kKvxMaeoQFQWZtfZDo,9455
+odoo/addons/event_registration_mail_compose/static/description/index.html,sha256=teLOgMG8FOqjNMLhdX-zfbfmTPO-xAAMYwhBvjN_Lbs,12249
+odoo/addons/event_registration_mail_compose/views/event_registration.xml,sha256=c30hdkud9Ck1hgEYvR5g_AubHqM3JPpc2c-NKDNX-Mw,661
+odoo_addon_event_registration_mail_compose-15.0.1.0.0.4.dist-info/METADATA,sha256=6vHhDcKI2s1ZGpbDjMga3DX6YrBJYcWAPdj-ksegd2M,3587
+odoo_addon_event_registration_mail_compose-15.0.1.0.0.4.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+odoo_addon_event_registration_mail_compose-15.0.1.0.0.4.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+odoo_addon_event_registration_mail_compose-15.0.1.0.0.4.dist-info/RECORD,,
