@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: IreneAPIWrapper
+Version: 2.23
+Summary: A wrapper for Irene's API and connects with a websocket connection.
+Home-page: https://github.com/MujyKun/IreneAPIWrapper
+Author: MujyKun
+Author-email: mujy@irenebot.com
+License: MIT License
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: asyncio (==3.4.3)
+Requires-Dist: aiohttp (==3.8.1)
+
+# IreneAPIWrapper v2.0 - A Complete Rewrite
+
+[Documentation](https://ireneapiwrapper.readthedocs.io/en/latest/)
+
+## Usage
+
+## Contribute
