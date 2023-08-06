@@ -1,0 +1,72 @@
+[LOCAL]
+# Third party software paths
+# New phaser stands for phaser 2.5.6 or higher
+#The following leave in blank
+python_local_interpreter: 
+#The following two should be configured with the path to shelxe and phaser
+#every machine in the pool must be able to call the programs from these paths 
+path_local_phaser: /path/to/phenix.phaser
+path_local_shelxe: /path/to/shelxe
+# chescat: program for phase combination
+path_local_chescat:
+# arcimboldo means arcimboldo_borges
+path_local_arcimboldo:
+# borges means aleph
+path_local_borges: 
+
+# OPTIONAL PARAMETERS
+#You do not have Condor so you can just leave this section as it is
+[CONDOR]
+# Parameters for each executable under Condor (memory constraints, CPU speed ...) 
+requirements_shelxe: 
+requirements_phaser:
+requirements_borges:
+
+[SGE]
+#The following should be the name of the queue where launch the jobs
+qname: queue_name
+#Leave this parameter to 1.00
+fraction: 1.00
+
+#You do not have Torque so you can just leave this section as it is
+[TORQUE]
+qname: 
+
+#You do not have MOAB so you can just leave this section as it is
+[MOAB]
+partition: 
+
+#You do not have SLURM so you can just leave this section as it is
+[SLURM]
+partition: 
+
+# Supercomputing environment parameters
+[GRID]
+# BORGES parameters for "borges" database generation
+#Leave these defaults parameters
+number_of_pdbs_per_tar: 5
+number_of_parallel_grid_jobs: 100
+#Your local grid would be SGE
+type_local: SGE
+#You do not have a remote grid but the setup.bor so leave it in blank
+type_remote: 
+
+#Here it goes the configuration for the connection to an eventual remote grid 
+#If no remote grid is available you can leave all the parameters as they are. 
+
+path_remote_phaser: /remote/path/to/phenix.phaser 
+path_remote_shelxe: /remote/path/to/shelxe
+path_remote_borgesclient: 
+python_remote_interpreter: 
+remote_frontend_username: 
+remote_frontend_host: 
+path_remote_sgepy: 
+home_frontend_directory:  
+remote_frontend_port: 22
+remote_fylesystem_isnfs: True
+remote_frontend_prompt: >
+
+#[CUSTOM COMMAND]
+#$ -S /bin/bash
+#$ 
+#module load ccp4-7.0

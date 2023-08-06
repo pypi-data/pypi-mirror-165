@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: arcimboldo
+Version: 1.0.15
+Summary: a suite of programs for x-ray diffraction structure solution
+Home-page: http://chango.ibmb.csic.es
+Author: Isabel Uson
+Author-email: bugs-borges@ibmb.csic.es
+Keywords: crystallography macromolecular
+Classifier: Operating System :: Unix
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research 
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=2.7
+License-File: LICENSE
+Requires-Dist: biopython
+Requires-Dist: matplotlib
+Requires-Dist: paramiko
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: pandas
+Requires-Dist: cython
+Requires-Dist: python-igraph
+Requires-Dist: psutil
+Requires-Dist: scikit-learn
+Requires-Dist: termcolor
+Requires-Dist: wget
+Requires-Dist: future
+Requires-Dist: csb
+Requires-Dist: natsort
+Requires-Dist: configparser
+Requires-Dist: typing
+
+ARCIMBOLDO constitutes a general phasing method based on combination of location of model fragments with PHASER and density modification with SHELXE
