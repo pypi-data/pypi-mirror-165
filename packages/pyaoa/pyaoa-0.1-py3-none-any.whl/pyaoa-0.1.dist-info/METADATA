@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: pyaoa
+Version: 0.1
+Summary: Python package to automatically analyze objects in external aerodynamic flow for a range of angle-of-attack
+Home-page: https://github.com/inflowencer/pyaoa
+Author: inflowencer
+Author-email: jason7bernhard@gmail.com
+Project-URL: Bug Reports, https://github.com/inflowencer/pyaoa/issues
+Project-URL: Source, https://github.com/inflowencer/pyaoa
+Keywords: cfd,aerodynamics,aoa
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.7, <4
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: rich
+Requires-Dist: matplotlib
+Requires-Dist: pyyaml
+
+# pyaoa - Automatic Angle-of-Attack Analysis
+
+Automatic pre- and postprocessing of external aerodynamic simulations of arbitrary numbers of objects to analyze at different angles-of-attack $\alpha$.
+
+## Installation
+
+## Examples
+
+## User Guide
