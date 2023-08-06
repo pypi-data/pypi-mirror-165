@@ -1,0 +1,29 @@
+---
+  - name: Check if HarpiyaERP App exists
+    stat: path="{{ bench_path }}/apps/harpiyaerp"
+    register: app
+
+  - name: Get the HarpiyaERP app
+    command: bench get-app harpiyaerp {{ harpiyaerp_repo_url }} --branch {{ harpiyaerp_branch }}
+    args:
+      creates: "{{ bench_path }}/apps/harpiyaerp"
+      chdir: "{{ bench_path }}"
+    when: not app.stat.exists and not without_harpiyaerp
+
+  - name: Check whether the site already exists
+    stat: path="{{ bench_path }}/sites/{{ site }}"
+    register: site_folder
+    when: not without_site
+
+  - name: Create a new site
+    command: "bench new-site {{ site }} --admin-password '{{ admin_password }}' --mariadb-root-password '{{ mysql_root_password }}'"
+    args:
+      chdir: "{{ bench_path }}"
+    when: not without_site and not site_folder.stat.exists
+
+  - name: Install HarpiyaERP to default site
+    command: "bench --site {{ site }} install-app harpiyaerp"
+    args:
+      chdir: "{{ bench_path }}"
+    when: not without_site and not without_harpiyaerp
+...
