@@ -1,0 +1,268 @@
+# Panther Config SDK
+The Panther Config module allows you to configure detections for your [Panther](https://panther.com) instance.
+
+## Getting Started
+
+### Install
+The Panther Config SDK can be installed using PIP.
+
+```sh
+pip3 install panther-config==0.0.13
+```
+
+### Writing a detection
+You can use the `detection` module in Panther config to configure detections. The example below shows a detection that processing an HTTP log.
+
+Assuming we have a log type `Internal.HTTP.Traffic` that has the following shape:
+```json
+{
+    "method": "POST",
+    "useSSL": false,
+    "path": "/api/some/endpoint",
+    "host": "internal.megacorp.com"
+}
+```
+
+We can write a detection to check for insecure `POST` and `PUT` requests:
+```python
+# import the "detection" module, as we'll be creating a rule.
+from panther_config import detection
+
+# The next four functions are used in the detection definition that follows. Panther 
+# detections allow for parts of a detection to be defined with custom Python code.
+
+
+# "filter_insecure" is an example of python function that will be used to create
+# a detection.PythonFilter that only matches insecure events. The event argument will
+# have a python dict object corresponding to the JSON event.
+def filter_insecure(event, params):
+    return event["useSSL"] == False
+
+
+# "filter_http_methods" is a slightly more complicated python function that we will use
+# to create a detection.PythonFilter later. This function uses the second "params" argument
+# to make the function's logic reusable.
+def filter_http_methods(event, params):
+    allowed_methods = params["methods"]
+    actual_method = event["method"]
+    return actual_method in allowed_methods
+
+
+# "reference_generator" is another example where we will use some python code to dynamically
+# change the information Panther presents on an Alert resulting from a Detection match. In
+# this example, we're populating a query param with some relevant information from 
+# the contextual event.
+def reference_generator(event):
+    origin = event["origin"]
+    return f"https://wiki.internal.megacorp.com/hosts_db?host={origin}"
+
+
+# "make_context" will be used to attach arbitrary data to the resulting Alert. This
+# can be used to simply change how data is presented or be used to push machine readable information
+# to a downstream Alert Destination.
+def make_context(event):
+    # The Panther Config SDK's hooks to arbitrary python come with some restrictions. When the
+    # detection is saved, the Panther backend will capture the source of provided function to use
+    # in realtime log data processing and other backend processes. Because of this, functions used
+    # to define a detection must not have references that are not local to the function body. Therefore,
+    # imports targeting any of the below _must_ be included in the function body:
+    #
+    #   - The python standard library
+    #   - Libraries that are enabled on your Panther instance
+    #   - Panther "Global Helpers" that you have configured on your instance
+    
+    import fnmatch 
+    
+    path = event["path"]
+    return {
+        "is_api_path": fnmatch.fnmatch(path, "/api/*")
+    }
+
+
+# "pick_severity" is a custom function we are using to define the severity of Alerts based on
+# the data present in the current log. The detection.Rule declaration below shows how this method
+# is registered with the definition of our Rule.
+def pick_severity(event) -> str:
+    from panther_config import detection # required. see notes in comment above "make_context"
+    
+    if event["origin"] != "internal.megacorp.com":
+        return detection.SeverityInfo
+
+    return detection.SeverityInfo
+
+
+# Declare a rule. Every call to "detection.Rule" in your repo will create a Rule in the Panther backend.
+# This example uses a subset of the fields available to define a Rule. See "Full Dataclass API" for
+# all the available fields.
+detection.Rule(
+    # Give the Rule an id. This name must be unique on your Panther 
+    # instance. Dot separated names following "namespace" pattern is recommended. 
+    rule_id="Internal.HTTP.Traffic.Insecure",
+    
+    # Pick a human friendly name for the rule. This will be used
+    # to present the Rule in the Panther Console UI
+    name="Detect insecure internal HTTP traffic",
+    
+    # Specify one or more log types for your Rule. This setting is what
+    # tells the Panther backend to run this Rule against the log data depicted above.
+    log_types=["Internal.HTTP.Traffic"],
+    
+    # Specify an enabled state for the Rule. Detections can be uploaded in a
+    # disabled state and will not begin processing log data until enabled.
+    enabled=True,
+    
+    # Optionally, you can specify a list of tags to associate with the detection.
+    tags=["internal"],
+
+    # The "filters" list defines the sequence of matching logic that an event
+    # will be tested against to determine whether there is a match. Returning "True" proceeds to the
+    # next check. If the final check returns "True", there is a match.
+    filters=[
+        # If the HTTP transaction was secure, we're not interested in that log in this detection.
+        # Therefore, the first filter uses the "filter_insecure" function we defined to filter to only
+        # events that have useSSL set to "false". 
+        detection.PythonFilter(func=filter_insecure),
+        
+        # For now, we're only interested in getting alerted for insecure POST and PUT requests.
+        # We therefore define the second filter step using "filter_http_methods". Unlike "filter_insecure",
+        # we pass some parameters to this function. 
+        detection.PythonFilter(func=filter_http_methods, params={'methods': ["POST", "PUT"]}),
+    ],
+
+    # On this line, we're defining the severity that should be associated with any resulting alerts.
+    # We have the option of defining a static severity (simply: severity="INFO") but, in this case, we want
+    # to make the severity dynamic based on data from the event. To do this, we reference the "pick_severity"
+    # function we defined at the top of the file. We also provide a fallback value in case the dynamic function
+    # cannot be processed. This fallback will also be the Severity value displayed in the Panther Console UI
+    severity=detection.DynamicStringField(
+        func=pick_severity,
+        fallback=detection.SeverityInfo,
+    ),
+
+    # Below we specify the "reference" field. This optional field is used to attach a link to any Alerts 
+    # resulting from this detection. Similar to "severity" we can make this field dynamic based on 
+    # event data. There is also a fallback value specified.
+    reference=detection.DynamicStringField(
+        func=reference_generator,
+        fallback="https://wiki.internal.megacorp.com/hosts_db",
+    ),
+    
+    # Fields like "runbook" and "description" are also available to further customize how any 
+    # resulting Alerts will be displayed. These can have dynamic handlers defined, but in this 
+    # example static string values will work just fine.
+    runbook="Optional runbook content",
+    description="A helpful description",
+    
+    # Finally, we use the optional "alert_context" field to tell the Panther backend to use our 
+    # "make_context" function to generate custom data that will be attached to any resulting Alerts.
+    alert_context=make_context,
+)
+```
+
+## Full Dataclass API
+
+
+## detection module
+
+### DynamicStringField
+Make a field dynamic based on the detection input
+
+| Field | Description | Type |
+| ----- | ---- | ----------- |
+| `fallback` | Fallback value in case the dynamic handler fails | `str` |
+| `func` | Dynamic handler | `Callable[[PantherEvent], str]` |
+
+
+### DynamicDestinations
+Make destinations dynamic based on the detection input
+
+| Field | Description | Type |
+| ----- | ---- | ----------- |
+| `fallback` | Fallback value in case the dynamic handler fails | `Optional[List[str]]` |
+| `func` | Dynamic handler | `Callable[[PantherEvent], List[str]]` |
+
+
+### AlertGrouping
+Configuration for how an alert is grouped
+
+| Field | Description | Type |
+| ----- | ---- | ----------- |
+| `period_minutes` | How long should matches be grouped into an alert after the first match | `int` |
+| `group_by` | Function to generate a key for grouping matches | `Optional[Callable[[PantherEvent], str]]` |
+
+
+### PythonFilter
+Create a filter by referencing a python function
+
+| Field | Description | Type |
+| ----- | ---- | ----------- |
+| `func` | Provide a function whose python source will be used as the filter definition | `Callable[[PantherEvent], bool]` |
+
+
+
+### JSONUnitTest
+Unit test with json content
+
+| Field | Description | Type |
+| ----- | ---- | ----------- |
+| `name` | name of the unit test | `str` |
+| `expect_match` | should this event trigger the rule? | `bool` |
+| `data` | json data | `str` |
+
+
+### Rule
+Define a Rule-type detection to execute against log data in your Panther instance
+
+| Field | Description | Type |
+| ----- | ---- | ----------- |
+| `rule_id` | ID for the rule | `str` |
+| `severity` | Severity for the rule | `Union[str, DynamicStringField]` |
+| `threshold` | Number of matches received before an alert is triggered | `int` |
+| `name` | Display name for the rule | `Optional[str]` |
+| `log_types` | Log Types to associate with this rule | `Union[str, List[str]]` |
+| `filters` | Define event filters for the rule | `Union[Union[PythonFilter], List[Union[PythonFilter]]]` |
+| `enabled` | Short description for the query | `bool` |
+| `unit_tests` | Define event filters for the rule | `Optional[Union[_BaseUnitTest, List[_BaseUnitTest]]]` |
+| `tags` | Tags for the rule | `Optional[Union[str, List[str]]]` |
+| `reference` | Reference for the rule | `Optional[Union[str, DynamicStringField]]` |
+| `runbook` | Runbook for the rule | `Optional[Union[str, DynamicStringField]]` |
+| `description` | Description for the rule | `Optional[Union[str, DynamicStringField]]` |
+| `summary_attrs` | Summary Attributes for the rule | `Optional[List[str]]` |
+| `reports` | Report mappings for the rule | `Optional[Dict[str, List[str]]]` |
+| `destinations` | Alert destinations for the rule | `Optional[Union[str, List[str], DynamicDestinations]]` |
+| `alert_title` | Title to use in the alert | `Optional[Callable[[PantherEvent], str]]` |
+| `alert_context` | Optional JSON to attach to alerts generated by this rule | `Optional[Callable[[PantherEvent], Dict[str, Any]]]` |
+| `alert_grouping` | Configuration for how an alert is grouped | `Optional[AlertGrouping]` |
+
+## query module
+
+### CronSchedule
+Cron expression based schedule definition for a query
+
+| Field | Description | Type |
+| ----- | ---- | ----------- |
+| `expression` | Defines how often queries using this schedule run | `str` |
+| `timeout_minutes` | Defines the timeout applied to queries with this schedule | `int` |
+
+
+### IntervalSchedule
+Interval based schedule definition for a query
+
+| Field | Description | Type |
+| ----- | ---- | ----------- |
+| `rate_minutes` | Defines how often queries using this schedule run | `int` |
+| `timeout_minutes` | Defines the timeout applied to queries with this schedule | `int` |
+
+
+### Query
+A saved or scheduled query
+
+| Field | Description | Type |
+| ----- | ---- | ----------- |
+| `name` | Unique name for the query | `str` |
+| `description` | Short description for the query | `str` |
+| `default_database` | Default database for the query | `str` |
+| `sql` | SQL statement | `str` |
+| `enabled` | Short description for the query | `bool` |
+| `tags` | Tags for the query | `Optional[Union[str, List[str]]]` |
+| `schedule` | Schedule attached to the query | `Optional[Union[IntervalSchedule, CronSchedule]]` |
