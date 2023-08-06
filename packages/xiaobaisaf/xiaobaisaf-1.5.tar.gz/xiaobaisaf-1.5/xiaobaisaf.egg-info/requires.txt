@@ -1,0 +1,7 @@
+allure-pytest
+ddddocr
+loguru
+httpx
+jira
+webdriver_manager
+xiaobaiauto2
