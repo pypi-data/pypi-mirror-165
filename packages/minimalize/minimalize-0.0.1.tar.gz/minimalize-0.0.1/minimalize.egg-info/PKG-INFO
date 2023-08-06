@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: minimalize
+Version: 0.0.1
+Summary: A Python Library with multipurpose capabilities for different purposes
+Home-page: https://github.com/AbelR007/Minimalize
+Author: Abel Roy
+Author-email: abelroi007@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Minimalize
+A Python Library with multipurpose capabilities for different purposes
+
+

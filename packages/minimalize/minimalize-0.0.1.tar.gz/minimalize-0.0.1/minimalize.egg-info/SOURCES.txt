@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+minimalize/__init__.py
+minimalize/pgbutton.py
+minimalize/running.py
+minimalize.egg-info/PKG-INFO
+minimalize.egg-info/SOURCES.txt
+minimalize.egg-info/dependency_links.txt
+minimalize.egg-info/top_level.txt
