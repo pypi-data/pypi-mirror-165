@@ -1,0 +1,5 @@
+retico-core~=0.2
+transformers
+webrtcvad
+pydub
+numpy
