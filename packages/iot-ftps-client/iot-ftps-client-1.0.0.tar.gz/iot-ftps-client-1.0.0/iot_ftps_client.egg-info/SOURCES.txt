@@ -1,0 +1,16 @@
+CHANGELOG.md
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+iot/__init__.py
+iot/ftps/__init__.py
+iot/ftps/client/__init__.py
+iot/ftps/client/_client.py
+iot/ftps/client/_version.py
+iot_ftps_client.egg-info/PKG-INFO
+iot_ftps_client.egg-info/SOURCES.txt
+iot_ftps_client.egg-info/dependency_links.txt
+iot_ftps_client.egg-info/not-zip-safe
+iot_ftps_client.egg-info/requires.txt
+iot_ftps_client.egg-info/top_level.txt
