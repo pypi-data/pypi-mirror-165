@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: mtlibs
+Version: 0.0.180
+Summary: This is the SDK for example.
+Home-page: http://example.com
+Author: example
+Author-email: author@example.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
+Requires-Dist: Flask
+Requires-Dist: werkzeug
+Requires-Dist: requests
+Requires-Dist: python-dotenv
+Requires-Dist: gitpython
+Requires-Dist: paramiko
+Requires-Dist: proxy.py
+Requires-Dist: flask-cors
+Requires-Dist: flask-settings
+Requires-Dist: flask-admin
+Requires-Dist: flask-restful
+Requires-Dist: flask-socketio
+Requires-Dist: pyyaml
+Requires-Dist: docker
+Requires-Dist: PySocks
+Requires-Dist: gunicorn
+Requires-Dist: stem
+
+demo
+
