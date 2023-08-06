@@ -1,0 +1,7 @@
+lmdb
+mmcv>=2.0.0rc1
+regex
+scikit-image
+titlecase
+torch
+torchvision
