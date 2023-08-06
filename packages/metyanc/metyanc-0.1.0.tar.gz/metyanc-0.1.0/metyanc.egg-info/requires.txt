@@ -1,0 +1,7 @@
+numpy>=1.7
+netCDF4
+pyyaml
+
+[test]
+coverage
+pep8
