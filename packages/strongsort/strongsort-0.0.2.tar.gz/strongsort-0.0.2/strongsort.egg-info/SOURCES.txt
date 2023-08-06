@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+strong_sort/__init__.py
+strong_sort/reid_multibackend.py
+strong_sort/strong_sort.py
+strongsort.egg-info/PKG-INFO
+strongsort.egg-info/SOURCES.txt
+strongsort.egg-info/dependency_links.txt
+strongsort.egg-info/requires.txt
+strongsort.egg-info/top_level.txt
