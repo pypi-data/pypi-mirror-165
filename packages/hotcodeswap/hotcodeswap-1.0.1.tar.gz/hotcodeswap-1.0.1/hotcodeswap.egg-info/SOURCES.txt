@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+hotcodeswap.egg-info/PKG-INFO
+hotcodeswap.egg-info/SOURCES.txt
+hotcodeswap.egg-info/dependency_links.txt
+hotcodeswap.egg-info/top_level.txt
+hotcodeswap.egg-info/zip-safe
+hotswap/__init__.py
+hotswap/hotswap.py
