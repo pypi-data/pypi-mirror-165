@@ -1,0 +1,133 @@
+Metadata-Version: 2.1
+Name: buildbot-phorge
+Version: 22.8.0
+Summary: buildbot-phorge integration
+Home-page: https://git.sr.ht/~evilham/buildbot-phorge/
+Author: Evilham
+Author-email: contact@evilham.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: Software Development :: Testing
+Classifier: Intended Audience :: Developers
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# [Buildbot][buildbot]-[Phorge][phorge] integration
+
+[Buildbot][buildbot] is a wonderful automation framework,
+[Phorge][phorge] is a community fork of [Phabricator][phabricator], a wonderful
+review and CVS hosting tool.
+
+Sadly they don't talk too well to eachother. This aims to fix that.
+
+## Setting up [Buildbot][buildbot]
+
+Install this package from pypi into the same environment that your
+buildbot-master runs on.
+
+### [Change Hook][bbchangehook]
+
+This component is required in order to tell [Buildbot][buildbot] about a new
+changeset.
+
+Similarly to other [Buildbot][buildbot] [Change Hooks][bbchangehook], we
+configure it in `c["www"]`.
+
+To set up the hook, we need the [Phorge][phorge] host, a secret to authenticate
+such host against [Buildbot][buildbot] and a Conduit API token to authenticate
+[Buildbot][buildbot] against [Phorge][phorge] in order to fetch additional data.
+
+#### Example
+
+```python
+# We use this to fetch additional data form Phorge's Conduit API
+phorge_host : str = "we.phorge.it"
+# Phorge uses HTTP Basic Authentication, the value of phorge_host will be
+# username and the value of bb_token (may be a secret) will be the password
+# This has to be set up in Phorge
+bb_token : Union[str, Secret] = util.Secret("we.phorge.it.bb_token")
+# Phorge doesn't send us all necessary data for the build, so we have to fetch
+# it using the Conduit API, for which we need this token. It may be a secret
+conduit_api_token: Union[str, Secret] = util.Secret("we.phorge.it.api_token")
+
+# And the actual bits, when setting up the 'www' plugin, change_hook_dialects
+# must be set up in a similar fashion to this.
+c["www"] = dict(
+	[...]
+	change_hook_dialects=dict(phorge={
+		"credentials": {
+			phorge_host: (bb_token, conduit_api_token)
+		}),
+	[...]
+)
+```
+
+### [Reporter][bbreporter]
+
+In order to notify [Phorge][phorge] about the result of builds, we need a
+[Reporter][bbreporter].
+
+Currently due to Conduit API limitations, no information other than `PASS`
+and `FAILED` can be sent.
+
+#### Example
+
+```python
+# Import the necessary class
+from buildbot_phorge import PhorgeReporter
+
+# Here we only need phorge_host and conduit_api_token, as for the hook
+# Remember conduit_api_token may be a Secret.
+c["services"].append(PhorgeReporter(token=conduit_api_token, host=phorge_host))
+```
+
+
+## Setting up [Phorge][phorge]
+
+In [Phorge][phorge] you have to setup a Build Plan for Harbormaster.
+Depending on your setup, you may only need one Build Step that triggers
+buildbot, as [Buildbot][buildbot] is much better at automation.
+
+This is **Build Step** of type **Make HTTP Request**.
+
+As far as we can see, there is no option to pass arguments over `POST`
+requests, so we pick HTTP Method `GET`.
+
+Add some secure **Credentials** which will be checked on [Buildbot][buildbot].
+
+> Remember that the **User** must match your [Phorge][phorge] hostname!
+
+Setup **When Complete** as **Wait For Message**, [Buildbot][buildbot] should
+tell [Phorge][phorge] about the result of the build afterwards.
+
+The tricky bit is the **URI** setting, we have to pass all the information
+that [Buildbot][buildbot] will need to trigger the build and let
+[Phorge][phorge] know about its result.
+
+The URI should look like this (change `${CI_HOST}` for your
+[Buildbot][buildbot] hostname)
+
+```
+# Set this Build Step URI on Phorge
+https://${CI_HOST}/change_hook/phorge?id=${build.id}&t=${target.phid}&ts=${step.timestamp}&u=${repository.uri}
+```
+
+# Future work
+
+This can still be improved but it works wonderfully as-is for us.
+
+Still, there are some things that you can hack / improve.
+
+## Use the `${buildable.diff}` to trigger builds on Reviews / Diffs
+
+## Use the `${buildable.revision}` to trigger builds on Revisions / Audits
+
+[buildbot]: https://buildbot.net
+[phorge]: https://phorge.it
+[phabricator]: https://phabricator.org
+[bbchangehook]: http://docs.buildbot.net/current/manual/configuration/changesources.html#change-hooks-http-notifications
+[bbreporter]: https://docs.buildbot.net/current/manual/configuration/reporters/index.html
