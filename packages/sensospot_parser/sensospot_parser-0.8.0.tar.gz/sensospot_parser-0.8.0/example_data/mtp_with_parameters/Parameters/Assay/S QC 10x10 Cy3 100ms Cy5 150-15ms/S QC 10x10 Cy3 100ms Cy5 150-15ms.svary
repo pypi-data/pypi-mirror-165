@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Definition of the microarray and the-->
+<!--embedded reference pattern-->
+<MicroArray>
+  <Layout NofSpotsX="10" NofSpotsY="10" SpotDistMmX="0.303" SpotDistMmY="0.297" />
+  <ReferencePattern ReferencePointOffsetMm.X="1.6392982179205673" ReferencePointOffsetMm.Y="2.0253288169139632">
+    <Features MarkerType="BRIGHT">
+    </Features>
+    <Tolerances ScalePercent="5" RotationPercent="5">
+      <CIRCLE PositionMm="0.06" SizePercent="50" SimpleCompactnessMax="17" EccentricityMax="0.2" />
+      <RECT PositionMm="0.1" SizePercent="30" SimpleCompactnessMin="13" SimpleCompactnessMax="22" EccentricityMin="0.25" EccentricityMax="0.4">
+      </RECT>
+    </Tolerances>
+    <Shapes>
+      <Shape0 ShapeType="CIRCLE" PosMm.X="0" PosMm.Y="0" DiameterMm="0.187">
+      </Shape0>
+      <Shape1 ShapeType="CIRCLE" PosMm.X="2.728" PosMm.Y="2.682" DiameterMm="0.184">
+      </Shape1>
+      <Shape2 ShapeType="CIRCLE" PosMm.X="2.701" PosMm.Y="-0.021" DiameterMm="0.187">
+      </Shape2>
+      <Shape3 ShapeType="CIRCLE" PosMm.X="0.024" PosMm.Y="2.7" DiameterMm="0.191">
+      </Shape3>
+    </Shapes>
+  </ReferencePattern>
+  <RelationArrayToRefPattern OffsetMm.X="0" OffsetMm.Y="0" ScalingFactor="0.99430589150056758" RotationAngleDeg="-0.13126175132547502">
+  </RelationArrayToRefPattern>
+</MicroArray>

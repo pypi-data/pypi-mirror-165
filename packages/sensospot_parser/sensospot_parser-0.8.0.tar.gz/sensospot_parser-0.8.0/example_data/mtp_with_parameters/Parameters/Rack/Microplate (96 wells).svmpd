@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<Rack Version="2">
+  <Reference RefPosXMm="103.5" RefPosYMm="67.5" RefPosZMm="3.8" XAxisInverted="True" YAxisInverted="True">
+  </Reference>
+  <ChannelSettings>
+    <ChannelSetting1 ExposureTimeMs="100" IlluminationId="3" Intensity="100">
+    </ChannelSetting1>
+    <ChannelSetting2 ExposureTimeMs="50" IlluminationId="4" Intensity="100">
+    </ChannelSetting2>
+  </ChannelSettings>
+  <PlateHolder HolderType="SinglePlateHolder">
+  </PlateHolder>
+  <Layout OffsetXMm="12.5" OffsetYMm="10" OffsetZMm="3.42" NofWellsX="12" NofWellsY="8" WellDistXMm="9" WellDistYMm="9" WellDiameterMm="5" WellSizeXMm="1" WellSizeYMm="1" WellType="Circle">
+  </Layout>
+  <DigitalPlate Create="False" BkgndColor="Black">
+  </DigitalPlate>
+  <Flip>
+    <Settings Direction="FLIP_NONE">
+    </Settings>
+  </Flip>
+</Rack>
