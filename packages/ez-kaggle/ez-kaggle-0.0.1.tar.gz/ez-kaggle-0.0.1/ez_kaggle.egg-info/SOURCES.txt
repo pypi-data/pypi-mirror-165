@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+settings.ini
+setup.py
+ez_kaggle/__init__.py
+ez_kaggle/_modidx.py
+ez_kaggle/dataset.py
+ez_kaggle/kernel.py
+ez_kaggle/setup.py
+ez_kaggle.egg-info/PKG-INFO
+ez_kaggle.egg-info/SOURCES.txt
+ez_kaggle.egg-info/dependency_links.txt
+ez_kaggle.egg-info/entry_points.txt
+ez_kaggle.egg-info/not-zip-safe
+ez_kaggle.egg-info/requires.txt
+ez_kaggle.egg-info/top_level.txt

@@ -1,0 +1,8 @@
+fastcore
+nbdev
+execnb
+kaggle
+
+[dev]
+fastai
+pandas
