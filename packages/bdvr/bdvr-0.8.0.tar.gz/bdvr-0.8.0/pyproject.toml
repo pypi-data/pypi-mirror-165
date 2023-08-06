@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "bdvr"
+version = "0.8.0"
+description = "customized report generated from set of blackduck reports that gives 'color coded vulnerabilities', and 'source paths' including 'direct' and 'indirect dependencies' details all in one report"
+authors = ["dineshr93gmail.com"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pandas = "^1.4.3"
+quo = "^2022.8.2"
+universal-startfile = "^0.1.3"
+
+[tool.poetry.scripts]
+bdvr = 'bdvr:main'
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
