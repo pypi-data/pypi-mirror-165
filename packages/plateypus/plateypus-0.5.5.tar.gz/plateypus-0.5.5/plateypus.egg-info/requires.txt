@@ -1,0 +1,8 @@
+pandas
+seaborn
+scipy
+openpyxl
+tables
+pillow
+colorcet
+importlib_metadata
