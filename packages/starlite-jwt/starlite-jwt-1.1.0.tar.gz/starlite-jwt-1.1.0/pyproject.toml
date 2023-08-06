@@ -1,0 +1,96 @@
+[tool.poetry]
+name = "starlite-jwt"
+version = "1.1.0"
+description = "A JWT auth toolkit for Starlite"
+authors = ["Na'aman Hirschfeld <nhirschfeld@gmail.com>"]
+maintainers = ["Na'aman Hirschfeld <nhirschfeld@gmail.com>", "Peter Schutt <peter.github@proton.me>", "Cody Fincher <cody.fincher@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/starlite-api/jwt-auth"
+repository = "https://github.com/starlite-api/jwt-auth"
+documentation = "https://github.com/starlite-api/jwt-auth"
+keywords = ["starlite", "jwt", "jwt-token", "jwt-auth", "jwt-authentication", "auth", "authentication", "middleware", "token", "apitoken"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Web Environment",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development",
+    "Typing :: Typed",
+]
+include = ["CHANGELOG.md"]
+packages = [
+    { include = "starlite_jwt" },
+]
+
+[tool.poetry.dependencies]
+python = ">=3.7,<4.0"
+starlite = ">=1.14.1"
+python-jose = "*"
+cryptography = "*"
+
+[tool.poetry.dev-dependencies]
+pytest = "*"
+pytest-asyncio = "*"
+pytest-cov = "*"
+requests = "*"
+pre-commit = "*"
+hypothesis = "*"
+mkdocs-gen-files = "*"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 120
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+
+[tool.pylint.DESIGN]
+max-args = 7
+
+[tool.pylint.MESSAGE_CONTROL]
+disable = [
+    "line-too-long",
+    "missing-module-docstring",
+    "missing-class-docstring",
+
+]
+enable = "useless-suppression"
+extension-pkg-allow-list = ["pydantic"]
+
+[tool.pylint.REPORTS]
+reports = "no"
+
+[tool.pylint.FORMAT]
+max-line-length = "120"
+
+[tool.pylint.VARIABLES]
+ignored-argument-names = "args|kwargs|_|__"
+
+[tool.pylint.BASIC]
+good-names = "_,__,i,e"
+# Regular expression which should only match function or class names that do
+# not require a docstring.
+no-docstring-rgx="(__.*__|main|test.*|.*test|.*Test|^_.*)$"
+
+[tool.coverage.run]
+omit = ["*/tests/*"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+
+[tool.pycln]
+all = true
