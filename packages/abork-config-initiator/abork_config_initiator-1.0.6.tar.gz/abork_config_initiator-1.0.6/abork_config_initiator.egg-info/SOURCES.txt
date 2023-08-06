@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+abork_config_initiator.egg-info/PKG-INFO
+abork_config_initiator.egg-info/SOURCES.txt
+abork_config_initiator.egg-info/dependency_links.txt
+abork_config_initiator.egg-info/top_level.txt
+py_config_initiator/__init__.py
+py_config_initiator/config.py
