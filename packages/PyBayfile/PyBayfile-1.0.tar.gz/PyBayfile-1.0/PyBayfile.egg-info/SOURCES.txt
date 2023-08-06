@@ -1,0 +1,7 @@
+setup.py
+PyBayfile/__init__.py
+PyBayfile.egg-info/PKG-INFO
+PyBayfile.egg-info/SOURCES.txt
+PyBayfile.egg-info/dependency_links.txt
+PyBayfile.egg-info/requires.txt
+PyBayfile.egg-info/top_level.txt
