@@ -1,0 +1,2 @@
+[console_scripts]
+hhlpy = hhlpy.__main__:main

@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: hhlpy
+Version: 0.0.4
+Summary: Prove hybrid programs correct using Hybrid Hoare Logic
+Author: Huanhuan Sheng, Bohua Zhan, Alexander Bentkamp
+Project-URL: Homepage, https://gitee.com/bhzhan/mars
+Keywords: hhl,hybrid systems,hoare logic
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Requires-Dist: flask (>=2.0.2)
+Requires-Dist: scipy (>=1.5.4)
+Requires-Dist: sympy (>=1.9)
+Requires-Dist: z3-solver (>=4.8.14.0)
+Requires-Dist: lark-parser (>=0.12.0)
+Requires-Dist: gevent-websocket (>=0.10.1)
+Requires-Dist: wolframclient (>=1.1.7)
+Requires-Dist: waitress (>=2.1.2)
+
