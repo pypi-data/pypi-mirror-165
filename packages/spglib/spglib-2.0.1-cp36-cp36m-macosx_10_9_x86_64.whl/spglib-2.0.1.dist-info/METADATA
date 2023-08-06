@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: spglib
+Version: 2.0.1
+Summary: This is the spglib module.
+Home-page: http://spglib.github.io/spglib/
+Author: Atsushi Togo
+Author-email: atz.togo@gmail.com
+License: BSD-3-Clause
+Platform: all
+Provides: spglib
+Description-Content-Type: text/x-rst
+Requires-Dist: numpy
+Provides-Extra: doc
+Requires-Dist: Sphinx (==4.5.0) ; extra == 'doc'
+Requires-Dist: sphinx-autobuild (==2021.3.14) ; extra == 'doc'
+Requires-Dist: sphinxcontrib-bibtex (==2.4.2) ; extra == 'doc'
+Requires-Dist: sphinx-book-theme (==0.3.3) ; extra == 'doc'
+Requires-Dist: myst-parser (==0.18.0) ; extra == 'doc'
+
+spglib
+======
+
+Python bindings for C library for finding and handling crystal
+symmetries
+
+Installation
+------------
+
+The package is developed on github. You can get the source for the
+released versions from the
+`repository <https://github.com/spglib/spglib/releases>`__.
+
+Using package distribution service
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The easiest way to install python-spglib is to use the pypi package, for
+which numpy is required to be installed before the installation. A
+command to install spglib is:
+
+::
+
+    pip install spglib
+
+Conda is another choice:
+
+::
+
+    conda install -c conda-forge spglib
+
+These packages are made by Pawel T. Jochym.
+
+
