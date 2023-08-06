@@ -1,0 +1,8 @@
+get_ncbi/__init__.py,sha256=px_rcc5u6P_TmH1nHMI95OSWjqrDmFZFUDxEbpmaEbo,276
+get_ncbi/main.py,sha256=M_wahk4eCf9FluyqG8KYeeSpZHwoQxVCN7MkeLr9aSQ,2921
+get_ncbi-1.0.1.data/scripts/get_ncbi,sha256=pX2Omq2sejk3mJSfTVj3Xa41zxASJcqMwH4z2pxu7sY,95
+get_ncbi-1.0.1.dist-info/LICENSE,sha256=JacPoYP9nkaejIrUVLBfyAi83mgBc0jqnn7QVwU15kE,1170
+get_ncbi-1.0.1.dist-info/METADATA,sha256=0NK0gxS9Cc1Aq0C1uEIv9T2fw7gajXfRTXDPOMPf9N8,482
+get_ncbi-1.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+get_ncbi-1.0.1.dist-info/top_level.txt,sha256=9-VckyGcNlVAWZ-A5GlGiEOmfsp8KkAdg_sLSv5co2c,9
+get_ncbi-1.0.1.dist-info/RECORD,,
