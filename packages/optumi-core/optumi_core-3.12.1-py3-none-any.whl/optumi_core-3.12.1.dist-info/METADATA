@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: optumi-core
+Version: 3.12.1
+Summary: Optumi core library
+Home-page: https://optumi.com
+Author: Optumi Inc Authors
+Author-email: cs@optumi.com
+License: UNKNOWN
+Keywords: Optumi
+Platform: Linux
+Platform: Mac OS X
+Platform: Windows
+Classifier: License :: Other/Proprietary License
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests-toolbelt
+
+# **Welcome to Optumi 👋**
+
+### Description
+
+Optumi is a cloud service that makes it easy for data scientists to develop & train ML models on powerful computing resources.
+
+We offer a JupyterLab extension that runs local Python notebooks in the cloud. We offer access to a wide variety of powerful cloud resources to launch interactive sessions or batch jobs.
+
