@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: classification-models-pytorch
+Version: 0.0.1
+Summary: Classification_models_pytorch
+Home-page: https://github.com/smha-Promedius/classification_models_pytorch
+Author: Seungmin Ha & Saerom Park
+Author-email: smha@promedius.ai
+License: MIT
+Description: UNKNOWN
+Keywords: artificial intelligence,image classification,torchvision
+Platform: UNKNOWN
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown

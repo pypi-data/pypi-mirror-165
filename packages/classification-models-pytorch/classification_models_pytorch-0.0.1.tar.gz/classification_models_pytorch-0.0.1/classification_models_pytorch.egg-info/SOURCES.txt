@@ -1,0 +1,8 @@
+setup.py
+classification_models_pytorch/__init__.py
+classification_models_pytorch/models.py
+classification_models_pytorch.egg-info/PKG-INFO
+classification_models_pytorch.egg-info/SOURCES.txt
+classification_models_pytorch.egg-info/dependency_links.txt
+classification_models_pytorch.egg-info/requires.txt
+classification_models_pytorch.egg-info/top_level.txt
