@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: websockets-actions
+Version: 0.2.0
+Summary: Using Actions for Websockets
+Author: Omelchenko Michael
+Author-email: socanime@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: starlette (>=0.20.4,<0.21.0)
+Requires-Dist: uvicorn[standart] (>=0.18.3,<0.19.0)
