@@ -1,0 +1,10 @@
+build
+setuptools
+pip
+sqlalchemy
+twine
+jsonpickle
+pytest
+eot
+wheel
+eons
