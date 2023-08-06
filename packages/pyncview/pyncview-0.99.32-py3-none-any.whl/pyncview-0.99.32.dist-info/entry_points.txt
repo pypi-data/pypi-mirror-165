@@ -1,0 +1,5 @@
+[console_scripts]
+multiplot = pyncview.multiplot:main
+
+[gui_scripts]
+pyncview = pyncview.pyncview:main
