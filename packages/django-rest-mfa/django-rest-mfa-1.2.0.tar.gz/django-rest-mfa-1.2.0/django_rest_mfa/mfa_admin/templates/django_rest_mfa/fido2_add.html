@@ -1,0 +1,34 @@
+{% extends "admin/base_site.html" %}
+{% load i18n static %}
+
+{% block title %}Multi Factor Authentication - Set Up New Device{% endblock %}
+
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+<a href="{% url 'admin:index' %}">{% translate 'Home' %}</a>
+&rsaquo; <a href="{% url 'user-key-list' %}">{% translate 'Multi Factor Authentication' %}</a>
+&rsaquo; Add FIDO2 Key
+</div>
+{% endblock %}
+
+{% block extrahead %}
+    <meta id="mfa-url-provider" data-user_keys_list="{% url "user-keys-list" %}"></meta>
+    <script src="{% static "django_rest_mfa/cbor.js" %}"></script>
+    <script src="{% static "django_rest_mfa/utils.js" %}"></script>
+{% endblock %}
+
+{% block content %}
+<h1>Set up new FIDO2 Hardware Device</h1>
+
+<form id="fido2_form">
+<label for="name">Device Name</label>
+<input name="name"></input>
+
+<p>
+Connect the device now and select add
+</p>
+
+<button>Add</button>
+</form>
+<script src="{% static "django_rest_mfa/fido2_add.js" %}"></script>
+{% endblock %}

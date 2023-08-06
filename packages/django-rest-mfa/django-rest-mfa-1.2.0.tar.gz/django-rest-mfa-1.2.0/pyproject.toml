@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "django-rest-mfa"
+version = "1.2.0"
+description = "Django Rest Framework Endpoints for MFA including TOTP and FIDO2"
+authors = ["David Burke <david@burkesoftware.com>"]
+license = "MIT"
+classifiers=[
+    'Framework :: Django',
+]
+
+[tool.poetry.urls]
+"homepage" = "https://gitlab.com/burke-software/django-rest-mfa"
+
+[tool.poetry.dependencies]
+python = "^3.8.0"
+fido2 = "^1.0.0"
+djangorestframework = "^3.12.4"
+pyotp = "^2.6.0"
+user-agents = "^2.2.0"
+dj-rest-auth = "^2.1.7"
+
+[tool.poetry.dev-dependencies]
+black = "^22.6.0"
+pylint-django = "^2.4.4"
+django-sslserver = "^0.22"
+model-bakery = "^1.3.1"
+ipdb = "^0.13.8"
+dj-rest-auth = "^2.2.4"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

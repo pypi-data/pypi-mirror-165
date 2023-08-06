@@ -1,0 +1,28 @@
+{% extends "admin/login.html" %}
+{% load static %}
+
+{% block extrahead %}
+    <meta
+        id="mfa-url-provider"
+        data-authenticate_fido2="{% url "authenticate-fido2" %}"
+        data-authenticate_totp="{% url "authenticate-totp" %}"
+    ></meta>
+    <script src="{% static "django_rest_mfa/cbor.js" %}"></script>
+    <script src="{% static "django_rest_mfa/utils.js" %}"></script>
+{% endblock %}
+
+{% block content %}
+<h2>Hardware key</h2>
+
+<h2>TOTP</h2>
+<form id="otp_form">
+    <label for="otp">One Time Pass Code</label>
+    <input id="otp" name="otp"></input>
+    <div>
+        <input id="remember" name="remember" type="checkbox"></input>
+        <label for="remember">Remember this device</label>
+    </div>
+    <input type="submit"></input>
+</form>
+<script src="{% static "django_rest_mfa/second_factor.js" %}"></script>
+{% endblock %}

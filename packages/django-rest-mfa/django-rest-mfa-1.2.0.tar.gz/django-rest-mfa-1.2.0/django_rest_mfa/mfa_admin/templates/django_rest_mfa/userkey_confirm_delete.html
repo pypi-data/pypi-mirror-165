@@ -1,0 +1,19 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+
+{% block title %}Multi Factor Authentication - Delete{% endblock %}
+
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+<a href="{% url 'admin:index' %}">{% translate 'Home' %}</a>
+&rsaquo; <a href="{% url 'user-key-list' %}">{% translate 'Multi Factor Authentication' %}</a>
+&rsaquo; Delete
+</div>
+{% endblock %}
+
+{% block content %}
+Are you sure you would like to delete {{ object }}?
+<form method="post">{% csrf_token %}
+<input type="submit" value="Delete"></input>
+</form>
+{% endblock %}
