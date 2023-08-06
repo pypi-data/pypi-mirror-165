@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+vnpy_tushare/__init__.py
+vnpy_tushare/tushare_datafeed.py
+vnpy_tushare.egg-info/PKG-INFO
+vnpy_tushare.egg-info/SOURCES.txt
+vnpy_tushare.egg-info/dependency_links.txt
+vnpy_tushare.egg-info/not-zip-safe
+vnpy_tushare.egg-info/requires.txt
+vnpy_tushare.egg-info/top_level.txt
