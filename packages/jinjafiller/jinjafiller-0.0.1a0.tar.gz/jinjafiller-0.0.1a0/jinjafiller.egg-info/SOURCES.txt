@@ -1,0 +1,11 @@
+README.md
+setup.py
+jinjafiller/__init__.py
+jinjafiller/cla.py
+jinjafiller/main.py
+jinjafiller.egg-info/PKG-INFO
+jinjafiller.egg-info/SOURCES.txt
+jinjafiller.egg-info/dependency_links.txt
+jinjafiller.egg-info/entry_points.txt
+jinjafiller.egg-info/requires.txt
+jinjafiller.egg-info/top_level.txt
