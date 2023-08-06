@@ -1,0 +1,7 @@
+requests==2.28.1
+lxml==4.8.0
+pytest==7.0.1
+allure-pytest==2.9.45
+psycopg2-binary==2.9.2
+cx-Oracle==8.3.0
+mysql-connector-python==8.0.28
