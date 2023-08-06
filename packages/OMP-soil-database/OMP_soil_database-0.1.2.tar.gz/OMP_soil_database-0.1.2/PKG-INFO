@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: OMP_soil_database
+Version: 0.1.2
+Summary: A python package for calculating the removal of microbial organisms in the subsurface
+Home-page: https://github.com/KWR-Water/OMP_soil_database
+Author: KWR Water Research Institute
+Author-email: vincent.post@kwrwater.nl, martin.korevaar@kwrwater.nl, martin.van.der.schans@kwrwater.nl, steven.ros@kwrwater.nl
+License: MIT
+Project-URL: Source, https://github.com/steven-ros/OMP_soil_database
+Project-URL: Documentation, http://OMP_soil_database.readthedocs.io/en/latest/
+Project-URL: Tracker, https://github.com/KWR-Water/OMP_soil_database/issues
+Project-URL: Help, https://github.com/KWR-Water/OMP_soil_database/issues
+Description: OMP_soil_database
+        ==================
+        .. image:: https://readthedocs.org/projects/OMP_soil_database/badge/?version=latest&style=flat
+                            :target: https://OMP_soil_database.readthedocs.io
+        .. image:: https://img.shields.io/travis/KWR-Water/OMP_soil_database
+                            :target: https://travis-ci.com/KWR-Water/OMP_soil_database
+        .. image:: https://img.shields.io/codecov/c/gh/KWR-Water/OMP_soil_database
+                            :target: https://codecov.io/gh/KWR-Water/OMP_soil_database
+        
+        A tool to calculate the fate of Organic Micropollutant and pathogens in the subsoil.
+        
+        See documentation_ for more information.
+        
+        
+        Installation
+        ------------
+        To get the latest stable version, use::
+        
+            python -m pip install git+https://github.com/KWR-Water/OMP_soil_database.git@main
+        
+        or::
+        
+            pip install git+ssh://git@github.com/KWR-Water/OMP_soil_database.git@main
+        
+        License
+        -------
+        
+        This package is MIT licensed. See `License File <https://github.com/KWR-Water/OMP_soil_database/blob/master/LICENSE>`__.
+        
+        .. _documentation: https://OMP_soil_database.readthedocs.io/en/latest/
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Other Audience
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering :: Hydrology
+Requires-Python: >=3.7
+Description-Content-Type: text/x-rst
