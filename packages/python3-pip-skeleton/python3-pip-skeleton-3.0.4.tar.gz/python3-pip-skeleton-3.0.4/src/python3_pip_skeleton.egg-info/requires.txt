@@ -1,0 +1,13 @@
+
+[dev]
+black==22.6.0
+flake8-isort
+isort>5.0
+mypy
+pipdeptree
+pre-commit
+pytest-cov
+setuptools_scm[toml]>=6.2
+sphinx-rtd-theme-github-versions
+tox
+types-mock
