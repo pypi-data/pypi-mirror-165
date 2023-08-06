@@ -1,0 +1,12 @@
+polvo/__init__.py,sha256=f8tDLuL7Y_lM-ZIgswsPV3ckmbhdQ71MCUbNMQNy06g,69
+polvo/_modidx.py,sha256=A2odVc56dKs_diL84bvbbaiSc3DTBUfcNZB_td549xk,6174
+polvo/core.py,sha256=exE-Mw-QgIPt-US-vOkna_ZSSjG6VFH9Lhy3Uori_BE,4293
+polvo/classification/__init__.py,sha256=dmIH3HHYOhQEumXQ-DWrAURpEpZ2q-zZ8IiYgn6V79c,36
+polvo/classification/baseline/__init__.py,sha256=DBouAWk5j9U_5zvpuXcEjomiqQHDwmRzYCtyBXMtBrk,23
+polvo/classification/baseline/baseline.py,sha256=izxXsFUob9mzqixIihe07Jp21P09DeeeIOL_KzirCEA,1836
+polvo-0.1.4.dist-info/LICENSE,sha256=xV8xoN4VOL0uw9X8RSs2IMuD_Ss_a9yAbtGNeBWZwnw,11337
+polvo-0.1.4.dist-info/METADATA,sha256=4xqwZknF9LlosKS706R5hWaAKsmvrHFZYzeqJLQZrN4,2145
+polvo-0.1.4.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+polvo-0.1.4.dist-info/entry_points.txt,sha256=BTXS9BlnK5cVIogD9lTCxd8rH-vrbSWpx1WAPXbHTsI,91
+polvo-0.1.4.dist-info/top_level.txt,sha256=qUXe6miVhovV2XKxffNNHas8zClRLRoPeXlKP5OfWBs,6
+polvo-0.1.4.dist-info/RECORD,,
