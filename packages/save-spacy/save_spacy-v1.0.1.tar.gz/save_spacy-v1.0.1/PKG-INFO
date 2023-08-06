@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: save_spacy
+Version: v1.0.1
+Summary: Save and Load Spacy models locally and on GCP.
+Home-page: https://github.com/rennanvoa2/save_spacy
+Author: Rennan Valadares
+Author-email: rennanvoa2@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/rennanvoa2/save_spacy/archive/refs/tags/v1.0.1.tar.gz
+Description: UNKNOWN
+Keywords: Spacy,spacy,save model,nlp
+Platform: UNKNOWN
