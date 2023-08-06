@@ -1,0 +1,12 @@
+pandas
+numpy
+scibiomart
+sciutil>=1.0.3
+scivae
+sklearn
+sciviso
+seaborn
+stats
+matplotlib_venn
+scimotf
+scie2g
