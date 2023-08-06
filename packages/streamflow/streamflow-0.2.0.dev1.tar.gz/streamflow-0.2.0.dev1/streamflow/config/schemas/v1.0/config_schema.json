@@ -1,0 +1,420 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "config_schema.json",
+  "type": "object",
+  "definitions": {
+    "binding": {
+      "$id": "#/definitions/binding",
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "step": {
+              "type": "string"
+            },
+            "target": {
+              "type": "object",
+              "$ref": "#/definitions/target"
+            }
+          },
+          "required": [
+            "step",
+            "target"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "port": {
+              "type": "string"
+            },
+            "target": {
+              "type": "object",
+              "$ref": "#/definitions/target"
+            }
+          },
+          "required": [
+            "port",
+            "target"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "checkpointManager": {
+      "$id": "#/definitions/checkpointManager",
+      "type": "object",
+      "definitions": {},
+      "properties": {
+        "enabled": {
+          "type": "boolean",
+          "description": "Enable checkpointing service",
+          "default": false
+        },
+        "type": {
+          "type": "string"
+        }
+      },
+      "$comment": "The `config` property is injected by each CheckpointManager extension",
+      "if": {
+        "properties": {
+          "enabled": {
+            "const": true
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "type",
+          "config"
+        ]
+      }
+    },
+    "database": {
+      "$id": "#/definitions/database",
+      "type": "object",
+      "definitions": {},
+      "properties": {
+        "type": {
+          "type": "string"
+        }
+      },
+      "$comment": "The `config` property is injected by each Database extension",
+      "required": [
+        "type",
+        "config"
+      ]
+    },
+    "dataManager": {
+      "$id": "#/definitions/dataManager",
+      "type": "object",
+      "definitions": {},
+      "properties": {
+        "type": {
+          "type": "string"
+        }
+      },
+      "$comment": "The `config` property is injected by each DataManager extension",
+      "required": [
+        "type",
+        "config"
+      ]
+    },
+    "deployment": {
+      "$id": "#/definitions/deployment",
+      "type": "object",
+      "definitions": {},
+      "properties": {
+        "external": {
+          "type": "boolean",
+          "description": "If set, StreamFlow does not manage the lifecycle of the execution environment. This means that all required services must be up and running when the workflow starts",
+          "default": false
+        },
+        "lazy": {
+          "type": "boolean",
+          "description": "If true, a model is deployed only when it becomes necessary for transfers or executions. If false, a DeployStep will deploy its related model as soon as it becomes fireable",
+          "default": true
+        },
+        "policy": {
+          "type": "string",
+          "description": "The scheduling policy to be used with this deployment.",
+          "default": "data_locality"
+        },
+        "type": {
+          "type": "string"
+        },
+        "workdir": {
+          "type": "string",
+          "description": "Path to the working directory.",
+          "default": "${TMPDIR}/streamflow"
+        }
+      },
+      "$comment": "The `config` property is injected by each Connector extension",
+      "required": [
+        "type",
+        "config"
+      ]
+    },
+    "deploymentManager": {
+      "$id": "#/definitions/deploymentManager",
+      "type": "object",
+      "definitions": {},
+      "properties": {
+        "type": {
+          "type": "string"
+        }
+      },
+      "$comment": "The `config` property is injected by each DeploymentManager extension",
+      "required": [
+        "type",
+        "config"
+      ]
+    },
+    "failureManager": {
+      "$id": "#/definitions/failureManager",
+      "type": "object",
+      "definitions": {},
+      "properties": {
+        "enabled": {
+          "type": "boolean",
+          "description": "Enable checkpointing service",
+          "default": false
+        },
+        "type": {
+          "type": "string"
+        }
+      },
+      "$comment": "The `config` property is injected by each FailureManager extension",
+      "if": {
+        "properties": {
+          "enabled": {
+            "const": true
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "type",
+          "config"
+        ]
+      }
+    },
+    "policy": {
+      "$id": "#/definitions/policy",
+      "type": "object",
+      "definitions": {},
+      "properties": {
+        "type": {
+          "type": "string"
+        }
+      },
+      "$comment": "The `config` property is injected by each Policy extension",
+      "required": [
+        "type",
+        "config"
+      ]
+    },
+    "scheduler": {
+      "$id": "#/definitions/scheduler",
+      "type": "object",
+      "definitions": {},
+      "properties": {
+        "type": {
+          "type": "string"
+        }
+      },
+      "$comment": "The `config` property is injected by each Scheduler extension",
+      "required": [
+        "type",
+        "config"
+      ]
+    },
+    "target": {
+      "$id": "#/definitions/target",
+      "type": "object",
+      "properties": {
+        "deployment": {
+          "type": "string"
+        },
+        "model": {
+          "type": "string"
+        },
+        "resources": {
+          "type": "integer",
+          "description": "(**Deprecated.** Use locations.) If greater than one, the STREAMFLOW_HOSTS variable contains the comma-separated list of nodes allocated for the task",
+          "default": 1
+        },
+        "locations": {
+          "type": "integer",
+          "description": "If greater than one, the STREAMFLOW_HOSTS variable contains the comma-separated list of nodes allocated for the task",
+          "default": 1
+        },
+        "policy": {
+          "type": "string",
+          "description": "The scheduling policy to be used with this target. Overrides the deployment policy when present.",
+          "default": "data_locality"
+        },
+        "service": {
+          "type": "string"
+        },
+        "workdir": {
+          "type": "string",
+          "description": "Path to the working directory. It overrides the deployment-level setting.",
+          "default": "${TMPDIR}/streamflow"
+        }
+      },
+      "oneOf": [
+        {
+          "required": [
+            "deployment"
+          ]
+        },
+        {
+          "required": [
+            "model"
+          ]
+        }
+      ],
+      "additionalProperties": false
+    },
+    "workflow": {
+      "$id": "#/definitions/workflow",
+      "type": "object",
+      "definitions": {
+        "cwl": {
+          "$id": "#/definitions/workflow/definitions/cwl",
+          "type": "object",
+          "properties": {
+            "file": {
+              "type": "string"
+            },
+            "settings": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "file"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "properties": {
+        "type": {
+          "$id": "#/definitions/workflow/properties/type",
+          "type": "string",
+          "enum": [
+            "cwl"
+          ]
+        },
+        "bindings": {
+          "$id": "#/definitions/workflow/properties/bindings",
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "type": "object",
+                "$ref": "#/definitions/binding"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "$ref": "#/definitions/binding"
+                }
+              }
+            ]
+          },
+          "uniqueItems": true
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "cwl"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "config": {
+                "$id": "#/definitions/workflow/properties/config",
+                "type": "object",
+                "$ref": "#/definitions/workflow/definitions/cwl"
+              }
+            }
+          }
+        }
+      ],
+      "required": [
+        "type",
+        "config"
+      ]
+    }
+  },
+  "properties": {
+    "checkpointManager": {
+      "$id": "#/properties/checkpointManager",
+      "type": "object",
+      "$ref": "#/definitions/checkpointManager"
+    },
+    "database": {
+      "$id": "#/properties/database",
+      "type": "object",
+      "$ref": "#/definitions/database"
+    },
+    "dataManager": {
+      "$id": "#/properties/dataManager",
+      "type": "object",
+      "$ref": "#/definitions/dataManager"
+    },
+    "deployments": {
+      "$id": "#/properties/deployments",
+      "type": "object",
+      "patternProperties": {
+        "^[a-z][a-zA-Z0-9._-]*$": {
+          "$ref": "#/definitions/deployment"
+        }
+      },
+      "additionalProperties": false
+    },
+    "deploymentManager": {
+      "$id": "#/properties/deploymentManager",
+      "type": "object",
+      "$ref": "#/definitions/deploymentManager"
+    },
+    "failureManager": {
+      "$id": "#/properties/failureManager",
+      "type": "object",
+      "$ref": "#/definitions/failureManager"
+    },
+    "scheduling": {
+      "$id": "#/properties/scheduling",
+      "type": "object",
+      "properties": {
+        "scheduler": {
+          "$id": "#/properties/scheduling/scheduler",
+          "type": "object",
+          "$ref": "#/definitions/scheduler"
+        },
+        "policies": {
+          "$id": "#/properties/scheduling/policies",
+          "type": "object",
+          "patternProperties": {
+            "^[a-z][a-zA-Z0-9._-]*$": {
+              "$ref": "#/definitions/policy"
+            }
+          }
+        }
+      }
+    },
+    "models": {
+      "$id": "#/properties/deployments",
+      "type": "object",
+      "patternProperties": {
+        "^[a-z][a-zA-Z0-9._-]*$": {
+          "$ref": "#/definitions/deployment"
+        }
+      },
+      "additionalProperties": false
+    },
+    "version": {
+      "type": "string"
+    },
+    "workflows": {
+      "$id": "#/properties/workflows",
+      "type": "object",
+      "patternProperties": {
+        "^[a-z][a-zA-Z0-9._-]*$": {
+          "$ref": "#/definitions/workflow"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "version"
+  ]
+}
