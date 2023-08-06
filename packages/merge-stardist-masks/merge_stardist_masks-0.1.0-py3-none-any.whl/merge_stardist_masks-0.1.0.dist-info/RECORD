@@ -1,0 +1,8 @@
+merge_stardist_masks/__init__.py,sha256=itXN_ieYoOfqmvX_gOlrrMwo_IPvaUui9lnJ5K264dQ,28
+merge_stardist_masks/naive_fusion.py,sha256=mpm7_B0sJIQwdvdpC4HPAgrkhxGEPjYHKmZVx-yI89c,27146
+merge_stardist_masks/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+merge_stardist_masks/utils.py,sha256=6FAqHTNaN9QuyUWXNMyKsBhynOaPELzj27uw6iqM_Vc,1071
+merge_stardist_masks-0.1.0.dist-info/LICENSE.rst,sha256=Oy7ZtmIqvY7laMYwz5Ieu9_O5HkY5f5Vg0dfl7ivFzE,1085
+merge_stardist_masks-0.1.0.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+merge_stardist_masks-0.1.0.dist-info/METADATA,sha256=OCcNgVVQn7LIExIc5cpmOGaWOx5N0MTpyLgOVQz5fUI,4199
+merge_stardist_masks-0.1.0.dist-info/RECORD,,
