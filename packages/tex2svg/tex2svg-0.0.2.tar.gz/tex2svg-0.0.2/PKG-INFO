@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: tex2svg
+Version: 0.0.2
+Summary: A script to convert LaTeX snippets to SVG
+Home-page: https://github.com/RyanMarcus/tex2svg
+Author: Ryan Marcus
+Author-email: ryan@ryanmarc.us
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: COPYING
+
+# tex2svg
+
+```bash
+pip3 install tex2svg
+```
+
+A simple program to convert a LaTeX equations to SVGs.
+
+```bash
+# for "inline mode" LaTeX
+echo "x^2" | tex2svg > x2.svg 
+
+# for "block" LaTeX
+echo "x^2" | tex2svg --block > x2.svg
+```
+
+Depends on `pdflatex`, `pdfcrop`, `pdf2svg`, and `svgo`. On Arch Linux, you can install these with:
+
+```bash
+sudo pacman -S pdf2svg texlive-most npm
+sudo npm install -g svgo
+```
+
+This program automatically caches outputs. The cache is stored in `~/.tex2svg`. 
+

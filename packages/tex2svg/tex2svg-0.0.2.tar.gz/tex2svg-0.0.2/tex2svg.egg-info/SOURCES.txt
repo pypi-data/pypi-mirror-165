@@ -1,0 +1,10 @@
+COPYING
+LICENSE
+README.md
+setup.py
+bin/tex2svg
+tex2svg/__init__.py
+tex2svg.egg-info/PKG-INFO
+tex2svg.egg-info/SOURCES.txt
+tex2svg.egg-info/dependency_links.txt
+tex2svg.egg-info/top_level.txt
