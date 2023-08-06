@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "trier"
+version = "1.0.3"
+description = "Utility wrapper to handle exceptions."
+license = "MIT"
+authors = ["Arnold Anthonypillai <arnoldbronson16@gmail.com>"]
+readme = "README.md"
+repository = "https://github.com/omegatrix/trier"
+homepage = "https://github.com/omegatrix/trier"
+keywords = ["error-handling", "python3", "async-await", "try-except", "try-catch"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development",
+    "Topic :: Utilities",
+    "Typing :: Typed"
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+pytest-asyncio = "^0.19.0"
+pytest = "^7.1.2"
+pre-commit = "^2.20.0"
+tox = "^3.25.1"
+scriv = {extras = ["toml"], version = "^0.16.0"}
+coverage = "^6.4.4"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.scriv]
+format = "md"
+version = "literal: src/trier/__init__.py: __version__"
