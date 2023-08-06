@@ -1,0 +1,13 @@
+mtxcli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mtxcli/dc.py,sha256=VA0e9Jlom8OOmnFDzvkzomE13fwDNoepneOob2Uu0mk,889
+mtxcli/dockerdev.py,sha256=hT1o8zc0Vx7cvghpF_pk_Kp1yZ9dUxRvnY6Ikb1NSeI,2260
+mtxcli/gitup copy.py,sha256=U_Nyb0ozC9RDa0Q3nqulHbVgslaaX2k-v2IWADyWjoc,2163
+mtxcli/gitup.py,sha256=JF33UH3jQLDgbCBY9Ij9eF162XOtVD_ch2nIXWRjEw0,875
+mtxcli/mtdp.py,sha256=-AIs5Hplb1nmO7DfTQ_FQ6cbhCbm5HN2pFtEwQdAqw4,1321
+mtxcli/mtgp.py,sha256=ZxrIzlyl0dr0dP0oevt6_I36npmmLcSN-rlkXt3MBmM,2707
+mtxcli-0.0.102.data/scripts/dc.py,sha256=dJWPjrFjnKRnM1CvgP52rja7Fer1z-Bgm8ZYP7nlrIg,875
+mtxcli-0.0.102.dist-info/METADATA,sha256=nbngmAKJXh4CWXfE3y4VP9_Xys1t6mc3DjI5jxEkz-s,807
+mtxcli-0.0.102.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+mtxcli-0.0.102.dist-info/entry_points.txt,sha256=UfTiJwYnqc864hJQyWuU9aGHcKZquzxaB9cPOmn360M,152
+mtxcli-0.0.102.dist-info/top_level.txt,sha256=y0GOuPE2PbtSbgMmqPiJsMajup4kgFF09PdXyafqwbQ,7
+mtxcli-0.0.102.dist-info/RECORD,,
