@@ -1,0 +1,10 @@
+LICENSE
+README.rst
+pure_interface.py
+pyproject.toml
+setup.cfg
+setup.py
+pure_interface.egg-info/PKG-INFO
+pure_interface.egg-info/SOURCES.txt
+pure_interface.egg-info/dependency_links.txt
+pure_interface.egg-info/top_level.txt
