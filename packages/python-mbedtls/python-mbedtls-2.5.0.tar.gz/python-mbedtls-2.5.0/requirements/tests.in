@@ -1,0 +1,15 @@
+# Base
+cython
+pytest
+
+# Tooling
+coverage
+readme_renderer
+
+# QA
+pre-commit
+
+# Plugins
+pytest-cov != 2.9.0
+pytest-repeat
+pytest-timeout
