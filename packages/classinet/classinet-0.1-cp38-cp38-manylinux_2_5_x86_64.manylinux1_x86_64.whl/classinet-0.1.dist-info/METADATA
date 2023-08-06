@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: classinet
+Version: 0.1
+Summary: This is the classinet package
+Home-page: http://classinet.com
+Author: Yaniv Bargury
+Author-email: yaniv@classinet.com
+License-File: LICENCE
+
+
+Classinet is a low latency, scalable, cloud based, machine learning inference service.
+This package is the Classinet client for Python.       
