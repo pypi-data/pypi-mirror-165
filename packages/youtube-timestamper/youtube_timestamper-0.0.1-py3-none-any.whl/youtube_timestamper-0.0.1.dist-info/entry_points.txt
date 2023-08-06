@@ -1,0 +1,2 @@
+[nbdev]
+youtube_timestamper = youtube_timestamper._modidx:d
