@@ -1,0 +1,41 @@
+[tool.poetry]
+name = "cbdf_api"
+version = "3.0.3"
+description = "The API to accomodate creation of custom components integrateable into the cbdf from AICURA medical."
+authors = [
+    "Christian Stur <christian.stur@aicura-medical.com>"
+]
+license = "Proprietary"
+readme = "README.md"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "License :: Other/Proprietary License",
+    "Programming Language :: Python :: 3.7",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence"
+]
+
+packages = [{ include = "cbdf_api" }]
+include = ["README.md", "LICENSE", "AUTHORS.md", "CONTRIBUTING.md"]
+exclude = ["cbdf_api/dist"]
+
+[tool.poetry.scripts]
+generate-templates = "cbdf_api.generate_templates:main"
+
+
+[tool.poetry.dependencies]
+python = "^3.7"
+tqdm = "4.62.3"
+
+[[tool.poetry.source]]
+name = "devpi_aicura_devel"
+url = "https://devpi.aicuramedical.com/aicura/production/+simple/"
+
+[build-system]
+requires = [
+    "poetry-core>=1.0.7",
+    "poetry-dynamic-versioning>=0.13.1",
+]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry-dynamic-versioning]
+enable = true
