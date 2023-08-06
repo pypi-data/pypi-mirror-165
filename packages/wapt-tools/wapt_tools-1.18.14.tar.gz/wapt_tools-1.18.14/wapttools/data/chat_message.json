@@ -1,0 +1,53 @@
+{
+  "cards": [
+    {
+      "header": {
+        "title": "New version of {package} detected"
+      },
+      "sections": [
+        {
+          "widgets": [
+            {
+              "keyValue": {
+                "topLabel": "Repository",
+                "content": "{repository}"
+              }
+            },
+            {
+              "keyValue": {
+                "topLabel": "Branch",
+                "content": "{branch}"
+              }
+            },
+            {
+              "keyValue": {
+                "topLabel": "Current Package Version",
+                "content": "{old_version}"
+              }
+            },
+            {
+              "keyValue": {
+                "topLabel": "Current Upstream Version",
+                "content": "{new_version}"
+              }
+            },
+            {
+              "buttons": [
+                {
+                  "textButton": {
+                    "text": "{package} website",
+                    "onClick": {
+                      "openLink": {
+                        "url": "{homepage}"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
