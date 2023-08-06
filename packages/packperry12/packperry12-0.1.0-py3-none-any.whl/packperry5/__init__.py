@@ -1,0 +1,1 @@
+from components.example import add_one
