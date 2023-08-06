@@ -1,0 +1,14 @@
+ldaporm/__init__.py,sha256=FX1uB9A8GQrSIKdyM4MfRyU174ifD40UlsZkjgGR5OM,23
+ldaporm/fields.py,sha256=YP2__Hg4UqRW-Q8--CGKyV9jJaVyGjdmlq1vCrjBng0,40656
+ldaporm/forms.py,sha256=T4dh_8gDZl8MEBPNNFfeO2iBIR7DIgmGXY9EvwabfBI,1786
+ldaporm/managers.py,sha256=LPq9xAbjjXbW4HDAoj5gwlYOb0ycdpS5igKctnfLXow,40792
+ldaporm/models.py,sha256=y9PAJhFUULwtiepcbhOU3LrkURbf2rO0BnQ8MjUMr08,12555
+ldaporm/options.py,sha256=gSY_3xidNeDig6F-1u8l4k7w9IE1NGzQZt7cCX5V13s,6843
+ldaporm/typing.py,sha256=HO3hAfsDWbbRx_fzOdskNCKTpj2wSxh2Z7_UCKKXvvc,336
+ldaporm/validators.py,sha256=ZqqaYxJFiMfsblcAVaFFF-IAGGemuGt6Qns2ADHhX-A,1178
+django_ldaporm-1.0.11.dist-info/AUTHORS.txt,sha256=DatIVff39u7v0XkBmc2B9eJInmpbTGOEP6WcEIgw_kg,46
+django_ldaporm-1.0.11.dist-info/LICENSE.txt,sha256=EO6iigx-3EhAuhHgUPu76tTAtaSz-KzluuhszXK8Y8I,1461
+django_ldaporm-1.0.11.dist-info/METADATA,sha256=Zbsmhi54co7DLvsJYFbhtURQ2zXPaqqZUd158Vu1Wac,1450
+django_ldaporm-1.0.11.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+django_ldaporm-1.0.11.dist-info/top_level.txt,sha256=VreaIVHuLyTRBV6kOP_6E6CWtif7yAycrMu1XB4R9GQ,8
+django_ldaporm-1.0.11.dist-info/RECORD,,
