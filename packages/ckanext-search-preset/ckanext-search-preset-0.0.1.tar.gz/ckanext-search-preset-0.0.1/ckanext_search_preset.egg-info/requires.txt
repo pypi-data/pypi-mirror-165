@@ -1,0 +1,6 @@
+ckanext-toolbelt>=0.2.5
+typing-extensions
+
+[dev]
+pytest-ckan
+pytest-factoryboy
