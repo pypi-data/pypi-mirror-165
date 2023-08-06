@@ -1,0 +1,7 @@
+setup.py
+get_eccc_data/__init__.py
+get_eccc_data.egg-info/PKG-INFO
+get_eccc_data.egg-info/SOURCES.txt
+get_eccc_data.egg-info/dependency_links.txt
+get_eccc_data.egg-info/requires.txt
+get_eccc_data.egg-info/top_level.txt
