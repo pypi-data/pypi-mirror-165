@@ -1,0 +1,9 @@
+blockapiwrapper/__init__.py,sha256=RaPFxdKyJQTkA1qI2xVxqOZ-kVqezVYJVRwY2Y5lxyo,43
+blockapiwrapper/__main__.py,sha256=ELm2IaIxe05FnP_ApYx7eaXVQhtJNU1EV2cohunutl0,420
+blockapiwrapper/base.py,sha256=fK95sd994dQjNiEu3t0Oxy6C8p09dCgiyT1O_GqVwVM,2391
+blockdataapis-1.0.1.dist-info/LICENSE,sha256=ZRf5-OowiOeGM9doz_izpuHpdzZdIqWFT4qt1S1vK7Q,1098
+blockdataapis-1.0.1.dist-info/METADATA,sha256=9NFUr_Gf0jPBOEh4AnPZI6iPCY_lHVdZCCR4IU6BFAk,2710
+blockdataapis-1.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+blockdataapis-1.0.1.dist-info/entry_points.txt,sha256=OjAvpCZAzgQ14Z-ynJwXYHRs11TXrOYBCSUiLNBCN6E,55
+blockdataapis-1.0.1.dist-info/top_level.txt,sha256=4CO0DB9LWS0ykJgFvEDCmh3_8rIZOEaIG9Yg9xeASU0,16
+blockdataapis-1.0.1.dist-info/RECORD,,
