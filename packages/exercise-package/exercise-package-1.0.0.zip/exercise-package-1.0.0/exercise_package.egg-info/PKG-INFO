@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: exercise-package
+Version: 1.0.0
+Summary: This is package for exercise!
+Author: ysy
+Author-email: ysy@qq.com
+License-File: LICENSE.txt
+
+This is README.rst
+==================
+
+*斜体*
+
+**加粗**
+
+``This is my code!``

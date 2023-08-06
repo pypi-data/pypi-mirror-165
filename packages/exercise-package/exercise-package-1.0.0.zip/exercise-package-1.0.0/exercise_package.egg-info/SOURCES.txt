@@ -1,0 +1,10 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+setup.py
+tool.py
+exercise_package.egg-info/PKG-INFO
+exercise_package.egg-info/SOURCES.txt
+exercise_package.egg-info/dependency_links.txt
+exercise_package.egg-info/top_level.txt
+package1/__init__.py
