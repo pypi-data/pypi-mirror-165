@@ -1,0 +1,5 @@
+
+      [console_scripts]
+      winsandbox=winsandbox.cli:main
+      wsb=winsandbox.cli:main
+      

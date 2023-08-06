@@ -1,0 +1,9 @@
+yattag
+rpyc
+cached-property
+recordclass
+IPython
+wmi
+
+[test]
+pytest
