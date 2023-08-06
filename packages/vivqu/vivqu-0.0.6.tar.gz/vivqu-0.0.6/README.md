@@ -1,0 +1,264 @@
+# Vivqu: easier data analysis and visualization based on pydeequ
+
+## 1. Background
+
+Feature quality is of great important to machine learing model performance, in order to insure the intactness of data that come from multiple upstream data sources, I devised a data quality checking library for post monitoring, which is named **vivqu**. 
+
+Based on PyDeequ, it gives data scientists deep insight into the data quality, and enable them to check whichever metrics they are insterested in. It also simplifies the intricate process when using PyDeequ directly and make users able to do the checking job within a few lines of code.
+
+Vivqu consists of several parts:
+
+1. QualityChecker: provides simplified interfaces to measure the quality of a dataframe.
+2. DataLoader: provides different ways to load data from multiple sources.
+3. Visualizer: provides visualization for one analysis result or show differences for two or more results.
+
+## 2. Requirement
+
++ python version >= 3.7
+
++ pyspark version < 3.1, >= 2.4
+
++ pydeequ version >= 1.0
+
++ heatmapz == 0.0.4
+
+If you don't have a java runtime environment (jre) on your computer, please choose one from [Latest releases | Adoptium](https://adoptium.net/zh-CN/temurin/releases/).
+
+## 3. Installation
+
+This project has been packaged and uploaded to [vivqu · PyPI](https://pypi.org/project/vivqu/).
+
+You can install vivqu with pip, which will automatically download pyspark, pydeequ and matplotlib with appropriate version.
+
+```bash
+pip install vivqu
+```
+
+## 4. Example with Jupyter Notebook
+
+You can follow this example in a jupyter notebook. Prepare a sample csv file, and let's start!
+
+Import pyspark, pydeequ and vivqu.
+```python
+import pyspark
+from pyspark.sql import SparkSession
+import pydeequ
+from pydeequ.analyzers import *
+import vivqu
+```
+
+Import matplotlib, change figure format to make it more clear.
+
+```python
+import matplotlib.pyplot as plt
+# add this command if you want to show chinese character
+plt.rcParams['font.sans-serif'] = ['Arial Unicode MS']
+
+%matplotlib inline
+# you can choose from png, svg and retina
+%config InlineBackend.figure_format = 'retina'
+```
+
+Create a spark session locally, you can also use a remote spark session.
+
+```python
+spark_session = (
+    SparkSession.builder
+    .config("spark.jars.packages", pydeequ.deequ_maven_coord)
+    .config("spark.jars.excludes", pydeequ.f2j_maven_coord)
+    .getOrCreate()
+)
+```
+
+Import DataLoader to load data from csv file.
+
+```python
+from vivqu.loader import DataLoader
+
+loader = DataLoader(spark_session)
+df = loader.load_csv("transaction_100a.csv")
+df.printSchema()
+```
+
+<img src="https://raw.githubusercontent.com/yang-d19/Personal/main/Pictures/vivqu/schema.png" width="480"/>
+
+Create quality checker by providing it with a spark session.
+
+```python
+from vivqu.checker import *
+
+checker = QualityChecker(spark_session)
+```
+
+Assign default metrics to columns that you are interested, then start analyzing.
+
+Add column names in string format means that they are analyzed in default way, which contain:
+
++ `Completeness`,  `CountDistinct`, ` Histogram` for column of ***Category*** type; 
+
++ `Completeness`, ` ApproxQuantiles`, ` Maximum`, `Minimum` for column of ***Numeric*** type.
+
+If you want to see the start and end date of this data frame, pass the column name of time information to analyze function.
+
+```python
+result_all_default = checker.analyze(
+    df, [ 
+    "Transaction_reason",
+    "Beneficiary_bank_name",
+    "Original_amount_USD",
+    ],
+    "Datetime_created"
+)
+result_all_default
+```
+
+<img src="https://raw.githubusercontent.com/yang-d19/Personal/main/Pictures/vivqu/result_all_default.png" alt="analyze-result" width="650"/>
+
+You can also add some other metrics and run.
+
+```python
+result_add_metric = checker.analyze(
+    df, [ 
+    "Original_amount_USD",
+    Size(),
+    Completeness("Beneficiary_bank_name"),
+    ]
+)
+result_add_metric
+```
+
+<img src="https://raw.githubusercontent.com/yang-d19/Personal/main/Pictures/vivqu/result_add_metric.png" alt="analyze-result" width="500"/>
+
+To visualize, you need to specify checker, dataframe, columns and date_column(Optional) parameter in visualize() function.
+
+```python
+from vivqu.visualize import *
+
+visualize(
+    checker, df, [
+    "Beneficiary_bank_name",
+    "Originator_category_code",
+    "Original_amount_USD",
+    ],
+    "Datetime_created"
+)
+```
+
+<img src="https://raw.githubusercontent.com/yang-d19/Personal/main/Pictures/vivqu/vis_result_all_default.png" alt="visualize-result" width="850" />
+
+Use diff() function to visualize specific columns between several dataframes.
+
+```python
+df1 = loader.load_csv("transaction_100a.csv")
+df2 = loader.load_csv("transaction_100b.csv")
+df3 = loader.load_csv("transaction_100c.csv")
+
+diff(
+    checker,
+    [df1, df2], [
+    "Beneficiary_bank_name",
+    "Originator_category_code",
+    "Original_amount_USD",
+    ]
+)
+```
+
+<img src="https://raw.githubusercontent.com/yang-d19/Personal/main/Pictures/vivqu/diff_no_date.png" alt="visualize-result" width="580" />
+
+If you pass `date_column` parameter to diff(), the start and end date of each data frame will be shown.
+
+```python
+diff(
+    checker,
+    [df1, df2, df3], [
+    "Beneficiary_bank_name",
+    "Original_amount_USD",
+    "Transaction_reason",
+    ],
+    "Datetime_created"
+)
+```
+
+<img src="https://raw.githubusercontent.com/yang-d19/Personal/main/Pictures/vivqu/diff-3.png" alt="visualize-result" width="800" />
+
+You can use Verifier to set constraints and see. verification result on given dataframe
+
+```python
+verifier = Verifier(checker)
+
+result = verifier.verify(
+    df1, [
+    (Uniqueness(["ID"]), lambda x: x == 1, "ID has no duplicate"),
+    (Completeness("Booking_Legal_Entity_ID"), lambda x: x == 1, 
+     		"Booking_Legal_Entity_ID has no null value"),
+    (Completeness("Transaction_reason"), lambda x: x == 1, 
+     		"Transaction_reason has no null value"),
+    (Size(), lambda x: x > 50, "Dataset size is larger than 50")
+])
+
+print(result)
+```
+
+```
+[True, True, False, True]
+```
+
+You can calculate correlation matrix and visualize it.
+
+```python
+corr_mat_df = checker.corr(
+    df, [
+    "Original_amount_USD", 
+    "Original_amount_orig_ccy", 
+    "Original_Inverse_USD",
+    "Normalized_amount_USD",
+    ]
+)
+corr_mat_df
+```
+
+<img src="https://raw.githubusercontent.com/yang-d19/Personal/main/Pictures/vivqu/corr_mat.png" alt="correlation-matrix" width=820 />
+
+The color indicate whether the correlation coefficient is postive or negtive, the size of each square indicate the absolute value of each coefficient.
+
+```python
+visualize_corr(
+    checker, df, [
+    "Original_amount_USD", 
+    "Original_amount_orig_ccy", 
+    "Original_Inverse_USD",
+    "Normalized_amount_USD",
+    ]
+)
+```
+
+
+
+<img src="https://raw.githubusercontent.com/yang-d19/Personal/main/Pictures/vivqu/vis_corr_mat.png" alt="correlation-matrix" width=400 />
+
+
+
+## 5. Metrics
+
+Here are the detailed explanations and examples of all metrics provided in pydeequ.
+
+Reference: https://aws.amazon.com/cn/blogs/big-data/test-data-quality-at-scale-with-deequ/
+
+| Metric | Description | Example |
+| ----   | -----       | ----    |
+|ApproxCountDistinct | Approximate number of distinct value, computed with HyperLogLogPlusPlus sketches. | `ApproxCountDistinct("review_id")` |
+| ApproxQuantile | Approximate quantile of a distribution. | `ApproxQuantile("star_rating", quantile = 0.5)`|
+| ApproxQuantiles | Approximate quantiles of a distribution. | `ApproxQuantiles("star_rating", quantiles = [0.25, 0.5, 0.75])` |
+| Completeness | Fraction of non-null values in a column. | `Completeness("review_id")`|
+| Correlation | Pearson correlation coefficient, measures the linear correlation between two columns. The result is in the range [-1, 1], where 1 means positive linear correlation, -1 means negative linear correlation, and 0 means no correlation.| `Correlation("total_votes", "star_rating")`|
+| CountDistinct | Number of distinct values.| `CountDistinct("review_id")`|
+| Distinctness | Fraction of distinct values of a column over the number of all values of a column. Distinct values occur at least once. Example: [a, a, b] contains two distinct values a and b, so distinctness is 2/3. | `Distinctness("review_id")`|
+| Entropy | Entropy is a measure of the level of information contained in an event (value in a column) when considering all possible events (values in a column). It is measured in nats (natural units of information). Entropy is estimated using observed value counts as the negative sum of (value_count/total_count) * log(value_count/total_count). Example: [a, b, b, c, c] has three distinct values with counts [1, 2, 2]. Entropy is then (-1/5\*log(1/5)-2/5\*log(2/5)-2/5\*log(2/5)) = 1.055. | `Entropy("star_rating")`|
+| Maximum | Maximum value. | `Maximum("star_rating")`|
+| Mean | Mean value; null values are excluded. | `Mean("star_rating")`|
+| Minimum | Minimum value. | `Minimum("star_rating")`|
+| MutualInformation | Mutual information describes how much information about one column (one random variable) can be inferred from another column (another random variable). If the two columns are independent, mutual information is zero. If one column is a function of the other column, mutual information is the entropy of the column. Mutual information is symmetric and nonnegative. | `MutualInformation(["total_votes", "star_rating"])` |
+| Size | Number of rows in a DataFrame. | `Size()`|
+| Sum | Sum of all values of a column.| `Sum("total_votes")`|
+| UniqueValueRatio | Fraction of unique values over the number of all distinct values of a column. Unique values occur exactly once; distinct values occur at least once. Example: [a, a, b] contains one unique value b, and two distinct values a and b, so the unique value ratio is 1/2. | `UniqueValueRatio("star_rating")`|
+| Uniqueness | Fraction of unique values over the number of all values of a column. Unique values occur exactly once. Example: [a, a, b] contains one unique value b, so uniqueness is 1/3. | `Uniqueness("star_rating")`|

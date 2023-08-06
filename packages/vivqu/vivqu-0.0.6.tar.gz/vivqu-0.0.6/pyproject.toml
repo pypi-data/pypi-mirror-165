@@ -1,0 +1,28 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "vivqu"
+version = "0.0.6"
+authors = [
+    { name="Ding Yang", email="yangding19thu@outlook.com" },
+]
+description = "Easier data analysis and visualization based on pydeequ"
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.7"
+dependencies = [
+    "pydeequ",
+    "pyspark",
+    "heatmapz"
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Repository" = "https://gitlab.awx.im/awx-platform/ml-platform/risk-data-quality-check/"
