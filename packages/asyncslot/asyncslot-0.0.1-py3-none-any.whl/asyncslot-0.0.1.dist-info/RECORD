@@ -1,0 +1,8 @@
+asyncslot/__init__.py,sha256=mfcvuuKPZjcyvKxnlPrDVUv9A7hHE8Q5MfbGKQidmng,56
+asyncslot/_base_events.py,sha256=iXfwyd7e5YW14Ylyq8UFrmkdcOCb4G283LHGp_LBF5E,13606
+asyncslot/_selector_events.py,sha256=GlUu3JjUsKexavHMnScHd-gNxEopTbLmzuz_lu5Ncb4,3932
+asyncslot-0.0.1.dist-info/LICENSE,sha256=On-WbJrC6m6Pa2SsSqETH3BnkCAXaCPw2dw7s1pH3K4,1417
+asyncslot-0.0.1.dist-info/METADATA,sha256=HWIwSOAQ6Rr_fENqBSBiGSUKnEpvNXTNvch0z3Yd_yk,8696
+asyncslot-0.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+asyncslot-0.0.1.dist-info/top_level.txt,sha256=55SMMEZip25r8egfX3MHzrKF6HA1SnfVV9Pt98RADyE,10
+asyncslot-0.0.1.dist-info/RECORD,,
