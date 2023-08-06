@@ -1,0 +1,7 @@
+setup.py
+oxansi/__init__.py
+oxansi/main.py
+oxansi.egg-info/PKG-INFO
+oxansi.egg-info/SOURCES.txt
+oxansi.egg-info/dependency_links.txt
+oxansi.egg-info/top_level.txt
