@@ -1,0 +1,14 @@
+LICENSE
+README.rst
+pyproject.toml
+setup.cfg
+setup.py
+src/bcl/__init__.py
+src/bcl/bcl.py
+src/bcl/sodium_ffi.py
+src/bcl.egg-info/PKG-INFO
+src/bcl.egg-info/SOURCES.txt
+src/bcl.egg-info/dependency_links.txt
+src/bcl.egg-info/not-zip-safe
+src/bcl.egg-info/requires.txt
+src/bcl.egg-info/top_level.txt
