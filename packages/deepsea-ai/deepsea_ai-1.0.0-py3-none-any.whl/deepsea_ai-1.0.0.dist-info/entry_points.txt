@@ -1,0 +1,3 @@
+[console_scripts]
+deepsea-ai=deepsea_ai.__main__:cli
+
