@@ -1,0 +1,15 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+src/easytrack/__init__.py
+src/easytrack/models.py
+src/easytrack/selectors.py
+src/easytrack/services.py
+src/easytrack/utils.py
+src/easytrack/wrappers.py
+src/python_easytrack.egg-info/PKG-INFO
+src/python_easytrack.egg-info/SOURCES.txt
+src/python_easytrack.egg-info/dependency_links.txt
+src/python_easytrack.egg-info/requires.txt
+src/python_easytrack.egg-info/top_level.txt
