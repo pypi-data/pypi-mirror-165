@@ -1,0 +1,4 @@
+sly==0.4
+beautifulsoup4==4.9.3
+colorama==0.4.4
+requests==2.26.0
