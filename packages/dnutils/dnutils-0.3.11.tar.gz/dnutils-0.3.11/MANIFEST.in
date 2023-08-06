@@ -1,0 +1,5 @@
+include setup.py
+include requirements.txt
+include version
+recursive-include src *.py
+prune build
