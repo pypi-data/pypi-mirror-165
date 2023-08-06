@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+setup.py
+prefigure/__init__.py
+prefigure/ofc.py
+prefigure/prefigure.py
+prefigure.egg-info/PKG-INFO
+prefigure.egg-info/SOURCES.txt
+prefigure.egg-info/dependency_links.txt
+prefigure.egg-info/requires.txt
+prefigure.egg-info/top_level.txt
