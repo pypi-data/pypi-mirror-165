@@ -1,0 +1,2 @@
+panther_config<0.1.0,>=0.0.13
+panther_utils<0.1.0,>=0.0.4
