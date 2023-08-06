@@ -1,0 +1,104 @@
+Metadata-Version: 2.1
+Name: pycountrycodes
+Version: 0.1.0
+Summary: Python package that replicates the ISO-3166 and ISO-3166-2 standards.
+Home-page: https://github.com/luizhenriquelongo/pyiso3166
+License: MIT
+Author: Luiz Henrique Longo
+Author-email: longo.luizh@gmail.com
+Maintainer: Luiz Henrique Longo
+Maintainer-email: longo.luizh@gmail.com
+Requires-Python: >=3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: pydantic (>=1.9.2,<2.0.0)
+Requires-Dist: rapidfuzz (>=2.5.0,<3.0.0)
+Requires-Dist: tox (>=3.25.1,<4.0.0)
+Project-URL: Repository, https://github.com/luizhenriquelongo/pyiso3166
+Description-Content-Type: text/markdown
+
+![ci](https://github.com/luizhenriquelongo/pyiso3166/actions/workflows/ci.yml/badge.svg)
+[![codecov](https://codecov.io/gh/luizhenriquelongo/pyiso3166/branch/master/graph/badge.svg?token=53G6ZN5K2E)](https://codecov.io/gh/luizhenriquelongo/pyiso3166)
+
+# PyCountryCodes
+
+PyCountryCodes is a Python library for dealing with the ISO 3166-1 and ISO 3166-2 Standards in a simple way.
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install `pycountrycodes`.
+
+```bash
+pip install pycountrycodes
+```
+
+## Usage
+
+### ISO 3166-1
+
+```python
+from pycountrycodes import countries
+
+# Go through the full list of countries available.
+for country in countries:
+    # prints the country name
+    print(country.name)
+
+# returns a Country object if the given criteria matches.
+countries.get(name='United Kingdom')
+countries.get(alpha_2='GB')
+countries.get(alpha_3='GBR')
+
+# returns a list of Country options fot the given query using fuzzy search.
+countries.search('United Kingdom')
+
+# returns a list of Country options fot the given query using fuzzy search 
+# using the match_score_cutoff to filter the list and only return results with
+# match_score greater or equal to 70.
+countries.search('United Kingdom', match_score_cutoff=70)
+```
+
+### ISO 3166-2
+
+```python
+from pycountrycodes import subdivisions
+
+# Go through the full list of subdivisions available.
+for subdivisions in subdivisions:
+    # prints the subdivision name
+    print(subdivisions.name)
+
+# returns a Subdivision object if the given criteria matches.
+subdivisions.get(code='US-NY')
+
+# returns a list of Subdivision objects if the given criteria matches.
+# for name, type and country_code, this method will return a list of options since
+# there can be multiples Subdivision objects with the same attribute values.
+subdivisions.get(name='New York')  # returns all Subdivision where obj.name is 'New York'
+subdivisions.get(type='Province')  # returns all Subdivision where obj.type is 'Province'
+subdivisions.get(country_code='GB')  # returns all Subdivision where obj.country_code is 'GB'
+
+# returns a list of Subdivisions options fot the given query using fuzzy search.
+subdivisions.search('New York')
+
+# returns a list of Country options fot the given query using fuzzy search 
+# using the match_score_cutoff to filter the list and only return results with
+# match_score greater or equal to 70.
+subdivisions.search('New York', match_score_cutoff=70)
+```
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+

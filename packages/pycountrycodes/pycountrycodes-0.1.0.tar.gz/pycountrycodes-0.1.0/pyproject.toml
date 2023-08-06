@@ -1,0 +1,49 @@
+[tool.poetry]
+name = "pycountrycodes"
+version = "0.1.0"
+description = "Python package that replicates the ISO-3166 and ISO-3166-2 standards."
+authors = ["Luiz Henrique Longo <longo.luizh@gmail.com>"]
+maintainers = ["Luiz Henrique Longo <longo.luizh@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+repository = "https://github.com/luizhenriquelongo/pyiso3166"
+
+
+[tool.poetry.dependencies]
+python = ">=3.7"
+pydantic = "^1.9.2"
+rapidfuzz = "^2.5.0"
+tox = "^3.25.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.1.2"
+bumpver = "^2022.1118"
+black = "^22.6.0"
+pytest-mock = "^3.8.2"
+pytest-xdist = "^2.5.0"
+tox-gh-actions = "^2.9.1"
+pytest-cov = "^3.0.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.bumpver]
+current_version = "0.1.0"
+version_pattern = "MAJOR.MINOR.PATCH"
+commit_message = "Bump version {old_version} -> {new_version}"
+commit = true
+tag = true
+push = false
+
+[tool.bumpver.file_patterns]
+"pyproject.toml" = ['current_version = "{version}"', 'version = "{version}"']
+
+[tool.black]
+line-length = 120
+target-version = ['py39']
