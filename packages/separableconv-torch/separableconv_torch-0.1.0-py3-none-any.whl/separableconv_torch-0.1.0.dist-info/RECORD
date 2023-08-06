@@ -1,0 +1,11 @@
+separableconv/__init__.py,sha256=rHoTn_oUVh2tuux35m0QkDrqZwtCJPnv0iRQx1_y9AQ,734
+separableconv/version.py,sha256=gxOIWLhVH6eSNR5L6px1gVjjzwqjG55O9MlGHfWzUH8,704
+separableconv/nn/__init__.py,sha256=YLWFmdzMI0myD5dCpdDRZl15FEAwXoAaX5J6uZjDD6Q,796
+separableconv/nn/base.py,sha256=syPe-63ITA_djQruQZ1XUdyiCwWX0V8WBKr0mDMt-2o,1644
+separableconv/nn/conv.py,sha256=8n8yU6yCMfh62wXr8UL2nlVe4nT__Vq1B3PYQXLooSw,14079
+separableconv/nn/lazy.py,sha256=_PmZz1vJupxospuKmo2w3mYg5PNorvHyYjrL0fm89dY,22664
+separableconv_torch-0.1.0.dist-info/LICENSE,sha256=9OeX9UDtcrzRJO18F7bduYGjIUwqtYEd6T5atBbTrZw,1083
+separableconv_torch-0.1.0.dist-info/METADATA,sha256=RT6LOQbeMdQjiYp8U_VTd9pP_OP5tAJdg9V9h378KHI,6284
+separableconv_torch-0.1.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+separableconv_torch-0.1.0.dist-info/top_level.txt,sha256=4udcwXnvCIfGQOpEYkLN8md2lk80BNvY3W9dyLVNR1k,14
+separableconv_torch-0.1.0.dist-info/RECORD,,
