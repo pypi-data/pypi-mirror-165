@@ -1,0 +1,17 @@
+pyyaml
+GitPython
+nornir
+nornir_salt
+nornir_scrapli
+nornir_netmiko
+nornir_jinja2
+scrapli-ssh2
+scrapli-netconf
+pyats[full]
+requests
+tabulate
+black
+pylint
+prospector
+bandit
+vulture
