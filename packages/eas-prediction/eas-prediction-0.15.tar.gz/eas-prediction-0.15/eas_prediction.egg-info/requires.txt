@@ -1,0 +1,4 @@
+urllib3
+protobuf==3.14
+pyfarmhash
+numpy>=1.9
