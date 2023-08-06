@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: libecl
+Version: 2.14.0
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Equinor ASA
+Author-email: fg_sib-scout@equinor.com
+License: UNKNOWN
+Platform: UNKNOWN
+License-File: LICENSE
+License-File: COPYING
+Requires-Dist: ecl (==2.14.0)
+
+UNKNOWN
+
