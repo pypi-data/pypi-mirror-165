@@ -1,0 +1,11 @@
+README.md
+setup.py
+gerrit_tools/__init__.py
+gerrit_tools/config.py
+gerrit_tools/main.py
+gerrit_tools.egg-info/PKG-INFO
+gerrit_tools.egg-info/SOURCES.txt
+gerrit_tools.egg-info/dependency_links.txt
+gerrit_tools.egg-info/entry_points.txt
+gerrit_tools.egg-info/not-zip-safe
+gerrit_tools.egg-info/top_level.txt
