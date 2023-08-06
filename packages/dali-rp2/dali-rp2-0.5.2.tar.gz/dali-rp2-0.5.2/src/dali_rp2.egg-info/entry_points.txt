@@ -1,0 +1,2 @@
+[console_scripts]
+dali_us = dali.plugin.country.us:dali_entry
