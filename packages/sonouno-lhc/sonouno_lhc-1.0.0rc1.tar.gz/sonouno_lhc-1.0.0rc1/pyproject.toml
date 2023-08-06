@@ -1,0 +1,45 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = [
+    "setuptools>61",
+    "setuptools_scm[toml]>=6.2",
+    "wheel",
+]
+
+[project]
+name = "sonouno_lhc"
+authors = [
+    {name = "Johanna Casado", email = "johi.ceh@gmail.com"},
+    {name = "Pierre Chanial", email = "pierre.chanial@gmail.com"},
+]
+maintainers = [
+    {name = "Pierre Chanial", email = "pierre.chanial@gmail.com"},
+]
+description = "Sonification for the HYPATIA experiment at CERN."
+readme = "README.md"
+keywords = [
+    "scientific computing",
+]
+classifiers = [
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.10",
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Science/Research",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering",
+]
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+dependencies = [
+    "matplotlib",
+    "numpy",
+    "sonounolib>=0.5.3",
+]
+dynamic = ["version"]
+
+[project.urls]
+repository = "https://github.com/sonoUnoTeam/sonoUno-lhc"
+
+[tool.setuptools_scm]
+version_scheme = "post-release"
+fallback_version = "0.0.0"

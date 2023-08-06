@@ -1,0 +1,57 @@
+name: Build
+
+on:
+  push:
+    branches:
+    - main
+  pull_request:
+    branches:
+    - main
+  release:
+    types: [published]
+
+jobs:
+
+  build_sdist_and_wheel:
+    name: Build sdist and wheel
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+
+    - name: Build
+      run: pipx run build --sdist --wheel
+
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Test
+      run: |
+        python -mvenv venv-test
+        source venv-test/bin/activate
+        pip install setuptools_scm
+        pip install "sonouno_lhc==$(python -m setuptools_scm)" --find-links dist
+        python -m sonouno_lhc
+
+    - uses: actions/upload-artifact@v3
+      with:
+        path: |
+          dist/*.tar.gz
+          dist/*.whl
+
+  upload_all:
+    needs: [build_sdist_and_wheel]
+    runs-on: ubuntu-latest
+    if: github.event_name == 'release' && github.event.action == 'published'
+    steps:
+      - uses: actions/download-artifact@v3
+        with:
+          name: artifact
+          path: dist
+
+      - uses: pypa/gh-action-pypi-publish@v1.5.1
+        with:
+          password: ${{ secrets.PYPI_SECRET }}
