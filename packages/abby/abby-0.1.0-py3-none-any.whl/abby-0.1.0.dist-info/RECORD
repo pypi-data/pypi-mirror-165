@@ -1,0 +1,16 @@
+abby/__init__.py,sha256=FbYol_xwSmMoTLkslvYZHBwkDTxSgxHduLW1UZ5-FqA,224
+abby/compare.py,sha256=-xZiY23zzD4JzCHm2lxX1WBQeUKo1H6fSzsSrNL0p8s,9066
+abby/datasets.py,sha256=yX8rSD18RfFLp1xpMp72ii7Nn-8gecmYT-V32iW3Dv0,239
+abby/utils.py,sha256=uRGXAhjQxb_fBD6HzP2P9R04S8TXe-8uxypf0D7wXhc,366
+abby/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+abby/tests/test_bootstrap.py,sha256=6FaI9quG3LYSIoWsiRBEK6KtNgYqzdBztwj5dlWy7B0,1407
+abby/tests/test_delta.py,sha256=qNpN3vnAz-nuncjKwiFthfskaG1eAf-b10-3XE5bbLM,1365
+abby/tests/test_multiple.py,sha256=OAq9-d9zSauOLpz4L8Vt4_DydKwV4Wn0In4PZXhEtt8,2433
+abby/tests/test_ttest.py,sha256=kTEkhSEQWjRxvrbUTBd-0mFo-RVkPdkA_4nMMvKAeu0,1345
+abby/tests/datasets/click_impression.csv,sha256=tUsVrEo_pAmE4Ih5omOa9d2SiiAH5soWJXo3ewZmgXE,2733
+abby/tests/datasets/penguins.csv,sha256=XFc4qjDvgVWQOweVv_hmBtTM-7ByIFSAnPxIkeIs73A,13516
+abby/tests/datasets/sleeps.csv,sha256=xFYE0xYNYfQFNch3Oxdi4SDke4JNlVIZUOpUyhdRb9k,264
+abby-0.1.0.dist-info/LICENSE,sha256=RAL6islnc2vzmV-sG4YJE_lnUrpHHl250boN2GtfqAo,1072
+abby-0.1.0.dist-info/WHEEL,sha256=4TfKIB_xu-04bc2iKz6_zFt-gEFEEDU_31HGhqzOCE8,81
+abby-0.1.0.dist-info/METADATA,sha256=KpGjcHDC-IYWALQv-RHq49KSCJsib_X8Z7MGOME8W9g,2706
+abby-0.1.0.dist-info/RECORD,,
