@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lwdp"
+version = "0.0.4"
+authors = [
+  { name="Nick Padon", email="npadon@gmail.com" },
+]
+description = "Lightweight Data Pipeline for with code-based stage cacheing"
+readme = "README.md"
+license = { file="LICENSE" }
+dependencies = [
+    "pandas",
+]
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/npadon/lwdp"
+"Bug Tracker" = "https://github.com/npadon/lwdp/issues"
