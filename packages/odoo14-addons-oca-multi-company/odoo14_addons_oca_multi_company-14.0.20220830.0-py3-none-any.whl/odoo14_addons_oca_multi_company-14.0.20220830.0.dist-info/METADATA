@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: odoo14-addons-oca-multi-company
+Version: 14.0.20220830.0
+Summary: Meta package for oca-multi-company Odoo addons
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Classifier: Framework :: Odoo :: 14.0
+Requires-Dist: odoo14-addon-account-invoice-consolidated
+Requires-Dist: odoo14-addon-account-invoice-inter-company
+Requires-Dist: odoo14-addon-account-invoice-inter-company-queued
+Requires-Dist: odoo14-addon-account-multicompany-easy-creation
+Requires-Dist: odoo14-addon-base-multi-company
+Requires-Dist: odoo14-addon-company-dependent-attribute
+Requires-Dist: odoo14-addon-intercompany-shared-contact
+Requires-Dist: odoo14-addon-mail-multicompany
+Requires-Dist: odoo14-addon-mail-template-multi-company
+Requires-Dist: odoo14-addon-partner-contact-company-propagation
+Requires-Dist: odoo14-addon-product-category-inter-company
+Requires-Dist: odoo14-addon-product-multi-company
+Requires-Dist: odoo14-addon-product-supplierinfo-group-intercompany
+Requires-Dist: odoo14-addon-product-supplierinfo-intercompany
+Requires-Dist: odoo14-addon-product-tax-multicompany-default
+Requires-Dist: odoo14-addon-purchase-quick-intercompany
+Requires-Dist: odoo14-addon-purchase-sale-inter-company
+Requires-Dist: odoo14-addon-res-company-code
+
+UNKNOWN
+
