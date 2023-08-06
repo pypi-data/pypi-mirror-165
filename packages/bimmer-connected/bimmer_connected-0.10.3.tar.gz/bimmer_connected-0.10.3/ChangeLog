@@ -1,0 +1,7 @@
+CHANGES
+=======
+
+0.10.3
+------
+
+* Add fingerprint to dict function (#481)
