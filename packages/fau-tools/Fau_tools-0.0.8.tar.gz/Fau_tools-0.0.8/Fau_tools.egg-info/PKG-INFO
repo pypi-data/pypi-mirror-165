@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: Fau-tools
+Version: 0.0.8
+Summary: A python module. The main function is for pytorch training.
+Home-page: https://github.com/Fau818/Fau_tools
+Author: Fau
+Author-email: Fau818@qq.com
+License: MIT
+Requires-Python: >=3.6
