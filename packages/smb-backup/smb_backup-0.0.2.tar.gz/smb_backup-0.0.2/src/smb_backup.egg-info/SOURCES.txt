@@ -1,0 +1,13 @@
+.gitignore
+LICENSE
+README.md
+pyproject.toml
+requirements.txt
+setup.py
+.github/workflows/publish_on_pipy.yml
+src/smb_backup/__init__.py
+src/smb_backup.egg-info/PKG-INFO
+src/smb_backup.egg-info/SOURCES.txt
+src/smb_backup.egg-info/dependency_links.txt
+src/smb_backup.egg-info/requires.txt
+src/smb_backup.egg-info/top_level.txt
