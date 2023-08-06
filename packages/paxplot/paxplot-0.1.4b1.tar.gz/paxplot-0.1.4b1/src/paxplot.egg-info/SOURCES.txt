@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/paxplot/__init__.py
+src/paxplot/core.py
+src/paxplot/datasets.py
+src/paxplot.egg-info/PKG-INFO
+src/paxplot.egg-info/SOURCES.txt
+src/paxplot.egg-info/dependency_links.txt
+src/paxplot.egg-info/requires.txt
+src/paxplot.egg-info/top_level.txt
+src/paxplot/data/hydroclimate_model_evaluation.csv
+src/paxplot/data/tradeoff.csv
