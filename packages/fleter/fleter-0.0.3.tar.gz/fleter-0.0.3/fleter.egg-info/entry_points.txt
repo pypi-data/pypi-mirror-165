@@ -1,0 +1,5 @@
+[console_scripts]
+fleter = fleter_cil:cli
+
+[gui_scripts]
+fleter-demo = fleter_demo:run
