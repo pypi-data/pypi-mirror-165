@@ -1,0 +1,38 @@
+* {
+  font-family: sans-serif;
+}
+
+:root {
+  --main-bg-color: #ffffff;
+  --table-header-bg: #dddddd;
+  --table-header-text: #000000;
+  --table-header-btn-active: #cccccc;
+  --table-header-btn-hover: #eeeeee;
+  --selected-url-text: #000000;
+  --tooltip-bg-color: #111111;
+  --tooltip-text: #ffffff;
+  --header-cookie-key-text: #111111;
+  --header-cookie-value-text: #000000;
+  --details-text: #000000;
+  --details-section-text: #000000;
+}
+
+body {
+  background-color: var(--main-bg-color);
+}
+
+header {
+  background-color: var(--main-bg-color);
+  padding: 0 5px 10px 0;
+}
+
+#navbar {
+  text-align: right;
+  background-color: var(--table-header-bg);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+#navbar a {
+  color: var(--table-header-text);
+  text-decoration: none;
+}
