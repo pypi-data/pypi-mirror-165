@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: advanced-databases
+Version: 0.0.0
+Summary: A collection of pure python database implementations.
+License: mit
+Project-URL: Bug Tracker, https://github.com/SimpleArt/advanced-databases/issues
+Project-URL: Documentation, https://simpleart.github.io/advanced-databases/
+Project-URL: Homepage, https://simpleart.github.io/advanced-databases/
+Project-URL: Repository, https://github.com/SimpleArt/advanced-databases
+Keywords: databases
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# advanced-databases
+ A collection of pure python database implementations.
