@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: brewt
+Version: 1.0.1
+Summary: a brewing tool for CivCraft
+Home-page: https://github.com/okosuno/brewt
+Author: omokami
+License: MIT
+Keywords: civcraft,civmc
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: Utilities
+Requires-Python: >=3.8

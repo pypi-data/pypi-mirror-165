@@ -1,0 +1,11 @@
+setup.py
+src/brewt/__init__.py
+src/brewt/bf_man.py
+src/brewt/brew_class.py
+src/brewt/brewt_main.py
+src/brewt.egg-info/PKG-INFO
+src/brewt.egg-info/SOURCES.txt
+src/brewt.egg-info/dependency_links.txt
+src/brewt.egg-info/entry_points.txt
+src/brewt.egg-info/requires.txt
+src/brewt.egg-info/top_level.txt
