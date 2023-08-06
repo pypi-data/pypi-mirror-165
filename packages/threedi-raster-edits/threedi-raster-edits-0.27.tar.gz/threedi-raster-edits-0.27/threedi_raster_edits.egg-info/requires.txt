@@ -1,0 +1,11 @@
+cached_property
+rtree
+scipy
+
+[test]
+mock
+pytest
+pytest-benchmark
+pytest-black
+pytest-cov
+pytest-flakes

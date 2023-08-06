@@ -1,0 +1,3 @@
+[console_scripts]
+run-threedi-raster-edits = threedi_raster_edits.scripts:main
+
