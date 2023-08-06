@@ -1,0 +1,1 @@
+.nj-collapse:not(.show){display:none}.nj-collapsing{position:relative;height:0;overflow:hidden;transition:height 0.35s ease}@media screen and (prefers-reduced-motion: reduce){.nj-collapsing{transition:none}}

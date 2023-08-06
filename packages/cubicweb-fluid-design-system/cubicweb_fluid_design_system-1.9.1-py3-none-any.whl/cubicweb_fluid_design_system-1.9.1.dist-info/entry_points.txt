@@ -1,0 +1,2 @@
+[cubicweb.cubes]
+fluid_design_system = cubicweb_fluid_design_system

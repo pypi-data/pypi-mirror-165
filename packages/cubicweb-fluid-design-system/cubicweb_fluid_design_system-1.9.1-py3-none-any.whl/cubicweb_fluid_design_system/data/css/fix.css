@@ -1,0 +1,6 @@
+ul.navbar-right .dropdown-menu a { white-space: nowrap; }
+ul.navbar-right .dropdown-menu a > i.material-icons { font-size: 20px; }
+
+#dropdownMenu.collapsing, #dropdownMenu.nj-collapsing {
+    transition-duration: 0s !important;
+}
