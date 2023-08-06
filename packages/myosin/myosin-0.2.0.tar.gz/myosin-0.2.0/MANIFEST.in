@@ -1,0 +1,8 @@
+# include all files in myosin base
+graft myosin 
+
+# exclude all compiler artefacts
+global-exclude *.py[co]
+
+# include requirements.txt
+include requirements.txt
