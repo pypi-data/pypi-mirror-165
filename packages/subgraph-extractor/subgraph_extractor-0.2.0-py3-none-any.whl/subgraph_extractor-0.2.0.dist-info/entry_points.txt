@@ -1,0 +1,3 @@
+[console_scripts]
+subgraph_config_generator = subgraph_extractor.cli:config_generator
+subgraph_extractor = subgraph_extractor.cli:main
