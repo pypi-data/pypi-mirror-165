@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: async-download
+Version: 1.0.0
+Summary: Uses coroutines to download files
+Home-page: https://github.com/danwald/async_download
+Author: danny crasto
+Author-email: danwald79@gmail.com
+License: MIT license
+Keywords: async_download
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: AUTHORS.rst
+
+Async download
+--------------
+
+![download](https://img.shields.io/pypi/v/async_download.svg "download") ![travis](https://img.shields.io/travis/danwald/async_download.svg) ![documentation status](https://readthedocs.org/projects/async-download/badge/?version=latest)
+
+
+Uses coroutines to download urls
+
+Note: Greedy and built for speed. [10K cdn hosted urls; 0.5GB Total data; <5 minutes; M1 laptop]
+
+Usage
+-----
+
+```
+Usage: async_download [OPTIONS]
+
+Options:
+  --execute         required to do something
+  --urls-file PATH  urls to download  [required]
+  --data-dir PATH   directory to save downloads  [required]
+  --help            Show this message and exit.
+
+```
+
+* Free software: MIT license
+* Documentation: https://async-download.readthedocs.io.
+
+
+Install & Run
+------------
+
+- `pipx install async-download`
+- `async_download --help`
+
+Credits
+-------
+
+This package was created with Cookiecutter and the `audreyr/cookiecutter-pypackage` project template.
+
+- [Cookiecutter](https://github.com/audreyr/cookiecutter)
+- [audreyr/cookiecutter-pypackage](https://github.com/audreyr/cookiecutter-pypackage)
+
+
+### History
+
+#### 1.0.0 (2022-08-29)
+* First release on PyPI.

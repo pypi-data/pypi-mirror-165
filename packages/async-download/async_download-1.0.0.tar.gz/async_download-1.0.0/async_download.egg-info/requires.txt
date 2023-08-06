@@ -1,0 +1,4 @@
+Click>=8
+aiohttp>=3.8
+tqdm>=4.64
+pip>=22
