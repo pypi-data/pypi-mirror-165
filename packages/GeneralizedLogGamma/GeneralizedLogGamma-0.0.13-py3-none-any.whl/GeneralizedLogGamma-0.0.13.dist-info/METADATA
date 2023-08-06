@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: GeneralizedLogGamma
+Version: 0.0.13
+Summary: To fit, validate, diagnostic, and plot generalized gamma and log-gamma distributions.
+Author-email: Carlos Alberto Cardozo Delgado <cardozopypackages@gmail.com>
+Project-URL: Homepage, https://github.com
+Project-URL: Bug Tracker, https://github.com
+Keywords: statistics,data science,research
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Education
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# GeneralizedLogGamma
+
+Set of tools to fit generalized gamma (GG) and generalized log-gamma distribution (GLG). Some developed functions are:
+
+* Density function of a generalized log-gamma distribution.
+* Cumulative distribution function of a generalized log-gamma distribution.
+* Quantile function of a generalized log-gamma distribution.
+* Generate random values of a generalized log-gamma distribution.
+* Entropy function of a generalized log-gamma distribution.
+* Survival function of generalized gamma distribution.
+* Hazard function of a generalized gamma distribution.
+* Generate random values of K-th Order Statistics from a generalized log-gamma distribution.
+* Mean, median, mode, variance, coeficient of variation, skewness, kurtosis of generalized log-gamma distribution.
+
+## License
+
+This project is licensed under the terms of the MIT license.
+
+
