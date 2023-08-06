@@ -1,0 +1,26 @@
+{% import 'macros/forms.html' as forms %}
+
+{% extends "auth_layout.html" %}
+
+{% block head_title %}{{ _('Sign up') }}{% endblock %}
+
+{% block title %}{{ _('Sign up') }}{% endblock %}
+
+{% block auth_form %}
+  <form method="POST" action="{{ tenant.url_path_for(request, 'register:register') }}" novalidate>
+    <div class="space-y-4">
+      {{ forms.form_field(form.email) }}
+      {{ forms.form_field(form.password) }}
+      {% for field in form.fields %}
+        {{ forms.form_field(field) }}
+      {% endfor %}
+      {{ forms.form_csrf_token(form) }}
+    </div>
+    <div class="flex items-center justify-between mt-6">
+      <div class="mr-1">
+        <a class="text-sm underline hover:no-underline" href="{{ tenant.url_path_for(request, 'auth:login') }}">{{ _('I already have an account') }}</a>
+      </div>
+      <button type="submit" class="btn bg-primary hover:bg-primary-hover text-white ml-3">{{ _('Sign up') }}</button>
+    </div>
+  </form>
+{% endblock %}
