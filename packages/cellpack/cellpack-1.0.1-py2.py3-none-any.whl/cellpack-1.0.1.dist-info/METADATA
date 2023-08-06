@@ -1,0 +1,170 @@
+Metadata-Version: 2.1
+Name: cellpack
+Version: 1.0.1
+Summary: algorthim to pack molecular recipes
+Home-page: https://github.com/mesoscope/cellpack
+Author: Megan Riel-Mehan
+Author-email: meganr@alleninstitute.org
+License: MIT license
+Keywords: cellpack
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: fire (>=0.4.0)
+Requires-Dist: matplotlib (>=3.3.4)
+Requires-Dist: numpy (>=1.19.2)
+Requires-Dist: panda3d (==1.10.10)
+Requires-Dist: pmw (==2.0.1)
+Requires-Dist: scipy (>=1.6.2)
+Requires-Dist: simulariumio (>=1.2.0)
+Requires-Dist: plotly (>=5.3.1)
+Requires-Dist: pycollada (==0.7.2)
+Requires-Dist: pyembree (>=0.1.12)
+Requires-Dist: pymunk (>=6.2.0)
+Requires-Dist: trimesh (>=3.9.34)
+Provides-Extra: all
+Requires-Dist: fire (>=0.4.0) ; extra == 'all'
+Requires-Dist: matplotlib (>=3.3.4) ; extra == 'all'
+Requires-Dist: numpy (>=1.19.2) ; extra == 'all'
+Requires-Dist: panda3d (==1.10.10) ; extra == 'all'
+Requires-Dist: pmw (==2.0.1) ; extra == 'all'
+Requires-Dist: scipy (>=1.6.2) ; extra == 'all'
+Requires-Dist: simulariumio (>=1.2.0) ; extra == 'all'
+Requires-Dist: plotly (>=5.3.1) ; extra == 'all'
+Requires-Dist: pycollada (==0.7.2) ; extra == 'all'
+Requires-Dist: pyembree (>=0.1.12) ; extra == 'all'
+Requires-Dist: pymunk (>=6.2.0) ; extra == 'all'
+Requires-Dist: trimesh (>=3.9.34) ; extra == 'all'
+Requires-Dist: pytest-runner (>=5.2) ; extra == 'all'
+Requires-Dist: black (>=19.10b0) ; extra == 'all'
+Requires-Dist: codecov (>=2.1.4) ; extra == 'all'
+Requires-Dist: flake8 (>=3.8.3) ; extra == 'all'
+Requires-Dist: flake8-debugger (>=3.2.1) ; extra == 'all'
+Requires-Dist: pytest (>=5.4.3) ; extra == 'all'
+Requires-Dist: pytest-cov (>=2.9.0) ; extra == 'all'
+Requires-Dist: pytest-raises (>=0.11) ; extra == 'all'
+Requires-Dist: bump2version (>=1.0.1) ; extra == 'all'
+Requires-Dist: coverage (>=5.1) ; extra == 'all'
+Requires-Dist: ipython (>=7.15.0) ; extra == 'all'
+Requires-Dist: m2r2 (>=0.2.7) ; extra == 'all'
+Requires-Dist: Sphinx (>=3.4.3) ; extra == 'all'
+Requires-Dist: sphinx-rtd-theme (>=0.5.1) ; extra == 'all'
+Requires-Dist: tox (>=3.15.2) ; extra == 'all'
+Requires-Dist: twine (>=3.1.1) ; extra == 'all'
+Requires-Dist: wheel (>=0.34.2) ; extra == 'all'
+Provides-Extra: dev
+Requires-Dist: pytest-runner (>=5.2) ; extra == 'dev'
+Requires-Dist: black (>=19.10b0) ; extra == 'dev'
+Requires-Dist: codecov (>=2.1.4) ; extra == 'dev'
+Requires-Dist: flake8 (>=3.8.3) ; extra == 'dev'
+Requires-Dist: flake8-debugger (>=3.2.1) ; extra == 'dev'
+Requires-Dist: pytest (>=5.4.3) ; extra == 'dev'
+Requires-Dist: pytest-cov (>=2.9.0) ; extra == 'dev'
+Requires-Dist: pytest-raises (>=0.11) ; extra == 'dev'
+Requires-Dist: bump2version (>=1.0.1) ; extra == 'dev'
+Requires-Dist: coverage (>=5.1) ; extra == 'dev'
+Requires-Dist: ipython (>=7.15.0) ; extra == 'dev'
+Requires-Dist: m2r2 (>=0.2.7) ; extra == 'dev'
+Requires-Dist: Sphinx (>=3.4.3) ; extra == 'dev'
+Requires-Dist: sphinx-rtd-theme (>=0.5.1) ; extra == 'dev'
+Requires-Dist: tox (>=3.15.2) ; extra == 'dev'
+Requires-Dist: twine (>=3.1.1) ; extra == 'dev'
+Requires-Dist: wheel (>=0.34.2) ; extra == 'dev'
+Provides-Extra: setup
+Requires-Dist: pytest-runner (>=5.2) ; extra == 'setup'
+Provides-Extra: test
+Requires-Dist: black (>=19.10b0) ; extra == 'test'
+Requires-Dist: codecov (>=2.1.4) ; extra == 'test'
+Requires-Dist: flake8 (>=3.8.3) ; extra == 'test'
+Requires-Dist: flake8-debugger (>=3.2.1) ; extra == 'test'
+Requires-Dist: pytest (>=5.4.3) ; extra == 'test'
+Requires-Dist: pytest-cov (>=2.9.0) ; extra == 'test'
+Requires-Dist: pytest-raises (>=0.11) ; extra == 'test'
+
+# cellPack
+
+[![Build Status](https://github.com/mesoscope/cellpack/workflows/Build%20Main/badge.svg)](https://github.com/mesoscope/cellpack/actions)
+[![Documentation](https://github.com/mesoscope/cellpack/workflows/Documentation/badge.svg)](https://mesoscope.github.io/cellpack/)
+[![Code Coverage](https://codecov.io/gh/mesoscope/cellpack/branch/main/graph/badge.svg)](https://codecov.io/gh/mesoscope/cellpack)
+
+algorithm to pack molecular recipes
+
+
+### Setup 
+1. create a virtual env: `conda create -n autopack`
+2. `activate autopack`
+3. `pip install -e .[dev]`
+
+### Run analysis code
+By default analyze will run all packing methods on `cellpack/test-recipes/NM_Analysis_FigureB1.0.json
+Examples:
+* `analyze -o [PATH/TO/OUTPUT/FOLDER]` will create subfolders for each packing method at your output folder
+* To run just one packing method: `analyze -o [PATH/TO/OUTPUT/FOLDER] -p jitter`
+* To change the dimension of the packing: `analyze -r cellpack/test-recipes/NM_Analysis_FigureC1.json  -o /Users/meganriel-mehan/Dropbox/cellPack/NM_Analysis_C_1 -d 3`
+* Turn off plotly plot: `analyze -o [PATH/TO/OUTPUT/FOLDER] -ng` or `analyze -o [PATH/TO/OUTPUT/FOLDER] --no-grid-plot`
+
+### Run conversion code 
+* To convert to simularium and view at https://staging.simularium.allencell.org/viewer
+`convert -r [FULL_PATH_TO_INPUT_RECIPE_FILE] -p [FULL_PATH_TO_PACKING_RESULT] -o [OUTPUT_PATH]`
+## Installation
+
+**Stable Release:** `pip install cellpack`<br>
+**Development Head:** `pip install git+https://github.com/mesoscope/cellpack.git`
+
+## Documentation
+
+For full package documentation please visit [mesoscope.github.io/cellpack](https://mesoscope.github.io/cellpack).
+
+## Development
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for information related to developing the code.
+
+### Contributing cheat sheet
+
+1. `pip install -e .[dev]`
+
+    This will install your package in editable mode with all the required development
+    dependencies (i.e. `tox`).
+
+2. `make build`
+
+    This will run `tox` which will run all your tests in both Python 3.7
+    and Python 3.8 as well as linting your code.
+
+3. `make clean`
+
+    This will clean up various Python and build generated files so that you can ensure
+    that you are working in a clean environment.
+
+4. `make docs`
+
+    This will generate and launch a web browser to view the most up-to-date
+    documentation for your Python package.
+
+#### Suggested Git Branch Strategy
+
+1. `main` is for the most up-to-date development, very rarely should you directly
+   commit to this branch. GitHub Actions will run on every push and on a CRON to this
+   branch but still recommended to commit to your development branches and make pull
+   requests to main. If you push a tagged commit with bumpversion, this will also release to PyPI.
+2. Your day-to-day work should exist on branches separate from `main`. Even if it is
+   just yourself working on the repository, make a PR from your working branch to `main`
+   so that you can ensure your commits don't break the development head. GitHub Actions
+   will run on every push to any branch or any pull request from any branch to any other
+   branch.
+3. It is recommended to use "Squash and Merge" commits when committing PR's. It makes
+   each set of changes to `main` atomic and as a side effect naturally encourages small
+   well defined PR's.
+
+
+**MIT license**
+
+
+
