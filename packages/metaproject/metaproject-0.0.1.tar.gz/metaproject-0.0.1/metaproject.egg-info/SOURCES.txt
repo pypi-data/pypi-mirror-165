@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+metaproject/cli.py
+metaproject/config.py
+metaproject/template.py
+metaproject/test.py
+metaproject.egg-info/PKG-INFO
+metaproject.egg-info/SOURCES.txt
+metaproject.egg-info/dependency_links.txt
+metaproject.egg-info/entry_points.txt
+metaproject.egg-info/requires.txt
+metaproject.egg-info/top_level.txt
