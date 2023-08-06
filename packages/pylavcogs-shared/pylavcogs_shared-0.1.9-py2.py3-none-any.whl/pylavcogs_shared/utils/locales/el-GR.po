@@ -1,0 +1,106 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: pylavcogs-shared\n"
+"POT-Creation-Date: 2022-08-31 13:43+0000\n"
+"PO-Revision-Date: 2022-08-31 13:44\n"
+"Last-Translator: \n"
+"Language-Team: Greek\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: redgettext 3.4.2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: pylavcogs-shared\n"
+"X-Crowdin-Project-ID: 535248\n"
+"X-Crowdin-Language: el\n"
+"X-Crowdin-File: /pylavcogs_shared/utils/locales/messages.pot\n"
+"X-Crowdin-File-ID: 590\n"
+"Language: el_GR\n"
+
+#: pylavcogs_shared/utils/required_methods.py:47
+#, docstring
+msgid "Shows the credits and translation details for the PyLav cogs and shared code"
+msgstr "Εμφανίζει τις πιστώσεις και τα στοιχεία μετάφρασης για τα PyLav cogs και κοινόχρηστο κώδικα"
+
+#: pylavcogs_shared/utils/required_methods.py:51
+msgid "PyLav was created by [Draper#6666](https://github.com/Drapersniper).\n\n"
+"PyLav can be located in https://github.com/Drapersniper/PyLav\n"
+"PyLavCog-Shared can be located in https://github.com/Drapersniper/PyLavCog-Shared\n"
+"PyLav-Cogs can be located in https://github.com/Drapersniper/PyLav-Cogs\n\n"
+"PyLav's support server can be found at https://discord.com/invite/Sjh2TSCYQB\n\n\n"
+"You can help translate PyLav by contributing to our Crowdin projects at:\n"
+"https://crowdin.com/project/pylav and https://crowdin.com/project/pylavcogs-shared and https://crowdin.com/project/pylavcogs\n\n\n"
+"Contributors:\n"
+"- https://github.com/Drapersniper/PyLav/graphs/contributors\n"
+"- https://github.com/Drapersniper/PyLavCog-Shared/graphs/contributors\n"
+"- https://github.com/Drapersniper/PyLav-Cogs/graphs/contributors\n"
+"If you wish to buy me a coffee for my work, you can do so at:\n"
+"https://www.buymeacoffee.com/draper or https://github.com/sponsors/Drapersniper"
+msgstr "Το PyLav δημιουργήθηκε από το [Draper#6666](https://github.com/Drapersniper).\n\n"
+"Το PyLav βρίσκεται στο https://github. om/Drapersniper/PyLav\n"
+"Η PyLavCog-Shared βρίσκεται στο https://github.com/Drapersniper/PyLavCog-Shared\n"
+"PyLav-Cogs βρίσκεται στο https://github. Ο διακομιστής υποστήριξης της PyLav/Drapersniper/PyLav-Cogs\n\n"
+"βρίσκεται στο https://discord.com/invite/Sjh2TSCYQB\n\n\n"
+"Μπορείτε να βοηθήσετε στη μετάφραση της PyLav συμβάλλοντας στα έργα μας στο Crowdin στο:\n"
+"https://crowdin. om/project/pylav και https://crowdin.com/project/pylavcogs-shared και https://crowdin.com/project/pylavcogs\n\n\n"
+"Συνεισφέροντες:\n"
+"- https://github.com/Drapersniper/PyLav/graphs/contributors\n"
+"- https://github. om/Drapersniper/PyLavCog-Shared/graphs/contributors\n"
+"- https://github.com/Drapersniper/PyLav-Cogs/graphs/contributors\n"
+"Εάν επιθυμείτε να μου αγοράσετε καφέ για το έργο μου, μπορείτε να το κάνετε στο:\n"
+"https://www.buymeacoffee.com/draper ή https://github.com/sponsors/Drapersniper"
+
+#: pylavcogs_shared/utils/required_methods.py:81
+#, docstring
+msgid "Show the version of PyLav and PyLavCogs-Shared libraries"
+msgstr "Εμφάνιση της έκδοσης των PyLav και PyLavCogs-Shared βιβλιοθήκες"
+
+#: pylavcogs_shared/utils/required_methods.py:93
+msgid "Library"
+msgstr "Βιβλιοθήκη"
+
+#: pylavcogs_shared/utils/required_methods.py:93
+msgid "Version"
+msgstr "Έκδοση"
+
+#: pylavcogs_shared/utils/required_methods.py:107
+#, docstring
+msgid "Sync the Bots slash commands"
+msgstr "Συγχρονισμός των εντολών κάθετος Bots"
+
+#: pylavcogs_shared/utils/required_methods.py:116
+msgid "Synced the bots slash commands"
+msgstr "Συγχρονισμός των εντολών κάθετου bots"
+
+#: pylavcogs_shared/utils/required_methods.py:137
+msgid "This command requires an existing player to be run"
+msgstr "Αυτή η εντολή απαιτεί την εκτέλεση ενός υπάρχοντος παίκτη"
+
+#: pylavcogs_shared/utils/required_methods.py:146
+msgid "MediaPlayer cog is currently temporarily unavailable due to an outage with the backend services, please try again later"
+msgstr "Ο κωδικός του MediaPlayer δεν είναι προσωρινά διαθέσιμος λόγω διακοπής λειτουργίας με τις υπηρεσίες του συστήματος υποστήριξης, παρακαλώ προσπαθήστε ξανά αργότερα"
+
+#: pylavcogs_shared/utils/required_methods.py:150
+msgid "No Lavalink node currently available"
+msgstr "Δεν υπάρχει διαθέσιμος κόμβος Lavalink"
+
+#: pylavcogs_shared/utils/required_methods.py:159
+msgid "MediaPlayer is currently unable to process tracks belonging to {feature}"
+msgstr "Το MediaPlayer δεν είναι σε θέση να επεξεργαστεί κομμάτια που ανήκουν στο {feature}"
+
+#: pylavcogs_shared/utils/required_methods.py:162
+msgid "No Lavalink node currently available with feature {feature}"
+msgstr "Κανένας κόμβος Lavalink δεν είναι διαθέσιμος με το χαρακτηριστικό {feature}"
+
+#: pylavcogs_shared/utils/required_methods.py:173
+msgid "This command is not available in this channel. Please use {channel}"
+msgstr "Αυτή η εντολή δεν είναι διαθέσιμη σε αυτό το κανάλι. Παρακαλούμε χρησιμοποιήστε {channel}"
+
+#: pylavcogs_shared/utils/required_methods.py:185
+msgid "This command requires you to be a DJ"
+msgstr "Αυτή η εντολή απαιτεί να είστε DJ"
+
+#: pylavcogs_shared/utils/required_methods.py:223
+msgid "PyLav is not ready - Please try again shortly"
+msgstr "Το PyLav δεν είναι έτοιμο - Παρακαλώ δοκιμάστε ξανά σύντομα"
+
