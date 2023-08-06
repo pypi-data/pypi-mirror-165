@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: nonebot-plugin-course
+Version: 0.1.0
+Summary: A plugin for nonebot to show course information
+Home-page: https://github.com/InariInDream/nonebot_plugin_course
+Author: InariInDream
+Author-email: inariindream@163.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+$$Nonebot-Plugin-Course$$
+
+## 浣跨敤璇存槑
