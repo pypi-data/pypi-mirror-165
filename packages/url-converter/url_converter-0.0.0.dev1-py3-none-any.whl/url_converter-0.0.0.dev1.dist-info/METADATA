@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: url-converter
+Version: 0.0.0.dev1
+Summary: Provides a base class for implementing simple URL converters.
+Author-email: Curt Gilman <curt@gilm.net>
+License: MIT
+Project-URL: Homepage, https://github.com/curt/python-url-converter
+Project-URL: Bug Tracker, https://github.com/curt/python-url-converter/issues
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+URL Converter for Python
+========================
+
+A base class for implementing simple URL converters.
+
+License
+-------
+
+MIT license.
+
+Author
+------
+
+The package is written and maintained by Curt Gilman.
