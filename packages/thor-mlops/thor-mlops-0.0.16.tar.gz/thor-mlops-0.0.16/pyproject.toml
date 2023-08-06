@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "thor-mlops"
+version = "0.0.16"
+authors = [
+	{name = "Tom Scheffers", email="tom@thunderstock.nl"},
+]
+description = "Amazing ML ops for preprocessing, feature storage and inference"
+readme = "README.md"
+license = { file="LICENSE" }
+keywords = ["ml", "pyarrow", "preprocessing"]
+dependencies = ["pyarrow>=8.0.0"]
+
+[project.urls]
+"Homepage" = "https://github.com/TomScheffers/thor-mlops"

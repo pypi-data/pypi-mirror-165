@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/thor_mlops/__init__.py
+src/thor_mlops/clean.py
+src/thor_mlops/ops.py
+src/thor_mlops/starschema.py
+src/thor_mlops.egg-info/PKG-INFO
+src/thor_mlops.egg-info/SOURCES.txt
+src/thor_mlops.egg-info/dependency_links.txt
+src/thor_mlops.egg-info/requires.txt
+src/thor_mlops.egg-info/top_level.txt
