@@ -1,0 +1,110 @@
+Metadata-Version: 2.1
+Name: wwtp-configuration
+Version: 0.0.9
+Summary: Class hierarchy to represent a wastewater treatment plant's configuration.
+Home-page: https://github.com/we3lab/wwtp-configuration
+Author: WE3 Lab
+Author-email: fchapin@stanford.edu
+License: UNKNOWN
+Keywords: wwtp-configuration
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: Free for non-commercial use
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.8
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: pint (==0.19.2)
+Requires-Dist: networkx (==2.8.5)
+Requires-Dist: pyvis (==0.2.1)
+Requires-Dist: matplotlib (==3.5.2)
+Provides-Extra: all
+Requires-Dist: pint (==0.19.2) ; extra == 'all'
+Requires-Dist: networkx (==2.8.5) ; extra == 'all'
+Requires-Dist: pyvis (==0.2.1) ; extra == 'all'
+Requires-Dist: matplotlib (==3.5.2) ; extra == 'all'
+Requires-Dist: black (>=22.3.0) ; extra == 'all'
+Requires-Dist: flake8 (>=4.0.0) ; extra == 'all'
+Requires-Dist: codecov (>=2.1.4) ; extra == 'all'
+Requires-Dist: pytest (>=6.2.5) ; extra == 'all'
+Requires-Dist: pytest-cov (>=3.0.0) ; extra == 'all'
+Requires-Dist: pytest-html (>=3.1.1) ; extra == 'all'
+Requires-Dist: tox (>=3.24.5) ; extra == 'all'
+Requires-Dist: Sphinx (==4.2.0) ; extra == 'all'
+Provides-Extra: dev
+Requires-Dist: black (>=22.3.0) ; extra == 'dev'
+Requires-Dist: flake8 (>=4.0.0) ; extra == 'dev'
+Requires-Dist: codecov (>=2.1.4) ; extra == 'dev'
+Requires-Dist: pytest (>=6.2.5) ; extra == 'dev'
+Requires-Dist: pytest-cov (>=3.0.0) ; extra == 'dev'
+Requires-Dist: pytest-html (>=3.1.1) ; extra == 'dev'
+Requires-Dist: tox (>=3.24.5) ; extra == 'dev'
+Requires-Dist: Sphinx (==4.2.0) ; extra == 'dev'
+Provides-Extra: setup
+Provides-Extra: test
+Requires-Dist: black (>=22.3.0) ; extra == 'test'
+Requires-Dist: flake8 (>=4.0.0) ; extra == 'test'
+Requires-Dist: codecov (>=2.1.4) ; extra == 'test'
+Requires-Dist: pytest (>=6.2.5) ; extra == 'test'
+Requires-Dist: pytest-cov (>=3.0.0) ; extra == 'test'
+Requires-Dist: pytest-html (>=3.1.1) ; extra == 'test'
+
+******************
+WWTP Configuration
+******************
+
+.. image::
+   https://github.com/we3lab/wwtp-configuration/workflows/Build%20Main/badge.svg
+   :height: 30
+   :target: https://github.com/we3lab/wwtp-configuration/actions
+   :alt: Build Status
+
+.. image::
+   https://github.com/we3lab/wwtp-configuration/workflows/Documentation/badge.svg
+   :height: 30
+   :target: https://we3lab.github.io/wwtp-configuration
+   :alt: Documentation
+
+.. image::
+   https://codecov.io/gh/we3lab/wwtp-configuration/branch/main/graph/badge.svg
+   :height: 30
+   :target: https://codecov.io/gh/we3lab/wwtp-configuration
+   :alt: Code Coverage
+
+A class hierarchy designed to represent a wastewater treatment plant's configuration.
+
+Useful Commands
+===============
+
+1. ``pip install -e .``
+
+  This will install your package in editable mode.
+
+2. ``pytest wwtp_configuration/tests --cov=wwtp_configuration --cov-report=html``
+
+  Produces an HTML test coverage report for the entire project which can
+  be found at ``htmlcov/index.html``.
+
+3. ``docs/make html``
+
+  This will generate an HTML version of the documentation which can be found
+  at ``_build/html/index.html``.
+
+4. ``flake8 wwtp_configuration --count --verbose --show-source --statistics``
+
+  This will lint the code and share all the style errors it finds.
+
+5. ``black wwtp_configuration``
+
+  This will reformat the code according to strict style guidelines.
+
+Legal Documents
+===============
+
+- `LICENSE <https://github.com/we3lab/wwtp-configuration/blob/main/LICENSE/>`_
+- `CONTRIBUTING <https://github.com/we3lab/wwtp-configuration/blob/main/CONTRIBUTING.rst/>`_
+
+
