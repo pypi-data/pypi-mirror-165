@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: flake8-unused-fixtures
+Version: 0.3.1
+Summary: Warn about unnecessary fixtures in tests' definition.
+Home-page: https://github.com/MarcinBinkowski/flake8_unused_fixtures
+License: BSD-3-Clause
+Keywords: flake8,lint
+Author: Marcin Binkowski
+Author-email: binq661@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: astunparse (>=1.6.3,<2.0.0)
+Requires-Dist: flake8 (>=5.0.4,<6.0.0)
+Project-URL: Repository, https://github.com/MarcinBinkowski/flake8_unused_fixtures
+Description-Content-Type: text/markdown
+
+# flake8_unused_fixtures
+This project searches for all functions 
+with prefix "test_" or suffix "_test" 
+and searches for all unused fixture names inside the function body.
+For now, it does not check if the function is actually marked as fixture.
+
+It is assumed that fixtures that do not need to be directly accessed are
+declared using `@pytest.mark.usefixtures`
