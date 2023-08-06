@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: pylogus
+Version: 0.1.0
+Summary: Simple log format and other stuff
+Home-page: https://github.com/Mcublog/pylog
+Author: Viacheslav
+Author-email: Viacheslav@mcublog.ru
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# pylogus
+
+Formatted log for python
+
+Usage example:
+
+```python
+import logging
+
+from pylogus import logger_init
+
+log = logger_init(__name__, logging.DEBUG)
+
+def example():
+    log.info("This is a info msg")
+    log.debug("This is a debug msg")
+    log.warning("This is a warning msg")
+    log.error("This is a error msg")
+
+if __name__ == "__main__":
+    example()
+```

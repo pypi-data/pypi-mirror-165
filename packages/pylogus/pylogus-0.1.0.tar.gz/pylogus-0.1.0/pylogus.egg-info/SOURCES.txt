@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+pylogus/__init__.py
+pylogus/pylogus.py
+pylogus/version.py
+pylogus.egg-info/PKG-INFO
+pylogus.egg-info/SOURCES.txt
+pylogus.egg-info/dependency_links.txt
+pylogus.egg-info/requires.txt
+pylogus.egg-info/top_level.txt
