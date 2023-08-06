@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "rcheck"
+version = "0.0.3"
+description = "Runtime type checking"
+authors = ["Alex Rudolph <alex3rudolph@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://www.github.com/alrudolph/rcheck"
+packages = [
+    { include = "rcheck" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+pylint = "^2.14.5"
+black = "^22.6.0"
+isort = "^5.10.1"
+pytest = "^7.1.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
