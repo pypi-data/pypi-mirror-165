@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+oglio/Reader.py
+oglio/Types.py
+oglio/Writer.py
+oglio/__init__.py
+oglio/py.typed
+oglio.egg-info/PKG-INFO
+oglio.egg-info/SOURCES.txt
+oglio.egg-info/dependency_links.txt
+oglio.egg-info/requires.txt
+oglio.egg-info/top_level.txt
