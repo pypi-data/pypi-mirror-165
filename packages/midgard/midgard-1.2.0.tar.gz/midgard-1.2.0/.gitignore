@@ -1,0 +1,8 @@
+dist
+documents
+__pycache__/
+.project
+.pydevproject
+.coverage
+/.pytest_cache/
+/.mypy_cache/

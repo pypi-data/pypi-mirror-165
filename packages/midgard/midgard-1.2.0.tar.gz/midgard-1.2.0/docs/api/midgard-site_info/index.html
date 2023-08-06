@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>midgard.site_info - Midgard v1.2.0</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/docco.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Midgard v1.2.0</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">How-to <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../howto/testing/" class="dropdown-item">Testing</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">API <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../midgard/" class="dropdown-item">midgard</a>
+</li>
+                                    
+<li>
+    <a href="../midgard-collections/" class="dropdown-item">midgard.collections</a>
+</li>
+                                    
+<li>
+    <a href="../midgard-config/" class="dropdown-item">midgard.config</a>
+</li>
+                                    
+<li>
+    <a href="../midgard-data/" class="dropdown-item">midgard.data</a>
+</li>
+                                    
+<li>
+    <a href="../midgard-dev/" class="dropdown-item">midgard.dev</a>
+</li>
+                                    
+<li>
+    <a href="../midgard-files/" class="dropdown-item">midgard.files</a>
+</li>
+                                    
+<li>
+    <a href="../midgard-gnss/" class="dropdown-item">midgard.gnss</a>
+</li>
+                                    
+<li>
+    <a href="../midgard-ionosphere/" class="dropdown-item">midgard.ionosphere</a>
+</li>
+                                    
+<li>
+    <a href="../midgard-math/" class="dropdown-item">midgard.math</a>
+</li>
+                                    
+<li>
+    <a href="../midgard-parsers/" class="dropdown-item">midgard.parsers</a>
+</li>
+                                    
+<li>
+    <a href="../midgard-plot/" class="dropdown-item">midgard.plot</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">midgard.site_info</a>
+</li>
+                                    
+<li>
+    <a href="../midgard-writers/" class="dropdown-item">midgard.writers</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../midgard-plot/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../midgard-writers/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#midgardsite_info" class="nav-link">midgard.site_info</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#midgardsite_info_site_info" class="nav-link">midgard.site_info._site_info</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#midgardsite_infoantenna" class="nav-link">midgard.site_info.antenna</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#midgardsite_inforeceiver" class="nav-link">midgard.site_info.receiver</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#midgardsite_infosite_coord" class="nav-link">midgard.site_info.site_coord</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#midgardsite_infosite_info" class="nav-link">midgard.site_info.site_info</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="midgardsite_info">midgard.site_info</h1>
+<h2 id="midgardsite_info_site_info">midgard.site_info._site_info</h2>
+<p>Base classes for site information.</p>
+<p><strong>Description:</strong></p>
+<p>All the base classes are abstract classes. There are three base classes defined.</p>
+<h3 id="modulebase"><strong>ModuleBase</strong></h3>
+<p>Full name: <code>midgard.site_info._site_info.ModuleBase</code></p>
+<p>Signature: <code>()</code></p>
+<p>Base class for each module of site information (e.g. Antenna, Receiver, ...).</p>
+<p>Allows different sources of site information history to be registered.</p>
+<h3 id="siteinfobase"><strong>SiteInfoBase</strong></h3>
+<p>Full name: <code>midgard.site_info._site_info.SiteInfoBase</code></p>
+<p>Signature: <code>(station: str, site_info: Dict[str, Any]) -&gt; None</code></p>
+<p>Site information base class defining common attributes and methods</p>
+<h3 id="siteinfohistorybase"><strong>SiteInfoHistoryBase</strong></h3>
+<p>Full name: <code>midgard.site_info._site_info.SiteInfoHistoryBase</code></p>
+<p>Signature: <code>(station: str, source_data: Any = None, source_path: str = None) -&gt; None</code></p>
+<p>Base class defining common attributes and methods for history classes</p>
+<h3 id="siteinfohistoryiterator"><strong>SiteInfoHistoryIterator</strong></h3>
+<p>Full name: <code>midgard.site_info._site_info.SiteInfoHistoryIterator</code></p>
+<p>Signature: <code>(site_info_history)</code></p>
+<p>Iterator class for SiteInfoHistory classes</p>
+<h2 id="midgardsite_infoantenna">midgard.site_info.antenna</h2>
+<p>Antenna information classes</p>
+<p><strong>Description:</strong>
+This module is divided into three different types of classes:</p>
+<pre><code>1. Main class Antenna that provides basic functionality to the user. See examples
+2. Antenna source type classes:
+    - There is one class for each source type
+    - A class with all relevant site coordinate information for a point in time.
+3. Antenna history source type classes:
+    - There is one class for each source type
+    - Converts input from source_data to a object of type AntennaHistorySinex, etc and provides functions
+      for accessing the history and relevant dates. 
+    - The history consist of a time interval for which the entry is valid and an instance of an antenna 
+      source type class for each defined time interval.
+
+If a source type does not contain information about the antenna the module will return 'None'.
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code>from midgard import parsers
+p = parsers.parse_file(parser_name='sinex_site', file_path='./data/site_info/igs.snx')
+source_data = p.as_dict()
+all_stations = source_data.keys()
+
+Antenna.get("snx", "osls", datetime(2020, 1, 1), source_data, source_path=p.file_path)
+Antenna.get("snx", all_stations, datetime(2020, 1, 1), source_data, source_path=p.file_path)
+
+Antenna.get_history("snx", "osls", source_data, source_path=p.file_path)
+Antenna.get_history("snx", all_stations, source_data, source_path=p.file_path)
+</code></pre>
+<h3 id="antenna"><strong>Antenna</strong></h3>
+<p>Full name: <code>midgard.site_info.antenna.Antenna</code></p>
+<p>Signature: <code>()</code></p>
+<p>Main class for converting antenna information from various sources into unified classes</p>
+<h3 id="antennahistorysinex"><strong>AntennaHistorySinex</strong></h3>
+<p>Full name: <code>midgard.site_info.antenna.AntennaHistorySinex</code></p>
+<p>Signature: <code>(station: str, source_data: Any = None, source_path: str = None) -&gt; None</code></p>
+<h3 id="antennahistoryssc"><strong>AntennaHistorySsc</strong></h3>
+<p>Full name: <code>midgard.site_info.antenna.AntennaHistorySsc</code></p>
+<p>Signature: <code>(station: str, source_data: Any = None, source_path: str = None) -&gt; None</code></p>
+<h3 id="antennasinex"><strong>AntennaSinex</strong></h3>
+<p>Full name: <code>midgard.site_info.antenna.AntennaSinex</code></p>
+<p>Signature: <code>(station: str, site_info: Dict[str, Any]) -&gt; None</code></p>
+<p>Antenna class handling SINEX file antenna station information</p>
+<h2 id="midgardsite_inforeceiver">midgard.site_info.receiver</h2>
+<p>Receiver information classes</p>
+<p><strong>Description:</strong>
+This module is divided into three different types of classes:</p>
+<pre><code>1. Main class Receiver that provides basic functionality to the user. See examples
+2. Receiver source type classes:
+    - There is one class for each source type
+    - A class with all relevant site coordinate information for a point in time.
+3. Receiver history source type classes:
+    - There is one class for each source type
+    - Converts input from source_data to a object of type ReceiverHistorySinex, etc and provides functions
+      for accessing the history and relevant dates. 
+    - The history consist of a time interval for which the entry is valid and an instance of a receiver 
+      source type class for each defined time interval.
+
+If a source type does not contain information about the receiver the module will return 'None'.
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code>from midgard import parsers
+p = parsers.parse_file(parser_name='sinex_site', file_path='./data/site_info/igs.snx')
+source_data = p.as_dict()
+all_stations = source_data.keys()
+
+Receiver.get("snx", "osls", datetime(2020, 1, 1), source_data, source_path=p.file_path)
+Receiver.get("snx", all_stations, datetime(2020, 1, 1), source_data, source_path=p.file_path)
+
+Receiver.get_history("snx", "osls", source_data, source_path=p.file_path)
+Receiver.get_history("snx", all_stations, source_data, source_path=p.file_path)
+</code></pre>
+<h3 id="receiver"><strong>Receiver</strong></h3>
+<p>Full name: <code>midgard.site_info.receiver.Receiver</code></p>
+<p>Signature: <code>()</code></p>
+<p>Main class for converting receiver information from various sources into unified classes</p>
+<h3 id="receiverhistorysinex"><strong>ReceiverHistorySinex</strong></h3>
+<p>Full name: <code>midgard.site_info.receiver.ReceiverHistorySinex</code></p>
+<p>Signature: <code>(station: str, source_data: Any = None, source_path: str = None) -&gt; None</code></p>
+<h3 id="receiverhistoryssc"><strong>ReceiverHistorySsc</strong></h3>
+<p>Full name: <code>midgard.site_info.receiver.ReceiverHistorySsc</code></p>
+<p>Signature: <code>(station: str, source_data: Any = None, source_path: str = None) -&gt; None</code></p>
+<h3 id="receiversinex"><strong>ReceiverSinex</strong></h3>
+<p>Full name: <code>midgard.site_info.receiver.ReceiverSinex</code></p>
+<p>Signature: <code>(station: str, site_info: Dict[str, Any]) -&gt; None</code></p>
+<p>Receiver class handling SINEX file receiver station information</p>
+<h2 id="midgardsite_infosite_coord">midgard.site_info.site_coord</h2>
+<p>Site cooridnate information classes</p>
+<p><strong>Description:</strong>
+This module is divided into three different types of classes:</p>
+<pre><code>1. Main class SiteCoord that provides basic functionality to the user. See examples
+2. Site coordinate source type classes:
+    - There is one class for each source type
+    - A class with all relevant site coordinate information for a point in time.
+3. Site coordinate history source type classes:
+    - There is one class for each source type
+    - Converts input from source_data to a object of type SiteCoordHistorySinex, etc and provides functions
+      for accessing the history and relevant dates. 
+    - The history consist of a time interval for which the entry is valid and an instance of a site coordinate 
+      source type class for each defined time interval.
+
+If a source type does not contain information about the site coordinates the module will return 'None'.
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code>from midgard import parsers
+from midgard.site_info.site_coord import SiteCoord
+
+# Read SINEX data    
+p = parsers.parse_file(parser_name='sinex_site', file_path='./data/site_info/igs.snx')
+source_data = p.as_dict()
+all_stations = source_data.keys()
+
+# Get station information
+SiteCoord.get("snx", "osls", datetime(2020, 1, 1), source_data, source_path=p.file_path)
+SiteCoord.get("snx", all_stations, datetime(2020, 1, 1), source_data, source_path=p.file_path)
+
+SiteCoord.get_history("snx", "osls", source_data, source_path=p.file_path)
+SiteCoord.get_history("snx", all_stations, source_data, source_path=p.file_path)
+</code></pre>
+<h3 id="sitecoord"><strong>SiteCoord</strong></h3>
+<p>Full name: <code>midgard.site_info.site_coord.SiteCoord</code></p>
+<p>Signature: <code>()</code></p>
+<p>Main class for converting site coordinates from various sources into unified classes</p>
+<h3 id="sitecoordhistorysinex"><strong>SiteCoordHistorySinex</strong></h3>
+<p>Full name: <code>midgard.site_info.site_coord.SiteCoordHistorySinex</code></p>
+<p>Signature: <code>(station: str, source_data: Any = None, source_path: str = None) -&gt; None</code></p>
+<h3 id="sitecoordhistoryssc"><strong>SiteCoordHistorySsc</strong></h3>
+<p>Full name: <code>midgard.site_info.site_coord.SiteCoordHistorySsc</code></p>
+<p>Signature: <code>(station: str, source_data: Any = None, source_path: str = None) -&gt; None</code></p>
+<h3 id="sitecoordsinex"><strong>SiteCoordSinex</strong></h3>
+<p>Full name: <code>midgard.site_info.site_coord.SiteCoordSinex</code></p>
+<p>Signature: <code>(station: str, site_info: Dict[str, Any]) -&gt; None</code></p>
+<p>Site coordinate class handling SINEX file station coordinate information</p>
+<h3 id="sitecoordssc"><strong>SiteCoordSsc</strong></h3>
+<p>Full name: <code>midgard.site_info.site_coord.SiteCoordSsc</code></p>
+<p>Signature: <code>(station: str, site_info: Dict[str, Any]) -&gt; None</code></p>
+<p>Site coordinate class handling SSC file station coordinate information</p>
+<h2 id="midgardsite_infosite_info">midgard.site_info.site_info</h2>
+<p>Module that provides site information as unified objects independent of source. </p>
+<p>Site information consists of antenna and receiver information and coordinates for a station.
+If a source type does not contain information about the antenna, receiver or coordinate the 
+corresponding entry will be set to 'None'.</p>
+<p>Example:</p>
+<p>from midgard import parsers
+p = parsers.parse_file(parser_name='sinex_site', file_path='./data/site_info/igs.snx')
+source_data = p.as_dict()
+all_stations = source_data.keys()</p>
+<p>SiteInfo.get("snx", "osls", datetime(2020, 1, 1), source_data, source_path=p.file_path)
+SiteInfo.get("snx", all_stations, datetime(2020, 1, 1), source_data, source_path=p.file_path)</p>
+<p>SiteInfo.get_history("snx", "osls", source_data, source_path=p.file_path)
+SiteInfo.get_history("snx", all_stations, source_data, source_path=p.file_path)</p>
+<p><strong>Description:</strong></p>
+<h3 id="siteinfo"><strong>SiteInfo</strong></h3>
+<p>Full name: <code>midgard.site_info.site_info.SiteInfo</code></p>
+<p>Signature: <code>()</code></p>
+<p>Main site information class for site information from various sources into unified classes</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -1,0 +1,24 @@
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python>=3.6
+  - bumpversion
+  - dataclasses
+  - colorama
+  - flit
+  - h5py
+  - idna
+  - importlib_resources
+  - ipython
+  - matplotlib
+  - mkdocs
+  - mypy
+  - numpy
+  - pandas
+  - pint
+  - pycurl
+  - pytest
+  - pytest-cov
+  - pytoml
+  - scipy
