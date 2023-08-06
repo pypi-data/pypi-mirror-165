@@ -1,0 +1,7 @@
+memorix_client_redis/__init__.py,sha256=4g66XzAqxMlHku8k-9LbUxOx7PD1wjVc4XzisHdLGzE,49
+memorix_client_redis/memorix_client_api.py,sha256=zlEv8G2irtohiNCx2koFZw_MxJYkoHQJmvHR8Hba2Rs,94
+memorix_client_redis/start.py,sha256=i_A6eQPBLVaFcTxIO5c4CtUuG4PwbDava3LTksF7kok,107
+memorix_client_redis-1.0.0rc2.dist-info/entry_points.txt,sha256=An_a5t4KH6QF7qKec6pj6ZDdOO22IN6FSu1ze2AxsSM,58
+memorix_client_redis-1.0.0rc2.dist-info/WHEEL,sha256=bbU3AyvhQ312rVm7zzRQjs6axI1UYWC3nmFA2E6FFSI,88
+memorix_client_redis-1.0.0rc2.dist-info/METADATA,sha256=ieor3GD4pt6ySDNBjaXYrbI3FEjGrvTXpc4eKwIxER8,337
+memorix_client_redis-1.0.0rc2.dist-info/RECORD,,
