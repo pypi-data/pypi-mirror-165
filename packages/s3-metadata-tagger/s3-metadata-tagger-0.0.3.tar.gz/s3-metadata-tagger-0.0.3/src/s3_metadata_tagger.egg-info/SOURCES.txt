@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/metadata_tagger/__init__.py
+src/metadata_tagger/object_tagger.py
+src/metadata_tagger/pdf_metadata_extractor/__init__.py
+src/metadata_tagger/pdf_metadata_extractor/pdf_metadata_extractor.py
+src/metadata_tagger/picture_metadata_extractor/__init__.py
+src/metadata_tagger/picture_metadata_extractor/picture_metadata_extractor.py
+src/s3_metadata_tagger.egg-info/PKG-INFO
+src/s3_metadata_tagger.egg-info/SOURCES.txt
+src/s3_metadata_tagger.egg-info/dependency_links.txt
+src/s3_metadata_tagger.egg-info/requires.txt
+src/s3_metadata_tagger.egg-info/top_level.txt

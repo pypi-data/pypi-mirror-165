@@ -1,0 +1,75 @@
+Metadata-Version: 2.1
+Name: s3-metadata-tagger
+Version: 0.0.3
+Summary: A package to add metadata tags to objects saved in s3
+License: BSD 3-Clause License
+        
+        Copyright (c) 2022, docu tools GmbH
+        All rights reserved.
+        
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions are met:
+        
+        1. Redistributions of source code must retain the above copyright notice, this
+           list of conditions and the following disclaimer.
+        
+        2. Redistributions in binary form must reproduce the above copyright notice,
+           this list of conditions and the following disclaimer in the documentation
+           and/or other materials provided with the distribution.
+        
+        3. Neither the name of the copyright holder nor the names of its
+           contributors may be used to endorse or promote products derived from
+           this software without specific prior written permission.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+        AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+        IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+        DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+        FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+        DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+        SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+        CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+        OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+        OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+        
+Project-URL: Homepage, https://github.com/DDS-GmbH/metadata-tagger-lib
+Project-URL: Bug Tracker, https://github.com/DDS-GmbH/metadata-tagger-lib/issues
+Keywords: aws,s3,metadata
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: Multimedia
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Provides-Extra: PDF
+Provides-Extra: PICTURE
+License-File: LICENSE
+
+# AWS S3 Metadata Tagger
+The S3 Metadata tagger adds information in the form of metadata to files saved in S3.
+
+To do this, the central handler takes a file location and a metadata extracting function.
+It first checks whether the file already contains the requested information via a `HEAD` request.
+If it does not, it downloads the file, invokes extracting function, and adds the metadata to
+the s3 object with a inplace `COPY, MetadataDirective="REPLACE"` operation.
+
+This package comes with two optional variants for metadata extraction:
+* PDF: for determining the number of pages in a pdf
+* PICTURE: for determining the dimension of an image
+
+## Structure
+### `object_tagger` 
+contains the higher-level orchestration:
+* `object_tagger.py` contains all the logic for checking whether the file has already been tagged, downloading it, invoking the metadata script, creating the tag object, and adding it to the s3 resource. 
+
+The metadata scripts are stored in their respective folders
+
+### `pdf_tagger`
+The pdf tagger uses [PyPDF2](https://pypdf2.readthedocs.io/en/latest/) to determine the amount of pages in a pdf
+
+### `picture_tagger`
+Using [Pillow](https://python-pillow.org/), the script gets the `width` and `height` of the passed image
