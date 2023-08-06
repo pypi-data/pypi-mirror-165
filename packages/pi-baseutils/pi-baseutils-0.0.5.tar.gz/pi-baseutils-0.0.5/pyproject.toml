@@ -1,0 +1,22 @@
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "pi-baseutils"
+version = "0.0.5"
+authors = [
+  { name="rhl1713", email="Leeruohua@126.com" },
+]
+description = "utils"
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
