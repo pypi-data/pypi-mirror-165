@@ -1,0 +1,3 @@
+[console_scripts]
+pydistcheck = pydistcheck.cli:check
+pydistcheck-summarize = pydistcheck.cli:summarize
