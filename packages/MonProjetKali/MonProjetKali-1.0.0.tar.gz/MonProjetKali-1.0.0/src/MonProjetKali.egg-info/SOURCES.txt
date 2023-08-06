@@ -1,0 +1,11 @@
+LICENCE.txt
+README.md
+pyproject.toml
+setup.cfg
+src/MonProjetKali.egg-info/PKG-INFO
+src/MonProjetKali.egg-info/SOURCES.txt
+src/MonProjetKali.egg-info/dependency_links.txt
+src/MonProjetKali.egg-info/requires.txt
+src/MonProjetKali.egg-info/top_level.txt
+src/main/launch.py
+src/other/test.py
