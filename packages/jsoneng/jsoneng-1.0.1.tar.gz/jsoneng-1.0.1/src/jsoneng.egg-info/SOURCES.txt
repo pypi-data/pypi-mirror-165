@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/jsoneng.egg-info/PKG-INFO
+src/jsoneng.egg-info/SOURCES.txt
+src/jsoneng.egg-info/dependency_links.txt
+src/jsoneng.egg-info/top_level.txt
+src/jsonengine/__init__.py
