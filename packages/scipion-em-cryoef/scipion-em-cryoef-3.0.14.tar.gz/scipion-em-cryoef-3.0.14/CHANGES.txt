@@ -1,0 +1,14 @@
+3.0.14 - add possible outputs dict
+3.0.13 - minor changes
+3.0.12 - add Mollweide plot
+3.0.11 - minor changes
+3.0.10 - add Github actions
+3.0.9 - update to support ChimeraX
+3.0.8 - changed version to reflect Scipion 3 support
+1.0.8 - fix viewer bug
+1.0.6 - Migrated to python3
+1.0.5 - switch to rst format
+1.0.4 - minor corrections
+1.0.2 - Include protocol.conf to create the source distribution
+1.0.1 - Add protocols.conf and update viewers import
+21-August-2018 - First version of the plugin
