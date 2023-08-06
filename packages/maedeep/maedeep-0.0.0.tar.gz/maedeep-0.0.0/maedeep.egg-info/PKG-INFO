@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: maedeep
+Version: 0.0.0
+Summary: Python interface to use articulatory model by Maeda
+Home-page: https://git.ecdf.ed.ac.uk/belie/maedeep
+Author: Benjamin Elie
+Author-email: benjamin.elie@ed.ac.uk
+License: Creative Commons Attribution 4.0 International License
+License-File: LICENSE.txt

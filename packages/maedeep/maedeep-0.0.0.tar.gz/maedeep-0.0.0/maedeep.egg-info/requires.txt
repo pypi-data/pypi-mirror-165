@@ -1,0 +1,8 @@
+numpy
+scipy
+tqdm
+shapely
+tensorflow
+keras
+sklearn
+pytest
