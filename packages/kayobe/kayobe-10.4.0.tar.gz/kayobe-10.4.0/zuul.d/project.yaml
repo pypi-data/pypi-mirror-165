@@ -1,0 +1,46 @@
+---
+- project:
+    templates:
+      - openstack-cover-jobs
+      - openstack-python3-wallaby-jobs
+      - publish-openstack-docs-pti
+      - release-notes-jobs-python3
+    check:
+      jobs:
+        - kayobe-tox-ansible-syntax
+        - kayobe-tox-ansible
+        - kayobe-tox-molecule
+        - kayobe-overcloud-centos8s
+        - kayobe-overcloud-ubuntu-focal
+        - kayobe-overcloud-tls-centos8s
+        - kayobe-overcloud-host-configure-centos8s
+        - kayobe-overcloud-host-configure-ubuntu-focal
+        - kayobe-overcloud-upgrade-centos8s
+        - kayobe-seed-centos8s
+        - kayobe-seed-ubuntu-focal
+        - kayobe-seed-images-centos8s
+        - kayobe-seed-upgrade-centos8s
+        - kayobe-seed-vm-centos8s
+        - kayobe-seed-vm-ubuntu-focal
+
+    gate:
+      queue: kayobe
+      jobs:
+        - kayobe-tox-ansible-syntax
+        - kayobe-tox-ansible
+        - kayobe-tox-molecule
+        - kayobe-overcloud-centos8s
+        - kayobe-overcloud-ubuntu-focal
+        - kayobe-overcloud-tls-centos8s
+        - kayobe-overcloud-host-configure-centos8s
+        - kayobe-overcloud-host-configure-ubuntu-focal
+        - kayobe-overcloud-upgrade-centos8s
+        - kayobe-seed-centos8s
+        - kayobe-seed-ubuntu-focal
+        - kayobe-seed-upgrade-centos8s
+        - kayobe-seed-vm-centos8s
+        - kayobe-seed-vm-ubuntu-focal
+
+    experimental:
+      jobs:
+        - kayobe-seed-images-ubuntu-focal
