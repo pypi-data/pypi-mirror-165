@@ -1,0 +1,13 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.py
+passage_identity.egg-info/PKG-INFO
+passage_identity.egg-info/SOURCES.txt
+passage_identity.egg-info/dependency_links.txt
+passage_identity.egg-info/requires.txt
+passage_identity.egg-info/top_level.txt
+passageidentity/__init__.py
+passageidentity/errors.py
+passageidentity/helper.py
+passageidentity/passage.py
