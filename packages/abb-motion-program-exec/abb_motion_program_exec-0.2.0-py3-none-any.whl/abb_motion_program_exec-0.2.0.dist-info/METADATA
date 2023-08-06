@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: abb-motion-program-exec
+Version: 0.2.0
+Summary: Simple module to execute motion commands on ABB robots and log results
+Home-page: https://github.com/johnwason/abb_motion_program_exec
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: bs4
+Requires-Dist: requests
+Requires-Dist: numpy
+
+UNKNOWN
+
+
