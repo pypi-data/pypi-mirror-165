@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: dudraw
+Version: 1.2.3
+Summary: A fork of Princeton's stddraw for use in classes at the University of Denver
+Project-URL: Homepage, https://github.com/kwertyops/dudraw
+Author-email: Andrew Hannum <andrew.hannum@du.edu>
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: pygame>=2.0.0
+Description-Content-Type: text/markdown
+
+# dudraw
+
+## Description
+
+Repository for `dudraw`, a fork of [stddraw from the Princeton Standard Libraries](https://introcs.cs.princeton.edu/python/code/).
+
+## Installation
+
+```
+pip install dudraw
+```
+
+## Documentation
+
+API Documentation: [https://kwertyops.github.io/dudraw/](https://kwertyops.github.io/dudraw/)
+
+To build documentation:
+
+```
+pip install pydoctor
+make docs
+```
+
+## License
+
+Released under the [GNU Public License version 3 (GPLv3)](https://www.gnu.org/licenses/gpl-3.0.html)
+
+## Authors
+
+Original Authors of [StdLib](https://introcs.cs.princeton.edu/java/stdlib/):
+
+    Robert Sedgewick
+    Kevin Wayne
+ 
+`dudraw` Fork Additions by:
+
+    Joseph Brooksbank
+    Ryan Dunagan
+    Declan Kahn
+    Eddy Rogers
+    Andrew Hannum
+    Mohammed Albow
+    Jeff Edgington
