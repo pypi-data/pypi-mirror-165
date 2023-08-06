@@ -1,0 +1,3 @@
+[console_scripts]
+pyclashsub = pyclashsub.__main__:main
+

@@ -1,0 +1,56 @@
+Metadata-Version: 1.1
+Name: pyclashsub
+Version: 0.0.1
+Summary: A python clash subscriber script
+Home-page: https://github.com/sorn/pyclashsub
+Author: Hong-She Liang
+Author-email: sorn@taorules.com
+License: Apache Software License
+Description: ==========
+        pyclashsub
+        ==========
+        
+        
+        .. image:: https://img.shields.io/pypi/v/pyclashsub.svg
+            :target: https://pypi.python.org/pypi/pyclashsub
+        
+        A python clash subscriber script
+        
+        
+        * License: Apache-2.0
+        * Documentation: https://pyclashsub.readthedocs.io.
+        
+        
+        Features
+        --------
+        
+        * TODO
+        
+        Credits
+        ---------
+        
+        This package was created with Cookiecutter_ and the `PyPackageTemplate`_ project template.
+        
+        .. _Cookiecutter: https://github.com/audreyr/cookiecutter
+        .. _`PyPackageTemplate`: https://github.com/starofrainnight/rtpl-pypackage
+        
+        
+        
+        =======
+        History
+        =======
+        
+        0.0.1 (2022-08-28)
+        ------------------
+        
+        * First release on PyPI.
+        
+Keywords: pyclashsub
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
