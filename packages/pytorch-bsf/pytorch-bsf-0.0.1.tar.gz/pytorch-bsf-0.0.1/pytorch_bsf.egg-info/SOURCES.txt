@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+pytorch_bsf.egg-info/PKG-INFO
+pytorch_bsf.egg-info/SOURCES.txt
+pytorch_bsf.egg-info/dependency_links.txt
+pytorch_bsf.egg-info/not-zip-safe
+pytorch_bsf.egg-info/requires.txt
+pytorch_bsf.egg-info/top_level.txt
+tests/__init__.py
+tests/bezier_simplex.py
+torch_bsf/__init__.py
+torch_bsf/__main__.py
+torch_bsf/bezier_simplex.py

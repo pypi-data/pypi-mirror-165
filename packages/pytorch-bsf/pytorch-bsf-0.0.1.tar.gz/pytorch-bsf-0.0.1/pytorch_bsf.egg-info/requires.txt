@@ -1,0 +1,9 @@
+setuptools>=21.0.0
+torch
+pytorch-lightning
+torchvision
+protobuf<=3.19
+mlflow
+
+[develop]
+tox
