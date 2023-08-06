@@ -1,0 +1,2 @@
+[console_scripts]
+autotrader = autotrader.bin.cli:cli
