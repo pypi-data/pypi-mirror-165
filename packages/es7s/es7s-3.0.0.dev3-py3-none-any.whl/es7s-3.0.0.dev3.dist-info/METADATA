@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: es7s
+Version: 3.0.0.dev3
+Summary: es7s system (un-)installer, shared code, settings manager
+Home-page: https://github.com/es7s/core
+Author: Aleksandr Shavykin
+Author-email: 0.delameter@gmail.com
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Terminals
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: pytermor
+Requires-Dist: click
+
+<h1 align="center">
+  <img src="https://user-images.githubusercontent.com">
+  <br>
+  <code>
+    es7s/core
+  </code>
+  <br>
+</h1>
+
+es7s system (un-)installer, shared code, settings manager
+
+## Installation
