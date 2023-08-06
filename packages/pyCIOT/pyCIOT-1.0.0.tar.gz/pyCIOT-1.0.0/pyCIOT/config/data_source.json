@@ -1,0 +1,311 @@
+{
+  "AIR": {
+    "OBS": {
+      "EPA": {
+        "base_url": "https://sta.ci.taiwan.gov.tw/STA_AirQuality_v2/v1.0/",
+        "description": "環境保護署國家空品測站",
+        "filters": {
+          "eq": { "properties/authority": "行政院環境保護署" }
+        }
+      },
+      "EPA_IoT": {
+        "base_url": "https://sta.ci.taiwan.gov.tw/STA_AirQuality_EPAIoT/v1.0/",
+        "description": "環境保護署智慧城鄉空品微型感測器",
+        "filters": {}
+      },
+      "AS_IoT": {
+        "base_url": "https://sta.ci.taiwan.gov.tw/STA_AirQuality_v2/v1.0/",
+        "description": "中研院校園空品微型感測器",
+        "filters": {
+          "eq": { "properties/authority": "中研院" }
+        }
+      },
+      "MOST_IoT": {
+        "base_url": "https://sta.ci.taiwan.gov.tw/STA_AirQuality_MOST/v1.0/",
+        "description": "科技部智慧園區空品測站",
+        "filters": {}
+      },
+      "NCNU_IoT": {
+        "base_url": "https://sta.ci.taiwan.gov.tw/STA_AirQuality_Local/v1.0/",
+        "description": "暨南大學在地空品微型感測器 (PM2.5十分鐘平均值)",
+        "filters": {}
+      }
+    }
+  },
+  "WATER": {
+    "WATER_LEVEL": {
+      "WRA_RIVER": {
+        "base_url": "https://sta.ci.taiwan.gov.tw/STA_WaterResource_v2/v1.0/",
+        "description": "水利署河川水位站",
+        "filters": {
+          "eq": {
+            "properties/authority_type": "水利署",
+            "Datastreams/name": "水位"
+          },
+          "sub": {
+            "Datastreams/description": "Datastream_Category_type=河川水位站"
+          }
+        },
+        "datastream_filters": {
+          "eq": { "name": "水位" }
+        }
+      },
+      "WRA_GROUNDWATER": {
+        "base_url": "https://sta.ci.taiwan.gov.tw/STA_WaterResource_v2/v1.0/",
+        "description": "水利署地下水位站",
+        "filters": {
+          "eq": {
+            "properties/authority_type": "水利署"
+          },
+          "sub": {
+            "Datastreams/description": "Datastream_Category_type=地下水位站"
+          }
+        }
+      },
+      "WRA2_DRAINAGE": {
+        "base_url": "https://sta.ci.taiwan.gov.tw/STA_WaterResource_v2/v1.0/",
+        "description": "水利署（與縣市政府合建）區域排水水位站",
+        "filters": {
+          "eq": {
+            "properties/authority_type": "水利署（與縣市政府合建）",
+            "Datastreams/name": "水位"
+          },
+          "sub": {
+            "Datastreams/description": "Datastream_Category_type=區域排水水位站"
+          }
+        },
+        "datastream_filters": {
+          "eq": { "name": "水位" }
+        }
+      },
+      "IA_POND": {
+        "base_url": "https://sta.ci.taiwan.gov.tw/STA_WaterResource_v2/v1.0/",
+        "description": "農田水利署埤塘水位站",
+        "filters": {
+          "eq": {
+            "properties/authority_type": "農田水利署"
+          },
+          "sub": {
+            "Datastreams/description": "Datastream_Category_type=埤塘水位站"
+          }
+        }
+      },
+      "IA_IRRIGATION": {
+        "base_url": "https://sta.ci.taiwan.gov.tw/STA_WaterResource_v2/v1.0/",
+        "description": "農田水利署農田灌溉圳路水位站",
+        "filters": {
+          "eq": {
+            "properties/authority_type": "農田水利署",
+            "Datastreams/name": "水深"
+          },
+          "sub": {
+            "Datastreams/description": "Datastream_Category_type=農田灌溉圳路水位站"
+          }
+        },
+        "datastream_filters": {
+          "eq": { "name": "水深" }
+        }
+      }
+    },
+    "GATE": {
+      "WRA": {
+        "base_url": "https://sta.ci.taiwan.gov.tw/STA_WaterResource_v2/v1.0/",
+        "description": "水利署閘門",
+        "filters": {
+          "eq": {
+            "properties/authority_type": "水利署"
+          },
+          "sub": {
+            "Datastreams/description": "Datastream_Category_type=閘門"
+          }
+        }
+      },
+      "WRA2": {
+        "base_url": "https://sta.ci.taiwan.gov.tw/STA_WaterResource_v2/v1.0/",
+        "description": "水利署（與縣市政府合建）閘門",
+        "filters": {
+          "eq": {
+            "properties/authority_type": "水利署（與縣市政府合建）"
+          },
+          "sub": {
+            "Datastreams/description": "Datastream_Category_type=閘門"
+          }
+        }
+      },
+      "IA": {
+        "base_url": "https://sta.ci.taiwan.gov.tw/STA_WaterResource_v2/v1.0/",
+        "description": "農田水利署閘門",
+        "filters": {
+          "eq": {
+            "properties/authority_type": "農田水利署"
+          },
+          "sub": {
+            "Datastreams/description": "Datastream_Category_type=閘門"
+          }
+        }
+      }
+    },
+    "PUMPING": {
+      "WRA2": {
+        "base_url": "https://sta.ci.taiwan.gov.tw/STA_WaterResource_v2/v1.0/",
+        "description": "水利署（與縣市政府合建）抽水站",
+        "filters": {
+          "eq": {
+            "properties/authority_type": "水利署（與縣市政府合建）"
+          },
+          "sub": {
+            "Datastreams/description": "Datastream_Category_type=抽水站"
+          }
+        }
+      },
+      "TPE": {
+        "base_url": "https://sta.ci.taiwan.gov.tw/STA_Pump_Taipei/v1.0/",
+        "description": "臺北市抽水站",
+        "filters": {}
+      }
+    },
+    "FLOODING": {
+      "WRA": {
+        "base_url": "https://sta.ci.taiwan.gov.tw/STA_WaterResource_v2/v1.0/",
+        "description": "水利署淹水感測器",
+        "filters": {
+          "eq": {
+            "properties/authority_type": "水利署",
+            "Datastreams/name": "淹水深度"
+          },
+          "sub": {
+            "Datastreams/description": "Datastream_Category_type=淹水感測器"
+          }
+        },
+        "datastream_filters": {
+          "eq": { "name": "淹水深度" }
+        }
+      },
+      "WRA2": {
+        "base_url": "https://sta.ci.taiwan.gov.tw/STA_WaterResource_v2/v1.0/",
+        "description": "水利署（與縣市政府合建）淹水感測器",
+        "filters": {
+          "eq": {
+            "properties/authority_type": "水利署（與縣市政府合建）",
+            "Datastreams/name": "淹水深度"
+          },
+          "sub": {
+            "Datastreams/description": "Datastream_Category_type=淹水感測器"
+          }
+        },
+        "datastream_filters": {
+          "eq": { "name": "淹水深度" }
+        }
+      }
+    }
+  },
+  "WEATHER": {
+    "GENERAL": {
+      "CWB": {
+        "base_url": "https://sta.ci.taiwan.gov.tw/STA_Weather/v1.0/",
+        "description": "中央氣象局局屬氣象站",
+        "filters": {
+          "sub": { "name": "局屬氣象站" }
+        }
+      },
+      "CWB_IoT": {
+        "base_url": "https://sta.ci.taiwan.gov.tw/STA_Weather/v1.0/",
+        "description": "中央氣象局自動氣象站",
+        "filters": {
+          "sub": { "name": "自動氣象站" }
+        }
+      }
+    },
+    "RAINFALL": {
+      "CWB": {
+        "base_url": "https://sta.ci.taiwan.gov.tw/STA_Rain/v1.0/",
+        "description": "中央氣象局雨量站",
+        "filters": {}
+      },
+      "WRA": {
+        "base_url": "https://sta.ci.taiwan.gov.tw/STA_WaterResource_v2/v1.0/",
+        "description": "水利署雨量感測器",
+        "filters": {
+          "eq": { "properties/authority_type": "水利署" },
+          "sub": { "Datastreams/description": "雨量感測器" }
+        },
+        "datastream_filters": {
+          "sub": { "description": "雨量感測器" }
+        }
+      },
+      "WRA2": {
+        "base_url": "https://sta.ci.taiwan.gov.tw/STA_WaterResource_v2/v1.0/",
+        "description": "水利署（與縣市政府合建）雨量感測器",
+        "filters": {
+          "eq": { "properties/authority_type": "水利署（與縣市政府合建）" },
+          "sub": { "Datastreams/description": "雨量感測器" }
+        },
+        "datastream_filters": {
+          "sub": { "description": "雨量感測器" }
+        }
+      },
+      "IA": {
+        "base_url": "https://sta.ci.taiwan.gov.tw/STA_WaterResource_v2/v1.0/",
+        "description": "農田水利署雨量感測器",
+        "filters": {
+          "eq": { "properties/authority_type": "農田水利署" },
+          "sub": { "Datastreams/description": "雨量感測器" }
+        },
+        "datastream_filters": {
+          "sub": { "description": "雨量感測器" }
+        }
+      }
+    },
+    "IMAGE": {
+      "CWB": {
+        "base_url": "https://sta.ci.taiwan.gov.tw/STA_Radar/v1.0/",
+        "description": "中央氣象局雷達整合回波圖",
+        "filters": {}
+      }
+    }
+  },
+  "QUAKE": {
+    "EARTHQUAKE": {
+      "CWB+NCREE": {
+        "base_url": "https://sta.ci.taiwan.gov.tw/STA_Earthquake_v2/v1.0/",
+        "description": "中央氣象局與國震中心地震監測站",
+        "filters": {}
+      }
+    }
+  },
+  "DISASTER": {
+    "ALERT": {
+      "base_url": "https://alerts.ncdr.nat.gov.tw/JSONAtomFeed.ashx",
+      "description": "災防中心災害示警"
+    },
+    "NOTICE": {
+      "base_url": "https://portal2.emic.gov.tw/Pub/ERA2/OpenData/",
+      "description": "消防署災情通報"
+    }
+  },
+  "CCTV": {
+    "IMAGE": {
+      "EPA": {
+        "base_url": "https://sta.ci.taiwan.gov.tw/STA_CCTV/v1.0/",
+        "description": "環保署空品監測即時影像器",
+        "filters": {
+          "eq": { "properties/authority": "環保署" }
+        }
+      },
+      "WRA": {
+        "base_url": "https://sta.ci.taiwan.gov.tw/STA_CCTV/v1.0/",
+        "description": "水利署水利防災用影像器",
+        "filters": {
+          "eq": { "properties/authority": "經濟部水利署" }
+        }
+      },
+      "COA": {
+        "base_url": "https://sta.ci.taiwan.gov.tw/STA_CCTV/v1.0/",
+        "description": "行政院農委會土石流觀測站影像",
+        "filters": {
+          "eq": { "properties/authority": "行政院農委會" }
+        }
+      }
+    }
+  }
+}

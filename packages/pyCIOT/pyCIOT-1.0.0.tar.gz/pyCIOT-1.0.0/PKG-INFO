@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: pyCIOT
+Version: 1.0.0
+Summary: Simple python module for retrieving data from Civil IOT Taiwan Data Service Platform
+Home-page: https://github.com/IISNRL/pyCIOT
+Author: cclljj
+Author-email: cclljj@iis.sinica.edu.tw
+Project-URL: Source, https://github.com/IISNRL/pyCIOT
+Project-URL: Bug Tracker, https://github.com/IISNRL/pyCIOT/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+## PyCIOT
+
+Simple Python module utility for retreiving data from [Civil IOT Taiwan Data Service Platform](https://ci.taiwan.gov.tw/dsp/en/index.aspx) [(民生公共物聯網資料服務平台)](https://ci.taiwan.gov.tw/dsp/en/index.aspx).
