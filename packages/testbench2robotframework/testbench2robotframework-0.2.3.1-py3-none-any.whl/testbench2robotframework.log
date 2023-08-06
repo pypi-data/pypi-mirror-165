@@ -1,0 +1,49 @@
+2022-05-27 10:26:25,543 - testbench2robotframework.py:15 -    DEBUG - Config file loaded.
+2022-05-27 10:26:25,544 - json_reader.py:43 -    DEBUG - Loading TestThemeTree from E:\web-itorx-json-generator\json\TestThemeTree.json
+2022-05-27 10:26:25,544 - json_reader.py:46 -     INFO - 6 nodes from TestThemeTree loaded.
+2022-05-27 10:26:25,546 - json_reader.py:56 -    DEBUG - TestCaseSetDetails itba-TC-800 loaded.
+2022-05-27 10:26:25,546 - json_reader.py:56 -    DEBUG - TestCaseSetDetails itba-TC-804 loaded.
+2022-05-27 10:26:25,547 - json_reader.py:56 -    DEBUG - TestCaseSetDetails itba-TC-803 loaded.
+2022-05-27 10:26:25,547 - json_reader.py:59 -     INFO - 3 TestCaseSetDetails loaded.
+2022-05-27 10:26:25,549 - json_reader.py:75 -    DEBUG - TestCaseDetails itba-TC-800-PC-2621 loaded.
+2022-05-27 10:26:25,549 - json_reader.py:75 -    DEBUG - TestCaseDetails itba-TC-804-PC-2627 loaded.
+2022-05-27 10:26:25,550 - json_reader.py:75 -    DEBUG - TestCaseDetails itba-TC-803-PC-2626 loaded.
+2022-05-27 10:26:25,552 - testbench2rf.py:425 -    DEBUG - itba-TC-800 has imports ['SeleniumLibrary'] from unknown root subdivision 'RF'!
+2022-05-27 10:26:25,552 - testbench2rf.py:430 -  WARNING - itba-TC-800 has unknown imports. TestBench Subdivisions which correspond to Libraries or Resources need to be declared in the configuration file. See Log for more details.
+2022-05-27 10:26:25,552 - testbench2rf.py:425 -    DEBUG - itba-TC-804 has imports ['SeleniumLibrary'] from unknown root subdivision 'RF'!
+2022-05-27 10:26:25,552 - testbench2rf.py:430 -  WARNING - itba-TC-804 has unknown imports. TestBench Subdivisions which correspond to Libraries or Resources need to be declared in the configuration file. See Log for more details.
+2022-05-27 10:26:25,552 - testbench2rf.py:425 -    DEBUG - itba-TC-803 has imports ['SeleniumLibrary'] from unknown root subdivision 'RF'!
+2022-05-27 10:26:25,553 - testbench2rf.py:430 -  WARNING - itba-TC-803 has unknown imports. TestBench Subdivisions which correspond to Libraries or Resources need to be declared in the configuration file. See Log for more details.
+2022-05-27 10:26:26,226 - testsuite_write.py:50 -    DEBUG - File written to Generated\1__Login\1__Gültiger_Login\1__Login_mit_korrekten_Benutzerdaten.robot
+2022-05-27 10:26:26,232 - testsuite_write.py:50 -    DEBUG - File written to Generated\1__Login\2__Ungültiger_Login\1__Login_mit_falschem_Benutzernamen.robot
+2022-05-27 10:26:26,234 - testsuite_write.py:50 -    DEBUG - File written to Generated\1__Login\2__Ungültiger_Login\2__Login_mit_falschem_Passwort.robot
+2022-05-27 10:26:26,235 - testsuite_write.py:50 -    DEBUG - File written to Generated\1__Login\1__Gültiger_Login\__init__.robot
+2022-05-27 10:26:26,246 - testsuite_write.py:50 -    DEBUG - File written to Generated\1__Login\__init__.robot
+2022-05-27 10:26:26,248 - testsuite_write.py:50 -    DEBUG - File written to Generated\1__Login\2__Ungültiger_Login\__init__.robot
+2022-05-27 10:26:26,258 - testsuite_write.py:20 -     INFO - Successfully wrote 6 robot files.
+2022-05-27 10:26:26,259 - testsuite_write.py:21 -     INFO - Path: E:\Projekte\TB2Robot\testbench2robotframework\build\lib\Generated
+2022-05-27 10:28:18,415 - testbench2robotframework.py:15 -    DEBUG - Config file loaded.
+2022-05-27 10:28:18,417 - json_reader.py:43 -    DEBUG - Loading TestThemeTree from E:\web-itorx-json-generator\json\TestThemeTree.json
+2022-05-27 10:28:18,417 - json_reader.py:46 -     INFO - 6 nodes from TestThemeTree loaded.
+2022-05-27 10:28:18,419 - json_reader.py:56 -    DEBUG - TestCaseSetDetails itba-TC-800 loaded.
+2022-05-27 10:28:18,420 - json_reader.py:56 -    DEBUG - TestCaseSetDetails itba-TC-804 loaded.
+2022-05-27 10:28:18,420 - json_reader.py:56 -    DEBUG - TestCaseSetDetails itba-TC-803 loaded.
+2022-05-27 10:28:18,420 - json_reader.py:59 -     INFO - 3 TestCaseSetDetails loaded.
+2022-05-27 10:28:18,422 - json_reader.py:75 -    DEBUG - TestCaseDetails itba-TC-800-PC-2621 loaded.
+2022-05-27 10:28:18,422 - json_reader.py:75 -    DEBUG - TestCaseDetails itba-TC-804-PC-2627 loaded.
+2022-05-27 10:28:18,423 - json_reader.py:75 -    DEBUG - TestCaseDetails itba-TC-803-PC-2626 loaded.
+2022-05-27 10:28:18,424 - testbench2rf.py:426 -    DEBUG - itba-TC-800 has imports ['SeleniumLibrary'] from unknown root subdivision 'RF'!
+2022-05-27 10:28:18,424 - testbench2rf.py:431 -  WARNING - itba-TC-800 has unknown imports. TestBench Subdivisions which correspond to Libraries or Resources need to be declared in the configuration file. See Log for more details.
+2022-05-27 10:28:18,425 - testbench2rf.py:426 -    DEBUG - itba-TC-804 has imports ['SeleniumLibrary'] from unknown root subdivision 'RF'!
+2022-05-27 10:28:18,425 - testbench2rf.py:431 -  WARNING - itba-TC-804 has unknown imports. TestBench Subdivisions which correspond to Libraries or Resources need to be declared in the configuration file. See Log for more details.
+2022-05-27 10:28:18,426 - testbench2rf.py:426 -    DEBUG - itba-TC-803 has imports ['SeleniumLibrary'] from unknown root subdivision 'RF'!
+2022-05-27 10:28:18,426 - testbench2rf.py:431 -  WARNING - itba-TC-803 has unknown imports. TestBench Subdivisions which correspond to Libraries or Resources need to be declared in the configuration file. See Log for more details.
+2022-05-27 10:28:18,977 - testsuite_write.py:41 -     INFO - Files in generation directory deleted.
+2022-05-27 10:28:18,979 - testsuite_write.py:50 -    DEBUG - File written to Generated\1__Login\1__Gültiger_Login\1__Login_mit_korrekten_Benutzerdaten.robot
+2022-05-27 10:28:18,983 - testsuite_write.py:50 -    DEBUG - File written to Generated\1__Login\2__Ungültiger_Login\1__Login_mit_falschem_Benutzernamen.robot
+2022-05-27 10:28:18,985 - testsuite_write.py:50 -    DEBUG - File written to Generated\1__Login\2__Ungültiger_Login\2__Login_mit_falschem_Passwort.robot
+2022-05-27 10:28:18,986 - testsuite_write.py:50 -    DEBUG - File written to Generated\1__Login\1__Gültiger_Login\__init__.robot
+2022-05-27 10:28:18,988 - testsuite_write.py:50 -    DEBUG - File written to Generated\1__Login\__init__.robot
+2022-05-27 10:28:18,989 - testsuite_write.py:50 -    DEBUG - File written to Generated\1__Login\2__Ungültiger_Login\__init__.robot
+2022-05-27 10:28:19,005 - testsuite_write.py:20 -     INFO - Successfully wrote 6 robot files.
+2022-05-27 10:28:19,006 - testsuite_write.py:21 -     INFO - Path: E:\Projekte\TB2Robot\testbench2robotframework\build\lib\Generated
