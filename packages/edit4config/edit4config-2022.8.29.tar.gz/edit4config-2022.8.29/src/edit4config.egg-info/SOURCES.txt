@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/edit4config/__init__.py
+src/edit4config/edit4config.py
+src/edit4config.egg-info/PKG-INFO
+src/edit4config.egg-info/SOURCES.txt
+src/edit4config.egg-info/dependency_links.txt
+src/edit4config.egg-info/top_level.txt
