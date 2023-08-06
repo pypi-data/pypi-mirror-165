@@ -1,0 +1,3 @@
+[console_scripts]
+sequana_downsampling = sequana_pipelines.downsampling.main:main
+

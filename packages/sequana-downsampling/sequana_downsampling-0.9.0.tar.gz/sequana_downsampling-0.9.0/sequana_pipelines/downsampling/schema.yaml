@@ -1,0 +1,35 @@
+# Schema validator for the quality_control
+# author: Thomas Cokelaer
+
+type: map
+mapping:
+    "input_directory":
+        type: str
+        required: False
+    "input_readtag":
+        type: str
+        required: False
+    "input_pattern":
+        type: str
+        required: False
+
+    "downsampling":
+        type: map
+        mapping:
+            "input_format":
+                type: str
+                enum: [fastq, fasta]
+            "method":
+                type: str
+                enum: [random, random_pct]
+            "threads":
+                type: int
+                range: { min: 1}
+            "percent":
+                type: float
+                range : { min: 0, max: 100}
+            "max_entries":
+                type: int
+                range: { min: 1}
+
+

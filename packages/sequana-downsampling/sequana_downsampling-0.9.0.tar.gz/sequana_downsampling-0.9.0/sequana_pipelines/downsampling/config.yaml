@@ -1,0 +1,38 @@
+# ============================================================================
+# Config file for Quality Control
+# ==========================================[ Sections for the users ]========
+#
+# One of input_directory, input_pattern and input_samples must be provided
+# If input_directory provided, use it otherwise if input_pattern provided,
+# use it, otherwise use input_samples.
+# ============================================================================
+
+
+input_directory: '.'
+input_pattern: '*.fastq.gz'
+input_readtag: "_R[12]_"
+
+
+##############################################################################
+# Your section
+#
+# :Parameters:
+#
+# - options: string with any valid FastQC options
+# - threads: for unpigz/pigz if data is zipped
+# - method can be a {tail, tail_pct, head, , head_pct, random, random_pct}
+#   if _pcft is appended, the percent field is used, otherwise, the max_entries
+#   if max_entries is used, depending on input_format, we select 1, 2, 4 lines.
+# - input_format in [fastq, fasta]. If provided, we will check the extension
+downsampling:
+    threads: 4
+    method: random
+    percent: 10
+    max_entries: 100
+    input_format: fastq
+
+
+##############################################################################
+#
+#onsuccess:
+#    toclean: " slurm*out downsampling.rules config.yaml stats.txt "
