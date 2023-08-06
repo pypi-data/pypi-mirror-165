@@ -1,0 +1,3 @@
+[console_scripts]
+dotctrl=snakypy.dotctrl.dotctrl:main
+
