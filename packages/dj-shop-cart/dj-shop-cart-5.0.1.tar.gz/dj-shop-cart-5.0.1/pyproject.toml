@@ -1,0 +1,68 @@
+[tool.poetry]
+name = "dj-shop-cart"
+version = "5.0.1"
+description = "Simple django cart manager for your django projects."
+authors = ["Tobi DEGNON <tobidegnon@protonmail.com>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/Tobi-De/dj-shop-cart"
+homepage = "https://github.com/Tobi-De/dj-shop-cart"
+keywords = ["django", "python", "cart", "shop", "ecommerce"]
+packages = [
+    { include = "dj_shop_cart" },
+    { include = "dj_shop_cart/migrations" },
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Framework :: Django :: 3.0",
+    "Framework :: Django :: 3.1",
+    "Framework :: Django :: 3.2",
+    "Framework :: Django :: 4.0",
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+Django = ">=3.0"
+attrs = ">=21.4,<23.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.1.2"
+pytest-django = "^4.5.2"
+mypy = "^0.971"
+pre-commit = "^2.20.0"
+black = "^22.6.0"
+isort = "^5.10.1"
+django-stubs = "^1.12.0"
+factory-boy = "^3.2.1"
+ipython = "^8.4.0"
+poetryup = "^0.10.0"
+redis = "^4.3.4"
+hiredis = "^2.0.0"
+
+[tool.black]
+target-version = ['py37']
+
+[tool.isort]
+profile = "black"
+add_imports = "from __future__ import annotations"
+
+[tool.mypy]
+mypy_path = "dj_shop_cart/"
+no_implicit_optional = true
+show_error_codes = true
+warn_unreachable = true
+warn_unused_ignores = true
+
+[[tool.mypy.overrides]]
+module = "tests.*"
+allow_untyped_defs = true
+
+[tool.pytest.ini_options]
+addopts = "--ds=tests.settings --reuse-db"
+python_files = ["tests.py", "test_*.py"]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
