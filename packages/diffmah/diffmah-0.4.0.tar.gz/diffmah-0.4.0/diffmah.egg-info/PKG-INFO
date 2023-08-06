@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: diffmah
+Version: 0.4.0
+Summary: Differentiable model of dark matter halo assembly
+Home-page: https://github.com/ArgonneCPAC/diffmah
+Author: Andrew Hearin
+Author-email: ahearin@anl.gov
+License-File: LICENSE
