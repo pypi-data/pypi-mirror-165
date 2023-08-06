@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: pyStarDB
+Version: 0.4.1
+Summary: Star file python Package
+Home-page: https://github.com/MPI-Dortmund/pyStarDB.git
+Author: Adnan Ali, Markus Stabrin
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.7
+License-File: LICENSE
+
+UNKNOWN
+
