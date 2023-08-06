@@ -1,0 +1,14 @@
+python-dotenv
+flask
+flask-marshmallow
+flask-sqlalchemy
+flask-migrate
+marshmallow-sqlalchemy
+marshmallow
+psycopg2
+requests
+utils-flask-sqlalchemy>=0.3.0
+
+[tests]
+pytest
+pytest-flask
