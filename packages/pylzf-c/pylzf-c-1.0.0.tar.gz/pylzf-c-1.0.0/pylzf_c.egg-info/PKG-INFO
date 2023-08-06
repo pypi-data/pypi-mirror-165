@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: pylzf-c
+Version: 1.0.0
+Summary: liblzf的C扩展，由python-lzf项目修改
+Home-page: http://github.com/teepark/python-lzf
+Author: GaoFeng
+Author-email: lfxx1994@gmail.com
+License: BSD
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: C
+Classifier: Topic :: System :: Archiving :: Compression
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE

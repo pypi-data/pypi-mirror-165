@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.txt
+lzf.h
+lzfP.h
+lzf_c.c
+lzf_d.c
+lzf_module.c
+setup.py
+pylzf_c.egg-info/PKG-INFO
+pylzf_c.egg-info/SOURCES.txt
+pylzf_c.egg-info/dependency_links.txt
+pylzf_c.egg-info/top_level.txt
