@@ -1,0 +1,15 @@
+README.md
+setup.py
+src/rosonic/__init__.py
+src/rosonic/argument.py
+src/rosonic/container.py
+src/rosonic/name.py
+src/rosonic/node.py
+src/rosonic/on_shutdown.py
+src/rosonic/parameter.py
+src/rosonic/timer.py
+src/rosonic.egg-info/PKG-INFO
+src/rosonic.egg-info/SOURCES.txt
+src/rosonic.egg-info/dependency_links.txt
+src/rosonic.egg-info/requires.txt
+src/rosonic.egg-info/top_level.txt
