@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: pdfmask
+Version: 0.1.0
+Summary: A command line tool for masking the content area in PDF
+Home-page: https://github.com/hiroshi-matsuda/pdfmask
+Author: Hiroshi Matsuda
+Author-email: hmtd223@gmail.com
+License: BSD-3-Clause
+Platform: UNKNOWN
+Requires-Python: >=3.6
+License-File: LICENSE
+
+UNKNOWN
+

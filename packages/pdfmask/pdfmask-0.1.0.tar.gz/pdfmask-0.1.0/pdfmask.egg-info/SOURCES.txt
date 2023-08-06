@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+pdfmask/__init__.py
+pdfmask/mask.py
+pdfmask/mask_gen.py
+pdfmask.egg-info/PKG-INFO
+pdfmask.egg-info/SOURCES.txt
+pdfmask.egg-info/dependency_links.txt
+pdfmask.egg-info/entry_points.txt
+pdfmask.egg-info/requires.txt
+pdfmask.egg-info/top_level.txt
