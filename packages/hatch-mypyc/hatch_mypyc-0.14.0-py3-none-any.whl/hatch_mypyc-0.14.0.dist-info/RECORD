@@ -1,0 +1,10 @@
+hatch_mypyc/__about__.py,sha256=RGpvT2XceDRlpFBS5nVDVWgv5kR0de550--0R6pn6xs,119
+hatch_mypyc/__init__.py,sha256=SnqyexerOAwtyoBgJiHYrEEn5N-QRT1miZRN1pkADP0,96
+hatch_mypyc/hooks.py,sha256=u2rX1rzUw6rhm8xFS6nBlr4xS9im_xze9Oi53y4Fn5U,241
+hatch_mypyc/plugin.py,sha256=TYKbt1Tnq2Bqim_wjcEKEC2dwbLWoLnh62GMD0x69Fw,12920
+hatch_mypyc/utils.py,sha256=PKiQwyFbd5TsGHP813m-r2s1FsRXnZrY7j33coHzd0k,1715
+hatch_mypyc-0.14.0.dist-info/METADATA,sha256=LkAS_xAMpuYGzHQchqnoPgPzo3yGWCmBLzA7Hne5dfA,4994
+hatch_mypyc-0.14.0.dist-info/WHEEL,sha256=09RFlvY3aVzvCNk4AXPZt-N-AI7GY_KktGsTb2IqIBU,86
+hatch_mypyc-0.14.0.dist-info/entry_points.txt,sha256=6aMvYw3KUzTtS_klIhQQ1a_U_PcpigkOigdXkCft5vU,34
+hatch_mypyc-0.14.0.dist-info/licenses/LICENSE.txt,sha256=fxQ6gSetSHOGLXCFS1vSq9AIWqc-ZP0rCHBKO59cB_w,1088
+hatch_mypyc-0.14.0.dist-info/RECORD,,
