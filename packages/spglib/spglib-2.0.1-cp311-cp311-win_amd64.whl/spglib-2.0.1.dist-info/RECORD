@@ -1,0 +1,7 @@
+spglib/__init__.py,sha256=ARcM_aV5J4t8FMIglIvh4O18umxZU67DqYrOM28eV_g,2508
+spglib/_spglib.cp311-win_amd64.pyd,sha256=aINDBApCS7QAd5KdgytG18O97bha8NViB386L1SksY4,1891840
+spglib/spglib.py,sha256=sPyhdS9r8pZDhrjgAYmLrzKEr1tTNOgYCgxgvx-E-ak,54256
+spglib-2.0.1.dist-info/METADATA,sha256=EPFzRyILyotNpYAzEKUDwlNWO9OB9iWRZ2GIN3kuBeQ,1293
+spglib-2.0.1.dist-info/WHEEL,sha256=TxwUeV-3HEbjjXVQ7qnUZIKQ4IinhZYV_rmkwq84M_Y,102
+spglib-2.0.1.dist-info/top_level.txt,sha256=CNMzkZzggIXHWmc5CQpyO1DSgiAoCJSkrXzaNQCnczo,7
+spglib-2.0.1.dist-info/RECORD,,
