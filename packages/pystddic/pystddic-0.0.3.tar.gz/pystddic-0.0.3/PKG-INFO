@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: pystddic
+Version: 0.0.3
+Summary: Standard Dictionary Management(Korean Ver)
+Home-page: https://github.com/oh-seung/pystddic
+Author: oh seung
+Author-email: seung.oh17@gmail.com
+Requires-Python: >=3.8
+License-File: LICENSE

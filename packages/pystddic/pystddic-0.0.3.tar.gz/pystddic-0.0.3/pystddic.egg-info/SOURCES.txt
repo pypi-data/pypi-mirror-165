@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+pystddic/__init__.py
+pystddic/main.py
+pystddic.egg-info/PKG-INFO
+pystddic.egg-info/SOURCES.txt
+pystddic.egg-info/dependency_links.txt
+pystddic.egg-info/requires.txt
+pystddic.egg-info/top_level.txt
