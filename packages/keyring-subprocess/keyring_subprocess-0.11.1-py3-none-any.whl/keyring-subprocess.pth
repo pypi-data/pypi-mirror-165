@@ -1,0 +1,1 @@
+import keyring_subprocess._internal; keyring_subprocess._internal.sitecustomize()

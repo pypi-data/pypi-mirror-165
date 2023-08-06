@@ -1,0 +1,9 @@
+[keyring.backends]
+keyring-subprocess=keyring_subprocess.backend:SubprocessBackend
+
+[sitecustomize]
+keyring-subprocess=keyring_subprocess._internal:sitecustomize
+
+[virtualenv.seed]
+keyring-subprocess=keyring_subprocess._internal.seeder:KeyringSubprocessFromAppData
+
