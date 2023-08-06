@@ -1,0 +1,14 @@
+target/__init__.py,sha256=aARQF9v_2sr18TFcn8zMUxbIeQtoHUGO_RAR_Wq7dhI,331
+target/_logger.py,sha256=4OMjO_5kgyjPoLiSIbvc4f0MKm8zJ1jHVBwhz6JWeg4,655
+target/file.py,sha256=ABrhbB0Ol3PaadDjRhDvdQy9ozq4z-FY4Qq8fybVw5I,7400
+target/logging.conf,sha256=erahU2eOyFu9aZMWaSjQb-oUfqucntt4RJ7uunrN-as,297
+target/stream.py,sha256=L5s84Bdr7an19wplgz4hVpBNqvsyGovzDBGxxYsnm_s,8489
+target/api/__init__.py,sha256=liaxVkmEJAlSeHXL1V3IRSk5CgQarSdz7ap_gOe-QlE,2778
+target/api/client.py,sha256=oSCiwEdGOOAeosOrZLjErQuKa4mjrUl1cur6L6yKLKo,11344
+target/api/test.py,sha256=E1uapwsklK0IXuD-KlrLsfPPKzHaJGUZ5l6w3VRSnGk,2817
+target_core-0.0.5.dist-info/LICENSE,sha256=HPMkbbY5GDmdfhkWY_Tk5VO4goYfIHm4pWpXY0Mgxxk,11333
+target_core-0.0.5.dist-info/METADATA,sha256=fKVpGAvDzQvQHCSOKbD9X60f1ymuH_2qbXoxfa2U-6U,14714
+target_core-0.0.5.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+target_core-0.0.5.dist-info/entry_points.txt,sha256=joljXLzEHXjnuUCoUKbcySoY7JW5UpT8qfjDqnumpzo,44
+target_core-0.0.5.dist-info/top_level.txt,sha256=yX7P2k0gUZC5cyMtz9sMKXSFIcJTTdhmvMeC8wsIZzg,7
+target_core-0.0.5.dist-info/RECORD,,
