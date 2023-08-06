@@ -1,0 +1,11 @@
+pyaphid/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyaphid/__main__.py,sha256=pz6en4rby2mKwIhDSRlSKmMYPH3EPIdSBjV5HblwG94,35
+pyaphid/analyzer.py,sha256=6KD-Ai0QvocuxQNunFQM4dt3fTf8gPerhbw_J532oYM,7514
+pyaphid/cli.py,sha256=WDGmPWgOZ8Xes2kToPbMASJNtuGLyRjBLIms6IIt5T4,3002
+pyaphid/helpers.py,sha256=B46pxEZkSm5y8CAHuauacjr-uWdaOJRN6X9vBYSNkBE,250
+pyaphid/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyaphid-0.1.2.dist-info/entry_points.txt,sha256=B1UpQukQF8eGtr_lJBcIHQ3jvz7sA32BviN-YQlfbug,43
+pyaphid-0.1.2.dist-info/LICENSE,sha256=K6TDLhU3O9EetOwPCJXppixVX3IIrTzu9QzfsEE49sA,1068
+pyaphid-0.1.2.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+pyaphid-0.1.2.dist-info/METADATA,sha256=eQalTSKs0yjQh2EoaYSnn95v6-GmwalON-EdKCdpa2M,1598
+pyaphid-0.1.2.dist-info/RECORD,,

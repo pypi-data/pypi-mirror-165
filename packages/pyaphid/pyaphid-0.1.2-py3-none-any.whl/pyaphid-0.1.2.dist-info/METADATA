@@ -1,0 +1,70 @@
+Metadata-Version: 2.1
+Name: pyaphid
+Version: 0.1.2
+Summary: Identify debugging function calls
+Home-page: https://github.com/jvllmr/pyaphid
+License: MIT
+Author: Jan Vollmer
+Author-email: jan@vllmr.dev
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: tomli (>=2.0.1,<3.0.0)
+Requires-Dist: typer[all] (>=0.6.1,<0.7.0)
+Project-URL: Repository, https://github.com/jvllmr/pyaphid
+Description-Content-Type: text/markdown
+
+# Pyaphid (Experimental)
+
+Pyaphid is a tool for detecting unwanted function calls in Python code.
+
+## Installation and usage
+
+Installation: `pip install pyaphid`
+
+Usage: `python -m pyaphid <files and/or directories to analyze>` or `pyaphid <files and/or directories to analyze>`
+
+### Configuration
+
+Forbidden function calls can be configured via the `pyproject.toml`:
+
+```toml
+[tool.pyaphid]
+forbidden = [
+    "print",
+    "pdb.run",
+    "werkzeug.debug.*"
+]
+```
+
+### CLI Options
+
+- -n / --names: `Look-up all func calls and print their identifier`
+
+## As a pre-commit hook
+
+```yaml
+- repo: https://github.com/jvllmr/pyaphid
+    rev: v0.1.2
+    hooks:
+      - id: pyaphid
+```
+
+
+
+## Limitations
+
+```python
+# Pyaphid cannot work with star imports
+from os.path import *
+dirname(".") # undetected
+
+# Pyaphid doesn't track assignments
+my_print = print
+my_print("Hello world") # undetected
+```
+
