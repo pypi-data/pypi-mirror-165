@@ -1,0 +1,17 @@
+numpy
+pandas
+networkx
+shapely
+scipy
+
+[dev]
+black
+isort
+pylint
+flake8
+pytest
+
+[examples]
+seaborn
+matplotlib
+watermark
