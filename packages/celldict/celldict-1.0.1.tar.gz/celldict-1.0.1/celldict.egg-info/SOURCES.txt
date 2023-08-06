@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+celldict/__init__.py
+celldict/main.py
+celldict.egg-info/PKG-INFO
+celldict.egg-info/SOURCES.txt
+celldict.egg-info/dependency_links.txt
+celldict.egg-info/top_level.txt
