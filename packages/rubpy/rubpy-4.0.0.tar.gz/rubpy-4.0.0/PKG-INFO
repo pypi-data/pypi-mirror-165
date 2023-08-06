@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: rubpy
+Version: 4.0.0
+Summary: This is an unofficial library and fastest library for deploying robots on Rubika accounts.
+Home-page: https://github.com/snipe4kill/rubika/
+Author: Shayan Heidari
+Author-email: snipe4kill.tg@gmail.com
+License: UNKNOWN
+Description: Loading...
+Keywords: rubika,rubpy,rubikaio,chat
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Internet
+Classifier: Topic :: Communications
+Classifier: Topic :: Communications :: Chat
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Requires-Python: ~=3.7
+Description-Content-Type: text/markdown
