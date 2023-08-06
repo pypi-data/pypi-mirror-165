@@ -1,0 +1,15 @@
+spoc/__init__.py,sha256=GVCXtZ0LCd5zZp-Tpk99muIv62QR9NrGXXjwQRceCBo,330
+spoc/errors.py,sha256=-bcxoirN1-p7gW_rTN1l_L89-R4TQ8LFFsvJRHjnJkk,283
+spoc/framework.py,sha256=7wxhw38B-lj_AkMJoLOhxwbsFzjpgSuRVv1lpbY87Lw,6643
+spoc/frozendict.py,sha256=WGbIBsoErnTfB42XH6nk94xx2u8mQPMPRETgId0cUW8,974
+spoc/get_spoc.py,sha256=lZTDL_r9kZfcBaF_KmDnCF23cFkC0RWN23bdVaagu9o,1618
+spoc/imports.py,sha256=58R7gNVhzJmMM7w5PZYz-x3VT1aRzIrU0xGJ_lAcMFE,2358
+spoc/plugins.py,sha256=sYrBlIOlohHd8kkzDxaiC6KqXEge4hodk79cq2sCUk8,521
+spoc/project.py,sha256=kOAOKu0KFxmAETEO45cH6JRTOb_TH6fsaAvjmEwPJa0,645
+spoc/toml_app.py,sha256=huf5_eYPhG5PcDz78SkosRUGsw_pVmHpzo_GhQDz7_w,866
+spoc/tools.py,sha256=Uw5lVoDTy6aeoKbBU6HrM2eE4-q9RsfWnlFnxxx3yVs,331
+spoc/types.py,sha256=alYj5juhGKh50SychIcy_PLqkJ_4Oyy8HdIPZfLE_MQ,1141
+spoc-0.1.4.dist-info/WHEEL,sha256=g_UdFZqm-k6b0W64OcndB0YT_D2mFFPAYBj7-_YsSPA,87
+spoc-0.1.4.dist-info/METADATA,sha256=UmgMXZX_gNx-3Ubr913jAL6uyPJ6whCIUcSourG0TGk,228
+spoc-0.1.4.dist-info/license_files/LICENSE,sha256=-P8pg4zWBLL03qD_ZLIyVWkEQNS3MglOOdgRQ4BxffA,1084
+spoc-0.1.4.dist-info/RECORD,,
