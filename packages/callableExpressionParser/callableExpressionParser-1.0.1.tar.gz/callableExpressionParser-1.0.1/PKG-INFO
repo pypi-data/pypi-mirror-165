@@ -1,0 +1,72 @@
+Metadata-Version: 2.1
+Name: callableExpressionParser
+Version: 1.0.1
+Summary: Math Expression Parser that works with [ + - * / ^ // ! ] operators, constants [ pi ], functions [ exp, log, ln ], strings ["testString"], and [variables] out of the box and can be expanded to cover more use cases!
+Author: Michael Stolte
+Author-email: Michael Stolte <michael@stolte.us>
+License: MIT License
+        
+        Copyright (c) 2022 Michael Stolte
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/mastoltejr/expressionParser
+Keywords: expression,math,parser,equation
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8.0
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+License-File: LICENSE
+
+# mathExpressionParser
+
+Math Expression Parser that works with [ + - * / ^ // ! ] operators, constants [ pi ], functions [ exp, log, ln ], strings ["testString"], and [variables] out of the box and can be expanded to cover more use cases!
+
+## Motivation
+
+A lot of the math expression parsers I found online didn't quite cover all the use cases I needed as well as were hard to expand upon. With that, I created my own!
+
+## How To Install
+
+```
+pip install callableExpressionParser
+```
+
+## How To Use
+
+Regardless of the language, you'll primarily use 2 lines of code in order.
+
+1. createExpressionTree - This function takes the list of nodes from extractNodes or an expression string and parses its nodes and creates a binary tree. Each parent node is an operator or a function, and each child node is a number, constant, or token group. This function returns the base node of the tree which you can call exec() on to prepare the tree.
+2. The result of the base Node's exec() function is a function that takes in an optional dictionary argument. If any variables are defined in the expression, the variables will be replaced with the dictionary key-value where the key is the variable's name.
+
+What's great about this approach is say you have a table represented as a list of dictionaries. If you'd want to add a calculated column that is some expression based on other row values, you can create the new column easily.
+
+**Example in python**
+
+```python
+from callableExpressionParser import createExpressionTree
+
+tbl = [{'a': 1, 'b': 2},{'a': 3, 'b': 4},{'a': 5, 'b': 6}]
+expression = '[a]+2*[b]'
+func = createExpressionTree(expression=expression).exec()
+tbl = [{**r, 'c': func(**r)} for r in tbl]
+print(tbl) # [{'a': 1, 'b': 2, 'c': 5.0},{'a': 3, 'b': 4, 'c': 11.0},{'a': 5, 'b': 6, 'c': 17.0}]
+```
