@@ -1,0 +1,9 @@
+awkward:
+
+  # This option is for cases where new array collections are created
+  # with unknown metadata. The default setting is to compute the first
+  # partition of the collection so that we can define the metadata. If
+  # this option is set to False then collections with unknown metadata
+  # will be instantiated with the `_meta` attribute set to an "empty"
+  # typetracer, which is an empty awkward array.
+  compute-unknown-meta: True
