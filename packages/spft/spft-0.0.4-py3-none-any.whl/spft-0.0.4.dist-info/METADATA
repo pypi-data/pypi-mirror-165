@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: spft
+Version: 0.0.4
+Summary: standard python functional tools
+Home-page: https://github.com/hanggun/spft
+Author: shuai pan
+Author-email: panshuai2019ps@163.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# spft
+standard python functional tools
+
+
