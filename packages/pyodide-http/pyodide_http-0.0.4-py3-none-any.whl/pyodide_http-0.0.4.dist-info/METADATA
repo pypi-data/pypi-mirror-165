@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: pyodide-http
+Version: 0.0.4
+Summary: Patch requests, urllib and urllib3 to make them work in Pyodide
+Home-page: UNKNOWN
+Author: Koen Vossen
+Author-email: info@koenvossen.nl
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+Patch requests, urllib and urllib3 to make them work in Pyodide
+
