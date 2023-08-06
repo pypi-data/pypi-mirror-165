@@ -1,0 +1,12 @@
+flake8_ejudge/__init__.py,sha256=yrjVnG0vsqkPuIORHzOOIG2FsuO7M7t6xpPvp4eS15E,66
+flake8_ejudge/__main__.py,sha256=45FlfrTKGkDixNjuL5jeSK9sBunycbna5DHdolkhc9M,142
+flake8_ejudge/flake8_ejudge_runner.py,sha256=GK1-F9iwdsCgOtXUa0RrMbbL9co57UjFhWZontzuj18,5941
+flake8_ejudge/flake8_ejudgeformatter.py,sha256=HPzTv7aN1IQbhlj6SXQtmm43RwvQ5BNmUVS2Izs840Q,3051
+flake8_ejudge/flake8_returnyesno.py,sha256=tUDOTqfSI3teN6UIzHkr1_ZF88cNkJKIkeWQ5LE7uZg,414
+flake8_ejudge/flake8_ruerrors.py,sha256=pxT-B4oeW-KUwhmQHAimAry-C6roCTb25lq8lU1CTnw,11739
+flake8_ejudge-0.5.2.dist-info/LICENSE,sha256=IMLv9M2pRXwHmAA5jTTwZb1MNc8Y8dnBIGEAcep8_-Q,1103
+flake8_ejudge-0.5.2.dist-info/METADATA,sha256=N3wLuBUgh9itiLVnJGw-9PTFUJZNZ_2KHlirEaYLQF4,14711
+flake8_ejudge-0.5.2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+flake8_ejudge-0.5.2.dist-info/entry_points.txt,sha256=0AsGfxW7f8Wt__yWehWrTqdGJXkf99UTi6bESLqS9_E,245
+flake8_ejudge-0.5.2.dist-info/top_level.txt,sha256=XgO6x21p6Bq619aiBRoXsNgYNM_FufVSguvExawudk4,14
+flake8_ejudge-0.5.2.dist-info/RECORD,,
