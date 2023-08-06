@@ -1,0 +1,16 @@
+LICENSE
+README.rst
+setup.py
+src/scaffoldfitter/__init__.py
+src/scaffoldfitter/fitter.py
+src/scaffoldfitter/fitterjson.py
+src/scaffoldfitter/fitterstep.py
+src/scaffoldfitter/fitterstepalign.py
+src/scaffoldfitter/fitterstepconfig.py
+src/scaffoldfitter/fitterstepfit.py
+src/scaffoldfitter.egg-info/PKG-INFO
+src/scaffoldfitter.egg-info/SOURCES.txt
+src/scaffoldfitter.egg-info/dependency_links.txt
+src/scaffoldfitter.egg-info/not-zip-safe
+src/scaffoldfitter.egg-info/requires.txt
+src/scaffoldfitter.egg-info/top_level.txt
