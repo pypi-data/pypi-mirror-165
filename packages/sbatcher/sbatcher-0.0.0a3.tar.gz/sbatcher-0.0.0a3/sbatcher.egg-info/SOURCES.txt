@@ -1,0 +1,11 @@
+README.md
+setup.py
+sbatcher/__init__.py
+sbatcher/array_job.py
+sbatcher/example.sbatcher.json
+sbatcher/logs.py
+sbatcher.egg-info/PKG-INFO
+sbatcher.egg-info/SOURCES.txt
+sbatcher.egg-info/dependency_links.txt
+sbatcher.egg-info/top_level.txt
+sbatcher/bin/sbatcher-array-job
