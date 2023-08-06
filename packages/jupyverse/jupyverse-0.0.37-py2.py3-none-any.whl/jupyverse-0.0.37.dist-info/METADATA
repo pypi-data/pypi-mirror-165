@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: jupyverse
+Version: 0.0.37
+Summary: A set of FPS plugins implementing a Jupyter server
+Home-page: https://jupyter.org
+Author: Jupyter Development Team
+Author-email: jupyter@googlegroups.com
+License: BSD 3-Clause License
+Keywords: jupyter,server,fastapi,pluggy,plugins
+Platform: Windows
+Platform: Linux
+Platform: Mac OS X
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: COPYING.md
+Requires-Dist: fps (>=0.0.19)
+Requires-Dist: fps-uvicorn (>=0.0.19)
+Requires-Dist: fps-contents
+Requires-Dist: fps-kernels
+Requires-Dist: fps-terminals
+Requires-Dist: fps-nbconvert
+Requires-Dist: fps-yjs
+Provides-Extra: auth
+Requires-Dist: fps-auth ; extra == 'auth'
+Provides-Extra: auth-fief
+Requires-Dist: fps-auth-fief ; extra == 'auth-fief'
+Provides-Extra: docs
+Requires-Dist: mkdocs ; extra == 'docs'
+Requires-Dist: mkdocs-material ; extra == 'docs'
+Provides-Extra: jupyterlab
+Requires-Dist: fps-jupyterlab ; extra == 'jupyterlab'
+Provides-Extra: retrolab
+Requires-Dist: fps-retrolab ; extra == 'retrolab'
+Provides-Extra: test
+Requires-Dist: mypy ; extra == 'test'
+Requires-Dist: types-setuptools ; extra == 'test'
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: pytest-asyncio ; extra == 'test'
+Requires-Dist: pytest-env ; extra == 'test'
+Requires-Dist: requests ; extra == 'test'
+Requires-Dist: websockets ; extra == 'test'
+Requires-Dist: ipykernel ; extra == 'test'
+
+[![Build Status](https://github.com/jupyter-server/jupyverse/workflows/CI/badge.svg)](https://github.com/jupyter-server/jupyverse/actions)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
+# jupyverse
+
+A set of [FPS](https://github.com/jupyter-server/fps) plugins implementing a Jupyter server.
+
+Try it online:
+- JupyterLab frontend: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jupyter-server/jupyverse/HEAD?urlpath=jupyverse-jlab)
+- RetroLab frontend: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jupyter-server/jupyverse/HEAD?urlpath=jupyverse-rlab)
+
+Documentation is available [here](https://davidbrochart.github.io/jupyverse).
+
+## Motivation
+
+For the motivations behind this project, please refer to this issue in the
+[Jupyter server team compass](https://github.com/jupyter-server/team-compass/issues/11).
