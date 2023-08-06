@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: acapy-patched
+Version: 0.5.6
+Home-page: https://github.com/hyperledger/aries-cloudagent-python
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6.3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: NOTICES
+Requires-Dist: aiohttp (~=3.7.4.post0)
+Requires-Dist: aiohttp-apispec (==2.2.1)
+Requires-Dist: aiohttp-cors (~=0.7.0)
+Requires-Dist: apispec (~=3.3.0)
+Requires-Dist: async-timeout (~=3.0.1)
+Requires-Dist: base58 (~=2.0.0)
+Requires-Dist: Markdown (~=3.1.1)
+Requires-Dist: marshmallow (==3.5.1)
+Requires-Dist: msgpack (~=0.6.1)
+Requires-Dist: prompt-toolkit (~=2.0.9)
+Requires-Dist: pynacl (~=1.3.0)
+Requires-Dist: requests (~=2.23.0)
+Requires-Dist: pyld (==2.0.1)
+Requires-Dist: py-multicodec (==0.2.1)
+Requires-Dist: pyyaml (~=5.3.1)
+Requires-Dist: ConfigArgParse (~=1.2.3)
+Provides-Extra: indy
+Requires-Dist: python3-indy (>=1.11.1<2) ; extra == 'indy'
+Provides-Extra: uvloop
+Requires-Dist: uvloop ; extra == 'uvloop'
+
+# Aries Cloudagent Python (Patched) <!-- omit in toc -->
+
+This is a patched fork of Aries Cloudagent Python [v0.5.6](https://github.com/hyperledger/aries-cloudagent-python/tree/0.5.6)
+
+## License
+
+[Apache License Version 2.0](https://github.com/hyperledger/aries-cloudagent-python/blob/master/LICENSE)
