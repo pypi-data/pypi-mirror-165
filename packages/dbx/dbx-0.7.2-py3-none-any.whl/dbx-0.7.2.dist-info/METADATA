@@ -1,0 +1,143 @@
+Metadata-Version: 2.1
+Name: dbx
+Version: 0.7.2
+Summary: DataBricks CLI eXtensions aka dbx
+Author: Thunder Shiviah, Michael Shtelma, Ivan Trusov
+License: Databricks License
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: NOTICE
+Requires-Dist: retry (<1.0.0,>=0.9.2)
+Requires-Dist: requests (<3.0.0,>=2.24.0)
+Requires-Dist: mlflow-skinny (==1.28.0)
+Requires-Dist: databricks-cli (<0.18,>=0.17)
+Requires-Dist: click (<9.0.0,>=8.1.0)
+Requires-Dist: rich (==12.5.1)
+Requires-Dist: typer[all] (==0.6.1)
+Requires-Dist: cookiecutter (<3.0.0,>=1.7.2)
+Requires-Dist: pyyaml (>=6.0)
+Requires-Dist: pydantic (>=1.9.1)
+Requires-Dist: Jinja2 (>=2.11.2)
+Requires-Dist: cryptography (<38.0.0,>=3.3.1)
+Requires-Dist: aiohttp (>=3.8.1)
+Requires-Dist: pathspec (>=0.9.0)
+Requires-Dist: watchdog (>=2.1.0)
+Provides-Extra: dev
+Requires-Dist: mkdocs (<2.0.0,>=1.1.2) ; extra == 'dev'
+Requires-Dist: mkdocs-click (<1.0,>=0.8.0) ; extra == 'dev'
+Requires-Dist: mkdocs-material (<9.0.0,>=8.4) ; extra == 'dev'
+Requires-Dist: mdx-include (<2.0.0,>=1.4.1) ; extra == 'dev'
+Requires-Dist: mkdocs-markdownextradata-plugin (<0.3.0,>=0.1.7) ; extra == 'dev'
+Requires-Dist: mkdocs-glightbox (<1.0,>=0.2.1) ; extra == 'dev'
+Requires-Dist: pre-commit (<3.0.0,>=2.20.0) ; extra == 'dev'
+Requires-Dist: prospector (==1.7.0) ; extra == 'dev'
+Requires-Dist: black (<23.0.0,>=22.3.0) ; extra == 'dev'
+Requires-Dist: MarkupSafe (<3.0.0,>=2.1.1) ; extra == 'dev'
+Requires-Dist: pytest (<8.0.0,>=7.1.2) ; extra == 'dev'
+Requires-Dist: pytest-mock (<3.9.0,>=3.8.2) ; extra == 'dev'
+Requires-Dist: pytest-xdist[psutil] (<3.0.0,>=2.5.0) ; extra == 'dev'
+Requires-Dist: pytest-asyncio (<1.0.0,>=0.18.3) ; extra == 'dev'
+Requires-Dist: pytest-cov (<4.0.0,>=3.0.0) ; extra == 'dev'
+Requires-Dist: pytest-timeout (<3.0.0,>=2.1.0) ; extra == 'dev'
+Requires-Dist: pytest-clarity (<2.0.0,>=1.0.1) ; extra == 'dev'
+
+# dbx by Databricks Labs
+
+<p align="center">
+    <a href="https://dbx.readthedocs.io/">
+        <img src="https://raw.githubusercontent.com/databrickslabs/dbx/master/images/logo.svg" class="align-center" width="200" height="200" alt="logo" />
+    </a>
+</p>
+
+<p align="center">
+    <b>🧱Databricks CLI eXtensions - aka <code>dbx</code> is a CLI tool for development and advanced Databricks workflows management.</b>
+</p>
+
+---
+
+<p align="center">
+    <a href="https://dbx.readthedocs.io/en/latest/?badge=latest">
+        <img src="https://img.shields.io/readthedocs/dbx?style=for-the-badge" alt="Documentation Status"/>
+    </a>
+    <a href="https://pypi.org/project/dbx/">
+        <img src="https://img.shields.io/pypi/v/dbx?color=green&amp;style=for-the-badge" alt="Latest Python Release"/>
+    </a>
+    <a href="https://github.com/databrickslabs/dbx/actions/workflows/onpush.yml">
+        <img src="https://img.shields.io/github/workflow/status/databrickslabs/dbx/build/main?style=for-the-badge"
+             alt="GitHub Workflow Status (branch)"/>
+    </a>
+    <a href="https://codecov.io/gh/databrickslabs/dbx">
+        <img src="https://img.shields.io/codecov/c/github/databrickslabs/dbx?style=for-the-badge&amp;token=S7ADH3W2E3"
+             alt="codecov"/>
+    </a>
+    <a href="https://lgtm.com/projects/g/databrickslabs/dbx/alerts">
+        <img src="https://img.shields.io/lgtm/alerts/github/databrickslabs/dbx?style=for-the-badge" alt="lgtm-alerts"/>
+    </a>
+    <a href="https://lgtm.com/projects/g/databrickslabs/dbx/context:python">
+        <img src="https://img.shields.io/lgtm/grade/python/github/databrickslabs/dbx?style=for-the-badge"
+             alt="lgtm-code-quality"/>
+    </a>
+    <a href="https://pypistats.org/packages/dbx">
+        <img src="https://img.shields.io/pypi/dm/dbx?style=for-the-badge" alt="downloads"/>
+    </a>
+    <a href="https://github.com/psf/black">
+        <img src="https://img.shields.io/badge/code%20style-black-000000.svg?style=for-the-badge"
+             alt="We use black for formatting"/>
+    </a>
+</p>
+
+---
+
+## Concept
+
+`dbx` simplifies Databricks workflows development, deployment and launch across multiple
+environments. It also helps to package your project and deliver it to
+your Databricks environment in a versioned fashion. Designed in a
+CLI-first manner, it is built to be actively used both inside CI/CD
+pipelines and as a part of local tooling for rapid prototyping.
+
+## Requirements
+
+- Python Version \> 3.8
+- `pip` or `conda`
+
+## Installation
+
+- with `pip`:
+
+```
+pip install dbx
+```
+
+## Documentation
+
+Please refer to the [docs page](https://dbx.readthedocs.io/en/latest/index.html).
+
+## Interface versioning
+
+For CLI interfaces, we support [SemVer](https://semver.org/) approach.
+However, for API components we don't use SemVer as of now. This may lead
+to instability when using `dbx` API methods directly.
+
+## Legal Information
+
+This software is provided as-is and is not officially supported by
+Databricks through customer technical support channels. Support,
+questions, and feature requests can be communicated through the Issues
+page of this repo. Please see the legal agreement and understand that
+issues with the use of this code will not be answered or investigated by
+Databricks Support.
+
+## Feedback
+
+Issues with `dbx`? Found a bug? Have a great idea for an addition? Feel
+free to file an
+[issue](https://github.com/databrickslabs/dbx/issues/new/choose).
+
+## Contributing
+
+Please find more details about contributing to `dbx` in the contributing
+[doc](https://github.com/databrickslabs/dbx/blob/master/contrib/CONTRIBUTING.md).
