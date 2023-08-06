@@ -1,0 +1,5 @@
+[console_scripts]
+machineop = machine_operator:operate
+
+[textx_languages]
+MachineOp = machine_operator:state_machine_lang
