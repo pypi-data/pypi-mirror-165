@@ -1,0 +1,127 @@
+# pyfigure
+
+Generate configuration files for classes.
+
+## Installation
+
+`pip install pyfigure`
+
+## Usage
+
+To generate a configuration file for a class, you must extend the class with `Configurable`, from the `pyfigure` module.
+
+Then, to add options to the configuration, create a new `Config` class, and add variables of the `Option` class.
+
+```py
+class YourClass(Configurable):
+
+    class YourConfig(Config):
+
+        option_name: type = Option(
+            default,
+            description
+        )
+
+        class sub_config:
+
+            cub_option: type = Option()
+```
+
+### Where the arguments are as follows:
+
+|argument|description
+|-|-
+`default`|The default value of the option
+`description`|A comment to explain what the option is for, optional
+`type`|Assign a different type, optionally
+
+`file.py`
+```py
+from pathlib import Path
+from pyfigure import Configurable, Config, Option
+from pyfigure.types import List, Choice, Color, Number, Time
+
+class ExampleClass(Configurable):
+
+    #config_file = 'other_file.toml'
+
+    class ExampleConfig(Config):
+        any_option = Option('any', "Any value works here")
+        time_option: Time = Option('12:00:00 e', "It's High Noon.")
+        string_option: str = Option('default', "Any string works here")
+        integer_option: int = Option(24, "Any integer here")
+        float_option: float = Option(15.55, "Any float")
+        bool_option: bool = Option(True, "Any boolean")
+        list_option: list = Option(['e', 'a', 'o'], "A list of things")
+        int_list_option: List[int] = Option([1, 2, 3], 'A list of integers')
+        choice_option: Choice['spam', 'eggs'] = Option('spam', 'Either "spam" or "eggs"')
+        class sub_config:
+            sub_option: str = Option('this value in a sub value')
+            class sub_sub_config:
+                sub_sub_option: str = Option('this value is a sub value of a sub value')
+        list_of_dicts_option: List[dict] = Option([{"foo": "bar"}])
+        path_option: Path = Option('test/', "A value that can be created using another value")
+        color_option: Color = Option('#33ff33', "A hex color value")
+        time_option: Time = Option('12:00:00', "It's High Noon")
+        number_option: Number(min=0, max=15) = Option(10, "A very specific number")
+
+    #def __init__(self):
+    #    Configurable.__init__(self)
+
+ec = ExampleClass()
+print(ec.config)
+```
+
+This class, when initialized, will print:
+
+```py
+{
+	'any_option': 'any',
+	'time_option': datetime.datetime(1900, 1, 1, 12, 0),
+	'string_option': 'default',
+	'integer_option': 24,
+	'float_option': 15.55,
+	'bool_option': True,
+	'list_option': ['e', 'a', 'o'],
+	'int_list_option': [1, 2, 3],
+	'choice_option': 'spam',
+	'path_option': PosixPath('test'),
+	'color_option': #33FF33,
+	'number_option': 10,
+	'list_of_dicts_option': [{'foo': 'bar'}],
+	'sub_config': {
+	    'sub_option': 'this value in a sub value',
+	    'sub_sub_config': {
+		    'sub_sub_option': 'this value is a sub value of a sub value'
+		}
+	}
+}
+```
+
+And create a new file:
+
+`file.toml`
+```toml
+any_option = "any" # Any value works here
+time_option = "12:00:00" # It's High Noon
+string_option = "default" # Any string works here
+integer_option = 24 # Any integer here
+float_option = 15.55 # Any float
+bool_option = true
+list_option = ["e", "a", "o"] # A list of things
+int_list_option = [1, 2, 3] # A list of integers
+choice_option = "spam" # Either "spam" or "eggs"
+path_option = "test/" # A value that can be created using another value
+color_option = "#33ff33" # A hex color value
+number_option = 10 # A very specific number
+
+[[list_of_dicts_option]]
+foo = "bar"
+
+[sub_config]
+sub_option = "this value in a sub value"
+
+[sub_config.sub_sub_config]
+sub_sub_option = "this value is a sub value of a sub value"
+
+```
