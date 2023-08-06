@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "random_walk_controversy"
+version = "0.1.0"
+description = "Parallel implementation of Garimella's algorithm to get the RWC score of a network"
+license = "BSD-2-Clause"
+authors = ["Gianluca Morcaldi <bendico765@gmail.com>"]
+readme = "README.md"
+homepage = "https://github.com/bendico765/random_walk_controversy"
+repository = "https://github.com/bendico765/random_walk_controversy"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+networkx = "^2.8.5"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
