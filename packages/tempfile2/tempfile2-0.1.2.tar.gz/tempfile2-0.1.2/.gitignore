@@ -1,0 +1,4 @@
+/build/
+/dist/
+/tempfile2.egg-info/
+__pycache__/
