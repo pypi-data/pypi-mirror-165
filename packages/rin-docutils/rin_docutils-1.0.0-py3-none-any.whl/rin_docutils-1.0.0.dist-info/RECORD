@@ -1,0 +1,11 @@
+rin/docutils/__init__.py,sha256=_vzuKiKidsBqA26v3ZZDbyBUTYJ7fu1JA1b1zuQCe8U,51
+rin/docutils/flag.py,sha256=Q2AJ7swuF2mf_Zi3o-mzxXAp-bwLP1LiWIm2ExjVsR8,395
+rin/docutils/markers.py,sha256=8LFMA4H9tiqJydkwKgokb-Qh5IRjEYnw25xyqOpfMyA,261
+rin/docutils/autodecorator/__init__.py,sha256=938efJR-L8YuUUuQqpuQ4g2eA80s3A74jYhURdW6wKw,3030
+rin/docutils/autodecorator/_modified_generate_autosummary_content.py,sha256=UZDDGOZbH8AczEqJszQmA4GkFvuKhmT2I4uoaEopnDM,6164
+rin/docutils/autodecorator/templates/autosummary/module.rst,sha256=UJU1g617O6kf86z4Qbr-fjRus5u8rIsWM0_yw-lSUv0,1277
+rin_docutils-1.0.0.dist-info/LICENSE,sha256=XxAGdtOsW2uXsWMVWk2WC5-ydfDLMyV1cxUPWLFBEfw,1085
+rin_docutils-1.0.0.dist-info/METADATA,sha256=cUpvyC9oL17GP1vWIM-tDFSghtzsE7Tw5ls71DvecUg,517
+rin_docutils-1.0.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+rin_docutils-1.0.0.dist-info/top_level.txt,sha256=xvtxPo2pjCk-bQ32yhZMV_7pGhkuxDhoZkdNdjE65tI,4
+rin_docutils-1.0.0.dist-info/RECORD,,

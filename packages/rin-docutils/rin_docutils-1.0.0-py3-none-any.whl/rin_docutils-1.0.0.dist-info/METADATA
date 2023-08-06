@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: rin-docutils
+Version: 1.0.0
+Summary: tools help you work with sphnix
+License: MIT License
+Project-URL: GitHub, https://github.com/susautw/rin-docutils
+Keywords: sphnix,document
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: sphnix
+Requires-Dist: sphnix ; extra == 'sphnix'
+
+# rin-docutils
