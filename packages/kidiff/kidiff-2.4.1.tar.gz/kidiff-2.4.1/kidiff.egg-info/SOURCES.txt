@@ -1,0 +1,11 @@
+README.md
+kicad-diff-init.py
+kicad-diff.py
+kicad-git-diff.py
+setup.cfg
+setup.py
+kidiff.egg-info/PKG-INFO
+kidiff.egg-info/SOURCES.txt
+kidiff.egg-info/dependency_links.txt
+kidiff.egg-info/requires.txt
+kidiff.egg-info/top_level.txt
