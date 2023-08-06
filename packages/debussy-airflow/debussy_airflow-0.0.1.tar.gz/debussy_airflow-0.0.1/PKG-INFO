@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: debussy_airflow
+Version: 0.0.1
+Summary: Debussy Concert provider for Airflow
+Home-page: https://github.com/DotzInc/debussy_airflow
+Author: Lawrence Fernandes
+Author-email: lawrence.stfs@gmail.com
+License: Apache Software License (http://www.apache.org/licenses/LICENSE-2.0)
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+License-File: LICENSE
+
+UNKNOWN
+
