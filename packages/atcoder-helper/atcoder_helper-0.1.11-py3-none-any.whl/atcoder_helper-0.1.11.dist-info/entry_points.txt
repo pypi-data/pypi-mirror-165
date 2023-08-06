@@ -1,0 +1,2 @@
+[console_scripts]
+atcoder_helper = atcoder_helper.scripts.main:main
