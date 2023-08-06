@@ -1,0 +1,4 @@
+[console_scripts]
+diart.benchmark = diart.benchmark:run
+diart.stream = diart.stream:run
+diart.tune = diart.tune:run
