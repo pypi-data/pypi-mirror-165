@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: bgpneigetpdb
+Version: 1.1.0
+Summary: Get BGP Neighbours from network devices for PDB
+Home-page: https://github.com/robwdwd/bgpneigetpdb
+License: BSD-2-Clause
+Author: Rob Woodward
+Author-email: rob@emailplus.org
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: click (>=8.1.3,<9.0.0)
+Requires-Dist: napalm (>=4.0.0,<5.0.0)
+Project-URL: Repository, https://github.com/robwdwd/bgpneigetpdb
+Description-Content-Type: text/markdown
+
+# bgpneigetbdp
+Get BGP neighbours from network devices for use in a peering database
+
