@@ -1,0 +1,14 @@
+typing_extensions
+
+[dev]
+bumpversion<1,>=0.5.3
+wheel
+twine
+ipython
+cfx-address>=1.0.0b4
+
+[doc]
+
+[lint]
+
+[test]
