@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: deepinfo
+Version: 0.1.0
+Summary: Infer information theoretic quantities ( Mutual information, KL divergence, DJS divergence ) with Neural Networks
+Home-page: UNKNOWN
+Author: Giulio Isacchini
+Author-email: giulioisac@gmail.com
+License: GPLv3
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Healthcare Industry
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Topic :: Scientific/Engineering :: Medical Science Apps.
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.6
+License-File: LICENSE
+
+UNKNOWN
+
