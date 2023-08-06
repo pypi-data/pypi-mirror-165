@@ -1,0 +1,8 @@
+alibabacloud_cloudapi20160714/__init__.py,sha256=f_VXcj--MhwjDb8cw2KA58sfuzFN4zZXGuOOHTCOVO4,21
+alibabacloud_cloudapi20160714/client.py,sha256=try819UblXJdocc6CPeyhtGvGh4XMM-utE_IyP6cybI,228303
+alibabacloud_cloudapi20160714/models.py,sha256=CjNhVB61v5KVjcklmEQEI4mOFPvPuCxw2zIrYyjfkxg,1110444
+alibabacloud_cloudapi20160714_py2-2.2.7.dist-info/LICENSE,sha256=VgSqXWyZONnzmDzK6u3lc8cM_zPwlIOD4dxG73CBeE0,588
+alibabacloud_cloudapi20160714_py2-2.2.7.dist-info/METADATA,sha256=MaWVwJC0Ho9DdF0JP0iFoRLWrQLWdVdEhYIUPPG0c18,2407
+alibabacloud_cloudapi20160714_py2-2.2.7.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+alibabacloud_cloudapi20160714_py2-2.2.7.dist-info/top_level.txt,sha256=gHgm1zVQ8LmLkeXgkAt9jmYLLwFJ_n3Zm68mYm2HPew,30
+alibabacloud_cloudapi20160714_py2-2.2.7.dist-info/RECORD,,
