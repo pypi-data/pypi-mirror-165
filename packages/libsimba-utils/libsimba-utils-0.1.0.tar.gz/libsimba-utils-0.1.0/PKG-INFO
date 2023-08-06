@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: libsimba-utils
+Version: 0.1.0
+Summary: libsimba Utilities
+Author: SIMBA Chain Inc.
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: hdwallet (==2.1.1)
+Requires-Dist: pycryptodome (==3.15.0)
+Requires-Dist: web3 (==5.30.0)
