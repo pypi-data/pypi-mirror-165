@@ -1,0 +1,8 @@
+teneva==0.11.5
+matplotlib==3.5.3
+numba==0.56.0
+numpy==1.22.0
+scipy==1.9.1
+tqdm==4.64.0
+llvmlite==0.39.0
+six==1.16.0
