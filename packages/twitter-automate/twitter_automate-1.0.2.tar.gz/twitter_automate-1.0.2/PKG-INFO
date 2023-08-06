@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: twitter_automate
+Version: 1.0.2
+Summary: This library allow to do automatisation actions like, share and comment on Twitter
+Home-page: https://gitlab.kaisens.fr/amouhite02/automatisation-rs
+Author: ADEBO
+Author-email: madebo@kaisensdata.fr
+License: MIT
+Description: # PACKAGE - TWITTER-AUTOMATE
+        
+        ### **But**
+        Ce packages permet d'automatiser les tâches de like, partage et commentaire sur Twitter.
+        
+        ### **Pour importer**
+        
+            from bot_twitter import automate_twitter as at
+        
+        ### **Fonctions**
+        
+        - **twitter_auth_api(self)**: 
+        
+            This function allow to authentificate on Twitter API
+        
+        - **twitter_auth_client(self)**: 
+        
+            This function allow to authentificate on Twitter Client
+        
+        - **twitter_get_last_post(self, user_api: twitter_auth_api, pseudo_twitter: str)**: 
+        
+            This function return a dictionary contain id of last tweet and date creation
+        
+        - **twitter_get_posts(self, user_api: twitter_auth_api, pseudo_twitter: str, nb_tweet: int)**: 
+        
+            This function return last tweets in function value of variable 'nb_tweet'
+        
+        - **twitter_like (self, user_client: twitter_auth_client, id_post: str)**: 
+        
+            This function allow to like a tweet
+        
+        - **twitter_retweet(self, user_client: twitter_auth_client, id_post: str)**: 
+        
+            This function allow to retweet a tweet
+        
+        - **twitter_comment(self, user_client: twitter_auth_client, id_post: str, text_comment: str)**: 
+        
+            This function allow to comment a tweet  
+        
+Keywords: automate,twitter-automate,twitter,automatisation
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
