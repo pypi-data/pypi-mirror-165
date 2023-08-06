@@ -1,0 +1,11 @@
+torch
+torchvision
+numpy
+scikit-learn
+matplotlib
+pandas
+tqdm
+iterative-stratification
+optuna
+seaborn
+kaggle
