@@ -1,0 +1,9 @@
+devpi_discord/__init__.py,sha256=07NzQXBgNlnw5kSN6ZYxE9By-_RuH3Jyy58Z74sIio0,21
+devpi_discord/discord_api.py,sha256=fEhoCNP0Juae8Dzwy9nKdx1iJ2fTHg7hCGdb3Z7moWM,1936
+devpi_discord/entrypoint.py,sha256=lse97OTzAvrX0FTwTCc07e8wC0mn1j76mUv2mdspHFw,792
+devpi_discord-0.0.1.dist-info/LICENSE.txt,sha256=YFnFUvvzejooehNm9cn0lHP1uN4nr-sh2EbjIrGjUyQ,1061
+devpi_discord-0.0.1.dist-info/METADATA,sha256=KSRJaI4QrZtFhGbKSozXrQtf7l1JUONBxAyIdhp_qj4,1809
+devpi_discord-0.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+devpi_discord-0.0.1.dist-info/entry_points.txt,sha256=VNIx4yue7A9TKo62RdLkLXjlOgPFUxkVHnzrYLPheFQ,56
+devpi_discord-0.0.1.dist-info/top_level.txt,sha256=JSEh6je25oWAeWb6oP7CuM_bIwdyL1hIVyCcb1qbdB0,14
+devpi_discord-0.0.1.dist-info/RECORD,,
