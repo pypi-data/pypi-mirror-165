@@ -1,0 +1,16 @@
+pyaesthetics/__init__.py,sha256=giumGudXH1lHzR4MOJwvTcbI2UoUY3_kBxRqyrSlUCw,288
+pyaesthetics/analysis.py,sha256=X7eDn-Hc_d241ljcAuNk9OvQ1a9wTfK0RNvYifVtvz0,5762
+pyaesthetics/brightness.py,sha256=JjossSJespOPRnBhXxgZ7T9FSPxHrY_OY2fDoqgj6-M,3788
+pyaesthetics/colorDetection.py,sha256=J_EmRHI5_HQzHcZggNP0mrtXEjn9zeiuuTJZNX3lEi0,3395
+pyaesthetics/colorfulness.py,sha256=82Gj2FNmzEhrQY_mYi2iq96HP0WFTW_QmGb_qXRnVm8,4444
+pyaesthetics/faceDetection.py,sha256=PSQIZN3JtZ64hI_taG3U92kDc4Mv27FdQj6I8tm5JXg,1744
+pyaesthetics/quadTreeDecomposition.py,sha256=iI9JMYKBvnMGrrkng63gIxTC5XEcT7BPaGqvFjm_kcc,5502
+pyaesthetics/selfsimilarity.py,sha256=kf_si2rOvuVN3JJ_GYM0JdDkht1a8FXcM2wKg9Oy484,3690
+pyaesthetics/spaceBasedDecomposition.py,sha256=9gQRS_IjD9uU2LQGic08DESCpmX-X2MJLaOmrQAhLQ8,6325
+pyaesthetics/symmetry.py,sha256=mkncAlzH8d1LbGY4oxpKVbcoK-4UFPfQ-U9vgsHTPJw,6590
+pyaesthetics-0.0.7.data/data/share/data/haarcascade_frontalface_default.xml,sha256=D31FJ4ROtRTUpJSOgi2pD7sWo0oLu7xq3GSYdHpar7A,930127
+pyaesthetics-0.0.7.dist-info/LICENSE,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+pyaesthetics-0.0.7.dist-info/METADATA,sha256=UOKmGFVPy90Sx6e7W8ESpNhXbBRYxMzfSdL2Qxk3MC0,1009
+pyaesthetics-0.0.7.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+pyaesthetics-0.0.7.dist-info/top_level.txt,sha256=qKafdepc6DE1-8dH-4c-dfynv2cWlqg8K8bpazY-jbQ,13
+pyaesthetics-0.0.7.dist-info/RECORD,,
