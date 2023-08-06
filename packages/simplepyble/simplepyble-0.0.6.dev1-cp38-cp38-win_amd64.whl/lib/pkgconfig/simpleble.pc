@@ -1,0 +1,11 @@
+prefix=D:/a/SimpleBLE/SimpleBLE/simplepyble/build/lib.win-amd64-cpython-38
+exec_prefix=D:/a/SimpleBLE/SimpleBLE/simplepyble/build/lib.win-amd64-cpython-38
+libdir=D:/a/SimpleBLE/SimpleBLE/simplepyble/build/lib.win-amd64-cpython-38/lib
+includedir=D:/a/SimpleBLE/SimpleBLE/simplepyble/build/lib.win-amd64-cpython-38/include
+
+Name: SimpleBLE
+Description: "The ultimate fully-fledged cross-platform library for Bluetooth Low Energy (BLE)."
+Version: 0.5.0
+Libs: -L${libdir} -lsimpleble 
+Cflags: -I${includedir}
+Conflicts:
