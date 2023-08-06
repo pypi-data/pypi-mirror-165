@@ -1,0 +1,9 @@
+setup.py
+sdpcPY/Sdpc.py
+sdpcPY/Sdpc_struct.py
+sdpcPY/__init__.py
+sdpcPY_win.egg-info/PKG-INFO
+sdpcPY_win.egg-info/SOURCES.txt
+sdpcPY_win.egg-info/dependency_links.txt
+sdpcPY_win.egg-info/requires.txt
+sdpcPY_win.egg-info/top_level.txt
