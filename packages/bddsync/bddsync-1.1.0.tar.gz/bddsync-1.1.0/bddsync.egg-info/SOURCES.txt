@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+bddsync/__init__.py
+bddsync/cucumber_wrapper.py
+bddsync/xray_wrapper.py
+bddsync.egg-info/PKG-INFO
+bddsync.egg-info/SOURCES.txt
+bddsync.egg-info/dependency_links.txt
+bddsync.egg-info/entry_points.txt
+bddsync.egg-info/requires.txt
+bddsync.egg-info/top_level.txt
