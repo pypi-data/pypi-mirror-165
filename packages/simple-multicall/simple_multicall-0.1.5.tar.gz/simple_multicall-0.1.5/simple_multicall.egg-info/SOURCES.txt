@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+simple_multicall/__init__.py
+simple_multicall/makerdao_multicall.py
+simple_multicall/multicall.py
+simple_multicall.egg-info/PKG-INFO
+simple_multicall.egg-info/SOURCES.txt
+simple_multicall.egg-info/dependency_links.txt
+simple_multicall.egg-info/top_level.txt
