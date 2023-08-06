@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "commandeer"
+version = "0.3.0"
+description = "A command-line parser library"
+authors = ["Johannes Spielmann <j@spielmannsolutions.com>"]
+license = "GPL-3.0-or-later"
+readme = "README.md"
+repository = "https://gitlab.com/jspielmann/commandeer"
+documentation = "https://commandeer.readthedocs.io/en/latest/"
+classifiers = [
+        'Development Status :: 5 - Production/Stable',
+        'Environment :: Console',
+        'Intended Audience :: Developers',
+        'License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)',
+        'Operating System :: OS Independent',
+	]
+packages = [
+    { include = "commandeer" },
+]	
+    
+[tool.poetry.dependencies]
+python = "^3.6"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
