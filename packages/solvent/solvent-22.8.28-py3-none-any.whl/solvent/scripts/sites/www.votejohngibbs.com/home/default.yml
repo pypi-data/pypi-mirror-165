@@ -1,0 +1,261 @@
+locators:
+  inclusions:
+    - mode: ''
+      value: ''
+      index: 0
+      uses: 0
+  exclusions:
+    - mode: ''
+      value: ''
+      index: 0
+      uses: 0
+actions:
+  - verb: ''
+    name: ''
+    locators:
+      - mode: ''
+        value: ''
+        index: 0
+        uses: 0
+  - verb: fill
+    name: first_name
+    locators:
+      - mode: ''
+        value: ''
+        index: 0
+        uses: 0
+      - mode: name
+        value: first_name
+        index: 0
+        uses: -1
+      - mode: name
+        value: first-name
+        index: 0
+        uses: -1
+      - mode: id
+        value: first_name
+        index: 0
+        uses: -1
+      - mode: id
+        value: first-name
+        index: 0
+        uses: -1
+      - mode: aria-label
+        value: First Name
+        index: 0
+        uses: -1
+      - mode: css
+        value: '[placeholder="First Name"]'
+        index: 0
+        uses: -1
+      - mode: id
+        value: FirstName
+        index: 0
+        uses: -1
+      - mode: name
+        value: first-name
+        index: 0
+        uses: -1
+      - mode: name
+        value: 'first-name '
+        index: 0
+        uses: 1
+  - verb: fill
+    name: last_name
+    locators:
+      - mode: ''
+        value: ''
+        index: 0
+        uses: 0
+      - mode: name
+        value: last_name
+        index: 0
+        uses: -1
+      - mode: name
+        value: last-name
+        index: 0
+        uses: 1
+      - mode: id
+        value: last_name
+        index: 0
+        uses: 0
+      - mode: id
+        value: last-name
+        index: 0
+        uses: 0
+      - mode: aria-label
+        value: Last Name
+        index: 0
+        uses: 0
+      - mode: css
+        value: '[placeholder="Last Name"]'
+        index: 0
+        uses: 0
+      - mode: id
+        value: LastName
+        index: 0
+        uses: 0
+  - verb: fill
+    name: email
+    locators:
+      - mode: ''
+        value: ''
+        index: 0
+        uses: 0
+      - mode: name
+        value: email
+        index: 0
+        uses: 1
+      - mode: name
+        value: email
+        index: 0
+        uses: 0
+      - mode: id
+        value: email
+        index: 0
+        uses: 0
+      - mode: id
+        value: email
+        index: 0
+        uses: 0
+      - mode: aria-label
+        value: Email
+        index: 0
+        uses: 0
+      - mode: css
+        value: '[placeholder="Email"]'
+        index: 0
+        uses: 0
+      - mode: id
+        value: Email
+        index: 0
+        uses: 0
+  - verb: fill
+    name: phone
+    locators:
+      - mode: ''
+        value: ''
+        index: 0
+        uses: 0
+      - mode: name
+        value: phone
+        index: 0
+        uses: 1
+      - mode: name
+        value: phone
+        index: 0
+        uses: 0
+      - mode: id
+        value: phone
+        index: 0
+        uses: 0
+      - mode: id
+        value: phone
+        index: 0
+        uses: 0
+      - mode: aria-label
+        value: Phone
+        index: 0
+        uses: 0
+      - mode: css
+        value: '[placeholder="Phone"]'
+        index: 0
+        uses: 0
+      - mode: id
+        value: Phone
+        index: 0
+        uses: 0
+  - verb: click
+    name: submit
+    locators:
+      - mode: ''
+        value: ''
+        index: 0
+        uses: 0
+      - mode: text
+        value: Submit
+        index: 0
+        uses: -1
+      - mode: text
+        value: Submit
+        index: 0
+        uses: -1
+      - mode: text
+        value: submit
+        index: 0
+        uses: -1
+      - mode: value
+        value: Submit
+        index: 0
+        uses: -1
+      - mode: value
+        value: Submit
+        index: 0
+        uses: -1
+      - mode: value
+        value: submit
+        index: 0
+        uses: -1
+      - mode: text (partial)
+        value: Submit
+        index: 0
+        uses: -1
+      - mode: text (partial)
+        value: Submit
+        index: 0
+        uses: -1
+      - mode: text (partial)
+        value: submit
+        index: 0
+        uses: -1
+      - mode: css
+        value: '[data=testid="buttonElement"]'
+        index: 0
+        uses: -1
+  - verb: click
+    name: sumit
+    locators:
+      - mode: ''
+        value: ''
+        index: 0
+        uses: 0
+      - mode: text
+        value: Sumit
+        index: 0
+        uses: -1
+      - mode: text
+        value: Sumit
+        index: 0
+        uses: -1
+      - mode: text
+        value: sumit
+        index: 0
+        uses: -1
+      - mode: value
+        value: Sumit
+        index: 0
+        uses: -1
+      - mode: value
+        value: Sumit
+        index: 0
+        uses: -1
+      - mode: value
+        value: sumit
+        index: 0
+        uses: -1
+      - mode: text (partial)
+        value: Sumit
+        index: 0
+        uses: -1
+      - mode: text (partial)
+        value: Sumit
+        index: 0
+        uses: -1
+      - mode: text (partial)
+        value: sumit
+        index: 0
+        uses: -1
+      - mode: css
+        value: '[data-testid="buttonElement"]'
+        index: 0
+        uses: 1

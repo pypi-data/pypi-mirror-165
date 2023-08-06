@@ -1,0 +1,40 @@
+locators:
+  inclusions:
+    - mode: ''
+      value: ''
+      index: 0
+      uses: 0
+  exclusions:
+    - mode: ''
+      value: ''
+      index: 0
+      uses: 0
+actions:
+  - verb: ''
+    name: ''
+    locators:
+      - mode: ''
+        value: ''
+        index: 0
+        uses: 0
+  - verb: select
+    name: year
+    locators:
+      - mode: css
+        value: '[data-testid="datepicker-year"]'
+        index: 0
+        uses: 2
+  - verb: click
+    name: next
+    locators:
+      - mode: text
+        value: Next
+        index: 0
+        uses: 2
+  - verb: fill
+    name: email
+    locators:
+      - mode: name
+        value: email
+        index: 0
+        uses: 2

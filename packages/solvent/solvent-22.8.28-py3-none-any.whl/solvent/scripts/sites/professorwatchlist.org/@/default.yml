@@ -1,0 +1,127 @@
+locators:
+  inclusions:
+    - mode: ''
+      value: ''
+      index: 0
+      uses: 0
+  exclusions:
+    - mode: ''
+      value: ''
+      index: 0
+      uses: 0
+actions:
+  - verb: ''
+    name: ''
+    locators:
+      - mode: ''
+        value: ''
+        index: 0
+        uses: 0
+  - verb: fill
+    name: first_name
+    locators:
+      - mode: css
+        value: '[placeholder="First Name"]'
+        index: 0
+        uses: 2
+  - verb: fill
+    name: last_name
+    locators:
+      - mode: css
+        value: '[placeholder="Last Name"]'
+        index: 0
+        uses: 2
+  - verb: fill
+    name: email
+    locators:
+      - mode: css
+        value: '[placeholder="Email"]'
+        index: 0
+        uses: 2
+  - verb: fill
+    name: phone
+    locators:
+      - mode: css
+        value: '[placeholder="Phone"]'
+        index: 0
+        uses: 2
+  - verb: fill
+    name: zip_code
+    locators:
+      - mode: css
+        value: '[placeholder="Zip Code"]'
+        index: 0
+        uses: 2
+  - verb: click
+    name: optin
+    locators:
+      - mode: ''
+        value: ''
+        index: 0
+        uses: 0
+      - mode: text
+        value: Optin
+        index: 0
+        uses: -1
+      - mode: text
+        value: Optin
+        index: 0
+        uses: -1
+      - mode: text
+        value: optin
+        index: 0
+        uses: -1
+      - mode: value
+        value: Optin
+        index: 0
+        uses: -1
+      - mode: value
+        value: Optin
+        index: 0
+        uses: -1
+      - mode: value
+        value: optin
+        index: 0
+        uses: -1
+      - mode: text
+        value: Opt-in to receive text messages from Professor Watchlist
+        index: 0
+        uses: 1
+  - verb: click
+    name: sign_up_now
+    locators:
+      - mode: ''
+        value: ''
+        index: 0
+        uses: 0
+      - mode: text
+        value: Sign Up Now
+        index: 0
+        uses: -1
+      - mode: text
+        value: Sign up now
+        index: 0
+        uses: -1
+      - mode: text
+        value: sign up now
+        index: 0
+        uses: -1
+      - mode: value
+        value: Sign Up Now
+        index: 0
+        uses: -1
+      - mode: value
+        value: Sign up now
+        index: 0
+        uses: -1
+      - mode: value
+        value: sign up now
+        index: 0
+        uses: -1
+  - verb: type
+    name: enter
+    locators:
+      - mode: ''
+        value: ''
+        index: 0
+        uses: 0

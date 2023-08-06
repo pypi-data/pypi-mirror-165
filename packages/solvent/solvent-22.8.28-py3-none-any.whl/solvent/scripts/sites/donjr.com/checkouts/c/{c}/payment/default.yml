@@ -1,0 +1,40 @@
+locators:
+  inclusions:
+    - mode: ''
+      value: ''
+      index: 0
+      uses: 0
+  exclusions:
+    - mode: ''
+      value: ''
+      index: 0
+      uses: 0
+actions:
+  - verb: ''
+    name: ''
+    locators:
+      - mode: ''
+        value: ''
+        index: 0
+        uses: 0
+  - verb: click
+    name: paypal
+    locators:
+      - mode: id
+        value: basic-PAYPAL_EXPRESS
+        index: 0
+        uses: 2
+  - verb: type
+    name: tab
+    locators:
+      - mode: ''
+        value: ''
+        index: 0
+        uses: 0
+  - verb: type
+    name: enter
+    locators:
+      - mode: ''
+        value: ''
+        index: 0
+        uses: 0

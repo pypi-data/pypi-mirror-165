@@ -1,0 +1,96 @@
+locators:
+  inclusions:
+    - mode: ''
+      value: ''
+      index: 0
+      uses: 0
+  exclusions:
+    - mode: ''
+      value: ''
+      index: 0
+      uses: 0
+actions:
+  - verb: ''
+    name: ''
+    locators:
+      - mode: ''
+        value: ''
+        index: 0
+        uses: 0
+  - verb: fill
+    name: email
+    locators:
+      - mode: id
+        value: signup_email
+        index: 0
+        uses: 2
+  - verb: click
+    name: create_account
+    locators:
+      - mode: value
+        value: Create Account
+        index: 0
+        uses: 2
+  - verb: fill
+    name: password
+    locators:
+      - mode: id
+        value: signup_password
+        index: 0
+        uses: 2
+  - verb: fill
+    name: confirm_password
+    locators:
+      - mode: id
+        value: signup_password_confirm
+        index: 0
+        uses: 2
+  - verb: fill
+    name: first_name
+    locators:
+      - mode: id
+        value: field_1
+        index: 0
+        uses: 2
+  - verb: fill
+    name: last_name
+    locators:
+      - mode: id
+        value: field_2
+        index: 0
+        uses: 2
+  - verb: fill
+    name: confirm_email
+    locators:
+      - mode: id
+        value: signup_email_confirm
+        index: 0
+        uses: 2
+  - verb: fill
+    name: nickname
+    locators:
+      - mode: id
+        value: field_3
+        index: 0
+        uses: 2
+  - verb: fill
+    name: country
+    locators:
+      - mode: id
+        value: field_19
+        index: 0
+        uses: 2
+  - verb: fill
+    name: selection
+    locators:
+      - mode: id
+        value: field_20
+        index: 0
+        uses: 2
+  - verb: click
+    name: agree
+    locators:
+      - mode: css
+        value: .bp-checkbox-wrap
+        index: 0
+        uses: 2

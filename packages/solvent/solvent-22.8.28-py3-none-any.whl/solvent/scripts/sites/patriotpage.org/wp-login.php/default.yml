@@ -1,0 +1,66 @@
+locators:
+  inclusions:
+    - mode: ''
+      value: ''
+      index: 0
+      uses: 0
+  exclusions:
+    - mode: ''
+      value: ''
+      index: 0
+      uses: 0
+actions:
+  - verb: ''
+    name: ''
+    locators:
+      - mode: ''
+        value: ''
+        index: 0
+        uses: 0
+  - verb: click
+    name: create_an_account
+    locators:
+      - mode: ''
+        value: ''
+        index: 0
+        uses: 0
+      - mode: text
+        value: Create An Account
+        index: 0
+        uses: -1
+      - mode: text
+        value: Create an account
+        index: 0
+        uses: -1
+      - mode: text
+        value: create an account
+        index: 0
+        uses: -1
+      - mode: value
+        value: Create An Account
+        index: 0
+        uses: -1
+      - mode: value
+        value: Create an account
+        index: 0
+        uses: -1
+      - mode: value
+        value: create an account
+        index: 0
+        uses: -1
+      - mode: text (partial)
+        value: Create An Account
+        index: 0
+        uses: -1
+      - mode: text (partial)
+        value: Create an account
+        index: 0
+        uses: -1
+      - mode: text (partial)
+        value: create an account
+        index: 0
+        uses: -1
+      - mode: text
+        value: Create an Account
+        index: 0
+        uses: 2

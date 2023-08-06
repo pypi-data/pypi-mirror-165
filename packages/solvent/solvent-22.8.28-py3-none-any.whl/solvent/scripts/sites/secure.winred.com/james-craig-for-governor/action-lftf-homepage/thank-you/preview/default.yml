@@ -1,0 +1,54 @@
+locators:
+  inclusions:
+    - mode: ''
+      value: ''
+      index: 0
+      uses: 0
+  exclusions:
+    - mode: ''
+      value: ''
+      index: 0
+      uses: 0
+actions:
+  - verb: ''
+    name: ''
+    locators:
+      - mode: ''
+        value: ''
+        index: 0
+        uses: 0
+  - verb: fill
+    name: first_name
+    locators:
+      - mode: ''
+        value: ''
+        index: 0
+        uses: 0
+      - mode: name
+        value: first_name
+        index: 0
+        uses: -1
+      - mode: name
+        value: first-name
+        index: 0
+        uses: -1
+      - mode: id
+        value: first_name
+        index: 0
+        uses: -1
+      - mode: id
+        value: first-name
+        index: 0
+        uses: -1
+      - mode: aria-label
+        value: First Name
+        index: 0
+        uses: -1
+      - mode: css
+        value: '[placeholder="First Name"]'
+        index: 0
+        uses: -1
+      - mode: id
+        value: FirstName
+        index: 0
+        uses: -1
