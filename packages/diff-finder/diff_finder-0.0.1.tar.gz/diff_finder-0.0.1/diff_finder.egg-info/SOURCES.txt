@@ -1,0 +1,7 @@
+setup.py
+diff_finder/__init__.py
+diff_finder/diff_finder.py
+diff_finder.egg-info/PKG-INFO
+diff_finder.egg-info/SOURCES.txt
+diff_finder.egg-info/dependency_links.txt
+diff_finder.egg-info/top_level.txt
