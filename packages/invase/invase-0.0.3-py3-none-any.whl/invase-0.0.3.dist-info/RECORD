@@ -1,0 +1,11 @@
+invase/__init__.py,sha256=u8lB_b36e5-58Jp1b2MTw4vIhQq9CF2PJlvsYMYTR4E,141
+invase/logger.py,sha256=lU0EbsMLgBYzsfybTfbaksXjufvb_UDKcMpfEkpMzbo,2865
+invase/method.py,sha256=ba8FLVpyA-jZinWHBXyG6ev-x53sUvsOjMxAkSOwyT0,23488
+invase/version.py,sha256=4dCrvStS1OgE3Vlcv-qx5-TAo377yOMEToEqCi-PwY4,23
+invase/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+invase/utils/distributions.py,sha256=EKxCxTif8e_of8_n7Cqk5J8YJwJHEoMgp0Sb2xdT2vE,263
+invase-0.0.3.dist-info/LICENSE,sha256=MzhgS6zHSRWv3ge3FfZ5ULYPBKlKZ6HBWZ-Il9iYYLo,1097
+invase-0.0.3.dist-info/METADATA,sha256=ak3C6QHaKi9oPAndUbtoQqTbC7WZJ6MJzQhbktUCB-8,3673
+invase-0.0.3.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+invase-0.0.3.dist-info/top_level.txt,sha256=aRLXUEUdxOkcA6F6cGiRBNX_MltGs0SpKjmLe6gfpz8,7
+invase-0.0.3.dist-info/RECORD,,
