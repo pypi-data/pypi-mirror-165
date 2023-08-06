@@ -1,0 +1,12 @@
+tree_sitter_builds-2022.8.29.dist-info/top_level.txt,sha256=_HRrA9sauZSHQqyWB11YHqgn0givlXbg5_cUDlBss7A,34
+tree_sitter_builds-2022.8.29.dist-info/WHEEL,sha256=Qij6yOX7pDoiGZWFfHOle2mljoAmb4RV4rtvx60og58,110
+tree_sitter_builds-2022.8.29.dist-info/METADATA,sha256=soisDTrFZ20slctX2bgUSTqfOmhWiK-UHnpy_INOU28,3350
+tree_sitter_builds-2022.8.29.dist-info/RECORD,,
+tree_sitter_builds-2022.8.29.dist-info/LICENSE,sha256=u8BqZQWU6Dz2I-eZWEIMD1VJMOL3vW6zNPWsHd9TGLM,546
+tree_sitter_builds.libs/libstdc++-8baf04f9.so.6.0.28,sha256=7dHa2sV5CgWXjdC4QqxbCNsm-pN9kkmNNqxtn5AaAvs,2428960
+tree_sitter_builds.libs/libgcc_s-8b50eaaa.so.1,sha256=aEf1qbEV-lDljbUGr6ql8FAfnxyJlKTeEsHNdrBlAHM,101648
+tree_sitter/binding.cpython-37m-i386-linux-gnu.so,sha256=elBJMNuSEOiYnQI9ToO-BvcjnbE0CZg2M9XiCbV5zYY,1028976
+tree_sitter/__init__.py,sha256=-3tGqm4Aux8TSTe8s029ii1a6j_9rZSbhp43tb0LfVM,3442
+tree_sitter_languages/languages.so,sha256=h9a92LFHvCcOSV_Kirxi1-Q2y_3gUFPviyWcKQ4MfKw,64852512
+tree_sitter_languages/core.cpython-37m-i386-linux-gnu.so,sha256=CPOZPazaA-YShEEbz483HX_XIxK_L_2X2AuiiXE4V5I,145320
+tree_sitter_languages/__init__.py,sha256=hQ-P_BgH0vHUC0sxnE95HowK1rU8CjRDL6REIyH6WVQ,227
