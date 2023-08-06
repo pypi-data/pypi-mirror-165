@@ -1,0 +1,10 @@
+django_dumpdata_one/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_dumpdata_one/models.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_dumpdata_one/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_dumpdata_one/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_dumpdata_one/management/commands/dumpdata_one.py,sha256=J4TAYhVdbC2p0kVlxa3TrxptKhfkMbtKXcwCz8yuoUY,3071
+django_dumpdata_one-0.8.6.dist-info/LICENSE,sha256=lWAfxDEwLfhcVoBGOMQRcxvNdxe3Dw6gbizR6Q_TkzI,1536
+django_dumpdata_one-0.8.6.dist-info/METADATA,sha256=Da0n7Zvl5sYYPZmZ2SPeyXb_FJZxfxOkr_e9CT2AdcM,3491
+django_dumpdata_one-0.8.6.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+django_dumpdata_one-0.8.6.dist-info/top_level.txt,sha256=9GzJLgh0rZZsOjbAG2ebUal2-mRoJu_7sYatpkr9I4U,20
+django_dumpdata_one-0.8.6.dist-info/RECORD,,

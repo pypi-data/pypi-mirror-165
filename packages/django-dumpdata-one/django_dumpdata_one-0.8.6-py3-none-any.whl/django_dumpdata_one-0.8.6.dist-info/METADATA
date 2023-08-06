@@ -1,0 +1,126 @@
+Metadata-Version: 2.1
+Name: django-dumpdata-one
+Version: 0.8.6
+Summary: Django management command to export choosen data from one table
+Home-page: https://github.com/ascaliaio/django-dumpdata-one
+Author: Stjepan Zlodi
+Author-email: stjepan@gmail.com
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 2.2
+Classifier: Framework :: Django :: 3.0
+Classifier: Framework :: Django :: 3.1
+Classifier: Framework :: Django :: 3.2
+Classifier: Framework :: Django :: 4.0
+Classifier: Framework :: Django :: 4.1
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: Django (>=2.2)
+
+.. image:: https://travis-ci.org/ascaliaio/django-dumpdata-one.svg
+    :target: https://travis-ci.org/github/ascaliaio/django-dumpdata-one/
+
+.. image:: https://codecov.io/gh/ascaliaio/django-dumpdata-one/branch/master/graph/badge.svg
+  :target: https://codecov.io/gh/ascaliaio/django-dumpdata-one
+
+Django Dumpdata One
+===================
+
+Custom ``dumpdata`` command which allows to exporting from given fields of a model
+and filter that data using standard Django lookups for filtering.
+
+The exported data structure is compatible with Django ``dumpdata`` structure which
+allows you to use standard ``loaddata`` command for import.
+
+Installation
+------------
+
+To get the latest stable release from PyPi
+
+.. code-block:: bash
+
+    pip install django-dumpdata-one
+
+
+Add ``dumpdata_one`` to your ``INSTALLED_APPS``
+
+.. code-block:: python
+
+    INSTALLED_APPS = (
+        ...,
+        "django_dumpdata_one",
+    )
+
+Usage
+-----
+
+Export data:
+
+.. code-block:: bash
+
+    ./manage.py dumpdata_one app_name.model_name --fields=field1,field2 > dump_file.json
+
+
+Import data:
+
+.. code-block:: bash
+
+    ./manage.py loaddata dump_file.json
+
+
+How to use filters? If you not familiar take a look at Django Field
+lookups - https://docs.djangoproject.com/en/3.0/topics/db/queries/#field-lookups
+
+.. code-block:: bash
+
+    ./manage.py dumpdata_one app_name.model_name --fields=field1 --filter=name__icontains=django
+
+    ./manage.py dumpdata_one app_name.model_name --fields=field1 --filter=name__icontains=django,pk__gt=300
+
+Set order by:
+
+.. code-block:: bash
+
+    ./manage.py dumpdata_one app_name.model_name --fields=field1,field2 --order=field2,field2
+
+Export all fields:
+
+.. code-block:: bash
+
+    ./manage.py dumpdate_one app_name.model_name --fields=*
+
+
+Limit number of exported records:
+
+.. code-block:: bash
+
+    ./manage.py dumpdata_one app_name.model_name --fields=* --limit=10
+
+
+Export full file URL:
+
+.. code-block:: bash
+
+    ./manage.py dumpdata_one app_name.model_name --fields=image --full_url=image
+
+
+Export from another database than 'default':
+
+.. code-block:: bash
+
+    ./manage.py dumpdata_one app_name.model_name --database=other_database
