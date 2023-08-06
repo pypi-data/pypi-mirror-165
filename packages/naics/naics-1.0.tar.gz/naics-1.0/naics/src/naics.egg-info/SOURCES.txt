@@ -1,0 +1,7 @@
+README.md
+setup.py
+naics/src/naics.py
+naics/src/naics.egg-info/PKG-INFO
+naics/src/naics.egg-info/SOURCES.txt
+naics/src/naics.egg-info/dependency_links.txt
+naics/src/naics.egg-info/top_level.txt
