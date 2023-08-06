@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: Flask-Surfer
+Version: 0.0.2
+Summary: UNKNOWN
+Home-page: https://github.com/jkalasas/Flask-Surfer
+Author: John Kyle Alas-as
+Author-email: alasasjohnkyle@gmail.com
+License: MIT
+Download-URL: https://github.com/jkalasas/Flask-Surfer/archive/refs/tags/0.0.2.tar.gz
+Keywords: csrf,flask,protection,security
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE.txt
+
+
+Flask-Surfer
+------------
+
+Extension to add CSRF protection to flask applications.
+
+
