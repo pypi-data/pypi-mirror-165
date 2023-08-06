@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/imgrep/__init__.py
+src/imgrep/main.py
+src/imgrep.egg-info/PKG-INFO
+src/imgrep.egg-info/SOURCES.txt
+src/imgrep.egg-info/dependency_links.txt
+src/imgrep.egg-info/entry_points.txt
+src/imgrep.egg-info/requires.txt
+src/imgrep.egg-info/top_level.txt
