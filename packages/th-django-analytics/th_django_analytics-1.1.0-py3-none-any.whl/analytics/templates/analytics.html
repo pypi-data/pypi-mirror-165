@@ -1,0 +1,33 @@
+{% extends 'admin/base_site.html' %} 
+{% load static %}
+
+{% block usertools %}
+  <div id="user-tools"><a href="/admin/">Admin</a> /<a href="/admin/password_change/">Modificar palavra-passe</a> /<a href="/admin/logout/">Sair</a></div>
+{% endblock %} 
+
+{% block breadcrumbs %}
+  <div class="breadcrumbs">
+    <a href="/admin/">Início</a>
+    › <a href="/admin/analytics/">Analytics</a>
+    › Meu Dashboard
+  </div>
+{% endblock %} 
+
+{% block extrahead %} 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link rel="stylesheet" href="{% static './css/analytics/analytics.css' %}" />
+{% endblock %} 
+
+{% block content %} 
+  <myDashboard></myDashboard>
+  <script> const DASHBOARD_CONTEXT = {{ dashboardContext|safe }} </script>
+  <script type="module" src="{% static './js/analytics/analytics.js' %}"></script>
+{% endblock %}
+
+  <!-- LOCAL MODE --><!-- LOCAL MODE --><!-- LOCAL MODE --><!-- LOCAL MODE -->
+<!-- <script src="{% static './js/libs/touch.js' %}"></script> -->
+  <!-- <script src="{% static './js/libs/chart.min.js' %}"></script> -->
+  <!-- <script src="{% static './js/libs/jquery.min.js' %}"></script> -->
+  <!-- <script src="{% static './js/libs/chroma.min.js' %}"></script> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.4.2/chroma.min.js" integrity="sha512-zInFF17qBFVvvvFpIfeBzo7Tj7+rQxLeTJDmbxjBz5/zIr89YVbTNelNhdTT+/DCrxoVzBeUPVFJsczKbB7sew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
