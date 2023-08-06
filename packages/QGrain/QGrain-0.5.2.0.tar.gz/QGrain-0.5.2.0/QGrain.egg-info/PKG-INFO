@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: QGrain
+Version: 0.5.2.0
+Summary: An easy-to-use software for the comprehensive analysis of grain size distributions
+Home-page: https://github.com/yuriok/QGrain
+Author: Yuming Liu
+Author-email: liuyuming@ieecas.cn
+License: MIT
+Platform: all
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development
+Classifier: Natural Language :: Chinese (Simplified)
+Classifier: Natural Language :: English
+Provides-Extra: server
+License-File: LICENSE
+License-File: LICENSE.rtf
