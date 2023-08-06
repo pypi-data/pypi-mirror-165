@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+bot_linkedin/__init__.py
+bot_linkedin/automate_linkedin.py
+docs/index.rst
+linkedin_bot.egg-info/PKG-INFO
+linkedin_bot.egg-info/SOURCES.txt
+linkedin_bot.egg-info/dependency_links.txt
+linkedin_bot.egg-info/requires.txt
+linkedin_bot.egg-info/top_level.txt
+requirements/requirements.txt
