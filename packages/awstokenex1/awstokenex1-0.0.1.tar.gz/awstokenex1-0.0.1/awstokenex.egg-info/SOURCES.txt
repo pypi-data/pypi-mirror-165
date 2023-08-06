@@ -1,0 +1,11 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.md
+setup.py
+awstokenex/__init__.py
+awstokenex.egg-info/PKG-INFO
+awstokenex.egg-info/SOURCES.txt
+awstokenex.egg-info/dependency_links.txt
+awstokenex.egg-info/requires.txt
+awstokenex.egg-info/top_level.txt

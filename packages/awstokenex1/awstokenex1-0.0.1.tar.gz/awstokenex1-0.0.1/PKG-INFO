@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: awstokenex1
+Version: 0.0.1
+Summary: This script is for read the env file and then search for the aws temporary credentials after that set it on ~/.aws/credentials file with profile name
+Home-page: https://github.com/h4rithd/awsTokenEx
+Author: h4rithd
+Author-email: h4rithd@pm.me
+License: MIT
+Keywords: awstokenex aws aws-token aws-secret AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY AWS_SESSION_TOKEN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Description-Content-Type: text/markdown
+License-File: LICENCE.txt
+
+```bash
+┌──(||||||||||||||)-[~/Scripts]
+└─$ python3 export-token.py -h                                                                                                                                           2 ⨯
+usage: python3 awsTokenEx.py -f [env_file] -p [ProfileName] 
+
+-------------------------------------------------------------
+--------------- | Bulk SSH Login check |---------------------
+-------------------------------------------------------------
+            _            _____    _            ___     
+           /_\__ __ ____|_   _|__| |_____ _ _ | __|_ __
+          / _ \ V  V (_-< | |/ _ \ / / -_) ' \| _|\ \ /
+         /_/ \_\_/\_//__/ |_|\___/_\_\___|_||_|___/_\_
+                                by h4rith.com
+-------------------------------------------------------------
+
+[!] Required arguments:
+  -f , --file      Environment variable file that contain token.
+  -p , --profile   Valid profile name.
+
+---------------- Script from h4rithd.com ----------------
+```
+
+Change Log
+==========
+
+0.0.1 (18/08/2022)
+-------------------
+- First Release
+
