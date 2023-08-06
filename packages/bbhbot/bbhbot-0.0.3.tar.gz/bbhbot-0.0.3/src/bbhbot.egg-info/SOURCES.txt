@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/bbhbot/__init__.py
+src/bbhbot/bbhbot.py
+src/bbhbot.egg-info/PKG-INFO
+src/bbhbot.egg-info/SOURCES.txt
+src/bbhbot.egg-info/dependency_links.txt
+src/bbhbot.egg-info/not-zip-safe
+src/bbhbot.egg-info/top_level.txt
