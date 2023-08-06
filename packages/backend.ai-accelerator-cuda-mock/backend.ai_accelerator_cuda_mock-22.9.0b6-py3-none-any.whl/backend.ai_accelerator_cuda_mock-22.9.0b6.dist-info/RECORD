@@ -1,0 +1,12 @@
+ai/backend/accelerator/cuda_mock/VERSION,sha256=cU38a7plUjtyij0IgadzKf4PQ097NFrXGOsbpLVO_jM,9
+ai/backend/accelerator/cuda_mock/__init__.py,sha256=HKBIEWtrpEk2KY3fB3Xb72N0xz5zoYUyn2HfZ75bTsc,96
+ai/backend/accelerator/cuda_mock/defs.py,sha256=WAoRd2qsG4w0nAQcyk8rSQ31dxtU1sI6bR1PL7sryDU,109
+ai/backend/accelerator/cuda_mock/plugin.py,sha256=TdwgZ8jC5cBvIpY9wo_IDIEggihb9OYc04H6-iWQ9t8,28104
+ai/backend/accelerator/cuda_mock/py.typed,sha256=7VuBIGAWQcUW0C7Z3GQ6WWSFJCSNXir4d9o56iU8cj4,6
+ai/backend/accelerator/cuda_mock/types.py,sha256=X94S3NeQ0BrSRJAGYOUw4R-a2aFNBqqgVc4P39m9Xkg,1344
+backend.ai_accelerator_cuda_mock-22.9.0b6.dist-info/METADATA,sha256=DeZOTy--vwNIE4lxvcOANzWet8VU68uFIJFeFc6D0Ng,2356
+backend.ai_accelerator_cuda_mock-22.9.0b6.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+backend.ai_accelerator_cuda_mock-22.9.0b6.dist-info/entry_points.txt,sha256=H0SnIwnQEs8F4ueMRNDvuACeJCc3BLFAUwB6Ui-WIKo,92
+backend.ai_accelerator_cuda_mock-22.9.0b6.dist-info/namespace_packages.txt,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+backend.ai_accelerator_cuda_mock-22.9.0b6.dist-info/top_level.txt,sha256=TJAp5TUfTUztZSUatbygths7CWRrFfnOMCtZ-DIcw6c,3
+backend.ai_accelerator_cuda_mock-22.9.0b6.dist-info/RECORD,,
