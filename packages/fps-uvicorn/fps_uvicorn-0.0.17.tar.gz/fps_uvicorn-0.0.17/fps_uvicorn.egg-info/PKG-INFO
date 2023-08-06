@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: fps-uvicorn
+Version: 0.0.17
+Summary: A uvicorn plugin for FPS
+Home-page: https://github.com/jupyter-server/fps
+Author: Jupyter Development Team
+Author-email: jupyter@googlegroups.com
+Keywords: server,fastapi,pluggy,plugins,fps,uvicorn
+Platform: Windows
+Platform: Linux
+Platform: Mac OS X
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# FPS Uvicorn!
+
+This is a [FPS](https://github.com/adriendelsalle/fps) plugin to run an ASGI server using `uvicorn`.
+
+## Run it!
+
+Just create a fresh environment with `python`, then:
+
+- install `fps-uvicorn` with `pip` by running `pip install fps-uvicorn`
+- run `fps-uvicorn` command
