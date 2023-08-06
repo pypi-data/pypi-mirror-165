@@ -1,0 +1,165 @@
+{
+    "user_param": {
+        "path": "i2b2pm.pm_user_params",
+        "get_args": [
+            "user_id",
+            "param_name_cd"
+        ],
+        "set_args": [
+            "user_id",
+            "param_name_cd",
+            "value",
+            "datatype_cd"
+        ]
+    },
+    "project_param": {
+        "path": "i2b2pm.pm_project_params",
+        "get_args": [
+            "param_name_cd",
+            "project_path"
+        ],
+        "set_args": [
+            "datatype_cd",
+            "param_name_cd",
+            "project_path",
+            "value"
+        ]
+    },
+    "project_role": {
+        "path": "i2b2pm.pm_project_user_roles",
+        "get_args": [
+            "project_id",
+            "user_id"
+        ],
+        "set_args": [
+            "project_id",
+            "user_id",
+            "user_role_cd"
+        ]
+    },
+    "project_user_param": {
+        "path": "i2b2pm.pm_project_user_params",
+        "get_args": [
+            "project_id",
+            "user_id",
+            "param_name_cd"
+        ],
+        "set_args": [
+            "datatype_cd",
+            "project_id",
+            "user_id",
+            "param_name_cd",
+            "value"
+        ]
+    },
+    "global_param": {
+        "path": "i2b2pm.pm_global_params",
+        "get_args": [
+            "param_name_cd",
+            "project_path"
+        ],
+        "set_args": [
+            "datatype_cd",
+            "param_name_cd",
+            "project_path",
+            "value"
+        ]
+    },
+    "cell": {
+        "path": "i2b2pm.pm_cell_data",
+        "get_args": [
+            "cell_id",
+            "project_path"
+        ],
+        "set_args": [
+            "cell_id",
+            "project_path",
+            "name",
+            "method_cd",
+            "url"
+        ]
+    },
+    "crc_db_lookup": {
+        "path": "i2b2hive.crc_db_lookup",
+        "get_args": [
+            "c_domain_id",
+            "c_project_path",
+            "c_owner_id",
+            "c_db_datasource"
+        ],
+        "set_args": [
+            "c_domain_id",
+            "c_project_path",
+            "c_owner_id",
+            "c_db_datasource",
+            "c_db_fullschema",
+            "c_db_servertype"
+        ]
+    },
+    "im_db_lookup": {
+        "path": "i2b2hive.im_db_lookup",
+        "get_args": [
+            "c_domain_id",
+            "c_project_path",
+            "c_owner"
+        ],
+        "set_args": [
+            "c_domain_id",
+            "c_project_path",
+            "c_owner",
+            "c_db_fullschema",
+            "c_db_datasource",
+            "c_db_servertype"
+        ]
+    },
+    "project": {
+        "path": "i2b2pm.pm_project_data",
+        "get_args": [
+            "project_id"
+        ],
+        "set_args": [
+            "project_id"
+        ]
+    },
+    "user": {
+        "path": "i2b2pm.pm_user_data",
+        "get_args": [
+            "user_id"
+        ],
+        "set_args": [
+            "user_id"
+        ]
+    },
+    "ont_db_lookup": {
+        "path": "i2b2hive.ont_db_lookup",
+        "get_args": [
+            "c_domain_id",
+            "c_project_path",
+            "c_owner_id"
+        ],
+        "set_args": [
+            "c_domain_id",
+            "c_project_path",
+            "c_owner_id",
+            "c_db_fullschema",
+            "c_db_datasource",
+            "c_db_servertype"
+        ]
+    },
+    "work_db_lookup": {
+        "path": "i2b2hive.work_db_lookup",
+        "get_args": [
+            "c_domain_id",
+            "c_project_path",
+            "c_owner_id"
+        ],
+        "set_args": [
+            "c_domain_id",
+            "c_project_path",
+            "c_owner_id",
+            "c_db_fullschema",
+            "c_db_datasource",
+            "c_db_servertype"
+        ]
+    }
+}

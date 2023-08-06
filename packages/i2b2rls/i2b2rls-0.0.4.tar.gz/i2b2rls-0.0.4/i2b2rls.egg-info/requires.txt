@@ -1,0 +1,4 @@
+sqlalchemy
+psycopg2-binary
+fire
+automapdb==0.1.2
