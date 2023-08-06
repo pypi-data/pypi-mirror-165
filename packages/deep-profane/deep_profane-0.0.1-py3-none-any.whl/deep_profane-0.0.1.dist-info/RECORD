@@ -1,0 +1,8 @@
+deep_profane/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+deep_profane/model_weights.py,sha256=rl6scGgmFYxbx-xJPrhsMcmNjKLpSpdRyGMefOfvUoA,1236
+deep_profane/tfhub_bert_handle.py,sha256=IHs1YfT04bB_xafPGt1vQiGcPZrPCt8AXZKojCQWT8Q,7853
+deep_profane/validator.py,sha256=NFI5x17POKa-My5GBvXqtY7XfVgYT0fWEJ04WhMg9RM,1611
+deep_profane-0.0.1.dist-info/METADATA,sha256=eibzYqa8j6OmQ-G4yZbsoXS2ULtsqzkdkoHMUH2n32k,1923
+deep_profane-0.0.1.dist-info/WHEEL,sha256=09RFlvY3aVzvCNk4AXPZt-N-AI7GY_KktGsTb2IqIBU,86
+deep_profane-0.0.1.dist-info/licenses/LICENSE,sha256=uIe8St8P-6OpXygmJuUTxiK-MPy54KDteV3ncqERMdY,1089
+deep_profane-0.0.1.dist-info/RECORD,,
