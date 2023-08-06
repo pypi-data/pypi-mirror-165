@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: wsb
+Version: 0.0.2
+Summary: wsb()填入字符串可以逐字输出，games()可以玩猜数字小游戏，open()填入网页可以打开
+Home-page: https://github.com/
+Author: Shibo Wang
+Author-email: 2280328662@qq.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+
+UNKNOWN
+
