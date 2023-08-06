@@ -1,0 +1,14 @@
+[run]
+branch = true
+source = mardor
+
+[paths]
+source =
+    src/mardor
+    .tox/*/lib/python*/site-packages/mardor
+    .tox/pypy/site-packages/mardor
+
+[report]
+show_missing = true
+precision = 2
+omit = *migrations*
