@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: okpt
+Version: 0.0.1
+Summary: okpt 
+Author-email: TK <tk@terminalkitten.com>
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: typing-extensions
+Requires-Dist: pydantic
+Requires-Dist: click
+Requires-Dist: devtools
+Requires-Dist: wasabi
+Requires-Dist: black ; extra == "dev"
+Requires-Dist: ipdb ; extra == "dev"
+Requires-Dist: ipython ; extra == "dev"
+Requires-Dist: flake8 ; extra == "dev"
+Requires-Dist: isort ; extra == "dev"
+Requires-Dist: wheel ; extra == "dev"
+Requires-Dist: Sphinx ; extra == "doc"
+Requires-Dist: sphinx-rtd-theme ; extra == "doc"
+Requires-Dist: livereload ; extra == "doc"
+Project-URL: Home, https://github.com/openkoppeltaal/okpt-python
+Provides-Extra: dev
+Provides-Extra: doc
+
+## Features
+
+## Installation
+
+Installing with:
+
+```bash
+pip install 'okpt'
+```
+
+## Setup
+
+## Usage
+
+## Documentation
+
+## License
+
+The MIT License
+
