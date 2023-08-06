@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: nbproject
+Version: 0.5.1
+Summary: nbproject: Manage Jupyter notebooks.
+Author-email: Lamin Labs <laminlabs@gmail.com>
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: pydantic
+Requires-Dist: pyyaml
+Requires-Dist: packaging
+Requires-Dist: orjson
+Requires-Dist: ipylab
+Requires-Dist: importlib-metadata
+Requires-Dist: stdlib_list; python_version < '3.10'
+Requires-Dist: nbproject_test
+Requires-Dist: lamin_logger
+Requires-Dist: pre-commit ; extra == "dev"
+Requires-Dist: black ; extra == "dev"
+Requires-Dist: pytest>=6.0 ; extra == "test"
+Requires-Dist: pytest-cov ; extra == "test"
+Requires-Dist: pandas ; extra == "test"
+Requires-Dist: nbformat ; extra == "test"
+Requires-Dist: nbclient ; extra == "test"
+Project-URL: Home, https://github.com/laminlabs/nbproject
+Provides-Extra: dev
+Provides-Extra: test
+
+[![coverage](https://codecov.io/gh/laminlabs/nbproject/branch/main/graph/badge.svg?token=05R04PR9RB)](https://codecov.io/gh/laminlabs/nbproject)
+[![pypi](https://img.shields.io/pypi/v/nbproject?color=%2334D058&label=pypi%20package)](https://pypi.org/project/nbproject)
+[![doi](https://img.shields.io/badge/doi-10.56528%2Fnbp-lightgrey)](https://doi.org/10.56528/nbp)
+![pyversions](https://img.shields.io/pypi/pyversions/nbproject)
+
+# nbproject: Manage Jupyter notebooks
+
+This package is in private beta at this moment!
+
+Follow https://twitter.com/laminlabs to learn about a first public release.
+
+For beta users: Read the [docs](https://lamin.ai/docs/nbproject).
+
