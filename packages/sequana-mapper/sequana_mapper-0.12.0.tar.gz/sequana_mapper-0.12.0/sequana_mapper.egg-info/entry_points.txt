@@ -1,0 +1,2 @@
+[console_scripts]
+sequana_mapper = sequana_pipelines.mapper.main:main
