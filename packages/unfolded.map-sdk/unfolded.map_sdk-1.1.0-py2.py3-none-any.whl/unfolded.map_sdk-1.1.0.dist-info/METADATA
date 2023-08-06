@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: unfolded.map-sdk
+Version: 1.1.0
+Summary: Jupyter Widget for Unfolded.ai Maps
+Author: UnfoldedInc.
+Author-email: info@unfolded.ai
+License: (c) 2022 Foursquare Labs, Inc. Terms available at https://www.unfolded.ai/terms-of-service/
+Keywords: Jupyter,Widgets,IPython
+Platform: Linux
+Platform: Mac OS X
+Platform: Windows
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Framework :: Jupyter
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: ipykernel (<7,>=4)
+Requires-Dist: ipywidgets (<8,>=7.0.0)
+Requires-Dist: jupyter-ui-poll (<0.3.0,>=0.2.1)
+Requires-Dist: pydantic (<2.0,>=1.0)
+Requires-Dist: geojson-pydantic (<0.5.0,>=0.4.2)
+Requires-Dist: typing-extensions ; python_version < "3.8"
+Provides-Extra: docs
+Requires-Dist: jupyter-sphinx ; extra == 'docs'
+Requires-Dist: nbsphinx ; extra == 'docs'
+Requires-Dist: nbsphinx-link ; extra == 'docs'
+Requires-Dist: pytest-check-links ; extra == 'docs'
+Requires-Dist: pypandoc ; extra == 'docs'
+Requires-Dist: recommonmark ; extra == 'docs'
+Requires-Dist: sphinx (>=1.5) ; extra == 'docs'
+Requires-Dist: sphinx-rtd-theme ; extra == 'docs'
+Provides-Extra: examples
+Provides-Extra: geopandas
+Requires-Dist: geopandas (>=0.7.0) ; extra == 'geopandas'
+Requires-Dist: pandas ; extra == 'geopandas'
+Provides-Extra: test
+Requires-Dist: pytest (>=4.6) ; extra == 'test'
+Requires-Dist: pytest-cov ; extra == 'test'
+Requires-Dist: nbval ; extra == 'test'
+Requires-Dist: mypy (==0.961) ; extra == 'test'
+Requires-Dist: jupyter-packaging ; extra == 'test'
+Requires-Dist: jupyterlab (~=3.2) ; extra == 'test'
+Requires-Dist: pandas ; extra == 'test'
+Requires-Dist: jupytext (==1.13.6) ; extra == 'test'
+
+# unfolded.map_sdk
+
+Unfolded Map SDK for Jupyter (Python).
+
+Refer to the documentation website for [how to install](https://docs.unfolded.ai/jupyter/cloud-notebooks/jupyter), [API documentation](https://docs.unfolded.ai/map-sdk/api), and [examples](https://docs.unfolded.ai/map-sdk/examples).
