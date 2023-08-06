@@ -1,0 +1,2 @@
+include pySRSLockin/graphics/*
+include pySRSLockin/*.ini
