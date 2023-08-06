@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+pytorch_cinic/__init__.py
+pytorch_cinic/dataset.py
+pytorch_cinic.egg-info/PKG-INFO
+pytorch_cinic.egg-info/SOURCES.txt
+pytorch_cinic.egg-info/dependency_links.txt
+pytorch_cinic.egg-info/requires.txt
+pytorch_cinic.egg-info/top_level.txt

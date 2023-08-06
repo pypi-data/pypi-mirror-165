@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: pytorch-cinic
+Version: 0.0.4
+Summary: A small wrapper around the CINIC10 dataset https://datashare.ed.ac.uk/handle/10283/3192
+Author-email: Igor Krawczuk <contact-gh@krawczuk.eu>
+License: MIT License
+        
+        Copyright (c) 2022 Igor Krawczuk
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/igor-krawczuk/pytorch-cinic
+Project-URL: Bug Tracker, https://github.com/igor-krawczuk/pytorch-cinic/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+A simple package packaging a pytorch dataloader for [the CINIC10 dataset](https://datashare.ed.ac.uk/handle/10283/3192 ).
+
+If you use it cite the original authors
+
+```
+@misc{https://doi.org/10.48550/arxiv.1810.03505,
+  doi = {10.48550/ARXIV.1810.03505},
+  url = {https://arxiv.org/abs/1810.03505},
+  author = {Darlow, Luke N. and Crowley, Elliot J. and Antoniou, Antreas and Storkey, Amos J.},
+  keywords = {Computer Vision and Pattern Recognition (cs.CV), Machine Learning (cs.LG), Machine Learning (stat.ML), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  title = {CINIC-10 is not ImageNet or CIFAR-10},
+  publisher = {arXiv},
+  year = {2018},
+  copyright = {Creative Commons Attribution Share Alike 4.0 International}
+}
+```
+
+and if you want to be nice, also [this repo](https://github.com/igor-krawczuk/pytorch-cinic) (although the code is borderline trivial so no hard feelings if not).
+
+To use simply import 
+
+`from pytorch_cinic.dataset import CINIC10`
+
+and then use like CIFAR10 (except that we use `partition=train/valid/test` instead of `train=True/False`)
