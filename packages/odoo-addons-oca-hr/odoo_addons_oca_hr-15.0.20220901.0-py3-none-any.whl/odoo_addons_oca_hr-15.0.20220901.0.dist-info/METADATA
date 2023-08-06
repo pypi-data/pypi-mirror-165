@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: odoo-addons-oca-hr
+Version: 15.0.20220901.0
+Summary: Meta package for oca-hr Odoo addons
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Classifier: Framework :: Odoo :: 15.0
+Requires-Dist: odoo-addon-hr-course (<15.1dev,>=15.0dev)
+Requires-Dist: odoo-addon-hr-employee-age (<15.1dev,>=15.0dev)
+Requires-Dist: odoo-addon-hr-employee-calendar-planning (<15.1dev,>=15.0dev)
+Requires-Dist: odoo-addon-hr-employee-firstname (<15.1dev,>=15.0dev)
+Requires-Dist: odoo-addon-hr-employee-lastnames (<15.1dev,>=15.0dev)
+Requires-Dist: odoo-addon-hr-employee-medical-examination (<15.1dev,>=15.0dev)
+Requires-Dist: odoo-addon-hr-employee-partner-external (<15.1dev,>=15.0dev)
+Requires-Dist: odoo-addon-hr-employee-relative (<15.1dev,>=15.0dev)
+Requires-Dist: odoo-addon-hr-employee-service (<15.1dev,>=15.0dev)
+Requires-Dist: odoo-addon-hr-employee-service-contract (<15.1dev,>=15.0dev)
+Requires-Dist: odoo-addon-hr-holidays-settings (<15.1dev,>=15.0dev)
+Requires-Dist: odoo-addon-hr-personal-equipment-request (<15.1dev,>=15.0dev)
+
+UNKNOWN
+
