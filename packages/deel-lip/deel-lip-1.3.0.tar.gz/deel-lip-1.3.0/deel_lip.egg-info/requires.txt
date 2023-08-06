@@ -1,0 +1,17 @@
+numpy
+tensorflow<3,>=2
+
+[dev]
+tox
+black
+flake8
+flake8-black
+numpy
+
+[docs]
+sphinx
+recommonmark
+sphinx_rtd_theme
+sphinx_markdown_builder
+sphinxcontrib_katex
+ipython
