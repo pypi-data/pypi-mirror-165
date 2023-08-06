@@ -1,0 +1,7 @@
+typer
+fastapi
+uvicorn[standard]
+python-multipart
+pydantic
+content-size-limit-asgi
+PyYAML
