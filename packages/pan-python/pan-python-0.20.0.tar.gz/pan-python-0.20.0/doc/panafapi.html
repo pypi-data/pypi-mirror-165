@@ -1,0 +1,807 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+<title>panafapi.py</title>
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 8954 2022-01-20 10:10:25Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See https://docutils.sourceforge.io/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+.subscript {
+  vertical-align: sub;
+  font-size: smaller }
+
+.superscript {
+  vertical-align: super;
+  font-size: smaller }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title, .code .error {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left, table.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right, table.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table.align-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+.align-top    {
+  vertical-align: top }
+
+.align-middle {
+  vertical-align: middle }
+
+.align-bottom {
+  vertical-align: bottom }
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math, pre.code {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+pre.code .ln { color: grey; } /* line numbers */
+pre.code, code { background-color: #eeeeee }
+pre.code .comment, code .comment { color: #5C6576 }
+pre.code .keyword, code .keyword { color: #3B0D06; font-weight: bold }
+pre.code .literal.string, code .literal.string { color: #0C5404 }
+pre.code .name.builtin, code .name.builtin { color: #352B84 }
+pre.code .deleted, code .deleted { background-color: #DEB0A1}
+pre.code .inserted, code .inserted { background-color: #A3D289}
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+/* "booktabs" style (no vertical lines) */
+table.docutils.booktabs {
+  border: 0px;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  border-collapse: collapse;
+}
+table.docutils.booktabs * {
+  border: 0px;
+}
+table.docutils.booktabs th {
+  border-bottom: thin solid;
+  text-align: left;
+}
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+</head>
+<body>
+<div class="document" id="panafapi-py">
+<h1 class="title">panafapi.py</h1>
+<h2 class="subtitle" id="command-line-interface-to-the-autofocus-api">command line interface to the AutoFocus API</h2>
+
+<!-- Copyright (c) 2017 Palo Alto Networks, Inc. <techbizdev@paloaltonetworks.com>
+
+Permission to use, copy, modify, and distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE. -->
+<div class="section" id="name">
+<h1>NAME</h1>
+<blockquote>
+panafapi.py - command line interface to the AutoFocus API</blockquote>
+</div>
+<div class="section" id="synopsis">
+<h1>SYNOPSIS</h1>
+<pre class="literal-block">
+panafapi.py [options]
+   --sessions            search AutoFocus sessions
+   -A                    get aggregate of sessions
+   -H                    get histogram of sessions
+   --session id          get AutoFocus session
+   --samples             search AutoFocus samples
+   --sample-analysis     get AutoFocus sample analysis report
+   --top-tags            search AutoFocus top tags
+   --tags                search AutoFocus tags
+   --tag name            get AutoFocus tag
+   --export              export AutoFocus list
+   -r json               JSON API request (multiple -r's allowed)
+   -n num                request num results
+   --scope scope         search scope
+   --hash hash           sample hash
+   --terminal            get only final search result
+   -t tag                .panrc tagname
+   -K api_key            AutoFocus API key
+   -V api_version        AutoFocus API version (default v1.0)
+   -h hostname           AutoFocus hostname
+   -p                    print response in Python to stdout
+   -j                    print response in JSON to stdout
+   -D                    enable debug (multiple up to -DDD)
+   --ssl opt             SSL verify option: verify|noverify
+   -T seconds            HTTP connect timeout
+   --version             display version
+   --help                display usage
+</pre>
+</div>
+<div class="section" id="description">
+<h1>DESCRIPTION</h1>
+<blockquote>
+<p><strong>panafapi.py</strong> is used to perform AutoFocus API requests.
+It uses the PanAFapi class from the <strong>pan.afapi</strong> module to
+execute API requests.</p>
+<p>The options are:</p>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">--sessions</span></tt></dt>
+<dd>Search AutoFocus sessions using the <tt class="docutils literal">/sessions/search/</tt>
+and <tt class="docutils literal">/sessions/results/</tt> API requests.</dd>
+<dt><tt class="docutils literal"><span class="pre">-A</span></tt></dt>
+<dd>Search AutoFocus sessions using the <tt class="docutils literal">/sessions/aggregate/search/</tt>
+and <tt class="docutils literal">/sessions/aggregate/results/</tt> API requests.</dd>
+<dt><tt class="docutils literal"><span class="pre">-H</span></tt></dt>
+<dd>Search AutoFocus sessions using the <tt class="docutils literal">/sessions/histogram/search/</tt>
+and <tt class="docutils literal">/sessions/histogram/search/</tt> API requests.</dd>
+<dt><tt class="docutils literal"><span class="pre">--session</span></tt> <em>id</em></dt>
+<dd>Get details for AutoFocus session using the <tt class="docutils literal">/session/</tt> API
+request.</dd>
+<dt><tt class="docutils literal"><span class="pre">--samples</span></tt></dt>
+<dd>Search AutoFocus (WildFire) samples using the <tt class="docutils literal">/samples/search/</tt>
+and <tt class="docutils literal">/samples/results/</tt> API requests.</dd>
+<dt><tt class="docutils literal"><span class="pre">--sample-analysis</span></tt></dt>
+<dd>Get details for a sample's WildFire analysis using the
+<tt class="docutils literal"><span class="pre">/sample/{id}/analysis</span></tt> API request.</dd>
+<dt><tt class="docutils literal"><span class="pre">--top-tags</span></tt></dt>
+<dd>Search AutoFocus top tags data using the <tt class="docutils literal"><span class="pre">/top-tags/search/</span></tt>
+and <tt class="docutils literal"><span class="pre">/top-tags/results/</span></tt> API requests.  This data corresponds to
+the <em>Top Tags</em> data in the AutoFocus portal dashboard and search
+statistics.</dd>
+<dt><tt class="docutils literal"><span class="pre">--tags</span></tt></dt>
+<dd>Search AutoFocus tags using the <tt class="docutils literal">/tags/</tt> API request.</dd>
+<dt><tt class="docutils literal"><span class="pre">--tag</span></tt> <em>name</em></dt>
+<dd>Get details for an AutoFocus tag using the <tt class="docutils literal">/tag/</tt>
+API request.</dd>
+<dt><tt class="docutils literal"><span class="pre">--export</span></tt></dt>
+<dd>Export a list of saved AutoFocus artifacts using the
+<tt class="docutils literal">/export/</tt> API request.</dd>
+<dt><tt class="docutils literal"><span class="pre">-r</span></tt> <em>json</em></dt>
+<dd><p class="first">JSON object to use in the body of the API request.</p>
+<p>Multiple <tt class="docutils literal"><span class="pre">-r</span></tt> options are allowed.</p>
+<p class="last"><em>json</em> can be a JSON string, a path to a file containing JSON,
+or the value <strong>-</strong> to specify that JSON is on <em>stdin</em>.</p>
+</dd>
+<dt><tt class="docutils literal"><span class="pre">-n</span></tt> <em>num</em></dt>
+<dd><p class="first">Specify number of results for the request.</p>
+<p class="last">This is a convenience option and sets the <tt class="docutils literal">pageSize</tt> string for
+<tt class="docutils literal"><span class="pre">--tags</span></tt> and the <tt class="docutils literal">size</tt> string for the search options to <em>num</em>
+in the JSON body of the request.</p>
+</dd>
+<dt><tt class="docutils literal"><span class="pre">--scope</span></tt> <em>scope</em></dt>
+<dd><p class="first">Specify the scope for the request.</p>
+<p class="last">This is a convenience option and sets the <tt class="docutils literal">scope</tt> string for
+<tt class="docutils literal"><span class="pre">--tags</span></tt> and the search options to <em>scope</em> in the JSON body of the
+request.</p>
+</dd>
+<dt><tt class="docutils literal"><span class="pre">--hash</span></tt> <em>hash</em></dt>
+<dd><p class="first">Specify the hash for the request.</p>
+<p class="last">This sets the <tt class="docutils literal">sampleid</tt> argument for the <tt class="docutils literal"><span class="pre">--sample-analysis</span></tt>
+(PanAFapi <tt class="docutils literal">sample_analysis()</tt> method) request.  The <tt class="docutils literal">sampleid</tt>
+is the SHA256 hash of the sample.</p>
+</dd>
+<dt><tt class="docutils literal"><span class="pre">--terminal</span></tt></dt>
+<dd><p class="first">Set the <tt class="docutils literal">terminal</tt> argument for the <tt class="docutils literal">*_search_results()</tt> PanAFapi
+methods to <tt class="docutils literal">True</tt>.</p>
+<p>This specifies that only the terminal (complete) search result
+should be returned.</p>
+<p class="last">By default intermediate (incomplete) search results are returned
+(the <tt class="docutils literal">terminal</tt> argument is set to <tt class="docutils literal">False</tt>).</p>
+</dd>
+<dt><tt class="docutils literal"><span class="pre">-t</span></tt> <em>tag</em></dt>
+<dd>Specify tagname for .panrc file.</dd>
+<dt><tt class="docutils literal"><span class="pre">-K</span></tt> <em>api_key</em></dt>
+<dd>Specify the API key for the request.</dd>
+<dt><tt class="docutils literal"><span class="pre">-V</span></tt> <em>api_version</em></dt>
+<dd><p class="first">Specify the API version for the request.</p>
+<p>API version is a string in the form v<strong>major</strong>.<strong>minor</strong> or
+<strong>major</strong>.<strong>minor</strong> (e.g., <em>v1.0</em>).  The API version is used to determine
+the PanAFapi class implementation to use.</p>
+<p class="last">The default API version can be determined by running <tt class="docutils literal">panafapi.py <span class="pre">-D</span></tt>.</p>
+</dd>
+<dt><tt class="docutils literal"><span class="pre">-h</span></tt> <em>hostname</em></dt>
+<dd><p class="first">URI hostname used in API requests.    This can also be
+specified in a .panrc file using the <tt class="docutils literal">hostname</tt> <em>varname</em>.</p>
+<p class="last">The default is <tt class="docutils literal">autofocus.paloaltonetworks.com</tt>.</p>
+</dd>
+<dt><tt class="docutils literal"><span class="pre">-p</span></tt></dt>
+<dd>Print JSON response in Python to <em>stdout</em>.</dd>
+<dt><tt class="docutils literal"><span class="pre">-j</span></tt></dt>
+<dd>Print JSON response to <em>stdout</em>.</dd>
+<dt><tt class="docutils literal"><span class="pre">-D</span></tt></dt>
+<dd>Enable debugging.  May be specified multiple times up to 3
+to increase debugging output.</dd>
+<dt><tt class="docutils literal"><span class="pre">--ssl</span></tt> <em>opt</em></dt>
+<dd><p class="first">Specify the type of SSL server certificate verification to be
+performed.</p>
+<dl class="last docutils">
+<dt><tt class="docutils literal">verify</tt></dt>
+<dd>Perform SSL server certificate verification.  This is the default.</dd>
+<dt><tt class="docutils literal">noverify</tt></dt>
+<dd>Disable SSL server certificate verification.</dd>
+</dl>
+</dd>
+<dt><tt class="docutils literal"><span class="pre">-T</span></tt> <em>seconds</em></dt>
+<dd>The HTTP connect <tt class="docutils literal">timeout</tt> in seconds.</dd>
+<dt><tt class="docutils literal"><span class="pre">--version</span></tt></dt>
+<dd>Display version.</dd>
+<dt><tt class="docutils literal"><span class="pre">--help</span></tt></dt>
+<dd>Display command options.</dd>
+</dl>
+<p>The following describes the options used to perform each AutoFocus
+API request:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="42%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Options</th>
+<th class="head">PanAFapi Method</th>
+<th class="head">API Resource URIs</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>--sessions</td>
+<td>sessions_search_results()</td>
+<td><div class="first last line-block">
+<div class="line">/sessions/search/</div>
+<div class="line">/sessions/results/</div>
+</div>
+</td>
+</tr>
+<tr><td>--sessions -A</td>
+<td>sessions_aggregate_search_results()</td>
+<td><div class="first last line-block">
+<div class="line">/sessions/aggregate/search/</div>
+<div class="line">/sessions/aggregate/results/</div>
+</div>
+</td>
+</tr>
+<tr><td>--sessions -H</td>
+<td>sessions_histogram_search_results()</td>
+<td><div class="first last line-block">
+<div class="line">/sessions/histogram/search/</div>
+<div class="line">/sessions/histogram/results/</div>
+</div>
+</td>
+</tr>
+<tr><td>--session id</td>
+<td>session()</td>
+<td><div class="first last line-block">
+<div class="line">/session/</div>
+</div>
+</td>
+</tr>
+<tr><td>--samples</td>
+<td>samples_search_results()</td>
+<td><div class="first last line-block">
+<div class="line">/samples/search/</div>
+<div class="line">/samples/results/</div>
+</div>
+</td>
+</tr>
+<tr><td>--sample-analysis</td>
+<td>sample_analysis()</td>
+<td><div class="first last line-block">
+<div class="line">/sample/{id}/analysis</div>
+</div>
+</td>
+</tr>
+<tr><td>--top-tags</td>
+<td>top_tags_search_results()</td>
+<td><div class="first last line-block">
+<div class="line">/top-tags/search/</div>
+<div class="line">/top-tags/results/</div>
+</div>
+</td>
+</tr>
+<tr><td>--tags</td>
+<td>tags()</td>
+<td><div class="first last line-block">
+<div class="line">/tags/</div>
+</div>
+</td>
+</tr>
+<tr><td>--tag name</td>
+<td>tag()</td>
+<td><div class="first last line-block">
+<div class="line">/tag/</div>
+</div>
+</td>
+</tr>
+<tr><td>--export</td>
+<td>export()</td>
+<td><div class="first last line-block">
+<div class="line">/export/</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+</div>
+<div class="section" id="files">
+<h1>FILES</h1>
+<blockquote>
+<dl class="docutils">
+<dt><tt class="docutils literal">.panrc</tt></dt>
+<dd>.panrc file.</dd>
+</dl>
+</blockquote>
+</div>
+<div class="section" id="exit-status">
+<h1>EXIT STATUS</h1>
+<blockquote>
+<strong>panafapi.py</strong> exits with 0 on success and 1 if an error occurs.</blockquote>
+</div>
+<div class="section" id="examples">
+<h1>EXAMPLES</h1>
+<blockquote>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Examples may use the <strong>jp.py</strong> program from
+<a class="reference external" href="http://jmespath.org/">JMESPath</a>.</p>
+</div>
+<p>Add AutoFocus API key with tagname <em>autofocus</em> to .panrc file.</p>
+<p>First <a class="reference external" href="https://docs.paloaltonetworks.com/autofocus/autofocus-api/get-started-with-the-autofocus-api/get-your-api-key.html">Get Your API Key</a>.</p>
+<pre class="literal-block">
+$ KEY=e3222942-2080-11e7-b1c7-03f23b1b6cb4
+$ echo &quot;api_key%autofocus=$KEY&quot; &gt;&gt;.panrc
+</pre>
+<p>Verify API key.</p>
+<pre class="literal-block">
+$ panafapi.py -t autofocus --tags
+tags: 200 OK tags=50 total_count=1394
+</pre>
+<p>Get 10 tags using <tt class="docutils literal"><span class="pre">-n</span> 10</tt>.</p>
+<pre class="literal-block">
+$ panafapi.py -t autofocus --tags -j -n 10 | jp.py 'tags[].public_tag_name'
+tags: 200 OK tags=10 total_count=1394
+[
+    &quot;Commodity.180Solutions&quot;,
+    &quot;Commodity.1stBrowser&quot;,
+    &quot;Commodity.360Root&quot;,
+    &quot;Unit42.4H&quot;,
+    &quot;Unit42.777Ransomware&quot;,
+    &quot;Commodity.7ev3n&quot;,
+    &quot;Unit42.7ev3nHONEST&quot;,
+    &quot;Unit42.7h9rRansomware&quot;,
+    &quot;Unit42.9002&quot;,
+    &quot;Unit42.AbaddonPOS&quot;
+]
+</pre>
+<p>Get tag details.</p>
+<pre class="literal-block">
+$ panafapi.py -t autofocus --tag Unit42.777Ransomware -j | jp.py tag
+tag: 200 OK
+{
+    &quot;count&quot;: 9,
+    &quot;lasthit&quot;: &quot;2016-05-28 05:50:27&quot;,
+    &quot;tag_class&quot;: &quot;malware_family&quot;,
+    &quot;description&quot;: &quot;777 ransomware appears to have been around since September 2015,but several new samples were discovered during mid-2016. This ransomware will encrypt files and append the .777 extension to them. There is a public decryptor that will automatically decrypt any files that end with the .777 extension.&quot;,
+    &quot;tag_definition_status_id&quot;: 1,
+    &quot;up_votes&quot;: 1,
+    &quot;created_at&quot;: &quot;2017-02-14 10:59:23&quot;,
+    &quot;tag_class_id&quot;: 3,
+    &quot;tag_definition_scope_id&quot;: 4,
+    &quot;tag_definition_scope&quot;: &quot;unit42&quot;,
+    &quot;comments&quot;: [],
+    &quot;updated_at&quot;: &quot;2017-02-14 10:59:23&quot;,
+    &quot;tag_definition_status&quot;: &quot;enabled&quot;,
+    &quot;source&quot;: &quot;Unit 42&quot;,
+    &quot;tag_name&quot;: &quot;777Ransomware&quot;,
+    &quot;public_tag_name&quot;: &quot;Unit42.777Ransomware&quot;,
+    &quot;refs&quot;: &quot;[{\&quot;source\&quot;:\&quot;BleepingComputer\&quot;,\&quot;title\&quot;:\&quot;Emsisoft Releases Decryptors for the Xorist and 777 Ransomware\&quot;,\&quot;url\&quot;:\&quot;https://www.bleepingcomputer.com/news/security/emsisoft-releases-decryptors-for-the-xorist-and-777-ransomware/\&quot;,\&quot;created\&quot;:\&quot;2017-01-30T12:50:49\&quot;}]&quot;,
+    &quot;customer_name&quot;: &quot;Palo Alto Networks Unit42&quot;
+}
+</pre>
+<p>Search private samples for malware and save results.</p>
+<pre class="literal-block">
+$ cat q-malware.json
+{
+    &quot;query&quot;: {
+        &quot;children&quot;: [
+            {
+                &quot;field&quot;: &quot;sample.malware&quot;,
+                &quot;operator&quot;: &quot;is&quot;,
+                &quot;value&quot;: 1
+            }
+        ],
+        &quot;operator&quot;: &quot;all&quot;
+    }
+}
+
+$ panafapi.py -t autofocus --samples -r q-malware.json --scope private -n 100 -j &gt; malware-private.json
+samples_search: 200 OK 339 0%
+samples_results: 200 OK 556 0% hits=0 total=0 time=0:00:00.591
+samples_results: 200 OK 10% hits=8 total=8 time=0:00:03.636
+samples_results: 200 OK 18% hits=9 total=9 time=0:00:04.658
+samples_results: 200 OK 35% hits=29 total=29 time=0:00:07.145
+samples_results: 200 OK 41% hits=74 total=74 time=0:00:07.966
+samples_results: 200 OK 73% hits=89 total=89 time=0:00:10.715
+samples_results: 200 OK 93% hits=91 total=91 time=0:00:11.592
+samples_results: 200 OK 100% hits=94 total=94 time=0:00:12.566 &quot;complete&quot;
+</pre>
+<p>Display some results.</p>
+<pre class="literal-block">
+$ jp.py -f malware-private.json 'hits[0:2]._source.[create_date,filetype,tag]'
+[
+    [
+        &quot;2017-03-30T13:14:29&quot;,
+        &quot;PE&quot;,
+        [
+            &quot;Commodity.WildFireTest&quot;
+        ]
+    ],
+    [
+        &quot;2017-03-30T12:24:30&quot;,
+        &quot;PE&quot;,
+        [
+            &quot;Commodity.WildFireTest&quot;
+        ]
+    ]
+]
+</pre>
+<p>Get sample analaysis details.</p>
+<pre class="literal-block">
+$ jp.py -f malware-private.json 'hits[0]._source.[sha256]'
+[
+    &quot;3886f96be7f889f38b88e93b12188eed6974ace9223334e7c0aa366a3cb61200&quot;
+]
+
+$ HASH=3886f96be7f889f38b88e93b12188eed6974ace9223334e7c0aa366a3cb61200
+
+$ panafapi.py -t autofocus --sample-analysis --hash $HASH -j &gt; $HASH.json
+sample-analysis: 200 OK
+</pre>
+<p>Display report connection section.</p>
+<pre class="literal-block">
+$ jp.py -f $HASH.json 'connection'
+{
+    &quot;win7&quot;: [
+        {
+            &quot;line&quot;: &quot;unknown , udp , 23.96.94.144:123 , US&quot;,
+            &quot;b&quot;: 32901349,
+            &quot;m&quot;: 6590112,
+            &quot;g&quot;: 359377
+        },
+        {
+            &quot;line&quot;: &quot;unknown , udp , 224.0.0.252:5355 , -&quot;,
+            &quot;b&quot;: 20249526,
+            &quot;m&quot;: 7999437,
+            &quot;g&quot;: 371806
+        }
+    ],
+    &quot;winxp&quot;: [
+        {
+            &quot;line&quot;: &quot;unknown , udp , 23.96.94.144:123 , US&quot;,
+            &quot;b&quot;: 32901349,
+            &quot;m&quot;: 6590112,
+            &quot;g&quot;: 359377
+        }
+    ]
+}
+</pre>
+</blockquote>
+</div>
+<div class="section" id="see-also">
+<h1>SEE ALSO</h1>
+<blockquote>
+<p>pan.afapi</p>
+<dl class="docutils">
+<dt>AutoFocus API Reference Guide</dt>
+<dd><a class="reference external" href="https://docs.paloaltonetworks.com/autofocus/autofocus-api.html">https://docs.paloaltonetworks.com/autofocus/autofocus-api.html</a></dd>
+<dt>View API Request for a Search as <strong>panafapi.py</strong> command line</dt>
+<dd><a class="reference external" href="https://docs.paloaltonetworks.com/autofocus/autofocus-whats-new/autofocus-release-history/new-features-march-2016/api-request-for-a-search.html">https://docs.paloaltonetworks.com/autofocus/autofocus-whats-new/autofocus-release-history/new-features-march-2016/api-request-for-a-search.html</a></dd>
+<dt>AutoFocus Administrator's Guide</dt>
+<dd><a class="reference external" href="https://docs.paloaltonetworks.com/autofocus/autofocus-admin.html">https://docs.paloaltonetworks.com/autofocus/autofocus-admin.html</a></dd>
+</dl>
+</blockquote>
+</div>
+<div class="section" id="authors">
+<h1>AUTHORS</h1>
+<blockquote>
+Palo Alto Networks, Inc. &lt;<a class="reference external" href="mailto:techbizdev&#64;paloaltonetworks.com">techbizdev&#64;paloaltonetworks.com</a>&gt;</blockquote>
+</div>
+</div>
+</body>
+</html>
