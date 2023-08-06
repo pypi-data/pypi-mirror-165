@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: whistleaio
+Version: 0.1.0
+Summary: Asynchronous Python library for Whistle's API
+Home-page: https://github.com/RobertD502/whistleaio
+Author: Robert Drinovac
+Author-email: unlisted@gmail.com
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/RobertD502/whistleaio/issues
+Project-URL: Source, https://github.com/RobertD502/whistleaio/
+Description: # Whistleaio
+        
+        Asynchronous Python library for Whistle's API using Whistle account email and password.
+        
+        This package provides an API client for the Whistle API to be used with a Whistle account email and password.
+        This API is not published, so there is a chance it may break in the future.
+        
+        ## Installation
+        
+        ### PyPI
+        ```
+        pip3 install whistleaio
+        ```
+        
+        
+        This package depends on [aiohttp](https://docs.aiohttp.org/en/stable/), and requires `Python 3.7` or greater.
+        
+Keywords: whistle,whistle fit,whistle api,whistle client,whistle gps,whistle pet
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
