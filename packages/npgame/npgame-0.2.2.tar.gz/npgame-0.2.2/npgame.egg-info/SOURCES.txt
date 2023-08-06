@@ -1,0 +1,9 @@
+README.md
+setup.py
+npgame/__init__.py
+npgame/npgame.py
+npgame.egg-info/PKG-INFO
+npgame.egg-info/SOURCES.txt
+npgame.egg-info/dependency_links.txt
+npgame.egg-info/requires.txt
+npgame.egg-info/top_level.txt
