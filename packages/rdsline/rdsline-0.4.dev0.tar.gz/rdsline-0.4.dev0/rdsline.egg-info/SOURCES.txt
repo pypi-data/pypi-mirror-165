@@ -1,0 +1,12 @@
+README.md
+setup.py
+rdsline/__init__.py
+rdsline/cli.py
+rdsline/settings.py
+rdsline/tabulate.py
+rdsline.egg-info/PKG-INFO
+rdsline.egg-info/SOURCES.txt
+rdsline.egg-info/dependency_links.txt
+rdsline.egg-info/entry_points.txt
+rdsline.egg-info/requires.txt
+rdsline.egg-info/top_level.txt
