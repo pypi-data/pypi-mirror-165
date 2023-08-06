@@ -1,0 +1,8 @@
+$opt
+   logfile=temp_opt.log
+$end
+$constrain
+   distance: 1, 11, 2.43034
+   distance: 4, 11, 2.43034
+
+$end

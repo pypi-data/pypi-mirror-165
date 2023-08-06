@@ -1,0 +1,9 @@
+DIST(a=2.5,x=2,y=2.5) SHRINK NCI
+CH3Cl.xyz 0a 4y
+HCOOH.xyz 1a 4x
+HCOOH.xyz 1x 4y
+
+# Trimolecular SN2
+# a is O-Cl reacting pair
+# x is the intra-acid hydrogen bond
+# y is the H-Cl hydrogen bond

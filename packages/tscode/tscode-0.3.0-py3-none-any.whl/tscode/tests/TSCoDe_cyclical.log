@@ -1,0 +1,60 @@
+
+     _____________________________________________________     
+    /            ___  __   __   __   __   ___             \    
+   /____________  |  /__` /  ` /  \ |  \ |__  _____________\   
+  /               |  .__/ \__, \__/ |__/ |___               \  
+ /                                                           \ 
+(            Transition State Conformational Docker           )
+ \                       Version 0.1.0                       / 
+  \                                                         / 
+   \    Nicolo' Tampellini - nicolo.tampellini@yale.edu    /  
+    \_____________________________________________________/    
+
+--> Atom pairings imposed are 2: [[0, 9], [3, 6]] (Cumulative index numbering)
+
+    2. b - Constraint 
+       Index 3 (carbon) on C2H4
+       Index 0 (carbon) on C2H4
+
+--> Parsed keywords are:
+    DIST(A=2.2,B=2.3) BYPASS DEBUG
+
+--> Setup performed correctly. 1600 candidates will be generated.
+
+--> DEBUG: written hypermolecule files (2)
+
+--> Input structures & reactive indexes data:
+
+    1. C2H4.xyz -> 6 atoms, 1 conformer, 4 pivots, sigmatropic (all conformers)
+        0  -> C(sp2, 1.1 A, 2 centers)
+        3  -> C(sp2, 1.15 A, 2 centers)
+
+    2. C2H4.xyz -> 6 atoms, 1 conformer, 4 pivots, sigmatropic (all conformers)
+        0  -> C(sp2, 1.15 A, 2 centers)
+        3  -> C(sp2, 1.1 A, 2 centers)
+
+--> Calculation options used were:
+    - bypass                    : True
+    - clash_thresh              : 1.5
+    - debug                     : True
+    - kcal_thresh               : 10
+    - max_clashes               : 0
+    - max_confs                 : 1000
+    - max_newbonds              : 0
+    - optimization              : False
+    - rmsd                      : 0.3
+    - rotation_range            : 90
+    - rotation_steps            : 9
+    - shrink                    : False
+    - shrink_multiplier         : 1
+    - suprafacial               : False
+
+--> Performing cyclical embed (1.6 k candidates)
+Generated 88 transition state candidates (10.339 s)
+
+Wrote 88 embedded TS structures to TSCoDe_embedded_cyclical.xyz file.
+
+Wrote 88 unoptimized TS structures to TSCoDe_unoptimized_cyclical.xyz file.
+
+
+--> TSCoDe normal termination: total time 10.837 seconds.

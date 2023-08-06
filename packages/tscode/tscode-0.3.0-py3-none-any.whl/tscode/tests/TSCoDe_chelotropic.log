@@ -1,0 +1,127 @@
+
+     _____________________________________________________     
+    /            ___  __   __   __   __   ___             \    
+   /____________  |  /__` /  ` /  \ |  \ |__  _____________\   
+  /               |  .__/ \__, \__/ |__/ |___               \  
+ /                                                           \ 
+(            Transition State Conformational Docker           )
+ \                       Version 0.1.0                       / 
+  \                                                         / 
+   \    Nicolo' Tampellini - nicolo.tampellini@yale.edu    /  
+    \_____________________________________________________/    
+
+--> Atom pairings imposed are 2: [[0, 10], [3, 10]] (Cumulative index numbering)
+
+    2. b - Constraint 
+       Index 3 (carbon) on C2H4
+       Index 4 (oxygen) on HCOOOH
+
+--> Parsed keywords are:
+    DIST(A=2.5,B=2.5) SADDLE
+
+--> Setup performed correctly. 800 candidates will be generated.
+
+--> Input structures & reactive indexes data:
+
+    1. C2H4.xyz -> 6 atoms, 1 conformer, 4 pivots, sigmatropic (all conformers)
+        0  -> C(sp2, 1.3 A, 2 centers)
+        3  -> C(sp2, 1.3 A, 2 centers)
+
+    2. HCOOOH.xyz -> 6 atoms, 1 conformer, 1 pivot
+        4  -> O(Ether, 1.2 A, 2 centers)
+
+--> Calculation options used were:
+    - calculator                : XTB
+    - clash_thresh              : 1.5
+    - double_bond_protection    : False
+    - ff_calc                   : OB
+    - ff_level                  : UFF
+    - ff_opt                    : True
+    - fix_angles_in_deformation : False
+    - kcal_thresh               : 10
+    - max_clashes               : 0
+    - max_confs                 : 1000
+    - max_newbonds              : 0
+    - only_refined              : False
+    - optimization              : True
+    - rigid                     : False
+    - rmsd                      : 0.3
+    - rotation_range            : 90
+    - rotation_steps            : 9
+    - saddle                    : True
+    - shrink                    : False
+    - shrink_multiplier         : 1
+    - suprafacial               : False
+    - theory_level              : GFN2-xTB
+
+--> Performing chelotropic embed (800 candidates)
+Generated 328 transition state candidates (9.311 s)
+
+--> Checking structures for compenetrations
+All structures passed the compenetration check
+
+--> Similarity Processing
+Discarded 326 candidates for similarity (2 left, 0.237 s)
+
+--> Checkpoint output - Wrote 2 TS structures to TSCoDe_checkpoint_chelotropic.xyz file before FF optimization.
+
+--> Structure optimization (UFF level via OB)
+Force Field UFF optimization took 0.043 s (~0.022 s per structure)
+Successfully optimized 2/2 candidates at UFF level.
+Discarded 1 candidates for energy (1 left, threshold 10 kcal/mol)
+--> Checkpoint output - Updated 1 TS structures to TSCoDe_checkpoint_chelotropic.xyz file before XTB optimization.
+
+--> Structure optimization (GFN2-xTB level via XTB)
+    - XTB GFN2-xTB optimization: Structure 1 CONVERGED - took 2.154 s
+Successfully optimized 1/1 structures. Non-optimized ones will not be discarded.
+XTB GFN2-xTB optimization took 2.154 s (~2.154 s per structure)
+--> Checkpoint output - Updated 1 TS structures before distance refinement.
+
+--> Refining bonding distances for TSs (GFN2-xTB level)
+    - XTB GFN2-xTB refinement: Structure 0 REFINED (26 iterations, 2.131 s)
+XTB GFN2-xTB refinement took 2.191 s (~2.191 s per structure)
+Successfully refined 1/1 structures. Non-refined ones will not be discarded.
+--> Fitness pruning - removing inaccurate structures
+All candidates meet the imposed criteria.
+
+Wrote 1 rough TS structures to TSCoDe_poses_chelotropic.xyz file.
+
+--> Performing conformational augmentation of TS candidates
+   - Candidate 1 - 1 new conformers (0.351 s)
+Conformational augmentation completed - found 1 new conformers (0.351 s)
+
+Discarded 1 candidates for similarity (1 left, 0.001 s)
+
+--> Checkpoint output - Wrote 1 TS structures to TSCoDe_checkpoint_chelotropic.xyz file before FF optimization.
+
+--> Structure optimization (UFF level via OB)
+Force Field UFF optimization took 0.021 s (~0.021 s per structure)
+Successfully optimized 1/1 candidates at UFF level.
+--> Checkpoint output - Updated 1 TS structures to TSCoDe_checkpoint_chelotropic.xyz file before XTB optimization.
+
+--> Structure optimization (GFN2-xTB level via XTB)
+    - XTB GFN2-xTB optimization: Structure 1 CONVERGED - took 0.962 s
+Successfully optimized 1/1 structures. Non-optimized ones will not be discarded.
+XTB GFN2-xTB optimization took 0.962 s (~0.962 s per structure)
+--> Checkpoint output - Updated 1 TS structures before distance refinement.
+
+--> Refining bonding distances for TSs (GFN2-xTB level)
+    - XTB GFN2-xTB refinement: Structure 0 REFINED (18 iterations, 1.433 s)
+XTB GFN2-xTB refinement took 1.437 s (~1.437 s per structure)
+Successfully refined 1/1 structures. Non-refined ones will not be discarded.
+--> Fitness pruning - removing inaccurate structures
+All candidates meet the imposed criteria.
+
+Wrote 1 rough TS structures to TSCoDe_poses_chelotropic.xyz file.
+
+Wrote VMD TSCoDe_poses_chelotropic.vmd file
+
+--> Saddle optimization (GFN2-xTB level)
+Saddle opt - Structure 1 - converged in 11 steps (5.588 s)
+XTB GFN2-xTB saddle optimization took 5.592 s (5.592 s per structure)
+Saddle opt completed for 1/1 structures
+
+Wrote 1 saddle-optimized structures to TSCoDe_SADDLE_TSs_chelotropic.xyz file
+
+
+--> TSCoDe normal termination: total time 26.439 seconds.

@@ -1,0 +1,130 @@
+
+     _____________________________________________________     
+    /            ___  __   __   __   __   ___             \    
+   /____________  |  /__` /  ` /  \ |  \ |__  _____________\   
+  /               |  .__/ \__, \__/ |__/ |___               \  
+ /                                                           \ 
+(            Transition State Conformational Docker           )
+ \                       Version 0.1.0                       / 
+  \                                                         / 
+   \    Nicolo' Tampellini - nicolo.tampellini@yale.edu    /  
+    \_____________________________________________________/    
+
+--> Atom pairings imposed are 1: [[0, 8]] (Cumulative index numbering)
+
+    1. a - Constraint 
+       Index 0 (carbon) on CH3Cl
+       Index 3 (oxygen) on HCOOH
+
+--> Parsed keywords are:
+    SHRINK TS DEBUG SOLVENT=METHANOL
+
+--> Setup performed correctly. 72 candidates will be generated.
+
+--> DEBUG: written hypermolecule files (2)
+
+--> Input structures & reactive indexes data:
+
+    1. CH3Cl.xyz -> 5 atoms, 1 conformer, 0 pivots
+        0  -> C(sp3, 3.375 A, 1 center)
+
+    2. HCOOH.xyz -> 5 atoms, 1 conformer, 1 pivot
+        3  -> O(Ether, 3.375 A, 2 centers)
+
+--> Calculation options used were:
+    - calculator                : XTB
+    - clash_thresh              : 1.5
+    - debug                     : True
+    - double_bond_protection    : False
+    - ff_calc                   : OB
+    - ff_level                  : UFF
+    - ff_opt                    : True
+    - fix_angles_in_deformation : False
+    - kcal_thresh               : 10
+    - max_clashes               : 0
+    - max_confs                 : 1000
+    - max_newbonds              : 0
+    - only_refined              : True
+    - optimization              : True
+    - rmsd                      : 0.3
+    - shrink                    : True
+    - shrink_multiplier         : 1.5
+    - solvent                   : methanol
+    - theory_level              : GFN2-xTB
+    - ts                        : True
+
+--> Performing string embed (72 candidates)
+Generated 72 transition state candidates (5.592 s)
+
+Wrote 72 embedded TS structures to TSCoDe_embedded_string.xyz file.
+
+--> Similarity Processing
+Discarded 67 candidates for similarity (5 left, 1.687 s)
+
+--> Checkpoint output - Wrote 5 TS structures to TSCoDe_checkpoint_string.xyz file before FF optimization.
+
+--> Structure optimization (UFF level via OB)
+Force Field UFF optimization took 0.04 s (~0.008 s per structure)
+Successfully optimized 5/5 candidates at UFF level.
+Discarded 4 candidates for similarity (1 left, 0.002 s)
+--> Checkpoint output - Updated 1 TS structures to TSCoDe_checkpoint_string.xyz file before XTB optimization.
+
+--> Structure optimization (GFN2-xTB level via XTB)
+    - XTB GFN2-xTB optimization: Structure 1 CONVERGED - took 0.77 s
+Successfully optimized 1/1 structures. Non-optimized ones will not be discarded.
+XTB GFN2-xTB optimization took 0.77 s (~0.77 s per structure)
+--> Checkpoint output - Updated 1 TS structures before distance refinement.
+
+--> Refining bonding distances for TSs (GFN2-xTB level)
+    - XTB GFN2-xTB refinement: Structure 0 REFINED (78 iterations, 6.808 s)
+XTB GFN2-xTB refinement took 6.868 s (~6.868 s per structure)
+Successfully refined 1/1 structures. Discarded 0 unrefined structures.
+--> Fitness pruning - removing inaccurate structures
+All candidates meet the imposed criteria.
+
+Wrote 1 rough TS structures to TSCoDe_poses_string.xyz file.
+
+--> Performing conformational augmentation of TS candidates
+   - Candidate 1 - 3 new conformers (0.697 s)
+Conformational augmentation completed - found 3 new conformers (0.697 s)
+
+Discarded 3 candidates for similarity (1 left, 0.002 s)
+
+--> Checkpoint output - Wrote 1 TS structures to TSCoDe_checkpoint_string.xyz file before FF optimization.
+
+--> Structure optimization (UFF level via OB)
+Force Field UFF optimization took 0.013 s (~0.013 s per structure)
+Successfully optimized 1/1 candidates at UFF level.
+--> Checkpoint output - Updated 1 TS structures to TSCoDe_checkpoint_string.xyz file before XTB optimization.
+
+--> Structure optimization (GFN2-xTB level via XTB)
+    - XTB GFN2-xTB optimization: Structure 1 CONVERGED - took 1.126 s
+Successfully optimized 1/1 structures. Non-optimized ones will not be discarded.
+XTB GFN2-xTB optimization took 1.126 s (~1.126 s per structure)
+--> Checkpoint output - Updated 1 TS structures before distance refinement.
+
+--> Refining bonding distances for TSs (GFN2-xTB level)
+    - XTB GFN2-xTB refinement: Structure 0 REFINED (18 iterations, 1.582 s)
+XTB GFN2-xTB refinement took 1.586 s (~1.586 s per structure)
+Successfully refined 1/1 structures. Discarded 0 unrefined structures.
+--> Fitness pruning - removing inaccurate structures
+All candidates meet the imposed criteria.
+
+Wrote 1 rough TS structures to TSCoDe_poses_string.xyz file.
+
+Wrote VMD TSCoDe_poses_string.vmd file
+
+--> Performing independent scans refinement (GFN2-xTB level)
+    - Structure 1 scan 1 COMPLETED 86 steps (1 m 2.433 s)
+XTB GFN2-xTB independent scans took 1 m 2.434 s (1 m 2.434 s per structure)
+Independent scans refinement completed for 1/1 structures
+
+--> Saddle optimization (GFN2-xTB level)
+Saddle opt - Structure 1 - converged in 18 steps (5.299 s)
+XTB GFN2-xTB saddle optimization took 5.302 s (5.302 s per structure)
+Saddle opt completed for 1/1 structures
+
+Wrote 1 saddle-optimized structures to TSCoDe_SADDLE_TSs_string.xyz file
+
+
+--> TSCoDe normal termination: total time 1 minutes 27.521 seconds.

@@ -1,0 +1,70 @@
+
+     _____________________________________________________     
+    /            ___  __   __   __   __   ___             \    
+   /____________  |  /__` /  ` /  \ |  \ |__  _____________\   
+  /               |  .__/ \__. \__/ |__/ |___               \  
+ /                                                           \ 
+(            Transition State Conformational Docker           )
+ \                       Version 0.1.1                       / 
+  \                                                         / 
+   \    Nicolo' Tampellini - nicolo.tampellini@yale.edu    /  
+    \_____________________________________________________/    
+
+--> Parsed keywords are:
+    DIST(A=2.5,X=2,Y=2.5) SHRINK NCI
+
+--> Setup performed correctly. 12000 candidates will be generated.
+
+--> Input structures & reactive indexes data:
+
+    1. CH3Cl.xyz -> 5 atoms, 1 conformer, 3 pivots, sp3_sigmastar
+        0  -> C(sp3, 2.813 A, 3 centers)
+        4  -> Cl(Single Bond, 2.357 A, 3 centers)
+
+    2. HCOOH.xyz -> 5 atoms, 1 conformer, 2 pivots
+        1  -> O(Ketone, 2.812 A, 2 centers)
+        4  -> H(Single Bond, 2.25 A, 1 center)
+
+    3. HCOOH.xyz -> 5 atoms, 1 conformer, 2 pivots
+        1  -> O(Ketone, 2.25 A, 2 centers)
+        4  -> H(Single Bond, 2.813 A, 1 center)
+
+--> Atom pairings imposed are 3: [[0, 6], [9, 11], [4, 14]] (Cumulative index numbering)
+
+    3. y - Interaction - 5.17 A
+       Index 4 (chlorine) on CH3Cl
+       Index 4 (hydrogen) on HCOOH
+
+--> Calculation options used were:
+    - calculator                : XTB
+    - clash_thresh              : 1.5
+    - double_bond_protection    : False
+    - ff_calc                   : OB
+    - ff_level                  : UFF
+    - ff_opt                    : True
+    - fix_angles_in_deformation : False
+    - kcal_thresh               : 15
+    - max_clashes               : 0
+    - max_confs                 : 1000
+    - max_newbonds              : 0
+    - nci                       : True
+    - only_refined              : True
+    - optimization              : True
+    - rigid                     : False
+    - rmsd                      : 0.3
+    - rotation_range            : 90
+    - rotation_steps            : 9
+    - shrink                    : True
+    - shrink_multiplier         : 1.5
+    - suprafacial               : False
+    - theory_level              : GFN2-xTB
+
+--> Performing cyclical embed (12.0 k candidates)
+Generated 6000 transition state candidates (23.949 s)
+
+--> Similarity Processing
+Discarded 5978 candidates for similarity (22 left, 43.296 s)
+
+--> Checkpoint output - Wrote 22 TS structures to TSCoDe_checkpoint_trimolecular.xyz file before FF optimization.
+
+--> Structure optimization (UFF level via OB)
