@@ -1,0 +1,7 @@
+autoshutdown
+example
+inputdevinputevent
+inputgpiod
+mpdclient
+plapperkasten
+soundeffects
