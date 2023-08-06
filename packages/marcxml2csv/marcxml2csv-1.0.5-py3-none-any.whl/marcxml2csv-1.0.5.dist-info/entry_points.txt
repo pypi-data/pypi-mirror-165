@@ -1,0 +1,4 @@
+[console_scripts]
+marcxml2csv=marcxml2csv.marcxml2csv:convert
+picaxml2csv=marcxml2csv.picaxml2csv:convert
+
