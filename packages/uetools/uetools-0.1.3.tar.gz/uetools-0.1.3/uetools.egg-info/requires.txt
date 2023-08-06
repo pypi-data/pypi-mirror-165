@@ -1,0 +1,5 @@
+appdirs
+colorama
+cookiecutter
+simple-parsing
+GitPython
