@@ -1,0 +1,17 @@
+click>=8
+pyam-iamc>=1.5
+openpyxl
+setuptools>=41
+pydantic
+pyyaml
+jsonschema
+setuptools_scm
+pandas
+
+[docs]
+sphinx
+sphinx-click
+numpydoc
+
+[tests]
+pytest
