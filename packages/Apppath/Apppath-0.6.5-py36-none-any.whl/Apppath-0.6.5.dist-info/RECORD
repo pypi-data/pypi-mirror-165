@@ -1,0 +1,13 @@
+apppath/__init__.py,sha256=gHbRy5c7jCikrd-56n22-NcdCNgqruJyH12rVEj4Ewg,3149
+apppath/app_path.py,sha256=sX7cUPSbo0Jv8GobS73y-APIVMQZDwHFwZRoEosJxzk,33755
+apppath/system_open_path_utilities.py,sha256=T6CQArg-VM-GbUxmGq48uhniosAVSAinRini6szmfCs,1816
+apppath/windows_path_utilities.py,sha256=r0eHSXhBnTUMK-WhRrW8l0pOhLWozOH7ovB6AmnM5Yw,4102
+apppath/entry_points/__init__.py,sha256=524z9dch4ZFnVhjJ39jmzoN3F-1oNZFgGb1IHJDSltw,101
+apppath/entry_points/clean_apppath.py,sha256=sQduwWXZdNo2TVreW5pW5RrJnp1jsxgu11Qv_h2og30,1244
+apppath/entry_points/open_apppath.py,sha256=2txZEOrd3dg3g7VnHeaq4ibpnR2HPNvCLN5lfqDqm6Y,1067
+Apppath-0.6.5.dist-info/LICENSE.md,sha256=Wy-v6k6SOpSObGtPFWSQuabTSke93dVCh-KZs-fbic4,10644
+Apppath-0.6.5.dist-info/METADATA,sha256=-j4mOBHZZ6q26E6DJczzZDGpKx5mOjMpIEbS1xt8LrY,6052
+Apppath-0.6.5.dist-info/WHEEL,sha256=ooAAk5YJ6bNSTeML7MM1iETtwnSAPO5uF-aPrbGp5-A,93
+Apppath-0.6.5.dist-info/entry_points.txt,sha256=q6_LuaB_iDNvtacLOf21VZCeLQs2lJvWYBw-qhy8ymA,137
+Apppath-0.6.5.dist-info/top_level.txt,sha256=7t9B2eMIdCdaPHR1vJ_LWkgpIWVagdpT_lYXnware0g,8
+Apppath-0.6.5.dist-info/RECORD,,
