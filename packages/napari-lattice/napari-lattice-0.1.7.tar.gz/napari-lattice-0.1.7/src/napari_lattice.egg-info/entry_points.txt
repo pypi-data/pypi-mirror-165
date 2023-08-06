@@ -1,0 +1,5 @@
+[console_scripts]
+napari_lattice = napari_lattice.cmds.__main__:main
+
+[napari.manifest]
+napari_lattice = napari_lattice:napari.yaml
