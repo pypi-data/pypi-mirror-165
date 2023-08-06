@@ -1,0 +1,15 @@
+parso
+isort
+
+[dev]
+pytest
+flake8
+invoke
+twine
+ipython
+jupyter_client
+pkgmt
+nbformat
+
+[optional]
+nbformat
