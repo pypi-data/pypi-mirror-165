@@ -1,0 +1,12 @@
+LICENSE.md
+MANIFEST.in
+README.md
+pyproject.toml
+src/pmaudit/__init__.py
+src/pmaudit/pmaudit
+src/pmaudit/pmauditor.py
+src/pmaudit/sys.pth
+src/pmaudit.egg-info/PKG-INFO
+src/pmaudit.egg-info/SOURCES.txt
+src/pmaudit.egg-info/dependency_links.txt
+src/pmaudit.egg-info/top_level.txt

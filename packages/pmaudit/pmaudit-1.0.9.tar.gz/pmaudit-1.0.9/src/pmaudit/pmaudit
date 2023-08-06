@@ -1,0 +1,17 @@
+#!/usr/bin/env python3
+"""Command-line wrapper."""
+
+import sys
+
+from pmauditor import main
+
+sys.exit(main())
+
+# Local Variables:
+# mode: Python
+# indent-tabs-mode: nil
+# python-indent: 4
+# fill-column: 80
+# End:
+#
+# vim: sw=4:et:tw=80:cc=+1
