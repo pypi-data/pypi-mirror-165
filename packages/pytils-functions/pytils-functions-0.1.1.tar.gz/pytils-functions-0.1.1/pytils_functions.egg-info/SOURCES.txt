@@ -1,0 +1,17 @@
+README.md
+setup.py
+pytils/__init__.py
+pytils/configurator.py
+pytils/logger.py
+pytils/pandas_table.py
+pytils/pickler.py
+pytils/singleton.py
+pytils_functions.egg-info/PKG-INFO
+pytils_functions.egg-info/SOURCES.txt
+pytils_functions.egg-info/dependency_links.txt
+pytils_functions.egg-info/requires.txt
+pytils_functions.egg-info/top_level.txt
+tests/__init__.py
+tests/test_configurator.py
+tests/test_logger.py
+tests/test_singleton.py
