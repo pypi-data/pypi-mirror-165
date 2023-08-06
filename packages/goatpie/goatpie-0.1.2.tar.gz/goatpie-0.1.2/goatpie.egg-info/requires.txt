@@ -1,0 +1,7 @@
+arrow
+click
+pandas
+plotext
+requests
+rich
+textual
