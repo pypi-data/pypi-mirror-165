@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: fallenleaf
+Version: 0.5.0
+Summary: Fallenleaf is simple dependecy injection container
+Home-page: https://github.com/AfterSchoolTeaParty/fallenleaf
+Author: nakanoyoichi83
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: werkzeug
+
+# FallenLeaf is mainly a dependency injectioon container package.
+
+
