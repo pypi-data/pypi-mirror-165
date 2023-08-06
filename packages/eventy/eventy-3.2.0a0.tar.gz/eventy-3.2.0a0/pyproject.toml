@@ -1,0 +1,142 @@
+[tool.poetry]
+name = "eventy"
+version = "3.2.0a0"
+description = "Qotto/eventy"
+license = "MIT"
+authors = ["Qotto Dev Team <dev@qotto.net>"]
+readme = "README.md"
+#homepage
+repository = "https://gitlab.com/qotto/oss/eventy"
+documentation = "https://qotto.gitlab.io/oss/eventy"
+#keywords
+classifiers = [
+    # How mature is this project? Common values are
+    #   3 - Alpha
+    #   4 - Beta
+    #   5 - Production/Stable
+    "Development Status :: 3 - Alpha",
+    # Indicate who your project is intended for
+    "Intended Audience :: Developers",
+    # "Topic :: Software Development :: Build Tools",
+    # Pick your license as you wish
+    "License :: OSI Approved :: MIT License",
+    # Specify the Python versions you support here. In particular, ensure
+    # that you indicate whether you support Python 2, Python 3 or both.
+    # These classifiers are *not* checked by 'pip install'. See instead
+    # 'python_requires' below.
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+]
+#packages
+include = [
+    "LICENSE",
+]
+
+#[tool.poetry.scripts]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+semver = ">=2"
+coloredlogs = ">=15"
+contextvars = ">=2"
+PyYAML = { version = ">=5", optional = true }
+avro-python3 = { version = ">=1", optional = true }
+celery = { version = ">=5", optional = true }
+sanic = { version = ">=18", optional = true }
+aiohttp = { version = ">=1", optional = true }
+django = { version = ">=1", optional = true }
+confluent-kafka = { version = ">=1.7", optional = true }
+requests = { version = "*", optional = true }
+
+
+[tool.poetry.dev-dependencies]
+environs = "*"
+mypy = "*"
+coverage = "*"
+flake8 = "*"
+sphinx = "*"
+sphinxcontrib-plantuml = "*"
+tox = "*"
+toml = "*"
+sphinx-rtd-theme = "*"
+pytest = "*"
+sanic-testing = "*"
+types-requests = "*"
+types-PyYAML = "*"
+gevent = "*"
+
+[tool.poetry.extras]
+celery = ["celery"]
+sanic = ["sanic"]
+aiohttp = ["aiohttp"]
+django = ["django"]
+confluent-kafka = ["confluent-kafka"]
+avro = ["avro-python3", "PyYAML"]
+requests = ["requests"]
+
+#[tool.poetry.plugins]
+
+[tool.poetry.urls]
+"Qotto" = "http://www.qotto.net"
+"Documentation" = "https://qotto.gitlab.io/oss/eventy"
+"Source" = "https://gitlab.com/qotto/oss/eventy"
+"Bug Reports" = "https://gitlab.com/qotto/oss/eventy/-/issues"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+testpaths = [
+    "tests",
+]
+
+[tool.mypy]
+python_version = "3.9"
+files = 'eventy'
+strict_optional = true
+warn_return_any = true
+warn_unreachable = true
+warn_unused_configs = true
+pretty = true
+
+[[tool.mypy.overrides]]
+module = [
+    'semver.*',
+    'confluent_kafka.*',
+    'coloredlogs.*',
+    'celery.*',
+    'django.*',
+    'sanic.*',
+    'avro.*',
+]
+ignore_missing_imports = true
+
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+envlist = py{37,38,39}
+isolated_build = true
+requires =
+    # See https://pypi.org/project/tox-poetry-dev-dependencies/
+    tox-poetry-dev-dependencies
+
+[testenv]
+poetry_add_dev_dependencies = True
+
+extras =
+    celery
+    sanic
+    aiohttp
+    django
+    confluent-kafka
+    avro
+    requests
+
+commands =
+    pytest --doctest-modules eventy
+    pytest
+"""
+
