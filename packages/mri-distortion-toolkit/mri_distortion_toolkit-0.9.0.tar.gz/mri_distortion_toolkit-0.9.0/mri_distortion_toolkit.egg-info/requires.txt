@@ -1,0 +1,9 @@
+numpy
+scipy
+scikit-image
+matplotlib
+pydicom
+pandas
+seaborn
+plotly
+jinja2
