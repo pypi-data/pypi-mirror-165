@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: rsyncs3
+Version: 0.1.0
+Summary: 
+Author: Jared
+Author-email: jcoughlin@dephy.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: boto3 (>=1.24.64,<2.0.0)
