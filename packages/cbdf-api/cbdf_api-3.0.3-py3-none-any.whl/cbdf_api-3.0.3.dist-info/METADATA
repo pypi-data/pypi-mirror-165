@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: cbdf-api
+Version: 3.0.3
+Summary: The API to accomodate creation of custom components integrateable into the cbdf from AICURA medical.
+License: Proprietary
+Author: Christian Stur
+Author-email: christian.stur@aicura-medical.com
+Requires-Python: >=3.7,<4.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Dist: tqdm (==4.62.3)
+Description-Content-Type: text/markdown
+
+# cbdf_api
+
+The API to accomodate creation of custom components integrateable into the cbdf as part of the AICURA platform.
+
+# Features
+
+
+# Credits
+
+This package was created with Cookiecutter and the Aicura python package template.
+ - Cookiecutter: https://github.com/audreyr/cookiecutter
+ - Aicura python package template: https://github.com/aicuramedical/custom-components-template

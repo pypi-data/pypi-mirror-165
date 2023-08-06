@@ -1,0 +1,3 @@
+[console_scripts]
+generate-templates=cbdf_api.generate_templates:main
+
