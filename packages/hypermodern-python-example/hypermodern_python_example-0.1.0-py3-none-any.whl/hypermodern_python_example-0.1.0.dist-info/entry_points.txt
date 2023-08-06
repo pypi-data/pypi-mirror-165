@@ -1,0 +1,3 @@
+[console_scripts]
+hypermodern-python-example=hypermodern_python_example.console:main
+
