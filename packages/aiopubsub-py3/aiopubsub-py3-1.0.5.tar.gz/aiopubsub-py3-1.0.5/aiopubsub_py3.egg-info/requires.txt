@@ -1,0 +1,6 @@
+
+[redis"]
+aioredis<2.0,>=1.3.0
+
+[redis2"]
+aioredis>=2.0
