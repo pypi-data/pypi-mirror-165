@@ -1,0 +1,9 @@
+rdf_sql_bulkloader/__init__.py,sha256=9OooanB2afFA93WqtLQSoKP-wZbfMal82fVimgeNjrY,183
+rdf_sql_bulkloader/cli.py,sha256=J6GZLlhypgIAK6PV7ZqXMWGsg3rmAwkKUIi6U-9Zga8,1748
+rdf_sql_bulkloader/loaders/__init__.py,sha256=y3JP1lRDMzQj_PkqVF2UPf5H4niy3m7vNGL1gsTOWP8,53
+rdf_sql_bulkloader/loaders/bulkloader.py,sha256=xkhR3pPdwTQL_oFxEWAlxoeBLZwPe_GX2xL3OjDQt5o,5807
+rdf_sql_bulkloader/loaders/sqlite3_bulkloader.py,sha256=lkqz6Uy6te9rUs1gfJO_CpvkKuqYY1KPtjpkyxZ_oUo,982
+rdf_sql_bulkloader-0.1.2.dist-info/entry_points.txt,sha256=sVppibH2FJB8y6zmdOMGyjXbJSyj_SGa-2Tv1Bnw3M0,66
+rdf_sql_bulkloader-0.1.2.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+rdf_sql_bulkloader-0.1.2.dist-info/METADATA,sha256=d0RNpDijOKU_5pouhFEuopfI00Tb2-b-LwoCKSXIzLQ,2049
+rdf_sql_bulkloader-0.1.2.dist-info/RECORD,,
