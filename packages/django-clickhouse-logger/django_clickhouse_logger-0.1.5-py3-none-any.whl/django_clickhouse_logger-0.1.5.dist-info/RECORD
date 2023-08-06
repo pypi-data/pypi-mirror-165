@@ -1,0 +1,10 @@
+django_clickhouse_logger/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_clickhouse_logger/handlers.py,sha256=_lFdOdmvdaugdlVX7ZQmhKryr4Z75clHMbtuWPMWgKc,424
+django_clickhouse_logger/settings.py,sha256=sqLDV_JQ8ayZrQ5mpYWrmQNRGs-Bcrt-V7HAUZHv_mM,613
+django_clickhouse_logger/proxy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_clickhouse_logger/proxy/clickhouse.py,sha256=FJvHvmRvfeVr2gKw6qP_8ESlWK01PXgLFeURnw3MqPA,6400
+django_clickhouse_logger-0.1.5.dist-info/LICENSE,sha256=BvmWh0aXPp8jrD0GS25NwyJ321UbcQ7KIui9wAmwVD0,1094
+django_clickhouse_logger-0.1.5.dist-info/METADATA,sha256=7SWVVC8Dfr5ut0sMJcxOPHUKdrtY6vf_U7YKIn47WpM,3356
+django_clickhouse_logger-0.1.5.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+django_clickhouse_logger-0.1.5.dist-info/top_level.txt,sha256=Im63huW9nYLEx23Qyaz5PyiElPnP5xXvrPeG0paHzDw,25
+django_clickhouse_logger-0.1.5.dist-info/RECORD,,
