@@ -1,0 +1,3 @@
+[console_scripts]
+samosa=samosa:validate_cwd_and_exit
+
