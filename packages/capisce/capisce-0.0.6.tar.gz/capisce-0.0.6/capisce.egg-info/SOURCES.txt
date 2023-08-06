@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+capisce.egg-info/PKG-INFO
+capisce.egg-info/SOURCES.txt
+capisce.egg-info/dependency_links.txt
+capisce.egg-info/entry_points.txt
+capisce.egg-info/requires.txt
+capisce.egg-info/top_level.txt
