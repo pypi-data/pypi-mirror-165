@@ -1,0 +1,7 @@
+example_package_jack/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+example_package_jack/example.py,sha256=NQl39Y69szEXOy-DF7nF9-fSC7LfX5hlzR2_zl-MVs0,47
+example_package_jack-0.0.1.dist-info/LICENSE,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+example_package_jack-0.0.1.dist-info/METADATA,sha256=x3GMPcY28qdvhBHHOM2KxoUZvY7YRe9rC23NzHCGjK4,1862
+example_package_jack-0.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+example_package_jack-0.0.1.dist-info/top_level.txt,sha256=dIoha0mys0DKIQqnndCM83L6J1DOXt5wudtvly-2CAc,21
+example_package_jack-0.0.1.dist-info/RECORD,,
