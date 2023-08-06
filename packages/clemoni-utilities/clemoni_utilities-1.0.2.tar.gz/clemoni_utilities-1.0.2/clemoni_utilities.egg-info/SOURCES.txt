@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+clemoni_utilities.egg-info/PKG-INFO
+clemoni_utilities.egg-info/SOURCES.txt
+clemoni_utilities.egg-info/dependency_links.txt
+clemoni_utilities.egg-info/top_level.txt
+utilities/__init__.py
+utilities/tools.py

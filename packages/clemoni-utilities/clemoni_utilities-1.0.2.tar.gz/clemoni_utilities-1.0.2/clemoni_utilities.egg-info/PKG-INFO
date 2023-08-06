@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: clemoni-utilities
+Version: 1.0.2
+Summary: A short utlitiy library for python
+Home-page: https://github.com/clemoni/clemoni_utilities
+Author: Clement Liscoet
+Author-email: clement.liscoet@gmail.com
+License: MIT
+License-File: LICENSE
