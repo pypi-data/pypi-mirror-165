@@ -1,0 +1,5 @@
+retico-core~=0.2
+transformers~=4.21
+webrtcvad~=2.0
+pydub~=0.25
+numpy~=1.23

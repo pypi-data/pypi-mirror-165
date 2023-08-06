@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+retico_wav2vecasr/__init__.py
+retico_wav2vecasr/version.py
+retico_wav2vecasr/wav2vecasr.py
+retico_wav2vecasr.egg-info/PKG-INFO
+retico_wav2vecasr.egg-info/SOURCES.txt
+retico_wav2vecasr.egg-info/dependency_links.txt
+retico_wav2vecasr.egg-info/requires.txt
+retico_wav2vecasr.egg-info/top_level.txt
