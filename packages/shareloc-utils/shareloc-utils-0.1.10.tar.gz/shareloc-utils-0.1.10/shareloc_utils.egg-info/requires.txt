@@ -1,0 +1,7 @@
+numpy
+pyyaml
+pillow
+tqdm
+
+[potree]
+pypotree

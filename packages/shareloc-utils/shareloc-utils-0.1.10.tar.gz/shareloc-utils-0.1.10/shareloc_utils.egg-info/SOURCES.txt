@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+shareloc_utils/VERSION
+shareloc_utils/__init__.py
+shareloc_utils/batch_download.py
+shareloc_utils/formats.py
+shareloc_utils/smlm_file.py
+shareloc_utils.egg-info/PKG-INFO
+shareloc_utils.egg-info/SOURCES.txt
+shareloc_utils.egg-info/dependency_links.txt
+shareloc_utils.egg-info/not-zip-safe
+shareloc_utils.egg-info/requires.txt
+shareloc_utils.egg-info/top_level.txt
