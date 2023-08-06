@@ -1,0 +1,3 @@
+[console_scripts]
+xrdsum=xrdsum.cli:main
+
