@@ -1,0 +1,17 @@
+datafet/__init__.py,sha256=tNDFtr-1HNS_R49gsy2JjLV7AKCak78-15hSHR_K_dg,157
+datafet/aws_operations/__init__.py,sha256=iupnYxeMMLQ4e4ErRe7rFozfhTF7OEagN5NUia-TXyI,30
+datafet/aws_operations/aws_operations.py,sha256=KGEuuL652G7koDtVY_eHfPLcl4EOncRtlmsipN58mwY,5336
+datafet/eid/__init__.py,sha256=T3IRq8Bd-pvEA0bBZMlfTAQZgA3YcKS5k3BIxRPkYuY,19
+datafet/eid/eid.py,sha256=3XAWdAhxasLFFSyd-d2wlVOhUCDU6etkqH6h0R1wN2s,852
+datafet/etl_helpers/__init__.py,sha256=NT-TEJqyaWCsOW16PK4PgcVy1Jl8xYiSIGcBwWu2t2c,27
+datafet/etl_helpers/etl_helpers.py,sha256=81AfxF6-P5d0t3ZXZ_fbbEgYRgcbbCSPKIKRkhYbajk,10703
+datafet/http_endpoints/__init__.py,sha256=S9FWiNqNsisevEEx0G0wwl0V0FxqhxxUKI3bF2QYs6U,43
+datafet/http_endpoints/echo.py,sha256=m6HMR418jKwZkZ7c3FT7o91hamUYRYRk1kj7s3I5kbA,303
+datafet/http_endpoints/version.py,sha256=GLg1W1ugtY5wlnXrxhe12ESmhPzzxoTVOALmK70g9vA,1503
+datafet/http_return/__init__.py,sha256=KZRWGyO1af3exbU7GMr300uhUXLIR91Po8mRg9QVVys,27
+datafet/http_return/http_return.py,sha256=h6VrpX4VrEJtQfI2fyN8404ZM_4GgPFEzWVn5sKKVnY,1517
+datafet/jwt_auth/__init__.py,sha256=OCA4J5Mi4h3yrXerbUuo12Ey4ma8wF6Dh2NdbFkE2kw,24
+datafet/jwt_auth/jwt_auth.py,sha256=gAWbDXzKCN2kYSg2OZRNOGfHDlIuUXan_-3CdCMoMh8,1875
+datafet-0.2.1.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+datafet-0.2.1.dist-info/METADATA,sha256=RBilQDbMlXXZsUkpmRosWCKR8lFYY-S2BNuweUVdIoE,1253
+datafet-0.2.1.dist-info/RECORD,,
