@@ -1,0 +1,12 @@
+sammhelper/__init__.py,sha256=aKjt75hJs0KNmncSvHTJO2Y24LkyaqB9UdD9IVXhq3Y,202
+sammhelper/curve_fit.py,sha256=61R-3hELbcFNdq6ja3l06UKIR1sVYa4fhtCPeNQ-bEc,976
+sammhelper/curve_fit_ode.py,sha256=cRWBAxOn5m5MrAwcnbksdModJfgWP2q1-Ei32gEB8-s,5625
+sammhelper/data_import.py,sha256=YIJ5cKQVPwYBHONwf5RvWcsnlKKN7phAzHwPjbutFU0,470
+sammhelper/get_index.py,sha256=yptk_kEk81w2Em4zEeSye_N7VBS-juzxPvruMBvnusU,714
+sammhelper/greet.py,sha256=ewZ805K0j84aZHDddIcAOmxV9pRca67Gctm9-n2MwyY,375
+sammhelper/nextprime.py,sha256=RYn4OT1X5FXBuh-h73dcY7zapGt7hPzr2hg8eQJJoFY,276
+sammhelper/sol_ode.py,sha256=h_pcv6DLrtL3SahswFmrZaLFEAnadYd6qB29wuS70CM,1880
+sammhelper-0.0.8.dist-info/METADATA,sha256=hw2odjr3SNm7QRN_te1iKD0WMcTVC5b2Kocm6ayaXjc,2760
+sammhelper-0.0.8.dist-info/WHEEL,sha256=09RFlvY3aVzvCNk4AXPZt-N-AI7GY_KktGsTb2IqIBU,86
+sammhelper-0.0.8.dist-info/licenses/LICENSE,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+sammhelper-0.0.8.dist-info/RECORD,,
