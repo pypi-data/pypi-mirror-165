@@ -1,0 +1,12 @@
+zhinst_core-22.8.35048.data/purelib/zhinst/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+zhinst_core-22.8.35048.data/purelib/zhinst/core.pyd,sha256=IK9ySeMy0ev5383Il9yN2fbzlz5Bjckl3gvWnonzxTE,16131072
+zhinst_core-22.8.35048.data/purelib/zhinst/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+zhinst_core-22.8.35048.data/purelib/zhinst/core/__init__.pyi,sha256=Lv-0Yxm4ykczcGuKiF43O1V3FaFAkF8zc1qoRXqFZkU,46713
+zhinst_core-22.8.35048.data/purelib/zhinst/core/errors/__init__.pyi,sha256=CRAv6fJ7ThtuitNBAggbkoQfClicNph6bMS44MWvq8I,658
+zhinst_core-22.8.35048.data/purelib/zhinst/ziPython/__init__.py,sha256=PMtmNBjJYSylmY50Fvs5aTQPhhcdLIfKnsDhxzLsvxc,440
+zhinst_core-22.8.35048.data/purelib/zhinst/ziPython/errors/__init__.py,sha256=B9I4dZc6UiEvWu9gA_kBNpte-nc-Z8B6sVfSv-o5GvU,205
+zhinst_core-22.8.35048.dist-info/LICENSE.txt,sha256=Nfoz6AtS0j6FAswUZ9fxVxQYfhtZDiQw4hmsBk3BgMc,1084
+zhinst_core-22.8.35048.dist-info/METADATA,sha256=FojiEUXRRjJkuhWGuTPkHlHzUdxhPKbdEGCWta0_Ghs,1973
+zhinst_core-22.8.35048.dist-info/WHEEL,sha256=C6CHup2HLC2Rld8AL5u9w89MYULjdaP5k0k7SG83CcI,102
+zhinst_core-22.8.35048.dist-info/top_level.txt,sha256=s3xDZd7YnFid75jK_ZGTv-9QW9AXR3JLO0SG_S4DuHY,7
+zhinst_core-22.8.35048.dist-info/RECORD,,
