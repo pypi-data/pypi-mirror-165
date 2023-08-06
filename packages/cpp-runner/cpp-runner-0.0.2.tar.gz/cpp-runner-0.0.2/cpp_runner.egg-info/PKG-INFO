@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: cpp-runner
+Version: 0.0.2
+Summary: A simple, small command line utility to run cpp files.
+Home-page: https://github.com/macaquedev/cpp-runner
+Author: Alex Pylypenko
+Author-email: macaquedev@gmail.com
+License: MIT
+Description: cpp-runner
+        ==========
+        
+        A simple cpp file runner with no external dependencies.
+        
+        To install, simply type:
+        
+            pip install cpp-runner
+        
+        To run a cpp file, type this:
+        
+            crun <filename> [-q]
+        
+        The filename argument is mandatory. The -q argument switches off console output.
+Platform: UNKNOWN
+Requires-Python: >=3.3
+Description-Content-Type: text/x-rst
