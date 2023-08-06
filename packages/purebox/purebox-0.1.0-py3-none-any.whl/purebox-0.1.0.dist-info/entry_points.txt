@@ -1,0 +1,2 @@
+[console_scripts]
+purebox = purebox.__main__:main
