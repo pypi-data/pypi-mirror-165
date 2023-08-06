@@ -1,0 +1,10 @@
+pubsublogger/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pubsublogger/exceptions.py,sha256=oxpxZcMi4GpV3mzAMSAUgdgTcHp5MTGbqquZ1dYpVxg,225
+pubsublogger/publisher.py,sha256=Xx5-jmQ05s_atGZJOfP7wus7xdzJxPI7dpgiky3WpII,2042
+pubsublogger/subscriber.py,sha256=xVv2xHS2weXAdpb4Ux7QvzBXw6KdJsrDb8tDQewayM8,5839
+pubsublogger-1.2.3.data/scripts/log_subscriber,sha256=ioe7vAmPFb30tZQtex-v0e9_HZoTeyEKf206DeT5Yzw,1893
+pubsublogger-1.2.3.dist-info/LICENSE.txt,sha256=or5-T5ZsMuGRLqQ4ofhFVYfOF6zN1tZfLLdDBo01yCI,1504
+pubsublogger-1.2.3.dist-info/METADATA,sha256=7XjcZ6rdAfN05IIma--EwYOb-SLW6Chl1xXJ3a72K2g,737
+pubsublogger-1.2.3.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+pubsublogger-1.2.3.dist-info/top_level.txt,sha256=qDcRMfAV_88INo06SG__SdHbDiPEDICaFii2JwKrX_s,13
+pubsublogger-1.2.3.dist-info/RECORD,,
