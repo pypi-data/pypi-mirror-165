@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: ubicquia
+Version: 0.0.1
+Summary: Ubicquia API Client Library
+Author: CiberC Dev
+License: GPLv3
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# Client
+
+Small utility Python client API.

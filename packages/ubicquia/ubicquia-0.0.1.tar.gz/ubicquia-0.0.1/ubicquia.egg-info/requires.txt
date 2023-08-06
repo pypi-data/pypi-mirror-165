@@ -1,0 +1,4 @@
+requests>=2.28
+requests-oauthlib
+python-decouple
+pydantic>=1.9
