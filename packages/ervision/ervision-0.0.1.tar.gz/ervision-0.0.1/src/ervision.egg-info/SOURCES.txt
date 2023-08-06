@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+src/ervision/__init__.py
+src/ervision.egg-info/PKG-INFO
+src/ervision.egg-info/SOURCES.txt
+src/ervision.egg-info/dependency_links.txt
+src/ervision.egg-info/top_level.txt
