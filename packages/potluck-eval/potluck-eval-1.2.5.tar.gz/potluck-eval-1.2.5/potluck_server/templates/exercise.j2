@@ -1,0 +1,112 @@
+{# vim: set shiftwidth=2 tabstop=2 syntax=html: #}
+{% extends "base.j2" %}
+
+{% block main_content %}
+<div class="container">
+  <a
+   href="{{url_for("route_dash", course=course, semester=semester)}}"
+   title="Click here to go back to the dashboard"
+   tabindex="0"
+  >Back to the dashboard</a>
+
+  <h2>
+    Results for {{target_user}} for exercise
+    {% if ginfo == None %}
+      {{eid}} (unlisted)
+    {% else %}
+      <a
+         href="{{ginfo.url}}"
+         title="View exercises for {{ginfo.group}}"
+      >
+        {{ginfo.group}}
+      </a>
+      → {{eid}}
+    {% endif %}
+  </h2>
+
+  {# TODO: Get due + countdown working for egroup info #}
+  {#
+  <p>
+  {{ due_at(ginfo) }}
+  {{ countdown(ginfo) }}
+  </p>
+  #}
+
+    {% if ginfo != None %}
+      <p
+       tabindex="0"
+       aria-label="submission timing"
+      >
+        {% if results.submitted_at != None %}
+          Your best submission for this exercise was received
+          {{results.submitted_at|timestamp}}<br>
+          (More recent submissions are not shown if they have worse
+          outcomes; check the messages printed when submitting for more
+          info on why.)
+        {% else %}
+          You have not yet submitted this exercise.<br>
+          (If you have attempted it, one reason might be that your
+          attempt generates an error before the submission can happen.
+          Look for a line in the output that says "Traceback" when you
+          run the tests.)
+        {% endif %}
+      </p>
+    {% endif %}
+
+    <p>
+    The status for this exercise is:
+    <a class="status {{results.status}}">{{results.status}}</a><br>
+    The full authors list was: {{', '.join(results.authors)}}
+    </p>
+
+    {% if results.outcomes|length > 0 %}
+      Outcomes for this exercise:
+
+      <ul
+       class="outcomes"
+       tabindex="0"
+       aria-label="Oucomes for this exercise."
+      >
+        {% for outcome in results.outcomes %}
+          {% if outcome[0] %}
+            {% set cls = "success" %}
+          {% else %}
+            {% set cls = "failure" %}
+          {% endif %}
+          <li class="outcome {{cls}}"><pre>{{outcome[2]}}</pre></li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>There were no test outcomes for this exercise.</p>
+    {% endif %}
+
+    <p>
+      {% if results.code|length == 1 %}
+        The code we received:<br>
+
+        For <code>{{results.code[0][0]|e}}</code>:
+        <pre class="exercise-code"><code>{{results.code[0][1]|e}}</code></pre>
+        {# TODO: Syntax highlighting for this code! #}
+      {% elif results.code|length > 0 %}
+        The code we received:<br>
+
+        <ul
+         tabindex="0"
+         aria-label="Code for this exercise"
+        >
+          {% for codepair in results.code %}
+            <li>
+              For <code>{{codepair[0]|e}}</code>:
+              <pre><code>{{codepair[1]|e}}</code></pre>
+            </li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        Your submission did not include any code.
+      {% endif %}
+    </p>
+
+
+</div> <!-- end of entire container -->
+
+{% endblock %}
