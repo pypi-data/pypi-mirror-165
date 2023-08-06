@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: svg-func
+Version: 1.2.1
+Summary: functions in svg for logo, debug for near rectangle
+Home-page: https://www.python.org/
+Author: xmn
+Author-email: 2579015983@qq.com
+License: MIT
+Project-URL: Documentation, https://packaging.python.org/tutorials/distributing-packages/
+Project-URL: Funding, https://donate.pypi.org
+Project-URL: Source, https://github.com/pypa/sampleproject/
+Project-URL: Tracker, https://github.com/pypa/sampleproject/issues
+Keywords: svg
+Platform: UNKNOWN
+Requires-Python: >=3
+
+UNKNOWN
+
