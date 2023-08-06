@@ -1,0 +1,6 @@
+prettytable
+nltk
+sklearn
+matplotlib
+numpy
+torch
