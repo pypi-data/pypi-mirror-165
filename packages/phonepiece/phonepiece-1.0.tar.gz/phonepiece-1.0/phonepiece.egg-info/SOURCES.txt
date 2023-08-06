@@ -1,0 +1,14 @@
+README.md
+setup.py
+phonepiece/__init__.py
+phonepiece/articulatory.py
+phonepiece/config.py
+phonepiece/edit_distance.py
+phonepiece/inventory.py
+phonepiece/segmenter.py
+phonepiece/tree.py
+phonepiece/unit.py
+phonepiece.egg-info/PKG-INFO
+phonepiece.egg-info/SOURCES.txt
+phonepiece.egg-info/dependency_links.txt
+phonepiece.egg-info/top_level.txt
