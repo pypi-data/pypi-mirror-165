@@ -1,0 +1,3 @@
+[console_scripts]
+dinora=dinora.cli:cli
+

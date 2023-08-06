@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: dinora
+Version: 0.0.3
+Summary: Dinora Chess Engine
+Home-page: https://github.com/DinoraChess/dinora
+License: GPL-3.0-only
+Keywords: chess,uci,ai,tensorflow
+Author: Saegl
+Author-email: saegl@protonmail.com
+Maintainer: Saegl
+Maintainer-email: saegl@protonmail.com
+Requires-Python: >=3.8,<3.11
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: GPU :: NVIDIA CUDA :: 11.2
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Games/Entertainment :: Board Games
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Provides-Extra: tf
+Requires-Dist: chess (>=1.6.1,<2.0.0)
+Requires-Dist: click (>=8.1.3,<9.0.0)
+Requires-Dist: numpy (>=1.19.2,<2.0.0)
+Requires-Dist: protobuf (==3.20.1); extra == "tf"
+Requires-Dist: pylru (>=1.2.0,<2.0.0)
+Requires-Dist: tensorflow (==2.8.0); extra == "tf"
+Project-URL: Documentation, https://dinora.readthedocs.io/en/latest
+Project-URL: Repository, https://github.com/DinoraChess/dinora
+Description-Content-Type: text/markdown
+
+# Dinora
+
+[Documentation](https://dinora.readthedocs.io/en/latest/) | [Installation](https://dinora.readthedocs.io/en/latest/installation.html)
+
+Dinora is alphazero-like chess engine. It uses 
+keras/tensorflow for position evaluation and Monte Carlo Tree Search for 
+calculating best move.
+
+### Features
+- Working chess engine
+- Minimal example of alpazero-like engine NN + MCTS
+- All code included in this repo - for playing and training
+- Everything written in python
+
+## Status
+You can play against Dinora in standard chess variation, with or without increment.
+I assume engine strength is about 1400 Lichess Elo, I evaluate engine rating 
+basing on a few games against me, so it's not accurate.  
+You can see example game below  
+(10+0) Dinora (100-200 nodes in search) vs Me (2200 Rapid Lichess rating)  
+
+<img src="https://github.com/Saegl/dinora/raw/main/assets/gif/gfychess-example.gif" width="350">
+
+# Acknowledgements
+
+This engine based on https://github.com/Zeta36/chess-alpha-zero and 
+https://github.com/dkappe/a0lite and Alphazero from Deepmind.
+
+A lot of tutorials about chess engines from https://www.chessprogramming.org/ was super helpful.
+
