@@ -1,0 +1,14 @@
+canvas_parent_api/__init__.py,sha256=3-CwYecLK3ZtV791u49q_4Q7qAZwiDHa8xXmfaZYj6E,90
+canvas_parent_api/base.py,sha256=Hw-lpbivJLy0WaYuhIrr7jRbAikoC_-3F2Szn_xqeMk,554
+canvas_parent_api/canvas.py,sha256=2Tnp4rLzPU8mUQ_ofD88a5S1N9Zak4F0hwemR9GmhJo,1416
+canvas_parent_api/canvas_api_client.py,sha256=BYGlvJRK4ZJ8OgsRNSkQHgH09PqfLKC8Tphh4V42t44,2615
+canvas_parent_api/models/__init__.py,sha256=_7T1gkT5ex8JkIiCn5lEnXxOqmDAWK7JnNbg5AvXPI0,37
+canvas_parent_api/models/assignment.py,sha256=idKInOlGawv1R_DTwBUhuO0BvT-7KCaSgpQ6vAPiF4I,14303
+canvas_parent_api/models/base.py,sha256=DWZouhuigm0f3UlC2FcS1bvorEVCEvPffXz7ETFaOzk,4698
+canvas_parent_api/models/course.py,sha256=K2ep8BVX1lzFpWSptA0Yt3UD4jV_8RcqLgkk-pjAkOA,9827
+canvas_parent_api/models/observee.py,sha256=Y8z0HC7OF9wRQG8iWj8vhiIH_KYX0X8ikb0nkZ97Xxo,1304
+canvas_parent_api-0.0.4.dist-info/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+canvas_parent_api-0.0.4.dist-info/METADATA,sha256=VMv2F2BWtlUHitjNQeqhbQm0ZvGkf4bySEvqvCDSkHE,3570
+canvas_parent_api-0.0.4.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+canvas_parent_api-0.0.4.dist-info/top_level.txt,sha256=vcjdsVCRg9PK7wM0Js9y0W7Z05JpbIQfB4uLR5We2_k,18
+canvas_parent_api-0.0.4.dist-info/RECORD,,
