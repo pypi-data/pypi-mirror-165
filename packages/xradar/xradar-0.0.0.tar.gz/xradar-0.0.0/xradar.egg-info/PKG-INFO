@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: xradar
+Version: 0.0.0
+Summary: Xradar includes all the tools to get your weather radar into the xarray data model.
+Home-page: https://github.com/openradar/xradar
+Author: ['Maxwell Grover, Kai Muehlbauer, Zachary Sherman']
+Author-email: mgrover@anl.gov
+License: MIT license
+Keywords: xradar
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+License-File: LICENSE
+License-File: AUTHORS.rst
+
+======
+xradar
+======
+
+
+.. image:: https://img.shields.io/pypi/v/xradar.svg
+        :target: https://pypi.python.org/pypi/xradar
+
+.. image:: https://img.shields.io/travis/mgrover1/xradar.svg
+        :target: https://travis-ci.com/mgrover1/xradar
+
+.. image:: https://readthedocs.org/projects/xradar/badge/?version=latest
+        :target: https://xradar.readthedocs.io/en/latest/?version=latest
+        :alt: Documentation Status
+
+
+
+
+Xradar includes all the tools to get your weather radar into the xarray data model.
+
+
+* Free software: MIT license
+* Documentation: https://xradar.readthedocs.io.
+
+
+Features
+--------
+
+* TODO
+
+
+=======
+History
+=======
+
+0.1.0 (2022-09-01)
+------------------
+
+* First release on PyPI.
