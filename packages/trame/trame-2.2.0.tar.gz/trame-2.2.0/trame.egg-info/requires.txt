@@ -1,0 +1,12 @@
+trame-client>=2.1.0
+trame-components
+trame-deckgl
+trame-markdown
+trame-matplotlib
+trame-plotly
+trame-router
+trame-server>=2.1.0
+trame-simput
+trame-vega
+trame-vtk
+trame-vuetify
