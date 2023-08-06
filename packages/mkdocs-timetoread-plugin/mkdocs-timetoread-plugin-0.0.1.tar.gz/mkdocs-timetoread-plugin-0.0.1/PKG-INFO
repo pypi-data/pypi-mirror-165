@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: mkdocs-timetoread-plugin
+Version: 0.0.1
+Summary: "Estimated Time To Read" generator for MkDocs
+Home-page: https://github.com/ntt4/mkdocs-timetoread-plugin
+Author: Tavis Booth
+Author-email: code@entityfour.io
+License: MIT
+Keywords: mkdocs
+Requires-Python: >=3.7
+License-File: LICENSE
+
+mkdocs-timetoread-plugin is a lightweight 'estimated time to read' generator for MkDocs inspired by @alanhamlett's 'readtime' and Medium's read time formula.
