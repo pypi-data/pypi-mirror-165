@@ -1,0 +1,81 @@
+Metadata-Version: 2.1
+Name: wl-utilities
+Version: 2022.0.0
+Summary: Utility code to perform QAG and SV analysis
+Home-page: https://github.com/WEAVE-LOFAR/utilities
+Author: philastrophist
+Author-email: shaun.c.read@gmail.com
+License: MIT
+Description: 
+        Utility code to be used in the WEAVE-QAG/SV environment
+        
+        This package is called `wl-utilities` on PyPI and can be installed with `pip install wl-utilities` and then imported with `import wl_utilities`
+        This package is a collaborative effort and will comprise the scientific code that allows the QAG tests and SV to run. `wl_utilities` will be a dependency of those projects. `wl_utilities` should not use `weaveio` or `qag` packages.
+        
+        Please see [setup](#setup) for setting up github 
+        
+        # Workflow 
+        
+        There will be 2 branches in use on this repository: 
+        
+        * `main` - where the production-ready version exists and which is uploaded automatically to PyPI for use by everyone.
+        * `develop` - where changes and merges all take place before merging into the `main` branch
+        
+        You will likely have 2 versions of this code:
+        1. from PyPI (with `pip install`). This will be the version you should use when running science tests in production
+        2. from your own development repo. This will be your test and development version which must be separate from everything else
+        
+        ### setup
+        To setup git to deal with collaboration here
+        1. On github click `Fork`. This creates a copy of `wl_utilities` for you to work on
+        2. `cd` somewhere for development on `wl_utiltities`
+        3. git clone `<your-fork-ssh-address>`
+        4. `cd wl_utilities` 
+        5. `git remote add upstream git@github.com:WEAVE-LOFAR/utilities.git`
+        6. `git fetch --all`
+        
+        
+        ## To add/modify this repository with your own changes and improvements please
+        
+        1. Pull the latest updates `git fetch --all && git checkout main && git pull && git merge upstream/master`
+        2. Create a new branch from the `git checkout -b my-very-clever-edit`
+        3. Make your changes on this branch
+        4. Update `requirements.txt` and `manifest.IN` with your python requirements and ancillary files that you used
+        5. Commit your changes `git add <file1> <file2> ...` and `git commit -m "description of changes"`
+        6. `git push`
+        7. Open a pull request on this github page referencing `my-very-clever-edit -> develop`
+        
+        All changes therefore end up in the `develop` branch of this repo.
+        
+        All pull requests will be review before merging so we can limit mistakes
+        
+        ## Structure
+        The structure of this package will be:
+        ```
+        wl_utilities/
+          misc/  # for random short but useful snippets
+          spectrum/  # for anything that processes spectra
+            example_modulea/  # these will be added as necessary
+            example_moduleb/
+          stats/  # for anything that looks like a statistical test
+          
+        ```
+        We will not use separate folders for individual's code since the object is to put them together and not repeat.
+        
+        
+        # Rules:
+        * This repo will be autoformatted according to `black` 
+        * No change is merged with the `main` branch until approved by "enough" people
+        * Keep the code as modular as possible 
+        
+        machine-readable-change-log
+        ###########################
+        2022.0.0: initial
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Description-Content-Type: text/markdown

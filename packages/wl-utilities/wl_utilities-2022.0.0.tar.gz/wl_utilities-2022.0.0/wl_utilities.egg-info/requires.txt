@@ -1,0 +1,9 @@
+astropy
+networkx
+numpy
+tqdm
+matplotlib
+jupyter
+notebook
+ipython
+scipy
