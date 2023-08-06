@@ -1,0 +1,17 @@
+jsonschema_spec/__init__.py,sha256=hIT4rXynzV5et42Us44Ob4FIX1nhShc-gXlzzDINSq4,318
+jsonschema_spec/accessors.py,sha256=SCjItDWbyxatGDtcLOIUQ-fHnmm8L-UEpYcLHFTCcaI,1362
+jsonschema_spec/handlers/__init__.py,sha256=9307LmVSbP2KA-GHIAyjoFpOobc-kjuHUqEQUReKg1I,761
+jsonschema_spec/handlers/compat.py,sha256=FcsfDpPgf7Za1pFKOgYix-l3pQ2oYLRNbIOhnTlbaYw,273
+jsonschema_spec/handlers/file.py,sha256=XgQ6TZvYzK1v47XUdYXwjRXhVh6IhD8eSw12OmzSCUU,1582
+jsonschema_spec/handlers/protocols.py,sha256=XPI9F2N2VRFTD8uoYlXzLuyG79QVIALE7TmA2F_1PJA,515
+jsonschema_spec/handlers/requests.py,sha256=BzQi4mXKSxTki69-8LegvSjKnU9wQyN84aulOVw58so,747
+jsonschema_spec/handlers/urllib.py,sha256=wqE7P3T8EI1XQj87eBZGash9sKK-Ihvpgr7YNONUgi4,587
+jsonschema_spec/handlers/utils.py,sha256=i_G2KK0lQH5_ZZp2x5PQp7NdTbxTn0C4-LNLYFhyXZk,361
+jsonschema_spec/paths.py,sha256=c0wtvuX3QQZyIfQ1Z9f97JbDTA1_hGp-spmcajYEB48,1418
+jsonschema_spec/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jsonschema_spec/readers.py,sha256=O2X_0V3jKiCDfn1cOaJcclozC5ogvQkif56hUeU30uw,1082
+jsonschema_spec/utils.py,sha256=FA8B1DwuGSQzLJGVtR_P6_ybMj86QeikaQOKfJSgrdE,247
+jsonschema_spec-0.1.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+jsonschema_spec-0.1.1.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+jsonschema_spec-0.1.1.dist-info/METADATA,sha256=WafumN59TUHuI7apsc_Snhk5GK4Am9iRPhnc_-GdBQ0,3653
+jsonschema_spec-0.1.1.dist-info/RECORD,,
