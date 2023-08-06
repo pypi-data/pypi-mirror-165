@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: aiogram-di
+Version: 0.0.1
+Summary: UNKNOWN
+Home-page: https://github.com/MaximZayats/aiogram-di
+Author: Maxim
+Author-email: maximzayats1@gmail.com
+License: UNKNOWN
+Keywords: python,aiogram,di,dependency injection,aiogram di
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+# Aiogram DI
+
+## Installation
+
+* Latest version from GitHub
+  ```
+  pip install git+https://github.com/MaximZayats/aiogram-di
+  ```
+  
+* From PyPi
+  ```
+  pip install -U aiogram-di
+  ```
+
+

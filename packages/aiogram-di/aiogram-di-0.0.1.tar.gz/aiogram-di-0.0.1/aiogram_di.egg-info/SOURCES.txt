@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.py
+aiogram_di.egg-info/PKG-INFO
+aiogram_di.egg-info/SOURCES.txt
+aiogram_di.egg-info/dependency_links.txt
+aiogram_di.egg-info/requires.txt
+aiogram_di.egg-info/top_level.txt
