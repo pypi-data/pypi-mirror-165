@@ -1,0 +1,6 @@
+requests
+filetype
+pillow
+eth_keys
+protobuf
+eth_account
