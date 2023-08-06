@@ -1,0 +1,40 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_rev_rd = {'rd:_g': 'race_driver:_grid',
+ 'rd_blackmore': 'r._d._blackmore',
+ 'rd_blumenfeld': 'r._d._blumenfeld',
+ 'rd_burman': 'rahul_dev_burman',
+ 'rd_call': 'r._d._call',
+ 'rd_congo': 'democratic_republic_of_the_congo',
+ 'rd_coordinates': 'geography_of_the_netherlands',
+ 'rd_dolphin': 'douglas_dolphin',
+ 'rd_fitzgerald': 'r._d._fitzgerald',
+ 'rd_laing': 'r._d._laing',
+ 'rd_mcnaughton': 'r._d._mcnaughton_building',
+ 'rd_oliver': 'r._d._oliver',
+ 'rd_patel': 'r._d._patel',
+ 'rd_pradhan': 'r._d._pradhan',
+ 'rd_raval': 'r._d._raval',
+ 'rd_reid': 'r._d._reid',
+ 'rd_tichborne': 'tichborne_case',
+ 'rd_wingfield': 'r._d._wingfield',
+ 'rdf_database': 'triplestore',
+ 'rdf_datastore': 'triplestore',
+ 'rdf_television': 'rdf_media',
+ 'rdg-33_grenade': 'rgd-33_grenade',
+ 'rdj_album': 'richard_d._james_album',
+ 'rdo-rje_shugs-ldan': 'dorje_shugden',
+ 'rdp_algorithm': 'ramer-douglas-peucker_algorithm',
+ 'rdp_technique': 'extreme_programming',
+ 'rdr_philippines': 'rho_delta_rho',
+ 'rdrive_image': 'r-drive_image',
+ 'rds-jvc_cup': 'rds_cup',
+ 'rds_encoder': 'radio_data_system',
+ 'rds_simmonscourt': 'royal_dublin_society',
+ 'rds_stadium': 'rds_arena',
+ 'rds_tmc': 'traffic_message_channel',
+ 'rdu_airport': 'raleigh-durham_international_airport'}
+        

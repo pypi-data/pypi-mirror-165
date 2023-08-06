@@ -1,0 +1,42 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_rev_wm = {'wm._a._shanklin': 'william_arnold_shanklin',
+ 'wm._a._spink': 'william_a._spinks',
+ 'wm._a._spinks': 'william_a._spinks',
+ 'wm._b._eerdmans': 'william_b._eerdmans_publishing_company',
+ 'wm._b._franklin': 'william_b._franklin',
+ 'wm._grant_bangerter': 'william_grant_bangerter',
+ 'wm._h._maher': 'william_h._maher',
+ 'wm._j._scanlan': 'william_j._scanlan',
+ 'wm._roger_louis': 'william_roger_louis',
+ 'wm._rolfe_kerr': 'w._rolfe_kerr',
+ 'wm._spencer_beaumont': 'william_spencer_beaumont',
+ 'wm._t._cannady': 'william_t._cannady',
+ 'wm._trufant_foster': 'william_trufant_foster',
+ 'wm._v._mong': 'william_v._mong',
+ 'wm_holden_caprice': 'holden_wm_statesman',
+ 'wm_holden_statesman': 'holden_wm_statesman',
+ 'wm_james_mortimer': 'wm._james_mortimer',
+ 'wm_keck_foundation': 'w._m._keck_foundation',
+ 'wm_keck_observatory': 'w._m._keck_observatory',
+ 'wm_lee_robinson': 'william_lee_robinson',
+ 'wm_mark_simmons': 'william_mark_simmons',
+ 'wm_morrison_plc': 'morrisons',
+ 'wm_morrison_supermarkets': 'morrisons',
+ 'wm_r_king': 'william_r._king',
+ 'wm_roger_louis': 'william_roger_louis',
+ 'wm_t_cannady': 'william_t._cannady',
+ 'wma_audio_file': 'windows_media_audio',
+ 'wmap_cold_spot': 'cmb_cold_spot',
+ 'wmata_rolling_stock': 'washington_metro_rolling_stock',
+ 'wmc_resources_limited': 'wmc_resources',
+ 'wmd_commission_report': 'iraq_intelligence_commission',
+ 'wmd_in_iraq': 'iraq_and_weapons_of_mass_destruction',
+ 'wmd_intelligence_commission': 'iraq_intelligence_commission',
+ 'wmds_in_iraq': 'iraq_and_weapons_of_mass_destruction',
+ 'wms_industries_inc.': 'wms_industries',
+ 'wmtw_tv_mast': 'wmtw'}
+        

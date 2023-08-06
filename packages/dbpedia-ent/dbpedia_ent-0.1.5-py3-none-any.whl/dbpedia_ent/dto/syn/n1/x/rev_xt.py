@@ -1,0 +1,41 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_rev_xt = {'xt-number': 'extratropical_transition_technique',
+ 'xt125r': 'yamaha_xt_125_r',
+ 'xt31': 'general_electric_t31',
+ 'xt51': 'turbomeca_artouste',
+ 'xt:commerce': 'oscommerce',
+ 'xtac': 'mdma',
+ 'xtacacs': 'tacacs',
+ 'xtacles': 'the_xtacles',
+ 'xtasy': 'mdma',
+ 'xtbg': 'xishuangbanna_tropical_botanical_garden',
+ 'xtce': 'xml_telemetric_and_command_exchange',
+ 'xten': 'x10_wireless_technology',
+ 'xterprise': 'xterprise_incorporated',
+ 'xterra': 'nissan_xterra',
+ 'xtianity': 'christianity',
+ 'xtianus': 'christian',
+ 'xtieng': 'stieng_people',
+ 'xtina': 'christina_aguilera',
+ 'xtp3tpa': 'xtp3-transactivated_gene_a_protein',
+ 'xtra': 'xetra',
+ 'xtra-am': 'xtra_am',
+ 'xtra-fm': 'xetra-fm',
+ 'xtraairways': 'xtra_airways',
+ 'xtrabike': 'xtracycle',
+ 'xtramile': 'xtra_mile_recordings',
+ 'xtraprint': 'xerox',
+ 'xtravision': 'xtra-vision',
+ 'xtreegold': 'xtree',
+ 'xtreem': 'xtreem_music',
+ 'xtreme': 'extreme',
+ 'xtrieve': 'btrieve',
+ 'xtsst': 'tsst',
+ 'xtsu': 'sokuon',
+ 'xtu-683': 'ziu-10',
+ 'xtuml': 'executable_uml'}
+        

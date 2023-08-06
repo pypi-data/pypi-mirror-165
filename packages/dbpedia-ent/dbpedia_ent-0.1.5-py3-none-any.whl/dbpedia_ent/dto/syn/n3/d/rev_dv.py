@@ -1,0 +1,40 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_rev_dv = {'dv8_physical_theater': 'dv8_physical_theatre',
+ 'dv_sadananda_gowda': 'd._v._sadananda_gowda',
+ 'dvb-h_and_dvb-sh': 'dvb-h',
+ 'dvb-t_in_croatia': 'television_in_croatia',
+ 'dvb-t_in_denmark': 'television_in_denmark',
+ 'dvb-t_in_ireland': 'television_in_ireland',
+ 'dvb-t_in_slovenia': 'television_in_slovenia',
+ 'dvb-t_in_sweden': 'digital_terrestrial_television_in_sweden',
+ 'dvb_over_ip': 'dvb-iptv',
+ 'dvd6c_licensing_agency': 'dvd6c',
+ 'dvd6c_licensing_group': 'dvd6c',
+ 'dvd_box_set': 'dvd',
+ 'dvd_copy_protection': 'cd/dvd_copy_protection',
+ 'dvd_dash_r': 'dvd-r',
+ 'dvd_encryption_key': 'aacs_encryption_key_controversy',
+ 'dvd_region_codes': 'dvd_region_code',
+ 'dvd_region_coding': 'dvd_region_code',
+ 'dvd_rental_kiosk': 'interactive_kiosk',
+ 'dvd_rental_kiosks': 'interactive_kiosk',
+ 'dvd_rental_shop': 'rental_shop',
+ 'dvd_ripping_software': 'dvd_ripper',
+ 'dvd_size_labels': 'dvd',
+ 'dvd_tv_enhanced': 'dvd_tv',
+ 'dvd_tv_games': 'dvd_tv_game',
+ 'dvd_video_object': 'vob',
+ 'dvdtv_enhanced_version': 'dvd_tv',
+ 'dvdtv_on_amc': 'dvd_tv',
+ 'dvi_file_format': 'device_independent_file_format',
+ 'dvina_trade_route': 'bjarmaland',
+ 'dvorak_keyboard_layout': 'dvorak_simplified_keyboard',
+ 'dvorana_gradski_vrt': 'gradski_vrt_hall',
+ 'dvorec_sporta_dinamo': 'dynamo_sports_palace',
+ 'dvortsovy_municipal_district': 'dvortsovy_municipal_okrug',
+ 'dvs_shoe_co': 'dvs_shoe_company'}
+        

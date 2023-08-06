@@ -1,0 +1,42 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_rev_kg = {'kg-175_taclane': 'taclane',
+ 'kg/1940_lmg': 'kg_m/40_light_machine_gun',
+ 'kg_2': 'kampfgeschwader_2',
+ 'kg_200': 'kampfgeschwader_200',
+ 'kg_3': 'kampfgeschwader_3',
+ 'kg_4': 'kampfgeschwader_4',
+ 'kg_51': 'kampfgeschwader_51',
+ 'kg_53': 'kampfgeschwader_53',
+ 'kg_54': 'kampfgeschwader_54',
+ 'kg_55': 'kampfgeschwader_55',
+ 'kg_6': 'kampfgeschwader_6',
+ 'kg_76': 'kampfgeschwader_76',
+ 'kg_77': 'kampfgeschwader_77',
+ 'kg_ambegaonkar': 'k._g._ambegaonkar',
+ 'kg_baalakrishnan': 'k._g._baalakrishnan',
+ 'kg_balakrishnan': 'k._g._balakrishnan',
+ 'kg_basin': 'krishna_godavari_basin',
+ 'kg_cunningham': 'k._g._cunningham',
+ 'kg_george': 'k._g._george',
+ 'kg_hammar': 'k._g._hammar',
+ 'kg_mudge': 'k._g._mudge',
+ 'kg_murphy': 'k._g._murphy',
+ 'kg_tribe': 'murder_of_tom_ap_rhys_pryce',
+ 'kg_whales': 'chinatrust_whales',
+ 'kgalema_molanthe': 'kgalema_motlanthe',
+ 'kgalema_motlhanthe': 'kgalema_motlanthe',
+ 'kgb_kgb': 'knowledge_generation_bureau',
+ 'kgb_memorials': 'kgb_victim_memorials',
+ 'kgb_russia': 'kgb',
+ 'kgb_ussr': 'knowledge_generation_bureau',
+ 'kgmc_lucknow': 'chhatrapati_shahuji_maharaj_medical_university',
+ 'kgo_kolomna': 'fc_avangard-kortek_kolomna',
+ 'kgs._lyngby': 'kongens_lyngby',
+ 'kgv_college': 'king_george_v_college',
+ 'kgv_school': 'king_george_v_school',
+ 'kgw-1_loon': 'republic-ford_jb-2'}
+        

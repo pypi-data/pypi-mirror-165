@@ -1,0 +1,36 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_trie_dk = {'_': ["dk'tronics",
+       'dk-10',
+       'dk4l',
+       'dk64',
+       'dk4',
+       'dk5',
+       'dk1',
+       'dk3',
+       'dk2'],
+ 'a': ['dkar-lho', 'dkay.com', 'dkan', 'dka'],
+ 'b': ['dkb-arena', 'dkba-5', 'dkbrg', 'dkbb', 'dkba', 'dkb'],
+ 'c': ['dkcph', 'dkc1', 'dkc'],
+ 'd': ['dkdp', 'dkdc', 'dkd'],
+ 'e': ['dke'],
+ 'f': ['dkfzp686a03134', 'dkfzp686h1993', 'dkfxp', 'dkfz'],
+ 'g': ['dkgb', 'dkg'],
+ 'h': ['dkhissa', 'dkhar', 'dkh'],
+ 'i': ['dkim-signature', 'dkids', 'dkit', 'dkim', 'dki'],
+ 'j': ['dkjb'],
+ 'k': ['dkk-sp1', 'dkk3', 'dkk1', 'dkk4', 'dkk2', 'dkk'],
+ 'l': ['dklmn', 'dkl3', 'dkl2', 'dkl'],
+ 'm': ['dkms', 'dkm'],
+ 'n': ['dknvs', 'dknf', 'dkny'],
+ 'o': ['dkosopedia', 'dkos', 'dkoi'],
+ 'p': ['dkp/ml', 'dkp'],
+ 'r': ['dkr2', 'dkr'],
+ 's': ['dksa', 'dksh', 'dks'],
+ 't': ['dkt-mc5', 'dkt/mc5'],
+ 'u': ['dkuug', 'dku'],
+ 'v': ['dkv'],
+ 'w': ['dkw']}

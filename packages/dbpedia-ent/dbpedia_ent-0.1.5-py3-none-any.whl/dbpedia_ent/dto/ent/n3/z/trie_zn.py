@@ -1,0 +1,35 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_trie_zn = {'_': ['zn_finger_protein'],
+ 'a': ['znamenskoye,_chechen_republic',
+       'znamya_truda_orekhovo-zuyevo',
+       'znamianka,_kirovohrad_oblast',
+       'znamensk,_kaliningrad_oblast',
+       'znamenskoye,_vladimir_oblast',
+       'znamenskoye,_vologda_oblast',
+       'znamensk,_astrakhan_oblast',
+       'znamensky_district,_russia',
+       'znamenka,_vladimir_oblast',
+       'znamenny_musical_notation',
+       'znamenka,_irkutsk_oblast',
+       'znamenskoye,_omsk_oblast',
+       'znamya_trudovoi_kommuny',
+       'znamenka,_amur_oblast',
+       'znamenka,_altai_krai',
+       'znaes_kolku_vredam',
+       'znaki_na_drodze'],
+ 'd': ['znd_detonation_model'],
+ 'e': ['znepole_ice_piedmont'],
+ 'k': ['znk_olimpija_ljubljana',
+       'znk_katarina_zrinski',
+       'znk_slovenj_gradec',
+       'znk_dinamo_zagreb',
+       'znk_rudar_skale',
+       'znk_mb_tabor'],
+ 'o': ['znojile_pri_studencu',
+       'znojile_pri_cepljah',
+       'zno_nanorod_sensor',
+       'znojile_pri_krki']}
