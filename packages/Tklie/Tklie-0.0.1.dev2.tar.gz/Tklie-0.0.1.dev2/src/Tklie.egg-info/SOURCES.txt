@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.py
+src/Tklie.egg-info/PKG-INFO
+src/Tklie.egg-info/SOURCES.txt
+src/Tklie.egg-info/dependency_links.txt
+src/Tklie.egg-info/requires.txt
+src/Tklie.egg-info/top_level.txt
+src/tkile/Constant.py
+src/tkile/Icons.py
+src/tkile/__init__.py
