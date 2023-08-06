@@ -1,0 +1,14 @@
+AUTHORS
+LICENSE
+README.md
+setup.py
+maltego_stix2/__init__.py
+maltego_stix2/config.py
+maltego_stix2/entities.py
+maltego_stix2/util.py
+maltego_stix2.egg-info/PKG-INFO
+maltego_stix2.egg-info/SOURCES.txt
+maltego_stix2.egg-info/dependency_links.txt
+maltego_stix2.egg-info/not-zip-safe
+maltego_stix2.egg-info/requires.txt
+maltego_stix2.egg-info/top_level.txt
