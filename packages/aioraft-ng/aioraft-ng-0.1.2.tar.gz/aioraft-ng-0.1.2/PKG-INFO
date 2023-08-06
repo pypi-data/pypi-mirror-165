@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: aioraft-ng
+Version: 0.1.2
+Summary: An implementation of `Raft` consensus algorithm written in asyncio-based Python 3.
+Home-page: https://github.com/lablup/aioraft-ng
+Author: Lablup Inc.
+Maintainer: rapsealk
+Maintainer-email: jskang@lablup.com
+License: Apache License 2.0
+Requires-Python: >=3.10
+Provides-Extra: dev
+License-File: LICENSE
