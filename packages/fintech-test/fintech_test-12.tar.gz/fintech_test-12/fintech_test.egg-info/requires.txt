@@ -1,0 +1,3 @@
+jupyterlab
+jupyterlab_templates
+gitpython
