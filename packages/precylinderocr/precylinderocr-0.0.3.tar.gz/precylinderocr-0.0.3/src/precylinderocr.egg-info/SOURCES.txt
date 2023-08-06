@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/precylinderocr/__init__.py
+src/precylinderocr/memory.py
+src/precylinderocr.egg-info/PKG-INFO
+src/precylinderocr.egg-info/SOURCES.txt
+src/precylinderocr.egg-info/dependency_links.txt
+src/precylinderocr.egg-info/requires.txt
+src/precylinderocr.egg-info/top_level.txt
