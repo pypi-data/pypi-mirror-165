@@ -1,0 +1,13 @@
+[build-system]
+requires = [
+    "setuptools>=42",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
+
+[tool.pylint.FORMAT]
+max-line-length=120
+min-similarity-lines=5
+
+[tool.pylint.'MESSAGES CONTROL']
+disable=['W3101']
