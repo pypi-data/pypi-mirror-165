@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "speiseplan"
+version = "0.3.1"
+description = ""
+authors = ["Markus Quade <info@markusqua.de>"]
+license = "MIT"
+
+[tool.poetry.scripts]
+speiseplan = "speiseplan:main"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+[tool.poetry.dev-dependencies]
+
+[[tool.poetry.source]]
+name = "foo"
+url = "https://pypi.example.org/simple/"
+default = false
+secondary = false
+
+[build-system]
+requires = ["poetry_core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
