@@ -1,0 +1,9 @@
+LICENSE,sha256=NoqA0BoF9uLIRUG6ryOmyHVsWRJcMhquFm4u7Bs9y5o,1069
+README.md,sha256=Ry3e8hV4K3DFyRyoNwB1BECJmoBwidcJzUAsY9u6BeU,2375
+settings_holder/__init__.py,sha256=-Z2PF3nmoxdbhLiNnxaFjMOeFoGKLzKWnD6STFTyTg0,171
+settings_holder/holder.py,sha256=ObDsM_P4zA6hecBHPrMj8sI9B2zUmm-gO5Cn-qnPDsg,5050
+settings_holder/utils.py,sha256=vLo4Bn1fssbYnxtQKG4_1s6YanHfm_bj1jQor6JVsFU,2001
+django_settings_holder-0.0.5.dist-info/LICENSE,sha256=NoqA0BoF9uLIRUG6ryOmyHVsWRJcMhquFm4u7Bs9y5o,1069
+django_settings_holder-0.0.5.dist-info/WHEEL,sha256=bbU3AyvhQ312rVm7zzRQjs6axI1UYWC3nmFA2E6FFSI,88
+django_settings_holder-0.0.5.dist-info/METADATA,sha256=DpjTYuBbR32CkjQ3h2oimM72I9siRGuTbau8UuLatPg,3870
+django_settings_holder-0.0.5.dist-info/RECORD,,
