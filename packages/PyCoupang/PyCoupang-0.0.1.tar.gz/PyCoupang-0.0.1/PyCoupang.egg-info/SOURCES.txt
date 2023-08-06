@@ -1,0 +1,10 @@
+README.md
+setup.py
+PyCoupang/__init__.py
+PyCoupang/api.py
+PyCoupang.egg-info/PKG-INFO
+PyCoupang.egg-info/SOURCES.txt
+PyCoupang.egg-info/dependency_links.txt
+PyCoupang.egg-info/top_level.txt
+PyCoupang/config/__init__.py
+PyCoupang/config/info.py
