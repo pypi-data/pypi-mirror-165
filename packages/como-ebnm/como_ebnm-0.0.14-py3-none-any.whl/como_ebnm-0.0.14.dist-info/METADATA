@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: como-ebnm
+Version: 0.0.14
+License-File: LICENSE.txt
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: jax
+
