@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: pyncview
+Version: 0.99.31
+Summary: NetCDF viewer written in Python
+Home-page: http://github.com/BoldingBruggeman/pyncview
+Author: Jorn Bruggeman
+Author-email: jorn@bolding-bruggeman.com
+License: GPL
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Programming Language :: Python :: 2.7
+License-File: license.rtf
+Requires-Dist: xmlplot (>=0.9.24)
+
+UNKNOWN
+
