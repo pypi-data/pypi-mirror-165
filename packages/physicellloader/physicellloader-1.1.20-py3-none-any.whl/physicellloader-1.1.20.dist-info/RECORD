@@ -1,0 +1,14 @@
+physicellloader/__init__.py,sha256=azaQbTFHsmCcKCeV_NRHwDgcxMYmoNBdJOwauA38Fu0,166
+physicellloader/_version.py,sha256=liqEm3unFngsYTfq7J7l6NC06-CGD6qNiQl_jcWB6WY,23
+physicellloader/pyMCDS.py,sha256=2cFebwhyPrrBLJ4G4mzUvOs8nhpAEi3ibU1FaPnSVTg,20080
+physicellloader/pyMCDS_timeseries.py,sha256=f50c4PvfzuZb5eSgIPTpNHjHew3ScxL76hg-W_lqB4I,3483
+physicellloader/read_MultiCellDS_xml.py,sha256=dm31-H2kM3mUWOFsyIBKT6J0eXpI2cry_kAkiqR5Mbk,7255
+physicellloader/plotting/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+physicellloader/plotting/anim_svg.py,sha256=lK0ddOpK5yHFQoMS_DuRBVuEeRP1fFyFrqJR4uj-vlo,11945
+physicellloader/plotting/anim_svg_cycle.py,sha256=XztFgQB3rPy8GSLsN-ZocsPTQaH4EOGJqYTxfIeltpA,11971
+physicellloader/plotting/anim_svg_substrate.py,sha256=9zAtzjAIaKlmPaFrDztldLNAFkSwyySVM6QnVb2B8Nc,12084
+physicellloader/plotting/cells3D_fury.py,sha256=djhIUcftOJ393fYVBFGr0G8aWN94KMeiEHUOu-PR8MM,2733
+physicellloader-1.1.20.dist-info/METADATA,sha256=wWQgY7RPi3h-VduWcjbdnyOGQvrhzkOHBpiON59YPs4,2238
+physicellloader-1.1.20.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+physicellloader-1.1.20.dist-info/top_level.txt,sha256=_8dzKFzVh17WRYWZQw7j2dBKR-ERNyAavXVB55tCBcQ,16
+physicellloader-1.1.20.dist-info/RECORD,,
