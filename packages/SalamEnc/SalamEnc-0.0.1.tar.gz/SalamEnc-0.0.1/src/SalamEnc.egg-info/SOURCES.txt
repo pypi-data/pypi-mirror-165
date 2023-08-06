@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+src/SalamEnc.egg-info/PKG-INFO
+src/SalamEnc.egg-info/SOURCES.txt
+src/SalamEnc.egg-info/dependency_links.txt
+src/SalamEnc.egg-info/top_level.txt
