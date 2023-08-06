@@ -1,0 +1,7 @@
+gtsam-quadrics
+numpy
+opencv-python
+matplotlib
+spatialmath-python
+scipy
+dinstinctipy
