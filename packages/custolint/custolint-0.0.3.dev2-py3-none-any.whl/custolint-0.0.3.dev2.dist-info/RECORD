@@ -1,0 +1,14 @@
+custolint/__init__.py,sha256=1it4g_DpsvK_Nkirvb1QxtGWO9n0mxRHRB_BgEcp3YY,239
+custolint/cli.py,sha256=dXUDx4kCwcTQYJ2XdiC4-1ZxI9gncr4y1umduI_K3ic,1044
+custolint/coverage.py,sha256=yGSduw46su9GI2BPHA_zH8crLiM7JHnFHLui9ag8ylw,3347
+custolint/flake8.py,sha256=Y6MZBlOZKWMbIe7MBtN-KDfBJdSTHJOWVpf_yJDqsPU,519
+custolint/generics.py,sha256=tKM-yBkF51opR-i6YF4pkcjhucCY5m-TnRl3s4cD8gE,5548
+custolint/git.py,sha256=0C_OcX8PQjME4TauGeXFKkgilKQ0ZhR5lY8LgjQJZHY,3129
+custolint/mypy.py,sha256=QSDP38MfneyJeU_DPCWJaG1A9itiC_U3nvmcPCRKQsU,3355
+custolint/pylint.py,sha256=8BHR48Y7ogB8iTabi17_FYW8FsoUOvr8ZgQzhxD3be8,521
+custolint/typing.py,sha256=JonloJtWdJtgvaa7m6LXUI0nfGjEGn-mPc-H38eszy4,351
+custolint-0.0.3.dev2.dist-info/METADATA,sha256=0WuCrJE-oNeHDgeV5eGBrXxKJWQvZ5zdXlIXE_zanf8,2793
+custolint-0.0.3.dev2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+custolint-0.0.3.dev2.dist-info/entry_points.txt,sha256=FXto-Crn9co-sUFEXZumypVJpoDeWKvSJQgErDlQmao,48
+custolint-0.0.3.dev2.dist-info/top_level.txt,sha256=jVr0mMMpbEHcSe4AFaZfyfD3jXO6YAkM_kEsQ1LIWoc,10
+custolint-0.0.3.dev2.dist-info/RECORD,,
