@@ -1,0 +1,3 @@
+[console_scripts]
+atomic-operator-runner=atomic_operator_runner.__main__:main
+
