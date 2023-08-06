@@ -1,0 +1,3 @@
+[console_scripts]
+sidechain-cli=sidechain_cli.main:main
+
