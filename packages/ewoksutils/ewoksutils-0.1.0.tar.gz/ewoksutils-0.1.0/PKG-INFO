@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: ewoksutils
+Version: 0.1.0
+Summary: Utilities for ewoks developers
+Home-page: https://gitlab.esrf.fr/workflow/ewoks/ewoksutils/
+Author: ESRF
+Author-email: wout.de_nolf@esrf.fr
+License: MIT
+Project-URL: Source, https://gitlab.esrf.fr/workflow/ewoks/ewoksutils/
+Project-URL: Documentation, https://ewoksutils.readthedocs.io/
+Project-URL: Tracker, https://gitlab.esrf.fr/workflow/ewoks/ewoksutils/issues/
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Provides-Extra: test
+Provides-Extra: dev
+Provides-Extra: doc
+License-File: LICENSE.md
+
+# ewoksutils
+
+*ewoksutils* provides utilities for [ewoks](https://ewoks.readthedocs.io/) developers.
+
+## Install
+
+```bash
+python3 -m pip install ewoksutils[test]
+```
+
+## Test
+
+```bash
+python3 -m pytest --pyargs ewoksutils.tests
+```
+
+## Documentation
+
+https://ewoksutils.readthedocs.io/
