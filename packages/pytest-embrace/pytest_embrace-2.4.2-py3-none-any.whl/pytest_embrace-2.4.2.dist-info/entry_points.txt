@@ -1,0 +1,6 @@
+[console_scripts]
+embrace=pytest_embrace.cli:main
+
+[pytest11]
+pytest_embrace=pytest_embrace.plugin
+
