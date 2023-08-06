@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.txt
+setup.py
+Doc/documentation.txt
+wvu/__init__.py
+wvu/util.py
+wvu.egg-info/PKG-INFO
+wvu.egg-info/SOURCES.txt
+wvu.egg-info/dependency_links.txt
+wvu.egg-info/requires.txt
+wvu.egg-info/top_level.txt

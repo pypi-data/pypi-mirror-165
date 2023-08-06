@@ -1,0 +1,8 @@
+numpy
+pandas
+sklearn
+seaborn
+matplotlib
+vtreat>=1.2.4
+wvpy>=0.3.5
+data_algebra>=1.4.1
