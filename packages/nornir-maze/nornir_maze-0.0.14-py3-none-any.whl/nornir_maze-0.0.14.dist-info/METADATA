@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: nornir-maze
+Version: 0.0.14
+Summary: A collection of Nornir tasks and functions
+Home-page: https://github.com/willikubny/nornir-maze
+Author: Willi Kubny
+Author-email: willi.kubny@gmail.com
+Project-URL: Repository, https://github.com/willikubny/nornir-maze
+Project-URL: Bug Tracker, https://github.com/willikubny/nornir-maze/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyyaml
+Requires-Dist: GitPython
+Requires-Dist: nornir
+Requires-Dist: nornir-salt
+Requires-Dist: nornir-scrapli
+Requires-Dist: nornir-netmiko
+Requires-Dist: nornir-jinja2
+Requires-Dist: scrapli-ssh2
+Requires-Dist: scrapli-netconf
+Requires-Dist: pyats[full]
+Requires-Dist: requests
+Requires-Dist: tabulate
+Requires-Dist: black
+Requires-Dist: pylint
+Requires-Dist: prospector
+Requires-Dist: bandit
+Requires-Dist: vulture
+
+![Screenshot 2022-08-31 at 10 43 46](https://user-images.githubusercontent.com/70367776/187637151-886093dc-a0a8-4cbd-a1db-86eceaa56248.png)
+
+----
+![PyPI](https://img.shields.io/pypi/v/nornir-maze?label=pypi%20version&style=plastic)
+![PyPI - License](https://img.shields.io/pypi/l/nornir-maze?label=license&style=plastic)
+![PyPI - Wheel](https://img.shields.io/pypi/wheel/nornir-maze?label=wheel&style=plastic)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/nornir-maze?label=python&style=plastic)
+![PyPI - Implementation](https://img.shields.io/pypi/implementation/nornir-maze?label=implementation&style=plastic)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/willikubny/nornir-maze?label=code%20size&style=plastic)
+![Lines of code](https://img.shields.io/tokei/lines/github/willikubny/nornir-maze?label=total%20lines&style=plastic)
+
+
+# Nornir-Maze
+
+A collection of Nornir tasks and functions.
+
+```diff
+! Documentaion under construction ...
+```
+
+## Installation
+
+In order to use the tasks and functions from nornir-maze you will need to install the library from Pypi.
+
+```bash
+pip install nornir-maze
+```
