@@ -1,0 +1,2 @@
+[console_scripts]
+mztabpy = mztabpy.mztabpy_cli:main

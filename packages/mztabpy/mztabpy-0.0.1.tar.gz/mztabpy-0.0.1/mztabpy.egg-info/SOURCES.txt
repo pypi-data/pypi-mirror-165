@@ -1,0 +1,12 @@
+LICENSE
+README.md
+mztabpy_click.py
+setup.py
+mztabpy.egg-info/PKG-INFO
+mztabpy.egg-info/SOURCES.txt
+mztabpy.egg-info/dependency_links.txt
+mztabpy.egg-info/entry_points.txt
+mztabpy.egg-info/requires.txt
+mztabpy.egg-info/top_level.txt
+tests/__init__.py
+tests/test_mztabpy.py
