@@ -1,0 +1,244 @@
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-20 12:49+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: action.py:143
+msgid "Submit"
+msgstr "Skicka"
+
+#: admin.py:171
+msgid "iommi administration"
+msgstr "iommi administration"
+
+#: admin.py:174 admin.py:489
+msgid "Change password"
+msgstr "Byt lösenord"
+
+#: admin.py:176
+msgid "Logout"
+msgstr "Logga ut"
+
+#: admin.py:267
+msgid "All models"
+msgstr "Alla modeller"
+
+#: admin.py:313
+#, python-format
+msgid "Create %(model_name)s"
+msgstr "Skapa %(model_name)s"
+
+#: admin.py:432
+msgid "Username"
+msgstr "Användarnamn"
+
+#: admin.py:433
+msgid "Password"
+msgstr "Lösenord"
+
+#: admin.py:436
+msgid "Login"
+msgstr "Logga in"
+
+#: admin.py:451
+msgid "Unknown username or password"
+msgstr "Okänt användarnamn eller lösenord"
+
+#: admin.py:467
+msgid "Incorrect password"
+msgstr "Felaktigt lösenord"
+
+#: admin.py:483
+msgid "New passwords does not match"
+msgstr "Dom nya lösenorden är olika"
+
+#: admin.py:499
+msgid "Current password"
+msgstr "Nuvarande lösenord"
+
+#: admin.py:500
+msgid "New password"
+msgstr "Nytt lösenord"
+
+#: admin.py:501
+msgid "Confirm password"
+msgstr "Repetera lösenord"
+
+#: experimental/edit_table.py:134 style_base.py:129 table.py:523
+msgid "Delete"
+msgstr "Radera"
+
+#: experimental/edit_table.py:239 form.py:1422 style_base.py:127
+msgid "Save"
+msgstr "Spara"
+
+#: form.py:798
+msgid "This field is required"
+msgstr "Detta fält får inte vara tomt"
+
+#: form.py:1059 table.py:241
+msgid "Yes"
+msgstr "Ja"
+
+#: form.py:1059 table.py:243
+msgid "No"
+msgstr "Nej"
+
+#: form.py:1272
+msgid "create"
+msgstr "skapa"
+
+#: form.py:1273
+msgid "edit"
+msgstr "ändra"
+
+#: form.py:1274
+msgid "delete"
+msgstr "radera"
+
+#: form.py:1416
+#, python-format
+msgid "%(crud_type)s %(model_name)s"
+msgstr "%(crud_type)s %(model_name)s"
+
+#: query.py:574 templates/iommi/query/form_toggle_script.html:26
+msgid "Switch to advanced search"
+msgstr "Byt till avancerad sökning"
+
+#: query.py:698
+msgid "Search"
+msgstr "Sök"
+
+#: query.py:737
+msgid "Filter"
+msgstr "Filtrera"
+
+#: style_base.py:128
+#, fuzzy
+#| msgid "create"
+msgid "Create"
+msgstr "skapa"
+
+#: table.py:511
+msgid "Edit"
+msgstr "Ändra"
+
+#: table.py:536
+msgid "Download"
+msgstr "Ladda ner"
+
+#: table.py:548
+msgid "Run"
+msgstr "Kör"
+
+#: table.py:1131
+msgid "Are you sure you want to delete these {} items?"
+msgstr "Är du säker att du vill radera dessa {} rader?"
+
+#: table.py:1146
+msgid "Yes, delete all!"
+msgstr "Ja, radera alla!"
+
+#: table.py:1541 table.py:1738
+msgid "Bulk change"
+msgstr "Ändra markerade"
+
+#: table.py:1744
+msgid "Bulk delete"
+msgstr "Radera markerade"
+
+#: templates/iommi/query/advanced.html:5
+msgid "Search query"
+msgstr "Sök"
+
+#: templates/iommi/query/advanced.html:9
+#: templates/iommi/query/form_toggle_script.html:48
+msgid "Show help"
+msgstr "Visa hjälp"
+
+#: templates/iommi/query/advanced.html:14
+msgid "Available fields"
+msgstr "Tillgängliga fält"
+
+#: templates/iommi/query/advanced.html:22
+msgid "Queries"
+msgstr "Filtreringar"
+
+#: templates/iommi/query/advanced.html:24
+#, fuzzy
+#| msgid "Search for an exact value: field_name=value"
+msgid "Search for an exact value: <code>field_name=value</code>"
+msgstr "Sök efter ett exakt värde: fält_namn=värde"
+
+#: templates/iommi/query/advanced.html:25
+#, fuzzy
+#| msgid ""
+#| "Search for an exact value containing space: field_name=\"value with space"
+#| "\""
+msgid ""
+"Search for an exact value containing space: <code>field_name=\"value with "
+"space\"</code>"
+msgstr ""
+"Sök efter ett exakt värde som har ett mellanslag: fält_namn=\"värde med "
+"mellanslag\""
+
+#: templates/iommi/query/advanced.html:26
+#, fuzzy
+#| msgid "Containing a text: field_name:val"
+msgid "Containing a text: <code>field_name:val</code>"
+msgstr "Innehåller text: fält_namn=vär"
+
+#: templates/iommi/query/advanced.html:27
+#, fuzzy
+#| msgid "Exclude a value: field_name!=value"
+msgid "Exclude a value: <code>field_name!=value</code>"
+msgstr "Uteslut ett värde: fält_namn=värde"
+
+#: templates/iommi/query/advanced.html:28
+#, fuzzy
+#| msgid ""
+#| "You can also use &lt;, &gt;, &lt;= and &gt;= to find ranges of values: "
+#| "field_name&lt;10"
+msgid ""
+"You can also use <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code> "
+"and <code>&gt;=</code> to find ranges of values: <code>field_name&lt;10</"
+"code>"
+msgstr ""
+"Du kan också använda &lt;, &gt;, &lt;= and &gt;= för att filtrera ut "
+"intervall: fält_namn&lt;10"
+
+#: templates/iommi/query/advanced.html:29
+#, fuzzy
+#| msgid "To search for dates, use ISO8601 format: field_name>1969-07-20"
+msgid ""
+"To search for dates, use ISO8601 format: <code>field_name>1969-07-20</code>"
+msgstr "För att söka efter datum, använd ISO8601-format: fält_namn>1969-07-20"
+
+#: templates/iommi/query/advanced.html:30
+#, fuzzy
+#| msgid ""
+#| "You can filter for relative dates: field_name < \"10 days ago\". "
+#| "Supported fields are days, months, years, quarters and weekdays. They can "
+#| "be negative and abbreviated from \"10 days ago\" to \"-10d\"."
+msgid ""
+"You can filter for relative dates: <code>field_name < \"10 days ago\"</"
+"code>. Supported fields are <code>days</code>, <code>months</code>, "
+"<code>years</code>, <code>quarters</code> and <code>weekdays</code>. They "
+"can be negative and abbreviated from <code>\"10 days ago\"</code> to <code>"
+"\"-10d\"</code>."
+msgstr ""
+"Du kan filtrera på relativa datum: fält_namn < \"10 days ago\". Enheter som "
+"stöds är days, months, years, quarters and weekdays. Dom kan vara negativa "
+"och förkortas från \"10 days ago\" to \"-10d\"."
+
+#: templates/iommi/query/form_toggle_script.html:17
+msgid "Switch to basic search"
+msgstr "Byt till enkel sökning"
+
+#: templates/iommi/query/form_toggle_script.html:42
+msgid "Hide help"
+msgstr "Göm hjälp"
