@@ -1,0 +1,6 @@
+
+[notifications]
+cryptography>=3.1
+oscrypto
+http_ece
+protobuf<=3.20
