@@ -1,0 +1,3 @@
+[console_scripts]
+pyhamilton-config = pyhamilton.__init__:autoconfig
+pyhamilton-quickstart = pyhamilton.cmd.quickstart:main
