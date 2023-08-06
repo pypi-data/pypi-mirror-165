@@ -1,0 +1,4 @@
+numpy>=1.22
+ismrmrd>=1.12.5
+pyFFTW>=0.11
+multimethod>=1.0

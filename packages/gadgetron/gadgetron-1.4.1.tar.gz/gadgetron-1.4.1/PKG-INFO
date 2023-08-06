@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: gadgetron
+Version: 1.4.1
+Summary: Python interface for Gadgetron
+Home-page: 
+Author: Kristoffer Langeland Knudsen
+Author-email: kristofferlknudsen@gradientsoftware.net
+License: MIT
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Gadgetron Python
+
+Python interface for Gadgetron.
