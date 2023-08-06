@@ -1,0 +1,3 @@
+[console_scripts]
+runaa-cli=run_across_america.cli:main
+
