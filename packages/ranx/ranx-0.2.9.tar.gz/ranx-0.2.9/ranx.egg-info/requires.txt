@@ -1,0 +1,10 @@
+numpy
+numba>=0.54.1
+pandas
+tabulate
+tqdm
+scipy>=1.6.0
+statsmodels
+ir_datasets
+rich
+orjson
