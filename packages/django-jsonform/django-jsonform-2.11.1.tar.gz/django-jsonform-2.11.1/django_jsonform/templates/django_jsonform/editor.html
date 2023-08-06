@@ -1,0 +1,42 @@
+<div id="id_{{ name }}_jsonform"></div>
+
+<textarea cols="40" id="id_{{ name }}" name="{{ name }}" rows="10" required="" style="display: none;">{{ data }}</textarea>
+
+<script>
+(function() {
+    function initJSONForm(inlineIndex) {
+        var config = {
+            containerId: 'id_{{ name }}_jsonform',
+            dataInputId: 'id_{{ name }}',
+            fileHandler: '{{ file_handler }}',
+            fieldName: '{{ name }}',
+            modelName: '{{ model_name }}',
+            schema: JSON.parse('{{ schema|escapejs }}'),
+            data: JSON.parse('{{ data|escapejs }}'),
+        };
+
+        if (config.containerId.indexOf('__prefix__') > -1) {
+            if (inlineIndex !== undefined && inlineIndex !== null) {
+                config.containerId = config.containerId.replace('__prefix__', inlineIndex);
+                config.dataInputId = config.dataInputId.replace('__prefix__', inlineIndex);
+            }
+        }
+
+        if (config.containerId.indexOf('__prefix__') === -1) {
+            var jsonForm = reactJsonForm.createForm(config);
+            jsonForm.render();
+        }
+    }
+
+    if ('{{ name }}'.indexOf('__prefix__') > -1) {
+        // this is an unrendered inline formset
+        django.jQuery(document).on('formset:added', function(e, row, id_prefix) {
+            // extract current inline's index and pass it to initJSONForm
+            initJSONForm(row[0].id.split('-').pop());
+        });
+    }
+    else {
+        initJSONForm();
+    }
+})();
+</script>
