@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "hotjar-data-wrapper"
+version = "0.1.0"
+description = "a wrapper for using Hotjar APIs"
+authors = ["Tobias McVey <tobias.mcvey@nav.no>"]
+license = "MIT"
+readme="README.md"
+homepage = "https://github.com/navikt/hotjar-data-wrapper"
+repository = "https://github.com/navikt/hotjar-data-wrapper"
+documentation = "https://github.com/navikt/hotjar-data-wrapper"
+
+keywords = ["Hotjar"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+requests = "^2.28.1"
+tqdm = "^4.64.0"
+
+[tool.poetry.dev-dependencies]
+ipykernel = "^6.15.1"
+black = "^22.6.0"
+twine = "^4.0.1"
+keyring = "^23.8.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
