@@ -1,0 +1,3 @@
+[console_scripts]
+rdf-sql-bulkloader=rdf_sql_bulkloader.cli:main
+
