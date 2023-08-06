@@ -1,0 +1,83 @@
+name: Main
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  black:
+    name: Black
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+      - uses: actions/checkout@v2
+      - name: Black
+        run: |
+          pip install black
+          black . --check
+  flake8:
+    name: Flake8
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+      - uses: actions/checkout@v2
+      - name: Flake8
+        run: |
+          pip install flake8 flake8-docstrings
+          flake8 .
+  mypy:
+    name: Mypy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+      - uses: actions/checkout@v2
+      - name: Mypy
+        run: |
+          pip install -r tests/requirements.txt
+          pip install mypy
+          pip install types-requests
+          mypy src
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.9', '3.10']
+    name: Python ${{ matrix.python-version }}
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v1
+      with:
+        python-version: ${{ matrix.python-version }}
+        architecture: x64
+    - run: |
+        pip install nox
+        nox --session --python ${{ matrix.python-version }}
+  release:
+    name: Python Semantic Release
+    runs-on: ubuntu-latest
+    concurrency: release
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Python Semantic Release
+        uses: relekang/python-semantic-release@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          repository_username: __token__
+          repository_password: ${{ secrets.PYPI_TOKEN }}
+    needs:
+      - black
+      - flake8
+      - mypy
+      - test
