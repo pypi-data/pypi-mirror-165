@@ -1,0 +1,14 @@
+pyproject.toml
+setup.py
+paper_cli.egg-info/PKG-INFO
+paper_cli.egg-info/SOURCES.txt
+paper_cli.egg-info/dependency_links.txt
+paper_cli.egg-info/entry_points.txt
+paper_cli.egg-info/requires.txt
+paper_cli.egg-info/top_level.txt
+papercli/__init__.py
+papercli/__main__.py
+papercli/api.py
+papercli/papercli.py
+papercli/save.py
+papercli/textgen.py
