@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: ghcTestPkg
+Version: 0.1.4
+Summary: to test how to release a pkg
+Home-page: https://github.com/LimerenceGL/ghcTestPkg.git
+Author: ghc
+Author-email: g51301727@gmail.com
+License: UNKNOWN
+Description: # ghcTestPkg
+        try to release this pkg on PyPI
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
