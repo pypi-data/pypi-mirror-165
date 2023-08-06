@@ -1,0 +1,4 @@
+jsii<2.0.0,>=1.66.0
+projen<0.62.0,>=0.61.37
+publication>=0.0.3
+typeguard~=2.13.3
