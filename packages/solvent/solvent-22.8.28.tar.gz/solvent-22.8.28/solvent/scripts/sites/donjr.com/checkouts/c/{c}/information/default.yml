@@ -1,0 +1,75 @@
+locators:
+  inclusions:
+    - mode: ''
+      value: ''
+      index: 0
+      uses: 0
+  exclusions:
+    - mode: ''
+      value: ''
+      index: 0
+      uses: 0
+actions:
+  - verb: ''
+    name: ''
+    locators:
+      - mode: ''
+        value: ''
+        index: 0
+        uses: 0
+  - verb: fill
+    name: email
+    locators:
+      - mode: name
+        value: email
+        index: 0
+        uses: 2
+  - verb: fill
+    name: first_name
+    locators:
+      - mode: name
+        value: firstName
+        index: 0
+        uses: 2
+  - verb: fill
+    name: last_name
+    locators:
+      - mode: name
+        value: lastName
+        index: 0
+        uses: 2
+  - verb: fill
+    name: address
+    locators:
+      - mode: id
+        value: address1
+        index: 0
+        uses: 2
+  - verb: type
+    name: enter
+    locators:
+      - mode: ''
+        value: ''
+        index: 0
+        uses: 0
+  - verb: type
+    name: tab
+    locators:
+      - mode: ''
+        value: ''
+        index: 0
+        uses: 0
+  - verb: type
+    name: down
+    locators:
+      - mode: ''
+        value: ''
+        index: 0
+        uses: 0
+  - verb: click
+    name: continue_to_shipping
+    locators:
+      - mode: value
+        value: Continue to shipping
+        index: 0
+        uses: 2

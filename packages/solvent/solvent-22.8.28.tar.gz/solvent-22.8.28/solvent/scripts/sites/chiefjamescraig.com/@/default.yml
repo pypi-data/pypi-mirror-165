@@ -1,0 +1,132 @@
+locators:
+  inclusions:
+    - mode: ''
+      value: ''
+      index: 0
+      uses: 0
+  exclusions:
+    - mode: ''
+      value: ''
+      index: 0
+      uses: 0
+actions:
+  - verb: ''
+    name: ''
+    locators:
+      - mode: ''
+        value: ''
+        index: 0
+        uses: 0
+  - verb: fill
+    name: first_name
+    locators:
+      - mode: id
+        value: input_11_1
+        index: 0
+        uses: 2
+  - verb: fill
+    name: email_address
+    locators:
+      - mode: ''
+        value: ''
+        index: 0
+        uses: 0
+      - mode: name
+        value: email_address
+        index: 0
+        uses: -1
+      - mode: name
+        value: email-address
+        index: 0
+        uses: -1
+      - mode: id
+        value: email_address
+        index: 0
+        uses: -1
+      - mode: id
+        value: email-address
+        index: 0
+        uses: -1
+      - mode: aria-label
+        value: Email Address
+        index: 0
+        uses: -1
+      - mode: css
+        value: '[placeholder="Email Address"]'
+        index: 0
+        uses: -1
+      - mode: id
+        value: EmailAddress
+        index: 0
+        uses: -1
+      - mode: id
+        value: input_11_2
+        index: 0
+        uses: 1
+  - verb: click
+    name: submit
+    locators:
+      - mode: value
+        value: Submit
+        index: 0
+        uses: 2
+  - verb: fill
+    name: name
+    locators:
+      - mode: ''
+        value: ''
+        index: 0
+        uses: 0
+      - mode: name
+        value: name
+        index: 0
+        uses: -1
+      - mode: name
+        value: name
+        index: 0
+        uses: -1
+      - mode: id
+        value: name
+        index: 0
+        uses: -1
+      - mode: id
+        value: name
+        index: 0
+        uses: -1
+      - mode: aria-label
+        value: Name
+        index: 0
+        uses: -1
+      - mode: css
+        value: '[placeholder="Name"]'
+        index: 0
+        uses: -1
+      - mode: id
+        value: Name
+        index: 0
+        uses: -1
+      - mode: id
+        value: input_11_1
+        index: 0
+        uses: 1
+  - verb: fill
+    name: email
+    locators:
+      - mode: id
+        value: input_11_2
+        index: 0
+        uses: 2
+  - verb: fill
+    name: phone
+    locators:
+      - mode: id
+        value: input_11_3
+        index: 0
+        uses: 2
+  - verb: click
+    name: optional
+    locators:
+      - mode: id
+        value: input_11_4_1
+        index: 0
+        uses: 2

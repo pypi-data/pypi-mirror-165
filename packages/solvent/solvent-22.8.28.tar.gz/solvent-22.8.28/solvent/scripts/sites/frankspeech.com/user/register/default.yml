@@ -1,0 +1,119 @@
+locators:
+  inclusions:
+    - mode: ''
+      value: ''
+      index: 0
+      uses: 0
+  exclusions:
+    - mode: ''
+      value: ''
+      index: 0
+      uses: 0
+actions:
+  - verb: ''
+    name: ''
+    locators:
+      - mode: ''
+        value: ''
+        index: 0
+        uses: 0
+  - verb: fill
+    name: phone_number
+    locators:
+      - mode: id
+        value: edit-field-phone-number-0-value
+        index: 0
+        uses: 2
+  - verb: fill
+    name: email_address
+    locators:
+      - mode: id
+        value: edit-mail
+        index: 0
+        uses: 2
+  - verb: fill
+    name: password
+    locators:
+      - mode: ''
+        value: ''
+        index: 0
+        uses: 0
+      - mode: name
+        value: password
+        index: 0
+        uses: -6
+      - mode: name
+        value: password
+        index: 0
+        uses: -6
+      - mode: id
+        value: password
+        index: 0
+        uses: -6
+      - mode: id
+        value: password
+        index: 0
+        uses: -6
+      - mode: aria-label
+        value: Password
+        index: 0
+        uses: -6
+      - mode: css
+        value: '[placeholder="Password"]'
+        index: 0
+        uses: -6
+      - mode: id
+        value: Password
+        index: 0
+        uses: -6
+      - mode: id
+        value: edit-pass-pass1
+        index: 0
+        uses: -6
+      - mode: id
+        value: edit-pass-pass1
+        index: 0
+        uses: -5
+      - mode: id
+        value: edit-pass-pass1
+        index: 0
+        uses: -5
+      - mode: id
+        value: edit-pass-pass1
+        index: 0
+        uses: -2
+  - verb: fill
+    name: confirm_password
+    locators:
+      - mode: id
+        value: edit-pass-pass2
+        index: 0
+        uses: 2
+  - verb: click
+    name: create_new_account
+    locators:
+      - mode: text
+        value: Create new account
+        index: 0
+        uses: 2
+  - verb: click
+    name: accept
+    locators:
+      - mode: id
+        value: edit-field-phone-confirm-value
+        index: 0
+        uses: 2
+  - verb: fill
+    name: username
+    locators:
+      - mode: id
+        value: edit-name
+        index: 0
+        uses: 2
+  - verb: type
+    name: tab
+    locators:
+      - mode: ''
+        value: ''
+        index: 0
+        uses: 0

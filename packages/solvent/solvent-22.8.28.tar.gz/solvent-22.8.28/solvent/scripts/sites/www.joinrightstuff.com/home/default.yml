@@ -1,0 +1,171 @@
+locators:
+  inclusions:
+    - mode: ''
+      value: ''
+      index: 0
+      uses: 0
+  exclusions:
+    - mode: ''
+      value: ''
+      index: 0
+      uses: 0
+actions:
+  - verb: ''
+    name: ''
+    locators:
+      - mode: ''
+        value: ''
+        index: 0
+        uses: 0
+  - verb: click
+    name: sign_up
+    locators:
+      - mode: value
+        value: SIGN UP FOR EARLY ACCESS
+        index: 1
+        uses: 2
+  - verb: fill
+    name: full_name
+    locators:
+      - mode: ''
+        value: ''
+        index: 0
+        uses: 0
+      - mode: name
+        value: full_name
+        index: 0
+        uses: -1
+      - mode: name
+        value: full-name
+        index: 0
+        uses: -1
+      - mode: id
+        value: full_name
+        index: 0
+        uses: -1
+      - mode: id
+        value: full-name
+        index: 0
+        uses: -1
+      - mode: aria-label
+        value: Full Name
+        index: 0
+        uses: -1
+      - mode: css
+        value: '[placeholder="Full Name"]'
+        index: 0
+        uses: -1
+      - mode: id
+        value: FullName
+        index: 0
+        uses: -1
+      - mode: name
+        value: name
+        index: 0
+        uses: 1
+  - verb: fill
+    name: email_address
+    locators:
+      - mode: ''
+        value: ''
+        index: 0
+        uses: 0
+      - mode: name
+        value: email_address
+        index: 0
+        uses: -1
+      - mode: name
+        value: email-address
+        index: 0
+        uses: -1
+      - mode: id
+        value: email_address
+        index: 0
+        uses: -1
+      - mode: id
+        value: email-address
+        index: 0
+        uses: -1
+      - mode: aria-label
+        value: Email Address
+        index: 0
+        uses: -1
+      - mode: css
+        value: '[placeholder="Email Address"]'
+        index: 0
+        uses: -1
+      - mode: id
+        value: EmailAddress
+        index: 0
+        uses: -1
+      - mode: name
+        value: email
+        index: 1
+        uses: 1
+  - verb: fill
+    name: zip_code
+    locators:
+      - mode: ''
+        value: ''
+        index: 0
+        uses: 0
+      - mode: name
+        value: zip_code
+        index: 0
+        uses: -1
+      - mode: name
+        value: zip-code
+        index: 0
+        uses: -1
+      - mode: id
+        value: zip_code
+        index: 0
+        uses: -1
+      - mode: id
+        value: zip-code
+        index: 0
+        uses: -1
+      - mode: aria-label
+        value: Zip Code
+        index: 0
+        uses: -1
+      - mode: css
+        value: '[placeholder="Zip Code"]'
+        index: 0
+        uses: -1
+      - mode: id
+        value: ZipCode
+        index: 0
+        uses: -1
+      - mode: name
+        value: zip
+        index: 0
+        uses: 1
+  - verb: fill
+    name: name
+    locators:
+      - mode: name
+        value: name
+        index: 0
+        uses: 2
+  - verb: fill
+    name: email
+    locators:
+      - mode: name
+        value: email
+        index: 1
+        uses: 2
+  - verb: fill
+    name: zip
+    locators:
+      - mode: name
+        value: zip
+        index: 0
+        uses: 2
+  - verb: click
+    name: sign_up_for_early_access
+    locators:
+      - mode: value
+        value: SIGN UP FOR EARLY ACCESS
+        index: 0
+        uses: 2

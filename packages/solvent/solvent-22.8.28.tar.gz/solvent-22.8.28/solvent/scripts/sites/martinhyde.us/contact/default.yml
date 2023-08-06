@@ -1,0 +1,54 @@
+locators:
+  inclusions:
+    - mode: ''
+      value: ''
+      index: 0
+      uses: 0
+  exclusions:
+    - mode: ''
+      value: ''
+      index: 0
+      uses: 0
+actions:
+  - verb: ''
+    name: ''
+    locators:
+      - mode: ''
+        value: ''
+        index: 0
+        uses: 0
+  - verb: fill
+    name: first_name
+    locators:
+      - mode: id
+        value: forminator-field-name-1
+        index: 0
+        uses: 1
+  - verb: fill
+    name: email_address
+    locators:
+      - mode: id
+        value: forminator-field-email-1
+        index: 0
+        uses: 2
+  - verb: fill
+    name: phone_number
+    locators:
+      - mode: id
+        value: forminator-field-phone-1
+        index: 0
+        uses: 2
+  - verb: fill
+    name: message
+    locators:
+      - mode: id
+        value: forminator-field-textarea-1
+        index: 0
+        uses: 2
+  - verb: click
+    name: send_message
+    locators:
+      - mode: text
+        value: Send Message
+        index: 0
+        uses: 2

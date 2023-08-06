@@ -1,0 +1,47 @@
+locators:
+  inclusions:
+    - mode: ''
+      value: ''
+      index: 0
+      uses: 0
+  exclusions:
+    - mode: ''
+      value: ''
+      index: 0
+      uses: 0
+actions:
+  - verb: ''
+    name: ''
+    locators:
+      - mode: ''
+        value: ''
+        index: 0
+        uses: 0
+  - verb: fill
+    name: phone_number
+    locators:
+      - mode: id
+        value: number
+        index: 0
+        uses: 88
+  - verb: click
+    name: submit
+    locators:
+      - mode: text
+        value: Submit
+        index: 0
+        uses: 84
+  - verb: click
+    name: sign_up
+    locators:
+      - mode: text
+        value: Sign up
+        index: 0
+        uses: 2
+  - verb: click
+    name: profile
+    locators:
+      - mode: css
+        value: .fa-user
+        index: 0
+        uses: 2

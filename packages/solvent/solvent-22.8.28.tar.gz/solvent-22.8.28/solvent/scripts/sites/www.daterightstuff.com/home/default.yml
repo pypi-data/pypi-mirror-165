@@ -1,0 +1,54 @@
+locators:
+  inclusions:
+    - mode: ''
+      value: ''
+      index: 0
+      uses: 0
+  exclusions:
+    - mode: ''
+      value: ''
+      index: 0
+      uses: 0
+actions:
+  - verb: ''
+    name: ''
+    locators:
+      - mode: ''
+        value: ''
+        index: 0
+        uses: 0
+  - verb: click
+    name: sign_up_for_early_access
+    locators:
+      - mode: id
+        value: undefined-210
+        index: 0
+        uses: 2
+  - verb: fill
+    name: name
+    locators:
+      - mode: name
+        value: name
+        index: 0
+        uses: 2
+  - verb: fill
+    name: email
+    locators:
+      - mode: name
+        value: email
+        index: 1
+        uses: 2
+  - verb: fill
+    name: zip
+    locators:
+      - mode: name
+        value: zip
+        index: 0
+        uses: 2
+  - verb: click
+    name: sign_up
+    locators:
+      - mode: id
+        value: undefined-226
+        index: 0
+        uses: 2

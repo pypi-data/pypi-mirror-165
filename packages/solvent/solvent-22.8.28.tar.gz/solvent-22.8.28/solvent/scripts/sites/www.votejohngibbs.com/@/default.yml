@@ -1,0 +1,70 @@
+locators:
+  inclusions:
+    - mode: ''
+      value: ''
+      index: 0
+      uses: 0
+  exclusions:
+    - mode: ''
+      value: ''
+      index: 0
+      uses: 0
+actions:
+  - verb: ''
+    name: ''
+    locators:
+      - mode: ''
+        value: ''
+        index: 0
+        uses: 0
+  - verb: click
+    name: continue_to_site
+    locators:
+      - mode: ''
+        value: ''
+        index: 0
+        uses: 0
+      - mode: text
+        value: Continue To Site
+        index: 0
+        uses: -1
+      - mode: text
+        value: Continue to site
+        index: 0
+        uses: -1
+      - mode: text
+        value: continue to site
+        index: 0
+        uses: -1
+      - mode: value
+        value: Continue To Site
+        index: 0
+        uses: -1
+      - mode: value
+        value: Continue to site
+        index: 0
+        uses: -1
+      - mode: value
+        value: continue to site
+        index: 0
+        uses: -1
+      - mode: text (partial)
+        value: Continue To Site
+        index: 0
+        uses: -1
+      - mode: text (partial)
+        value: Continue to site
+        index: 0
+        uses: -1
+      - mode: text (partial)
+        value: continue to site
+        index: 0
+        uses: -1
+      - mode: tag
+        value: a
+        index: 1
+        uses: -1
+      - mode: css
+        value: '[data-testid="richTextElement"]'
+        index: 0
+        uses: 1
