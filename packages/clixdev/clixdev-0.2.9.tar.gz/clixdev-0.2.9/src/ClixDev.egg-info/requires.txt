@@ -1,0 +1,5 @@
+setuptools
+wheel
+django
+psutil
+requests
