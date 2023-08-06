@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: aigov-libs
+Version: 1.1.5
+Summary: aigov_libs
+Author: IBM
+License: UNKNOWN
+Keywords: AI,Watson,IBM,AI Governance
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: timeout-decorator
+Requires-Dist: astunparse
+
+# aigov_libs
+
+A library for tracking and summarizing data lineages.
+
+## Documentation
+
+TBD
+
+## License
+
+This library is delivered under the [International License Agreement for Non-Warranted Programs](https://www14.software.ibm.com/cgi-bin/weblap/lap.pl?li_formnum=L-DHMI-CEQ82R).
+
+
+
