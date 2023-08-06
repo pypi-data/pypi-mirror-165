@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dash-dashy"
+version = "0.0.1"
+description = "Easy-to-use data visualization framework"
+readme = "README.md"
+authors = [{ name = "Toni Axelsson", email = "toniaxelsson@gmail.com" }]
+license = { file = "LICENSE" }
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+keywords = ["visualization", "web", "data science"]
+dependencies = [
+    "dash >= 2.6.1",
+    "dash-bootstrap-components >= 1.2.1",
+    "libsass >= 0.21.0",
+    "pandas >= 1.4.3"
+]
+requires-python = ">=3.9"
+
+[project.optional-dependencies]
+dev = ["flake8", "pytest"]
+
+[project.urls]
+homepage = "https://github.com/wynss/dashy"
+
+[project.scripts]
+dashy = "dashy.__main__:description"

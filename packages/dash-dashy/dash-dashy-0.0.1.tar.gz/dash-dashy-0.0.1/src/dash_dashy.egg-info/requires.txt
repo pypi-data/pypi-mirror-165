@@ -1,0 +1,8 @@
+dash>=2.6.1
+dash-bootstrap-components>=1.2.1
+libsass>=0.21.0
+pandas>=1.4.3
+
+[dev]
+flake8
+pytest
