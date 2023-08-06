@@ -1,0 +1,19 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+[project]
+name = "c_sqlite3"
+version = "0.0.1"
+authors = [
+  { name="北悸安凉", email="2591623190@qq.com" },
+]
+description = "一个方便本人操作sqlite的api集"
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
