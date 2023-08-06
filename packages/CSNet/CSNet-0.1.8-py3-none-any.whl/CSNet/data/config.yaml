@@ -1,0 +1,57 @@
+input_dir:
+  desc: The path of dataset.
+  value: null
+scheduler_gamma:
+  desc: The decaying factor associated with the scheduler.
+  value: 0.93
+weight_decay:
+  desc: Weight decay is a regularization technique by adding a small penalty, usually the L2 norm of the weights.
+  value: 0.0
+LR:
+  desc: Value of learning rate
+  value: 0.001
+hidden_dim:
+  desc: Number of hidden channels
+  value: 500
+m_dim:
+  desc: Number of measurement channels
+  value: 20
+snr:
+  desc: The signal-to-noise ratio of the data during training
+  value: 5
+lambda_sparsity:
+  desc: Coefficient of sparsity_loss
+  value: 0.0
+lambda_cos:
+  desc: Coefficient of cos_loss
+  value: 0.0
+step:
+  desc: Step of task
+  value: 1
+t_decay:
+  desc: decay rate of t of gumbel-signmoid
+  value: 0.98
+num_workers:
+  desc: Number of dataload
+  value: 4
+batch_size:
+  desc: Size of mini-batch
+  value: 128
+max_epochs:
+  desc: Max epochs
+  value: 100
+manual_seed:
+  desc: Fixed random seed
+  value: 2022
+model_path:
+  desc: Path of model
+  value: null
+patience:
+  desc: Number of checks with no improvement after which training will be stopped
+  value: 5
+bias:
+  desc: Coefficient of phi of density  
+  value: 3.0
+phi_times:
+  desc: Times of phi search
+  value: 30
