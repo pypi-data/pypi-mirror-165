@@ -1,0 +1,3 @@
+[console_scripts]
+armc2yaml = FOX.entry_points:main_armc2yaml
+init_armc = FOX.entry_points:main_armc
