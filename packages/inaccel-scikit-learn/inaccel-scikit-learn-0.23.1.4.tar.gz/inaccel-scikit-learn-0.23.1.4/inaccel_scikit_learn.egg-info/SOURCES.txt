@@ -1,0 +1,17 @@
+LICENSE
+NOTICE
+README.md
+setup.py
+inaccel/sklearn/__init__.py
+inaccel/sklearn/naive_bayes.py
+inaccel/sklearn/cluster/__init__.py
+inaccel/sklearn/cluster/_kmeans.py
+inaccel/sklearn/linear_model/__init__.py
+inaccel/sklearn/linear_model/_logistic.py
+inaccel_scikit_learn.egg-info/PKG-INFO
+inaccel_scikit_learn.egg-info/SOURCES.txt
+inaccel_scikit_learn.egg-info/dependency_links.txt
+inaccel_scikit_learn.egg-info/namespace_packages.txt
+inaccel_scikit_learn.egg-info/requires.txt
+inaccel_scikit_learn.egg-info/top_level.txt
+inaccel_scikit_learn.egg-info/zip-safe
