@@ -1,0 +1,17 @@
+COPYING.md
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+fps_auth_fief/__init__.py
+fps_auth_fief/backend.py
+fps_auth_fief/config.py
+fps_auth_fief/models.py
+fps_auth_fief/routes.py
+fps_auth_fief.egg-info/PKG-INFO
+fps_auth_fief.egg-info/SOURCES.txt
+fps_auth_fief.egg-info/dependency_links.txt
+fps_auth_fief.egg-info/entry_points.txt
+fps_auth_fief.egg-info/requires.txt
+fps_auth_fief.egg-info/top_level.txt
