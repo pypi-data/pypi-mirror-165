@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: vivi
+Version: 0.1.1
+Summary: 
+License: MIT
+Author: Daan van der Kallen
+Author-email: mail@daanvdk.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: starlette (>=0.20.4,<0.21.0)
