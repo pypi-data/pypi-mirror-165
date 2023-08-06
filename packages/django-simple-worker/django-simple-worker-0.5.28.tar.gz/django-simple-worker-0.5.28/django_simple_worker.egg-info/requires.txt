@@ -1,0 +1,3 @@
+django
+apscheduler
+sentry-sdk

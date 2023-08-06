@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: django-simple-worker
+Version: 0.5.28
+Summary: Django Simple Worker
+Home-page: https://www.idea-loop.com/
+Author: idealoop
+Author-email: noreply@idea-loop.com
+License: MIT
+Description-Content-Type: text/markdown
+
+
+# Django Simple Worker
+
+
+#### Installation
+```shell
+pip install django-simple-worker
+```
+
+Add to installed apps:
+```python
+INSTALLED_APPS = [
+    'simpleworker',
+]
+```
+
+Add to your urls (optional):
+```python
+path('simpleworker/', include(('simpleworker.urls', 'simpleworker'), namespace='simpleworker')),
+```
+
+#### Configuration
+Add to Django settings:
+```python
+SIMPLE_WORKER_SYNC_PROCESSING = env.bool('SIMPLE_WORKER_SYNC_PROCESSING', default=False)
+```
+
+#### Usage
+TODO
