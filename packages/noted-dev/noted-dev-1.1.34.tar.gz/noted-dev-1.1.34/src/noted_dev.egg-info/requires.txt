@@ -1,0 +1,7 @@
+wheel==0.37.1
+setuptools==65.3.0
+numpy==1.23.2
+pandas==1.4.3
+PyYAML==6.0
+sendmail==2.0
+sense-o-api==1.24

@@ -1,0 +1,11 @@
+include \
+    COPYRIGHT.txt \
+    LICENCE.txt \
+    Makefile \
+    MANIFEST.in \
+    README.md \
+    requirements.txt \
+    setup.cfg \
+    setup.py \
+    
+graft src/noted/

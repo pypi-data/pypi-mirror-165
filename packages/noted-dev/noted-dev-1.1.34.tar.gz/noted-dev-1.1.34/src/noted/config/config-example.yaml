@@ -1,0 +1,27 @@
+# © Copyright 2022 CERN. This software is distributed under the terms of
+# the GNU General Public Licence version 3 (GPL Version 3), copied verbatim
+# in the file "LICENCE.txt". In applying this licence, CERN does not waive
+# the privileges and immunities granted to it by virtue of its status as an
+# Intergovernmental Organization or submit itself to any jurisdiction.
+
+#
+# NOTED
+# CONFIGURATION FILE
+# PARAMETERS TO SET UP BY THE USER
+#
+src_rcsite: ['rc_site_1', 'rc_site_2', 'rc_site_3', 'rc_site_4'] # Source RC_Sites
+dst_rcsite: ['rc_site_1', 'rc_site_2', 'rc_site_3', 'rc_site_4'] # Destination RC_Sites
+events_to_wait_until_notification: 5     # Number of events to wait until send an email for notification
+max_throughput_threshold_link    : 5     # Maximum throughput threshold for the link [Gb/s]: the 'START' notification will be generated if throughput > max_throughput_threshold_link
+min_throughput_threshold_link    : 2     # Minimum throughput threshold for the link [Gb/s]: the 'STOP'  notification will be generated if throughput < min_throughput_threshold_link
+unidirectional_link              : False # If False both TX and RX paths will be monitoring: {src -> dst}, {dst -> src}
+number_of_dynamic_circuits       : 2     # Number of dynamic circuits that are available in the link
+sense_uuid                       : 'sense_uuid_1' # Sense-o UUID dynamic circuit
+sense_vlan                       : 'vlan_description_1' # VLAN description
+sense_uuid_2                     : 'sense_uuid_2' # Sense-o UUID dynamic circuit
+sense_vlan_2                     : 'vlan_description_2' # VLAN description
+from_email_address               : 'email_1' # Email address where the email notification will came from
+to_email_address                 : 'email_1, email_2' # Email address to send notification
+subject_email                    : 'subject' # Subject of the email
+message_email                    : "message" # Custom message to be send on the email [double quotes for \n]
+auth_token                       : auth_token # Authenticantion token

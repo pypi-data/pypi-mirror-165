@@ -1,0 +1,27 @@
+# © Copyright 2022 CERN. This software is distributed under the terms of 
+# the GNU General Public Licence version 3 (GPL Version 3), copied verbatim 
+# in the file "LICENCE.txt". In applying this licence, CERN does not waive 
+# the privileges and immunities granted to it by virtue of its status as an 
+# Intergovernmental Organization or submit itself to any jurisdiction.
+
+#
+# NOTED
+# CONFIGURATION FILE FOR ALL
+# PARAMETERS TO SET UP BY THE USER
+#
+src_rcsite: ['FZK-LCG2', 'CERN-PROD', 'pic', 'ifae', 'RAL-LCG2', 'IN2P3-CC', 'SARA-MATRIX', 'RRC-KI-T1', 'INFN-T1', 'NIKHEF-ELPROD', 'NDGF-T1', 'Taiwan-LCG2'] # Source RC_Sites
+dst_rcsite: ['FZK-LCG2', 'CERN-PROD', 'pic', 'ifae', 'RAL-LCG2', 'IN2P3-CC', 'SARA-MATRIX', 'RRC-KI-T1', 'INFN-T1', 'NIKHEF-ELPROD', 'NDGF-T1', 'Taiwan-LCG2'] # Destination RC_Sites
+events_to_wait_until_notification: 1     # Number of events to wait until send an email for notification
+max_throughput_threshold_link    : 5     # Maximum throughput threshold for the link [Gb/s]: the 'START' notification will be generated if throughput > max_throughput_threshold_link
+min_throughput_threshold_link    : 100   # Minimum throughput threshold for the link [Gb/s]: the 'STOP'  notification will be generated if throughput < min_throughput_threshold_link
+unidirectional_link              : False # If False both TX and RX paths will be monitoring: {src -> dst}, {dst -> src}
+number_of_dynamic_circuits       : 1     # Number of dynamic circuits that are available in the link
+sense_uuid                       : 'd5ce78b8-95f7-405a-b286-f91035475f6d' # VLAN 3694: sense-o UUID dynamic circuit
+sense_vlan                       : 'VLAN_3694' # VLAN description
+sense_uuid_2                     : '' # VLAN 20245: sense-o UUID dynamic circuit
+sense_vlan_2                     : '' # VLAN description
+from_email_address               : 'noted@cern.ch' # Email address where the email notification will came from
+to_email_address                 : 'carmen.misa.moreira@cern.ch' # Email address to send notification
+subject_email                    : '[NOTED] Notification' # Subject of the email
+message_email                    : "Hi,\n\nNew transfer detected...\n\n" # Custom message to be send on the email
+auth_token                       : eyJrIjoiNlQ5a2h3bUFDd3BsNDBrZzRpREJ3MTRKRGtJd3NVOFoiLCJuIjoiZnRzX25vdGVkX25ldyIsImlkIjoyNX0= # Authenticantion token

@@ -1,0 +1,1733 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>main API documentation</title>
+<meta name="description" content="**NOTED: a framework to optimise network traffic via the analysis of data from File Transfer Services.** …" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>main</code></h1>
+</header>
+<section id="section-intro">
+<h2 id="noted-a-framework-to-optimise-network-traffic-via-the-analysis-of-data-from-file-transfer-services"><strong>NOTED: a framework to optimise network traffic via the analysis of data from File Transfer Services.</strong></h2>
+<pre><code>Authors: 
+    * Carmen Misa Moreira
+    * Edoardo Martelli 
+
+Company: 
+    CERN (IT-CS-NE)
+</code></pre>
+<p><code>$ python3 main.py config-example.py [--verbosity debug/info/warning]</code></p>
+<pre><code>python3 main.py -h
+usage: main.py [-h] [-v VERBOSITY] config_file
+
+NOTED: a framework to optimise network traffic via the analysis of data from File Transfer Services.
+
+positional arguments:
+  config_file                           the name of the configuration file [config-example.yaml]
+
+optional arguments:
+  -h, --help                            show this help message and exit
+  -v VERBOSITY, --verbosity VERBOSITY   defines the logging level [debug, info, warning]
+</code></pre>
+<pre><code>Structure of the project:
+.
+├── TransferBroker.py
+├── __init__.py
+├── config
+│   └── config-example.yaml
+├── documentation
+│   ├── noted_main_function_documentation.pdf
+│   └── noted_transfer_broker_class_documentation.pdf
+├── html
+│   ├── TransferBroker.html
+│   └── main.html
+├── log
+│   ├── sense.log
+│   └── transfer_broker.log
+├── main.py
+├── noted_email.txt
+├── params
+│   └── params.ini
+├── plot_transfers.py
+├── query
+│   ├── query_monit_prod_fts_raw_queue_dst_rcsite
+│   └── query_monit_prod_fts_raw_queue_src_rcsite
+├── sense-o
+│   ├── sense-cancel.sh
+│   └── sense-provision.sh
+└── transfers
+    ├── transfer_broker_all_transfers.txt
+    ├── transfer_broker_dst_rcsite.txt
+    └── transfer_broker_src_rcsite.txt
+</code></pre>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">&#34;&#34;&#34;
+## **NOTED: a framework to optimise network traffic via the analysis of data from File Transfer Services.**
+
+```
+Authors: 
+    * Carmen Misa Moreira
+    * Edoardo Martelli 
+
+Company: 
+    CERN (IT-CS-NE)
+```
+
+`$ python3 main.py config-example.py [--verbosity debug/info/warning]`
+
+```
+python3 main.py -h
+usage: main.py [-h] [-v VERBOSITY] config_file
+
+NOTED: a framework to optimise network traffic via the analysis of data from File Transfer Services.
+
+positional arguments:
+  config_file                           the name of the configuration file [config-example.yaml]
+
+optional arguments:
+  -h, --help                            show this help message and exit
+  -v VERBOSITY, --verbosity VERBOSITY   defines the logging level [debug, info, warning]
+```
+
+```
+Structure of the project:
+.
+├── TransferBroker.py
+├── __init__.py
+├── config
+│   └── config-example.yaml
+├── documentation
+│   ├── noted_main_function_documentation.pdf
+│   └── noted_transfer_broker_class_documentation.pdf
+├── html
+│   ├── TransferBroker.html
+│   └── main.html
+├── log
+│   ├── sense.log
+│   └── transfer_broker.log
+├── main.py
+├── noted_email.txt
+├── params
+│   └── params.ini
+├── plot_transfers.py
+├── query
+│   ├── query_monit_prod_fts_raw_queue_dst_rcsite
+│   └── query_monit_prod_fts_raw_queue_src_rcsite
+├── sense-o
+│   ├── sense-cancel.sh
+│   └── sense-provision.sh
+└── transfers
+    ├── transfer_broker_all_transfers.txt
+    ├── transfer_broker_dst_rcsite.txt
+    └── transfer_broker_src_rcsite.txt
+```
+&#34;&#34;&#34;
+
+__docformat__ = &#34;google&#34;
+
+import os
+import ssl
+import yaml
+import json
+import time
+import logging
+import configparser
+import threading
+import urllib.request
+import pandas  as pd
+from datetime  import datetime
+from threading import Thread
+from queue import LifoQueue
+from argparse import ArgumentParser
+from TransferBroker import TransferBroker # TransferBroker class
+
+pd.set_option(&#39;display.max_rows&#39;, None, &#39;display.max_columns&#39;, None)
+pd.set_option(&#39;expand_frame_repr&#39;, False)
+pd.set_option(&#39;display.width&#39;, None)
+
+class_transfer_broker_ = TransferBroker()
+
+def load_yaml(filename):
+    &#34;&#34;&#34;Function to load a yaml file.
+
+    Args:
+        filename (str): name of the yaml file.
+
+    Returns:
+        dict: data in a dictionary structure.
+    &#34;&#34;&#34;
+    with open(filename) as file:
+        data = yaml.load(file, Loader = yaml.FullLoader)
+        return data 
+
+def load_json_from_url(json_url):
+    &#34;&#34;&#34;Function to load a json file from URL.
+
+    Args:
+        json_url (str): url of the json file.
+
+    Returns:
+        dict: data in a dictionary structure.
+    &#34;&#34;&#34;
+    logging.debug(&#39;Loading JSON from URL: %s&#39; % json_url)
+    # Self signed certificate issue
+    ssl_context = ssl.create_default_context();
+    ssl_context.check_hostname = False
+    ssl_context.verify_mode = ssl.CERT_NONE
+    # Load json file from URL
+    with urllib.request.urlopen(json_url, context = ssl_context, timeout = None) as url:
+        data = json.loads(url.read().decode())
+        return data
+
+def get_subendpoints_rcsites(df_sub_endpoint):
+    &#34;&#34;&#34;Function to get sub-endpoints in rcsites.
+
+    Args:
+        df_sub_endpoint (dataframe): CRIC database sub-endpoints.
+
+    Returns:
+        list: endpoints of rc_site in a list structure.
+    &#34;&#34;&#34;
+    logging.debug(&#39;Querying CRIC database: get sub-endpoints rcsites.&#39;)
+    list_endpoints = []
+    # Iterate over services parameter
+    for i in range(df_sub_endpoint.shape[0]):
+        df_protocols = pd.DataFrame(df_sub_endpoint[&#39;protocols&#39;].values[i]).T
+        # Get endpoints
+        if &#39;endpoint&#39; in df_protocols.columns: df_endpoints = pd.DataFrame(df_protocols[&#39;endpoint&#39;].dropna().drop_duplicates().reset_index(drop = True))
+        else: continue # there are none endpoints
+        rcsite = df_sub_endpoint[&#39;rcsite&#39;].values[i]
+        federation = df_sub_endpoint[&#39;federation&#39;].values[i]
+        # Iterate over subendpoints parameter
+        for index, row in df_endpoints.iterrows():
+            items = pd.DataFrame(row.values.tolist())
+            for j in range(items.shape[1]):
+                if [items[j].values[0], rcsite] not in list_endpoints: list_endpoints.append([items[j].values[0], rcsite, federation])
+    return list_endpoints
+
+def get_endpoints_rcsites(df_cric_database, df_cric_endpoints):
+    &#34;&#34;&#34;Function to get endpoints and rcsites.
+
+    Args:
+        df_cric_database (dataframe): CRIC database.
+        df_cric_endpoints (dataframe): CRIC endpoints.
+
+    Returns:
+        dataframe: columns Rcsite, Federation and Endpoint of CRIC database in a dataframe structure.
+    &#34;&#34;&#34;
+    logging.debug(&#39;Querying CRIC database: get endpoints rcsites.&#39;)
+    # Separate the endpoints into two categories: endpoint and sub-endpoint
+    df_endpoint     = df_cric_endpoints[df_cric_endpoints[&#39;endpoint&#39;].notnull()]
+    df_sub_endpoint = df_cric_endpoints[df_cric_endpoints[&#39;endpoint&#39;].isnull()] # endpoints are in a sub-site
+    # Fill dataframe with the data from query
+    df_cric_database[&#39;Rcsite&#39;]     = df_endpoint[&#39;rcsite&#39;].values
+    df_cric_database[&#39;Federation&#39;] = df_endpoint[&#39;federation&#39;].values
+    df_cric_database[&#39;Endpoint&#39;]   = df_endpoint[&#39;endpoint&#39;].values
+    # Get sub-endpoints in rcsites
+    list_endpoints = get_subendpoints_rcsites(df_sub_endpoint)
+    # Append endpoints to dataframe, drop duplicates and sort data by rcsites
+    df_cric_database = pd.concat([df_cric_database, pd.DataFrame(list_endpoints, columns = [&#39;Endpoint&#39;, &#39;Rcsite&#39;, &#39;Federation&#39;])])
+    df_cric_database = df_cric_database.drop_duplicates(subset = [&#39;Endpoint&#39;])
+    df_cric_database = df_cric_database.sort_values(by = [&#39;Rcsite&#39;], ignore_index = True)
+    # Format data: remove port in endpoints: davs://webdav.lcg.triumf.ca:2880 -&gt; davs://webdav.lcg.triumf.ca
+    df_cric_database[&#39;Endpoint&#39;] = df_cric_database[&#39;Endpoint&#39;].replace({r&#39;:\d+&#39;: &#39;&#39;}, regex = True)
+    return df_cric_database
+
+def get_rcsites_ip_address(df_cric_database, df_query, ip_version):
+    &#34;&#34;&#34;Function to get IPv4/IPv6 addresses, fills the columns &#39;IPv4&#39; and &#39;IPv6&#39; of df_cric_database.
+
+    Args:
+        df_cric_database (dataframe): CRIC database.
+        df_query (dataframe): FTS optimizer events.
+        ip_version (str): IP version, it can take two values: {ipv4, ipv6}.
+    &#34;&#34;&#34;
+    logging.debug(&#39;Querying CRIC database: get %s%s addresses.&#39; % (ip_version[:2].upper(), ip_version[2:]))
+    list_ip = []
+    # Iterate over netroutes parameter
+    for i in range(df_query.shape[0]):
+        name = df_query[&#39;name&#39;].values[i]
+        df_networks = pd.DataFrame(df_query[&#39;netroutes&#39;].values[i]).T[&#39;networks&#39;]
+        df_ip = pd.DataFrame(df_networks.values.tolist())
+        # Get IPv4/IPv6 addresses
+        if ip_version in df_ip.columns: df_ip_version = pd.DataFrame(df_ip[ip_version].dropna().reset_index(drop = True))
+        else: continue # There are none ip address
+        for index, row in df_ip_version.iterrows():
+            items = pd.DataFrame(row.values.tolist())
+            for i in range(items.shape[1]):
+                if items[i].values[0] not in list_ip: list_ip.append(items[i].values[0])
+        # Fill dataframe with the data from query
+        duplicated_index = df_cric_database.query(&#39;Rcsite in @name&#39;).index # Note: can be more than one endpoints with the same rcsite
+        if &#39;ipv4&#39; in ip_version: df_cric_database.loc[duplicated_index, &#39;IPv4&#39;] = [list_ip.copy()]
+        else: df_cric_database.loc[duplicated_index, &#39;IPv6&#39;] = [list_ip.copy()]
+        # Clear the content of the list for the next iteration
+        list_ip.clear()
+    return
+
+def get_rcsites_ip_addresses(df_cric_database, df_cric_ip_address):
+    &#34;&#34;&#34;Function to get rcsites and IPv4/IPv6 addresses.
+
+    Args:
+        df_cric_database (dataframe): CRIC database.
+        df_cric_ip_address (dataframe): CRIC IPv4/IPv6 addresses.
+
+    Returns:
+        dataframe: columns &#39;IPv4&#39; and &#39;IPv6&#39; of CRIC database in a dataframe structure.
+    &#34;&#34;&#34;
+    # Get rcsites from fts_queues json file
+    list_rcsites = df_cric_database[&#39;Rcsite&#39;].drop_duplicates().tolist()
+    # Get parameters from CRIC json file, i.e. df_cric_ip_address
+    df_query = df_cric_ip_address.query(&#39;name in @list_rcsites&#39;, engine = &#39;python&#39;).reset_index(drop = True)
+    # Get IPv4/IPv6 addresses
+    get_rcsites_ip_address(df_cric_database, df_query, &#39;ipv4&#39;)
+    get_rcsites_ip_address(df_cric_database, df_query, &#39;ipv6&#39;)
+    return df_cric_database
+
+def send_email(params, message):
+    &#34;&#34;&#34;
+    Function to send an email for advertising the congestion of the link.
+
+    Args:
+        params (configparser): parameters file.
+        message (str): message to stream
+    &#34;&#34;&#34;
+    logging.warning(&#39;Sending email: LHCOPN Source: %s, LHCOPN Destination: %s, message: %s&#39; % (class_transfer_broker_.get_list_src_rcsites(), class_transfer_broker_.get_list_dst_rcsites(), message))
+    # Inspect parameters of the transfers and get the metrics of the link
+    df_last_event = inspect_transfers(params)
+    data_gigabytes, throughput_gigabits, parallel_transfers, queued_transfers, timestamp = get_metrics_link(df_last_event) 
+    # Write content of the email into a txt file
+    with open(&#39;noted_email.txt&#39;, &#39;w&#39;) as f:
+        f.write(&#39;From: noted@cern.ch\n&#39;)
+        f.write(&#39;To: carmen.misa.moreira@cern.ch\n&#39;)
+        f.write(&#39;Subject: [NOTED] Notification\n\n&#39;)
+        f.write(&#39;Hi,\n\n&#39;)
+        f.write(&#39;New transfer detected...\n\n&#39;)
+        f.write(message + &#39;\n\n&#39;)
+        if &#39;src_rcsite&#39; in threading.current_thread().name:
+            f.write(&#39;LHCOPN Source: &#39;      + str(class_transfer_broker_.get_list_src_rcsites()) + &#39;\n&#39;)
+            f.write(&#39;LHCOPN Destination: &#39; + str(class_transfer_broker_.get_list_dst_rcsites()) + &#39;\n\n&#39;)
+        else:
+            f.write(&#39;LHCOPN Source: &#39;      + str(class_transfer_broker_.get_list_dst_rcsites()) + &#39;\n&#39;)
+            f.write(&#39;LHCOPN Destination: &#39; + str(class_transfer_broker_.get_list_src_rcsites()) + &#39;\n\n&#39;)
+        f.write(&#39;\tTimestamp: &#39;            + str(timestamp)            + &#39;\n&#39;)
+        f.write(&#39;\tNumber of transfers: &#39;  + str(parallel_transfers)   + &#39;\n&#39;)
+        f.write(&#39;\tQueued transfers: &#39;     + str(queued_transfers)     + &#39;\n&#39;)
+        f.write(&#39;\tThroughput [Gb/s]: &#39;    + str(throughput_gigabits)  + &#39;\n&#39;)
+        f.write(&#39;\tAmount of data [GB]: &#39;  + str(data_gigabytes)       + &#39;\n\n&#39;)
+        f.write(&#39;Cheers\n&#39;)
+        f.write(&#39;NOTED 2.0\n&#39;)
+    # Send email
+    cmd = os.popen(&#39;sendmail -vt &lt; noted_email.txt&#39;)
+    return
+
+def get_fts_optimizer_events(cmd):
+    &#34;&#34;&#34;Function to get the FTS optimizer events.
+
+    Args:
+        cmd (str): curl command to execute.
+
+    Returns:
+        dataframe: FTS optimizers events in a dataframe structure.
+    &#34;&#34;&#34;
+    logging.debug(&#39;Inspecting transfers: get FTS optimizer events.&#39;)
+    # Get all the FTS Optimizer events:
+    #   Connections:    gives the maximum number of transfers that can be held (optimizer decision)
+    #   Rationale:      if &#39;Range fixes&#39; means that connections is the limit value set by the organization, for example, by ATLAS
+    #                   if &#39;Queue emptying&#39; then connections is the maximum value set by the organization or maybe an optimizer value, for example, max = 100 but they assign 78
+    #   Active_count:   gives the number of parallel transfers (TCP windows)
+    #   Submitted_count gives the number of transfers in the queue
+    try:
+        response = json.loads(os.popen(cmd).read())[&#39;responses&#39;]
+        df_hits  = pd.DataFrame(pd.DataFrame(response)[&#39;hits&#39;][0][&#39;hits&#39;])
+        df_items = pd.DataFrame(df_hits[&#39;_source&#39;].values.tolist())
+        df_fts_optimizer_data = pd.DataFrame(df_items[&#39;data&#39;].values.tolist())
+    # Return an empty dataframe because there are none FTS Optimizer Events
+    except (KeyError, ValueError): df_fts_optimizer_data = pd.DataFrame(columns = [&#39;source_se&#39;, &#39;dest_se&#39;, &#39;timestamp&#39;, &#39;throughput&#39;, &#39;throughput_ema&#39;, &#39;duration_avg&#39;, &#39;filesize_avg&#39;, &#39;filesize_stddev&#39;, &#39;success_rate&#39;, &#39;retry_count&#39;, &#39;active_count&#39;, &#39;submitted_count&#39;, &#39;connections&#39;, &#39;rationale&#39;, &#39;endpnt&#39;])
+    return df_fts_optimizer_data
+
+def get_metrics_link(df_last_event):
+    &#34;&#34;&#34;Function to get the metrics of the link.
+
+    Args:
+        df_last_event (dataframe): last event of FTS optimizer.
+
+    Returns:
+        float64: amount of data in GB.
+        float64: throughput of the link in Gb/s.
+        int64: number of TCP parallel transfers.
+        int64: number of transfers in the queue.
+        int64: timestamp of the current FTS optimizer event.
+    &#34;&#34;&#34;
+    logging.debug(&#39;Inspecting transfers: get metrics of the link.&#39;)
+    data_gigabytes = df_last_event[&#39;filesize_avg&#39;].values[0]/1e9      # Amount of data [GB]
+    throughput_gigabits = 8*df_last_event[&#39;throughput&#39;].values[0]/1e9 # Throughput [Gb/s]
+    parallel_transfers  = df_last_event[&#39;active_count&#39;].values[0]     # TCP parallel transfers
+    queued_transfers    = df_last_event[&#39;submitted_count&#39;].values[0]  # Transfers in the queue
+    timestamp           = df_last_event[&#39;timestamp&#39;].values[0]        # Timestamp
+    return data_gigabytes, throughput_gigabits, parallel_transfers, queued_transfers, timestamp
+
+def append_data_to_log_file(filename, df_last_event):
+    &#34;&#34;&#34;Function to append data to a log file.
+
+    Args:
+        filename (str): name of the file to append data.
+        df_last_event (dataframe): last FTS optimizer event.
+    &#34;&#34;&#34;
+    logging.debug(&#39;Transfer broker: append data to log file %s.&#39; % filename)
+    f = open(filename + &#39;.txt&#39;, &#39;a+&#39;)
+    if isinstance(df_last_event, pd.DataFrame): 
+        data_gigabytes, throughput_gigabits, parallel_transfers, queued_transfers, timestamp = get_metrics_link(df_last_event)
+        f.write(&#39;timestamp: &#39; + str(timestamp) + &#39;, datetime: &#39; + str(datetime.now()) + &#39;, source: &#39; + str(df_last_event[&#39;source_se&#39;].values[0]) + &#39;, destination: &#39; + str(df_last_event[&#39;dest_se&#39;].values[0]) + &#39;, data_gigabytes [GB]: &#39; + str(data_gigabytes) + &#39;, throughput_gigabits [Gb/s]: &#39; + str(throughput_gigabits) + &#39;, parallel_transfers: &#39; + str(parallel_transfers) + &#39;, queued_transfers: &#39; + str(queued_transfers) + &#39;\n&#39;)
+    f.close()
+    return
+
+def monitor_queue_before_alert(params, action):
+    &#34;&#34;&#34;Function to monitor FTS queue for X events to check if it is just instantaneous traffic or a huge transfer is going to take place.
+
+    Args:
+        params (configparser): parameters file.
+        action (str): action to execute, it can take two values {start, stop}.
+    &#34;&#34;&#34;
+    logging.warning(&#39;Link under supervision: monitor queue before alert.&#39;)
+    number_of_events = 0
+    last_timestamp = &#39;&#39;
+    while True:
+        # Inspect the parameters of the transfers in FTS and make a decision on the link based on that
+        df_last_event = inspect_transfers(params)
+        # Get the metrics of the link
+        data_gigabytes, throughput_gigabits, parallel_transfers, queued_transfers, timestamp = get_metrics_link(df_last_event)
+        # Count events if there are with different timestamp, i.e. if there are different FTS Optimizer events
+        if last_timestamp != str(timestamp):
+            # Interrupt the start/stop sequence because the throughput changed its expected behaviour
+            if (throughput_gigabits &lt; class_transfer_broker_.get_max_throughput() and action == &#39;start&#39;) or (throughput_gigabits &gt; class_transfer_broker_.get_min_throughput() and action == &#39;stop&#39;): return False
+            # Update last timestamp to the new one and count the events
+            last_timestamp = str(timestamp)
+            number_of_events = number_of_events + 1
+            logging.warning(&#39;Link under supervision: monitor queue before alert: action %s, number of events %d&#39; % (action, number_of_events))
+            logging.warning(&#39;df_last_event: timestamp: %s, source_se: %s, dest_se: %s, throughput [Gb/s]: %s, parallel_transfers: %s, queued_transfers: %s&#39; % (timestamp, df_last_event[&#39;source_se&#39;].values[0], df_last_event[&#39;dest_se&#39;].values[0], throughput_gigabits, parallel_transfers, queued_transfers))
+            logging.warning(&#39;There are %d transfers with a total of %f GB - Throughput: %f Gb/s&#39; % (parallel_transfers, data_gigabytes, throughput_gigabits))
+            if number_of_events == class_transfer_broker_.get_events_to_wait(): return True
+        time.sleep(60) # FTS OptimizerInterval = 60s
+
+def sense_dynamic_circuit(params, task, action, message):
+    &#34;&#34;&#34;Function to provide or cancel a dynamic circuit by using sense-o autogole northbound API.
+
+    Args:
+        params (configparser): parameters file.
+        task (str): action to be executed in sense-o, it can take two values: {provision, cancel}.
+        action (str): action to be execute on the link, it can take two values: {start, stop}
+        message (str): message to send in the email notification
+    &#34;&#34;&#34;
+    logging.warning(&#39;Calling to sense-o API to %s a dynamic circuit.&#39; % task)
+    # Provision dynamic circuit with sense-o
+    if &#39;provision&#39; in task:
+        cmd = os.popen(str(&#39;sh sense-o/sense-provision.sh &#39; + class_transfer_broker_.get_sense_uuid() + &#39; &#39; + class_transfer_broker_.get_sense_vlan()));     
+        cmd = os.popen(str(&#39;sh sense-o/sense-provision.sh &#39; + class_transfer_broker_.get_sense_uuid_2() + &#39; &#39; + class_transfer_broker_.get_sense_vlan_2()));
+    # Cancel dynamic circuit with sense-o
+    else:
+        cmd = os.popen(str(&#39;sh sense-o/sense-cancel.sh &#39; + class_transfer_broker_.get_sense_uuid() + &#39; &#39; + class_transfer_broker_.get_sense_vlan()));     
+        cmd = os.popen(str(&#39;sh sense-o/sense-cancel.sh &#39; + class_transfer_broker_.get_sense_uuid_2() + &#39; &#39; + class_transfer_broker_.get_sense_vlan_2())); 
+    send_email(params, message)
+    if &#39;src_rcsite&#39; in threading.current_thread().name: filename = params.get(&#39;FILENAME PARAMETERS&#39;, &#39;filename_transfers_src&#39;)
+    else: filename = params.get(&#39;FILENAME PARAMETERS&#39;, &#39;filename_transfers_dst&#39;)
+    append_data_to_log_file(filename, action)
+    return
+
+def make_decision_before_alert(params, action, message):
+    &#34;&#34;&#34;Function to make a decision on the link for loooking into the FTS queue before alert.
+
+    Args:
+        params (configparser): parameters file.
+        action (str): action to be execute on the link, it can take two values: {start, stop}
+        message (str): message to send in the email notification
+    &#34;&#34;&#34;
+    logging.warning(&#39;Link under supervision: make decision before alert: action %s&#39; % action)
+    # Look to FTS queue for X events to see if it is just instaneous traffic fluctuations or not, if true send alert email notification
+    bool_email = monitor_queue_before_alert(params, action)
+    if bool_email:
+        # Check the current state of the link. This is used to synchronize TX and RX threads because the start and stop should be send only once
+        if not class_transfer_broker_.get_unidirectional(): 
+            # If TX and RX are not congested -&gt; activate dynamic circuit and update state of the link
+            if action == &#39;start&#39; and not class_transfer_broker_.get_link_src_state() and not class_transfer_broker_.get_link_dst_state(): 
+                logging.warning(&#39;Link under supervision: update link state: True&#39;)
+                if &#39;src_rcsite&#39; in threading.current_thread().name: class_transfer_broker_.set_link_src_state(True)
+                else: class_transfer_broker_.set_link_dst_state(True)
+                sense_dynamic_circuit(params, &#39;provision&#39;, action, message)
+            # If TX congested but RX not: set only RX and do not send an email
+            elif action == &#39;start&#39; and class_transfer_broker_.get_link_src_state() and not class_transfer_broker_.get_link_dst_state(): 
+                logging.warning(&#39;Link under supervision: update dst link state: True&#39;)
+                class_transfer_broker_.set_link_dst_state(True)
+            # If RX congested but TX not: set only TX and do not send an email
+            elif action == &#39;start&#39; and not class_transfer_broker_.get_link_src_state() and class_transfer_broker_.get_link_dst_state(): 
+                logging.warning(&#39;Link under supervision: update link state: True&#39;)
+                class_transfer_broker_.set_link_src_state(True)
+            # Stop condition -&gt; TX are RX are congested, not send an email
+            elif action == &#39;stop&#39; and class_transfer_broker_.get_link_src_state() and class_transfer_broker_.get_link_dst_state():
+                # Update state of the link
+                logging.warning(&#39;Link under supervision: update link state: False&#39;)
+                if &#39;src_rcsite&#39; in threading.current_thread().name: class_transfer_broker_.set_link_src_state(False)
+                else: class_transfer_broker_.set_link_dst_state(False)
+            # If TX is not congested and RX will be not congested -&gt; send email
+            elif action == &#39;stop&#39; and not class_transfer_broker_.get_link_src_state() and class_transfer_broker_.get_link_dst_state():
+                logging.warning(&#39;Link under supervision: update dst link state: False&#39;)
+                class_transfer_broker_.set_link_dst_state(False)
+                sense_dynamic_circuit(params, &#39;cancel&#39;, action, message)
+            # If RX is not congested and TX will be not congested -&gt; send email
+            elif action == &#39;stop&#39; and class_transfer_broker_.get_link_src_state() and not class_transfer_broker_.get_link_dst_state():
+                logging.warning(&#39;Link under supervision: update src link state: False&#39;)
+                class_transfer_broker_.set_link_src_state(False)
+                sense_dynamic_circuit(params, &#39;cancel&#39;, action, message)
+        # It&#39;s an unidirectional link so all the start/stop conditions should be applied to TX
+        else: 
+            if action == &#39;start&#39;:
+                sense_dynamic_circuit(params, &#39;provision&#39;, action, message)
+                class_transfer_broker_.set_link_src_state(True)
+            else: 
+                sense_dynamic_circuit(params, &#39;cancel&#39;, action, message)
+                class_transfer_broker_.set_link_src_state(False)            
+    return
+
+def make_decision_link(params, df_last_event):
+    &#34;&#34;&#34;Function to make a decision on the link [start/stop events].
+
+    Args:
+        params (configparser): parameters file.
+        df_last_event (dataframe): last event of FTS optimizer.
+    &#34;&#34;&#34;
+    logging.debug(&#39;Inspecting transfers: make decision.&#39;)
+    # Get the metrics of the link
+    data_gigabytes, throughput_gigabits, parallel_transfers, queued_transfers, timestamp = get_metrics_link(df_last_event)
+    # Get current state of the link
+    if &#39;src_rcsite&#39; in threading.current_thread().name: link_state = class_transfer_broker_.get_link_src_state()
+    else: link_state = class_transfer_broker_.get_link_dst_state()
+    # If throughput &gt; X Gb/s and the link is not congested send an email because the link will be congested
+    if   throughput_gigabits &gt; class_transfer_broker_.get_max_throughput() and not link_state: make_decision_before_alert(params, &#39;start&#39;, &#39;START MESSAGE -&gt; A new link should be added to avoid congestion on the link&#39;)
+    # If the link was congested but now the transfers takes throughput &lt; X Gb/s, the link will not be congested anymore
+    elif throughput_gigabits &lt; class_transfer_broker_.get_min_throughput() and link_state: make_decision_before_alert(params, &#39;stop&#39;, &#39;STOP MESSAGE -&gt; The link could be removed&#39;)
+    return
+
+def inspect_transfers(params):
+    &#34;&#34;&#34;Function to inspect transfers parameters in FTS.
+
+    Args:
+        params (configparser): parameters file.
+
+    Returns:
+        dataframe: last event of FTS optimizer.
+    &#34;&#34;&#34;
+    logging.debug(&#39;Inspecting transfers.&#39;)
+    # Get list of endpoints [needed to execute the curl command]
+    list_src_endpoints = class_transfer_broker_.get_list_src_endpoints()
+    list_dst_endpoints = class_transfer_broker_.get_list_dst_endpoints()
+    # Get FTS Optimizer events for a given {src, dst} pair and drop duplicates events
+    df_fts_optimizer_data = get_fts_optimizer_events(params.get(&#39;CMD&#39;, &#39;cmd&#39;))
+    if &#39;src_rcsite&#39; in threading.current_thread().name: df_query = df_fts_optimizer_data.query(params.get(&#39;QUERY PARAMETERS&#39;, &#39;query_src_site&#39;), engine = &#39;python&#39;).drop_duplicates(subset = [&#39;source_se&#39;, &#39;dest_se&#39;], keep = &#39;first&#39;).reset_index(drop = True)
+    else: df_query = df_fts_optimizer_data.query(params.get(&#39;QUERY PARAMETERS&#39;, &#39;query_dst_site&#39;), engine = &#39;python&#39;).drop_duplicates(subset = [&#39;source_se&#39;, &#39;dest_se&#39;], keep = &#39;first&#39;).reset_index(drop = True)
+    # Get latest FTS Optimizer event (first row), i.e. the most recent event generated by FTS Optimizer. Note that the whole traffic is the sum of all the transfer involved in all endpoints for the given {srv, dst} pairs -&gt; sum columns
+    df_query = df_query.query(&#39;throughput != 0 &amp; active_count &gt; 0&#39;).reset_index(drop = True)
+    # The link is &#39;inactive&#39;, i.e. df_query empty -&gt; FTS Optimizer is updated every 5 min because the link is &#39;inactive&#39;
+    if not df_query.empty: df_last_event = pd.DataFrame({&#39;source_se&#39;: [df_query[&#39;source_se&#39;][0]], &#39;dest_se&#39;: [df_query[&#39;dest_se&#39;][0]], &#39;timestamp&#39;: [df_query[&#39;timestamp&#39;][0]], &#39;throughput&#39;: [df_query[&#39;throughput&#39;].sum()], &#39;filesize_avg&#39;: [df_query[&#39;filesize_avg&#39;].sum()], &#39;active_count&#39;: [df_query[&#39;active_count&#39;].sum()], &#39;submitted_count&#39;: [df_query[&#39;submitted_count&#39;].sum()]})
+    else:
+        # Create an empty dataframe
+        logging.warning(&#39;No transfers found for the given {src, dst} pair.&#39;)
+        time.sleep(5*60) # FTS OptimizerSteadyInterval = 300s = 5min
+        df_last_event = pd.DataFrame(columns = [&#39;source_se&#39;, &#39;dest_se&#39;, &#39;timestamp&#39;, &#39;throughput&#39;, &#39;filesize_avg&#39;, &#39;active_count&#39;, &#39;submitted_count&#39;])
+    return df_last_event
+
+def monitor_transfers(params):
+    &#34;&#34;&#34;Function to monitor transfers in FTS, this function is used by TX/RX threads.
+
+    Args:
+        params (configparser): parameters file.
+    &#34;&#34;&#34;
+    logging.info(&#39;Monitoring transfers.&#39;)
+    if &#39;src_rcsite&#39; in threading.current_thread().name: filename = params.get(&#39;FILENAME PARAMETERS&#39;, &#39;filename_transfers_src&#39;)
+    else: filename = params.get(&#39;FILENAME PARAMETERS&#39;, &#39;filename_transfers_dst&#39;)
+    # Declare variables
+    last_timestamp = &#39;0&#39;
+    while True:
+        # Inspect the parameters of the transfers in FTS and make a decision on the link based on that
+        df_last_event = inspect_transfers(params)
+        # Get the metrics of the link
+        if df_last_event.empty: continue # There are none transfers
+        data_gigabytes, throughput_gigabits, parallel_transfers, queued_transfers, timestamp = get_metrics_link(df_last_event)
+        if throughput_gigabits != 0:
+            if &#39;src_rcsite&#39; in threading.current_thread().name: link_state = class_transfer_broker_.get_link_src_state()
+            else: link_state = class_transfer_broker_.get_link_dst_state()
+            make_decision_link(params, df_last_event)
+            # Append data to a log file for traceability purposes of the events
+            if link_state and timestamp != last_timestamp: append_data_to_log_file(filename, df_last_event)
+            if timestamp != last_timestamp:
+                append_data_to_log_file(params.get(&#39;FILENAME PARAMETERS&#39;, &#39;filename_all_transfers&#39;), df_last_event)
+                logging.info(&#39;df_last_event: timestamp: %s, source_se: %s, dest_se: %s, throughput [Gb/s]: %s, parallel_transfers: %s, queued_transfers: %s&#39; % (timestamp, df_last_event[&#39;source_se&#39;].values[0], df_last_event[&#39;dest_se&#39;].values[0], throughput_gigabits, parallel_transfers, queued_transfers))
+                logging.info(&#39;There are %d transfers with a total of %f GB - Throughput: %f Gb/s&#39; % (parallel_transfers, data_gigabytes, throughput_gigabits))
+            last_timestamp = timestamp
+            time.sleep(60) # FTS OptimizerInterval = 60s
+        # If the link is active and suddenly it goes down
+        elif throughput_gigabits == 0 and link_state:
+            if &#39;src_rcsite&#39; in threading.current_thread().name: class_transfer_broker_.set_link_src_state(False)
+            else: class_transfer_broker_.set_link_dst_state(False)
+            send_email(params, &#39;STOP MESSAGE -&gt; The link could be removed\n\n&#39;)
+            append_data_to_log_file(filename, &#39;stop&#39;)
+
+def query_cric_database(params):
+    &#34;&#34;&#34;Query CRIC database.
+
+    Args:
+        params (configparser): parameters file.
+
+    Returns:
+        dataframe: CRIC database information in a dataframe structure.
+    &#34;&#34;&#34;
+    # Get data from CRIC database
+    dict_cric_ip_address = load_json_from_url(params.get(&#39;CRIC PARAMETERS&#39;, &#39;cric_ip_address_url&#39;)) # IPv4/IPv6 addresses query json
+    dict_cric_endpoints  = load_json_from_url(params.get(&#39;CRIC PARAMETERS&#39;, &#39;cric_endpoints_url&#39;))  # Endpoints, rcsites and federations query json
+    # Convert dictionaries to dataframes
+    df_cric_ip_address = pd.DataFrame.from_dict(dict_cric_ip_address).T # columns = admin_email, altname, cert_status, corepower, cores, country, country_code, cpu_capacity, crr_url, description, disk_capacity, federations, gocdb_pk, gocdb_url, id, infourl, institute, is_pledged, latitude, longitude, monit_tag, name, netroutes, netsites, oim_groupid, rc_tier_level, security_email, services, sites, slots, srr_url, state, status, tape_capacity, timezone
+    df_cric_ip_address = df_cric_ip_address[df_cric_ip_address[&#39;netroutes&#39;] != {}].reset_index(drop = True) # format data: remove places without IPv4/IPv6 addresses
+    df_cric_endpoints  = pd.DataFrame.from_dict(dict_cric_endpoints).T  # columns = arch, country, country_code, description, endpoint, federation, flavour, id, impl, in_report, info_url, is_ipv6, is_monitored, is_virtual, last_modified, name, rcsite, rcsite_state, resources, rr_profile, state, status, type, usage, version, aprotocols, protocols
+    # Process data: get endpoints
+    logging.debug(&#39;Querying CRIC database.&#39;)
+    df_cric_database = pd.DataFrame(columns = [&#39;Endpoint&#39;, &#39;Rcsite&#39;, &#39;Federation&#39;, &#39;IPv4&#39;, &#39;IPv6&#39;])
+    df_cric_database = get_endpoints_rcsites(df_cric_database, df_cric_endpoints)     # Get endpoints, federations and rcsites: columns = Endpoint, Rcsite, Federation
+    df_cric_database = get_rcsites_ip_addresses(df_cric_database, df_cric_ip_address) # Get rcsites, IPv4 and IPv6 addresses:   columns = IPv4, IPv6
+    logging.info(&#39;There are %d rcsites defined in CRIC database&#39;   % df_cric_ip_address.shape[0])
+    logging.info(&#39;There are %d endpoints defined in CRIC database&#39; % df_cric_endpoints.shape[0])
+    return df_cric_database
+
+def generate_query(config, params, type, df_cric_database):
+    &#34;&#34;&#34;Function to generate the queries for downloading the FTS raw queues.
+
+    Args:
+        config (dict): dictionary with the yaml configuration file.
+        params (configparser): parameters file.
+        type (str): direction of the link. It can take two values: src_rcsite or dst_rcsite.
+        df_cric_database (DataFrame): CRIC database information in a dataframe structure.
+
+    Returns:
+        list: list of endpoints for a defined link.
+    &#34;&#34;&#34;
+    # Get a list with the endpoints 
+    rcsite_type = config[type]
+    list_endpoints = df_cric_database.query(&#39;Rcsite in @rcsite_type&#39;).reset_index(drop = True)[&#39;Endpoint&#39;].tolist()
+    # Write query into a file without extension
+    if &#39;src_rcsite&#39; in type: 
+        query_2nd_line_2 = &#39;&#34;data.source_se&#34;: &#39; + json.dumps(list_endpoints)
+        with open(params.get(&#39;QUERY PARAMETERS&#39;, &#39;filename_src_query&#39;), &#39;w&#39;) as f: f.write(params.get(&#39;ELASTIC SEARCH PARAMETERS&#39;, &#39;query_1st_line&#39;) + &#39;\n&#39; + params.get(&#39;ELASTIC SEARCH PARAMETERS&#39;, &#39;query_2nd_line_1&#39;) + query_2nd_line_2 + params.get(&#39;ELASTIC SEARCH PARAMETERS&#39;, &#39;query_2nd_line_3&#39;) + &#39;\n&#39;)
+    else: 
+        query_2nd_line_2 = &#39;&#34;data.dest_se&#34;: &#39; + json.dumps(list_endpoints)
+        with open(params.get(&#39;QUERY PARAMETERS&#39;, &#39;filename_dst_query&#39;), &#39;w&#39;) as f: f.write(params.get(&#39;ELASTIC SEARCH PARAMETERS&#39;, &#39;query_1st_line&#39;) + &#39;\n&#39; + params.get(&#39;ELASTIC SEARCH PARAMETERS&#39;, &#39;query_2nd_line_1&#39;) + query_2nd_line_2 + params.get(&#39;ELASTIC SEARCH PARAMETERS&#39;, &#39;query_2nd_line_3&#39;) + &#39;\n&#39;)
+    logging.debug(&#39;Generating query for %s, number of endpoints: %d&#39; % (type, len(list_endpoints)))
+    return list_endpoints
+
+def build_thread(params, type):
+    &#34;&#34;&#34;Function to create a thread per link for monitoring the transfers.
+
+    Args:
+        params (configparser): parameters file.
+        type (str): direction of the link, it can take two values: {tx, rx}.
+
+    Returns:
+        thread: pointing to a defined link.
+    &#34;&#34;&#34;
+    logging.debug(&#39;Building thread %s%s.&#39; % (&#39;transfer_broker_&#39;, type))
+    # Launch a thread to monitor transfers for a defined link {src, dst}
+    transfers = Thread(name = &#39;transfer_broker_&#39; + type, target = monitor_transfers, args = [params])
+    return transfers
+
+def start_threads(transfers_tx, transfers_rx):
+    &#34;&#34;&#34;Function to start thread and monitor the transfers.
+
+    Args:
+        transfers_tx (thread): tx thread.
+        transfers_rx (thread): rx thread.
+    &#34;&#34;&#34;
+    logging.debug(&#39;Starting thread %s.&#39; % transfers_tx.name)
+    logging.debug(&#39;Starting thread %s.&#39; % transfers_rx.name)
+    # Start threads
+    transfers_tx.start()
+    if not class_transfer_broker_.get_unidirectional(): transfers_rx.start()    
+    transfers_tx.join()
+    transfers_rx.join()
+    return
+
+# Main function
+def main():
+
+    &#34;&#34;&#34;Main function.&#34;&#34;&#34;
+    # Logging
+    logging.basicConfig(level = logging.NOTSET, filename = &#39;log/transfer_broker_&#39; + str(time.time()) + &#39;.log&#39;, filemode = &#39;w&#39;, format = &#39;%(asctime)s %(name)s - %(levelname)s - %(threadName)s: %(message)s&#39;)
+    logging.getLogger(&#39;numexpr.utils&#39;).setLevel(logging.WARNING) # hide logging messages from numexpr.utils module
+    # Config parser
+    params = configparser.ConfigParser(interpolation = configparser.ExtendedInterpolation())
+    params.read(&#39;params/params.ini&#39;)
+    # Argument parser
+    args_parser = ArgumentParser(description = &#39;NOTED: a framework to optimise network traffic via the analysis of data from File Transfer Services.&#39;)
+    args_parser.add_argument(&#39;config_file&#39;, help = &#39;the name of the configuration file [config-example.yaml]&#39;)
+    args_parser.add_argument(&#39;-v&#39;, &#39;--verbosity&#39;, help = &#39;defines the logging level [debug, info, warning]&#39;)
+    args = args_parser.parse_args()
+    # Set verbosity level
+    if args.verbosity is not None: 
+        if   &#39;debug&#39;   in args.verbosity: logging.getLogger().setLevel(logging.DEBUG)
+        elif &#39;info&#39;    in args.verbosity: logging.getLogger().setLevel(logging.INFO)
+        elif &#39;warning&#39; in args.verbosity: logging.getLogger().setLevel(logging.WARNING)
+    # Load yaml config file
+    logging.debug(&#39;Loading YAML file: %s&#39; % args.config_file.split(&#39;/&#39;)[1])
+    config = load_yaml(args.config_file)
+    logging.info(&#39;Source rcsite: %s&#39; % config[&#39;src_rcsite&#39;])
+    logging.info(&#39;Destination rcsite: %s&#39; % config[&#39;dst_rcsite&#39;])
+    # CRIC database
+    df_cric_database = query_cric_database(params)
+    # Generate queries
+    list_src_endpoints = generate_query(config, params, &#39;src_rcsite&#39;, df_cric_database)
+    list_dst_endpoints = generate_query(config, params, &#39;dst_rcsite&#39;, df_cric_database)
+    # Set the attributes of the class transfer broker
+    class_transfer_broker_.set_list_src_rcsites(config[&#39;src_rcsite&#39;])
+    class_transfer_broker_.set_list_dst_rcsites(config[&#39;dst_rcsite&#39;])
+    class_transfer_broker_.set_list_src_endpoints(list_src_endpoints)
+    class_transfer_broker_.set_list_dst_endpoints(list_dst_endpoints)
+    class_transfer_broker_.set_unidirectional(config[&#39;unidirectional_link&#39;])
+    class_transfer_broker_.set_events_to_wait(config[&#39;events_to_wait_until_notification&#39;])
+    class_transfer_broker_.set_max_throughput(config[&#39;max_throughput_threshold_link&#39;])
+    class_transfer_broker_.set_min_throughput(config[&#39;min_throughput_threshold_link&#39;])
+    class_transfer_broker_.set_num_circuits(config[&#39;number_of_dynamic_circuits&#39;])
+    class_transfer_broker_.set_sense_uuid(config[&#39;sense_uuid&#39;])
+    class_transfer_broker_.set_sense_vlan(config[&#39;sense_vlan&#39;])
+    # Build threads
+    transfers_tx = build_thread(params, &#39;src_rcsite&#39;) 
+    transfers_rx = build_thread(params, &#39;dst_rcsite&#39;)
+    # Start threads
+    start_threads(transfers_tx, transfers_rx)
+
+if __name__ == &#39;__main__&#39;:
+    main()</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="main.append_data_to_log_file"><code class="name flex">
+<span>def <span class="ident">append_data_to_log_file</span></span>(<span>filename, df_last_event)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Function to append data to a log file.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>filename</code></strong> :&ensp;<code>str</code></dt>
+<dd>name of the file to append data.</dd>
+<dt><strong><code>df_last_event</code></strong> :&ensp;<code>dataframe</code></dt>
+<dd>last FTS optimizer event.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def append_data_to_log_file(filename, df_last_event):
+    &#34;&#34;&#34;Function to append data to a log file.
+
+    Args:
+        filename (str): name of the file to append data.
+        df_last_event (dataframe): last FTS optimizer event.
+    &#34;&#34;&#34;
+    logging.debug(&#39;Transfer broker: append data to log file %s.&#39; % filename)
+    f = open(filename + &#39;.txt&#39;, &#39;a+&#39;)
+    if isinstance(df_last_event, pd.DataFrame): 
+        data_gigabytes, throughput_gigabits, parallel_transfers, queued_transfers, timestamp = get_metrics_link(df_last_event)
+        f.write(&#39;timestamp: &#39; + str(timestamp) + &#39;, datetime: &#39; + str(datetime.now()) + &#39;, source: &#39; + str(df_last_event[&#39;source_se&#39;].values[0]) + &#39;, destination: &#39; + str(df_last_event[&#39;dest_se&#39;].values[0]) + &#39;, data_gigabytes [GB]: &#39; + str(data_gigabytes) + &#39;, throughput_gigabits [Gb/s]: &#39; + str(throughput_gigabits) + &#39;, parallel_transfers: &#39; + str(parallel_transfers) + &#39;, queued_transfers: &#39; + str(queued_transfers) + &#39;\n&#39;)
+    f.close()
+    return</code></pre>
+</details>
+</dd>
+<dt id="main.build_thread"><code class="name flex">
+<span>def <span class="ident">build_thread</span></span>(<span>params, type)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Function to create a thread per link for monitoring the transfers.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>params</code></strong> :&ensp;<code>configparser</code></dt>
+<dd>parameters file.</dd>
+<dt><strong><code>type</code></strong> :&ensp;<code>str</code></dt>
+<dd>direction of the link, it can take two values: {tx, rx}.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>thread</code></dt>
+<dd>pointing to a defined link.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def build_thread(params, type):
+    &#34;&#34;&#34;Function to create a thread per link for monitoring the transfers.
+
+    Args:
+        params (configparser): parameters file.
+        type (str): direction of the link, it can take two values: {tx, rx}.
+
+    Returns:
+        thread: pointing to a defined link.
+    &#34;&#34;&#34;
+    logging.debug(&#39;Building thread %s%s.&#39; % (&#39;transfer_broker_&#39;, type))
+    # Launch a thread to monitor transfers for a defined link {src, dst}
+    transfers = Thread(name = &#39;transfer_broker_&#39; + type, target = monitor_transfers, args = [params])
+    return transfers</code></pre>
+</details>
+</dd>
+<dt id="main.generate_query"><code class="name flex">
+<span>def <span class="ident">generate_query</span></span>(<span>config, params, type, df_cric_database)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Function to generate the queries for downloading the FTS raw queues.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>config</code></strong> :&ensp;<code>dict</code></dt>
+<dd>dictionary with the yaml configuration file.</dd>
+<dt><strong><code>params</code></strong> :&ensp;<code>configparser</code></dt>
+<dd>parameters file.</dd>
+<dt><strong><code>type</code></strong> :&ensp;<code>str</code></dt>
+<dd>direction of the link. It can take two values: src_rcsite or dst_rcsite.</dd>
+<dt><strong><code>df_cric_database</code></strong> :&ensp;<code>DataFrame</code></dt>
+<dd>CRIC database information in a dataframe structure.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>list</code></dt>
+<dd>list of endpoints for a defined link.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def generate_query(config, params, type, df_cric_database):
+    &#34;&#34;&#34;Function to generate the queries for downloading the FTS raw queues.
+
+    Args:
+        config (dict): dictionary with the yaml configuration file.
+        params (configparser): parameters file.
+        type (str): direction of the link. It can take two values: src_rcsite or dst_rcsite.
+        df_cric_database (DataFrame): CRIC database information in a dataframe structure.
+
+    Returns:
+        list: list of endpoints for a defined link.
+    &#34;&#34;&#34;
+    # Get a list with the endpoints 
+    rcsite_type = config[type]
+    list_endpoints = df_cric_database.query(&#39;Rcsite in @rcsite_type&#39;).reset_index(drop = True)[&#39;Endpoint&#39;].tolist()
+    # Write query into a file without extension
+    if &#39;src_rcsite&#39; in type: 
+        query_2nd_line_2 = &#39;&#34;data.source_se&#34;: &#39; + json.dumps(list_endpoints)
+        with open(params.get(&#39;QUERY PARAMETERS&#39;, &#39;filename_src_query&#39;), &#39;w&#39;) as f: f.write(params.get(&#39;ELASTIC SEARCH PARAMETERS&#39;, &#39;query_1st_line&#39;) + &#39;\n&#39; + params.get(&#39;ELASTIC SEARCH PARAMETERS&#39;, &#39;query_2nd_line_1&#39;) + query_2nd_line_2 + params.get(&#39;ELASTIC SEARCH PARAMETERS&#39;, &#39;query_2nd_line_3&#39;) + &#39;\n&#39;)
+    else: 
+        query_2nd_line_2 = &#39;&#34;data.dest_se&#34;: &#39; + json.dumps(list_endpoints)
+        with open(params.get(&#39;QUERY PARAMETERS&#39;, &#39;filename_dst_query&#39;), &#39;w&#39;) as f: f.write(params.get(&#39;ELASTIC SEARCH PARAMETERS&#39;, &#39;query_1st_line&#39;) + &#39;\n&#39; + params.get(&#39;ELASTIC SEARCH PARAMETERS&#39;, &#39;query_2nd_line_1&#39;) + query_2nd_line_2 + params.get(&#39;ELASTIC SEARCH PARAMETERS&#39;, &#39;query_2nd_line_3&#39;) + &#39;\n&#39;)
+    logging.debug(&#39;Generating query for %s, number of endpoints: %d&#39; % (type, len(list_endpoints)))
+    return list_endpoints</code></pre>
+</details>
+</dd>
+<dt id="main.get_endpoints_rcsites"><code class="name flex">
+<span>def <span class="ident">get_endpoints_rcsites</span></span>(<span>df_cric_database, df_cric_endpoints)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Function to get endpoints and rcsites.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>df_cric_database</code></strong> :&ensp;<code>dataframe</code></dt>
+<dd>CRIC database.</dd>
+<dt><strong><code>df_cric_endpoints</code></strong> :&ensp;<code>dataframe</code></dt>
+<dd>CRIC endpoints.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>dataframe</code></dt>
+<dd>columns Rcsite, Federation and Endpoint of CRIC database in a dataframe structure.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_endpoints_rcsites(df_cric_database, df_cric_endpoints):
+    &#34;&#34;&#34;Function to get endpoints and rcsites.
+
+    Args:
+        df_cric_database (dataframe): CRIC database.
+        df_cric_endpoints (dataframe): CRIC endpoints.
+
+    Returns:
+        dataframe: columns Rcsite, Federation and Endpoint of CRIC database in a dataframe structure.
+    &#34;&#34;&#34;
+    logging.debug(&#39;Querying CRIC database: get endpoints rcsites.&#39;)
+    # Separate the endpoints into two categories: endpoint and sub-endpoint
+    df_endpoint     = df_cric_endpoints[df_cric_endpoints[&#39;endpoint&#39;].notnull()]
+    df_sub_endpoint = df_cric_endpoints[df_cric_endpoints[&#39;endpoint&#39;].isnull()] # endpoints are in a sub-site
+    # Fill dataframe with the data from query
+    df_cric_database[&#39;Rcsite&#39;]     = df_endpoint[&#39;rcsite&#39;].values
+    df_cric_database[&#39;Federation&#39;] = df_endpoint[&#39;federation&#39;].values
+    df_cric_database[&#39;Endpoint&#39;]   = df_endpoint[&#39;endpoint&#39;].values
+    # Get sub-endpoints in rcsites
+    list_endpoints = get_subendpoints_rcsites(df_sub_endpoint)
+    # Append endpoints to dataframe, drop duplicates and sort data by rcsites
+    df_cric_database = pd.concat([df_cric_database, pd.DataFrame(list_endpoints, columns = [&#39;Endpoint&#39;, &#39;Rcsite&#39;, &#39;Federation&#39;])])
+    df_cric_database = df_cric_database.drop_duplicates(subset = [&#39;Endpoint&#39;])
+    df_cric_database = df_cric_database.sort_values(by = [&#39;Rcsite&#39;], ignore_index = True)
+    # Format data: remove port in endpoints: davs://webdav.lcg.triumf.ca:2880 -&gt; davs://webdav.lcg.triumf.ca
+    df_cric_database[&#39;Endpoint&#39;] = df_cric_database[&#39;Endpoint&#39;].replace({r&#39;:\d+&#39;: &#39;&#39;}, regex = True)
+    return df_cric_database</code></pre>
+</details>
+</dd>
+<dt id="main.get_fts_optimizer_events"><code class="name flex">
+<span>def <span class="ident">get_fts_optimizer_events</span></span>(<span>cmd)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Function to get the FTS optimizer events.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>cmd</code></strong> :&ensp;<code>str</code></dt>
+<dd>curl command to execute.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>dataframe</code></dt>
+<dd>FTS optimizers events in a dataframe structure.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_fts_optimizer_events(cmd):
+    &#34;&#34;&#34;Function to get the FTS optimizer events.
+
+    Args:
+        cmd (str): curl command to execute.
+
+    Returns:
+        dataframe: FTS optimizers events in a dataframe structure.
+    &#34;&#34;&#34;
+    logging.debug(&#39;Inspecting transfers: get FTS optimizer events.&#39;)
+    # Get all the FTS Optimizer events:
+    #   Connections:    gives the maximum number of transfers that can be held (optimizer decision)
+    #   Rationale:      if &#39;Range fixes&#39; means that connections is the limit value set by the organization, for example, by ATLAS
+    #                   if &#39;Queue emptying&#39; then connections is the maximum value set by the organization or maybe an optimizer value, for example, max = 100 but they assign 78
+    #   Active_count:   gives the number of parallel transfers (TCP windows)
+    #   Submitted_count gives the number of transfers in the queue
+    try:
+        response = json.loads(os.popen(cmd).read())[&#39;responses&#39;]
+        df_hits  = pd.DataFrame(pd.DataFrame(response)[&#39;hits&#39;][0][&#39;hits&#39;])
+        df_items = pd.DataFrame(df_hits[&#39;_source&#39;].values.tolist())
+        df_fts_optimizer_data = pd.DataFrame(df_items[&#39;data&#39;].values.tolist())
+    # Return an empty dataframe because there are none FTS Optimizer Events
+    except (KeyError, ValueError): df_fts_optimizer_data = pd.DataFrame(columns = [&#39;source_se&#39;, &#39;dest_se&#39;, &#39;timestamp&#39;, &#39;throughput&#39;, &#39;throughput_ema&#39;, &#39;duration_avg&#39;, &#39;filesize_avg&#39;, &#39;filesize_stddev&#39;, &#39;success_rate&#39;, &#39;retry_count&#39;, &#39;active_count&#39;, &#39;submitted_count&#39;, &#39;connections&#39;, &#39;rationale&#39;, &#39;endpnt&#39;])
+    return df_fts_optimizer_data</code></pre>
+</details>
+</dd>
+<dt id="main.get_metrics_link"><code class="name flex">
+<span>def <span class="ident">get_metrics_link</span></span>(<span>df_last_event)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Function to get the metrics of the link.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>df_last_event</code></strong> :&ensp;<code>dataframe</code></dt>
+<dd>last event of FTS optimizer.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>float64</code></dt>
+<dd>amount of data in GB.</dd>
+<dt><code>float64</code></dt>
+<dd>throughput of the link in Gb/s.</dd>
+<dt><code>int64</code></dt>
+<dd>number of TCP parallel transfers.</dd>
+<dt><code>int64</code></dt>
+<dd>number of transfers in the queue.</dd>
+<dt><code>int64</code></dt>
+<dd>timestamp of the current FTS optimizer event.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_metrics_link(df_last_event):
+    &#34;&#34;&#34;Function to get the metrics of the link.
+
+    Args:
+        df_last_event (dataframe): last event of FTS optimizer.
+
+    Returns:
+        float64: amount of data in GB.
+        float64: throughput of the link in Gb/s.
+        int64: number of TCP parallel transfers.
+        int64: number of transfers in the queue.
+        int64: timestamp of the current FTS optimizer event.
+    &#34;&#34;&#34;
+    logging.debug(&#39;Inspecting transfers: get metrics of the link.&#39;)
+    data_gigabytes = df_last_event[&#39;filesize_avg&#39;].values[0]/1e9      # Amount of data [GB]
+    throughput_gigabits = 8*df_last_event[&#39;throughput&#39;].values[0]/1e9 # Throughput [Gb/s]
+    parallel_transfers  = df_last_event[&#39;active_count&#39;].values[0]     # TCP parallel transfers
+    queued_transfers    = df_last_event[&#39;submitted_count&#39;].values[0]  # Transfers in the queue
+    timestamp           = df_last_event[&#39;timestamp&#39;].values[0]        # Timestamp
+    return data_gigabytes, throughput_gigabits, parallel_transfers, queued_transfers, timestamp</code></pre>
+</details>
+</dd>
+<dt id="main.get_rcsites_ip_address"><code class="name flex">
+<span>def <span class="ident">get_rcsites_ip_address</span></span>(<span>df_cric_database, df_query, ip_version)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Function to get IPv4/IPv6 addresses, fills the columns 'IPv4' and 'IPv6' of df_cric_database.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>df_cric_database</code></strong> :&ensp;<code>dataframe</code></dt>
+<dd>CRIC database.</dd>
+<dt><strong><code>df_query</code></strong> :&ensp;<code>dataframe</code></dt>
+<dd>FTS optimizer events.</dd>
+<dt><strong><code>ip_version</code></strong> :&ensp;<code>str</code></dt>
+<dd>IP version, it can take two values: {ipv4, ipv6}.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_rcsites_ip_address(df_cric_database, df_query, ip_version):
+    &#34;&#34;&#34;Function to get IPv4/IPv6 addresses, fills the columns &#39;IPv4&#39; and &#39;IPv6&#39; of df_cric_database.
+
+    Args:
+        df_cric_database (dataframe): CRIC database.
+        df_query (dataframe): FTS optimizer events.
+        ip_version (str): IP version, it can take two values: {ipv4, ipv6}.
+    &#34;&#34;&#34;
+    logging.debug(&#39;Querying CRIC database: get %s%s addresses.&#39; % (ip_version[:2].upper(), ip_version[2:]))
+    list_ip = []
+    # Iterate over netroutes parameter
+    for i in range(df_query.shape[0]):
+        name = df_query[&#39;name&#39;].values[i]
+        df_networks = pd.DataFrame(df_query[&#39;netroutes&#39;].values[i]).T[&#39;networks&#39;]
+        df_ip = pd.DataFrame(df_networks.values.tolist())
+        # Get IPv4/IPv6 addresses
+        if ip_version in df_ip.columns: df_ip_version = pd.DataFrame(df_ip[ip_version].dropna().reset_index(drop = True))
+        else: continue # There are none ip address
+        for index, row in df_ip_version.iterrows():
+            items = pd.DataFrame(row.values.tolist())
+            for i in range(items.shape[1]):
+                if items[i].values[0] not in list_ip: list_ip.append(items[i].values[0])
+        # Fill dataframe with the data from query
+        duplicated_index = df_cric_database.query(&#39;Rcsite in @name&#39;).index # Note: can be more than one endpoints with the same rcsite
+        if &#39;ipv4&#39; in ip_version: df_cric_database.loc[duplicated_index, &#39;IPv4&#39;] = [list_ip.copy()]
+        else: df_cric_database.loc[duplicated_index, &#39;IPv6&#39;] = [list_ip.copy()]
+        # Clear the content of the list for the next iteration
+        list_ip.clear()
+    return</code></pre>
+</details>
+</dd>
+<dt id="main.get_rcsites_ip_addresses"><code class="name flex">
+<span>def <span class="ident">get_rcsites_ip_addresses</span></span>(<span>df_cric_database, df_cric_ip_address)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Function to get rcsites and IPv4/IPv6 addresses.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>df_cric_database</code></strong> :&ensp;<code>dataframe</code></dt>
+<dd>CRIC database.</dd>
+<dt><strong><code>df_cric_ip_address</code></strong> :&ensp;<code>dataframe</code></dt>
+<dd>CRIC IPv4/IPv6 addresses.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>dataframe</code></dt>
+<dd>columns 'IPv4' and 'IPv6' of CRIC database in a dataframe structure.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_rcsites_ip_addresses(df_cric_database, df_cric_ip_address):
+    &#34;&#34;&#34;Function to get rcsites and IPv4/IPv6 addresses.
+
+    Args:
+        df_cric_database (dataframe): CRIC database.
+        df_cric_ip_address (dataframe): CRIC IPv4/IPv6 addresses.
+
+    Returns:
+        dataframe: columns &#39;IPv4&#39; and &#39;IPv6&#39; of CRIC database in a dataframe structure.
+    &#34;&#34;&#34;
+    # Get rcsites from fts_queues json file
+    list_rcsites = df_cric_database[&#39;Rcsite&#39;].drop_duplicates().tolist()
+    # Get parameters from CRIC json file, i.e. df_cric_ip_address
+    df_query = df_cric_ip_address.query(&#39;name in @list_rcsites&#39;, engine = &#39;python&#39;).reset_index(drop = True)
+    # Get IPv4/IPv6 addresses
+    get_rcsites_ip_address(df_cric_database, df_query, &#39;ipv4&#39;)
+    get_rcsites_ip_address(df_cric_database, df_query, &#39;ipv6&#39;)
+    return df_cric_database</code></pre>
+</details>
+</dd>
+<dt id="main.get_subendpoints_rcsites"><code class="name flex">
+<span>def <span class="ident">get_subendpoints_rcsites</span></span>(<span>df_sub_endpoint)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Function to get sub-endpoints in rcsites.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>df_sub_endpoint</code></strong> :&ensp;<code>dataframe</code></dt>
+<dd>CRIC database sub-endpoints.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>list</code></dt>
+<dd>endpoints of rc_site in a list structure.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_subendpoints_rcsites(df_sub_endpoint):
+    &#34;&#34;&#34;Function to get sub-endpoints in rcsites.
+
+    Args:
+        df_sub_endpoint (dataframe): CRIC database sub-endpoints.
+
+    Returns:
+        list: endpoints of rc_site in a list structure.
+    &#34;&#34;&#34;
+    logging.debug(&#39;Querying CRIC database: get sub-endpoints rcsites.&#39;)
+    list_endpoints = []
+    # Iterate over services parameter
+    for i in range(df_sub_endpoint.shape[0]):
+        df_protocols = pd.DataFrame(df_sub_endpoint[&#39;protocols&#39;].values[i]).T
+        # Get endpoints
+        if &#39;endpoint&#39; in df_protocols.columns: df_endpoints = pd.DataFrame(df_protocols[&#39;endpoint&#39;].dropna().drop_duplicates().reset_index(drop = True))
+        else: continue # there are none endpoints
+        rcsite = df_sub_endpoint[&#39;rcsite&#39;].values[i]
+        federation = df_sub_endpoint[&#39;federation&#39;].values[i]
+        # Iterate over subendpoints parameter
+        for index, row in df_endpoints.iterrows():
+            items = pd.DataFrame(row.values.tolist())
+            for j in range(items.shape[1]):
+                if [items[j].values[0], rcsite] not in list_endpoints: list_endpoints.append([items[j].values[0], rcsite, federation])
+    return list_endpoints</code></pre>
+</details>
+</dd>
+<dt id="main.inspect_transfers"><code class="name flex">
+<span>def <span class="ident">inspect_transfers</span></span>(<span>params)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Function to inspect transfers parameters in FTS.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>params</code></strong> :&ensp;<code>configparser</code></dt>
+<dd>parameters file.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>dataframe</code></dt>
+<dd>last event of FTS optimizer.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def inspect_transfers(params):
+    &#34;&#34;&#34;Function to inspect transfers parameters in FTS.
+
+    Args:
+        params (configparser): parameters file.
+
+    Returns:
+        dataframe: last event of FTS optimizer.
+    &#34;&#34;&#34;
+    logging.debug(&#39;Inspecting transfers.&#39;)
+    # Get list of endpoints [needed to execute the curl command]
+    list_src_endpoints = class_transfer_broker_.get_list_src_endpoints()
+    list_dst_endpoints = class_transfer_broker_.get_list_dst_endpoints()
+    # Get FTS Optimizer events for a given {src, dst} pair and drop duplicates events
+    df_fts_optimizer_data = get_fts_optimizer_events(params.get(&#39;CMD&#39;, &#39;cmd&#39;))
+    if &#39;src_rcsite&#39; in threading.current_thread().name: df_query = df_fts_optimizer_data.query(params.get(&#39;QUERY PARAMETERS&#39;, &#39;query_src_site&#39;), engine = &#39;python&#39;).drop_duplicates(subset = [&#39;source_se&#39;, &#39;dest_se&#39;], keep = &#39;first&#39;).reset_index(drop = True)
+    else: df_query = df_fts_optimizer_data.query(params.get(&#39;QUERY PARAMETERS&#39;, &#39;query_dst_site&#39;), engine = &#39;python&#39;).drop_duplicates(subset = [&#39;source_se&#39;, &#39;dest_se&#39;], keep = &#39;first&#39;).reset_index(drop = True)
+    # Get latest FTS Optimizer event (first row), i.e. the most recent event generated by FTS Optimizer. Note that the whole traffic is the sum of all the transfer involved in all endpoints for the given {srv, dst} pairs -&gt; sum columns
+    df_query = df_query.query(&#39;throughput != 0 &amp; active_count &gt; 0&#39;).reset_index(drop = True)
+    # The link is &#39;inactive&#39;, i.e. df_query empty -&gt; FTS Optimizer is updated every 5 min because the link is &#39;inactive&#39;
+    if not df_query.empty: df_last_event = pd.DataFrame({&#39;source_se&#39;: [df_query[&#39;source_se&#39;][0]], &#39;dest_se&#39;: [df_query[&#39;dest_se&#39;][0]], &#39;timestamp&#39;: [df_query[&#39;timestamp&#39;][0]], &#39;throughput&#39;: [df_query[&#39;throughput&#39;].sum()], &#39;filesize_avg&#39;: [df_query[&#39;filesize_avg&#39;].sum()], &#39;active_count&#39;: [df_query[&#39;active_count&#39;].sum()], &#39;submitted_count&#39;: [df_query[&#39;submitted_count&#39;].sum()]})
+    else:
+        # Create an empty dataframe
+        logging.warning(&#39;No transfers found for the given {src, dst} pair.&#39;)
+        time.sleep(5*60) # FTS OptimizerSteadyInterval = 300s = 5min
+        df_last_event = pd.DataFrame(columns = [&#39;source_se&#39;, &#39;dest_se&#39;, &#39;timestamp&#39;, &#39;throughput&#39;, &#39;filesize_avg&#39;, &#39;active_count&#39;, &#39;submitted_count&#39;])
+    return df_last_event</code></pre>
+</details>
+</dd>
+<dt id="main.load_json_from_url"><code class="name flex">
+<span>def <span class="ident">load_json_from_url</span></span>(<span>json_url)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Function to load a json file from URL.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>json_url</code></strong> :&ensp;<code>str</code></dt>
+<dd>url of the json file.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>dict</code></dt>
+<dd>data in a dictionary structure.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def load_json_from_url(json_url):
+    &#34;&#34;&#34;Function to load a json file from URL.
+
+    Args:
+        json_url (str): url of the json file.
+
+    Returns:
+        dict: data in a dictionary structure.
+    &#34;&#34;&#34;
+    logging.debug(&#39;Loading JSON from URL: %s&#39; % json_url)
+    # Self signed certificate issue
+    ssl_context = ssl.create_default_context();
+    ssl_context.check_hostname = False
+    ssl_context.verify_mode = ssl.CERT_NONE
+    # Load json file from URL
+    with urllib.request.urlopen(json_url, context = ssl_context, timeout = None) as url:
+        data = json.loads(url.read().decode())
+        return data</code></pre>
+</details>
+</dd>
+<dt id="main.load_yaml"><code class="name flex">
+<span>def <span class="ident">load_yaml</span></span>(<span>filename)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Function to load a yaml file.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>filename</code></strong> :&ensp;<code>str</code></dt>
+<dd>name of the yaml file.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>dict</code></dt>
+<dd>data in a dictionary structure.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def load_yaml(filename):
+    &#34;&#34;&#34;Function to load a yaml file.
+
+    Args:
+        filename (str): name of the yaml file.
+
+    Returns:
+        dict: data in a dictionary structure.
+    &#34;&#34;&#34;
+    with open(filename) as file:
+        data = yaml.load(file, Loader = yaml.FullLoader)
+        return data </code></pre>
+</details>
+</dd>
+<dt id="main.main"><code class="name flex">
+<span>def <span class="ident">main</span></span>(<span>)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Main function.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def main():
+
+    &#34;&#34;&#34;Main function.&#34;&#34;&#34;
+    # Logging
+    logging.basicConfig(level = logging.NOTSET, filename = &#39;log/transfer_broker_&#39; + str(time.time()) + &#39;.log&#39;, filemode = &#39;w&#39;, format = &#39;%(asctime)s %(name)s - %(levelname)s - %(threadName)s: %(message)s&#39;)
+    logging.getLogger(&#39;numexpr.utils&#39;).setLevel(logging.WARNING) # hide logging messages from numexpr.utils module
+    # Config parser
+    params = configparser.ConfigParser(interpolation = configparser.ExtendedInterpolation())
+    params.read(&#39;params/params.ini&#39;)
+    # Argument parser
+    args_parser = ArgumentParser(description = &#39;NOTED: a framework to optimise network traffic via the analysis of data from File Transfer Services.&#39;)
+    args_parser.add_argument(&#39;config_file&#39;, help = &#39;the name of the configuration file [config-example.yaml]&#39;)
+    args_parser.add_argument(&#39;-v&#39;, &#39;--verbosity&#39;, help = &#39;defines the logging level [debug, info, warning]&#39;)
+    args = args_parser.parse_args()
+    # Set verbosity level
+    if args.verbosity is not None: 
+        if   &#39;debug&#39;   in args.verbosity: logging.getLogger().setLevel(logging.DEBUG)
+        elif &#39;info&#39;    in args.verbosity: logging.getLogger().setLevel(logging.INFO)
+        elif &#39;warning&#39; in args.verbosity: logging.getLogger().setLevel(logging.WARNING)
+    # Load yaml config file
+    logging.debug(&#39;Loading YAML file: %s&#39; % args.config_file.split(&#39;/&#39;)[1])
+    config = load_yaml(args.config_file)
+    logging.info(&#39;Source rcsite: %s&#39; % config[&#39;src_rcsite&#39;])
+    logging.info(&#39;Destination rcsite: %s&#39; % config[&#39;dst_rcsite&#39;])
+    # CRIC database
+    df_cric_database = query_cric_database(params)
+    # Generate queries
+    list_src_endpoints = generate_query(config, params, &#39;src_rcsite&#39;, df_cric_database)
+    list_dst_endpoints = generate_query(config, params, &#39;dst_rcsite&#39;, df_cric_database)
+    # Set the attributes of the class transfer broker
+    class_transfer_broker_.set_list_src_rcsites(config[&#39;src_rcsite&#39;])
+    class_transfer_broker_.set_list_dst_rcsites(config[&#39;dst_rcsite&#39;])
+    class_transfer_broker_.set_list_src_endpoints(list_src_endpoints)
+    class_transfer_broker_.set_list_dst_endpoints(list_dst_endpoints)
+    class_transfer_broker_.set_unidirectional(config[&#39;unidirectional_link&#39;])
+    class_transfer_broker_.set_events_to_wait(config[&#39;events_to_wait_until_notification&#39;])
+    class_transfer_broker_.set_max_throughput(config[&#39;max_throughput_threshold_link&#39;])
+    class_transfer_broker_.set_min_throughput(config[&#39;min_throughput_threshold_link&#39;])
+    class_transfer_broker_.set_num_circuits(config[&#39;number_of_dynamic_circuits&#39;])
+    class_transfer_broker_.set_sense_uuid(config[&#39;sense_uuid&#39;])
+    class_transfer_broker_.set_sense_vlan(config[&#39;sense_vlan&#39;])
+    # Build threads
+    transfers_tx = build_thread(params, &#39;src_rcsite&#39;) 
+    transfers_rx = build_thread(params, &#39;dst_rcsite&#39;)
+    # Start threads
+    start_threads(transfers_tx, transfers_rx)</code></pre>
+</details>
+</dd>
+<dt id="main.make_decision_before_alert"><code class="name flex">
+<span>def <span class="ident">make_decision_before_alert</span></span>(<span>params, action, message)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Function to make a decision on the link for loooking into the FTS queue before alert.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>params</code></strong> :&ensp;<code>configparser</code></dt>
+<dd>parameters file.</dd>
+<dt><strong><code>action</code></strong> :&ensp;<code>str</code></dt>
+<dd>action to be execute on the link, it can take two values: {start, stop}</dd>
+<dt><strong><code>message</code></strong> :&ensp;<code>str</code></dt>
+<dd>message to send in the email notification</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def make_decision_before_alert(params, action, message):
+    &#34;&#34;&#34;Function to make a decision on the link for loooking into the FTS queue before alert.
+
+    Args:
+        params (configparser): parameters file.
+        action (str): action to be execute on the link, it can take two values: {start, stop}
+        message (str): message to send in the email notification
+    &#34;&#34;&#34;
+    logging.warning(&#39;Link under supervision: make decision before alert: action %s&#39; % action)
+    # Look to FTS queue for X events to see if it is just instaneous traffic fluctuations or not, if true send alert email notification
+    bool_email = monitor_queue_before_alert(params, action)
+    if bool_email:
+        # Check the current state of the link. This is used to synchronize TX and RX threads because the start and stop should be send only once
+        if not class_transfer_broker_.get_unidirectional(): 
+            # If TX and RX are not congested -&gt; activate dynamic circuit and update state of the link
+            if action == &#39;start&#39; and not class_transfer_broker_.get_link_src_state() and not class_transfer_broker_.get_link_dst_state(): 
+                logging.warning(&#39;Link under supervision: update link state: True&#39;)
+                if &#39;src_rcsite&#39; in threading.current_thread().name: class_transfer_broker_.set_link_src_state(True)
+                else: class_transfer_broker_.set_link_dst_state(True)
+                sense_dynamic_circuit(params, &#39;provision&#39;, action, message)
+            # If TX congested but RX not: set only RX and do not send an email
+            elif action == &#39;start&#39; and class_transfer_broker_.get_link_src_state() and not class_transfer_broker_.get_link_dst_state(): 
+                logging.warning(&#39;Link under supervision: update dst link state: True&#39;)
+                class_transfer_broker_.set_link_dst_state(True)
+            # If RX congested but TX not: set only TX and do not send an email
+            elif action == &#39;start&#39; and not class_transfer_broker_.get_link_src_state() and class_transfer_broker_.get_link_dst_state(): 
+                logging.warning(&#39;Link under supervision: update link state: True&#39;)
+                class_transfer_broker_.set_link_src_state(True)
+            # Stop condition -&gt; TX are RX are congested, not send an email
+            elif action == &#39;stop&#39; and class_transfer_broker_.get_link_src_state() and class_transfer_broker_.get_link_dst_state():
+                # Update state of the link
+                logging.warning(&#39;Link under supervision: update link state: False&#39;)
+                if &#39;src_rcsite&#39; in threading.current_thread().name: class_transfer_broker_.set_link_src_state(False)
+                else: class_transfer_broker_.set_link_dst_state(False)
+            # If TX is not congested and RX will be not congested -&gt; send email
+            elif action == &#39;stop&#39; and not class_transfer_broker_.get_link_src_state() and class_transfer_broker_.get_link_dst_state():
+                logging.warning(&#39;Link under supervision: update dst link state: False&#39;)
+                class_transfer_broker_.set_link_dst_state(False)
+                sense_dynamic_circuit(params, &#39;cancel&#39;, action, message)
+            # If RX is not congested and TX will be not congested -&gt; send email
+            elif action == &#39;stop&#39; and class_transfer_broker_.get_link_src_state() and not class_transfer_broker_.get_link_dst_state():
+                logging.warning(&#39;Link under supervision: update src link state: False&#39;)
+                class_transfer_broker_.set_link_src_state(False)
+                sense_dynamic_circuit(params, &#39;cancel&#39;, action, message)
+        # It&#39;s an unidirectional link so all the start/stop conditions should be applied to TX
+        else: 
+            if action == &#39;start&#39;:
+                sense_dynamic_circuit(params, &#39;provision&#39;, action, message)
+                class_transfer_broker_.set_link_src_state(True)
+            else: 
+                sense_dynamic_circuit(params, &#39;cancel&#39;, action, message)
+                class_transfer_broker_.set_link_src_state(False)            
+    return</code></pre>
+</details>
+</dd>
+<dt id="main.make_decision_link"><code class="name flex">
+<span>def <span class="ident">make_decision_link</span></span>(<span>params, df_last_event)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Function to make a decision on the link [start/stop events].</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>params</code></strong> :&ensp;<code>configparser</code></dt>
+<dd>parameters file.</dd>
+<dt><strong><code>df_last_event</code></strong> :&ensp;<code>dataframe</code></dt>
+<dd>last event of FTS optimizer.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def make_decision_link(params, df_last_event):
+    &#34;&#34;&#34;Function to make a decision on the link [start/stop events].
+
+    Args:
+        params (configparser): parameters file.
+        df_last_event (dataframe): last event of FTS optimizer.
+    &#34;&#34;&#34;
+    logging.debug(&#39;Inspecting transfers: make decision.&#39;)
+    # Get the metrics of the link
+    data_gigabytes, throughput_gigabits, parallel_transfers, queued_transfers, timestamp = get_metrics_link(df_last_event)
+    # Get current state of the link
+    if &#39;src_rcsite&#39; in threading.current_thread().name: link_state = class_transfer_broker_.get_link_src_state()
+    else: link_state = class_transfer_broker_.get_link_dst_state()
+    # If throughput &gt; X Gb/s and the link is not congested send an email because the link will be congested
+    if   throughput_gigabits &gt; class_transfer_broker_.get_max_throughput() and not link_state: make_decision_before_alert(params, &#39;start&#39;, &#39;START MESSAGE -&gt; A new link should be added to avoid congestion on the link&#39;)
+    # If the link was congested but now the transfers takes throughput &lt; X Gb/s, the link will not be congested anymore
+    elif throughput_gigabits &lt; class_transfer_broker_.get_min_throughput() and link_state: make_decision_before_alert(params, &#39;stop&#39;, &#39;STOP MESSAGE -&gt; The link could be removed&#39;)
+    return</code></pre>
+</details>
+</dd>
+<dt id="main.monitor_queue_before_alert"><code class="name flex">
+<span>def <span class="ident">monitor_queue_before_alert</span></span>(<span>params, action)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Function to monitor FTS queue for X events to check if it is just instantaneous traffic or a huge transfer is going to take place.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>params</code></strong> :&ensp;<code>configparser</code></dt>
+<dd>parameters file.</dd>
+<dt><strong><code>action</code></strong> :&ensp;<code>str</code></dt>
+<dd>action to execute, it can take two values {start, stop}.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def monitor_queue_before_alert(params, action):
+    &#34;&#34;&#34;Function to monitor FTS queue for X events to check if it is just instantaneous traffic or a huge transfer is going to take place.
+
+    Args:
+        params (configparser): parameters file.
+        action (str): action to execute, it can take two values {start, stop}.
+    &#34;&#34;&#34;
+    logging.warning(&#39;Link under supervision: monitor queue before alert.&#39;)
+    number_of_events = 0
+    last_timestamp = &#39;&#39;
+    while True:
+        # Inspect the parameters of the transfers in FTS and make a decision on the link based on that
+        df_last_event = inspect_transfers(params)
+        # Get the metrics of the link
+        data_gigabytes, throughput_gigabits, parallel_transfers, queued_transfers, timestamp = get_metrics_link(df_last_event)
+        # Count events if there are with different timestamp, i.e. if there are different FTS Optimizer events
+        if last_timestamp != str(timestamp):
+            # Interrupt the start/stop sequence because the throughput changed its expected behaviour
+            if (throughput_gigabits &lt; class_transfer_broker_.get_max_throughput() and action == &#39;start&#39;) or (throughput_gigabits &gt; class_transfer_broker_.get_min_throughput() and action == &#39;stop&#39;): return False
+            # Update last timestamp to the new one and count the events
+            last_timestamp = str(timestamp)
+            number_of_events = number_of_events + 1
+            logging.warning(&#39;Link under supervision: monitor queue before alert: action %s, number of events %d&#39; % (action, number_of_events))
+            logging.warning(&#39;df_last_event: timestamp: %s, source_se: %s, dest_se: %s, throughput [Gb/s]: %s, parallel_transfers: %s, queued_transfers: %s&#39; % (timestamp, df_last_event[&#39;source_se&#39;].values[0], df_last_event[&#39;dest_se&#39;].values[0], throughput_gigabits, parallel_transfers, queued_transfers))
+            logging.warning(&#39;There are %d transfers with a total of %f GB - Throughput: %f Gb/s&#39; % (parallel_transfers, data_gigabytes, throughput_gigabits))
+            if number_of_events == class_transfer_broker_.get_events_to_wait(): return True
+        time.sleep(60) # FTS OptimizerInterval = 60s</code></pre>
+</details>
+</dd>
+<dt id="main.monitor_transfers"><code class="name flex">
+<span>def <span class="ident">monitor_transfers</span></span>(<span>params)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Function to monitor transfers in FTS, this function is used by TX/RX threads.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>params</code></strong> :&ensp;<code>configparser</code></dt>
+<dd>parameters file.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def monitor_transfers(params):
+    &#34;&#34;&#34;Function to monitor transfers in FTS, this function is used by TX/RX threads.
+
+    Args:
+        params (configparser): parameters file.
+    &#34;&#34;&#34;
+    logging.info(&#39;Monitoring transfers.&#39;)
+    if &#39;src_rcsite&#39; in threading.current_thread().name: filename = params.get(&#39;FILENAME PARAMETERS&#39;, &#39;filename_transfers_src&#39;)
+    else: filename = params.get(&#39;FILENAME PARAMETERS&#39;, &#39;filename_transfers_dst&#39;)
+    # Declare variables
+    last_timestamp = &#39;0&#39;
+    while True:
+        # Inspect the parameters of the transfers in FTS and make a decision on the link based on that
+        df_last_event = inspect_transfers(params)
+        # Get the metrics of the link
+        if df_last_event.empty: continue # There are none transfers
+        data_gigabytes, throughput_gigabits, parallel_transfers, queued_transfers, timestamp = get_metrics_link(df_last_event)
+        if throughput_gigabits != 0:
+            if &#39;src_rcsite&#39; in threading.current_thread().name: link_state = class_transfer_broker_.get_link_src_state()
+            else: link_state = class_transfer_broker_.get_link_dst_state()
+            make_decision_link(params, df_last_event)
+            # Append data to a log file for traceability purposes of the events
+            if link_state and timestamp != last_timestamp: append_data_to_log_file(filename, df_last_event)
+            if timestamp != last_timestamp:
+                append_data_to_log_file(params.get(&#39;FILENAME PARAMETERS&#39;, &#39;filename_all_transfers&#39;), df_last_event)
+                logging.info(&#39;df_last_event: timestamp: %s, source_se: %s, dest_se: %s, throughput [Gb/s]: %s, parallel_transfers: %s, queued_transfers: %s&#39; % (timestamp, df_last_event[&#39;source_se&#39;].values[0], df_last_event[&#39;dest_se&#39;].values[0], throughput_gigabits, parallel_transfers, queued_transfers))
+                logging.info(&#39;There are %d transfers with a total of %f GB - Throughput: %f Gb/s&#39; % (parallel_transfers, data_gigabytes, throughput_gigabits))
+            last_timestamp = timestamp
+            time.sleep(60) # FTS OptimizerInterval = 60s
+        # If the link is active and suddenly it goes down
+        elif throughput_gigabits == 0 and link_state:
+            if &#39;src_rcsite&#39; in threading.current_thread().name: class_transfer_broker_.set_link_src_state(False)
+            else: class_transfer_broker_.set_link_dst_state(False)
+            send_email(params, &#39;STOP MESSAGE -&gt; The link could be removed\n\n&#39;)
+            append_data_to_log_file(filename, &#39;stop&#39;)</code></pre>
+</details>
+</dd>
+<dt id="main.query_cric_database"><code class="name flex">
+<span>def <span class="ident">query_cric_database</span></span>(<span>params)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Query CRIC database.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>params</code></strong> :&ensp;<code>configparser</code></dt>
+<dd>parameters file.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>dataframe</code></dt>
+<dd>CRIC database information in a dataframe structure.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def query_cric_database(params):
+    &#34;&#34;&#34;Query CRIC database.
+
+    Args:
+        params (configparser): parameters file.
+
+    Returns:
+        dataframe: CRIC database information in a dataframe structure.
+    &#34;&#34;&#34;
+    # Get data from CRIC database
+    dict_cric_ip_address = load_json_from_url(params.get(&#39;CRIC PARAMETERS&#39;, &#39;cric_ip_address_url&#39;)) # IPv4/IPv6 addresses query json
+    dict_cric_endpoints  = load_json_from_url(params.get(&#39;CRIC PARAMETERS&#39;, &#39;cric_endpoints_url&#39;))  # Endpoints, rcsites and federations query json
+    # Convert dictionaries to dataframes
+    df_cric_ip_address = pd.DataFrame.from_dict(dict_cric_ip_address).T # columns = admin_email, altname, cert_status, corepower, cores, country, country_code, cpu_capacity, crr_url, description, disk_capacity, federations, gocdb_pk, gocdb_url, id, infourl, institute, is_pledged, latitude, longitude, monit_tag, name, netroutes, netsites, oim_groupid, rc_tier_level, security_email, services, sites, slots, srr_url, state, status, tape_capacity, timezone
+    df_cric_ip_address = df_cric_ip_address[df_cric_ip_address[&#39;netroutes&#39;] != {}].reset_index(drop = True) # format data: remove places without IPv4/IPv6 addresses
+    df_cric_endpoints  = pd.DataFrame.from_dict(dict_cric_endpoints).T  # columns = arch, country, country_code, description, endpoint, federation, flavour, id, impl, in_report, info_url, is_ipv6, is_monitored, is_virtual, last_modified, name, rcsite, rcsite_state, resources, rr_profile, state, status, type, usage, version, aprotocols, protocols
+    # Process data: get endpoints
+    logging.debug(&#39;Querying CRIC database.&#39;)
+    df_cric_database = pd.DataFrame(columns = [&#39;Endpoint&#39;, &#39;Rcsite&#39;, &#39;Federation&#39;, &#39;IPv4&#39;, &#39;IPv6&#39;])
+    df_cric_database = get_endpoints_rcsites(df_cric_database, df_cric_endpoints)     # Get endpoints, federations and rcsites: columns = Endpoint, Rcsite, Federation
+    df_cric_database = get_rcsites_ip_addresses(df_cric_database, df_cric_ip_address) # Get rcsites, IPv4 and IPv6 addresses:   columns = IPv4, IPv6
+    logging.info(&#39;There are %d rcsites defined in CRIC database&#39;   % df_cric_ip_address.shape[0])
+    logging.info(&#39;There are %d endpoints defined in CRIC database&#39; % df_cric_endpoints.shape[0])
+    return df_cric_database</code></pre>
+</details>
+</dd>
+<dt id="main.send_email"><code class="name flex">
+<span>def <span class="ident">send_email</span></span>(<span>params, message)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Function to send an email for advertising the congestion of the link.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>params</code></strong> :&ensp;<code>configparser</code></dt>
+<dd>parameters file.</dd>
+<dt><strong><code>message</code></strong> :&ensp;<code>str</code></dt>
+<dd>message to stream</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def send_email(params, message):
+    &#34;&#34;&#34;
+    Function to send an email for advertising the congestion of the link.
+
+    Args:
+        params (configparser): parameters file.
+        message (str): message to stream
+    &#34;&#34;&#34;
+    logging.warning(&#39;Sending email: LHCOPN Source: %s, LHCOPN Destination: %s, message: %s&#39; % (class_transfer_broker_.get_list_src_rcsites(), class_transfer_broker_.get_list_dst_rcsites(), message))
+    # Inspect parameters of the transfers and get the metrics of the link
+    df_last_event = inspect_transfers(params)
+    data_gigabytes, throughput_gigabits, parallel_transfers, queued_transfers, timestamp = get_metrics_link(df_last_event) 
+    # Write content of the email into a txt file
+    with open(&#39;noted_email.txt&#39;, &#39;w&#39;) as f:
+        f.write(&#39;From: noted@cern.ch\n&#39;)
+        f.write(&#39;To: carmen.misa.moreira@cern.ch\n&#39;)
+        f.write(&#39;Subject: [NOTED] Notification\n\n&#39;)
+        f.write(&#39;Hi,\n\n&#39;)
+        f.write(&#39;New transfer detected...\n\n&#39;)
+        f.write(message + &#39;\n\n&#39;)
+        if &#39;src_rcsite&#39; in threading.current_thread().name:
+            f.write(&#39;LHCOPN Source: &#39;      + str(class_transfer_broker_.get_list_src_rcsites()) + &#39;\n&#39;)
+            f.write(&#39;LHCOPN Destination: &#39; + str(class_transfer_broker_.get_list_dst_rcsites()) + &#39;\n\n&#39;)
+        else:
+            f.write(&#39;LHCOPN Source: &#39;      + str(class_transfer_broker_.get_list_dst_rcsites()) + &#39;\n&#39;)
+            f.write(&#39;LHCOPN Destination: &#39; + str(class_transfer_broker_.get_list_src_rcsites()) + &#39;\n\n&#39;)
+        f.write(&#39;\tTimestamp: &#39;            + str(timestamp)            + &#39;\n&#39;)
+        f.write(&#39;\tNumber of transfers: &#39;  + str(parallel_transfers)   + &#39;\n&#39;)
+        f.write(&#39;\tQueued transfers: &#39;     + str(queued_transfers)     + &#39;\n&#39;)
+        f.write(&#39;\tThroughput [Gb/s]: &#39;    + str(throughput_gigabits)  + &#39;\n&#39;)
+        f.write(&#39;\tAmount of data [GB]: &#39;  + str(data_gigabytes)       + &#39;\n\n&#39;)
+        f.write(&#39;Cheers\n&#39;)
+        f.write(&#39;NOTED 2.0\n&#39;)
+    # Send email
+    cmd = os.popen(&#39;sendmail -vt &lt; noted_email.txt&#39;)
+    return</code></pre>
+</details>
+</dd>
+<dt id="main.sense_dynamic_circuit"><code class="name flex">
+<span>def <span class="ident">sense_dynamic_circuit</span></span>(<span>params, task, action, message)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Function to provide or cancel a dynamic circuit by using sense-o autogole northbound API.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>params</code></strong> :&ensp;<code>configparser</code></dt>
+<dd>parameters file.</dd>
+<dt><strong><code>task</code></strong> :&ensp;<code>str</code></dt>
+<dd>action to be executed in sense-o, it can take two values: {provision, cancel}.</dd>
+<dt><strong><code>action</code></strong> :&ensp;<code>str</code></dt>
+<dd>action to be execute on the link, it can take two values: {start, stop}</dd>
+<dt><strong><code>message</code></strong> :&ensp;<code>str</code></dt>
+<dd>message to send in the email notification</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def sense_dynamic_circuit(params, task, action, message):
+    &#34;&#34;&#34;Function to provide or cancel a dynamic circuit by using sense-o autogole northbound API.
+
+    Args:
+        params (configparser): parameters file.
+        task (str): action to be executed in sense-o, it can take two values: {provision, cancel}.
+        action (str): action to be execute on the link, it can take two values: {start, stop}
+        message (str): message to send in the email notification
+    &#34;&#34;&#34;
+    logging.warning(&#39;Calling to sense-o API to %s a dynamic circuit.&#39; % task)
+    # Provision dynamic circuit with sense-o
+    if &#39;provision&#39; in task:
+        cmd = os.popen(str(&#39;sh sense-o/sense-provision.sh &#39; + class_transfer_broker_.get_sense_uuid() + &#39; &#39; + class_transfer_broker_.get_sense_vlan()));     
+        cmd = os.popen(str(&#39;sh sense-o/sense-provision.sh &#39; + class_transfer_broker_.get_sense_uuid_2() + &#39; &#39; + class_transfer_broker_.get_sense_vlan_2()));
+    # Cancel dynamic circuit with sense-o
+    else:
+        cmd = os.popen(str(&#39;sh sense-o/sense-cancel.sh &#39; + class_transfer_broker_.get_sense_uuid() + &#39; &#39; + class_transfer_broker_.get_sense_vlan()));     
+        cmd = os.popen(str(&#39;sh sense-o/sense-cancel.sh &#39; + class_transfer_broker_.get_sense_uuid_2() + &#39; &#39; + class_transfer_broker_.get_sense_vlan_2())); 
+    send_email(params, message)
+    if &#39;src_rcsite&#39; in threading.current_thread().name: filename = params.get(&#39;FILENAME PARAMETERS&#39;, &#39;filename_transfers_src&#39;)
+    else: filename = params.get(&#39;FILENAME PARAMETERS&#39;, &#39;filename_transfers_dst&#39;)
+    append_data_to_log_file(filename, action)
+    return</code></pre>
+</details>
+</dd>
+<dt id="main.start_threads"><code class="name flex">
+<span>def <span class="ident">start_threads</span></span>(<span>transfers_tx, transfers_rx)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Function to start thread and monitor the transfers.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>transfers_tx</code></strong> :&ensp;<code>thread</code></dt>
+<dd>tx thread.</dd>
+<dt><strong><code>transfers_rx</code></strong> :&ensp;<code>thread</code></dt>
+<dd>rx thread.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def start_threads(transfers_tx, transfers_rx):
+    &#34;&#34;&#34;Function to start thread and monitor the transfers.
+
+    Args:
+        transfers_tx (thread): tx thread.
+        transfers_rx (thread): rx thread.
+    &#34;&#34;&#34;
+    logging.debug(&#39;Starting thread %s.&#39; % transfers_tx.name)
+    logging.debug(&#39;Starting thread %s.&#39; % transfers_rx.name)
+    # Start threads
+    transfers_tx.start()
+    if not class_transfer_broker_.get_unidirectional(): transfers_rx.start()    
+    transfers_tx.join()
+    transfers_rx.join()
+    return</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul>
+<li><a href="#noted-a-framework-to-optimise-network-traffic-via-the-analysis-of-data-from-file-transfer-services">NOTED: a framework to optimise network traffic via the analysis of data from File Transfer Services.</a></li>
+</ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="main.append_data_to_log_file" href="#main.append_data_to_log_file">append_data_to_log_file</a></code></li>
+<li><code><a title="main.build_thread" href="#main.build_thread">build_thread</a></code></li>
+<li><code><a title="main.generate_query" href="#main.generate_query">generate_query</a></code></li>
+<li><code><a title="main.get_endpoints_rcsites" href="#main.get_endpoints_rcsites">get_endpoints_rcsites</a></code></li>
+<li><code><a title="main.get_fts_optimizer_events" href="#main.get_fts_optimizer_events">get_fts_optimizer_events</a></code></li>
+<li><code><a title="main.get_metrics_link" href="#main.get_metrics_link">get_metrics_link</a></code></li>
+<li><code><a title="main.get_rcsites_ip_address" href="#main.get_rcsites_ip_address">get_rcsites_ip_address</a></code></li>
+<li><code><a title="main.get_rcsites_ip_addresses" href="#main.get_rcsites_ip_addresses">get_rcsites_ip_addresses</a></code></li>
+<li><code><a title="main.get_subendpoints_rcsites" href="#main.get_subendpoints_rcsites">get_subendpoints_rcsites</a></code></li>
+<li><code><a title="main.inspect_transfers" href="#main.inspect_transfers">inspect_transfers</a></code></li>
+<li><code><a title="main.load_json_from_url" href="#main.load_json_from_url">load_json_from_url</a></code></li>
+<li><code><a title="main.load_yaml" href="#main.load_yaml">load_yaml</a></code></li>
+<li><code><a title="main.main" href="#main.main">main</a></code></li>
+<li><code><a title="main.make_decision_before_alert" href="#main.make_decision_before_alert">make_decision_before_alert</a></code></li>
+<li><code><a title="main.make_decision_link" href="#main.make_decision_link">make_decision_link</a></code></li>
+<li><code><a title="main.monitor_queue_before_alert" href="#main.monitor_queue_before_alert">monitor_queue_before_alert</a></code></li>
+<li><code><a title="main.monitor_transfers" href="#main.monitor_transfers">monitor_transfers</a></code></li>
+<li><code><a title="main.query_cric_database" href="#main.query_cric_database">query_cric_database</a></code></li>
+<li><code><a title="main.send_email" href="#main.send_email">send_email</a></code></li>
+<li><code><a title="main.sense_dynamic_circuit" href="#main.sense_dynamic_circuit">sense_dynamic_circuit</a></code></li>
+<li><code><a title="main.start_threads" href="#main.start_threads">start_threads</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>
