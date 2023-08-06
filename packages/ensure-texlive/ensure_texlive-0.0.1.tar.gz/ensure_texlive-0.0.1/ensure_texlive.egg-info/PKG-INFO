@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: ensure-texlive
+Version: 0.0.1
+Summary: A small TeXLive distibution installer
+Home-page: https://gitlab.com/peczony/ensure_texlive
+Author: Alexander Pecheny
+Author-email: ap@pecheny.me
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+**ensure_texlive** is a utility that installs
+a small latex distribution (essentially a TinyTeX) in user mode on a user's machine.
+
+Project home on gitlab: https://gitlab.com/peczony/ensure_texlive
