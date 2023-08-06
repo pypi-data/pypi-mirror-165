@@ -1,0 +1,12 @@
+setup.py
+tdviewer/__init__.py
+tdviewer/box_op.py
+tdviewer/color_map.py
+tdviewer/show.py
+tdviewer/show_rename.py
+tdviewer/vis.py
+tdviewer.egg-info/PKG-INFO
+tdviewer.egg-info/SOURCES.txt
+tdviewer.egg-info/dependency_links.txt
+tdviewer.egg-info/requires.txt
+tdviewer.egg-info/top_level.txt
