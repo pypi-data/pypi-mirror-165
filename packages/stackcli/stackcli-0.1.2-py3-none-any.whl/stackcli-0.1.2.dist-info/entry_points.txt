@@ -1,0 +1,3 @@
+[console_scripts]
+stackcli=stack_api.api_cli:app
+
