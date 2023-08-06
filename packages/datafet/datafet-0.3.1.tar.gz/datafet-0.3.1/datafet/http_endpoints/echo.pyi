@@ -1,0 +1,3 @@
+from fastapi import Request as Request
+
+def get_echo(request: Request): ...
