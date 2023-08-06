@@ -1,0 +1,2 @@
+[console_scripts]
+dmrlib-pcap-tool = okdmr.dmrlib.tools.pcap_tool:PcapTool.main
