@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: whitebox_workflows
+Version: 0.9.0
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+License-File: LICENSE.txt
+Summary: whitebox_workflows is a Python library for advanced spatial analysis.
+Keywords: spatial analysis,GIS,remote sensing
+Author: Whitebox Geospatial Inc.
+Author-email: support@whiteboxgeo.com
+Requires-Python: >=3.6
+Description-Content-Type: text/x-rst; charset=UTF-8
+
+=============================
+Whitebox Workflows for Python
+=============================
+
+
+What is Whitebox Workflows?
+===========================
+
+Whitebox Workflows (WbW) is a Python library for advanced geoprocessing, including many GIS and remote sensing analysis operations for manipulating common types of raster, vector and lidar geospatial data.
+
+
+
