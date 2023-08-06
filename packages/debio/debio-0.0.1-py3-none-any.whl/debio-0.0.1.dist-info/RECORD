@@ -1,0 +1,13 @@
+debio/__init__.py,sha256=Uqb8dNK3VySXGADGuOXz05daXHT-iNbGfno1K4d1drs,115
+debio/api.py,sha256=HeCxRTuWVu67KLY08pJK_YuMINBjMfZ4v7OhyklLyjA,3147
+debio/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+debio/version.py,sha256=V9qM7cXmIV_CxCai-LWOSpc6_OhNjbRLpPx4yERhhtM,996
+debio/resources/__init__.py,sha256=1JRxzKPDgkvOD68php52AtNSfOb8Pd2fGHAQJ2gl9zU,516
+debio/resources/properties.json,sha256=2-tHPbCYn9aEY3KSLTXEXYNGZ6LjV9IO0DOZO1XshwQ,105
+debio/resources/terms.json,sha256=T1PNoYwrqgwDVLtfmj7L5e0Sq02OEbqHPC8RFhICuUU,2
+debio/resources/typedefs.json,sha256=BxPIFtRAYARO1N1IW-RBHkdq580vks6CI0pX-EDg_1Y,4071
+debio-0.0.1.dist-info/LICENSE,sha256=ve6WiK7DUzD7fEkZ_ddqaiBSMNj9ib93QYZG5UsOAH0,1076
+debio-0.0.1.dist-info/METADATA,sha256=5QodDLlMcxDHYPR0bqIyHYEubTJb47z5h-pDP5BnbB8,7820
+debio-0.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+debio-0.0.1.dist-info/top_level.txt,sha256=3HS38LkG1kFaw422R2nnYuFOZUxgcWzkWvhZFUBMIs8,6
+debio-0.0.1.dist-info/RECORD,,
