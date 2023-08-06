@@ -1,0 +1,8 @@
+resistors/__init__.py,sha256=4wEe2OH1vsBeffddXzSBy3f3AhUA_uNna61U4L-R8D0,3443
+resistors/errors.py,sha256=kwB8mkGRjcKdy-364dkYCZ9CuexsRp0T_NjYQMdHxU8,393
+resistors/util.py,sha256=nttFDCIVDsoz3mX_a8IBe6db5zv1n7_mRGptk0lkLzQ,372
+resistors-1.0.0.dist-info/LICENSE,sha256=ulVokxK74lqXhQwsjqZ34Hwam_XHrj1sq69Vz4_mNJ8,1054
+resistors-1.0.0.dist-info/METADATA,sha256=rCWgCMJ00pixxA-vvgGDXnlRo-KUitOLH63QxY-fNwY,1322
+resistors-1.0.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+resistors-1.0.0.dist-info/top_level.txt,sha256=tR4NMvyc9l3QGFXrFr6hi1Ww-l8NQGA8mkXyi0p_mfU,10
+resistors-1.0.0.dist-info/RECORD,,
