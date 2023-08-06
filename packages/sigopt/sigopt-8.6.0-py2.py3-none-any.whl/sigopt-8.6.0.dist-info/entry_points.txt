@@ -1,0 +1,3 @@
+[console_scripts]
+sigopt = sigopt.cli.__main__:sigopt_cli
+

@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: sigopt
+Version: 8.6.0
+Summary: SigOpt Python API Client
+Home-page: https://sigopt.com/
+Author: SigOpt
+Author-email: support@sigopt.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+License-File: LICENSE
+Requires-Dist: GitPython (>=2.0.0)
+Requires-Dist: Pint (<0.17.0,>=0.16.0)
+Requires-Dist: PyYAML (<6.0.0,>=5.4.1)
+Requires-Dist: backoff (<2.0.0,>=1.10.0)
+Requires-Dist: boto3 (<2.0.0,>=1.16.34)
+Requires-Dist: click (>=8.0.0)
+Requires-Dist: docker (<5.0.0,>=4.4.0)
+Requires-Dist: ipython (>=5.0.0)
+Requires-Dist: kubernetes (<13.0.0,>=12.0.1)
+Requires-Dist: packaging (>=21.3)
+Requires-Dist: pyOpenSSL (>=20.0.0)
+Requires-Dist: pypng (>=0.0.20)
+Requires-Dist: requests (<3.0.0,>=2.25.0)
+Requires-Dist: rsa (<5.0.0,>=4.7)
+Provides-Extra: dev
+Requires-Dist: Pillow ; extra == 'dev'
+Requires-Dist: flake8 (==3.8.4) ; extra == 'dev'
+Requires-Dist: isort (==4.3.4) ; extra == 'dev'
+Requires-Dist: matplotlib (>=3.3.4) ; extra == 'dev'
+Requires-Dist: mock (>=3.0.5) ; extra == 'dev'
+Requires-Dist: nose (==1.3.7) ; extra == 'dev'
+Requires-Dist: notebook ; extra == 'dev'
+Requires-Dist: numpy (<2.0.0,>=1.15.0) ; extra == 'dev'
+Requires-Dist: pylint (==2.9.6) ; extra == 'dev'
+Requires-Dist: pymongo (==3.12.3) ; extra == 'dev'
+Requires-Dist: pyspark ; extra == 'dev'
+Requires-Dist: pytest (==6.2.1) ; extra == 'dev'
+Requires-Dist: setuptools (>=47.3.1) ; extra == 'dev'
+Requires-Dist: twine (<4.0.0,>=3.2.0) ; extra == 'dev'
+Requires-Dist: scikit-learn (>=0.23.2) ; extra == 'dev'
+Requires-Dist: vulture (==2.3.0) ; extra == 'dev'
+Requires-Dist: xgboost (<1.6.0,>=1.3.1) ; extra == 'dev'
+Requires-Dist: numpy (>=1.15.0) ; extra == 'dev'
+Requires-Dist: hyperopt (>=0.2.7) ; extra == 'dev'
+Provides-Extra: hyperopt
+Requires-Dist: hyperopt (>=0.2.7) ; extra == 'hyperopt'
+Provides-Extra: xgboost
+Requires-Dist: xgboost (<1.6.0,>=1.3.1) ; extra == 'xgboost'
+Requires-Dist: numpy (>=1.15.0) ; extra == 'xgboost'
+
+UNKNOWN
+
