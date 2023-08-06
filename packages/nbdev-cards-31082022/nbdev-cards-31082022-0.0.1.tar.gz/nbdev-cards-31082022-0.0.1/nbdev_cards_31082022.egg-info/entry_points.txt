@@ -1,0 +1,2 @@
+[nbdev]
+nbdev_cards = nbdev_cards._modidx:d
