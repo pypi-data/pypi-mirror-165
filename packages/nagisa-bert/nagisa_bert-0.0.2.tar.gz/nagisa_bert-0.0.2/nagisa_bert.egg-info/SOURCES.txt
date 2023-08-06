@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+nagisa_bert/__init__.py
+nagisa_bert/tokenization_nagisa_bert.py
+nagisa_bert.egg-info/PKG-INFO
+nagisa_bert.egg-info/SOURCES.txt
+nagisa_bert.egg-info/dependency_links.txt
+nagisa_bert.egg-info/not-zip-safe
+nagisa_bert.egg-info/requires.txt
+nagisa_bert.egg-info/top_level.txt
+tests/__init__.py
+tests/test_tokenization_nagisa_bert.py
