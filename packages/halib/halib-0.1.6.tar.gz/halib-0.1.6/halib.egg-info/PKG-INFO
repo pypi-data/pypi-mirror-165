@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: halib
+Version: 0.1.6
+Summary: Small library for common tasks
+Author: Hoang Van Ha
+Author-email: hoangvanhauit@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+Helper package for coding and automation
+
+**Version 0.1.6**
+
+New features:
+
+* add DFCreator for manipulating table (DataFrame) - create, insert row, display, write to file
+
+---
+
+
+
+**Version 0.1.5**
+
+New Features
+
+- add cmd module
+- new package structure
+
+---
+
+**Version 0.1.4**
+
+New Features
+
+- add support to create Bitbucket Project from template
+
+---
+
+**Version 0.1.2**
+
+New Features
+
+- add support to upload local to google drive.
+
+
