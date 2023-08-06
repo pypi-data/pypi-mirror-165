@@ -1,0 +1,50 @@
+[build-system]
+requires      = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dur_utils"
+version = "0.1"
+description = "Durham Colours, as rgb tuples."
+readme = "README.md"
+authors = [{ name = "Sean Craven", email = "seanpietercraven@gmail.com  " }]
+license = { file = "LICENSE" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+keywords = ["Durham", "Colours"]
+dependencies = [
+]
+requires-python = ">=3.9"
+
+[project.optional-dependencies]
+dev = ["black", "bumpver", "isort", "pip-tools", "pytest"]
+
+[project.urls]
+Homepage = "https://seancraven.github.io/CDS_book/"
+Github = "https://seancraven.github.io/CDS_book/"
+
+[options]
+package_dir = "src"
+
+[options.packages.find]
+where = "src"
+
+
+[tool.bumpver]
+current_version = "0.1"
+version_pattern = "MAJOR.MINOR.PATCH"
+commit_message = "bump version {old_version} -> {new_version}"
+commit = true
+tag = true
+push = false
+
+
+[tool.bumpver.file_patterns]
+"pyproject.toml" = [
+    'current_version = "{version}"', 'version = "{version}"'
+]
+
+"src/simpletrans/__init__.py" = ["{version}"]
+[metadata]
+long_description = "file: README.md"
