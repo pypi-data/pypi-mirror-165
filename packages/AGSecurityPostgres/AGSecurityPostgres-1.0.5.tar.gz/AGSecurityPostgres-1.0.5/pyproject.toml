@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "AGSecurityPostgres"
+version = "1.0.5"
+authors = [
+  { name="Michael Lundager", email="michael@wivvies.com" },
+]
+description = "Security Query Builder"
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "AGCoder",
+    "AGQueryPostgres",
+    "psycopg2-binary"
+]
