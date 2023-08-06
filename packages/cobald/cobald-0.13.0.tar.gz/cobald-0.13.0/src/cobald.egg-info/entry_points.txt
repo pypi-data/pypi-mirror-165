@@ -1,0 +1,15 @@
+[cobald.config.sections]
+__config_test = builtins:dict
+pipeline = cobald.daemon.core.config:load_pipeline
+
+[cobald.config.yaml_constructors]
+Buffer = cobald.decorator.buffer:Buffer
+Limiter = cobald.decorator.limiter:Limiter
+LinearController = cobald.controller.linear:LinearController
+Logger = cobald.decorator.logger:Logger
+RelativeSupplyController = cobald.controller.relative_supply:RelativeSupplyController
+Standardiser = cobald.decorator.standardiser:Standardiser
+__yaml_tag_test = cobald.daemon.plugins:__yaml_tag_test
+
+[console_scripts]
+cobald = cobald.daemon.core.main:cli_run

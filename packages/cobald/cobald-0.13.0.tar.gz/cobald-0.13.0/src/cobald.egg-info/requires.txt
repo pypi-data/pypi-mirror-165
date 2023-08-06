@@ -1,0 +1,23 @@
+pyyaml
+trio>=0.4.0
+entrypoints
+toposort
+typing_extensions
+
+[contrib]
+flake8
+flake8-bugbear
+pytest-cov
+pytest>=4.3.0
+pytest-timeout
+
+[contrib:implementation_name == "cpython"]
+black
+
+[docs]
+sphinx
+sphinx_rtd_theme
+
+[test]
+pytest>=4.3.0
+pytest-timeout
