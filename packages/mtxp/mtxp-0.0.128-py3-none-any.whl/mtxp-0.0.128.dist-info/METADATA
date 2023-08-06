@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: mtxp
+Version: 0.0.128
+Summary: The funniest joke in the world
+Home-page: http://github.com/storborg/funniest
+Author: Flying Circus
+Author-email: flyingcircus@example.com
+License: MIT
+Keywords: funniest joke comedy flying circus
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Text Processing :: Linguistic
+Requires-Dist: aiohttp
+Requires-Dist: authlib
+Requires-Dist: boto3
+Requires-Dist: django-cors-headers
+Requires-Dist: django-extensions
+Requires-Dist: django-filter (>=2)
+Requires-Dist: django-lifecycle
+Requires-Dist: django-oauth-toolkit
+Requires-Dist: django-s3-sqlite
+Requires-Dist: django-s3-storage
+Requires-Dist: django-storages
+Requires-Dist: django (>=4.0)
+Requires-Dist: djangorestframework
+Requires-Dist: djangorestframework-simplejwt
+Requires-Dist: flask
+Requires-Dist: mtlibs (>=0.0.5)
+Requires-Dist: pillow
+Requires-Dist: psycopg2-binary
+Requires-Dist: pyjwt (>=2.0.0)
+Requires-Dist: python-dotenv
+Requires-Dist: requests
+Requires-Dist: wheel
+Requires-Dist: zappa
+
+long_description
+
+
