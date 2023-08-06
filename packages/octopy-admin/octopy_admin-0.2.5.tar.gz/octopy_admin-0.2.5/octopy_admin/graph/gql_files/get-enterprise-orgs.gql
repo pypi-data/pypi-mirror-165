@@ -1,0 +1,15 @@
+query getEnterpiseOrgs($slug: String!, $cursor: String) {
+  enterprise(slug: $slug) {
+    organizations(first: 100, after: $cursor) {
+      totalCount
+      nodes {
+        name
+        login
+      }
+      pageInfo {
+        hasNextPage
+        endCursor
+      }
+    }
+  }
+}
