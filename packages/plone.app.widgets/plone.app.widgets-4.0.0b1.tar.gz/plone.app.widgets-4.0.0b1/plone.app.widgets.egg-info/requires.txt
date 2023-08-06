@@ -1,0 +1,15 @@
+setuptools
+plone.app.vocabularies>=2.1.12
+Products.CMFPlone>=5.2
+six
+
+[dexterity]
+pytz
+plone.app.dexterity
+plone.app.contenttypes>=1.1
+plone.app.event>=1.2
+
+[test]
+plone.app.robotframework[debug]
+plone.app.testing>=4.2.4
+mock
