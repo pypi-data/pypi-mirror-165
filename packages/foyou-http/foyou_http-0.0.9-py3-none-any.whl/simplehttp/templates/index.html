@@ -1,0 +1,18 @@
+<html>
+<head><title>Index of {{ title }}</title></head>
+<body>
+<h1>Index of {{ title }}</h1>
+<hr>
+<pre><a href="../">../</a>
+{% for f in body -%}
+{% set len = f.path | length -%}
+{% if len < 50 -%}
+    <a href="{{ f.path }}">{{ f.path }}</a>{{ ('{:>' + (70 - len) | string + '}').format(f.time) }}{{ '{:>20}'.format(f.size) }}
+{% else -%}
+    <a href="{{ f.path }}">{{ f.path[:47] }}..></a>{{ '{:>20}'.format(f.time) }}{{ '{:>20}'.format(f.size) }}
+{% endif -%}
+{% endfor -%}
+</pre>
+<hr>
+</body>
+</html>
