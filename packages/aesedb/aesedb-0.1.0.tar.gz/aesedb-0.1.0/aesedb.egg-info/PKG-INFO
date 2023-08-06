@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: aesedb
+Version: 0.1.0
+Summary: NTDS parser toolkit
+Home-page: https://github.com/skelsec/aesedb
+Author: Tamas Jos
+Author-email: info@skelsecprojects.com
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
