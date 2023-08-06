@@ -1,0 +1,12 @@
+azure-common
+python-dateutil
+requests
+azure-core<2.0.0,>=1.10.0
+msrest>=0.6.18
+cryptography>=2.1.4
+
+[:python_version<"3.0"]
+azure-nspkg
+
+[:python_version=="2.7"]
+futures
