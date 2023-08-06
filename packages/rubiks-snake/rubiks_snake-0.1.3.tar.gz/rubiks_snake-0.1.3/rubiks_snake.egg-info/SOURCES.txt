@@ -1,0 +1,10 @@
+LICENSE
+README.md
+rubiks_snake.py
+setup.cfg
+setup.py
+rubiks_snake.egg-info/PKG-INFO
+rubiks_snake.egg-info/SOURCES.txt
+rubiks_snake.egg-info/dependency_links.txt
+rubiks_snake.egg-info/requires.txt
+rubiks_snake.egg-info/top_level.txt
