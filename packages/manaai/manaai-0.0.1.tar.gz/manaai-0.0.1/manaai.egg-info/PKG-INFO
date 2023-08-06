@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: manaai
+Version: 0.0.1
+Summary: MANAAI for faster testing your models.
+Home-page: https://github.com/jinfagang/manaai
+Author: Lucas Jin
+Author-email: jinfagang19@163.com
+License: GPL-3.0
+Keywords: deep learning,script helper,tools
+Platform: any
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Education
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Image Recognition
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+
+# manaai cli
+
+https://manaai.cn  comand line tools for MANA users:
+
+- get model weights with their token;
+- search avaiable repos;
+- loadding a model for quick start.
+

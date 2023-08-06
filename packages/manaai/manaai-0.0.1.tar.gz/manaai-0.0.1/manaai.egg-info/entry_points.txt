@@ -1,0 +1,2 @@
+[console_scripts]
+manaai-cli = manaai.manaai_cli:main

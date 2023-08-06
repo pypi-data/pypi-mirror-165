@@ -1,0 +1,11 @@
+MANIFEST.in
+setup.cfg
+setup.py
+manaai/manaai_cli.py
+manaai/version.py
+manaai.egg-info/PKG-INFO
+manaai.egg-info/SOURCES.txt
+manaai.egg-info/dependency_links.txt
+manaai.egg-info/entry_points.txt
+manaai.egg-info/requires.txt
+manaai.egg-info/top_level.txt
