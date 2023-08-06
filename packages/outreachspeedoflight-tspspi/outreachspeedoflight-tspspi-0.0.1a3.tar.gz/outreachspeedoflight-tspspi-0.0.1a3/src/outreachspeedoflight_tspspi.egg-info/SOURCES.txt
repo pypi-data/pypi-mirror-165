@@ -1,0 +1,13 @@
+LICENSE.md
+README.md
+pyproject.toml
+setup.cfg
+src/outreachspeedoflight/__init__.py
+src/outreachspeedoflight/daq.py
+src/outreachspeedoflight/speedoflightgui.py
+src/outreachspeedoflight_tspspi.egg-info/PKG-INFO
+src/outreachspeedoflight_tspspi.egg-info/SOURCES.txt
+src/outreachspeedoflight_tspspi.egg-info/dependency_links.txt
+src/outreachspeedoflight_tspspi.egg-info/entry_points.txt
+src/outreachspeedoflight_tspspi.egg-info/requires.txt
+src/outreachspeedoflight_tspspi.egg-info/top_level.txt
