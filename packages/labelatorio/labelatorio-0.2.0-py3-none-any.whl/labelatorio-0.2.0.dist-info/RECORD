@@ -1,0 +1,11 @@
+labelatorio/__init__.py,sha256=WfeAgv_v1RBqBXJaHxizLyErozC8st9OV3s6pB6970Y,71
+labelatorio/_helpers.py,sha256=MUTaxLcGme0MOodNyKvsaUmhGyZoBw-3dIVLdltjm4E,284
+labelatorio/client.py,sha256=9OTPXdijjpGB4hnV6Pc4Xj515zq7TIFg9JHfMT7v3w4,24328
+labelatorio/data_model.py,sha256=fBitZEglaH_drdSi8cSGzorG6MkQvvxZEbkeE6J1hI0,6182
+labelatorio/enums.py,sha256=M6i0xlDfnYRU-bXUtCXFCvx4etkelC2Pn6CzS0U2pU0,551
+labelatorio/query_model.py,sha256=f-x_bROm1fqQKnyG_f8OPvdvzs4FWrY9OuOcrTVWUJ0,1616
+labelatorio-0.2.0.dist-info/LICENSE,sha256=aTTvP1VH6eTGDnHmFcg15UBlnq6-EpvZM9b_FTG3-fA,1075
+labelatorio-0.2.0.dist-info/METADATA,sha256=oeXdZd9-57YKnGLvv2wf3S8bg7nRS_02NMQxZ4lTchE,2229
+labelatorio-0.2.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+labelatorio-0.2.0.dist-info/top_level.txt,sha256=urZOKj-lBIKFx6PcCWCC8WgnEkRjbIY_NosQ54AGXl4,12
+labelatorio-0.2.0.dist-info/RECORD,,
