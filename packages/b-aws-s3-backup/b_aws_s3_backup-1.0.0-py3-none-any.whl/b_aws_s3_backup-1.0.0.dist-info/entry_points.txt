@@ -1,0 +1,5 @@
+[console_scripts]
+s3back = b_aws_s3_backup.cli_actions.backup:main
+s3rest = b_aws_s3_backup.cli_actions.restore:main
+s3seed = b_aws_s3_backup.cli_actions.seed:main
+
