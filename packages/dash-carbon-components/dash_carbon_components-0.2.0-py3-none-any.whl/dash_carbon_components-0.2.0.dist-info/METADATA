@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: dash-carbon-components
+Version: 0.2.0
+Summary: Dash Components using IBM's Carbon Design System https://github.com/carbon-design-system
+Home-page: UNKNOWN
+Author: Matheus Rangel <matheus.rangel@ibm.com>
+License: Apache License Version 2.0
+Project-URL: Source Code, https://github.com/Matheus-Rangel/dash-carbon-components
+Platform: UNKNOWN
+Classifier: Framework :: Dash
+License-File: LICENSE
+
+UNKNOWN
+

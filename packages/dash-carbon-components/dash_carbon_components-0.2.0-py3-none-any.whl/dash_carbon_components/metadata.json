@@ -1,0 +1,2451 @@
+{
+  "src/lib/components/Button.js": {
+    "description": "Carbon Button",
+    "displayName": "Button",
+    "methods": [],
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": true,
+        "description": "The id of the button"
+      },
+      "children": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "arrayOf",
+              "value": {
+                "name": "node"
+              }
+            },
+            {
+              "name": "node"
+            }
+          ]
+        },
+        "required": false,
+        "description": "Specify the content of your Button"
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "jsx Style"
+      },
+      "className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Specify an optional className to be added to your Button"
+      },
+      "disabled": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Specify whether the Button should be disabled, or not"
+      },
+      "dangerDescription": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Specify the message read by screen readers for the danger button variant"
+      },
+      "href": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Optionally specify an href for your Button to become an `<a>` element"
+      },
+      "isSelected": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Specify whether the Button is currently selected"
+      },
+      "kind": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "'primary'",
+              "computed": false
+            },
+            {
+              "value": "'secondary'",
+              "computed": false
+            },
+            {
+              "value": "'danger'",
+              "computed": false
+            },
+            {
+              "value": "'ghost'",
+              "computed": false
+            },
+            {
+              "value": "'danger--primary'",
+              "computed": false
+            },
+            {
+              "value": "'danger--ghost'",
+              "computed": false
+            },
+            {
+              "value": "'danger--tertiary'",
+              "computed": false
+            },
+            {
+              "value": "'tertiary'",
+              "computed": false
+            }
+          ]
+        },
+        "required": true,
+        "description": "Specify the kind of Button you want to create"
+      },
+      "role": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Optional prop to specify the role of the Button"
+      },
+      "size": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "'default'",
+              "computed": false
+            },
+            {
+              "value": "'field'",
+              "computed": false
+            },
+            {
+              "value": "'small'",
+              "computed": false
+            },
+            {
+              "value": "'sm'",
+              "computed": false
+            },
+            {
+              "value": "'lg'",
+              "computed": false
+            },
+            {
+              "value": "'xl'",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "Specify the size of the button, from a list of available sizes.\nFor `default` buttons, this prop can remain unspecified."
+      },
+      "tooltipAlignment": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "'start'",
+              "computed": false
+            },
+            {
+              "value": "'center'",
+              "computed": false
+            },
+            {
+              "value": "'end'",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "Specify the alignment of the tooltip to the icon-only button.\nCan be one of: start, center, or end."
+      },
+      "tooltipPosition": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "'top'",
+              "computed": false
+            },
+            {
+              "value": "'right'",
+              "computed": false
+            },
+            {
+              "value": "'bottom'",
+              "computed": false
+            },
+            {
+              "value": "'left'",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "Specify the direction of the tooltip for icon-only buttons.\nCan be either top, right, bottom, or left."
+      },
+      "type": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "'button'",
+              "computed": false
+            },
+            {
+              "value": "'reset'",
+              "computed": false
+            },
+            {
+              "value": "'submit'",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "Optional prop to specify the type of the Button"
+      },
+      "n_clicks": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Number of times this button has been clicked",
+        "defaultValue": {
+          "value": "0",
+          "computed": false
+        }
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Dash function"
+      }
+    }
+  },
+  "src/lib/components/Card.js": {
+    "description": "Card to display content",
+    "displayName": "Card",
+    "methods": [],
+    "props": {
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "The inline styles"
+      },
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The ID of this component, used to identify dash components\nin callbacks. The ID needs to be unique across all of the\ncomponents in an app."
+      },
+      "children": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "arrayOf",
+              "value": {
+                "name": "node"
+              }
+            },
+            {
+              "name": "node"
+            }
+          ]
+        },
+        "required": false,
+        "description": "The children of the element"
+      },
+      "className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The class of the element",
+        "defaultValue": {
+          "value": "''",
+          "computed": false
+        }
+      },
+      "title": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Title of the card"
+      },
+      "info": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Additional information about the content of this card."
+      },
+      "actions": {
+        "type": {
+          "name": "arrayOf",
+          "value": {
+            "name": "shape",
+            "value": {
+              "displayName": {
+                "name": "string",
+                "required": false
+              },
+              "actionPropName": {
+                "name": "string",
+                "required": false
+              }
+            }
+          }
+        },
+        "required": false,
+        "description": "Actions available on the side menu, button clicks will be outputted to the actionPropName prop of this card",
+        "defaultValue": {
+          "value": "[]",
+          "computed": false
+        }
+      },
+      "action_click": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The action click value"
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Dash function"
+      }
+    }
+  },
+  "src/lib/components/Checkbox.js": {
+    "description": "Checkbox Input",
+    "displayName": "Checkbox",
+    "methods": [],
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": true,
+        "description": "Provide an `id` to uniquely identify the Checkbox input"
+      },
+      "label": {
+        "type": {
+          "name": "node"
+        },
+        "required": true,
+        "description": "Provide a label to provide a description of the Checkbox input that you are\nexposing to the user"
+      },
+      "hideLabel": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Specify whether the label should be hidden, or not"
+      },
+      "disabled": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Specify whether the Checkbox should be disabled"
+      },
+      "value": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Specify whether the underlying input is checked"
+      },
+      "title": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Specify a title for the <label> node for the Checkbox"
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Dash function"
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "The inline styles"
+      },
+      "className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Specify an optional className to be applied to the <label> node"
+      }
+    }
+  },
+  "src/lib/components/Column.js": {
+    "description": "Row Column",
+    "displayName": "Column",
+    "methods": [],
+    "props": {
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "The inline styles"
+      },
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The ID of this component, used to identify dash components\nin callbacks. The ID needs to be unique across all of the\ncomponents in an app."
+      },
+      "children": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "arrayOf",
+              "value": {
+                "name": "node"
+              }
+            },
+            {
+              "name": "node"
+            }
+          ]
+        },
+        "required": false,
+        "description": "The children of the element"
+      },
+      "className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Specify a custom className to be applied to the `Column`",
+        "defaultValue": {
+          "value": "''",
+          "computed": false
+        }
+      },
+      "lg": {
+        "type": {
+          "name": "custom",
+          "raw": "CarbonColumn.propTypes.lg"
+        },
+        "required": false,
+        "description": "Specify column span for the `lg` breakpoint (Default breakpoint up to 1312px)\nThis breakpoint supports 16 columns by default.\n\n@see https://www.carbondesignsystem.com/guidelines/layout#breakpoints"
+      },
+      "max": {
+        "type": {
+          "name": "custom",
+          "raw": "CarbonColumn.propTypes.max"
+        },
+        "required": false,
+        "description": "Specify column span for the `max` breakpoint. This breakpoint supports 16\ncolumns by default.\n\n@see https://www.carbondesignsystem.com/guidelines/layout#breakpoints"
+      },
+      "md": {
+        "type": {
+          "name": "custom",
+          "raw": "CarbonColumn.propTypes.md"
+        },
+        "required": false,
+        "description": "Specify column span for the `md` breakpoint (Default breakpoint up to 1056px)\nThis breakpoint supports 8 columns by default.\n\n@see https://www.carbondesignsystem.com/guidelines/layout#breakpoints"
+      },
+      "sm": {
+        "type": {
+          "name": "custom",
+          "raw": "CarbonColumn.propTypes.sm"
+        },
+        "required": false,
+        "description": "Specify column span for the `sm` breakpoint (Default breakpoint up to 672px)\nThis breakpoint supports 4 columns by default.\n\n@see https://www.carbondesignsystem.com/guidelines/layout#breakpoints"
+      },
+      "xlg": {
+        "type": {
+          "name": "custom",
+          "raw": "CarbonColumn.propTypes.xlg"
+        },
+        "required": false,
+        "description": "Specify column span for the `xlg` breakpoint (Default breakpoint up to\n1584px) This breakpoint supports 16 columns by default.\n\n@see https://www.carbondesignsystem.com/guidelines/layout#breakpoints"
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Prop passed by Dash"
+      }
+    }
+  },
+  "src/lib/components/DataTable.js": {
+    "description": "DataTable",
+    "displayName": "DataTable",
+    "methods": [],
+    "props": {
+      "className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": ""
+      },
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": true,
+        "description": "The ID of this component, used to identify dash components\nin callbacks. The ID needs to be unique across all of the\ncomponents in an app."
+      },
+      "data": {
+        "type": {
+          "name": "array"
+        },
+        "required": false,
+        "description": "The date format.",
+        "defaultValue": {
+          "value": "[]",
+          "computed": false
+        }
+      },
+      "columns": {
+        "type": {
+          "name": "arrayOf",
+          "value": {
+            "name": "shape",
+            "value": {
+              "id": {
+                "name": "string",
+                "required": false
+              },
+              "name": {
+                "name": "string",
+                "required": false
+              }
+            }
+          }
+        },
+        "required": false,
+        "description": "True to use the light version."
+      },
+      "isSortable": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Specify whether the table should be able to be sorted by its headers"
+      },
+      "locale": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Provide a string for the current locale"
+      },
+      "overflowMenuOnHover": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Specify whether the overflow menu (if it exists) should be shown always, or only on hover"
+      },
+      "radio": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Specify whether the control should be a radio button or inline checkbox"
+      },
+      "shouldShowBorder": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "`false` If true, will remove the table border"
+      },
+      "size": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "'xs'",
+              "computed": false
+            },
+            {
+              "value": "'sm'",
+              "computed": false
+            },
+            {
+              "value": "'md'",
+              "computed": false
+            },
+            {
+              "value": "'lg'",
+              "computed": false
+            },
+            {
+              "value": "'xl'",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "Change the row height of table. Currently supports `xs`, `sm`, `md`, `lg`, and `xl`."
+      },
+      "stickyHeader": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Specify whether the header should be sticky.\nStill experimental: may not work with every combination of table props"
+      },
+      "useStaticWidth": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "`false` If true, will use a width of 'auto' instead of 100%"
+      },
+      "useZebraStyles": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "`true` to add useZebraStyles striping."
+      },
+      "title": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Title of the table"
+      },
+      "description": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Description of the table"
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Dash func"
+      },
+      "isSearchable": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Whether the table should have the search input"
+      },
+      "actions": {
+        "type": {
+          "name": "arrayOf",
+          "value": {
+            "name": "shape",
+            "value": {
+              "id": {
+                "name": "string",
+                "required": false
+              },
+              "name": {
+                "name": "string",
+                "required": false
+              }
+            }
+          }
+        },
+        "required": false,
+        "description": "List of custom actions avaible in this table, every time the user press in one of the actions the action prop will\nbe updated with the id of the action and the time of the click",
+        "defaultValue": {
+          "value": "[]",
+          "computed": false
+        }
+      },
+      "action": {
+        "type": {
+          "name": "shape",
+          "value": {
+            "id": {
+              "name": "string",
+              "required": false
+            },
+            "timestamp": {
+              "name": "string",
+              "required": false
+            }
+          }
+        },
+        "required": false,
+        "description": "Output only, this prop will be updated every time the user press one action"
+      },
+      "isPageable": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Whether to paginate the table"
+      },
+      "pageSizes": {
+        "type": {
+          "name": "arrayOf",
+          "value": {
+            "name": "shape",
+            "value": {
+              "text": {
+                "name": "string",
+                "required": false
+              },
+              "value": {
+                "name": "number",
+                "required": false
+              }
+            }
+          }
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "[\n    {text: 'Ten', value: 10},\n    {text: 'Twenty', value: 20},\n    {text: 'Thirty', value: 30},\n    {text: 'Fourty', value: 40},\n    {text: 'Fifty', value: 50},\n]",
+          "computed": false
+        }
+      },
+      "pageSize": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": ""
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "jsx Style"
+      },
+      "centerElements": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "iconColumns": {
+        "type": {
+          "name": "array"
+        },
+        "required": false,
+        "description": ""
+      }
+    }
+  },
+  "src/lib/components/DatePicker.js": {
+    "description": "DatePicker",
+    "displayName": "DatePicker",
+    "methods": [],
+    "props": {
+      "allowInput": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "flatpickr prop passthrough. Allows the user to enter a date directly\ninto the input field"
+      },
+      "className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The CSS class names."
+      },
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": true,
+        "description": "The ID of this component, used to identify dash components\nin callbacks. The ID needs to be unique across all of the\ncomponents in an app."
+      },
+      "dateFormat": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The date format."
+      },
+      "light": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "True to use the light version."
+      },
+      "locale": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The language locale used to format the days of the week, months, and numbers.\nThe full list of supported locales can be found here https://github.com/flatpickr/flatpickr/tree/master/src/l10n"
+      },
+      "maxDate": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The maximum date that a user can pick to."
+      },
+      "minDate": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The minimum date that a user can start picking from."
+      },
+      "short": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "True to use the short version."
+      },
+      "value": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "arrayOf",
+              "value": {
+                "name": "string"
+              }
+            }
+          ]
+        },
+        "required": false,
+        "description": "The value of the date value provided to flatpickr"
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Prop passed by Dash"
+      },
+      "placeholder": {
+        "type": {
+          "name": "string"
+        },
+        "required": true,
+        "description": "Placeholder"
+      },
+      "labelText": {
+        "type": {
+          "name": "string"
+        },
+        "required": true,
+        "description": "Label text"
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "jsx Style"
+      }
+    }
+  },
+  "src/lib/components/DatePickerRange.js": {
+    "description": "DatePickerRange, the id of the DateInputs will be id + '-start' and id + '-end'",
+    "displayName": "DatePickerRange",
+    "methods": [],
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": true,
+        "description": "The ID of this component, used to identify dash components\nin callbacks. The ID needs to be unique across all of the\ncomponents in an app."
+      },
+      "dateFormat": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The date format."
+      },
+      "light": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "True to use the light version."
+      },
+      "locale": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The language locale used to format the days of the week, months, and numbers.\nThe full list of supported locales can be found here https://github.com/flatpickr/flatpickr/tree/master/src/l10n"
+      },
+      "maxDate": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The maximum date that a user can pick to."
+      },
+      "minDate": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The minimum date that a user can start picking from."
+      },
+      "short": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "True to use the short version."
+      },
+      "value": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "arrayOf",
+              "value": {
+                "name": "string"
+              }
+            }
+          ]
+        },
+        "required": false,
+        "description": "The value of the date value provided to flatpickr"
+      },
+      "startLabel": {
+        "type": {
+          "name": "string"
+        },
+        "required": true,
+        "description": "Start input label"
+      },
+      "endLabel": {
+        "type": {
+          "name": "string"
+        },
+        "required": true,
+        "description": "End input label"
+      },
+      "placeholder": {
+        "type": {
+          "name": "string"
+        },
+        "required": true,
+        "description": "placeholder"
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Prop passed by Dash"
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "jsx Style"
+      }
+    }
+  },
+  "src/lib/components/Dropdown.js": {
+    "description": "Dropdown component",
+    "displayName": "Dropdown",
+    "methods": [],
+    "props": {
+      "disabled": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Disable the control"
+      },
+      "options": {
+        "type": {
+          "name": "arrayOf",
+          "value": {
+            "name": "union",
+            "value": [
+              {
+                "name": "string"
+              },
+              {
+                "name": "shape",
+                "value": {
+                  "label": {
+                    "name": "string",
+                    "required": false
+                  },
+                  "value": {
+                    "name": "any",
+                    "required": false
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "required": false,
+        "description": "List of items",
+        "defaultValue": {
+          "value": "[]",
+          "computed": false
+        }
+      },
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": true,
+        "description": "Specify a custom `id`"
+      },
+      "inline": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Specify whether you want the inline version of this control"
+      },
+      "invalid": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Specify if the currently selected value is invalid."
+      },
+      "invalidText": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Message which is displayed if the value is invalid."
+      },
+      "label": {
+        "type": {
+          "name": "node"
+        },
+        "required": true,
+        "description": "Generic `label` that will be used as the textual representation of what\nthis field is for"
+      },
+      "translateWithId": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Callback function for translating ListBoxMenuIcon SVG title"
+      },
+      "ariaLabel": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "'aria-label' of the ListBox component."
+      },
+      "value": {
+        "type": {
+          "name": "any"
+        },
+        "required": false,
+        "description": "In the case you want to control the dropdown selection entirely."
+      },
+      "light": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "`true` to use the light version."
+      },
+      "titleText": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "node"
+            }
+          ]
+        },
+        "required": false,
+        "description": "Provide the title text that will be read by a screen reader when\nvisiting this control"
+      },
+      "helperText": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "node"
+            }
+          ]
+        },
+        "required": false,
+        "description": "Provide helper text that is used alongside the control label for\nadditional help"
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Function passed by Dash"
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Style of the component"
+      }
+    }
+  },
+  "src/lib/components/Grid.js": {
+    "description": "Carbon Grid",
+    "displayName": "Grid",
+    "methods": [],
+    "props": {
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "The inline styles"
+      },
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The ID of this component, used to identify dash components\nin callbacks. The ID needs to be unique across components in an app."
+      },
+      "children": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "arrayOf",
+              "value": {
+                "name": "node"
+              }
+            },
+            {
+              "name": "node"
+            }
+          ]
+        },
+        "required": false,
+        "description": "The children of the element"
+      },
+      "className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The class of the element",
+        "defaultValue": {
+          "value": "''",
+          "computed": false
+        }
+      },
+      "condensed": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Collapse the gutter to 1px. Useful for fluid layouts.\nRows have 1px of margin between them to match gutter."
+      },
+      "fullWidth": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Remove the default max width that the grid has set"
+      },
+      "narrow": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Container hangs 16px into the gutter. Useful for\ntypographic alignment with and without containers."
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Prop passed by Dash"
+      }
+    }
+  },
+  "src/lib/components/Link.js": {
+    "description": "Link component",
+    "displayName": "Link",
+    "methods": [],
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The id of the link"
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Inline styles"
+      },
+      "className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Provide a custom className to be applied to the containing `<a>` node"
+      },
+      "disabled": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Specify if the control should be disabled, or not"
+      },
+      "inline": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Specify whether you want the inline version of this control"
+      },
+      "size": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "'sm'",
+              "computed": false
+            },
+            {
+              "value": "'md'",
+              "computed": false
+            },
+            {
+              "value": "'lg'",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "Specify the size of the Link. Currently supports either `sm`, 'md' (default) or 'lg` as an option."
+      },
+      "n_clicks": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Number of times this link has been clicked",
+        "defaultValue": {
+          "value": "0",
+          "computed": false
+        }
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Dash function"
+      },
+      "visited": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Specify whether you want the link to receive visited styles after the link has been clicked",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "href": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Provide the `href` attribute for the `<a>` node"
+      },
+      "children": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "arrayOf",
+              "value": {
+                "name": "node"
+              }
+            },
+            {
+              "name": "node"
+            }
+          ]
+        },
+        "required": false,
+        "description": "Provide the content for the Link"
+      }
+    }
+  },
+  "src/lib/components/MultiSelect.js": {
+    "description": "MultiSelect",
+    "displayName": "MultiSelect",
+    "methods": [],
+    "props": {
+      "disabled": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Disable the control"
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Inline style"
+      },
+      "locale": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Specify the locale of the control.\nUsed for the default compareItems used for sorting the list of items in the control."
+      },
+      "light": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "true to use the light version."
+      },
+      "selectionFeedback": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "'top'",
+              "computed": false
+            },
+            {
+              "value": "'fixed'",
+              "computed": false
+            },
+            {
+              "value": "'top-after-reopen'",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "Specify feedback (mode) of the selection.\ntop: selected item jumps to top\nfixed: selected item stays at it's position\ntop-after-reopen: selected item jump to top after reopen dropdown\ndefault top-after-reopen"
+      },
+      "direction": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "'bottom, top'",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "Specify the direction of the multiselect dropdown. Can be either top or bottom.\ndefault bottom"
+      },
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": true,
+        "description": "Id of the element"
+      },
+      "invalid": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Is the current selection invalid."
+      },
+      "invalidText": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The text to show if it is invalid."
+      },
+      "options": {
+        "type": {
+          "name": "arrayOf",
+          "value": {
+            "name": "union",
+            "value": [
+              {
+                "name": "string"
+              },
+              {
+                "name": "shape",
+                "value": {
+                  "label": {
+                    "name": "string",
+                    "required": false
+                  },
+                  "value": {
+                    "name": "any",
+                    "required": false
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "required": true,
+        "description": "List of items"
+      },
+      "label": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Generic label that will be used as the textual representation of what this field is for"
+      },
+      "size": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "'sm'",
+              "computed": false
+            },
+            {
+              "value": "'lg'",
+              "computed": false
+            },
+            {
+              "value": "'xl'",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "Specify the size of the ListBox. Currently supports either sm, lg or xl as an option."
+      },
+      "titleText": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Provide text to be used in a <label> element that is tied to the multiselect via ARIA attributes."
+      },
+      "value": {
+        "type": {
+          "name": "arrayOf",
+          "value": {
+            "name": "any"
+          }
+        },
+        "required": false,
+        "description": "The list of the selected items",
+        "defaultValue": {
+          "value": "[]",
+          "computed": false
+        }
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Prop passed by Dash"
+      },
+      "filterable": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Specify if this component should be filterable",
+        "defaultValue": {
+          "value": "true",
+          "computed": false
+        }
+      }
+    }
+  },
+  "src/lib/components/NumberInput.js": {
+    "description": "NumberInput component",
+    "displayName": "NumberInput",
+    "methods": [],
+    "props": {
+      "allowEmpty": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "`true` to allow empty string.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "style of the input"
+      },
+      "ariaLabel": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Provide a description that would be used to best describe the use case of the NumberInput component",
+        "defaultValue": {
+          "value": "'Numeric input field with increment and decrement buttons'",
+          "computed": false
+        }
+      },
+      "className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Specify an optional className to be applied to the wrapper node"
+      },
+      "defaultValue": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "number"
+            },
+            {
+              "name": "string"
+            }
+          ]
+        },
+        "required": false,
+        "description": "Optional starting value for uncontrolled state"
+      },
+      "disabled": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Specify if the control should be disabled, or not",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "helperText": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Provide text that is used alongside the control label for additional help",
+        "defaultValue": {
+          "value": "''",
+          "computed": false
+        }
+      },
+      "hideLabel": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Specify whether you want the underlying label to be visually hidden",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "iconDescription": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Provide a description for up/down icons that can be read by screen readers",
+        "defaultValue": {
+          "value": "'choose a number'",
+          "computed": false
+        }
+      },
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": true,
+        "description": "Specify a custom `id` for the input"
+      },
+      "invalid": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Specify if the currently value is invalid.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "invalidText": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Message which is displayed if the value is invalid.",
+        "defaultValue": {
+          "value": "'Provide invalidText'",
+          "computed": false
+        }
+      },
+      "label": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Generic `label` that will be used as the textual representation of what\nthis field is for"
+      },
+      "light": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "`true` to use the light version.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "max": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "The maximum value."
+      },
+      "min": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "The minimum value."
+      },
+      "readOnly": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Specify if the component should be read-only"
+      },
+      "size": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "'sm'",
+              "computed": false
+            },
+            {
+              "value": "'xl'",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "Specify the size of the Number Input. Currently supports either `sm` or `xl` as an option."
+      },
+      "step": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Specify how much the valus should increase/decrease upon clicking on up/down button",
+        "defaultValue": {
+          "value": "1",
+          "computed": false
+        }
+      },
+      "value": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "number"
+            },
+            {
+              "name": "string"
+            }
+          ]
+        },
+        "required": false,
+        "description": "Specify the value of the input"
+      },
+      "warn": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Specify whether the control is currently in warning state",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "warnText": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Provide the text that is displayed when the control is in warning state",
+        "defaultValue": {
+          "value": "''",
+          "computed": false
+        }
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Prop passed by dash"
+      }
+    }
+  },
+  "src/lib/components/RadioButtonGroup.js": {
+    "description": "Radio Group Component",
+    "displayName": "RadioButtonGroup",
+    "methods": [],
+    "props": {
+      "legendText": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "Provide a legend to the RadioButtonGroup input that you are\nexposing to the user"
+      },
+      "radiosButtons": {
+        "type": {
+          "name": "arrayOf",
+          "value": {
+            "name": "shape",
+            "value": {
+              "label": {
+                "name": "string",
+                "required": false
+              },
+              "value": {
+                "name": "string",
+                "required": false
+              },
+              "id": {
+                "name": "string",
+                "required": false
+              }
+            }
+          }
+        },
+        "required": false,
+        "description": "The radios buttons inside this group",
+        "defaultValue": {
+          "value": "[]",
+          "computed": false
+        }
+      },
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Specify a custom `id` for the radio group"
+      },
+      "value": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The value selected"
+      },
+      "labelPosition": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "'left'",
+              "computed": false
+            },
+            {
+              "value": "'right'",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "Provide where label text should be placed"
+      },
+      "orientation": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "'horizontal'",
+              "computed": false
+            },
+            {
+              "value": "'vertical'",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "Provide where radio buttons should be placed"
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Dash function"
+      },
+      "disabled": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Specify whether the group is disabled"
+      },
+      "className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Provide an optional className to be applied to the container node"
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "jsx Style"
+      }
+    }
+  },
+  "src/lib/components/Slider.js": {
+    "description": "Slider",
+    "displayName": "Slider",
+    "methods": [],
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The ID of this component, used to identify dash components\nin callbacks. The ID needs to be unique across all of the\ncomponents in an app."
+      },
+      "name": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Form item name"
+      },
+      "inputType": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The form element type",
+        "defaultValue": {
+          "value": "'number'",
+          "computed": false
+        }
+      },
+      "ariaLabelInput": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The ARIA label for the <input>"
+      },
+      "labelText": {
+        "type": {
+          "name": "string"
+        },
+        "required": true,
+        "description": "Label text"
+      },
+      "disabled": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Disabled",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "light": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Light variant",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "hideTextInput": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Without text input",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "value": {
+        "type": {
+          "name": "number"
+        },
+        "required": true,
+        "description": "The value"
+      },
+      "min": {
+        "type": {
+          "name": "number"
+        },
+        "required": true,
+        "description": "The minimum value"
+      },
+      "max": {
+        "type": {
+          "name": "number"
+        },
+        "required": true,
+        "description": "The maximum value"
+      },
+      "step": {
+        "type": {
+          "name": "number"
+        },
+        "required": true,
+        "description": "The step"
+      },
+      "stepMultiplier": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "The step factor for Shift+arrow keys",
+        "defaultValue": {
+          "value": "5",
+          "computed": false
+        }
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Prop passed by Dash"
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "jsx Style"
+      }
+    }
+  },
+  "src/lib/components/Tab.js": {
+    "description": "Tab component",
+    "displayName": "Tab",
+    "methods": [],
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The ID of this component, used to identify dash components\nin callbacks. The ID needs to be unique across all of the\ncomponents in an app."
+      },
+      "className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Specify an optional className to be added to your Tab"
+      },
+      "disabled": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Whether your Tab is disabled."
+      },
+      "hidden": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Whether your Tab is disabled."
+      },
+      "label": {
+        "type": {
+          "name": "string"
+        },
+        "required": true,
+        "description": "Provide the contents of your Tab"
+      },
+      "role": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Provide an accessibility role for your Tab"
+      },
+      "value": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Value of the tab"
+      },
+      "children": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "arrayOf",
+              "value": {
+                "name": "node"
+              }
+            },
+            {
+              "name": "node"
+            }
+          ]
+        },
+        "required": false,
+        "description": "Tab content"
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "jsx Style"
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Prop passed by Dash"
+      }
+    }
+  },
+  "src/lib/components/Tabs.js": {
+    "description": "Tabs",
+    "displayName": "Tabs",
+    "methods": [
+      {
+        "name": "getTabs",
+        "docblock": null,
+        "modifiers": [],
+        "params": [],
+        "returns": null
+      },
+      {
+        "name": "getTabAt",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "value",
+            "type": null
+          }
+        ],
+        "returns": null
+      },
+      {
+        "name": "handleTabClick",
+        "docblock": null,
+        "modifiers": [],
+        "params": [],
+        "returns": null
+      },
+      {
+        "name": "handleTabKeyDown",
+        "docblock": null,
+        "modifiers": [],
+        "params": [],
+        "returns": null
+      },
+      {
+        "name": "handleTabAnchorFocus",
+        "docblock": null,
+        "modifiers": [],
+        "params": [],
+        "returns": null
+      },
+      {
+        "name": "selectTabAt",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "index",
+            "type": null
+          }
+        ],
+        "returns": null
+      }
+    ],
+    "props": {
+      "ariaLabel": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Specify the text to be read by screen-readers when visiting the <Tabs>\ncomponent"
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Specify the inline style"
+      },
+      "children": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "arrayOf",
+              "value": {
+                "name": "node"
+              }
+            },
+            {
+              "name": "node"
+            }
+          ]
+        },
+        "required": false,
+        "description": "Pass in a collection of <Tab> children to be rendered depending on the\ncurrently selected tab"
+      },
+      "className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Provide a className that is applied to the root <nav> component for the\n<Tabs>"
+      },
+      "hidden": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Specify whether the Tab content is hidden"
+      },
+      "role": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "By default, this value is \"navigation\". You can also provide an alternate\nrole if it makes sense from the accessibility-side",
+        "defaultValue": {
+          "value": "'navigation'",
+          "computed": false
+        }
+      },
+      "onClick": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Optionally provide an `onClick` handler that is invoked when a <Tab> is\nclicked"
+      },
+      "onKeyDown": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Optionally provide an `onKeyDown` handler that is invoked when keyed\nnavigation is triggered"
+      },
+      "triggerHref": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Provide a string that represents the `href` for the triggered <Tab>",
+        "defaultValue": {
+          "value": "'#'",
+          "computed": false
+        }
+      },
+      "selected": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Optionally provide an index for the currently selected <Tab>"
+      },
+      "iconDescription": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Provide a description that is read out when a user visits the caret icon\nfor the dropdown menu of items",
+        "defaultValue": {
+          "value": "'show menu options'",
+          "computed": false
+        }
+      },
+      "tabContentClassName": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Provide a className that is applied to the <TabContent> components"
+      },
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The ID of this component, used to identify dash components\nin callbacks. The ID needs to be unique across all of the\ncomponents in an app."
+      },
+      "headerOffsets": {
+        "type": {
+          "name": "arrayOf",
+          "value": {
+            "name": "string"
+          }
+        },
+        "required": false,
+        "description": "Number of columns of left offset the header will have"
+      },
+      "headerSizes": {
+        "type": {
+          "name": "arrayOf",
+          "value": {
+            "name": "string"
+          }
+        },
+        "required": false,
+        "description": "Number of columns the header will have"
+      },
+      "value": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Value of the selected tab"
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Prop passed by Dash"
+      }
+    }
+  },
+  "src/lib/components/UIShell.js": {
+    "description": "UIShell is a default layout with the header and a sidebar",
+    "displayName": "UIShell",
+    "methods": [
+      {
+        "name": "getSideMenuItems",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "items",
+            "type": null
+          }
+        ],
+        "returns": null
+      },
+      {
+        "name": "getHeaderMenuItems",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "items",
+            "type": null
+          }
+        ],
+        "returns": null
+      }
+    ],
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Element id"
+      },
+      "name": {
+        "type": {
+          "name": "string"
+        },
+        "required": true,
+        "description": "Platform Name"
+      },
+      "sidebarItems": {
+        "type": {
+          "name": "arrayOf",
+          "value": {
+            "name": "shape",
+            "value": {
+              "name": {
+                "name": "string",
+                "required": false
+              },
+              "url": {
+                "name": "string",
+                "required": false
+              }
+            }
+          }
+        },
+        "required": false,
+        "description": "Items of the sidebar",
+        "defaultValue": {
+          "value": "[]",
+          "computed": false
+        }
+      },
+      "headerItems": {
+        "type": {
+          "name": "arrayOf",
+          "value": {
+            "name": "shape",
+            "value": {
+              "name": {
+                "name": "string",
+                "required": false
+              },
+              "url": {
+                "name": "string",
+                "required": false
+              }
+            }
+          }
+        },
+        "required": false,
+        "description": "Items of the header",
+        "defaultValue": {
+          "value": "[]",
+          "computed": false
+        }
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Prop passed by Dash"
+      },
+      "loading_state": {
+        "type": {
+          "name": "shape",
+          "value": {
+            "is_loading": {
+              "name": "bool",
+              "description": "Determines if the component is loading or not",
+              "required": false
+            },
+            "prop_name": {
+              "name": "string",
+              "description": "Holds which property is loading",
+              "required": false
+            },
+            "component_name": {
+              "name": "string",
+              "description": "Holds the name of the component that is loading",
+              "required": false
+            }
+          }
+        },
+        "required": false,
+        "description": "Object that holds the loading state object coming from dash-renderer"
+      }
+    }
+  }
+}
