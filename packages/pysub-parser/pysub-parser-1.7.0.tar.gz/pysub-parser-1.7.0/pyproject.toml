@@ -1,0 +1,42 @@
+[tool.poetry]
+name = "pysub-parser"
+description = "Utility to extract the contents of a subtitle file."
+documentation = "https://github.com/fedecalendino/pysub-parser/blob/main/README.md"
+homepage = "https://github.com/fedecalendino/pysub-parser"
+license = "MIT"
+readme = "README.md"
+version = "1.7.0"
+
+authors = [
+  "Fede Calendino <fede@calendino.com>",
+]
+classifiers = [
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+]
+keywords = [
+  "parsing",
+  "subtitle",
+  "srt",
+  "ssa",
+  "sub",
+]
+packages = [
+  { include = "pysubparser" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+unidecode = "^1.3.4"
+
+[tool.poetry.dev-dependencies]
+coverage = "^6.4.1"
+ddt = "^1.5.0"
+black = "^22.6.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
