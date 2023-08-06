@@ -1,0 +1,12 @@
+README.md
+license.txt
+setup.py
+MonashUE1013.egg-info/PKG-INFO
+MonashUE1013.egg-info/SOURCES.txt
+MonashUE1013.egg-info/dependency_links.txt
+MonashUE1013.egg-info/requires.txt
+MonashUE1013.egg-info/top_level.txt
+src/MonashUE1013/MonashUE1013.py
+src/MonashUE1013/__init__.py
+src/MonashUE1013/ProjectResources/ProjectResources.py
+src/MonashUE1013/ProjectResources/__init__.py
