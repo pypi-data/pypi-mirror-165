@@ -1,0 +1,16 @@
+usbee.libs/libusb-1-150b88da.0.so.0.1.0,sha256=9_XVoqlSa90Pdy-bYXWdnG4_3jVxUhvhEEAFt1Gxk-0,118536
+usbee.libs/libudev-9a7475a2.so.1.6.2,sha256=KiO_Qvv4DbbKJYOv4oyUFTdBhvFMRo5vY8d__nFKRag,110040
+usbee.libs/libelf-0-3d9de92a.176.so,sha256=vNXIM4StWXL1VShLrddETo8E5AInRNKngdY8BETcdzE,105720
+usbee.libs/libbz2-a273e504.so.1.0.6,sha256=rG90qT6zByoD_7GEoC9BGhcYmz84nAlVGMxs0ts9bqw,70992
+usbee.libs/libattr-4f2a9577.so.1.1.0,sha256=B2FUS3_CrqK0NtDxWShfhzS8lNm5yz723oSxjM_fpAo,21456
+usbee.libs/liblzma-004595ca.so.5.2.2,sha256=uBYgw3aPH1qysw-Huk3--_U9lrgRLm3YRPLN0yz4p28,163472
+usbee.libs/libdw-0-780627ce.176.so,sha256=xyri4FwOj1frgs60xWT9n2EwAya-rFxesfslQT5tUmU,383176
+usbee.libs/libcap-79733b59.so.2.22,sha256=LC4uoTM49e-E1u-EfFDS-ulD3y68YtNODRRuw-X_1Fo,25408
+usbee/__init__.py,sha256=m5eDLLfd1GjcdS4eyFfx8rBlCgWHzBHcNR4TZRHghSM,433
+usbee/usbee.cpython-36m-x86_64-linux-gnu.so,sha256=yWgT56nOv-TdWOVzqA26PjSmfpcCW3j_mR2Nx0DEA78,568704
+usbee/submodules/__init__.py,sha256=aXAJK2zUbYD6s63ccWT2LcVRCT_1IE38t5pOe2R33R8,896
+usbee/submodules/_ci/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+usbee-0.2.6.0.dist-info/WHEEL,sha256=YVAXCacQXnznQ-_lMj8Nvqrs7YPtMP1pHRCw9EcyWRQ,150
+usbee-0.2.6.0.dist-info/top_level.txt,sha256=53Uo8LXXk4L8h2myXPy37q5GB0dzJHRlL2MyQqMi9AE,6
+usbee-0.2.6.0.dist-info/METADATA,sha256=iBGWvdNpWbcMIo8tUL8A45SwrzHbNqU0YykAgbQ3NEg,211
+usbee-0.2.6.0.dist-info/RECORD,,
