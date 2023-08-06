@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: manrododex
+Version: 0.0.1a0
+Summary: A manga downloader for mangadex
+Home-page: https://github.com/Sydiepus/Manrododex
+Author: Charbel Assaad
+Author-email: sydiepus@gmail.com
+License: MIT
+Project-URL: Code, https://github.com/Sydiepus/Manrododex
+Project-URL: Issue tracker, https://github.com/Sydiepus/Manrododex/issues
+Keywords: mangadex,manga,downloader
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Internet :: WWW/HTTP
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests (>=2.28.1)
+Requires-Dist: tqdm (>=4.64.0)
+Requires-Dist: urllib3 (>=1.26.11)
+
+<h1 align="center">Manrododex</br>
+<sup><sup>マンロードデクス</sup></sup></h1>
+
+### A manga downloader for mangadex using their [API](https://api.mangadex.org/docs/)
+![](https://img.shields.io/github/license/Sydiepus/Manrododex)
+![](https://img.shields.io/github/issues/Sydiepus/Manrododex)
+
+## Features
+
+- Threads support for faster downloads.
+- Uses queue for safe threading and better memory usage.
+- Creates a series.json file like mylar. (
+  see [here](https://komga.org/guides/scan-analysis-refresh.html#import-metadata-generated-by-mylar)
+  and [here](https://github.com/mylar3/mylar3/wiki/series.json-examples))
+- Can be used to automate the download of manga in combination with crontabs/Scheduled Tasks.
+- Manrododex makes it possible to download multiple manga with little to user interaction.
+- A possibly wrong Japanese translation of the name.
+- Bugs
+
+## Inspiration
+
+I might have stolen some ideas from these awesome projects.
+
+- [manga-py](https://github.com/manga-py/manga-py)
+- [mangadex-dl](https://github.com/frozenpandaman/mangadex-dl)
+- [MangaDex.py](https://github.com/Proxymiity/MangaDex.py)
+- [Qtile](https://github.com/qtile/qtile)
+
+## Maintainer
+
+[@Sydiepus](https://github.com/Sydiepus) GPG: ```BD1D 09DF 8A49 E7A6 C705 3B8A 7D6C DB7E 575A C12A```
+
+## Note:
+
+- I'll be taking a break for some time and might not be able to properly test or fix the program.
+- Not tested on Windows yet.
+- wiki coming soon.
