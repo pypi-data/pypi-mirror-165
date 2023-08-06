@@ -1,0 +1,157 @@
+[tool.poetry]
+name = "repod"
+version = "0.2.2"
+description = "Tooling to maintain binary package repositories for Linux distributions using the pacman package manager"
+authors = ["Arch Linux <arch-projects@lists.archlinux.org>"]
+license = "GPL-3.0-or-later"
+packages = [
+  {include = 'repod'}
+]
+include = [
+  {path = 'tests/*', format = 'sdist'},
+  {path = 'docs/*', format = 'sdist'},
+  {path = 'justfile', format = 'sdist'},
+]
+readme = "README.md"
+homepage = "https://gitlab.archlinux.org/archlinux/repod"
+repository = "https://gitlab.archlinux.org/archlinux/repod"
+documentation = "https://repod.archlinux.page"
+keywords = ["arch linux", "repository", "pacman", "packages"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: End Users/Desktop",
+  "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+  "Natural Language :: English",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3.10",
+  "Topic :: Database",
+  "Topic :: Database :: Database Engines/Servers",
+  "Topic :: Documentation :: Sphinx",
+  "Topic :: Internet",
+  "Topic :: Security :: Cryptography",
+  "Topic :: Software Development",
+  "Topic :: System :: Archiving :: Packaging",
+  "Topic :: System :: Operating System",
+  "Topic :: System :: Software Distribution",
+  "Topic :: Utilities",
+  "Typing :: Typed",
+]
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://gitlab.archlinux.org/archlinux/repod/-/issues/"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pydantic = "^1.8.1"
+orjson = "^3.6.6"
+Jinja2 = "^3.0.0"
+subprocess-tee = "^0.3.5"
+aiofiles = "^0.8.0"
+tomli = "^2.0.0"
+pyzstd = "^0.15.2"
+python-magic = "^0.4.26"
+email-validator = "^1.2.1"
+pyalpm = {version = "^0.10.6", optional = true, extras = ["vercmp"]}
+pyxdg = "^0.28"
+
+[tool.poetry.extras]
+vercmp = ["pyalpm"]
+
+[tool.poetry.dev-dependencies]
+tox = "^3.24.5"
+pytest = "^7.0.0"
+isort = "^5.10.0"
+mypy = "^0.971"
+flake8 = "^5.0.0"
+black = "^22.1.0"
+coverage = "^6.1"
+pytest-asyncio = "^0.19.0"
+pytest-lazy-fixture = "^0.6.3"
+coverage-conditional-plugin = "^0.5.0"
+Sphinx = "^5.0.0"
+sphinx-rtd-theme = "^1.0.0"
+sphinx-argparse = "^0.3.1"
+sphinxcontrib-programoutput = "^0.17"
+vulture = "^2.5"
+
+[tool.poetry.scripts]
+repod-file = "repod.cli:repod_file"
+
+[tool.pytest.ini_options]
+markers = ["integration", "regex"]
+asyncio_mode = "auto"
+
+[tool.black]
+line-length = 120
+exclude = '''
+/(
+  \.direnv|
+  |\.eggs
+  |\.git
+  |\.hg
+  |\.mypy_cache
+  |\.nox
+  |\.tox
+  |\.venv
+  |\.svn
+  |_build
+  |buck-out
+  |db-write
+  |db2json
+  |dbscripts
+  |build
+  |dist
+)/
+'''
+
+
+[tool.coverage.path]
+source = "repod"
+
+[tool.coverage.report]
+omit = ["tests/*", ".tox/*", "db-write/*", "db2json/*", "dbscripts/*"]
+precision = 2
+show_missing = true
+
+[tool.coverage.run]
+branch = true
+command_line = "-m pytest --junit-xml=junit-report.xml -vv tests/ -m 'not integration and not regex'"
+omit = ["tests/*", ".tox/*", "db-write/*", "db2json/*", "dbscripts/*"]
+relative_files = true
+plugins = ["coverage_conditional_plugin"]
+
+[tool.coverage.xml]
+output = ".tox/coverage.xml"
+
+[tool.coverage.coverage_conditional_plugin.rules]
+no-cover-nonlinux = "'linux' not in sys.platform"
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+
+[tool.mypy]
+ignore_missing_imports = true
+follow_imports = "silent"
+follow_imports_for_stubs = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_return_any = true
+warn_incomplete_stub = true
+warn_redundant_casts = true
+warn_unused_configs = true
+no_implicit_optional = true
+warn_unreachable = true
+check_untyped_defs = true
+disallow_any_generics = true
+disallow_untyped_calls = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+show_error_codes = true
+
+[build-system]
+# requiring setuptools to get around flaky pip behavior (we actually don't need it)
+# https://github.com/pypa/pip/issues/6100
+requires = ["setuptools", "poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
