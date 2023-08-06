@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+src/bixor/__init__.py
+src/bixor.egg-info/PKG-INFO
+src/bixor.egg-info/SOURCES.txt
+src/bixor.egg-info/dependency_links.txt
+src/bixor.egg-info/top_level.txt
