@@ -1,0 +1,1370 @@
+/////////////////////////////////////////////////////////////////////////////
+// This C file has been created automatically. Do not edit!!!
+/////////////////////////////////////////////////////////////////////////////
+
+// For this module we refer to the section
+// 'Computation in the Clifford group' in the guide, see
+// https://mmgroup.readthedocs.io/en/latest/
+
+
+/** @file qstate12.c
+  File ``qstate12.c`` contains  functions for quadratic
+  state matrices as described in the *API reference* in 
+  section **Computation in the Clifford group**.
+
+
+  C functions in this module are prefixed with ``qbstate12_``.
+  Unless otherwise stated, these functions return an ``int32_t``, 
+  where a nonegative value is interpreted as success, and a negative 
+  value is intepreted as failure. Error codes are documented
+  in file ``clifford12.h``.
+
+  Typical names for parameters of functions in this module are:
+
+      Name           | Parameter type
+      -------------- | ----------------------------------------------
+      pqs, pqs1, ... |  Pointer to structure of type qbstate12_type
+      nqb            |  Number of qubits, i.e. of columns of matrix 
+                     |  A in a structure of type qbstate12_type.
+      nrows          |  Number of rows of matrix   A  or   Q  
+                     |  in a structure of type qbstate12_type.
+      i, i1, ...     |  Index of a row of matrix   A  or   Q  ,  
+                     |  starting with 0.
+      j, j1, ...     |  Index of a column of matrix   A  , with a 
+                     |  column of   A  , corrsesponding to a qubit, 
+                     |  starting with j = 0.
+                     |  If appropriate, an index  j >= ncols refers 
+                     |  to column (j - ncols) of matrix    Q  .
+      pv, pv1,...    |  Pointer to a row or column vector of matrix 
+                     |  A, Q  or   M  .   
+*/
+
+
+/*************************************************************************
+** External references 
+*************************************************************************/
+
+#include <string.h>
+#include <math.h>
+/// @cond DO_NOT_DOCUMENT 
+#define CLIFFORD12_INTERN
+/// @endcond 
+
+#include "clifford12.h"
+
+// %%EXPORT_KWD CLIFFORD12_API
+
+// %%GEN h
+// %%GEN ch
+#ifdef __cplusplus
+extern "C" {
+#endif
+// %%GEN c
+
+
+
+//  %%GEN h
+//  %%GEN c
+
+
+/*************************************************************************
+*** Checking a state for consistency
+*************************************************************************/
+
+
+/**
+  @brief Check a structure of type ``qstate12_type``.
+
+  Return 0 if ok, or an error code if there is any error in the structure 
+  referred by ``pqs``.  Part ``Q[i,0]`` is set to ``Q[0, i]``.  Part
+  ``Q[0,0]`` is set ot 0.  Irrelevant data bits in valid data 
+  rows are zeroed. 
+*/
+// %%EXPORT p
+CLIFFORD12_API
+int32_t qstate12_check(qstate12_type *pqs) 
+{
+    uint_fast32_t i, j, c, err=0;
+    uint64_t *m = pqs->data;
+    uint64_t mask;
+    if (bad_state(pqs)) return ERR_QSTATE12_INCONSISTENT;
+    pqs->factor &= FACTOR_MASK;
+    if (pqs->nrows == 0) pqs->factor = 0;
+    c = pqs->ncols;
+    mask = ((ONE << c) << pqs->nrows) - 1;
+    mask &= ~(ONE << c);
+    m[0] &= mask;
+    for (i = 1; i < pqs->nrows; ++i) {
+        m[i] &= mask;
+        m[i] |= (m[0] >> i) & (ONE << c);
+        for (j = 0; j < i; ++j) {
+            err |= (m[i] >> (c + j)) ^ (m[j] >> (c + i));   
+        }
+    }
+    for (i = pqs->nrows; i < pqs->maxrows; ++i) m[i] = 0;
+    return (err & 1) ? ERR_QSTATE12_Q_NOT_SYMM : 0;    
+} 
+
+/*************************************************************************
+*** Construction of a state
+*************************************************************************/
+
+/**
+  @brief Assign memory to a structure of type ``qstate12_type``.
+
+  Assign the array ``data`` of ``size`` integers of type ``uint64_t`` as
+  memory to  structure of type ``qstate12_type`` referred by ``pqs``.
+*/
+// %%EXPORT p
+CLIFFORD12_API
+int32_t qstate12_set_mem(qstate12_type *pqs, uint64_t *data, uint32_t size)
+{
+    pqs->data = data;
+    pqs->maxrows = size;
+    pqs->nrows = 0;
+    pqs->ncols = 0;
+    pqs->factor = 0;
+    pqs->shape1 = 0;
+    pqs->reduced = 0;
+    return 0;
+}
+
+
+
+
+
+
+/**
+  @brief Set a structure of type ``qstate12_type`` to a zero vector.
+
+  Set the structure referrred by ``pqs`` to a zero column vector
+  of length ``2**nqb``, corresponding to the zero state of ``nqb``
+  qubits.
+*/
+// %%EXPORT p
+CLIFFORD12_API
+int32_t qstate12_zero(qstate12_type *pqs, uint32_t nqb) 
+// Set state *pqs to zero row vector, for nqb qubits.
+{  
+    pqs->nrows = 0;
+    pqs->factor = 0;
+    pqs->ncols = nqb;
+    pqs->shape1 = 0;
+    if (nqb <=  MAXCOLS) return 0;
+    pqs->ncols = 0;
+    // By definition, zero state if, of course, reduced. But it is
+    // likely that somebody will copy data into this state aferwards, 
+    // and re-reducung the zero state is not a big affair.
+    pqs->reduced = 0;
+    return ERR_QSTATE12_TOOLARGE;
+}
+
+
+
+
+
+/**
+  @brief Set a structure of type ``qstate12_type`` to a state vector.
+
+  Set the structure referrred by ``pqs`` to a unit column vector
+  ``|v>`` of length ``2**nqb``. Thus for the quadratic mapping
+  ``qs`` referred by ``pqs`` we have ``qs(x) = 1`` if ``x`` is 
+  equal to the bit vector ``v`` and ``qs(x) = 0`` otherwise. 
+*/
+// %%EXPORT p
+CLIFFORD12_API
+int32_t qstate12_vector_state(qstate12_type *pqs, uint32_t nqb, uint64_t v)
+{
+    pqs->nrows = 1;
+    pqs->ncols = nqb;
+    pqs->factor = 0;
+    pqs->shape1 = 0;
+    pqs->data[0] = v & ((ONE << nqb) - 1);
+    pqs->reduced = 1;
+    if (nqb + 1 <=  MAXCOLS) return 0;
+    pqs->ncols = pqs->nrows = 0;
+    return ERR_QSTATE12_TOOLARGE;
+}
+
+/**
+  @brief Set a data in a structure of type ``qstate12_type``
+
+  Set ``pqs->nqb = nqb`` so that the state ``qs`` referred by ``pqs``
+  corresponds to a column vector of length ``2**nqb``. Set 
+  ``pqs->nrows = nrows``, and copy ``nrows`` rows of the array
+  ``data`` to ``pqs->data``.
+  
+  If ``mode == 1`` then copy the upper triangular part of the
+  data bit matrix part ``Q`` to the lower triangular part.
+  
+  If ``mode == 2`` then copy the lower triangular part of the
+  data bit matrix part ``Q`` to the upper triangular part.
+
+  Otherwise the part ``Q`` of the data bit matrix must be symmetric.
+  
+  The resulting state is checked with function qstate12_check().
+*/
+// %%EXPORT p
+CLIFFORD12_API
+int32_t qstate12_set(qstate12_type *pqs, uint32_t nqb, uint32_t nrows, uint64_t *data, uint32_t mode)
+{
+    uint_fast32_t i, j;
+    uint64_t *m = pqs->data, mask, mask_r;
+    
+    if (nqb + nrows > MAXCOLS || nrows > pqs->maxrows) 
+        return ERR_QSTATE12_TOOLARGE;
+    pqs->nrows = nrows;
+    pqs->ncols = nqb;
+    pqs->factor = 0;
+    pqs->shape1 = 0;
+    pqs->reduced = 0;
+    mask = ((ONE << nqb) << nrows) - 1;
+    for (i = 0; i < nrows; ++i) m[i] = data[i] & mask;
+    mask = ONE << nqb;
+    if (mode == 1) {
+        m[0] &= mask - 1;
+        for (i = 1; i < nrows; ++i) {
+            m[i] &= (mask << (i + 1)) - 1;
+        }    
+        for (i = 0; i < nrows; ++i) {
+            for (j = i+1; j < nrows; ++j) 
+                m[i] ^= ((m[j] >> i) & mask) << j;
+        }
+        return 0;
+    }
+    if (mode == 2) {
+        mask_r = (mask << nrows) - 1;
+        m[0] &= mask_r - mask;
+        for (i = 1; i < nrows; ++i) {
+            m[i] &=  mask_r - ((mask << i) - mask);
+        }
+        for (i = 0; i < nrows; ++i) {
+            for (j = 0; j < i; ++j) 
+                m[i] ^= ((m[j] >> i) & mask) << j;
+        }
+        return 0;
+    }    
+    return qstate12_check(pqs);
+}
+
+/**
+  @brief Copy a state of type ``qstate12_type`` to another state.
+
+  Copy the data in the state referred by ``pqs1`` to the data in
+  the state referred by ``pqs2``. Memory must have been allocated 
+  to the state ``pqs2`` with function qstate12_set_mem()
+*/
+// %%EXPORT p
+CLIFFORD12_API
+int32_t qstate12_copy(qstate12_type *pqs1, qstate12_type *pqs2) 
+{
+    if (bad_state(pqs1)) return ERR_QSTATE12_INCONSISTENT;
+    if (pqs2->maxrows < pqs1->nrows) return ERR_QSTATE12_BUFFER_OVFL;
+    pqs2->nrows = pqs1->nrows;
+    pqs2->factor = pqs1->factor;
+    pqs2->ncols = pqs1->ncols;
+    pqs2->shape1 = pqs1->shape1;
+    pqs2->reduced = pqs1->reduced;
+    memcpy(pqs2->data, pqs1->data, pqs1->nrows * sizeof(uint64_t));
+    return 0;
+}
+
+
+/**
+  @brief Copy a state of type ``qstate12_type`` and allocate mamory.
+
+  Equivalent to
+  
+       qstate12_set_mem(pqs2, data, size);
+       qstate12_copy(pqs1,pqs2); 
+*/
+// %%EXPORT p
+CLIFFORD12_API
+int32_t qstate12_copy_alloc(qstate12_type *pqs1, qstate12_type *pqs2, uint64_t *data, uint32_t size)
+{
+    if (bad_state(pqs1)) return ERR_QSTATE12_INCONSISTENT;
+    if (size < pqs1->nrows) return ERR_QSTATE12_BUFFER_OVFL;
+    pqs2->data = data;
+    pqs2->maxrows = size;    
+    pqs2->nrows = pqs1->nrows;
+    pqs2->factor = pqs1->factor;
+    pqs2->ncols = pqs1->ncols;
+    pqs2->shape1 = pqs1->shape1;
+    pqs2->reduced = pqs1->reduced;
+    memcpy(data, pqs1->data, pqs1->nrows * sizeof(uint64_t));
+    return 0;
+}
+
+/*************************************************************************
+*** Operations on scalars
+*************************************************************************/
+
+// Although complex numbers have been invented more than 200 years
+// ago and standardized in C99 about 20 years ago, it is still too
+// annoying to deal with the peculiarites of the data type 
+// 'double complex' in the various compilers being used.
+// So we output an array of type double[] of real numbers of 
+// doubled length, where an adjacent pair of entries gives the
+// real and the imaginary part of a complex number. We let Python
+// do the conversion from that real array to a complex array. See:
+// 
+// https://stackoverflow.com/questions/2598734/numpy-creating-a-complex-array-from-2-real-ones
+
+
+
+
+/**
+  @brief Convert a scalar factor to a complex number
+
+  The function takes a scalar ``factor`` (as given by the 
+  component ``factor`` in the structure ``qstate12``) and
+  converts that factor to a complex number. The real part of 
+  the result is  returned in ``pcomplex[0]`` 
+  and the imaginary part in ``pcomplex[1]``.
+
+  Caution:
+
+  If bit 3 of ``factor`` is set then the function calculates 
+  the complex number 0.
+
+  The function returns:
+
+        4  if the result is complex, but not real.
+ 
+        3  if the result is real, but not rational.
+ 
+        2  if the result is rational, but not integral.
+
+        1  if the result is integral, but not  zero.
+
+        0  if the result is zero.
+
+        ERR_QSTATE12_SCALAR_OVFL in case of overflow or underflow
+
+*/
+// %%EXPORT p
+CLIFFORD12_API
+int32_t qstate12_factor_to_complex(int32_t factor, double *pcomplex)
+{
+    int phi = factor & 7, exp = factor >> 4;
+    double f;
+
+    static const int8_t  PHASES[8][2] = {
+        {1,0},  {1,1},   {0,1},  {-1,1}, 
+        {-1,0}, {-1,-1}, {0,-1}, {1,-1}
+    };  
+
+    pcomplex[0] = pcomplex[1] = 0.0;
+    if (factor & 8)  return 0;
+    exp -= phi & 1; 
+    f = (exp & 1) ? 1.414213562373095048801688724209 : 1.0;
+    f = ldexp(f, exp >> 1);
+    if (PHASES[phi][0]) pcomplex[0] = copysign(f, PHASES[phi][0]);
+    if (PHASES[phi][1]) pcomplex[1] = copysign(f, PHASES[phi][1]);
+    if (f >= HUGE_VAL || f == 0.0) return ERR_QSTATE12_SCALAR_OVFL;
+    if (phi & 3) return 4;
+    if (exp & 1) return 3;
+    return exp < 0 ? 2 : 1;    
+}
+
+
+
+/**
+  @brief Convert a scalar factor to a 32-bit integer
+  
+  The function takes a scalar ``factor`` (as given by the 
+  component ``factor`` in the structure ``qstate12``) and
+  converts that factor to an integer. That integer is 
+  stored in ``pi[0]``.
+
+  Caution:
+
+  If bit 3 of ``factor`` is set then the function calculates 
+  the integer zero.
+
+  The function returns:
+
+   1  if the result is integral, but not  zero.
+
+   0  if the result is zero.
+
+   ERR_QSTATE12_SCALAR_OVFL in case of overflow or underflow
+   
+   ERR_QSTATE12_SCALAR_INT  if the result is not an integer
+
+*/
+// %%EXPORT p
+CLIFFORD12_API
+int32_t qstate12_factor_to_int32(int32_t factor, int32_t *pi)
+{
+    *pi = 0;
+    if (factor & 8)  return 0;
+    if (factor < 0 || factor & 0x13) return ERR_QSTATE12_SCALAR_INT;
+    if (factor >= (62 << 4)) return ERR_QSTATE12_SCALAR_OVFL;
+    *pi = 1L << (factor >> 5);
+    if (factor & 4) *pi = -*pi;
+    return 1;   
+}
+
+
+
+/*************************************************************************
+*** Elementary operations on a state
+*************************************************************************/
+
+/**
+  @brief Conjugate the state referred by ``pqs``
+
+  The function changes the state referred by ``pqs`` to its complex
+  complex state.
+*/
+// %%EXPORT p
+CLIFFORD12_API
+int32_t qstate12_conjugate(qstate12_type *pqs)
+{
+    uint_fast32_t k;
+    uint64_t *m = pqs->data, c = ONE << pqs->ncols;
+    if (bad_state(pqs)) return ERR_QSTATE12_INCONSISTENT ;
+    for (k = 1; k < pqs->nrows; ++k)  m[0] ^=  m[k] & (c << k);
+    pqs->factor = (((pqs->factor & FACTOR_MASK) ^ 7) + 1) & FACTOR_MASK;
+    return 0;
+}
+
+
+/**
+  @brief Multiply the state referred by ``pqs`` by a scalar
+
+  The function multiplies the state ``qs`` referred by ``pqs`` 
+  with the scalar
+  
+        2**(e/2) * exp(phi * pi * sqrt(-1) / 4)  .
+  
+*/
+// %%EXPORT p
+CLIFFORD12_API
+int32_t qstate12_mul_scalar(qstate12_type *pqs, int32_t e, uint32_t phi)
+{
+    if (bad_state(pqs)) return ERR_QSTATE12_INCONSISTENT ;
+    if (pqs->nrows == 0) return 0;
+    if (ADD_FACTOR_OVERFLOW(pqs->factor >> 4, e)) 
+        return ERR_QSTATE12_SCALAR_OVFL;
+    pqs->factor = ADD_FACTORS(pqs->factor, (e << 4) + (phi & 7));
+    return 0;
+}
+
+
+
+/**
+  @brief Replace entries of a state by their absolute values
+
+  The function replaces the entries of the state referred 
+  by ``pqs`` by their absolute values.
+*/
+// %%EXPORT p
+CLIFFORD12_API
+int32_t qstate12_abs(qstate12_type *pqs)
+{
+    uint_fast32_t k;
+    uint64_t *m = pqs->data, mask = (ONE << pqs->ncols) - 1;
+    if (bad_state(pqs)) return ERR_QSTATE12_INCONSISTENT;
+    for (k = 0; k < pqs->nrows; ++k)  m[k] &=  mask;
+    pqs->factor &= 0ULL - (uint64_t)0x10ULL;
+    return 0;
+}
+
+
+
+/*************************************************************************
+*** Low-level functions
+*************************************************************************/
+/**
+   Return column ``j`` of the bit matrix ``M`` stored in ``pqs->data``
+   as a bit vector in an integer of type ``uin64_t``.
+*/ 
+// %%EXPORT p
+CLIFFORD12_API
+uint64_t qstate12_get_column(qstate12_type *pqs, uint32_t j)
+{
+    if (bad_state(pqs) || j >= pqs->nrows + pqs->ncols) return 0;
+    return qstate12_get_col(pqs->data, j,  pqs->nrows); 
+}
+
+
+
+
+/**
+  Delete all rows ``i, 1 <= i < pqs->nrows,`` from the bit matrix 
+  ``M`` stored in ``pqs->data``, if bit ``i`` in the bit vector
+  ``*pv`` is set.  Here we also adjust the quadratic form ``Q``
+  which is part of the bit matrix ``M``. Row 0 is never deleted.
+*/
+// %%EXPORT
+CLIFFORD12_API
+int32_t qstate12_del_rows(qstate12_type *pqs, uint64_t v)
+{ 
+    uint64_t *m = pqs->data, mask;
+    uint_fast32_t i, k, sh, row_pos, shifted = 0;
+    if (bad_state(pqs)) return ERR_QSTATE12_INCONSISTENT ;
+    row_pos= 1;
+    while ((v & (ONE << row_pos)) == 0 && row_pos < pqs->nrows) ++row_pos;
+    for (i = row_pos; i < pqs->nrows; ++i) {
+        if ((v >> i) & 1) continue;
+        m[row_pos] = m[i];
+        sh = i - row_pos - shifted;
+        if (sh) {
+            mask = ((ONE << pqs->ncols) << row_pos) - 1;
+            for (k = 0; k < pqs->nrows; ++k) 
+                m[k] = (m[k] & mask) | ((m[k] >> sh) & ~mask);
+            shifted += sh;
+        }
+        ++row_pos;
+    }
+    pqs->nrows = row_pos;
+    return 0; 
+} 
+
+/**
+  Insert ``nrows`` zero rows into the bit matrix ``M`` stored in 
+  ``pqs->data``, starting before row ``i``.  The corresponding 
+  zero columns of  the quadratic form ``Q``, which is part of the
+  bit matrix ``M``, are also inserted.  ``1 <= i <= nrows`` must 
+  hold. This process multiplies the state vector by the scalar
+  ``2**nrows``.
+*/
+// %%EXPORT
+CLIFFORD12_API
+int32_t qstate12_insert_rows(qstate12_type *pqs, uint32_t i, uint32_t nrows) 
+{ 
+    uint_fast32_t k; 
+    uint64_t *m = pqs->data, mask; 
+    if (bad_state(pqs)) return ERR_QSTATE12_INCONSISTENT ;
+    if (pqs->ncols + pqs->nrows + nrows > MAXCOLS) 
+        return ERR_QSTATE12_TOOLARGE;
+    if (pqs->nrows + nrows > pqs->maxrows) 
+        return ERR_QSTATE12_BUFFER_OVFL;
+    if (i == 0 || i > pqs->nrows) return ERR_QSTATE12_BAD_ROW;
+    for (k = pqs->nrows - 1; k >= i; --k)  m[k + nrows] = m[k]; 
+    for (k = i + nrows - 1; k >= i; --k) m[k] = 0; 
+    mask = ((ONE <<  pqs->ncols) << i) - 1; 
+    for (k = 0; k < pqs->nrows + nrows; ++ k) 
+        m[k] = (m[k] & mask) |  ((m[k] & ~mask) << nrows); 
+    pqs->nrows += nrows;
+    pqs->reduced = 0;
+    return 0;
+}
+
+/**
+  Let ``M`` be the bit matrix stored in  ``pqs->data``.  We return 
+  the matrix product ``w = A * Transposed(v)``, where ``A`` is the 
+  ``A`` part of the bit matrix ``M``, as a bit vector.
+*/
+// %%EXPORT p
+CLIFFORD12_API
+int32_t qstate12_mul_Av(qstate12_type *pqs, uint64_t v, uint64_t *pw) 
+{
+    uint64_t  w = 0, x, *m = pqs->data;
+    uint_fast32_t i, sh; 
+    if (bad_state(pqs)) return ERR_QSTATE12_INCONSISTENT ;
+    v &= (ONE << pqs->ncols) - 1;
+    if (v & (v-1)) {
+        // The standard case: v has bit weight > 1
+        for (i = 0; i < pqs->nrows; ++i) {
+            // Compute x = bit_parity(m[i] & v)
+            x = m[i] & v;
+            x ^= x >> 32; x ^= x >> 16; x ^= x >> 8; x ^= x >> 4;
+            x = (0x6996 >> (x & 0xf)) & 1;
+            // set bit i of output w to x
+            w += x << i;
+        }
+    } else if (v) {
+        // Optimize the case where v has bit weight 1
+        for (sh = 0; (v & 1) == 0; v >>= 1) ++sh;
+        for (i = 0; i < pqs->nrows; ++i) 
+            w += ((m[i] >> sh) & 1) << i;
+    }   
+    // There is nothing to do in case  v == 0
+    *pw = w;
+    return 0;
+}
+
+
+
+
+/*************************************************************************
+*** Permuting bit arguments of a state
+*************************************************************************/
+
+
+/**
+  @brief Rotate qubit arguments of the state ``qs`` referred by ``pqs``.
+
+  For ``n0 <= i < n0 + nrot``  we map qubit ``i`` to qubit  
+  ``n0 + (i + rot) % nrot``. E.g. ``nrot = 3, rot = 1, n0 = 0`` 
+  means that bits are mapped as ``0->1, 1->2, 2->0``. Let 
+  ``nn1 = pqs->ncols``. Then the function changes the  quadratic 
+  mapping ``qs`` to referred by ``pqs`` to ``qs1`` with
+  
+  
+       qs1(x[nn1-1],...,x[n0+nrot],y[nrot-1],...,y[0],x[n0-1],...,x[0])
+       = qs(x[nn1-1],...,x[n0+nrot],z[nrot-1],...,z[0],x[n0-1],...,x[0]),
+	   
+  where ``z[j] = y[j - rot (mod 3)]``.
+*/
+// %%EXPORT p
+CLIFFORD12_API
+int32_t qstate12_rot_bits(qstate12_type *pqs, int32_t rot, uint32_t nrot, uint32_t n0)
+{
+    if (bad_state(pqs)) return ERR_QSTATE12_INCONSISTENT ;
+    if (nrot + n0 > pqs->ncols) return ERR_QSTATE12_QUBIT_INDEX;
+    if (nrot < 2) return 0;
+    pqs->reduced = 0;
+    return bitmatrix64_rot_bits(pqs->data, pqs->nrows, rot, nrot, n0);
+}
+
+
+/**
+  @brief Exchange qubit arguments of the state ``qs`` referred by ``pqs``.
+
+  Exchange qubit ``j`` with argument bit ``j + sh`` of the state ``qs`` 
+  referred by ``pqs``, if bit ``j`` of ``mask`` is set. If bit ``j``
+  of ``mask`` is  set then bit  ``j + sh`` of ``mask`` must not be set. 
+  No bit of ``mask`` at  position greater or equal to ``pqs->ncols - sh``
+  may be set.
+  
+  E.g. ``qstate12_xch_bits(pqs, 1, 0x11)`` changes the  quadratic 
+  mapping ``qs`` to ``qs1`` with
+  
+       qs1(...,x6,x5,x4,x3,x2,x1,x0) = qs(...,x6,x4,x5,x3,x2,x0,x1) .
+*/
+// %%EXPORT p
+CLIFFORD12_API
+int32_t qstate12_xch_bits(qstate12_type *pqs, uint32_t sh, uint64_t mask)
+// Exchange argument bit j with argument bit j + sh of the state qs 
+// referred by pqs, if bit j of 'mask' is set. If bit j of 'mask' is 
+// set then bit  j + sh of 'mask' must not be set. No 'mask' bit at 
+// position >= pqs->ncols - sh may be set.
+// E.g.  qstate12_xch_bits(pqs, 1, 0x11) changes qs to qs' with
+// qs'(...,x6,x5,x4,x3,x2,x1,x0) = qs(...,x6,x4,x5,x3,x2,x0,x1).
+{
+    if (bad_state(pqs)) return ERR_QSTATE12_INCONSISTENT ;
+    if (mask == 0) return 0;
+    pqs->reduced = 0;
+    if (sh >= pqs->ncols ||  mask & ((mask | ((0-ONE) << pqs->ncols)) >> sh)) 
+        return ERR_QSTATE12_QUBIT_INDEX;
+    return bitmatrix64_xch_bits(pqs->data, pqs->nrows, sh, mask);
+}
+
+
+
+
+
+
+/*************************************************************************
+*** Pivoting and reducing a state
+*************************************************************************/
+
+
+
+
+/**
+  @brief Auxiliary function for function qstate12_reduce().
+  
+  Let ``M`` be the bit matrix stored in  ``pqs->data``. The pivoting
+  process is controlled by the bit vector ``v``. If ``k < i`` and
+  bit  ``k`` of ``v ``is set  then row ``i`` of bit matrix ``M ``is
+  xored to row ``k`` of ``M``. The columns of the  part ``Q`` of ``M``
+  are also adjusted. ``1 <= i < pqs->nrows`` must hold. Pivoting does
+  not change the state. 
+  
+  For internal use only. Input conditions are not checked.
+*/
+// %%EXPORT 
+CLIFFORD12_API
+void qstate12_pivot(qstate12_type *pqs, uint32_t i, uint64_t v)
+{
+    uint64_t *m = pqs->data; 
+    uint64_t col_mask = ONE << pqs->ncols;
+    uint64_t col_update = 0;
+    uint_fast32_t k, sh; 
+
+    pqs->reduced = 0;
+    // process rows i-1, ..., 1 
+    for  (k = i - 1; k > 0; --k) if (v & (ONE << k)) {
+         // Flip bit Q[0,k] if Q[i,k] ^ (Q[k,k] & Q[i,i]) is 1; 
+         // see guide, section 'Implementation of quadratic mappings'
+         m[0] ^= ((m[k] & (m[i] >> (i-k))) ^ m[i]) & (col_mask << k);
+         // Mark column Q[.,i] to be added to column Q[.,k]
+         col_update |=  (col_mask << k);
+         // Add row i of A and Q to row k
+         m[k] ^= m[i];
+    }
+
+    // Do the column operations marked in col_update
+    sh = pqs->ncols + i;
+    if (col_update) {
+        for (k = 0; k < pqs->nrows; ++k) {
+            m[k] ^= (0 - ((m[k] >> sh) & 1)) & col_update;
+        } 
+    }
+
+    // Finally, process row 0
+    if (v & 1) {
+        // Put factor *= exp(pi/2 * sqrt(-1) * k), k = 2 * Q[0,i] + Q[i,i]
+        // see guide, section 'Implementation of quadratic mappings'
+        k = ((m[0] >> sh) & 1) << 1;
+        k += (m[i] >> sh) & 1;
+        pqs->factor = ADD_FACTORS(pqs->factor, k << 1);
+        // Add row i to row 0
+        m[0] ^= m[i];
+    }
+}
+
+
+
+
+/**
+  @brief Auxiliary function for function qstate12_reduce().
+
+  Sum up the kernel of the transformation matrix ``A``, which
+  is part of the bit matrix ``M = pqs->data``. We assume that ``A``
+  is echelonized in the sense that all nonzero rows of ``A`` are
+  linear independent and that they occur before the zero rows.
+*/
+// %%EXPORT 
+CLIFFORD12_API
+int32_t qstate12_sum_up_kernel(qstate12_type *pqs)
+{
+    uint64_t *m = pqs->data, mask = (ONE << pqs->ncols) - 1; 
+    uint64_t v, del_rows = 0;
+    int_fast32_t i, n;
+    int32_t old_sign = ~pqs->factor & FACTOR_SIGN;
+
+    // Sum up rows where A is zero. We use the algorithm in section
+    // 'Reducing the representation of a quadratic mapping' of the guide.
+    // Here in each iteration we delete the last row of the kernel. We 
+    // may also mark more rows deleted in the bits of variable del_rows.
+    while (pqs->nrows > 1 && (m[pqs->nrows - 1] & mask) == 0) {
+        n = pqs->nrows - 1;
+        // Ignore all rows marked as deleted
+        if (del_rows & (ONE << n)) {
+             --pqs->nrows;
+             continue;
+        }     
+        // find highest row i with Q[i,n] = 0
+        i = qstate12_find_pivot(m, pqs->nrows, pqs->ncols + n);
+        if (i <= 0) {
+            if (i == -1) {
+                // All bits in column n of Q are cleared
+                // Then double the state vector
+                pqs->factor += 32;
+            } else {
+                // Column n of Q has exactly one bit set in row 0
+                // Then the result is zero
+                return pqs->factor = pqs->nrows = 0;
+            }
+        } else {
+            // Pivot so that Q[k,n] will be 0 for k != i 
+            v = qstate12_get_col(m,  pqs->ncols + n, i);
+            qstate12_pivot(pqs, i, v);
+            if (i == n) {
+                // Last diagonal element of Q is one
+                // Multiply state vector with (1 + sqrt(-1))
+                pqs->factor = ADD_FACTORS(pqs->factor, 0x11);
+            } else {
+                // Compute row i of Q in v
+                v =  (m[i] >> pqs->ncols) & (uint64_t)(-2LL);
+                v |= (m[0] >> (pqs->ncols + i)) & 1;
+                // Pivot so that Q[k,i] will be 0 for k != n 
+                qstate12_pivot(pqs, n, v);
+                // Mark row i to be deleted
+                del_rows ^= ONE << i;
+                m[i] = 0;  // We don't want to find anything in row i
+                // Double the state vector
+                pqs->factor += 32;
+            }
+        }
+        --pqs->nrows;  // delete row n
+    }
+    if (old_sign & pqs->factor) return ERR_QSTATE12_SCALAR_OVFL;
+    // Delete marked rows
+    if (del_rows) {
+        qstate12_del_rows(pqs, del_rows);
+    }        
+    return 0; 
+}
+
+
+
+
+
+
+/** @brief Convert the state represented by ``pqs`` to echelon form
+
+  The representation state referred by ``pqs`` is converted to (not
+  necessarily reduced) echelon form, and the kernel of bit
+  matrix ``A``, which is part of the bit matrix ``M = pqs->data``
+  is summed up as described in the guide,
+  section 'Reducing the representation of a quadratic mapping'.
+  The representation of the state is not changed if this is
+  already the case.
+  
+  This function does not change the state.
+*/
+// %%EXPORT p
+CLIFFORD12_API
+int32_t qstate12_echelonize(qstate12_type *pqs)
+{
+    uint_fast32_t row_pos = 1, i, i1; 
+    int_fast32_t col; 
+    uint64_t *m = pqs->data, v, mask;
+    if (bad_state(pqs)) return ERR_QSTATE12_INCONSISTENT;  
+    if (pqs->reduced) return 0;
+    if (pqs->nrows == 0) return pqs->factor = 0; // done if state is 0
+
+    // Convert submatrix A of M to (non-reduced) echelon form
+    if (pqs->ncols > 0) for (col = pqs->ncols - 1; col >= 0; --col) {
+        // pivot with column col, advance row_pos if success
+        i = pqs->nrows - 1; 
+        mask = ONE << col;
+        v = 0;
+        while (i >= row_pos  && ((m[i] & mask) == 0)) -- i;
+        if (i >= row_pos) {
+            if (i > row_pos) {
+                for (i1 = row_pos; i1 < i; ++i1) 
+                    v |= ((m[i1] >> col) & 1) << i1; 
+                if (v) qstate12_pivot(pqs, i, v);
+                qstate12_xch_rows(pqs, i, row_pos);
+            }
+            if (++row_pos >= pqs->nrows) break;
+        }
+    }    
+    return qstate12_sum_up_kernel(pqs);
+}
+
+/** @brief Reduce the state represented by ``pqs``
+
+  The representation state referred by ``pqs`` is converted to
+  reduced echelon form, and the kernel of bit matrix ``A``, which
+  is part of the bit matrix ``M = pqs->data`` is summed up as
+  described in the guide,
+  section 'Reducing the representation of a quadratic mapping'.
+  The representation of the state is not changed if this is
+  already the case.
+  
+  This function does not change the state.
+*/
+// %%EXPORT p
+CLIFFORD12_API
+int32_t qstate12_reduce(qstate12_type *pqs)
+{
+    uint_fast32_t row_pos = 1, i, i1; 
+    int_fast32_t col, res; 
+    uint64_t *m = pqs->data, v, mask;
+    if (bad_state(pqs)) return ERR_QSTATE12_INCONSISTENT ;  // abort if state is bad
+    if (pqs->reduced) return 0;
+    if (pqs->nrows == 0) return pqs->factor = 0; // done if state is 0
+
+    // Convert submatrix A of M to reduced echelon form
+    if (pqs->ncols > 0) for (col = pqs->ncols - 1; col >= 0; --col) {
+        // pivot with column col, advance row_pos if success
+        i = pqs->nrows - 1; 
+        mask = ONE << col;
+        while (i >= row_pos  && ((m[i] & mask) == 0)) -- i;
+        if  (i >= row_pos) {
+            v = 0;
+            for (i1 = 0; i1 < i; ++i1) 
+                v |= ((m[i1] >> col) & 1) << i1; 
+            if (v) qstate12_pivot(pqs, i, v);
+            if (i > row_pos) qstate12_xch_rows(pqs, i, row_pos);
+            if (++row_pos >= pqs->nrows) break;
+        }    
+    }    
+    res = qstate12_sum_up_kernel(pqs);
+    pqs->reduced = 1;
+    return res;
+}
+
+
+/**
+  @brief Compute a certain table for the state referred by ``pqs``
+
+  Compute a row table for the state ``qs`` referred by ``pqs``.
+  Here ``qs`` must be in (not necessarily reduced) echelon form.
+  
+  
+  The function computes ``row_table[j] = i`` if the leading bit
+  of row ``i`` of part ``A`` of the bit matrix ``M = pqs->data``
+  is in column ``j``, for ``0 <= j < pqs->ncols`` and
+  ``1 <= i < pqs->nrows``. If now such row exists for column
+  ``j`` then we put  ``row_table[j] = QSTATE12_UNDEF_ROW``.
+  
+  The representation of the state is not changed.
+*/
+// %%EXPORT p
+CLIFFORD12_API
+int32_t qstate12_row_table(qstate12_type *pqs, uint8_t *row_table)
+{
+    uint_fast32_t row_pos = 1, i;
+    int32_t col; 
+    uint64_t *m = pqs->data, mask;
+    if (bad_state(pqs)) return ERR_QSTATE12_INCONSISTENT ; 
+    for (col =  pqs->ncols - 1; col >= 0; --col) 
+        row_table[col] = QSTATE12_UNDEF_ROW;
+    if (pqs->nrows == 0) return 0;
+ 
+    for (col =  pqs->ncols - 1; col >= 0; --col) {
+        // find pivoting row ``i`` for column ``col``
+        i = pqs->nrows - 1; 
+        mask = ONE << col;
+        while (i >= row_pos  && ((m[i] & mask) == 0)) -- i;
+        if (i >= row_pos) {
+            row_pos =  i;
+            row_table[col] = (uint8_t)i;
+            ++row_pos;
+        }
+    }
+    return 0;  
+}
+
+
+
+/*************************************************************************
+*** Checking equality of two states state
+*************************************************************************/
+
+/** 
+  @brief Check equality of two states
+  
+  Return 1 if the states referred by ``pqs1`` and ``pqs2`` are equal,
+  0 if not, and a negative number in case of error.
+  Both states are reduced before comparing them.
+*/
+// %%EXPORT p
+CLIFFORD12_API
+int32_t qstate12_equal(qstate12_type *pqs1, qstate12_type *pqs2) 
+{
+    uint64_t mask, diff = 0;
+    uint_fast32_t i;
+    int_fast32_t res;
+
+    // Reduce and compare  qs1 and  qs2
+    if ((res = qstate12_reduce(pqs1)) < 0) return res;
+    if ((res = qstate12_reduce(pqs2)) < 0) return res;
+    if ((pqs1->nrows | pqs2->nrows) == 0) return 1;
+    if (((pqs1->factor ^ pqs2->factor) & FACTOR_MASK) |
+        (pqs1->nrows ^ pqs2->nrows)) return 0;
+    mask = (((ONE << pqs1->nrows) - 1) << pqs1->ncols) - 1;
+    for (i = 0; i < pqs1->nrows; ++i) 
+        diff |= (pqs1->data[i] ^ pqs2->data[i]) & mask;
+    return (int32_t)(!diff);
+}
+
+
+/*************************************************************************
+*** Extending and restricting a state
+*************************************************************************/
+
+/**
+  @brief Insert qubits into a state and set them to 0
+
+  We insert ``nqb`` zero qubits into the state ``qs`` referred
+  by  ``pqs`` starting at position ``j``.
+ 
+  Let ``n = pqs->ncols`` so that the state ``qs`` referred by
+  ``pqs`` depends on ``n`` qubits. We change ``qs`` to the
+  following state ``qs1`` depending on ``n + nqb`` qubits:
+ 
+  ``qs1(x[n-1],...,x[j],y[nqb-1],...,y[0],x[j-1]...,x[0])``
+  is equal to ``qs(x[n-1],...,x[j],x[j-1]...,x[0])`` if
+  ``y[0] = ... = y[nqb-1] = 0`` and equal to zero otherwise.
+  So we increment ``pqs->ncols`` by ``nqb``.
+ 
+  If the input is reduced then the result is also reduced.
+  ``pqs->shape1`` is set to 0, i.e. a column vector is
+  returned.
+*/
+// %%EXPORT p
+CLIFFORD12_API
+int32_t qstate12_extend_zero(qstate12_type *pqs, uint32_t j, uint32_t nqb)
+{
+    uint32_t k;
+    uint64_t *m = pqs->data, mask;
+    
+    if (bad_state(pqs)) return ERR_QSTATE12_INCONSISTENT ;
+    if (j > pqs->ncols) return ERR_QSTATE12_QUBIT_INDEX;
+    if (pqs->ncols + nqb + pqs->nrows > MAXCOLS) 
+       return ERR_QSTATE12_TOOLARGE;
+    mask = (ONE << j) - 1;
+    pqs->ncols += nqb;
+    pqs->shape1 = 0;
+
+    for (k = 0; k < pqs->nrows; ++k) {
+         m[k] = (m[k] & mask) | ((m[k] & ~mask) << nqb);
+    }
+    return 0;   
+}
+
+
+
+/**
+  @brief Insert qubits into a state
+
+  We insert ``nqb`` qubits into the state ``qs`` referred
+  by  ``pqs`` starting at position ``j``.
+ 
+  Let ``n = pqs->ncols`` so that the state ``qs`` referred by
+  ``pqs`` depends on ``n`` qubits. We change ``qs`` to the
+  following state ``qs1`` depending on ``n + nqb`` qubits:
+ 
+  ``qs1(x[n-1],...,x[j],y[nqb-1],...,y[0],x[j-1]...,x[0])``
+  is equal to ``qs(x[n-1],...,x[j],x[j-1]...,x[0])``.
+  So we increment ``pqs->ncols`` by ``nqb``.
+ 
+  The result is not reduced. ``pqs->shape1`` is set to 0, i.e.
+  a column vector is  returned.
+*/
+// %%EXPORT p
+CLIFFORD12_API
+int32_t qstate12_extend(qstate12_type *pqs, uint32_t j, uint32_t nqb)
+{
+
+    uint64_t *m = pqs->data, mask;
+    uint_fast32_t i, k;
+    int32_t res;
+
+    if ((res = qstate12_extend_zero(pqs, j, nqb)) < 0) return res;
+    if (pqs->nrows == 0) return 0;
+    pqs->reduced = 0;
+    mask = (ONE << j) - 1;
+    i = pqs->nrows; 
+    if ((res = qstate12_insert_rows(pqs, i, nqb)) < 0) return res;
+    mask = ONE << j;
+    for (k = 0; k < nqb; ++k) m[i+k] ^= mask << k;
+    return 0;
+}
+
+
+/**
+  @brief Sum up the functional values for some qubits
+  
+  We sum up ``nqb`` qubits of the state ``qs`` referred by ``pqs``
+  starting at position ``j``.
+ 
+  Let ``n = pqs->ncols`` so that the state ``qs`` referred by
+  ``pqs`` depends on ``n`` qubits. We change ``qs`` to the
+  following state ``qs1`` depending on ``n - ncols`` qubits:
+ 
+  ``qs1(x[n-1],...,x[j+nqb],x[j-1],...,x[0])`` =
+  ``sum_{x[j+nqb-1],...,x[j]}  qs1(x[nn1-1],...,x[0])`` .
+  So we decrement ``pqs->ncols`` by ``nqb``.
+ 
+  The output is not reduced.
+  ``pqs->shape1`` is set to 0, i.e. a column vector is returned.
+*/
+// %%EXPORT p
+CLIFFORD12_API
+int32_t qstate12_sum_cols(qstate12_type *pqs, uint32_t j, uint32_t nqb)
+{
+    uint32_t k;
+    uint64_t *m = pqs->data, mask = (ONE << j) - 1;
+    
+    if (bad_state(pqs)) return ERR_QSTATE12_INCONSISTENT ;
+    if (nqb + j > pqs->ncols) return ERR_QSTATE12_QUBIT_INDEX;
+    pqs->ncols -= nqb;
+    pqs->shape1 = 0;
+    pqs->reduced = 0;
+    for (k = 0; k < pqs->nrows; ++k) {
+        m[k] = (m[k] & mask) | ((m[k] >> nqb) & ~mask);
+    }    
+    return 0;   
+}
+
+
+/**
+  @brief Restrict ``nqb`` qubits starting at postion ``j`` to 0.
+ 
+  Let ``n = pqs->ncols`` so that the state ``qs`` referred by
+  ``pqs`` depends on ``n`` qubits. We change ``qs`` to the
+  following state ``qs1`` depending on ``n`` qubits:
+ 
+  ``qs1(x[n-1],...,x[0])`` is equal to ``qs(x[n-1],...,x[0])`` if
+  ``x[j] = ... = x[j+nqb-1] = 0`` and equal to zero otherwise.
+  We do not change the shape of ``qs``.
+  
+  The output is reduced if the input is reduced.
+*/
+// %%EXPORT p
+CLIFFORD12_API
+int32_t qstate12_restrict_zero(qstate12_type *pqs, uint32_t j, uint32_t nqb)
+{
+    uint64_t *m = pqs->data, v, deleted = 0;
+    int_fast32_t i;
+    uint_fast32_t col_pos;
+
+    if (bad_state(pqs)) return ERR_QSTATE12_INCONSISTENT ;
+    if (nqb + j > pqs->ncols) return ERR_QSTATE12_QUBIT_INDEX;
+    if (pqs->nrows == 0)  return 0;
+    
+    for (col_pos = j; col_pos < j + nqb; ++col_pos) {
+        i = qstate12_find_pivot(m, pqs->nrows, col_pos);
+        if (i > 0) {
+            v =  qstate12_get_col(m, col_pos, i);
+            qstate12_pivot(pqs, i, v); 
+            m[i] = 0;
+            deleted |= ONE << i;
+        } else if (i == 0) {
+            return  pqs->nrows = 0;  
+        } 
+    }
+    return qstate12_del_rows(pqs, deleted);   
+}
+
+
+/**
+  @brief Restrict some qubits to 0 and delete them.
+  
+  Similar to function ``qstate12_restrict_zero``, but with deleting
+  the restricted qubits.
+ 
+  Let ``n = pqs->ncols`` so that the state ``qs`` referred by
+  ``pqs`` depends on ``n`` qubits.  We change ``qs`` to the
+  following state ``qs1`` depending  on ``n1 = n - nqb`` qubits:
+  
+  ``qs1(x[n1-1],...,x[0])`` is equal to
+  ``qs(x[n1-1],...,x[j],0,...,0,x[j-1],...,x[0])``.
+  So we decrement ``pqs->ncols`` by ``nqb``.
+ 
+  The output is not reduced.
+  ``pqs->shape1`` is set to ``0``, i.e. a column vector is returned.
+  
+  In quantum computing theory this operation can be interpreted
+  as measurement of the corresponding qubits with postselection,
+  setting all measured qubits to 0.
+*/
+// %%EXPORT p
+CLIFFORD12_API
+int32_t qstate12_restrict(qstate12_type *pqs, uint32_t j, uint32_t nqb)
+{
+    int32_t res;
+    if ((res = qstate12_restrict_zero(pqs, j, nqb)) < 0) return res;
+    pqs->reduced = 0;
+    return qstate12_sum_cols(pqs, j, nqb);
+}
+
+
+
+
+
+
+/*************************************************************************
+*** Applying 'gates' to a state
+*************************************************************************/
+
+/**
+  @brief Apply a not gate to a state
+
+  Change the state ``qs`` referred by ``pqs`` to a state ``qs1``
+  with ``qs1(x) = qs(x (+) v)``, where ``'(+)'`` is the bitwise
+  xor operation.
+  The result is not reduced.
+  
+  Computing ``qstate12_gate_not(pqs, 1 << j)`` corresponds to
+  negating qubit ``j``.
+*/
+// %%EXPORT p
+CLIFFORD12_API
+int32_t qstate12_gate_not(qstate12_type *pqs, uint64_t v)
+{
+    if (bad_state(pqs)) return ERR_QSTATE12_INCONSISTENT ;
+    if (pqs->nrows == 0) return 0;
+    pqs->data[0] ^= v & ((ONE << pqs->ncols) - 1);
+    pqs->reduced = 0;
+    return 0;
+}
+
+
+/**
+  @brief Apply a contol-not gate to a state
+
+  Change the state ``qs`` referred by ``pqs`` to a state ``qs1``
+  with ``qs1(x) = qs(x (+) <vc,x> * v)``, where ``'(+)'`` is
+  the bitwise  xor operation, and ``<.,.>`` is the scalar
+  product of bit vectors. The result is not reduced.
+  The scalar product of the bit vectors ``j`` and ``jc`` must
+  be zero. Otherwise the ``ctrl not`` operation is not
+  unitary.
+ 
+  Computing ``qstate12_gate_ctrl_not(pqs, 1 << jc, 1 << j)``,
+  for ``jc != j``, corresponds to applying a controlled not
+  gate  to qubit ``j``,  contolled by qubit ``jc``.
+*/
+// %%EXPORT p
+CLIFFORD12_API
+int32_t qstate12_gate_ctrl_not(qstate12_type *pqs, uint64_t vc, uint64_t v)
+
+{
+    uint64_t *m = pqs->data, wc, x;
+    uint_fast32_t i;
+    int32_t res;
+    v &= (ONE << pqs->ncols) - 1;
+    x = v & vc;
+    x ^= x >> 32; x ^= x >> 16; x ^= x >> 8; x ^= x >> 4;
+    x = (0x6996 >> (x & 0xf)) & 1;
+    if (x) return ERR_QSTATE12_CTRL_NOT;
+
+    if ((res = qstate12_mul_Av(pqs, vc, &wc)) < 0) 
+        return ERR_QSTATE12_CTRL_NOT;
+
+    pqs->reduced = 0;
+    if (wc) for (i = 0; i < pqs->nrows; ++i) 
+        m[i] ^= (0 - ((wc >> i) & ONE)) & v;
+    return 0;
+}
+
+
+
+/**
+  @brief Apply a phase gate to a state
+  
+  Change the state ``qs`` referred by ``pqs`` to a state ``qs1``
+  with ``qs1(x) = qs(x) * sqrt(-1)**(phi * <v,x>)``, where
+  ``<.,.>`` is the scalar product of bit vectors and ``'**'``
+  denotes exponentiation.
+  The result is reduced if the input is reduced.
+  Computing ``qstate12_gate_ph(pqs, 1 << j, phi)``
+  corresponds to applying a  phase ``(phi * pi/2)``  gate
+  to qubit ``j``.
+*/
+// %%EXPORT p
+CLIFFORD12_API
+int32_t qstate12_gate_phi(qstate12_type *pqs, uint64_t v, uint32_t phi)
+{
+    uint64_t *m = pqs->data, w, wsh, c = ONE << pqs->ncols;
+    uint_fast32_t i;
+    int32_t res;
+    if ((res = qstate12_mul_Av(pqs, v, &w)) < 0) return res;
+    if (w == 0) return 0;
+    wsh = w << pqs->ncols;
+
+    if (phi & 1) {
+        //TODO: yet to be documented and checked!!!!
+        pqs->factor = ADD_FACTORS(pqs->factor, (w & 1) << 1);
+        m[0] ^= wsh & (0 - (w & ONE)) & ~c;
+        for (i = 1; i < pqs->nrows; ++i) {
+            m[0] ^= wsh & m[i] & (c << i);
+            m[i] ^= wsh & (0 - ((w >> i) & ONE));
+        }
+    }
+    if (phi & 2) {
+        pqs->factor ^= (w & 1) << 2; 
+        m[0] ^= wsh & ~c;
+    }
+    return 0;
+}
+
+
+/**
+  @brief Apply a controlled phase gate to a state
+  
+  Change the state ``qs`` referred by ``pqs`` to a state ``qs1``
+  with ``qs1(x) = qs(x) * (-1)**(<v1,x>*<v2,x>)``, where
+  ``<.,.>`` is the scalar product of bit vectors and ``'**'``
+  denotes exponentiation.
+  
+  The result is reduced if the input is reduced.
+  Computing ``qstate12_gate_ctrl_phi(pqs, 1 << j1, 1 << j2)``
+  corresponds to applying a  phase ``pi`` gate to
+  qubit ``j2`` controlled by qubit ``j1``.
+*/
+// %%EXPORT p
+CLIFFORD12_API
+int32_t qstate12_gate_ctrl_phi(qstate12_type *pqs, uint64_t v1, uint64_t v2)
+{
+    uint64_t *m = pqs->data, w1, w2, w1sh, w2sh;
+    uint_fast32_t i;
+    int32_t res;
+    if ((res = qstate12_mul_Av(pqs, v1, &w1)) < 0) return res;
+    if ((res = qstate12_mul_Av(pqs, v2, &w2)) < 0) return res;
+    w1sh = (w1 & ~ONE) << pqs->ncols;
+    w2sh = (w2 & ~ONE) << pqs->ncols;
+    pqs->factor ^= (w1 & w2 & 1) << 2; 
+    m[0] ^= (w1sh & (0 - (w2 & ONE))) ^ (w2sh & (0 - (w1 & ONE)))
+          ^ (w1sh & w2sh);
+    for (i = 1; i < pqs->nrows; ++i) {
+        m[i] ^= (w1sh & (0 - ((w2 >> i) & ONE))) 
+              ^ (w2sh & (0 - ((w1 >> i) & ONE)));
+    }
+    return 0;
+}
+
+
+/**
+  @brief Apply Hadamard gates to a state
+  
+  Apply a Hadamard gate to all qubits ``j`` of the state ``qs``
+  (referred by pqs) with  ``v & (1 << j) == 1``.
+  Applying a Hadamard gate to gate ``j`` changes a state ``qs``
+  to a state ``1/sqrt(2) * qs1``, where
+  ``qs1(..,x[j+1],x_j,x[j-1],..)`` = ``qs(..,x[j+1],0,x[j-1],..)``
+  + ``(-1)**(x_j) * qs(..,x[j+1],1,x[j-1],..)`` .
+  The result is not reduced.
+*/
+// %%EXPORT p
+CLIFFORD12_API
+int32_t qstate12_gate_h(qstate12_type *pqs, uint64_t v)
+{
+    uint64_t *m = pqs->data, w, mask1, c;
+    uint_fast32_t i, j, sh, max_rows;
+    int32_t res;
+    int32_t old_sign;
+    if (bad_state(pqs)) return ERR_QSTATE12_INCONSISTENT ;
+    if (pqs->nrows == 0) return 0; // nothing do do for zero state
+
+    max_rows = MIN(2 * pqs->ncols + 2, pqs->maxrows - 1);
+    max_rows = MIN(max_rows, MAXCOLS - pqs->ncols - 1);
+
+    for (j = 0; j < pqs->ncols ; ++j) if (v & (ONE << j))  {
+        // Reduce if short of space
+        pqs->reduced = 0;
+        if (pqs->nrows >= max_rows) {
+            if ((res = qstate12_echelonize(pqs)) < 0) 
+                return res;
+            if (pqs->nrows >= max_rows) return ERR_QSTATE12_BUFFER_OVFL;
+        }
+        // Append one zero row and apply the algorithm in the guide in
+        // section 'Applying a Hadamard gate to a quadratic mapping'.
+        // Let n be the index of the row appended to part A and of the
+        // row and column appended to part Q. We put
+        // Q[n,k] = Q[k,n] = A[k,j],  A[k,j] = 0 for all k < n, 
+        // and A[n,j] = 1.
+        w = 0;
+        sh = pqs->nrows + pqs->ncols;
+        mask1 = (ONE << sh) - (ONE << j) - 1;
+        for (i = 0; i < pqs->nrows; ++i) {
+            c = (m[i] >> j) & 1;
+            m[i] = (m[i] & mask1) | (c << sh);
+            w |= c << i;
+        } 
+        m[pqs->nrows++] = (ONE << j) + (w << pqs->ncols);
+        // multiply result with 1 / sqrt(2)
+        old_sign = pqs->factor & FACTOR_SIGN;
+        pqs->factor -= 0x10;
+        if (old_sign & ~pqs->factor) return ERR_QSTATE12_SCALAR_OVFL;        
+    }
+    return 0;
+}
+
+
+
+
+
+
+//  %%GEN h
+//  %%GEN c
+
+
+// %%GEN ch
+#ifdef __cplusplus
+}
+#endif
+
