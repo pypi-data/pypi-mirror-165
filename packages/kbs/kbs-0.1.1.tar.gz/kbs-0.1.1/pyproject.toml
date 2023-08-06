@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "kbs"
+version = "0.1.1"
+description = "kbs is a command line tool to work with kubernetes secrets"
+authors = ["Steinn Eldjárn Sigurðarson <steinnes@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pykube-ng = "^22.1.0"
+click = "^8.0.4"
+
+[tool.poetry.dev-dependencies]
+black = "^22.1.0"
+isort = "^5.10.1"
+flake8 = "^4.0.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+kbs = "kbs.cli:cli"
