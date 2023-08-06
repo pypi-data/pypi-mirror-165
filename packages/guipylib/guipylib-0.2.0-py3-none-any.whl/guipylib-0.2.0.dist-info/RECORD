@@ -1,0 +1,12 @@
+guipy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+guipy/components/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+guipy/components/_component.py,sha256=I7lKjZaBjAXFTyClpaiTNovIeMAujr1gN3YuGSMgkcM,336
+guipy/components/plot.py,sha256=QrlUBEbTNyx-cJFpFNAey1G5Ua56BoDXFC05NO1frGM,4685
+guipy/components/slider.py,sha256=ezWEn92z70squCfB4QPvsomUmnzrAX8ysI-3NtY8aHQ,2381
+guipy/components/textbox.py,sha256=CnxUjLLBi-L1kMn-QK9BRC3bQtxZAwN16s37ziIpCM8,2375
+guipy/manager.py,sha256=da00mcxF1jlV5ZxGl6Ikgs3AJN4KOVc4Tu4v0VqS528,1355
+guipy/utils.py,sha256=OTJ1dnFNeYAHDk9oDkRt1bjNtQ1-USk4r3OBHB6Uv9o,1162
+guipylib-0.2.0.dist-info/LICENSE,sha256=WTYSF6wOfkBrqORweFPLAfFHDSSJKFaD7mlIQHsmtic,1067
+guipylib-0.2.0.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+guipylib-0.2.0.dist-info/METADATA,sha256=Il-mCSw-mMSyrtveknPoEKYwTBeISgTovYpS3F7k9w8,2625
+guipylib-0.2.0.dist-info/RECORD,,
