@@ -1,0 +1,15 @@
+thriftpyi/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+thriftpyi/__main__.py,sha256=lH9S5whlreCu4ylW8LoTqtk5v2sRFMHhKm6aMSWHJwQ,92
+thriftpyi/cli.py,sha256=V25cvHHcnQnVklEA0xBOoRd0ph2DckoLSS9GrcX54XY,955
+thriftpyi/compat.py,sha256=0CXb5_I1wfHjwf8Zdx7rfefqPcYGJy3v2JqYLn-Pq2I,183
+thriftpyi/factories.py,sha256=Ti-St5Dag7o_tk2dyTO-Kcl9NDuui2YyO0Rp__u_Ddw,6859
+thriftpyi/files.py,sha256=KkGBpqCPgHMNu8MDXKtxzPBvn_wC2XEtwm8mUgHavgE,726
+thriftpyi/main.py,sha256=0PG8jSNTX5Qr2MZ5lyNrYGot32s2cqx4hv8--jCUH9s,1088
+thriftpyi/proxies.py,sha256=NVNaVIKMgC0oeQY54So3BdLyCJsCSviVJubiPf_EnfI,4060
+thriftpyi/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+thriftpyi/utils.py,sha256=ND61hmYoL3QtAinBULnrETNCN7Ike0tIAjq4dtOlpW4,2109
+thrift_pyi-0.4.0.dist-info/entry_points.txt,sha256=NHnttcuKQIzzcclue3FIMtwiIezGggabv-e65BLYgZw,48
+thrift_pyi-0.4.0.dist-info/LICENSE,sha256=k4sM6mL0VPSa3AO3Qm1cjq_ymNqW_vkX1NHWf60Jw-o,1074
+thrift_pyi-0.4.0.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+thrift_pyi-0.4.0.dist-info/METADATA,sha256=xwOvfsAb8Cvt8g8pVG6WEnCSxE5X7Vhx-ILcnnKwrGU,4418
+thrift_pyi-0.4.0.dist-info/RECORD,,
