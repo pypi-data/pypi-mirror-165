@@ -1,0 +1,5 @@
+numpy>=1.22
+matplotlib>=3.2.1
+lmfit>=1.0.0
+mpmath>=1.1.0
+autograd>=1.3
