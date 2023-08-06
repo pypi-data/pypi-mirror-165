@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+mc_authn/__init__.py
+mc_authn.egg-info/PKG-INFO
+mc_authn.egg-info/SOURCES.txt
+mc_authn.egg-info/dependency_links.txt
+mc_authn.egg-info/entry_points.txt
+mc_authn.egg-info/requires.txt
+mc_authn.egg-info/top_level.txt
