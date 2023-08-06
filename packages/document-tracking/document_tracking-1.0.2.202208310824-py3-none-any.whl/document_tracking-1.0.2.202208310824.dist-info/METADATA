@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: document-tracking
+Version: 1.0.2.202208310824
+Summary: Algorithms to track documents and build news stories from them. It implements the Miranda et al. (2018) algorithm, as well as other alternatives and baselines to track documents.
+Home-page: https://gitlab.univ-lr.fr/cross-lingual-event-tracking/developpement/from-documents-to-events/document_tracking
+Author: Guillaume Bernard
+Author-email: contact@guillaume-bernard.fr
+License: GPLv3 License and 3-Clause BSD Licence
+Project-URL: Bug Tracker, https://gitlab.univ-lr.fr/cross-lingual-event-tracking/developpement/from-documents-to-events/document_tracking/-/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Intended Audience :: Science/Research
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: LICENSE_BSD
+License-File: AUTHORS
+Requires-Dist: bcubed (~=1.5)
+Requires-Dist: numpy (~=1.19.5)
+Requires-Dist: pandas (~=1.3.5)
+Requires-Dist: scikit-learn (~=1.0.2)
+Requires-Dist: scipy (~=1.7.3)
+Requires-Dist: sentence-transformers (~=2.1.0)
+Requires-Dist: setuptools (~=53.0.0)
+Requires-Dist: tqdm (~=4.62.3)
+Requires-Dist: yellowbrick (~=1.3.post1)
+Requires-Dist: document-tracking-resources (~=1.0.0)
+
+# `document_tracking`
+
+This project is originaly based on the Miranda et al.’s implementation of a news tracking algorithm published in the following paper (original code: [![](https://archive.softwareheritage.org/badge/directory/2b5a159195789c76ecb01692b70bdd3a9e63dbf2/)](https://archive.softwareheritage.org/browse/directory/2b5a159195789c76ecb01692b70bdd3a9e63dbf2/
+))
+
+    Miranda, Sebastião, Artūrs Znotiņš, Shay B. Cohen, et Guntis Barzdins. 
+    2018. “Multilingual Clustering of Streaming News”. In 2018 
+    Conference on Empirical Methods in Natural Language Processing, 4535‑44.
+    Brussels, Belgium: Association for Computational Linguistics. 
+    https://www.aclweb.org/anthology/D18-1483/.
+
+This work is a reimplementation of the original work from these authors where the entire API was rewritten to be used by external projects. The idea of this reimplementation is to propose the news tracking algorithms with industrial standards, such as allowing automation and quality.
+
+The package also includes alternative algorithms and baselines, currently only K-Means is provided.
+
+|     **Algorithm**     | **Supervised** |                  **Main Class**                 |
+|:---------------------:|:--------------:|:-----------------------------------------------:|
+| Miranda et al. (2018) | Yes            | `document_tracking.miranda.StreamingAggregator` |
+| K-Means               | No             | `document_tracking.kmeans.KMeansAggregator`     |
+
+Use the [`news_tracking`](https://gitlab.univ-lr.fr/cross-lingual-event-tracking/developpement/from-documents-to-events/news_tracking) package in order to use this library if you’re not a developer.
+
+## Installation
+
+```bash
+pip install document_tracking
+```
+
+## Licence
+
+Some parts, provided by Miranda et al. in their original paper remain under the BSD-3 clause. The code that is reused from the original code is provided under a `third_party` package and remains under its own license. Other part are released under the GPLv3 licence. To make it easier distinguish both licenses, headers were added on top of files. Both licenses are included in this repository.
+
+
