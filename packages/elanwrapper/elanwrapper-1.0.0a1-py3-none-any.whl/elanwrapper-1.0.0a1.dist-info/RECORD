@@ -1,0 +1,12 @@
+elanwrapper/__init__.py,sha256=79cPdsyxePkhEFDslS1fC1xC7h03vSSiR-0UTQkRdDc,307
+elanwrapper/conflicts.py,sha256=0sNLWyJ_yMfDUlmsM0IYAQCr2p4k4eg04Ei03-F11VQ,3570
+elanwrapper/preferences.py,sha256=TYVZfxyKxUZKdXc44a-7xUce_2c64jp2KNShxMOmHME,7028
+elanwrapper/segments.py,sha256=aDzXm7SAzQp8oWEMHkmp1iw4ElgTscyMxjbbpfFsYY0,6659
+elanwrapper/wrapper.py,sha256=68TPgfADcQ4u7fZZik8raRKQVkB7Xa_EtVf7Ey8Qj7w,10430
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_elan_file.py,sha256=TE8UdzoBLTMAdkRLyOMlGIHonmzMgl9hUzIA70wj1i0,1577
+tests/test_timeline.py,sha256=vV2DJ4FgwkjM3cRSTsE1A4hX3lV6MaCdYLGeusxdC0s,4461
+elanwrapper-1.0.0a1.dist-info/METADATA,sha256=mK1ttKoQsmp71mxX_SAM3ViBsaXS8QaXUooNW-G_GfE,547
+elanwrapper-1.0.0a1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+elanwrapper-1.0.0a1.dist-info/top_level.txt,sha256=H_ub_-EB32GF3ya1QSdKOjVWnZY1kCjzNgKmg5K4pSY,18
+elanwrapper-1.0.0a1.dist-info/RECORD,,
