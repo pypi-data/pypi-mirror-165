@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: arya-client
+Version: 0.1.0
+Summary: Arya Client Library
+Home-page: https://aryaanalytics.com
+Keywords: Arya,Arya Python Client
+Author: emiliano bonilla
+Author-email: emilbon99@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: arya-freighter (>=0.1.0,<0.2.0)
+Requires-Dist: mypy (>=0.971,<0.972)
+Requires-Dist: numpy (>=1.23.1,<2.0.0)
+Requires-Dist: websockets (>=10.3,<11.0)
+Project-URL: Repository, https://github.com/arya-analytics/arya
