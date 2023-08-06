@@ -1,0 +1,5 @@
+[buildbot.reporters]
+phorge = buildbot_phorge:PhorgeReporter
+
+[buildbot.webhooks]
+phorge = buildbot_phorge:PhorgeHook
