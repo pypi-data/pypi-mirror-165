@@ -1,0 +1,22 @@
+openpyxl<3.1,>=3
+tablib<=3.1.0,>=3.0.0
+Click<8.1,>=7.1
+colorama
+
+[:python_version < "3.8"]
+cached-property
+
+[code_audit]
+black
+isort
+
+[docs]
+Sphinx
+sphinx-click<3.1,>=2.7
+sphinx-rtd-theme==1.0.0
+
+[tests]
+pytest<7,>=6
+coverage
+pytest-cov
+pytest-random-order

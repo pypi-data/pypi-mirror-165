@@ -1,0 +1,3 @@
+[console_scripts]
+xlsx2sqlite = xlsx2sqlite.scripts.console:console
+
