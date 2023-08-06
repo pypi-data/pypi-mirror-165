@@ -1,0 +1,93 @@
+Metadata-Version: 2.1
+Name: resotoclient
+Version: 0.1.14
+Summary: Resoto Python client library
+Home-page: https://github.com/someengineering/resotoclient-python
+License: Apache-2.0
+Author: Some Engineering Inc.
+Requires-Python: >=3.8,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Security
+Classifier: Topic :: Utilities
+Provides-Extra: extras
+Requires-Dist: PyJWT (>=2.3.0,<3.0.0)
+Requires-Dist: cryptography (>=36.0.2)
+Requires-Dist: graphviz (>=0.20,<0.21); extra == "extras"
+Requires-Dist: jsons (>=1.6.1,<2.0.0)
+Requires-Dist: pandas (>=1.4.2,<2.0.0); extra == "extras"
+Requires-Dist: requests (>=2.27.1,<3.0.0)
+Requires-Dist: requests-toolbelt (>=0.9.1,<0.10.0)
+Project-URL: Changelog, https://github.com/someengineering/resotoclient-python/releases
+Project-URL: Repository, https://github.com/someengineering/resotoclient-python
+Description-Content-Type: text/markdown
+
+# resotoclient-python
+Python client for Resoto
+
+## Installation
+```bash
+pip install resotoclient
+```
+
+For GraphVis and Pandas support:
+
+```bash
+pip install resotoclient[extras]
+```
+
+## Usage
+```python
+from resotoclient import ResotoClient
+
+client = ResotoClient(url="https://localhost:8900", psk="changeme")
+instances_csv = client.cli_execute("search is(instance) | tail 5 | list --csv")
+
+for instance in instances_csv:
+    print(instance)
+```
+
+### Pandas Dataframes
+```python
+df = client.dataframe("is(instance)")
+```
+
+### GraphViz Digraph
+```python
+graph = client.graphviz("is(graph_root) -->")
+```
+
+## Test
+The tests expect a ResotoCore on localhost with the default PSK `changeme`.
+You can start it locally via:
+
+```bash
+$> resotocore --graphdb-database resotoclient_test --psk changeme
+```
+
+A local test environment is required. See the [contribution guide](https://resoto.com/docs/contributing/components) for instructions.
+When the virtual environment is available, use those commands to set up the project and run the tests:
+
+```bash
+$> pip install --upgrade pip poetry nox nox-poetry
+$> nox
+```
+
+For more examples see the examples directory.
+
+## Publish
+- bump the version number in pyproject.toml
+- `poetry build`
+- `poetry publish`
+
