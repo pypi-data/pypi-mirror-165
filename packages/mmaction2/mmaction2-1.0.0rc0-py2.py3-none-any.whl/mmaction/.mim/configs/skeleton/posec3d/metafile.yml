@@ -1,0 +1,120 @@
+Collections:
+  - Name: PoseC3D
+    README: configs/skeleton/posec3d/README.md
+    Paper:
+      URL: https://arxiv.org/abs/2104.13586
+      Title: "Revisiting Skeleton-based Action Recognition"
+Models:
+  - Name: slowonly_r50_u48_240e_8xb16_gym_keypoint
+    Config: configs/skeleton/posec3d/slowonly_r50_u48_240e_8xb16_gym_keypoint.py
+    In Collection: PoseC3D
+    Metadata:
+      Architecture: SlowOnly-R50
+      Batch Size: 16
+      Epochs: 240
+      Parameters: 2044867
+      Training Data: FineGYM
+      Training Resources: 8 GPUs
+      pseudo heatmap: keypoint
+    Results:
+    - Dataset: FineGYM
+      Task: Skeleton-based Action Recognition
+      Metrics:
+        mean Top 1 Accuracy: 93.4
+    Training Log: https://download.openmmlab.com/mmaction/v2.0/skeleton/posec3d/slowonly_r50_u48_240e_8xb16_gym_keypoint/20220805_150313.log
+    Weights: https://download.openmmlab.com/mmaction/v2.0/skeleton/posec3d/slowonly_r50_u48_240e_8xb16_gym_keypoint/slowonly_r50_u48_240e_8xb16_gym_keypoint_20220815-da338c58.pth
+
+  - Name: slowonly_r50_u48_240e_8xb16_gym_limb
+    Config: configs/skeleton/posec3d/slowonly_r50_u48_240e_8xb16_gym_limb.py
+    In Collection: PoseC3D
+    Metadata:
+      Architecture: SlowOnly-R50
+      Batch Size: 16
+      Epochs: 240
+      Parameters: 2044867
+      Training Data: FineGYM
+      Training Resources: 8 GPUs
+      pseudo heatmap: limb
+    Results:
+    - Dataset: FineGYM
+      Task: Skeleton-based Action Recognition
+      Metrics:
+        mean Top 1 Accuracy: 93.7
+    Training Log: https://download.openmmlab.com/mmaction/v2.0/skeleton/posec3d/slowonly_r50_u48_240e_8xb16_gym_limb/20220805_150302.log
+    Weights: https://download.openmmlab.com/mmaction/v2.0/skeleton/posec3d/slowonly_r50_u48_240e_8xb16_gym_limb/slowonly_r50_u48_240e_8xb16_gym_limb_20220815-2e6e3c5c.pth
+
+  - Name: slowonly_r50_u48_240e_8xb16_ntu60_xsub_keypoint
+    Config: configs/skeleton/posec3d/slowonly_r50_u48_240e_8xb16_ntu60_xsub_keypoint.py
+    In Collection: PoseC3D
+    Metadata:
+      Architecture: SlowOnly-R50
+      Batch Size: 16
+      Epochs: 240
+      Parameters: 2024860
+      Training Data: NTU60-XSub
+      Training Resources: 8 GPUs
+      pseudo heatmap: keypoint
+    Results:
+    - Dataset: NTU60-XSub
+      Task: Skeleton-based Action Recognition
+      Metrics:
+        Top 1 Accuracy: 93.6
+    Training Log: https://download.openmmlab.com/mmaction/v2.0/skeleton/posec3d/slowonly_r50_u48_240e_8xb16_ntu60_xsub_keypoint/20220805_124409.log
+    Weights: https://download.openmmlab.com/mmaction/v2.0/skeleton/posec3d/slowonly_r50_u48_240e_8xb16_ntu60_xsub_keypoint/slowonly_r50_u48_240e_8xb16_ntu60_xsub_keypoint_20220815-38db104b.pth
+
+  - Name: slowonly_r50_u48_240e_8xb16_ntu60_xsub_limb
+    Config: configs/skeleton/posec3d/slowonly_r50_u48_240e_8xb16_ntu60_xsub_limb.py
+    In Collection: PoseC3D
+    Metadata:
+      Architecture: SlowOnly-R50
+      Batch Size: 16
+      Epochs: 240
+      Parameters: 2024860
+      Training Data: NTU60-XSub
+      Training Resources: 8 GPUs
+      pseudo heatmap: limb
+    Results:
+    - Dataset: NTU60-XSub
+      Task: Skeleton-based Action Recognition
+      Metrics:
+        Top 1 Accuracy: 93.5
+    Training Log: https://download.openmmlab.com/mmaction/v2.0/skeleton/posec3d/slowonly_r50_u48_240e_8xb16_ntu60_xsub_limb/20220805_123439.log
+    Weights: https://download.openmmlab.com/mmaction/v2.0/skeleton/posec3d/slowonly_r50_u48_240e_8xb16_ntu60_xsub_limb/slowonly_r50_u48_240e_8xb16_ntu60_xsub_limb_20220815-af2f119a.pth
+
+  - Name: slowonly_kinetics400_pretrained_r50_u48_120e_8xb16_hmdb51_split1_keypoint
+    Config: configs/skeleton/posec3d/slowonly_kinetics400_pretrained_r50_u48_120e_8xb16_hmdb51_split1_keypoint.py
+    In Collection: PoseC3D
+    Metadata:
+      Architecture: SlowOnly-R50
+      Batch Size: 16
+      Epochs: 120
+      Parameters: 3029984
+      Training Data: HMDB51
+      Training Resources: 8 GPUs
+      pseudo heatmap: keypoint
+    Results:
+    - Dataset: HMDB51
+      Task: Skeleton-based Action Recognition
+      Metrics:
+        Top 1 Accuracy: 69.2
+    Training Log: https://download.openmmlab.com/mmaction/v2.0/skeleton/posec3d/slowonly_kinetics400_pretrained_r50_u48_120e_8xb16_hmdb51_split1_keypoint/20220805_143455.log
+    Weights: https://download.openmmlab.com/mmaction/v2.0/skeleton/posec3d/slowonly_kinetics400_pretrained_r50_u48_120e_8xb16_hmdb51_split1_keypoint/slowonly_kinetics400_pretrained_r50_u48_120e_8xb16_hmdb51_split1_keypoint_20220815-17eaa484.pth
+
+  - Name: slowonly_kinetics400_pretrained_r50_u48_120e_8xb16_ucf101_split1_keypoint
+    Config: configs/skeleton/posec3d/slowonly_kinetics400_pretrained_r50_u48_120e_8xb16_ucf101_split1_keypoint.py
+    In Collection: PoseC3D
+    Metadata:
+      Architecture: SlowOnly-R50
+      Batch Size: 16
+      Epochs: 120
+      Parameters: 3055584
+      Training Data: UCF101
+      Training Resources: 8 GPUs
+      pseudo heatmap: keypoint
+    Results:
+    - Dataset: UCF101
+      Task: Skeleton-based Action Recognition
+      Metrics:
+        Top 1 Accuracy: 86.9
+    Training Log: https://download.openmmlab.com/mmaction/v2.0/skeleton/posec3d/slowonly_kinetics400_pretrained_r50_u48_120e_8xb16_ucf101_split1_keypoint/20220805_130002.log
+    Weights: https://download.openmmlab.com/mmaction/v2.0/skeleton/posec3d/slowonly_kinetics400_pretrained_r50_u48_120e_8xb16_ucf101_split1_keypoint/slowonly_kinetics400_pretrained_r50_u48_120e_8xb16_ucf101_split1_keypoint_20220815-9972260d.pth

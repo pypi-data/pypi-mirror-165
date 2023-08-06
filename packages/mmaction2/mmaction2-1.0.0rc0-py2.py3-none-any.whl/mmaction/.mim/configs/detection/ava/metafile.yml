@@ -1,0 +1,187 @@
+Collections:
+- Name: AVA
+  README: configs/detection/ava/README.md
+  Paper:
+    URL: https://arxiv.org/abs/1705.08421
+    Title: "AVA: A Video Dataset of Spatio-temporally Localized Atomic Visual Actions"
+
+Models:
+  - Name: slowonly_kinetics400_pretrained_r50_4x16x1_20e_8xb16_ava_rgb
+    Config: configs/detection/ava/slowonly_kinetics400_pretrained_r50_4x16x1_20e_8xb16_ava_rgb.py
+    In Collection: AVA
+    Metadata:
+      Architecture: ResNet50
+      Batch Size: 16
+      Epochs: 20
+      Pretrained: Kinetics-400
+      Resolution: short-side 320
+      Training Data: AVA v2.1
+      Training Resources: 8 GPUs
+    Modality: RGB
+    Results:
+      - Dataset: AVA v2.1
+        Task: Action Detection
+        Metrics:
+              mAP: 20.76
+
+  - Name: slowonly_nl_kinetics400_pretrained_r50_4x16x1_20e_8xb16_ava_rgb
+    Config: configs/detection/ava/slowonly_nl_kinetics400_pretrained_r50_4x16x1_20e_8xb16_ava_rgb.py
+    In Collection: AVA
+    Metadata:
+      Architecture: ResNet50
+      Batch Size: 16
+      Epochs: 20
+      Pretrained: Kinetics-400
+      Resolution: short-side 320
+      Training Data: AVA v2.1
+      Training Resources: 8 GPUs
+    Modality: RGB
+    Results:
+      - Dataset: AVA v2.1
+        Task: Action Detection
+        Metrics:
+              mAP: 21.49
+
+  - Name: slowonly_nl_kinetics400_pretrained_r50_8x8x1_20e_8xb16_ava_rgb
+    Config: configs/detection/ava/slowonly_nl_kinetics400_pretrained_r50_8x8x1_20e_8xb16_ava_rgb.py
+    In Collection: AVA
+    Metadata:
+      Architecture: ResNet50
+      Batch Size: 16
+      Epochs: 20
+      Pretrained: Kinetics-400
+      Resolution: short-side 320
+      Training Data: AVA v2.1
+      Training Resources: 8 GPUs
+    Modality: RGB
+    Results:
+      - Dataset: AVA v2.1
+        Task: Action Detection
+        Metrics:
+              mAP: 23.47
+
+  - Name: slowonly_kinetics400_pretrained_r101_8x8x1_20e_8xb16_ava_rgb
+    Config: configs/detection/ava/slowonly_kinetics400_pretrained_r101_8x8x1_20e_8xb16_ava_rgb.py
+    In Collection: AVA
+    Metadata:
+      Architecture: ResNet101
+      Batch Size: 16
+      Epochs: 20
+      Pretrained: Kinetics-400
+      Resolution: short-side 320
+      Training Data: AVA v2.1
+      Training Resources: 8 GPUs
+    Modality: RGB
+    Results:
+      - Dataset: AVA v2.1
+        Task: Action Detection
+        Metrics:
+              mAP: 24.82
+
+  - Name: slowfast_kinetics400_pretrained_r50_4x16x1_20e_8xb16_ava_rgb
+    Config: configs/detection/ava/slowfast_kinetics400_pretrained_r50_4x16x1_20e_8xb16_ava_rgb.py
+    In Collection: AVA
+    Metadata:
+      Architecture: ResNet50
+      Batch Size: 16
+      Epochs: 20
+      Pretrained: Kinetics-400
+      Resolution: short-side 320
+      Training Data: AVA v2.1
+      Training Resources: 8 GPUs
+    Modality: RGB
+    Results:
+      - Dataset: AVA v2.1
+        Task: Action Detection
+        Metrics:
+              mAP: 24.27
+
+  - Name: slowfast_context_kinetics400_pretrained_r50_4x16x1_20e_8xb16_ava_rgb
+    Config: configs/detection/ava/slowfast_context_kinetics400_pretrained_r50_4x16x1_20e_8xb16_ava_rgb.py
+    In Collection: AVA
+    Metadata:
+      Architecture: ResNet50
+      Batch Size: 16
+      Epochs: 20
+      Pretrained: Kinetics-400
+      Resolution: short-side 320
+      Training Data: AVA v2.1
+      Training Resources: 8 GPUs
+    Modality: RGB
+    Results:
+      - Dataset: AVA v2.1
+        Task: Action Detection
+        Metrics:
+              mAP: 25.25
+
+  - Name: slowfast_kinetics400_pretrained_r50_8x8x1_20e_8xb8_ava_rgb
+    Config: configs/detection/ava/slowfast_kinetics400_pretrained_r50_8x8x1_20e_8xb8_ava_rgb.py
+    In Collection: AVA
+    Metadata:
+      Architecture: ResNet50
+      Batch Size: 8
+      Epochs: 20
+      Pretrained: Kinetics-400
+      Resolution: short-side 320
+      Training Data: AVA v2.1
+      Training Resources: 8 GPUs
+    Modality: RGB
+    Results:
+      - Dataset: AVA v2.1
+        Task: Action Detection
+        Metrics:
+              mAP: 25.73
+
+  - Name: slowfast_kinetics400_pretrained_r50_8x8x1_cosine_10e_8xb6_ava22_rgb
+    Config: configs/detection/ava/slowfast_kinetics400_pretrained_r50_8x8x1_cosine_10e_8xb6_ava22_rgb.py
+    In Collection: AVA
+    Metadata:
+      Architecture: ResNet50
+      Batch Size: 6
+      Epochs: 20
+      Pretrained: Kinetics-400
+      Resolution: short-side 320
+      Training Data: AVA v2.2
+      Training Resources: 8 GPUs
+    Modality: RGB
+    Results:
+      - Dataset: AVA v2.2
+        Task: Action Detection
+        Metrics:
+              mAP: 25.98
+
+  - Name: slowfast_temporal_max_kinetics_pretrained_r50_8x8x1_cosine_10e_ava22_rgb
+    Config: configs/detection/ava/slowfast_temporal_max_kinetics_pretrained_r50_8x8x1_cosine_10e_ava22_rgb.py
+    In Collection: AVA
+    Metadata:
+      Architecture: ResNet50
+      Batch Size: 6
+      Epochs: 20
+      Pretrained: Kinetics-400
+      Resolution: short-side 320
+      Training Data: AVA v2.2
+      Training Resources: 8 GPUs
+    Modality: RGB
+    Results:
+      - Dataset: AVA v2.2
+        Task: Action Detection
+        Metrics:
+              mAP: 26.38
+
+  - Name: slowfast_temporal_max_focal_alpha3_gamma1_kinetics400_pretrained_r50_8x8x1_cosine_10e_8xb6_ava22_rgb
+    Config: configs/detection/ava/slowfast_temporal_max_focal_alpha3_gamma1_kinetics400_pretrained_r50_8x8x1_cosine_10e_8xb6_ava22_rgb.py
+    In Collection: AVA
+    Metadata:
+      Architecture: ResNet50
+      Batch Size: 6
+      Epochs: 20
+      Pretrained: Kinetics-400
+      Resolution: short-side 320
+      Training Data: AVA v2.2
+      Training Resources: 8 GPUs
+    Modality: RGB
+    Results:
+      - Dataset: AVA v2.2
+        Task: Action Detection
+        Metrics:
+              mAP: 26.59
