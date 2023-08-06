@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+shadow3libpyvinyl/Shadow3Calculator.py
+shadow3libpyvinyl/Shadow3Data.py
+shadow3libpyvinyl/Shadow3GData.py
+shadow3libpyvinyl/__init__.py
+shadow3libpyvinyl/openPMD.py
+shadow3libpyvinyl.egg-info/PKG-INFO
+shadow3libpyvinyl.egg-info/SOURCES.txt
+shadow3libpyvinyl.egg-info/dependency_links.txt
+shadow3libpyvinyl.egg-info/not-zip-safe
+shadow3libpyvinyl.egg-info/requires.txt
+shadow3libpyvinyl.egg-info/top_level.txt

@@ -1,0 +1,6 @@
+recursive-include libpyvinyl-shadow3 *.pyx
+recursive-include libpyvinyl-shadow3 *.py
+recursive-include libpyvinyl-shadow3 *.dat
+
+include README.md
+include LICENSE

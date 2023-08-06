@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: shadow3libpyvinyl
+Version: 1.0.3
+Summary: libpyvinyl interface to shadow3
+Home-page: https://github.com/PaNOSC-ViNYL/shadow3-libpyvinyl
+Author: M Sanchez del Rio
+Author-email: srio@esrf.eu
+Maintainer: Manuel Sanchez del Rio
+Maintainer-email: srio@esrf.eu
+License: GPLv3
+Download-URL: https://github.com/PaNOSC-ViNYL/shadow3-libpyvinyl
+Keywords: dictionary,glossary,synchrotronsimulation,ray-tracing,PaNOSC
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Environment :: Plugins
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+License-File: LICENSE
+
+# shadow3-libpyvinyl
+libpyvinyl interface for shadow3
+
+
