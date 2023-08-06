@@ -1,0 +1,16 @@
+soniox/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+soniox/capture_device.py,sha256=cCrHy1sTjkn3BoEnul5TW7ktYcknpaqyI5TGYqsqpgA,3815
+soniox/conversion.py,sha256=9FtQK_9-Z02MjJS6b1yOfQ6fZHWpaamQIW2ARNhggFI,304
+soniox/manage_speakers.py,sha256=cfNoLsuxIshoJoaEIbQiV7rbNfxmqj3koR1G5azHf9w,6512
+soniox/manage_speech_contexts.py,sha256=-E364la0yBRBHguwBTRzDkLOQL75grb5t3SjIQ8tNQc,5586
+soniox/multi_channel_utils.py,sha256=dCJqPx0yHrWAGuMRsl8hEaO1Vcon54pHBArG8-vA7W8,3808
+soniox/speech_service.py,sha256=yd-cvZef4QcDoyoszgYDiyTQYCur-5z2CimmFbNzPZQ,12174
+soniox/speech_service_pb2.py,sha256=BgjuwKS4jkvfoWdEKB2nOAGCHF70-66cBU8cv5jtKrM,36691
+soniox/speech_service_pb2_grpc.py,sha256=awTTyiIGDqdB7VN6Wk9oS8segcDcWKkS6prmz3jiHvQ,34287
+soniox/transcribe_file.py,sha256=YrQfXJRHH8cJkMCueyDJaM864k5tcvTxh7vlFvjqESI,13952
+soniox/transcribe_live.py,sha256=cBHvdrC1xWgg7wA_K1buhEW-_4jNbrQLX9GAzCWfrCM,7395
+soniox_test-1.4.0.dist-info/LICENSE,sha256=pvJ3BxiHxlcXTJrP-VYLZ-XKVQYH5x0O0vwgEGBIq3I,1053
+soniox_test-1.4.0.dist-info/METADATA,sha256=q26n6s5KAb124ChWEQGA6x8IfCmjakHVN4qAKx20lGY,696
+soniox_test-1.4.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+soniox_test-1.4.0.dist-info/top_level.txt,sha256=UjfbjeVPEq7R3M9mmHc2l1BHb7WHGrcIo44VK8jlgVI,7
+soniox_test-1.4.0.dist-info/RECORD,,
