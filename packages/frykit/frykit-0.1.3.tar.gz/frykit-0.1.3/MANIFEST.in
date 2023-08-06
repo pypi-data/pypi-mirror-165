@@ -1,0 +1,3 @@
+include image/*.png
+include test/*.py
+recursive-include frykit/data *
