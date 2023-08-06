@@ -1,0 +1,88 @@
+{
+    "additionalProperties": true,
+    "definitions": {
+        "diameter_model": {
+            "additionalProperties": false,
+            "description": "The model used to diametrize a cell",
+            "properties": {
+                "distribution": {
+                    "description": "The distribution properties",
+                    "enum": ["exponnorm", "expon_rev", "gamma", "skewnorm"],
+                    "type": "string"
+                },
+                "params": {
+                    "additionalProperties": false,
+                    "description": "The parameter properties",
+                    "type": "object",
+                    "properties": {
+                        "a": {
+                            "type": "number"
+                        },
+                        "loc": {
+                            "type": "number"
+                        },
+                        "scale": {
+                            "type": "number"
+                        },
+                        "min": {
+                            "type": "number"
+                        },
+                        "max": {
+                            "type": "number"
+                        },
+                        "num_value": {
+                            "type": "number"
+                        }
+                    }
+                },
+                "sequential": {
+                    "oneOf": [
+                        {"type": "string", "enum": ["asymmetry_threshold"]},
+                        {"type": "null"}
+                    ]
+                }
+            },
+            "title": "Diameter model"
+        },
+        "neurite_models": {
+            "additionalProperties": false,
+            "description": "The model used to diametrize each neurite type",
+            "type": "object",
+            "properties": {
+                "apical": {"$ref": "#/definitions/diameter_model"},
+                "basal": {"$ref": "#/definitions/diameter_model"},
+                "axon": {"$ref": "#/definitions/diameter_model"}
+            },
+            "title": "Neurite type model"
+        }
+    },
+    "properties": {
+        "diameter_power_relation": {
+            "description": "",
+            "$ref": "#/definitions/neurite_models"
+        },
+        "sibling_ratios": {
+            "description": "The sibling ratio",
+            "$ref": "#/definitions/neurite_models"
+        },
+        "tapers": {
+            "description": "The tapers",
+            "$ref": "#/definitions/neurite_models"
+        },
+        "terminal_diameters": {
+            "description": "The terminal diameters",
+            "$ref": "#/definitions/neurite_models"
+        },
+        "trunk_diameters": {
+            "description": "The trunk diameters",
+            "$ref": "#/definitions/neurite_models"
+        },
+        "trunk_tapers": {
+            "description": "The trunk tapers",
+            "$ref": "#/definitions/neurite_models"
+        }
+    },
+    "type": "object",
+    "title": "Diametrizer model parameters",
+    "description": "The model parameters used to diametrize a cell"
+}
