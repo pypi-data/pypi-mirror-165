@@ -1,0 +1,9 @@
+README.md
+gitignore_parser.py
+setup.cfg
+setup.py
+gitignore_parser.egg-info/PKG-INFO
+gitignore_parser.egg-info/SOURCES.txt
+gitignore_parser.egg-info/dependency_links.txt
+gitignore_parser.egg-info/requires.txt
+gitignore_parser.egg-info/top_level.txt
