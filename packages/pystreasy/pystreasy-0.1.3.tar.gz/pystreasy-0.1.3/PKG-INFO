@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: pystreasy
+Version: 0.1.3
+Summary: makes working with strings easy
+Home-page: https://github.com/ablesoftwaredev/pystreasy
+License: MIT
+Author: ablesoftwaredev
+Author-email: 48694187+ablesoftwaredev@users.noreply.github.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Project-URL: Repository, https://github.com/ablesoftwaredev/pystreasy
