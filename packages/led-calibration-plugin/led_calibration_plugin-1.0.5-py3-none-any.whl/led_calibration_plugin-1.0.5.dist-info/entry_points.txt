@@ -1,0 +1,2 @@
+[pioreactor.plugins]
+led_calibration_plugin = led_calibration_plugin
