@@ -1,0 +1,12 @@
+version: '3'
+services:
+  sv2:
+    build:
+        context: .
+        dockerfile: Dockerfile
+    user: "1000:100"
+    image: nice_burnell
+    working_dir: /app
+    volumes:
+        - $PWD:/app
+    command: yt-dlp https://www.youtube.com/watch?v=BddP6PYo2gs
