@@ -1,0 +1,30 @@
+ 17-05-2022 16:24:39:543 [pid=353931 tid=353931] NOTICE  cufio-drv:625 running in compatible mode
+ 17-05-2022 16:25:25:467 [pid=354064 tid=354064] NOTICE  cufio-drv:625 running in compatible mode
+ 17-05-2022 17:45:18:943 [pid=358766 tid=358766] NOTICE  cufio-drv:625 running in compatible mode
+ 17-05-2022 18:15:27:911 [pid=360320 tid=360320] NOTICE  cufio-drv:625 running in compatible mode
+ 17-05-2022 18:16:28:191 [pid=360427 tid=360427] NOTICE  cufio-drv:625 running in compatible mode
+ 17-05-2022 18:17:23:919 [pid=360558 tid=360558] NOTICE  cufio-drv:625 running in compatible mode
+ 17-05-2022 18:17:59:283 [pid=360619 tid=360619] NOTICE  cufio-drv:625 running in compatible mode
+ 17-05-2022 18:18:56:399 [pid=360765 tid=360765] NOTICE  cufio-drv:625 running in compatible mode
+ 17-05-2022 18:20:31:567 [pid=360881 tid=360881] NOTICE  cufio-drv:625 running in compatible mode
+ 17-05-2022 18:20:53:239 [pid=360933 tid=360933] NOTICE  cufio-drv:625 running in compatible mode
+ 17-05-2022 18:21:10:987 [pid=360985 tid=360985] NOTICE  cufio-drv:625 running in compatible mode
+ 17-05-2022 18:21:17:127 [pid=361020 tid=361020] NOTICE  cufio-drv:625 running in compatible mode
+ 17-05-2022 18:23:34:563 [pid=361177 tid=361177] NOTICE  cufio-drv:625 running in compatible mode
+ 17-05-2022 18:24:14:211 [pid=361261 tid=361261] NOTICE  cufio-drv:625 running in compatible mode
+ 24-05-2022 14:06:27:823 [pid=18534 tid=18534] ERROR  cufio-topo-nvfs:72 pci device not present in topology device attribute table: 0000:04:00.0
+ 24-05-2022 14:06:27:842 [pid=18534 tid=18534] ERROR  cufio-topo-nvfs:72 pci device not present in topology device attribute table: 0000:04:00.0
+ 24-05-2022 14:06:27:844 [pid=18534 tid=18534] ERROR  cufio-topo-nvfs:72 pci device not present in topology device attribute table: 0000:04:00.0
+ 24-05-2022 14:07:15:296 [pid=18619 tid=18619] ERROR  cufio-topo-nvfs:72 pci device not present in topology device attribute table: 0000:04:00.0
+ 24-05-2022 14:07:15:297 [pid=18619 tid=18619] ERROR  cufio-topo-nvfs:72 pci device not present in topology device attribute table: 0000:04:00.0
+ 24-05-2022 14:07:15:299 [pid=18619 tid=18619] ERROR  cufio-topo-nvfs:72 pci device not present in topology device attribute table: 0000:04:00.0
+ 24-05-2022 14:07:45:998 [pid=18700 tid=18700] ERROR  cufio-topo-nvfs:72 pci device not present in topology device attribute table: 0000:04:00.0
+ 24-05-2022 14:07:45:999 [pid=18700 tid=18700] ERROR  cufio-topo-nvfs:72 pci device not present in topology device attribute table: 0000:04:00.0
+ 24-05-2022 14:07:46:1 [pid=18700 tid=18700] ERROR  cufio-topo-nvfs:72 pci device not present in topology device attribute table: 0000:04:00.0
+ 24-05-2022 14:09:15:571 [pid=18828 tid=18828] ERROR  cufio-topo-nvfs:72 pci device not present in topology device attribute table: 0000:04:00.0
+ 24-05-2022 14:09:15:572 [pid=18828 tid=18828] ERROR  cufio-topo-nvfs:72 pci device not present in topology device attribute table: 0000:04:00.0
+ 24-05-2022 14:09:15:574 [pid=18828 tid=18828] ERROR  cufio-topo-nvfs:72 pci device not present in topology device attribute table: 0000:04:00.0
+ 21-07-2022 12:24:40:595 [pid=476906 tid=476906] ERROR  cufio-topo-nvfs:79 pci device not present in topology device attribute table: 0000:b3:00.0
+ 21-07-2022 12:24:40:600 [pid=476906 tid=476906] ERROR  cufio-topo-nvfs:79 pci device not present in topology device attribute table: 0000:b3:00.0
+ 21-07-2022 12:24:40:600 [pid=476906 tid=476906] ERROR  cufio-topo-nvfs:79 pci device not present in topology device attribute table: 0000:b3:00.0
+ 15-08-2022 21:42:08:629 [pid=3373285 tid=3373285] NOTICE  cufio-drv:705 running in compatible mode
