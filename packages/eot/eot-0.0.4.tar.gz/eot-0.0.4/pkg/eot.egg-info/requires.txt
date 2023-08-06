@@ -1,0 +1,7 @@
+eons
+twine
+pip
+pytest
+build
+setuptools
+wheel

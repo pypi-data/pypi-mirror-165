@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+setup.cfg
+pkg/eot/__init__.py
+pkg/eot/__main__.py
+pkg/eot/eot.py
+pkg/eot.egg-info/PKG-INFO
+pkg/eot.egg-info/SOURCES.txt
+pkg/eot.egg-info/dependency_links.txt
+pkg/eot.egg-info/entry_points.txt
+pkg/eot.egg-info/requires.txt
+pkg/eot.egg-info/top_level.txt
