@@ -1,0 +1,14 @@
+kilroy_face_discord/__init__.py,sha256=SolG90WYflPKiItQ5EF067cCuxobpnKrwfgalZZXXe8,44
+kilroy_face_discord/__main__.py,sha256=6i5bG8ZEGJW8a6IXJ8y5F_xNStWqoXIt0q2XSUunYzI,3541
+kilroy_face_discord/config.py,sha256=6xk56JLbyCq4SVHEloAjI5x4vYdUH-KNd7qu6s_9nWI,824
+kilroy_face_discord/face.py,sha256=9fmeesOSz0Qkd0yYNJ6imWdhglwRQGBhXbpHjf1lcCs,10018
+kilroy_face_discord/processors.py,sha256=PlmGl98moXGZ24YGSpxA2tIN_OrGHUu9krmkBc8gVog,6097
+kilroy_face_discord/resources/__init__.py,sha256=_wezS5TKy-o2hQfQak0vUBf27KjqF5KOy-jVODFFTTE,1573
+kilroy_face_discord/resources/config.yaml,sha256=n5HbhexoJl2rvMqzAR3AXhCKTzp5nPR6S_UCJSTf4_A,239
+kilroy_face_discord/scorers.py,sha256=1T8fWCeS8poXj7Q_wba-ifwHUUk1Tjbmc4flFLQdiNM,572
+kilroy_face_discord/scrapers.py,sha256=PnjCyR3szXDD0FuDDFxMhBV-tsTrnQDg9QFvGTiTBXA,1086
+kilroy_face_discord-0.5.1.dist-info/entry_points.txt,sha256=tmpFM2Pn-S_K6Sx_RZljl4Q-ApyvQpLkkiaBJghT-o4,72
+kilroy_face_discord-0.5.1.dist-info/LICENSE,sha256=jX4FG3WEtoz7iCbng5k7DLrQhDMs0fDnD2vGC6hQU_A,1063
+kilroy_face_discord-0.5.1.dist-info/WHEEL,sha256=N0LZrBtofpkS5mJXgVHTCEy52Sam4D6PHQWC8HnMeTs,83
+kilroy_face_discord-0.5.1.dist-info/METADATA,sha256=56Zp0uRD6E9V54lypH1snMLbMfzJC-QMbpDaE1aI35U,1788
+kilroy_face_discord-0.5.1.dist-info/RECORD,,
