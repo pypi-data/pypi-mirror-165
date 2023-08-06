@@ -1,0 +1,10 @@
+SetSimilaritySearch/__init__.py,sha256=TMXGxmOLKMNcfutGP0gxsFdqzMkqX0prCEgnDEuWP8U,103
+SetSimilaritySearch/all_pairs.py,sha256=iW6KS4kpwfnOvZpueVcnuyM3ixd3gMHK4ALe7QDVt6o,3349
+SetSimilaritySearch/search.py,sha256=P9RmqmRB11RRajoxb_krE2YGRJXQ6sWfQ6bYsit4TcA,4246
+SetSimilaritySearch/utils.py,sha256=0mRDT9ON6glFYJOAjd4wZos0ujFOqBGQIvyQvUqTKuM,4181
+SetSimilaritySearch-1.0.0.data/scripts/all_pairs.py,sha256=jPLstvkxgv2dBElyFXzD3AIxH8R74iOzx72Jbf10d9I,5290
+SetSimilaritySearch-1.0.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+SetSimilaritySearch-1.0.0.dist-info/METADATA,sha256=RlRen-n4Qj6kq7yJ-ckr2ylbTTjeau5f2ussPMPBXl4,9067
+SetSimilaritySearch-1.0.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+SetSimilaritySearch-1.0.0.dist-info/top_level.txt,sha256=EMMi3TLjW5IAbSnEygkUDWYCoO67GH7xvKBndp94dag,20
+SetSimilaritySearch-1.0.0.dist-info/RECORD,,
