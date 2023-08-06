@@ -1,0 +1,12 @@
+LICENSE
+README.rst
+setup.cfg
+setup.py
+paramsdict/__init__.py
+paramsdict/paramsdict.py
+paramsdict/util.py
+paramsdict.egg-info/PKG-INFO
+paramsdict.egg-info/SOURCES.txt
+paramsdict.egg-info/dependency_links.txt
+paramsdict.egg-info/requires.txt
+paramsdict.egg-info/top_level.txt
