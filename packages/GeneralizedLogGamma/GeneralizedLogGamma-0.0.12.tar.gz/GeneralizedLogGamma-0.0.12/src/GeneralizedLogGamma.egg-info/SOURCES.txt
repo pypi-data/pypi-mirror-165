@@ -1,0 +1,16 @@
+LICENSE.txt
+README.md
+pyproject.toml
+src/GeneralizedLogGamma/__init__.py
+src/GeneralizedLogGamma/dglg.py
+src/GeneralizedLogGamma/entropy.py
+src/GeneralizedLogGamma/hazardgg.py
+src/GeneralizedLogGamma/orderglg.py
+src/GeneralizedLogGamma/pglg.py
+src/GeneralizedLogGamma/qglg.py
+src/GeneralizedLogGamma/rglg.py
+src/GeneralizedLogGamma/survgg.py
+src/GeneralizedLogGamma.egg-info/PKG-INFO
+src/GeneralizedLogGamma.egg-info/SOURCES.txt
+src/GeneralizedLogGamma.egg-info/dependency_links.txt
+src/GeneralizedLogGamma.egg-info/top_level.txt
