@@ -1,0 +1,893 @@
+
+import enum
+from functools import lru_cache
+import functools
+import logging
+import re
+from typing import Any, Callable, Dict, Iterable, Iterator, Optional, Sequence, List, Tuple, Type, Union, cast, TYPE_CHECKING, overload
+import sys
+import ast
+from ast import AST
+import warnings
+
+import attr
+
+from astuce import exceptions, _lookup
+
+# TODO: remove once Python 3.7 support is dropped
+if sys.version_info < (3, 8):
+    from cached_property import cached_property
+else:
+    from functools import cached_property  # noqa: WPS440
+
+from .exceptions import InferenceError, LastNodeError, RootNodeError
+from . import _typing
+
+if TYPE_CHECKING:
+    from .parser import Parser
+    from ._context import OptionalInferenceContext
+
+_END_OF_FRAME_SENTINEL_CONSTANT = 430335967
+
+@object.__new__
+class Uninferable:
+    """Special object which is returned when inference fails."""
+
+    def __repr__(self) -> str:
+        return "<Uninferable>"
+
+    __str__ = __repr__
+
+    # TODO: Is this code required?
+    # def __getattribute__(self, name):
+    #     if name.startswith("__") and name.endswith("__"):
+    #         return object.__getattribute__(self, name)
+    #     return self
+
+    # def __call__(self, *args, **kwargs):
+    #     return self
+
+    def __bool__(self) -> bool:
+        return False
+
+
+class ASTNode:
+    """
+    This class is dynamically added to the bases of each AST node class.
+    
+    :var lineno: 
+        - Modules lineno -> 0
+        - Missing lineno information -> -1 (should not happend)
+
+    """
+
+    parent: '_typing.ASTNode' = None # type:ignore
+    """
+    `None` for Modules.
+    """
+    
+    _locals: Dict[str, List[_typing.LocalsAssignT]] = None # type:ignore
+    _parser: 'Parser' = None # type:ignore
+    _modname: Optional[str] = None
+    _is_package: bool = False
+    _filename: Optional[str] = None
+
+    @cached_property
+    def root(self) -> _typing.Module:
+        """Return the root node of the syntax tree.
+
+        :returns: The root node.
+        :rtype: Module
+        """
+        if self.parent:
+            return self.parent.root
+        assert isinstance(self, ast.Module)
+        return self # type:ignore[return-value]
+    
+    @cached_property
+    def lineno(self) -> int:
+        if isinstance(self, ast.Module):
+            return 0
+        return getattr(super(), 'lineno', -1)
+
+    @property
+    def qname(self) -> str:
+        """Get the 'qualified' name of the node.
+
+        For example: module.name, module.class.name ...
+
+        :returns: The qualified name.
+        :rtype: str
+        """
+        if isinstance(self, ast.Module):
+            assert self._modname is not None
+            return self._modname
+        assert isinstance(self, (ast.ClassDef, ast.FunctionDef, ast.AsyncFunctionDef)), "use 'qname' only on frame nodes"
+        return f"{self.parent.frame.qname}.{self.name}"
+
+    @cached_property
+    def locals(self) -> Dict[str, List[_typing.LocalsAssignT]]:
+        assert is_scoped_node(self), "use 'locals' only on scoped nodes"
+        return self._locals
+    
+    # TODO: remove once Python 3.7 support is dropped
+    if sys.version_info < (3, 8):  # noqa: WPS604
+        end_lineno = property(lambda node: None)
+
+    @cached_property
+    def kind(self) -> str:
+        """Return the kind of this node.
+
+        Returns:
+            The node kind.
+        """
+        return self.__class__.__name__.lower()
+
+    @cached_property
+    def children(self) -> Sequence['_typing.ASTNode']:
+        """Build and return the children of this node.
+
+        Returns:
+            A list of children.
+        """
+        return list(ast.iter_child_nodes(self)) # type:ignore
+
+    @cached_property
+    def position(self) -> int:
+        """Tell the position of this node amongst its siblings.
+
+        Raises:
+            RootNodeError: When the node doesn't have a parent.
+
+        Returns:
+            The node position amongst its siblings.
+        """
+        if not isinstance(self, ast.Module):
+            return self.parent.children.index(self)
+        else:
+            raise RootNodeError("the root node does not have a parent, nor siblings, nor a position")
+
+    @cached_property
+    def previous_siblings(self) -> Sequence['_typing.ASTNode']:
+        """Return the previous siblings of this node, starting from the closest.
+
+        Returns:
+            The previous siblings.
+        """
+        if self.position == 0:
+            return []
+        return self.parent.children[self.position - 1 :: -1]
+
+    @cached_property
+    def next_siblings(self) -> Sequence['_typing.ASTNode']:
+        """Return the next siblings of this node, starting from the closest.
+
+        Returns:
+            The next siblings.
+        """
+        if self.position == len(self.parent.children) - 1:
+            return []
+        return self.parent.children[self.position + 1 :]
+
+    @cached_property
+    def siblings(self) -> Sequence['_typing.ASTNode']:
+        """Return the siblings of this node.
+
+        Returns:
+            The siblings.
+        """
+        return [*reversed(self.previous_siblings), *self.next_siblings]
+
+    @cached_property
+    def previous(self) -> '_typing.ASTNode':
+        """Return the previous sibling of this node.
+
+        Raises:
+            LastNodeError: When the node does not have previous siblings.
+
+        Returns:
+            The sibling.
+        """
+        try:
+            return self.previous_siblings[0]
+        except IndexError as error:
+            raise LastNodeError("there is no previous node") from error
+
+    @cached_property  # noqa: A003
+    def next(self) -> '_typing.ASTNode':  # noqa: A003
+        """Return the next sibling of this node.
+
+        Raises:
+            LastNodeError: When the node does not have next siblings.
+
+        Returns:
+            The sibling.
+        """
+        try:
+            return self.next_siblings[0]
+        except IndexError as error:
+            raise LastNodeError("there is no next node") from error
+
+    @cached_property
+    def first_child(self) -> '_typing.ASTNode':
+        """Return the first child of this node.
+
+        Raises:
+            LastNodeError: When the node does not have children.
+
+        Returns:
+            The child.
+        """
+        try:
+            return self.children[0]
+        except IndexError as error:
+            raise LastNodeError("there are no children node") from error
+
+    @cached_property
+    def last_child(self) -> '_typing.ASTNode':  # noqa: A003
+        """Return the lasts child of this node.
+
+        Raises:
+            LastNodeError: When the node does not have children.
+
+        Returns:
+            The child.
+        """
+        try:
+            return self.children[-1]
+        except IndexError as error:
+            raise LastNodeError("there are no children node") from error
+
+    @cached_property
+    def scope(self) -> _typing.ScopedNodeT:
+        """
+        The scope is which this expression can be resolved. This is generally equal to the frame, 
+        expect for nodes defined in decorators, in this case the scope is the upper scope.
+
+        Returns the first parent frame or generator/comprehension.
+
+        When called on a :class:`Module` this returns self.
+        """
+        if isinstance(self, ast.Module):
+            return cast(_typing.ScopedNodeT, self)
+
+        if not self.parent:
+            raise RootNodeError("parent missing")
+
+        # special code for node inside function/class decorators, they should use the upper scope.
+        if self._is_from_decorator:
+            # the parent of a frame is always another frame, and a frame is always a scope ;-)
+            return cast(_typing.FrameNodeT, self.frame.parent)
+
+        # special code for NamedExpr
+        if isinstance(self, ast.NamedExpr):
+            # For certain parents NamedExpr evaluate to the scope of the parent
+            if isinstance(self.parent, (ast.arguments, ast.keyword, ast.comprehension)):
+                return self.parent.parent.parent.scope
+
+        if isinstance(self, (ast.AsyncFunctionDef, ast.FunctionDef, ast.ClassDef, ast.Module, 
+                             ast.GeneratorExp, ast.DictComp, ast.SetComp, ast.ListComp, ast.Lambda)):
+            return cast('_typing.ScopedNodeT', self)
+        
+        return self.parent.scope
+    
+    @cached_property
+    def frame(self) -> _typing.FrameNodeT:
+        """
+        Returns the first parent `ast.Lambda`, `ast.FunctionDef`, `ast.AsyncFunctionDef`,`ast.ClassDef` or `ast.Module`.
+
+        The parent of a frame is always another frame.
+        
+        Lambda frame is special because we can't define further locals except the one defined in the arguments.
+
+        When called on a :class:`Module` this returns self.
+        """
+        if isinstance(self, ast.Module):
+            return self # type:ignore[return-value]
+        
+        if not self.parent:
+            raise RootNodeError("parent missing")
+
+        # special code for NamedExpr
+        if isinstance(self, ast.NamedExpr):
+            # For certain parents NamedExpr evaluate to the scope of the parent
+            if isinstance(self.parent, (ast.arguments, ast.keyword, ast.comprehension)):
+                return self.parent.parent.parent.frame
+
+        if isinstance(self, (ast.AsyncFunctionDef, ast.FunctionDef, ast.ClassDef, ast.Lambda)):
+            return cast('_typing.FrameNodeT', self)
+        
+        return self.parent.frame
+    
+    @cached_property
+    def statement(self) -> Union[_typing.ASTstmt, _typing.Module]:
+        """
+        The first parent node, including self, marked as statement node.
+        When called on a :class:`Module` this returns self.
+        """
+        if isinstance(self, ast.stmt):
+            return cast(_typing.ASTstmt, self)
+        if isinstance(self, ast.Module):
+            return self
+        return self.parent.statement
+    
+    def locate_child(self, child:'ASTNode', recurse:bool=False) -> Tuple[str, Union['_typing.ASTNode', Sequence['_typing.ASTNode']]]:
+        """Find the field of this node that contains the given child.
+        :param child: The child node to search fields for.
+        :param recurse: Whether to recurse in all nested children to find the node.
+        :type child: ASTNode
+        :returns: A tuple of the name of the field that contains the child,
+            and the sequence or node that contains the child node.
+        :rtype: tuple(str, iterable(ASTNode) or ASTNode)
+        :raises ValueError: If no field could be found that contains
+            the given child.
+        """
+        for field in self._fields:
+            node_or_sequence: Union['ASTNode', Sequence['ASTNode']] = getattr(self, field)
+            # /!\ compiler.ast Nodes have an __iter__ walking over child nodes
+            if child is node_or_sequence:
+                return field, child
+            if (
+                isinstance(node_or_sequence, (tuple, list))
+                and child in node_or_sequence
+            ):
+                return field, node_or_sequence
+        
+        if recurse and len(self.children)>0:
+            for field in self._fields:
+                _node_or_seq: Union['ASTNode', Sequence['ASTNode']] = getattr(self, field)
+                for grand_child in _node_or_seq if isinstance(_node_or_seq, (tuple, list)) else [_node_or_seq]:
+                    if not isinstance(grand_child, ASTNode):
+                        continue
+                    try:
+                        return field, grand_child.locate_child(child, True)[1]
+                    except ValueError:
+                        pass
+        
+        msg = "Could not find %s in %s's children"
+        raise ValueError(msg % (repr(child), repr(self)))
+
+    def infer(self, context:'OptionalInferenceContext'=None) -> Iterator['_typing.ASTNode']:
+        # workaround cyclic import
+        from . import inference
+        return inference.infer(self, context) #type:ignore[arg-type]
+    
+    # The MIT License (MIT)
+    # Copyright (c) 2015 Read the Docs, Inc
+    def resolve(self, basename: str) -> str:
+        """
+        Resolve a basename to get its fully qualified name in the context of self.
+
+        :param self: The node representing the context in which to resolve the base name.
+        :param basename: The partial base name to resolve.
+        :returns: The fully resolved base name.
+        """
+        full_basename = basename
+
+        top_level_name = re.sub(r"\(.*\)", "", basename).split(".", 1)[0]
+
+        assigns = self.lookup(top_level_name)[1]
+
+        for assignment in assigns:
+            if isinstance(assignment, ast.alias):
+                import_name = get_full_import_name(assignment)
+                full_basename = basename.replace(top_level_name, import_name, 1)
+                break
+            elif isinstance(assignment, ast.ClassDef):
+                full_basename = assignment.qname
+                break
+            elif isinstance(assignment, ast.Name) and is_assign_name(assignment):
+                full_basename = "{}.{}".format(assignment.scope.qname, assignment.id)
+                # TODO: handle aliases
+            elif isinstance(assignment, ast.arg):
+                full_basename = "{}.{}".format(assignment.scope.qname, assignment.arg)
+        
+        full_basename = re.sub(r"\(.*\)", "()", full_basename)
+
+        # Some unecessary -yet- support for builtins:
+        # if full_basename.startswith("builtins."):
+        #     return full_basename[len("builtins.") :]
+
+        # if full_basename.startswith("__builtin__."):
+        #     return full_basename[len("__builtin__.") :]
+
+        # dottedname = full_basename.split('.')
+        # if dottedname[0] in self._parser.modules:
+        #     origin_module = self._parser.modules[dottedname[0]]
+        #     ...
+        #     # TODO: finish me
+
+        return full_basename
+
+    def node_ancestors(self) -> Iterator["_typing.ASTNode"]:
+        """Yield parent, grandparent, etc until there are no more."""
+        parent = self.parent
+        while parent is not None:
+            yield parent
+            parent = parent.parent
+    
+    def _report(self, descr: str, lineno_offset: int = 0) -> None:
+        # A warning should be triggered only at one place in the code.
+        """Log an error or warning about this node object."""
+
+        def description(node: ASTNode) -> str:
+            """A string describing our source location to the user.
+
+            If this module's code was read from a file, this returns
+            its file path. In other cases, such as during unit testing,
+            the full module name is returned.
+            """
+            source_path = node.root._filename
+            return node.root.qname if source_path is None else str(source_path)
+
+        linenumber: object
+        linenumber = self.lineno
+        if linenumber:
+            linenumber += lineno_offset
+        elif lineno_offset and self.parent is None:
+            linenumber = lineno_offset
+        else:
+            linenumber = '???'
+
+        logging.getLogger('astuce').warning(f'{description(self)}:{linenumber}: {descr}')
+
+    def parent_of(self, node: 'ASTNode') -> bool:
+        """Check if this node is the parent of the given node.
+        :param node: The node to check if it is the child.
+        :type node: ASTNode
+        :returns: True if this node is the parent of the given node,
+            False otherwise.
+        :rtype: bool
+        """
+        return any(self is parent for parent in node.node_ancestors())
+
+    @cached_property
+    def _is_from_decorator(self) -> bool:
+        """Return True if the node is the child of a decorator"""
+
+        for parent in self.node_ancestors():
+            if isinstance(parent, (ast.AsyncFunctionDef, ast.FunctionDef, ast.ClassDef)):
+                field, _ = parent.locate_child(self, True)
+                return field == 'decorator_list'
+                
+        return False
+    
+    @lru_cache()
+    def unparse(self) -> str:
+        return self._parser.unparse(self)
+
+    @lru_cache()
+    def lookup(self, name: str, offset:int=0) -> Tuple['_typing.ASTNode', List['_typing.ASTNode']]:
+        """Lookup where the given variable is assigned.
+
+        The lookup starts from self's scope. If self is not a frame itself
+        and the name is found in the inner frame locals, statements will be
+        filtered to remove ignorable statements according to self's location.
+
+        :param name: The name of the variable to find assignments for.
+        :param offset: The line offset to filter statements up to.
+
+        :returns: The scope node and the list of assignments associated to the
+            given name according to the scope node where it has been found.
+        :returntype: tuple[ASTNode, List[_typing.LocalsAssignT]]
+        """
+        return _lookup.lookup(self, name, offset)
+
+class Context(enum.Enum):
+    Load = 1
+    Store = 2
+    Del = 3
+
+_CONTEXT_MAP = {
+    ast.Load: Context.Load,
+    ast.Store: Context.Store,
+    ast.Del: Context.Del,
+    ast.Param: Context.Store,
+}
+
+def is_assign_name(node: Union[ast.Name, ast.Attribute]) -> bool:
+    """
+    Whether this node is the target of an assigment.
+    """
+    return get_context(node) == Context.Store
+
+def is_del_name(node: Union[ast.Name, ast.Attribute]) -> bool:
+    """
+    Whether this node is the target of a del statment.
+    """
+    return get_context(node) == Context.Del
+
+@functools.lru_cache(maxsize=None)
+def get_context(node: Union[ast.Attribute, ast.List, ast.Name, ast.Subscript, ast.Starred, ast.Tuple]) -> Context:
+    """
+    Wraps the context ast context classes into a more friendly enumeration.
+
+    Dynamically created nodes do not have the ctx field, in this case fall back to Load context.
+    """
+
+    # Just in case, we use getattr because dynamically created nodes do not have the ctx field.
+    try:
+        return _CONTEXT_MAP[type(getattr(node, 'ctx', ast.Load()))] # type:ignore[index]
+    except KeyError as e:
+        raise ValueError(f"Can't get the context of {node!r}") from e
+
+def is_frame_node(node: 'ASTNode') -> bool:
+    """
+    Whether this node is a frame.
+    """
+    return isinstance(node, (ast.Module, ast.ClassDef, ast.FunctionDef, ast.AsyncFunctionDef, ast.Lambda))
+
+def is_scoped_node(node: 'ASTNode') -> bool:
+    """
+    Whether this node is a scope.
+    """
+    return isinstance(node, (ast.AsyncFunctionDef, ast.FunctionDef, ast.ClassDef, ast.Module, 
+                             ast.GeneratorExp, ast.DictComp, ast.SetComp, ast.ListComp, ast.Lambda))
+
+
+def get_module_parent(node: _typing.Module) -> Optional[_typing.Module]:
+    """
+    Returns the parent package of this module or `None` if not found. 
+
+    Some code rely on the fact that `Module.parent` property is always None. 
+    So we should not overide this behaviour.
+    """
+    parent_name = '.'.join(node.qname.split('.')[:-1])
+    if not parent_name:
+        # top-level module
+        return None
+    return node._parser.modules.get(parent_name)
+
+# ==========================================================
+# relative imports
+
+def get_origin_module(alias:ast.alias) -> str:
+    """
+    Get the origin module fullname from an ast.alias. 
+    This string can be used to retreive the `ast.Module` 
+    instance from the `Parser.modules` dict.
+
+    Note that for static analysis, we don't currently need the submodule information.
+    So imports like::
+        
+        import c.abc
+
+    Will result in 'c' beeing returned.
+
+    But:: 
+    
+        import c.abc as cabc
+    
+    Will result in 'c.abc' beeing returned.
+
+    Import from like::
+
+        # in pack/__init__.py
+        from .x import y
+        # in pack/x.py
+        pass 
+        # if the file is not in the system, it will fail to resolve.
+    
+    Will result in 'pack.x' beeing returned.
+    """
+    if isinstance(alias.parent, ast.ImportFrom):
+        module_name = _get_full_origin_name(alias.parent)
+        return module_name
+    else:
+        if alias.asname is None:
+            return alias.name.split('.')[0]
+        else:
+            return alias.name
+
+def get_full_import_name(alias:ast.alias) -> str:
+    """
+    Get the full path of a name from a ``from .x import y`` or ``import y`` alias.
+
+    Note that for static analysis, we don't currently need the submodule information.
+    So imports like::
+        import c.abc
+
+    Will result in 'c' beeing returned.
+    """
+    origin_module = get_origin_module(alias)
+    if isinstance(alias.parent, ast.ImportFrom):
+        partial_basename = alias.name
+        return "{}.{}".format(origin_module, partial_basename)
+    else:
+        return origin_module
+
+# The MIT License (MIT)
+# Copyright (c) 2015 Read the Docs, Inc
+def _get_full_origin_name(import_from: ast.ImportFrom) -> str:
+    """
+    Get the full path of a name from a ``from .x import y`` alias.
+
+    :param import_from: The node to resolve the name of.
+    :param alias: The alias node
+    :returns: The full import path of the name.
+    """
+    module_name = import_from.module
+    if import_from.level:
+        module_name = relative_to_absolute(import_from)
+    return module_name
+
+def relative_to_absolute(node: ast.ImportFrom) -> str:
+    """Convert a relative import path to an absolute one.
+
+    Parameters:
+        node: The "from ... import ..." AST node.
+        name: The imported name.
+
+    Returns:
+        The absolute import path of the module this nodes imports from.
+    
+    Raises:
+        InferenceError: if the import is relative and the module could not 
+            be found in the system.
+    """
+    modname = node.module
+    level = node.level
+    
+    if level:
+        # Relative import.
+        parent: Optional[_typing.Module] = cast(_typing.ASTNode, node).root
+        if parent._is_package: #type:ignore[union-attr]
+            level -= 1
+        for _ in range(level):
+            if parent is None:
+                break
+            parent = get_module_parent(parent)
+        if parent is None:
+            raise InferenceError(
+                "Failed to resolve relative import: {node}", node=node,
+                )
+        if modname is None:
+            modname = parent.qname
+        else:
+            modname = f'{parent.qname}.{modname}'
+    else:
+        # The module name can only be omitted on relative imports.
+        assert modname is not None
+    
+    return modname
+
+
+@attr.s(auto_attribs=True)
+class TypeInfo:
+    """
+    Optionnaly holds type information.
+    """
+    type_annotation: Optional[_typing.ASTexpr]
+    classdef: Optional[_typing.ClassDef]
+
+    def __bool__(self) -> bool:
+        """
+        Does this type info actually holds information?
+        """
+        return self.type_annotation is not None
+    
+    def __str__(self) -> str:
+        """
+        Type information as string.
+        """
+        return self.type_annotation.unparse() if self else '??'
+
+class Instance:
+    """
+    This class is selectively added to the bases of the following ast nodes:
+    `Constant`, `List`, `Tuple`, `Dict`, `Set`.
+
+    :var type_info: The type information of this instance.
+    """
+    type_info: TypeInfo
+
+    @classmethod
+    def create_instance(cls, *args:Any, 
+             classdef:Optional[ast.ClassDef]=None, 
+             type_annotation:Optional[ast.expr]=None, 
+             **kwargs:Any) -> 'Instance':
+        """
+        Special factory method to create instances of nodes that represent Instances. 
+
+        It can be instanciated directly to represent any object.
+        
+        It's also used to create inferred 
+        `ast.Constant`, `ast.List`, `ast.Tuple`, `ast.Dict` or `ast.Set` nodes.
+        """
+        i: Instance = cls(*args, **kwargs)
+        i._init_type_info(classdef, type_annotation)
+        return i
+    
+    def _init_type_info(self, classdef:Optional[ast.ClassDef]=None, 
+                type_annotation:Optional[ast.expr]=None, ) -> None:
+        self.type_info = self._get_type_info(classdef, type_annotation)
+
+    def _get_type_info(self, classdef:Optional[_typing.ClassDef], type_annotation:Optional[ast.expr], ) -> TypeInfo:
+
+        _type = None
+        if type_annotation is not None:
+            _type = type_annotation
+        elif classdef is not None:
+            _type = qname_to_ast(classdef.qname)
+        elif isinstance(self, ast.List):
+            _type = qname_to_ast("list")
+        elif isinstance(self, ast.Set):
+            _type = qname_to_ast("set")
+        elif isinstance(self, ast.Tuple):
+            _type = qname_to_ast("tuple")
+        elif isinstance(self, ast.Dict):
+            _type = qname_to_ast("dict")
+        elif isinstance(self, ast.Constant) and self.value is not ...:
+            _type = qname_to_ast(self.value.__class__.__name__)
+        
+        return TypeInfo(_type, classdef=classdef)
+        
+def are_exclusive(stmt1: 'ASTNode', stmt2: 'ASTNode') -> bool:
+    """
+    return true if the two given statements are mutually exclusive
+
+    algorithm :
+    1) index stmt1's parents
+    2) climb among stmt2's parents until we find a common parent
+    3) if the common parent is a If or Try statement, look if nodes are
+        in exclusive branches
+    """
+    # index stmt1's parents
+    exceptions = None
+    stmt1_parents = {}
+    children = {}
+    previous = stmt1
+    for node in stmt1.node_ancestors():
+        stmt1_parents[node] = 1
+        children[node] = previous
+        previous = node
+    # climb among stmt2's parents until we find a common parent
+    previous = stmt2
+    for node in stmt2.node_ancestors():
+        if node in stmt1_parents:
+            # if the common parent is a If or TryExcept statement, look if
+            # nodes are in exclusive branches
+            if isinstance(node, ast.If) and exceptions is None:
+                if (
+                    node.locate_child(previous)[1]
+                    is not node.locate_child(children[node])[1]
+                ):
+                    return True
+            elif isinstance(node, ast.Try):
+                c2attr, c2node = node.locate_child(previous)
+                c1attr, c1node = node.locate_child(children[node])
+                if c1node is not c2node:
+                    first_in_body_caught_by_handlers = False
+                    second_in_body_caught_by_handlers = False
+                    first_in_else_other_in_handlers = (
+                        c2attr == "handlers" and c1attr == "orelse"
+                    )
+                    second_in_else_other_in_handlers = (
+                        c2attr == "orelse" and c1attr == "handlers"
+                    )
+                    # TODO: Add support for selecting expect handlers - for builtin exceptions at least.
+                    if any(
+                        (
+                            first_in_body_caught_by_handlers,
+                            second_in_body_caught_by_handlers,
+                            first_in_else_other_in_handlers,
+                            second_in_else_other_in_handlers,
+                        )
+                    ):
+                        return True
+                elif c2attr == "handlers" and c1attr == "handlers":
+                    return previous is not children[node]
+            return False
+        previous = node
+    return False
+
+def is_orelse(node: 'ASTNode') -> bool:
+    """
+    Is this If node is part of the the C{else} branch of a parent If node.
+
+    :note: Always returns False if C{node} is not an L{ast.If}.
+    """
+
+    parent = node.parent
+    if isinstance(parent, ast.If) and node in parent.orelse:
+        return True
+    return False
+
+def get_if_statement_ancestor(node: 'ASTNode') -> Optional['ASTNode']:
+    """Return the first parent node that is an If node (or None)"""
+    for parent in node.node_ancestors():
+        if isinstance(parent, ast.If):
+            return parent
+    return None
+
+def qname_to_ast(name:str) -> Union[ast.Name, ast.Attribute]:
+    """
+    Transform a dotted name (i.e ``twisted.internet.reactor``) into it's AST couterparts.
+    """
+    parts = name.split('.')
+    assert parts, "must not be empty"
+    
+    if len(parts)==1:
+        return ast.Name(parts[0], ast.Load())
+    else:
+        return ast.Attribute(qname_to_ast('.'.join(parts[:-1])), parts[-1], ast.Load())
+
+def fix_ast(node:_typing.ASTNode, parent:Optional[_typing.ASTNode]) -> _typing.ASTNode:
+    """
+    Fix a newly created AST tree to be compatible with astuce.
+    """
+
+    def fix_missing_parents(node:_typing.ASTNode, parent:_typing.ASTNode) -> _typing.ASTNode:
+        """
+        Fix the missing ``parent`` attribute, starting at node.
+        Also setup the ``_parser`` attribute.
+        """
+        def _fix(_node:_typing.ASTNode, _parent:_typing.ASTNode) -> None:
+            _parent._parser._init_new_node(_node, _parent)
+            for child in _node.children:
+                _fix(child, _node)
+        _fix(node, parent)
+        return node
+
+    if parent is None:
+        parent = getattr(node, 'parent', None)
+        assert parent is not None, f"missing required argument 'parent'"
+    # TODO: Locations doesn't really makes sens for inferred nodes. 
+    # But it's handy to have the context linenumber here.
+    return fix_missing_parents(
+        ast.fix_missing_locations(
+            ast.copy_location(node, parent)), parent)
+
+def literal_to_ast(ob:Any) -> ast.expr:
+    """
+    Transform a literal object into it's AST counterpart.
+    
+    The object provided may only consist of the following
+    Python builtin types: strings, bytes, numbers, tuples, lists, dicts,
+    sets, booleans, and None.
+
+    Normally, ``AST`` and ``literal_to_ast(ast.literal_eval(AST))`` are equivalent.
+    """
+    def _convert(thing:Any) -> ast.expr:
+        if isinstance(thing, tuple):
+            return ast.Tuple.create_instance(elts=list(map(_convert, thing))) # type:ignore[no-any-return, attr-defined]
+        elif isinstance(thing, list):
+            return ast.List.create_instance(elts=list(map(_convert, thing))) # type:ignore[no-any-return, attr-defined]
+        elif isinstance(thing, set):
+            return ast.Set.create_instance(elts=list(map(_convert, thing))) # type:ignore[no-any-return, attr-defined]
+        elif isinstance(thing, dict):
+            values = []
+            keys = []
+            for k,v in thing.items():
+                values.append(_convert(v))
+                keys.append(_convert(k))
+            return ast.Dict.create_instance(keys=keys, values=values) # type:ignore[no-any-return, attr-defined]
+        elif isinstance(thing, (int, float, complex, bytes, str, bool)):
+            return ast.Constant.create_instance(thing) # type:ignore[no-any-return, attr-defined]
+        elif thing is None:
+            return ast.Constant.create_instance(None) # type:ignore[no-any-return, attr-defined]
+        raise ValueError(f"Not a literal: {thing!r}")
+    return _convert(ob)
+
+def nodes_of_class(
+    self:_typing.ASTNode,
+    klass: Union[Type[ast.AST], Tuple[Type[ast.AST], ...]],
+    predicate: Optional[Callable[[_typing.ASTNode], bool]]=None
+) -> Iterator['_typing.ASTNode']:
+    """Get the nodes (including this one or below) of the given types.
+
+    :param klass: The types of node to search for.
+    :param predicate: Callable that returns False value to ignore more objects.
+
+    :returns: The node of the given types.
+    """
+    if isinstance(self, klass):
+        if predicate is not None:
+            if bool(predicate(self))==True:
+                yield self
+        else:
+            yield self
+
+    for child_node in self.children:
+        yield from nodes_of_class(child_node, klass, predicate)
+
