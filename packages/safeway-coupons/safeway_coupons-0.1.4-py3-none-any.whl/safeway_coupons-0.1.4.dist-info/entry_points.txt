@@ -1,0 +1,3 @@
+[console_scripts]
+safeway-coupons=safeway_coupons.app:main
+
