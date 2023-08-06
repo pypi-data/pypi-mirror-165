@@ -1,0 +1,5 @@
+bw2data
+pypardiso
+pytest
+pytest-cov
+python-coveralls
