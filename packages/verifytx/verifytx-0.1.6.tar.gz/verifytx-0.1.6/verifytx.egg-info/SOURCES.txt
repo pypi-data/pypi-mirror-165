@@ -1,0 +1,9 @@
+LICENSE.txt
+README.txt
+setup.py
+verifytx/__init__.py
+verifytx.egg-info/PKG-INFO
+verifytx.egg-info/SOURCES.txt
+verifytx.egg-info/dependency_links.txt
+verifytx.egg-info/requires.txt
+verifytx.egg-info/top_level.txt
