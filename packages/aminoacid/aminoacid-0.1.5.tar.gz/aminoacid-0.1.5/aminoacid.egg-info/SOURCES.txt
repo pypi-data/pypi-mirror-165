@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+aminoacid/__init__.py
+aminoacid/_socket.py
+aminoacid/abc.py
+aminoacid/client.py
+aminoacid/exceptions.py
+aminoacid.egg-info/PKG-INFO
+aminoacid.egg-info/SOURCES.txt
+aminoacid.egg-info/dependency_links.txt
+aminoacid.egg-info/requires.txt
+aminoacid.egg-info/top_level.txt
+aminoacid/util/__init__.py
+aminoacid/util/commands.py
+aminoacid/util/enums.py
+aminoacid/util/events.py
