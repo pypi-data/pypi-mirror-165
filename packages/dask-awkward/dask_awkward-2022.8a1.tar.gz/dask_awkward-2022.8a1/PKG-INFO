@@ -1,0 +1,83 @@
+Metadata-Version: 2.1
+Name: dask-awkward
+Version: 2022.8a1
+Summary: Awkward Array meets Dask
+Project-URL: Homepage, https://github.com/ContinuumIO/dask-awkward
+Project-URL: Bug Tracker, https://github.com/ContinuumIO/dask-awkward/issues
+Author-email: Doug Davis <ddavis@ddavis.io>, Martin Durant <mdurant@anaconda.com>
+Maintainer-email: Doug Davis <ddavis@ddavis.io>, Martin Durant <mdurant@anaconda.com>
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.8
+Requires-Dist: awkward>=1.9.0rc12
+Requires-Dist: dask>=2022.01.0
+Provides-Extra: complete
+Requires-Dist: pyarrow; extra == 'complete'
+Requires-Dist: pytest-cov>=3.0.0; extra == 'complete'
+Requires-Dist: pytest>=6.0; extra == 'complete'
+Requires-Dist: requests>=2.27.1; extra == 'complete'
+Provides-Extra: docs
+Requires-Dist: dask-sphinx-theme>=3.0.2; extra == 'docs'
+Requires-Dist: pyarrow; extra == 'docs'
+Requires-Dist: pytest-cov>=3.0.0; extra == 'docs'
+Requires-Dist: pytest>=6.0; extra == 'docs'
+Requires-Dist: requests>=2.27.1; extra == 'docs'
+Provides-Extra: io
+Requires-Dist: pyarrow; extra == 'io'
+Provides-Extra: test
+Requires-Dist: pyarrow; extra == 'test'
+Requires-Dist: pytest-cov>=3.0.0; extra == 'test'
+Requires-Dist: pytest>=6.0; extra == 'test'
+Requires-Dist: requests>=2.27.1; extra == 'test'
+Description-Content-Type: text/markdown
+
+dask-awkward
+============
+
+> Connecting [awkward-array](https://awkward-array.org) and
+[Dask](https://dask.org/).
+
+[![Tests](https://github.com/ContinuumIO/dask-awkward/actions/workflows/pypi-tests.yml/badge.svg)](https://github.com/ContinuumIO/dask-awkward/actions/workflows/pypi-tests.yml)
+[![Tests](https://github.com/ContinuumIO/dask-awkward/actions/workflows/conda-tests.yml/badge.svg)](https://github.com/ContinuumIO/dask-awkward/actions/workflows/conda-tests.yml)
+[![Documentation Status](https://readthedocs.org/projects/dask-awkward/badge/?version=latest)](https://dask-awkward.readthedocs.io/en/latest/?badge=latest)
+[![PyPI](https://img.shields.io/pypi/v/dask-awkward?color=blue)](https://pypi.org/project/dask-awkward)
+![stability-alpha](https://img.shields.io/badge/stability-alpha-blue.svg)
+
+**This is alpha software** without any guaranteed API stability.
+
+The dask-awkward project is affiliated with awkward-array's v1 to v2
+transition. [Read more about that
+here](https://github.com/scikit-hep/awkward/wiki).
+
+Installing
+----------
+
+If you are interested in experimenting with `dask-awkward` we
+recommend installing from the `main` branch:
+
+```
+pip install git+https://github.com/ContinuumIO/dask-awkward@main
+```
+
+The [awkward-array](https://github.com/scikit-hep/awkward) project is
+working on version 2 of the core `awkward` Python library; `awkward`
+version 1.8 includes many components of what will be version 2, but in
+the `awkward._v2` module. Installing `dask-awkward` requires
+`awkward>=1.9.0rc12`.
+
+It's recommended to have a bleeding edge version of `awkward`
+installed with:
+
+```
+pip install git+https://github.com/scikit-hep/awkward@main
+```
+
+Since `dask-awkward` is designed for `awkward` version 2, the
+concrete, high-level array object (`ak.Array`) that we use is actually
+the `awkward._v2.Array` object.
