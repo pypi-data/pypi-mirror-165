@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+src/__init__.py
+src/copy.py
+src/placeholder.py
+src/presmanager.py
+src/style.py
+src/xml.py
+src/pyptx_templar.egg-info/PKG-INFO
+src/pyptx_templar.egg-info/SOURCES.txt
+src/pyptx_templar.egg-info/dependency_links.txt
+src/pyptx_templar.egg-info/requires.txt
+src/pyptx_templar.egg-info/top_level.txt
