@@ -1,0 +1,6 @@
+include docs\*.txt
+include assets\*.png
+include src\subsearch\data\config.json
+include src\subsearch\assets\buttons\*.png
+include src\subsearch\assets\icons\*.ico
+
