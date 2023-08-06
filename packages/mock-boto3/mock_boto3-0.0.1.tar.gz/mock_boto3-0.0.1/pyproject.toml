@@ -1,0 +1,19 @@
+[project]
+name = "mock_boto3"
+version = "0.0.1"
+authors = [
+  { name="johnnyblase", email="johnnyblasin@gmail.com" },
+]
+description = "mock_boto3"
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/jadecobra/mock_boto3"
+"Bug Tracker" = "https://github.com/jadecobra/mock_boto3/issues"
