@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "mathextend"
+version = "1.0.3"
+authors = [
+  { name="xiechenxin", email="xiechenxin20110311@qq.com" },
+]
+description = "Extension of a powerful math library"
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/xcx-2843604975/mathutil"
+"Bug Tracker" = "https://github.com/xcx-2843604975/mathutil/issues"
