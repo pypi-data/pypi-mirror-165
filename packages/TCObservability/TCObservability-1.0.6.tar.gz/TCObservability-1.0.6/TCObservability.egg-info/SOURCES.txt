@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+TCObservability/__init__.py
+TCObservability/tracing.py
+TCObservability.egg-info/PKG-INFO
+TCObservability.egg-info/SOURCES.txt
+TCObservability.egg-info/dependency_links.txt
+TCObservability.egg-info/requires.txt
+TCObservability.egg-info/top_level.txt
