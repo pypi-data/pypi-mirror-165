@@ -1,0 +1,89 @@
+Metadata-Version: 2.1
+Name: open-dev
+Version: 0.1.5.dev14
+Summary: A collection of tooling to enable open source development..
+Home-page: https://github.com/8ball030/open_dev
+License: Apache-2.0
+Author: 8Baller
+Author-email: 8ball030@gmail.com
+Requires-Python: >=3.7.2,<4.0
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Provides-Extra: dev
+Provides-Extra: doc
+Provides-Extra: test
+Requires-Dist: GitPython (>=3.1.27,<4.0.0)
+Requires-Dist: black (>=22.6.0,<23.0.0); extra == "test"
+Requires-Dist: bump2version (>=1.0.1,<2.0.0); extra == "dev"
+Requires-Dist: click (>=8.1.3,<9.0.0)
+Requires-Dist: isort (>=5.10.1,<6.0.0); extra == "test"
+Requires-Dist: mkdocs (>=1.3.1,<2.0.0); extra == "doc"
+Requires-Dist: mkdocs-autorefs (>=0.4.1,<0.5.0); extra == "doc"
+Requires-Dist: mkdocs-include-markdown-plugin (>=3.6.1,<4.0.0); extra == "doc"
+Requires-Dist: mkdocs-material (>=8.4.0,<9.0.0); extra == "doc"
+Requires-Dist: mkdocs-material-extensions (>=1.0.3,<2.0.0)
+Requires-Dist: mkdocstrings (>=0.19.0,<0.20.0); extra == "doc"
+Requires-Dist: mypy (>=0.971,<0.972); extra == "test"
+Requires-Dist: pip (>=22.2.2,<23.0.0); extra == "dev"
+Requires-Dist: pre-commit (>=2.20.0,<3.0.0); extra == "dev"
+Requires-Dist: pylama[all] (>=8.4.1,<9.0.0); extra == "test"
+Requires-Dist: pytest-cov (>=3.0.0,<4.0.0); extra == "test"
+Requires-Dist: rich-click (>=1.5.2,<2.0.0)
+Requires-Dist: toml (>=0.10.2,<0.11.0); extra == "dev"
+Requires-Dist: tox (>=3.25.1,<4.0.0); extra == "dev"
+Requires-Dist: twine (>=4.0.1,<5.0.0); extra == "dev"
+Requires-Dist: yamllint (>=1.27.1,<2.0.0)
+Description-Content-Type: text/markdown
+
+# open_dev
+
+
+[![pypi](https://img.shields.io/pypi/v/open_dev.svg)](https://pypi.org/project/open_dev/)
+[![python](https://img.shields.io/pypi/pyversions/open_dev.svg)](https://pypi.org/project/open_dev/)
+[![Build Status](https://github.com/8ball030/open_dev/actions/workflows/dev.yml/badge.svg)](https://github.com/8ball030/open_dev/actions/workflows/dev.yml)
+[![codecov](https://codecov.io/gh/8ball030/open_dev/branch/main/graphs/badge.svg)](https://codecov.io/github/8ball030/open_dev)
+
+
+Install Dependencies.
+
+(Poetry) Is used to managed the dependencies. (https://python-poetry.org/docs/#installation)
+# osx / linux / bashonwindows install instructions
+```bash
+curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+```
+```
+# windows install instructions
+```
+```
+(Invoke-WebRequest -Uri https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py -UseBasicParsing).Content | python `
+```
+
+
+A collection of tooling to enable open source development.
+
+
+* Documentation: <https://8ball030.github.io/open_dev>
+* GitHub: <https://github.com/8ball030/open_dev>
+* PyPI: <https://pypi.org/project/open_dev/>
+* Free software: Apache-2.0
+
+
+## Features
+
+* TODO
+
+## Credits
+
+This package was created with [Cookiecutter](https://github.com/audreyr/cookiecutter) and the [waynerv/cookiecutter-pypackage](https://github.com/waynerv/cookiecutter-pypackage) project template.
+
