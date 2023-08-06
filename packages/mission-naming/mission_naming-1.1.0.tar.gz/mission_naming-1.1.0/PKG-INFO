@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: mission_naming
+Version: 1.1.0
+Summary: A library to generate random mission names
+Home-page: https://github.com/rphlo/mission_naming
+Author: Raphael Stefanini
+Author-email: raphael@rphlo.com
+License: UNKNOWN
+Download-URL: https://github.com/rphlo/mission_naming/tarball/1.1.0
+Keywords: random,naming,name,mission
+Platform: UNKNOWN
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+
+UNKNOWN
+
