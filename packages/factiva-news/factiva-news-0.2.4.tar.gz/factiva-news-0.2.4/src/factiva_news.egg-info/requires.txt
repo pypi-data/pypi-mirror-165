@@ -1,0 +1,6 @@
+factiva-core>=0.2.3
+fastavro
+google-cloud-core
+google-cloud-pubsub
+google-cloud-bigquery
+pymongo
