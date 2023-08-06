@@ -1,0 +1,7 @@
+[console_scripts]
+dc = mtxcli.dc:main
+dockerdev = mtxcli.dockerdev:main
+gitup = mtxcli.gitup:main
+mtdp = mtxcli.mtdp:main
+mtgp = mtxcli.mtgp_init:main
+
