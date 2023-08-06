@@ -1,0 +1,3 @@
+[console_scripts]
+emo_platform_cli=emo_platform.cli:main
+

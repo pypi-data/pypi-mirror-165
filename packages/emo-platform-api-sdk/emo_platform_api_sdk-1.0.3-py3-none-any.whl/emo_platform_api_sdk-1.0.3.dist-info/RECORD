@@ -1,0 +1,13 @@
+emo_platform/__init__.py,sha256=5lCSLuDIDZp4gRqVTdp1IcxD_xp-xcnyGvyGgTye1w0,513
+emo_platform/api.py,sha256=luKnXtwEAzrYYiQ9GE5N-QmSheysMqRoQ_UzmyT7zkM,81688
+emo_platform/api_async.py,sha256=Kwc-2_-WVwrTbTI4hW40cW6teGyK86Zrn9xW6licxio,79261
+emo_platform/cli.py,sha256=J0CwofyLjwTEEkEVLriDtU167PN8UXKzRs-oRDwzXDE,6061
+emo_platform/exceptions.py,sha256=POQq1Fjfm_ZSJKyhuFKABQnkU3Cn7HVT7cLowSexdqw,3303
+emo_platform/models.py,sha256=y4WEdl-eJeegt19hQ-uWyrUDEx5wpacYbJR6VaDJ-NY,3083
+emo_platform/response.py,sha256=mYvEFEIyZSjdJolTjZ1IsZim4bX3I-JldcEZndrmjOo,17605
+emo_platform/tokens/.gitkeep,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+emo_platform_api_sdk-1.0.3.dist-info/entry_points.txt,sha256=Uu-_CW3MW-xDFbW92qvLvKqKPLPYOKPsinwJkZrF5hE,58
+emo_platform_api_sdk-1.0.3.dist-info/LICENSE,sha256=6EAWK7wPw5cmgzieoEinRRAon86CzdtKv_DJWDnVh8I,1072
+emo_platform_api_sdk-1.0.3.dist-info/WHEEL,sha256=N0LZrBtofpkS5mJXgVHTCEy52Sam4D6PHQWC8HnMeTs,83
+emo_platform_api_sdk-1.0.3.dist-info/METADATA,sha256=k6mwhGcNNz3vLurzvJpwI3rJqYsNzUs_no7upBtMWBM,10773
+emo_platform_api_sdk-1.0.3.dist-info/RECORD,,
