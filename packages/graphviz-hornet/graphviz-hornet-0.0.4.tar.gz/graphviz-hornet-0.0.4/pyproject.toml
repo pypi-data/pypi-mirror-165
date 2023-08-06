@@ -1,0 +1,20 @@
+# https://setuptools.pypa.io/en/latest/userguide/pyproject_config.html
+[project]
+name = "graphviz-hornet"
+dynamic = ["version"]
+readme = "README.md"
+license = {file = "LICENSE"}
+
+dependencies = [
+   "graphviz"	
+]
+[tool.setuptools.packages.find]
+include = ["hornet"]
+
+[project.optional-dependencies]
+dev = ["build", "twine"]
+[tool.setuptools.dynamic]
+version = {attr = "hornet.VERSION"}
+
+[tool.black]
+line-length = 79
