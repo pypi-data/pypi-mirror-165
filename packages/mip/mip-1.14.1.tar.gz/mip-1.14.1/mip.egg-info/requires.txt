@@ -1,0 +1,12 @@
+cffi==1.15.0
+
+[gurobi]
+gurobipy>=8.*
+
+[numpy]
+
+[numpy:python_version == "3.7"]
+numpy==1.21.6
+
+[numpy:python_version >= "3.8"]
+numpy==1.23.1
