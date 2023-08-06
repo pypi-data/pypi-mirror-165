@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: ci-cd-dict
+Version: 2.0.0
+Author: Ayberk Yasa
+Requires-Python: >=3.8
+
+This is for CI/CD homework.
