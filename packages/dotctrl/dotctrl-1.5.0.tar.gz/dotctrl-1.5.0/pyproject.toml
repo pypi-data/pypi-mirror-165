@@ -1,0 +1,91 @@
+[tool.poetry]
+authors = ["William C. Canin <william.costa.canin@gmail.com>"]
+description = "Dotctrl is a package for managing your dotfiles on Linux."
+homepage = "https://github.com/snakypy/dotctrl"
+include = ["LICENSE"]
+keywords = ["dotfiles", "snakypy", "dot", "linux"]
+license = "MIT license"
+name = "dotctrl"
+readme = "README.rst"
+repository = "https://github.com/snakypy/dotctrl"
+version = "1.5.0"
+
+classifiers = [
+  "Intended Audience :: Developers",
+  "Environment :: Console",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: POSIX :: Linux",
+  "Operating System :: MacOS",
+  "Programming Language :: Python :: 3",
+]
+
+packages = [
+  {include = "snakypy"},
+]
+
+[tool.poetry.scripts]
+dotctrl = "snakypy.dotctrl.dotctrl:main"
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/snakypy/dotctrl/issues"
+
+[tool.poetry.dependencies]
+docopt = "^0.6.2"
+python = "^3.9"
+snakypy-helpers = "^0.3.1"
+tomlkit = "^0.11.1"
+
+[tool.poetry.dev-dependencies]
+black = "^22.6.0"
+flake8 = "^4.0.1"
+imake = "^0.3.1"
+ipython = "^7.23.1"
+isort = "^5.8.0"
+mypy = "^0.812"
+pre-commit = "^2.13.0"
+pytest = "^6.2.3"
+tox = "^3.23.0"
+
+[tool.black]
+exclude = '''
+
+(
+  /(
+      \.eggs         # exclude a few common directories in the
+    | \.git          # root of the project
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \venv
+    | buck-out
+    | build
+    | _build
+    | venv
+    | dist
+    | docs
+    | tmp
+  )/
+)
+'''
+include = '\.pyi?$'
+line-length = 88
+target-version = ['py38']
+
+[tool.isort]
+force_grid_wrap = 0
+include_trailing_comma = true
+line_length = 88
+multi_line_output = 3
+profile = "black"
+src_paths = ["snakypy", "tests"]
+use_parentheses = true
+
+[tool.pytest.ini_options]
+cache_dir = "/tmp/.pytest_cache"
+minversion = "6.0"
+# addopts = "-ra -q"
+testpaths = ["tests"]
+
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core>=1.0.0"]
