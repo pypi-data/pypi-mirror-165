@@ -1,0 +1,196 @@
+{
+
+    "00": {
+        "reg": "B00",
+        "tbl_name": "sample_info_agg"
+    },
+    "01A": {
+        "reg": "B0100[13]_.*E",
+        "tbl_name": "population_agg"
+    },
+    "01M": {
+        "reg": "B01002[A-Z]?_.*E",
+       "tbl_name": "population_med"
+    },
+    "02": {
+        "reg": [
+            "B02001_.*E",
+            "B0200[89]_001E",
+            "B0201[0-3]_001E",
+            "^C02"
+        ],
+        "tbl_name": "pop_race_agg"
+    },
+    "03": {
+        "reg": "B0300[23]_.*",
+        "tbl_name": "pop_hispanic_latino_agg"
+    },
+    "07": {
+        "reg": "B0720[123]_.*E",
+        "tbl_name": "geographic_mobility_agg"
+    },
+    "08": {
+        "reg": [
+            "B0800[789]_.*E",
+            "B0801[678]_.*E",
+            "B0813[456]_.*E",
+            "B0830[123]_.*E"
+        ],
+        "tbl_name": "commuting_agg"
+    },
+    "09": {
+        "reg": [
+            "B09002_.*E",
+            "B0901[89]_.*E",
+            "B0902[01]_.*E"
+        ],
+        "tbl_name": "household_parent_children_agg"
+    },
+    "11": {
+        "reg": [
+            "B1100[1-7][A-Z]?_.*E",
+            "B1101[56]_.*E"
+        ],
+        "tbl_name": "household_type_agg"
+    },
+    "12": {
+        "reg": "B12001_.*E",
+        "tbl_name": "marital_status_and_history_agg"
+    },
+    "14": {
+        "reg": "B1400[257][A-Z]?_.*E",
+        "tbl_name": "school_enrollment_agg"
+    },
+    "15": {
+        "reg": [
+            "B1500[23]_.*E",
+            "B1501[12]_.*E",
+            "C15010[A-Z]?_.*E"
+        ],
+        "tbl_name": "educational_attainment_agg"
+    },
+    "16": {
+        "reg": "[BC]1600[24].*E",
+        "tbl_name": "languages_spoken_at_home_agg"
+    },
+    "17": {
+        "reg": [
+            "B1701[017]_.*E",
+            "B17021_.*E",
+            "C17002_.*E"
+        ],
+        "tbl_name": "poverty_agg"
+    },
+    "19A": {
+        "reg": [
+            "B19001_.*E",
+            "B19025[A-Z]?_.*E",
+            "B19037_.*E",
+            "B1905[0-79]_.*E",
+            "B1906[0-79]_.*E",
+            "B19070_.*E",
+            "B19101_.*E",
+            "B19127_.*E",
+            "B19201_.*E",
+            "B19214_.*E",
+            "B19301[A-Z]?_.*E",
+            "B19313[A-Z]?_.*E"
+        ],
+        "tbl_name": "income_characteristics_agg"
+    },
+    "19M": {
+        "reg": [
+            "B19013_.*E",
+            "B19049_.*E",
+            "B19202_.*E"
+        ],
+        "tbl_name": "income_characteristics_med"
+    },
+    "20A": {
+        "reg": "B2000[13]_.*E",
+        "tbl_name": "earnings_agg"
+    },
+    "20M": {
+        "reg": "B20002_.*E",
+        "tbl_name": "earnings_med"
+    },
+    "21": {
+        "reg": [
+            "B2100[12]_.*E",
+            "C21007_.*E"
+        ],
+        "tbl_name": "veterans_status_agg"
+    },
+    "22": {
+        "reg": "B22010_.*E",
+        "tbl_name": "foodstamps_agg"
+    },
+    "23": {
+        "reg": [
+            "B2300[37-9]_.*E",
+            "B2302[24-7]_.*E"
+        ],
+        "tbl_name": "employment_status_agg"
+    },
+    "24": {
+        "reg": [
+            "B24080_.*E",
+            "C240[123]0[A-Z]?_.*E"
+        ],
+        "tbl_name": "industry_occupation_characteristics_agg"
+    },
+    "25A": {
+        "reg": [
+            "B2500[1246-9]_.*E",
+            "B2500[3][A-Z]?_.*E",
+            "B2501[4-79]_.*E",
+            "B2502[024]_.*E",
+            "B2503[23468]_.*E",
+            "B2504[0-79]_.*E",
+            "B2505[013-79]_.*E",
+            "B2506[0-35-9]_.*E",
+            "B2507[02459]_.*E",
+            "B2508[0125679]_.*E",
+            "B2509[13]_.*E"
+        ],
+        "tbl_name": "housing_agg"
+    },
+    "25M": {
+        "reg": [
+            "B2501[08]_.*E",
+            "B25021_.*E",
+            "B2503[579]_.*E",
+            "B25058_.*E",
+            "B25064_.*E",
+            "B2507[1678]_.*E",
+            "B2508[38]_.*E",
+            "B25092_.*E"
+        ],
+        "tbl_name": "housing_med"
+    },
+    "27": {
+        "reg": "B27010_.*E",
+        "tbl_name": "health_insurance_agg"
+    },
+    "99": {
+        "reg": [
+            "B990[157][12]_.*E",
+            "B990[236]1_.*E",
+            "B99053_.*E",
+            "B9908[0-4]_.*E",
+            "B99092_.*E",
+            "B9910[234]_.*E",
+            "B99121_.*E",
+            "B991[4-7][12]_.*E",
+            "B99163_.*E",
+            "B9919[1-4]_.*E",
+            "B99201_.*E",
+            "B9921[12]_.*E",
+            "B9923[1-4]_.*E",
+            "B9924[1-3]_.*E",
+            "B99251[0-689]_.*E",
+            "B99252[0-2]?_.*E",
+            "B9925[3-9]_.*E"
+        ],
+        "tbl_name": "imputations_agg"}
+}

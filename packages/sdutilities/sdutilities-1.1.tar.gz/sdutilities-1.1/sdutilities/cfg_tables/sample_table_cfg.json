@@ -1,0 +1,158 @@
+{
+    "01A": {
+        "reg": [
+            "B01001_.*E",
+            "B01003_001E"
+        ],
+        "tbl_name": "population_sample_agg"
+    },
+    "02": {
+        "reg": [
+            "B02001_.*E"
+        ],
+        "tbl_name": "pop_race_sample_agg"
+    },
+    "03": {
+        "reg": "B03002_.*",
+        "tbl_name": "pop_hispanic_latino_sample_agg"
+    },
+    "05": {
+        "reg": "B05005_.*E",
+        "tbl_name": "entry_sample_agg"
+    },
+    "08": {
+        "reg": [
+            "B08301_00[1-4]E",
+            "B08301_01[06-9]E",
+            "B08301_02[01]E"
+        ],
+        "tbl_name": "commuting_sample_agg"
+    },
+    "09": {
+        "reg": [
+            "B09002_.*E",
+            "B09021_00[89]E",
+            "B09021_0[12][0-9]E"
+        ],
+        "tbl_name": "household_parent_children_sample_agg"
+    },
+    "11": {
+        "reg": [
+            "B11016_.*E"
+        ],
+        "tbl_name": "household_type_sample_agg"
+    },
+    "12": {
+        "reg": [
+            "B12001_.*E"
+        ],
+        "tbl_name": "marital_status_and_history_sample_agg"
+    },
+    "15": {
+        "reg": [
+            "B1500[23]_.*E",
+            "B15011_.*E",
+            "C15010[A-Z]?_0[01][16]E"
+        ],
+        "tbl_name": "educational_attainment_sample_agg"
+    },
+    "16": {
+        "reg": [
+            "B16002.*E",
+            "B16004_0[2-4][0459]E",
+            "B16004_046E",
+            "B16004_0[5-6][1267]E"
+        ],
+        "tbl_name": "languages_spoken_at_home_sample_agg"
+    },
+    "17": {
+        "reg": [
+            "C17002_.*E",
+            "B1701[017]_.*E",
+            "B17021_.*E"
+        ],
+        "tbl_name": "poverty_sample_agg"
+    },
+    "19A": {
+        "reg": [
+            "B19001_.*E"
+        ],
+        "tbl_name": "income_characteristics_sample_agg"
+    },
+    "19M": {
+        "reg": [
+            "B19013_.*E",
+            "B19202_.*E"
+        ],
+        "tbl_name": "income_characteristics_sample_med"
+    },
+    "20M": {
+        "reg": "B20002_001E",
+        "tbl_name": "earnings_sample_med"
+    },
+    "22": {
+        "reg": "B22010_00[125]E",
+        "tbl_name": "foodstamps_sample_agg"
+    },
+    "23": {
+        "reg": [
+            "B23025_001E",
+            "B23027_0[0-3][2378]E"
+        ],
+        "tbl_name": "employment_status_sample_agg"
+    },
+    "24": {
+        "reg": [
+            "C24010_00[1-9]E",
+            "C24010_0[1-6][0-9]E",
+            "C24010_07[0-3]E",
+            "C24030_00[1-9]E",
+            "C24030_0[1-4][0-9]E",
+            "C24030_05[0-5]E"
+        ],
+        "tbl_name": "industry_occupation_characteristics_sample_agg"
+    },
+    "25A": {
+        "reg": [
+            "B2500[124679]_001E",
+            "B2500[38]_00[1-3]E",
+            "B2501[4579]_.*E",
+            "B25016_00[17]E",
+            "B25016_016E",
+            "B2502[024]_001E",
+            "B2503[368]_001E",
+            "B2503[24]_.*E",
+            "B2504[03567]_001E",
+            "B2504[1249]_.*E",
+            "B2505[04-79]_001E",
+            "B2505[13]_.*E",
+            "B2506[0-35-9]_001E",
+            "B2507[0245]_001E",
+            "B2508[125679]_001E",
+            "B2509[13]_001E"
+        ],
+        "tbl_name": "housing_sample_agg"
+    },
+    "25M": {
+        "reg": [
+            "B2501[08]_.*E",
+            "B25021_00[1-3]E",
+            "B2503[579]_.*E",
+            "B25058_001E",
+            "B25064_001E",
+            "B2507[1678]_001E",
+            "B2508[38]_.*E",
+            "B25092_.*E"
+        ],
+        "tbl_name": "housing_sample_med"
+    },
+    "27": {
+        "reg": "B27010_.*E",
+        "tbl_name": "health_insurance_sample_agg"
+    },
+    "99": {
+        "reg": [
+            "B9908[0-2]_.*E"
+        ],
+        "tbl_name": "imputations_sample_agg"}
+}
