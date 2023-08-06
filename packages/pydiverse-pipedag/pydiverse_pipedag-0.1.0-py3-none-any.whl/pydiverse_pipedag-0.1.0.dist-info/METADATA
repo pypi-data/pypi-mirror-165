@@ -1,0 +1,105 @@
+Metadata-Version: 2.1
+Name: pydiverse-pipedag
+Version: 0.1.0
+Summary: A pipeline orchestration layer built on top of prefect for caching and cache invalidation to SQL and blob store targets.
+License: BSD-3-Clause
+Author: QuantCo, Inc.
+Requires-Python: >=3.8,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: SQL
+Classifier: Topic :: Database
+Provides-Extra: docs
+Provides-Extra: filelock
+Provides-Extra: zookeeper
+Requires-Dist: SQLAlchemy (>=1.4.39,<2.0.0)
+Requires-Dist: Sphinx (>=5.1.1,<6.0.0); extra == "docs"
+Requires-Dist: attrs (>=22.1.0,<23.0.0)
+Requires-Dist: filelock (>=3.7.1,<4.0.0); extra == "filelock"
+Requires-Dist: kazoo (>=2.8.0,<3.0.0); extra == "zookeeper"
+Requires-Dist: msgpack (>=1.0.4,<2.0.0)
+Requires-Dist: networkx (>=2.8.5,<3.0.0)
+Requires-Dist: packaging (>=21.3,<22.0)
+Requires-Dist: pandas (>=1.4.3,<2.0.0)
+Requires-Dist: prefect (>=1.3,<3)
+Requires-Dist: pynng (>=0.7.1,<0.8.0)
+Requires-Dist: sphinx-rtd-theme (>=1.0.0,<2.0.0); extra == "docs"
+Requires-Dist: sphinxcontrib-apidoc (>=0.3.0,<0.4.0); extra == "docs"
+Requires-Dist: structlog (>=22.1.0,<23.0.0)
+Requires-Dist: tomli (>=2.0.1,<3.0.0)
+Requires-Dist: typing-extensions (>=4.1.0,<5)
+Description-Content-Type: text/markdown
+
+# pydiverse.pipedag
+
+[![CI](https://github.com/pydiverse/pydiverse.pipedag/actions/workflows/ci.yml/badge.svg)](https://github.com/pydiverse/pydiverse.pipedag/actions/workflows/ci.yml)
+
+A pipeline orchestration layer built on top of prefect for caching and cache invalidation to SQL and blob store targets.
+
+## Preparing installation
+
+To install the package locally in development mode, you first have to install
+[Poetry](https://python-poetry.org/docs/#installation).
+
+When installing poetry using conda(I know this sounds odd), it is recommended to install
+also compilers, so source packages can be built on `poetry install`. Since we use psycopg2,
+it also helps to install psycopg2 in conda to have pg_config available:
+
+```bash
+conda install -n poetry -c poetry conda-forge compilers cmake make psycopg2
+conda activate poetry  # only needed for poetry install
+```
+
+On OSX, a way to install pg_config (needed for source building psycopg2 by `poetry install`) is
+
+```bash
+brew install postgresql
+```
+
+## Installation
+
+> Currently, development on pipedag is not possible with Windows. The current setup of installing prefect and running
+> tests with docker (to spin up Postgres and Zookeeper) fail in poetry dependency resolution. It would be a nice
+> contribution to find drop-in replacements for both that run as simple python dependency without docker and moving
+> docker based tests to github actions (multi-DB target tests will be moved to cloud anyways).
+
+After that, install pydiverse pipedag like this:
+
+```bash
+git clone https://github.com/pydiverse/pydiverse.pipedag.git
+cd pydiverse.pipedag
+
+# Create the environment, activate it and install the pre-commit hooks
+poetry install
+poetry shell
+pre-commit install
+```
+
+## Pre-commit install with conda and python 3.8
+
+We currently have some pre-commit hooks bound to python=3.8. So pre-commit install may fail when running with
+python=3.10 python environment. However, the pre-commit environment does not need to be the same as the environment
+used for testing pipedag code. When using conda, you may try:
+
+```bash
+conda install -n python38 -c python=3.8 pre_commit
+conda activate python38
+pre-commit install
+```
+
+## Testing
+
+To facilitate easy testing, we provide a Docker Compose file to start all required servers.
+Just run `docker compose up` in the root directory of the project to start everything, and then run `pytest` in a new
+tab.
+
+You can inspect the contents of the PipeDAT Postgres database at `postgresql://postgres:pipedag@127.0.0.1/pipedag`.
+To reset the state of the docker containers you can run `docker compose down`.
+This might be necessary if the database cache gets corrupted.
+
