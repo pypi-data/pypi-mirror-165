@@ -1,0 +1,13 @@
+tofipa/__init__.py,sha256=z3_aMcv9TAKDy0ETnCetIo7hhHTBbmButujDp4Pv7Ks,452
+tofipa/_btclient.py,sha256=a_mBOQ9Y2j8-nKuzOrwvz7o2sLAya2l6VFViuWdUBOE,892
+tofipa/_cli.py,sha256=ZrvOqf3KEtanTt0LxuAajz-TePEvW2tQsKLNnp8NIxw,6953
+tofipa/_combinator.py,sha256=MiEbJUrZ7vGczX2dTxhiTnjwi3XkoQ2uQIKq7ThO2Rw,3364
+tofipa/_config.py,sha256=W4oaXEHzvf9uxV6hC6UQ9YlxOY6AegWcwfKvOHdUB5s,17492
+tofipa/_errors.py,sha256=2wExAVdhexs6X2GxD3XlTTmlwZMk2OEpfM6Uz6HCgII,462
+tofipa/_location.py,sha256=xjbhL2WhbhuEsN4Nb3CXx6XynxfvyZMWoGbhK_gireA,12525
+tofipa-0.3.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+tofipa-0.3.0.dist-info/METADATA,sha256=xbf4xgwTAj3J20cvJsB1Ht63L5eKFPfPrHF6NWDyk6c,8363
+tofipa-0.3.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+tofipa-0.3.0.dist-info/entry_points.txt,sha256=4j71_bf1J41_ELr6fcoN2sllZGykPHYivV-_N1eQtD0,38
+tofipa-0.3.0.dist-info/top_level.txt,sha256=aL53Hit8XfFH4wnEb9g1aAyLdvD9J4n7oqMgpIC3LXQ,7
+tofipa-0.3.0.dist-info/RECORD,,
