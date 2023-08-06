@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: django4-oss-storage
+Version: 1.0.0
+Summary: resolved the "force_text" issue in django4.0 version not supported by aliyun oss module
+Author: wj
+License: UNKNOWN
+Platform: UNKNOWN
+
+UNKNOWN
+

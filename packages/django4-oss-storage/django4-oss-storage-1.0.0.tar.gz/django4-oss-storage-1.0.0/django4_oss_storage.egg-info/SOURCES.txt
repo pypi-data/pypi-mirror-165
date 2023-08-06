@@ -1,0 +1,8 @@
+setup.py
+django4_oss_storage/__init__.py
+django4_oss_storage/backends.py
+django4_oss_storage/defaults.py
+django4_oss_storage.egg-info/PKG-INFO
+django4_oss_storage.egg-info/SOURCES.txt
+django4_oss_storage.egg-info/dependency_links.txt
+django4_oss_storage.egg-info/top_level.txt
