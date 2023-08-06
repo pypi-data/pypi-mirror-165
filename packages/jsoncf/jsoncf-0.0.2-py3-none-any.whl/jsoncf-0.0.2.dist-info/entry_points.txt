@@ -1,0 +1,3 @@
+[console_scripts]
+jsoncf=jsoncf.main:prettify
+
