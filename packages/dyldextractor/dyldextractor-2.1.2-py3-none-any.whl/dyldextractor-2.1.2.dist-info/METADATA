@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: dyldextractor
+Version: 2.1.2
+Summary: Extract Binaries from Apple's Dyld Shared Cache
+Home-page: https://github.com/arandomdev/dyldextractor
+Author: arandomdev
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: progressbar2
+Requires-Dist: capstone (==4.0.2)
+
+file: README.md
