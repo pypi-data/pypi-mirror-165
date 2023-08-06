@@ -1,0 +1,2 @@
+[console_scripts]
+re_cloud = re_cloud.command_line:main

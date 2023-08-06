@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: re-cloud
+Version: 0.0.1
+Summary: re_cloud - data quality framework
+Home-page: https://github.com/re-data/re-cloud
+Author: redata-team
+Author-email: mateusz@getre.io
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+
+# re-cloud
