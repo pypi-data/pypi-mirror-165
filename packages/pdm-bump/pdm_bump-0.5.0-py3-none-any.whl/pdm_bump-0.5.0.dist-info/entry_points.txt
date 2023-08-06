@@ -1,0 +1,3 @@
+[pdm]
+pdm-bump=pdm_bump:main
+
