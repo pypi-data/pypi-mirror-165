@@ -1,0 +1,2 @@
+[squirrel]
+squirrel_datasets_core = squirrel_datasets_core.squirrel_plugin
