@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: trtools
+Version: 4.2.0
+Summary: Toolkit for genome-wide analysis of STRs
+Home-page: http://github.com/gymreklab/TRTools
+Download-URL: http://github.com/gymreklab/TRTools
+Author: Melissa Gymrek
+Author-email: mgymrek@ucsd.edu
+Maintainer: Melissa Gymrek
+Maintainer-email: mgymrek@ucsd.edu
+License: MIT
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3.5
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Requires-Python: >=3.5
+License-File: LICENSE.txt
+Requires-Dist: cyvcf2
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: pybedtools
+Requires-Dist: pysam
+Requires-Dist: scikit-learn
+Requires-Dist: scipy
+
+Toolkit for genome-wide analysis of STRs

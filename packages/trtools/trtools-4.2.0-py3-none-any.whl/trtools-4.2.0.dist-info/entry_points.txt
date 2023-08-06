@@ -1,0 +1,6 @@
+[console_scripts]
+compareSTR = trtools.compareSTR:run
+dumpSTR = trtools.dumpSTR:run
+mergeSTR = trtools.mergeSTR:run
+qcSTR = trtools.qcSTR:run
+statSTR = trtools.statSTR:run
