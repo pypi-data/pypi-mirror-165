@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+./callableExpressionParser.py
+callableExpressionParser.egg-info/PKG-INFO
+callableExpressionParser.egg-info/SOURCES.txt
+callableExpressionParser.egg-info/dependency_links.txt
+callableExpressionParser.egg-info/requires.txt
+callableExpressionParser.egg-info/top_level.txt
