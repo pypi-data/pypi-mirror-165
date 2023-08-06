@@ -1,0 +1,9 @@
+LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+lol_manifest/__init__.py,sha256=AFefOOuY6pyq8j-DtccNEu1vzsNghATooiuRYOoDg8g,206
+lol_manifest/manifest.py,sha256=a_HGyPt_-zwadNs9V8bb0yovlc720Lflpc1kp-muDwk,15492
+lol_manifest/tools.py,sha256=JAYZN4u6lPNq2SpV67uzWcML1yYXcQpiKU4tM-aPWQ4,1510
+requirements.txt,sha256=FP9LQqAPoJD8Ev_E_7Q-hjT76Tlqwh7cF9Y8BcJkJnc,48
+lol_manifest_tool-0.0.1.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+lol_manifest_tool-0.0.1.dist-info/WHEEL,sha256=-4m9Bscf2nuKX3L1zitglyC3pXho-2m1eWiGZIeIPHQ,91
+lol_manifest_tool-0.0.1.dist-info/METADATA,sha256=2QGQdsvZbdyhQ8vhwejusbEVHzuoJQr3hYsBFRgnD08,1321
+lol_manifest_tool-0.0.1.dist-info/RECORD,,
