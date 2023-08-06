@@ -1,0 +1,17 @@
+CONTRIBUTORS.txt
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+gtmarket/__init__.py
+gtmarket/api.py
+gtmarket/core.py
+gtmarket/predictor.py
+gtmarket/version.py
+gtmarket.egg-info/PKG-INFO
+gtmarket.egg-info/SOURCES.txt
+gtmarket.egg-info/dependency_links.txt
+gtmarket.egg-info/not-zip-safe
+gtmarket.egg-info/requires.txt
+gtmarket.egg-info/top_level.txt
