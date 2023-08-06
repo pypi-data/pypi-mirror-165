@@ -1,0 +1,30 @@
+deploy:
+  provider: pypi
+  user: internaphosting
+  password:
+    secure: Pfbbk3NfTIWAxz44Zyti21+huQIBlaUXlMlCd6iDYWU+e2lqZwo5WSrBEnhwotBGorf4YyZzTRoUqs6P9x8Swp2AeV5pNprXvS9ff+0+ALQ+DtR2OBudXFC6c2AZEGVOCALvPEyl9mJURwtT7843SnnoN0ZcS0RmbPuNrigbvJQRx/5e7NqpE3fVPPJ1OHISVTTnCTAITbfU7UtdxUiuPaRUYALQ/Ffgk6SzN/FvQiCVwWws8gXMTPe02QvVYQDg7sRuel0nfu7AfuAPbDmRgmZwVi48t0+FNWfyRxjepd5yDEgG3m0GYGpvtG+c0ElglPSMmK+ewRPZXFM9AgepJK4HsdHebpZH1kwIwita37ZEis2hgU97bfVo2dwhF5KBdixiJpDxUu09oiSGzvAbGWZA4Qx/m9Tw/TDm5+bBp+qca4HhKgp7JiDS5CJumjDCfCzs5Yw0yTxmiHvJjaJttRycgcyiW/NeiytBUY69NZzzQceKUkrns1Dr9g/I0W4QPMeSQWWOsvxb80Wflzxwz0ozLemcWmuekR7dxOaR4gRQl/vwHsLg87GoXL3w34VfefPv48Xn/VuLfN7AYC2H9QNqlO6JRUxS/hH1hQGsMn9TpQhhqW8zi7cKfXG/sO83Ur024kI4tntm9V93hUrsN1+VAvX27SR4L4bpa6wwMrg=
+  on:
+    tags: true
+    repo: internap/netman
+
+matrix:
+  include:
+    - language: python
+      python: "2.7"
+      install:
+        - 'pip install tox'
+      script: tox -r
+    - env:
+        - DOCKER_COMPOSE_VERSION=1.10.0
+      install:
+        - sudo rm /usr/local/bin/docker-compose
+        - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
+        - chmod +rx docker-compose
+        - sudo mv docker-compose /usr/local/bin
+      script:
+        - docker build . -t internap/netman:latest
+        - docker-compose up -d
+        - docker inspect -f {{.State.Running}} netman_tsr1.yul1.example.net_1
+        - docker inspect -f {{.State.Running}} netman_netman_1
+        - while [[ $(docker inspect -f {{.State.Health.Status}} netman_netman_1) != "healthy" ]]; do echo "Container is" $(docker inspect -f {{.State.Health.Status}} netman_netman_1); sleep 1; done;
+        - "curl -X POST http://localhost:32771/switches/netman_tsr1.yul1.example.net_1/vlans -d '{\"number\": 1000, \"name\": \"myvlan\"}' -H 'Content-Type: application/json' -H 'Netman-model: cisco' -H 'Netman-username: root' -H 'Netman-password: root'"
