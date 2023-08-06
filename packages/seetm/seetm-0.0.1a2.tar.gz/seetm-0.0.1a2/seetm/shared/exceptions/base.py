@@ -1,0 +1,2 @@
+class SEETMException(Exception):
+    pass
