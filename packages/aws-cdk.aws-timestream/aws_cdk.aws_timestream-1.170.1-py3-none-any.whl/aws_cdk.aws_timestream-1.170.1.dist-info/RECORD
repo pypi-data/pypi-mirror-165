@@ -1,0 +1,10 @@
+aws_cdk/aws_timestream/__init__.py,sha256=YL6UKakqzPgorLwqHXEtVKN4_1NalhGV0T1XpA0ItHg,141492
+aws_cdk/aws_timestream/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+aws_cdk/aws_timestream/_jsii/__init__.py,sha256=EKjVSiFk2cZL7boQnqSFN0ap6csTLpF798MmXEKlwEs,402
+aws_cdk/aws_timestream/_jsii/aws-timestream@1.170.1.jsii.tgz,sha256=8gyZxXVWFv-YMNmo4Luv-tT-JNxBHOODN0z-aYDlHC0,71364
+aws_cdk.aws_timestream-1.170.1.dist-info/LICENSE,sha256=wX3LqRrxZ97zcDpw0dQ58Zb9AQalEDmXs6nP39muv7o,11391
+aws_cdk.aws_timestream-1.170.1.dist-info/METADATA,sha256=GZ1n-WCNzQ_PejbJmYR3BlqbVr9lKlgyOlVAFkaCJfk,3153
+aws_cdk.aws_timestream-1.170.1.dist-info/NOTICE,sha256=piksgoXop22-zO1J9i3rVrv57wUN9siPK1pqGzZ7-AE,113
+aws_cdk.aws_timestream-1.170.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+aws_cdk.aws_timestream-1.170.1.dist-info/top_level.txt,sha256=1TALAKbuUGsMSrfKWEf268lySCmcqSEO6cDYe_XlLHM,8
+aws_cdk.aws_timestream-1.170.1.dist-info/RECORD,,
