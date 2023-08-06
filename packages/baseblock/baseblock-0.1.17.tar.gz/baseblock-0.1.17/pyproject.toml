@@ -1,0 +1,20 @@
+[tool.poetry]
+authors = ["Craig Trim <craigtrim@gmail.com>"]
+description = "Base Block of Common Enterprise Python Utilities"
+name = "baseblock"
+version = "0.1.17"
+
+[tool.poetry.dependencies]
+PyYAML = "6.0"
+cryptography = "37.0.4"
+python = "3.8.5"
+unicodedata2 = "*"
+
+[tool.poetry.dev-dependencies]
+autopep8 = "*"
+plac = "*"
+pytest = "*"
+
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core>=1.0.0"]
