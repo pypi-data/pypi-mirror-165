@@ -1,0 +1,74 @@
+{
+    "name" : "harmonize",
+    "label": "ORI to GBD Format",
+
+    "dag": {
+        "nodes": {
+            "manifests" : "harmonize.Manifests",
+            "filter"    : "harmonize.Filter",
+            "transform" : "harmonize.Transform",
+            "resize"    : "harmonize.Resize",
+            "organize"  : "harmonize.Organize",
+            "split"     : "harmonize.Split",
+            "merge"     : "harmonize.Merge"
+        },
+        "edges": [
+            {
+                "from"     : "manifests",
+                "to"       : "filter",
+                "bindings" : { "filter.manifest" : "manifests.manifest_list" }
+            },
+            {
+                "from"     : "filter",
+                "to"       : "transform",
+                "bindings" : { "transform.data_files"  : "filter.data_files",
+                               "transform.extraction_dir" : "filter.extraction_dir" }
+            },
+            {
+                "from"     : "filter",
+                "to"       : "resize",
+                "bindings" : { "resize.img_files" : "filter.img_files",
+                               "resize.extraction_dir" : "filter.extraction_dir" }
+            },
+            {
+                "from"     : "filter",
+                "to"       : "organize",
+                "bindings" : { "organize.extraction_dir" : "filter.extraction_dir",
+                               "organize.gbd_extraction_date" : "filter.gbd_extraction_date" }
+            },
+            {
+                "from"     : "filter",
+                "to"       : "split",
+                "bindings" : { "split.extraction_dir" : "filter.extraction_dir",
+                               "split.gbd_extraction_date" : "filter.gbd_extraction_date" }
+            },
+            {
+                "from"     : "transform",
+                "to"       : "organize",
+                "bindings" : { "organize.data_files" : "transform.data_files" }
+            },
+            {
+                "from"     : "resize",
+                "to"       : "organize",
+                "bindings" : { "organize.img_files" : "resize.img_files" }
+            },
+            {
+                "from"     : "organize",
+                "to"       : "split",
+                "bindings" : { "split.data_files" : "organize.data_files",
+                               "split.img_files"  : "organize.img_files" }
+            },
+            {
+                "from"     : "split",
+                "to"       : "merge",
+                "bindings" : { "merge.consolidated_items" : "split.consolidated_items",
+                               "merge.padding"  : "split.padding" }
+            }
+        ]
+    },
+    "config" : {
+	    "steps": {
+        }
+    }
+}
+
