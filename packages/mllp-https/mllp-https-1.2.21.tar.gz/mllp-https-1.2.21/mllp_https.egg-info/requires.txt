@@ -1,0 +1,4 @@
+requests
+ssl
+certifi
+urllib3
