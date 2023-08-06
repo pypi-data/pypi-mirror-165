@@ -1,0 +1,11 @@
+asn1crypto
+asyauth>=0.0.1
+asysocks>=0.2.0
+colorama
+minikerberos>=0.3.0
+prompt-toolkit>=3.0.2
+six
+tqdm
+unicrypto>=0.0.8
+wcwidth
+winacl>=0.1.1
