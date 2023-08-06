@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: eqlog
+Version: 1.0.2
+Summary: 日志工具
+Home-page: https://github.com/enqiangjing/eqlog
+Author: enqiang
+Author-email: enqiangjing@163.com
+License: MIT License
+Keywords: eqlog,log,logging,logger
+Platform: any
+License-File: LICENSE
+
+日志工具：1.0.1修复文件读取bug
