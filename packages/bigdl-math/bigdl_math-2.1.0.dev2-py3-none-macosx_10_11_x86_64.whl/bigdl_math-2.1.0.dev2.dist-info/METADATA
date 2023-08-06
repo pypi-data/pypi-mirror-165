@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: bigdl-math
+Version: 2.1.0.dev2
+Summary: Math Dependency Library for bigdl-orca
+Home-page: https://github.com/intel-analytics/BigDL
+Author: BigDL Authors
+Author-email: bigdl-user-group@googlegroups.com
+License: Apache License, Version 2.0
+
