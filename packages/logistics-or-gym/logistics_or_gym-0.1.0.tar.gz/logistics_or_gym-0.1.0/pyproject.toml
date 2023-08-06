@@ -1,0 +1,34 @@
+[tool.poetry]
+name = "logistics_or_gym"
+version = "0.1.0"
+description = "or-problems formulated as gym environments to solve logisitcal-problems"
+authors = ["hadisdev <hadi.salameh@hotmail.com>"]
+
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/HublyGroup/logistics-or-gym"
+repository = "https://github.com/HublyGroup/logistics-or-gym"
+keywords = ["logistics-or-gym", "or", "gym", "logistics", "logistics-or", "or-gym"]
+classifiers = [
+    "Environment :: Console",
+    "Framework :: Flake8",
+    "Operating System :: OS Independent",
+    "Topic :: Data Science :: envs",
+    "Topic :: gym :: logistics",
+    "Topic :: Machine Learnning :: Reinforcement Learning",
+]
+include = [
+    "LICENSE",
+]
+
+[tool.poetry.dependencies]
+python = ">=3.8 <3.11"
+numpy = "~1.23.2"
+gym = "*"
+
+[tool.poetry.dev-dependencies]
+pytest = "^3.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
