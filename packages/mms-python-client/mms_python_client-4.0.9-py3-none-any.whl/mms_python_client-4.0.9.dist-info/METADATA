@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: mms-python-client
+Version: 4.0.9
+Summary: MMS Reference Implementation API
+Home-page: 
+Author: OpenMBEE
+Author-email: mms@openmbee.org
+License: Apache 2.0
+Keywords: OpenAPI,OpenAPI-Generator,MMS Reference Implementation API
+Requires-Python: >=3.6
+Requires-Dist: urllib3 (>=1.25.3)
+Requires-Dist: python-dateutil
+
+    Documentation for MMS API  # noqa: E501
+    
