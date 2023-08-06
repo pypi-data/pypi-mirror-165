@@ -1,0 +1,14 @@
+setuptools>=41.0.0
+cython
+contextlib2
+pillow
+lxml
+pycocotools-fix
+jupyter
+matplotlib
+
+[tf]
+tensorflow<2.0
+
+[tf-gpu]
+tensorflow-gpu<2.0
