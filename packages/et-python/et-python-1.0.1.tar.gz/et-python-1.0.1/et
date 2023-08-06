@@ -1,0 +1,42 @@
+#!/usr/bin/env python3
+
+import sys
+
+
+def print_table(table):
+    widths = [max((len(l[i]) for l in table)) for i in range(len(table[0]))]
+    print("╭", *("─" * (w + 2) + "┬" for w in widths[:-1]), "─" * (widths[-1] + 2), "╮", sep="")
+    for line in table:
+        for i, (part, w) in enumerate(zip(line, widths)):
+            print("│"[bool(i) :], " ", part.ljust(w), " │", sep="", end="")
+        print()
+    print("╰", *("─" * (w + 2) + "┴" for w in widths[:-1]), "─" * (widths[-1] + 2), "╯", sep="")
+
+
+table = []
+for line in sys.stdin:
+    line = line.rstrip("\r\n")
+    tc = line.count("\t")
+    if table:
+        if tc == 0:
+            print_table(table)
+            table.clear()
+            print(line)
+
+        elif tc != len(table[-1]) - 1:
+            print_table(table)
+            table.clear()
+            table.append(line.split("\t"))
+
+        else:
+            table.append(line.split("\t"))
+
+    else:
+        if tc == 0:
+            print(line)
+
+        else:
+            table.append(line.split("\t"))
+
+if table:
+    print_table(table)
