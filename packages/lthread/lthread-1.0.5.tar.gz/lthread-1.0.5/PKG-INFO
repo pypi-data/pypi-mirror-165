@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: lthread
+Version: 1.0.5
+Summary: (OBSOLETE) lightweight threads in Python using extended generators
+Author: Katie Rust
+Author-email: katie@ktpanda.org
+License: MIT License
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+
+lthread
+=======
+
+NOTE: `lthread` is basically obsoltete. Everything that it can do can be done much more easily with Python 3.7's `asyncio`.

@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+lthread/__init__.py
+lthread/core.py
+lthread/glib.py
+lthread/io.py
+lthread/subprocess.py
+lthread.egg-info/PKG-INFO
+lthread.egg-info/SOURCES.txt
+lthread.egg-info/dependency_links.txt
+lthread.egg-info/top_level.txt
+test/test_child_write.py
