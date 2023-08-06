@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+navio/__init__.py
+navio/auth.py
+navio/base.py
+navio/baseExceptions.py
+navio.py.egg-info/PKG-INFO
+navio.py.egg-info/SOURCES.txt
+navio.py.egg-info/dependency_links.txt
+navio.py.egg-info/requires.txt
+navio.py.egg-info/top_level.txt
