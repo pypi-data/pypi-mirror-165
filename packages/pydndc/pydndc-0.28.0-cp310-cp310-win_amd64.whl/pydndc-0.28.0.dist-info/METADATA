@@ -1,0 +1,1056 @@
+Metadata-Version: 2.1
+Name: pydndc
+Version: 0.28.0
+Summary: dndc, but from python
+Author: David Priver
+Author-email: david@davidpriver.com
+License: Proprietary
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.6, <4
+Description-Content-Type: text/markdown
+
+<!-- This md file was generated from a dnd file. -->
+<div>
+<div>
+<h1>DND --- David's Novel Documents</h1>
+<h2>A Better Way to Write</h2>
+.dnd files are a convenient way to write documents, create dungeons, record
+notes, and other things that you would like to write prose or free-form text,
+but with a little more structure. .dnd files offer unrivaled ability to
+introspect the document for a document format.
+
+
+At its heart, .dnd is a tree-based language. Blocks are actually composable and
+can have different parse rules, which is useful for embedding other languages
+within a document. Normally, a block is designated by indentation and ends when
+either the document ends or a block with less indentation is introduced. A new
+block is normally introduced by a block containing two colons. For example:
+
+<pre>
+Hello World!::md
+  This is some wonderful text!
+</pre>
+
+
+In the above example, a block is introduced on the first line. The text to the
+left of the double colon is the "header" of the block. For documents, this is
+used as text for a heading. It is optional. The text to the right of the double
+colon is the block's type, in this case "md". The type must be one recognized
+by the compiling program and changes the parsing rules for the subsequent
+block.
+
+
+On the next line, we indent as the string is a child of the md block. One of
+the rules for md blocks is that consecutive lines of text will be combined
+together into paragraph nodes. A blank line indicates the end of a paragraph.
+Md blocks can also embed other blocks, which are introduced in the usual
+manner by double colons.
+
+
+The above snippet will be translated into the following:
+
+<pre>
+<div>
+<h2 id="hello-world">Hello World!</h2>
+<p>
+This is some wonderful text!
+</p>
+</div>
+</pre>
+
+
+
+Which looks like:
+
+<div>
+<div>
+<h2 id="hello-world">Hello World!</h2>
+<p>
+This is some wonderful text!
+</p>
+</div>
+
+</div>
+
+
+The exact level of the heading will depend on where the block is in the final
+document tree. Parent blocks with headings will increase the level of child
+headings. Blocks at root scope with headings will be h2s.
+
+
+<h2>Convenience</h2>
+The most convenient type of block to write in is the "md" block. It is not a
+markdown block, but it is similar in some ways. Notably missing are markdown
+style headers. We offer the 'h' block instead, or just nest another md block.
+
+
+For example:
+
+<pre>
+I am so smart::md
+  It is really amazing how smart I am. Behold my intelligence:
+
+  1. My IQ is over 9000.
+  2. I am really good looking.
+    * This is an important point.
+    * Wait, what does that have to do with intelligence?
+
+  This is an internal heading::h
+  Yeah, what about it?
+
+  An internal block::md
+    This is what I usually use instead as it mirrors how I think about
+    the topic (subtopic is a subtree).
+
+</pre>
+
+
+Turns into this:
+
+
+<div>
+<div>
+  <h2 id="i-am-so-smart">I am so smart</h2>
+  <p>
+    It is really amazing how smart I am. Behold my intelligence:
+  </p>
+  <ol>
+    <li>
+      My IQ is over 9000.
+    </li>
+    <li>
+      I am really good looking.
+      <ul>
+        <li>
+          This is an important point.
+        </li>
+        <li>
+          Wait, what does that have to do with intelligence?
+        </li>
+      </ul>
+    </li>
+  </ol>
+  <h2 id="this-is-an-internal-heading">This is an internal heading</h2>
+  <p>
+    Yeah, what about it?
+  </p>
+  <div>
+    <h3 id="an-internal-block">An internal block</h3>
+    <p>
+      This is what I usually use instead as it mirrors how I think about
+      the topic (subtopic is a subtree).
+    </p>
+  </div>
+</div>
+
+
+</div>
+
+
+Additionally we support tables. For example:
+
+<pre>
+::comment
+  This is a comment by the way! It is not in the rendered html.
+
+  The first row of the table is taken to be the headings for the table.
+  There is no requirement to have the same number of cells in each row,
+  but user beware, it gets wonky.
+The Nodes::table
+  Node Type    | Block Name   | Heading
+  MD           | md           | Yes
+  DIV          | div          | Yes
+  STRING       | ---          | ---
+  PARA         | ---          | ---
+  TITLE        | title        | Yes
+  HEADING      | h            | Yes
+  TABLE        | table        | Yes
+  TABLE_ROW    | ---          | ---
+  STYLESHEETS  | css          | ---
+  LINKS        | links        | ---
+  SCRIPTS      | script       | ---
+  IMPORT       | import       | ---
+  IMAGE        | img          | Yes
+  BULLETS      | ---          | Yes
+  RAW          | raw          | No
+  PRE          | pre          | Yes
+  LIST         | ---          | Yes
+  LIST_ITEM    | ---          | No
+  KEYVALUE     | kv           | Yes
+  KEYVALUEPAIR | ---          | No
+  IMGLINKS     | imglinks     | Yes
+  TOC          | toc          | Yes
+  COMMENT      | comment      | ---
+  CONTAINER    | ---          | No
+  QUOTE        | quote        | Yes
+  JS           | js           | No
+  DETAILS      | details      | Yes
+  INVALID      | ---          | ---
+
+::md
+  * Node Type is the type of the node.
+  * Block name is how it is introduced via the double colon syntax
+    (an empty entry indicates the node can only be created via scripts
+    or implicitly as part of another node).
+  * Heading is whether or not the header is turned into a heading.
+  * The INVALID node will cause an error if encountered during rendering.
+    It can be used as a poison node when debugging.
+  For more detailed information, see the [reference](REFERENCE.html).
+  ::links
+    reference = REFERENCE.html
+</pre>
+
+
+And here is that table
+
+
+
+<h3>The Nodes</h3><table>
+<thead>
+<tr>
+<th>Node Type</th>
+<th>Block Name</th>
+<th>Heading</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MD</td>
+<td>md</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>DIV</td>
+<td>div</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>STRING</td>
+<td>---</td>
+<td>---</td>
+</tr>
+<tr>
+<td>PARA</td>
+<td>---</td>
+<td>---</td>
+</tr>
+<tr>
+<td>TITLE</td>
+<td>title</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>HEADING</td>
+<td>h</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>TABLE</td>
+<td>table</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>TABLE_ROW</td>
+<td>---</td>
+<td>---</td>
+</tr>
+<tr>
+<td>STYLESHEETS</td>
+<td>css</td>
+<td>---</td>
+</tr>
+<tr>
+<td>LINKS</td>
+<td>links</td>
+<td>---</td>
+</tr>
+<tr>
+<td>SCRIPTS</td>
+<td>script</td>
+<td>---</td>
+</tr>
+<tr>
+<td>IMPORT</td>
+<td>import</td>
+<td>---</td>
+</tr>
+<tr>
+<td>IMAGE</td>
+<td>img</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>BULLETS</td>
+<td>---</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>RAW</td>
+<td>raw</td>
+<td>No</td>
+</tr>
+<tr>
+<td>PRE</td>
+<td>pre</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>LIST</td>
+<td>---</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>LIST_ITEM</td>
+<td>---</td>
+<td>No</td>
+</tr>
+<tr>
+<td>KEYVALUE</td>
+<td>kv</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>KEYVALUEPAIR</td>
+<td>---</td>
+<td>No</td>
+</tr>
+<tr>
+<td>IMGLINKS</td>
+<td>imglinks</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>TOC</td>
+<td>toc</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>COMMENT</td>
+<td>comment</td>
+<td>---</td>
+</tr>
+<tr>
+<td>CONTAINER</td>
+<td>---</td>
+<td>No</td>
+</tr>
+<tr>
+<td>QUOTE</td>
+<td>quote</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>JS</td>
+<td>js</td>
+<td>No</td>
+</tr>
+<tr>
+<td>DETAILS</td>
+<td>details</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>INVALID</td>
+<td>---</td>
+<td>---</td>
+</tr>
+</tbody>
+</table>
+
+* Node Type is the type of the node.
+* Block name is how it is introduced via the double colon syntax
+    (an empty entry indicates the node can only be created via scripts
+    or implicitly as part of another node).
+* Heading is whether or not the header is turned into a heading.
+* The INVALID node will cause an error if encountered during rendering.
+    It can be used as a poison node when debugging.
+
+
+For more detailed information, see the [reference](REFERENCE.html).
+
+
+
+
+<h2>Self-Contained</h2>
+.dnd documents can include css and js files. They will be placed into the head
+of the document so that the html page is completely self-contained. However,
+you don't have to write them inline here in one document. You can include them
+in the document by the appropriate block.
+
+
+Example:
+
+<pre>
+::comment
+  You haven't seen this before. The '#' symbol to the right of the double
+  colon indicates a directive. Only certain directives are allowed.
+  For example, this #import directive tells the system to not interpret the
+  contents as raw strings to be included in a <script> tag, but instead as
+  file paths to load.
+
+  css blocks also support #import with the same meaning, but for <style>.
+::css #import
+  cssfile1.css
+  another/css/file.css
+  and/another.css
+::script #import
+  somejsfile.js
+  another/jsfile.js
+::css
+  * {
+    box-sizing: border-box;
+  }
+</pre>
+
+
+Images can also be included. They are base64-encoded and stored as a data
+string in the html page. You can use the `#noinline` directive
+to disable this behavior.
+
+
+<h2>Attributes, Classes and Directives</h2>
+Blocks can have classes, which directly correspond to css classes in the output
+html.
+
+
+Example:
+
+<pre>
+Hola::div .foo .bar
+  hello, aloha
+</pre>
+
+
+In this example the Hola div will have `foo` and `bar`
+as css classes.
+
+
+Blocks can also have attributes, which are user defined tags. They only have whatever
+meaning you give to them.
+
+
+Example:
+
+<pre>
+A room::md @coord(1,2)
+  some stuff is in the room
+Another room::md @coord(4, 6)
+  A goblin is in this room.
+
+</pre>
+
+
+A block can have any number of attributes. Attributes are identifiers and can
+have arguments in parens. The contents of the parens are stored as a string.
+
+
+Javascript blocks can retrieve the attributes of a node via the .attributes
+field. It presents a map-like interface to the attributes. You can also set an
+attribute without a value, which will give it an empty string as its value.
+Many things only check for the presence of the key and ignore the value.
+
+<h3>Directives</h3>
+Blocks can also have directives, which are prefixed by the '#'.
+
+
+Example:
+
+<pre>
+Don't look::div #hide
+  Don't put me in the document!
+Duplicate Heading::h #id(my-id)
+Duplicate Heading::h #id(my-id-2)
+
+Don't ID me bro::md #noid
+  IDs are for squares!
+</pre>
+
+
+The following directives are currently used.
+
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>`#noid`</td>
+<td>Don't give the heading an id</td>
+</tr>
+<tr>
+<td>`#id(iden)`</td>
+<td>Instead of the automatic id, use `iden`
+as the id for the heading
+</td>
+</tr>
+<tr>
+<td>`#hide`</td>
+<td>Don't output the block in the rendered output.</td>
+</tr>
+<tr>
+<td>`#noinline`</td>
+<td>Produce a link (href) instead of embedding.</td>
+</tr>
+<tr>
+<td>`#import`</td>
+<td>Treat the lines inside the block as paths to be
+imported and import them as children of this node.
+</td>
+</tr>
+</tbody>
+</table>
+
+
+Directives may be expanded in future versions.
+
+
+
+<h2>But Wait, There's More</h2>
+The structured document format is convenient to write in, but sometimes you
+need to manipulate the document programmatically. Javascript blocks are your
+friend.
+
+
+For Example:
+
+<pre>
+::js
+  `
+  js blocks have 3 special variables in them.
+    node: this node (the js block)
+    ctx: this variable represents the state of compiling.
+          It offers methods such as \`make_node\` to create new nodes
+          that can be inserted into the document.
+    NodeType: This is actually a do-nothing object, that is used to
+              namespace the types of the nodes. This is useful because
+              you need to choose a type if you make a new node.
+              You can also check the \`type\` attribute on nodes.
+  `
+  for(let child of node.parent.children){
+    if(child.type == NodeType.PARA){
+      for(let line of child.children){
+        if(line.header.includes('example'))
+          line.header = 'For Example:';
+      }
+    }
+    if(child.type == NodeType.PRE){
+      child.add_child('::js');
+      for(let line of node.children){
+        child.add_child('  '+line.header);
+      }
+      break;
+    }
+  }
+  // If you're paying attention, you'll realize this js block added itself
+  // to the document.
+  
+</pre>
+
+
+Javascript blocks are isolated.
+
+
+You can print things in javascript blocks, using `console.log`. I
+used it several times while writing this!
+
+<pre>
+::js
+  `
+  This block will print out every node in the document.
+  The system can do this as well more efficiently, but this is just
+  showing off that io works as expected.
+  `
+  function walk(n, depth){
+    if(depth > 10){
+      return;
+    }
+    console.log('--'.repeat(depth), n);
+    for(let child of n.children){
+      walk(child, depth+1);
+    }
+  }
+  walk(ctx.root, 0);
+
+</pre>
+
+
+Here is a fun demo. We will now embed the entire document via javascript. This
+is all done at compile time. You can even see the javascript block that was
+used to embed the text.
+
+
+
+
+<details><summary>This Document</summary>
+<pre>
+DND --- David's Novel Documents::title
+A Better Way to Write::md
+  .dnd files are a convenient way to write documents, create dungeons, record
+  notes, and other things that you would like to write prose or free-form text,
+  but with a little more structure. .dnd files offer unrivaled ability to
+  introspect the document for a document format.
+
+  At its heart, .dnd is a tree-based language. Blocks are actually composable and
+  can have different parse rules, which is useful for embedding other languages
+  within a document. Normally, a block is designated by indentation and ends when
+  either the document ends or a block with less indentation is introduced. A new
+  block is normally introduced by a block containing two colons. For example:
+
+  ::pre .embedded
+    Hello World!::md
+      This is some wonderful text!
+  In the above example, a block is introduced on the first line. The text to the
+  left of the double colon is the "header" of the block. For documents, this is
+  used as text for a heading. It is optional. The text to the right of the double
+  colon is the block's type, in this case "md". The type must be one recognized
+  by the compiling program and changes the parsing rules for the subsequent
+  block.
+
+  On the next line, we indent as the string is a child of the md block. One of
+  the rules for md blocks is that consecutive lines of text will be combined
+  together into paragraph nodes. A blank line indicates the end of a paragraph.
+  Md blocks can also embed other blocks, which are introduced in the usual
+  manner by double colons.
+
+  The above snippet will be translated into the following:
+
+  ::pre .embedded
+    <div>
+    <h2 id="hello-world">Hello World!</h2>
+    <p>
+    This is some wonderful text!
+    </p>
+    </div>
+  ::comment
+    Comments look like this. You would only notice this if you were reading
+    this from the source demo down below.
+
+    The raw block fixes the indentation, but otherwises pastes the strings as
+    is into the resulting document. This is an escape hatch and allows you to
+    do arbitrary things that don't deserve special syntax. For example, if you
+    want to embed an input form then you are no longer writing prose, so it is fine
+    if you just write some raw html.
+
+    Most nodes that contain other nodes will either have a <div> tag or will
+    have the appropriate tag for that kind of node (for example, a pre node
+    will have a <pre> tag.) The raw node is one of the exceptions to this.
+  Which looks like:
+
+  ::div .embedded
+    ::raw
+      <div>
+      <h2 id="hello-world">Hello World!</h2>
+      <p>
+      This is some wonderful text!
+      </p>
+      </div>
+  The exact level of the heading will depend on where the block is in the final
+  document tree. Parent blocks with headings will increase the level of child
+  headings. Blocks at root scope with headings will be h2s.
+
+Convenience::md
+  The most convenient type of block to write in is the "md" block. It is not a
+  markdown block, but it is similar in some ways. Notably missing are markdown
+  style headers. We offer the 'h' block instead, or just nest another md block.
+
+  For example:
+
+  ::pre .embedded
+    I am so smart::md
+      It is really amazing how smart I am. Behold my intelligence:
+
+      1. My IQ is over 9000.
+      2. I am really good looking.
+        * This is an important point.
+        * Wait, what does that have to do with intelligence?
+
+      This is an internal heading::h
+      Yeah, what about it?
+
+      An internal block::md
+        This is what I usually use instead as it mirrors how I think about
+        the topic (subtopic is a subtree).
+
+  Turns into this:
+
+  ::comment
+    Formatted a bit for legibility, we avoid indenting to save on whitespace
+    normally.
+  ::div .embedded
+    ::raw
+      <div>
+        <h2 id="i-am-so-smart">I am so smart</h2>
+        <p>
+          It is really amazing how smart I am. Behold my intelligence:
+        </p>
+        <ol>
+          <li>
+            My IQ is over 9000.
+          </li>
+          <li>
+            I am really good looking.
+            <ul>
+              <li>
+                This is an important point.
+              </li>
+              <li>
+                Wait, what does that have to do with intelligence?
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <h2 id="this-is-an-internal-heading">This is an internal heading</h2>
+        <p>
+          Yeah, what about it?
+        </p>
+        <div>
+          <h3 id="an-internal-block">An internal block</h3>
+          <p>
+            This is what I usually use instead as it mirrors how I think about
+            the topic (subtopic is a subtree).
+          </p>
+        </div>
+      </div>
+
+  Additionally we support tables. For example:
+
+  ::js
+    // I got lazy and didn't want to write it twice, so I just did this as
+    // a script.
+
+    let text=`
+    ::comment
+      This is a comment by the way! It is not in the rendered html.
+
+      The first row of the table is taken to be the headings for the table.
+      There is no requirement to have the same number of cells in each row,
+      but user beware, it gets wonky.
+    The Nodes::table
+      Node Type    | Block Name   | Heading
+      MD           | md           | Yes
+      DIV          | div          | Yes
+      STRING       | ---          | ---
+      PARA         | ---          | ---
+      TITLE        | title        | Yes
+      HEADING      | h            | Yes
+      TABLE        | table        | Yes
+      TABLE_ROW    | ---          | ---
+      STYLESHEETS  | css          | ---
+      LINKS        | links        | ---
+      SCRIPTS      | script       | ---
+      IMPORT       | import       | ---
+      IMAGE        | img          | Yes
+      BULLETS      | ---          | Yes
+      RAW          | raw          | No
+      PRE          | pre          | Yes
+      LIST         | ---          | Yes
+      LIST_ITEM    | ---          | No
+      KEYVALUE     | kv           | Yes
+      KEYVALUEPAIR | ---          | No
+      IMGLINKS     | imglinks     | Yes
+      TOC          | toc          | Yes
+      COMMENT      | comment      | ---
+      CONTAINER    | ---          | No
+      QUOTE        | quote        | Yes
+      JS           | js           | No
+      DETAILS      | details      | Yes
+      INVALID      | ---          | ---
+
+    ::md
+      * Node Type is the type of the node.
+      * Block name is how it is introduced via the double colon syntax
+        (an empty entry indicates the node can only be created via scripts
+        or implicitly as part of another node).
+      * Heading is whether or not the header is turned into a heading.
+      * The INVALID node will cause an error if encountered during rendering.
+        It can be used as a poison node when debugging.
+      For more detailed information, see the [reference](REFERENCE.html).
+      ::links
+        reference = REFERENCE.html
+    `
+    let prenode = ctx.make_node(NodeType.PRE, {classes:['embedded'](embedded)});
+    for(let line of text.trim().split('\n'))
+      prenode.add_child(line.trimRight());
+    node.parent.add_child(prenode)
+    // parse is convenient, it appends the nodes by
+    // parsing the string as if it were a document.
+    node.parent.parse('::md\n  And here is that table')
+    node.parent.parse(text)
+
+Self-Contained::md
+  .dnd documents can include css and js files. They will be placed into the head
+  of the document so that the html page is completely self-contained. However,
+  you don't have to write them inline here in one document. You can include them
+  in the document by the appropriate block.
+
+  Example:
+
+  ::pre .embedded
+    ::comment
+      You haven't seen this before. The '#' symbol to the right of the double
+      colon indicates a directive. Only certain directives are allowed.
+      For example, this #import directive tells the system to not interpret the
+      contents as raw strings to be included in a <script> tag, but instead as
+      file paths to load.
+
+      css blocks also support #import with the same meaning, but for <style>.
+    ::css #import
+      cssfile1.css
+      another/css/file.css
+      and/another.css
+    ::script #import
+      somejsfile.js
+      another/jsfile.js
+    ::css
+      * {
+        box-sizing: border-box;
+      }
+  Images can also be included. They are base64-encoded and stored as a data
+  string in the html page. You can use the `#noinline` directive
+  to disable this behavior.
+
+Attributes, Classes and Directives::md
+  Blocks can have classes, which directly correspond to css classes in the output
+  html.
+
+  Example:
+
+  ::pre .embedded
+    Hola::div .foo .bar
+      hello, aloha
+  In this example the Hola div will have `foo` and `bar`
+  as css classes.
+
+  Blocks can also have attributes, which are user defined tags. They only have whatever
+  meaning you give to them.
+
+  Example:
+
+  ::pre .embedded
+    A room::md @coord(1,2)
+      some stuff is in the room
+    Another room::md @coord(4, 6)
+      A goblin is in this room.
+
+  A block can have any number of attributes. Attributes are identifiers and can
+  have arguments in parens. The contents of the parens are stored as a string.
+
+  Javascript blocks can retrieve the attributes of a node via the .attributes
+  field. It presents a map-like interface to the attributes. You can also set an
+  attribute without a value, which will give it an empty string as its value.
+  Many things only check for the presence of the key and ignore the value.
+
+
+  Directives::md
+    Blocks can also have directives, which are prefixed by the '#'.
+
+    Example:
+
+    ::pre .embedded
+      Don't look::div #hide
+        Don't put me in the document!
+      Duplicate Heading::h #id(my-id)
+      Duplicate Heading::h #id(my-id-2)
+
+      Don't ID me bro::md #noid
+        IDs are for squares!
+    The following directives are currently used.
+
+    ::table
+      Attribute              | Meaning
+      `#noid`     | Don't give the heading an id
+      `#id(iden)` | Instead of the automatic id, use `iden`
+                               as the id for the heading
+      `#hide`     | Don't output the block in the rendered output.
+      `#noinline` | Produce a link (href) instead of embedding.
+      `#import`   | Treat the lines inside the block as paths to be
+                               imported and import them as children of this node.
+    Directives may be expanded in future versions.
+
+But Wait, There's More::md
+  The structured document format is convenient to write in, but sometimes you
+  need to manipulate the document programmatically. Javascript blocks are your
+  friend.
+
+  example:
+
+  ::pre .embedded
+  ::js
+    `
+    js blocks have 3 special variables in them.
+      node: this node (the js block)
+      ctx: this variable represents the state of compiling.
+            It offers methods such as \`make_node\` to create new nodes
+            that can be inserted into the document.
+      NodeType: This is actually a do-nothing object, that is used to
+                namespace the types of the nodes. This is useful because
+                you need to choose a type if you make a new node.
+                You can also check the \`type\` attribute on nodes.
+    `
+    for(let child of node.parent.children){
+      if(child.type == NodeType.PARA){
+        for(let line of child.children){
+          if(line.header.includes('example'))
+            line.header = 'For Example:';
+        }
+      }
+      if(child.type == NodeType.PRE){
+        child.add_child('::js');
+        for(let line of node.children){
+          child.add_child('  '+line.header);
+        }
+        break;
+      }
+    }
+    // If you're paying attention, you'll realize this js block added itself
+    // to the document.
+
+  Javascript blocks are isolated.
+
+  You can print things in javascript blocks, using `console.log`. I
+  used it several times while writing this!
+
+  ::pre .embedded
+    ::js
+      `
+      This block will print out every node in the document.
+      The system can do this as well more efficiently, but this is just
+      showing off that io works as expected.
+      `
+      function walk(n, depth){
+        if(depth > 10){
+          return;
+        }
+        console.log('--'.repeat(depth), n);
+        for(let child of n.children){
+          walk(child, depth+1);
+        }
+      }
+      walk(ctx.root, 0);
+
+  Here is a fun demo. We will now embed the entire document via javascript. This
+  is all done at compile time. You can even see the javascript block that was
+  used to embed the text.
+
+  ::js
+    let details = ctx.make_node(NodeType.DETAILS, {header:'This Document'});
+    let prenode = ctx.make_node(NodeType.PRE,
+        {classes:['embedded'](embedded)});
+    // `add_child` can accept two kinds of arguments: nodes and strings
+    // strings are converted to STRING nodes.
+    for(let line of FileSystem.load_file(ctx.sourcepath).split('\n'))
+      prenode.add_child(line);
+    details.add_child(prenode);
+    details.id = 'this-document';
+    ctx.root.add_child(details);
+
+::comment
+  Normally I would put the css in its own file, but this README
+  itself needs to be self-contained.
+::css
+  .embedded {
+    border: 1px solid black;
+    max-width: 44em;
+    width: auto;
+    padding: 0 1em;
+  }
+  div.container {
+    max-width: 44em;
+    grid-column: 2;
+    grid-row:1;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+    border-bottom: 1px grey dotted;
+  }
+  div.root {
+    display: grid;
+    grid-template-columns: 15em auto;
+    grid-column-gap: 4em;
+    padding-bottom: 90vh;
+  }
+  nav a {
+    border-bottom: 0;
+    color: initial;
+    text-decoration: none;
+  }
+  nav li {
+    list-style-type: square;
+  }
+  nav {
+    position: fixed;
+  }
+  th, td {
+    padding: 4px 8px;
+    border: 1px solid grey;
+    text-align: left;
+  }
+  th {
+    border-bottom: 2px solid black;
+  }
+  table {
+    border-collapse: collapse;
+    margin:auto;
+  }
+  body {
+    font-family: "Helvetica", "Verdana", "Tahoma", sans;
+  }
+  code, pre {
+    font-family: "SF Mono", ui-mono, "Cascadia Mono", Consolas, monospace;
+  }
+  pre {
+    font-size: 12px;
+  }
+
+  @media only screen and (max-width: 720px) {
+    nav {
+      display: none;
+    }
+    div.root {
+      display: initial;
+    }
+  }
+  code {
+    background-color: #f3f3f3;
+    padding: 1px;
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+
+::js
+  // this shows more raw manipulation of the tree.
+  // we actually temporarily detach the root node from the context
+  let root = ctx.root;
+  root.type = NodeType.DIV;
+  root.classes.add('container');
+  let new_root = ctx.make_node(NodeType.DIV, {classes:['root'](root)});
+  root.detach();
+  new_root.add_child(root);
+  // TOC blocks are kind of special. As one of the last things, the system
+  // will walk the document tree and create a toc of all the h2s and h3s.
+  new_root.add_child(ctx.make_node(NodeType.TOC));
+  ctx.root = new_root;
+
+</pre>
+
+</details>
+
+</div>
+
+
+</div>
