@@ -1,0 +1,141 @@
+Metadata-Version: 2.1
+Name: craft-providers
+Version: 1.4.1
+Summary: Craft provider tooling
+Home-page: https://github.com/canonical/craft-providers
+Author: Canonical Ltd.
+Author-email: snapcraft@lists.snapcraft.io
+License: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pydantic
+Requires-Dist: pyyaml
+Requires-Dist: requests-unixsocket
+Provides-Extra: dev
+Requires-Dist: autoflake ; extra == 'dev'
+Requires-Dist: twine ; extra == 'dev'
+Requires-Dist: coverage ; extra == 'dev'
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: codespell ; extra == 'dev'
+Requires-Dist: flake8 ; extra == 'dev'
+Requires-Dist: isort ; extra == 'dev'
+Requires-Dist: mypy ; extra == 'dev'
+Requires-Dist: logassert ; extra == 'dev'
+Requires-Dist: pydocstyle ; extra == 'dev'
+Requires-Dist: pylint ; extra == 'dev'
+Requires-Dist: pylint-fixme-info ; extra == 'dev'
+Requires-Dist: pylint-pytest ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: pytest-mock ; extra == 'dev'
+Requires-Dist: pytest-subprocess ; extra == 'dev'
+Requires-Dist: responses ; extra == 'dev'
+Requires-Dist: types-requests ; extra == 'dev'
+Requires-Dist: types-setuptools ; extra == 'dev'
+Requires-Dist: types-pyyaml ; extra == 'dev'
+Provides-Extra: doc
+Requires-Dist: sphinx ; extra == 'doc'
+Requires-Dist: sphinx-autodoc-typehints ; extra == 'doc'
+Requires-Dist: sphinx-pydantic ; extra == 'doc'
+Requires-Dist: sphinx-rtd-theme ; extra == 'doc'
+Provides-Extra: test
+Requires-Dist: coverage ; extra == 'test'
+Requires-Dist: black ; extra == 'test'
+Requires-Dist: codespell ; extra == 'test'
+Requires-Dist: flake8 ; extra == 'test'
+Requires-Dist: isort ; extra == 'test'
+Requires-Dist: mypy ; extra == 'test'
+Requires-Dist: logassert ; extra == 'test'
+Requires-Dist: pydocstyle ; extra == 'test'
+Requires-Dist: pylint ; extra == 'test'
+Requires-Dist: pylint-fixme-info ; extra == 'test'
+Requires-Dist: pylint-pytest ; extra == 'test'
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: pytest-mock ; extra == 'test'
+Requires-Dist: pytest-subprocess ; extra == 'test'
+Requires-Dist: responses ; extra == 'test'
+Requires-Dist: types-requests ; extra == 'test'
+Requires-Dist: types-setuptools ; extra == 'test'
+Requires-Dist: types-pyyaml ; extra == 'test'
+
+# Craft Providers
+
+This project aims to provide Python interfaces for instantiating and executing
+builds for a variety of target environments.
+
+Initial providers include:
+- LXD containers
+- Multipass VMs
+
+Host support is targeted for:
+- Linux
+- Mac OS X
+- Windows
+
+
+# License
+
+Free software: GNU Lesser General Public License v3
+
+
+# Documentation
+
+https://craft-providers.readthedocs.io.
+
+
+# Contributing
+
+A `Makefile` is provided for easy interaction with the project. To see
+all available options run:
+
+```
+make help
+```
+
+## Running tests
+
+To run all tests in the suite run:
+
+```
+make tests
+```
+
+## Adding new requirements
+
+If a new dependency is added to the project run:
+
+```
+make freeze-requirements
+```
+
+## Verifying documentation changes
+
+To locally verify documentation changes run:
+
+```
+make docs
+```
+
+After running, newly generated documentation shall be available at
+`./docs/_build/html/`.
+
+
+## Committing code
+
+Please follow these guidelines when committing code for this project:
+
+- Use a topic with a colon to start the subject
+- Separate subject from body with a blank line
+- Limit the subject line to 50 characters
+- Do not capitalize the subject line
+- Do not end the subject line with a period
+- Use the imperative mood in the subject line
+- Wrap the body at 72 characters
+- Use the body to explain what and why (instead of how)
