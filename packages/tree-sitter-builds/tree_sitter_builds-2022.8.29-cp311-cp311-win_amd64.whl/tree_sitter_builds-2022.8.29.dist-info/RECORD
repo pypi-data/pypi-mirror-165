@@ -1,0 +1,10 @@
+tree_sitter/__init__.py,sha256=KYxj0ktZiEiD-LvrQjUlVFEk7kLKlVJ7JdoJ14mWQYc,3535
+tree_sitter/binding.cp311-win_amd64.pyd,sha256=xZeQTxCkhUdVzSy2qFpapbdEfxrq43_4rru-ToBHeBY,140288
+tree_sitter_languages/__init__.py,sha256=hguXEZ8gntPQAmoiISSceYApf4daOdMEZXTYeWiBfpM,237
+tree_sitter_languages/core.cp311-win_amd64.pyd,sha256=ulvuP-yqKZ5BEOlDh9OEHWzcYVQC6OlxI19Q-h6MBcU,26112
+tree_sitter_languages/languages.dll,sha256=mGanFczO3NoKk0xqQX60HS0__JJUk4Qvpb8NY_B561k,63222784
+tree_sitter_builds-2022.8.29.dist-info/LICENSE,sha256=QIE0FQr4mJB5JZ4o33c8G4jPmf9aQrlNqQm26oYye_o,559
+tree_sitter_builds-2022.8.29.dist-info/METADATA,sha256=soisDTrFZ20slctX2bgUSTqfOmhWiK-UHnpy_INOU28,3350
+tree_sitter_builds-2022.8.29.dist-info/WHEEL,sha256=TxwUeV-3HEbjjXVQ7qnUZIKQ4IinhZYV_rmkwq84M_Y,102
+tree_sitter_builds-2022.8.29.dist-info/top_level.txt,sha256=_HRrA9sauZSHQqyWB11YHqgn0givlXbg5_cUDlBss7A,34
+tree_sitter_builds-2022.8.29.dist-info/RECORD,,
