@@ -1,0 +1,15 @@
+click<9.0,>=7.0
+cloudpickle~=1.0
+googleapis-common-protos<2.0,>=1.5
+pathlib2<3.0,>=2.2
+protobuf<4.0,>=3.8
+pytimeparse<2.0,>=1.1.8
+pyyaml<6.0,>=5.1
+requests<3.0,>=2.21
+
+[unit_tests]
+filelock
+hypothesis
+pytest>=4.3
+pytest-xdist>=1.32
+six>=1.11
