@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: mlsphere
+Version: 0.0.4
+Summary: Run ML models within containerized, rootless and immutable environment
+Author: Xiaozhe Yao
+Author-email: askxzyao@gmail.com
+Project-URL: Bug Tracker, https://github.com/yao-sh/mlsphere/issues
+Project-URL: Source Code, https://github.com/yao-sh/mlsphere
