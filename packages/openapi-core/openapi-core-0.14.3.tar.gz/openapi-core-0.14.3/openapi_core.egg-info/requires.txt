@@ -1,0 +1,28 @@
+isodate
+dictpath
+openapi-spec-validator<0.4.0
+openapi-schema-validator<0.2.0
+six
+lazy-object-proxy
+attrs
+werkzeug
+parse
+more-itertools
+
+[:python_version < "3.0"]
+backports.functools-lru-cache
+backports.functools-partialmethod
+
+[:python_version >= "3.6"]
+PyYAML<6.0
+
+[django]
+
+[django:python_version >= "3.0"]
+django>=2.2
+
+[flask]
+flask
+
+[requests]
+requests
