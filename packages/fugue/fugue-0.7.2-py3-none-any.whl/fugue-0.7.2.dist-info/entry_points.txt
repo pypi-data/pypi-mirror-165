@@ -1,0 +1,7 @@
+[fugue.plugins]
+dask = fugue_dask:register [dask]
+duckdb = fugue_duckdb:register [duckdb]
+ibis = fugue_ibis:register [ibis]
+ray = fugue_ray:register [ray]
+spark = fugue_spark:register [spark]
+
