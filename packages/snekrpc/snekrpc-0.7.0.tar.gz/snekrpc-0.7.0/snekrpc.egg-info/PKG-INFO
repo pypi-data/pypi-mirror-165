@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: snekrpc
+Version: 0.7.0
+Summary: A Python RPC library for prototyping.
+Home-page: https://github.com/dhagrow/snekrpc
+Author: Miguel Turner
+Author-email: cymrow@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+# snekrpc
+
+`snekrpc` is a (primarily) Python RPC library. It is designed to facilitate the rapid development of prototype distributed architectures.
+
+
