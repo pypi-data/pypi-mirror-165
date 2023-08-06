@@ -1,0 +1,3 @@
+[console_scripts]
+btd6=btd6.__main__:main
+
