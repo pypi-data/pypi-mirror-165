@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.rst
+requirements.txt
+setup.py
+statspost/__init__.py
+statspost/_type.py
+statspost/client.py
+statspost/enums.py
+statspost/errors.py
+statspost/http.py
+statspost/py.typed
+statspost.py.egg-info/PKG-INFO
+statspost.py.egg-info/SOURCES.txt
+statspost.py.egg-info/dependency_links.txt
+statspost.py.egg-info/requires.txt
+statspost.py.egg-info/top_level.txt
