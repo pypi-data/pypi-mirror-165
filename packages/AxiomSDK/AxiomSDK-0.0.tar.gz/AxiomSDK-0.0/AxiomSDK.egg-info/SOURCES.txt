@@ -1,0 +1,8 @@
+setup.cfg
+setup.py
+AxiomSDK/__init__.py
+AxiomSDK.egg-info/PKG-INFO
+AxiomSDK.egg-info/SOURCES.txt
+AxiomSDK.egg-info/dependency_links.txt
+AxiomSDK.egg-info/not-zip-safe
+AxiomSDK.egg-info/top_level.txt
