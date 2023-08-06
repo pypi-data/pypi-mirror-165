@@ -1,0 +1,2 @@
+[console_scripts]
+youtubedlapi-server-infusiblecoder = youtubedlapi_server_infusiblecoder.server:main
