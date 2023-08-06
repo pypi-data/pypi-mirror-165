@@ -1,0 +1,12 @@
+LICENSE
+README.rst
+pyproject.toml
+setup.py
+tree_sitter_rst/__init__.py
+tree_sitter_rst/core.py
+tree_sitter_rst.egg-info/PKG-INFO
+tree_sitter_rst.egg-info/SOURCES.txt
+tree_sitter_rst.egg-info/dependency_links.txt
+tree_sitter_rst.egg-info/not-zip-safe
+tree_sitter_rst.egg-info/requires.txt
+tree_sitter_rst.egg-info/top_level.txt

@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools","tree_sitter","wheel", "build"]
+build-backend = "setuptools.build_meta"
+
+[tool.cibuildwheel]
+test-requires = "pytest"
+test-command = ""#"pytest --pyargs tree_sitter_rst"
+before-build = [
+    "ls tree-sitter-rst",
+    "git submodule update --init",
+    "ls tree-sitter-rst",
+    "python -m pip install tree_sitter",
+]
+
