@@ -1,0 +1,3 @@
+[console_scripts]
+constellate=constellate.cli.app:cli
+
