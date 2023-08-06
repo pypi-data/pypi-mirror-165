@@ -1,0 +1,10 @@
+aiodocker~=0.21.0
+attrs>=20.3
+backend.ai-agent==22.09.0b6
+backend.ai-cli==22.09.0b6
+backend.ai-common==22.09.0b6
+backend.ai-kernel-binary==22.09.0b6
+backend.ai-kernel-helper==22.09.0b6
+backend.ai-kernel==22.09.0b6
+backend.ai-plugin==22.09.0b6
+trafaret~=2.1
