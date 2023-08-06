@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: ml-toolbox-mh
+Version: 0.0.1
+Summary: 月亮小屋算法技术团队ML工具箱
+Home-page: https://github.com/
+Author: soft
+Author-email: 18415507@qq.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
