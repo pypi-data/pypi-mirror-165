@@ -1,0 +1,12 @@
+Pillow>=8.1.1
+toml>=0.10.2
+
+[build]
+wheel>=0.37.1
+
+[test]
+flake8>=4.0.1
+tox>=3.25.0
+mypy>=0.950
+pytest>=7.0.1
+pytest-cov>=3.0.0
