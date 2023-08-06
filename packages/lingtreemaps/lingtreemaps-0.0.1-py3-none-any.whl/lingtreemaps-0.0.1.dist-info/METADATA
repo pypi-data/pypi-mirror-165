@@ -1,0 +1,96 @@
+Metadata-Version: 2.1
+Name: lingtreemaps
+Version: 0.0.1
+Summary: Plot results on linguistic trees and maps.
+Home-page: https://github.com/fmatter/lingtreemaps
+Author: Florian Matter
+Author-email: florianmatter@gmail.com
+Project-URL: Bug Tracker, https://github.com/fmatter/lingtreemaps/issues
+Keywords: linguistics,keyword2
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: affine (==2.3.1)
+Requires-Dist: attrs (==21.4.0)
+Requires-Dist: biopython (==1.79)
+Requires-Dist: certifi (==2022.6.15)
+Requires-Dist: charset-normalizer (==2.1.0)
+Requires-Dist: click (==8.1.3)
+Requires-Dist: click-plugins (==1.1.1)
+Requires-Dist: cligj (==0.7.2)
+Requires-Dist: contextily (==1.2.0)
+Requires-Dist: colorlog
+Requires-Dist: cycler (==0.11.0)
+Requires-Dist: Fiona (==1.8.21)
+Requires-Dist: fonttools (==4.34.4)
+Requires-Dist: geographiclib (==1.52)
+Requires-Dist: geopandas (==0.10.2)
+Requires-Dist: geopy (==2.2.0)
+Requires-Dist: idna (==3.3)
+Requires-Dist: importlib-metadata (==4.12.0)
+Requires-Dist: importlib-resources (==5.8.0)
+Requires-Dist: joblib (==1.1.0)
+Requires-Dist: kiwisolver (==1.4.3)
+Requires-Dist: matplotlib (==3.5.2)
+Requires-Dist: mercantile (==1.2.1)
+Requires-Dist: munch (==2.5.0)
+Requires-Dist: numpy (==1.21.6)
+Requires-Dist: packaging (==21.3)
+Requires-Dist: pandas (==1.3.5)
+Requires-Dist: Pillow (==9.2.0)
+Requires-Dist: pyparsing (==3.0.9)
+Requires-Dist: pyproj (==3.2.1)
+Requires-Dist: python-dateutil (==2.8.2)
+Requires-Dist: pytz (==2022.1)
+Requires-Dist: rasterio (==1.3a3)
+Requires-Dist: requests (==2.28.1)
+Requires-Dist: scipy (==1.7.3)
+Requires-Dist: seaborn (==0.11.2)
+Requires-Dist: Shapely (==1.8.2)
+Requires-Dist: six (==1.16.0)
+Requires-Dist: snuggs (==1.4.7)
+Requires-Dist: typing-extensions (==4.3.0)
+Requires-Dist: urllib3 (==1.26.10)
+Requires-Dist: xyzservices (==2022.6.0)
+Requires-Dist: zipp (==3.8.1)
+Provides-Extra: dev
+Requires-Dist: bump2version ; extra == 'dev'
+Requires-Dist: coverage[toml] ; extra == 'dev'
+Requires-Dist: prospector[with_pyroma] (==1.7.7) ; extra == 'dev'
+Requires-Dist: isort ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: pytest-cov ; extra == 'dev'
+Requires-Dist: sphinx ; extra == 'dev'
+Requires-Dist: sphinx-rtd-theme ; extra == 'dev'
+Requires-Dist: sphinx-autoapi ; extra == 'dev'
+Requires-Dist: tox ; extra == 'dev'
+Requires-Dist: myst-parser ; extra == 'dev'
+Requires-Dist: flake8 ; extra == 'dev'
+Requires-Dist: twine ; extra == 'dev'
+Provides-Extra: publishing
+Requires-Dist: twine ; extra == 'publishing'
+Requires-Dist: wheel ; extra == 'publishing'
+
+# lingtreemaps
+
+![License](https://img.shields.io/github/license/fmatter/lingtreemaps)
+[![Documentation Status](https://readthedocs.org/projects/lingtreemaps/badge/?version=latest)](https://lingtreemaps.readthedocs.io/en/latest/?badge=latest)
+[![Tests](https://img.shields.io/github/workflow/status/fmatter/lingtreemaps/tests?label=tests)](https://github.com/fmatter/lingtreemaps/actions/workflows/tests.yml)
+[![Linting](https://img.shields.io/github/workflow/status/fmatter/lingtreemaps/lint?label=linting)](https://github.com/fmatter/lingtreemaps/actions/workflows/lint.yml)
+[![Codecov](https://img.shields.io/codecov/c/github/fmatter/lingtreemaps)](https://app.codecov.io/gh/fmatter/lingtreemaps/)
+[![PyPI](https://img.shields.io/pypi/v/lingtreemaps.svg)](https://pypi.org/project/lingtreemaps)
+![Versions](https://img.shields.io/pypi/pyversions/lingtreemaps)
+
+Plot data on linguistic trees and maps.
+Inspired by [phytools](http://blog.phytools.org/2019/03/projecting-phylogenetic-tree-onto-map.html), written in python.
+
+
+**[Documentation](https://lingtreemaps.readthedocs.io)**
