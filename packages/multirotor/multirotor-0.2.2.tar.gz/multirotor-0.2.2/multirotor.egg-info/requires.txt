@@ -1,0 +1,15 @@
+numpy>=1.23.2
+scipy
+numba
+matplotlib
+gym
+
+[CONTROL]
+control
+
+[DEV]
+twine
+build
+sphinx
+sphinx-autoapi
+numpydoc
