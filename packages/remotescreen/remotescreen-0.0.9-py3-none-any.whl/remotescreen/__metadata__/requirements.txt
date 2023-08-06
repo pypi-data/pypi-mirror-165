@@ -1,0 +1,5 @@
+encryptedsocket>=0.0.1
+unencryptedsocket>=0.0.1
+pillow==7.1.1
+tornado==6.0.4
+omnitools>=0.0.1
