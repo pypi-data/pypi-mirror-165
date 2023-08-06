@@ -1,0 +1,4 @@
+recursive-include bot_linkedin *.py
+include requirements/requirements.txt
+include docs/index.rst
+include setup.py
