@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+geologic/__init__.py
+geologic/earthpressure.py
+geologic/test.py
+geologic/testtext.txt
+geologic.egg-info/PKG-INFO
+geologic.egg-info/SOURCES.txt
+geologic.egg-info/dependency_links.txt
+geologic.egg-info/top_level.txt
+geologic/data/__init__.py

@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: geologic
+Version: 0.0.1.dev0
+Summary: geotechnical calculation and modeling Tools
+Home-page: https://github.com/GeotechnicalBIM
+Author: Johannes Beck
+Author-email: geotechnicalbim@gmail.com
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+<h1>GeoLogic</h1>
+<p>A package for geotechnical calculations in spatial model driven calculation workflows.</p>
+<p>Under development!</p>
