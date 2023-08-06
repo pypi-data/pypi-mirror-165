@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+nonebot_plugin_wordsnorote/Kaoyan.json
+nonebot_plugin_wordsnorote/__init__.py
+nonebot_plugin_wordsnorote/get_word.py
+nonebot_plugin_wordsnorote/read_user.py
+nonebot_plugin_wordsnorote/write_user.py
+nonebot_plugin_wordsnorote.egg-info/PKG-INFO
+nonebot_plugin_wordsnorote.egg-info/SOURCES.txt
+nonebot_plugin_wordsnorote.egg-info/dependency_links.txt
+nonebot_plugin_wordsnorote.egg-info/requires.txt
+nonebot_plugin_wordsnorote.egg-info/top_level.txt
