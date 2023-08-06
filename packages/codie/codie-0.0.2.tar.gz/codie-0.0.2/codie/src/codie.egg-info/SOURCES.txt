@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+codie/src/codie.egg-info/PKG-INFO
+codie/src/codie.egg-info/SOURCES.txt
+codie/src/codie.egg-info/dependency_links.txt
+codie/src/codie.egg-info/requires.txt
+codie/src/codie.egg-info/top_level.txt
+codie/src/codie.py
+codie/src/codie.egg-info/PKG-INFO
+codie/src/codie.egg-info/SOURCES.txt
+codie/src/codie.egg-info/dependency_links.txt
+codie/src/codie.egg-info/requires.txt
+codie/src/codie.egg-info/top_level.txt
