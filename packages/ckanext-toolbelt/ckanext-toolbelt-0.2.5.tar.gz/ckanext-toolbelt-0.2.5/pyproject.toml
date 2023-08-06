@@ -1,0 +1,16 @@
+[tool.black]
+line-length = 79
+
+[tool.pytest.ini_options]
+filterwarnings = [
+    "ignore::sqlalchemy.exc.SADeprecationWarning",
+    "ignore::sqlalchemy.exc.SAWarning",
+    "ignore::DeprecationWarning",
+    "ignore::bs4.GuessedAtParserWarning"  # using lxml as default parser
+]
+
+markers = [
+
+]
+
+addopts = "--ckan-ini test.ini"
