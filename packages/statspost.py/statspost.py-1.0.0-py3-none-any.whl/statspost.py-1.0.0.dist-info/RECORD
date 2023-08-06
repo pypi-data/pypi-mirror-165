@@ -1,0 +1,12 @@
+statspost/__init__.py,sha256=PRhKbSiMKF-FC6d4o_Pvyd4VcIje0Q-QMPixvQfhSkk,780
+statspost/_type.py,sha256=ImSOHqMXH_4gmHlEK9dpsfDGDkNSaZc7SsbgwTf6elo,460
+statspost/client.py,sha256=hQNVTgQMe4qJc1PoxC5Z7f54NKo_dFzyo0ETxWs6aUY,15080
+statspost/enums.py,sha256=oyufUBMwEoTihVyZmdkquF7e90XhMAYzXzkkq-0WgeU,210
+statspost/errors.py,sha256=6NZUuPXslHLngAPc_jzp0h5iI1R-7bDTXXUvVZpqZzc,1339
+statspost/http.py,sha256=fMAZFUW08u-yJYKdaD4QIu_VKrh0TpOANWwGHzUesCM,3876
+statspost/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+statspost.py-1.0.0.dist-info/LICENSE,sha256=r05xI5mSZL3t-twDCh-HM4gKrrSSWKuw91AKDJ0b8z0,1093
+statspost.py-1.0.0.dist-info/METADATA,sha256=iSlYdeO6YV3HK10wfJS3OPSbnY__Rwy0dR4wuK-V_Jk,3656
+statspost.py-1.0.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+statspost.py-1.0.0.dist-info/top_level.txt,sha256=SgGw9tPYTI_irwt82DhQLhHrL-x2KNh-cyWZvEiPwNM,10
+statspost.py-1.0.0.dist-info/RECORD,,
