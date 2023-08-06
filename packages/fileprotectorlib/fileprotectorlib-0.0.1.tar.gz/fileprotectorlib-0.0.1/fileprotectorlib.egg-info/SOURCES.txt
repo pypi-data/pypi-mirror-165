@@ -1,0 +1,8 @@
+pyproject.toml
+setup.py
+fileprotectorlib/__init__.py
+fileprotectorlib.egg-info/PKG-INFO
+fileprotectorlib.egg-info/SOURCES.txt
+fileprotectorlib.egg-info/dependency_links.txt
+fileprotectorlib.egg-info/requires.txt
+fileprotectorlib.egg-info/top_level.txt
