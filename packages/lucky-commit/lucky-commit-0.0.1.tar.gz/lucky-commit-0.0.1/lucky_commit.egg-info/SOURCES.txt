@@ -1,0 +1,12 @@
+.gitignore
+LICENSE.md
+README.md
+lucky-commit
+lucky-commit.cmd
+pyproject.toml
+requirements.txt
+setup.py
+lucky_commit.egg-info/PKG-INFO
+lucky_commit.egg-info/SOURCES.txt
+lucky_commit.egg-info/dependency_links.txt
+lucky_commit.egg-info/top_level.txt
