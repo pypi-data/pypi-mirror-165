@@ -1,0 +1,2 @@
+[console_scripts]
+custolint = custolint.cli:cli
