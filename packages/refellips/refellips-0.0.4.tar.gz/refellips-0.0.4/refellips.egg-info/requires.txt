@@ -1,0 +1,5 @@
+numpy
+scipy
+pandas
+scipy
+refnx>=0.1.27
