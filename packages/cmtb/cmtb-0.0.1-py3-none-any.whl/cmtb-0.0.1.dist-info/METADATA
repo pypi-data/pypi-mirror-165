@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: cmtb
+Version: 0.0.1
+Summary: Confusion matrix in tensorboard
+Home-page: https://github.com/mr-francois/cmtb
+Author: UNKNOWN
+Author-email: mr.francois@gmx.de
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: tensorflow
+Requires-Dist: numpy
+Requires-Dist: sklearn
+Requires-Dist: matplotlib
+
+UNKNOWN
+
+
