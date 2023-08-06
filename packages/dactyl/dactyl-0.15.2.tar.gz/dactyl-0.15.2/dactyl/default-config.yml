@@ -1,0 +1,98 @@
+## Paths to markdown files are relative to this folder
+content_path: content
+
+## Files or folders of images/etc. used in your documents, to be copied to the
+##  output directory when you use `-s` and to the temp dir when you make pdfs.
+##  Can be a single path:
+#content_static_path: content/static
+##  ...or an array of paths (files or folders to be copied to the out):
+#content_static_path:
+#    - content/images
+#    - content/video
+#    - flow-diagram.png
+## If you omit the content_static_path, then no files are copied over.
+
+## If no template path is provided, use the ones built into Dactyl
+#template_path: templates
+
+## Path where the Dactyl output should be written.
+out_path: out
+
+## Static files used in your templates, to be copied to the output directory.
+template_static_path: assets
+
+## Temporary folder. Dactyl puts temp files in a timestamped subfolder of this.
+temporary_files_path: /tmp/
+
+## Filters include "badges", "buttonize", "callouts", and more
+default_filters: []
+
+## If a PDF filename isn't provided, slugify and merge the pdf_filename_fields
+##  of the target together, connected by the pdf_filename_separator.
+## These fields are also used to generate index names for ElasticSearch uploads
+pdf_filename_fields:
+    - display_name
+pdf_filename_separator: '-'
+
+es_index_fields:
+    - name
+es_index_separator: '-'
+
+prince_executable: prince
+# Disable --no-warn-css for compatibility with older Prince versions:
+legacy_prince: false
+
+## If this is true, parses the files as Markdown without Jinja syntax
+skip_preprocessor: false
+
+## Set these to false to raise an error referring to a
+## field that doesn't exist, such as {{ foo }} or {% if foo %}
+## These settings are ignored when running with --bypass_errors.
+template_allow_undefined: true
+preprocessor_allow_undefined: true
+
+## How to generate default HTML paths from Markdown files. These can be
+## overwritten by the "html" field of the page definition.
+## In all cases, the file extension is changed from .md to .html.
+## Available formulas include:
+## "flatten": The default. Use the full path to the md file, except replace /
+##            with - so all files end up in one output folder.
+## "path": Use the full path to the md file including folders. This can make
+##         for prettier URLs but requires you to handle absolute paths correctly
+## "tail": Use just the filename, not the whole path. This can result in
+##         duplicates if you have files with the same name in different folders,
+##         for example if you have multiple "overview.md" docs. You should
+##         change the duplicates individually using "html" parameters in the
+##         page definitions, as needed.
+# Legacy parameter: flatten_default_html_paths: true
+default_html_names: flatten
+
+## Set this to true to disable Dactyl's built-in syntax highlighting
+no_highlighting: false
+
+## Default templates.
+default_template: doc.html
+default_pdf_template: simple.html
+default_es_template: template-es.json
+
+time_format: "%Y-%m-%d" # Used to be "%B %d, %Y"
+
+## Default cover page / index page
+cover_page:
+    html: index.html
+    name: Index
+    pdf_template: pdf-cover.html
+    template: landing.html
+
+## List of targets you can build. Each target corresponds to a single PDF file
+targets: []
+
+## List of pages. Each page corresponds to a single output HTML file.
+pages: []
+
+## Link Checker Config
+known_broken_links: []
+ignore_anchors_in: []
+
+## ElasticSearch config
+# elasticsearch: http://localhost:9200
