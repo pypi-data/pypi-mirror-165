@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+29082022_distributions/Binomialdistribution.py
+29082022_distributions/Gaussiandistribution.py
+29082022_distributions/Generaldistribution.py
+29082022_distributions/__init__.py
+29082022_distributions.egg-info/PKG-INFO
+29082022_distributions.egg-info/SOURCES.txt
+29082022_distributions.egg-info/dependency_links.txt
+29082022_distributions.egg-info/not-zip-safe
+29082022_distributions.egg-info/top_level.txt
