@@ -1,0 +1,15 @@
+rapidocr_onnxruntime/__init__.py,sha256=hflMEFs8QtSIH7H-gDtPkOi0IPYL4wTvz7RxwrE7z5A,112
+rapidocr_onnxruntime/rapid_ocr_api.py,sha256=cP8KIEYDP2wMv1WrBBzsBof1gZ6vXPOlu8mpiF4shvI,6067
+rapidocr_onnxruntime/ch_ppocr_v2_cls/__init__.py,sha256=o8psmpX-h2v5Fm_Ay9HbtWuyBlRTVxWhtLc6AEGvIMM,110
+rapidocr_onnxruntime/ch_ppocr_v2_cls/text_cls.py,sha256=v9ocSH855dlLOhtlilQ16_SZC574sfg3RDaYE83Rx8Q,4548
+rapidocr_onnxruntime/ch_ppocr_v2_cls/utils.py,sha256=IP5AtOJU6u-XStGVGU5zyhuZmw6ISOap66PCSd-iFPg,3036
+rapidocr_onnxruntime/ch_ppocr_v3_det/__init__.py,sha256=jzPxgedoCcYJ6tj11Er-0eg_dOdSI5wPMMqWH98VLmM,112
+rapidocr_onnxruntime/ch_ppocr_v3_det/text_detect.py,sha256=XHpDqb0j-xQDoUmijIkyn_vXQ9r40AxQJSoHft9aIPE,4461
+rapidocr_onnxruntime/ch_ppocr_v3_det/utils.py,sha256=3oZRzyM2_pLX5EIUFy2bEv0Rsj_XQKZkPN6RUz0jI6Q,15265
+rapidocr_onnxruntime/ch_ppocr_v3_rec/__init__.py,sha256=r3_45Z17yJXM7ijSi7BRdWO9uEQ_Pi8QSFUsqTF_7kk,116
+rapidocr_onnxruntime/ch_ppocr_v3_rec/text_recognize.py,sha256=-kiTrytjZ02rxrNdSBcQd370iVEGMjF_zt8cs9oe_KM,4521
+rapidocr_onnxruntime/ch_ppocr_v3_rec/utils.py,sha256=ydw2UWFYItmV3UswyXMh8MYD02HW4hIg2cBKGZ-7qe4,4689
+rapidocr_onnxruntime-1.1.4.dist-info/METADATA,sha256=3oig5uHxnPSmaWkl2xdtDKjAgpczM__EjoGl52J9svY,1820
+rapidocr_onnxruntime-1.1.4.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+rapidocr_onnxruntime-1.1.4.dist-info/top_level.txt,sha256=wuq8r1w2Vih-jQZuS9M_u-ZqJKfzOQEllC68Vml8Kog,21
+rapidocr_onnxruntime-1.1.4.dist-info/RECORD,,
