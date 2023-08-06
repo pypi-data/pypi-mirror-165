@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+wordconstraints/__init__.py
+wordconstraints/wordconstraints.py
+wordconstraints.egg-info/PKG-INFO
+wordconstraints.egg-info/SOURCES.txt
+wordconstraints.egg-info/dependency_links.txt
+wordconstraints.egg-info/top_level.txt
