@@ -1,0 +1,15 @@
+README.md
+setup.py
+src/vdk/plugin/kerberos/authenticator_factory.py
+src/vdk/plugin/kerberos/base_authenticator.py
+src/vdk/plugin/kerberos/kerberos_configuration.py
+src/vdk/plugin/kerberos/kerberos_plugin.py
+src/vdk/plugin/kerberos/kinit_authenticator.py
+src/vdk/plugin/kerberos/minikerberos_authenticator.py
+src/vdk/plugin/kerberos/vdk_kerberos_client.py
+src/vdk_kerberos_auth.egg-info/PKG-INFO
+src/vdk_kerberos_auth.egg-info/SOURCES.txt
+src/vdk_kerberos_auth.egg-info/dependency_links.txt
+src/vdk_kerberos_auth.egg-info/entry_points.txt
+src/vdk_kerberos_auth.egg-info/requires.txt
+src/vdk_kerberos_auth.egg-info/top_level.txt
