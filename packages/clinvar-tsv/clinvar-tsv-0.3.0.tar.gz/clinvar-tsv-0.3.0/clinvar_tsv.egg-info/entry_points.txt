@@ -1,0 +1,2 @@
+[console_scripts]
+clinvar_tsv = clinvar_tsv.__main__:main

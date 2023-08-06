@@ -1,0 +1,10 @@
+versioneer
+snakemake
+pysam
+logzero
+attrs
+cattrs
+python-dateutil
+interval-binning
+tqdm
+interval-binning

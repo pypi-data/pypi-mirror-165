@@ -1,0 +1,15 @@
+# Requirements for testing of clinvar-tsv
+
+# Base Requirements
+-r base.txt
+
+# Wonderful py.test library, style checker etc.
+pytest
+flake8
+pytest-flake8
+coverage
+pytest-cov
+isort
+
+# Black source code formatter and style checker
+black ==22.6.0

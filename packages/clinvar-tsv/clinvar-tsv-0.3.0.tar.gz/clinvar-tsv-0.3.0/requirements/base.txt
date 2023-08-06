@@ -1,0 +1,29 @@
+# Base requirements for clinvar-tsv
+
+# Versioneer is useful for version management
+versioneer
+
+# Snakemake for running the workflow
+snakemake
+
+# PySAM for FAI support
+pysam
+
+# Easy logging.
+logzero
+
+# Helpful attrs.
+attrs
+cattrs
+
+# Helper for parsing dates.
+python-dateutil
+
+# UCSC interval binning
+interval-binning
+
+# Progress display.
+tqdm
+
+# Binning
+interval-binning

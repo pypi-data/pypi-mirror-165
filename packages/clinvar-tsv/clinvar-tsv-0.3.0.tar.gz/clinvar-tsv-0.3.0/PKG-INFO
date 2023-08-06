@@ -1,0 +1,72 @@
+Metadata-Version: 2.1
+Name: clinvar-tsv
+Version: 0.3.0
+Summary: Python 3 library for accessing and managing BioMedical sheets
+Home-page: https://github.com/bihealth/clinvar-tsv
+Author: Manuel Holtgrewe
+Author-email: manuel.holtgrewe@bihealth.de
+License: MIT license
+Keywords: clinvar
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+License-File: LICENSE
+
+===========
+Clinvar-TSV
+===========
+
+The code in this repository allows to first download,t hen convert ClinVar XML files into TSV files (one for b37 and b38).
+The TSV files will contain one entry for each ClinVar ``<ReferenceClinVarAssertion>`` entry with important information extracted from ClinVar.
+The code is used by `bihealth/varfish-db-downloader <https://github.com/bihealth/varfish-db-downloader/>`_.
+
+The project was originally based on `macarthurlab/clinvar <https://github.com/macarthur-lab/clinvar>`_.
+
+
+=====================
+Clinvar-TSV Changelog
+=====================
+
+------
+v0.3.0
+------
+
+- Various refinements of the code.
+- Adding tests and CI.
+
+------
+v0.2.2
+------
+
+- Fixing bug with quotes.
+
+------
+v0.2.1
+------
+
+- Fixing bug in setting clinical significance flags.
+
+------
+v0.2.0
+------
+
+- Complete refurbishing of XML parsing, using models based on python-attrs.
+- Removing old tests.
+
+------
+v0.1.1
+------
+
+- Fixing installation of Snakefile.
+
+------
+v0.1.0
+------
+
+- First actual release, versioning done using versioneer.
+- Everything is new!
