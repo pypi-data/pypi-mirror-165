@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: WADI
+Version: 0.0.1
+Summary: A python package for calculating the removal of microbial organisms in the subsurface
+Home-page: https://github.com/steven-ros/WADI
+Author: KWR Water Research Institute
+Author-email: vincent.post@kwrwater.nl, martin.korevaar@kwrwater.nl, martin.van.der.schans@kwrwater.nl, steven.ros@kwrwater.nl
+License: MIT
+Project-URL: Source, https://github.com/steven-ros/WADI
+Project-URL: Documentation, http://WADI.readthedocs.io/en/latest/
+Project-URL: Tracker, https://github.com/steven-ros/WADI/issues
+Project-URL: Help, https://github.com/steven-ros/WADI/issues
+Description: SUTRA
+        ============
+        .. image:: https://readthedocs.org/projects/sutra/badge/?version=latest&style=flat
+                            :target: https://WADI.readthedocs.io
+        .. image:: https://img.shields.io/travis/steven-ros/WADI
+                            :target: https://travis-ci.com/steven-ros/WADI
+        .. image:: https://img.shields.io/codecov/c/gh/steven-ros/WADI
+                            :target: https://codecov.io/gh/steven-ros/WADI
+        
+        A tool to calculate the fate of Organic Micropollutant and pathogens in the subsoil.
+        
+        See documentation_ for more information.
+        
+        
+        Installation
+        ------------
+        To get the latest stable version, use::
+        
+            python -m pip install git+https://github.com/steven-ros/WADI.git@main
+        
+        or::
+        
+            pip install git+ssh://git@github.com/steven-ros/WADI.git@main
+        
+        License
+        -------
+        
+        This package is MIT licensed. See `License File <https://github.com/steven-ros/WADI/blob/master/LICENSE>`__.
+        
+        .. _documentation: https://WADI.readthedocs.io/en/latest/
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Other Audience
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering :: Hydrology
+Requires-Python: >=3.7
+Description-Content-Type: text/x-rst

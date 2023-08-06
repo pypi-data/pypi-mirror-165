@@ -1,0 +1,12 @@
+README.rst
+setup.cfg
+setup.py
+WADI/__init__.py
+WADI/removal_functions.py
+WADI.egg-info/PKG-INFO
+WADI.egg-info/SOURCES.txt
+WADI.egg-info/dependency_links.txt
+WADI.egg-info/requires.txt
+WADI.egg-info/top_level.txt
+testing/__init__.py
+testing/test_removal_functions.py
