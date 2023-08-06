@@ -1,0 +1,1 @@
+djangocms_static_ace

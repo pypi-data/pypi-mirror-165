@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+djangocms_static_ace/__init__.py
+djangocms_static_ace.egg-info/PKG-INFO
+djangocms_static_ace.egg-info/SOURCES.txt
+djangocms_static_ace.egg-info/dependency_links.txt
+djangocms_static_ace.egg-info/not-zip-safe
+djangocms_static_ace.egg-info/requires.txt
+djangocms_static_ace.egg-info/top_level.txt
