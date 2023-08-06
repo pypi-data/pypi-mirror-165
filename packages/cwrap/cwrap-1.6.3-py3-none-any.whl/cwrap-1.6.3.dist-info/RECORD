@@ -1,0 +1,14 @@
+cwrap/__init__.py,sha256=u26LODQXzzMi3d43B6gHd0vX2FM44J-ooNnVp2nfKV0,1875
+cwrap/basecclass.py,sha256=hDZPI1KWPGb7T0k_0ZSvRgi-PXNDQIi4w5llFJpIgzE,4946
+cwrap/basecenum.py,sha256=TCEJRIelxAorvr8YJfYGRzxCdvhm4_I2pchOWNosIFI,5123
+cwrap/basecvalue.py,sha256=gEcwMHdZ7q7zn7Ou1ZG-OfLSUlIZf2X1xRVUmseo88o,2091
+cwrap/cfile.py,sha256=1qdryUEMPbZbWccYyFSd_gT4EMk6CrlAvi2MEqmv-mY,5948
+cwrap/clib.py,sha256=pAOc6-uEVQxzWcx2hry35WecxTi4gmv92sQcGVghiLo,3756
+cwrap/metacwrap.py,sha256=He9HtExc78S9uz08u_za_N1e8DBHcyf_JT3-R3LzSNs,1931
+cwrap/prototype.py,sha256=EMfyFuJyhQnArvWo-iftSaJY0j0bZ_gbn_4nc9uz080,9746
+cwrap/version.py,sha256=WwDOSAIi5NHLnF712120ecWZ7b-8BXBLMT84k8-t4Qw,176
+cwrap-1.6.3.dist-info/LICENSE,sha256=KdZLnTl6Qk0PT7wUW8ugRdviqwxU5wjE26sku5sicOU,674
+cwrap-1.6.3.dist-info/METADATA,sha256=_TyFT9kTxTXn5SD6G20pWXwQjVNnBqjCSKHa0Y_jcl8,1019
+cwrap-1.6.3.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+cwrap-1.6.3.dist-info/top_level.txt,sha256=CUjoCmJmjoO-LFc7eRvSm7AHuFbYgwHhkQ6Al-x6sTk,6
+cwrap-1.6.3.dist-info/RECORD,,
