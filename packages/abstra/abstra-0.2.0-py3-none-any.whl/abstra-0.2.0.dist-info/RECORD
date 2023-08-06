@@ -1,0 +1,9 @@
+abstra/__init__.py,sha256=BEcvuSVo2WITu1jAKlvvde2WT4E8FJ_QjScOiWoT1A8,93
+abstra/connectors.py,sha256=6jey_ypu2gf2Vp3e1vO7A2jkbrqoqJlDV49H-zrhpaE,833
+abstra/hooks.py,sha256=UfY8-jo3zvtvqZPmdcD8pQGnuGGzougl1RcOPUmq200,941
+abstra/tables.py,sha256=0A-fJWXNWcn1hKaCBo4u5K47ywGbKAMqMURvmlifVNk,842
+abstra/utils.py,sha256=bX7efZC8i_kXD_0tncpbozEGfSSINZGD0QdT_iXduh8,281
+abstra-0.2.0.dist-info/METADATA,sha256=3ju5F3_KTe0aM2f3ZVCbRUG0ax9HUwxxlyuu-PSf3_0,2196
+abstra-0.2.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+abstra-0.2.0.dist-info/top_level.txt,sha256=UBc43u-ccYQsqaYAoVzS-I7zmR8NlHVlCt9WCLgSjzo,7
+abstra-0.2.0.dist-info/RECORD,,
