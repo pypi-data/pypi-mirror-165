@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: pyctm
+Version: 0.0.4
+Summary: Python Cognitive System Toolkit for Microservices
+Author: Eduardo de Moraes Froes
+License: MIT
+Keywords: python,cst
+Platform: UNKNOWN
+License-File: LICENSE
+Requires-Dist: confluent-kafka
+
+UNKNOWN
+
