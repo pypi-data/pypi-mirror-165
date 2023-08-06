@@ -1,0 +1,69 @@
+Metadata-Version: 2.1
+Name: axe-core-python
+Version: 0.1.0
+Summary: Automated web accessibility testing using axe-core engine.
+Home-page: https://github.com/ruslan-rv-ua/axe-core-python
+License: MIT
+Keywords: accessibility,axe,axe-core,selenium,playwright
+Author: Ruslan Iskov
+Author-email: ruslan.rv.ua@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Adaptive Technologies
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Quality Assurance
+Classifier: Topic :: Software Development :: Testing
+Project-URL: Documentation, https://ruslan-rv-ua.github.io/axe-core-python/
+Project-URL: Repository, https://github.com/ruslan-rv-ua/axe-core-python
+Description-Content-Type: text/markdown
+
+# axe-core-python
+
+![PyPI](https://img.shields.io/pypi/v/axe-core-python) 
+![PyPI - License](https://img.shields.io/pypi/l/axe-core-python) 
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/axe-core-python)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/axe-core-python) 
+
+
+Automated web accessibility testing using [axe-core](https://github.com/dequelabs/axe-core) engine.
+
+## Documentation
+
+- [Full documentation](https://ruslan-rv-ua.github.io/axe-core-python/).
+
+## Requirements
+
+- Python >= 3.10
+- [selenium](https://www.selenium.dev) >= 4.4.0 
+or [playwright](https://github.com/microsoft/playwright-python) >= 1.25.0
+
+## Installation
+
+```console
+pip install -U axe-core-python
+```
+
+## Usage
+
+```python
+from playwright.sync_api import sync_playwright
+from axe_core_python.sync_playwright import Axe
+
+axe = Axe()
+
+with sync_playwright() as playwright:
+    browser = playwright.chromium.launch()
+    page = browser.new_page()
+    page.goto("https://www.google.com")
+    result = axe.run(page)
+    browser.close()
+
+violations = result['violations']
+print(f"{len(violations)} violations found.")
+```
+
+For more examples see [documentation](https://ruslan-rv-ua.github.io/axe-core-python/).
