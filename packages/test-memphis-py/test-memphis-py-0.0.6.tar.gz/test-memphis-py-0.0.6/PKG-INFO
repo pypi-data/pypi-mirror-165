@@ -1,0 +1,22 @@
+Metadata-Version: 1.1
+Name: test-memphis-py
+Version: 0.0.6
+Summary: A powerful message broker for developers
+Home-page: https://github.com/shohamroditimemphis/test-memphis.py
+Author: Memphis.dev
+Author-email: shoham@memphis.dev
+License: GPL
+Download-URL: https://github.com/shohamroditimemphis/test-memphis.py/releases/tag/v0.0.6.tar.gz
+Description: UNKNOWN
+Keywords: message broker,devtool,streaming,data
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
