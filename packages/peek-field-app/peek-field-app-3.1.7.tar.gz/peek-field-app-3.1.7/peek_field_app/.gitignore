@@ -1,0 +1,66 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# Ignore the automatically generated files
+.lastHash
+@_peek/
+@peek/
+
+# Ignore python compiled files
+*.pyc
+__pycache__
+__pycache__/
+*.egg-info/
+
+# Web
+npm-debug.log
+.DS_Store
+hooks
+lib/
+node_modules/
+dist
+/tmp
+platforms
+tmp/
+typings/
+**/out-tsc
+dist/
+build/
+/bower_components
+
+# IDEs and editors
+.idea
+/.vscode
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage/*
+/libpeerconnection.log
+npm-debug.log
+testem.log
+/typings
+
+# e2e
+/e2e/*.js
+/e2e/*.map
+
+#System Files
+.DS_Store
+Thumbs.db
+.idea
+
+MANIFEST
+
+# Ignore sonarscanner
+.scannerwork/
+.scannerwork/
+
+# Yalc
+.yalc
+.yalc/
+yalc.lock

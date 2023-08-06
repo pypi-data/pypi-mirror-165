@@ -1,0 +1,13 @@
+@import "src/variables";
+
+.peek-page-contents {
+    position: fixed;
+    top: calc(64px + var(--safe-area-top));
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.peek-page-contents-scroll {
+    overflow-y: scroll;
+}
