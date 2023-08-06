@@ -1,0 +1,5 @@
+[console_scripts]
+pdflaminate = pdfmask.mask:main_laminate
+pdfmask = pdfmask.mask:main_mask
+pdfmask_gen = pdfmask.mask_gen:main
+
