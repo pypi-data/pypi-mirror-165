@@ -1,0 +1,105 @@
+Performing C++ SOURCE FILE Test COMPILER_SUPPORT_Wshorten64to32 failed with the following output:
+Change Dir: /home/erwincoumans/dev/tiny-differentiable-simulator/third_party/eigen3/build_cmake/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_475f1/fast && /usr/bin/make -f CMakeFiles/cmTC_475f1.dir/build.make CMakeFiles/cmTC_475f1.dir/build
+make[1]: Entering directory '/home/erwincoumans/dev/tiny-differentiable-simulator/third_party/eigen3/build_cmake/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_475f1.dir/src.cxx.o
+/usr/bin/c++    -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -DCOMPILER_SUPPORT_Wshorten64to32 -Werror   -Wshorten-64-to-32 -o CMakeFiles/cmTC_475f1.dir/src.cxx.o -c /home/erwincoumans/dev/tiny-differentiable-simulator/third_party/eigen3/build_cmake/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command line option '-Wshorten-64-to-32'
+make[1]: *** [CMakeFiles/cmTC_475f1.dir/build.make:66: CMakeFiles/cmTC_475f1.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/home/erwincoumans/dev/tiny-differentiable-simulator/third_party/eigen3/build_cmake/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_475f1/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test COMPILER_SUPPORT_Wenumconversion failed with the following output:
+Change Dir: /home/erwincoumans/dev/tiny-differentiable-simulator/third_party/eigen3/build_cmake/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_b0104/fast && /usr/bin/make -f CMakeFiles/cmTC_b0104.dir/build.make CMakeFiles/cmTC_b0104.dir/build
+make[1]: Entering directory '/home/erwincoumans/dev/tiny-differentiable-simulator/third_party/eigen3/build_cmake/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_b0104.dir/src.cxx.o
+/usr/bin/c++    -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wlogical-op -DCOMPILER_SUPPORT_Wenumconversion -Werror   -Wenum-conversion -o CMakeFiles/cmTC_b0104.dir/src.cxx.o -c /home/erwincoumans/dev/tiny-differentiable-simulator/third_party/eigen3/build_cmake/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command line option '-Wenum-conversion'; did you mean '-Wno-conversion'?
+make[1]: *** [CMakeFiles/cmTC_b0104.dir/build.make:66: CMakeFiles/cmTC_b0104.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/home/erwincoumans/dev/tiny-differentiable-simulator/third_party/eigen3/build_cmake/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_b0104/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test COMPILER_SUPPORT_Wcpp11extensions failed with the following output:
+Change Dir: /home/erwincoumans/dev/tiny-differentiable-simulator/third_party/eigen3/build_cmake/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_b4b84/fast && /usr/bin/make -f CMakeFiles/cmTC_b4b84.dir/build.make CMakeFiles/cmTC_b4b84.dir/build
+make[1]: Entering directory '/home/erwincoumans/dev/tiny-differentiable-simulator/third_party/eigen3/build_cmake/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_b4b84.dir/src.cxx.o
+/usr/bin/c++    -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wlogical-op -DCOMPILER_SUPPORT_Wcpp11extensions -Werror   -Wc++11-extensions -o CMakeFiles/cmTC_b4b84.dir/src.cxx.o -c /home/erwincoumans/dev/tiny-differentiable-simulator/third_party/eigen3/build_cmake/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command line option '-Wc++11-extensions'; did you mean '-fms-extensions'?
+make[1]: *** [CMakeFiles/cmTC_b4b84.dir/build.make:66: CMakeFiles/cmTC_b4b84.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/home/erwincoumans/dev/tiny-differentiable-simulator/third_party/eigen3/build_cmake/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_b4b84/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test COMPILER_SUPPORT_wd981 failed with the following output:
+Change Dir: /home/erwincoumans/dev/tiny-differentiable-simulator/third_party/eigen3/build_cmake/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_55320/fast && /usr/bin/make -f CMakeFiles/cmTC_55320.dir/build.make CMakeFiles/cmTC_55320.dir/build
+make[1]: Entering directory '/home/erwincoumans/dev/tiny-differentiable-simulator/third_party/eigen3/build_cmake/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_55320.dir/src.cxx.o
+/usr/bin/c++    -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wlogical-op -Wdouble-promotion -Wshadow -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new -fno-common -fstrict-aliasing -DCOMPILER_SUPPORT_wd981 -Werror   -wd981 -o CMakeFiles/cmTC_55320.dir/src.cxx.o -c /home/erwincoumans/dev/tiny-differentiable-simulator/third_party/eigen3/build_cmake/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command line option '-wd981'
+make[1]: *** [CMakeFiles/cmTC_55320.dir/build.make:66: CMakeFiles/cmTC_55320.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/home/erwincoumans/dev/tiny-differentiable-simulator/third_party/eigen3/build_cmake/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_55320/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test COMPILER_SUPPORT_wd2304 failed with the following output:
+Change Dir: /home/erwincoumans/dev/tiny-differentiable-simulator/third_party/eigen3/build_cmake/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_2735e/fast && /usr/bin/make -f CMakeFiles/cmTC_2735e.dir/build.make CMakeFiles/cmTC_2735e.dir/build
+make[1]: Entering directory '/home/erwincoumans/dev/tiny-differentiable-simulator/third_party/eigen3/build_cmake/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_2735e.dir/src.cxx.o
+/usr/bin/c++    -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wlogical-op -Wdouble-promotion -Wshadow -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new -fno-common -fstrict-aliasing -DCOMPILER_SUPPORT_wd2304 -Werror   -wd2304 -o CMakeFiles/cmTC_2735e.dir/src.cxx.o -c /home/erwincoumans/dev/tiny-differentiable-simulator/third_party/eigen3/build_cmake/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command line option '-wd2304'
+make[1]: *** [CMakeFiles/cmTC_2735e.dir/build.make:66: CMakeFiles/cmTC_2735e.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/home/erwincoumans/dev/tiny-differentiable-simulator/third_party/eigen3/build_cmake/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_2735e/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test COMPILER_SUPPORT_STRICTANSI failed with the following output:
+Change Dir: /home/erwincoumans/dev/tiny-differentiable-simulator/third_party/eigen3/build_cmake/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_d620d/fast && /usr/bin/make -f CMakeFiles/cmTC_d620d.dir/build.make CMakeFiles/cmTC_d620d.dir/build
+make[1]: Entering directory '/home/erwincoumans/dev/tiny-differentiable-simulator/third_party/eigen3/build_cmake/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_d620d.dir/src.cxx.o
+/usr/bin/c++    -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wlogical-op -Wdouble-promotion -Wshadow -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new -fno-common -fstrict-aliasing -DCOMPILER_SUPPORT_STRICTANSI -Werror   -strict-ansi -o CMakeFiles/cmTC_d620d.dir/src.cxx.o -c /home/erwincoumans/dev/tiny-differentiable-simulator/third_party/eigen3/build_cmake/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command line option '-strict-ansi'; did you mean '-fstrict-enums'?
+make[1]: *** [CMakeFiles/cmTC_d620d.dir/build.make:66: CMakeFiles/cmTC_d620d.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/home/erwincoumans/dev/tiny-differentiable-simulator/third_party/eigen3/build_cmake/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_d620d/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test COMPILER_SUPPORT_Qunusedarguments failed with the following output:
+Change Dir: /home/erwincoumans/dev/tiny-differentiable-simulator/third_party/eigen3/build_cmake/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_ffae8/fast && /usr/bin/make -f CMakeFiles/cmTC_ffae8.dir/build.make CMakeFiles/cmTC_ffae8.dir/build
+make[1]: Entering directory '/home/erwincoumans/dev/tiny-differentiable-simulator/third_party/eigen3/build_cmake/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_ffae8.dir/src.cxx.o
+/usr/bin/c++    -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wlogical-op -Wdouble-promotion -Wshadow -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new -fno-common -fstrict-aliasing -DCOMPILER_SUPPORT_Qunusedarguments -Werror   -Qunused-arguments -o CMakeFiles/cmTC_ffae8.dir/src.cxx.o -c /home/erwincoumans/dev/tiny-differentiable-simulator/third_party/eigen3/build_cmake/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command line option '-Qunused-arguments'
+make[1]: *** [CMakeFiles/cmTC_ffae8.dir/build.make:66: CMakeFiles/cmTC_ffae8.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/home/erwincoumans/dev/tiny-differentiable-simulator/third_party/eigen3/build_cmake/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_ffae8/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
