@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: tilos-radio-player
+Version: 0.0.4
+Summary: Tilos Rádió Player
+Home-page: UNKNOWN
+Author: xa49
+Author-email: <tilosplayer@gmail.com>
+License: UNKNOWN
+Keywords: python
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: certifi (==2022.5.18.1)
+Requires-Dist: charset-normalizer (==2.0.12)
+Requires-Dist: idna (==3.3)
+Requires-Dist: requests (==2.28.0)
+Requires-Dist: simple-term-menu (==1.4.1)
+Requires-Dist: urllib3 (==1.26.9)
+
+UNKNOWN
+
+
