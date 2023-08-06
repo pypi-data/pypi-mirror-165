@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+pytest_eliot/__init__.py
+pytest_eliot/plugin.py
+pytest_eliot.egg-info/PKG-INFO
+pytest_eliot.egg-info/SOURCES.txt
+pytest_eliot.egg-info/dependency_links.txt
+pytest_eliot.egg-info/entry_points.txt
+pytest_eliot.egg-info/requires.txt
+pytest_eliot.egg-info/top_level.txt
+tests/test_fixtures.py
