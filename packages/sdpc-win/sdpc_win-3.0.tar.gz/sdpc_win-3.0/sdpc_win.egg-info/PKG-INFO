@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: sdpc-win
+Version: 3.0
+Summary: a library for sdpcPY (windows version)
+Home-page: https://github.com/THU-JWonderLand/sdpcPY-win
+Author: Qiming He, Renao Yan, Yiqing Liu, Jiawen Li
+Author-email: lijiawen21@mails.tsinghua.edu.cn
+License: MIT License
+Description-Content-Type: UNKNOWN
+Description: UNKNOWN
+Platform: windows
