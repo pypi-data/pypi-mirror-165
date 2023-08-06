@@ -1,0 +1,15 @@
+pymsd/__init__.py,sha256=j0MfdSXX9Qs4DeIAW4rrPgQbZkiZDxAFV67teculC0M,437
+pymsd/easy.py,sha256=GxkohlRgVGXqA6lI-q7VOCpNQjMvSFdP30_RqhmlyUc,1165
+pymsd/numpy.py,sha256=4NVKXLqVtlhQge8lTqOKQH6WWT56p9kNmCFYAAi0yWE,1172
+pymsd/pandas.py,sha256=sFG_SVMKqmr-VzDoj-cIHojGRnQaI8BjBMAc9lgAvoA,1360
+pymsd/polars.py,sha256=K_NkzD2YyjCXsvo3b65WV9ygquL1IPhJOl_fKbQnnJA,922
+pymsd/proto/__init__.py,sha256=_pt63caeElTsf1_jWX8uac19e4Q_elGg0CUvx3qSNKg,7
+pymsd/proto/dataframe_pb2.py,sha256=dq1ldBfcxDBD3B6w11-YBD8Nz0HNo64HnTXN0nrtrEg,3949
+pymsd/proto/msd_pb2.py,sha256=E_J9_iGksfc-PN1CLNgqZ8VNdj_SaUX_kVkHY7it5A8,23890
+pymsd/proto/msd_pb2_grpc.py,sha256=g7GC40tkJLGsCGF8A4Kty6fwheanvKQHXCaK-bHcvVs,11664
+pymsd/proto/schema_pb2.py,sha256=YCBgEMxNt0BtftSEbMHkLn8MpatYvP40JHlgBEs1aWE,4427
+pymsd/pyarrow.py,sha256=lHAjB5n3-V-8aQvYdTenEPWvR0wBzY3nQCpWPMN-V-g,1118
+pymsd/setting.py,sha256=Xv5ImCUJT8XVaMt02d6Z4mrukcgEtJmfwN0s5ZJYPcw,393
+pymsd-0.2.0.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+pymsd-0.2.0.dist-info/METADATA,sha256=hSFzbOJM-TP8qRJizCpmgM2a7OIPKgkM-HkpATx2AKw,2974
+pymsd-0.2.0.dist-info/RECORD,,
