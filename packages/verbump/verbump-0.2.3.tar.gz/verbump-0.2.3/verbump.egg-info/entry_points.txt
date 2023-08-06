@@ -1,0 +1,3 @@
+[console_scripts]
+verbump = verbump.cli:main
+
