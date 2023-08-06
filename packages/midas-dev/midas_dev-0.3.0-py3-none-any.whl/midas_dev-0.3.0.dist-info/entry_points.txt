@@ -1,0 +1,9 @@
+[console_scripts]
+midblack=midas_dev.main:run_black
+midfmt=midas_dev.main:run_fmt
+midisort=midas_dev.main:run_isort
+midlint=midas_dev.main:run_lint
+midmypy=midas_dev.main:run_mypy
+midpytest=midas_dev.main:run_pytest
+midtest=midas_dev.main:run_test
+
