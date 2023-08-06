@@ -1,0 +1,12 @@
+pandas
+scikit-learn
+hmmlearn
+deeptime
+torch
+torchvision
+torchaudio
+matplotlib
+tqdm
+MDAnalysis
+seaborn
+mdtraj

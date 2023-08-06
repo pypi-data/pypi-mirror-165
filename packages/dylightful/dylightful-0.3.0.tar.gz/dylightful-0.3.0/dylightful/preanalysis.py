@@ -1,0 +1,2 @@
+def autocorr():
+    raise NotImplementedError

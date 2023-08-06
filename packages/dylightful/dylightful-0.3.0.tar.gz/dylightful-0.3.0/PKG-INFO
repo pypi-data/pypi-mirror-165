@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: dylightful
+Version: 0.3.0
+Summary: Package to uncover hidden interaction patterns in supramolecular complexes
+Home-page: https://github.com/MQSchleich/dylightful
+Author: Julian M. Kleber
+Author-email: julian.m.kleber@gmail.com
+License: MIT
+License-File: LICENSE
