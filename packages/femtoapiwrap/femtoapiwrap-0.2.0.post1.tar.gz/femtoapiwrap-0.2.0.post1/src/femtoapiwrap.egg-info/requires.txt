@@ -1,0 +1,17 @@
+femtoapi==1.0.0
+PySide2
+numpy
+scipy>=1.2.0
+upolygon==0.1.8
+
+[doc]
+sphinx
+docutils==0.18.1
+
+[examples]
+h5py
+Pillow==9.1.1
+matplotlib
+
+[test]
+coverage
