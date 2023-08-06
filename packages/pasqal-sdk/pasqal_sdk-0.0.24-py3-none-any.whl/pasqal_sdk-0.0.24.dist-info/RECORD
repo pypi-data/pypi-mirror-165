@@ -1,0 +1,15 @@
+sdk/__init__.py,sha256=AuIIO4hyazbl3AILWZoW8dnEAbdCokmP88c-UTsigyg,3739
+sdk/_version.py,sha256=xSuUA8ebwd-TUOQ5pF3YBBKPvWS0QoZbsdDwm0S6meQ,625
+sdk/batch.py,sha256=5bsVp4ldIBc3HRZUF1aAJNALQBboG71andrGTEtXOZI,3609
+sdk/client.py,sha256=HUVi_r_ofWFco04fS15rrIKsI9WTSPlwLQpY-BctPBI,4300
+sdk/endpoints.py,sha256=RG0LD9qbg8wgQxtQ6q7t66HTCX_jGXzav_tZC18qNlQ,882
+sdk/errors.py,sha256=69G6c4c5Yke2Hk2U0J2BWSp-vlOFklHgYyZHwJNqL6E,1213
+sdk/job.py,sha256=wFfWFC-o_p3uGdrDfean9HTyV4GVBCqRV7ECeBc994w,885
+sdk/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sdk/utils/jsend.py,sha256=QtCYKPz6VQSC7ejcf2oOwXiOv0nxB79xG8HuxW-aaq0,726
+sdk/utils/strenum.py,sha256=PpWCdGCzv6fJhOsGiZbz3wJGj3-aEc9xVLQ48Qo8N7k,242
+pasqal_sdk-0.0.24.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+pasqal_sdk-0.0.24.dist-info/METADATA,sha256=4SXnTfz0ReNhwKLIYKxaLH8PxbC_jDDLpq1yTyl9aJU,4199
+pasqal_sdk-0.0.24.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+pasqal_sdk-0.0.24.dist-info/top_level.txt,sha256=JuXS55gRP3EzGKmJgbLfVfUolO3cM_u69k3qvutnBuw,4
+pasqal_sdk-0.0.24.dist-info/RECORD,,
