@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+nr_common_metadata_model_builder/__init__.py
+nr_common_metadata_model_builder.egg-info/PKG-INFO
+nr_common_metadata_model_builder.egg-info/SOURCES.txt
+nr_common_metadata_model_builder.egg-info/dependency_links.txt
+nr_common_metadata_model_builder.egg-info/entry_points.txt
+nr_common_metadata_model_builder.egg-info/not-zip-safe
+nr_common_metadata_model_builder.egg-info/requires.txt
+nr_common_metadata_model_builder.egg-info/top_level.txt
+nr_common_metadata_model_builder/models/__init__.py
+nr_common_metadata_model_builder/models/nr_common_metadata.yaml
+nr_common_metadata_model_builder/models/nr_common_metadata_model.yaml

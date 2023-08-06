@@ -1,0 +1,3 @@
+[oarepo.models]
+nr-common-metadata = nr_common_metadata_model_builder.models:nr_common_metadata.yaml
+nr-common-metadata-model = nr_common_metadata_model_builder.models:nr_common_metadata_model.yaml
