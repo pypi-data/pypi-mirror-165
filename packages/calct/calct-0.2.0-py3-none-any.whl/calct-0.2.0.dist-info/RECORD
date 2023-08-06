@@ -1,0 +1,12 @@
+calct/__init__.py,sha256=tXoq21bd5ESp5MtDCAuAeC5GPYdaZ22NukA4HgNx0ZE,408
+calct/__version__.py,sha256=6IKboCqj1mW1cDevn5KW5nV9vE_GqeF7QLCqcZATcxU,134
+calct/common.py,sha256=mhPETy_iN123YltL5_rQ-P-7BqbUgUSi8hJJQAHs9n0,1301
+calct/duration.py,sha256=2kWcmk8CFxceY3PjkcfV5WC4g2L5n4SOk-0H4Py8pSk,6606
+calct/main.py,sha256=a-awNsWhDGETGyp4pPGyi2EniEFBPiREaYHiNGFMjl4,6773
+calct/parser.py,sha256=i9pRoG6TY_daiCAKRpsLPwvhT0cJAcPm6w-9WFcv7d8,7991
+calct-0.2.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+calct-0.2.0.dist-info/METADATA,sha256=gwV_IG2RpbjBHQj9D5el5H_w9URk-TAa2lkI9645q3Q,1457
+calct-0.2.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+calct-0.2.0.dist-info/entry_points.txt,sha256=DUwKB_Cjq_IFdZOdPW0aw6ma2PdXFkl_tSHzDx30BaE,42
+calct-0.2.0.dist-info/top_level.txt,sha256=wVJnTNuXZkdJ5u0iRD2xdlYY2geE_aJQymneFok9ksY,6
+calct-0.2.0.dist-info/RECORD,,

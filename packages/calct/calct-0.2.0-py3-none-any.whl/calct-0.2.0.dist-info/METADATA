@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: calct
+Version: 0.2.0
+Summary: Easily do calculations on hours and minutes using the command line
+Home-page: https://github.com/philippewarren/calct
+Author: Philippe Warren
+Author-email: philippewarren31@gmail.com
+License: GPLv3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: English
+Classifier: Natural Language :: French
+Classifier: Topic :: Utilities
+Classifier: Typing :: Typed
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: dev
+Requires-Dist: black (>=22.6.0) ; extra == 'dev'
+Requires-Dist: ipython (>=8.4.0) ; extra == 'dev'
+Requires-Dist: mypy (>=0.971) ; extra == 'dev'
+Requires-Dist: pylint (>=2.15.0) ; extra == 'dev'
+Requires-Dist: flake8 (>=5.0.4) ; extra == 'dev'
+Requires-Dist: isort (>=5.10.1) ; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: pytest (>=7.1.2) ; extra == 'test'
+Requires-Dist: pytest-cov (>=3.0.0) ; extra == 'test'
+
+# Calct
+Easily do calculations on hours and minutes using the command line
+
+## TODO
+1. Improve README and documentation
+2. Add more tests
+3. Custom parsing of durations without using `strptime` to support more formats
+ - `25h` (bigger than 23h)
+ - `h61`, `61m` (bigger than 60m)
+ - `0.1h`(float format for hours)
