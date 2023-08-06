@@ -1,0 +1,7 @@
+setup.py
+pwdcrk/__init__.py
+pwdcrk/pwdcrk.py
+pwdcrk.egg-info/PKG-INFO
+pwdcrk.egg-info/SOURCES.txt
+pwdcrk.egg-info/dependency_links.txt
+pwdcrk.egg-info/top_level.txt
