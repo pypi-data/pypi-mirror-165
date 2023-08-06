@@ -1,0 +1,10 @@
+[console_scripts]
+mid=midas_dev.main:Fulltest.run_cli
+midblack=midas_dev.main:Black.run_cli
+midflake8=midas_dev.main:Flake8.run_cli
+midfmt=midas_dev.main:Format.run_cli
+midisort=midas_dev.main:ISort.run_cli
+midmypy=midas_dev.main:Mypy.run_cli
+midpytest=midas_dev.main:Pytest.run_cli
+midtest=midas_dev.main:Fulltest.run_cli
+
