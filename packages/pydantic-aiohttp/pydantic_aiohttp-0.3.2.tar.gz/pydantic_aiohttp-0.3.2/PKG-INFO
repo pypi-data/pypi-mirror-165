@@ -1,0 +1,184 @@
+Metadata-Version: 2.1
+Name: pydantic-aiohttp
+Version: 0.3.2
+Summary: Simple HTTP Client based on aiohttp with integration of pydantic
+Home-page: https://github.com/pylakey/pydantic_aiohttp
+License: MIT
+Author: pylakey
+Author-email: pylakey@protonmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: Framework :: AsyncIO
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Typing :: Typed
+Requires-Dist: aiofiles (>=0.8.0,<0.9.0)
+Requires-Dist: aiohttp[speedups] (>=3.8.1,<4.0.0)
+Requires-Dist: pydantic (>=1.9.2,<2.0.0)
+Requires-Dist: ujson (>=5.4.0,<6.0.0)
+Project-URL: Repository, https://github.com/pylakey/pydantic_aiohttp
+Description-Content-Type: text/markdown
+
+# pydantic_aiohttp - Symbiosis of [Pydantic](https://github.com/samuelcolvin/pydantic) and [Aiohttp](https://github.com/aio-libs/aiohttp)
+
+[![PyPI version shields.io](https://img.shields.io/pypi/v/pydantic_aiohttp.svg)](https://pypi.python.org/pypi/pydantic_aiohttp/)
+[![PyPI pyversions](https://img.shields.io/pypi/pyversions/pydantic_aiohttp.svg)](https://pypi.python.org/pypi/pydantic_aiohttp/)
+[![PyPI license](https://img.shields.io/pypi/l/pydantic_aiohttp.svg)](https://pypi.python.org/pypi/pydantic_aiohttp/)
+
+This repository provides simple HTTP Client based on aiohttp with integration of pydantic
+
+## Examples
+
+### Basic example
+
+```python
+import asyncio
+
+import pydantic
+
+from pydantic_aiohttp import Client
+
+
+class HelloWorldResponse(pydantic.BaseModel):
+    hello: str
+
+
+async def main():
+    example_client = Client("https://api.example.com")
+
+    response = await example_client.get("/hello", response_model=HelloWorldResponse)
+    print(response.hello)
+
+    # After all your work is done you should close client (this method closes aiohttp session instance)
+    await example_client.close()
+
+
+if __name__ == '__main__':
+    asyncio.run(main())
+
+```
+
+### Use as context manager
+
+```python
+import asyncio
+
+import pydantic
+
+from pydantic_aiohttp import Client
+
+
+class HelloWorldResponse(pydantic.BaseModel):
+    hello: str
+
+
+async def main():
+    # Client will be closed automatically on exit from context
+    async with Client("https://api.example.com") as client:
+        response = await client.get("/hello", response_model=HelloWorldResponse)
+    
+    print(response.hello)
+
+
+if __name__ == '__main__':
+    asyncio.run(main())
+
+```
+
+### Handling errors parsed as pydantic models
+
+```python
+import http
+import asyncio
+
+import pydantic
+
+import pydantic_aiohttp
+from pydantic_aiohttp import Client
+
+
+class FastAPIValidationError(pydantic.BaseModel):
+    loc: list[str]
+    msg: str
+    type: str
+
+
+class FastAPIUnprocessableEntityError(pydantic.BaseModel):
+    detail: list[FastAPIValidationError]
+
+
+class User(pydantic.BaseModel):
+    id: str
+    email: str
+    first_name: str
+    last_name: str
+    is_admin: bool
+
+
+async def main():
+    client = Client(
+        "https://fastapi.example.com",
+        error_response_models={
+            http.HTTPStatus.UNPROCESSABLE_ENTITY: FastAPIUnprocessableEntityError
+        }
+    )
+
+    try:
+        # Imagine, that "email" field is required for this route
+        await client.post(
+            "/users",
+            body={
+                "first_name": "John",
+                "last_name": "Doe"
+            },
+            response_model=User
+        )
+    except pydantic_aiohttp.HTTPUnprocessableEntity as e:
+        # response field of exception now contain parsed pydantic model entity 
+        print(e.response.detail[0].json(indent=4))
+        # >>>
+        # {
+        #     "loc": [
+        #         "body",
+        #         "email"
+        #     ],
+        #     "msg": "field required",
+        #     "type": "value_error.missing"
+        # }
+    finally:
+        await client.close()
+
+
+if __name__ == '__main__':
+    asyncio.run(main())
+
+```
+
+### Downloading files
+```python
+import asyncio
+
+from pydantic_aiohttp import Client
+
+
+async def main():
+    client = Client('https://source.unsplash.com')
+
+    try:
+        await client.download_file("/random", filepath="random.jpg")
+    finally:
+        await client.close()
+
+
+if __name__ == '__main__':
+    asyncio.run(main())
+
+```
+
+## LICENSE
+
+This project is licensed under the terms of the [MIT](https://github.com/pylakey/aiotdlib/blob/master/LICENSE) license.
+
