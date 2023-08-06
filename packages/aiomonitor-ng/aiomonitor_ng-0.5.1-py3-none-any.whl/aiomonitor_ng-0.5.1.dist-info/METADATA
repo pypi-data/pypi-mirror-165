@@ -1,0 +1,311 @@
+Metadata-Version: 2.1
+Name: aiomonitor-ng
+Version: 0.5.1
+Summary: aiomonitor-ng adds monitor and python REPL capabilities for asyncio application
+Home-page: https://github.com/achimnol/aiomonitor-ng
+Download-URL: https://pypi.python.org/pypi/aiomonitor-ng
+Author: Nikolay Novik
+Author-email: nickolainovik@gmail.com
+License: Apache 2
+Platform: POSIX
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Operating System :: POSIX
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: AsyncIO
+License-File: LICENSE
+Requires-Dist: terminaltables
+Requires-Dist: aioconsole
+
+aiomonitor-ng
+=============
+
+**aiomonitor-ng** is a (temporary) fork of **aiomonitor** with support for
+Python 3.10+ and additional usability & debuggability improvements.
+
+**aiomonitor** is a module that adds monitor and cli capabilities
+for asyncio_ applications. Idea and code were borrowed from curio_ project.
+Task monitor that runs concurrently to the asyncio_ loop (or fast drop-in
+replacement uvloop_) in a separate thread as result monitor will work even if
+the event loop is blocked for some reason.
+
+This library provides a python console using aioconsole_ module. It is possible
+to execute asynchronous commands inside your running application. Extensible
+with you own commands, in the style of the standard library's cmd_ module
+
+.. image:: https://raw.githubusercontent.com/achimnol/aiomonitor-ng/master/docs/screenshot-ps-where-example.png
+
+Installation
+------------
+Installation process is simple, just::
+
+    $ pip install aiomonitor-ng
+
+
+Example
+-------
+Monitor has context manager interface:
+
+.. code:: python
+
+    import aiomonitor
+
+    loop = asyncio.get_event_loop()
+    with aiomonitor.start_monitor(loop=loop):
+        loop.run_forever()
+
+Now from separate terminal it is possible to connect to the application::
+
+    $ nc localhost 50101
+    
+
+To make arrow keys working properly you can use the `rlwrap` trick:
+
+    $ rlwrap nc localhost 50101
+    
+
+or the included python client::
+
+    $ python -m aiomonitor.cli
+    
+    
+    
+
+Tutorial
+--------
+
+Let's create a simple aiohttp_ application, and see how ``aiomonitor`` can
+be integrated with it.
+
+.. code:: python
+
+    import asyncio
+
+    import aiomonitor
+    from aiohttp import web
+
+    # Simple handler that returns response after 100s
+    async def simple(request):
+        loop = request.app.loop
+
+        print('Start sleeping')
+        await asyncio.sleep(100, loop=loop)
+        return web.Response(text="Simple answer")
+
+    loop = asyncio.get_event_loop()
+    # create application and register route
+    app = web.Application(loop=loop)
+    app.router.add_get('/simple', simple)
+
+    # it is possible to pass a dictionary with local variables
+    # to the python console environment
+    host, port = "localhost", 8090
+    locals_ = {"port": port, "host": host}
+    # init monitor just before run_app
+    with aiomonitor.start_monitor(loop=loop, locals=locals_):
+        # run application with built-in aiohttp run_app function
+        web.run_app(app, port=port, host=host)
+
+Let's save this code in file ``simple_srv.py``, so we can run it with the following command::
+
+    $ python simple_srv.py
+    ======== Running on http://localhost:8090 ========
+    (Press CTRL+C to quit)
+
+And now one can connect to a running application from a separate terminal, with
+the ``nc`` command, and ``aiomonitor`` will immediately respond with prompt::
+
+    $ nc localhost 50101
+    Asyncio Monitor: 1 tasks running
+    Type help for commands
+    monitor >>>
+
+
+Note in order to make arrow keys and editing work properly just prepend command with `rlwrap`::
+
+    $ rlwrap nc localhost 50101
+
+
+Now you can type commands, for instance, ``help``::
+
+    monitor >>> help
+    Commands:
+                 ps               : Show task table
+                 where taskid     : Show stack frames for a task
+                 cancel taskid    : Cancel an indicated task
+                 signal signame   : Send a Unix signal
+                 stacktrace       : Print a stack trace from the event loop thread
+                 console          : Switch to async Python REPL
+                 quit             : Leave the monitor
+
+``aiomonitor`` also supports async python console inside a running event loop
+so you can explore the state of your application::
+
+    monitor >>> console
+    Python 3.5.2 (default, Oct 11 2016, 05:05:28)
+    [GCC 4.2.1 Compatible Apple LLVM 8.0.0 (clang-800.0.38)] on darwin
+    Type "help", "copyright", "credits" or "license" for more information.
+    ---
+    This console is running in an asyncio event loop.
+    It allows you to wait for coroutines using the 'await' syntax.
+    Try: await asyncio.sleep(1, result=3, loop=loop)
+    ---
+    >>> await asyncio.sleep(1, result=3, loop=loop)
+
+To leave the console type ``exit()``::
+
+    >>> exit()
+    monitor >>>
+
+
+``aiomonitor`` is very easy to extend with your own console commands.
+
+.. code:: python
+
+   class WebMonitor(aiomonitor.Monitor):
+       def do_hello(self, sin, sout, name=None):
+           """Using the /hello GET interface
+
+           There is one optional argument, "name".  This name argument must be
+           provided with proper URL excape codes, like %20 for spaces.
+           """
+           name = '' if name is None else '/' + name
+           r = requests.get('http://localhost:8090/hello' + name)
+           sout.write(r.text + '\n')
+
+
+Requirements
+------------
+
+* Python_ 3.5+
+* aioconsole_
+* uvloop_ (optional)
+
+
+.. _PEP492: https://www.python.org/dev/peps/pep-0492/
+.. _Python: https://www.python.org
+.. _aioconsole: https://github.com/vxgmichel/aioconsole
+.. _aiohttp: https://github.com/KeepSafe/aiohttp
+.. _asyncio: http://docs.python.org/3.5/library/asyncio.html
+.. _curio: https://github.com/dabeaz/curio
+.. _uvloop: https://github.com/MagicStack/uvloop
+.. _cmd: http://docs.python.org/3/library/cmd.html
+
+CHANGES
+=======
+
+0.5.1 (2022-08-29)
+------------------
+
+* Fix the task creation location in the 'ps' command output
+
+0.5.0 (2022-08-26)
+------------------
+
+* Made it compatible with Python 3.10
+
+* Added the task creation stack chain display to the 'where' command by setting a custom task factory (#1)
+
+* Changed the 'ps' command view to be more concise and display many tasks in a better way (#2)
+
+
+0.4.5 (2019-11-03)
+------------------
+
+* Fixed endless loop on EOF (thanks @apatrushev)
+
+
+0.4.4 (2019-03-23)
+------------------
+
+* Simplified python console start end #175
+
+* Added python 3.7 compatibility #176
+
+
+0.4.3 (2019-02-02)
+------------------
+
+* Reworked console server start/close logic #169
+
+
+0.4.2 (2019-01-13)
+------------------
+
+* Fixed issue with type annotations from 0.4.1 release #164
+
+
+0.4.1 (2019-01-10)
+------------------
+
+* Fixed Python 3.5 support #161 (thanks @bmerry)
+
+
+0.4.0 (2019-01-04)
+------------------
+
+* Added support for custom commands #133 (thanks @yggdr)
+
+* Fixed OptLocals being passed as the default value for "locals" #122 (thanks @agronholm)
+
+* Added an API inspired by the standard library's cmd module #135 (thanks @yggdr)
+
+* Correctly report the port running aioconsole #124 (thanks @bmerry)
+
+
+0.3.1 (2018-07-03)
+------------------
+
+* Added the stacktrace command #120 (thanks @agronholm)
+
+
+0.3.0 (2017-09-08)
+------------------
+
+* Added _locals_ parameter for passing environment to python REPL
+
+
+0.2.1 (2016-01-03)
+------------------
+
+* Fixed import in telnet cli in #12 (thanks @hellysmile)
+
+
+0.2.0 (2016-01-01)
+------------------
+
+* Added basic documentation
+
+* Most of methods of Monitor class are not not private api
+
+
+0.1.0 (2016-12-14)
+------------------
+
+* Added missed LICENSE file
+
+* Updated API, added start_monitor() function
+
+
+0.0.3 (2016-12-11)
+------------------
+
+* Fixed README.rst
+
+
+0.0.2 (2016-12-11)
+------------------
+
+* Tests more stable now
+
+* Added simple tutorial to README.rst
+
+
+0.0.1 (2016-12-10)
+------------------
+
+* Initial release.
