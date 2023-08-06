@@ -1,0 +1,10 @@
+tabulate
+ipywidgets
+ipyevents
+pandas
+seaborn
+sympy
+matplotlib
+deprecation
+brightway2==2.3
+SALib
