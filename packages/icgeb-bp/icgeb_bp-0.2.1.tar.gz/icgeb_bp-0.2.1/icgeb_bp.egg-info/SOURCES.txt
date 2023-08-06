@@ -1,0 +1,8 @@
+setup.py
+icgeb_bp/__init__.py
+icgeb_bp/basmati.py
+icgeb_bp.egg-info/PKG-INFO
+icgeb_bp.egg-info/SOURCES.txt
+icgeb_bp.egg-info/dependency_links.txt
+icgeb_bp.egg-info/requires.txt
+icgeb_bp.egg-info/top_level.txt

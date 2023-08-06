@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: icgeb-bp
+Version: 0.2.1
+Summary: Predticts Basmati Paddy Seeds 
+Home-page: UNKNOWN
+Author: Nimisha_Tiwari
+Author-email: nimi.tiwari08@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: python,Rice,Basmati,deep learning,image classification,icgeb
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
