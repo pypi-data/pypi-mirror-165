@@ -1,0 +1,101 @@
+[build-system]
+build-backend = "poetry.masonry.api"
+requires = ["poetry>=1.0.5"]
+
+[tool.poetry]
+authors = [
+  "Clay Mcleod <clay.mcleod@STJUDE.org>",
+  "Jobin Sunny <jobin.sunny@STJUDE.org>",
+  "Andrew Thrasher <andrew.thrasher@STJUDE.org>",
+  "Andrew Frantz <andrew.frantz@STJUDE.org",
+]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent",
+  "Development Status :: 5 - Production/Stable",
+  "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+description = "An opinionated Cromwell orchestration system"
+documentation = "https://stjudecloud.github.io/oliver/"
+homepage = "https://stjudecloud.github.io/oliver/"
+include = [
+  "*.txt",
+  "*.md",
+]
+keywords = [
+  "bioinformatics",
+  "genomics",
+  "workflows",
+  "cromwell",
+]
+license = "MIT"
+name = "stjudecloud-oliver"
+packages = [
+  {include = "oliver"},
+]
+readme = "README.md"
+repository = "https://github.com/stjudecloud/oliver"
+version = "1.4.9"
+
+[tool.poetry.scripts]
+oliver = "oliver.__main__:main"
+
+[tool.poetry.dependencies]
+aiohttp = "^3.6.2"
+azure-cosmos = ">=3.1.2,<5.0.0"
+boto3 = "^1.11.9"
+logzero = "^1.5.0"
+mypy-boto3 = {extras = ["batch", "logs"], version = "^1.12.17"}
+mypy_boto3_batch = "^1.12.21"
+mypy_boto3_logs = "^1.12.21"
+pendulum = "^2.0.5"
+python = "^3.9.7"
+requests = "^2.22.0"
+tabulate = "^0.8.6"
+typed-ast = "1.5.2"
+tzlocal = "<3.0.0"
+
+[tool.poetry.dev-dependencies]
+black = "^21.11b1"
+boto3-stubs = "^1.24.61"
+mkdocs = "^1.0.4"
+mkdocs-bootswatch = "^1.0"
+mypy = "^0.910"
+pydocstyle = "^6.1.1"
+pylint = "2.12.2"
+pytest = "^6.2.5"
+pytest-asyncio = "^0.16.0"
+pytest-cov = "^3.0.0"
+python-semantic-release = ">=6.0.0"
+rope = "^0.22.0"
+types-tabulate = "^0.8.3"
+
+[tool.semantic_release]
+build_command = "poetry build"
+commit_author = "St. Jude Cloud <support@stjude.cloud>"
+commit_message = ""
+commit_subject = "chore: bumping version to v{version}"
+upload_to_release = "false"
+version_source = "commit"
+version_variable = "pyproject.toml:version"
+# check_build_status = true
+
+[tool.black]
+exclude = '''
+/(
+    \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+  | __pycache__
+  | .*egg-info
+)/
+'''
+include = '\.pyi?$'
+target-version = ['py36', 'py37', 'py38']
