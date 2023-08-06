@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: ShanCsv
+Version: 0.7
+Summary: A Python Package for CSV File Parsing and Rendering
+Home-page: https://github.com/Ninjago77/ShanCsv
+Author: Shanvanth Arunmozhi
+Author-email: shanvantharunmozhi@gmail.com
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/Ninjago77/ShanCsv/issues
+Project-URL: Docs, https://github.com/Ninjago77/ShanCsv#readme
+Description: # ShanCsv <br/>[![Python 3.8+](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/downloads/) [![Pip latest](https://img.shields.io/badge/pip-latest-blue)](https://pip.pypa.io/en/stable/) [![license](https://img.shields.io/badge/license-MIT-green)](https://github.com/Ninjago77/ShanCsv/blob/main/LICENSE)
+        A [Python Package](https://pypi.org/) for [CSV](https://en.wikipedia.org/wiki/Comma-separated_values) File Parsing and Rendering. Easy to use and follows the formats of other commonly used libraries - The [load(s)](#shancsvloadfile)/[dump(s)](#shancsvdumpdata-file) functions of [pickle](https://docs.python.org/3/library/pickle.html)/[json](https://docs.python.org/3/library/json.html). Automatically converts data values from/to a 2-dimensional list as *float, int, bool, none, str* unlike the [in-built csv library.](https://docs.python.org/3/library/csv.html)
+        Completly customizable by giving the specified \*\**kwargs* to the [`Csv Class`](#shancsvcsvinputobj-inputtypestr-moreargs) directly or through the [other functions](#basic-usage) indirectly. Simple, readable, easy to understand [Docs.](https://github.com/Ninjago77/ShanCsv#readme) So what are you waiting for? Install [ShanCsv](#how-to-install) and try it now!
+        ## View the [Docs](https://github.com/Ninjago77/ShanCsv#readme) and more at: https://github.com/Ninjago77/ShanCsv#readme]
+Keywords: samplecsv,shancsv,csv,comma-sperated-values,data,storage,development
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Database
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Libraries
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.8, <4
+Description-Content-Type: text/markdown
