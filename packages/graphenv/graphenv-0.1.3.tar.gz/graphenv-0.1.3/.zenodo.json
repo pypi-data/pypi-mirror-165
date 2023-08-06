@@ -1,0 +1,37 @@
+{
+  "creators": [
+    {
+      "orcid": "0000-0001-6140-1957",
+      "name": "Dave Biagioni",
+      "affiliation": "Computational Sciences Center, National Renewable Energy Laboratory, Golden CO 80401, USA"
+    },
+    {
+      "orcid": "0000-0002-5867-3561",
+      "name": "Charles Tripp",
+      "affiliation": "Computational Sciences Center, National Renewable Energy Laboratory, Golden CO 80401, USA"
+    },
+    {
+      "orcid": "0000-0003-0078-6560",
+      "name": "Struan Clark",
+      "affiliation": "Computational Sciences Center, National Renewable Energy Laboratory, Golden CO 80401, USA"
+    },
+    {
+      "orcid": "0000-0001-5132-0168",
+      "name": "Dmitry Duplyakin",
+      "affiliation": "Computational Sciences Center, National Renewable Energy Laboratory, Golden CO 80401, USA"
+    },
+    {
+      "orcid": "0000-0003-2828-1273",
+      "name": "Jeffrey Law",
+      "affiliation": "Biosciences Center, National Renewable Energy Laboratory, Golden CO 80401, USA"
+    },
+    {
+      "orcid": "0000-0002-7928-3722",
+      "name": "Peter St. John",
+      "affiliation": "Biosciences Center, National Renewable Energy Laboratory, Golden CO 80401, USA"
+    }
+  ],
+  "keywords": ["Python", "reinforcement learning", "graph search", "combinatorial optimization"],
+  "license": "BSD-3-Clause",
+  "title": "graphenv: a Python library for reinforcement learning on graph search spaces"
+}
