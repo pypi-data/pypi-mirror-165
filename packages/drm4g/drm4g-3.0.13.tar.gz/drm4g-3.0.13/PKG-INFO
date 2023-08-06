@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: drm4g
+Version: 3.0.13
+Summary: Meta-scheduling framework for distributed computing infrastructures
+Home-page: https://github.com/SantanderMetGroup/DRM4G
+Author: Santander Meteorology Group (UC-CSIC)
+Author-email: antonio.cofino@unican.es
+License: UNKNOWN
+Project-URL: Documentation, https://github.com/SantanderMetGroup/DRM4G/wiki
+Project-URL: Source, https://github.com/SantanderMetGroup/DRM4G
+Project-URL: Tracker, https://github.com/SantanderMetGroup/DRM4G/issues
+Project-URL: Download, https://pypi.org/project/drm4g/#files
+Project-URL: Twitter, https://twitter.com/SantanderMeteo
+Description: DRM4G is an open platform, based on GridWay, to define, submit,
+        and manage computational jobs. DRM4G is a Python (3.5+)
+        implementation that provides a single point of control for computing
+        resources without installing any intermediate middlewares. As a result,
+        a user is able to run the same job on laptops, desktops, workstations,
+        clusters, supercomputers, on any grid and cloud.
+        
+        For additional information, see https://github.com/SantanderMetGroup/DRM4G/wiki .
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: European Union Public Licence 1.1 (EUPL 1.1)
+Classifier: Operating System :: POSIX
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Office/Business :: Scheduling
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown

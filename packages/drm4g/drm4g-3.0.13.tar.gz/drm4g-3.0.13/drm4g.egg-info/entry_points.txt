@@ -1,0 +1,6 @@
+[console_scripts]
+drm4g = drm4g.commands.main:main
+gw_em_mad_drm4g.py = drm4g.core.em_mad:main
+gw_im_mad_drm4g.py = drm4g.core.im_mad:main
+gw_tm_mad_drm4g.py = drm4g.core.tm_mad:main
+
