@@ -1,0 +1,12 @@
+LICENSE.md
+README.md
+setup.cfg
+setup.py
+pydiscordself/__init__.py
+pydiscordself/errors.py
+pydiscordself/main.py
+pydiscordself.egg-info/PKG-INFO
+pydiscordself.egg-info/SOURCES.txt
+pydiscordself.egg-info/dependency_links.txt
+pydiscordself.egg-info/requires.txt
+pydiscordself.egg-info/top_level.txt
