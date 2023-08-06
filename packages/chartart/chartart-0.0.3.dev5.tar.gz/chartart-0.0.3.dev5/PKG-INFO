@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: chartart
+Version: 0.0.3.dev5
+Summary: ChartArt python package
+Home-page: https://github.com/pypa/sampleproject
+Author: BR-Advisers
+Author-email: info@br-advisers.com
+Project-URL: Bug Tracker, https://github.com/pypa/sampleproject/issues
+Keywords: chartart,NLP
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# ChartArt Package is under development
+
+Use 
+[Github-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
+to write your content.
+
+Change Log 
+
+0.0.1 => 0.0.2 
+Added support for =>
+-Publish post without javascript package from notebook
+-Pulish post from standalone python script (Non jupyter environment)
+
+
+0.0.2 => 0.0.3 
+Added support for features at the time of publishing post. Features will get used as filters.
