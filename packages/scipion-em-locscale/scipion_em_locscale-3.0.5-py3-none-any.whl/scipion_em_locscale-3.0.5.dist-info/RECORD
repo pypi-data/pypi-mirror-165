@@ -1,0 +1,16 @@
+locscale/__init__.py,sha256=wwHZuqFnL_HhoE8iew9_fNc3LZDeYhISLI3SsbDszqw,3279
+locscale/bibtex.py,sha256=NvUQfdH3rsop4TWH9VIAY4z-er3pQOpuFhVXcMuBpjI,1817
+locscale/constants.py,sha256=DcaNtQLu9iDKfZXuEqriCsjwgKsdI_Gvg-LDftLJNTc,1219
+locscale/convert.py,sha256=c7ionFhhEGcoq7nwRsok2EL8Oe6-OHaRhrOJck5fACM,3452
+locscale/locscale_logo.jpg,sha256=DygzXgGzNywCp9gSw6M0CESq_77mnL_n-AJwweqPK78,153665
+locscale/protocols.conf,sha256=RdLLd76w8_t-hOzjd3O7np1AW9pisdgTIlk1vbvMXgU,3103
+locscale/protocols/__init__.py,sha256=4zrlC48xIXPT9o3uSipPCtxFIhytaIz_t3cGYLIEgeE,1195
+locscale/protocols/protocol_locscale.py,sha256=FRgyE_8623TNB_RvNSAItire8E4UazTfUBEghqyL6Tw,8311
+locscale/tests/__init__.py,sha256=mBpgiM2EWEhmZ4ufyAgSLHOC8FvzdxJRj9OUfYTdxvs,1204
+locscale/tests/test_protocol_locscale.py,sha256=QykprsbzgMZBYlTxPLDmgwdUX3RUG75i5hj1ODe0NTw,5175
+scipion_em_locscale-3.0.5.dist-info/LICENCE,sha256=xTplwv1WHIfqq_EHLvXcq4ZTBCvBUwhGX1JBNYXrYnE,35146
+scipion_em_locscale-3.0.5.dist-info/METADATA,sha256=X86IxSBqmiNfgCzb4G6x3hQfIwYFxxIaGznx83U2Yc8,3355
+scipion_em_locscale-3.0.5.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+scipion_em_locscale-3.0.5.dist-info/entry_points.txt,sha256=y6m-lG5YjqiG4S21wOyUR1dgOUQnD9S0UnRaBtNsWzo,41
+scipion_em_locscale-3.0.5.dist-info/top_level.txt,sha256=dLulDHeLlyWE0jVaOSHa4719nyzitaJ0TS8xEcD5-G0,9
+scipion_em_locscale-3.0.5.dist-info/RECORD,,
