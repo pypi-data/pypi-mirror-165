@@ -1,0 +1,15 @@
+dbtc/__init__.py,sha256=PwzRanL4JCmVamJau3kB5mdyYOTYL7viGUvSqqbVbTk,72
+dbtc/cli.py,sha256=92009TmjFd72b0Cp02DyTDrkT0i0TEuNlXUH3SBzoso,28911
+dbtc/client/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dbtc/client/base.py,sha256=jrpof66rx9D_uA-Zh4-h1IBa3liMJqqhld2S1JwCl5U,1353
+dbtc/client/cloud/__init__.py,sha256=GAuXKwXX1Erml3ZV_rycICrfhfpcjqlW2jPS_2zpzBQ,76
+dbtc/client/cloud/base.py,sha256=sesW5Ug3-HSowYa5rt71jqCpz4pMtZJWCi41_CJ_rWI,44890
+dbtc/client/main.py,sha256=J3DgxVwS0r8hr9mR_fbYit4lekwP0pzNZupooZ16qB4,258
+dbtc/client/metadata/__init__.py,sha256=lAH5J4EyB9GnMPLos8GBlsS8gLYyPgxzWBbREEXyEZs,16179
+dbtc/client/metadata/artifacts/metadata_schema.json,sha256=AhqRjo1pbxuCnz6V-AtVyjn6gcfLgDfq_cp36yKxfY8,86338
+dbtc/client/metadata/schema.py,sha256=uuPiZ2dgpeDFUABjDS4r_TFs7OCO6BhwkxlMI1U5t4Q,33972
+dbtc/console.py,sha256=F1wAPAFb91MOdSUiv5VHOEa1ghMv6KiPeo5Gf59G_zI,103
+dbtc-0.2.0.dist-info/entry_points.txt,sha256=JWVlAZvWC5IE1aA5Ac5w5pOJhvApnpOz4zU4-ceR5UY,38
+dbtc-0.2.0.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+dbtc-0.2.0.dist-info/METADATA,sha256=8154bY3Syiewoakaz21qQ7Kyy3oxKaLPFChBOQdjDBk,4562
+dbtc-0.2.0.dist-info/RECORD,,
