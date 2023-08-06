@@ -1,0 +1,2 @@
+[console_scripts]
+optom-automator = optom_tools.main:main
