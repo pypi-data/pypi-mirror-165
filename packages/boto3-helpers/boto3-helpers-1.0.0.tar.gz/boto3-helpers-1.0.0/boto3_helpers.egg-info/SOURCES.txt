@@ -1,0 +1,15 @@
+LICENSE
+README.rst
+pyproject.toml
+setup.cfg
+setup.py
+boto3_helpers/__init__.py
+boto3_helpers/dynamodb.py
+boto3_helpers/mediatailor.py
+boto3_helpers/pagination.py
+boto3_helpers/sts.py
+boto3_helpers.egg-info/PKG-INFO
+boto3_helpers.egg-info/SOURCES.txt
+boto3_helpers.egg-info/dependency_links.txt
+boto3_helpers.egg-info/requires.txt
+boto3_helpers.egg-info/top_level.txt
