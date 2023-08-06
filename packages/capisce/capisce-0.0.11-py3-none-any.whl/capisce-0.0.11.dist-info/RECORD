@@ -1,0 +1,9 @@
+capisce/__init__.py,sha256=Jm6zpRHoraLkVU3M25dLa9xPoyHvGwbXWYK_o2X08KA,20
+capisce/req.py,sha256=k1LCwRgNz3oejlCQ95Zyx4OOBygtFqC_CV6_fJUWJj0,3524
+capisce/wsgi.py,sha256=0g1eUlIrZcz-19WQqxKAreiKSqVXsaitgcZ_sdYAHqI,3170
+capisce-0.0.11.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+capisce-0.0.11.dist-info/METADATA,sha256=api2S9IqFh2cK5m6zHRh4FsgaDwTI53ZNnJy8_9ZLg8,41470
+capisce-0.0.11.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+capisce-0.0.11.dist-info/entry_points.txt,sha256=naImuUFtwpmPLrUnrFSIpOjs0Lvtf-fXLvGRLkwEvNQ,46
+capisce-0.0.11.dist-info/top_level.txt,sha256=z3HVN7ebnGcOmqULxdJBcTCaRBwc2ChJ8aEQlezRd3U,8
+capisce-0.0.11.dist-info/RECORD,,
