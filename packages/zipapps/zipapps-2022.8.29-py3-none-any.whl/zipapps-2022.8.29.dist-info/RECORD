@@ -1,0 +1,12 @@
+zipapps/__init__.py,sha256=5Ge2bj3qrq7FOVjTa0pRAH6Ps4F1f64e6J9uFWhnCw0,176
+zipapps/__main__.py,sha256=fxRAYuDHRDlw8Kt4CrCUQy9894MyVCDUhnNUj1Ryx1Q,12202
+zipapps/activate_zipapps.py,sha256=Nc6lCOpg2Wgj89H8_WRgxaJLoC-hHzQabe77XDYuVN4,533
+zipapps/ensure_zipapps.py.template,sha256=30HJdc_NyahFWLyGIKY7kvEH-Fc_IJ6MsUr9bGeoIFg,8426
+zipapps/entry_point.py.template,sha256=x0lySNDlBaHtHWrAc5mmh2TCQ1-93xE27Xn2TKoibkI,3421
+zipapps/freezing.py,sha256=zO_da2zSuDGCzYEGrvFuedLIxWlZKWED5t-NElbxY9M,4640
+zipapps/main.py,sha256=-nI3UGMg0kJTP5lP2cID8IO9c7NjkdJeuxR2oISKbHQ,24281
+zipapps-2022.8.29.dist-info/LICENSE,sha256=KtSpsWH2GC9mjez63oWTVfrZcPTRXzLFPAUpdV9uyTo,1065
+zipapps-2022.8.29.dist-info/METADATA,sha256=GuDIB1pyO5GY4kY9uJ1z7GdQ-a-63aKsmEmDv_6OWIM,21773
+zipapps-2022.8.29.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+zipapps-2022.8.29.dist-info/top_level.txt,sha256=cVKUndU2xYPu1qxNZ67DRgQtplYuCtxcXfoY7IVEReE,8
+zipapps-2022.8.29.dist-info/RECORD,,
