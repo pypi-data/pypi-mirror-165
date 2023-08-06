@@ -1,0 +1,3 @@
+[manim.plugins]
+manim_onlinetex=manim_onlinetex
+
