@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: sectoralarmlib
+Version: 0.9
+Summary: Library for Sector Alarm
+Home-page: https://github.com/peroyvind/sectoralarmlib
+Author: Per-Øyvind Bruun
+Author-email: per-oyvind.bruun@vitari.no
+Keywords: sectoralarm
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.5
+
+Library for Sector Alarm
