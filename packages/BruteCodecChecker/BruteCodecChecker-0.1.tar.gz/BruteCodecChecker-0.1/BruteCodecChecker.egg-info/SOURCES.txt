@@ -1,0 +1,8 @@
+README.md
+setup.py
+BruteCodecChecker/__init__.py
+BruteCodecChecker.egg-info/PKG-INFO
+BruteCodecChecker.egg-info/SOURCES.txt
+BruteCodecChecker.egg-info/dependency_links.txt
+BruteCodecChecker.egg-info/requires.txt
+BruteCodecChecker.egg-info/top_level.txt
