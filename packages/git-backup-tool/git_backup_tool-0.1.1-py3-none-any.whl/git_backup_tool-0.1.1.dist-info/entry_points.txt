@@ -1,0 +1,3 @@
+[console_scripts]
+git-backup-tool=gitbackup.git_backup:run_cli
+
