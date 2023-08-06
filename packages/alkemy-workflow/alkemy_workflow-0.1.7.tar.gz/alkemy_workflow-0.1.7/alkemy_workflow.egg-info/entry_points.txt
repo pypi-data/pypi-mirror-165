@@ -1,0 +1,2 @@
+[console_scripts]
+aw = alkemy_workflow.cli:main
