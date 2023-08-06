@@ -1,0 +1,222 @@
+## 0.5.1 - 2022-09-02
+
+### Fixed
+- Correctly initialize setup on new file load #156
+
+## 0.5.0 - 2022-09-02
+
+### Added
+- Also store Rayleigh peak shift #153
+- Write scale bar to Brillouin Tiff file #154 #155
+
+## 0.4.0 - 2022-08-29
+
+### Added
+- Allow to specify calibration temperature #143
+- Export all peaks from multi-peak fits #146
+- Also store peak fit offsets #150 #151
+- Allow to get fits #152
+
+### Changed
+- Update scipy #142
+
+### Fixed
+- Handle indices as int when getting key #144
+- Fix exporting fluorescence w/o scale calibration #145
+- Don't overwrite bounds when setting peak number #148
+- Don't fail to set regions w/o calibration #149
+
+## 0.3.0 - 2022-08-17
+
+### Added
+- Allow to export all Brillouin parameters acquired #141
+
+### Fixed
+- Align export parameter names with rest of library #140
+
+## 0.2.4 - 2022-08-12
+
+### Fixed
+- Don't fail on empty arc #138
+- Fix issues with flake8 v5, lock scipy version #139
+
+## 0.2.3 - 2022-07-01
+
+### Fixed
+- Fix exporting on macOS #135
+- Resolve paths to ensure proper folder handling #137
+- Minor cleanup of test_serializer.py #136
+
+## 0.2.2 - 2022-06-29
+
+### Fixed
+- Explicitly import pdfpages to solve pyinstaller issue #134
+
+## 0.2.1 - 2022-06-28
+
+Re-release to trigger PyPi upload. No changes to 0.2.0.
+
+## 0.2.0 - 2022-06-27
+
+### Added
+- Implement exporting Brillouin and fluorescence maps as images #116
+- Implement exporting Brillouin data as CSV file #131
+- Implement retrieving fluorescence images #115
+- Compensate drift by shifting evaluate regions #114
+- Allow to get image binning #123 and binning factor #124
+
+### Changed
+- Evaluate in the temporal order of acquisition #113
+- Reduce code duplication #112
+- Optimize calculation of get_arc_from_circle_phis #125
+- Account for binning when extracting #127
+- Allow to set all points at once when extracting #129
+- Only update the positions for the given key #130
+
+### Fixed
+- Improve the spectra extraction #120 #132
+- Ensure discretize_arc returns arc within image #121
+- Only use linear frequency interpolation #122
+- Don't crash finding all points on empty calibrations #128
+- Don't crash evaluation when no spectra is returned #133
+
+## 0.1.10 - 2022-05-12
+
+### Changed
+- Raise proper exceptions if source or session files are lacking #106 #111
+- Improve exact circle calculation #108
+
+### Fixed
+- Don't fail hard for invalid circle fits #107
+- Don't crash when changing number peaks during evaluation #109
+- Don't fail hard for aborted measurements #110
+
+## 0.1.9 - 2022-05-06
+
+### Fixed
+- Don't fail hard for values outside interpolation range #104
+- Fix calculating and handling bounds #105
+
+## 0.1.8 - 2022-05-03
+
+### Added
+- Support multi-peak fitting for measurement data #99 #102
+- Adjust evaluation model to store multi-peak fit results #96
+- Implement getting correct multi-peak fit data #97
+- Add an example script for exporting 2D data #101
+
+### Changed
+- Interpolate to find index for given frequency #100
+- Improve the calibration peak finding #103
+
+## 0.1.7 - 2022-04-22
+
+### Added
+- Allow to set calibration frequencies #87
+- Add functions to get image count #92
+- Allow to sort calibration keys by time #93
+- Add function to get expected calibration frequencies #95
+
+### Changed
+- Adjust required peak height to signal level #86
+
+### Fixed
+- Delete VIPA params when clearing calibration #88
+- Fix issue when only one calibration sample is used #89
+- Only clear correct fit, add test for FitSet #94
+
+## 0.1.6 - 2022-04-11
+
+### Fixed
+- Better handle broken eval data files #85
+
+## 0.1.5 - 2022-04-11
+
+### Fixed
+- Don't fail on empty repetitions #84
+
+## 0.1.4 - 2022-03-22
+
+### Fixed
+- Bring back multiprocessing support #82
+
+## 0.1.3 - 2022-03-21
+
+### Fixed
+- Improve circle fit for points on straight line #80
+- Remove multiprocessing support for now #81
+
+## 0.1.2 - 2022-03-15
+
+### Fixed
+- Maintain order or parameter keys #78
+
+## 0.1.1 - 2022-03-15
+
+### Added
+- Provide session files for source files #74
+
+### Fixed
+- Ensure we always get the expected data shape #75
+
+## 0.1.0 - 2022-03-14
+
+### Added
+- Implement getting results maps #70
+- Save bmlab version in session file #71
+- Allow to open session files directly #72
+
+## 0.0.13 - 2022-02-21
+
+### Fixed
+- Fix lorentz fit for special case #68
+
+## 0.0.12 - 2022-02-16
+
+### Added
+- Add example for standalone evaluation #61
+- Allow finding peaks in extraction view for all calibrations #65
+- Allow to rotate the image by negative number #67
+
+### Changed
+- Improve the peak finding for calibration spectra #63
+- Code cleanup #66
+
+### Fixed
+- Correctly close and join mp pool #60
+- Fix switched Rayleigh and Brillouin regions in test #62
+
+## 0.0.11 - 2022-02-01
+
+### Added
+- Implement peak finding for calibration spectra #56
+- Allow to add regions by frequency #59
+
+### Changed
+- Don't show runtime warning for fitting #54
+- Calculate derived values during evaluation #55
+- Bundle auto evaluation in a general controller #58
+- Code cleanup #52 #57
+
+### Fixed
+- Correct bmlab citation hint #51
+- Don't fail when not enough peaks for frequency axis #53
+
+## 0.0.4
+
+- setup: use "pytest" command instead of deprecated "setup.py test"
+- get metadata from HDF file
+- set image orientation
+
+## 0.0.3
+
+- testing connection with BMicro
+
+## 0.0.2
+
+- CI test release
+
+## 0.0.1
+
+- dummy release
+
