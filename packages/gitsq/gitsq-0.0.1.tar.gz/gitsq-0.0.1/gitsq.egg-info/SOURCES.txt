@@ -1,0 +1,12 @@
+.gitignore
+LICENSE.md
+README.md
+gitsq
+gitsq.cmd
+pyproject.toml
+requirements.txt
+setup.py
+gitsq.egg-info/PKG-INFO
+gitsq.egg-info/SOURCES.txt
+gitsq.egg-info/dependency_links.txt
+gitsq.egg-info/top_level.txt
