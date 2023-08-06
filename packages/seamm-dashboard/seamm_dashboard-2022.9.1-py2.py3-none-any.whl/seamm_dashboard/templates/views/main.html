@@ -1,0 +1,107 @@
+<!-- Plugins and scripts required by this view-->
+<!-- <script src="static/js/main.js"></script>-->
+<script src= "{{ url_for('static', filename='js/table_api.js') }}"></script>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+<div class="animated fadeIn sidebar-nav hidden" id="view">
+  <div class="row">
+    <div class="col-sm-12 col-lg-4">
+      <div class="card text-white bg-jobs">
+        <div class="card-body pb-0">
+          <div class="btn-group float-right">
+            <button type="button" class="btn btn-transparent dropdown-toggle p-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="icon-settings"></i>
+            </button>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a class="dropdown-item nav-link" href="jobs">View Jobs List</a>
+              <a class="dropdown-item nav-link" href="#">Import Job</a>
+              <a class="dropdown-item nav-link" href="#">Submit Job</a>
+            </div>
+          </div>
+          <div class="text-value-lg"><a class='nav-link' href="jobs" style="color:white">My Jobs</a></div>
+        </div>
+        <div class="chart-wrapper mt-3 px-3" style="height:175px;">
+          <div class="text-value" id='num-jobs-in-dashboard'></div>in dashboard
+          <div class="text-value" id='num-jobs-running'></div>running
+          <div class="text-value" id='num-jobs-finished'></div>completed
+        </div>
+      </div>
+    </div>
+
+    <!--/.col-->
+    <div class="col-sm-12 col-lg-4">
+      <div class="card text-white bg-flowcharts">
+        <div class="card-body pb-0">
+          <div class="btn-group float-right">
+            <button type="button" class="btn btn-transparent dropdown-toggle p-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="icon-settings"></i>
+            </button>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a class="dropdown-item nav-link" href="flowcharts">View Flowcharts</a>
+              <a class="dropdown-item" href="#">Import Flowchart</a>
+            </div>
+          </div>
+          <div class="text-value-lg"><a class='nav-link' href="flowcharts" style="color:white">My Flowcharts</a></div>
+        </div>
+        <div class="chart-wrapper mt-3 px-3" style="height:175px;">
+          <div class="text-value" id='num-flowcharts'></div>flowcharts in library
+        </div>
+      </div>
+    </div>
+    <!--/.col-->
+    <div class="col-sm-12 col-lg-4">
+      <div class="card text-white bg-projects">
+        <div class="card-body pb-0">
+          <div class="btn-group float-right">
+            <button type="button" class="btn btn-transparent dropdown-toggle p-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="icon-settings"></i>
+            </button>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a class="dropdown-item nav-link" href="projects">View Projects</a>
+              <a class="dropdown-item" href="#">Create New Project</a>
+            </div>
+          </div>
+          <div class="text-value-lg"><a class='nav-link' href="projects" style="color:white">My Projects</a></div>
+        </div>
+        <div class="chart-wrapper mt-3 px-3" style="height:175px;">
+            <div class="text-value" id='num-projects'></div>projects
+        </div>
+      </div>
+    </div>
+    <!--/.col-->
+  </div>
+  <div class="row">
+    <h4>Recently Modified Jobs</h4>
+    <h2 class='pb-1'><span id='page-title'></span><button type="button" id="refresh" class="btn btn-primary ml-4" title="Refresh Table" data-toggle="tooltip" data-placement="top"><i class="fas fa-sync"></i></button></h2>
+  </div>
+  <div class="row mb-5">
+    <div class="col-sm-12">
+          <table id="jobs" class="table table-responsive-sm table-bordered table-striped table-sm" style="width:100%">"
+            <thead>
+              <tr>
+                <th>
+                </th>
+                <th>
+                  Job ID 
+                </th>
+                <th>
+                  Title
+                </th>
+                <th>
+                  Status
+                </th>
+                <th>
+                  Submitted
+                </th>
+                <th>
+                  Started
+                </th>
+                <th>
+                  Finished
+                </th>
+              </tr>
+            </thead>
+          </table>
+      </div>
+    </div>
+</div>
+  
