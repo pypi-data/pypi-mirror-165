@@ -1,0 +1,30 @@
+[tool.poetry]
+authors = ["Craig Trim <craigtrim@gmail.com>"]
+description = "dbPedia Concept Linking and Redirect Analysis"
+name = "dbpedia-get"
+version = "0.1.6"
+
+[tool.poetry.dependencies]
+Unidecode = "*"
+# apache-beam = "*"
+baseblock = "*"
+datasets = "^2.4.0"
+fast_sentence_segment = "*"
+openpyxl = "^3.0.7"
+pandas = "^1.2.3"
+python = "3.8.5"
+spacy = "3.3"
+tabulate = "*"
+unicodedata2 = "*"
+unidecode = "*"
+wikipedia = "^1.4.0"
+
+[tool.poetry.dev-dependencies]
+autopep8 = "*"
+en-core-web-sm = {path = "resources/lib/en_core_web_sm-3.3.0.tar.gz"}
+plac = "*"
+pytest = "*"
+
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core>=1.0.0"]
