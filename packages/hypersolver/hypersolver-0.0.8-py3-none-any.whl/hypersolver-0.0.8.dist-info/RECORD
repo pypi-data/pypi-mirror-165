@@ -1,0 +1,16 @@
+hypersolver/__init__.py,sha256=r31kpKo_vZkiT5xSo92BYcqZl8jyHGd1QdxUTVQUMSI,1901
+hypersolver/derivative.py,sha256=Fc6nGVbgaTLGQsUmdqKwLb0snoyWlJ_FZTnIpjYySzk,3187
+hypersolver/lax_friedrichs.py,sha256=uIw6IifS2GqgX4r7BQgSWbDueZphhBEZ4ctAU-cnLlw,1922
+hypersolver/lax_wendroff.py,sha256=HMSKpjwzapXGx1XyecWfJPxFItVarz9XJXaa0h0ClKM,2599
+hypersolver/method_of_characteristics.py,sha256=yasaZdyTGcP95qUM8cKrg9zLvUIMnr6j37BJ0ieKcIQ,1884
+hypersolver/runge_kutta.py,sha256=0l1cvRAY-gPm1S3p6Xy6f6uMQ24XQyKAvhxWHIt98ts,1613
+hypersolver/util.py,sha256=JNiRkUgBIwcZqO0kzOMQ8s7YzTLrtIhJeI94VeuB9mg,1840
+hypersolver/tests/derivative_test.py,sha256=D7W11R0AQpNne_s1usBx7WK9plFufNo5sVSpEbfTMTE,2800
+hypersolver/tests/lax_friedrichs_test.py,sha256=uTLTf_pe_Gbe8Cl_OsWKZPZbiYNDgmASgKImcvVWl80,1131
+hypersolver/tests/lax_wendroff_test.py,sha256=mV1ZQTYpRigz4vcbd9yJXUjZbwdzu0JbfAkgykFOrOE,1201
+hypersolver/tests/method_of_characteristics_test.py,sha256=-WjeY1eRqMuYgXsoIqvg6C3oPO0ehvS-1YEbeJI7BBA,715
+hypersolver/tests/runge_kutta_test.py,sha256=gMfMWoR6-f5Zi01AWcWxfXrcYasyKVLfYFjpMxDla9o,881
+hypersolver/tests/util_test.py,sha256=Bk4nfgq4IZ-LTpiOTtR1WEBZVFLyrbPEJ2nNhZfWoEA,1380
+hypersolver-0.0.8.dist-info/WHEEL,sha256=4TfKIB_xu-04bc2iKz6_zFt-gEFEEDU_31HGhqzOCE8,81
+hypersolver-0.0.8.dist-info/METADATA,sha256=YebH3wFPCRKFnh0nJidnv__6kkXOTTYZdSjX_i4R9eM,1719
+hypersolver-0.0.8.dist-info/RECORD,,
