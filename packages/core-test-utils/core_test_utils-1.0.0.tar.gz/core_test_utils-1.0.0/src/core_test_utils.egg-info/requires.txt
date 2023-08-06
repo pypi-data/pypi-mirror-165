@@ -1,0 +1,16 @@
+aerospike==4.0.0
+allure-pytest==2.8.29
+botocore==1.23.15
+boto3==1.20.15
+cassandra-driver==3.25.0
+Faker==4.1.2
+kafka-python==2.0.2
+kubernetes==22.6.0
+mysql-connector-python==8.0.27
+psycopg2==2.9.3
+psycopg2-binary==2.9.3
+pytz==2020.1
+PyYAML==6.0
+redis==4.2.2
+requests==2.24.0
+testrail-api==1.10.3
