@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: pyrams
+Version: 0.8.7
+License-File: LICENSE
+Requires-Dist: metpy
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: tqdm
+Requires-Dist: xarray (>=v2022.03.0)
+Requires-Dist: pint (>=0.18)
+Requires-Dist: pint-xarray (>=0.3)
+Requires-Dist: cf-xarray (>=0.7.4)
+Requires-Dist: matplotlib
+Requires-Dist: shapely
+Requires-Dist: netCDF4
+
