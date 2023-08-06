@@ -1,0 +1,27 @@
+# © Copyright 2022 CERN. This software is distributed under the terms of 
+# the GNU General Public Licence version 3 (GPL Version 3), copied verbatim 
+# in the file "LICENCE.txt". In applying this licence, CERN does not waive 
+# the privileges and immunities granted to it by virtue of its status as an 
+# Intergovernmental Organization or submit itself to any jurisdiction.
+
+#
+# NOTED
+# CONFIGURATION FILE FOR IN2P3-CC
+# PARAMETERS TO SET UP BY THE USER
+#
+src_rcsite: ['IN2P3-CC']                 # Source RC_Sites
+dst_rcsite: ['pic', 'ifae', 'CERN-PROD', 'TRIUMF-LCG2', 'BNL-ATLAS', 'RRC-KI-T1', 'INFN-T1', 'FZK-LCG2', 'SARA-MATRIX', 'NIKHEF-ELPROD', 'RAL-LCG2', 'Taiwan-LCG2', 'JINR-T1', 'KR-KISTI-GSDC-01', 'KR-KISTI-GSDC-02', 'USCMS-FNAL-WC1', 'NDGF-T1'] # Destination RC_Sites
+events_to_wait_until_notification: 5     # Number of events to wait until send an email for notification
+max_throughput_threshold_link    : 5     # Maximum throughput threshold for the link [Gb/s]: the 'START' notification will be generated if throughput > max_throughput_threshold_link
+min_throughput_threshold_link    : 2     # Minimum throughput threshold for the link [Gb/s]: the 'STOP'  notification will be generated if throughput < min_throughput_threshold_link
+unidirectional_link              : False # If False both TX and RX paths will be monitoring: {src -> dst}, {dst -> src}
+number_of_dynamic_circuits       : 2     # Number of dynamic circuits that are available in the link
+sense_uuid                       : '71360f1f-c1da-499c-b6e7-0e2eb1946d73' # VLAN 2024: sense-o UUID dynamic circuit
+sense_vlan                       : 'VLAN_2024' # VLAN description
+sense_uuid_2                     : '00d98420-20b8-48bd-b457-993b1bec7426' # VLAN 20245: sense-o UUID dynamic circuit
+sense_vlan_2                     : 'VLAN_2025' # VLAN description
+from_email_address               : 'noted@cern.ch' # Email address where the email notification will came from
+to_email_address                 : 'carmen.misa.moreira@cern.ch, edoardo.martelli@cern.ch' # Email address to send notification
+subject_email                    : '[NOTED] Notification' # Subject of the email
+message_email                    : 'Hi,\n\n New transfer detected...\n\n' # Custom message to be send on the email
+auth_token                       : eyJrIjoiNlQ5a2h3bUFDd3BsNDBrZzRpREJ3MTRKRGtJd3NVOFoiLCJuIjoiZnRzX25vdGVkX25ldyIsImlkIjoyNX0= # Authenticantion token
