@@ -1,0 +1,7 @@
+doc/sphinx/build
+doc/sphinx/_build
+tests/coverage
+tests/testdata
+dist/
+
+examples # For now just ignore, refine when examples exist

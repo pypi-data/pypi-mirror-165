@@ -1,0 +1,21 @@
+version: 2
+
+build:
+  os: "ubuntu-20.04"
+  tools:
+    python: "3.9"
+  jobs:
+    pre_build:
+      - make pre-docs
+        # - sphinx-apidoc -f -o doc/sphinx/source noctiluca
+        # - rm doc/sphinx/source/modules.rst
+        # - cd doc/sphinx/source && vim -n -S post-apidoc.vim
+        # - cd doc/sphinx && make clean
+
+sphinx:
+  configuration: doc/sphinx/source/conf.py
+
+python:
+  install:
+    - method: pip
+      path: .
