@@ -1,0 +1,14 @@
+advanced/databases/__init__.py,sha256=LKoGFFuNJ3Uy8E5ZgWa8Q2ZwBwdHjPCN4lKJfgYJwDE,61
+advanced/databases/_src/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+advanced/databases/_src/big_list.py,sha256=FczxfcVx-ICZVhQY39hpRtQfMkp6Wm2ImxV-T2sReaA,36337
+advanced/databases/_src/mutable_sequence_islice.py,sha256=-4FuycmfPE3yvgVx6WKhiEuXDQ0PxnaFGbyyblDncaQ,1266
+advanced/databases/_src/mutable_sequence_islice_proxy.py,sha256=orPJWE4qDA2BLKfWjf5vCdVyQlYGyBUcFxSb1RhVtwA,1329
+advanced/databases/_src/sequence_islice.py,sha256=DhHM6lV2WILeyEAuR6Yr65xcImgiELBRygC3rWyXKBY,2724
+advanced/databases/_src/sequence_islice_proxy.py,sha256=gFdzioXOpOhlW93v9JdGdRFg9YtBMQbH8lkJa95o2fg,1296
+advanced/databases/_src/viewable_mutable_sequence.py,sha256=W9X2OR0q40aKRuU8KCGKFhAboq2yMcKTV_9IPMcopYk,920
+advanced/databases/_src/viewable_sequence.py,sha256=DyAouUgVpXMrVaBXbxKWiSEZrkOn7m3Th-BLthEj4R8,2118
+advanced_databases-0.0.2.dist-info/LICENSE,sha256=c60StuzUoXJ0rAe7Z14Ht_-3HemIiIE62xJsudaVnXI,1086
+advanced_databases-0.0.2.dist-info/METADATA,sha256=Wdm67kV6fysl5_3lHzITksk_ysNN16HSaaV2sO32t08,869
+advanced_databases-0.0.2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+advanced_databases-0.0.2.dist-info/top_level.txt,sha256=u46VrEo-bsovzo20sUe51g-_JoFePJvztp2NtfD4bDY,9
+advanced_databases-0.0.2.dist-info/RECORD,,
