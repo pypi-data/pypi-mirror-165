@@ -1,0 +1,2 @@
+[console_scripts]
+whochat = whochat.__main__:main
