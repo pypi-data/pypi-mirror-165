@@ -1,0 +1,88 @@
+Metadata-Version: 2.1
+Name: suhteita
+Version: 2022.8.28
+Summary: Relationships (Finnish: suhteita) maintained across distances as load test core.
+Author-email: Stefan Hagen <stefan@hagen.link>
+Maintainer-email: Stefan Hagen <stefan@hagen.link>
+License: MIT License        
+        Copyright (c) 2022 Stefan Hagen        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.        
+Project-URL: Homepage, https://git.sr.ht/~sthagen/suhteita
+Project-URL: Bug-Tracker, https://todo.sr.ht/~sthagen/suhteita
+Project-URL: Documentation, https://codes.dilettant.life/docs/suhteita
+Project-URL: Source-Code, https://git.sr.ht/~sthagen/suhteita
+Project-URL: Test-Coverage, https://codes.dilettant.life/coverage/suhteita
+Keywords: developer-tools,validation,verification
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: atlassian-python-api (>=3.27.0)
+Requires-Dist: jmespath (>=1.0.1)
+Requires-Dist: robotframework (>=5.0.1)
+Requires-Dist: wrapt (>=1.14.1)
+Requires-Dist: tomli ; python_version < "3.11"
+Provides-Extra: dev
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: coverage ; extra == 'dev'
+Requires-Dist: flake8 ; extra == 'dev'
+Requires-Dist: hypothesis ; extra == 'dev'
+Requires-Dist: mypy ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: pytest-cov ; extra == 'dev'
+Requires-Dist: pytest-flake8 ; extra == 'dev'
+Requires-Dist: types-jmespath ; extra == 'dev'
+
+# suhteita
+
+Relationships (Finnish: suhteita) maintained across distances as load test core.
+
+[License: MIT](https://git.sr.ht/~sthagen/suhteita/tree/default/item/LICENSE)
+
+[![version](https://img.shields.io/pypi/v/suhteita.svg?style=flat)](https://pypi.python.org/pypi/suhteita/)
+[![downloads](https://pepy.tech/badge/suhteita/month)](https://pepy.tech/project/suhteita)
+[![wheel](https://img.shields.io/pypi/wheel/suhteita.svg?style=flat)](https://pypi.python.org/pypi/suhteita/)
+[![supported-versions](https://img.shields.io/pypi/pyversions/suhteita.svg?style=flat)](https://pypi.python.org/pypi/suhteita/)
+[![supported-implementations](https://img.shields.io/pypi/implementation/suhteita.svg?style=flat)](https://pypi.python.org/pypi/suhteita/)
+
+## Documentation
+
+User and developer [documentation of suhteita](https://codes.dilettant.life/docs/suhteita).
+
+## Bug Tracker
+
+Feature requests and bug reports are best entered in the [todos of suhteita](https://todo.sr.ht/~sthagen/suhteita).
+
+## Primary Source repository
+
+The primary source of `suhteita` lives somewhere on a mountain in Central Switzerland.
+But, we use decentralized version control (git), so any clone can become the source to everyone's benefit, no central only code.
+Anyway, the preferred public clones of `suhteita` are:
+
+* [on codeberg](https://codeberg.org/sthagen/suhteita) - a democratic community-driven, non-profit software development platform operated by Codeberg e.V.
+* [at sourcehut](https://git.sr.ht/~sthagen/suhteita) - a collection of tools useful for software development.
+
+## Status
+
+Experimental.
+
+**Note**: The default branch is `default`.
