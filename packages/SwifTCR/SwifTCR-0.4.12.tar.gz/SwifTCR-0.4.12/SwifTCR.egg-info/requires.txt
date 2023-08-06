@@ -1,0 +1,7 @@
+findspark
+pyspark
+scipy
+numpy
+pandas
+networkx
+more_itertools
