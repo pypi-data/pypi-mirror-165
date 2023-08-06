@@ -1,0 +1,9 @@
+componentes/__init__.py,sha256=O6Hcm5iZIrpcFQnuw3IzCUSoKf0HHRvbYGyeE-Tz5Zk,23
+componentes/README.rst,sha256=_--kcRDJwJcEKuIJxJ4I93IxFaFMpUVosQCl4cnDU5Q,1172
+componentes/utils_carol.py,sha256=eUUumCIIZbE7XRgQeDNG0hrqGi6U3X5pseOYIJFB6Rw,3173
+componentes/utils_python.py,sha256=C3rhmhWMJRby8q9Ndp1Sq_65I-oRQNMMSsJthbw4-Pc,1155
+componentes/utils_zendesk_api.py,sha256=qBXY6dWLwcivNRCuuFAYxdgHwGGsSBfg_HwYRbsiLV0,4022
+componentes/utils_zendesk_scraping.py,sha256=Iv5Q2kc7m7eU9sAncAQeggN9DP6VnF122RRS1IBigYo,2981
+componentes-0.2.0.dist-info/WHEEL,sha256=wycAfLpmmoS0r5FEKIVwKB-iEMUiIZXv6P5GBpfA1-Q,87
+componentes-0.2.0.dist-info/METADATA,sha256=6zJgU1yqV-sLeGAGb3Cl6Djy6vOO03nInwvPoRcQs8c,2199
+componentes-0.2.0.dist-info/RECORD,,
