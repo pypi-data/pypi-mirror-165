@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: tensorflow-privacy
+Version: 0.8.5
+Home-page: https://github.com/tensorflow/privacy
+License: Apache-2.0
+License-File: LICENSE
+Requires-Dist: absl-py (==1.*,>=1.0)
+Requires-Dist: attrs (~=21.4)
+Requires-Dist: dm-tree (==0.1.7)
+Requires-Dist: dp-accounting (==0.3.0)
+Requires-Dist: matplotlib (~=3.3)
+Requires-Dist: numpy (~=1.21)
+Requires-Dist: pandas (~=1.4)
+Requires-Dist: scikit-learn (==1.*,>=1.0)
+Requires-Dist: scipy (~=1.7)
+Requires-Dist: tensorflow-datasets (~=4.5)
+Requires-Dist: tensorflow-estimator (~=2.4)
+Requires-Dist: tensorflow-probability (~=0.15)
+Requires-Dist: tensorflow (~=2.4)
+
