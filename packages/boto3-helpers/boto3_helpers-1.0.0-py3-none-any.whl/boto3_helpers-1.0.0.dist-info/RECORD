@@ -1,0 +1,10 @@
+boto3_helpers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+boto3_helpers/dynamodb.py,sha256=F-9Kw3MYO03S0ckNX8lZAjY-ZVqQ3Vx9ytgy5B0Bkq4,3694
+boto3_helpers/mediatailor.py,sha256=yZlh-TmODsDNGMP-4BfZ7r3Hz0heN_S7wf6-HvrJplk,1819
+boto3_helpers/pagination.py,sha256=rCsFWoD7b_xYsGsgh9PgoaFlTouqsDH75ijc08q6tvs,1674
+boto3_helpers/sts.py,sha256=98qUmSPdiRXOpy4hbaz6WbJqBsH1M31a3LAUsL_Q53Q,4469
+boto3_helpers-1.0.0.dist-info/LICENSE,sha256=DVQuDIgE45qn836wDaWnYhSdxoLXgpRRKH4RuTjpRZQ,10174
+boto3_helpers-1.0.0.dist-info/METADATA,sha256=ab6tpjKtOvoPNIrhG6N-jKxAa3VOPPeJ9o1uruv5Yyo,2602
+boto3_helpers-1.0.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+boto3_helpers-1.0.0.dist-info/top_level.txt,sha256=ASS1vLIgfqZtnt-8TTH0A2J0xZR3caUxh1lO3wgJivg,14
+boto3_helpers-1.0.0.dist-info/RECORD,,
