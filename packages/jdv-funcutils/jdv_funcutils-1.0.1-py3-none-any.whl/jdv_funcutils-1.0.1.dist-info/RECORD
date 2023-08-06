@@ -1,0 +1,15 @@
+jdv_funcutils/__init__.py,sha256=G7hMPkKUvMmxAL8ESEakhe5tKV4QI5Z_ImngYCFbexM,563
+jdv_funcutils/__version__.py,sha256=bI-7qJTcstJW_2rlUZ8GgT7pZ07Up2wrKmww8iSPh3Y,289
+jdv_funcutils/signature/__init__.py,sha256=yaslMyja1Wwd12YvTpPqyQ8wk4CfUf10cPUR_X3sweE,142
+jdv_funcutils/signature/mutable_signature.py,sha256=rN94eksZ0jiEiQnIQwivYClZmaipHelR4ibhoCMHung,25859
+jdv_funcutils/signature/typedefs.py,sha256=_8zkQ65RDP2KduNMWC8vQOOGJFEUBi7mo6jNFRYksX8,340
+jdv_funcutils/signature/utils.py,sha256=h1T4CKf4Kt-a2YAYubCwjngvEGGvlOJdBlwOXyeHR_k,2635
+jdv_funcutils/utils/__init__.py,sha256=OjrEJMuR6XOJropgc9QNOi5MqQ4srizwtTFmmb6WAGU,216
+jdv_funcutils/utils/decorators.py,sha256=Mpt5AtH1u-wt6RcA6MmmoN7xNbmWUYI4zPqQnM_rGy8,1005
+jdv_funcutils/utils/null.py,sha256=WPRHz0Ors6wkmsg3P3HCMQll4A8Zvq_d2WpJtoNCPFY,531
+jdv_funcutils/utils/repr_utils.py,sha256=KQfbEaR8fWvZPDUD9Clu-K4I0aS-aBQcwwFFm26xZgA,1438
+jdv_funcutils/utils/singleton.py,sha256=MuRPoUBxTfHX1a-kyjctvxK9i8u1RRMA3JjmmQA-wBQ,1049
+jdv_funcutils/utils/textutils.py,sha256=QXBXXy9yARRB8E6rvjoNcsv6ykNGz3vbUdP8Bw3yU30,342
+jdv_funcutils-1.0.1.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+jdv_funcutils-1.0.1.dist-info/METADATA,sha256=npo88OKrrzMduhA0-hI5Wf-AE1aE5joD5jNT5w1RI1E,699
+jdv_funcutils-1.0.1.dist-info/RECORD,,
