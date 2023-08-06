@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: kfp-toolbox
+Version: 0.3.0
+Summary: The toolbox for kfp (Kubeflow Pipelines SDK)
+Project-URL: Homepage, https://speg03.github.io/kfp-toolbox/
+Project-URL: Repository, https://github.com/speg03/kfp-toolbox
+Author-email: Takahiro Yano <speg03@gmail.com>
+Keywords: kfp,kubeflow,pipelines
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.7
+Requires-Dist: google-cloud-aiplatform~=1.7
+Requires-Dist: importlib-metadata>=1.4; python_version < '3.8'
+Requires-Dist: kfp~=1.8
+Requires-Dist: pyyaml>=5.3
+Requires-Dist: typer<1.0,>=0.4
+Provides-Extra: docs
+Requires-Dist: furo; extra == 'docs'
+Requires-Dist: sphinx; extra == 'docs'
+Requires-Dist: sphinx-autobuild; extra == 'docs'
+Provides-Extra: test
+Requires-Dist: pytest; extra == 'test'
+Requires-Dist: pytest-cov; extra == 'test'
+Description-Content-Type: text/markdown
+
+# kfp-toolbox
+
+*kfp-toolbox* is a Python library that provides useful tools for kfp (Kubeflow Pipelines SDK).
+
+[![PyPI](https://img.shields.io/pypi/v/kfp-toolbox)](https://pypi.org/project/kfp-toolbox/)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/kfp-toolbox)](https://pypi.org/project/kfp-toolbox/)
+[![Python Tests](https://github.com/speg03/kfp-toolbox/actions/workflows/python-tests.yml/badge.svg)](https://github.com/speg03/kfp-toolbox/actions/workflows/python-tests.yml)
+[![codecov](https://codecov.io/gh/speg03/kfp-toolbox/branch/main/graph/badge.svg?token=wsW6rjrcBz)](https://codecov.io/gh/speg03/kfp-toolbox)
+[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/speg03/kfp-toolbox/main.svg)](https://results.pre-commit.ci/latest/github/speg03/kfp-toolbox/main)
+
+
+## Installation
+
+```
+pip install kfp-toolbox
+```
+
+
+## Documentation
+
+https://speg03.github.io/kfp-toolbox/
+
+
+## License
+
+[MIT](https://github.com/speg03/kfp-toolbox/blob/main/LICENSE)
+
+
+## Author
+
+[speg03](https://github.com/speg03)
