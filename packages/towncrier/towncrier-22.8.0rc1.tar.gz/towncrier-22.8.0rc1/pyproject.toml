@@ -1,0 +1,68 @@
+[tool.towncrier]
+    package = "towncrier"
+    package_dir = "src"
+    filename = "NEWS.rst"
+    issue_format = "`#{issue} <https://github.com/hawkowl/towncrier/issues/{issue}>`_"
+
+    [[tool.towncrier.section]]
+        path = ""
+
+    [[tool.towncrier.type]]
+        directory = "feature"
+        name = "Features"
+        showcontent = true
+
+    [[tool.towncrier.type]]
+        directory = "bugfix"
+        name = "Bugfixes"
+        showcontent = true
+
+    [[tool.towncrier.type]]
+        directory = "doc"
+        name = "Improved Documentation"
+        showcontent = true
+
+    [[tool.towncrier.type]]
+        directory = "removal"
+        name = "Deprecations and Removals"
+        showcontent = true
+
+    [[tool.towncrier.type]]
+        directory = "misc"
+        name = "Misc"
+        showcontent = false
+
+
+[tool.black]
+target-version = ['py37']
+exclude = '''
+
+(
+  /(
+      \.eggs         # exclude a few common directories in the
+    | \.git          # root of the project
+    | \.tox
+    | \.venv
+    | \.env
+    | env
+    | _build
+    | _trial_temp.*
+    | build
+    | dist
+    | debian
+  )/
+)
+'''
+
+
+[tool.isort]
+profile = "attrs"
+
+
+[build-system]
+requires = [
+    "setuptools ~= 44.1.1",
+    "wheel ~= 0.36.2",
+    "incremental == 17.5.0",
+]
+build-backend = "setuptools.build_meta"
