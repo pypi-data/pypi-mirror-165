@@ -1,0 +1,2 @@
+[console_scripts]
+gridit = gridit.__main__:cli_main
