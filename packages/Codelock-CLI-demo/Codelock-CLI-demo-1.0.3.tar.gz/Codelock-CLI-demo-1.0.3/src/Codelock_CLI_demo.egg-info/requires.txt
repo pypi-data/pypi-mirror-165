@@ -1,0 +1,7 @@
+requests>=2.28.1
+tk
+
+[dev]
+shutil
+requests
+tk
