@@ -1,0 +1,11 @@
+[project]
+name = "figure_second"
+dependencies = [
+	"matplotlib~=3.5.1"
+]
+version = "0.1.0"
+description = ""
+
+[build-system]
+requires = ["maturin>=0.13,<0.14"]
+build-backend = "maturin"
