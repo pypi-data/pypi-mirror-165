@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: ombori.grid
+Version: 1.15.2
+Requires-Python: >=3.6
+Requires-Dist: paho-mqtt
+
