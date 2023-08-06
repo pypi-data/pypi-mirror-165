@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: odoo12-addons-oca-l10n-brazil
+Version: 12.0.20220901.0
+Summary: Meta package for oca-l10n-brazil Odoo addons
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Classifier: Framework :: Odoo :: 12.0
+Requires-Dist: odoo12-addon-l10n-br-account
+Requires-Dist: odoo12-addon-l10n-br-account-bank-statement-import-cnab
+Requires-Dist: odoo12-addon-l10n-br-account-due-list
+Requires-Dist: odoo12-addon-l10n-br-account-nfe
+Requires-Dist: odoo12-addon-l10n-br-account-payment-brcobranca
+Requires-Dist: odoo12-addon-l10n-br-account-payment-order
+Requires-Dist: odoo12-addon-l10n-br-base
+Requires-Dist: odoo12-addon-l10n-br-coa
+Requires-Dist: odoo12-addon-l10n-br-coa-complete
+Requires-Dist: odoo12-addon-l10n-br-coa-generic
+Requires-Dist: odoo12-addon-l10n-br-coa-simple
+Requires-Dist: odoo12-addon-l10n-br-contract
+Requires-Dist: odoo12-addon-l10n-br-crm
+Requires-Dist: odoo12-addon-l10n-br-currency-rate-update
+Requires-Dist: odoo12-addon-l10n-br-delivery
+Requires-Dist: odoo12-addon-l10n-br-delivery-nfe
+Requires-Dist: odoo12-addon-l10n-br-fiscal
+Requires-Dist: odoo12-addon-l10n-br-hr
+Requires-Dist: odoo12-addon-l10n-br-hr-contract
+Requires-Dist: odoo12-addon-l10n-br-mis-report
+Requires-Dist: odoo12-addon-l10n-br-nfe
+Requires-Dist: odoo12-addon-l10n-br-nfe-spec
+Requires-Dist: odoo12-addon-l10n-br-nfse
+Requires-Dist: odoo12-addon-l10n-br-nfse-ginfes
+Requires-Dist: odoo12-addon-l10n-br-nfse-issnet
+Requires-Dist: odoo12-addon-l10n-br-nfse-paulistana
+Requires-Dist: odoo12-addon-l10n-br-portal
+Requires-Dist: odoo12-addon-l10n-br-product-contract
+Requires-Dist: odoo12-addon-l10n-br-purchase
+Requires-Dist: odoo12-addon-l10n-br-purchase-request
+Requires-Dist: odoo12-addon-l10n-br-purchase-stock
+Requires-Dist: odoo12-addon-l10n-br-repair
+Requires-Dist: odoo12-addon-l10n-br-resource
+Requires-Dist: odoo12-addon-l10n-br-sale
+Requires-Dist: odoo12-addon-l10n-br-sale-commission
+Requires-Dist: odoo12-addon-l10n-br-sale-commission-stock
+Requires-Dist: odoo12-addon-l10n-br-sale-stock
+Requires-Dist: odoo12-addon-l10n-br-stock
+Requires-Dist: odoo12-addon-l10n-br-stock-account
+Requires-Dist: odoo12-addon-l10n-br-stock-account-report
+Requires-Dist: odoo12-addon-l10n-br-website-sale
+Requires-Dist: odoo12-addon-l10n-br-website-sale-delivery
+Requires-Dist: odoo12-addon-l10n-br-zip
+Requires-Dist: odoo12-addon-payment-cielo
+Requires-Dist: odoo12-addon-payment-pagseguro
+Requires-Dist: odoo12-addon-spec-driven-model
+
+UNKNOWN
+
