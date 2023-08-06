@@ -1,0 +1,37 @@
+class BaseExceptions(Exception):
+    def __init__(self):
+        super().__init__()
+        
+    def __str__(self) -> str:
+        return super().__str__()
+    
+class ConnectionError(BaseExceptions):
+    def __init__(self):
+        self.message = "Connection Error. This could be due to your internet connection or the API being unavailable."
+        super().__init__()
+        
+        
+    def __str__(self) -> str:
+        return self.message
+
+class RateLimitError(BaseExceptions):
+    def __init__(self):
+        self.message = "Rate Limit Error. You are sending too many requests to the API!"
+        super().__init__()
+        
+        
+    def __str__(self) -> str:
+        return self.message
+
+class NotFoundError(BaseExceptions):
+    def __init__(self):
+        self.message = "Error: Data not found. Are all arguments correct? If not, the page may not exist."
+        super().__init__()
+
+class UnauthorisedError(BaseExceptions):
+    def __init__(self):
+        self.message = "Unauthorised. Please check your token and try again"
+        super().__init__()        
+        
+    def __str__(self) -> str:
+        return self.message

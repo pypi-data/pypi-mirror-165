@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: navio.py
+Version: 2.1.0
+Summary: Simple API Wrapper for the Navio API
+Home-page: https://github.com/mrbean565/Navio-Integration/tree/main/navio
+Author: Bean
+Author-email: bean@truckerbean.com
+License: GNU
+Keywords: api wrapper
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Navio-Integration
+Python Module and Discord bot for Navio, the ETS2 job tracker.
+
+
