@@ -1,0 +1,11 @@
+majormode/__init__.py,sha256=RcLLXA2QSm8F8fnco7-uTLNj31o507_kBsfUlN8Dqw4,854
+majormode/xeberus/__init__.py,sha256=RcLLXA2QSm8F8fnco7-uTLNj31o507_kBsfUlN8Dqw4,854
+majormode/xeberus/service/__init__.py,sha256=hQMe9IQZJz-QpDqv0w-_PUlHH4DeLc4TfZ5po5NfS9w,778
+majormode/xeberus/service/device/__init__.py,sha256=hQMe9IQZJz-QpDqv0w-_PUlHH4DeLc4TfZ5po5NfS9w,778
+majormode/xeberus/service/device/device_service.py,sha256=wC8ikdf9fY3yhDU91NLUy6gP6hci6PCxBj-NSDBh4kw,107009
+majormode/xeberus/service/device/device_service_http_handler.py,sha256=Es3Nto8BiaZJ_NciGLHpHWd5BnuTYmhB1mk6nWUvfIY,32064
+xeberus_restful_api_server_library-1.5.4.dist-info/LICENSE.md,sha256=hCuNMtbrnA42ltFotP_fojKG6vk1b9-vyar_8Q_N5iY,752
+xeberus_restful_api_server_library-1.5.4.dist-info/METADATA,sha256=LemYFaHdW-aMj0G6RTJC5DslgNE16pvydY0R9FByDkk,823
+xeberus_restful_api_server_library-1.5.4.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+xeberus_restful_api_server_library-1.5.4.dist-info/top_level.txt,sha256=qLr6h4oeLqaugRahQG2kHWqnLf2QDgu8LP6VtCUDw7M,10
+xeberus_restful_api_server_library-1.5.4.dist-info/RECORD,,
