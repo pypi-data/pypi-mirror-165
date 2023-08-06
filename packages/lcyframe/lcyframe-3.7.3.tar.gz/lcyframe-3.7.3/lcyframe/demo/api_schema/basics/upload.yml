@@ -1,0 +1,174 @@
+- model:  开通产品
+  handler: "Authorization"
+  apis: "/authorization"
+  method:
+    post:
+      summary: 签发授权
+      description: 授权开通使用某个服务、套餐。开通后，分自动激活和客户邮件连接激活
+      parameters:
+        - name: company_id
+          description: 客户id
+          required: true
+          type: int
+#        - name: domain_name_list
+#          description: 授权范围
+#          required: true
+#          type: json
+#          default: { }
+#        - name: files
+#          description: 文件数据
+#          required: true
+#          type: files
+        - name: product_id
+          description: 产品id
+          required: true
+          type: int
+        - name: service_life
+          description: 授权时长，即产品有效期，单位天
+          required: true
+          type: int
+        - name: domain_name_list
+          description: 授权主域列表
+          required: true
+          type: json
+        - name: active_mode
+          description: 激活方式, 0直接激活，1邮件激活
+          required: true
+          type: int
+          default: [0, 1]
+        - name: email
+          description: 授权邮箱
+          required: false
+          type: str
+
+
+
+    get:
+      summary: 详情
+      description:
+      parameters:
+        - name: id
+          description: id
+          required: true
+          type: int
+      responses:
+        {
+          id: 40,
+          create_time: "2022-08-25 17:09:13",
+          update_time: "",
+          license: "",
+          issued_at: "签发时间，2022-08-25 17:09:13.058567",
+          company_id: 1,
+          order_number: "",
+          auth_valid_at: "",
+          auth_state: "0待激活，1已激活，2已过期|int",
+#          issued_type: 1,
+          service_life: 365,
+          active_mode: 0客户激活，1直接激活|int,
+          email: "激活邮箱",
+          service_start: "服务开始时间，2022-08-25 17:09:13",
+          service_end: "服务到期时间，2022-08-25 17:09:13",
+          creater_id: 31,
+          used_state: 0,
+          product_id: 5,
+          domain_name_list: '[ "www.sbc.com", "1caihcloud.com" ]',
+          service_list: '[1, 2, 3, 4, 5, 6]',
+          product_name: '产品名称',
+          company_name: '企业名称'
+        }
+
+    put:
+      summary: 编辑
+      description:
+      parameters:
+        - name: id
+          description: 记录id
+          required: true
+          type: int
+        - name: service_list
+          description: 服务条目
+          required: false
+          type: json
+        - name: domain_name_list
+          description: 授权域名
+          required: false
+          type: json
+        - name: service_end
+          description: 到期时间
+          required: false
+          type: datetime
+
+      responses:
+        {
+
+        }
+
+    delete:
+      summary: 删除
+      description: 删除记录
+      parameters:
+        - name: id
+          description: 记录id
+          required: true
+          type: int
+
+
+      responses:
+        {
+
+        }
+
+- handler: "AuthorizationList"
+  apis: "/authorization/list"
+  method:
+    get:
+        summary: 授权列表
+        description:
+        parameters:
+          - name: page
+            in: query
+            description: 翻页码
+            required: false
+            type: integer
+          - name: count
+            in: query
+            description: 每页显示条数
+            required: false
+            type: integer
+          - name: auth_state
+            description: 授权状态：0待激活，1已激活，2已过期
+            required: false
+            type: int
+            allow: [ 0, 1, 2]
+          - name: search
+            description: 搜索授权客户名称或产品名称等关键字查询
+            required: false
+            type: str
+          - name: order_key
+            description: 排序字段,service_end=-1
+            required: false
+            type: str
+
+        responses:
+            {
+              'datas':
+                [
+                  {
+                    id: 40,
+                    license: "",
+                    issued_at: "2022-08-25 17:09:13",
+                    service_end: "",
+                    auth_state: 0,
+                    product_id: 5,
+                    company_id: 1,
+                    company_name: "中国-东盟信息港股份有限公司",
+                    product_name: "产品名称"
+                  }
+                ],
+              pagination: {
+                pages: 10,        # 总页数
+                page: 1,        # 当前页
+                count: 10,        # 每页10条
+                counts: 10        # 总条数
+              }
+            }

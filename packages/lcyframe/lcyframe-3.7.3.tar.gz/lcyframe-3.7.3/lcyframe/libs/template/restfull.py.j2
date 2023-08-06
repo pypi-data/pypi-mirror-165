@@ -1,0 +1,44 @@
+#!/usr/bin/env python
+# -*- coding:utf-8 -*-
+import random, string
+from test_script import *
+from lcyframe.libs import cprint, utils
+{% for resource in resources %}
+{% for method, m in resource.method.items() %}
+def {{method + resource.api.replace("/", "_")}}(*args, **kwargs):
+    """
+    {{m.summary}}:{{m.description or ''}}
+    {% if m.parameters %}
+    参数:
+    {% for p in m.parameters -%}
+       - {{p.name}} # {% if p.required %}必填{% else %}选填{%endif%},{{p.type}},{{p.description or ''}}
+    {% endfor -%}
+    {% endif -%}
+    """
+    headers = {}
+    files = {}
+    {% for p in m.parameters -%}
+        {% if p.type in ["files", "file"] -%}
+    # {{p.description or '需要上传的文件'}}
+    files["{{p.name}}"] = open("../请指定文件路径")
+    {{break}}
+    {% endif -%}
+    {% endfor -%}
+params = {
+        {% for p in m.parameters -%}
+        {% if p.type not in ["files", "file"] -%}
+                "{{p.name}}": "({% if p.required %}必填{% else %}选填{%endif%}){{p.description or '无描述'}}",
+        {% endif -%}
+        {% endfor -%}
+}
+    return send(methed="{{method.lower()}}", url="{{resource.api}}", params=params, headers=headers, files=files)
+{% endfor -%}
+{% endfor %}
+
+if __name__ == "__main__":
+    {% for resource in resources -%}
+    {% for method, m in resource.method.items() -%}
+    # {{m.summary}}
+    {{method + resource.api.replace("/", "_")}}()
+    {% endfor -%}
+    {% endfor -%}
