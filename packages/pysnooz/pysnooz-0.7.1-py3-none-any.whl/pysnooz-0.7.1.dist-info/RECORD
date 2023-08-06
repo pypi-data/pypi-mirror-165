@@ -1,0 +1,12 @@
+pysnooz/__init__.py,sha256=2KJZDSMOG7KS82AxYOrZ4ZihYxX0wjfUjDsIZh3L024,22
+pysnooz/advertisement.py,sha256=Mr_o2nzGJxENbsWxvaAoUoyhZ4zlI11MBKz-hAA-wgo,2143
+pysnooz/api.py,sha256=QKn_B562yqO4pYlyXUF4qxS9a3BcmMw0u-0WtWv908o,4264
+pysnooz/commands.py,sha256=RVhtjpPnPVTdM9sVE4r31dzjQkCtcSMPbfUH1XtyZfU,13660
+pysnooz/const.py,sha256=eIt1NaCX91Z-h5nIfvTePEGkct83tTcXuil5brxhqtU,267
+pysnooz/device.py,sha256=2uJKK_J7bKHtuINBFRv096xMV1jk2Fu1JaXuFT6nPac,14433
+pysnooz/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pysnooz/transition.py,sha256=xpTUlqiYbRkpkbohAk0ssJ70ojaob_KGRsb9nAx84tM,3110
+pysnooz-0.7.1.dist-info/LICENSE,sha256=V6IY5Ny7zK_CClNlIMu5VG9nSJ7ukOaEVZGzyrsWmWU,1075
+pysnooz-0.7.1.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+pysnooz-0.7.1.dist-info/METADATA,sha256=q9_PYwmFPXtZMaF44DSGQyczG7bBJKZEjZRkKxdXgmU,5559
+pysnooz-0.7.1.dist-info/RECORD,,
