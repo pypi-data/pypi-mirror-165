@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: naveen
+Version: 0.2.3
+Requires-Dist: bs4
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: pyyaml
+
