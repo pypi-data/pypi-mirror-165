@@ -1,0 +1,4 @@
+libevdev
+paramiko
+pynput
+screeninfo

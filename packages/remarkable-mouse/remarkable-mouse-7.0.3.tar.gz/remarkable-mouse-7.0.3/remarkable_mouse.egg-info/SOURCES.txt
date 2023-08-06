@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+remarkable_mouse/__init__.py
+remarkable_mouse/codes.py
+remarkable_mouse/common.py
+remarkable_mouse/evdev.py
+remarkable_mouse/generate_codes.py
+remarkable_mouse/pynput.py
+remarkable_mouse/remarkable_mouse.py
+remarkable_mouse/version.py
+remarkable_mouse.egg-info/PKG-INFO
+remarkable_mouse.egg-info/SOURCES.txt
+remarkable_mouse.egg-info/dependency_links.txt
+remarkable_mouse.egg-info/entry_points.txt
+remarkable_mouse.egg-info/requires.txt
+remarkable_mouse.egg-info/top_level.txt
