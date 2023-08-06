@@ -1,0 +1,2 @@
+[console_scripts]
+tblink-rpc = tblink_rpc.__main__:main
