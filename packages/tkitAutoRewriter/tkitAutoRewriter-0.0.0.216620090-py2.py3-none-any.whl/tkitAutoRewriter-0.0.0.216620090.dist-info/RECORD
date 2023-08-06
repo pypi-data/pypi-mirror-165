@@ -1,0 +1,10 @@
+tkitAutoRewriter/__init__.py,sha256=eV0sYWEaxPQtHRf9l9DEk4VGixqpkfafAipz1nhOinE,173
+tkitAutoRewriter/api.py,sha256=y31KxWsBqzzV0T7r7AXxM_1pSgZwDYFvXengKDB6FH0,29743
+tkitAutoRewriter/diff.py,sha256=IRqWJrQdd9ur_jq17AYNay6t4XECJqzp5OMevdKJrc8,1279
+tkitAutoRewriter/rewriter.py,sha256=IvqVABjMgiWFilh6Y4hCbRXVKiGe1wO9ZGp4-qJXSDs,1078
+tkitAutoRewriter/test_text_rewrite_.py,sha256=p_BZKFf0l-zSXjdxSsmEI_j7J7OxwwE1oejmQeUSRbg,3950
+tkitAutoRewriter/text_tilling.py,sha256=zQs5VSERuN3-bWu0g3mIn5FVRp03Vdp9aA5r6OK-6YY,686
+tkitAutoRewriter-0.0.0.216620090.dist-info/METADATA,sha256=IKwY6DzwzKiCArQ5gexxKS3xayv6A5V94B_a4ip9KR8,9149
+tkitAutoRewriter-0.0.0.216620090.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+tkitAutoRewriter-0.0.0.216620090.dist-info/top_level.txt,sha256=O102HReAL1UEnal2KG8GcG_Ui18IOY8RgNJFg0IANBM,17
+tkitAutoRewriter-0.0.0.216620090.dist-info/RECORD,,
