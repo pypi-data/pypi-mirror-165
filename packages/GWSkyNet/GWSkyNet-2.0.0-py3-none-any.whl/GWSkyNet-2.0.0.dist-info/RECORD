@@ -1,0 +1,16 @@
+GWSkyNet/GWSkyNet.py,sha256=UCsP5Y34-rKlBvy3Nd4ne3wLDbv3ugyzBFUKIlDYB_A,11193
+GWSkyNet/__init__.py,sha256=DB-A-N7EVX8FhcKVGLHbEFTRDzWXMqh2dn-eQOV7w8M,81
+GWSkyNet/GWSkyNet_data/models/GWSkyNet_v1.h5,sha256=RN4PVMvYIZlNUw9UWjEUQDXCZ8auPbB-3ihYgIKYyK0,84888
+GWSkyNet/GWSkyNet_data/models/GWSkyNet_v1.json,sha256=n0LgS_X_qHdIVVmKMkcVEPYEJRbQVPPAENVTlZes4ek,14939
+GWSkyNet/GWSkyNet_data/models/GWSkyNet_v2.h5,sha256=3-ECgYgmbPrPkrnVO1Xts2kkBezkoEgVbhBDlAwwYhk,95664
+GWSkyNet/GWSkyNet_data/models/GWSkyNet_v2.json,sha256=XxWB9GECC-sfpFVG-39oyiXbN5A3mNtNcPC-6_C2ASc,16953
+GWSkyNet/GWSkyNet_data/models/GWSkyNet_v3.h5,sha256=TyAusGPHRw_0vHUcBUqupT8o_509DuBma6Q1GFImHVk,103280
+GWSkyNet/GWSkyNet_data/models/GWSkyNet_v3.json,sha256=Umih-3uHVb5GY5aibvqdD02Uy_4Uy0iw1aKUAP8WS_M,18408
+GWSkyNet/GWSkyNet_data/models/training_norms.txt,sha256=oY2PVRNylm-cdASQaNo76wfaDrt_tC41Fdo4xpWJnoY,476
+GWSkyNet/GWSkyNet_data/rates/GWSkyNet_v2_rates.txt,sha256=l6POwQvYcz7UF7vVx12Fk0Y0saTuD2jcq8Zshfir-vg,360012
+GWSkyNet/GWSkyNet_data/rates/GWSkyNet_v3_rates.txt,sha256=EHgpwWGesWIpQrp5Y6guzIvn94964f0L0P4RRMPpQwk,360011
+GWSkyNet-2.0.0.dist-info/LICENSE,sha256=78HGhuU6NEbC2uKSq07HCWpwhlt8cueQY6DUfbSDZhs,18073
+GWSkyNet-2.0.0.dist-info/METADATA,sha256=o6oVEYvjPMEroK77UGzW3I8fv-fUUiKnkY53dDiGb-E,2961
+GWSkyNet-2.0.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+GWSkyNet-2.0.0.dist-info/top_level.txt,sha256=gsWfW-KJEBllnA4SlPH_cRvS7oycVxIWhwb-IRnuCDM,9
+GWSkyNet-2.0.0.dist-info/RECORD,,
