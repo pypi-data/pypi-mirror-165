@@ -1,0 +1,12 @@
+zope.error-4.6-py3.9-nspkg.pth,sha256=SWEVH-jEWsKYrL0qoC6GBJaStx_iKxGoAY9PQycFVC4,529
+zope/error/__init__.py,sha256=R7AnufGptrHaYIiLK8M37nkMMhyLOupctU0RdZqvano,14
+zope/error/configure.zcml,sha256=-7dCiPBujSyvszt_o_XAt9_8Xo-RwEGTb5wd8HbDifs,948
+zope/error/error.py,sha256=sHSt2woda9gh_J2qY6GPnKBgWEopy0VKvv_xIgZtas0,9901
+zope/error/interfaces.py,sha256=DOHeOHSWBPzeu5WjaPkIKZnnKLXmet4OPJCBHPogoBU,1968
+zope/error/tests.py,sha256=r9vDTQW_a2deAbBGG3GC_6Kf6UweT4HFCfotekcqbkA,14814
+zope.error-4.6.dist-info/LICENSE.txt,sha256=PmcdsR32h1FswdtbPWXkqjg-rKPCDOo_r1Og9zNdCjw,2070
+zope.error-4.6.dist-info/METADATA,sha256=TfWwyN65sw7KXIGgJkmfThzrSOCbdYYqXGTcCPnlRSA,5612
+zope.error-4.6.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+zope.error-4.6.dist-info/namespace_packages.txt,sha256=QpUHvpO4wIuZDeEgKY8qZCtD-tAukB0fn_f6utzlb98,5
+zope.error-4.6.dist-info/top_level.txt,sha256=QpUHvpO4wIuZDeEgKY8qZCtD-tAukB0fn_f6utzlb98,5
+zope.error-4.6.dist-info/RECORD,,
