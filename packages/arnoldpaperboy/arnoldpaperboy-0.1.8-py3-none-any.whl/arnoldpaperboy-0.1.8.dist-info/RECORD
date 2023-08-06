@@ -1,0 +1,17 @@
+arnoldpaperboy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+arnoldpaperboy/logger/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+arnoldpaperboy/logger/client.py,sha256=T0VMMf-jZayjFIz22rX3S2TinYjCgpzkr77tGGeXmwM,397
+arnoldpaperboy/logger/handlers.py,sha256=-TcRxf3mMrf2ui12068afHk0Xmn8g0q_ahQcmv56bYk,3195
+arnoldpaperboy/logger/helpers.py,sha256=UJxG_yahGNzFYiLaw8pw-bumdJMqS8dkX5sljaDfuHU,12534
+arnoldpaperboy/monitoring/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+arnoldpaperboy/monitoring/custom_metrics.py,sha256=16qi1aFkGMtX31Z8ab7bNSWjb5FeICxytzduZK8xCtw,3994
+arnoldpaperboy/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+arnoldpaperboy/utils/resource.py,sha256=kPBVZ0c5dPVpnP2J3NRUg72IhapaBTi4aQYe9ZWtV2E,2837
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_helpers.py,sha256=Kz2Sp9WbPSh3Czu-5beg8jZXtjISS5tBobOOhsFECtA,122
+tests/test_logging_handlers.py,sha256=GxDqeheCtJO_B_LTwAXOuDUUf6nYulERhrE-fdhbVrA,123
+arnoldpaperboy-0.1.8.dist-info/LICENSE.rst,sha256=CyrAG9mh6F8MtLfHt1HULBjG2HAcC0UhziAjf3MZWu4,10895
+arnoldpaperboy-0.1.8.dist-info/METADATA,sha256=eNVlZ-VlvqGwb3K3ixnD21FRomM6M_b9vTaddJMM8Ko,6249
+arnoldpaperboy-0.1.8.dist-info/WHEEL,sha256=ewwEueio1C2XeHTvT17n8dZUJgOvyCWCt0WVNLClP9o,92
+arnoldpaperboy-0.1.8.dist-info/top_level.txt,sha256=OPLCwej7l_j_nT5nRDrWvWGJlrFkB5G4XWYzKvXsvsY,21
+arnoldpaperboy-0.1.8.dist-info/RECORD,,
