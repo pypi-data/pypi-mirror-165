@@ -1,0 +1,2 @@
+[console_scripts]
+gerrit_tools = gerrit_tools.main:main
