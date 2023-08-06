@@ -1,0 +1,2 @@
+[console_scripts]
+gta = gtasker.cmdparser:main
