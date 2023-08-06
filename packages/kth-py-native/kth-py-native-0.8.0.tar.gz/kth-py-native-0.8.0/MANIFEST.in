@@ -1,0 +1,28 @@
+include *.so
+include *.dll
+include *.dylib
+
+include include/kth/py-native/*.h
+include include/kth/py-native/chain/*.h
+include include/kth/py-native/config/*.h
+include include/kth/py-native/p2p/*.h
+
+include src/*.cpp
+include src/*.c
+include include/kth/py-native/chain/*.cpp
+include include/kth/py-native/chain/*.c
+include include/kth/py-native/config/*.cpp
+include include/kth/py-native/config/*.c
+include include/kth/py-native/p2p/*.cpp
+include include/kth/py-native/p2p/*.c
+
+include *.h
+include chain/*.h
+include p2p/*.h
+include doc/*
+include test/*
+
+include conanfile.py
+
+include version.py
+include README.md
