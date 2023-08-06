@@ -1,0 +1,4 @@
+[console_scripts]
+apple = pkgexampleconsole:my_second_entry_point_funtion
+banana = pkgexampleconsole:my_first_entry_point_funtion
+carrot = pkgexampleconsole:myscript.main
