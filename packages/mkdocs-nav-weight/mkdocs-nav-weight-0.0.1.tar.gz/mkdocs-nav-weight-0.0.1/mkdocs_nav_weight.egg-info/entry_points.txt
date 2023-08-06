@@ -1,0 +1,3 @@
+[mkdocs.plugins]
+mkdocs-nav-weight = mkdocs_nav_weight:MkDocsNavWeight
+
