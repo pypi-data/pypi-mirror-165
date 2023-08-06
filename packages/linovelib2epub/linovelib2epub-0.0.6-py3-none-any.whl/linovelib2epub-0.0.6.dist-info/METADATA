@@ -1,0 +1,75 @@
+Metadata-Version: 2.1
+Name: linovelib2epub
+Version: 0.0.6
+Summary: Craw light novel from [哔哩轻小说(linovelib)](https://w.linovelib.com/) and convert to epub.
+Project-URL: Homepage, https://github.com/wdpm/linovelib2epub
+Project-URL: Source, https://github.com/wdpm/linovelib2epub
+Project-URL: Tracker, https://github.com/wdpm/linovelib2epub/issues
+Author-email: wdpm <1137299673@qq.com>
+Keywords: ebook,epub,library,light novel,哔哩轻小说
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Natural Language :: Chinese (Simplified)
+Classifier: Natural Language :: Chinese (Traditional)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.7
+Requires-Dist: bs4>=0.0.1
+Requires-Dist: demjson>=2.2.4
+Requires-Dist: ebooklib>=0.17.1
+Requires-Dist: fake-useragent>=0.1.11
+Requires-Dist: requests>=2.28.1
+Requires-Dist: rich>=12.5.1
+Requires-Dist: uuid>=1.30
+Description-Content-Type: text/markdown
+
+# linovelib2epub
+Craw light novel from [哔哩轻小说(linovelib)](https://w.linovelib.com/) and convert to epub.
+
+[![Hatch project](https://img.shields.io/badge/%F0%9F%A5%9A-Hatch-4051b5.svg)](https://github.com/pypa/hatch)
+
+
+## Features
+
+- [x] flexible `has_illustration` and `divide_volume` option for epub output
+- [x] built-in http request retry mechanism to improve network fault tolerance
+- [x] built-in random browser user_agent through fake_useragent library
+- [x] built-in strict integrity check about image download
+- [x] built-in mechanism for saving temporary book data by pickle library
+- [x] use multi-thread to download images
+
+## Usage
+1. Install this package from pypi:
+```
+pip install linovelib2epub
+```
+2. create a python file and edit the content as follows:
+```python
+from linovelib2epub.linovel import Linovelib2Epub
+
+# warning!: must run within __main__ module guard due to process spawn issue.
+if __name__ == '__main__':
+    linovelib_epub = Linovelib2Epub(book_id=3279)
+    linovelib_epub.run()
+```
+If it finished without errors, you can see the epub file is under the folder where your python file is located.
+
+3. For more options. 
+> TODO
+
+## Todo
+
+- [ ] (feat) utilize sigil to debug CSS rules for book style beautification
+- [ ] (devops) publish this library to PYPI not TestPyPI
+- [ ] logging level: info or succinct
+
+## Known issues
+
+See `docs/` folder.
