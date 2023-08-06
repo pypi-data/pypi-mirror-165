@@ -1,0 +1,12 @@
+plone.app.querystring
+plone.base
+pytz
+setuptools
+zope.deprecation
+zope.globalrequest
+
+[test]
+mock
+plone.app.testing
+zope.configuration
+zope.testing
