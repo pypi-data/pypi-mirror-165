@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: dnsuptools
+Version: 0.0.25.post1
+Summary: Library interfaces to dns service api for query, update, add, delete comfortably.
+Home-page: https://github.com/TheTesla/dnsuptools
+Author: Stefan Helmert
+Author-email: stefan.helmert@t-online.de
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENCE
+
+[![Build Status](https://travis-ci.com/TheTesla/dnsuptools.svg?branch=master)](https://travis-ci.com/TheTesla/dnsuptools)
+
+# DNSupTools
+
+This is a python library enabling easy dns server record updates. Currently only
+inwx.de is supported. 
+
+This program library depends on pycurl. To use this you need:
+
+```bash
+sudo apt install libcurl4-openssl-dev libssl-dev
+```
+
+# ToDo
+
+complete all tests!
+
+# Author
+
+Stefan Helmert
+
+
