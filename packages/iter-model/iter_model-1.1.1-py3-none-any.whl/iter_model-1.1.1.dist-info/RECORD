@@ -1,0 +1,8 @@
+iter_model/__init__.py,sha256=uwlPMRyFtevsnF4HEl-eDB8UK4p2sSnb-Etxv73lJv8,89
+iter_model/async_iter.py,sha256=hOgX1-t7NFW_Ui9SBpGzyULgALIQfF5sumLkyszZF9Y,13919
+iter_model/async_utils.py,sha256=3uSJ-4IkOFgBj3OKGqXEK7Ylw92jeS5i8OEqnZ3Rfq8,520
+iter_model/sync_iter.py,sha256=BvASKMSpFh0FPw_Yd1DpVfBQZ-_iFTI931lZzYRz8LY,9896
+iter_model-1.1.1.dist-info/LICENSE,sha256=kK9PCyuVvfynOdOcRYIzledljYRahH0xAtNGH3Q4vVE,1062
+iter_model-1.1.1.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+iter_model-1.1.1.dist-info/METADATA,sha256=3MVC-B-se-E3bsSkyaonzbfPqr5POhQsduep0zLumQE,3533
+iter_model-1.1.1.dist-info/RECORD,,
