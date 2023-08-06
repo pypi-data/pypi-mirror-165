@@ -1,0 +1,3 @@
+[console_scripts]
+np-lims-tk=np_lims_tk.__main__:app
+
