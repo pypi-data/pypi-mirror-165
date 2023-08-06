@@ -1,0 +1,12 @@
+sbomdiff/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sbomdiff/cli.py,sha256=ddXPDeRrSaSE0voVftr_4rfXL9A5cJnJplpQaGNInGg,4861
+sbomdiff/cyclonedx_parser.py,sha256=eShaLkWdtSbtInw10LiaPH41ka6nO2bOKy1V2rHQNao,2997
+sbomdiff/output.py,sha256=LudbY8AWtCyV6ZBxbquvFvOC6DTG8c3ex_TsyPPYamg,1299
+sbomdiff/spdx_parser.py,sha256=HgySC2XN1eAuVdI6SgHiwviaEfoS6jOc6_STmVzMmU8,7416
+sbomdiff/version.py,sha256=UElp1S4vflxjj9NWNXktWralI0iCvF7tALLpAhTFJ28,100
+sbomdiff-0.1.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+sbomdiff-0.1.0.dist-info/METADATA,sha256=nuXVnyO0lFaAdwr4dCg1d5q-gA93i6w4BV_qs2vuxWg,5816
+sbomdiff-0.1.0.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+sbomdiff-0.1.0.dist-info/entry_points.txt,sha256=fcONsvnGhylyVE47AbBD9yrXj47ScGZbVyJ7jGRcx9o,47
+sbomdiff-0.1.0.dist-info/top_level.txt,sha256=vt1EhODe3hHuS5SesbQue8uX-pOojrBfdtCwYdbEUgg,9
+sbomdiff-0.1.0.dist-info/RECORD,,
