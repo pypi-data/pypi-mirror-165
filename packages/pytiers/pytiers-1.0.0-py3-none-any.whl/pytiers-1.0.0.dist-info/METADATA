@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: pytiers
+Version: 1.0.0
+Summary: UNKNOWN
+Author: Huang Bo-Xuan
+Author-email: r09142003@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: seaborn
+Requires-Dist: matplotlib
+Requires-Dist: pandas
+
+UNKNOWN
+
