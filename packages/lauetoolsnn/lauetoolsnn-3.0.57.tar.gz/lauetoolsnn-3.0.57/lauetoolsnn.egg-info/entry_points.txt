@@ -1,0 +1,5 @@
+[console_scripts]
+lauenn = lauetoolsnn.lauetoolsneuralnetwork:start
+lauenn_addmat = lauetoolsnn.util_scripts.add_material:start
+lauenn_mat = lauetoolsnn.util_scripts.add_material:querymat
+lauetoolsnn = lauetoolsnn.lauetoolsneuralnetwork:start
