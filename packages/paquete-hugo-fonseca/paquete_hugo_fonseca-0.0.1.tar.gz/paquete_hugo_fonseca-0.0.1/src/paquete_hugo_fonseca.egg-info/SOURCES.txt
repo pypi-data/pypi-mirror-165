@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/paquete_hugo_fonseca/__init__.py
+src/paquete_hugo_fonseca/estadisticos.py
+src/paquete_hugo_fonseca.egg-info/PKG-INFO
+src/paquete_hugo_fonseca.egg-info/SOURCES.txt
+src/paquete_hugo_fonseca.egg-info/dependency_links.txt
+src/paquete_hugo_fonseca.egg-info/top_level.txt
