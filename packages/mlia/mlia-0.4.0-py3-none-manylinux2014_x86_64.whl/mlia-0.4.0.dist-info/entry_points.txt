@@ -1,0 +1,2 @@
+[console_scripts]
+mlia = mlia.cli.main:main
