@@ -1,0 +1,5 @@
+pandas
+pyarrow<7.1,>=7.0
+numpy>=1.22
+jinja2
+scipy
