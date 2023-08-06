@@ -1,0 +1,3 @@
+[console_scripts]
+np-validator=np_validator.__main__:app
+
