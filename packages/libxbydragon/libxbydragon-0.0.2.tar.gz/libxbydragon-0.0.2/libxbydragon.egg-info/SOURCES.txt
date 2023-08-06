@@ -1,0 +1,10 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+setup.py
+libxbydragon/__init__.py
+libxbydragon.egg-info/PKG-INFO
+libxbydragon.egg-info/SOURCES.txt
+libxbydragon.egg-info/dependency_links.txt
+libxbydragon.egg-info/top_level.txt
