@@ -1,0 +1,3 @@
+[console_scripts]
+file-trigger = file_trigger.__main__:main
+file-trigger-build-windows-service = file_trigger.scripts.build_windows_service:main
