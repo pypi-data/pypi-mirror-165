@@ -1,0 +1,15 @@
+ipa_tool/.DS_Store,sha256=VVH_wJ9-38Il-D1YLTmt2_CqUQ-rTlAQWnZAzxVmYk4,6148
+ipa_tool/__init__.py,sha256=HnE1Vtw8xMhi84fKBOfH2GvFd_jhr9DHuPA_hbXB58M,65
+ipa_tool/__main__.py,sha256=Y7QynLscAYEvo7rUHlxp8CLLafyZ2iCiOtowVkKXmW8,47
+ipa_tool/analyze_macho.py,sha256=nLFqG1TvZyUzbGRK6Q0pV_mHs2ld6pSnDGhRmbpkhOk,1054
+ipa_tool/calc_md5.py,sha256=rL9oj5UQaAxx9GU0Q0kVdrUMeN1jorMkiBd2rnxgfhw,301
+ipa_tool/create_infos.py,sha256=BPOeraMo8G0HteObZ7cjOIbCDBDtNRwoJLEEqDXCHf4,3511
+ipa_tool/format_plist.py,sha256=mo5l8jXUl7Hraz-QPExIuCZpUwGDl4SI0V1vy5pP46c,1069
+ipa_tool/get_icon.py,sha256=7oFWrhbjOtiRPh8ma27pmrFyUB5_G2_0-_sur16nQ5M,6177
+ipa_tool/get_size.py,sha256=Q0q0CZNVIAebZK9Dmrok40L7_BXi5roaGd_FEILav5Y,197
+ipa_tool/load_ipa.py,sha256=pXkHxVqCvUvd0ZGmmECuNS_5MrqTvoxKZ5KOCCTXKz8,122
+ipa_tool/main.py,sha256=OuUgLchZ9TGoT-r8zYLr9BuorFVxiP7OqDMAuQZ6aAg,2266
+ipa_tool-1.4.5.dist-info/entry_points.txt,sha256=KHbndLx8PTyz9UqjFqQwhpq56jRPHMu_pNjmiMs1juU,46
+ipa_tool-1.4.5.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+ipa_tool-1.4.5.dist-info/METADATA,sha256=Z_VSvsBN4GHRSrEMcBzg-sNQ9sG2TkdEn9GXY_6FTvc,598
+ipa_tool-1.4.5.dist-info/RECORD,,
