@@ -1,0 +1,4 @@
+[console_scripts]
+evaluate=aiai_eval.cli:evaluate
+evaluate-gui=aiai_eval.gui:main
+
