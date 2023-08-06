@@ -1,0 +1,6 @@
+setuptools
+plone.base
+
+[test]
+plone.app.contenttypes
+plone.app.testing
