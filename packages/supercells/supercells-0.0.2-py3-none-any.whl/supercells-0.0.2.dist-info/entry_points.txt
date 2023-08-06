@@ -1,0 +1,2 @@
+[console_scripts]
+supercells = supercells.supercells:main
