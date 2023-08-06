@@ -1,0 +1,6 @@
+click
+gitpython
+pyyaml
+requests
+toml
+tqdm
