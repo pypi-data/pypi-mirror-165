@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+datajuggler/__init__.py
+datajuggler/dict.py
+datajuggler/utils.py
+datajuggler/versions.py
+datajuggler/yaml.py
+datajuggler.egg-info/PKG-INFO
+datajuggler.egg-info/SOURCES.txt
+datajuggler.egg-info/dependency_links.txt
+datajuggler.egg-info/top_level.txt
