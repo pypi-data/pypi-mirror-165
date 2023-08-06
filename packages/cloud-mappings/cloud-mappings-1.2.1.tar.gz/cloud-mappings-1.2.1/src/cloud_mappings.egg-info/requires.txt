@@ -1,0 +1,17 @@
+
+[awss3]
+boto3==1.24.54
+
+[azureblob]
+azure-identity==1.10.0
+azure-storage-blob==12.13.1
+
+[azuretable]
+azure-identity==1.10.0
+azure-data-tables==12.4.0
+
+[gcpstorage]
+google-cloud-storage==2.5.0
+
+[tests]
+pytest==7.1.2
