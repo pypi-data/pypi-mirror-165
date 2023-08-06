@@ -1,0 +1,9 @@
+mlconfig/__init__.py,sha256=Q5D9-GcjZ0UFYreBX0A5jRE3VwCLZPjk9-3mGi4Xe-A,151
+mlconfig/collections.py,sha256=mAMB70IKiN1EP2rZWu5mBx8g1UYwRwQt2xRPNewj6yA,2046
+mlconfig/config.py,sha256=pbmOgLkVRgamPMYC_v2cOVAZV8RWENEATdZvSVE0qd0,5363
+mlconfig/torch/__init__.py,sha256=rN1jzyGHr6ihpQahtPBN2yJtkJRND7lYxZXqc5M7thE,790
+mlconfig/utils.py,sha256=qXcsWyqem5nxe_48oxxooqA0vJNyI1d7izTyFfPlQgc,1283
+mlconfig-0.1.8.dist-info/LICENSE,sha256=vK26DADDD3vPEl4y8fDmCE1Ub_iX3vSP4APVkSiROZs,1066
+mlconfig-0.1.8.dist-info/WHEEL,sha256=bbU3AyvhQ312rVm7zzRQjs6axI1UYWC3nmFA2E6FFSI,88
+mlconfig-0.1.8.dist-info/METADATA,sha256=qcpaTuYJ6ci753NHgjx4yRveVZnAAyx2I5DUQ9fCOug,521
+mlconfig-0.1.8.dist-info/RECORD,,
