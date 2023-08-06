@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: dbpedia-ent
+Version: 0.1.6
+Summary: Static dbPedia Entities for Fast Lookups
+Author: Craig Trim
+Author-email: craig.trim@causalitylink.com
+Requires-Python: ==3.8.5
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: baseblock
+Requires-Dist: unicodedata2

@@ -1,0 +1,43 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_rev_gf = {'gf072': 'gulf_air_flight_072',
+ 'gfa-basic': 'gfa_basic',
+ 'gfafb': 'grand_forks_air_force_base',
+ 'gfan': 'g-fan',
+ 'gfantis': 'g-fan',
+ 'gfaqs': 'gamefaqs',
+ 'gfci': 'residual-current_device',
+ 'gfcr': 'group_for_cryptology_research',
+ 'gfdl': 'gnu_free_documentation_license',
+ 'gfip': 'global_financial_integrity',
+ 'gfjtu': 'general_federation_of_jordanian_trade_unions',
+ 'gflop': 'flops',
+ 'gflops': 'flops',
+ 'gflops/watt': 'performance_per_watt',
+ 'gfnc': 'geelong_field_naturalists_club',
+ 'gfoa': 'government_finance_officers_association',
+ 'gfoat': 'government_finance_officers_association_of_texas',
+ 'gforce': 'g-force',
+ 'gforge.org': 'sourceforge',
+ 'gfps': 'grand_forks_public_schools',
+ 'gfra1': 'gdnf_family_receptor_alpha_1',
+ 'gfrc': 'glass_fiber_reinforced_concrete',
+ 'gfrege': 'gottlob_frege',
+ 'gfrp': 'glass-reinforced_plastic',
+ 'gfs2': 'global_file_system',
+ 'gfsk': 'gaussian_frequency-shift_keying',
+ 'gfsn': 'gay_football_supporters_network',
+ 'gfto': 'going_for_the_one',
+ 'gftu': 'general_federation_of_trade_unions',
+ 'gftuk': 'general_federation_of_trade_unions_of_korea',
+ 'gfunk': 'rooster_teeth_productions',
+ 'gfusa': 'grameen_foundation',
+ 'gfvn': 'government_of_free_vietnam',
+ 'gfwoc': 'golden_shield_project',
+ 'gfwtub': 'general_federation_of_workers_trade_unions_in_bahrain',
+ 'gfxboot': 'gnu_grub',
+ 'gfzw': 'north_atlantic_deep_water'}
+        

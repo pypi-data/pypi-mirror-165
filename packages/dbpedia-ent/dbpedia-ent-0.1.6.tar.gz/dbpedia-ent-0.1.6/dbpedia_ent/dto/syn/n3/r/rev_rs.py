@@ -1,0 +1,43 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_rev_rs = {'rs_album_guide': 'rolling_stone_album_guide',
+ 'rs_basingstoke_fc': 'rs_basingstoke_f.c.',
+ 'rs_ginnastica_torino': 'r.s._ginnastica_torino',
+ 'rs_music_records': 'rs_music',
+ 'rs_of_serbia': 'serbia',
+ 'rsa_battlehouse_tower': 'rsa_battle_house_tower',
+ 'rsa_blocker_tags': 'rsa_blocker_tag',
+ 'rsa_data_security': 'rsa_security',
+ 'rsh_remote_shell': 'remote_shell',
+ 'rsm_robson_rhodes': 'robson_rhodes',
+ 'rsmc_new_delhi': 'india_meteorological_department',
+ 'rspb_bempton_cliffs': 'bempton_cliffs',
+ 'rspb_berney_marshes': 'berney_marshes_rspb_reserve',
+ 'rspb_blacktoft_sands': 'blacktoft_sands_rspb_reserve',
+ 'rspb_brading_marshes': 'brading_marshes_rspb_reserve',
+ 'rspb_buckenham_marshes': 'buckenham_marshes_rspb_reserve',
+ 'rspb_coombes_valley': 'coombes_valley_rspb_reserve',
+ 'rspb_fairburn_ings': 'fairburn_ings_rspb_reserve',
+ 'rspb_lakenheath_fen': 'lakenheath_fen_rspb_reserve',
+ 'rspb_leighton_moss': 'leighton_moss_rspb_reserve',
+ 'rspb_middleton_lake': 'middleton_lakes_rspb_reserve',
+ 'rspb_middleton_lakes': 'middleton_lakes_rspb_reserve',
+ 'rspb_old_moor': 'rspb_old_moor_wetland_centre',
+ 'rspb_ouse_washes': 'ouse_washes',
+ 'rspb_pulborough_brooks': 'pulborough_brooks',
+ 'rspb_radipole_lake': 'radipole_lake',
+ 'rspb_rye_meads': 'rye_meads_nature_reserve',
+ 'rspb_sandwell_valley': 'sandwell_valley_rspb_reserve',
+ 'rspb_south_stack': 'south_stack_cliffs_rspb_reserve',
+ 'rspb_stour_estuary': 'stour_estuary_rspb_reserve',
+ 'rspb_strumpshaw_fen': 'strumpshaw_fen_rspb_reserve',
+ 'rspb_titchwell_marsh': 'titchwell_marsh',
+ 'rss_feed_reader': 'aggregator',
+ 'rss_feeds_directory': 'web_directory',
+ 'rss_web_feed': 'rss',
+ 'rsx_energy_inc': 'rsx_energy',
+ 'rsx_energy_inc.': 'rsx_energy'}
+        

@@ -1,0 +1,35 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_trie_pm = {'_': ['pm-scl_overlap_syndrome',
+       'pm/scl_overlap_syndrome',
+       'pm1910_machine_gun',
+       'pm_edition_weekend',
+       'pm_narendra_modi',
+       'pm_kusum_scheme',
+       'pm_place_stores',
+       'pm_east/pm_west',
+       'pm_of_australia',
+       'pm_of_palestine',
+       'pm_yoga_awards',
+       'pm_of_thailand',
+       'pm_cares_fund',
+       'pm_of_canada',
+       'pm_of_poland',
+       'pm_of_haiti',
+       'pm_cool_lee',
+       'pm_wz._63',
+       'pm_of_uk'],
+ 'b': ['pmb_road_classic'],
+ 'c': ['pmc_top_10'],
+ 'd': ['pmd_series_mines'],
+ 'e': ['pme_aggregation_function'],
+ 'h': ['pmhc_cellular_microarrays', 'pmhc_cellular_microarray'],
+ 'i': ['pmi_colleges_bohol'],
+ 'k': ['pmk_gas_mask'],
+ 'p': ['pmp-paper_machinery_producer', 'pmp_floating_bridge', 'pmp_my_ride'],
+ 'r': ['pmr_engineering_college', 'pmr_grenade_launcher'],
+ 't': ['pmtair_flight_241', 'pmt_dance_studio'],
+ 'u': ['pmu_18_scandal']}

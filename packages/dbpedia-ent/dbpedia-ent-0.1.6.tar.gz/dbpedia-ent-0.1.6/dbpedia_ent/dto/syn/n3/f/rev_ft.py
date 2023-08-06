@@ -1,0 +1,42 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_rev_ft = {'ft._a.p._hill': 'fort_a.p._hill',
+ 'ft._abraham_lincoln': 'fort_abraham_lincoln',
+ 'ft._benjamin_harrison': 'fort_benjamin_harrison',
+ 'ft._collins_force': 'colorado_force',
+ 'ft._hunter_liggett': 'fort_hunter_liggett',
+ 'ft._laramie_treaty': 'treaty_of_fort_laramie',
+ 'ft._lauderdale_stadium': 'fort_lauderdale_stadium',
+ 'ft._lauderdale_strikers': 'fort_lauderdale_strikers',
+ 'ft._mchenry_tunnel': 'fort_mchenry_tunnel',
+ 'ft._saint_anne': 'fort_sainte_anne',
+ 'ft._st._anne': 'fort_sainte_anne',
+ 'ft._ste._anne': 'fort_sainte_anne',
+ 'ft._wayne_kekiongas': 'fort_wayne_kekiongas',
+ 'ft._wayne_pistons': 'detroit_pistons',
+ 'ft._wayne_wizards': 'fort_wayne_tincaps',
+ 'ft._worth_cats': 'fort_worth_cats',
+ 'ft._worth_panthers': 'fort_worth_cats',
+ 'ft.lauderdale_high_school': 'fort_lauderdale_high_school',
+ 'ft_bend_isd': 'fort_bend_independent_school_district',
+ 'ft_global_500': 'financial_times_global_500',
+ 'ft_lauderdale_high': 'fort_lauderdale_high_school',
+ 'ft_sam_houston': 'fort_sam_houston',
+ 'ft_worth_cats': 'fort_worth_cats',
+ 'ft_worth_panthers': 'fort_worth_cats',
+ 'ftc_chat_network': 'ftc_chat_service',
+ 'ftc_dam_neck': 'training_support_center_hampton_roads',
+ 'ftc_world_championship': 'first_championship',
+ 'ftse/xinhua_china_25': 'xinhua_finance',
+ 'ftse/xinhua_china_a50': 'xinhua_a50_china_tracker',
+ 'ftse_100_members': 'ftse_100_index',
+ 'ftse_smallcap_index.': 'ftse_smallcap_index',
+ 'ftse_techmark_index': 'ftse_techmark_100',
+ 'ftse_xinhua_index': 'xinhua_finance',
+ 'ftw_heavyweight_championship': 'ecw_ftw_heavyweight_championship',
+ 'ftw_heavyweight_title': 'ecw_ftw_heavyweight_championship',
+ 'ftw_world_championship': 'ecw_ftw_heavyweight_championship'}
+        

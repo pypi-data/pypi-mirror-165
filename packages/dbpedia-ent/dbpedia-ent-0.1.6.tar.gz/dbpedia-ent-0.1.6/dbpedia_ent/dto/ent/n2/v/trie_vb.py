@@ -1,0 +1,36 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_trie_vb = {'_': ['vb_chandrasekhar',
+       'vb_chandrasekar',
+       'vb_controller',
+       'vb5_interface',
+       'vb_commodore',
+       'vb-6_felix',
+       'vb-3_razon',
+       'vb_series',
+       'vb_script',
+       'vb_sports',
+       'vb_eradi',
+       'vb_farms',
+       'vb_rocks',
+       'vb_watch',
+       'vb_codes',
+       'vb_open',
+       'vb_.net',
+       'vb_2005',
+       'vb_gold',
+       'vb_wave',
+       'vb_10b',
+       'vb_10'],
+ 'a': ['vba32_antivirus', 'vba_macros'],
+ 'b': ['vbbs/virtual_advanced'],
+ 'c': ['vbc_zandhoven', 'vbc_waremme', 'vbc_akrides', 'vbcp_39l', 'vbcp_38l'],
+ 'd': ['vbdos_1.0'],
+ 'i': ['vbi_teletext', 'vbi_vaccines'],
+ 'm': ['vbmr_griffon', 'vbm_433'],
+ 'r': ['vbras_spungs'],
+ 't': ['vbtp-mr_guarani'],
+ 'u': ['vbuzzer_messenger']}
