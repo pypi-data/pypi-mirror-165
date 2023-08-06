@@ -1,0 +1,18 @@
+[project]
+name = "readme_executor"
+authors = [
+    {name = "Randall Morgan", email = "rmorgan@sensornet.us"},
+]
+readme = "readme.md"
+classifiers = [
+    "License :: OSI Approved :: GNU Lesser General Public License v2 or later (LGPLv2+)",
+]
+requires-python = ">=3.7"
+dynamic = ["version", "description"]
+
+[project.scripts]
+readme-executor = "main"
+
+[project-urls]
+Documentation = "https://github.com/Monotoba/readme_executor"
+Source = "https://github.com/Monotoba/readme_executor"
