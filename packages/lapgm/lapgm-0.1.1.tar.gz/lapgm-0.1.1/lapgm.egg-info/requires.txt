@@ -1,0 +1,7 @@
+numpy>=1.20
+scipy
+scikit-learn
+matplotlib
+
+[gpu]
+cupy-cuda11x
