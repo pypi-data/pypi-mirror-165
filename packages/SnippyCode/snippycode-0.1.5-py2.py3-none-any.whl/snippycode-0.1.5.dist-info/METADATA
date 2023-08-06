@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: snippycode
+Version: 0.1.5
+Summary: A command line extension to add snippets directly in Visual Studio Code.
+Home-page: https://github.com/FabioFlorey/snippycode
+Author: Fabio Craig Wimmer Florey
+Author-email: fabioflorey@icloud.com
+License: GPL-3
+License-File: LICENSE.md
+
+# SnippyCode
+## A command line extension to add snippets directly in Visual Studio Code.
