@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: wellcome_storage_service
+Version: 2.3.4
+Summary: A client for the Wellcome Storage Service
+Home-page: https://github.com/wellcomecollection/storage-service
+Author: Wellcome Trust (Digital Platform Team)
+Author-email: wellcomedigitalplatform@wellcome.org
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development
+Classifier: Topic :: Utilities
+Provides-Extra: s3
+
+wellcome-storage-service
+========================
+
+This is a client for the `Wellcome Storage Service <https://github.com/wellcomecollection/storage-service>`_.
+
+Uploading a new version
+***********************
+
+To upload a new version, run the ``release.sh`` script that lives with the source code for this library.
+
+Python 2.7 support
+******************
+
+Although we use Python 3 everywhere else in the platform, Archivematica still uses Python 2.7 and this client library.
+
+

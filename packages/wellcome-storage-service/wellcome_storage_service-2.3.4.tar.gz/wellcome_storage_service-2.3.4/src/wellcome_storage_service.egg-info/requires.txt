@@ -1,0 +1,4 @@
+requests_oauthlib<2,>=1.2.0
+
+[s3]
+boto3<2,>=1.9.253
