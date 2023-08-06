@@ -1,0 +1,18 @@
+[project]
+name = "PrintWithColor"
+version = "0.0.1"
+description="A tiny wrapper for colorama library that enhances the print() syntax by enabling text coloring on the screen."
+readme = "ReadMe.md"
+requires-python = ">=3.5, <4"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: The Unlicense (Unlicense)",
+    "Operating System :: OS Independent",
+]
+dependencies = ["colorama"]
+keywords = ['colorama', 'printwithcolor']
+license = {text = "The Unlicense (Unlicense)"}
+
+[project.urls]
+"Homepage" = "https://github.com/SweetSea-ButNotSweet/PrintWithColor"
+"Bug Tracker" = "https://github.com/SweetSea-ButNotSweet/PrintWithColor/issues"
