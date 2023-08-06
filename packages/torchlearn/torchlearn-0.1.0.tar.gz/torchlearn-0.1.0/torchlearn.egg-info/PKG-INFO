@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: torchlearn
+Version: 0.1.0
+Summary: ""
+Home-page: https://github.com/VincentCoriou
+Author: Vincent Coriou
+Author-email: vincent.coriou@gmail.com
+License: "Apache License 2.0"
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: <4,>=3.7
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+License-File: LICENSE
+
+# TorchLearn

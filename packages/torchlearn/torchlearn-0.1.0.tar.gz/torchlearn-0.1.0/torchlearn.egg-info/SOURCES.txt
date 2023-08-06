@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+VERSION
+pyproject.toml
+requirements-dev.txt
+requirements.txt
+setup.cfg
+setup.py
+torchlearn/__init__.py
+torchlearn.egg-info/PKG-INFO
+torchlearn.egg-info/SOURCES.txt
+torchlearn.egg-info/dependency_links.txt
+torchlearn.egg-info/not-zip-safe
+torchlearn.egg-info/requires.txt
+torchlearn.egg-info/top_level.txt
