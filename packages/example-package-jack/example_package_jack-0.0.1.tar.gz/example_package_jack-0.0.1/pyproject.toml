@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "example_package_jack"
+version = "0.0.1"
+authors = [
+    { name="jacki chan", email="uwannacry1@gmail.com"}
+]
+description = "my first package"
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+
+[project.urls]
+"Homepage" = "https://do-u-wanna-cry.com"
+"Bug Tracker" = "https://i-c-u-do.com"
+
