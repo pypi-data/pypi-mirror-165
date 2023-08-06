@@ -1,0 +1,2 @@
+pytak>=5.0.0
+aiohttp
