@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+src/lauris_real_python_reader.egg-info/PKG-INFO
+src/lauris_real_python_reader.egg-info/SOURCES.txt
+src/lauris_real_python_reader.egg-info/dependency_links.txt
+src/lauris_real_python_reader.egg-info/entry_points.txt
+src/lauris_real_python_reader.egg-info/requires.txt
+src/lauris_real_python_reader.egg-info/top_level.txt
+src/reader/__init__.py
+src/reader/__main__.py
+src/reader/config.toml
+src/reader/feed.py
+src/reader/viewer.py
