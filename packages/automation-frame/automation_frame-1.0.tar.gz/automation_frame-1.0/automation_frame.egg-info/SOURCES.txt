@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+automation_frame/__init__.py
+automation_frame.egg-info/PKG-INFO
+automation_frame.egg-info/SOURCES.txt
+automation_frame.egg-info/dependency_links.txt
+automation_frame.egg-info/requires.txt
+automation_frame.egg-info/top_level.txt
+automation_frame/tools/__init__.py
+automation_frame/tools/tool_http.py
