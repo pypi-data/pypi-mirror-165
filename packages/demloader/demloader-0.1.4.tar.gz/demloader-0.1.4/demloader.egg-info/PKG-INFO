@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: demloader
+Version: 0.1.4
+Summary: Single purpose downloader for global Copernicus DEM data.
+Home-page: https://github.com/gaffinetB/demloader
+Author: Ben Gaffinet
+Author-email: ben@gaffinet.lu
+License: GPLv3
+Description: UNKNOWN
+Keywords: dem gis sentinel copernicus download
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: GIS
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3.6

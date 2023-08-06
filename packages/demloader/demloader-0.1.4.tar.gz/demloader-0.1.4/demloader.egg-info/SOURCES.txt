@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+demloader/__init__.py
+demloader/download.py
+demloader/prefixes.py
+demloader.egg-info/PKG-INFO
+demloader.egg-info/SOURCES.txt
+demloader.egg-info/dependency_links.txt
+demloader.egg-info/requires.txt
+demloader.egg-info/top_level.txt
