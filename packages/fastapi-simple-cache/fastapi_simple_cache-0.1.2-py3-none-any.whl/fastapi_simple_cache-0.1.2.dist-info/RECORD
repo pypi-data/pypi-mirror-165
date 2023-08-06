@@ -1,0 +1,11 @@
+fastapi_simple_cache/__init__.py,sha256=RphzesNCFmgz28wS9NVRLWpmr3agwrpywOo_DLEhXv8,1480
+fastapi_simple_cache/backends/__init__.py,sha256=A8wQivWfzFgKZYAY0Bt2niMQbp96FabB2pdNhlsqQIE,479
+fastapi_simple_cache/backends/firestore.py,sha256=4MBsyYl4_aNINdDGLBB4KIanXls0_eD6scdPR5TaVH8,1506
+fastapi_simple_cache/backends/inmemory.py,sha256=x-ZJIYdLkMomhYvXmLhzVgSjmfUlelmWEfMHDMtOxDU,1230
+fastapi_simple_cache/backends/redis.py,sha256=g43pEYoeD6_K_5qGSpWT1tKj1pvdTG2c7228wmoDP1w,1664
+fastapi_simple_cache/decorator/__init__.py,sha256=e4iKaji_v0TPz0ko4apY-EKmHLVPr7b7gA8maJ1OHpA,2689
+fastapi_simple_cache/decorator/key_builder.py,sha256=67aRnRbsrYfMKJ0xWl-50lc7QoySedny2gBLrg9caNI,462
+fastapi_simple_cache-0.1.2.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+fastapi_simple_cache-0.1.2.dist-info/WHEEL,sha256=4TfKIB_xu-04bc2iKz6_zFt-gEFEEDU_31HGhqzOCE8,81
+fastapi_simple_cache-0.1.2.dist-info/METADATA,sha256=DyqpZVoyip_0MuqZ7O_2JtoKHNBqHEgIt2PxDvqsiLo,6556
+fastapi_simple_cache-0.1.2.dist-info/RECORD,,
