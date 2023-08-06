@@ -1,0 +1,9 @@
+embedml/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+embedml/nn.py,sha256=mXDzyEexoo8O9Jfu9bYQkGTwkOtJJb5jpjMmxXn6bbE,2675
+embedml/tensor.py,sha256=fnk85wBDnaJP4XS5w7uWltAh3s9Sg0d7mGKFZcOD9q4,9000
+embedml/util.py,sha256=CSn_fs5VE4yc3TVMK8DRkwb2N_6g7QPpMZlpv3t1JG8,930
+embedml-0.1.3.dist-info/LICENSE,sha256=jKyMfcQXa27MsbKCFlNyrdR3man0xM08fFYNdumaXvw,1076
+embedml-0.1.3.dist-info/METADATA,sha256=1jRgH3Z1DlMPppzoyeE4tpjs8HusCMeWXGXIv4GfrjQ,2165
+embedml-0.1.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+embedml-0.1.3.dist-info/top_level.txt,sha256=GvcN9ATtTKXUvsYmwS7t0_pDlq5kHCaw36Kuvsz5a1c,8
+embedml-0.1.3.dist-info/RECORD,,
