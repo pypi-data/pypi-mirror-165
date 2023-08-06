@@ -1,0 +1,9 @@
+pyaphid/__main__.py,sha256=pz6en4rby2mKwIhDSRlSKmMYPH3EPIdSBjV5HblwG94,35
+pyaphid/analyzer.py,sha256=REWgDgcddDTFtsV2WIvcJQxavOMGqtWiR1wC3LXSgic,5694
+pyaphid/cli.py,sha256=rdHYW7IFHRXzKEGBvQXHU10lnivQ29cUt9Ac_5kPM90,2929
+pyaphid/helpers.py,sha256=B46pxEZkSm5y8CAHuauacjr-uWdaOJRN6X9vBYSNkBE,250
+pyaphid/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyaphid-0.1.0.dist-info/entry_points.txt,sha256=B1UpQukQF8eGtr_lJBcIHQ3jvz7sA32BviN-YQlfbug,43
+pyaphid-0.1.0.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+pyaphid-0.1.0.dist-info/METADATA,sha256=D38YpNyWZgYv_5vdlAs-CMh6j-Kq4sjrPzpCijdI1j0,1493
+pyaphid-0.1.0.dist-info/RECORD,,

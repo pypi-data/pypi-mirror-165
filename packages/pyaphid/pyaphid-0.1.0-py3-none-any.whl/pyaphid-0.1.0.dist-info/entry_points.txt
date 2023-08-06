@@ -1,0 +1,3 @@
+[console_scripts]
+pyaphid=pyaphid.cli:run
+
