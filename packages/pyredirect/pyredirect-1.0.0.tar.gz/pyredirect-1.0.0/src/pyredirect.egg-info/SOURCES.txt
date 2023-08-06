@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+src/pyredirect/__init__.py
+src/pyredirect.egg-info/PKG-INFO
+src/pyredirect.egg-info/SOURCES.txt
+src/pyredirect.egg-info/dependency_links.txt
+src/pyredirect.egg-info/requires.txt
+src/pyredirect.egg-info/top_level.txt
