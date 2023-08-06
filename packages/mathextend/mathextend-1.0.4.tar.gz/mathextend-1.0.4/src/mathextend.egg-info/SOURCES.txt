@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+src/__init__.py
+src/mathextend.egg-info/PKG-INFO
+src/mathextend.egg-info/SOURCES.txt
+src/mathextend.egg-info/dependency_links.txt
+src/mathextend.egg-info/top_level.txt
+src/mathutil/Constant.py
+src/mathutil/Flat_graphics.py
+src/mathutil/Fractions.py
+src/mathutil/Three_dimensional_graphics.py
+src/mathutil/__init__.py
