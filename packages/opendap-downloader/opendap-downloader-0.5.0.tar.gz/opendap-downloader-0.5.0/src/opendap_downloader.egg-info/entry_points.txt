@@ -1,0 +1,2 @@
+[console_scripts]
+opendap-downloader = opendap_downloader.opendap_downloader:download_dataset

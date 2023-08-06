@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/opendap_downloader/__init__.py
+src/opendap_downloader/opendap_downloader.py
+src/opendap_downloader.egg-info/PKG-INFO
+src/opendap_downloader.egg-info/SOURCES.txt
+src/opendap_downloader.egg-info/dependency_links.txt
+src/opendap_downloader.egg-info/entry_points.txt
+src/opendap_downloader.egg-info/requires.txt
+src/opendap_downloader.egg-info/top_level.txt
