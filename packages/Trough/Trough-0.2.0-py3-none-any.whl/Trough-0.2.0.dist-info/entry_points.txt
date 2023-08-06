@@ -1,0 +1,2 @@
+[console_scripts]
+trough-shell = trough.shell:trough_shell
