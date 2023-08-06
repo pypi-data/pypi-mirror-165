@@ -1,0 +1,8 @@
+black>=22.6.0
+flake8>=5.0.3
+jupyter>=1.0.0
+nbformat>=5.4.0
+pip-tools>=6.6.0
+pytest>=6.2.4
+testbook>=0.4.2
+tqdm>=4.64.0

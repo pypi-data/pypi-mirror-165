@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: testing_tools
+Version: 1.0.3
+Summary: Improper readme for description parsing.
+Home-page: UNKNOWN
+Author: (c) Fondation Vallet - Benin Excellence
+Author-email: adkevinkpakpo@gmail.com
+License: UNKNOWN
+Description: # testing_tools
+        
+        Tools to test notebooks:
+        - they are commited without outputs
+        - they run from end to end without error.
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
