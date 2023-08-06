@@ -1,0 +1,13 @@
+/target
+**/*.rs.bk
+
+.venv
+*.pyc
+*.egg-info/
+*.so
+.idea
+*.pyd
+.history
+dist
+.vscode
+.mypy_cache
