@@ -1,0 +1,20 @@
+{
+    "install_requires": [
+        "generallibrary",
+        "send2trash",
+        "appdirs",
+        "pandas",
+        "dill"
+    ],
+    "extras_require": {},
+    "enabled": true,
+    "private": false,
+    "name": "generalfile",
+    "target": "python",
+    "version": "2.5.8",
+    "description": "Easily manage files cross platform.",
+    "topics": [
+        "file-manager"
+    ],
+    "manifest": []
+}

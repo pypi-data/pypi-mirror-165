@@ -1,0 +1,5 @@
+generallibrary
+send2trash
+appdirs
+pandas
+dill
