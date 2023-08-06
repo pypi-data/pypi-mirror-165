@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: djadyen
+Version: 2.0.4a20
+Summary: Django adyen payment integration
+Home-page: https://github.com/maykinmedia/djadyen
+Author: Maykin Media
+Author-email: support@maykinmedia.nl
+License: MIT
+Keywords: django,adyen,payment
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 1.11
+Classifier: Framework :: Django :: 2.2
+Classifier: Framework :: Django :: 3.2
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Provides-Extra: tests
+Provides-Extra: pep8
+Provides-Extra: coverage
+Provides-Extra: docs
+Provides-Extra: release
