@@ -1,0 +1,2 @@
+[console_scripts]
+dashy = dashy.__main__:description
