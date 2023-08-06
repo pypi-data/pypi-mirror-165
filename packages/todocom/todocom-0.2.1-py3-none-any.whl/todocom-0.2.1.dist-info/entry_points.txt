@@ -1,0 +1,3 @@
+[console_scripts]
+todo=todocom.cli:main
+
