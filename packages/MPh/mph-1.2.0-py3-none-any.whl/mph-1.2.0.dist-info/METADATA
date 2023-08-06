@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: MPh
+Version: 1.2.0
+Summary: Pythonic scripting interface for Comsol Multiphysics
+Keywords: Comsol,multiphysics,physics,finite elements,computer simulation
+Author: John Hennig
+Requires-Python: >= 3.6
+Description-Content-Type: text/markdown
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Intended Audience :: Science/Research
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: JPype1
+Requires-Dist: NumPy
+Requires-Dist: Sphinx ; extra == "dev"
+Requires-Dist: Furo ; extra == "dev"
+Requires-Dist: MyST-parser ; extra == "dev"
+Requires-Dist: pyTest ; extra == "dev"
+Requires-Dist: pyTest-cov ; extra == "dev"
+Requires-Dist: Flake8-pyproject ; extra == "dev"
+Requires-Dist: Flit ; extra == "dev"
+Project-URL: Documentation, https://mph.readthedocs.io
+Project-URL: Source, https://github.com/MPh-py/MPh
+Provides-Extra: dev
+
+﻿*Pythonic scripting interface for Comsol Multiphysics*
+
+[Comsol] is a commercial software application that is widely used in
+science and industry for research and development. It excels at modeling
+almost any (multi-)physics problem by solving the governing set of
+partial differential equations via the finite-element method. It comes
+with a modern graphical user interface to set up simulation models and
+can be scripted from Matlab or its native Java API.
+
+MPh brings the dearly missing power of Python to the world of Comsol.
+It leverages the Java bridge provided by [JPype] to access the Comsol
+API and wraps it in a layer of pythonic ease-of-use. The Python wrapper
+covers common scripting tasks, such as loading a model from a file,
+modifying parameters, importing data, to then run the simulation,
+evaluate the results, and export them.
+
+Comsol models are marked by their `.mph` file extension, which stands
+for multi-physics. Hence the name of this library. It is open-source
+and in no way affiliated with Comsol Inc., the company that develops
+and sells the simulation software.
+
+Find the full [documentation on Read-the-Docs][docs].
+
+[Comsol]: https://www.comsol.com
+[JPype]:  https://github.com/jpype-project/jpype
+[docs]:   https://mph.readthedocs.io
+
