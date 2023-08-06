@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+hurpetools/__init__.py
+hurpetools/hurpetools.py
+hurpetools.egg-info/PKG-INFO
+hurpetools.egg-info/SOURCES.txt
+hurpetools.egg-info/dependency_links.txt
+hurpetools.egg-info/top_level.txt
