@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+takeout/__init__.py
+takeout/takeout.py
+takeout.py.egg-info/PKG-INFO
+takeout.py.egg-info/SOURCES.txt
+takeout.py.egg-info/dependency_links.txt
+takeout.py.egg-info/requires.txt
+takeout.py.egg-info/top_level.txt
