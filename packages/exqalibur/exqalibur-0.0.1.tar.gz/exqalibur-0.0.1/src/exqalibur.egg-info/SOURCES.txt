@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/exqalibur/__init__.py
+src/exqalibur/example.py
+src/exqalibur.egg-info/PKG-INFO
+src/exqalibur.egg-info/SOURCES.txt
+src/exqalibur.egg-info/dependency_links.txt
+src/exqalibur.egg-info/top_level.txt
