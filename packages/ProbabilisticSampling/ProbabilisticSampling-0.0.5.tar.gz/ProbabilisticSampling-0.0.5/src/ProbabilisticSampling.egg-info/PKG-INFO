@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: ProbabilisticSampling
+Version: 0.0.5
+Summary: Set of tools to estimates finite populations parameters based on probabilistic designs and assisted-models estimators.
+Author-email: Carlos Alberto Cardozo Delgado <cardozopypackages@gmail.com>
+Project-URL: Homepage, https://github.com
+Project-URL: Bug Tracker, https://github.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Education
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# ProbabilisticSampling
+
+Set of tools to estimates finite populations parameters based on probabilistic designs and assisted-models estimators.
+
+* Bernoulli Sampling with inclusion probability p of a population of size N.
+* Simple Random Sampling without Replacement of a population of size N.
+* Horvitz-Thompson Estimator of the total parameter under a given sampling design. 
+* Hansen-Hurvitz Estimator of the total parameter under a given sampling design.
+
+## License
+
+This project is licensed under the terms of the MIT license.
