@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+phoenix/__init__.py
+phoenix/__version__.py
+phoenix/client.py
+phoenix_rec.egg-info/PKG-INFO
+phoenix_rec.egg-info/SOURCES.txt
+phoenix_rec.egg-info/dependency_links.txt
+phoenix_rec.egg-info/requires.txt
+phoenix_rec.egg-info/top_level.txt

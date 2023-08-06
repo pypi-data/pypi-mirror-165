@@ -1,0 +1,8 @@
+__title__ = 'phoenix-rec'
+__description__ = 'SDK for phoenix-rec'
+__url__ = 'https://github.com/ultraman-king/phoenix'
+__version__ = '1.0.3'
+__author__ = ''
+__author_email__ = ''
+__license__ = 'MIT License'
+__copyright__ = ''
