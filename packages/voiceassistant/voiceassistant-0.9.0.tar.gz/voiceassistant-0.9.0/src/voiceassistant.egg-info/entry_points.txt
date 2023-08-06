@@ -1,0 +1,2 @@
+[console_scripts]
+vass = voiceassistant.__main__:main
