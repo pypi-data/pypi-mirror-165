@@ -1,0 +1,10 @@
+setup.py
+bo22_dsnd_probability_distributions/Binomialdistribution.py
+bo22_dsnd_probability_distributions/Gaussiandistribution.py
+bo22_dsnd_probability_distributions/Generaldistribution.py
+bo22_dsnd_probability_distributions/__init__.py
+bo22_dsnd_probability_distributions.egg-info/PKG-INFO
+bo22_dsnd_probability_distributions.egg-info/SOURCES.txt
+bo22_dsnd_probability_distributions.egg-info/dependency_links.txt
+bo22_dsnd_probability_distributions.egg-info/not-zip-safe
+bo22_dsnd_probability_distributions.egg-info/top_level.txt
