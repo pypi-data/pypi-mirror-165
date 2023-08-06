@@ -1,0 +1,12 @@
+mytoolkit/__int__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mytoolkit/mjson.py,sha256=nfR_dOTZYjfjwPcmsqiD7XI826zTi5tVm5UBGh2N8Uw,2629
+mytoolkit/basic/partition.py,sha256=L4DsbqH74UrRlXI5gshTwri7yQRNLp6JSVHcGt0f0Zk,349
+mytoolkit/basic/strings.py,sha256=QALhRkQdV2yfNqhCSdRFvbEg5y_ce7CUouRNabEICPU,128
+mytoolkit/db/dataclass.py,sha256=oQFt8hok4jK2chDzc8vL0ML_ogc-Q-j3MG7vTKcKlT4,8272
+mytoolkit/db/mongo/base_model.py,sha256=_v_4wGjDNpQuhjpRr2cm8P53X6flHUUFpebfcK1VQ1E,19638
+mytoolkit/db/mongo/connection.py,sha256=T4tT6u7jWXGjacdYXx6yzo77p51aFWkH_h4WUbOn-oE,13729
+mytoolkit-0.0.10.dist-info/LICENSE,sha256=BwNjHnfKsl0HNWHQwClVTXNwFJWNZ1C9PcYLwFP7BU8,1063
+mytoolkit-0.0.10.dist-info/METADATA,sha256=FNJ3ullcsto4o3vrE1rvczPMBn2wFgUkzGns_m_P_O8,1793
+mytoolkit-0.0.10.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+mytoolkit-0.0.10.dist-info/top_level.txt,sha256=dAyWMpAyy2Z-EaHyxBVAOwFDJUSHaCCGxuPg8JPcq_A,10
+mytoolkit-0.0.10.dist-info/RECORD,,
