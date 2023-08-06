@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: django-search-arrayfield
+Version: 1.2.0
+Summary: Dynamic Search in Array Field in Django Admin# django_search_arrayfield
+Home-page: https://github.com/The-Tarzan-Way/django_search_arrayfield
+Author: Arshan Ahmad , Shivaank Tripathi
+Author-email: <arshan@thetarzanway.com>
+Keywords: python,django_better_admin,dynamic_search,dynamic-search,django-admin
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+
+A package that allows Dynamic Search in Array Field in Django Admin
