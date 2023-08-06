@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/shurjopay_V2.egg-info/PKG-INFO
+src/shurjopay_V2.egg-info/SOURCES.txt
+src/shurjopay_V2.egg-info/dependency_links.txt
+src/shurjopay_V2.egg-info/requires.txt
+src/shurjopay_V2.egg-info/top_level.txt
+src/shurjopay_v2/__init__.py
+src/shurjopay_v2/callbackHandler.py
+src/shurjopay_v2/shurjopay.py
