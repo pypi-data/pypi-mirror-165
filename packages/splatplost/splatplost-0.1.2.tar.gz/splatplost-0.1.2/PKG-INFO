@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: splatplost
+Version: 0.1.2
+Summary: A software-based SplatPost plotter.
+Home-page: https://github.com/Victrid/splatplost
+Author: Weihao Jiang
+Author-email: weihau.chiang@gmail.com
+License: GPLv3
+License-File: LICENSE
