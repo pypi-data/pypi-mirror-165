@@ -1,0 +1,5 @@
+{
+  "load_extensions": {
+    "figurl_jupyter/extension": true
+  }
+}
