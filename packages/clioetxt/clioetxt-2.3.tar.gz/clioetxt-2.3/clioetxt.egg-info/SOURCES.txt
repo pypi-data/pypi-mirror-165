@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+clioetxt/__init__.py
+clioetxt/load_txt.py
+clioetxt/merge.py
+clioetxt/transform.py
+clioetxt.egg-info/PKG-INFO
+clioetxt.egg-info/SOURCES.txt
+clioetxt.egg-info/dependency_links.txt
+clioetxt.egg-info/top_level.txt
