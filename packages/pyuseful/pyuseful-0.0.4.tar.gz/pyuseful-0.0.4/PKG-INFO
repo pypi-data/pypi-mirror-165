@@ -1,0 +1,121 @@
+Metadata-Version: 2.1
+Name: pyuseful
+Version: 0.0.4
+Summary: A collection of useful tools
+Author-email: sikvelsigma <sikvelsigma@yandex.ru>
+License: MIT License
+        
+        Copyright (c) 2022 sikvelsigma
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+Project-URL: Homepage, https://github.com/sikvelsigma/pytools-utils
+Project-URL: Bug Tracker, https://github.com/sikvelsigma/pytools-utils/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# pyuseful
+
+The package contains a collection of tools I find useful. Check out [wiki](https://github.com/sikvelsigma/pytools-utils/wiki) page for more detail and examples.
+# Install
+Requires python 3.9
+
+```
+pip install pyuseful
+```
+
+# General info
+
+Consists of several sub-packages:
+- `classtools`
+
+    ---
+
+    - immutable
+        - <kbd>class</kbd> `ImmutableProperties`
+
+            Makes class propreties immutable
+    ---
+    - message
+        - <kbd>class</kbd> `MessageThread`
+
+            Creates a separate thread which prints messeges in queue
+    ---
+    - postint
+        - <kbd>class</kbd> `PostInit`
+
+            Adds a call to `__postinit__` method after init is complete
+    ---
+    - require
+        - <kbd>class</kbd> `RequireAttrs`
+
+            Adds attribute `require` which forces you to set listed attributes by the end of init
+
+        - <kbd>class</kbd> `RequireDictParser`
+
+            Parses `dict` or `json` file into a class and make attributes from keys. Adds attribute `require` and `require_any` which force you to set listed attributes by the end of init
+
+
+
+- `decorators`
+
+    ---
+
+    - require
+
+        - <kbd>decorator</kbd> `require_condition`
+
+            Let's you specify a condition in which a method of a class can be called
+
+        - <kbd>decorator</kbd> `once`
+
+            Function can only be called once or it always returns the same result as the 1st call
+
+        - <kbd>decorator</kbd> `limit`
+
+            Limits a number of times a function can be called
+    ---
+    - thread
+        - <kbd>decorator</kbd> `repeat_timer`
+
+        Repeat a function every `timer` number of seconds. Returns a `Queue`-like object with results
+    ---
+    - timing
+        - <kbd>decorator</kbd> `time_exec`
+
+            Messure exec time of a function
+
+
+
+- `filetools`
+
+    ---
+
+    - misc
+        - <kbd>function</kbd> `mod_name_with_ext`
+
+            Modify a path without modifying an extention
+    ---
+    - splicer
+        - <kbd>class</kbd> `Splicer`
+
+            Let's you specify blocks in files which can be pasted into other files
