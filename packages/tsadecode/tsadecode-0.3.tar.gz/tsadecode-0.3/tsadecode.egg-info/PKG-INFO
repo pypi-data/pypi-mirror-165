@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: tsadecode
+Version: 0.3
+Summary: Decoding utilities for ZUN data
+Home-page: https://github.com/32th-System/py-tsadecode
+Author: 32th-System
+Author-email: intensonat@gmail.com
+License: Unlicense
