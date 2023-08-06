@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: lthread
+Version: 1.0.3
+Summary: (OBSOLETE) lightweight threads in Python using extended generators
+Author: Katie Rust
+Author-email: katie@ktpanda.org
+License: MIT License
+Classifier: Programming Language :: Python
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Other Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Operating System :: Unix
+Classifier: Operating System :: Microsoft :: Windows
