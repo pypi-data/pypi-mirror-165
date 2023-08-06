@@ -1,0 +1,14 @@
+stringtools/__init__.py,sha256=E7uLTdlh8v6knx_kt0tOm7ZNFfvy4S9MsDmKrhB8FRc,413
+stringtools/analysers.py,sha256=D3tUD730TkrtjfYfmsOX5TGFUTb-J5MfuZs7gQuj8Y4,12487
+stringtools/converters.py,sha256=89tNc4V_KXDGhinmohzXid28zLuuMyg74LijKJFn7Rs,4773
+stringtools/general.py,sha256=jDsuWkmALki7sVksi14wJamyIey03sDqpEe28oqjFNM,8412
+stringtools/generators.py,sha256=uRMGZuN-uNmBkk_f7qz6CuobQb7hLzK5qSvcfYfjOZY,5878
+stringtools/validators.py,sha256=zIhjhLZPmvVPNcI3orYkPG7a9qVALkOU_3CBiHT0e78,3488
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_stringtools_version_name.py,sha256=pfgZDH2FsDX4fe_DnrOkj35N1Y3A2WQl5jC6yhkp4Cc,1443
+stringtools-2.0.0.dist-info/LICENSE,sha256=l0amjwi-xKGYwF-xPVKeei2gkA9R-Fb8ubuEli6zlWo,1076
+stringtools-2.0.0.dist-info/METADATA,sha256=vaNtgcMSmMwY6whP-IGu-xxnP0TbBvKyv-jXGsOJBH4,16043
+stringtools-2.0.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+stringtools-2.0.0.dist-info/top_level.txt,sha256=FuQrzxGSk2Z6V-K70JtFO1tpn1Gp4kSXlOtIKL1t4iw,18
+stringtools-2.0.0.dist-info/RECORD,,
