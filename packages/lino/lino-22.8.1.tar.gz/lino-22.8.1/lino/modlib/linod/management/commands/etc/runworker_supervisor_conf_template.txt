@@ -1,0 +1,17 @@
+[program:lino_runworker_{{project_name}}]
+environment=
+    DJANGO_SETTINGS_MODULE={{settings_module}}
+directory={{project_path}}
+command=/bin/bash -c "source {{env_activate}} && python manage.py runworker {{channels}}"
+stopsignal=KILL
+killasgroup=true
+priority=998
+startsecs=5
+
+[program:initiate_linod_{{project_name}}]
+environment=
+    DJANGO_SETTINGS_MODULE={{settings_module}}
+directory={{project_path}}
+command=/bin/bash -c "source {{env_activate}} && python manage.py initiate_linod"
+autorestart=false
+priority=999
