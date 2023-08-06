@@ -1,0 +1,10 @@
+CHANGELOG.md,sha256=LaFk7GsjkLVRALGgvwX824C7VOPmVG8KbJIzIgLOYrw,596
+pytrify/__init__.py,sha256=u8OulTpexV9pHzZeUIJVTB1mkeJ-Io4TLYB5EKbaNg8,162
+pytrify/errors.py,sha256=yU2Pj0_UqlliBJrMPsbLj-On63WcKKVEwuOdUWhJdIo,123
+pytrify/immutable_wrapper.py,sha256=8IbOqyu4VugKtRxiqDaQ_eNMNugyH3Y-BxXs7rniwNc,1990
+pytrify/list_view.py,sha256=obtkg3JXYYeOsnHCRvQ6ffruyPI4sogKrE3yNNov8Fc,1807
+pytrify/set_once.py,sha256=LDlVpSAcsf4j4bcyNzODf4YlZqgings0WDaYwZfJvIQ,1445
+pytrify-0.1.0a2.dist-info/LICENSE,sha256=fTYs0dUHaJa5A1U3SwEgTLQqXN3bMhd8VNv3J72Xns4,1071
+pytrify-0.1.0a2.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+pytrify-0.1.0a2.dist-info/METADATA,sha256=vUPHfwtSYv5t_DUs0vr7dU-e5E3Jc8IR2ALdEq4CyDs,733
+pytrify-0.1.0a2.dist-info/RECORD,,
