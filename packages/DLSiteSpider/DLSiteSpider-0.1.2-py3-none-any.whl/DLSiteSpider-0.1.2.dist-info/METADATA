@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: DLSiteSpider
+Version: 0.1.2
+Summary: A DLSite spider
+Home-page: https://github.com/asmr-one/DLSiteSpider
+Author: asmr-one
+Author-email: asmr.one@protonmail.com
+Project-URL: Bug Tracker, https://github.com/asmr-one/DLSiteSpider/issues
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: requests (~=2.27.1)
+Requires-Dist: beautifulsoup4 (~=4.10.0)
+Requires-Dist: datasize (~=1.0.0)
+Requires-Dist: setuptools (~=57.0.0)
+Requires-Dist: lxml
+
+TODO

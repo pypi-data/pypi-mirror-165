@@ -1,0 +1,10 @@
+DLSiteSpider/__init__.py,sha256=kCPh2BlYhDshCzhO-SGUT_kN1JDw8VFMdGz3wYS5Y9Q,88
+DLSiteSpider/dynamic.py,sha256=zNpjTl4f3br3PXIjvOTOn2LxAB4rfcRbKivKjJlvOgA,4099
+DLSiteSpider/static.py,sha256=l2F7kk75UHwimZHHkod196iD_ox_SPYFr9oTNgGY3zg,3364
+DLSiteSpider/test_dynamic.py,sha256=94ad3lm9bk3w272PbxsAAEwyhaIKvbCwvnDNIY6jjoU,451
+DLSiteSpider/test_static.py,sha256=V_P_J6ke910A-aQLSQ-ybndIMI2jCKXGl3l_aaKHP98,1586
+DLSiteSpider/utils.py,sha256=n9T-9_XfEoGY7vQBF9IVQMh7Dc22EwNWS_EWFoSGnGs,362
+DLSiteSpider-0.1.2.dist-info/METADATA,sha256=5VjkkHBI07KNyEzo_lfpKugdHPG_tnAoWrAm-iiLPEs,794
+DLSiteSpider-0.1.2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+DLSiteSpider-0.1.2.dist-info/top_level.txt,sha256=hUT-_Qj21lSvBwhA_MwntdQe_leQYQf5hGjebspt82o,13
+DLSiteSpider-0.1.2.dist-info/RECORD,,
