@@ -1,0 +1,10 @@
+CHANGELOG.txt
+MANIFEST.in
+README.txt
+__init__.py
+licence.txt
+setup.py
+apobasiccalc.egg-info/PKG-INFO
+apobasiccalc.egg-info/SOURCES.txt
+apobasiccalc.egg-info/dependency_links.txt
+apobasiccalc.egg-info/top_level.txt
