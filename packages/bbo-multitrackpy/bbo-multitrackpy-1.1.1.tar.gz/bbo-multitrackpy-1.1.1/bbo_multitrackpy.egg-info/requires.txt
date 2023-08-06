@@ -1,0 +1,5 @@
+scipy
+numpy
+imageio
+bbo-ccvtools
+h5py
