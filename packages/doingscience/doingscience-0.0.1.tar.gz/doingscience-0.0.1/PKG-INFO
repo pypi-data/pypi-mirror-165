@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: doingscience
+Version: 0.0.1
+Summary: This package includes multipurpose fuctions to simplify your life.
+License: MIT
+Author: Iasonas Tragakis
+Author-email: iasonas@doing-science.com
+Requires-Python: >=3.8,<3.11
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: backoff (==2.0.1)
+Requires-Dist: beautifulsoup4 (==4.11.1)
+Requires-Dist: pandas (==1.4.2)
+Requires-Dist: pyfarmhash (==0.2.2)
+Requires-Dist: requests (==2.27.1)
+Requires-Dist: simplejson (==3.17.2)
+Project-URL: Bug Tracker, https://github.com/doingscience/doingscience/issues
+Project-URL: Homepage, https://github.com/doingscience/doingscience
+Description-Content-Type: text/markdown
+
+# DoingScience
