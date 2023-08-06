@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "SearchGooglePy"
+version = "0.0.5"
+authors = [
+  { name="Boubajoker", email="mohanathas.leo@gmail.com" },
+]
+description = "SearchGooglePy is a simple (un-official) Google Search API under python."
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://boubajoker.github.io/SearchGooglePy/"
+"Bug Tracker" = "https://github.com/Boubajoker/SearchGooglePy/"

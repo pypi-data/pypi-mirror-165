@@ -1,0 +1,150 @@
+body {
+    font-family: Arial;
+    /* background-color: rgb(0, 0, 0); */
+}
+
+img {
+    margin-top: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+a {
+    color: rgb(26, 115, 232, 0.950);
+    text-decoration: none;
+}
+
+a:focus {
+    color: rgb(26, 115, 232, 0.950);
+    text-decoration: underline;
+}
+
+nav {
+    background-color:rgb(255, 255, 255);
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px rgb(0, 0, 0);
+    height: 70px;
+    text-align: center;
+}
+
+tt {
+    background-color: rgb(155, 155, 155);
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    font-family: Consolas;
+    transition: ease-in background-color 0.5s;
+}
+tt:hover {
+    background-color: rgb(26, 115, 232, 0.950);
+}
+
+pre {
+    background-color: rgb(155, 155, 155);
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    font-family: Consolas;
+    height: fit-content;
+    width: fit-content;
+    border-radius: 5px;
+}
+
+table {
+    box-shadow: 0px 0px 4.5px;
+    border-radius: 15px;
+}
+
+td {
+    background-color: rgb(155, 155, 155);
+    border-radius: 5px;
+}
+
+footer {
+    color:  rgb(0, 0, 0);
+    margin-top: 350px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 5px rgb(0, 0, 0);
+    border-radius: 5px;
+}
+
+.copy-btns {
+    height: 40px;
+    width: 150px;
+    border-width: 0px;
+    background-color: rgb(26, 115, 232, 0.950);
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-weight: 550;
+    transition: box-shadow ease-in 0.5s;
+}
+
+.main-title {
+    margin: 0px;
+}
+
+.navbar-btns {
+    margin-top: 10px;
+    height: 40px;
+    width: 150px;
+    font-size: 15px;
+    border-width: 0px;
+    background-color: rgb(26, 115, 232, 0.950);
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-weight: 550;
+    transition: box-shadow ease-in 0.5s;
+}
+
+.navbar-btns:hover {
+    box-shadow: 0px 0px 10px rgb(26, 115, 232, 0.950);
+}
+
+.main-title {
+    text-align: center;
+    font-weight: 100;
+}
+
+.sections-titles {
+    font-weight: 100;
+}
+
+.credits-paragraph {
+    text-align: center;
+    font-weight: bold;
+    color: rgb(155, 155, 155);
+}
+
+.g-google {
+    color: rgb(26, 115, 232, 0.950);
+}
+.o1-google {
+    color: rgb(255, 0, 0);
+}
+.o2-google {
+    color: rgb(255, 125, 0);
+}
+.l-google {
+    color: rgb(0, 255, 0);
+}
+.e-google {
+    color: rgb(255, 0, 0);
+}
+
+.warn-paragraph {
+    text-align: center;
+    color: rgb(255, 125, 0);
+    font-weight: bolder;
+    font-size: large;
+}
+
+::-webkit-scrollbar {
+    background: rgb(0, 0, 0, 0);
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgb(0, 0, 0, 0.270);
+    border-radius: 15px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(0, 0, 0, 0.470);
+}
