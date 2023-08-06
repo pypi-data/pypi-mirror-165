@@ -1,0 +1,54 @@
+[build-system]
+requires = ["flit_core >=2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "unimacro"
+authors = [{name = "Quintijn Hoogenboom (maintainer)", email = "q.hoogenboom@antenna.nl"}]
+dynamic = ["version", "description"]
+requires-python = ">=3.9"
+readme = "README.md"
+
+
+dependencies = ["dtactions >= 1.5.0",
+        "debugpy >= 1.2.0",
+		"pywin32 >= 300",
+		"natlinkcore >= 5.2.1"]
+		  
+		
+classifiers=[	"Development Status :: 4 - Beta",
+				"Topic :: Multimedia :: Sound/Audio :: Speech",
+				"Topic :: Scientific/Engineering :: Human Machine Interfaces",
+				]
+				
+[project.optional-dependencies]
+test = [
+    "pytest >=7.1.2",
+]
+[tool.pytest.ini_options]
+minversion = "7.1.2"
+addopts = "--capture=tee-sys "
+# very important
+#the pythonpath lets pytest load code in your source area
+#in addition to that in site-packages etc.
+#you may want to run your tests without install natlinkcore with flit or pip
+pythonpath = [
+    "src",
+	"src/unimacro",
+    "src/unimacro/unimacro_test",
+]
+testpaths= [
+      "src/unimacro/unimacro_test",
+]
+python_files = [
+			"unittest*.py",
+			"test_*.py",
+	]
+ 
+
+[project.scripts]
+
+[project.urls]
+homepage = "https://qh.antenna.nl/unimacro/"
+repository="https://github.com/dictation-toolbox/unimacro"
+source="https://github.com/dictation-toolbox/unimacro"		
