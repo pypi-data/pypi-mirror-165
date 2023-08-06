@@ -1,0 +1,17 @@
+socha/__init__.py,sha256=WT3quvzTRps3QDPEqmRBPTL5BrVSapTcZ5fAYGI1Upg,299
+socha/starter.py,sha256=VomGjjKHphTI9zhhUHt3g7rLr2S-g4JCjxZL1yuyPAY,4417
+socha/api/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+socha/api/networking/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+socha/api/networking/_network_interface.py,sha256=BwCVDphagdr3U3aPXhODaVCMwFBPjkOpPzoMC_nrBPc,2906
+socha/api/networking/_xflux.py,sha256=JfTKyqEEEQBpYhUjniDY363heO5qptZsBBzVbydMvGg,6528
+socha/api/networking/player_client.py,sha256=uho_mwUqi32xsHKCLLF_rm5qFqzcc4HR-xI1W1L2ke4,4682
+socha/api/plugin/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+socha/api/plugin/penguins.py,sha256=7tEowFjVgZeHBD7nu5bb1IIgkQh0sa3CmV7YBw_o23o,28028
+socha/api/protocol/__init__.py,sha256=5QREvA0gv2O6L8Q_yRsnh8zf7xYGpUqWrwOBC-_izTI,414
+socha/api/protocol/protocol.py,sha256=oCz0qOq2YVQiZN1LngRbDF_j3T3yD1L-VPYz9cc367E,16961
+socha/api/protocol/protocol_packet.py,sha256=6gUJZdFUhNdtRNymMsN7KnnHQefWyIqId_hN3mYb26g,173
+socha/api/protocol/room_message.py,sha256=hFwHyvkf-2Nbw6Y1plhWRLWXJVUm1C9JtSeAjo3t6aw,346
+socha-0.9.2.dist-info/METADATA,sha256=fxMlo-t2AKYfNa_T79Q1-rSpWdhdKvuk2SZREGXd_TM,4426
+socha-0.9.2.dist-info/WHEEL,sha256=09RFlvY3aVzvCNk4AXPZt-N-AI7GY_KktGsTb2IqIBU,86
+socha-0.9.2.dist-info/licenses/LICENSE,sha256=z72U6pv-bQgJ_Svr4uCXnMjemsp38aSerhHEdEAOMJ4,7632
+socha-0.9.2.dist-info/RECORD,,
