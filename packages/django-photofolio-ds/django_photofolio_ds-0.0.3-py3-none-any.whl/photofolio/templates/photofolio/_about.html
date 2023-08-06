@@ -1,0 +1,31 @@
+{% load static %}
+
+<section id="about" class="about">
+  <div class="container">
+
+    <div class="row gy-4 justify-content-center">
+      <div class="col-lg-4">
+        <img src="{% static 'img/about/'|add:about.image_filename %}" class="img-fluid" alt="">
+      </div>
+      <div class="col-lg-5 content">
+        <h2>{{ about.name }}</h2>
+        <p class="fst-italic py-3">
+          {{ about.head }}
+        </p>
+        <div class="row">
+          <div class="col">
+            <ul>
+              {% for item in about.contents %}
+              <li><i class="bi bi-chevron-right"></i> <span>{{ item }}</span></li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+        <p class="py-3">
+          {{ about.tail }}
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
