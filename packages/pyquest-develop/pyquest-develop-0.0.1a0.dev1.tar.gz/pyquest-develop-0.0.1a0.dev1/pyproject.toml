@@ -1,0 +1,37 @@
+[build-system]
+    requires = ['setuptools', 'wheel', 'toml', 'scikit-build', 'cmake>=3.13', 'cython', 'numpy>=1.20']
+    build-backend = 'setuptools.build_meta'  # Should be switched to skbuild-backend as soon as available.
+
+# This is not yet used by any backend tool, but we comply with PEP 621 and PEP 631 anyway. For now,
+# setup.py reads the metadata from this file and passes it to skbuild.setup(). It makes several
+# assumptions about the structure of the "project" table that are not required by PEP 621.
+# After any substantial changes to this table, even if they conform to PEP 621, setup.py should
+# therefore be checked to ensure the data is still parsed correctly.
+[project]
+    name = "pyquest-develop"
+    version = "0.0.1a0.dev1"
+    description = "A Python interface for QuEST, early development access."
+    readme = "./README.md"
+    license = {file = "./LICENCE.txt"}
+    authors = [
+        {name = "Richard Meister", email = "richardm.tug@gmail.com"},
+    ]
+    classifiers=[
+        "Development Status :: 2 - Pre-Alpha",
+        "Environment :: Console",
+        "Environment :: GPU :: NVIDIA CUDA",
+        "Intended Audience :: Science/Research",
+        "License :: OSI Approved :: MIT License",
+        "Natural Language :: English",
+        "Operating System :: MacOS :: MacOS X",
+        "Operating System :: Microsoft :: Windows",
+        "Operating System :: POSIX :: Linux",
+        "Programming Language :: C++",
+        "Programming Language :: Cython",
+        "Programming Language :: Python :: 3 :: Only",
+        "Topic :: Scientific/Engineering :: Physics",
+    ]
+    dependencies = ['numpy>=1.20']
+
+    [project.urls]
+    homepage = "https://github.com/rrmeister/pyQuEST"
