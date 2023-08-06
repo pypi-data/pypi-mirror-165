@@ -1,0 +1,8 @@
+README.md
+setup.py
+oxtables/__init__.py
+oxtables/main.py
+oxtables.egg-info/PKG-INFO
+oxtables.egg-info/SOURCES.txt
+oxtables.egg-info/dependency_links.txt
+oxtables.egg-info/top_level.txt
