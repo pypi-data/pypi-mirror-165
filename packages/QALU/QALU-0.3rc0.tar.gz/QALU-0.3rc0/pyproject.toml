@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "QALU"
+version = "0.3-rc"
+authors = [
+  { name="Ali Hakim Taskiran", email="alihakimxyz@gmail.com" },
+]
+description = "Quantum Arithmetic Logic Units"
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/QArchs/QALU"
+"Bug Tracker" = "https://github.com/QArchs/QALU/issues"
