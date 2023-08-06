@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: L1log
+Version: 0.1.7
+Summary: A plugin that logs and send all the user's actions to an LRS
+Home-page: https://gitlab.univ-lille.fr/mirabelle.nebut/thonny-logs
+Author: Yvan PETER, Mirabelle NEBUT, Corentin DUVIVIER
+Author-email: mirabelle.nebut@univ-lille.fr, yvan.peter@univ-lille.fr,corentin.duvivier.etu@univ-lille.fr
+Platform: Windows
+Platform: macOS
+Platform: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: thonny (>=3.3.13)
+Requires-Dist: requests
+Requires-Dist: libcst
+
+# thonny-logging-plugin
+The goal of this plugin is to log the meaningfull user's actions and send them to a server in order to analyse them.  
+The logs can also be stored localy.  
+
+There is an option pannel in the menu Tools --> Options --> LoggingPlugin to change the server's address or the local file path.
+
+The informations are sended to the xAPI format
