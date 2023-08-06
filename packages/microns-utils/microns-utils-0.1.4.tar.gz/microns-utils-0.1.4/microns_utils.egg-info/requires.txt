@@ -1,0 +1,11 @@
+seaborn
+scipy
+ipyvolume
+decorator
+h5py
+cloud-volume
+caveclient
+nglui
+slackclient
+datajoint-plus
+wridgets
