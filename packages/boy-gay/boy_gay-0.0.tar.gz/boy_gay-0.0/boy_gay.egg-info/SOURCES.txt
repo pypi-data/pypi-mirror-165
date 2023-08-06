@@ -1,0 +1,8 @@
+setup.cfg
+setup.py
+boy_gay/__init__.py
+boy_gay.egg-info/PKG-INFO
+boy_gay.egg-info/SOURCES.txt
+boy_gay.egg-info/dependency_links.txt
+boy_gay.egg-info/not-zip-safe
+boy_gay.egg-info/top_level.txt
