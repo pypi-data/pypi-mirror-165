@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: gitsq
+Version: 1.0.1
+Summary: Automatic squash tool for Git written in Python
+Home-page: https://github.com/excitoon/gitsq
+Author: Vladimir Chebotarev
+Author-email: vladimir.chebotarev@gmail.com
+License: MIT
+Project-URL: Documentation, https://github.com/excitoon/gitsq/blob/master/README.md
+Project-URL: Source, https://github.com/excitoon/gitsq
+Project-URL: Tracker, https://github.com/excitoon/gitsq/issues
+Description: # `gitsq`
+        
+        Automatic squash tool for Git written in Python.
+        
+        ## Usage
+        
+        TODO
+        
+        ## Install
+        
+        ```
+        pip3 install gitsq
+        ```
+        
+Keywords: git,automatic,squash
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development
+Classifier: Topic :: Terminals
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
