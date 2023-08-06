@@ -1,0 +1,3 @@
+[console_scripts]
+lssr=lssr.__main__:main
+
