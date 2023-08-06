@@ -1,0 +1,143 @@
+CHANGES
+=======
+
+v3.4.0
+------
+
+* Bump version: 3.3.0 → 3.4.0
+* [IMP] pre\_commit\_vauxoo: Support fail if 'optional' hooks type and support "-" prefix to remove hooks type (#35)
+
+v3.3.0
+------
+
+* Bump version: 3.2.4 → 3.3.0
+* [FIX] click: Match envvar for disable-pylint-checks and use csv string (#34)
+
+v3.2.4
+------
+
+* Bump version: 3.2.3 → 3.2.4
+* [ADD] requirements.txt: Add requirements.txt file and setup.py read this file (#32)
+* [REF] cli: Show env var for INCLUDE\_LINT and add help to path option (#31)
+* [REF] docs: Clean dummy files and add docs badge and logo (#30)
+
+v3.2.3
+------
+
+* Bump version: 3.2.2 → 3.2.3
+* [REF] CI: Generates ChangeLog with pbr installed (#29)
+
+v3.2.2
+------
+
+* Bump version: 3.2.1 → 3.2.2
+* [REF] setup.py: Autogenerate ChangeLog (#28)
+
+v3.2.1
+------
+
+* Bump version: 3.2.0 → 3.2.1
+* [REF] cli: Bypassing errors if git repo is not found allow to run --help (#27)
+
+v3.2.0
+------
+
+* Bump version: 3.1.0 → 3.2.0
+* [REF] README: Better help output with newlines (#26)
+* [REF] cli: Small refactoring, typos and py3.5 compatibility (#25)
+
+v3.1.0
+------
+
+* Bump version: 3.0.0 → 3.1.0
+* [FIX] click: Compatibility with click==8.0.1 used by big image (#24)
+
+v3.0.0
+------
+
+* Bump version: 2.1.1 → 3.0.0
+* [REF] click: Use standard parameters, envvar and callback transformation and a few refactoring and more (#23)
+
+v2.1.1
+------
+
+* Bump version: 2.1.0 → 2.1.1
+* [REF] CI: Add test to run with dockerv vauxoo image (#22)
+* [REF] click: Remove incompatible parameter for all click versions (#21)
+
+v2.1.0
+------
+
+* Bump version: 2.0.0 → 2.1.0
+* [FIX] CI: Auto deploy pypi
+
+v2.0.0
+------
+
+* Bump version: 1.3.2 → 2.0.0
+* [IMP] pre-commit-vauxoo: Add params, help, default and environment variable matches (#20)
+* [FIX] prettierrc: Enable only for js and xml files (#19)
+* [REF] CI: Order builds by OS and add py3.10 (#17)
+* [REF] tests: Create dummy repo in tmp folder
+* [REF] CI: Fix covtest
+* [REF] tests: Migrating tests to unittest
+
+v1.3.2
+------
+
+* Bump version: 1.3.1 → 1.3.2
+* [REF] CI: Build package before to publish it (#15)
+
+v1.3.1
+------
+
+* Bump version: 1.3.0 → 1.3.1
+* [REF] gh-actions: Publish package (#14)
+* [FIX] pre\_commit\_vauxoo: typos in log messages (#13)
+
+v1.3.0
+------
+
+* Bump version: 1.2.1 → 1.3.0
+* [REF] CI: Enable py3.10 (#12)
+* [REF] github: Set pre-commit cache
+* [REF] tests: Fixing test
+* [FIX] pre\_commit\_vauxoo: Fix current path
+* [REF] pre\_commit\_vauxoo: Use INCLUDE\_LINT and EXCLUDE\_AUTOFIX
+* [REF] pre\_commit\_vauxoo: Add logging colorized and summary result
+* [REF] pre\_commit\_vauxoo: Small refactoring
+* [REF] config: Add flake8 optional checks includes bugbear (#8)
+
+v1.2.1
+------
+
+* Bump version: 1.2.0 → 1.2.1
+* [REF] README: Fix installation command and version (#9)
+* [FIX] pre\_commit\_vauxoo: Return the same type of object (#7)
+* [REF] pre\_commit\_vauxoo: Add verbose subprocess.call wrapper in order to know what command was executed (#6)
+
+v1.2.0
+------
+
+* Bump version: 1.1.0 → 1.2.0
+* [REF] pre\_commit\_vauxoo: Run pre-commit only in current path (#5)
+
+v1.1.0
+------
+
+* Bump version: 1.0.1 → 1.1.0
+* [REF] prettierrc.yml: Enable xmlSelfClosingSpace (#3)
+
+v1.0.1
+------
+
+* Bump version: 1.0.0 → 1.0.1
+* [REF] pre\_commit\_vauxoo: Look for .git dir in parent dirs and allow to run the command in any subfolder (#2)
+* [REF] cfg: Update configuration from vx/mqt (remove flake8 bugbear)
+* [REF] eslintrc: Support syntax "??="
+* [ADD] pre-commit-vauxoo: first code
+
+v1.0.0
+------
+
+* Add initial project skeleton
