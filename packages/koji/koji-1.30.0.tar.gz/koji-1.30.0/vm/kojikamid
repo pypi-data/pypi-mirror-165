@@ -1,0 +1,1443 @@
+#!/usr/bin/python3
+
+# Koji daemon that runs in a Windows VM and executes commands associated
+# with a task.
+# Copyright (c) 2010-2014 Red Hat, Inc.
+#
+#    Koji is free software; you can redistribute it and/or
+#    modify it under the terms of the GNU Lesser General Public
+#    License as published by the Free Software Foundation;
+#    version 2.1 of the License.
+#
+#    This software is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+#    Lesser General Public License for more details.
+#
+#    You should have received a copy of the GNU Lesser General Public
+#    License along with this software; if not, write to the Free Software
+#    Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+#
+# Authors:
+#       Mike Bonnet <mikeb@redhat.com>
+#       Jay Greguske <jgregusk@redhat.com>
+#
+# To register this script as a service on Windows 2008 (with Cygwin 1.7.5 installed) run:
+#   kojiwind --install
+# in a cygwin shell.
+
+import base64
+import glob
+import hashlib
+import logging
+import os
+import re
+import subprocess
+import sys
+import tempfile
+import threading
+import time
+import traceback
+import xmlrpc.client
+# urllib is required by the SCM class which is substituted into this file
+# do not remove the import below
+import urllib  # noqa: F401
+import zipfile
+from configparser import RawConfigParser
+from optparse import OptionParser
+
+import six    # noqa: F401, needed for imported code
+
+
+MANAGER_PORT = 7000
+
+KOJIKAMID = True
+
+
+
+class Enum(dict):
+    """A simple class to track our enumerated constants
+
+    Can quickly map forward or reverse
+    """
+
+    def __init__(self, *args):
+        self._order = tuple(*args)
+        super(Enum, self).__init__([(value, n) for n, value in enumerate(self._order)])
+
+    def __getitem__(self, key):
+        if isinstance(key, (int, slice)):
+            return self._order.__getitem__(key)
+        else:
+            return super(Enum, self).__getitem__(key)
+
+    def get(self, key, default=None):
+        try:
+            return self.__getitem__(key)
+        except (IndexError, KeyError):
+            return default
+
+    def getnum(self, key, default=None):
+        try:
+            value = self.__getitem__(key)
+        except (IndexError, KeyError):
+            return default
+        if isinstance(key, int):
+            return key
+        else:
+            return value
+
+    def _notImplemented(self, *args, **opts):
+        raise NotImplementedError
+
+    # deprecated
+    getvalue = _notImplemented
+    # read-only
+    __setitem__ = _notImplemented
+    __delitem__ = _notImplemented
+    clear = _notImplemented
+    pop = _notImplemented
+    popitem = _notImplemented
+    update = _notImplemented
+    setdefault = _notImplemented
+
+
+CHECKSUM_TYPES = Enum((
+    'md5',
+    'sha1',
+    'sha256',
+))
+
+
+# Exceptions
+PythonImportError = ImportError  # will be masked by koji's one
+
+
+class GenericError(Exception):
+    """Base class for our custom exceptions"""
+    faultCode = 1000
+    fromFault = False
+
+    def __str__(self):
+        try:
+            return str(self.args[0]['args'][0])
+        except Exception:
+            try:
+                return str(self.args[0])
+            except Exception:
+                return str(self.__dict__)
+
+
+class BuildError(GenericError):
+    """Raised when a build fails"""
+    faultCode = 1005
+
+
+def ensuredir(directory):
+    """Create directory, if necessary.
+
+    :param str directory: path of the directory
+
+    :returns: str: normalized directory path
+
+    :raises OSError: If argument already exists and is not a directory, or
+                     error occurs from underlying `os.mkdir`.
+    """
+    directory = os.path.normpath(directory)
+    if os.path.exists(directory):
+        if not os.path.isdir(directory):
+            raise OSError("Not a directory: %s" % directory)
+    else:
+        head, tail = os.path.split(directory)
+        if not tail and head == directory:
+            # can only happen if directory == '/' or equivalent
+            # (which obviously should not happen)
+            raise OSError("root directory missing? %s" % directory)
+        if head:
+            ensuredir(head)
+        # note: if head is blank, then we've reached the top of a relative path
+        try:
+            os.mkdir(directory)
+        except OSError:
+            # do not thrown when dir already exists (could happen in a race)
+            if not os.path.isdir(directory):
+                # something else must have gone wrong
+                raise
+    return directory
+
+def _open_text_file(path, mode='rt'):
+    # enforce utf-8 encoding for py3
+    if six.PY2:
+        return open(path, mode)
+    else:
+        return open(path, mode, encoding='utf-8')
+
+class SCM(object):
+    "SCM abstraction class"
+
+    types = {'CVS': ('cvs://',),
+             'CVS+SSH': ('cvs+ssh://',),
+             'GIT': ('git://', 'git+http://', 'git+https://', 'git+rsync://'),
+             'GIT+SSH': ('git+ssh://',),
+             'SVN': ('svn://', 'svn+http://', 'svn+https://'),
+             'SVN+SSH': ('svn+ssh://',)}
+
+    @classmethod
+    def is_scm_url(cls, url, strict=False):
+        """
+        Return True if the url appears to be a valid, accessible source location, False otherwise
+        """
+        schemes = [s for t in cls.types for s in cls.types[t]]
+        for scheme in schemes:
+            if url.startswith(scheme):
+                return True
+        # otherwise not valid
+        if strict:
+            raise koji.GenericError('Invalid scheme in scm url. Valid schemes '
+                                    'are: %s' % ' '.join(sorted(schemes)))
+        else:
+            return False
+
+    def __init__(self, url, allow_password=False):
+        """
+        Initialize the SCM object using the specified url.
+        The expected url format is:
+
+        scheme://[user@]host/path/to/repo?path/to/module#revision_or_tag_identifier
+
+        The initialized SCM object will have the following attributes:
+        - url (the unmodified url)
+        - scheme
+        - user (may be null)
+        - host
+        - repository
+        - module
+        - revision
+        - use_common (defaults to True, may be set by assert_allowed())
+        - source_cmd (defaults to ['make', 'sources'], may be set by assert_allowed())
+        - scmtype
+
+        The exact format of each attribute is SCM-specific, but the structure of the url
+        must conform to the template above, or an error will be raised.
+        """
+        self.logger = logging.getLogger('koji.build.SCM')
+
+        if not SCM.is_scm_url(url, strict=True):
+            raise koji.GenericError('Invalid SCM URL: %s' % url)
+
+        self.url = url
+        scheme, user, password, host, path, query, fragment = self._parse_url(
+            allow_password=allow_password)
+
+        self.scheme = scheme
+        if password is not None:
+            self.user = '%s:%s' % (user, password)
+        else:
+            self.user = user
+        self.host = host
+        self.repository = path
+        self.module = query
+        self.revision = fragment
+        self.use_common = True
+        self.source_cmd = ['make', 'sources']
+
+        for scmtype, schemes in SCM.types.items():
+            if self.scheme in schemes:
+                self.scmtype = scmtype
+                break
+        else:   # pragma: no cover
+            # should never happen
+            raise koji.GenericError('Invalid SCM URL: %s' % url)
+
+    def get_info(self, keys=None):
+        if keys is None:
+            keys = ["url", "scheme", "user", "host", "repository", "module", "revision", "scmtype"]
+        return dslice(vars(self), keys)
+
+    def _parse_url(self, allow_password=False):
+        """
+        Parse the SCM url into usable components.
+        Return the following tuple:
+
+        (scheme, user, host, path, query, fragment)
+
+        user may be None, everything else will have a value
+        """
+        # get the url's scheme
+        scheme = self.url.split('://')[0] + '://'
+
+        # replace the scheme with http:// so that the urlparse works in all cases
+        dummyurl = self.url.replace(scheme, 'http://', 1)
+        parsed_url = urllib.parse.urlparse(dummyurl)
+        path = parsed_url.path
+        params = parsed_url.params
+        query = parsed_url.query
+        fragment = parsed_url.fragment
+
+        user = None
+        password = None
+
+        userhost = parsed_url.netloc.split('@')
+        if len(userhost) > 2:
+            raise koji.GenericError('Invalid username@hostname specified: %s' % userhost)
+        if not userhost:
+            raise koji.GenericError(
+                'Unable to parse SCM URL: %s . Could not find the netloc element.' % self.url)
+        if parsed_url.username:
+            user = parsed_url.username
+        if parsed_url.password:
+            password = parsed_url.password
+        if password is not None and not allow_password:
+            raise koji.GenericError('username:password format not supported: %s:%s'
+                                    % (user, password))
+        netloc = userhost[-1]
+
+        # check for empty path before we apply normpath
+        if not path:
+            raise koji.GenericError(
+                'Unable to parse SCM URL: %s . Could not find the path element.' % self.url)
+
+        path = os.path.normpath(path)
+
+        # path and query should not end with /
+        path = path.rstrip('/')
+        query = query.rstrip('/')
+        # normpath might not strip // at start of path
+        if path.startswith('//'):
+            path = '/' + path.strip('/')
+        # path should start with /
+        if not path.startswith('/'):  # pragma: no cover
+            # any such url should have already been caught by is_scm_url
+            raise koji.GenericError('Invalid SCM URL. Path should begin with /: %s) ')
+
+        # check for validity: params should be empty, query may be empty, everything else should be
+        # populated
+        if params:
+            raise koji.GenericError(
+                'Unable to parse SCM URL: %s . Params element %s should be empty.' %
+                (self.url, params))
+        if not scheme:  # pragma: no cover
+            # should not happen because of is_scm_url check earlier
+            raise koji.GenericError(
+                'Unable to parse SCM URL: %s . Could not find the scheme element.' % self.url)
+        if not fragment:
+            raise koji.GenericError(
+                'Unable to parse SCM URL: %s . Could not find the fragment element.' % self.url)
+
+        # return parsed values
+        return (scheme, user, password, netloc, path, query, fragment)
+
+    def assert_allowed(self, allowed='', session=None, by_config=True, by_policy=False,
+                       policy_data=None):
+        """
+        Check whether this scm is allowed and apply options by either/both approach below:
+
+            - "allowed_scms" from config file, see
+              :func:`~koji.daemon.SCM.assert_allowed_by_config`
+            - "build_from_scm" hub policy, see :func:`~koji.daemon.SCM.assert_allowed_by_policy`
+
+        When both approaches are applied, the config one will be applied, then the policy one.
+
+        :param str allowed: The allowed_scms config content which is used for by-config approach
+        :param koji.ClientSession session: The allowed_scms config content which is used for
+                                           by-policy approach
+        :param bool by_config: Using config or not, Default: True
+        :param bool by_policy: Using policy or not, Default: False
+        :param dict policy_data: The policy data which will be merged with the generated scm info,
+                                 then will be passed to hub call for policy assertion when using
+                                 policy.
+        :raises koji.BuildError: if the scm is denied.
+        """
+        if by_config:
+            self.assert_allowed_by_config(allowed or '')
+        if by_policy:
+            if session is None:
+                raise koji.ConfigurationError(
+                    'When allowed SCM assertion is by policy, session must be passed in.')
+            self.assert_allowed_by_policy(session, **(policy_data or {}))
+
+    def assert_allowed_by_config(self, allowed):
+        """
+        Check this scm against allowed list and apply options
+
+        allowed is a space-separated list of entries in one of the following
+        forms:
+
+            host:repository[:use_common[:source_cmd]]
+            !host:repository
+
+        Incorrectly-formatted entries will be skipped with a warning.
+
+        The first form allows a host:repository pattern and optionally sets a
+        few options for it.
+
+        The second form explicitly blocks a host:repository pattern
+
+        Both host and repository are treated as glob patterns
+
+        If there is a matching entry, then the optional fields, if given, will
+        be applied to the instance.
+
+        If there is no matching entry, or if the host:repository is blocked
+        then BuildError is raised.
+
+        The use_common option defaults to on.  If it is set to no, off, false
+        or 0, it will be disabled.  If the option is on, then kojid will
+        attempt to checkout a common/ directory from the repository.
+
+        The source_command is a shell command to be run before building the
+        srpm.  It defaults to "make sources".  This can be overridden by the
+        matching allowed entry.  The command must be encoded with commas
+        instead of spaces (e.g. "make,sources").
+        """
+        is_allowed = False
+        for allowed_scm in allowed.split():
+            scm_tuple = allowed_scm.split(':')
+            if len(scm_tuple) < 2:
+                self.logger.warning('Ignoring incorrectly formatted SCM host:repository: %s' %
+                                    allowed_scm)
+                continue
+            host_pat = scm_tuple[0]
+            repo_pat = scm_tuple[1]
+            invert = False
+            if host_pat.startswith('!'):
+                invert = True
+                host_pat = host_pat[1:]
+            if fnmatch(self.host, host_pat) and fnmatch(self.repository, repo_pat):
+                # match
+                if invert:
+                    break
+                is_allowed = True
+                # check if we specify a value for use_common
+                if len(scm_tuple) >= 3:
+                    if scm_tuple[2].lower() in ('no', 'off', 'false', '0'):
+                        self.use_common = False
+                # check if we specify a custom source_cmd
+                if len(scm_tuple) >= 4:
+                    if scm_tuple[3]:
+                        self.source_cmd = scm_tuple[3].split(',')
+                    else:
+                        # there was nothing after the trailing :,
+                        # so they don't want to run a source_cmd at all
+                        self.source_cmd = None
+                break
+        if not is_allowed:
+            raise koji.BuildError(
+                '%s:%s is not in the list of allowed SCMs' % (self.host, self.repository))
+
+    def assert_allowed_by_policy(self, session, **extra_data):
+        """
+        Check this scm against hub policy: build_from_scm and apply options
+
+        The policy data is the combination of scminfo with scm_ prefix and kwargs.
+        It should at least contain following keys:
+
+            - scm_url
+            - scm_scheme
+            - scm_user
+            - scm_host
+            - scm_repository
+            - scm_module
+            - scm_revision
+            - scm_type
+
+        More keys could be added as kwargs(extra_data). You can pass any reasonable data which
+        could be handled by policy tests, like:
+
+            - scratch (if the task is scratch)
+            - channel (which channel the task is assigned)
+            - user_id (the task owner)
+
+        If the key in extra_data is one of scm_* listed above, it will override the one generated
+        from scminfo.
+
+        The format of the action returned from build_from_scm could be one of following forms::
+
+            allow [use_common] [<source_cmd>]
+            deny [<reason>]
+
+        If use_common is not set, use_common property is False.
+        If source_cmd is none, it will be parsed as None. If it not set, the default value:
+        ['make', 'sources'], or the value set by :func:`~koji.daemon.SCM.assert_allowed_by_config`
+        will be set.
+
+        Policy example:
+
+            build_from_scm =
+                bool scratch :: allow none
+                match scm_host scm.example.com :: allow use_common make sources
+                match scm_host scm2.example.com :: allow
+                all :: deny
+
+
+        :param koji.ClientSession session: the session object to call hub xmlrpc APIs.
+                                           It should be a host session.
+
+        :raises koji.BuildError: if the scm is denied.
+        """
+        policy_data = {}
+        for k, v in six.iteritems(self.get_info()):
+            policy_data[re.sub(r'^(scm_?)?', 'scm_', k)] = v
+        policy_data.update(extra_data)
+        result = (session.evalPolicy('build_from_scm', policy_data) or '').split()
+        is_allowed = result and result[0].lower() in ('yes', 'true', 'allow', 'allowed')
+        if not is_allowed:
+            raise koji.BuildError(
+                'SCM: %s:%s is not allowed, reason: %s' % (self.host, self.repository,
+                                                           ' '.join(result[1:]) or None))
+        # Apply options when it's allowed
+        applied = result[1:]
+        self.use_common = len(applied) != 0 and applied[0].lower() == 'use_common'
+        idx = 1 if self.use_common else 0
+        self.source_cmd = applied[idx:] or self.source_cmd
+        if self.source_cmd is not None and len(self.source_cmd) > 0 \
+           and self.source_cmd[0].lower() == 'none':
+            self.source_cmd = None
+
+    def checkout(self, scmdir, session=None, uploadpath=None, logfile=None):
+        """
+        Checkout the module from SCM.  Accepts the following parameters:
+         - scmdir: the working directory
+         - session: a ClientSession object
+         - uploadpath: the path on the server the logfile should be uploaded to
+         - logfile: the file used for logging command output
+        session, uploadpath, and logfile are not used when run within kojikamid,
+        but are otherwise required.
+
+        Returns the directory that the module was checked-out into (a subdirectory of scmdir)
+        """
+        # TODO: sanity check arguments
+        sourcedir = '%s/%s' % (scmdir, self.module)
+
+        update_checkout_cmd = None
+        update_checkout_dir = None
+        env = None
+
+        def _run(cmd, chdir=None, fatal=False, log=True, _count=[0]):
+            if globals().get('KOJIKAMID'):
+                # we've been inserted into kojikamid, use its run()
+                return run(cmd, chdir=chdir, fatal=fatal, log=log)  # noqa: F821
+            else:
+                append = (_count[0] > 0)
+                _count[0] += 1
+                if log_output(session, cmd[0], cmd, logfile, uploadpath,
+                              cwd=chdir, logerror=1, append=append, env=env):
+                    raise koji.BuildError('Error running %s command "%s", see %s for details' %
+                                          (self.scmtype, ' '.join(cmd), os.path.basename(logfile)))
+
+        if self.scmtype == 'CVS':
+            pserver = ':pserver:%s@%s:%s' % ((self.user or 'anonymous'), self.host,
+                                             self.repository)
+            module_checkout_cmd = ['cvs', '-d', pserver, 'checkout', '-r', self.revision,
+                                   self.module]
+            common_checkout_cmd = ['cvs', '-d', pserver, 'checkout', 'common']
+
+        elif self.scmtype == 'CVS+SSH':
+            if not self.user:
+                raise koji.BuildError(
+                    'No user specified for repository access scheme: %s' % self.scheme)
+
+            cvsserver = ':ext:%s@%s:%s' % (self.user, self.host, self.repository)
+            module_checkout_cmd = ['cvs', '-d', cvsserver, 'checkout', '-r', self.revision,
+                                   self.module]
+            common_checkout_cmd = ['cvs', '-d', cvsserver, 'checkout', 'common']
+            env = {'CVS_RSH': 'ssh'}
+
+        elif self.scmtype == 'GIT':
+            scheme = self.scheme
+            if '+' in scheme:
+                scheme = scheme.split('+')[1]
+            if self.user:
+                gitrepo = '%s%s@%s%s' % (scheme, self.user, self.host, self.repository)
+            else:
+                gitrepo = '%s%s%s' % (scheme, self.host, self.repository)
+            commonrepo = os.path.dirname(gitrepo) + '/common'
+            checkout_path = os.path.basename(self.repository)
+            if self.repository.endswith('/.git'):
+                # If we're referring to the .git subdirectory of the main module,
+                # assume we need to do the same for the common module
+                checkout_path = os.path.basename(self.repository[:-5])
+                commonrepo = os.path.dirname(gitrepo[:-5]) + '/common/.git'
+            elif self.repository.endswith('.git'):
+                # If we're referring to a bare repository for the main module,
+                # assume we need to do the same for the common module
+                checkout_path = os.path.basename(self.repository[:-4])
+                commonrepo = os.path.dirname(gitrepo[:-4]) + '/common.git'
+
+            sourcedir = '%s/%s' % (scmdir, checkout_path)
+            module_checkout_cmd = ['git', 'clone', '-n', gitrepo, sourcedir]
+            common_checkout_cmd = ['git', 'clone', commonrepo, 'common']
+            update_checkout_cmd = ['git', 'reset', '--hard', self.revision]
+            update_checkout_dir = sourcedir
+
+            # self.module may be empty, in which case the specfile should be in the top-level
+            # directory
+            if self.module:
+                # Treat the module as a directory inside the git repository
+                sourcedir = '%s/%s' % (sourcedir, self.module)
+
+        elif self.scmtype == 'GIT+SSH':
+            if not self.user:
+                raise koji.BuildError(
+                    'No user specified for repository access scheme: %s' % self.scheme)
+            gitrepo = 'git+ssh://%s@%s%s' % (self.user, self.host, self.repository)
+            commonrepo = os.path.dirname(gitrepo) + '/common'
+            checkout_path = os.path.basename(self.repository)
+            if self.repository.endswith('/.git'):
+                # If we're referring to the .git subdirectory of the main module,
+                # assume we need to do the same for the common module
+                checkout_path = os.path.basename(self.repository[:-5])
+                commonrepo = os.path.dirname(gitrepo[:-5]) + '/common/.git'
+            elif self.repository.endswith('.git'):
+                # If we're referring to a bare repository for the main module,
+                # assume we need to do the same for the common module
+                checkout_path = os.path.basename(self.repository[:-4])
+                commonrepo = os.path.dirname(gitrepo[:-4]) + '/common.git'
+
+            sourcedir = '%s/%s' % (scmdir, checkout_path)
+            module_checkout_cmd = ['git', 'clone', '-n', gitrepo, sourcedir]
+            common_checkout_cmd = ['git', 'clone', commonrepo, 'common']
+            update_checkout_cmd = ['git', 'reset', '--hard', self.revision]
+            update_checkout_dir = sourcedir
+
+            # self.module may be empty, in which case the specfile should be in the top-level
+            # directory
+            if self.module:
+                # Treat the module as a directory inside the git repository
+                sourcedir = '%s/%s' % (sourcedir, self.module)
+
+        elif self.scmtype == 'SVN':
+            scheme = self.scheme
+            if '+' in scheme:
+                scheme = scheme.split('+')[1]
+
+            svnserver = '%s%s%s' % (scheme, self.host, self.repository)
+            module_checkout_cmd = ['svn', 'checkout', '-r', self.revision,
+                                   '%s/%s' % (svnserver, self.module), self.module]
+            common_checkout_cmd = ['svn', 'checkout', '%s/common' % svnserver]
+
+        elif self.scmtype == 'SVN+SSH':
+            if not self.user:
+                raise koji.BuildError(
+                    'No user specified for repository access scheme: %s' % self.scheme)
+
+            svnserver = 'svn+ssh://%s@%s%s' % (self.user, self.host, self.repository)
+            module_checkout_cmd = ['svn', 'checkout', '-r', self.revision,
+                                   '%s/%s' % (svnserver, self.module), self.module]
+            common_checkout_cmd = ['svn', 'checkout', '%s/common' % svnserver]
+
+        else:
+            raise koji.BuildError('Unknown SCM type: %s' % self.scmtype)
+
+        # perform checkouts
+        _run(module_checkout_cmd, chdir=scmdir, fatal=True)
+
+        if update_checkout_cmd:
+            # Currently only required for GIT checkouts
+            # Run the command in the directory the source was checked out into
+            if self.scmtype.startswith('GIT') and globals().get('KOJIKAMID'):
+                _run(['git', 'config', 'core.autocrlf', 'true'],
+                     chdir=update_checkout_dir, fatal=True)
+                _run(['git', 'config', 'core.safecrlf', 'true'],
+                     chdir=update_checkout_dir, fatal=True)
+            _run(update_checkout_cmd, chdir=update_checkout_dir, fatal=True)
+
+        if self.use_common and not globals().get('KOJIKAMID'):
+            _run(common_checkout_cmd, chdir=scmdir, fatal=True)
+            if not os.path.exists('%s/../common' % sourcedir):
+                # find the relative distance from sourcedir/../common to scmdir/common
+                destdir = os.path.split(sourcedir)[0]
+                path_comps = destdir[len(scmdir) + 1:]
+                rel_path = '../' * len(path_comps.split('/'))
+                os.symlink(rel_path + 'common', '%s/../common' % sourcedir)
+
+        self.sourcedir = sourcedir
+        return sourcedir
+
+    def get_source(self):
+        r = {
+            'url': self.url,
+            'source': '',
+        }
+        if self.scmtype.startswith('GIT'):
+            cmd = ['git', 'rev-parse', 'HEAD']
+            proc = subprocess.Popen(cmd, stdout=subprocess.PIPE,
+                                    cwd=self.sourcedir,)
+            out, _ = proc.communicate()
+            status = proc.wait()
+            if status != 0:
+                raise koji.GenericError('Error getting commit hash for git')
+            fragment = out.strip()
+            if six.PY3:
+                fragment = fragment.decode()
+            scheme = self.scheme[:-3]
+            netloc = self.host
+            path = self.repository
+            query = self.module
+            r['source'] = urllib.parse.urlunsplit([scheme, netloc, path, query, fragment])
+        else:
+            # just use the same url
+            r['source'] = self.url
+        return r
+
+def md5_constructor(*args, **kwargs):
+    if hasattr(hashlib._hashlib, 'get_fips_mode') and hashlib._hashlib.get_fips_mode():
+        # do not care about FIPS we need md5 for signatures and older hashes
+        # It is still used for *some* security
+        kwargs['usedforsecurity'] = False
+    return hashlib.md5(*args, **kwargs)  # nosec
+
+
+
+class fakemodule(object):
+    pass
+
+
+# make parts of the above insert accessible as koji.X
+koji = fakemodule()
+koji.GenericError = GenericError  # noqa: F821
+koji.BuildError = BuildError  # noqa: F821
+koji._open_text_file = _open_text_file  # noqa: F821
+
+
+def encode_int(n):
+    """If n is too large for a 32bit signed, convert it to a string"""
+    if n <= 2147483647:
+        return n
+    # else
+    return str(n)
+
+
+class WindowsBuild(object):
+
+    LEADING_CHAR = re.compile('^[^A-Za-z_]')
+    VAR_CHARS = re.compile('[^A-Za-z0-9_]')
+
+    def __init__(self, server):
+        """Get task info and setup build directory"""
+        self.logger = logging.getLogger('koji.vm')
+        self.server = server
+        info = server.getTaskInfo()
+        self.source_url = info[0]
+        self.build_tag = info[1]
+        if len(info) > 2:
+            self.task_opts = info[2]
+        else:
+            self.task_opts = {}
+        self.workdir = '/tmp/build'
+        ensuredir(self.workdir)  # noqa: F821
+        self.buildreq_dir = os.path.join(self.workdir, 'buildreqs')
+        ensuredir(self.buildreq_dir)  # noqa: F821
+        self.source_dir = None
+        self.spec_dir = None
+        self.patches_dir = None
+        self.buildroot_id = None
+
+        # we initialize these here for clarity, but they are populated in loadConfig()
+        self.name = None
+        self.version = None
+        self.release = None
+        self.epoch = None
+        self.description = None
+        self.platform = None
+        self.preinstalled = []
+        self.buildrequires = []
+        self.provides = []
+        self.shell = None
+        self.execute = []
+        self.postbuild = []
+        self.output = {}
+        self.logs = []
+
+    def checkTools(self):
+        """Is this environment fit to build in, based on the spec file?"""
+        errors = []
+        for entry in self.preinstalled:
+            checkdir = False
+            if entry.startswith('/'):
+                # Cygwin path
+                if entry.endswith('/'):
+                    # directory
+                    checkdir = True
+            elif entry[1:3] == ':\\':
+                # Windows path
+                if entry.endswith('\\'):
+                    # directory
+                    checkdir = True
+            else:
+                # Check in the path
+                ret, output = run(['/bin/which', entry], log=False)
+                output = output.strip()
+                if ret:
+                    errors.append(output)
+                else:
+                    self.logger.info('command %s is available at %s', entry, output)
+                continue
+            if checkdir:
+                if not os.path.isdir(entry):
+                    errors.append('directory %s does not exist' % entry)
+                else:
+                    self.logger.info('directory %s exists', entry)
+            else:
+                # file
+                if not os.path.isfile(entry):
+                    errors.append('file %s does not exist' % entry)
+                else:
+                    self.logger.info('file %s exists', entry)
+        if errors:
+            raise BuildError('error validating build environment: %s' %  # noqa: F821
+                             ', '.join(errors))
+
+    def updateClam(self):
+        """update ClamAV virus definitions"""
+        ret, output = run(['/bin/freshclam', '--quiet'])
+        if ret:
+            raise BuildError('could not update ClamAV database: %s' % output)  # noqa: F821
+
+    def checkEnv(self):
+        """make the environment is fit for building in"""
+        for tool in ['/bin/freshclam', '/bin/clamscan', '/bin/patch']:
+            if not os.path.isfile(tool):
+                raise BuildError('%s is missing from the build environment' % tool)  # noqa: F821
+
+    def zipDir(self, rootdir, filename):
+        rootbase = os.path.basename(rootdir)
+        roottrim = len(rootdir) - len(rootbase)
+        zfo = zipfile.ZipFile(filename, 'w', zipfile.ZIP_DEFLATED)
+        for dirpath, dirnames, filenames in os.walk(rootdir):
+            for skip in ['CVS', '.svn', '.git']:
+                if skip in dirnames:
+                    dirnames.remove(skip)
+            for filename in filenames:
+                filepath = os.path.join(dirpath, filename)
+                zfo.write(filepath, filepath[roottrim:])
+        zfo.close()
+
+    def checkout(self):
+        """Checkout sources, winspec, and patches, and apply patches"""
+        src_scm = SCM(self.source_url)  # noqa: F821
+        self.source_dir = src_scm.checkout(
+            ensuredir(os.path.join(self.workdir, 'source')))  # noqa: F821
+        self.zipDir(self.source_dir, os.path.join(self.workdir, 'sources.zip'))
+        if 'winspec' in self.task_opts:
+            spec_scm = SCM(self.task_opts['winspec'])  # noqa: F821
+            self.spec_dir = spec_scm.checkout(
+                ensuredir(os.path.join(self.workdir, 'spec')))  # noqa: F821
+            self.zipDir(self.spec_dir, os.path.join(self.workdir, 'spec.zip'))
+        else:
+            self.spec_dir = self.source_dir
+        if 'patches' in self.task_opts:
+            patch_scm = SCM(self.task_opts['patches'])  # noqa: F821
+            self.patches_dir = patch_scm.checkout(
+                ensuredir(os.path.join(self.workdir, 'patches')))  # noqa: F821
+            self.zipDir(self.patches_dir, os.path.join(self.workdir, 'patches.zip'))
+            self.applyPatches(self.source_dir, self.patches_dir)
+        self.virusCheck(self.workdir)
+
+    def applyPatches(self, sourcedir, patchdir):
+        """Apply patches in patchdir to files in sourcedir)"""
+        patches = [patch for patch in os.listdir(patchdir) if
+                   os.path.isfile(os.path.join(patchdir, patch)) and
+                   patch.endswith('.patch')]
+        if not patches:
+            raise BuildError('no patches found at %s' % patchdir)  # noqa: F821
+        patches.sort()
+        for patch in patches:
+            cmd = ['/bin/patch', '--verbose', '-d', sourcedir, '-p1', '-i',
+                   os.path.join(patchdir, patch)]
+            run(cmd, fatal=True)
+
+    def loadConfig(self):
+        """Load build configuration from the spec file."""
+        specfiles = [spec for spec in os.listdir(self.spec_dir) if spec.endswith('.ini')]
+        if len(specfiles) == 0:
+            raise BuildError('No .ini file found')  # noqa: F821
+        elif len(specfiles) > 1:
+            raise BuildError('Multiple .ini files found')  # noqa: F821
+
+        conf = RawConfigParser()
+        conf.read(os.path.join(self.spec_dir, specfiles[0]))
+
+        # [naming] section
+        for entry in ('name', 'version', 'release', 'description'):
+            setattr(self, entry, conf.get('naming', entry))
+        if conf.has_option('naming', 'epoch'):
+            self.epoch = conf.get('naming', 'epoch')
+
+        # [building] section
+        self.platform = conf.get('building', 'platform')
+
+        # preinstalled are paths to files or directories that must exist
+        # in the VM for it to execute the build.
+        # If the path ends in / or \ it must be a directory, otherwise it must
+        # be a file.
+        # They may be specified as Cygwin (/cygdrive/c/...) or Windows (C:\...)
+        # absolute paths, or without a path in which case it is searched for
+        # on the PATH.
+        if conf.has_option('building', 'preinstalled'):
+            self.preinstalled.extend(
+                [e.strip() for e in conf.get('building', 'preinstalled').split('\n') if e])
+
+        # buildrequires and provides are multi-valued (space-separated)
+        for br in conf.get('building', 'buildrequires').split():
+            # buildrequires is a space-separated list
+            # each item in the list is in the format:
+            # pkgname[:opt1:opt2=val2:...]
+            # the options are put into a dict
+            # if the option has no =val, the value in the dict will be None
+            if br:
+                br = br.split(':')
+                bropts = {}
+                for opt in br[1:]:
+                    if '=' in opt:
+                        key, val = opt.split('=', 1)
+                    else:
+                        key = opt
+                        val = None
+                    bropts[key] = val
+                self.buildrequires.append((br[0], bropts))
+        for prov in conf.get('building', 'provides').split():
+            if prov:
+                self.provides.append(prov)
+        # optionally specify a shell to use (defaults to bash)
+        # valid values are: cmd, cmd.exe (alias for cmd), and bash
+        if conf.has_option('building', 'shell'):
+            self.shell = conf.get('building', 'shell')
+        else:
+            self.shell = 'bash'
+        # execute is multi-valued (newline-separated)
+        self.execute.extend([e.strip() for e in conf.get('building', 'execute').split('\n') if e])
+
+        # postbuild are files or directories that must exist after the build is
+        # complete, but are not included in the build output
+        # they are specified as paths relative the source directory, and may be
+        # in Unix or Windows format
+        # each entry may contain shell-style globs, and one or more files
+        # matching the glob is considered valid
+        if conf.has_option('building', 'postbuild'):
+            for entry in conf.get('building', 'postbuild').split('\n'):
+                entry = entry.strip()
+                if not entry:
+                    continue
+                for var in ('name', 'version', 'release'):
+                    entry = entry.replace('$' + var, getattr(self, var))
+                self.postbuild.append(entry)
+
+        # [files] section
+        for entry in conf.get('files', 'output').split('\n'):
+            entry = entry.strip()
+            if not entry:
+                continue
+            tokens = entry.split(':')
+            filename = tokens[0]
+            for var in ('name', 'version', 'release'):
+                filename = filename.replace('$' + var, getattr(self, var))
+            metadata = {}
+            metadata['platforms'] = tokens[1].split(',')
+            if len(tokens) > 2:
+                metadata['flags'] = tokens[2].split(',')
+            else:
+                metadata['flags'] = []
+            self.output[filename] = metadata
+        self.logs.extend([e.strip() for e in conf.get('files', 'logs').split('\n') if e])
+
+    def initBuildroot(self):
+        """Create the buildroot object on the hub."""
+        repo_id = self.task_opts.get('repo_id')
+        if not repo_id:
+            raise BuildError('repo_id must be specified')  # noqa: F821
+        self.buildroot_id = self.server.initBuildroot(repo_id, self.platform)
+
+    def expireBuildroot(self):
+        """Set the buildroot object to expired on the hub."""
+        self.server.expireBuildroot(self.buildroot_id)
+
+    def fetchFile(self, basedir, buildinfo, fileinfo, brtype):
+        """Download the file from buildreq, at filepath, into the basedir"""
+        destpath = os.path.join(basedir, fileinfo['localpath'])
+        ensuredir(os.path.dirname(destpath))  # noqa: F821
+        if 'checksum_type' in fileinfo:
+            checksum_type = CHECKSUM_TYPES[fileinfo['checksum_type']]  # noqa: F821
+            if checksum_type == 'sha1':
+                checksum = hashlib.sha1()  # nosec
+            elif checksum_type == 'sha256':
+                checksum = hashlib.sha256()
+            elif checksum_type == 'md5':
+                checksum = md5_constructor.md5()  # noqa: F821
+            else:
+                raise BuildError('Unknown checksum type %s for %s' % (  # noqa: F821
+                                 checksum_type,
+                                 os.path.basename(fileinfo['localpath'])))
+        with koji._open_text_file(destpath, 'wt') as destfile:
+            offset = 0
+            while True:
+                encoded = self.server.getFile(buildinfo, fileinfo, encode_int(offset), 1048576,
+                                              brtype)
+                if not encoded:
+                    break
+                data = base64.b64decode(encoded)
+                del encoded
+                destfile.write(data)
+                offset += len(data)
+                if 'checksum_type' in fileinfo:
+                    checksum.update(data)
+        # rpms don't have a checksum in the fileinfo, but check it for everything else
+        if 'checksum_type' in fileinfo:
+            digest = checksum.hexdigest()
+            if fileinfo['checksum'] != digest:
+                raise BuildError(  # noqa: F821
+                    'checksum validation failed for %s, %s (computed) != %s (provided)' %
+                    (destpath, digest, fileinfo['checksum']))
+            self.logger.info(
+                'Retrieved %s (%s bytes, %s: %s)', destpath, offset, checksum_type, digest)
+        else:
+            self.logger.info('Retrieved %s (%s bytes)', destpath, offset)
+
+    def fetchBuildReqs(self):
+        """Retrieve buildrequires listed in the spec file"""
+        files = []
+        rpms = []
+        for buildreq, brinfo in self.buildrequires:
+            # if no type is specified in the options, default to win
+            brtype = brinfo.get('type', 'win')
+            buildinfo = self.server.getLatestBuild(self.build_tag, buildreq,
+                                                   self.task_opts.get('repo_id'))
+            br_dir = os.path.join(self.buildreq_dir, buildreq, brtype)
+            ensuredir(br_dir)  # noqa: F821
+            brinfo['dir'] = br_dir
+            brfiles = []
+            brinfo['files'] = brfiles
+            buildfiles = self.server.getFileList(buildinfo['id'], brtype, brinfo)
+            for fileinfo in buildfiles:
+                self.fetchFile(br_dir, buildinfo, fileinfo, brtype)
+                brfiles.append(fileinfo['localpath'])
+                if brtype == 'rpm':
+                    rpms.append(fileinfo)
+                else:
+                    files.append(fileinfo)
+        self.server.updateBuildrootFiles(self.buildroot_id, files, rpms)
+        self.virusCheck(self.buildreq_dir)
+
+    def build(self):
+        if self.shell in ('cmd', 'cmd.exe'):
+            self.cmdBuild()
+        else:
+            self.bashBuild()
+        # move the zips of the SCM checkouts to their final locations
+        for src in ['sources.zip', 'spec.zip', 'patches.zip']:
+            srcpath = os.path.join(self.workdir, src)
+            if os.path.exists(srcpath):
+                dest = '%s-%s-%s-%s' % (self.name, self.version, self.release, src)
+                destpath = os.path.join(self.source_dir, dest)
+                os.rename(srcpath, destpath)
+                self.output[dest] = {'platforms': ['all'],
+                                     'flags': ['src']}
+
+    def varname(self, name):
+        """
+        Convert name to a valid shell variable name.
+        Converts leading characters that aren't letters or underscores
+        to underscores.
+        Converts any other characters that aren't letters, numbers,
+        or underscores to underscores.
+        """
+        name = self.LEADING_CHAR.sub('_', name)
+        name = self.VAR_CHARS.sub('_', name)
+        return name
+
+    def cmdBuild(self):
+        """Do the build: run the execute line(s) with cmd.exe"""
+        tmpfd, tmpname = tempfile.mkstemp(prefix='koji-tmp', suffix='.bat',
+                                          dir='/cygdrive/c/Windows/Temp')
+        script = koji._open_text_file(tmpfd, 'wt')
+        for attr in ['source_dir', 'spec_dir', 'patches_dir']:
+            val = getattr(self, attr)
+            if val:
+                ret, output = run(['/bin/cygpath', '-wa', val], log=False, fatal=True)
+                script.write('set %s=%s\r\n' % (attr, output.strip()))
+        for buildreq, brinfo in self.buildrequires:
+            buildreq = self.varname(buildreq)
+            ret, output = run(['/bin/cygpath', '-wa', brinfo['dir']], log=False, fatal=True)
+            br_dir = output.strip()
+            files = ' '.join(brinfo['files'])
+            files.replace('/', '\\')
+            if brinfo.get('type'):
+                # if the spec file qualifies the buildreq with a type,
+                # the env. var is named buildreq_type_{dir,files}
+                script.write('set %s_%s_dir=%s\r\n' % (buildreq, brinfo['type'], br_dir))
+                script.write('set %s_%s_files=%s\r\n' % (buildreq, brinfo['type'], files))
+            else:
+                # otherwise it's just buildreq_{dir,files}
+                script.write('set %s_dir=%s\r\n' % (buildreq, br_dir))
+                script.write('set %s_files=%s\r\n' % (buildreq, files))
+            script.write('\r\n')
+        script.write('set name=%s\r\n' % self.name)
+        script.write('set version=%s\r\n' % self.version)
+        script.write('set release=%s\r\n' % self.release)
+        for cmd in self.execute:
+            script.write(cmd)
+            script.write('\r\n')
+        script.close()
+        cmd = ['cmd.exe', '/C', 'C:\\Windows\\Temp\\' + os.path.basename(tmpname)]
+        ret, output = run(cmd, chdir=self.source_dir)
+        if ret:
+            raise BuildError('build command failed, see build.log for details')  # noqa: F821
+
+    def bashBuild(self):
+        """Do the build: run the execute line(s) with bash"""
+        tmpfd, tmpname = tempfile.mkstemp(prefix='koji-tmp.', dir='/tmp')
+        script = koji._open_text_file(tmpfd, 'wt')
+        script.write("export source_dir='%s'\n" % self.source_dir)
+        script.write("export spec_dir='%s'\n" % self.spec_dir)
+        if self.patches_dir:
+            script.write("export patches_dir='%s'\n" % self.patches_dir)
+        for buildreq, brinfo in self.buildrequires:
+            buildreq = self.varname(buildreq)
+            if brinfo.get('type'):
+                script.write("export %s_%s_dir='%s'\n" % (buildreq, brinfo['type'], brinfo['dir']))
+                script.write("export %s_%s_files='" % (buildreq, brinfo['type']))
+            else:
+                script.write("export %s_dir='%s'\n" % (buildreq, brinfo['dir']))
+                script.write("export %s_files='" % buildreq)
+            for filename in brinfo['files']:
+                script.write(filename)
+                script.write('\n')
+            script.write("'\n\n")
+        script.write('export name=%s\n' % self.name)
+        script.write('export version=%s\n' % self.version)
+        script.write('export release=%s\n' % self.release)
+        for cmd in self.execute:
+            script.write(cmd)
+            script.write('\n')
+        script.close()
+        cmd = ['/bin/bash', '-e', '-x', tmpname]
+        ret, output = run(cmd, chdir=self.source_dir)
+        if ret:
+            raise BuildError('build command failed, see build.log for details')  # noqa: F821
+
+    def checkBuild(self):
+        """Verify that the build completed successfully."""
+        errors = []
+        for entry in self.postbuild:
+            relpath = entry
+            if '\\' in relpath:
+                relpath = relpath.replace('\\', '/')
+            fullpath = os.path.join(self.source_dir, relpath)
+            results = glob.glob(fullpath)
+            if fullpath.endswith('/'):
+                for result in results:
+                    if os.path.isdir(result):
+                        self.logger.info('found directory %s at %s', entry, result)
+                        break
+                else:
+                    errors.append('directory %s does not exist' % entry)
+            else:
+                for result in results:
+                    if os.path.isfile(result):
+                        self.logger.info('found file %s at %s', entry, result)
+                        break
+                else:
+                    errors.append('file %s does not exist' % entry)
+        self.virusCheck(self.workdir)
+        if errors:
+            raise BuildError('error validating build output: %s' %  # noqa: F821
+                  ', '.join(errors))
+
+    def virusCheck(self, path):
+        """ensure a path is virus free with ClamAV. path should be absolute"""
+        if not path.startswith('/'):
+            raise BuildError('Invalid path to scan for viruses: ' + path)  # noqa: F821
+        run(['/bin/clamscan', '--quiet', '--recursive', path], fatal=True)
+
+    def gatherResults(self):
+        """Gather information about the output from the build, return it"""
+        return {'name': self.name, 'version': self.version, 'release': self.release,
+                'epoch': self.epoch,
+                'description': self.description, 'platform': self.platform,
+                'provides': self.provides,
+                'output': self.output, 'logs': self.logs,
+                'buildroot_id': self.buildroot_id}
+
+    def run(self):
+        """Run the entire build process"""
+        self.checkEnv()
+        self.updateClam()
+        self.checkout()
+        self.loadConfig()
+        self.initBuildroot()
+        self.checkTools()
+        self.fetchBuildReqs()
+        self.build()
+        self.checkBuild()
+        self.expireBuildroot()
+        return self.gatherResults()
+
+
+def run(cmd, chdir=None, fatal=False, log=True):
+    global logfd
+    output = ''
+    olddir = None
+    if chdir:
+        olddir = os.getcwd()
+        os.chdir(chdir)
+    if log:
+        logger = logging.getLogger('koji.vm')
+        logger.info('$ %s', ' '.join(cmd))
+        proc = subprocess.Popen(cmd, stdout=logfd, stderr=subprocess.STDOUT,
+                                close_fds=True, text=True)
+        ret = proc.wait()
+    else:
+        proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+                                close_fds=True, text=True)
+        output, dummy = proc.communicate()
+        ret = proc.returncode
+    if olddir:
+        os.chdir(olddir)
+    if ret and fatal:
+        msg = 'error running: %s, return code was %s' % (' '.join(cmd), ret)
+        if log:
+            msg += ', see %s for details' % (os.path.basename(logfd.name))
+        else:
+            msg += ', output: %s' % output
+        raise BuildError(msg)  # noqa: F821
+    return ret, output
+
+
+def find_net_info():
+    """
+    Find the network gateway configured for this VM.
+    """
+    ret, output = run(['ipconfig', '/all'], log=False)
+    if ret:
+        raise RuntimeError('error running ipconfig, output was: %s' % output)
+    macaddr = None
+    gateway = None
+    for line in output.splitlines():
+        line = line.strip()
+        # take the first values we find
+        if line.startswith('Physical Address'):
+            if not macaddr:
+                macaddr = line.split()[-1]
+                # format it to be consistent with the libvirt MAC address
+                macaddr = macaddr.replace('-', ':').lower()
+        elif line.startswith('Default Gateway'):
+            if not gateway:
+                gateway = line.split()[-1]
+
+    # check that we have valid values
+    if macaddr and len(macaddr) != 17:
+        macaddr = None
+    if gateway and (len(gateway) < 7 or len(gateway) > 15):
+        gateway = None
+    return macaddr, gateway
+
+
+def upload_file(server, prefix, path):
+    """upload a single file to the vmd"""
+    logger = logging.getLogger('koji.vm')
+    destpath = os.path.join(prefix, path)
+    fobj = open(destpath, 'rb')
+    offset = 0
+    sum = hashlib.sha256()
+    while True:
+        data = fobj.read(131072)
+        if not data:
+            break
+        encoded = base64.b64encode(data).decode()
+        server.upload(path, encode_int(offset), encoded)
+        offset += len(data)
+        sum.update(data)
+    fobj.close()
+    digest = sum.hexdigest()
+    server.verifyChecksum(path, digest, 'sha256')
+    logger.info('Uploaded %s (%s bytes, sha256: %s)', destpath, offset, digest)
+
+
+def get_mgmt_server():
+    """Get a ServerProxy object we can use to retrieve task info"""
+    logger = logging.getLogger('koji.vm')
+    macaddr, gateway = find_net_info()
+    while not (macaddr and gateway):
+        # wait for the network connection to come up and get an address
+        time.sleep(5)
+        macaddr, gateway = find_net_info()
+    logger.debug('found MAC address %s, connecting to %s:%s',
+                 macaddr, gateway, MANAGER_PORT)
+    server = xmlrpc.client.ServerProxy('http://%s:%s/' % (gateway, MANAGER_PORT), allow_none=True)
+    # we would set a timeout on the socket here, but that is apparently not
+    # supported by python/cygwin/Windows
+    task_port = server.getPort(macaddr)
+    logger.debug('found task-specific port %s', task_port)
+    return xmlrpc.client.ServerProxy('http://%s:%s/' % (gateway, task_port), allow_none=True)
+
+
+def get_options():
+    """handle usage and parse options"""
+    usage = """%prog [options]
+    Run Koji tasks assigned to a VM.
+    Run without any arguments to start this daemon.
+    """
+    parser = OptionParser(usage=usage)
+    parser.add_option('-d', '--debug', action='store_true', help='Log debug statements')
+    parser.add_option('-i', '--install', action='store_true', default=False,
+                      help='Install this daemon as a service')
+    parser.add_option('-u', '--uninstall', action='store_true', default=False,
+                      help='Uninstall this daemon if it was installed previously as a service')
+    (options, args) = parser.parse_args()
+    return options
+
+
+def setup_logging(opts):
+    global logfile, logfd
+    logger = logging.getLogger('koji.vm')
+    level = logging.INFO
+    if opts.debug:
+        level = logging.DEBUG
+    logger.setLevel(level)
+    logfd = koji._open_text_file(logfile, 'wt')
+    handler = logging.StreamHandler(logfd)
+    handler.setLevel(level)
+    handler.setFormatter(logging.Formatter('%(asctime)s [%(levelname)s] %(name)s: %(message)s'))
+    logger.addHandler(handler)
+    return handler
+
+
+def log_local(msg):
+    tb = ''.join(traceback.format_exception(*sys.exc_info()))
+    sys.stderr.write('%s: %s\n' % (time.ctime(), msg))
+    sys.stderr.write(tb)
+
+
+def stream_logs(server, handler, builds):
+    """Stream logs incrementally to the server.
+       The global logfile will always be streamed.
+       The logfiles associated with any builds
+       will also be streamed."""
+    global logfile
+    logs = {logfile: (os.path.basename(logfile), None)}
+    while handler.active:
+        for build in builds:
+            for relpath in build.logs:
+                logpath = os.path.join(build.source_dir, relpath)
+                if logpath not in logs:
+                    logs[logpath] = (relpath, None)
+        for log, (relpath, fd) in logs.items():
+            if not fd:
+                if os.path.isfile(log):
+                    try:
+                        fd = open(log, 'rb')
+                        logs[log] = (relpath, fd)
+                    except Exception:
+                        log_local('Error opening %s' % log)
+                        continue
+                else:
+                    continue
+            offset = fd.tell()
+            contents = fd.read(65536)
+            if contents:
+                size = len(contents)
+                data = base64.b64encode(contents).decode()
+                digest = hashlib.sha256(contents).hexdigest()
+                del contents
+                try:
+                    server.uploadDirect(relpath, offset, size, ('sha256', digest), data)
+                except Exception:
+                    log_local('error uploading %s' % relpath)
+        time.sleep(1)
+
+
+def fail(server, handler):
+    """do the right thing when a build fails"""
+    global logfile, logfd
+    logging.getLogger('koji.vm').error('error running build', exc_info=True)
+    tb = ''.join(traceback.format_exception(*sys.exc_info()))
+    handler.active = False
+    if server is not None:
+        try:
+            logfd.flush()
+            upload_file(server, os.path.dirname(logfile),
+                        os.path.basename(logfile))
+        except Exception:
+            log_local('error calling upload_file()')
+        while True:
+            try:
+                # this is the very last thing we do, keep trying as long as we can
+                server.failTask(tb)
+                break
+            except Exception:
+                log_local('error calling server.failTask()')
+    sys.exit(1)
+
+
+logfile = '/tmp/build.log'
+logfd = None
+
+
+def main():
+    prog = os.path.basename(sys.argv[0])
+    opts = get_options()
+    if opts.install:
+        ret, output = run(['/bin/cygrunsrv', '--install', prog,
+                           '--path', sys.executable, '--args', os.path.abspath(prog),
+                           '--type', 'auto', '--dep', 'Dhcp',
+                           '--disp', 'Koji Windows Daemon',
+                           '--desc', 'Runs Koji tasks assigned to a VM'],
+                          log=False)
+        if ret:
+            print('Error installing %s service, output was: %s' % (prog, output))
+            sys.exit(1)
+        else:
+            print('Successfully installed the %s service' % prog)
+            sys.exit(0)
+    elif opts.uninstall:
+        ret, output = run(['/bin/cygrunsrv', '--remove', prog], log=False)
+        if ret:
+            print('Error removing the %s service, output was: %s' % (prog, output))
+            sys.exit(1)
+        else:
+            print('Successfully removed the %s service' % prog)
+            sys.exit(0)
+
+    handler = setup_logging(opts)
+    handler.active = True
+    server = None
+    try:
+        server = get_mgmt_server()
+
+        builds = []
+        thread = threading.Thread(target=stream_logs,
+                                  args=(server, handler, builds))
+        thread.daemon = True
+        thread.start()
+
+        # xmlrpclib is not thread-safe, create a new ServerProxy
+        # instance so we're not sharing with the stream_logs thread
+        server = get_mgmt_server()
+
+        build = WindowsBuild(server)
+        builds.append(build)
+        results = build.run()
+
+        for filename in results['output'].keys():
+            upload_file(server, build.source_dir, filename)
+
+        handler.active = False
+        thread.join()
+
+        for filename in results['logs']:
+            # reupload the log files to make sure the thread
+            # didn't miss anything
+            upload_file(server, build.source_dir, filename)
+
+        upload_file(server, os.path.dirname(logfile),
+                    os.path.basename(logfile))
+        results['logs'].append(os.path.basename(logfile))
+
+        server.closeTask(results)
+    except Exception:
+        fail(server, handler)
+    sys.exit(0)
+
+
+if __name__ == '__main__':
+    main()
