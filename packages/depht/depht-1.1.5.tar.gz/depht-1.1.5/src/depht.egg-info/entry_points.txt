@@ -1,0 +1,3 @@
+[console_scripts]
+depht = depht.__main__:main
+depht_train = depht_train.run:main
