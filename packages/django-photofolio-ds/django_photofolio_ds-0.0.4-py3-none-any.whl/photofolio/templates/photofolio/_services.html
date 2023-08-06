@@ -1,0 +1,18 @@
+<section id="services" class="services">
+  <div class="container">
+
+    <div class="row gy-4">
+
+      {% for item in services.items %}
+      <div class="col-xl-3 col-md-6 d-flex">
+        <div class="service-item position-relative">
+          <i class="bi {{ item.icon }}"></i>
+          <h4><a href="" class="stretched-link">{{ item.title }}</a></h4>
+          <p>{{ item.desc }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
