@@ -1,0 +1,229 @@
+29-Oct-20 15:45:40:DEBUG:STREAM b'IHDR' 16 13
+29-Oct-20 15:45:40:DEBUG:STREAM b'sRGB' 41 1
+29-Oct-20 15:45:40:DEBUG:STREAM b'gAMA' 54 4
+29-Oct-20 15:45:40:DEBUG:STREAM b'pHYs' 70 9
+29-Oct-20 15:45:40:DEBUG:STREAM b'IDAT' 91 283
+29-Oct-20 15:47:42:DEBUG:STREAM b'IHDR' 16 13
+29-Oct-20 15:47:42:DEBUG:STREAM b'sRGB' 41 1
+29-Oct-20 15:47:42:DEBUG:STREAM b'gAMA' 54 4
+29-Oct-20 15:47:42:DEBUG:STREAM b'pHYs' 70 9
+29-Oct-20 15:47:42:DEBUG:STREAM b'IDAT' 91 283
+29-Oct-20 15:49:05:DEBUG:STREAM b'IHDR' 16 13
+29-Oct-20 15:49:05:DEBUG:STREAM b'sRGB' 41 1
+29-Oct-20 15:49:05:DEBUG:STREAM b'gAMA' 54 4
+29-Oct-20 15:49:05:DEBUG:STREAM b'pHYs' 70 9
+29-Oct-20 15:49:05:DEBUG:STREAM b'IDAT' 91 283
+29-Oct-20 15:50:10:DEBUG:STREAM b'IHDR' 16 13
+29-Oct-20 15:50:10:DEBUG:STREAM b'sRGB' 41 1
+29-Oct-20 15:50:10:DEBUG:STREAM b'gAMA' 54 4
+29-Oct-20 15:50:10:DEBUG:STREAM b'pHYs' 70 9
+29-Oct-20 15:50:10:DEBUG:STREAM b'IDAT' 91 283
+29-Oct-20 15:53:41:DEBUG:STREAM b'IHDR' 16 13
+29-Oct-20 15:53:41:DEBUG:STREAM b'sRGB' 41 1
+29-Oct-20 15:53:41:DEBUG:STREAM b'gAMA' 54 4
+29-Oct-20 15:53:41:DEBUG:STREAM b'pHYs' 70 9
+29-Oct-20 15:53:41:DEBUG:STREAM b'IDAT' 91 283
+10-Dec-20 15:37:16:DEBUG:Starting new HTTPS connection (1): secure.agco-ats.com:443
+10-Dec-20 15:37:17:DEBUG:https://secure.agco-ats.com:443 "POST /api/v2/Authentication HTTP/1.1" 200 317
+10-Dec-20 15:41:47:DEBUG:Starting new HTTPS connection (1): secure.agco-ats.com:443
+10-Dec-20 15:41:47:DEBUG:https://secure.agco-ats.com:443 "POST /api/v2/Authentication HTTP/1.1" 200 317
+11-Dec-20 15:23:36:DEBUG:Starting new HTTPS connection (1): secure.agco-ats.com:443
+11-Dec-20 15:23:36:DEBUG:https://secure.agco-ats.com:443 "POST /api/v2/Authentication HTTP/1.1" 200 317
+11-Dec-20 15:23:42:INFO:Attempting to get license id using the voucher code
+11-Dec-20 15:23:42:DEBUG:Starting new HTTPS connection (1): secure.agco-ats.com:443
+11-Dec-20 15:23:45:DEBUG:https://secure.agco-ats.com:443 "GET /api/v2/Licenses?VoucherCode=NP3870M3C06C66848MNA&Status=Active HTTP/1.1" 200 627
+11-Dec-20 15:25:03:DEBUG:Starting new HTTPS connection (1): secure.agco-ats.com:443
+11-Dec-20 15:25:03:DEBUG:https://secure.agco-ats.com:443 "POST /api/v2/Authentication HTTP/1.1" 200 317
+11-Dec-20 15:25:06:INFO:Attempting to get license id using the voucher code
+11-Dec-20 15:25:06:DEBUG:Starting new HTTPS connection (1): secure.agco-ats.com:443
+11-Dec-20 15:25:06:DEBUG:https://secure.agco-ats.com:443 "GET /api/v2/Licenses?VoucherCode=NP3870M3C06C66848MNA&Status=Active HTTP/1.1" 200 627
+11-Dec-20 15:31:26:DEBUG:Starting new HTTPS connection (1): secure.agco-ats.com:443
+11-Dec-20 15:31:26:DEBUG:https://secure.agco-ats.com:443 "POST /api/v2/Authentication HTTP/1.1" 200 317
+11-Dec-20 15:31:29:INFO:Attempting to get license id using the voucher code
+11-Dec-20 15:31:29:DEBUG:Starting new HTTPS connection (1): secure.agco-ats.com:443
+11-Dec-20 15:31:29:DEBUG:https://secure.agco-ats.com:443 "GET /api/v2/Licenses?VoucherCode=NP3870M3C06C66848MNA&Status=Active HTTP/1.1" 200 627
+11-Dec-20 15:32:21:DEBUG:Starting new HTTPS connection (1): secure.agco-ats.com:443
+11-Dec-20 15:32:21:DEBUG:https://secure.agco-ats.com:443 "POST /api/v2/Authentication HTTP/1.1" 200 317
+11-Dec-20 15:32:24:INFO:Attempting to get license id using the voucher code
+11-Dec-20 15:32:24:DEBUG:Starting new HTTPS connection (1): secure.agco-ats.com:443
+11-Dec-20 15:32:24:DEBUG:https://secure.agco-ats.com:443 "GET /api/v2/Licenses?VoucherCode=NP3870M3C06C66848MNA&Status=Active HTTP/1.1" 200 627
+11-Dec-20 15:58:53:DEBUG:Starting new HTTPS connection (1): secure.agco-ats.com:443
+11-Dec-20 15:58:54:DEBUG:https://secure.agco-ats.com:443 "POST /api/v2/Authentication HTTP/1.1" 200 317
+11-Dec-20 15:59:01:INFO:Attempting to add AuthCode to License for Dev environment
+11-Dec-20 15:59:05:INFO:Attempting to get license id using the voucher code
+11-Dec-20 15:59:05:DEBUG:Starting new HTTPS connection (1): secure.agco-ats.com:443
+11-Dec-20 15:59:05:DEBUG:https://secure.agco-ats.com:443 "GET /api/v2/Licenses?VoucherCode=NP3870M3C06C66848MNA&Status=Active HTTP/1.1" 200 627
+11-Dec-20 15:59:11:DEBUG:Starting new HTTPS connection (1): secure.agco-ats.com:443
+11-Dec-20 15:59:11:DEBUG:https://secure.agco-ats.com:443 "POST /api/v2/AuthorizationCodes HTTP/1.1" 401 259
+11-Dec-20 16:06:28:DEBUG:Starting new HTTPS connection (1): secure.agco-ats.com:443
+11-Dec-20 16:06:29:DEBUG:https://secure.agco-ats.com:443 "POST /api/v2/Authentication HTTP/1.1" 200 317
+11-Dec-20 16:06:37:INFO:Attempting to add AuthCode to License for Dev environment
+11-Dec-20 16:06:43:INFO:Attempting to get license id using the voucher code
+11-Dec-20 16:06:43:DEBUG:Starting new HTTPS connection (1): secure.agco-ats.com:443
+11-Dec-20 16:06:43:DEBUG:https://secure.agco-ats.com:443 "GET /api/v2/Licenses?VoucherCode=NP3870M3C06C66848MNA&Status=Active HTTP/1.1" 200 627
+11-Dec-20 16:07:00:DEBUG:Starting new HTTPS connection (1): secure.agco-ats.com:443
+11-Dec-20 16:07:00:DEBUG:https://secure.agco-ats.com:443 "POST /api/v2/AuthorizationCodes HTTP/1.1" 400 2518
+11-Dec-20 16:08:31:DEBUG:Starting new HTTPS connection (1): secure.agco-ats.com:443
+11-Dec-20 16:08:32:DEBUG:https://secure.agco-ats.com:443 "POST /api/v2/Authentication HTTP/1.1" 200 317
+11-Dec-20 16:08:37:INFO:Attempting to get license id using the voucher code
+11-Dec-20 16:08:37:DEBUG:Starting new HTTPS connection (1): secure.agco-ats.com:443
+11-Dec-20 16:08:37:DEBUG:https://secure.agco-ats.com:443 "GET /api/v2/Licenses?VoucherCode=NP3870M3C06C66848MNA&Status=Active HTTP/1.1" 200 627
+11-Dec-20 16:08:41:INFO:Attempting to add AuthCode to License for Dev environment
+11-Dec-20 16:09:30:DEBUG:Starting new HTTPS connection (1): secure.agco-ats.com:443
+11-Dec-20 16:09:31:DEBUG:https://secure.agco-ats.com:443 "POST /api/v2/AuthorizationCodes HTTP/1.1" 400 2518
+11-Dec-20 16:17:46:DEBUG:Starting new HTTPS connection (1): secure.agco-ats.com:443
+11-Dec-20 16:17:46:DEBUG:https://secure.agco-ats.com:443 "POST /api/v2/Authentication HTTP/1.1" 200 317
+11-Dec-20 16:18:05:INFO:Attempting to get license id using the voucher code
+11-Dec-20 16:18:05:DEBUG:Starting new HTTPS connection (1): secure.agco-ats.com:443
+11-Dec-20 16:18:05:DEBUG:https://secure.agco-ats.com:443 "GET /api/v2/Licenses?VoucherCode=NP3870M3C06C66848MNA&Status=Active HTTP/1.1" 200 627
+11-Dec-20 16:18:06:INFO:Attempting to add AuthCode to License for Dev environment
+11-Dec-20 16:18:41:DEBUG:Starting new HTTPS connection (1): secure.agco-ats.com:443
+11-Dec-20 16:18:42:DEBUG:https://secure.agco-ats.com:443 "POST /api/v2/AuthorizationCodes HTTP/1.1" 400 2518
+11-Dec-20 16:39:18:DEBUG:Starting new HTTPS connection (1): secure.agco-ats.com:443
+11-Dec-20 16:39:18:DEBUG:https://secure.agco-ats.com:443 "POST /api/v2/Authentication HTTP/1.1" 200 317
+11-Dec-20 16:39:24:INFO:Attempting to get license id using the voucher code
+11-Dec-20 16:39:25:DEBUG:Starting new HTTPS connection (1): secure.agco-ats.com:443
+11-Dec-20 16:39:26:DEBUG:https://secure.agco-ats.com:443 "GET /api/v2/Licenses?VoucherCode=NP3870M3C06C66848MNA&Status=Active HTTP/1.1" 200 627
+11-Dec-20 16:39:26:INFO:Attempting to add AuthCode to License for Dev environment
+11-Dec-20 16:39:26:DEBUG:Starting new HTTPS connection (1): secure.agco-ats.com:443
+11-Dec-20 16:39:27:DEBUG:https://secure.agco-ats.com:443 "POST /api/v2/AuthorizationCodes HTTP/1.1" 400 2518
+11-Dec-20 16:40:07:DEBUG:Starting new HTTPS connection (1): secure.agco-ats.com:443
+11-Dec-20 16:40:07:DEBUG:https://secure.agco-ats.com:443 "POST /api/v2/Authentication HTTP/1.1" 200 317
+11-Dec-20 16:40:14:INFO:Attempting to get license id using the voucher code
+11-Dec-20 16:40:14:DEBUG:Starting new HTTPS connection (1): secure.agco-ats.com:443
+11-Dec-20 16:40:15:DEBUG:https://secure.agco-ats.com:443 "GET /api/v2/Licenses?VoucherCode=NP3870M3C06C66848MNA&Status=Active HTTP/1.1" 200 627
+11-Dec-20 16:40:16:INFO:Attempting to add AuthCode to License for Dev environment
+11-Dec-20 16:41:35:DEBUG:Starting new HTTPS connection (1): secure.agco-ats.com:443
+11-Dec-20 16:41:35:DEBUG:https://secure.agco-ats.com:443 "POST /api/v2/AuthorizationCodes HTTP/1.1" 400 2518
+11-Dec-20 16:42:08:INFO:Attempting to apply Trusted Publish certificates
+11-Dec-20 16:42:08:ERROR:Site-packages were not found for this Python version
+14-Dec-20 13:10:15:DEBUG:Starting new HTTPS connection (1): secure.agco-ats.com:443
+14-Dec-20 13:10:16:DEBUG:https://secure.agco-ats.com:443 "POST /api/v2/Authentication HTTP/1.1" 200 317
+14-Dec-20 13:10:58:INFO:Attempting to get license id using the voucher code
+14-Dec-20 13:10:58:DEBUG:Starting new HTTPS connection (1): secure.agco-ats.com:443
+14-Dec-20 13:10:58:DEBUG:https://secure.agco-ats.com:443 "GET /api/v2/Licenses?VoucherCode=NP3870M3C06C66848MNA&Status=Active HTTP/1.1" 200 627
+14-Dec-20 13:11:20:INFO:Attempting to add AuthCode to License for Dev environment
+14-Dec-20 13:11:27:DEBUG:Starting new HTTPS connection (1): secure.agco-ats.com:443
+14-Dec-20 13:11:27:DEBUG:https://secure.agco-ats.com:443 "POST /api/v2/AuthorizationCodes HTTP/1.1" 400 2518
+14-Dec-20 13:16:31:DEBUG:Starting new HTTPS connection (1): secure.agco-ats.com:443
+14-Dec-20 13:16:31:DEBUG:https://secure.agco-ats.com:443 "POST /api/v2/Authentication HTTP/1.1" 200 317
+14-Dec-20 13:16:36:INFO:Attempting to get license id using the voucher code
+14-Dec-20 13:16:36:DEBUG:Starting new HTTPS connection (1): secure.agco-ats.com:443
+14-Dec-20 13:16:36:DEBUG:https://secure.agco-ats.com:443 "GET /api/v2/Licenses?VoucherCode=NP3870M3C06C66848MNA&Status=Active HTTP/1.1" 200 627
+14-Dec-20 13:16:37:INFO:Attempting to add AuthCode to License for Dev environment
+14-Dec-20 13:16:40:DEBUG:Starting new HTTPS connection (1): secure.agco-ats.com:443
+14-Dec-20 13:16:40:DEBUG:https://secure.agco-ats.com:443 "POST /api/v2/AuthorizationCodes HTTP/1.1" 200 125
+19-Mar-21 08:22:34:INFO:Number of active packages in AUC: 7
+19-Mar-21 08:22:34:DEBUG:ReadyToInstallValue: 
+19-Mar-21 08:22:34:DEBUG:ReadyToInstallValue: 
+19-Mar-21 08:22:34:DEBUG:ReadyToInstallValue: 
+19-Mar-21 08:22:34:INFO:Number of active packages in AUC: 7
+19-Mar-21 08:22:34:DEBUG:ReadyToInstallValue: 
+19-Mar-21 08:23:31:DEBUG:ReadyToInstallValue: 
+19-Mar-21 08:23:31:DEBUG:ReadyToInstallValue: 
+19-Mar-21 08:23:31:DEBUG:ReadyToInstallValue: 
+19-Mar-21 08:23:31:INFO:Number of active packages in AUC: 7
+19-Mar-21 08:23:52:INFO:Number of active packages in AUC: 7
+19-Mar-21 08:23:52:DEBUG:ReadyToInstallValue: 
+19-Mar-21 08:23:52:DEBUG:ReadyToInstallValue: 
+19-Mar-21 08:23:52:DEBUG:ReadyToInstallValue: 
+19-Mar-21 08:23:52:INFO:Number of active packages in AUC: 7
+19-Mar-21 08:23:52:DEBUG:ReadyToInstallValue: 
+19-Mar-21 08:24:09:DEBUG:ReadyToInstallValue: 
+19-Mar-21 08:24:09:DEBUG:ReadyToInstallValue: 
+19-Mar-21 08:24:09:DEBUG:ReadyToInstallValue: 
+19-Mar-21 08:24:09:INFO:Number of active packages in AUC: 7
+19-Mar-21 08:24:11:DEBUG:ReadyToInstallValue: 
+19-Mar-21 08:24:11:DEBUG:ReadyToInstallValue: 
+19-Mar-21 08:24:11:DEBUG:ReadyToInstallValue: 
+19-Mar-21 08:24:11:INFO:Number of active packages in AUC: 7
+19-Mar-21 08:27:06:INFO:Number of active packages in AUC: 7
+19-Mar-21 08:27:06:DEBUG:ReadyToInstallValue: 
+19-Mar-21 08:27:06:DEBUG:ReadyToInstallValue: 
+19-Mar-21 08:27:06:DEBUG:ReadyToInstallValue: 
+19-Mar-21 08:27:06:INFO:Number of active packages in AUC: 7
+19-Mar-21 08:27:06:DEBUG:ReadyToInstallValue: 
+19-Mar-21 08:27:18:DEBUG:ReadyToInstallValue: 
+19-Mar-21 08:27:18:DEBUG:ReadyToInstallValue: 
+19-Mar-21 08:27:18:DEBUG:ReadyToInstallValue: 
+19-Mar-21 08:27:18:INFO:Number of active packages in AUC: 7
+19-Mar-21 08:28:08:DEBUG:ReadyToInstallValue: 
+19-Mar-21 08:28:08:DEBUG:ReadyToInstallValue: 
+19-Mar-21 08:28:08:DEBUG:ReadyToInstallValue: 
+19-Mar-21 08:28:08:INFO:Number of active packages in AUC: 7
+19-Mar-21 08:28:08:INFO:DownloadSchedule: Start: On
+19-Mar-21 08:28:08:INFO:Number of active packages in AUC: 7
+19-Mar-21 08:28:56:DEBUG:ReadyToInstallValue: 
+19-Mar-21 08:29:03:INFO:Number of active packages in AUC: 7
+19-Mar-21 08:29:03:DEBUG:ReadyToInstallValue: 
+19-Mar-21 08:29:03:DEBUG:ReadyToInstallValue: 
+19-Mar-21 08:29:03:DEBUG:ReadyToInstallValue: 
+19-Mar-21 08:29:03:INFO:Number of active packages in AUC: 7
+19-Mar-21 08:29:03:INFO:DownloadSchedule: Start: On
+19-Mar-21 08:29:03:INFO:Number of active packages in AUC: 7
+19-Mar-21 08:29:03:INFO:DownloadSchedule: Start: On
+19-Mar-21 08:29:03:DEBUG:ReadyToInstallValue: 
+19-Mar-21 08:34:04:DEBUG:ReadyToInstallValue: 
+19-Mar-21 08:34:07:DEBUG:ReadyToInstallValue: 
+19-Mar-21 08:34:08:DEBUG:ReadyToInstallValue: 
+19-Mar-21 08:34:08:INFO:Number of active packages in AUC: 7
+19-Mar-21 08:34:11:INFO:DownloadSchedule: Start: On
+19-Mar-21 08:34:14:INFO:Number of active packages in AUC: 7
+19-Mar-21 08:34:39:DEBUG:ReadyToInstallValue: 
+19-Mar-21 08:34:39:DEBUG:ReadyToInstallValue: 
+19-Mar-21 08:34:41:DEBUG:ReadyToInstallValue: 
+19-Mar-21 08:34:41:INFO:Number of active packages in AUC: 0
+19-Mar-21 08:34:43:INFO:DownloadSchedule: Start: On
+19-Mar-21 08:34:45:INFO:Number of active packages in AUC: 0
+19-Mar-21 08:34:45:DEBUG:ReadyToInstallValue: 
+19-Mar-21 08:34:47:INFO:Changing current_state to AllDownloadsCompleted
+19-Mar-21 08:35:54:DEBUG:ReadyToInstallValue: True
+19-Mar-21 08:35:54:DEBUG:ReadyToInstallValue: True
+19-Mar-21 08:35:54:INFO:Number of active packages in AUC: 0
+19-Mar-21 08:35:57:DEBUG:ReadyToInstallValue: True
+19-Mar-21 08:35:57:INFO:DownloadSchedule: Start: On
+19-Mar-21 08:36:00:INFO:Number of active packages in AUC: 0
+19-Mar-21 08:36:00:DEBUG:ReadyToInstallValue: True
+19-Mar-21 08:49:34:INFO:Number of active packages in AUC: 0
+19-Mar-21 08:49:34:DEBUG:ReadyToInstallValue: True
+19-Mar-21 08:49:34:DEBUG:ReadyToInstallValue: True
+19-Mar-21 08:49:34:INFO:Number of active packages in AUC: 0
+19-Mar-21 08:49:34:DEBUG:ReadyToInstallValue: True
+19-Mar-21 08:49:34:INFO:DownloadSchedule: Start: On
+19-Mar-21 08:49:34:INFO:Number of active packages in AUC: 0
+19-Mar-21 08:49:34:DEBUG:ReadyToInstallValue: True
+19-Mar-21 08:49:34:INFO:DownloadSchedule: Start: On
+19-Mar-21 08:49:34:DEBUG:ReadyToInstallValue: True
+19-Mar-21 13:22:32:INFO:Number of active packages in AUC: 0
+19-Mar-21 13:22:32:DEBUG:ReadyToInstallValue: True
+19-Mar-21 13:22:32:DEBUG:ReadyToInstallValue: True
+19-Mar-21 13:22:32:INFO:Number of active packages in AUC: 0
+19-Mar-21 13:22:32:DEBUG:ReadyToInstallValue: True
+19-Mar-21 13:22:32:INFO:DownloadSchedule: Start: On
+19-Mar-21 13:22:32:INFO:Number of active packages in AUC: 0
+19-Mar-21 13:22:32:DEBUG:ReadyToInstallValue: True
+19-Mar-21 13:22:32:INFO:DownloadSchedule: Start: On
+19-Mar-21 13:22:32:DEBUG:ReadyToInstallValue: True
+19-Mar-21 13:22:48:DEBUG:ReadyToInstallValue: True
+19-Mar-21 13:22:48:DEBUG:ReadyToInstallValue: True
+19-Mar-21 13:22:48:INFO:Number of active packages in AUC: 0
+19-Mar-21 13:22:49:DEBUG:ReadyToInstallValue: True
+19-Mar-21 13:22:50:INFO:DownloadSchedule: Start: On
+19-Mar-21 13:22:50:INFO:Number of active packages in AUC: 0
+19-Mar-21 13:22:50:DEBUG:ReadyToInstallValue: True
+19-Mar-21 13:23:15:DEBUG:Starting new HTTPS connection (1): secure.agco-ats.com:443
+19-Mar-21 13:23:16:DEBUG:https://secure.agco-ats.com:443 "POST /api/v2/Authentication HTTP/1.1" 200 317
+19-Mar-21 13:23:16:INFO:Attempting to apply Trusted Publish certificates
+19-Mar-21 13:23:16:ERROR:Site-packages were not found for this Python version
+19-Mar-21 13:23:17:DEBUG:Starting new HTTPS connection (1): secure.agco-ats.com:443
+19-Mar-21 13:23:17:DEBUG:https://secure.agco-ats.com:443 "GET /api/v2/UpdateGroupClientRelationships?limit=100&ClientID=26c273f7-efc8-42fe-b663-e30a7045fb42 HTTP/1.1" 200 736
+19-Mar-21 13:23:17:DEBUG:Starting new HTTPS connection (1): secure.agco-ats.com:443
+19-Mar-21 13:23:17:DEBUG:https://secure.agco-ats.com:443 "PUT /api/v2/UpdateGroupClientRelationships/c404f9b6-98d6-4bb6-8f09-474dd3072d9b HTTP/1.1" 204 0
+19-Mar-21 13:23:17:DEBUG:Starting new HTTPS connection (1): secure.agco-ats.com:443
+19-Mar-21 13:23:18:DEBUG:https://secure.agco-ats.com:443 "PUT /api/v2/UpdateGroupClientRelationships/a75c81c3-d42d-4d0a-aaad-bc9b923574d5 HTTP/1.1" 204 0
+19-Mar-21 13:23:18:INFO:Attempting to restart AUC
+19-Mar-21 13:23:18:INFO:Killing process: AGCOUpdateService.exe
+19-Mar-21 13:23:18:DEBUG:Killed process: AGCOUpdateService.exe
+19-Mar-21 13:23:18:DEBUG:Attempting to set the following service to running: AGCO Update
+19-Mar-21 13:23:20:DEBUG:AGCO Update has started
+19-Mar-21 13:23:20:DEBUG:Attempting to start AUC
