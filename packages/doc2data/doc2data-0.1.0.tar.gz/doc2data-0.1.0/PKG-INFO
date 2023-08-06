@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: doc2data
+Version: 0.1.0
+Summary: Integrated document processing with machine learning.
+Project-URL: Documentation, http://doc2data.readthedocs.io/
+Project-URL: Issues, https://github.com/serge724/doc2data/issues
+Project-URL: Source, https://github.com/serge724/doc2data
+Author-email: Sergej Levich <sergej.levich@gmail.com>
+Keywords: deep learning,document processing,machine learning,pdf parsing
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.7
+Requires-Dist: numpy>=1.21.6
+Requires-Dist: pandas>=1.3.5
+Requires-Dist: pillow>=9.0.0
+Requires-Dist: pymupdf>=1.19.6
+Requires-Dist: tqdm>=4.64.0
+Description-Content-Type: text/markdown
+
+# doc2data
+
+[![PyPI - Version](https://img.shields.io/pypi/v/doc2data.svg)](https://pypi.org/project/doc2data)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/doc2data.svg)](https://pypi.org/project/doc2data)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Hatch project](https://img.shields.io/badge/%F0%9F%A5%9A-Hatch-4051b5.svg)](https://github.com/pypa/hatch)
+
+-----
+
+## About doc2data
+doc2data provides functionality to train and use deep learning models for various document processing tasks.
+
+
+**Table of Contents**
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install doc2data
+```
+
+## License
+
+`doc2data` is distributed under the terms of the [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) license.
