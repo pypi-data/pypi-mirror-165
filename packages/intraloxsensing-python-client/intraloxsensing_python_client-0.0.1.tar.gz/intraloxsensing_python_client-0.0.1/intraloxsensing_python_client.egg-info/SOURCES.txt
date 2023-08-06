@@ -1,0 +1,9 @@
+README.md
+setup.py
+intraloxsensing_python_client.egg-info/PKG-INFO
+intraloxsensing_python_client.egg-info/SOURCES.txt
+intraloxsensing_python_client.egg-info/dependency_links.txt
+intraloxsensing_python_client.egg-info/requires.txt
+intraloxsensing_python_client.egg-info/top_level.txt
+python_client/__init__.py
+python_client/sensing.py
