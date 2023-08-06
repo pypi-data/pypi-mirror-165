@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: jreq
+Version: 1.1.0
+Summary: JSON Requests
+Download-URL: https://github.com/imercury13/jreq
+Author: Igor Kuptsov
+Author-email: ya360@uh.net.ru
+Maintainer: Igor Kuptsov
+Maintainer-email: ya360@uh.net.ru
+License: MIT
+Project-URL: Documentation, https://jreq.readthedocs.io/ru/1.1.0
+Project-URL: Bug Tracker, https://github.com/imercury13/jreq/issues
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python
+License-File: LICENSE
+Requires-Dist: requests
+
+**JSON Request**
+
+Надстройка над `requests`, ожидающая на выходе json ответ.
+В случае неответа или возврата не json, рекурсивно вызывает сама себя с добавленной паузой.
