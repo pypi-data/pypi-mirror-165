@@ -1,0 +1,3 @@
+include easycluster_demo.py
+include CHANGELOG.md
+include README.html

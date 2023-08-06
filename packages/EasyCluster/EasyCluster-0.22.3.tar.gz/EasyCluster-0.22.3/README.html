@@ -1,0 +1,560 @@
+<html>
+<head>
+  <title>EasyCluster documentation</title>
+  <style type="text/css">
+    body {
+      font-family: sans-serif;
+    }
+    h1, h2, h3 {
+      background-color: #f2f2f2;
+      font-weight: bold;
+      border-bottom: 1px solid #eee;
+    }
+    h2, h3 {
+      margin-top: 1.5em;
+    }
+    pre {
+      margin-left: 30px;
+      margin-right: 30px;
+      background-color: #f8f8f8;
+      border: 1px solid #ddd;
+      border-radius: 3px 3px 3px 3px;
+    }
+    p > code {
+      background-color: #f8f8f8;
+      border: 1px solid #ddd;
+      border-radius: 3px 3px 3px 3px;
+    }
+  </style>
+</head>
+<body>
+<h1>EasyCluster</h1>
+
+<p>EasyCluster is a remote execution / clustering module for Python.</p>
+
+<p>Possible uses include:</p>
+
+<ul>
+<li>computation (e.g. NumPy, PyOpenCL)</li>
+<li>coordinated automation for testing networks / SANs</li>
+<li>access to specific hardware in multiple systems (e.g. GPUs, video capture/encoding boards)</li>
+</ul>
+
+<h2>Links</h2>
+
+<ul>
+<li><a href="https://pypi.python.org/pypi/EasyCluster">Releases</a></li>
+<li><a href="https://github.com/ktpanda/easycluster">Development</a></li>
+<li><a href="http://pythonhosted.org/EasyCluster/">Documentation</a></li>
+</ul>
+
+<h2>Requirements</h2>
+
+<ul>
+<li>CPython 3.4+</li>
+<li>SSH support requires an 'ssh' binary on the client, and 'sshd' on the server</li>
+</ul>
+
+<h2>Features</h2>
+
+<ul>
+<li>Transparent calling of functions and methods</li>
+<li>Transparent handling of exceptions</li>
+<li>Convenience functions for calling one function in parallel on
+multiple remote systems</li>
+<li>Automatic support for threading</li>
+<li>Requests and responses protected with shared HMAC key</li>
+<li>Connecting via SSH without installing anything on the server (Linux/Unix only)</li>
+<li>Cross-platform compatible; Master scripts running on Linux/OSX can connect
+to servers running on Windows and vice/versa.</li>
+</ul>
+
+<h2>Installing</h2>
+
+<p>You can install EasyCluster with <code>pip</code>. Just run</p>
+
+<pre><code>python3 -m pip install EasyCluster
+</code></pre>
+
+<h2>How it works</h2>
+
+<p>EasyCluster works by having a single master script connect to one or more
+servers running SSH or the cluster service. The master can then call Python
+functions on the remote service or send code to execute.</p>
+
+<p>See <code>easycluster_demo.py</code> for an example of how to use most of the features.</p>
+
+<p>Since version 0.22.1, SSH is the preferred method of connecting to servers on
+all platforms except Windows. When using SSH, the server does not need to have
+easycluster installed - it only needs to have SSH and either Python 2.6, 2.7, or
+3.2+. When using SSH, you should use SSH private keys and an SSH agent,
+otherwise SSH will prompt for a password whenever it connects.</p>
+
+<p>If you don't want to use SSH, e.g. you need to run the server on Windows and
+don't want to run Cygwin, you will need to generate a secret key that is shared
+between the client and server. This key is used to authenticate requests, but
+does not encrypt data, therefore it should only be used on a trusted, firewalled
+network, not openly on the Internet. If you want to use EasyCluster to
+coordinate systems in remote geographic areas, consider using a VPN or SSH
+tunnel. The EasyCluster service operates over a single TCP port, so most
+tunneling solutions will work.</p>
+
+<h2>Connecting to a server</h2>
+
+<p>The easiest way to use EasyCluster is to use Client.from_spec:</p>
+
+<pre><code>&gt;&gt;&gt; rmt = Client.from_spec('user@example.com')
+&gt;&gt;&gt; rmt = ThreadedClient.from_spec('user@example.com:rpython=python2.7')
+</code></pre>
+
+<p>The connection spec looks like this::</p>
+
+<pre><code>[user@]host[:port][:opt=val]...
+</code></pre>
+
+<p>The 'host' can be a hostname, IPv4 address, or bracketed IPv6 address.</p>
+
+<p>For compatibility reasons, SSH is only used if the 'user' field is present. If
+you want to use SSH without specifying a user name, pass ':ssh=yes' as an option.</p>
+
+<p>For standalone servers, the key is determined by specifying either the 'kf' or 'key' options.</p>
+
+<p>If ':compress=1' is specified, then compression is enabled for the connection.</p>
+
+<p>Example connection specifications::</p>
+
+<pre><code>'user@example.com'                   # Using SSH
+'example.com:ssh=yes'                # Using SSH without a user name (let SSH choose)
+'example.com:ssh=/usr/local/bin/ssh' # Using a custom SSH path
+'user@192.0.2.1:9999'                # IPv4 address on non-standard port
+'user@[2001:db8::2]'                 # IPv6 addresses must be in brackets
+'example.com:kf=secret.key'          # Connecting to a standalone server using a key from a file
+'example.com:9999:key=s3cret'        # Using a key directly, with non-standard port
+</code></pre>
+
+<p>The recommended way of allowing the user of your script to specify remote
+options is to use <code>optparse</code>:</p>
+
+<pre><code># File: connect_example.py
+
+import sys
+import optparse
+import easycluster
+
+options = optparse.OptionParser(description='Do some stuff')
+easycluster.add_key_options(options)
+opts, args = options.parse_args()
+default_key = easycluster.key_from_options(opts)
+remotes = []
+for spec in args:
+    params = easycluster.parse_connection_spec(spec, default_key=default_key)
+    rmt = easycluster.Client(**params)
+    remotes.append(rmt)
+</code></pre>
+
+<p>This example allows a user to specify a default key using <code>-k</code> (if multiple
+servers use the same key), but allows the user to specify individual keys if
+necessary:</p>
+
+<pre><code>python do_stuff.py -k common.key host1 host2 oddhost:kf=key_for_oddhost.key
+</code></pre>
+
+<p>You can also specify a different TCP port to connect to. This is useful if you
+want to use SSH tunnels:</p>
+
+<pre><code>ssh host1 -N -f -L 11001:localhost:11999
+ssh host2 -N -f -L 11002:localhost:11999
+python do_stuff.py -k common.key localhost:11001 localhost:11002
+</code></pre>
+
+<p>The master script can connect to the same server multiple times. Each connection
+creates a separate process with a clean environment. The master can also create
+a "local" instance using <code>easycluster.server.spawn_local()</code>, which starts a new
+server process without having to run a separate server.</p>
+
+<h2>Executing code remotely</h2>
+
+<p>The most straightforward way to execute code remotely is to define functions in
+a string, and call <code>define_common()</code>:</p>
+
+<pre><code>&gt;&gt;&gt; from easycluster import *
+&gt;&gt;&gt; define_common('''
+... def addvals(a, b):
+...     return a + b
+... def subvals(a, b):
+...     return a - b
+... ''')
+&gt;&gt;&gt; key = read_key_file('secret.key')
+&gt;&gt;&gt; rmt = Client(key, 'localhost')
+&gt;&gt;&gt; rmt.addvals(3, 4)
+7
+&gt;&gt;&gt; rmt.subvals(15, 4)
+11
+</code></pre>
+
+<p>Any functions or classes you define in in the block of code passed to
+<code>define_common</code> can be called on the remote side. You can also call functions in
+classes defined in standard library modules:</p>
+
+<pre><code>&gt;&gt;&gt; rmt.subprocess.call(['/bin/echo', 'hello'])
+&gt;&gt;&gt;
+</code></pre>
+
+<p>This example won't actually echo anything to your terminal - <code>echo</code> is executed
+on the server, so if you have the server open in a terminal, you will see it
+echoed there.</p>
+
+<p>The block of code you pass to define_common is also evaluated on the client, so
+functions, classes, and class instances can be pickled by reference and passed
+back and forth between client and server. By default, a virtual module called
+<code>easycluster.remote_code</code> is created to store the definitions. You can import
+this module on the client if you want to run a function on both client and
+server, or create a instance of a class that will be passed to the server by
+value:</p>
+
+<pre><code>&gt;&gt;&gt; from easycluster.remote_code import addvals, subvals
+&gt;&gt;&gt; addvals(1, 2)
+3
+&gt;&gt;&gt;
+</code></pre>
+
+<p>You can change the name of the module by specifying a different second parameter
+to <code>define_common</code>. Remember that since this code is executed in the context of
+a different module, you won't have access to global variables and imported
+modules from your master script:</p>
+
+<pre><code>&gt;&gt;&gt; import os
+&gt;&gt;&gt; define_common('''
+... def hello():
+...     os.system('echo hello')
+... ''')
+...
+&gt;&gt;&gt; rmt.hello()
+Traceback (most recent call last):
+  ...
+NameError: global name 'os' is not defined
+&gt;&gt;&gt;
+</code></pre>
+
+<p>You must remember to import whatever modules you need to use inside of your
+define_common block. Of course, the libraries you import must be available on
+the remote system too - EasyCluster will not copy them over.</p>
+
+<h2>Exceptions</h2>
+
+<p>If the remote code raises an exception, the exception will be pickled up and
+re-raised on the client, along with a stack trace. By default, the stack trace
+will be printed to STDERR, because otherwise it would be lost - the stack trace
+generated by raising the exception on the client only goes as far as the proxy
+wrapper. If you don't want exceptions to be printed, you can subclass <code>Client</code>
+and override <code>report_exception</code>. For a single request, you can also set
+<code>origexc</code> to <code>False</code> or <code>'quiet'</code> (see the section on Parallel Execution below).</p>
+
+<h2>Manipulating objects on the server</h2>
+
+<p>By default, if you call a function on the server, and it returns a value, that
+value will be pickled, and a new copy of the object will be created on the
+client. This is fine for simple values such as strings, integers, tuples,
+dictionaries, etc., but a lot of objects can't or shouldn't be pickled; instead,
+EasyCluster allows you to mark classes as "server objects" that are not pickled,
+but remain on the server and are referenced by the client.</p>
+
+<p>When the returned data structure is reconstructed on the client, any "server
+objects" are converted into "proxy" objects. Calling a method on this proxy
+calls the corresponding method on the server. These proxy objects can also be
+passed as arguments to other functions on the same connection, and will be
+unserialized as the original object on the server.</p>
+
+<pre><code>&gt;&gt;&gt; define_common('''
+... class TestObject1(ServerObject):
+...    def __init__(self, val):
+...        self.val = val
+...    def getval(self):
+...        return self.val
+...    def newobj(self):
+...        return TestObject1(self.val + 1)
+...
+... def get_object_vals(lst):
+...     return [obj.val for obj in lst]
+... ''')
+&gt;&gt;&gt;
+&gt;&gt;&gt; # Call this on every connection after calling define_common.
+&gt;&gt;&gt; rmt.update_definitions()
+&gt;&gt;&gt;
+&gt;&gt;&gt; obj1 = rmt.TestObject1(100)
+&gt;&gt;&gt; obj1
+&lt;RemoteProxy for oid 1 on localhost:11999&gt;
+&gt;&gt;&gt; obj1.getval()
+100
+&gt;&gt;&gt; obj2 = obj1.newobj()
+&gt;&gt;&gt; obj2
+&lt;RemoteProxy for oid 2 on localhost:11999&gt;
+&gt;&gt;&gt; obj2.getval()
+101
+&gt;&gt;&gt; rmt.get_object_vals[obj1, obj2]
+[100, 101]
+&gt;&gt;&gt;
+</code></pre>
+
+<p>Classes can indicate that they should be proxied rather than copied by
+inheriting from <code>ServerObject</code>. Existing classes which are unaware of EasyCluster
+can be registered on the server by calling <code>make_server_class</code>.</p>
+
+<p>There are two ways classes can specify which methods and attributes to export:</p>
+
+<ul>
+<li><p>Specifying <code>export_methods</code>, <code>export_attrs</code>, or <code>export_attrs_cache</code>.  Classes
+which inherit from <code>ServerObject</code> but do not specify a proxy class will have
+one dynamically created when they are first referenced. The server will
+examime the class to determine which methods and attributes should be
+exported.</p>
+
+<ul>
+<li><p>If the class has a class attribute called <code>export_methods</code>, then the proxy
+class will only have wrappers for those methods.</p></li>
+<li><p>If <code>export_methods</code> is not defined (default), or the special value <code>'@auto'</code>
+is in the list of exported method names, then the class will be examined,
+and all defined methods will be automatically added to the list.</p></li>
+<li><p>The <code>export_attrs</code> class attribute works the same way: if it is defined,
+wrapper properties will be created on the proxy object for each
+attribute. If <code>export_attrs</code> is not defined, or <code>'@auto'</code> is included in
+export_attrs, then a special <code>__getattr__</code> is defined on the proxy which
+will forward attribute accesses to the server.</p></li>
+<li><p>If you know that an attribute contains data which will not change over the
+lifetime of the object, you can put it in <code>export_attrs_cache</code>. The client
+will cache the value of the attribute the first time it is accessed, and
+won't access it again.</p></li>
+</ul></li>
+<li><p>Defining a proxy class directly. This is the most flexible way of exporting
+methods and attributes. This allows you to not only define proxy methods and
+attributes, but allows you to:</p>
+
+<ul>
+<li><p>Implement simple methods on the client. For example, most iterators simply
+return <code>self</code> from <code>__iter__</code>. In fact, easycluster provides a proxy class
+you can inherit from called SelfIterProxy which does this.</p></li>
+<li><p>Make your proxy object inherit from some other class so that
+<code>isinstance(prox, clas)</code> returns <code>True</code>.</p></li>
+</ul></li>
+</ul>
+
+<p>Example of both methods:</p>
+
+<pre><code>&gt;&gt;&gt; define_common('''
+... class TestObject2(TestObject1):
+...     export_methods = ('getval',)
+...     export_attrs = ('val',)
+...
+... class TestObject3Proxy(RemoteProxy):
+...     proxy_methods = ('getval',)
+...     proxy_attrs = ('val',)
+...
+... class TestObject3(TestObject1):
+...     proxy_class = TestObject3Proxy
+... ''')
+&gt;&gt;&gt;
+&gt;&gt;&gt; rmt.update_definitions()
+&gt;&gt;&gt; obj2 = rmt.TestObject2(200)
+&gt;&gt;&gt; obj2.val
+200
+&gt;&gt;&gt; obj2.getval()
+200
+&gt;&gt;&gt; obj2.non_existant_method()
+Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+AttributeError: 'dynamic_proxy_getval_val' object has no attribute 'non_existant_method'
+&gt;&gt;&gt;
+
+&gt;&gt;&gt; define_common('''
+... ''')
+&gt;&gt;&gt; rmt.update_definitions()
+&gt;&gt;&gt; obj3 = rmt.TestObject3(300)
+&gt;&gt;&gt; type(obj3)
+&lt;class 'easycluster_code.TestObject3Proxy'&gt;
+&gt;&gt;&gt; obj3.val
+300
+</code></pre>
+
+<p>If you have a built-in class or a class from a library module that you want to
+treat as a "server object", you can call <code>easycluster.make_server_class()</code> in your
+define_common block:</p>
+
+<pre><code>&gt;&gt;&gt; define_common('''
+... import array
+... make_server_class(array.array)
+... ''')
+&gt;&gt;&gt; rmt.update_definitions()
+&gt;&gt;&gt; rmt_array = rmt.array.array('B', 1234)
+</code></pre>
+
+<p>You can pass <code>export_methods</code>, <code>export_attrs</code>, <code>export_attrs_cache</code>, and
+<code>proxy_class</code> to <code>make_server_class</code>; they have the same meaning as defined for
+ServerObject.</p>
+
+<p>There is also a function called <code>make_singleton</code>, which behaves like
+<code>make_server_class</code>, except it operates on a single instance of a class; if that
+instance is returned, it will be proxied, but other instances of the same class
+will be pickled.</p>
+
+<h2>Parallel Execution</h2>
+
+<p>Usually, clustering implies you want to execute code in parallel on multiple
+systems. By default, calling remote code suspends execution of the master script
+while the remote code is executing. However, there are several ways to execute
+remote code in parallel.</p>
+
+<p>The simplest way to do this is to use a non-blocking response:</p>
+
+<pre><code>&gt;&gt;&gt; rmt2 = Client(key, 'otherhost')
+&gt;&gt;&gt; r1 = rmt.addvals(5, 8, nonblocking=True)
+&gt;&gt;&gt; r2 = rmt2.addvals(14, 18, nonblocking=True)
+&gt;&gt;&gt; r1.wait()
+13
+&gt;&gt;&gt; r2.wait()
+32
+&gt;&gt;&gt;
+</code></pre>
+
+<p>Passing <code>nonblocking=True</code> to any proxy method causes it to immediately return a
+special "non-blocking response" object which has a <code>wait()</code> method. The <code>wait()</code>
+method waits until the code has finished executing on the remote server and
+returns the response value. If the remote side raised an exception, <code>wait()</code>
+will raise the same exception (unless you pass <code>origexc</code> -- see below).</p>
+
+<p>You can also use the convenience functions <code>eval_multi</code>, <code>call_multi</code>, and
+<code>call_method_multi</code> to call the same function in parallel on multiple systems:</p>
+
+<pre><code>&gt;&gt;&gt; call_multi([rmt, rmt2], 'addvals', 2, 3)
+[5, 5]
+&gt;&gt;&gt;
+</code></pre>
+
+<p>This function calls a specific function on multiple systems, waits for all of
+the responses, then returns a list of their responses.</p>
+
+<p>Besides <code>nonblocking</code>, there are other common keyword arguments that can be
+passed to remote calls:</p>
+
+<ul>
+<li><p><code>oncomplete</code> - If this is specified, then the remote call will return
+immediately, and will call this function when the remote call completes. This
+can be either a function which will be called as <code>func(response)</code>, or a tuple
+of <code>(func, arg1, arg2, ...)</code> which will be called as <code>func(response, arg1,
+arg2, ...)</code>. If you're using the standard <code>Client</code> class, completion functions
+will not be called until something calls <code>read_response()</code> on the client
+object, or calls <code>wait()</code> on a non-blocking response associated with the
+client. If you're using <code>ThreadedClient</code>, completion functions are called from
+the thread which reads responses from the server.</p></li>
+<li><p><code>onerror</code> - Identical to oncomplete, but called with a <code>RemoteException</code>
+instance instead of a return value when the remote call raises an
+exception. If <code>oncomplete</code> is specified, but <code>onerror</code> is not, the
+<code>oncomplete</code> function is called in both cases.</p></li>
+<li><p><code>threadid</code> - An arbitrary integer specifying the thread on the server to run
+the request in. If not specified, the current default will be used. The
+default can be changed by calling <code>set_default_thread()</code> on the client
+object. If the specified thread does not exist on the server, it is
+created. If the threadid is the special constant <code>easycluster.SINGLE</code>, a new
+thread is created on the server for this request, then exits.</p></li>
+<li><p><code>origexc</code> - If <code>True</code> (default), and the request raises an exception, it will
+print the remote stack trace to the screen and raise the original
+exception. If it is <code>False</code>, a <code>RemoteException</code> is raised instead. If it is
+the value <code>'quiet'</code>, then the original exception is raised without a stack
+trace being printed. <code>RemoteException</code> instances have the two attributes:
+<code>orig</code>, the original exception; and <code>text</code>, the stack trace on the server.</p></li>
+</ul>
+
+<p>You can start multiple threads on the same server by using non-blocking
+responses with <code>threadid</code>:</p>
+
+<pre><code>&gt;&gt;&gt; r1 = rmt.addvals(101, 102, nonblocking=True, threadid=1)
+&gt;&gt;&gt; r2 = rmt.addvals(222, 333, nonblocking=True, threadid=2)
+&gt;&gt;&gt; r3 = rmt.addvals(555, 888, nonblocking=True, threadid=3)
+&gt;&gt;&gt; [r1.wait(), r2.wait(), r3.wait()]
+[203, 555, 1443]
+</code></pre>
+
+<h2>Using ThreadedClient</h2>
+
+<p>If your master script is already multi-threaded, you can use <code>ThreadedClient</code>
+to automatically manage server threads for you.</p>
+
+<p>The <code>ThreadedClient</code> class starts a separate thread to read responses from the
+server. Because of this, completion functions are called as soon as the remote
+call returns, and the thread actively monitors the server to ensure that it
+hasn't gone down or locked up.</p>
+
+<p><code>ThreadedClient</code> will detect if you call remote functions from a separate thread
+in your master script, and will start a corresponding thread on the server to
+handle your request:</p>
+
+<pre><code>&gt;&gt;&gt; import threading
+&gt;&gt;&gt; tc1 = ThreadedClient(key, 'host1')
+&gt;&gt;&gt; tc2 = ThreadedClient(key, 'host2')
+&gt;&gt;&gt;
+&gt;&gt;&gt; def client_thread(id, a, b):
+...     print 'Thread %d: starting' % id
+...     val1 = tc1.addvals(a, b)
+...     print 'Thread %d: tc1 returned %r' % (id, val1)
+...     val2 = tc2.addvals(a, b)
+...     print 'Thread %d: tc2 returned %r' % (id, val2)
+...     print 'Thread %d: finished' % id
+...
+&gt;&gt;&gt; def run_threads():
+...     t1 = threading.Thread(target=client_thread, args=(1, 200, 500))
+...     t2 = threading.Thread(target=client_thread, args=(2, 300, 600))
+...     t1.start(); t2.start()
+...     t1.join(); t2.join()
+...
+&gt;&gt;&gt; run_threads()
+Thread 1: starting
+Thread 2: starting
+Thread 1: tc1 returned 700
+Thread 2: tc1 returned 900
+Thread 1: tc2 returned 700
+Thread 2: tc2 returned 900
+Thread 1: finished
+Thread 2: finished
+&gt;&gt;&gt;
+</code></pre>
+
+<p>Once threads in your master script exit, <code>ThreadedClient</code> will detect it and
+stop the corresponding thread on the server.</p>
+
+<h2>Starting the standalone server</h2>
+
+<p>On POSIX systems (Linux, BSD, Solaris), a command called <code>easycluster</code> should be
+installed in <code>/usr/local/bin</code>. On Windows, the main entry point is installed
+under <code>%PYTHON%\scripts\easycluster.exe</code>. With Python 2.7 and 3.2, you can also
+run <code>python -m easycluster</code>.</p>
+
+<p>Before you run the server, you should create a secret HMAC keyfile. Both the
+server and the client need this keyfile to be able to communicate:</p>
+
+<pre><code>easycluster -g secret.key
+</code></pre>
+
+<p>This will create a new file, called 'secret.key' which is readable only by the
+user that created it. You can then run the server with:</p>
+
+<pre><code>easycluster -S -k secret.key
+</code></pre>
+
+<p>If you don't want to see every remote call logged, run:</p>
+
+<pre><code>easycluster -S -k secret.key -c QuietServer
+</code></pre>
+
+<h2>Running EasyCluster standalone server as a service on boot</h2>
+
+<p>You can have the easycluster service start automatically on boot on Windows,
+Solaris, and Linux (Redhat, Debian, Ubuntu, and SuSE have been tested):</p>
+
+<pre><code>easycluster --install
+</code></pre>
+
+<p>This will register a service with the system which will start on the next
+boot. You can unregister it with <code>easycluster --uninstall</code>. Once the service is
+registered, you can start and stop it with <code>easycluster --start</code> and
+<code>easycluster --stop</code></p>
+</body>
+</html>
