@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+datasloth/__init__.py
+datasloth.egg-info/PKG-INFO
+datasloth.egg-info/SOURCES.txt
+datasloth.egg-info/dependency_links.txt
+datasloth.egg-info/not-zip-safe
+datasloth.egg-info/requires.txt
+datasloth.egg-info/top_level.txt
