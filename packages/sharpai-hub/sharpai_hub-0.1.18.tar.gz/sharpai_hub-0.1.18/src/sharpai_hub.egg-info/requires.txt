@@ -1,0 +1,8 @@
+getmac>=0.8.3
+packaging>=20.9
+pyyaml>=5.1
+requests
+tqdm
+
+[:python_version < "3.8"]
+importlib_metadata

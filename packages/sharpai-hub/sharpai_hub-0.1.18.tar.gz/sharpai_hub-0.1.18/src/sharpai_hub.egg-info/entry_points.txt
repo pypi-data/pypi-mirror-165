@@ -1,0 +1,3 @@
+[console_scripts]
+sharpai-cli = sharpai_hub.cli:main
+
