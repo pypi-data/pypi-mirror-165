@@ -1,0 +1,16 @@
+pandas
+requests
+setuptools
+
+[excel]
+openpyxl
+
+[format]
+openpyxl
+
+[repositories]
+kaggle
+openml
+
+[test]
+pytest

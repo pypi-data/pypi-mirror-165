@@ -1,0 +1,8 @@
+build
+data
+dist
+docs
+htmlcov
+images
+pycurator
+tests
