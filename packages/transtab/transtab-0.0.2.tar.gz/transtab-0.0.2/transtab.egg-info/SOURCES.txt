@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+transtab/__init__.py
+transtab/constants.py
+transtab/dataset.py
+transtab/evaluator.py
+transtab/modeling_transtab.py
+transtab/trainer.py
+transtab/trainer_utils.py
+transtab/transtab.py
+transtab.egg-info/PKG-INFO
+transtab.egg-info/SOURCES.txt
+transtab.egg-info/dependency_links.txt
+transtab.egg-info/requires.txt
+transtab.egg-info/top_level.txt
