@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+gs_usb/__init__.py
+gs_usb/__version__.py
+gs_usb/constants.py
+gs_usb/gs_usb.py
+gs_usb/gs_usb_frame.py
+gs_usb/gs_usb_structures.py
+gs_usb.egg-info/PKG-INFO
+gs_usb.egg-info/SOURCES.txt
+gs_usb.egg-info/dependency_links.txt
+gs_usb.egg-info/requires.txt
+gs_usb.egg-info/top_level.txt
