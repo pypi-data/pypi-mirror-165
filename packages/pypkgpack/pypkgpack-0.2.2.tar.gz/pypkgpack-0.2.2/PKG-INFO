@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: pypkgpack
+Version: 0.2.2
+Summary: Bundling your Python project into a single Python file.
+Author: thautwarm
+Author-email: twshere@outlook.com
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: ast-compat (>=0.11.1,<0.12.0)
+Requires-Dist: wisepy2 (>=1.3,<2.0)
+Description-Content-Type: text/markdown
+
+## PyPkgPack
+
+[![CI](https://github.com/Suzhou-Tongyuan/pypkgpack/actions/workflows/ci.yml/badge.svg)](https://github.com/Suzhou-Tongyuan/pypkgpack/actions/workflows/ci.yml)
+[![versions](https://img.shields.io/pypi/pyversions/pypkgpack.svg)](https://pypi.org/project/pypkgpack/#history)
+[![pypi](https://img.shields.io/pypi/v/pypkgpack.svg)](https://pypi.org/project/pypkgpack/)
+[![License](https://img.shields.io/badge/License-BSD_2--Clause-green.svg)](https://github.com/Suzhou-Tongyuan/pypkgpack/blob/main/LICENSE)
+
+Bundling a pure Python package into a single Python file.
+
+Usage:
+
+```shell
+> pypkgpack /path/to/mypackage --out bundled_package.py
+
+> python
+
+python> import bundled_package
+python> from mypackage.mymodule import myfunction
+python> print(myfunction())
+```
+
+Features:
+
+- [x] bundling a Python package into a single Python file
+- [x] caching bytecode compilation and cache invalidation
+- [x] fixing the missing `__init__.py`
+- [x] allow multiple source code implementations for the same module
+- [x] respect Python's import semantics
+- [x] bundled modules need no extra dependencies
+- [ ] support bundling binaries and assets
+- [ ] allow lazy imports
+
