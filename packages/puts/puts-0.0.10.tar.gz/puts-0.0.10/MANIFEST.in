@@ -1,0 +1,5 @@
+recursive-include puts *.py
+recursive-exclude tests *
+recursive-exclude docs *
+recursive-exclude examples *
+exclude Makefile

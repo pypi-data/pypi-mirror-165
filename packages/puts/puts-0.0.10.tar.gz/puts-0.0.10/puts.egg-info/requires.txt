@@ -1,0 +1,9 @@
+colorlog>=4.1.0
+numpy
+
+[dev]
+check-manifest
+pytest
+tox
+twine
+wheel
