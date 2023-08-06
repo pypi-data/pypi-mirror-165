@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: likeprocessing
+Version: 0.1.2
+Summary: Like processing library with pygame
+Author: Pierre Lemaitre
+Author-email: oultetman@sfr.fr
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: multipledispatch (>=0.6.0,<0.7.0)
+Requires-Dist: pygame (>=2.1.2,<3.0.0)
