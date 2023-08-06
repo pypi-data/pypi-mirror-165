@@ -1,0 +1,2 @@
+[pytest11]
+pytest_pymysql_autorecord = pytest_pymysql_autorecord.plugin
