@@ -1,0 +1,3 @@
+import pydub
+
+def calculate_rms(segment: pydub.AudioSegment) -> float: ...
