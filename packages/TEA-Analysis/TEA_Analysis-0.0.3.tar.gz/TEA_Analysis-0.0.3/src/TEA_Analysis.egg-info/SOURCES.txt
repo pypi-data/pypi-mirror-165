@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/TEA_Analysis/TEA_Analysis.py
+src/TEA_Analysis/__init__.py
+src/TEA_Analysis.egg-info/PKG-INFO
+src/TEA_Analysis.egg-info/SOURCES.txt
+src/TEA_Analysis.egg-info/dependency_links.txt
+src/TEA_Analysis.egg-info/top_level.txt
