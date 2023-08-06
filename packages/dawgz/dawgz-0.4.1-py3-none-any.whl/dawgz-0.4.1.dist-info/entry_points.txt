@@ -1,0 +1,3 @@
+[console_scripts]
+dawgz = dawgz.__main__:main
+
