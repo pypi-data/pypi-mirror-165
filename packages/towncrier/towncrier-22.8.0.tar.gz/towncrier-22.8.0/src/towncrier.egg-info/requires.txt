@@ -1,0 +1,9 @@
+click
+click-default-group
+incremental
+jinja2
+setuptools
+tomli
+
+[dev]
+packaging
