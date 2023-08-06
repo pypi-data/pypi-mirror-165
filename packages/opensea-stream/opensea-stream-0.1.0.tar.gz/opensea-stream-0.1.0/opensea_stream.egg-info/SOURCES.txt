@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+opensea_sdk/__init__.py
+opensea_sdk/opensea_stream.py
+opensea_sdk/utils.py
+opensea_stream.egg-info/PKG-INFO
+opensea_stream.egg-info/SOURCES.txt
+opensea_stream.egg-info/dependency_links.txt
+opensea_stream.egg-info/not-zip-safe
+opensea_stream.egg-info/requires.txt
+opensea_stream.egg-info/top_level.txt
