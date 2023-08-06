@@ -1,0 +1,14 @@
+canvas_parent_api/__init__.py,sha256=3-CwYecLK3ZtV791u49q_4Q7qAZwiDHa8xXmfaZYj6E,90
+canvas_parent_api/base.py,sha256=bBuFVW8aexrXmVqTn_B5QRTjcddok1UP3VIeVsQh98I,616
+canvas_parent_api/canvas.py,sha256=H9g4OVWhAu3hoz9Z5UI6qAkS4KmaLC6ecVQFfhspuR0,1422
+canvas_parent_api/canvas_api_client.py,sha256=w1_tDLqboCb6eR3PTUw6_vJvDV_QtyxypSckaIQK9fA,2615
+canvas_parent_api/models/__init__.py,sha256=_7T1gkT5ex8JkIiCn5lEnXxOqmDAWK7JnNbg5AvXPI0,37
+canvas_parent_api/models/assignment.py,sha256=XYayiC5Uh6md1SjsLabnkWiyZSkT3nrH18Gd4ewT0PU,14374
+canvas_parent_api/models/base.py,sha256=MamzduskdWrI1oMS_ZCMRFGMWcbZ38pSfFrytD7LkR8,4703
+canvas_parent_api/models/course.py,sha256=7LsgDwmO0msrIKEYH20zWEgYu9hz3O1gGsQ-6pyQh0o,9798
+canvas_parent_api/models/observee.py,sha256=eWaIxEzYrdWltJ8XjCUQyNzi6ia18NBDxMRuo7uFCVo,1306
+canvas_parent_api-0.0.5.dist-info/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+canvas_parent_api-0.0.5.dist-info/METADATA,sha256=976sVrcQ53u5M_gasa0INfWfojhGBoD-jslHdYJtIlg,3570
+canvas_parent_api-0.0.5.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+canvas_parent_api-0.0.5.dist-info/top_level.txt,sha256=vcjdsVCRg9PK7wM0Js9y0W7Z05JpbIQfB4uLR5We2_k,18
+canvas_parent_api-0.0.5.dist-info/RECORD,,
