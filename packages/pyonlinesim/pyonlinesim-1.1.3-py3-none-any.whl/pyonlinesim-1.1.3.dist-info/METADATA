@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: pyonlinesim
+Version: 1.1.3
+Summary: Asynchronous wrapper to interact with onlinesim.ru API
+Home-page: https://github.com/marple-git/pyonlinesim
+Author: Marple
+Requires-Python: >=3.6.1,<4.0.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: aiohttp (>=3.7.3)
+Requires-Dist: pydantic (>=1.9.2,<2.0.0)
+Project-URL: Repository, https://github.com/marple-git/pyonlinesim
+Description-Content-Type: text/markdown
+
+[![Downloads](https://pepy.tech/badge/pyonlinesim)](https://pepy.tech/project/pyonlinesim)
+[![Downloads](https://pepy.tech/badge/pyonlinesim/month)](https://pepy.tech/project/pyonlinesim)
+[![Downloads](https://pepy.tech/badge/pyonlinesim/week)](https://pepy.tech/project/pyonlinesim)
+[![Code Quality Score](https://api.codiga.io/project/34377/score/svg)](https://api.codiga.io/project/34377/score/svg)
+[![Code Grade](https://api.codiga.io/project/34377/status/svg)](https://api.codiga.io/project/34377/status/svg)
+
+## 🔗 Links
+* 🎓 **Documentation:** [*CLICK*](https://pyonlinesim.readthedocs.io/en/latest/)
+* 🖱️ **Developer contacts:** [![Dev-Telegram](https://img.shields.io/badge/Telegram-blue.svg?style=flat-square&logo=telegram)](https://t.me/marple_tech)
+## 🐦 Dependencies  
+
+| Library  |                       Description                       |
+|:--------:|:-------------------------------------------------------:|
+| aiohttp  | Asynchronous HTTP Client/Server for asyncio and Python. |
+| pydantic |                   JSON Data Validator                   |
+
+---
+
