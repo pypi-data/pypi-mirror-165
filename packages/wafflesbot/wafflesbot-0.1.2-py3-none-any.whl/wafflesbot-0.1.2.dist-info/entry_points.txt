@@ -1,0 +1,3 @@
+[console_scripts]
+wafflesbot=wafflesbot.main:main
+

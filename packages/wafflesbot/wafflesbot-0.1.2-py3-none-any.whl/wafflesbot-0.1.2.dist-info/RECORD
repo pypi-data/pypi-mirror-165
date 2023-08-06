@@ -1,0 +1,12 @@
+wafflesbot/__init__.py,sha256=hTezoOXdDn8Mtdc1FMMIDrkeQjYwawvPd4CYT2Oz5t4,111
+wafflesbot/__version__.py,sha256=YvuYzWnKtqBb-IqG8HAu-nhIYAsgj9Vmc_b9o7vO-js,22
+wafflesbot/jmap.py,sha256=TZy72aQ1d8T_xxTo-pqbaKomS9QeaGNLNGQlBQ0q2e8,13321
+wafflesbot/main.py,sha256=fp8FivDsXLWvb6RvEEYiisyI-8xH46JDW4PJC8-wAys,2153
+wafflesbot/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wafflesbot/reply.py,sha256=h2SDsk5X2KpDvKS5DrejxVEmWE50jWYStGKd3uhd9ew,1816
+wafflesbot/waffles.py,sha256=3XZUxvaIQeqL2lnZvckP3iLnRZc8G66HfDcpAhaPhDw,2319
+wafflesbot-0.1.2.dist-info/entry_points.txt,sha256=krrIIT4aESeUHk3Sk7efTZtfcLo7bfw2xjq0LuvupVw,51
+wafflesbot-0.1.2.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+wafflesbot-0.1.2.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+wafflesbot-0.1.2.dist-info/METADATA,sha256=W0XQCA_9rTgij7ctBTCa6aai2wmCPj5E5qB1Z647tFQ,4312
+wafflesbot-0.1.2.dist-info/RECORD,,
