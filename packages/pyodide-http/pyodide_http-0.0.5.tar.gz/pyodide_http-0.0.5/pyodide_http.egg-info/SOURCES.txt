@@ -1,0 +1,10 @@
+README.md
+setup.py
+pyodide_http/__init__.py
+pyodide_http/_core.py
+pyodide_http/_requests.py
+pyodide_http/_urllib.py
+pyodide_http.egg-info/PKG-INFO
+pyodide_http.egg-info/SOURCES.txt
+pyodide_http.egg-info/dependency_links.txt
+pyodide_http.egg-info/top_level.txt
