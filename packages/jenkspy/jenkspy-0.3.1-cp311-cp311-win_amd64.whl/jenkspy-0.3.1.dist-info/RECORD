@@ -1,0 +1,11 @@
+jenkspy/__init__.py,sha256=uawiHmRM8AnGKFYt-F2cM78sEii8aM-_OReUT-J7UnQ,251
+jenkspy/core.py,sha256=VjxswzgkGkqNJYzbgQCS-y0woUSGHKZZ7j8damtd8Wk,7682
+jenkspy/jenks.cp311-win_amd64.pyd,sha256=hlQVqt6CSxbLNXbde_NrgVJeOI5ajozAF82LeHKK05U,127488
+jenkspy/src/_jenks.c,sha256=wdMyTb0mCs0UZTdpivdr0542eQkkhf6t9rHTBF8rsdU,5867
+jenkspy/src/jenks.c,sha256=7tF-f4Ps4X8s5E3HhBHh-VjGCYbVYvaQ-HA5wwlE_sM,837390
+jenkspy/src/jenks.pyx,sha256=4drSmBBEH41jTy6OWHoXDHIEt1gRrZDhoFn-B-j0hdw,4235
+jenkspy-0.3.1.dist-info/LICENSE,sha256=Ujyq6YMD7lrcpn15g6ZMa_rhcjU3XUuvxenr60oMGFI,1096
+jenkspy-0.3.1.dist-info/METADATA,sha256=uqncjT-gS7vMIJAF8_Yqf0LC8Md5h1HIiHijikdcLAc,5931
+jenkspy-0.3.1.dist-info/WHEEL,sha256=TxwUeV-3HEbjjXVQ7qnUZIKQ4IinhZYV_rmkwq84M_Y,102
+jenkspy-0.3.1.dist-info/top_level.txt,sha256=E2-lCywkT4CoCVZzI9ByTlag11BHyIxbLUNGPJNIvhA,8
+jenkspy-0.3.1.dist-info/RECORD,,
