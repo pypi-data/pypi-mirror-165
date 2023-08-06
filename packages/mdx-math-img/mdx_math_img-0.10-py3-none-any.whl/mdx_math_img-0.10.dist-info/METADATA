@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: mdx-math-img
+Version: 0.10
+Summary: Math extension for Python-Markdown, using img
+Home-page: https://github.com/linsyking/mdx-math-img
+Author: linsyking
+Author-email: linsy_king@sjtu.edu.cn
+License: BSD 3-Clause License
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Markdown (>=3.0)
+
+# mdx-math-img
+
+Fork from <https://github.com/mitya57/python-markdown-math>.
