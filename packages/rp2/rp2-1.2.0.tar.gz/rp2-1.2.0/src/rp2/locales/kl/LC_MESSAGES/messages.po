@@ -1,0 +1,722 @@
+# Kalaallisut translations for rp2.
+# Copyright (C) 2022 eprbell
+# This file is distributed under the same license as the rp2 project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: rp2 1.0.6\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2022-08-17 00:13-0700\n"
+"PO-Revision-Date: 2022-08-10 19:04-0700\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: kl\n"
+"Language-Team: kl <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.10.3\n"
+
+msgid "<Crypto> In-Out"
+msgstr "__test_<Crypto> In-Out"
+
+msgid "<Crypto> Tax"
+msgstr "__test_<Crypto> Tax"
+
+msgid "Account Balances"
+msgstr "__test_Account Balances"
+
+msgid "Accounting Method"
+msgstr "__test_Accounting Method"
+
+msgid "Acquired"
+msgstr "__test_Acquired"
+
+msgid "Acquired Balance"
+msgstr "__test_Acquired Balance"
+
+msgid "Acquired Lot"
+msgstr "__test_Acquired Lot"
+
+msgid "Acquired Lot Fraction"
+msgstr "__test_Acquired Lot Fraction"
+
+msgid "Acquired Lot Fraction %"
+msgstr "__test_Acquired Lot Fraction %"
+
+msgid "Acquired Lot Fraction Description"
+msgstr "__test_Acquired Lot Fraction Description"
+
+msgid "Acquired Lot Spot Price"
+msgstr "__test_Acquired Lot Spot Price"
+
+msgid "Acquired Lot Timestamp"
+msgstr "__test_Acquired Lot Timestamp"
+
+msgid "Acquired Lot {}"
+msgstr "__test_Acquired Lot {}"
+
+msgid "Acquired Lot {} Amount Fraction"
+msgstr "__test_Acquired Lot {} Amount Fraction"
+
+msgid "Acquired Lot {} Cost Basis"
+msgstr "__test_Acquired Lot {} Cost Basis"
+
+msgid "Acquired Lot {} Fee Fraction"
+msgstr "__test_Acquired Lot {} Fee Fraction"
+
+msgid "Amount"
+msgstr "__test_Amount"
+
+msgid "Amount Fraction"
+msgstr "__test_Amount Fraction"
+
+msgid "Amount of given asset held"
+msgstr "__test_Amount of given asset held"
+
+msgid "Asset"
+msgstr "__test_Asset"
+
+msgid "Asset - Exchange"
+msgstr "__test_Asset - Exchange"
+
+msgid "Asset Price Lookup Table"
+msgstr "__test_Asset Price Lookup Table"
+
+msgid "Asset holder"
+msgstr "__test_Asset holder"
+
+msgid "Average Price"
+msgstr "__test_Average Price"
+
+msgid "Average Price Paid Per 1 crypto"
+msgstr "__test_Average Price Paid Per 1 crypto"
+
+msgid "Average price at which the crypto was acquired"
+msgstr "__test_Average price at which the crypto was acquired"
+
+msgid "Average price at which the crypto was acquired, across all transactions"
+msgstr "__test_Average price at which the crypto was acquired, across all transactions"
+
+msgid "Balance"
+msgstr "__test_Balance"
+
+msgid "Balance of all the BUY and EARN transactions for a given exchange and holder"
+msgstr "__test_Balance of all the BUY and EARN transactions for a given exchange and holder"
+
+msgid "Balance of all the SEND and SOLD transactions for which the given exchange and holder are receiver"
+msgstr "__test_Balance of all the SEND and SOLD transactions for which the given exchange and holder are receiver"
+
+msgid "Balance of all the SEND and SOLD transactions for which the given exchange and holder are sender"
+msgstr "__test_Balance of all the SEND and SOLD transactions for which the given exchange and holder are sender"
+
+msgid "Capital"
+msgstr "__test_Capital"
+
+msgid "Capital Gains"
+msgstr "__test_Capital Gains"
+
+msgid "Capital Gains Type"
+msgstr "__test_Capital Gains Type"
+
+msgid "Captures all transactions coming in (IN), going out (OUT) and transferring across accounts (INTRA)"
+msgstr "__test_Captures all transactions coming in (IN), going out (OUT) and transferring across accounts (INTRA)"
+
+msgid "Color Code"
+msgstr "__test_Color Code"
+
+msgid "Computation of balances and gain / loss"
+msgstr "__test_Computation of balances and gain / loss"
+
+msgid "Computed balances of all accounts. Useful to double-check that the input transactions have been entered correctly. If values don’t match actual balances some data is missing or wrong"
+msgstr "__test_Computed balances of all accounts. Useful to double-check that the input transactions have been entered correctly. If values don’t match actual balances some data is missing or wrong"
+
+msgid "Computed gain and loss for the given cryptocurrency, organized by year and capital gains type (LONG or SHORT)"
+msgstr "__test_Computed gain and loss for the given cryptocurrency, organized by year and capital gains type (LONG or SHORT)"
+
+msgid "Cost Basis"
+msgstr "__test_Cost Basis"
+
+msgid "Cost Basis Weight %"
+msgstr "__test_Cost Basis Weight %"
+
+msgid "Crypto"
+msgstr "__test_Crypto"
+
+msgid "Crypto / asset symbol"
+msgstr "__test_Crypto / asset symbol"
+
+msgid "Crypto Amount"
+msgstr "__test_Crypto Amount"
+
+msgid "Crypto Amt"
+msgstr "__test_Crypto Amt"
+
+msgid "Crypto Amt Running Sum"
+msgstr "__test_Crypto Amt Running Sum"
+
+msgid "Crypto Balance"
+msgstr "__test_Crypto Balance"
+
+msgid "Crypto Balance * Input Price"
+msgstr "__test_Crypto Balance * Input Price"
+
+msgid "Crypto Fee"
+msgstr "__test_Crypto Fee"
+
+msgid "Crypto Fee Running Sum"
+msgstr "__test_Crypto Fee Running Sum"
+
+msgid "Crypto In"
+msgstr "__test_Crypto In"
+
+msgid "Crypto In Running Sum"
+msgstr "__test_Crypto In Running Sum"
+
+msgid "Crypto Out"
+msgstr "__test_Crypto Out"
+
+msgid "Crypto Out Running Sum"
+msgstr "__test_Crypto Out Running Sum"
+
+msgid "Crypto Received"
+msgstr "__test_Crypto Received"
+
+msgid "Crypto Sent"
+msgstr "__test_Crypto Sent"
+
+msgid "Crypto Taxable Total"
+msgstr "__test_Crypto Taxable Total"
+
+msgid "Crypto amount for the given taxable event fraction"
+msgstr "__test_Crypto amount for the given taxable event fraction"
+
+msgid "Crypto value of the fees"
+msgstr "__test_Crypto value of the fees"
+
+msgid "Description"
+msgstr "__test_Description"
+
+msgid "Description of the transaction"
+msgstr "__test_Description of the transaction"
+
+msgid "Detailed computation of gain and loss: each lot is divided into fractions, which are used to calculate the cost basis and the gain/loss"
+msgstr "__test_Detailed computation of gain and loss: each lot is divided into fractions, which are used to calculate the cost basis and the gain/loss"
+
+msgid "Direction (IN/OUT/INTRA) and type (BUY, SOLD, etc) of the taxable event"
+msgstr "__test_Direction (IN/OUT/INTRA) and type (BUY, SOLD, etc) of the taxable event"
+
+msgid "Direction/Type"
+msgstr "__test_Direction/Type"
+
+msgid "Does the transaction contain a taxable event? If so the taxable amount is highlighted in yellow"
+msgstr "__test_Does the transaction contain a taxable event? If so the taxable amount is highlighted in yellow"
+
+msgid "EARN (crypto earned through interest, etc.), GIFT (crypto given), SOLD (crypto sold) OR INTRA (fees for transferring crypto across accounts)"
+msgstr "__test_EARN (crypto earned through interest, etc.), GIFT (crypto given), SOLD (crypto sold) OR INTRA (fees for transferring crypto across accounts)"
+
+msgid "ENTER PRICES ON INPUT TAB"
+msgstr "__test_ENTER PRICES ON INPUT TAB"
+
+msgid "English description of this in-transaction fraction"
+msgstr "__test_English description of this in-transaction fraction"
+
+msgid "English description of this taxable event fraction"
+msgstr "__test_English description of this taxable event fraction"
+
+msgid "Event"
+msgstr "__test_Event"
+
+msgid "Exchange"
+msgstr "__test_Exchange"
+
+msgid "Exchange account or wallet owner"
+msgstr "__test_Exchange account or wallet owner"
+
+msgid "Exchange or wallet from which the transfer of crypto occurred (e.g. Coinbase, Coinbase Pro, BlockFi, etc.)"
+msgstr "__test_Exchange or wallet from which the transfer of crypto occurred (e.g. Coinbase, Coinbase Pro, BlockFi, etc.)"
+
+msgid "Exchange or wallet on which the transaction occurred (e.g. Coinbase, Coinbase Pro, BlockFi, etc.)"
+msgstr "__test_Exchange or wallet on which the transaction occurred (e.g. Coinbase, Coinbase Pro, BlockFi, etc.)"
+
+msgid "Exchange or wallet to which the transfer of crypto occurred (e.g. Coinbase, Coinbase Pro, BlockFi, etc.)"
+msgstr "__test_Exchange or wallet to which the transfer of crypto occurred (e.g. Coinbase, Coinbase Pro, BlockFi, etc.)"
+
+msgid "Exchange or wallet where balance is held (Asset - Exchange tab only)"
+msgstr "__test_Exchange or wallet where balance is held (Asset - Exchange tab only)"
+
+msgid "Fee Fraction"
+msgstr "__test_Fee Fraction"
+
+msgid "Fill in Asset Prices in the Input Tab for calculations"
+msgstr "__test_Fill in Asset Prices in the Input Tab for calculations"
+
+msgid "Final"
+msgstr "__test_Final"
+
+msgid "Final Balance"
+msgstr "__test_Final Balance"
+
+msgid "Final balance of all transactions for a given exchange and holder"
+msgstr "__test_Final balance of all transactions for a given exchange and holder"
+
+msgid "Fraction %"
+msgstr "__test_Fraction %"
+
+msgid "Fraction Description"
+msgstr "__test_Fraction Description"
+
+msgid "From"
+msgstr "__test_From"
+
+msgid "From Date Filter"
+msgstr "__test_From Date Filter"
+
+msgid "From Exchange"
+msgstr "__test_From Exchange"
+
+msgid "From Holder"
+msgstr "__test_From Holder"
+
+msgid "Gain / Loss"
+msgstr "__test_Gain / Loss"
+
+msgid "Gain / Loss %"
+msgstr "__test_Gain / Loss %"
+
+msgid "Gain / Loss Detail"
+msgstr "__test_Gain / Loss Detail"
+
+msgid "Gain / Loss Summary"
+msgstr "__test_Gain / Loss Summary"
+
+msgid "Gains"
+msgstr "__test_Gains"
+
+msgid "Gains Type"
+msgstr "__test_Gains Type"
+
+msgid "General"
+msgstr "__test_General"
+
+msgid "Grand Total"
+msgstr "__test_Grand Total"
+
+msgid "Gray"
+msgstr "__test_Gray"
+
+msgid "Hash of the transaction"
+msgstr "__test_Hash of the transaction"
+
+msgid "Hash or exchange-specific unique identifier for the transaction"
+msgstr "__test_Hash or exchange-specific unique identifier for the transaction"
+
+msgid "Holder"
+msgstr "__test_Holder"
+
+msgid "How much of the given cryptocurrency was acquired with the transaction"
+msgstr "__test_How much of the given cryptocurrency was acquired with the transaction"
+
+msgid "How much of the given cryptocurrency was received with the transaction"
+msgstr "__test_How much of the given cryptocurrency was received with the transaction"
+
+msgid "How much of the given cryptocurrency was sent with the transaction"
+msgstr "__test_How much of the given cryptocurrency was sent with the transaction"
+
+msgid "In"
+msgstr "__test_In"
+
+msgid "In-Flow Detail"
+msgstr "__test_In-Flow Detail"
+
+msgid "Indicates the percent of which this asset's unrealized gain/loss contributed to the whole portfolio's Unrealized Gain / Loss % (Gain/Loss relative to total cash investment)"
+msgstr "__test_Indicates the percent of which this asset's unrealized gain/loss contributed to the whole portfolio's Unrealized Gain / Loss % (Gain/Loss relative to total cash investment)"
+
+msgid "Information calculated based on values entered in the Input tab"
+msgstr "__test_Information calculated based on values entered in the Input tab"
+
+msgid "Information from transactions"
+msgstr "__test_Information from transactions"
+
+msgid "Input"
+msgstr "__test_Input"
+
+msgid "Input Price"
+msgstr "__test_Input Price"
+
+msgid "Intra-Flow Detail"
+msgstr "__test_Intra-Flow Detail"
+
+msgid "LONG"
+msgstr "__test_LONG"
+
+msgid "LONG (> 1 year) or SHORT (< 1 year)"
+msgstr "__test_LONG (> 1 year) or SHORT (< 1 year)"
+
+msgid "Legend"
+msgstr "__test_Legend"
+
+msgid "Looked up from the Input tab for the given asset"
+msgstr "__test_Looked up from the Input tab for the given asset"
+
+msgid "Lots that have been sent or sold, according to the order defined by the Accounting Method (see General section)"
+msgstr "__test_Lots that have been sent or sold, according to the order defined by the Accounting Method (see General section)"
+
+msgid "Movements across accounts without increasing/decreasing total value of crypto owned. The amount transferred is non-taxable but the transfer fee is considered a crypto sale and it is a taxable event"
+msgstr "__test_Movements across accounts without increasing/decreasing total value of crypto owned. The amount transferred is non-taxable but the transfer fee is considered a crypto sale and it is a taxable event"
+
+msgid "N/A"
+msgstr "__test_N/A"
+
+msgid "NO"
+msgstr "__test_NO"
+
+msgid "Name of the exchange or wallet account holder"
+msgstr "__test_Name of the exchange or wallet account holder"
+
+msgid "No Fee"
+msgstr "__test_No Fee"
+
+msgid "Notes"
+msgstr "__test_Notes"
+
+msgid "Open Positions / Unrealized Gains"
+msgstr "__test_Open Positions / Unrealized Gains"
+
+msgid "Open Positions by Asset"
+msgstr "__test_Open Positions by Asset"
+
+msgid "Open Positions by Asset and Exchange"
+msgstr "__test_Open Positions by Asset and Exchange"
+
+msgid "Out-Flow Detail"
+msgstr "__test_Out-Flow Detail"
+
+msgid "Owner of the exchange account or wallet from which the transfer of crypto occurred"
+msgstr "__test_Owner of the exchange account or wallet from which the transfer of crypto occurred"
+
+msgid "Owner of the exchange account or wallet to which the transfer of crypto occurred"
+msgstr "__test_Owner of the exchange account or wallet to which the transfer of crypto occurred"
+
+msgid "Paid Per 1 {}"
+msgstr "__test_Paid Per 1 {}"
+
+msgid "Percent change between Unrealized Value and Unrealized Cost Basis"
+msgstr "__test_Percent change between Unrealized Value and Unrealized Cost Basis"
+
+msgid "Percentage of the in-transaction"
+msgstr "__test_Percentage of the in-transaction"
+
+msgid "Percentage of the taxable event"
+msgstr "__test_Percentage of the taxable event"
+
+msgid "Price"
+msgstr "__test_Price"
+
+msgid "Received"
+msgstr "__test_Received"
+
+msgid "Received Balance"
+msgstr "__test_Received Balance"
+
+msgid "Report Fields"
+msgstr "__test_Report Fields"
+
+msgid "Running Sum"
+msgstr "__test_Running Sum"
+
+msgid "Running sum of crypto amount"
+msgstr "__test_Running sum of crypto amount"
+
+msgid "Running sum of crypto fees"
+msgstr "__test_Running sum of crypto fees"
+
+msgid "Running sum of crypto received"
+msgstr "__test_Running sum of crypto received"
+
+msgid "Running sum of crypto sent"
+msgstr "__test_Running sum of crypto sent"
+
+msgid "SHORT"
+msgstr "__test_SHORT"
+
+msgid "Sent"
+msgstr "__test_Sent"
+
+msgid "Sent Balance"
+msgstr "__test_Sent Balance"
+
+msgid "Sent/Sold"
+msgstr "__test_Sent/Sold"
+
+msgid "Sheet Types"
+msgstr "__test_Sheet Types"
+
+msgid "Size of investment relative to other assets for cost basis ({} Unrealized Cost Basis divided by the sum of all assets' {} Unrealized Cost Basis)"
+msgstr "__test_Size of investment relative to other assets for cost basis ({} Unrealized Cost Basis divided by the sum of all assets' {} Unrealized Cost Basis)"
+
+msgid "Size of investment relative to the portfolio's unrealized value (Unrealized Value divided by sum of all assets' Unrealized Values)"
+msgstr "__test_Size of investment relative to the portfolio's unrealized value (Unrealized Value divided by sum of all assets' Unrealized Values)"
+
+msgid "Spot Price"
+msgstr "__test_Spot Price"
+
+msgid "Sum of all capital gains in {} for transactions of the given capital gains type"
+msgstr "__test_Sum of all capital gains in {} for transactions of the given capital gains type"
+
+msgid "Sum of all cost bases in {} for transactions of the given capital gains type"
+msgstr "__test_Sum of all cost bases in {} for transactions of the given capital gains type"
+
+msgid "Sum of all taxable events in crypto for transactions of the given capital gains type"
+msgstr "__test_Sum of all taxable events in crypto for transactions of the given capital gains type"
+
+msgid "Sum of all taxable events in {} for transactions of the given capital gains type"
+msgstr "__test_Sum of all taxable events in {} for transactions of the given capital gains type"
+
+msgid "Sum of fiat cost to acquire the balance of crypto based on in-flow transactions"
+msgstr "__test_Sum of fiat cost to acquire the balance of crypto based on in-flow transactions"
+
+msgid "Sum of fiat cost to acquire the balance of crypto based on in-flow transactions divided by the crypto balance"
+msgstr "__test_Sum of fiat cost to acquire the balance of crypto based on in-flow transactions divided by the crypto balance"
+
+msgid "Summary"
+msgstr "__test_Summary"
+
+msgid "Summary year"
+msgstr "__test_Summary year"
+
+msgid "Table Types"
+msgstr "__test_Table Types"
+
+msgid "Taxable"
+msgstr "__test_Taxable"
+
+msgid "Taxable Event"
+msgstr "__test_Taxable Event"
+
+msgid "Taxable Event Direction/Type"
+msgstr "__test_Taxable Event Direction/Type"
+
+msgid "Taxable Event Fraction %"
+msgstr "__test_Taxable Event Fraction"
+
+msgid "Taxable Event Fraction Description"
+msgstr "__test_Taxable Event Fraction Description"
+
+msgid "Taxable Event Spot Price"
+msgstr "__test_Taxable Event Spot Price"
+
+msgid "Taxable Event Timestamp"
+msgstr "__test_Taxable Event Timestamp"
+
+msgid "Taxable Event {}"
+msgstr "__test_Taxable Event {}"
+
+msgid "Taxable Event {} Amount Fraction"
+msgstr "__test_Taxable Event {} Amount Fraction"
+
+msgid "Taxable Total"
+msgstr "__test_Taxable Total"
+
+msgid "This file contains two versions of the same report. One version is grouped by Asset, the other by Asset and Exchange (or wallet)"
+msgstr "__test_This file contains two versions of the same report. One version is grouped by Asset, the other by Asset and Exchange (or wallet)"
+
+msgid "This report leverages the details of your transactions to give you a snapshot of the value of your unsold holdings"
+msgstr "__test_This report leverages the details of your transactions to give you a snapshot of the value of your unsold holdings"
+
+msgid "Time at which the in-transaction occurred"
+msgstr "__test_Time at which the in-transaction occurred"
+
+msgid "Time at which the taxable event occurred"
+msgstr "__test_Time at which the taxable event occurred"
+
+msgid "Time at which the transaction occurred"
+msgstr "__test_Time at which the transaction occurred"
+
+msgid "Timestamp"
+msgstr "__test_Timestamp"
+
+msgid "To Date Filter"
+msgstr "__test_To Date Filter"
+
+msgid "To Exchange"
+msgstr "__test_To Exchange"
+
+msgid "To Holder"
+msgstr "__test_To Holder"
+
+msgid "Total"
+msgstr "__test_Total"
+
+msgid "Total Cost Basis %"
+msgstr "__test_Total Cost Basis %"
+
+msgid "Transaction"
+msgstr "__test_Transaction"
+
+msgid "Transaction Type"
+msgstr "__test_Transaction Type"
+
+msgid "Transactions that added new crypto to accounts (e.g. buy, etc.). Only EARN-typed transactions are taxable events (interest received on crypto)"
+msgstr "__test_Transactions that added new crypto to accounts (e.g. buy, etc.). Only EARN-typed transactions are taxable events (interest received on crypto)"
+
+msgid "Transactions that removed some crypto from accounts (e.g. sell, send as gift, etc.). These are taxable events"
+msgstr "__test_Transactions that removed some crypto from accounts (e.g. sell, send as gift, etc.). These are taxable events"
+
+msgid "Type"
+msgstr "__test_Type"
+
+msgid "Type of the transaction (BUY, GIFT, INTEREST, STAKING, etc.)"
+msgstr "__test_Type of the transaction (BUY, GIFT, INTEREST, STAKING, etc.)"
+
+msgid "Type of the transaction (DONATE, GIFT, SELL, etc.)"
+msgstr "__test_Type of the transaction (DONATE, GIFT, SELL, etc.)"
+
+msgid "USD"
+msgstr "__test_USD"
+
+msgid "USD Total"
+msgstr "__test_USD Total"
+
+msgid "Unique Id"
+msgstr "__test_Unique Id"
+
+msgid "Unrealized G/L of"
+msgstr "__test_Unrealized G/L of"
+
+msgid "Unrealized G/L of Total Cost Basis %"
+msgstr "__test_Unrealized G/L of Total Cost Basis %"
+
+msgid "Unrealized Value - Unrealized Cost Basis"
+msgstr "__test_Unrealized Value - Unrealized Cost Basis"
+
+msgid "Value"
+msgstr "__test_Value"
+
+msgid "Value Weight %"
+msgstr "__test_Value Weight %"
+
+msgid "Value of 1 unit of the given cryptocurrency at the time the in-transaction occurred"
+msgstr "__test_Value of 1 unit of the given cryptocurrency at the time the in-transaction occurred"
+
+msgid "Value of 1 unit of the given cryptocurrency at the time the taxable event occurred"
+msgstr "__test_Value of 1 unit of the given cryptocurrency at the time the taxable event occurred"
+
+msgid "Value of 1 unit of the given cryptocurrency at the time the transaction occurred"
+msgstr "__test_Value of 1 unit of the given cryptocurrency at the time the transaction occurred"
+
+msgid "Weight %"
+msgstr "__test_Weight %"
+
+msgid "Which cryptocurrency (e.g. BTC, ETH, etc.)"
+msgstr "__test_Which cryptocurrency (e.g. BTC, ETH, etc.)"
+
+msgid "Which cryptocurrency was transacted (e.g. BTC, ETH, etc.)"
+msgstr "__test_Which cryptocurrency was transacted (e.g. BTC, ETH, etc.)"
+
+msgid "With Fee"
+msgstr "__test_With Fee"
+
+msgid "YES"
+msgstr "__test_YES"
+
+msgid "Year"
+msgstr "__test_Year"
+
+msgid "Yearly Gain / Loss Summary"
+msgstr "__test_Yearly Gain / Loss Summary"
+
+msgid "Yellow"
+msgstr "__test_Yellow"
+
+msgid "{}"
+msgstr "__test_{}"
+
+msgid "{} Fee"
+msgstr "__test_{} Fee"
+
+msgid "{} In"
+msgstr "__test_{} In"
+
+msgid "{} In No Fee"
+msgstr "__test_{} In No Fee"
+
+msgid "{} In With Fee"
+msgstr "__test_{} In With Fee"
+
+msgid "{} In-Out"
+msgstr "__test_{} In-Out"
+
+msgid "{} Out"
+msgstr "__test_{} Out"
+
+msgid "{} Per Unit"
+msgstr "__test_{} Per Unit"
+
+msgid "{} Per Unit Cost Basis"
+msgstr "__test_{} Per Unit Cost Basis"
+
+msgid "{} Per Unit Input Price"
+msgstr "__test_{} Per Unit Input Price"
+
+msgid "{} Tax"
+msgstr "__test_{} Tax"
+
+msgid "{} Taxable Total"
+msgstr "__test_{} Taxable Total"
+
+msgid "{} Total"
+msgstr "__test_{} Total"
+
+msgid "{} Total Cost Basis"
+msgstr "__test_{} Total Cost Basis"
+
+msgid "{} Unrealized"
+msgstr "__test_{} Unrealized"
+
+msgid "{} Unrealized Cost Basis"
+msgstr "__test_{} Unrealized Cost Basis"
+
+msgid "{} Unrealized Gain / Loss"
+msgstr "__test_{} Unrealized Gain / Loss"
+
+msgid "{} Unrealized Gain / Loss %"
+msgstr "__test_{} Unrealized Gain / Loss %"
+
+msgid "{} Unrealized Value"
+msgstr "__test_{} Unrealized Value"
+
+msgid "{} Unrealized Value Weight %"
+msgstr "__test_{} Unrealized Value Weight %"
+
+msgid "{} amount of this in-transaction fraction"
+msgstr "__test_{} amount of this in-transaction fraction"
+
+msgid "{} amount of this taxable event fraction"
+msgstr "__test_{} amount of this taxable event fraction"
+
+msgid "{} cost basis of this in-transaction fraction"
+msgstr "__test_{} cost basis of this in-transaction fraction"
+
+msgid "{} fee of this in-transaction fraction"
+msgstr "__test_{} fee of this in-transaction fraction"
+
+msgid "{} value of the fees"
+msgstr "__test_{} value of the fees"
+
+msgid "{} value of the transaction with fees"
+msgstr "__test_{} value of the transaction with fees"
+
+msgid "{} value of the transaction without fees"
+msgstr "__test_{} value of the transaction without fees"
+
+#~ msgid "Asset - Exchange"
+#~ msgstr "__test_Asset - Exchange"
+
+#~ msgid "Input"
+#~ msgstr "__test_Input"
+
+#~ msgid "US dollar value of the fees"
+#~ msgstr "__test_US dollar value of the fees"
+
