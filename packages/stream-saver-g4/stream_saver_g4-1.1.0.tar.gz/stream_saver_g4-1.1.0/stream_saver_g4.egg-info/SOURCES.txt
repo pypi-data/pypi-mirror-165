@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+stream_saver_g4/__init__.py
+stream_saver_g4.egg-info/PKG-INFO
+stream_saver_g4.egg-info/SOURCES.txt
+stream_saver_g4.egg-info/dependency_links.txt
+stream_saver_g4.egg-info/requires.txt
+stream_saver_g4.egg-info/top_level.txt
