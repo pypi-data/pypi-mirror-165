@@ -1,0 +1,3 @@
+azure-core<2.0.0,>=1.24.2
+msrest>=0.7.1
+cryptography>=2.1.4
