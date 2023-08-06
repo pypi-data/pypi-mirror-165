@@ -1,0 +1,11 @@
+nicesql/__init__.py,sha256=tzgnrYr_mAOiy-n_6qpxfQE_X1sLrriHLLOnpCvmPmw,211
+nicesql/sqlengine.py,sha256=8fellbkpsvHeFK81IF4YJs-ciUowHui5NRdVIUD_gb0,3922
+nicesql/sqlmodel.py,sha256=PzASL9rwdRu0T_gedB-954xt1B7iGH91qNqcJH0_zrQ,379
+nicesql/sqlresult.py,sha256=WTPxdGOc1dFsCMkHp-JFTY8UWjG0KMXXRpj5wL8d2AQ,830
+nicesql/utils.py,sha256=mj8Cn79WbPY5TU6uZoXgRC2Lj__ihqYw7epyDVoKYuk,678
+nicesql/engine/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nicesql/engine/sqlite.py,sha256=wHDDSHSj9fkBqiplGrDRy9drwL5I6EQhDYUX-zUc7F8,1009
+nice_sql-0.0.4.dist-info/METADATA,sha256=h3jOzLuNiVMv-ij7wRTS0MgFzggu14I-LNk_wG71-0E,2561
+nice_sql-0.0.4.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+nice_sql-0.0.4.dist-info/top_level.txt,sha256=zrxJdd-w3-cB8kIxMa4b_yz7D6WcJz-InBvW-rvaR50,8
+nice_sql-0.0.4.dist-info/RECORD,,
