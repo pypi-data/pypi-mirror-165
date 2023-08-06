@@ -1,0 +1,6 @@
+localstack-client
+
+[test]
+flake8
+localstack
+pytest
