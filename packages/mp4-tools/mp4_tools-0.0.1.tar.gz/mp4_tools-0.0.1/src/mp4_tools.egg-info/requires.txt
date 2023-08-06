@@ -1,0 +1,4 @@
+coloredlogs
+ffmpeg-python
+ffmpy
+ffmpeg

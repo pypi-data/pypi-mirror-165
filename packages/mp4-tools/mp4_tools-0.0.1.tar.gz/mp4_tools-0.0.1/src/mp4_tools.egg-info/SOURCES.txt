@@ -1,0 +1,12 @@
+README.rst
+setup.cfg
+setup.py
+src/mp4_tools/ConcatVideos.py
+src/mp4_tools/Convert.py
+src/mp4_tools/__init__.py
+src/mp4_tools/rename.py
+src/mp4_tools.egg-info/PKG-INFO
+src/mp4_tools.egg-info/SOURCES.txt
+src/mp4_tools.egg-info/dependency_links.txt
+src/mp4_tools.egg-info/requires.txt
+src/mp4_tools.egg-info/top_level.txt
