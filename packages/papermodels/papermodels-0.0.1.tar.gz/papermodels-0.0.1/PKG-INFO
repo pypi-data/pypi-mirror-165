@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: papermodels
+Version: 0.0.1
+Summary: Load networks
+Author-email: Connor Ferster <connor@structuralpython.com>
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Dist: matplotlib
+Requires-Dist: parse
+Requires-Dist: shapely
+Requires-Dist: colour
+Requires-Dist: numpy
+Requires-Dist: sqlalchemy
+Project-URL: Home, https://github.com/connorferster/papermodels
+
+# sdm
+Prototype of a structural engineering data model for buildings
+
