@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+PDFCompareTrueDiff/__init__.py
+PDFCompareTrueDiff.egg-info/PKG-INFO
+PDFCompareTrueDiff.egg-info/SOURCES.txt
+PDFCompareTrueDiff.egg-info/dependency_links.txt
+PDFCompareTrueDiff.egg-info/requires.txt
+PDFCompareTrueDiff.egg-info/top_level.txt
