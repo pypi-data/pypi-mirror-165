@@ -1,0 +1,278 @@
+# Foobar
+
+ `KernelQuantification` used Kernel Mean Embedding to estimate the proportion of a mixture of distributions.
+
+## Overview
+
+`KernelQuantification` is a method to do quantification learning, i.e. estimate proportions of labels in a target sample, using Kernel Mean Embedding and Random Fourier Features. This python implementation can run on CPU or on GPU if cuda is installed. <br>
+
+The methods implemented in this package are detailed in the following article: 
+
+> ARTICLE NOT YET AVAILABLE
+
+The code associated to the article can be found here:
+
+> CODE NOT YET AVAILABLE
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install Kernel Quantifier from [pypi](https://pypi.org/).
+
+```bash
+pip install kernelquantifier
+```
+
+You will require [CUDA](https://developer.nvidia.com/cuda-downloads) to use the algorithms on your GPU. <br>
+**Note** that the KernelQuantifier can be use on CPU however Generative KernelQuantifier requires a GPU to be efficient.
+
+## Example
+
+We test our methods on a toy dataset: [Iris flower dataset](https://en.wikipedia.org/wiki/Iris_flower_data_set) contains in the scikit-learn package.  
+
+All the code can be found at `./tests/example.ipynb`. 
+
+### Package 
+
+```python
+import kernelquantifier as kq
+
+import torch
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.datasets import load_iris
+from sklearn.decomposition import PCA
+```
+
+### Data
+
+We load the data and we use apply a PCA on the data to plot it. Code taken from the [scikit-learn documentation](https://scikit-learn.org/stable/auto_examples/decomposition/plot_incremental_pca.html#sphx-glr-auto-examples-decomposition-plot-incremental-pca-py)
+
+```python
+iris = load_iris()
+X = iris.data
+y = iris.target
+
+pca = PCA(n_components=2)
+X_pca = pca.fit_transform(X)
+
+colors = ["navy", "turquoise", "darkorange"]
+plt.figure(figsize=(8, 8))
+for color, i, target_name in zip(colors, [0, 1, 2], iris.target_names):
+    plt.scatter(
+        X_pca[y == i, 0],
+        X_pca[y == i, 1],
+        color=color,
+        lw=2,
+        label=target_name,
+    )
+plt.legend(loc="best", shadow=False, scatterpoints=1)
+plt.axis([-4, 4, -1.5, 1.5])
+plt.savefig("figures/iris_pca.png")
+plt.show()
+```
+<img src="./tests/figures/iris_pca.png" width="100%"/>
+
+We split the dataset in two part, one will be the Source and the other the Target. We don't have acces to the label of the Target
+dataset.
+
+```python
+np.random.seed(123)
+idx = np.random.choice(np.arange(X.shape[0]), 75, replace=False)
+idx_inv = []
+for i in range(X.shape[0]):
+    if i not in idx:
+        idx_inv.append(i)
+
+# Target
+Target = X[idx]
+Target_Label = y[idx]
+
+_, counts = np.unique(Target_Label, return_counts=True)
+pi = counts/Target_Label.shape[0]
+
+# Source
+Source = X[idx_inv]
+Source_Label = y[idx_inv]
+
+# Plot
+Source_pca = pca.transform(Source)
+Target_pca = pca.transform(Target)
+
+colors = ["navy", "turquoise", "darkorange"]
+plt.figure(figsize=(8, 8))
+for color, i, target_name in zip(colors, [0, 1, 2], iris.target_names):
+    plt.scatter(
+        Source_pca[Source_Label == i, 0],
+        Source_pca[Source_Label == i, 1],
+        color=color,
+        lw=2,
+        label=target_name,
+    )
+plt.scatter(
+    Target_pca[:, 0],
+    Target_pca[:, 1],
+    color="gray",
+    lw=1,
+    label="Target",
+)
+plt.legend(loc="best", shadow=False, scatterpoints=1)
+plt.axis([-4, 4, -1.5, 1.5])
+plt.show()
+```
+
+<img src="./tests/figures/iris_source_target.png" width="100%"/>
+
+### Preparing the data
+
+We transform the target into a torch.tensor. 
+
+```python
+Target = torch.from_numpy(Target)
+```
+
+We have implemented a class `kernelquantifier.LabelledCollection` to manage the Source data. This is essentially a list of tensor, where each index correspond to one class, with a few more methods implemented (see the documentation for more information).  
+
+To create `kernelquantifier.LabelledCollection` we need to pass as argument a function that will transform the data as a list and the corresponding arguments (see the documentation for more information).\\
+For instance in our case the Source `X` come with label `y`. We create a function  `to_labelledCollection` that takes the data and the labels as arguments and returns a list where index 0 contains the point belonging to the class 0 and so on.
+
+------------------
+Side note on the device:  
+The computation can be done either on the CPU or the GPU. To be performed on the GPU you will need [CUDA](https://developer.nvidia.com/cuda-downloads) installed.  
+The device the computation will be done on, is the same device as the Source (If Target and Source are not on the same device, the Target will be moved).  
+We have implemented two functions : `kernelquantifier.choose_device` that will select the gpu is avalaible and the cpu otherwise. And `kernelquantifier.cuda_info` that will give informations on the device.
+
+```python
+device = kq.choose_device(verbose=True) 
+# device = torch.device("cpu")
+kq.cuda_info(device)
+```
+
+outputs:
+```bash
+Running on the GPU
+Using device: cuda:0
+
+NVIDIA RTX A2000 Laptop GPU
+Memory Usage:
+Allocated: 0.0 GB
+Cached:    0.0 GB
+11.3
+```
+------------------
+
+```python
+def to_labelledCollection(X, y):
+    return [torch.from_numpy(X[y == i, :]).to(device) for i in range(3)]
+
+Source = kq.LabelledCollection(to_labelledCollection, Source, Source_Label)
+```
+
+### KernelQuantifier
+
+There is two version of the Kernel Quantifier algorithm. The one that use Random Fourier Features and the one that don't. See notebook `computation_times.ipynb` or the article to see the difference between the two.
+
+#### With RandomFourierFeatures
+
+To use the KernelQuantifier with RFF, we call the class `kernelquantifier.KernelQuantifierRFF` (see the docs for more information).\\
+The init as two arguments: kernel_type (str) and seed (int). The seed is there to ensure the reproducibility of the experiments. While the kernel_type specify the kernel we want to use. Use the function `kernelquantifier.available_kernel_rff` to see the list of currently available kernel with RFF.\\
+Then we have to fit our kernel. The method `KernelQuantifierRFF.fit` is used to store the RFF given a sigma and the number of RFF. If sigma is a range and not a float, then the method will compute the optimal sigma according to our theoretical criterion (see the article).
+
+```python
+quantifier = kq.KernelQuantifierRFF(kernel_type="gaussian", seed=123)
+quantifier.fit(Source, sigma=[0.1, 2], verbose=True, number_rff=1000)
+```
+<img src="./tests/figures/choose_sigma.png" width="100%"/>
+
+```bash
+return : Sigma =  0.9530612244897959
+```
+
+We now can quantify using the method `KernelQuantifierRFF.quantify`. This method take as argument the Source (as a LabelledCollection) and the Target. It returns the estimate proportion as an `numpy.array`. We print the estimated proportions `pi_hat` and the true proportions computed earlier `pi`. Finally we used `kernelquantifier.KL_divergence` to compute the KL divergence times 100 between the two vectors.
+
+```python
+pi_hat = quantifier.quantify(Source, Target)
+print(f"pi_hat = {pi_hat} \npi = {pi}")
+print(f"Error = {kq.KL_divergence(pi_hat, pi)}")
+```
+
+outputs:
+```bash
+pi_hat = [0.36557279 0.31453992 0.31988729] 
+pi = [0.36       0.26666667 0.37333333]
+Error = 0.8126347074855538
+```
+
+#### Without RandomFourierFeatures
+
+The version without RFF is similar to the one with RFF.\\
+We creat an instance of the class `kernelquantifier.KernelQuantifier`. Use the function `kernelquantifier.available_kernel` to see the list of currently available kernel without RFF. We then use the method `KernelQuantifier.fit` witout specifying the number of RFF.
+
+```python
+quantifier = kq.KernelQuantifier(kernel_type="gaussian", seed=123)
+quantifier.fit(Source, sigma=[0.1, 2], verbose=True)
+```
+<img src="./tests/figures/choose_sigma_withoutrff.png" width="100%"/>
+
+We then quantify using the method `KernelQuantifier.quantify` with the same arguments in input as before.
+
+```python
+assert isinstance(Source.data_,list)
+pi_hat = quantifier.quantify(Source.data_, Target) # quantifier.quantify(Source, Target)
+print(f"pi_hat = {pi_hat} \npi = {pi}")
+print(f"Error = {kq.KL_divergence(pi_hat, pi)}")
+```
+
+outputs:
+```bash
+pi_hat = [0.36641991 0.3124038  0.32117629] 
+pi = [0.36       0.26666667 0.37333333]
+Error = 0.759835032840004
+```
+
+### Generative KernelQuantifier
+
+Generative KernelQuantifier was designed to deal with the Generalised Label Shift Hypothesis. This is not the case here. We don't need to use GKQuant. Nevertheless we will use it as an example.\\
+We create an instance of class `kernelquantifier.GenerativeKernelQuantifier`. We specify the kernel_type (use `kernelquantifier.available_kernel_rff` to see the list of available kernel), and the generator type. Use `kernelquantifier.available_generator` to see the list of available generator.\\
+Currently three: 
+- sharelinear: $g_i(x) = Ax + b_i$
+- independantlinear $g_i(x) = A_i x + b_i$
+- translation $g_i(x) = x + b_i$
+$A \text{and} A_i$ are diagonal matrix.
+
+We fit the sameway we fitted the `kernelquantifier.KernelQuantifier`.
+
+```python
+quantifier = kq.GenerativeKernelQuantifier(
+    kernel_type="gaussian", 
+    generator_type="sharelinear", 
+    seed=123)
+quantifier.fit(Source, sigma=1., verbose=True, number_rff=1000)
+```
+
+The method quantify has several parameters (see the pseudo-code in the article for more details and the docs).
+
+```python
+parameter = {"n_epoch": 20,
+             "n_epochGM": 10,
+             "lr": 0.001,
+             "verbose": True,
+             "initial_prop" : None}
+
+pi_hat = quantifier.quantify(Source, Target, **parameter)
+print(f"pi_hat = {pi_hat} \npi = {pi}")
+print(f"Error = {kq.KL_divergence(pi_hat, pi)}")
+```
+
+outputs:
+```bash
+pi_hat = [0.35858863 0.30174921 0.33966216] 
+pi = [0.36       0.26666667 0.37333333]
+Error = 0.3781702910014444
+``` 
+
+
+## Contributing
+Pull requests are welcome.
+
+## License
+KernelQuantifier is under the [MIT](https://choosealicense.com/licenses/mit/) licence. See the LICENCE file.
