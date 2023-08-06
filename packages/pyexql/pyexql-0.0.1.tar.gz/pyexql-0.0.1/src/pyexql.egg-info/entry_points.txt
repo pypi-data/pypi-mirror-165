@@ -1,0 +1,2 @@
+[console_scripts]
+pyexql = pyexql.__main__:main

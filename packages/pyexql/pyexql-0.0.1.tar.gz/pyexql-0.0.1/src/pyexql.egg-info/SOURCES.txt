@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+src/__init__.py
+src/pyexql/__init__.py
+src/pyexql/__main__.py
+src/pyexql/main.py
+src/pyexql/run.py
+src/pyexql/validate.py
+src/pyexql.egg-info/PKG-INFO
+src/pyexql.egg-info/SOURCES.txt
+src/pyexql.egg-info/dependency_links.txt
+src/pyexql.egg-info/entry_points.txt
+src/pyexql.egg-info/requires.txt
+src/pyexql.egg-info/top_level.txt

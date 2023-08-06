@@ -1,0 +1,4 @@
+fastapi
+python-dotenv
+snowflake-connector-python==2.7.12
+uvicorn[standard]

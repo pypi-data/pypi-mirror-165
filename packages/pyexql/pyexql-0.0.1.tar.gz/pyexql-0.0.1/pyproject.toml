@@ -1,0 +1,32 @@
+# pyproject.toml
+
+[build-system]
+requires      = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyexql"
+version = "0.0.1"
+description = "ExQL"
+readme = "README.md"
+authors = [{ name = "ExQL", email = "exql@googlegroups.com" }]
+license = { file = "LICENSE" }
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+keywords = ["exql"]
+dependencies = [
+    "fastapi",
+    "python-dotenv",
+    "snowflake-connector-python==2.7.12",
+    "uvicorn[standard]",
+]
+requires-python = ">=3.9"
+
+[project.urls]
+Homepage = "https://google.com"
+
+[project.scripts]
+pyexql = "pyexql.__main__:main"

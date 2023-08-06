@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: pyexql
+Version: 0.0.1
+Summary: ExQL
+Author-email: ExQL <exql@googlegroups.com>
+Project-URL: Homepage, https://google.com
+Keywords: exql
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# pyexql
+
+## Dev Setup
+
+Connector version is 2.7.12, python version is 3.9
+1. Snowflake connector requirements: `pip install -r https://raw.githubusercontent.com/snowflakedb/snowflake-connector-python/v2.7.12/tested_requirements/requirements_39.reqs`
+2. Connector: `pip install snowflake-connector-python==2.7.12`
