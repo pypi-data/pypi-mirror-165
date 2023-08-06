@@ -1,0 +1,7 @@
+azure_datalake_utils/__init__.py,sha256=lk0N9HhI-la3AnBagNfT8w8GYviEf87rUUiYv-Te-8o,297
+azure_datalake_utils/azure_datalake_utils.py,sha256=sPCnt5kAcQAq4QTfbyTWj2C5M58uWs9KW1OZffqOxmU,3808
+azure_datalake_utils/exepctions.py,sha256=ZMENGr80iSMz1RJhbWAh0QQ6rXl185Ok7OPIU8lQt-c,961
+azure_datalake_utils-0.2.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+azure_datalake_utils-0.2.0.dist-info/WHEEL,sha256=bbU3AyvhQ312rVm7zzRQjs6axI1UYWC3nmFA2E6FFSI,88
+azure_datalake_utils-0.2.0.dist-info/METADATA,sha256=15hFud5vmDFTR53SuJ3aNXpVFZuli0rolK_o6-zyT3I,4635
+azure_datalake_utils-0.2.0.dist-info/RECORD,,
