@@ -1,0 +1,99 @@
+Metadata-Version: 2.1
+Name: djib
+Version: 0.1.2
+Summary: Djib Python API
+Home-page: https://djib.io
+License: GPL-3.0-only
+Keywords: blockchain,command-line-tools,p2p-network,solana,djib
+Author: Djib tech team
+Author-email: tech@djib.io
+Requires-Python: >=3.10,<4.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: PyNaCl (>=1.5.0,<2.0.0)
+Requires-Dist: base58 (>=2.1.1,<3.0.0)
+Requires-Dist: jsonrpcserver (>=5.0.8,<6.0.0)
+Requires-Dist: python-magic (>=0.4.27,<0.5.0)
+Requires-Dist: solana (>=0.25.1,<0.26.0)
+Project-URL: Documentation, https://docs.djib.io
+Description-Content-Type: text/markdown
+
+<div align="center">
+    <img src="https://4289938616-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F6MrZ6BqPMP2mmJKSKsG8%2Ficon%2F5q4QZZ6hqugOY1FCi0Mw%2Flogo.svg?alt=media&token=114140fd-3e6b-4ba9-8925-07c50a835eb5" width="25%" height="25%">
+</div>
+
+---
+
+# Djib Python SDK
+
+It's the base Python library for interacting with Djib network.
+You can use it interact
+with the Djib network. 
+
+## Quickstart
+
+### Installation
+
+```sh
+pip install djib
+```
+
+### General RPC Usage
+
+```py
+from djib.rpc import DjibRpc
+
+WALLET_PRIVATE_KEY = '<Base58 encoded string>'
+
+try:
+    rpc = DjibRpc(WALLET_PRIVATE_KEY, is_devnet=True)
+
+    # status of drive
+    response = rpc.status()
+
+    if response.error:
+        print(f"Error: {response.error['message']}, Code: {response.error['code']}, Data: {response.error['data']}")
+    else:
+        print(response.data)
+except Exception as e:
+    print(f"Error: {str(e)}")
+```
+
+### KMS Usage
+
+```py
+from djib.rpc import KmsClient
+
+WALLET_PRIVATE_KEY = '<Base58 encoded string>'
+
+try:
+    kms = KmsClient(WALLET_PRIVATE_KEY, is_devnet=True)
+    a = 'Hello, World!'
+    a_enc = kms.encrypt(a)
+    a_dec = kms.decrypt(a_enc)
+    assert a_dec == a
+except Exception as e:
+    print(f"Error: {str(e)}")
+```
+
+
+## Development
+
+### Setup
+
+1. Install [poetry](https://python-poetry.org/docs/#installation)
+2. Install dev dependencies:
+
+```sh
+poetry install
+```
+
+3. Activate the poetry shell.
+
+```sh
+poetry shell
+```
+
