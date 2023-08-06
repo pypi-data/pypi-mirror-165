@@ -1,0 +1,11 @@
+casdoor_auth/__init__.py,sha256=GcM6cHAS5H-e52JClTdbDcKGaMsY-0zKQ9h1xhKJL4M,635
+casdoor_auth/apps.py,sha256=EQZUX7FVfiMtRLi-tMmeR0muHrrgf8tVgGJH2KuigX4,756
+casdoor_auth/tests.py,sha256=67IircP8yXBapWq40DlrDYSEcRiK83XUKEGgx9AOwNE,606
+casdoor_auth/urls.py,sha256=N5ZLxS0xky4tUs4ccDt0QLU4_wwVH9y8bux4BQhN5_0,798
+casdoor_auth/user.py,sha256=3-DubS1vhcGiOJ8XSsj309nOOfLZg4rgOgTzE06bmPI,1013
+casdoor_auth/views.py,sha256=4jJqkK-VoNnSFbxiBuRf3611eRVmsK57oHblhhktXh0,1800
+django_casdoor_auth-1.0.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+django_casdoor_auth-1.0.1.dist-info/METADATA,sha256=LsrP0NbkmLIWkza_br1OaiilAob2MZRTI25IHb5IB98,4006
+django_casdoor_auth-1.0.1.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+django_casdoor_auth-1.0.1.dist-info/top_level.txt,sha256=LGvhKvvkMRXwKrgijpcDpbe4NEJ3N2a6qv_mNqE1r2M,13
+django_casdoor_auth-1.0.1.dist-info/RECORD,,
