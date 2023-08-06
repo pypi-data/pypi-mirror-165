@@ -1,0 +1,13 @@
+
+[doc]
+sphinx
+sphinx-rtd-theme
+nbsphinx
+ipython
+ipykernel
+
+[test]
+numpy
+pytest
+graphviz
+particle
