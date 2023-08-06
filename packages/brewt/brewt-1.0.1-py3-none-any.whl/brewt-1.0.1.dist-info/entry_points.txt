@@ -1,0 +1,2 @@
+[console_scripts]
+brewt = brewt.brewt_main:main
