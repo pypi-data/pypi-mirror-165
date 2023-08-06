@@ -1,0 +1,9 @@
+nagisa_bert/__init__.py,sha256=fPzj8eaA5PUndVWxqGJ-ogTURqrUAMfQvt7KCEA1Y5I,92
+nagisa_bert/tokenization_nagisa_bert.py,sha256=HKNs2O-jtTMgP22ql3Ch7p87oElU6foEVpA-XWyahKA,7571
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_tokenization_nagisa_bert.py,sha256=idTngoVSxbsd7h6h_1mGRwjplTq2sSNnqAB_wot-4iQ,3885
+nagisa_bert-0.0.2.dist-info/LICENSE,sha256=kFOe06HsbGpE7DwRFKb7FJluQdsOpmY38H6Objzfz6U,1065
+nagisa_bert-0.0.2.dist-info/METADATA,sha256=E-eYdGyXCZeMk-aXCl8h2l8Ok-yuCQ3uwnxIt77zhQw,4061
+nagisa_bert-0.0.2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+nagisa_bert-0.0.2.dist-info/top_level.txt,sha256=JfIzwj9_FlQxQsecvVTUIlkAmFmh-XzNZGnv7zg9RWg,18
+nagisa_bert-0.0.2.dist-info/RECORD,,
