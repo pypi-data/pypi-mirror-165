@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: thsolver
+Version: 1.1.0
+Summary: Solver for PyTorch
+Home-page: https://github.com/octree-nn/solver-pytorch
+Author: Peng-Shuai Wang
+Author-email: wangps@hotmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# The Solver for PyTorch
+
+[![downloads](https://pepy.tech/badge/thsolver)](https://pepy.tech/project/thsolver)
+[![PyPI](https://img.shields.io/pypi/v/thsolver)](https://pypi.org/project/thsolver/)
+
+
+The code can be used for training/testing PyTorch models. It is used in the
+[O-CNN](https://github.com/octree-nn/ocnn-pytorch) and my daily experiments.
+
+It is similar to `pytorch-lightning`, with much simpler implementations.
