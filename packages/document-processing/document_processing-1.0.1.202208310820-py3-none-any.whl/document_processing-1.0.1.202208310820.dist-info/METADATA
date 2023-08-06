@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: document-processing
+Version: 1.0.1.202208310820
+Summary: Pre-process documents for Natural Language Processing using spaCy models
+Home-page: https://gitlab.univ-lr.fr/cross-lingual-event-tracking/developpement/from-documents-to-events/document_processing
+Author: Guillaume Bernard
+Author-email: contact@guillaume-bernard.fr
+License: GPLv3
+Project-URL: Bug Tracker, https://gitlab.univ-lr.fr/cross-lingual-event-tracking/developpement/from-documents-to-events/document_processing/-/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Intended Audience :: Science/Research
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: AUTHORS
+Requires-Dist: pandas (~=1.3.5)
+Requires-Dist: setuptools (~=53.0.0)
+Requires-Dist: spacy (~=3.2.1)
+
+# `document_processing`
+
+## Install
+
+```bash
+pip install document_processing
+```
+
+This package provides functions to pre-process text for various NLP tasks. It uses [`spaCy`](https://spacy.io/) and its models to analyse the text.
+
+## Behaviour
+
+The entry point of this package is `process_dcouments` in which you put the `Series` of documents to process and the `spaCy` model name that will be loaded to transform the texts.
+
+From a document, you can extract tokens, lemmas and entities with the `get_tokens_lemmas_entities_from_document` function, giving it the document returned by the previous function, and the preprocessing function, as described below.
+
+### Pre-processing functions
+
+- `preprocess_list_of_texts`: process tokens, remove stopwords, non-standard characters, etc.
+- `preprocess_list_of_tweets`: same as above, and remove all token that seem to be HTTP links, which are often present in Tweets.
+
+
+
