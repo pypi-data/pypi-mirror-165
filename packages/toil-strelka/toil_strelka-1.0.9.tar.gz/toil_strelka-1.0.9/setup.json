@@ -1,0 +1,35 @@
+{
+  "classifiers": [
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Operating System :: Unix",
+    "Operating System :: POSIX",
+    "Topic :: Utilities"
+  ],
+  "entry_points": {
+    "console_scripts": ["toil_strelka=toil_strelka.cli:main"]
+  },
+  "setup_requires": ["pytest-runner==2.11.1"],
+  "install_requires": ["toil_container>=2.0.3"],
+  "extras_require": {
+    "test": [
+      "coverage>=6.2.0",
+      "pydocstyle>=6.1.1",
+      "pytest>=7.0.1",
+      "pytest-cov>=3.0.0",
+      "pytest-env>=0.6.2",
+      "pylint>=2.12.2",
+      "tox>=3.24.5"
+    ]
+  },
+  "author": "Joe Zhou, Juan Medina, Max Levine, Juan E. Arango",
+  "keywords": [],
+  "license": "BSD",
+  "name": "toil_strelka",
+  "test_suite": "tests",
+  "long_description": "📘 learn more on `GitHub <https://github.com/papaemmelab/toil_strelka>`_!",
+  "description": "Toil implementation of Strelka SNV Caller",
+  "url": "https://github.com/papaemmelab/toil_strelka"
+}
