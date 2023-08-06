@@ -1,0 +1,11 @@
+wedata/__init__.py,sha256=x9qPA9-PT0ii5OCttyMGCekQE2fwxcS5QHxMfyJ5jbE,91
+wedata/api.py,sha256=CMr6fa31_8FtEzyLmOc4H2zy16saNNrX12obUJZqoFg,867
+wedata/checker.py,sha256=jb8hL9Y9MYnO4ETeF9Pj7I-9-oK4sNxr-jaXjOgsCdU,2714
+wedata/client.py,sha256=QD7NXkdulVKXLy52AYgDnF-_sBfkxo1gXNxBYUfMCz0,6732
+wedata/client_local.py,sha256=2Giw4pr2y-VV0dGsC9mKs5QRsXPJJLAiTqFIsaRbVJs,3786
+wedata/config.py,sha256=WOE9OqNUeb3bIYZdK5UlMqJl9zrGmih4_rFIOfvart4,61
+wedata/utils.py,sha256=uFwOVipyw7GvopOrntgfVRKAmzFZQtPsX18myDVj30E,622
+wedata-0.0.18.dist-info/METADATA,sha256=m8ynEimZZa_mgVwntr78is1PHPHs9HEFT8iJpo95P3I,1440
+wedata-0.0.18.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+wedata-0.0.18.dist-info/top_level.txt,sha256=Xa0v1rh__RvfVTVDirW5r5UBKg7ZO_iuTeXfp8MNo2A,7
+wedata-0.0.18.dist-info/RECORD,,
