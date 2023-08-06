@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: pyonize
+Version: 0.1.4
+Summary: convert json|dict to python object
+Home-page: https://github.com/BilalAlpaslan/Pyonize
+License: LICENSE
+Author: Bilal Alpaslan
+Author-email: m.bilal.alpaslan@gmail.com
+Requires-Python: >=3.7
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+
+# Pyonize
+
+convert json|dict to python object
+
+## Setup
+
+```
+pip install pyonize
+```
+
+## Examples
+```py
+from pyonize import pyonize
+
+deneme = pyonize({"id": 1, "name": "jhon", "job": {"id": 1, "title": "CTO"}, "list": [
+                1, 2, 3], "dictlist": [{"name": "foo"}, {"name": "bar"}]})
+
+print(deneme.name)
+print(deneme.job)
+print(deneme.job.title)
+```
+
+##
+
+```py
+from pyonize import Pyon
+
+class Foo(Pyon):
+    def bar(self):
+        ...
+
+data = {"id": 1, "name": "jhon", "job": {"id": 1, "title": "CTO"},
+    "list": [1, 2, 3], "dictlist": [{"name": "foo"}, {"name": "bar"}]}
+
+foo = Foo(data)
+
+print(foo.id)
+print(foo.dictlist[1].name)
+
+```
+
+<br>
+<hr>
+
+
