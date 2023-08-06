@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: minifrpy
+Version: 0.2
+Summary: langage minimal
+Home-page: https://github.com/imenemes/mypylang
+Author: imen Lhocine
+Author-email: imen.mes@gmail.com
+License: MIT
+
+ 
+mypy
+--------
+
+Pour l'utiliser simplement:
+
+    $ mypyfr
+
+    mypy>
+
+depuis l'intepreteur python:
+
+    >>> from mypy import interpreter
+    >>> interpreter.main()
+
+    mypy>
+
+Pour lancer les tests:
+
+    >>> from mypy import tests
+
+    les tests seront lancés automatiquement

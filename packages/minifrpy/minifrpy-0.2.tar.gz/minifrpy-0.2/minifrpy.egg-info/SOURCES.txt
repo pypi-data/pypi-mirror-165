@@ -1,0 +1,17 @@
+MANIFEST.in
+README.rst
+setup.py
+minifrpy.egg-info/PKG-INFO
+minifrpy.egg-info/SOURCES.txt
+minifrpy.egg-info/dependency_links.txt
+minifrpy.egg-info/entry_points.txt
+minifrpy.egg-info/not-zip-safe
+minifrpy.egg-info/requires.txt
+minifrpy.egg-info/top_level.txt
+mypy/__init__.py
+mypy/execute.py
+mypy/interpreter.py
+mypy/mylexer.py
+mypy/myparser.py
+mypy/mypy_errors.py
+mypy/tests.py
