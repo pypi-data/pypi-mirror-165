@@ -1,0 +1,49 @@
+{
+    "PUE" : {
+        "fullname" : "Power Usage Effectiveness",
+        "icon" : "electric_bolt",
+        "documentation" : "https://philipp-sommerhalter.gitbook.io/eesr/library/metrics/pue"
+    },
+    "CUE" : {
+        "fullname" : "Carbon Usage Effectiveness",
+        "icon" : "eco",
+        "documentation" : "https://philipp-sommerhalter.gitbook.io/eesr/library/metrics/cue"
+    },
+    "APCr" : {
+        "fullname" : "Adaptability Power Curve at Renewable Energies",
+        "icon" : "eco",
+        "documentation" : "https://philipp-sommerhalter.gitbook.io/eesr/library/metrics/apcr"        
+    },
+    "CO2 (g)" : {
+        "fullname" : "Total carbon dioxide emissions",
+        "icon" : "eco",
+        "documentation" : ""        
+    },
+    "GEC" : {
+        "fullname" : "Green Energy Coefficient",
+        "icon" : "eco",
+        "documentation" : "https://philipp-sommerhalter.gitbook.io/eesr/library/metrics/gec"        
+    },
+    "TUE" : {
+        "fullname" : "Total-power Usage Effectiveness",
+        "icon" : "electric_bolt",
+        "documentation" : "https://philipp-sommerhalter.gitbook.io/eesr/library/metrics/tue"        
+    },
+    "NeNr" : {
+        "fullname" : "Non-essential Non-renewable",
+        "icon" : "eco",
+        "documentation" : "https://philipp-sommerhalter.gitbook.io/eesr/library/metrics/nenr"        
+    },
+    "CADE" : {
+        "fullname" : "Corporate Average Data Center Efficiency",
+        "icon" : "none",
+        "documentation" : "https://philipp-sommerhalter.gitbook.io/eesr/library/metrics/cade"        
+    },
+    "DPPE" : {
+        "fullname" : "Data Center Performance Per Energy",
+        "icon" : "none",
+        "documentation" : "https://philipp-sommerhalter.gitbook.io/eesr/library/metrics/dppe"        
+    }
+
+    
+}

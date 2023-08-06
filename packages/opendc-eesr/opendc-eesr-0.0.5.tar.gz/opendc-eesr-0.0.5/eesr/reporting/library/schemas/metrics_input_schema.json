@@ -1,0 +1,145 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id" : "",
+    "title": "OpenDC EESR Data Schema",
+    "description": "JSON schema definition for expected data for opendc-eesr report builder",
+    "type" : "object",
+    "properties" : {
+        "builtin_metrics" : {
+            "type" : "object",
+            "additionalProperties" : false,
+            "properties" : {
+                    "PUE" : {
+                        "type" : "number"
+                    },
+                    "CUE" : {
+                        "type" : "number"
+                    },
+                    "APCr" : {
+                        "type" : "number"
+                    },
+                    "CO2 (g)" : {
+                        "type" : "number"
+                    },
+                    "GEC" : {
+                        "type" : "number"
+                    },
+                    "TUE" : {
+                        "type" : "number"
+                    },
+                    "NeNr" : {
+                        "type" : "number"
+                    },
+                    "total_energy" : {
+                        "type" : "object",
+                        "properties" : {
+                            "value" : { "type" : "number" },
+                            "unit" : {
+                                "type" : "string",
+                                "enum" : [
+                                    "Wh",
+                                    "kWh",
+                                    "MWh",
+                                    "GWh",
+                                    "TWh"
+                                ]
+                            }
+                        }
+                    },
+                    "CADE" : {
+                        "type" : "number"
+                    },
+                    "DPPE" : {
+                        "type" : "number"
+                    }
+            }
+        },
+        "additional_metrics" : {
+            "title" : "Additional metrics for custom profile/template",
+            "type" : "array",
+            "items" : {
+                "type" : "object",
+                "properties" : {
+                    "name" : {
+                        "type" : "string",
+                        "maxLength" : 8
+                    },
+                    "desc" : {
+                        "description" : "A short description for hover tooltip or dashboard view.",
+                        "type" : "string"
+                    },
+                    "documentation" : {
+                        "description" : "A link to resources which describes the metric in full detail. May be research paper.",  
+                        "type" : "string",
+                        "format" : "uri"
+                    },
+                    "icon" : {
+                        "description" : "Select the icon displayed beside the metric indicating whether it is efficiency or sustainability focused.",
+                        "enum" : ["energy", "sustainability", "none", "custom"]
+                    },
+                    "value" : {
+                        "type" : "number"
+                    }
+                },
+                "if" : {
+                    "properties" : { "icon" : { "const" : "custom"}}
+                },
+                "then" : {
+                    "properties" : { "custom_i" : {
+                            "description" : "Name and desired color of custom icon. Must be from https://fonts.google.com/icons. Use <span> name for name!",
+                            "type" : "object",
+                            "properties" : {
+                                "name" : {"type" : "string"},
+                                "color" : { "type" : "string"}
+                            }
+                        } 
+                    }
+                },
+                "required" : ["name", "desc", "documentation", "icon"]
+            }
+        },
+        "domain" : {
+            "title" : "Domain specific details to report",
+            "type" : "array",
+            "items" : {
+                "type" : "object",
+                "properties" : {
+                    "name" : {"type" : "string"},
+                    "value" : {"type" : "number"}
+                }
+            }
+        },
+        "graph_comment" : {
+            "type" : "string"
+        },
+        "metadata" : {
+            "description" : "Metadata describing the origin of the data",
+            "type" : "object",
+            "properties" : {
+                "start_date" : {
+                    "type" : "string",
+                    "format" : "date"
+                },
+                "end_date" : {
+                    "type" : "string",
+                    "format" : "date"
+                },
+                "environment" : {
+                    "description" : "The environment from where the data originates.",
+                    "type" : "string",
+                    "examples" : [
+                        "OpenDC Simulator",
+                        "AWS Frankfurt"
+                    ]
+                }, 
+                "environment_link" : {
+                    "description" : "Link",
+                    "type" : "string",
+                    "format" : "uri"
+                }
+            },
+            "required" : ["start_date", "end_date", "environment"]
+        }
+    },
+    "required": ["builtin_metrics", "metadata"]
+}

@@ -1,0 +1,46 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id" : "",
+    "title": "OpenDC EESR Profile Schema",
+    "description": "JSON schema definition for defining a reporting profile",
+    "type" : "object",
+    "properties": {
+        "name" : {
+            "description" : "The name of the custom reporting profile",
+            "type" : "string"
+        },
+        "builtin_metrics" : {
+            "description" : "List of metric IDs from the EESR metrics library to report",
+            "type" : "array",
+            "items" : {
+                "type" : "string",
+                "uniqueItems": true,
+                "enum" : [
+                    "PUE",
+                    "CUE",
+                    "APCr",
+                    "CO2",
+                    "GEC",
+                    "TUE",
+                    "NeNr",
+                    "total_energy",
+                    "CADE",
+                    "DPPE"
+                ]
+            }
+        },
+        "additional_metrics" : {
+            "description" : "List of metric IDs that should included in additional_metrics in input file",
+            "type" : "array",
+            "uniqueItems": true,
+            "items" : {
+                "type" : "string"
+            }
+        },
+        "graph" : {
+            "description" : "List of graph IDs to generate and display in the report",
+            "type" : "string"
+        }
+    },
+    "required": ["name", "builtin_metrics", "graph"]
+}

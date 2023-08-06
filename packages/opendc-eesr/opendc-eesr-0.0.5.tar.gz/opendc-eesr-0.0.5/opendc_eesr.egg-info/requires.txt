@@ -1,0 +1,6 @@
+domonic
+html5lib
+plotly
+pandas
+numpy
+entsoe-py
