@@ -1,0 +1,10 @@
+README.md
+setup.py
+ssgrab.py
+ssgrab.egg-info/PKG-INFO
+ssgrab.egg-info/SOURCES.txt
+ssgrab.egg-info/dependency_links.txt
+ssgrab.egg-info/entry_points.txt
+ssgrab.egg-info/not-zip-safe
+ssgrab.egg-info/requires.txt
+ssgrab.egg-info/top_level.txt

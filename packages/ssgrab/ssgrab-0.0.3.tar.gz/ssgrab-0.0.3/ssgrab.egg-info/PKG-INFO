@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: ssgrab
+Version: 0.0.3
+Summary: Get packages from SendSafely
+Home-page: http://github.com/fprimex/ssgrab
+Author: Brent Woodruff
+Author-email: brent@fprimex.com
+License: Apache
+Keywords: sendsafely
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Topic :: Utilities
+
+Get packages from SendSafely

@@ -1,0 +1,2 @@
+[console_scripts]
+ssgrab = ssgrab:main
