@@ -1,0 +1,6 @@
+requests>=2.27.1
+pystac>=1.4.0
+python-dateutil>=2.7.0
+
+[validation]
+jsonschema>=4.5.1
