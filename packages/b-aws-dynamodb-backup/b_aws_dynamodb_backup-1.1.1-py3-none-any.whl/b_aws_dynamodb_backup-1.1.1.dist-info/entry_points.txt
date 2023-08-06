@@ -1,0 +1,5 @@
+[console_scripts]
+dyback = b_aws_dynamodb_backup.cli_actions.backup:main
+dyrest = b_aws_dynamodb_backup.cli_actions.restore:main
+dyseed = b_aws_dynamodb_backup.cli_actions.seed:main
+
