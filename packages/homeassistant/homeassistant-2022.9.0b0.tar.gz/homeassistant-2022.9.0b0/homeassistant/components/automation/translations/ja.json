@@ -1,0 +1,21 @@
+{
+    "issues": {
+        "service_not_found": {
+            "fix_flow": {
+                "step": {
+                    "confirm": {
+                        "title": "{name} \u306f\u3001\u4e0d\u660e\u306a\u30b5\u30fc\u30d3\u30b9\u3092\u4f7f\u7528\u3057\u3066\u3044\u307e\u3059"
+                    }
+                }
+            },
+            "title": "{name} \u306f\u3001\u4e0d\u660e\u306a\u30b5\u30fc\u30d3\u30b9\u3092\u4f7f\u7528\u3057\u3066\u3044\u307e\u3059"
+        }
+    },
+    "state": {
+        "_": {
+            "off": "\u30aa\u30d5",
+            "on": "\u30aa\u30f3"
+        }
+    },
+    "title": "\u30aa\u30fc\u30c8\u30e1\u30fc\u30b7\u30e7\u30f3"
+}
