@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+cloudinary_upload.egg-info/PKG-INFO
+cloudinary_upload.egg-info/SOURCES.txt
+cloudinary_upload.egg-info/dependency_links.txt
+cloudinary_upload.egg-info/requires.txt
+cloudinary_upload.egg-info/top_level.txt
