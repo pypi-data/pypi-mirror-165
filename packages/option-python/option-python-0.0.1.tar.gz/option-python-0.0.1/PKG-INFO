@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: option-python
+Version: 0.0.1
+Summary: A simple Rust-like Option type for Python with Type Annotations
+Home-page: https://github.com/Catminusminus/option
+License: MIT
+Author: Catminusminus
+Author-email: getomya@svk.jp
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Project-URL: Repository, https://github.com/Catminusminus/option
+Description-Content-Type: text/markdown
+
+# Option
+A simple Rust-like Option type for Python with Type Annotations.
+
+This package is heavily based on the [Result](https://github.com/rustedpy/result) package's implementation.
+
+## Installation
+```
+pip install option-python
+```
+
