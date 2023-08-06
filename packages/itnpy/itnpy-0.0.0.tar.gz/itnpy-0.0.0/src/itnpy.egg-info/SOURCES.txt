@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+src/itnpy/__init__.py
+src/itnpy/itn.py
+src/itnpy/vocab.py
+src/itnpy.egg-info/PKG-INFO
+src/itnpy.egg-info/SOURCES.txt
+src/itnpy.egg-info/dependency_links.txt
+src/itnpy.egg-info/requires.txt
+src/itnpy.egg-info/top_level.txt
