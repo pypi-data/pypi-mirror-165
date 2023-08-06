@@ -1,0 +1,104 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.4.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.4",
+  "serialNumber": "urn:uuid:b80ee57c-f474-43cb-b74e-62ca022e4a3a",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2022-08-28T20:37:07.339251+00:00",
+    "tools": [
+      {
+        "vendor": "CycloneDX",
+        "name": "cyclonedx-bom",
+        "version": "3.5.0"
+      },
+      {
+        "vendor": "CycloneDX",
+        "name": "cyclonedx-python-lib",
+        "version": "2.7.1",
+        "externalReferences": [
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-python-lib/actions",
+            "type": "build-system"
+          },
+          {
+            "url": "https://pypi.org/project/cyclonedx-python-lib/",
+            "type": "distribution"
+          },
+          {
+            "url": "https://cyclonedx.github.io/cyclonedx-python-lib/",
+            "type": "documentation"
+          },
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-python-lib/issues",
+            "type": "issue-tracker"
+          },
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-python-lib/blob/main/LICENSE",
+            "type": "license"
+          },
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-python-lib/blob/main/CHANGELOG.md",
+            "type": "release-notes"
+          },
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-python-lib",
+            "type": "vcs"
+          },
+          {
+            "url": "https://cyclonedx.org",
+            "type": "website"
+          }
+        ]
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "library",
+      "bom-ref": "2a567cd9-8c34-4a02-afb4-92d4266baee4",
+      "name": "atlassian-python-api",
+      "version": "3.27.0",
+      "purl": "pkg:pypi/atlassian-python-api@3.27.0"
+    },
+    {
+      "type": "library",
+      "bom-ref": "3621afa4-37c6-43d9-8fbb-cdd0145efa31",
+      "name": "jmespath",
+      "version": "1.0.1",
+      "purl": "pkg:pypi/jmespath@1.0.1"
+    },
+    {
+      "type": "library",
+      "bom-ref": "f20a9916-2b5c-425a-9a48-e475c2cffea3",
+      "name": "robotframework",
+      "version": "5.0.1",
+      "purl": "pkg:pypi/robotframework@5.0.1"
+    },
+    {
+      "type": "library",
+      "bom-ref": "27d6f28b-991f-49ff-8416-eeaaf465c51c",
+      "name": "wrapt",
+      "version": "1.14.1",
+      "purl": "pkg:pypi/wrapt@1.14.1"
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "2a567cd9-8c34-4a02-afb4-92d4266baee4",
+      "dependsOn": []
+    },
+    {
+      "ref": "3621afa4-37c6-43d9-8fbb-cdd0145efa31",
+      "dependsOn": []
+    },
+    {
+      "ref": "f20a9916-2b5c-425a-9a48-e475c2cffea3",
+      "dependsOn": []
+    },
+    {
+      "ref": "27d6f28b-991f-49ff-8416-eeaaf465c51c",
+      "dependsOn": []
+    }
+  ]
+}
