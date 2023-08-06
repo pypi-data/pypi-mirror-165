@@ -1,0 +1,9 @@
+fasta_reader/__init__.py,sha256=zvznPJmfP4lHknTXj8db57pmuu_k-5fAb6DphoWOjEs,350
+fasta_reader/_cli.py,sha256=NRKFWnBEJoo2u5yZiSJeCgg_4QMK9x-5HjB60e4HbI8,1902
+fasta_reader/_reader.py,sha256=5j-iifyxc_ZyVuOsFd0__VEI763oTQHrOXeE3CbYd9Y,5105
+fasta_reader/_writer.py,sha256=cmpq0YIVSYzSTOYlh_6c_xB5oA7Ux1w4GfDUPj0vOao,1658
+fasta_reader-1.0.3.dist-info/entry_points.txt,sha256=FxNB8SSQbjMEL5mQ7w6ix9xUM1QuhUnc38FyFEPfw10,47
+fasta_reader-1.0.3.dist-info/LICENSE,sha256=XNUUGUmK_r38YxkWrd_3EdmctCZNadNgsBdZ8VEbP3Q,1069
+fasta_reader-1.0.3.dist-info/WHEEL,sha256=4TfKIB_xu-04bc2iKz6_zFt-gEFEEDU_31HGhqzOCE8,81
+fasta_reader-1.0.3.dist-info/METADATA,sha256=Vrj2Hj3s4oJvguDOaiPcgF62ol1fuR7g8HtqP2K5J4c,1890
+fasta_reader-1.0.3.dist-info/RECORD,,
