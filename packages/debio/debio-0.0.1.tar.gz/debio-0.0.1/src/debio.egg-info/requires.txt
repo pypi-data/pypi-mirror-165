@@ -1,0 +1,15 @@
+pyobo
+
+[docs]
+sphinx
+sphinx-rtd-theme
+sphinx-autodoc-typehints
+sphinx_automodapi
+
+[export]
+jinja2
+bioontologies
+
+[tests]
+pytest
+coverage
