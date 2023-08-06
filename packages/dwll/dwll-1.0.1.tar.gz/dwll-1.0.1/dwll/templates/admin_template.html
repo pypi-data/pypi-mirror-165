@@ -1,0 +1,15 @@
+"""
+
+Module {{app_name}} Admins
+
+"""
+from django.contrib import admin
+{% if model_name %}
+from .models import {{model_name|title}}
+
+@admin.register({{model_name|title}})
+class {{model_name|title}}Admin(admin.ModelAdmin):
+    list_display = (
+        'id', 'name', 'slug', 'creation_date', 'modification_date', 'status'
+    )
+{% endif %}

@@ -1,0 +1,7 @@
+from dwll.signals import language_changed
+from django.dispatch import receiver
+
+@receiver(language_changed)
+def change_language(sender, **kwargs):
+    user, language = kwargs['user'], kwargs['language']
+    # Do everything here with the language changed

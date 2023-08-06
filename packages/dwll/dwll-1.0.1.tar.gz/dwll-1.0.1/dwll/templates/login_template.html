@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load dwll %}
+{% block title %}{% display_message 'bar.login.title' 'Ingreso' %}{% endblock %}
+{% block body %}
+<section class="py-5">
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <h2>{% display_message 'login.title' 'Ingreso de Usuarios' %}</h2>
+                <form id="login_form" action="{% url 'account_login' %}" method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="login">{% display_message 'login.email' 'Usuario' %}</label>
+                        <input type="text" name="login" autofocus="autofocus" maxlength="150"
+                                           placeholder="{% display_message 'login.email' 'Usuario' %}" 
+                                           id="id_login" required class="form-control">
+                        <span class="error-msg">{{form.login.errors}}</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">{% display_message 'login.password' 'Clave' %}</label>
+                        <input type="password" name="password" autofocus="autofocus" maxlength="150"
+                                           placeholder="{% display_message 'login.password' 'Clave' %}" 
+                                           id="id_password" required class="form-control">
+                        <span class="error-msg">{{form.password.errors}}</span>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-10"><br>
+                            <button type="submit" form="login_form" class="btn btn-primary">
+                                <i class="fa fa-user"></i>&nbsp;{% display_message 'login.do' 'Ingresar' %}
+                            </button>
+                        </div>
+                    </div>
+                    {% if redirect_field_value %}
+                    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                    {% endif %}
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

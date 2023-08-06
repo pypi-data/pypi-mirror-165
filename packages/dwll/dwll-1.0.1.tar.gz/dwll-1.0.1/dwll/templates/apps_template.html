@@ -1,0 +1,11 @@
+from django.apps import AppConfig
+
+from dwll.signals import language_changed
+
+class {{app_name|title}}Config(AppConfig):
+    default_auto_field = 'django.db.models.BigAutoField'
+    name = '{{app_name}}'
+
+    def ready(self):
+        from . import signals        
+        language_changed.connect(signals.change_language)

@@ -1,0 +1,43 @@
+"""
+
+Module {{app_name}} Views
+
+"""
+from django.shortcuts import render
+{% if model_name %}
+from dwll.virtual_views import (
+    LoginRequiredSecurityMixin,
+    VirtualListView,
+    VirtualCreateView,
+    VirtualUpdateView
+)
+from .models import {{model_name|title}}
+from . import forms
+{% endif %}
+
+def home(request):
+    return render(request, 'home.html')
+
+{% if model_name %}
+class {{model_name|title}}List(LoginRequiredSecurityMixin, VirtualListView):
+    model = {{model_name|title}}
+    
+    @property
+    def view_filters(self):
+        return ["slug"]
+    
+    @property
+    def view_orderedby(self):
+        return "-creation_date"
+
+class {{model_name|title}}Create(LoginRequiredSecurityMixin, VirtualCreateView):
+    form_class = forms.{{model_name|title}}CreateUpdateForm
+    model = {{model_name|title}}
+    
+    def get_success_url(self):
+        return '/{{model_name|lower}}s/'
+
+class {{model_name|title}}Update(LoginRequiredSecurityMixin, VirtualUpdateView):
+    form_class = forms.{{model_name|title}}CreateUpdateForm
+    model = {{model_name|title}}
+{% endif %}

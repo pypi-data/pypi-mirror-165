@@ -1,0 +1,15 @@
+"""
+
+Module {{app_name}} Locust File
+
+"""
+from locust import HttpUser, task
+
+class {{app_name|title}}LoadTest(HttpUser):
+    @task
+    def stress(self):
+        self.client.get("")
+        {% if model_name %}     
+        self.client.get("{{model_name|lower}}s")
+        {% endif %}
+        # Agregar aqui todas las vistas que se quieran testear

@@ -1,0 +1,16 @@
+"""
+
+Module {{app_name}} URLs
+
+"""
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.home, name='index'),
+    {% if model_name %}
+    path('{{model_name|lower}}s/', views.{{model_name|title}}List.as_view(), name='{{model_name|lower}}s'),
+    path('{{model_name|lower}}s/create', views.{{model_name|title}}Create.as_view(), name='{{model_name|lower}}-create'),
+    path('{{model_name|lower}}s/<int:pk>/update', views.{{model_name|title}}Update.as_view(), name='{{model_name|lower}}-update')
+    {% endif %}
+]

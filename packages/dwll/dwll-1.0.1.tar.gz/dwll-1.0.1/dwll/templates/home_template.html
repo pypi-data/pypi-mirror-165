@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load dwll %}
+{% block title %}{% display_message 'home.title' %}{% endblock title %}
+{% block header %}
+{% include "header.html" %}
+{% endblock %}
+{% block body %}
+<section class="py-5">
+    <div class="container my-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <h2>{% display_message 'home.helloworld' 'Hola Mundo' %}</h2>
+          <p class="lead">{% display_message 'home.project.gen' 'Este es un proyecto generado con Django Web Launch Library' %}</p>
+          <p class="mb-0">
+              {% display_message 'home.project.text' 'Todos los textos que observa pueden ser administrados fácilmente desde el sitio administrativo de django.' %}&nbsp;
+              <a href="/admin/dwll/message" target="_blank">{% display_message 'home.admin.go' 'Click aqui para ir al administrador' %}</a></p>
+        </div>
+      </div>
+    </div>
+</section>
+{% get_configuration 'HOME.IMAGE' 'https://camo.githubusercontent.com/83206e0a76e319c7a5bf30df586490587b9f9c8e43c58407ffa2c0b5cf571e8a/68747470733a2f2f756e73706c6173682e636f6d2f626c6f672f636f6e74656e742f696d616765732f323032302f30382f646174616865616465722e6a7067' as home_picture %}
+<div class="py-5 bg-image-full" style="background-image: url('{{ home_picture }}');">
+    <div style="height: 20rem;">
+      <div class="row justify-content-center">
+        <div class="text-center">
+          <h3>{% display_message 'home.picture' 'Cambia esta imagen cuando quieras desde configuración' %}</h3>
+        </div>
+      </div>
+    </div>
+</div>
+<section id="about" class="py-5">
+  <div class="container my-5">
+{% get_configuration_as_bool 'HOME.ABOUT.ENABLED' 'true' 'true' as segment_enabled %}
+{% if segment_enabled %}
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <h2>{% display_message 'home.conditional.title' 'Sobre este Sitio' %}</h2>
+          <p class="lead">{% display_message 'home.conditional.text' 'Este texto es condicional. Hemos creado una variable de configuración que activa o desactiva este segmento' %}</p>
+          <p class="mb-0">
+              {% display_message 'home.conditional.notes' 'Para desactivarlo dirijase al siguiente enlace y cambie el valor de la configuracion por la palabra "false"' %}
+              <a href="/admin/dwll/configuration/?q=HOME.ABOUT.ENABLED" target="_blank">{% display_message 'home.admin.go' 'Click aqui para ir al administrador' %}</a>
+          </p>
+        </div>
+      </div>
+{% else %}
+      <div class="row justify-content-center">
+        <div class="col-lg-6"><h2>{% display_message 'home.conditional.disabled' 'Segmento Deshabilitado' %}</h2></div>
+      </div>
+{% endif %}
+</div>
+</section>
+{% endblock %}

@@ -1,0 +1,39 @@
+"""
+
+Module {{app_name}} Admins
+
+"""
+from django import forms
+from django.contrib import messages as django_messages
+{% if model_name %}
+from dwll import messages
+
+from . import models
+
+class {{model_name|title}}CreateUpdateForm(forms.ModelForm):
+
+    class Meta:
+        model = models.{{model_name|title}}
+        exclude = ("status", "creation_date", "modification_date",
+                   "creation_user", "modification_user")
+
+    def __init__(self, *args, **kwargs):
+        self.request = kwargs.pop('request')
+        super({{model_name|title}}CreateUpdateForm, self).__init__(*args, **kwargs)
+
+        for key, field in self.fields.items():
+            field.widget.attrs['class'] = 'form-control'
+
+    def clean(self):
+        slug = self.cleaned_data['slug'] if 'slug' in self.cleaned_data else None
+        if slug and models.{{model_name|title}}.objects.get_active(slug=slug).exists():
+            django_messages.error(self.request, 
+                    messages.get_full_message(self.request, 
+                    'malkin.slug.exists'))
+        return self.cleaned_data
+
+    def save(self):
+        entity = super({{model_name|title}}CreateUpdateForm, self).save(commit=False)
+        entity.save(request=self.request)
+        return entity
+{% endif %}

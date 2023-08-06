@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load dwll %}
+{% block title %}{% display_message 'list.title' 'Listado' %}{% endblock %}
+{% block body %}
+<section class="py-5">
+    <div class="container my-5">
+        <h1>{% display_message 'list.of' 'Listado' %}</h1>
+        <div class="row">
+            <div class="col-md-12">
+                <a href="{% url '[ITEM]-create' %}" class="btn btn-primary">
+                    {% display_message 'list.new' 'Crear Nuevo' %}</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">{% display_message 'cols.actions' %}</th>
+                            <th scope="col">{% display_message 'cols.name' %}</th>
+                            <th scope="col">{% display_message 'cols.slug' %}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Cambiar aqui items por el nombre de la entidad en minuscula -->
+                        {% for item in [ITEM]_list %}
+                        <tr>
+                            <th scope="col"><a href="{% url '[ITEM]-update' pk=item.id %}">
+                                {% display_message 'actions.edit' %}</a></th>
+                            <td scope="col">{{item.name}}</td>
+                            <td scope="col">{{item.slug}}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>            
+        </div>
+    </div>
+</section>
+{% endblock %}
