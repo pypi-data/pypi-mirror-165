@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: signal-cli-socket
+Version: 0.7
+Summary: A package to use with the signal-cli made by AsamK.
+Home-page: https://github.com/Nickwasused/signal-cli-socket
+License: MPL-2.0
+Author: Nickwasused
+Author-email: contact.nickwasused.fa6c8@simplelogin.co
+Classifier: License :: OSI Approved
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Project-URL: Bug Tracker, https://github.com/Nickwasused/signal-cli-socket/issues
+Project-URL: Documentation, https://github.com/Nickwasused/signal-cli-socket
+Project-URL: Repository, https://github.com/Nickwasused/signal-cli-socket
+Description-Content-Type: text/markdown
+
+# signal-cli-socket
+Use with https://github.com/AsamK/signal-cli
+
+# Example Code
+```
+from signal-cli-socket import signal
+
+sig = Signal("+491635558756")
+
+# send message to a user
+sig.send_message("+491625555457", "Hello there!")
+sig.send_message_attatchment("+491625555457", "Here is the picture that you wanted.", "./photo.jpg")
+
+# send messages to a group
+sig.send_message("KBHvLSJlKKb8FQSA6Ajo5pB8/mgPjaTEbr68Mb5MwkA=", "Hello there!", True)
+sig.send_message_attatchment("KBHvLSJlKKb8FQSA6Ajo5pB8/mgPjaTEbr68Mb5MwkA=", "Enjoy the view!", "./photo.jpg", True)
+```
+
+# Signal Object
+| Parameter | Type | required | default value
+| ------- | ------------------ | ---- | ---
+| account | string | yes | 
+| socket_path | string | no | /tmp/signal-cli/socket
+| id | int | no | random value
+
+| Option  | Description       
+| ------- | ------------------
+| send_message() | Send a Message to a User or a group
+| send_message_attatchment() | Send a Message to a User or a group with an attachment
+
