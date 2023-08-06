@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/audioFX/Fx.py
+src/audioFX/__init__.py
+src/audioFX/config.toml
+src/audioFX/example.py
+src/audioFX.egg-info/PKG-INFO
+src/audioFX.egg-info/SOURCES.txt
+src/audioFX.egg-info/dependency_links.txt
+src/audioFX.egg-info/requires.txt
+src/audioFX.egg-info/top_level.txt
