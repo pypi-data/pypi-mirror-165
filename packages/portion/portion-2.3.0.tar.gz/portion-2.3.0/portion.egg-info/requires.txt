@@ -1,0 +1,6 @@
+sortedcontainers~=2.2
+
+[test]
+pytest~=7.0
+coverage~=6.0
+black>=21.8b

@@ -1,0 +1,16 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.py
+portion/__init__.py
+portion/const.py
+portion/dict.py
+portion/func.py
+portion/interval.py
+portion/io.py
+portion.egg-info/PKG-INFO
+portion.egg-info/SOURCES.txt
+portion.egg-info/dependency_links.txt
+portion.egg-info/requires.txt
+portion.egg-info/top_level.txt
+portion.egg-info/zip-safe
