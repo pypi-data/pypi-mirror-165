@@ -1,0 +1,5 @@
+dbnd==0.88.5
+dbnd-spark==0.88.5
+qds-sdk==1.13.2
+
+[tests]
