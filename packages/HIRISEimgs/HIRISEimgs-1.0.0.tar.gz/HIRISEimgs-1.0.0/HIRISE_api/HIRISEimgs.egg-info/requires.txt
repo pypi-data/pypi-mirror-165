@@ -1,0 +1,8 @@
+wheel
+humanize
+requests
+beautifulsoup4
+umap-learn
+hdbscan
+rasterfairy
+pytest

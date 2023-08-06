@@ -1,0 +1,18 @@
+Metadata-Version: 1.2
+Name: HIRISEimgs
+Version: 1.0.0
+Summary: HIRISE Image Data, Information, Preprocessing and Models
+Home-page: UNKNOWN
+Author: Niranjana Sundararajan
+Author-email: <niranjanasundararajan@gmail.com>
+License: MIT
+Description: HIRISE Image Data, Information, Preprocessing and Models
+Keywords: python,HIRISE,NASA,PDS,API,image data
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Python: >3.5.2
