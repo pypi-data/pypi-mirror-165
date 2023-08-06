@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: lastlogtocsv
+Version: 3.0.0
+Summary: lastlog to CSV converter.
+Author: Franck FERMAN
+Author-email: <fferman@protonmail.ch>
+Keywords: franckferman,lastlog,Linux
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE
+Requires-Dist: typing-extensions
+
+Convert lastlog Linux file to CSV file, with Python 3.
