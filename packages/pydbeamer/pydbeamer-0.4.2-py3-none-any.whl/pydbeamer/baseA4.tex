@@ -1,0 +1,127 @@
+\documentclass[UTF8,a4paper,10pt]{ctexart}
+\usepackage[left=2.50cm, right=2.50cm, top=2.50cm, bottom=2.50cm]{geometry}
+\usepackage[OT1]{fontenc}
+\usepackage{tcolorbox}
+\usepackage{multicol}
+\usepackage{times}
+\usepackage{framed}
+\usepackage{pythonhighlight}
+\usepackage{listings} %代码包
+\usepackage{xcolor} %代码高亮包
+\usepackage{amsmath, amsfonts, amssymb} % math equations, symbols
+\usepackage[english]{babel}
+\usepackage{color}      % color content
+\usepackage{graphicx}   % import figures
+\usepackage{url}        % hyperlinks
+\usepackage{bm}         % bold type for equations
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{epstopdf}
+\usepackage{epsfig}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{animate}
+\usepackage{fontspec}
+\usepackage{pythonhighlight}
+\usepackage{setspace}
+\usepackage{ctex}
+\usepackage{amsmath, amsfonts, amssymb, amsthm}
+\usepackage{graphicx}
+\usepackage{fontspec}
+\usepackage{ulem} %解决下划线换行紊乱
+\usepackage{caption} %添加图、表的标题
+\usepackage{subfigure}
+\usepackage{theorem}
+\usepackage{smartdiagram}
+\usepackage[backend=bibtex,sorting=none]{biblatex} %不列出所有作者
+\addbibresource{ref.bib} %BibTeX数据文件及位置
+%\setbeamertemplate{bibliography item}[text] %设置参考文献图标样式数字标号
+\usepackage{appendix} %增加附录
+\usepackage{multicol} %分栏
+\usepackage{syntonly} %只编译文件是否成功，省时省力
+\usepackage{enumerate}
+\usepackage{animate}
+\usepackage{listings} %代码包
+\usepackage{xcolor} %代码高亮包
+\usepackage{color} %代码高亮包
+\usepackage{framed} %代码高亮包
+\usepackage{paracol}
+\usepackage[T1]{fontenc}  
+\usepackage{textcomp}  
+\usepackage{lmodern}
+\usepackage{tocloft}
+\usepackage{upquote}
+\usepackage[toc]{multitoc}
+\definecolor{shadecolor}{rgb}{0.92,0.92,0.92}
+\usepackage[most]{tcolorbox}
+\definecolor{cred}{RGB}{116,23,82}
+\renewcommand{\algorithmicrequire}{ \textbf{Input:}}     % use Input in the format of Algorithm  
+\renewcommand{\algorithmicensure}{ \textbf{Initialize:}} % use Initialize in the format of Algorithm  
+\renewcommand{\algorithmicreturn}{ \textbf{Output:}}     % use Output in the format of Algorithm  
+
+\definecolor{cred}{RGB}{116,23,82}
+
+% \newcommand{\pic}[2]{\includegraphics[width=#2\textwidth]{#1}}
+
+\newcommand{\blue}[1]{\textcolor{blue}{{}#1}}
+% \newcommand{\red}[1]{\textbf{\textcolor{red}{{}#1}}}
+\newcommand{\typecolor}[1]{{\textcolor{cred}{{}#1}}}
+\newcommand{\black}[1]{\textbf{\textcolor{black}{{}#1}}}
+\newcommand{\red}[1]{\textcolor{red}{{}#1}}
+\newcommand{\purple}[1]{\textcolor{purple}{{}#1}}
+\newcommand{\orange}[1]{\textbf{\textcolor{orange}{{}#1}}}
+\newcommand{\pic}[2]{\includegraphics[width=#2\textwidth]{#1}}
+\usepackage{fancyhdr}   % 设置页眉、页脚 
+\usepackage{hyperref}   % bookmarks
+\hypersetup{colorlinks = true, linkcolor = black, unicode} % unicode
+\makeatletter %使\section中的内容左对齐
+\renewcommand{\section}{\@startsection{section}{1}{0mm}
+  {-\baselineskip}{0.5\baselineskip}{\bf\leftline}}
+\ctexset{section/format=\Large\bfseries\raggedright}
+\ctexset{subsection/format=\normalsize\bfseries\raggedright}
+\ctexset{subsubsection/format=\normalsize\bfseries\raggedright}
+\lstset{
+        breaklines,
+        numbers=left, %设置行号位置
+        basicstyle=\small,
+        numberstyle=\tiny, %设置行号大小
+        identifierstyle=\color{black},
+        keywordstyle=\color{blue}, %设置关键字颜色
+        commentstyle=\color[cmyk]{1,0,1,0}, %设置注释颜色
+        extendedchars=false,
+        frame=single, %设置边框格式
+        stringstyle = \color{orange!100},
+        backgroundcolor=\color[rgb]{0.96,0.96,0.96},%
+        escapeinside=``, %逃逸字符(1左面的键)，用于显示中文
+        %breaklines, %自动折行
+        extendedchars=false, %解决代码跨页时，章节标题，页眉等汉字不显示的问题
+        xleftmargin=2em,xrightmargin=2em, aboveskip=1em, %设置边距
+        tabsize=4, %设置tab空格数
+        showspaces=false, %不显示空格
+        showstringspaces=false,
+        rulecolor=\color[rgb]{0.8,0.8,0.8},
+        upquote=true
+}
+\setcounter{tocdepth}{3}
+\addto\captionsenglish{
+    \renewcommand{\contentsname}{\centering 目录}
+    \renewcommand{\listfigurename}{插图目录}
+    \renewcommand{\listtablename}{表格目录}
+    \renewcommand{\refname}{参考文献}
+    \renewcommand{\abstractname}{摘要}
+    \renewcommand{\indexname}{索引}
+    \renewcommand{\tablename}{表}
+    \renewcommand{\figurename}{图}
+}
+\renewcommand{\printtoctitle}{\Huge\bfseries}
+\usepackage{tikz}
+\usetikzlibrary{backgrounds,mindmap}
+\usepackage{xcolor}
+\usetikzlibrary{calc,positioning,intersections}
+\usepackage{pgfplots}
+\usepackage{listings}
+\usepackage[left= 2cm,right=2cm,top=2.5cm,bottom=2.5cm]{geometry}
+\tikzset{
+    every node/.append style={concept, concept color=orange!40, minimum size=0cm, inner sep=2mm},
+}
