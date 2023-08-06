@@ -1,0 +1,54 @@
+StateMachine:
+    'events'
+        events+=Event
+    'end'
+
+    'commands'
+        commands+=Command
+    'end'
+
+    ('commandgroups'
+        commandGroupBlocks+=CommandGroupBlock        
+    'end')? 
+
+    states+=State
+;
+
+Keyword:
+    'end' | 'events' | 'state' | 'actions' | 'commandgroups' | 'group' | 'groupend'
+;
+
+Event:
+    name=SMID code=ID
+;
+
+Command:
+    name=SMID code=ID
+;
+
+CommandGroupBlock:
+    'group' name=SMID
+        groupCommands+=[Command|SMID]       
+    'groupend'
+;
+
+GroupOrCommand: Command | CommandGroupBlock;
+
+State:
+    'state' name=ID
+        ('actions' '{' actions+=[GroupOrCommand | SMID] '}')?
+        (transitions+=Transition)?
+    'end'
+;
+
+Transition:
+    event=[Event|SMID] '=>' to_state=[State]
+;
+
+SMID:
+    !Keyword ID
+;
+
+Comment:
+    /\/\*(.|\n)*?\*\//
+;

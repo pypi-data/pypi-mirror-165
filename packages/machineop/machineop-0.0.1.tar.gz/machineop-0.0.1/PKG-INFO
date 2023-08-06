@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: machineop
+Version: 0.0.1
+Summary: The domain specific language for operating statemachines. The default machine included in the package is microwave oven.
+Author: LiveByTheCode (Archer EarthX)
+Author-email: archerearthx@gmail.com
+License: MIT
+Keywords: textX DSL python domain specific languages state machines
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.7
