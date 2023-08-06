@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: getml
+Version: 1.3.0
+Summary: Python API for getML
+Home-page: https://docs.getml.com/1.3.0
+Download-URL: https://github.com/getml/getml-python-api
+Author: getML
+Author-email: support@getml.com
+Keywords: AutoML,feature learning
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: Intended Audience :: Telecommunications Industry
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Manufacturing
+Classifier: Intended Audience :: Healthcare Industry
+Classifier: Operating System :: OS Independent
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: pyarrow (<7.1,>=7.0)
+Requires-Dist: numpy (>=1.22)
+Requires-Dist: jinja2
+Requires-Dist: scipy
+
+
+    getML (https://getml.com) is a software for automated machine learning
+    (AutoML) with a special focus on feature learning for relational data
+    and time series.
+
+    This is the official python client for the getML engine.
+
+    Documentation and more details at https://docs.getml.com/1.3.0
