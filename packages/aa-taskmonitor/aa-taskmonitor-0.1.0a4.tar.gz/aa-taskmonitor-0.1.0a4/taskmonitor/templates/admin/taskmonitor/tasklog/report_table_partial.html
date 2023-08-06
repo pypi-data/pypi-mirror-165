@@ -1,0 +1,32 @@
+{% load humanize %}
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th class="text-right">Amount</th>
+            <th class="text-right">% total</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for row in rows %}
+            <tr>
+                <td>
+                    {% if row.url %}
+                        <a href="{{ row.url }}">{{ row.name }}</a>
+                    {% else %}
+                        {{ row.name }}
+                    {% endif %}
+                </td>
+                <td class="text-right">{{ row.amount|floatformat:"0g" }}</td>
+                <td class="text-right">{{ row.percent|floatformat:"1" }}</td>
+            </tr>
+        {% empty %}
+            <tr>
+                <td colspan="3">No data</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<br>
+[<a href="#contents">contents</a>]

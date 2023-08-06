@@ -1,0 +1,58 @@
+{% extends 'admin/change_list.html' %}
+{% load i18n humanize static %}
+
+{% block extrastyle %}
+    {{ block.super }}
+    <link rel="stylesheet" type="text/css" href="{% static 'taskmonitor/admin.css' %}">
+{% endblock %}
+
+{% block breadcrumbs %}
+    <div class="breadcrumbs">
+        <a href="{% url 'admin:index' %}">{% translate 'Home' %}</a>
+        &rsaquo; <a href="{% url 'admin:app_list' app_label=cl.opts.app_label %}">{{ cl.opts.app_config.verbose_name }}</a>
+        &rsaquo; <a href="{% url 'admin:taskmonitor_tasklog_changelist' %}">{{ cl.opts.verbose_name_plural|capfirst }}</a> - Reports
+    </div>
+{% endblock %}
+
+{% block content %}
+
+    <p>Total of {% if total_runs > 1000000 %}{{ total_runs|intword }}{% else %}{{ total_runs|intcomma }}{% endif %} task logs spanning {{ youngest_date|timeuntil:oldest_date }} with a cumulative runtime of {{ total_runtime_date|timesince }}.</p>
+
+    <h2 id="contents">Conents</h2>
+    <ul>
+        <li><a href="#task-runs-by-app">Task runs by state</a></li>
+        <li><a href="#task-runs-by-app">Task runs by app</a></li>
+        <li><a href="#top-tasks-by-runs">Top tasks by runs</a></li>
+        <li><a href="#top-tasks-by-runtime">Top tasks by runtime</a></li>
+        <li><a href="#top-failed-tasks">Top tasks by failed runs</a></li>
+        <li><a href="#top-retried-tasks">Top tasks by retried runs</a></li>
+    </ul>
+
+    <h2 id="task-runs-by-app">Task runs by state</h2>
+    {% include "admin/taskmonitor/tasklog/report_table_partial.html" with rows=task_totals_by_state %}
+
+    <h2 id="task-runs-by-app">Task runs by app</h2>
+    {% include "admin/taskmonitor/tasklog/report_table_partial.html" with rows=task_runs_per_app %}
+
+    <h2 id="top-tasks-by-runs">Top {{ MAX_TOP }} tasks by runs</h2>
+    {% include "admin/taskmonitor/tasklog/report_table_partial.html" with rows=tasks_top_runs %}
+
+    <h2 id="top-tasks-by-runtime">Top {{ MAX_TOP }} tasks by instance runtime in seconds</h2>
+    {% include "admin/taskmonitor/tasklog/report_table_partial.html" with rows=tasks_top_runtime %}
+
+    <h2 id="top-failed-tasks">Top {{ MAX_TOP }} tasks by failed runs</h2>
+    {% include "admin/taskmonitor/tasklog/report_table_partial.html" with rows=tasks_top_failed %}
+
+    <h2 id="top-retried-tasks">Top {{ MAX_TOP }} tasks by retried runs</h2>
+    {% include "admin/taskmonitor/tasklog/report_table_partial.html" with rows=tasks_top_retried %}
+
+    <br>
+    <p>
+        This data is cached. Last updated {{ last_update_at|naturaltime }}.
+        <a href="{% url 'taskmonitor:admin_taskmonitor_reports_clear_cache' %}"><input type="button" value="Recalc now"></a>
+    </p>
+    <p>
+        All data of this app is stored for a maxmimum of {{ data_max_age }} hours.
+    </p>
+
+{% endblock %}
