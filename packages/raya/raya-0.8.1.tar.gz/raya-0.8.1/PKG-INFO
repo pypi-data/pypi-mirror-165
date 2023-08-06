@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: raya
+Version: 0.8.1
+Summary: Raya OS skelaton by Unlimited Robotics
+Home-page: UNKNOWN
+Author: Ofir Ozeri
+Author-email: ofiro@unlimited-robotics.com
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.8
+License-File: LICENSE
+
+This is an auto-generated library including all the componants needed so that raya-os can offer an auto-completion for developers using rayasdk. 
+
