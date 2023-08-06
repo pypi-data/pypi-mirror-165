@@ -1,0 +1,5 @@
+project_name: Bionty
+description: Data model generator for biology
+project_slug: bionty
+repository_name: bionty
+package_name: bionty
