@@ -1,0 +1,20 @@
+{
+  "template": "https://github.com/hypothesis/cookiecutters",
+  "directory": "pypackage",
+  "ignore": ["src/tox_envfile/core.py", "tests/unit/tox_envfile/core_test.py"],
+  "extra_context": {
+    "name": "tox-envfile",
+    "package_name": "tox_envfile",
+    "slug": "tox-envfile",
+    "short_description": "Load env files in your tox envs.",
+    "python_versions": "3.10.4, 3.9.12, 3.8.13, 3.7.13",
+    "github_owner": "hypothesis",
+    "copyright_holder": "Hypothesis",
+    "public": "yes",
+    "console_script": "no",
+    "dependabot_pip_interval": "monthly",
+    "__entry_point": "tox-envfile",
+    "__github_url": "https://github.com/hypothesis/tox-envfile",
+    "__pypi_url": "https://pypi.org/project/tox-envfile"
+  }
+}
