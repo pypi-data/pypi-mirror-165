@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: MonProjetKali
+Version: 1.0.0
+Summary: Un projet inutile
+Author: René LaTaupe
+Classifier: Topic :: Software Development :: Libraries :: pygame
+Classifier: Natural Language :: French
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENCE.txt
+Requires-Dist: pygame
+
+# Lisez-moi
+
+Le fichier d'aide...
