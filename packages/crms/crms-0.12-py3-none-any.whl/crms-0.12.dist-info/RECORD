@@ -1,0 +1,9 @@
+crms/__init__.py,sha256=p76ikDAUy2M8FL6qATiAsBQJkFqdiCSRvoxfXupOUpE,352
+crms/crms.py,sha256=1wp7uHXj-eGQdKW7kCT9ADqXy8XaYs_edzPNN0dzjiE,26079
+crms/other_data/m1.pth,sha256=MHvAk78eAfrFxX0GJTbSYjykSm7NRPzcbM90tMKHsrU,40371968
+crms/other_data/m2.pth,sha256=ZAJXQCdU6BMOc8PppGHmKKwK4sQiJmdwmxaRUEnTYV8,40393951
+crms-0.12.dist-info/METADATA,sha256=YgY6FIpMQc4AvTtNtYlJx3psJN-GDYVf-C0qLtSIwhk,3258
+crms-0.12.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+crms-0.12.dist-info/entry_points.txt,sha256=JyeyIr7aC6A0iEXcFCzgULqWw5rqWO81hpHLVhlg384,40
+crms-0.12.dist-info/top_level.txt,sha256=KBy3r6K8goRqXSn9DFToUlPlakb9nqkoFVOkvzk2I8o,5
+crms-0.12.dist-info/RECORD,,
