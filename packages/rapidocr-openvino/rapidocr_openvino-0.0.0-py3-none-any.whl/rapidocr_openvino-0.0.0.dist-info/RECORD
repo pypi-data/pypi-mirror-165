@@ -1,0 +1,16 @@
+rapidocr_openvino/__init__.py,sha256=mNBrZWp9rvs2Ry9OG9eJV6jNY8-pxmXMXXY9URvO88M,111
+rapidocr_openvino/rapid_ocr_api.py,sha256=Q1LITElsXpUWV8UKRtUZsDIrrq0JdD-f2ZoVm1uO-Rc,6050
+rapidocr_openvino/ch_ppocr_v2_cls/__init__.py,sha256=o8psmpX-h2v5Fm_Ay9HbtWuyBlRTVxWhtLc6AEGvIMM,110
+rapidocr_openvino/ch_ppocr_v2_cls/text_cls.py,sha256=hpRGNLtQZmlBhryjh2S56nREW5IEWSmtoMOXZQYDjZk,4501
+rapidocr_openvino/ch_ppocr_v2_cls/utils.py,sha256=oYqVLgJSkvSZfAjxohTsLGwhEP-oFERvmgfyBelCdgQ,1632
+rapidocr_openvino/ch_ppocr_v3_det/__init__.py,sha256=6rHIa2HmwwwPWIVYDbiDulB8HOnzxGgPG8V9fMqt0ZE,111
+rapidocr_openvino/ch_ppocr_v3_det/text_detect.py,sha256=fg9U_Hl69ebI3Gt7yNXPfpALHhVoaZ5i5PUxqAFc2QI,4323
+rapidocr_openvino/ch_ppocr_v3_det/utils.py,sha256=x4Rsyk4kJjgOU8eucBv-HlkZS4dZ0Q-n393P8jC7sa0,13971
+rapidocr_openvino/ch_ppocr_v3_rec/__init__.py,sha256=3wtnEjfZxmHYdTIWb3dqbnu36-fioVVmeMkGw5o2snk,42
+rapidocr_openvino/ch_ppocr_v3_rec/ppocr_keys_v1.txt,sha256=KLI2KtSrLcOHaapy_rU146nds_0qdYWgWSDmOTsdx_c,26249
+rapidocr_openvino/ch_ppocr_v3_rec/text_recognize.py,sha256=yPcY3E0DR9luCOeS-vSkGCPCx90bMq0y81gb5D_tHgQ,4471
+rapidocr_openvino/ch_ppocr_v3_rec/utils.py,sha256=SJU28QXQNYqfPD5WmSfa992e7yT39K57SFszhlWsXRg,3025
+rapidocr_openvino-0.0.0.dist-info/METADATA,sha256=Ux8LrViVq7vZEwbxGII7fpGPlR-g0kmiRvagkQDoGVw,1831
+rapidocr_openvino-0.0.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+rapidocr_openvino-0.0.0.dist-info/top_level.txt,sha256=Jy3RmCGTNzXL_EkTJves3fbErqjxjZahFNP6WVTSGXQ,18
+rapidocr_openvino-0.0.0.dist-info/RECORD,,
