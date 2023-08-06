@@ -1,0 +1,7 @@
+build
+cosmic_profiles
+dist
+docs
+example_scripts
+paper
+wheelhouse
