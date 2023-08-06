@@ -1,0 +1,37 @@
+{
+    "$id": "https://example.com/demo",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Messages.Created.v1",
+    "version": 1,
+    "properties": {
+        "event_id":      { "type": "string" },
+        "event_version": { "enum": [1] },
+        "event_name":    { "type": "string" },
+        "event_time":    { "type": "string" },
+        "producer":      { "type": "string" },
+        "data": {
+            "type": "object",
+            "properties": {
+                "messages": {
+                    "type": "array",
+                    "items": {
+                        "message_json": "object",
+                        "is_unknown": "boolean",
+                        "trigger_message_id": "integer"
+                    }
+                }
+            },
+            "required": [
+                "messages"
+            ]
+        }
+    },
+    "required": [
+        "event_id",
+        "event_version",
+        "event_name",
+        "event_time",
+        "producer",
+        "data"
+    ]
+}

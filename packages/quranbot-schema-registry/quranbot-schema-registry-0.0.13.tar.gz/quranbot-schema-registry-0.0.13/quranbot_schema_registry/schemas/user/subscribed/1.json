@@ -1,0 +1,32 @@
+{
+    "$id": "https://example.com/demo",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "User.Subscribed.v1",
+    "version": 1,
+    "properties": {
+        "event_id":      { "type": "string" },
+        "event_version": { "enum": [1] },
+        "event_name":    { "type": "string" },
+        "event_time":    { "type": "string" },
+        "producer":      { "type": "string" },
+        "data": {
+            "type": "object",
+            "properties": {
+                "user_id":   { "type": "integer" },
+                "date_time": { "type": "string" }
+            },
+            "required": [
+                "user_id",
+                "date_time"
+            ]
+        }
+    },
+    "required": [
+        "event_id",
+        "event_version",
+        "event_name",
+        "event_time",
+        "producer",
+        "data"
+    ]
+}
