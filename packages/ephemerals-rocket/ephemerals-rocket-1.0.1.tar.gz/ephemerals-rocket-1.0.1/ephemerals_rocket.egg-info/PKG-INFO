@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: ephemerals-rocket
+Version: 1.0.1
+Summary: Ephemeral Rocket Database Context Helper.
+Home-page: https://github.com/paranoid-software/ephemerals.py/tree/main/rocket
+Author: Paranoid Software
+Author-email: info@paranoid.software
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+
+# Ephemeral Rocket Database Context
+
+Ephemeral database context for Rocket, it can be used to code integration tests with a fairly isolated database environment.
