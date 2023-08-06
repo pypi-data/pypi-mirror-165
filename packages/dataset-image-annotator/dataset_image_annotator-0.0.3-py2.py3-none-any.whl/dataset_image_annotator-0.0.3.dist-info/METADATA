@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: dataset-image-annotator
+Version: 0.0.3
+Summary: Image annotation tool
+Home-page: https://github.com/kamikaze/dataset-image-annotator
+Author: Oleg Korsak
+Author-email: kamikaze.is.waiting.you@gmail.com
+License: gpl-3
+Project-URL: Documentation, https://github.com/kamikaze/dataset-image-annotator/wiki
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Requires-Python: >=3.10
+Description-Content-Type: text/x-rst; charset=UTF-8
+License-File: LICENSE
+License-File: AUTHORS.rst
+Requires-Dist: pydantic (==1.9.2)
+Requires-Dist: PySide6 (==6.3.1)
+Provides-Extra: testing
+Requires-Dist: pytest ; extra == 'testing'
+Requires-Dist: pytest-cov ; extra == 'testing'
+
+Dataset image annotator
+=======================
+
+Dataset image annotation tool

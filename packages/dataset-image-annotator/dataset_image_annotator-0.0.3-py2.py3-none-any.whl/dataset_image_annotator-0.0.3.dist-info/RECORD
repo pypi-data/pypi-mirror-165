@@ -1,0 +1,16 @@
+dataset_image_annotator/Browser.qml,sha256=tyrh0NLUQ1yObC4I9XJ22GJIa6pFO5DozsPjn_wtpXk,1751
+dataset_image_annotator/FileDelegate.qml,sha256=nwLbRRNJdcYUIrNDDpoa4rknQF2ykJM1A4TACZaTZiI,3867
+dataset_image_annotator/Map.qml,sha256=CahT8MG50JVX3TaoIseKgQSWuszF5kWTs4hyMp9mFOw,2919
+dataset_image_annotator/Status.qml,sha256=DYrBPVX0Cbal4gYyKBVqGegXlk4-srYBygXcVUmeka0,223
+dataset_image_annotator/Viewer.qml,sha256=87UtYvLDkh0GyCU0es0c46MgMS5SpjZz-P9tQsgGK0I,3480
+dataset_image_annotator/__init__.py,sha256=h-KTJUaQ50E3RmkTn_GO88IRunmDTEpNc3ylpFvCTOc,339
+dataset_image_annotator/__main__.py,sha256=0mN8vQ6kM6ARCCr80myebWC6Th780Iv2_rmalUSd0bw,753
+dataset_image_annotator/annotation_window.ui,sha256=ajzhkb-WBuKQnA54kWmtOpg-uCEjw5ahRAdcBwIEF5s,4737
+dataset_image_annotator/conf.py,sha256=lwnkPZk-upS37FPuq9HDdpZDNHNXZBWASHgyW5soGOk,157
+dataset_image_annotator/main.qml,sha256=yobrnlN-k74DiifZZ9vojI-nC5OhyEahxNfZ7JM00ao,566
+dataset_image_annotator-0.0.3.dist-info/AUTHORS.rst,sha256=3R9JnfjfjH5RoPWOeqKFJgxVShSSfzQPIrEr1nxIo9Q,90
+dataset_image_annotator-0.0.3.dist-info/LICENSE,sha256=xxILuojHm4fKQOrMHPSslbyy6WuKAN2RiG74HbrYfzM,34575
+dataset_image_annotator-0.0.3.dist-info/METADATA,sha256=y1ocANG4n3t2aDxfOr7hwwouarODtDbLqWPciKly19Y,814
+dataset_image_annotator-0.0.3.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+dataset_image_annotator-0.0.3.dist-info/top_level.txt,sha256=dLM9r4LKTtQ01_4xsOBFu6Pl8HG1EByu9dYOdCJefMk,24
+dataset_image_annotator-0.0.3.dist-info/RECORD,,
