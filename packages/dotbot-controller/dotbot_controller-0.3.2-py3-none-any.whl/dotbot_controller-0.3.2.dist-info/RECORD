@@ -1,0 +1,15 @@
+bot_controller/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bot_controller/bc_serial.py,sha256=YHiBd0spSG5PkSzrj2HHkHPf6M-SYUIMFf-Iwn8g0lk,236
+bot_controller/controller.py,sha256=WlfbpwavlTbxGjIX1fuLb_Mux1NYiD43DrJBU7Uy8Ws,419
+bot_controller/factory.py,sha256=ddcYPiMeBGvrpa_Z8i16MR4Ta4Q9Pu979GwhVj1pBiY,558
+bot_controller/joystick.py,sha256=gzBC2xdlKu356QhmCpCszbAmyejEB_0JyTiDVVAxDS4,2963
+bot_controller/keyboard.py,sha256=j3p48ACEgrDHFkGdAMUDZk08x9MEu9FLrPWl73RlBmU,3681
+bot_controller/main.py,sha256=x9uQinhAnaRZUJGcKn6EFCWta0NMT20CXOkx-9aKurM,1719
+bot_controller/protocol.py,sha256=HlFVzjhWHYPv4_9jxPj6HDJW17-GGox8NrnGWLpYgkw,100
+bot_controller/server.py,sha256=nj0MlQJWqWuRCqnzIFelt_01yhI5mMVPlWlJ_GVDMRo,736
+dotbot_controller-0.3.2.dist-info/LICENSE.txt,sha256=Wpf9NxGSeuEGJXS6eq3Xm02FCAKUN_lAz2CtA0tToGg,1450
+dotbot_controller-0.3.2.dist-info/METADATA,sha256=7CgpI3m6G7NwCzB4fj9I60yv8vSFjzyqs5pfM__B2XI,1597
+dotbot_controller-0.3.2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+dotbot_controller-0.3.2.dist-info/entry_points.txt,sha256=zbJrg_uPUQsYWWmOOKo9_N-p5LdrX1gY2tXPckG0uQ4,63
+dotbot_controller-0.3.2.dist-info/top_level.txt,sha256=W-9P3H_WM_crePxAzeSOBADOckKaYP3fwLFogVYqw5c,15
+dotbot_controller-0.3.2.dist-info/RECORD,,
