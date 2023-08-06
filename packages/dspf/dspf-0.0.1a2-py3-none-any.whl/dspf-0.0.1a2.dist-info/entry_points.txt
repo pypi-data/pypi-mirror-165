@@ -1,0 +1,3 @@
+[console_scripts]
+data-science-portfolio=data_science_portfolio.__main__:main
+
