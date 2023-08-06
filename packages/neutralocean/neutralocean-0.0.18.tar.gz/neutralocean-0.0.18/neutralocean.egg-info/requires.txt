@@ -1,0 +1,8 @@
+numba
+numpy
+xarray
+scipy
+gsw
+pooch
+xgcm
+netcdf4
