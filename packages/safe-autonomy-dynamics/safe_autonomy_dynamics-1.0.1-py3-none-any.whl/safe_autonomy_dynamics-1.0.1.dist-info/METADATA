@@ -1,0 +1,135 @@
+Metadata-Version: 2.1
+Name: safe-autonomy-dynamics
+Version: 1.0.1
+Summary: ACT3 Safe Autonomy Dynamics Models
+Home-page: https://git.act3-ace.com/rta/safe-autonomy-dynamics
+Author: ACT3
+License: Distribution C
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: pydantic
+Requires-Dist: mypy (==0.930)
+Requires-Dist: mypy-extensions (==0.4.3)
+Requires-Dist: mypy-protobuf (==2.7)
+Requires-Dist: types-PyYAML (==5.4.11)
+Requires-Dist: flake8 (==3.9.2)
+Requires-Dist: pylint (==2.8.3)
+Requires-Dist: pytest (==6.2.2)
+Requires-Dist: pytest-cov (==2.11.1)
+Requires-Dist: pytest-order (==0.10.0)
+Requires-Dist: yapf (==0.31.0)
+Requires-Dist: isort (==5.9.3)
+Requires-Dist: rope (==0.19.0)
+Requires-Dist: pre-commit (==2.13.0)
+Requires-Dist: pre-commit-hooks (==4.0.1)
+Requires-Dist: detect-secrets (==1.1.0)
+Requires-Dist: blacken-docs (==1.12.1)
+Requires-Dist: bashate (==2.0.0)
+Provides-Extra: docs
+Requires-Dist: mkdocs ; extra == 'docs'
+Requires-Dist: mkdocs-git-revision-date-localized-plugin ; extra == 'docs'
+Requires-Dist: mkdocs-material ; extra == 'docs'
+Requires-Dist: mkdocs-material-extensions ; extra == 'docs'
+Requires-Dist: mkdocs-mermaid-plugin ; extra == 'docs'
+Requires-Dist: mkdocs-pdf-export-plugin ; extra == 'docs'
+Requires-Dist: mkdocstrings (==0.18.0) ; extra == 'docs'
+Requires-Dist: mkdocs-autorefs ; extra == 'docs'
+Requires-Dist: mkdocs-coverage ; extra == 'docs'
+Requires-Dist: mkdocs-gen-files ; extra == 'docs'
+Requires-Dist: mkdocs-section-index ; extra == 'docs'
+Requires-Dist: papermill ; extra == 'docs'
+Requires-Dist: Pillow ; extra == 'docs'
+Requires-Dist: pymdown-extensions ; extra == 'docs'
+Provides-Extra: testing
+Requires-Dist: flake8 ; extra == 'testing'
+Requires-Dist: mypy ; extra == 'testing'
+Requires-Dist: mypy-extensions ; extra == 'testing'
+Requires-Dist: mypy-protobuf ; extra == 'testing'
+Requires-Dist: pylint ; extra == 'testing'
+Requires-Dist: pytest ; extra == 'testing'
+Requires-Dist: pytest-mock ; extra == 'testing'
+Requires-Dist: pytest-cov ; extra == 'testing'
+Requires-Dist: pytest-order ; extra == 'testing'
+Requires-Dist: yapf ; extra == 'testing'
+Requires-Dist: isort ; extra == 'testing'
+Requires-Dist: rope ; extra == 'testing'
+Requires-Dist: pre-commit ; extra == 'testing'
+Requires-Dist: pre-commit-hooks ; extra == 'testing'
+Requires-Dist: detect-secrets ; extra == 'testing'
+Requires-Dist: blacken-docs ; extra == 'testing'
+Requires-Dist: bashate ; extra == 'testing'
+Requires-Dist: fish ; extra == 'testing'
+Requires-Dist: watchdog ; extra == 'testing'
+Requires-Dist: speedscope ; extra == 'testing'
+Requires-Dist: pandas-profiling ; extra == 'testing'
+Requires-Dist: factory ; extra == 'testing'
+
+# safe-autonomy-dynamics
+
+## Intro
+The safe-autonomy-dynamics package provides an API for dynamic systems supported by a library of common functions used to access and update system dynamics. These dynamics are used to build simulated environments which behave like real-world systems for the purpose of safe autonomy research and development (though their use is not limited to the safety domain). The package also includes a zoo of air and space domain dynamics modules tailored for simulating aerospace systems. The team intends to grow the zoo as new dynamic systems are studied or simulation requirements change.
+
+## Docs
+Library documentation and api reference located [here](https://act3-ace.github.io/safe-autonomy-dynamics/).
+
+## Installation
+The following instructions detail how to install 
+the safe-autonomy-dynamics library on your local system.
+It is recommended to install the python modules within 
+a [virtualenv](https://virtualenv.pypa.io/en/stable/#)
+or [conda](https://docs.conda.io/projects/conda/en/latest/index.html) environment.
+
+### Installing safe-autonomy-dynamics
+Clone a copy of the safe-autonomy-dynamics source code 
+onto your local machine via SSH:
+```shell
+git clone git@github.com:act3-ace/safe-autonomy-dynamics.git
+```
+or HTTPS:
+```shell
+git clone https://github.com/act3-ace/safe-autonomy-dynamics.git
+```
+
+Install the safe-autonomy-dynamics module into your 
+environment using `pip`:
+```shell
+cd safe-autonomy-dynamics
+pip install .
+```
+
+For a local development version, please install 
+using the `-e, --editable` option:
+```shell
+pip install -e .
+```
+
+## Build Docs Locally
+
+First make sure the mkdocs requirements are installed 
+
+```shell
+pip install -r mkdocs-requirements.txt
+```
+
+Now, build the documentation and serve it locally. By default, you should be able to reach the docs on your local web browser at `127.0.0.1:8000`
+
+```shell
+rm -r site
+mkdocs build
+cp -r docs/. site/
+mkdocs serve
+```
+
+## Public Release
+Distribution A. Approved for public release; distribution is unlimited. Case Number: AFRL-2022-3202
+
+## Team
+Umberto Ravaioli,
+Kyle Dunlap,
+Jamie Cunningham,
+John McCarroll,
+Kerianne Hobbs
