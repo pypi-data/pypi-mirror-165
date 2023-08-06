@@ -1,0 +1,3 @@
+matplotlib
+numpy
+sonounolib>=0.5.3
