@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+./__dist/avsh.egg-info/PKG-INFO
+./__dist/avsh.egg-info/SOURCES.txt
+./__dist/avsh.egg-info/dependency_links.txt
+./__dist/avsh.egg-info/requires.txt
+./__dist/avsh.egg-info/top_level.txt
+avsh/__init__.py

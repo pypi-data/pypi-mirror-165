@@ -1,0 +1,28 @@
+[build-system]
+requires = [
+    'setuptools',
+    'numpy',
+    'Cython'
+]
+build-backend = 'setuptools.build_meta'
+
+[project]
+name = 'avsh'
+license = {file = "LICENSE"}
+description = 'Antenna Vector Spherical Harmonics Tools'
+version = '0.1.0-dev'
+readme = "README.md"
+dependencies = [
+    # ===================== numerical bases
+    'numpy',
+    'cython',
+    'scipy',  # evaluate
+    'pandas',
+    # ===================== plotting
+    'matplotlib',
+    'PyQt5',
+    'pyvista==0.35.1',
+    'imageio-ffmpeg',
+    # ===================== persisting
+    'h5py'
+]

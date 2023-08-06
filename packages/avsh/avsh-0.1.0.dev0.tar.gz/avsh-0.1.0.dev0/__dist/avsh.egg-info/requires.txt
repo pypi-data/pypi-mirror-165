@@ -1,0 +1,9 @@
+numpy
+cython
+scipy
+pandas
+matplotlib
+PyQt5
+pyvista==0.35.1
+imageio-ffmpeg
+h5py
