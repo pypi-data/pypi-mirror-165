@@ -1,0 +1,10 @@
+recursive-exclude paper gradio
+include src/robust_deid/sequence_datasets/text_transformations/augmentations/phi/patorg.txt
+include src/robust_deid/sequence_datasets/text_transformations/augmentations/phi/hospital/acronyms.json
+include src/robust_deid/sequence_datasets/text_transformations/augmentations/phi/hospital/assisted_living.json
+include src/robust_deid/sequence_datasets/text_transformations/augmentations/phi/hospital/hospitals.json
+include src/robust_deid/sequence_datasets/text_transformations/augmentations/phi/hospital/hospitals_full.json
+include src/robust_deid/sequence_datasets/text_transformations/augmentations/phi/hospital/ids.json
+include src/robust_deid/sequence_datasets/text_transformations/augmentations/phi/hospital/location_ids.json
+include src/robust_deid/sequence_datasets/text_transformations/augmentations/phi/hospital/locations.json
+include src/robust_deid/sequence_datasets/text_transformations/augmentations/phi/hospital/pharmacies.json
