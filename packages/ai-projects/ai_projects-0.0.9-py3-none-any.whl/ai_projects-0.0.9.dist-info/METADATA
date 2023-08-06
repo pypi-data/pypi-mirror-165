@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: ai-projects
+Version: 0.0.9
+Summary: Collection of AI algorithms and agents.
+Home-page: https://github.com/jakkes/AI_Projects
+Author: Jakob Stigenberg
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: torch (~=1.9)
+Requires-Dist: scipy (~=1.6)
+Requires-Dist: tensorboard (<3)
+Requires-Dist: gym (~=0.18)
+Requires-Dist: typed-argument-parser (~=1.6)
+Requires-Dist: python-linq (~=2.0)
+Requires-Dist: pyzmq (~=22.3)
+Requires-Dist: setuptools (==59.5.0)
+
+# Artificial Intelligence
+[![Build status](https://github.com/jakkes/AI_Projects/actions/workflows/python-app.yml/badge.svg?branch=master)](https://github.com/jakkes/AI_Projects/actions/workflows/python-app.yml)
+
+A collection of AI algorithms, RL agents, and more.
+
+
+## Documentation
+https://jakkes.github.io/AI_Projects/ai
+
+
+
+## Installing
+```
+pip install ai-projects
+```
+
+
