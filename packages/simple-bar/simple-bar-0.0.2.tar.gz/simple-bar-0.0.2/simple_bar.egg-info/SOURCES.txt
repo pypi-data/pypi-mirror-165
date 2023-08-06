@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+simple_bar.egg-info/PKG-INFO
+simple_bar.egg-info/SOURCES.txt
+simple_bar.egg-info/dependency_links.txt
+simple_bar.egg-info/top_level.txt
+simplebar/__init__.py
+simplebar/bar.py
