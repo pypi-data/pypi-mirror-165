@@ -1,0 +1,19 @@
+[build-system]
+requires      = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "visual-graph"
+version = "0.1.0"
+description = "Educational package for creating visual graphs"
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "matplotlib >=3.5.3",
+    "networkx >=2.8.6",
+    "drawilleplot >=0.1.0",
+]
+requires-python = ">=3.8"
