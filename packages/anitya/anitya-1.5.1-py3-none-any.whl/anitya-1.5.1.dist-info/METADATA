@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: anitya
+Version: 1.5.1
+Summary: anitya is a project to monitor upstream releases in a distro.
+Home-page: https://fedorahosted.org/anitya/
+Author: Pierre-Yves Chibon
+Author-email: pingou@pingoured.fr
+Maintainer: Pierre-Yves Chibon
+Maintainer-email: pingou@pingoured.fr
+License: GPLv2+
+Download-URL: https://fedorahosted.org/releases/a/n/anitya/
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.8
+License-File: LICENSE
+Requires-Dist: alembic (<2.0.0,>=1.3.1)
+Requires-Dist: anitya-schema (<3.0.0,>=2.0.0)
+Requires-Dist: arrow (<2.0.0,>=0.14.6)
+Requires-Dist: beautifulsoup4 (<5.0.0,>=4.9.3)
+Requires-Dist: defusedxml (<1.0.0,>=0.6.0)
+Requires-Dist: fedora-messaging (<4.0.0,>=2.0.1)
+Requires-Dist: flask (<3.0.0,>=1.1.2)
+Requires-Dist: flask-login (<1.0.0,>=0.6.2)
+Requires-Dist: flask-wtf (<2.0.0,>=0.14.2)
+Requires-Dist: jinja2 (<4.0.0,>=3.0.0)
+Requires-Dist: ordered-set (<5.0.0,>=3.1)
+Requires-Dist: packaging (>=20.0)
+Requires-Dist: python-dateutil (<3.0.0,>=2.8.0)
+Requires-Dist: semver (<3.0.0,>=2.8.1)
+Requires-Dist: social-auth-app-flask (<2.0.0,>=1.0.0)
+Requires-Dist: social-auth-app-flask-sqlalchemy (<2.0.0,>=1.0.1)
+Requires-Dist: sqlalchemy (<2.0.0,>=1.3.17)
+Requires-Dist: sseclient (<1.0.0,>=0.0.26)
+Requires-Dist: Werkzeug (==2.1.2)
+Requires-Dist: straight.plugin (<2.0.0,>=1.5.0)
+Requires-Dist: toml (<1.0.0,>=0.10.2)
+Requires-Dist: webargs (<9.0.0,>=8.0.0)
+Requires-Dist: wtforms (<4.0.0,>=2.2.1)
+
+UNKNOWN
+
