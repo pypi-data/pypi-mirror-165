@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: kyte
+Version: 0.0.1
+Summary: Python module for interfacing KytePHP
+Home-page: https://github.com/keyqcloud/kyte-api-python
+Author: Kenneth P. Hough
+Author-email: <kenneth@keyqcloud.com>
+License: UNKNOWN
+Keywords: python,kyte,kyte api
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: os
+Requires-Dist: datetime
+Requires-Dist: requests
+Requires-Dist: json
+Requires-Dist: base64
+Requires-Dist: urllib.parse
+Requires-Dist: hashlib
+Requires-Dist: hmac
+Requires-Dist: logging
+
+Python module for interacting with a KytePHP API
+
