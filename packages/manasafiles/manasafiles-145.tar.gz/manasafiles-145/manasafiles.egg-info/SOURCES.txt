@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+manasafiles/__init__.py
+manasafiles/decorators.py
+manasafiles/functions.py
+manasafiles.egg-info/PKG-INFO
+manasafiles.egg-info/SOURCES.txt
+manasafiles.egg-info/dependency_links.txt
+manasafiles.egg-info/requires.txt
+manasafiles.egg-info/top_level.txt
