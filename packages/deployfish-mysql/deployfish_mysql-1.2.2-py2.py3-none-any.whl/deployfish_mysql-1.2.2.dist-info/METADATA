@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: deployfish-mysql
+Version: 1.2.2
+Summary: Deployfish MySQL plugin
+Home-page: https://github.com/caltechads/deployfish-mysql
+Author: Caltech IMSS ADS
+Author-email: imss-ads-staff@caltech.edu
+License: UNKNOWN
+Keywords: aws,ecs,docker,devops,mysql
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: cement (>=3.0)
+Requires-Dist: click (>=7.0)
+Requires-Dist: deployfish (>1.7.4)
+
+UNKNOWN
+
+
