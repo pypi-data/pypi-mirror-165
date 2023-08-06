@@ -1,0 +1,37 @@
+[project]
+name = "samosa"
+version = "0.1.3"
+description = "Enforce a triangular Git workflow. If this is not possible, explain why."
+authors = [
+    { name = "David Seaward", email = "david@librem.one" },
+]
+dependencies = [
+    "pygit2>=1.10.0",
+]
+requires-python = ">=3.10"
+readme = "README.md"
+
+[project.license]
+text = "GPL-3.0-or-later"
+
+[project.optional-dependencies]
+
+[project.scripts]
+samosa = "samosa:validate_cwd_and_exit"
+
+[build-system]
+requires = [
+    "pdm-pep517>=1.0.0",
+]
+build-backend = "pdm.pep517.api"
+
+[tool.pdm.build]
+includes = [
+    "samosa.py",
+    "samosa_resource/",
+]
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "reuse>=1.0.0",
+]

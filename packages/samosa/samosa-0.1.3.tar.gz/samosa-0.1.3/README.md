@@ -1,0 +1,86 @@
+# Samosa (समोसा)
+
+Enforce a triangular Git workflow. If this is not possible, explain why.
+
+## Samosa standard
+
+The following checks should be true:
+
+ * In a Git repository
+ * There is a remote named "origin"
+ * There is a remote named "upstream"
+ * Author name and email are set, and are not invalid
+ * The default push target is "origin:current"
+ * The pre-commit hook exists and is executable
+ * There is a local branch named "main"
+ * The main branch tracks "upstream/main"
+
+See WORKFLOW.md for a detailed workflow that results in a samosa standard
+repository.
+
+## Usage
+
+```bash
+cd <repository-folder>
+samosa
+```
+
+If any checks fail, Samosa will attempt to make a correction. If the
+correction cannot be made automatically, Samosa will make a suggestion
+and terminate with exit code 1 (error).
+
+If all checks pass, Samosa will display a short confirmation message
+and terminate with exit code 0 (success).
+
+## Development environment
+
+First, fork https://gitlab.com/lofidevops/samosa
+
+```
+git checkout <your-fork>
+cd samosa
+# set up triangular workflow here!
+pdm install --dev
+```
+
+You can use a text editor, or any IDE that supports virtualenv / pdm.
+
+## Roadmap (don't hold your breath)
+
+ * `samosa clone`: interactive prompts that follow the suggested workflow
+ * `samosa checkout`: in samosa repository, checkout a new branch, hooked up correctly
+
+## Out of scope
+
+ * Detecting/supporting other workflows.
+
+## Sharing and contributions
+
+Samosa (समोसा) \
+https://gitlab.com/lofidevops/samosa \
+Copyright 2022 David Seaward and contributors \
+SPDX-License-Identifier: GPL-3.0-or-later
+
+Shared under GPL-3.0-or-later. We adhere to the Contributor Covenant
+2.0 without modification, and certify origin per DCO 1.1 with a
+signed-off-by line. Contributions under the same terms are welcome.
+
+Submit conduct issues as private tickets. Sign commits with `git -s`.
+For a software bill of materials run `reuse spdx`. For more details
+see LICENSES, CONDUCT and DCO.
+
+## Acknowledgements
+
+WORKFLOW.md and the associated pre-commit bash script are derived from Aaron
+Bull Schaefer's excellent
+[Git Triangular Workflow](https://gist.github.com/elasticdog/164fe1bb75ad645abd30d545382a1542).
+License details are included in the relevant files.
+
+## Additional references
+
+ * [Triangle workflows](https://gist.github.com/anjohnson/8994c95ab2a06f7d2339)
+ * [Git 2.5, including multiple worktrees and triangular workflows](https://github.blog/2015-07-29-git-2-5-including-multiple-worktrees-and-triangular-workflows/)
+ * [Forking workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/forking-workflow) (this seems to be
+   another name for triangular workflows)
+ * [Git forking workflow, what names for the remotes?](https://stackoverflow.com/q/38965156/236081)
+ * [Integration-manager workflow](https://git-scm.com/book/tl/v2/Distributed-Git-Distributed-Workflows#_integration_manager)
