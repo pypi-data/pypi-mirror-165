@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: rsyncs3
+Version: 0.2.0
+Summary: Utility to easily download objects from Amazon S3 buckets.
+Home-page: https://github.com/DephyInc/rsyncS3
+License: MIT
+Author: Dephy Inc.
+Author-email: software@dephy.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: boto3 (>=1.24.64,<2.0.0)
+Project-URL: Repository, https://github.com/DephyInc/rsyncS3
