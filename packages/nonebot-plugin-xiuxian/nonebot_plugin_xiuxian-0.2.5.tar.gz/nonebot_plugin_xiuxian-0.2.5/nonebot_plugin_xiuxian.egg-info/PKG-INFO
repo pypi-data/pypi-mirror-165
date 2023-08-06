@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: nonebot-plugin-xiuxian
+Version: 0.2.5
+Summary: xiuxian模拟器
+Home-page: https://github.com/s52047qwas/nonebot_plugin_xiuxian
+Author: PinkCat
+Author-email: 578043031@qq.com
+License: MIT
+Description: UNKNOWN
+Keywords: plugin,nonebot2,xiuxian
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.9

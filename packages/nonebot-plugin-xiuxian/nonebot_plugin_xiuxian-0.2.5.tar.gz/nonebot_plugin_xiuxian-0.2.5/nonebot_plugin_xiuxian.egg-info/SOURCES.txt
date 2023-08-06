@@ -1,0 +1,12 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+nonebot_plugin_xiuxian/__init__.py
+nonebot_plugin_xiuxian/xiuxian2_handle.py
+nonebot_plugin_xiuxian/xiuxian_opertion.py
+nonebot_plugin_xiuxian.egg-info/PKG-INFO
+nonebot_plugin_xiuxian.egg-info/SOURCES.txt
+nonebot_plugin_xiuxian.egg-info/dependency_links.txt
+nonebot_plugin_xiuxian.egg-info/requires.txt
+nonebot_plugin_xiuxian.egg-info/top_level.txt
