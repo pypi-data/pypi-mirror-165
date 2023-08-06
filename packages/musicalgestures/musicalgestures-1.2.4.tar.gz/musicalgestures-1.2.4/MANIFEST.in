@@ -1,0 +1,6 @@
+include README.md
+include setup.cfg
+graft musicalgestures
+prune musicalgestures/deprecated
+prune musicalgestures/documentation
+prune musicalgestures/.ipynb_checkpoints
