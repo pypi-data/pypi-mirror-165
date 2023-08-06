@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: dailyArt
+Version: 0.0.1
+Summary: private package. too many functions.
+Home-page: https://github.com/Jonathan-art116/dailyArt.git
+Author: Jonathan
+Author-email: xyzning@qq.com
+License: GNU
+Project-URL: Bug Tracker, https://github.com/Jonathan-art116/dailyArt/issues
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+## !!! Do not install this package This is a demo to setuptool 
+
+---
+
+### How to pack projects? 
+[click me](https://packaging.python.org/en/latest/tutorials/packaging-projects/)
+***
+
+### setup project
+1. conda create -n daily python=3.10
+2. conda activate daily
+3. python -m pip install --upgrade pip
+4. python -m pip install --upgrade build
+
+### build project
+1. python -m build
+2. python -m twine upload  dist/*

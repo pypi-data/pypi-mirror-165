@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+src/dailyArt.egg-info/PKG-INFO
+src/dailyArt.egg-info/SOURCES.txt
+src/dailyArt.egg-info/dependency_links.txt
+src/dailyArt.egg-info/top_level.txt
+src/daily_art/__init__.py
+src/daily_art/main.py
+src/say_hello/__init__.py
+src/say_hello/main.py
