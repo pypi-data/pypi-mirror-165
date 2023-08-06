@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+ghcTestPkg/__init__.py
+ghcTestPkg/ghcTestPkg.py
+ghcTestPkg.egg-info/PKG-INFO
+ghcTestPkg.egg-info/SOURCES.txt
+ghcTestPkg.egg-info/dependency_links.txt
+ghcTestPkg.egg-info/requires.txt
+ghcTestPkg.egg-info/top_level.txt
