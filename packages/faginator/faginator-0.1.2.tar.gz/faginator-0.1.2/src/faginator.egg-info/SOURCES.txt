@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/faginator/Faginator.py
+src/faginator/__init__.py
+src/faginator.egg-info/PKG-INFO
+src/faginator.egg-info/SOURCES.txt
+src/faginator.egg-info/dependency_links.txt
+src/faginator.egg-info/top_level.txt
