@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: megacodist
+Version: 1.0.1
+Summary: A sorted list for Python.
+Home-page: https://github.com/megacodist/megacodist
+Author: Megacodist
+Author-email: megacodist@gmail.com
+Keywords: list,sorted list
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# megacodist
+ A Python library for regular and repeatitive tasks.
