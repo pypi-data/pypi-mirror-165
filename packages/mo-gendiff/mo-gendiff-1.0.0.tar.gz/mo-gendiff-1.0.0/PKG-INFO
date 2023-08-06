@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: mo-gendiff
+Version: 1.0.0
+Summary: Two files difference generator
+Author: Max Odinokiy
+Author-email: max.odinokiy@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: PyYAML (>=6.0,<7.0)
+Requires-Dist: pytest-cov (>=3.0.0,<4.0.0)
