@@ -1,0 +1,2 @@
+[console_scripts]
+cisctl = cisctl.shell:main

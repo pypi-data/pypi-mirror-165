@@ -1,0 +1,7 @@
+CHANGES
+=======
+
+v0.1.1
+------
+
+* support gcr image with /cmd/
