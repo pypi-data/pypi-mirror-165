@@ -1,0 +1,10 @@
+LICENCE
+README.md
+setup.py
+jplaceparser/__init__.py
+jplaceparser/parser.py
+jplaceparser.egg-info/PKG-INFO
+jplaceparser.egg-info/SOURCES.txt
+jplaceparser.egg-info/dependency_links.txt
+jplaceparser.egg-info/requires.txt
+jplaceparser.egg-info/top_level.txt

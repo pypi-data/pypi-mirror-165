@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: jplaceparser
+Version: 0.0.1
+Summary: Tools to parse the JPLACE files
+Home-page: https://github.com/Robaina/Jplaceparser
+Author: Semidán Robaina Estévez, 2022
+Author-email: srobaina@ull.edu.es
+Maintainer: Semidán Robaina Estévez
+Maintainer-email: srobaina@ull.edu.es
+License: CC-BY-4.0 license
+Description-Content-Type: text/markdown
+License-File: LICENCE
+
+# jplaceparser
+A python parser for jplace (evolutionary placement) files
