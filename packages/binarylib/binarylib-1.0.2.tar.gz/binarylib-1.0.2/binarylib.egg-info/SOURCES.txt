@@ -1,0 +1,6 @@
+binarylib.py
+setup.py
+binarylib.egg-info/PKG-INFO
+binarylib.egg-info/SOURCES.txt
+binarylib.egg-info/dependency_links.txt
+binarylib.egg-info/top_level.txt
