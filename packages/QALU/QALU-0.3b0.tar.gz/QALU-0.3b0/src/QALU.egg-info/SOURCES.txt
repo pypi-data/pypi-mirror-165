@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+src/QALU.py
+src/QALU.egg-info/PKG-INFO
+src/QALU.egg-info/SOURCES.txt
+src/QALU.egg-info/dependency_links.txt
+src/QALU.egg-info/top_level.txt
