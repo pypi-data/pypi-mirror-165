@@ -1,0 +1,9 @@
+README.md
+setup.py
+mathnet/__init__.py
+mathnet/sugar.py
+mathnet.egg-info/PKG-INFO
+mathnet.egg-info/SOURCES.txt
+mathnet.egg-info/dependency_links.txt
+mathnet.egg-info/entry_points.txt
+mathnet.egg-info/top_level.txt
