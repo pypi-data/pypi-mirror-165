@@ -1,0 +1,27 @@
+graft docs
+graft src
+
+# If you are encounting problems with .c file use
+# git update-index --assume-unchanged src/maicos/lib/*.c
+
+include *.rst
+include LICENSE
+include requirements.txt
+include requirements_setup.txt
+
+exclude .codacy.yaml
+exclude .codeclimate.yml
+exclude .coveragerc
+exclude .gitignore
+exclude .gitlab-ci.yml
+exclude .readthedocs.yml
+exclude tox.ini
+exclude requirements_cython.txt
+
+prune .gitlab
+prune .tox
+prune developer
+prune tests
+prune examples
+
+global-exclude *.py[cod] __pycache__/* *.so *.dylib
