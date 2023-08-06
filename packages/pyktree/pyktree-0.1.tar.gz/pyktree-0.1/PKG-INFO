@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: pyktree
+Version: 0.1
+Home-page: https://github.com/hieupth/pyktree
+Download-URL: https://github.com/hieupth/pyktree/archive/v_01.tar.gz
+Author: Hieu Pham
+Author-email: 64821726+hieupth@users.noreply.github.com
+License: MIT
+Keywords: tree,general tree,data structures
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Python K-Tree
+Python implementation of K-General Tree data structure.
+## Installation
+This package can be installed via pip:
+```
+pip install pyktree
+```
+Or installed via conda:
+```
+conda install pyktree -c hieupth
+```
+## License
+[MIT License](https://github.com/hieupth/pyktree/main/LICENSE). <br>
+Copyright &copy; 2022 [Hieu Pham](https://github.com/hieupth). All rights reserved.
