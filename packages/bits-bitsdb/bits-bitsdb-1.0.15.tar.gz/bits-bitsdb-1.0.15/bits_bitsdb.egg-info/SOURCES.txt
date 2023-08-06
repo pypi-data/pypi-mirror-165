@@ -1,0 +1,17 @@
+README.md
+setup.cfg
+setup.py
+bits/__init__.py
+bits/bitsdb/__init__.py
+bits/bitsdb/bitsdbapi.py
+bits/bitsdb/cloudfunctions.py
+bits/bitsdb/datastore.py
+bits/bitsdb/firestore.py
+bits/bitsdb/mongodb.py
+bits/bitsdb/update.py
+bits_bitsdb.egg-info/PKG-INFO
+bits_bitsdb.egg-info/SOURCES.txt
+bits_bitsdb.egg-info/dependency_links.txt
+bits_bitsdb.egg-info/not-zip-safe
+bits_bitsdb.egg-info/requires.txt
+bits_bitsdb.egg-info/top_level.txt
