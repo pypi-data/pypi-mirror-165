@@ -1,0 +1,8 @@
+requests
+
+[dev]
+black
+bumpver
+pip-tools
+wheel
+requests
