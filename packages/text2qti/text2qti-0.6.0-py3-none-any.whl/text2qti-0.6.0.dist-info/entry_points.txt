@@ -1,0 +1,5 @@
+[console_scripts]
+text2qti = text2qti.cmdline:main
+
+[gui_scripts]
+text2qti_tk = text2qti.gui.tk:main
