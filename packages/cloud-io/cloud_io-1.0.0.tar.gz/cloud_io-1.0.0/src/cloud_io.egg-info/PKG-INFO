@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: cloud-io
+Version: 1.0.0
+Summary: Improper readme for description parsing.
+Home-page: UNKNOWN
+Author: (c) Akouete Kpakpo
+Author-email: adkevinkpakpo@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# cloud_io
+Handle I/O from cloud buckets
+
+

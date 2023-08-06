@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+src/cloud_io.egg-info/PKG-INFO
+src/cloud_io.egg-info/SOURCES.txt
+src/cloud_io.egg-info/dependency_links.txt
+src/cloud_io.egg-info/requires.txt
+src/cloud_io.egg-info/top_level.txt
