@@ -1,0 +1,3 @@
+[console_scripts]
+lndocs=lndocs.__main__:main
+
