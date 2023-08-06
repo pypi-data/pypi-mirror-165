@@ -1,0 +1,10 @@
+feishuer/__init__.py,sha256=btpyKMNTuLIMPAlpuE_cTNEzi8NOrKkANVM3OCxuYVU,35
+feishuer/__version__.py,sha256=o4ScPsx3ebE9pX-fF55Y4NZwE-gZl1putS6aE2pTVtI,23
+feishuer/bot.py,sha256=4royBH3ouO_hJthyiqViKsbriJjY0rs3qldkIwykn1I,4185
+feishuer/errors.py,sha256=QzzojYPBlGYGHArBH0Mbk7o955kKW1ioqJyRo46mkQE,478
+feishuer/log.py,sha256=pmnFEVKLiQEMQlDzCgm8oxt3GhThUw4uUpCXqHWAfEk,56
+feishuer-0.2.3.dist-info/LICENSE,sha256=JXgOR9MuQIGQqdvgDz9EqrVDc0QcTSmgnv-BB1-5MrE,1085
+feishuer-0.2.3.dist-info/METADATA,sha256=qS-OyHOWxS_347YABypTWG1zlggppTuF2mSF6DaL-1Q,2876
+feishuer-0.2.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+feishuer-0.2.3.dist-info/top_level.txt,sha256=hIwDzdKV693VdhPhGMvSl8YeZK-pq0XENnXA6VUsLoo,9
+feishuer-0.2.3.dist-info/RECORD,,
