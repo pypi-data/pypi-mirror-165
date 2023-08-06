@@ -1,0 +1,12 @@
+setuptools
+plone.batching
+plone.registry
+plone.z3cform
+Products.BTreeFolder2
+Products.CMFCore
+Products.CMFDynamicViewFTI
+Zope>=5
+
+[test]
+plone.testing
+plone.subrequest
