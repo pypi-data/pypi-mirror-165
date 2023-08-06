@@ -1,0 +1,5 @@
+Markdown
+mdx_math_img>=0.9
+pyyaml
+canvasapi
+pick
