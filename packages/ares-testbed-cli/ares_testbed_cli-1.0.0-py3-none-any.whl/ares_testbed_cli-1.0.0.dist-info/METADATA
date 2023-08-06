@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: ares-testbed-cli
+Version: 1.0.0
+Summary: UNKNOWN
+Home-page: https://github.optum.com/ecp/optum-testbed-cli
+Author: Venkata Krishna Lolla
+Author-email: venkata.lolla@optum.com
+Maintainer: Venkata Krishna Lolla
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: python-dotenv
+Requires-Dist: requests
+Requires-Dist: pyyaml
+Requires-Dist: tabulate
+Requires-Dist: numpy
+Requires-Dist: munch
+
+UNKNOWN
+
+

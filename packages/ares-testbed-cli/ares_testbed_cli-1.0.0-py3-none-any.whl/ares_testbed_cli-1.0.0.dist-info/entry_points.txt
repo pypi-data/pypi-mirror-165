@@ -1,0 +1,3 @@
+[console_scripts]
+otbctl = otbctl.__main__:main
+
