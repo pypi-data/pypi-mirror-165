@@ -1,0 +1,15 @@
+pydogceo/PyDogCeo.py,sha256=Q6yDi7bMTRH4ZJvZ1B4SDCghy5V7lRc-ln8FMFgSQbo,323
+pydogceo/__init__.py,sha256=jLxGJMLD-0Y7XItkviIuCRA0TQK9wqAeRIDcOGw48RU,30
+pydogceo/config/BaseConfiguration.py,sha256=9XG3QVQnHzZlz6V3DQCAF8amuSk0CKWtOxtxK60lUEk,96
+pydogceo/config/__init__.py,sha256=kMkCw-BEGLxkua_vIQzCGJbYITonCuLyQ_ogQvIepH4,48
+pydogceo/request/BaseRequest.py,sha256=dmNdcc0_bskfauWVcnWWeYfAIEBVhmh3wZ3DkJo4bKQ,455
+pydogceo/request/__init__.py,sha256=PYoJ8ERrydDywp6deAzLhCks-lwDuu76zSq3LgOusXo,37
+pydogceo/routes/Breed.py,sha256=UW7rRvWCH7Ma2be0rf7ITbF88MdPsPv8wViWhpI65oA,1488
+pydogceo/routes/Breeds.py,sha256=rcG5FvQ0vWSfwjihLPtFpZGdTzmSx-bJReRxfmkpdkM,1855
+pydogceo/routes/Image.py,sha256=K1w97mZfRLwYwSQwkfmsAtGbCGdHDFcz9tlUb80I_hA,760
+pydogceo/routes/Images.py,sha256=ZXmlmiM2UhxthGQGH-2Z1BXPebs00NwFmdCmA0CFdoU,2133
+pydogceo/routes/__init__.py,sha256=xKW0abGqGXy7gq5B0NoW3iKUwyGdxGSHCXFEY6BrIY4,86
+pydogceo-1.0.0.dist-info/METADATA,sha256=Tp-iFkiAV159FI5mD3uH5HHYUTOHRnIrmiFXQnZNAb0,3057
+pydogceo-1.0.0.dist-info/WHEEL,sha256=09RFlvY3aVzvCNk4AXPZt-N-AI7GY_KktGsTb2IqIBU,86
+pydogceo-1.0.0.dist-info/licenses/LICENSE,sha256=cq2TBRwIA8Zn1O0k5Z6pR0bXaM6VJMNs4nF1KaAq01M,1071
+pydogceo-1.0.0.dist-info/RECORD,,
