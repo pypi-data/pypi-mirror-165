@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: alkemy-workflow
+Version: 0.1.8
+Summary: Alkemy Workflow
+Home-page: https://github.com/DLBD-Department/alkemy-worflow
+License: MIT
+Keywords: git workflow
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+License-File: LICENSE
+Requires-Dist: backports.cached-property
+Requires-Dist: requests
+Requires-Dist: click
+Requires-Dist: importlib-resources
+
+Alkemy Git Workflow
