@@ -1,0 +1,3 @@
+[console_scripts]
+init-service=init_service:run_cli
+

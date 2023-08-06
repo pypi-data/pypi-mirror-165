@@ -1,0 +1,9 @@
+# microservice specific routes
+
+<!--(if type=="BACKEND")-->
+GET        /hello-world             uk.gov.hmrc.$!APP_PACKAGE_NAME!$.controllers.MicroserviceHelloWorldController.hello
+<!--(else)-->
+->         /hmrc-frontend           hmrcfrontend.Routes
+GET        /                        uk.gov.hmrc.$!APP_PACKAGE_NAME!$.controllers.HelloWorldController.helloWorld
+GET        /assets/*file            controllers.Assets.versioned(path = "/public", file: Asset)
+<!--(end)-->

@@ -1,0 +1,9 @@
+app/controllers/HelloWorldController.scala
+app/controllers/LanguageSwitchController.scala
+test/controllers/HelloWorldControllerSpec.scala
+app/config/ErrorHandler.scala
+test/config
+app/assets
+app/views
+conf/messages
+conf/messages.cy
