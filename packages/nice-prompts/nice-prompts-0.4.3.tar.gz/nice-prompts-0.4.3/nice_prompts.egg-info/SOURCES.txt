@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+./nice_prompts/__init__.py
+./nice_prompts/main.py
+nice_prompts.egg-info/PKG-INFO
+nice_prompts.egg-info/SOURCES.txt
+nice_prompts.egg-info/dependency_links.txt
+nice_prompts.egg-info/requires.txt
+nice_prompts.egg-info/top_level.txt
+test/test.py
