@@ -1,0 +1,8 @@
+LICENSE,sha256=Kqcm8NMjVB5kQU2Rdjnoz7QE-bgXeEWdYXIxrU1ukhI,1088
+logistics_or_gym/__init__.py,sha256=vSfjdcl8RzrOJdzHnjf26MwoJUPMDyOnUPeNIxjdMIc,107
+logistics_or_gym/envs/__init__.py,sha256=FVt0v1S1FVJQsjlYMUNL3vP9nYqi65Ctr_d4zhQAqvA,47
+logistics_or_gym/envs/HCVRP.py,sha256=jmvqMSr6bhe6jO95x5xt7dD81HRmIFayB5UE6YvsgQI,7234
+logistics_or_gym-0.1.1.dist-info/LICENSE,sha256=Kqcm8NMjVB5kQU2Rdjnoz7QE-bgXeEWdYXIxrU1ukhI,1088
+logistics_or_gym-0.1.1.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+logistics_or_gym-0.1.1.dist-info/METADATA,sha256=sNr0O0mw13NLgg9acw3001Otl7s83G2vggEVbf_STFg,4807
+logistics_or_gym-0.1.1.dist-info/RECORD,,
