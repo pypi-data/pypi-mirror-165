@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+examples/example_batch.py
+examples/example_individual.py
+psycopg2_logical_decoding_json_consumer/__init__.py
+psycopg2_logical_decoding_json_consumer.egg-info/PKG-INFO
+psycopg2_logical_decoding_json_consumer.egg-info/SOURCES.txt
+psycopg2_logical_decoding_json_consumer.egg-info/dependency_links.txt
+psycopg2_logical_decoding_json_consumer.egg-info/requires.txt
+psycopg2_logical_decoding_json_consumer.egg-info/top_level.txt
