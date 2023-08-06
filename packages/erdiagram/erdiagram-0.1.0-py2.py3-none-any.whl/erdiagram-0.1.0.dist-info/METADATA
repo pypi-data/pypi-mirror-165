@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: erdiagram
+Version: 0.1.0
+Summary: Make diagrams for SQLAlchemy.
+Author-email: Lamin Labs <laminlabs@gmail.com>
+Description-Content-Type: text/markdown
+Requires-Dist: nbproject
+Requires-Dist: pydot
+Requires-Dist: sqlalchemy
+Requires-Dist: pre-commit ; extra == "dev"
+Requires-Dist: nox ; extra == "dev"
+Requires-Dist: pytest>=6.0 ; extra == "test"
+Requires-Dist: pytest-cov ; extra == "test"
+Requires-Dist: nbmake ; extra == "test"
+Project-URL: Home, https://github.com/laminlabs/erdiagram
+Provides-Extra: dev
+Provides-Extra: test
+
+# ERdiagram: Entity relationship diagrams for SQLalchemy
+
+Read the [docs](https://lamin.ai/docs/db).
+
