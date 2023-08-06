@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: qtoggleserver
+Version: 0.25.0-beta.1
+Summary: A fully fledged qToggle Python implementation
+Home-page: https://github.com/qtoggle/qtoggleserver
+Author: The qToggle Team
+Author-email: ccrisan@gmail.com
+License: Apache 2.0
+License-File: LICENSE.txt
