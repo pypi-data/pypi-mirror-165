@@ -1,0 +1,6 @@
+pandas
+numpy
+scibiomart
+sciutil>=1.0.3
+scimotf
+scie2g
