@@ -1,0 +1,3 @@
+[console_scripts]
+guts = container_guts.client:run
+
