@@ -1,0 +1,8 @@
+aws_pcluster_slurm_spawner/__init__.py,sha256=8Wd3LZnJV0t_kVNeHNCOtkjivjBRHU0uImX27cO8kXo,344
+aws_pcluster_slurm_spawner/_version.py,sha256=Cag9y9aBQf1966jrkVURM-btWlpIguG2NGCwi89vby8,497
+aws_pcluster_slurm_spawner/aws_pcluster_slurm_spawner.py,sha256=noez0qGcNXrNY6M9iWzLokY1wCZOW14K6rWsRM1ZnI4,21116
+aws_pcluster_slurm_spawner-1.2.1.dist-info/LICENSE,sha256=tl-7vPvIBZUx8aAJ5_KHs2h46296OhTGbuUZ3OTP7BY,585
+aws_pcluster_slurm_spawner-1.2.1.dist-info/METADATA,sha256=9j5ML0cvdA7uP9Y4JfriRzmgxu8lB_O1mrj2Yf-bCrs,1827
+aws_pcluster_slurm_spawner-1.2.1.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+aws_pcluster_slurm_spawner-1.2.1.dist-info/top_level.txt,sha256=chJ8wt0DEII5dWhcWXZ-5O0rOo8HWwYOy3xzre4oncc,27
+aws_pcluster_slurm_spawner-1.2.1.dist-info/RECORD,,
