@@ -1,0 +1,10 @@
+watchmen_storage_s3/__init__.py,sha256=qyluFRpJcXi9WcIQQLtynvTXUWBXVKiYUGoS9YPb5aM,108
+watchmen_storage_s3/data_source_s3.py,sha256=u2rttRkCRLSHf0Jb2335O7uG0ursYNIPMyU8llm4pCo,1250
+watchmen_storage_s3/object_defs_s3.py,sha256=mxZW0muXOw9szcNItinWVLY4BOxl6Fvg1ypz6CWNfC4,495
+watchmen_storage_s3/simple_storage_service.py,sha256=pNGKmjZU47brFIPib3XJ1dQWIyC8p-CLjGLXTzKKUw8,1685
+watchmen_storage_s3/storage_s3.py,sha256=bGMrdGD3yi2cJcJhPYpI_7eLGuf6HaMFyC7qXfm8unY,8655
+watchmen_storage_s3/storage_s3_configuration.py,sha256=zdeue1gWocJlgaW-i7vp0s9bkqDsRhsHwek-gK6kTow,1826
+watchmen_storage_s3-16.2.5.dist-info/LICENSE,sha256=iuuG7ErblOdcEZi5u89VXS0VIUiTb4flerGp_PAS9E4,1061
+watchmen_storage_s3-16.2.5.dist-info/WHEEL,sha256=bbU3AyvhQ312rVm7zzRQjs6axI1UYWC3nmFA2E6FFSI,88
+watchmen_storage_s3-16.2.5.dist-info/METADATA,sha256=FrVTKSkt-AGvTfzLRB5cnPZClmujZnzP54is5dA6jx0,468
+watchmen_storage_s3-16.2.5.dist-info/RECORD,,
