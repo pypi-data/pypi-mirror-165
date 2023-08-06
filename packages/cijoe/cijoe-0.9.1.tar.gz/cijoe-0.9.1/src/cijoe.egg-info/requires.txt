@@ -1,0 +1,9 @@
+jinja2
+paramiko
+pytest
+pytest-reportlog
+pyyaml
+requests
+scp
+setuptools>=60
+watchdog

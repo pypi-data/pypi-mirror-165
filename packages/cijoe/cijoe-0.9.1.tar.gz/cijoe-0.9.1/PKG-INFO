@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: cijoe
+Version: 0.9.1
+Summary: UNKNOWN
+Home-page: https://github.com/refenv/cijoe
+Author: Simon A. F. Lund
+Author-email: os@safl.dk
+License: BSD
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Framework :: Pytest
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Testing
+Classifier: Topic :: Software Development
+Classifier: Topic :: Text Processing
+Classifier: Topic :: Utilities
+Requires-Python: >=3.9
+License-File: LICENSE
+
+UNKNOWN
+
