@@ -1,0 +1,231 @@
+Metadata-Version: 2.1
+Name: AutoMapDB
+Version: 0.1.3
+Summary: Automagically provides CRUD API to any PostgreSQL database
+Home-page: https://gitlab.com/mds-imbi-freiburg/automapdb
+Author: Fabi T.
+Author-email: fabian.thomczyk@uniklinik-freiburg.de
+License: License :: LGPL
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.6, <=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: psycopg2
+Requires-Dist: fire
+Requires-Dist: pyyaml (==5.1)
+
+# AutoMapDB
+
+[![pipeline status](https://gitlab.com/uklfr/mds/automapdb/badges/main/pipeline.svg)](https://gitlab.com/uklfr/mds/automapdb/-/commits/master)
+[![coverage report](https://gitlab.com/mds-imbi-freiburg/automapdb/badges/main/coverage.svg?job=test)](https://gitlab.com/mds-imbi-freiburg/automapdb/-/commits/main)
+[![License: MIT](https://img.shields.io/gitlab/license/24181795)](https://gitlab.com/mds-imbi-freiburg/automapdb/-/blob/master/LICENSE)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5566911.svg)](https://doi.org/10.5281/zenodo.5566911)
+
+*Automagically provides CRUD API to an arbitrary PostgreSQL database*
+
+## Getting Started
+### Prerequisites
+#### Dependencies
+* Python3 & pip
+* Postgres (10+) Client & Server Dev
+* GCC
+* libffi
+
+~~~bash
+apt install -y python3-pip gcc postgresql postgresql-server-dev-10
+# or
+pacman -S python3 python-pip gcc postgresql postgresql-libs libffi
+~~~
+
+#### Install
+
+~~~bash
+pip install automapdb
+~~~
+
+## Usage
+### From Shell
+#### Table Mappings
+Table Mappings are representations of Database Tables.
+They live in your `tables.json` and can be used to customize API and CLI access to the database tables.
+
+To start, create a mapping for a table you'd like to CRUD on:
+
+```bash
+# Pass connection string as argument
+automapdb --db_url=postgresql://i2b2:demouser@localhost:5433/i2b2 mapper add i2b2pm.pm_user_data
+
+# Or conveniently set the environment variable DB_URL
+export DB_URL=postgresql://i2b2:demouser@localhost:5433/i2b2
+automapdb mapper add i2b2pm.pm_user_data
+```
+
+This creates an entry in your `tables.json`:
+```json
+{
+"i2b2pm.pm_user_data":  # Customizable name for your table (sql path by default)
+  {
+    "path": "i2b2pm.pm_user_data",  # SQL path to table (schema.table)
+    "get_args": ["user_id"],        # Required fields to select an entry (PRIMARY KEY fields)
+    "set_args": ["user_id"]         # Required fields to create/update an entry (NOT NULLABLE fields)
+}
+```
+
+To map all the tables in your schema:
+```bash 
+automapdb mapper add_all --schema=i2b2pm
+```
+
+To create a mapper to your own gusto, specify the database path and the field you'd like to change:
+```bash
+automapdb mapper update i2b2pm.pm_user_data --name=user --get_args=[user_id] --set_args=[user_id,full_name]
+```
+__Hint:__ You can omit the flags if you give the arguments in proper order
+
+Now have a look at what happened:
+
+```bash
+automapdb mapper show i2b2pm.pm_user_data
+```
+
+To customize the columns needed to create or select a table entry can be done by setting `get_args` and `set_args`:.
+By default the `get_args` are the PRIMARY KEY fields in the database, the `set_args` are NOT NULLABLE fields.
+
+To inspect the columns and see the columns, use `show_fields TABLE`:
+```bash
+automapdb mapper show_fields i2b2pm.pm_project_data
+```
+
+If you are done mapping get a list of your mappings:
+```bash
+automapdb mapper list
+```
+
+#### Table Operations
+`Usage: automapdb table TABLENAME [add|get|update|delete|list]`
+
+Basic CRUD operations:
+```bash
+automapdb table list user
+automapdb table add user testuser full_name "Test User" project_path "/test"
+automapdb table get user testuser
+automapdb table update user testuser email user@example.org
+automapdb table delete user testuser
+```
+
+##### Simple queries
+Using `list` and a series of arguments one can create a filtered query:
+~~~
+automapdb table list user --status_cd=A --full_name="i2b2 Admin"
+~~~
+
+Additionally, one can construct an `ILIKE` filter by passing a dictionary to the `ilike` argument:
+
+~~~bash
+automapdb table list of --patient_num=1000000001 --ilike='{tval_char:"%tobacco%"}'
+~~~
+
+Using the argument `fields` will return only selected columns:
+~~~
+automapdb table list user --fields=user_id,password
+~~~
+
+Show info on table columns from database:
+```bash
+automapdb table list_fields user
+```
+
+
+#### Formatting
+The output of many methods can be formatted by passing the `--fmt=FORMAT` argument.   
+Currently supported are `json`, `jsonl`, `yaml`, `str` and `pretty` (python pprint).
+
+### From Python
+
+```python
+from automapdb import AutoMapDB, TableManager, TableMapper
+
+# Create AutoMapDB
+connection_string = "postgresql://i2b2:demouser@localhost:5432/i2b2"
+db = AutoMapDB(connection_string)
+
+# Create mapper for Tables
+mapper = TableMapper(db)
+
+# Create mappings for all tables in schema 'i2b2pm'
+mapper.add_all("i2b2pm")
+
+# Change table_mapping mapping_name
+mapper.update("i2b2pm.pm_project_data", name="project")
+
+# Create TableManager object
+table = TableManager(db, mapper=mapper)
+
+# List rows in Table project (=i2b2pm.pm_project_data)
+projects = table.list("project", fields=["project_id", "project_path", "status_cd"])
+
+# Iterate over rows
+for project in projects:
+    # Get row data
+    if project["status_cd"] == "D":
+        # Update data in row
+        table.update("project", project["project_id"], project["project_path"], "status_cd", "A")
+```
+
+### Help
+The cli is built around [Fire](https://github.com/google/python-fire),
+therefore you can ask for help at any point simply by firing off your command:
+
+`$ automapdb table`
+```bash
+> COMMANDS
+>     COMMAND is one of the following:
+>      add
+>        Add row to table, with args mapped to the tables not_nullable fields
+>      delete
+>        Delete row from table
+>      get
+>        Query database for one/multiple rows. Use args to provide the primary keys
+>      list
+>        Open query to table with kwargs as WHERE filters
+>      list_fields
+>        Shows the name, datatype, primary_key and nullable flags for the columns of given Table
+>      query
+>        Construct raw SQL query for a table.
+>      update
+>        Update row with args mapped to the tables not_nullable fields
+```
+
+`$ automapdb table add i2b2pm.pm_user_data`
+```bash
+> ERROR: ERROR: Missing fields: 'user_id'
+> Usage: automapdb add i2b2pm.pm_user_data 'user_id' ['full_name'|'password'|'email'|'project_path']
+```
+
+### Development
+```bash
+pip install -r requirements.dev.txt
+pre-commit install
+pre-commit install --hook-type commit-msg
+```
+
+#### Test
+Start the i2b2 postgres backend:
+```bash
+docker run -p 5433:5432 i2b2/i2b2-pg:p1
+```
+
+Run tests:
+```bash
+python -m pytest --cov=automapdb
+```
+
+## Citation
+If you use this work in scientific work, please cite our work according to https://zenodo.org/record/5566911.
+
+
+## LICENSE
+&copy; 2020 - present [Fabian Thomczyk](https://www.uniklinik-freiburg.de/imbi/mitarbeiter.html?imbiuser=thomczyk) and [Raphael Scheible](https://www.uniklinik-freiburg.de/imbi/mitarbeiter.html?imbiuser=scheiblr), Faculty of Medicine, University of Freiburg  
+Released under the MIT License.
