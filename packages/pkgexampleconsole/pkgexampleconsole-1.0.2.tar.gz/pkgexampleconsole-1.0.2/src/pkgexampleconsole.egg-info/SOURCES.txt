@@ -1,0 +1,11 @@
+LICENCE
+README.md
+pyproject.toml
+src/pkgexampleconsole/__init__.py
+src/pkgexampleconsole/helloworld.py
+src/pkgexampleconsole/myscript.py
+src/pkgexampleconsole.egg-info/PKG-INFO
+src/pkgexampleconsole.egg-info/SOURCES.txt
+src/pkgexampleconsole.egg-info/dependency_links.txt
+src/pkgexampleconsole.egg-info/entry_points.txt
+src/pkgexampleconsole.egg-info/top_level.txt

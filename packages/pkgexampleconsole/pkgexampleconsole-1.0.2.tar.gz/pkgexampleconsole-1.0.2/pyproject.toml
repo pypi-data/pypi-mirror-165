@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=65.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pkgexampleconsole"
+version = "1.0.2"
+authors = [
+  { name="Good Boy", email="pythonic@rexbytes.com" },
+]
+description = "A console package example"
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+
+[project.urls]
+"Homepage" = "https://github.com/RexBytes/pkgexampleconsole"
+"Bug Tracker" = "https://github.com/RexBytes/pkgexampleconsole/issues"
+"Download URL" ="https://github.com/RexBytes/pkgexampleconsole/archive/refs/tags/v1.0.2.tar.gz"
+
+[project.scripts]
+banana = "pkgexampleconsole:my_first_entry_point_funtion"
+apple = "pkgexampleconsole:my_second_entry_point_funtion"
+carrot = "pkgexampleconsole:myscript.main"
