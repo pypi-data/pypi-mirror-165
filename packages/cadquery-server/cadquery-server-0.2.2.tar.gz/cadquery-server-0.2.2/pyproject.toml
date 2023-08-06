@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "cadquery-server"
+version = "0.2.2"
+description = "A web server used to render 3d models from CadQuery code loaded dynamically."
+license = "MIT"
+authors = ["Roipoussiere"]
+readme = "./README.md"
+homepage = "https://open-vsx.org/extension/roipoussiere/cadquery"
+repository = "https://framagit.org/roipoussiere/cadquery-vscode"
+keywords = ["cad", "cadquery", "3d", "parametric", "modeling"]
+packages = [
+    { include = "cq_server" }
+]
+classifiers = [
+    "Framework :: Flask",
+    "Topic :: Multimedia :: Graphics :: 3D Modeling"
+]
+
+[tool.poetry.dependencies]
+python = ">=3.8,<3.11"
+jupyter-cadquery = "^3.2.2"
+cadquery-massembly = "^0.9.0"
+matplotlib = "^3.5.3"
+Flask = "^2.2.2"
+cadquery = {version = "2.2.0b0", optional = true}
+casadi = {version = "3.5.5", optional = true}
+
+[tool.poetry.scripts]
+cq-server = "cq_server.cli:main"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.extras]
+cadquery = ["cadquery", "casadi"]

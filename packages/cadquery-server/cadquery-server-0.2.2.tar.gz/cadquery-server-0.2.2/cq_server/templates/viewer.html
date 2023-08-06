@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>{{ module }} | CadQuery Viewer</title>
+	<link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/icon_cq.png') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='vendor/three-cad-viewer.esm.css') }}" />
+	<link rel="stylesheet" href="{{ url_for('static', filename='viewer.css') }}" />
+</head>
+
+<body>
+	<div id="cad_view"></div>
+	<script type="module">
+		import { init_viewer } from "{{ url_for('static', filename='viewer.js') }}";
+		window.addEventListener('DOMContentLoaded', () => {
+			init_viewer('{{ module }}', {{ options | tojson }});
+		});
+	</script>
+</body>
+
+</html>
