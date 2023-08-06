@@ -1,0 +1,11 @@
+SwifTCR/__init__.py,sha256=MvL0R6TxHUsdnHs-MdyC32HuMR216OqfWEz6OwSNLcY,205
+SwifTCR/cluster.py,sha256=m8_BcdIcwUYwa7g-_PX50JWJnxBT5nv6m_0Uu1gvRm8,2402
+SwifTCR/output.py,sha256=IaXIepBxMXC7RztZnmY1xS7pPGMkJsZhLXVuEqnNAiU,1890
+SwifTCR/preprocess.py,sha256=taok788tM5aW0Lrt_kC6PJa4rcY0tdjFv2rKJX5gDyI,1855
+SwifTCR/random_data.py,sha256=O-8TeXyLYId13m0eZv90aIbi_zoW03vXeUQ5EZneFXE,1383
+SwifTCR/spark.py,sha256=x3HIwBApykvZX4gq0EszSqeTMl9TC-qljxrmgbjqveM,1992
+SwifTCR-0.4.11.dist-info/LICENSE,sha256=PVwn0B01vCEESlULGMTRFIV9yUBmfkM9XURZaUKrHPc,1091
+SwifTCR-0.4.11.dist-info/METADATA,sha256=KsWJfaQO--9hSoMbCMtLQEeTC9WVImg9mCCkVqZEYCI,859
+SwifTCR-0.4.11.dist-info/WHEEL,sha256=v8slff5hmCpvciQ3G55d2d1CnOBupjDFJHDE2dUb1Ao,97
+SwifTCR-0.4.11.dist-info/top_level.txt,sha256=oQRilR6-jhwNGYBgu-vN6Y6Y-fQpvF2OnHp0yjJvpWA,8
+SwifTCR-0.4.11.dist-info/RECORD,,

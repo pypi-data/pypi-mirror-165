@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: SwifTCR
+Version: 0.4.11
+Summary: Cluster and construct netwotk graph of highly similar sequences
+Author: ido
+Author-email: idoh@systemsbiomed.org
+Keywords: cluster,TCR,edit,distance
+License-File: LICENSE
+Requires-Dist: findspark
+Requires-Dist: pyspark
+Requires-Dist: scipy
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: networkx
+Requires-Dist: more-itertools
+
+SwifTCR is a Python package provides a relatively quick way to find all sequences with shared single-only-replacement, only-deletion or both, creating clusters of CDR3s highly similar and construct a network graph. The tool, designed to enable researchers to quickly identify clusters in a relatively small data-set, is also available for large-scale data collection thanks its implementation of Spark, making it available for big-data immunological analysis.
