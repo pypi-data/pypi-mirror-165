@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+src/ga4gh.vrsatile.pydantic.egg-info/PKG-INFO
+src/ga4gh.vrsatile.pydantic.egg-info/SOURCES.txt
+src/ga4gh.vrsatile.pydantic.egg-info/dependency_links.txt
+src/ga4gh.vrsatile.pydantic.egg-info/not-zip-safe
+src/ga4gh.vrsatile.pydantic.egg-info/requires.txt
+src/ga4gh.vrsatile.pydantic.egg-info/top_level.txt
+src/ga4gh/vrsatile/pydantic/__init__.py
+src/ga4gh/vrsatile/pydantic/core_models.py
+src/ga4gh/vrsatile/pydantic/vrs_models.py
+src/ga4gh/vrsatile/pydantic/vrsatile_models.py
