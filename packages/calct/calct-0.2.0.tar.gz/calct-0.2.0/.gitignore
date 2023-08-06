@@ -1,0 +1,13 @@
+.vscode
+NOGIT*
+__pycache__
+.venv*
+.pytest_cache
+.mypy_cache
+.coverage
+htmlcov*
+*.egg*
+pip-wheel-metadata*
+dist
+calct/__version__.py
+build
