@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: tgfp-nfl
+Version: 2.0.4
+Summary: Python extraction of NFL scores schedule data from abstracted data source
+License: MIT
+Author: John Sturgeon
+Author-email: john.sturgeon@me.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: onetoonemap (>=1.0.0,<2.0.0)
+Requires-Dist: python-dateutil (>=2.8.2,<3.0.0)
