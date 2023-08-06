@@ -1,0 +1,14 @@
+eth-account<0.7.0,>=0.6.0
+cfx-address>=1.0.0b4
+cfx-utils>=1.0.0b4
+
+[dev]
+pytest<7,>=6.2.5
+wheel
+
+[docs]
+
+[linter]
+
+[tester]
+pytest<7,>=6.2.5
