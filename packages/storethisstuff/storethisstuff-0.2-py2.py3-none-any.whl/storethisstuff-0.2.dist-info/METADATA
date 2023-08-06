@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: storethisstuff
+Version: 0.2
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Vladimir Isakov
+Author-email: vl.isakov@hotmail.com
+License: Creative Commons Attribution-Noncommercial-Share Alike license
+Platform: UNKNOWN
+Requires-Dist: flask (==2.2.0)
+
+long_description
+
