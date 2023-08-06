@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/apojwt/ApoJWT.py
+src/apojwt/__init__.py
+src/apojwt.egg-info/PKG-INFO
+src/apojwt.egg-info/SOURCES.txt
+src/apojwt.egg-info/dependency_links.txt
+src/apojwt.egg-info/requires.txt
+src/apojwt.egg-info/top_level.txt

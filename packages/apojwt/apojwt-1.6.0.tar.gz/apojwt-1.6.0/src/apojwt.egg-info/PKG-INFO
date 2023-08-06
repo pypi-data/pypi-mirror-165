@@ -1,0 +1,330 @@
+Metadata-Version: 2.1
+Name: apojwt
+Version: 1.6.0
+Summary: JWT Authentication Functions and Decorators. Built for In10t's Project Apogee
+Author: In10t
+License: Copyright 2022 In10t
+        
+        Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+        
+        1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+        
+        2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+Keywords: apojwt,jwt,apogee
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# ApoJWT
+The `apojwt` Package was created with the intention of providing JWT support to In10t's Apogee Microservices. These services require a hierarchy of permissions that vary across all endpoints. As such, this package aims to provide decorators that can be attached with route declarations to ensure a valid JWT with proper permissions is being sent in the request headers. The package is inteded to be used alongside an API framework such as Flask or FastAPI.
+
+---
+
+
+## ApoJWT Class
+The ApoJWT class has the following constructor:
+```python
+(self, secret: str, exp_period: int=900, iss: str="", asynch: bool=False, server_audience: str="default", algorithm: str="HS256", token_finder=None, permission_formatter=None, exception_handler=None)
+"""
+Keyword Arguments (those with asterisks are functions):
+
+JWT Validation
+    secret: Secret string used to encode and decode the access JWT
+    exp_period: Length of time in seconds access tokens should be valid for. Default 900 (15 minutes) 
+    iss: Issuer string used for additional security. Default ""
+    server_audience: Audience name of the server hosting the HTTP framework. 
+        Audience names are typically base address URLs. Ex: https://example.com
+    algorithm: The algorithm to use when encoding/decoding. Default HS256
+    admin_permission: Optional permission allowing full access to JWTs carrying this permission. USE CAREFULLY
+    * token_finder: Function used to retrieve access JWT from http Authorization header. Default None
+        Expected Function Structure: (*args, **kwargs) -> str
+        NOTE: args and kwargs are the same arguments given to the http request handler 
+
+Framework Configuration
+    asynch: Tells ApoJWT to use async decorators instead of the normal. Default False
+        (FastAPI needs this True)
+    * exception_handler: HTTP error handling function given an HTTP code and message as arguments
+        Expected Function Structure: (code: int, exception_type: str, msg: str) -> None
+
+Request Data Utility
+    * permission_formatter: String formatting function that is given permission_name as an argument
+        Can be used to format request data in the permission name
+        Expected Function Structure: (permission: str, *args, **kwargs) -> str
+"""
+```
+<br>
+<br>
+
+## Higher Order Functionality in ApoJWT
+---
+
+### **Token Finder**
+The token_finder function must be passed to the higher order constructor for decorated token validation to succeed. The function must return the JWT string, which can usually be found in the HTTP request headers with the key 'Authorization'. It is standard for JWTs to be prefixed with the word 'Bearer'. It will be up to this function to remove this substring.
+
+Expected Function Structure: `(*args, **kwargs) -> str`
+
+NOTE: `args` and `kwargs` are the same arguments given to the HTTP request handler
+
+***Example***
+```python
+request.headers["Authorization"]
+>>> 'Bearer <token>'
+request.headers["Authorization"].replace("Bearer ", "")
+>>> '<token>'
+```
+```python
+"""Token Finder: used to locate and return the JWT"""
+# FastAPI
+token_finder = lambda **kwargs: str(kwargs["Authorization"]).replace("Bearer ", "")
+ajwt = ("secret", iss="issuer", asynch=True, token_finder=token_finder)
+## NOTE: asynch is True for FastAPI
+
+# Flask
+token_finder = lambda: request.headers["Authorization"].replace("Bearer ", "")
+ajwt = ("secret", iss="issuer", token_finder=token_finder)
+## NOTE: asynch defaults to False for Flask
+``` 
+### **Exception Handler**
+The exception handler is optional, but allows for decorated validation to properly be handled with an HTTP error response provided by the HTTP framework in use.
+
+Expected Function Structure: `(code: int, exception_type: str, msg: str, *args, **kwargs) -> None`
+
+***Example***
+```python
+"""Exception Handler"""
+# FastAPI
+def exception_handler(code: int, msg: str):
+    raise HTTPException(status_code=code, detail=msg)
+ajwt = ("secret", iss="issuer", asynch=True, token_finder=..., exception_handler=exception_handler)
+
+# Flask
+def exception_handler(code: int, msg: str):
+    abort(code, msg)
+ajwt = ("secret", iss="issuer", token_finder=..., exception_handler=exception_handler)
+```
+
+### **Permission Formatter**
+The permission_formatter is completely optional, but can be used to add additional information to permissions that may only be found in the request body.
+
+Expected Function Structure: `(permission: str, *args, **kwargs) -> str`
+
+***Example: Append the resource_id found in the request***
+```python
+"""Permission Formatter: used to apply additional formatting to permission"""
+# FastAPI
+def fastapi_permission_formatter(permission_name, *args, **kwargs):
+    if "resource_id" in kwargs.keys():
+        return f"{permission_name}:{kwargs['resource_id']}"
+ajwt = ("secret", iss="issuer", asynch=True, token_finder=..., permission_formatter=fastapi_permission_formatter)
+
+# Flask
+def flask_permission_formatter(permission_name):
+    if "resource_id" in request.args.keys():
+        return f"{permission_name}:{request.args['resource_id']}"
+    elif "resource_id" in request.json.keys():
+        return f"{permission_name}:{request.json['resource_id']}"
+ajwt = ("secret", iss="issuer", asynch=False, token_finder=..., permission_formatter=flask_permission_formatter)
+```
+<br>
+<br>
+
+## Decorators
+Decorators are the main use case of the ApoJWT package after initialization. They allow any endpoint to be secured with a single simple line of code. 
+```python
+ajwt = ApoJWT(secret, iss, token_finder=lambda: ..., ...)
+
+
+@ajwt.token_required
+"""Validates JWT
+
+Returns 'token_data' and 'token_sub' as kwargs to HTTP handler
+"""
+
+
+@ajwt.permission_required(permission_name: str)
+"""Validates JWT and ensures permission_name is among the token permissions
+
+permission_name: a permission string
+
+Returns 'token_data' and 'token_sub' as kwargs to HTTP handler
+"""
+```
+Both decorators return `token_data` and `token_sub` as keyword arguments to the HTTP handler that is being decorated. With these arguments, the additional data stored in the JWT and the JWT's subject are both accessible. 
+## Functions
+```python
+ajwt = ApoJWT(secret, iss, asynch=..., token_finder=...)
+
+ajwt.create_token(self, sub: str="", permissions: list[str]=[], aud: list[str]=[], data: dict=dict(), refresh_data: dict=dict()):
+        """Encodes and returns an access JWT and optionally a refresh JWT
+
+        sub: Subject of the JWT (typically some reference to the user of JWT)
+        permissions: List of permissions to assign to token
+        aud: List of audiences token should be accepted by
+        data: Any additional information that is needed
+        refresh_data: If refresh is configured, this additional data is stored with the refresh token
+
+        JWT will contain the following claims:
+            - exp: Expiration Time
+            - nbf: Not Before Time
+            - iss: Issuer
+            - aud: Audience
+            - iat: Issued At
+        """
+
+ajwt.token_data():
+"""Retrieves the additional data stored in the JWT payload"""
+```
+<br>
+<br>
+
+## Refresh Tokens
+---
+ApoJWT 1.5.0 introduced Refresh Token functionality. This feature is highly recommended to provide an extra layer of security to applications. To read up on Refresh Tokens and their benefits, check out [this Auth0 article](https://auth0.com/blog/refresh-tokens-what-are-they-and-when-to-use-them/) for more information. The Refresh functionality in ApoJWT is activated with the following function:
+
+```python
+ajwt.config_refresh(refresh_secret: str, refresh_exp_period: int=86400, refresh_finder=None):
+        """Configures ApoJWT for use with refresh tokens
+
+        refresh_secret: Secret string used to encode and decode the refresh JWT
+
+        refresh_exp_period: Number of seconds for the refresh token to be valid. Default 86400 (1 day)
+
+        refresh_finder: Function used to retrieve the refresh JWT from an http-only cookie. Default None
+        """
+```
+The function `refresh_finder` is a similar function to `token_finder` in that it must return the refresh token. The main difference is that `refresh_finder`, in most cases, should find the refresh token in an http-only secure cookie instead of the HTTP Authorization header. `refresh_finder` is also optional if refresh tokens only need to be created and not used by ApoJWT.
+
+Expected `refresh_finder` Function Structure: `(*args, **kwargs) -> str`
+
+Once this function is called and initialized, ApoJWT is equipped to handle Refresh Tokens.
+<br>
+
+***Refresh Functionality***
+
+The `create_token` function will now return a tuple containing the access token and the refresh token 
+```python
+access, refresh = ajwt.create_token(...)
+```
+
+Typically, this refresh token can then be stored in an HTTP-only cookie.
+
+From there, the `@ajwt.refresh` decorator can be placed on any endpoint where a refresh should occur. The decorator passes the new access token as a keyword argument named `access_token` to the function it is decorating.
+
+```python
+# Fast Api
+@app.get("/some/endpoint")
+@ajwt.refresh
+def refresh(access_token):
+    return access_token
+```
+<br>
+<br>
+
+## Usage Examples
+---
+### Constructing ApoJWT
+```python
+# FastAPI
+def fastapi_permission_formatter(permission_name, *args, **kwargs):
+    if "resource_id" in kwargs.keys():
+        return f"{permission_name}:{kwargs['resource_id']}"
+        
+def fastapi_exception_handler(code, msg):
+    raise HTTPException(status_code=code, detail=msg)
+
+fastapi_token_finder = lambda **kwargs: str(kwargs["authorization"]).replace("Bearer ", "")
+ajwt = (
+    "secret", 
+    iss="issuer", 
+    asynch=True
+    token_finder=fastapi_token_finder
+    permission_formatter=fastapi_permission_formatter
+    exception_handler=fastapi_exception_handler
+)
+## NOTE: asynch must be True for FastAPI
+```
+```python
+# Flask
+def flask_permission_formatter(permission_name):
+    if "resource_id" in request.args.keys():
+        return f"{permission_name}:{request.args['resource_id']}"
+    elif "resource_id" in request.json.keys():
+        return f"{permission_name}:{request.json['resource_id']}"
+
+def flask_exception_handler(code, msg):
+    abort(code, msg)
+    
+flask_token_finder = lambda: request.headers["authorization"].replace("Bearer ", "")
+ajwt = (
+    "secret", 
+    iss="issuer",
+    token_finder=flask_token_finder
+    permission_formatter=flask_permission_formatter
+    exception_handler=flask_exception_handler
+)
+## NOTE: asynch defaults to False
+
+```
+
+### Validating JWT with Decorators
+```python
+# fast api
+@app.get("/some/endpoint")
+@ajwt.permission_required("some:permission:name"):
+...
+
+# flask
+@app.route("/some/endpoint", methods=["GET"])
+@ajwt.permission_required("some:permission:name"):
+...
+```
+
+### Refresh Configuration
+```python
+# fast api
+def refresh_finder(refresh_token: Union[str, None] = Cookie(default=None)):
+    return refresh_token
+ajwt.config_refresh("refresh_secret", refresh_finder=refresh_finder)
+
+# flask
+ajwt.config_refresh("refresh_secret", refresh_finder=lambda: request.cookies.get('refresh_token'))
+(refresh_secret: str, refresh_exp_period: int=86400, refresh_finder=None)
+```
+
+### Creating a New JWT
+```python
+"""Permissions will be assigned to the new token"""
+
+sub = "user_id_1"
+permissions = ["some:permission:name", ...]
+data = dict(...=...)
+aud = [...]
+
+# NOTE: all arguments are optional
+# If refresh is not configured
+token = ajwt.create_token(sub=sub, permissions=permissions, aud=aud, data=data)
+
+# If refresh is configured
+refresh_data = dict(...=...)
+access, refresh = ajwt.create_token(
+    sub=sub, 
+    permissions=permissions, 
+    aud=aud, 
+    data=data, 
+    refresh_data=refresh_data
+)
+```
+
+### Getting Token Data and Subject from JWT
+```python
+@app....
+@ajwt.token_required
+def route(token_data: dict, token_subject: str):
+    print(token_subject)
+    return token_data
+```
