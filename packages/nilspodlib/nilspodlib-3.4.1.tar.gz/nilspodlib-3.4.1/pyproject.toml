@@ -1,0 +1,89 @@
+[tool.poetry]
+name = "nilspodlib"
+version = "3.4.1"
+description = "A Python library to load and convert sensor data recorded by a NilsPod by Portablies."
+authors = [
+    "Arne Küderle <arne.kuederle@fau.de>",
+    "Nils Roth <nils.roth@fau.de>",
+    "Robert Richer <robert.richer@fau.de"
+]
+readme = "README.md"
+homepage = "https://github.com/mad-lab-fau/NilsPodLib"
+repository = "https://github.com/mad-lab-fau/NilsPodLib"
+documentation = "https://nilspodlib.readthedocs.io/en/latest/"
+license = "MIT"
+keywords = ["sensors", "scientific", "IMU", "accelerometer"]
+classifiers = [
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Physics"
+]
+
+[tool.poetry.dependencies]
+python = ">=3.8,<=3.11"
+numpy = "^1.19.2"
+pandas = "^1.1.3"
+scipy = "^1.5.2"
+imucal = "^2.0.0"
+typing-extensions = "^4.3.0"
+
+[tool.poetry.dev-dependencies]
+coverage = "^6.4.4"
+recommonmark = "^0.6.0"
+memory_profiler = "^0.57.0"
+matplotlib = "^3.5.3"
+toml = "^0.10.2"
+black = "^22.6.0"
+pytest = "^7.1.2"
+pytest-cov = "^3.0.0"
+prospector = "^1.7.7"
+Sphinx = "^5.1.1"
+numpydoc = "^1.4.0"
+sphinx-gallery = "^0.11.1"
+pydata-sphinx-theme = "^0.9.0"
+isort = "^5.10.1"
+poethepoet = "^0.16.0"
+
+[tool.black]
+line-length = 120
+target-version = ['py38']
+exclude = '''
+(
+  /(
+      \.eggs         # exclude a few common directories in the
+    | \.git          # root of the project
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | _build
+    | docs
+    | build
+    | dist
+    | \.virtual_documents
+  )/
+)
+'''
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+line_length = 120
+skip_gitignore = true
+
+[tool.poe.tasks]
+_format_black = "black ."
+_format_isort = "isort ."
+format = ["_format_black", "_format_isort"]
+lint = { cmd = "prospector", help = "Lint all files with Prospector." }
+_check_black = "black . --check"
+_check_isort = "isort . --check"
+check = { sequence = ["_check_black", "_check_isort", "lint"], help = "Check all potential format and linting issues.", ignore_fail = false }
+test = { cmd = "pytest --cov=nilspodlib --cov-report=term-missing --cov-report=xml", help = "Run Pytest with coverage." }
+docs = { "script" = "_tasks:task_docs()",  help = "Build the html docs using Sphinx." }
+bump_version = { "script" = "_tasks:task_update_version()" }
+
+[build-system]
+requires = ["poetry_core>=1.0.0"]
+build-backend = "poetry.masonry.api"
+
