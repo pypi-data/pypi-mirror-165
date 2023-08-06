@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: aviat
+Version: 0.2.2
+Summary: 
+License: MIT
+Author: RedMooner
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Provides-Extra: argparse
+Provides-Extra: beautifulsoup4
+Provides-Extra: tqdm
