@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+tap_datadog_rum/__init__.py
+tap_datadog_rum/api_client.py
+tap_datadog_rum/schema_mapper.py
+tap_datadog_rum.egg-info/PKG-INFO
+tap_datadog_rum.egg-info/SOURCES.txt
+tap_datadog_rum.egg-info/dependency_links.txt
+tap_datadog_rum.egg-info/entry_points.txt
+tap_datadog_rum.egg-info/requires.txt
+tap_datadog_rum.egg-info/top_level.txt
