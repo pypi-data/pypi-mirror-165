@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: sec-client
+Version: 0.0.2a0
+Summary: Client for retrieving and storing company data from SEC EDGAR RESTful API
+License: MIT
+Author: _fiz_
+Author-email: crxz.fiz@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Office/Business :: Financial
+Classifier: Topic :: Office/Business :: Financial :: Investment
+Classifier: Topic :: Office/Business :: Financial :: Spreadsheet
+Provides-Extra: black
+Requires-Dist: SQLAlchemy (>=1.4.40,<2.0.0)
+Requires-Dist: fake-useragent (>=0.1.11,<0.2.0)
+Requires-Dist: sec-edgar-api (>=1.0.0,<2.0.0)
