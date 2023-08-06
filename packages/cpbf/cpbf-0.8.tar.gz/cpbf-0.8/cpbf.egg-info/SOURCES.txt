@@ -1,0 +1,13 @@
+LICENSE.txt
+README.rst
+setup.cfg
+setup.py
+cpbf/__init__.py
+cpbf/compute.py
+cpbf/octave.py
+cpbf.egg-info/PKG-INFO
+cpbf.egg-info/SOURCES.txt
+cpbf.egg-info/dependency_links.txt
+cpbf.egg-info/requires.txt
+cpbf.egg-info/top_level.txt
+tests/__init__.py
