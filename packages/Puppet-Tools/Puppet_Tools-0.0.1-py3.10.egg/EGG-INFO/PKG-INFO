@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: Puppet-Tools
+Version: 0.0.1
+Summary: Puppet CLI tool for linting, validating
+Author: Bertus Wisman
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.6
+License-File: LICENSE
