@@ -1,0 +1,13 @@
+README.md
+setup.py
+cyberfly_data_shipper.egg-info/PKG-INFO
+cyberfly_data_shipper.egg-info/SOURCES.txt
+cyberfly_data_shipper.egg-info/dependency_links.txt
+cyberfly_data_shipper.egg-info/requires.txt
+cyberfly_data_shipper.egg-info/top_level.txt
+data_shipper/__init__.py
+data_shipper/api.py
+data_shipper/auth.py
+data_shipper/config.py
+data_shipper/main.py
+data_shipper/utils.py
