@@ -1,0 +1,10 @@
+bayhess/__init__.py,sha256=8ButSjI7HywUH69ujnPpa865tCb2vqNQXA0RrubGw6A,29
+bayhess/bayhess.py,sha256=SBswM7toGlGRm9yIaZ_6WleSaohuOipnC8Q_wO4NATM,10300
+bayhess/cg.py,sha256=QEaEEoHf2TXdJhYVvV6QRu_xNyW-2qj4_ICzkCC4abY,2028
+bayhess/distributions.py,sha256=Wr1ocyxi42mUf6hVdPD_kbMMBKolXjBLXPOSPxzDU5g,19092
+bayhess/newton.py,sha256=c8aLJVztBEhp1rFL91wN_HqBA1IJHbOlutx_qmYFgu0,6122
+bayhess-0.1.1.dist-info/LICENSE,sha256=BCZPPSDROt8x22G7Hc87iywAKAHtJ3yplYS1tcKS79E,34756
+bayhess-0.1.1.dist-info/METADATA,sha256=Da2W-1qfzFT7lzhp5F-KtThbwy3HnomwwFPlWmmMKgE,1390
+bayhess-0.1.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+bayhess-0.1.1.dist-info/top_level.txt,sha256=qTomSFB9z48_gN2UUodsgdGJTkJNlro11Uoc8PwAB38,8
+bayhess-0.1.1.dist-info/RECORD,,
