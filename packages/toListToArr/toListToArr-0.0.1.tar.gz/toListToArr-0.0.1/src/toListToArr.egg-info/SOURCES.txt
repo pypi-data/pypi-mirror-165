@@ -1,0 +1,10 @@
+LICENSE
+pyproject.toml
+setup.cfg
+src/toListToArr/__init__.py
+src/toListToArr/arrToList.py
+src/toListToArr/listToArr.py
+src/toListToArr.egg-info/PKG-INFO
+src/toListToArr.egg-info/SOURCES.txt
+src/toListToArr.egg-info/dependency_links.txt
+src/toListToArr.egg-info/top_level.txt
