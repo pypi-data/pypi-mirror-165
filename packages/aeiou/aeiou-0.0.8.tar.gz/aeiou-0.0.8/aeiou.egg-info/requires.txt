@@ -1,0 +1,15 @@
+fastcore
+pandas
+numpy
+torch
+torchvision
+torchaudio
+wandb
+matplotlib
+pillow
+tqdm
+librosa>=0.8.1
+einops
+accelerate
+
+[dev]
