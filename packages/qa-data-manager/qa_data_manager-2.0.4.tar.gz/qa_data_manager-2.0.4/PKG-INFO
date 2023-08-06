@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: qa_data_manager
+Version: 2.0.4
+Summary: QA-DATA-MANAGER Генерация тестовых данных
+Home-page: https://bitbucket.org/ibolitpro/qa-data-manager
+Author: e.kurdyumov
+Author-email: e.kurdyumov@ibolit.pro
+
+Библиотека для генерации данны в базе данных для автотестов

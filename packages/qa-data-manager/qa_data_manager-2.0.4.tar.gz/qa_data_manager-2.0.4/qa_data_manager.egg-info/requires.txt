@@ -1,0 +1,4 @@
+faker
+peewee
+pymysql
+pyjwt
