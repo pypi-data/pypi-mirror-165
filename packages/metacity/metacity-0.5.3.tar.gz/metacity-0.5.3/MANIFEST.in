@@ -1,0 +1,2 @@
+include README.md setup.py pyproject.toml CMakeLists.txt
+graft src
