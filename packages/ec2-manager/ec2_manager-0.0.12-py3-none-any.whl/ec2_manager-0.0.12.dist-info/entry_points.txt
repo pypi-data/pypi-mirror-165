@@ -1,0 +1,2 @@
+[console_scripts]
+ec2-manager = ec2_manager.cli:main

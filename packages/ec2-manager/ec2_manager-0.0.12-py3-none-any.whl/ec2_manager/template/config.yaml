@@ -1,0 +1,33 @@
+# globals
+
+# the type should be unique since this will be the name of your terraform state file.
+type: example
+aws_region: us-east-1
+vpc_name: "Default VPC"
+public_subnet_cidr: "172.31.0.0/20"
+
+# setting a private subnet deploys the instance into the private subnet. Its ports can only be connected to from the
+# public subnet.
+# private_subnet_cidr: "172.31.80.0/20"
+
+# This exposes the docker daemons port to the network. Exposing your docker daemon to the internet is not recommended.
+# expose_docker_daemons: True
+
+# instance configurations
+instances:
+  example-instance-1:
+    instance_type: t4g.nano
+    update: True
+    volume_size: 8
+    commands:
+      start: "docker-compose up --detach"
+      stop: "docker-compose down"
+
+    # an env file can be base64 encoded and set to this environment variable
+    encoded_env_file_variable: "ENV_FILE"
+    envs:
+      EXAMPLE: HelloWorld
+    ports:
+      - protocol: tcp
+        from_port: 80
+        to_port: 80
