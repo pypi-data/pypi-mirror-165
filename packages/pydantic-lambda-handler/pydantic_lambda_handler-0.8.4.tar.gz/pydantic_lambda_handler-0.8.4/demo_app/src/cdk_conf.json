@@ -1,0 +1,204 @@
+[
+    {
+        "methods": [
+            {
+                "method": "POST",
+                "index": "demo_app_handlers.py",
+                "handler": "index_handler",
+                "reference": "demo_app_handlers.index_handler",
+                "status_code": "201",
+                "function_name": "IndexHandler"
+            }
+        ],
+        "name": "",
+        "resources": [
+            {
+                "name": "context",
+                "methods": [
+                    {
+                        "method": "GET",
+                        "index": "subfolder/additional_args_handlers.py",
+                        "handler": "with_context",
+                        "reference": "subfolder.additional_args_handlers.with_context",
+                        "status_code": "200",
+                        "function_name": "WithContext"
+                    }
+                ]
+            },
+            {
+                "name": "error_much",
+                "methods": [
+                    {
+                        "method": "GET",
+                        "index": "demo_app_handlers.py",
+                        "handler": "error_much_handler",
+                        "reference": "demo_app_handlers.error_much_handler",
+                        "status_code": "200",
+                        "function_name": "ErrorMuchHandler"
+                    },
+                    {
+                        "method": "POST",
+                        "index": "demo_app_handlers.py",
+                        "handler": "error_much_handler_post",
+                        "reference": "demo_app_handlers.error_much_handler_post",
+                        "status_code": "201",
+                        "function_name": "ErrorMuchHandlerPost"
+                    }
+                ]
+            },
+            {
+                "name": "hello",
+                "methods": [
+                    {
+                        "method": "GET",
+                        "index": "demo_app_handlers.py",
+                        "handler": "hello_handler",
+                        "reference": "demo_app_handlers.hello_handler",
+                        "status_code": "200",
+                        "function_name": "HelloHandler"
+                    },
+                    {
+                        "method": "POST",
+                        "index": "demo_app_handlers.py",
+                        "handler": "create_handler",
+                        "reference": "demo_app_handlers.create_handler",
+                        "status_code": "201",
+                        "function_name": "CreateHandler"
+                    }
+                ]
+            },
+            {
+                "name": "item_enum",
+                "resources": [
+                    {
+                        "name": "{item_id}",
+                        "methods": [
+                            {
+                                "method": "GET",
+                                "index": "subfolder/path_parameters_handlers.py",
+                                "handler": "handler_with_enum_type_hint",
+                                "reference": "subfolder.path_parameters_handlers.handler_with_enum_type_hint",
+                                "status_code": "200",
+                                "function_name": "HandlerWithEnumTypeHint"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "items",
+                "resources": [
+                    {
+                        "name": "{item_id}",
+                        "methods": [
+                            {
+                                "method": "GET",
+                                "index": "subfolder/path_parameters_handlers.py",
+                                "handler": "handler_with_type_hint",
+                                "reference": "subfolder.path_parameters_handlers.handler_with_type_hint",
+                                "status_code": "200",
+                                "function_name": "HandlerWithTypeHint"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "list_response",
+                "methods": [
+                    {
+                        "method": "GET",
+                        "index": "subfolder/response_model_handlers.py",
+                        "handler": "response_list",
+                        "reference": "subfolder.response_model_handlers.response_list",
+                        "status_code": "200",
+                        "function_name": "ResponseList"
+                    }
+                ]
+            },
+            {
+                "name": "list_response_model",
+                "methods": [
+                    {
+                        "method": "GET",
+                        "index": "subfolder/response_model_handlers.py",
+                        "handler": "response_list_model",
+                        "reference": "subfolder.response_model_handlers.response_list_model",
+                        "status_code": "200",
+                        "function_name": "ResponseListModel"
+                    }
+                ]
+            },
+            {
+                "name": "pets",
+                "resources": [
+                    {
+                        "name": "{petId}",
+                        "methods": [
+                            {
+                                "method": "GET",
+                                "index": "subfolder/path_parameters_handlers.py",
+                                "handler": "pets_handler",
+                                "reference": "subfolder.path_parameters_handlers.pets_handler",
+                                "status_code": "200",
+                                "function_name": "PetsHandler"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "query",
+                "methods": [
+                    {
+                        "method": "GET",
+                        "index": "subfolder/query_parameters_handlers.py",
+                        "handler": "query_skip",
+                        "reference": "subfolder.query_parameters_handlers.query_skip",
+                        "status_code": "200",
+                        "function_name": "QuerySkip"
+                    }
+                ]
+            },
+            {
+                "name": "query_required",
+                "methods": [
+                    {
+                        "method": "GET",
+                        "index": "subfolder/query_parameters_handlers.py",
+                        "handler": "query_required",
+                        "reference": "subfolder.query_parameters_handlers.query_required",
+                        "status_code": "200",
+                        "function_name": "QueryRequired"
+                    }
+                ]
+            },
+            {
+                "name": "response_model",
+                "methods": [
+                    {
+                        "method": "GET",
+                        "index": "subfolder/response_model_handlers.py",
+                        "handler": "response_model",
+                        "reference": "subfolder.response_model_handlers.response_model",
+                        "status_code": "200",
+                        "function_name": "ResponseModel"
+                    }
+                ]
+            },
+            {
+                "name": "teapot",
+                "methods": [
+                    {
+                        "method": "GET",
+                        "index": "subfolder/path_parameters_handlers.py",
+                        "handler": "hello_teapot",
+                        "reference": "subfolder.path_parameters_handlers.hello_teapot",
+                        "status_code": "418",
+                        "function_name": "HelloTeapot"
+                    }
+                ]
+            }
+        ]
+    }
+]

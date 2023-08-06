@@ -1,0 +1,72 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "pydantic_lambda_handler"
+authors = [{name = "Mark Harvey", email = "inspiredharvey@gmail.com"}]
+readme = "README.md"
+license = {file = "LICENSE"}
+classifiers = ["License :: OSI Approved :: MIT License"]
+dynamic = ["version", "description"]
+
+dependencies = [
+    "orjson>=3.7.5",
+    "pydantic>=1.9.1",
+    "pydantic-core"
+]
+
+[project.optional-dependencies]
+tests = [
+  'pytest',
+  'pytest-cov',
+  'requests',
+  "awslambdaric",
+  "boto3>=1.20.32",
+  "botocore>=1.23.32",
+  "openapi-schema-pydantic",
+]
+
+dev = [
+  'coverage>=5.0.3',
+  'pytest',
+  'pytest-benchmark[histogram]>=3.2.1',
+  'aws-cdk-lib',
+  'requests',
+  'invoke',
+  "awslambdaric",
+  "boto3>=1.20.32",
+  "botocore>=1.23.32",
+  "openapi-schema-pydantic",
+]
+
+[project.urls]
+Home = "https://github.com/harvey251/pydantic-lambda-handler"
+
+[tool.hatch.version]
+path = "src/pydantic_lambda_handler/__init__.py"
+
+[project.scripts]
+gen-open-api-spec = "pydantic_lambda_handler.gen_open_api_inspect:main"
+gen-cdk-conf = "pydantic_lambda_handler.gen_open_api_inspect:cdk_conf"
+
+[tool.pytest.ini_options]
+pythonpath = [
+ "./", "src/", "demo_app/src/"
+]
+
+[tool.coverage.run]
+source = ['src', "demo_app/src"]
+
+
+[tool.semantic_release]
+version_variable = "src/pydantic_lambda_handler/__init__.py:__version__"
+build_command = "pip install flit && flit build"
+branch = "main"
+
+[tool.black]
+line-length = 120
+
+[tool.isort]
+profile = "black"
+skip = ["venv", "demo_app_requirements"]
