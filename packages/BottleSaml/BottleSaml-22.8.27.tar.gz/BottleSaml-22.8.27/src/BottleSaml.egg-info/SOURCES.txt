@@ -1,0 +1,16 @@
+License.txt
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+docs/LOGINHOOKS.md
+docs/READMESP.md
+docs/SAMLSPCLASS.md
+src/BottleSaml/SamlSP.py
+src/BottleSaml/__init__.py
+src/BottleSaml/reqID.py
+src/BottleSaml.egg-info/PKG-INFO
+src/BottleSaml.egg-info/SOURCES.txt
+src/BottleSaml.egg-info/dependency_links.txt
+src/BottleSaml.egg-info/requires.txt
+src/BottleSaml.egg-info/top_level.txt
