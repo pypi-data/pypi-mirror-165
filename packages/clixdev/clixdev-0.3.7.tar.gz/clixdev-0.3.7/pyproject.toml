@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=65.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "clixdev"
+version = "0.3.7"
+authors = [
+  { name="Eris Verne", email="erisverne7@gmail.com" },
+]
+description = "www.clix.dev command line tool."
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.8"
+dependencies = [
+  "psutil", "requests"
+]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+
+[project.scripts]
+clixdev = "clixdev:terminal.terminal"
+
+[project.urls]
+"Homepage" = "https://clix.dev"
