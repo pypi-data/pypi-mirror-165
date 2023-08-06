@@ -1,0 +1,8 @@
+README.md
+setup.py
+hai_client/__init__.py
+hai_client/version.py
+hepai_client.egg-info/PKG-INFO
+hepai_client.egg-info/SOURCES.txt
+hepai_client.egg-info/dependency_links.txt
+hepai_client.egg-info/top_level.txt
