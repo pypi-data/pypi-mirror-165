@@ -1,0 +1,4 @@
+pandas
+markdown
+pyyaml
+netCDF4
