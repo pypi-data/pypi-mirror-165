@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+sphinxcontrib/__init__.py
+sphinxcontrib/gtagjs.py
+sphinxcontrib_gtagjs.egg-info/PKG-INFO
+sphinxcontrib_gtagjs.egg-info/SOURCES.txt
+sphinxcontrib_gtagjs.egg-info/dependency_links.txt
+sphinxcontrib_gtagjs.egg-info/namespace_packages.txt
+sphinxcontrib_gtagjs.egg-info/requires.txt
+sphinxcontrib_gtagjs.egg-info/top_level.txt

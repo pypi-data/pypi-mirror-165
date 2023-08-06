@@ -1,0 +1,10 @@
+Sphinx
+
+[linting]
+doc8
+pygments
+black
+flake8
+
+[packaging]
+bumpversion
