@@ -1,0 +1,12 @@
+Flask
+Flask-Cors
+Flask-SQLAlchemy
+Flask-Migrate
+marshmallow-sqlalchemy
+SQLAlchemy<1.4
+psycopg2
+python-dotenv
+boto3
+pillow
+urllib3
+click>=8.1.3
