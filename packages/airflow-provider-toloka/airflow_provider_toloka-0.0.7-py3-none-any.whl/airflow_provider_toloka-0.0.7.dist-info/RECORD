@@ -1,0 +1,16 @@
+toloka_provider/__init__.py,sha256=iR801evI-ZVQ3wgSLPIAyVcc4okLCpDeppiNUdFGAXw,425
+toloka_provider/hooks/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+toloka_provider/hooks/toloka.py,sha256=9eQMaxYh8HjwUgV_3PDIExlPC_hMWRHmgMuXkJqIupE,4045
+toloka_provider/sensors/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+toloka_provider/sensors/toloka.py,sha256=5WIdOHLg_JAzbJHpBfikZY3zW7x2-SC-4dM5RErwEZc,3228
+toloka_provider/tasks/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+toloka_provider/tasks/toloka.py,sha256=z21a9K2cZrPJ6CWtVGWdTtn4Yx9la8XENQKWEuUBTO0,7996
+toloka_provider/utils/__init__.py,sha256=alIDGBnxWH4JvP-UW-7N99seBBi0r1GV1h8f1ERFBec,21
+toloka_provider/utils/utils.py,sha256=K4E46_ZB_7ybzGTJUA6yNrI8Z6rdyt7_AN6hcgcHCzg,1497
+airflow_provider_toloka-0.0.7.dist-info/AUTHORS,sha256=N1Sq7X85OasajsTmYr6BXoi5xZ9bqatRkugA675uVjI,236
+airflow_provider_toloka-0.0.7.dist-info/LICENSE,sha256=uUaqiocjqjy7AsVf43XiFXej5ys5dh5o2DMweEsua0E,578
+airflow_provider_toloka-0.0.7.dist-info/METADATA,sha256=yhpeWZESeM3TmdSh3QZ7-EY42Bt8LtbeiXhvkxz8Qj8,4366
+airflow_provider_toloka-0.0.7.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+airflow_provider_toloka-0.0.7.dist-info/entry_points.txt,sha256=NvE8cu_ZhBgljWmRBSgk3raJO0GuBKvaSRiTdstC3tw,85
+airflow_provider_toloka-0.0.7.dist-info/top_level.txt,sha256=IJml6PvQf2CRWDCBUKsGufSy6i2hTrZNLPGQyZ3O3Kw,16
+airflow_provider_toloka-0.0.7.dist-info/RECORD,,
