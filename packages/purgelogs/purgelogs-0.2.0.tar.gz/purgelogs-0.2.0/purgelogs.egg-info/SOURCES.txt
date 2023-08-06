@@ -1,0 +1,8 @@
+README.md
+purgelogs.py
+setup.py
+purgelogs.egg-info/PKG-INFO
+purgelogs.egg-info/SOURCES.txt
+purgelogs.egg-info/dependency_links.txt
+purgelogs.egg-info/entry_points.txt
+purgelogs.egg-info/top_level.txt
