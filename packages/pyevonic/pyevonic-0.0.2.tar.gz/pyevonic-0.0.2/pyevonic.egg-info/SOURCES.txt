@@ -1,0 +1,10 @@
+README.md
+setup.py
+pyevonic/__init__.py
+pyevonic/evonic.py
+pyevonic/exceptions.py
+pyevonic/models.py
+pyevonic.egg-info/PKG-INFO
+pyevonic.egg-info/SOURCES.txt
+pyevonic.egg-info/dependency_links.txt
+pyevonic.egg-info/top_level.txt
