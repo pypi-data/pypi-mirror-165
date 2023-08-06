@@ -1,0 +1,47 @@
+[tool.poetry]
+name = "IBanker"
+
+version = "0.0.1"
+
+description = "IBanker is a package intended for building typical financial models used in investment banking i.e DCFs, LBOs, etc."
+
+authors = ["_fiz_ <crxz.fiz@gmail.com>"]
+
+license = "MIT"
+
+readme = "README.md"
+
+keywords = ["Finance", "Investment Banking", "Financial Modeling", "pandas", "numpy"]
+
+classifiers = [
+"Intended Audience :: Financial and Insurance Industry",
+"Operating System :: Microsoft :: Windows :: Windows 10",
+"Operating System :: MacOS :: MacOS X",
+"Programming Language :: Python",
+"Topic :: Office/Business :: Financial",
+"Topic :: Office/Business :: Financial :: Investment",
+"Topic :: Office/Business :: Financial :: Spreadsheet",
+"Development Status :: 1 - Planning"
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pandas = "^1.4.3"
+numpy = "^1.23.2"
+SQLAlchemy = "^1.4.40"
+tinydb = "^4.7.0"
+sec-edgar-api = "^1.0.0"
+fake-useragent = "^0.1.11"
+cytools = "^0.4.1"
+yfinance = "^0.1.74"
+pandas-datareader = "^0.10.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.extras]
+black = ["black"]
