@@ -1,0 +1,15 @@
+bakery/__init__.py,sha256=0FLwPL3E1NjG85x8T4TQk6PGEC5yaqQ7HdLAY8kYSCk,653
+bakery/bakery.py,sha256=xdf0bxDnh6nrXuT4vTzNbgUBlNbDqcmeSIdqVU3Lhj4,4081
+bakery/baking.py,sha256=gF5cwWMApBawe4wHWnYNBr8LJxT9wIxE76kASxwQDco,6731
+bakery/cake.py,sha256=g7dgjsgAicEvTKN8W8eyQfvWFc_uMb3tdfyIY3_alkw,3266
+bakery/mypy.py,sha256=1ca6EwhGdMI7drFzZST-eR28ejAaQ1KvCPJJFZ19cWQ,2052
+bakery/piece_of_cake.py,sha256=zr4WAZJaxdFZ4aRjYnftD-VNfjHd3l99MwiigpOWLVI,2721
+bakery/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bakery/shape.py,sha256=9RX8GmPAZ2yq0J-TIWEAwlK6YR8vJgvbhRUlJAnAdOQ,3364
+bakery/stuff.py,sha256=Cr83uCz-JIcvzHFQXlHV5pboPdQFmqjtTTC3jwEzdt8,7785
+bakery/testbakery.py,sha256=ZDql8lBPIj2lkCkPjZHV6d0HRtKt-pIOxgC_v35N5Jc,4994
+fresh_bakery-0.1.0.dist-info/entry_points.txt,sha256=aoD8nkVp6z-fYigIICR45-0Jn9Vxr-UmaCFrPEI9EHA,42
+fresh_bakery-0.1.0.dist-info/LICENSE,sha256=XVMoBcSggv_8UOJ-pzP7I7mqiJpOY0MoP6LzIHGRg5c,1063
+fresh_bakery-0.1.0.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+fresh_bakery-0.1.0.dist-info/METADATA,sha256=9x3EbihnBwoYJf9woPZwhbfGkmfWjVlg0spNUbFu-Es,862
+fresh_bakery-0.1.0.dist-info/RECORD,,
