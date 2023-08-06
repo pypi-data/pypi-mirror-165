@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+pdfdarkness/__init__.py
+pdfdarkness/measure_darkness.py
+pdfdarkness.egg-info/PKG-INFO
+pdfdarkness.egg-info/SOURCES.txt
+pdfdarkness.egg-info/dependency_links.txt
+pdfdarkness.egg-info/entry_points.txt
+pdfdarkness.egg-info/requires.txt
+pdfdarkness.egg-info/top_level.txt
