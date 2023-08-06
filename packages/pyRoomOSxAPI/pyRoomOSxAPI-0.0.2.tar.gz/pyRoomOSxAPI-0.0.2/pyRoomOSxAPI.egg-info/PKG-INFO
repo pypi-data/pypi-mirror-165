@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: pyRoomOSxAPI
+Version: 0.0.2
+Summary: Simple implementation RoomOS xAPI
+Home-page: https://github.com/batonogov/pyRoomOSxAPI
+Author: Fedor Batonogov
+Author-email: batonogov@icloud.com
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# pyRoomOSxAPI
+
+Simple implementation [RoomOS xAPI](https://roomos.cisco.com/xapi).
+
+The xAPI is the API language of RoomOS, and it lets you create awesome integrations for Cisco video devices.
+
+Supported xAPI version: `10.15.1.6`!
+
+---
+
+> from pyRoomOSxAPI import xCommand
+
+> from pyRoomOSxAPI import xConfiguration
+
+> from pyRoomOSxAPI import xFeedback

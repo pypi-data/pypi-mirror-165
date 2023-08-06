@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+pyRoomOSxAPI/__init__.py
+pyRoomOSxAPI/xCommand.py
+pyRoomOSxAPI/xConfiguration.py
+pyRoomOSxAPI/xFeedback.py
+pyRoomOSxAPI.egg-info/PKG-INFO
+pyRoomOSxAPI.egg-info/SOURCES.txt
+pyRoomOSxAPI.egg-info/dependency_links.txt
+pyRoomOSxAPI.egg-info/top_level.txt
