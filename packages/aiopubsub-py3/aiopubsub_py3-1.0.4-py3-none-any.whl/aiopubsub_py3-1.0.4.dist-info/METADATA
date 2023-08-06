@@ -1,0 +1,96 @@
+Metadata-Version: 2.1
+Name: aiopubsub-py3
+Version: 1.0.4
+Summary: aio pubsub 
+Home-page: https://github.com/daleeg/aio_pubsub
+License: MIT
+Keywords: aio redis pubsub mqtt publish subscribe
+Platform: POSIX
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Operating System :: POSIX
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Framework :: AsyncIO
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: redis_
+Requires-Dist: aioredis (<2.0,>=1.3.0) ; extra == 'redis_'
+Provides-Extra: redis2_
+Requires-Dist: aioredis (>=2.0) ; extra == 'redis2_'
+
+aio_pubsub
+########
+
+
+1. 安装
+==========
+
+.. code-block:: shell
+
+   pip install aiopubsub-py3
+   pip install aiopubsub-py3[redis]
+   pip install aiopubsub-py3[redis2]
+
+2. 示例
+==========
+
+- 2.1 发布
+
+.. code-block:: python
+
+    from aiopubsub import Pubsub
+
+    async def main():
+        pubpub = Pubsub(Pubsub.REDIS, port=16379)
+        count = await pubpub.publish("foo", {"test": 1})
+        print(count)
+        async with pubpub.get_pub(namespace="cs") as pub:
+            count = await pub.publish("foo", {"test": 2})
+            print(count)
+            count = await pub.publish("foo", {"test": 3})
+            print(count)
+        await pubpub.close()
+
+- 2.2 订阅
+
+.. code-block:: python
+
+    from aiopubsub import Pubsub
+
+    async def main():
+        pubsub = Pubsub(Pubsub.REDIS, port=16379)
+
+        async with pubsub.get_sub(namespace="cs") as sub:
+            await sub.subscribe("foo")
+            async for k in sub.listen():
+                print(k)
+        await pubsub.close()
+
+- 2.3 模糊订阅
+
+.. code-block:: python
+
+    from aiopubsub import Pubsub
+
+    async def main():
+        pubsub = Pubsub(Pubsub.REDIS, port=16379)
+        async with pubsub.get_sub(namespace="cs") as psub:
+            await psub.psubscribe("foo*")
+            async for k in psub.listen():
+                print(k)
+        await pubsub.close()
+
+
+
