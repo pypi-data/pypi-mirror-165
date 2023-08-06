@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: steamship
+Version: 2.1.25
+Summary: TEST
+Home-page: https://www.steamship.com
+Author: Steamship Team
+Author-email: developers@steamship.com
+License: MIT
+Project-URL: Documentation, https://steamship.com/
+Project-URL: Source, https://github.com/steamship-core/python-client/
+Project-URL: Twitter, https://twitter.com/GetSteamship
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown; charset=UTF-8
+License-File: LICENSE
+License-File: AUTHORS.rst
+Requires-Dist: requests (==2.27.1)
+Requires-Dist: pydantic (==1.9.0)
+Requires-Dist: aiohttp (==3.8.1)
+Requires-Dist: inflection (==0.5.1)
+Requires-Dist: fluent-logger (==0.10.0)
+Provides-Extra: testing
+Requires-Dist: setuptools ; extra == 'testing'
+Requires-Dist: pytest ; extra == 'testing'
+Requires-Dist: pytest-cov ; extra == 'testing'
+
