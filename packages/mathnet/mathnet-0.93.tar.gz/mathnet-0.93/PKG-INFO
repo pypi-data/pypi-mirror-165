@@ -1,0 +1,18 @@
+Metadata-Version: 1.2
+Name: mathnet
+Version: 0.93
+Summary: UNKNOWN
+Home-page: https://pypi.org/search/?q=mathnet
+Author: Jianxing Wang
+Author-email: wjx_ncepu@126.com
+Maintainer: Jianxing Wang
+Maintainer-email: wjx_ncepu@126.com
+License: MIT License
+Description: # readme
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.0
