@@ -1,0 +1,11 @@
+roarquery/__init__.py,sha256=SWMPTZeFCuV_Ck6MV3ZxRhsdcGSIq9143i_CMmXhNr4,58
+roarquery/__main__.py,sha256=1MBAhMJJYP1L77mjlpGM21dDrRrPD9lH56c9SaUfGbE,4454
+roarquery/collections.py,sha256=1up96T8ZIG3eF6JgD0Znc9dbgiZmRFzPvkZc_M8Dhko,334
+roarquery/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+roarquery/runs.py,sha256=m0Ytu6zS2knzQeQtmKi5CXDCy81udfQu2EA2EPdXmtE,8118
+roarquery/utils.py,sha256=AFzc2BbdCPHiKeqIHFTI21tTup1mbcu5O55foKKtLR0,4201
+roarquery-0.2.2.dist-info/entry_points.txt,sha256=k50sP0yH9AyKhW80Ol2DrzyDzIdi4Cju0vD78GR_Pnc,53
+roarquery-0.2.2.dist-info/LICENSE.rst,sha256=MD542rd-o5quw2T8yPUdg5uo33_2DfZvCnEdgtf1zec,1091
+roarquery-0.2.2.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+roarquery-0.2.2.dist-info/METADATA,sha256=tfn1JZ85gJ4SGvcu0j0gfsAAE9WKESdNr_V5zkHNLfw,6028
+roarquery-0.2.2.dist-info/RECORD,,
