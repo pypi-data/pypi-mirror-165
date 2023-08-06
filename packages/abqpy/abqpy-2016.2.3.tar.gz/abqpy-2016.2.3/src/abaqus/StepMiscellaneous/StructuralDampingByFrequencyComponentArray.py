@@ -1,0 +1,5 @@
+import typing
+
+from .StructuralDampingByFrequencyComponent import StructuralDampingByFrequencyComponent
+
+StructuralDampingByFrequencyComponentArray = typing.List[StructuralDampingByFrequencyComponent]
