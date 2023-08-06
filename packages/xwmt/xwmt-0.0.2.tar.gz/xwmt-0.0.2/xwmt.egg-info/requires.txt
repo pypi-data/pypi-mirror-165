@@ -1,0 +1,7 @@
+gsw
+numba
+numpy
+pandas
+xarray
+xgcm
+xhistogram
