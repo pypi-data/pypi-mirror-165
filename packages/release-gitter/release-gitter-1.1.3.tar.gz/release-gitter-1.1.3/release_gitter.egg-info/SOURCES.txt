@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pseudo_builder.py
+release_gitter.py
+setup.py
+release_gitter.egg-info/PKG-INFO
+release_gitter.egg-info/SOURCES.txt
+release_gitter.egg-info/dependency_links.txt
+release_gitter.egg-info/entry_points.txt
+release_gitter.egg-info/requires.txt
+release_gitter.egg-info/top_level.txt
