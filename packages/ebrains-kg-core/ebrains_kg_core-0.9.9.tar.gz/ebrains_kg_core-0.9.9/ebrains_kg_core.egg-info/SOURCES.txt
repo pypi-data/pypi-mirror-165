@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+ebrains_kg_core.egg-info/PKG-INFO
+ebrains_kg_core.egg-info/SOURCES.txt
+ebrains_kg_core.egg-info/dependency_links.txt
+ebrains_kg_core.egg-info/requires.txt
+ebrains_kg_core.egg-info/top_level.txt
+kg_core/__communication.py
+kg_core/__init__.py
+kg_core/kg.py
+kg_core/oauth.py
+kg_core/py.typed
+kg_core/request.py
+kg_core/response.py
