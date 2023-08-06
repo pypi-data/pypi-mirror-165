@@ -1,0 +1,28 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+
+{% block title %} Multi Factor Authentication{% endblock %}
+
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+<a href="{% url 'admin:index' %}">{% translate 'Home' %}</a>
+&rsaquo; Multi Factor Authentication
+</div>
+{% endblock %}
+
+{% block content %}
+<h1>Keys</h1>
+
+<a href="{% url 'fido2-add' %}">Set up new FIDO2 device</a>
+{% if not has_otp %}
+<br/>
+<a href="{% url 'otp-add' %}">Set up OTP</a>
+{% endif %}
+
+<ul>
+    {% for key in object_list %}
+        <li>{{ key }} <a class="deletelink" href="{% url 'user-key-delete' key.pk %}">Delete</a></li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "admin/base_site.html" %}
+{% load i18n static %}
+
+{% block title %}Multi Factor Authentication - Set Up OTP{% endblock %}
+
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+<a href="{% url 'admin:index' %}">{% translate 'Home' %}</a>
+&rsaquo; <a href="{% url 'user-key-list' %}">{% translate 'Multi Factor Authentication' %}</a>
+&rsaquo; Add OTP
+</div>
+{% endblock %}
+
+{% block extrahead %}
+    <meta id="mfa-url-provider" data-user_keys_list="{% url "user-keys-list" %}"></meta>
+    <script src="{% static "django_rest_mfa/qrcode.min.js" %}"></script>
+    <script src="{% static "django_rest_mfa/utils.js" %}"></script>
+{% endblock %}
+
+{% block content %}
+<h1>Set up OTP</h1>
+
+<p>Open QR code in authenticator app</p>
+
+<canvas id="canvas"></canvas>
+
+<p>Then open the app and enter the 6 digit code</p>
+
+<form id="otp_form">
+<label for="answer">Code</label>
+<input name="answer"></input>
+<input type="hidden" id="secret_key" name="secret_key"></input>
+<br/>
+<input type="submit"></input>
+</form>
+
+<script src="{% static "django_rest_mfa/otp_add.js" %}"></script>
+{% endblock %}

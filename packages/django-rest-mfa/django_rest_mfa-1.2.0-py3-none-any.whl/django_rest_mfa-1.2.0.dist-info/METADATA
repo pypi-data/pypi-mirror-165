@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: django-rest-mfa
+Version: 1.2.0
+Summary: Django Rest Framework Endpoints for MFA including TOTP and FIDO2
+License: MIT
+Author: David Burke
+Author-email: david@burkesoftware.com
+Requires-Python: >=3.8.0,<4.0.0
+Classifier: Framework :: Django
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: dj-rest-auth (>=2.1.7,<3.0.0)
+Requires-Dist: djangorestframework (>=3.12.4,<4.0.0)
+Requires-Dist: fido2 (>=1.0.0,<2.0.0)
+Requires-Dist: pyotp (>=2.6.0,<3.0.0)
+Requires-Dist: user-agents (>=2.2.0,<3.0.0)
+Project-URL: homepage, https://gitlab.com/burke-software/django-rest-mfa
