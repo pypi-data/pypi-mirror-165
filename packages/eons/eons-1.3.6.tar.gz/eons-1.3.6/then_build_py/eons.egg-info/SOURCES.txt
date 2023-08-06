@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.cfg
+then_build_py/eons/__init__.py
+then_build_py/eons/eons.py
+then_build_py/eons.egg-info/PKG-INFO
+then_build_py/eons.egg-info/SOURCES.txt
+then_build_py/eons.egg-info/dependency_links.txt
+then_build_py/eons.egg-info/requires.txt
+then_build_py/eons.egg-info/top_level.txt
