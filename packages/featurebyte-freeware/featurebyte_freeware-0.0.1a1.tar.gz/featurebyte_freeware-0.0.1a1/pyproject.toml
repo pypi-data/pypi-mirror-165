@@ -1,0 +1,29 @@
+# Poetry pyproject.toml: https://python-poetry.org/docs/pyproject/
+
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry_core>=1.0.0"]
+
+[tool.poetry]
+authors = ["FeatureByte <it-admin@featurebyte.com>"]
+classifiers = [  #! Update me
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Operating System :: OS Independent",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+]
+description = "Free utilities from FeatureByte"
+homepage = "https://github.com/featurebyte/freeware"
+keywords = []  #! Update me
+license = "Apache Software License 2.0"
+name = "featurebyte_freeware"
+readme = "README.md"
+repository = "https://github.com/featurebyte/freeware"
+version = "0.0.1a1"
+
+[tool.poetry.dependencies]
+
