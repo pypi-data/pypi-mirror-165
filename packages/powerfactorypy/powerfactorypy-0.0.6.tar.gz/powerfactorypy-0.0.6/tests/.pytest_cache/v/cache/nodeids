@@ -1,0 +1,14 @@
+[
+  "test_pf_base_interface.py::test_create_by_path",
+  "test_pf_base_interface.py::test_create_in_folder",
+  "test_pf_base_interface.py::test_get_attr",
+  "test_pf_base_interface.py::test_get_from_folder",
+  "test_pf_base_interface.py::test_get_from_folder_exceptions",
+  "test_pf_base_interface.py::test_get_obj",
+  "test_pf_base_interface.py::test_get_obj_",
+  "test_pf_base_interface.py::test_get_obj_path_argument",
+  "test_pf_base_interface.py::test_get_obj_with_project_folder_argument",
+  "test_pf_base_interface.py::test_set_attr",
+  "test_pf_base_interface.py::test_set_attr_by_path",
+  "test_pf_base_interface.py::test_set_attr_exceptions"
+]
