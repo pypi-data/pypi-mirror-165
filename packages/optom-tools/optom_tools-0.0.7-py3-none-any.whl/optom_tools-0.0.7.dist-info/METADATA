@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: optom-tools
+Version: 0.0.7
+Summary: Providing tools for optometrists.
+Author: Shivan Sivakumaran
+Author-email: <shivan.sivakumaran@gmail.com>
+License: MIT
+Project-URL: homepage, https://github.com/shivan-s/optom-tools
+Project-URL: repository, https://github.com/shivan-s/optom-tools
+Project-URL: changelog, https://github.com/shivan-s/optom-tools/blob/main/CHANGELOG.md
+Project-URL: documentation, https://shivan-s.github.io/optom-tools
+Keywords: optom,optometry,optometrist,calculations
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Healthcare Industry
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: rich
+
+# Optom Tools ⚠️ Under develepment ⚠️
+
+[![Build](https://github.com/shivan-s/optom-tools/actions/workflows/build.yml/badge.svg)](https://github.com/shivan-s/optom-tools/actions/workflows/build.yml)
+[![Deploy Docs](https://github.com/shivan-s/optom-tools/actions/workflows/docs.yml/badge.svg)](https://github.com/shivan-s/optom-tools/actions/workflows/docs.yml)
+![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)
+[![Latest Version](https://img.shields.io/pypi/v/optom-tools.svg)](https://pypi.python.org/pypi/optom-tools/)
+[![Format](https://img.shields.io/pypi/format/optom-tools.svg)](https://pypi.python.org/pypi/optom-tools/)
+[![Python Versions](https://img.shields.io/pypi/pyversions/optom-tools.svg)](https://pypi.python.org/pypi/optom-tools/)
+[![Implementation](https://img.shields.io/pypi/implementation/optom-tools.svg)](https://pypi.python.org/pypi/optom-tools/)
+[![License](https://img.shields.io/pypi/status/optom-tools.svg)](https://pypi.python.org/pypi/optom-tools/)
+
+## Getting Started
+
+Install with `pip` or your other favourite package manager (e.g. `pipenv` or `poetry`).
+
+```shell
+pip install optom-tools
+```
+
+## Simple Example
+
+```python
+>>> from optom_tools import Prescription
+
+>>> prescription = Prescription.parse("+1.00/-2.00x180")
+
+>>> prescription.transpose()
+
+>>> str(prescription)
+
+"-1.00 / +2.00 x 90"
+```
+
+## Docs
+
+Comprehensive documentation can be found here: <https://shivan-s.github.io/optom-tools>
+
+## Contribution
+
+Yes, please. I'd love some help on this.
