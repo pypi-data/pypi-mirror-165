@@ -1,0 +1,3 @@
+MIT License
+Copyright (c) 2022 Yogesh Yadav, zfunds.in
+Please give credits to the author if you are using the module

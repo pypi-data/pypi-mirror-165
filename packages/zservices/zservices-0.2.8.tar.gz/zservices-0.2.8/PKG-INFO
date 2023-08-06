@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: zservices
+Version: 0.2.8
+Summary: ZFunds basic services
+Home-page: https://github.com/ZFunds/zservices/
+Author: Yogesh Yadav
+Author-email: yogesh@zfunds.in
+License: MIT
+Download-URL: https://github.com/ZFunds/zservices/
+Keywords: dynamodb,discord,s3,requests,sftp
+Platform: cross-platfom
+Platform: platform-independent
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Programming Language :: Python :: 3.10
+License-File: LICENSE.txt
+
+Dependencies: coming soon
+
