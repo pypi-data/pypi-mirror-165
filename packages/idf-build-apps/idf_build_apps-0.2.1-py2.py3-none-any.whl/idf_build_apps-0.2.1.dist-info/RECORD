@@ -1,0 +1,15 @@
+idf_build_apps/__init__.py,sha256=3Yf7u47Zyewzl4bBDi0R4CNuVwlnm9zlUC4jlDAA2S0,443
+idf_build_apps/__main__.py,sha256=4wVIjxcHeCTMW5MIw6-f_CyzdXMlvrfzrWsXVLsudY8,8382
+idf_build_apps/app.py,sha256=R3lkqCyZEDVGGaVFkT5a1ZF2tpTA2IeDfgiE8YgM7Po,17765
+idf_build_apps/constants.py,sha256=uTpy0XaMh7IcTuf1_5fXQaaSEpBo-AZj7u4p-_24RVQ,1530
+idf_build_apps/finder.py,sha256=OKzT8-QrHZ6RIaiNhAJeLqb_d5c3idn1a7moeyyJ9ZQ,8589
+idf_build_apps/main.py,sha256=HQ2ML3ZWXir-cV86SXg7yFMPOLqi176S4C7Ry1YkfPY,5256
+idf_build_apps/utils.py,sha256=0eJzsn7bloPxKmcO9mdBONGQV-zFBQlHxryQf2fCeDc,4517
+idf_build_apps/manifest/__init__.py,sha256=zPPuxCTwr6yVRARUeiQ3nfD2qPFF5kVkxD-gR5ljs6s,128
+idf_build_apps/manifest/if_parser.py,sha256=XBjdJ6b6IubffPmYbjN9a9AsZ49eVW5h48JvOzJcuRQ,4565
+idf_build_apps/manifest/manifest.py,sha256=MkhKUdlvoh8bL0jCByaX7KdVbFt5v0YKXfgIlNHh2Ng,4709
+idf_build_apps/manifest/soc_header.py,sha256=y9alkEWe-b3oGqkkLQa894wE5HyS84DH2_JaATmtAoM,3437
+idf_build_apps-0.2.1.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+idf_build_apps-0.2.1.dist-info/WHEEL,sha256=96_DCfscDnVj9fVNwi1rfifiRwfpxLjwXWglVksjj_E,99
+idf_build_apps-0.2.1.dist-info/METADATA,sha256=RlTg5Sgm_2CcX5JPUPN18BViKPA9MOs37Xu1XPC0WFA,1273
+idf_build_apps-0.2.1.dist-info/RECORD,,
