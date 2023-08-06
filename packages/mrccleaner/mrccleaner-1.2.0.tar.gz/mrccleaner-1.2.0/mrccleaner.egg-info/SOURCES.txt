@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+mrccleaner/__init__.py
+mrccleaner/mrccleaner.py
+mrccleaner/version.py
+mrccleaner.egg-info/PKG-INFO
+mrccleaner.egg-info/SOURCES.txt
+mrccleaner.egg-info/dependency_links.txt
+mrccleaner.egg-info/entry_points.txt
+mrccleaner.egg-info/requires.txt
+mrccleaner.egg-info/top_level.txt
