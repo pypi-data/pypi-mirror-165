@@ -1,0 +1,94 @@
+Metadata-Version: 2.1
+Name: py-filesystem
+Version: 0.1.1
+Summary: file and folder system information
+Home-page: https://github.com/FredTourn/py-filesystem/
+Author: FredTourn
+Author-email: mz.bouba@free.fr
+License: GPL
+Keywords: file folder system
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*
+Description-Content-Type: text/markdown
+Requires-Dist: python-magic (>=0.4.27)
+
+# py-filesystem
+
+py-filesystem is a Python module that provides information about files and folders.
+
+## Usage
+
+To obtain information from a folder
+
+```python
+>>> import os
+>>> from filesystem import Folder
+>>> folder = Folder(os.getcwd())
+>>> folder.what
+'folder'
+>>> folder.atime
+1657473718.8713582
+>>> folder.atime_humanized()
+'10 Jul 2022 19:21:58'
+>>> folder.size             
+133914
+>>> folder.size_humanized()
+'130.8KiB'
+>>> folder.is_empty
+False
+>>> folder.listdir 
+['.git', '.gitignore', 'README.md', 'build', 'dist', 'filesystem', 'py_filesystem.egg-info', 'requirements.txt', 'setup.py', 'test']
+```
+
+To obtain information from a file
+
+```python
+>>> from filesystem import File
+>>> file = File('README.md')
+>>> file.mime
+'inode/x-empty'
+>>> file.size
+0
+>>> file.is_readable()
+True
+>>> file.is_writable()
+True
+>>> file.md5
+'d41d8cd98f00b204e9800998ecf8427e'
+>>> file.extension
+'.md'
+>>> file.name
+'README'
+```
+
+## Installation
+
+```
+pip install py-filesystem
+```
+
+Other sources:
+
+- Pypi: https://pypi.org/project/py-filesystem/
+- Github: https://github.com/FredTourn/py-filesystem
+
+## Requirements
+
+[python-magic](https://pypi.org/project/python-magic/)
+
+### libmagic
+
+#### MacOs
+[macappstore: installation libmagic](https://macappstore.org/libmagic/)
+
+

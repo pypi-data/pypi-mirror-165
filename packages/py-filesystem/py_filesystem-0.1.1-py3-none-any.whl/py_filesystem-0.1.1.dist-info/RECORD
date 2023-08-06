@@ -1,0 +1,9 @@
+filesystem/__init__.py,sha256=iGCGDPZhD9Qk7sdHLrswtoRLd2Kh0ke5L-PmdmqXF6g,206
+filesystem/databasic.py,sha256=8FBST_-VktzI6d7hMaV4uFZ0JhBswGvL2YvdtlHFFf4,4639
+filesystem/dataerror.py,sha256=O6LOwT8oQwgopK3X8hQZgY63Z4ICBkLVh0Jyi3HefKQ,476
+filesystem/datafile.py,sha256=AU1uAZSnPyiarxa0rBpoWeG9TvW7aI2W79tUVzxFIdg,7645
+filesystem/datafolder.py,sha256=sIUfHNmwpXtsLHc0Y5tLcBMpMKV8Nb0lolRSjt2dYiI,10815
+py_filesystem-0.1.1.dist-info/METADATA,sha256=-jZVHqOz2ZoYxsZXfe3yur97BRyog6RydHkdimoSxkE,2162
+py_filesystem-0.1.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+py_filesystem-0.1.1.dist-info/top_level.txt,sha256=a0vxi6KMy91J8nFsnzPJIRFV_3A_psGVx4oHvRYNoOs,11
+py_filesystem-0.1.1.dist-info/RECORD,,
