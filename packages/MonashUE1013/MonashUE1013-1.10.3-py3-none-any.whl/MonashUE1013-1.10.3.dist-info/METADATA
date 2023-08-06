@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: MonashUE1013
+Version: 1.10.3
+Summary: Package to support student projects for ENG1013 at Monash University
+Author: Monash University
+Author-email: eng1013.clayton-x@monash.edu
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: license.txt
+Requires-Dist: pymata4
+
+# MonashUE1013 
+MonashUE1013 is a python package that uses pymata4 to allow for specific Arduino functionality for use as part of Monash University's ENG1013 course as part of the department of Engineering. 
+  
+This module requires the pymata4 module with FirmataExpress installed on an associated Arduino Board. It should be included in files as:
+```py
+  from MonashUE1013 import MonashUE1013
+```
+  
+## Main functionality includes 
+- Setting up a 7 segment display using 1 or 2 shift registers running 1 or 2 clocks, see more information on the function parameters for specific call instructions 
+- Running a 7 segment display using 1 or 2 shift registers running 1 or 2 clocks, see more information on the function parameters for specific call instructions 
+- Setting up a 3V motor using a Motor driver chip, see more information on the function parameters for specific call instructions
+- Running a 3V motor using a Motor driver chip, see more information on the function parameters for specific call instructions
+  
+## Requirements
+MonashUE1013 requires `pymata4`. 
+
+## LICENSING
+  See license.txt for licencing information for this module 
