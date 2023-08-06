@@ -1,0 +1,17 @@
+{
+	"keys": [
+		{
+			"kid": "16:samtrafiken_one",
+			"kty": "EC",
+			"x": "f83OJ3D2xF1Bg8vub9tLe1gHMzV76e8Tus9uPHvRVEU",
+			"y": "x_FEzRu9m36HLN_tue659LNpXW6pCyStikYjKIWI5a0",
+			"crv": "P-256"
+		},
+		{
+			"kty": "RSA",
+			"kid": "16:samtrafiken_fallback_2023",
+			"n": "t5ITeoklTnhR8XNDLYKx5WsUxkJZkBSqT-5dfc-W_1cByD0ZKf-2DkwArXWwK4bYPQ2RlDuot-m8U2GSjnQ9wNxrA1oIUzJZYw1ryqbq-Lh1hrbYWbW2OlcIIce2dzEnSdbphTthoYFDu1xS8n5hi1xC-LGlmfmQfTCjCZR5CFnRbar97rAjfrRfvlwG15XJTC6BiDtYZMF5KmpgKCqP39ELCqV0LHXfeJ50v263a9enlD0RogNAbwM0OTDZ-ek8WF5YePEuE1p0-Pbe14O-pSkT_DPwl5pF6uk6QN3whr90oTgDkUoI4xb88jhscWb1yf4PfjsF3F4JUgYn9V1w28-N7ZIkGe6-PznWmvjsgJj9u6sg9f2-AU5k2ZsZCuO1-bVSubjJU0j2J7DyvP3wpxt1ybrOjA1X8K2s6bMBan0u3CsHDsikGHsgKlDkWJvD5fBpb1Ize3YfbAJvbGNtT2ae6Ft0cB__xVGDvJqEl6UHZgU4gBm01DiX20RJcGgWbX5nsz47mC2zXG_thtpPd8lAsyevGBKTsMpPEomAwRfL_VDWvjcXGPTD7Lm-igzzWLHrK9xRmhBOHs_oxK2o6gUtu4LcqSh1PHCIzBznzdacHVSPrLy5pPTuwxm4DYrhycOvlb8PPL9qX7qscJTwp5jcNYAYvmF2Ezns32HhIXM",
+			"e": "AQAB"
+		}
+	]
+}
