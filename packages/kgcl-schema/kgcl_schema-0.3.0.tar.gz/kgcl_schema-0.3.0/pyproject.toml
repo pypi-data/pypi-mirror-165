@@ -1,0 +1,34 @@
+[tool.poetry]
+name = "kgcl_schema"
+version = "v0.3.0"
+description = "Schema for the KGCL project."
+authors = [
+    "Chris Mungall <cjmungall@lbl.gov>",
+    "Harshad Hegde <hhegde@lbl.gov>"
+    ]
+license = "MIT"
+readme = "README.md"
+
+
+[tool.poetry.dependencies]
+python = "^3.8"
+linkml-runtime = "^1.1.24"
+lark = "^1.1.2"
+bioregistry = "^0.5.49"
+
+[tool.poetry.dev-dependencies]
+linkml = "^1.2.15"
+mkdocs-material = "^8.2.8"
+pytest = "^7.1.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+kgcl-diff = "kgcl_schema.kgcl_diff:cli"
+kgcl-apply = "kgcl_schema.kgcl:cli"
+kgcl-parse = "kgcl_schema.grammar.parser:cli"
+
+[tool.poetry.extras]
+docs = ["linkml", "mkdocs-material"]
