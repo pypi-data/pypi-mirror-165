@@ -1,0 +1,81 @@
+Metadata-Version: 2.1
+Name: mextractor
+Version: 1.1.1
+Summary: mextractor can extract media metadata to YAML and read them
+Home-page: https://pypi.org/project/mextractor/
+License: Apache-2.0
+Keywords: pydantic,metadata,video,image,bigdata
+Author: Can H. Tartanoglu
+Author-email: canhtart@gmail.com
+Requires-Python: >=3.7,<3.11
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Provides-Extra: extract
+Requires-Dist: ffmpeg-python (>=0.2.0,<0.3.0); extra == "extract"
+Requires-Dist: numba (>=0.56.0,<0.57.0)
+Requires-Dist: numpy (>=1.21.0,<2.0.0); python_version >= "3.7" and python_version < "3.8"
+Requires-Dist: numpy; python_version >= "3.8" and python_version < "3.11"
+Requires-Dist: opencv-python (>=4.6.0,<5.0.0); extra == "extract"
+Requires-Dist: pydantic (>=1.9.2,<2.0.0)
+Requires-Dist: pydantic-yaml (>=0.8.0,<0.9.0)
+Requires-Dist: ruamel.yaml (>=0.17.21,<0.18.0)
+Requires-Dist: webp (>=0.1.4,<0.2.0)
+Project-URL: Repository, https://github.com/caniko/media-metadata-extractor
+Description-Content-Type: text/markdown
+
+# mextractor: media metadata extractor
+
+Videos and images can be large. 
+
+## Installation
+
+Download and install from PyPi with `pip`:
+
+```shell
+pip install mextractor
+```
+
+## Usage
+
+### Extract and dump metadata
+```python
+import mextractor
+
+metadata = mextractor.extract_and_dump(path_to_dump, path_to_media)
+```
+
+### Load media
+
+#### Video
+
+```python
+import mextractor
+
+video_metadata = mextractor.parse_file(path_to_metadata)
+
+print(video_metadata.fps)
+print(video_metadata.frames)
+print(video_metadata.resolution)
+print(video_metadata.seconds)
+print(video_metadata.path)
+print(video_metadata.bytes)
+```
+
+#### Image
+
+```python
+import mextractor
+
+image_metadata = mextractor.parse_file(path_to_metadata)
+
+print(image_metadata.resolution)
+print(image_metadata.path)
+print(image_metadata.bytes)
+```
+
