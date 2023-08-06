@@ -1,0 +1,6 @@
+include lightStart/database/*
+exclude lightStart/database/credentials.json
+include lightStart/database/templates/*
+include lightStart/discord/*
+include lightStart/discord/gateway/*
+include lightStart/utils/*

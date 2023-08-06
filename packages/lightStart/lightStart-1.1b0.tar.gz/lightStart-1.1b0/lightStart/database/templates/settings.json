@@ -1,0 +1,33 @@
+{
+    "commands": {
+        "beg": {
+            "enabled": true,
+            "cooldown": 35, 
+            "patron cooldown": 25
+        },
+        "crime": {
+            "enabled": true,
+            "cooldown": 35,
+            "patron cooldown": 15
+        }
+    },
+    "messages": {
+        "coloured?": false
+    },
+    "typing indicator": {
+        "enabled?": false,
+        "minimum": 0.5,
+        "maximum": 1.0
+    },
+    "logging": {
+        "debug?": true,
+        "warning?": true
+    },
+    "presence": {
+        "status": "invisible"
+    },
+    "settings": {
+        "timeout": 5,
+        "patron?": false
+    }
+}
