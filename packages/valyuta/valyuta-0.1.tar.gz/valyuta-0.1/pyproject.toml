@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "valyuta"
+version = "0.1"
+description = ""
+authors = ["coderstack404 <coderstack404@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+requests = "^2.28.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
