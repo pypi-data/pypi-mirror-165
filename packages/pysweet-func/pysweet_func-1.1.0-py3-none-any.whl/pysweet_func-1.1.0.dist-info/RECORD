@@ -1,0 +1,10 @@
+pysweet/__init__.py,sha256=cDPySv-m-WIG6_yrBxcb6cDWsZXzpIC6ASDyXIHI9ag,112
+pysweet/expression.py,sha256=ebcfgaZowPIfYy1J-hVq-yR1rnUhsk-mWWAr9i0uaY4,3560
+pysweet/func.py,sha256=KQxwR6xRhWBR35LpYGKtpcolc60fN7WFqiaokm5bH-Q,929
+pysweet/iterable.py,sha256=MeGLqcj-xNGML7N-M5nVmHvjO8oTuxPu5Gg5gHm4mrQ,3825
+pysweet/types.py,sha256=AH2oCDnNJpk3f_45dWoo6X6Mx4Zvl1TEpzQmPv4ULpw,860
+pysweet/value.py,sha256=KnSmdvbEoFOv8uESC1fOlcN6Y4fyW_cPFHJcbEuZbAE,821
+pysweet_func-1.1.0.dist-info/LICENSE,sha256=rqZjdcGisdNtjVoibdVrvGxAdc2tPzL7MCQ2_agzZNg,1072
+pysweet_func-1.1.0.dist-info/WHEEL,sha256=bbU3AyvhQ312rVm7zzRQjs6axI1UYWC3nmFA2E6FFSI,88
+pysweet_func-1.1.0.dist-info/METADATA,sha256=3xZ4lfsB3FSb3AeYB6bIwedTPagK50SvzyB_aM6UoI0,4048
+pysweet_func-1.1.0.dist-info/RECORD,,
