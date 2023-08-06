@@ -1,0 +1,10 @@
+pandas
+requests
+arrow
+tqdm
+pillow
+bs4
+lxml
+html2text
+trove-query-parser
+trove-newspaper-images
