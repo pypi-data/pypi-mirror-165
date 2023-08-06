@@ -1,0 +1,261 @@
+##### Document
+
+SPDXVersion: SPDX-2.2
+SPDXID: SPDXRef-licenses-doc
+DataLicense: CC0-1.0
+Creator: Arm Ltd
+
+##### Package
+
+PackageName: tosa-checker
+PackageOriginator: Arm Ltd
+PackageHomePage: https://git.mlplatform.org/tosa/tosa_checker.git
+PackageLicenseDeclared: Apache-2.0
+PackageLicenseConcluded: Apache-2.0
+
+##### Direct dependencies, statically linked or header-only
+
+PackageName: llvm
+SPDXID: SPDXRef-llvm
+PackageDownloadLocation: https://github.com/llvm/llvm-project/tree/main/llvm
+PackageLicenseDeclared: (Apache-2.0 AND LLVM-exception)
+PackageLicenseConcluded: (Apache-2.0 AND LLVM-exception)
+
+PackageName: llvm-mlir
+SPDXID: SPDXRef-llvm-mlir
+PackageDownloadLocation: https://github.com/llvm/llvm-project/tree/main/mlir
+PackageLicenseDeclared: (Apache-2.0 AND LLVM-exception)
+PackageLicenseConcluded: (Apache-2.0 AND LLVM-exception)
+
+PackageName: pybind11
+SPDXID: SPDXRef-pybind11
+PackageDownloadLocation: https://github.com/pybind/pybind11/
+PackageLicenseDeclared: BSD-3-Clause
+PackageLicenseConcluded: BSD-3-Clause
+PackageCopyrightText: <text>Copyright (c) 2016 Wenzel Jakob <wenzel.jakob@epfl.ch>, All rights reserved.</text>
+
+PackageName: tensorflow
+SPDXID: SPDXRef-tensorflow
+PackageDownloadLocation: https://github.com/tensorflow/tensorflow
+PackageLicenseDeclared: Apache-2.0
+PackageLicenseConcluded: Apache-2.0
+PackageCopyrightText: <text>Copyright 2020 The TensorFlow Authors. All Rights Reserved.</text>
+
+##### Indirect dependencies, statically linked or header-only
+
+PackageName: abseil-cpp
+SPDXID: SPDXRef-abseil-cpp
+PackageDownloadLocation: https://github.com/abseil/abseil-cpp/
+PackageLicenseDeclared: Apache-2.0
+PackageLicenseConcluded: Apache-2.0
+PackageCopyrightText: <text>Copyright 2017 The Abseil Authors</text>
+
+PackageName: ARM_NEON_2_x86_SSE
+SPDXID: SPDXRef-arm-neon-2-x86-sse
+PackageDownloadLocation: https://github.com/intel/ARM_NEON_2_x86_SSE
+PackageLicenseDeclared: LicenseRef-ARM_NEON_2_x86_SSE
+PackageLicenseConcluded: LicenseRef-ARM_NEON_2_x86_SSE
+PackageCopyrightText: <text>Copyright (C) 2012-2020 Intel Corporation.  All rights reserved.</text>
+
+PackageName: clog
+SPDXID: SPDXRef-clog
+PackageDownloadLocation: https://github.com/pytorch/cpuinfo/tree/master/deps/clog
+PackageLicenseDeclared: BSD-2-Clause
+PackageLicenseConcluded: BSD-2-Clause
+PackageCopyrightText: <text>
+Copyright (C) 2018 Marat Dukhan
+Copyright (c) 2017-2018 Facebook Inc.
+Copyright (c) 2017 Georgia Institute of Technology
+
+All rights reserved.
+</text>
+
+PackageName: cpuinfo
+SPDXID: SPDXRef-cpuinfo
+PackageDownloadLocation: https://github.com/pytorch/cpuinfo/
+PackageLicenseDeclared: BSD-2-Clause
+PackageLicenseConcluded: BSD-2-Clause
+PackageCopyrightText: <text>
+Copyright (c) 2019 Google LLC
+Copyright (c) 2017-2018 Facebook Inc.
+Copyright (C) 2012-2017 Georgia Institute of Technology
+Copyright (C) 2010-2012 Marat Dukhan
+
+All rights reserved.
+</text>
+
+PackageName: cpython
+SPDXID: SPDXRef-cpython
+PackageDownloadLocation: https://github.com/python/cpython
+PackageLicenseDeclared: PSF-2.0
+PackageLicenseConcluded: PSF-2.0
+PackageCopyrightText: <text>Copyright © 2001-2022 Python Software Foundation. All rights reserved.</text>
+
+PackageName: double-conversion
+SPDXID: SPDXRef-double-conversion
+PackageDownloadLocation: https://github.com/google/double-conversion
+PackageLicenseDeclared: BSD-3-Clause
+PackageLicenseConcluded: BSD-3-Clause
+PackageCopyrightText: <text>Copyright 2006-2011, the V8 project authors. All rights reserved.</text>
+
+PackageName: eigen
+SPDXID: SPDXRef-eigen
+PackageDownloadLocation: https://gitlab.com/libeigen/eigen/
+PackageLicenseDeclared: (Apache-2.0 OR BSD-3-Clause OR MPL-2.0 OR LGPL-2.1-or-later OR Minpack)
+PackageLicenseConcluded: MPL-2.0
+PackageLicenseComments: <text>Compiled with EIGEN_MPL2_ONLY defined</text>
+
+PackageName: farmhash
+SPDXID: SPDXRef-farmhash
+PackageDownloadLocation: https://github.com/google/farmhash
+PackageLicenseDeclared: MIT
+PackageLicenseConcluded: MIT
+PackageCopyrightText: <text>Copyright (c) 2014 Google, Inc.</text>
+
+PackageName: flatbuffers
+SPDXID: SPDXRef-flatbuffers
+PackageDownloadLocation: https://github.com/google/flatbuffers/
+PackageLicenseDeclared: Apache-2.0
+PackageLicenseConcluded: Apache-2.0
+PackageCopyrightText: <text>Copyright 2022 Google Inc. All rights reserved.</text>
+
+PackageName: giflib
+SPDXID: SPDXRef-giflib
+PackageDownloadLocation: https://sourceforge.net/projects/giflib/
+PackageLicenseDeclared: MIT
+PackageLicenseConcluded: MIT
+PackageCopyrightText: <text>Copyright (c) 1997  Eric S. Raymond.</text>
+
+PackageName: googleapis
+SPDXID: SPDXRef-googleapis
+PackageDownloadLocation: https://github.com/googleapis/googleapis
+PackageLicenseDeclared: Apache-2.0
+PackageLicenseConcluded: Apache-2.0
+PackageCopyrightText: <text>Copyright 2022 Google LLC</text>
+
+PackageName: highwayhash
+SPDXID: SPDXRef-highwayhash
+PackageDownloadLocation: https://github.com/google/highwayhash/
+PackageLicenseDeclared: Apache-2.0
+PackageLicenseConcluded: Apache-2.0
+PackageCopyrightText: <text>Copyright 2022 Google Inc. All Rights Reserved.</text>
+
+PackageName: hwloc
+SPDXID: SPDXRef-hwloc
+PackageDownloadLocation: https://github.com/open-mpi/hwloc
+PackageLicenseDeclared: LicenseRef-hwloc
+PackageLicenseConcluded: LicenseRef-hwloc
+PackageCopyrightText: <text>
+Copyright © 2004-2006 The Trustees of Indiana University and Indiana University Research and Technology Corporation.  All rights reserved.
+Copyright © 2004-2005 The University of Tennessee and The University of Tennessee Research Foundation.  All rights reserved.
+Copyright © 2004-2005 High Performance Computing Center Stuttgart, University of Stuttgart.  All rights reserved.
+Copyright © 2004-2005 The Regents of the University of California. All rights reserved.
+Copyright © 2009      CNRS
+Copyright © 2009-2016 Inria.  All rights reserved.
+Copyright © 2009-2015 Université Bordeaux
+Copyright © 2009-2015 Cisco Systems, Inc.  All rights reserved.
+Copyright © 2009-2012 Oracle and/or its affiliates.  All rights reserved.
+Copyright © 2010      IBM
+Copyright © 2010      Jirka Hladky
+Copyright © 2012      Aleksej Saushev, The NetBSD Foundation
+Copyright © 2012      Blue Brain Project, EPFL. All rights reserved.
+Copyright © 2013-2014 University of Wisconsin-La Crosse. All rights reserved.
+Copyright © 2015      Research Organization for Information Science and Technology (RIST). All rights reserved.
+Copyright © 2015-2016 Intel, Inc.  All rights reserved.
+</text>
+
+PackageName: libjpeg-turbo
+SPDXID: SPDXRef-libjpeg-turbo
+PackageDownloadLocation: https://github.com/libjpeg-turbo/libjpeg-turbo
+PackageLicenseDeclared: (BSD-3-Clause AND IJG AND Zlib)
+PackageLicenseConcluded: (BSD-3-Clause AND IJG AND Zlib)
+PackageCopyrightText: <text>
+Copyright (C)2009-2022 D. R. Commander. All Rights Reserved.
+Copyright (C)2015 Viktor Szathmáry. All Rights Reserved.
+</text>
+
+PackageName: nasm
+SPDXID: SPDXRef-nasm
+PackageDownloadLocation: https://github.com/netwide-assembler/nasm
+PackageLicenseDeclared: BSD-2-Clause
+PackageLicenseConcluded: BSD-2-Clause
+PackageCopyrightText: <text>Copyright 1996-2010 the NASM Authors - All rights reserved.</text>
+
+PackageName: nsync
+SPDXID: SPDXRef-nsync
+PackageDownloadLocation: https://github.com/google/nsync
+PackageLicenseDeclared: Apache-2.0
+PackageLicenseConcluded: Apache-2.0
+PackageCopyrightText: <text>Copyright 2022 Google Inc.</text>
+
+PackageName: OouraFFT
+SPDXID: SPDXRef-OouraFFT
+PackageDownloadLocation: https://www.kurims.kyoto-u.ac.jp/~ooura/fft.html
+PackageLicenseDeclared: LicenseRef-OouraFFT
+PackageLicenseConcluded: LicenseRef-OouraFFT
+PackageCopyrightText: <text>Copyright Takuya OOURA, 1996-2001 </text>
+
+PackageName: protobuf
+SPDXID: SPDXRef-protobuf
+PackageDownloadLocation: https://github.com/protocolbuffers/protobuf/
+PackageLicenseDeclared: BSD-3-Clause
+PackageLicenseConcluded: BSD-3-Clause
+PackageCopyrightText: <text>Copyright 2008 Google Inc.  All rights reserved.</text>
+
+PackageName: re2
+SPDXID: SPDXRef-re2
+PackageDownloadLocation: https://github.com/google/re2/
+PackageLicenseDeclared: BSD-3-Clause
+PackageLicenseConcluded: BSD-3-Clause
+PackageCopyrightText: <text>Copyright (c) 2009 The RE2 Authors. All rights reserved.</text>
+
+PackageName: ruy
+SPDXID: SPDXRef-ruy
+PackageDownloadLocation: https://github.com/google/ruy/
+PackageLicenseDeclared: Apache-2.0
+PackageLicenseConcluded: Apache-2.0
+PackageCopyrightText: <text>Copyright 2022 Google LLC. All Rights Reserved.</text>
+
+PackageName: snappy
+SPDXID: SPDXRef-snappy
+PackageDownloadLocation: https://github.com/google/snappy/
+PackageLicenseDeclared: BSD-3-Clause
+PackageLicenseConcluded: BSD-3-Clause
+PackageCopyrightText: <text>Copyright 2011, Google Inc. All rights reserved.</text>
+
+PackageName: tensorflow-gcp-tools
+SPDXID: SPDXRef-tensorflow-gcp-tools
+PackageDownloadLocation: https://github.com/GoogleCloudPlatform/tensorflow-gcp-tools/
+PackageLicenseDeclared: Apache-2.0
+PackageLicenseConcluded: Apache-2.0
+PackageCopyrightText: <text>Copyright 2020 Google LLC. All Rights Reserved.</text>
+
+PackageName: zlib
+SPDXID: SPDXRef-zlib
+PackageDownloadLocation: https://zlib.net/
+PackageLicenseDeclared: Zlib
+PackageLicenseConcluded: Zlib
+PackageCopyrightText: <text>Copyright (C) 1995-2022 Jean-loup Gailly and Mark Adler</text>
+
+##### Direct dependencies, dynamically linked
+
+PackageName: glibc
+SPDXID: SPDXRef-glibc
+PackageDownloadLocation: https://www.gnu.org/software/libc/
+PackageLicenseDeclared: LGPL-2.1-or-later
+PackageLicenseConcluded: LGPL-2.1-or-later
+PackageCopyrightText: <text>Copyright (C) 1991-2022 Free Software Foundation, Inc.</text>
+
+PackageName: libgcc
+SPDXID: SPDXRef-libgcc
+PackageDownloadLocation: https://gcc.gnu.org/
+PackageLicenseDeclared: GPL-3.0-only WITH GCC-exception-3.1
+PackageLicenseConcluded: GPL-3.0-only WITH GCC-exception-3.1
+PackageCopyrightText: <text>Copyright (C) 2009 Free Software Foundation, Inc.</text>
+
+PackageName: libstdc++
+SPDXID: SPDXRef-libstdc++
+PackageDownloadLocation: https://gcc.gnu.org/
+PackageLicenseDeclared: GPL-3.0-only WITH GCC-exception-3.1
+PackageLicenseConcluded: GPL-3.0-only WITH GCC-exception-3.1
+PackageCopyrightText: <text>Copyright (C) 2009 Free Software Foundation, Inc.</text>

@@ -1,0 +1,87 @@
+Metadata-Version: 2.1
+Name: tosa-checker
+Version: 0.1.0
+Summary: Tool to check if a ML model is compatible with the TOSA specification
+Home-page: https://git.mlplatform.org/tosa/tosa_checker.git/
+Author: Arm Limited
+License: Apache-2.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Utilities
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSES.spdx
+License-File: LICENSES/Apache-2.0.txt
+License-File: LICENSES/BSD-2-Clause.txt
+License-File: LICENSES/BSD-3-Clause.txt
+License-File: LICENSES/GCC-exception-3.1.txt
+License-File: LICENSES/GPL-3.0-only.txt
+License-File: LICENSES/IJG.txt
+License-File: LICENSES/LGPL-2.1-or-later.txt
+License-File: LICENSES/LLVM-exception.txt
+License-File: LICENSES/LicenseRef-ARM_NEON_2_x86_SSE.txt
+License-File: LICENSES/LicenseRef-OouraFFT.txt
+License-File: LICENSES/LicenseRef-hwloc.txt
+License-File: LICENSES/MIT.txt
+License-File: LICENSES/MPL-2.0.txt
+License-File: LICENSES/PSF-2.0.txt
+License-File: LICENSES/Zlib.txt
+
+<!---
+SPDX-FileCopyrightText: Copyright 2022, Arm Limited and/or its affiliates.
+SPDX-License-Identifier: Apache-2.0
+--->
+# TOSA Checker
+
+## Overview
+
+The TOSA Checker is a tool that provides an easy way to ensure that a TensorFlow™ Lite model is compatible with the [TOSA specification](https://www.mlplatform.org/tosa).
+
+The project is currently in alpha, some stability issues may still be found.
+
+## Prerequisites
+
+To build the TOSA Checker the following are required:
+
+* Ubuntu® 20.04.03 LTS (the TOSA Checker has been tested on this OS, but should work on other Linux® OS)
+* Bazel™ (Bazelisk is an easy way to install the correct version of Bazel™)
+* Git™
+* Python® >=3.7 (python, python-dev and python-pip)
+
+## Building and installation
+
+```
+pip install -U pip setuptools wheel
+pip install -U numpy
+python setup.py bdist_wheel
+pip install dist/tosa_checker-0.1.0-cp38-cp38-linux_x86_64.whl
+```
+
+## Docker™ image
+
+A Docker™ image to build the TOSA Checker is also provided. More information can be found on [docker/README.md](docker/README.md).
+
+## Usage
+
+```python
+>>> import tosa_checker as tc
+>>> checker = tc.TOSAChecker(model_path="model.tflite")
+>>> checker.is_tosa_compatible()
+True
+```
+
+## License
+
+TOSA Checker is licensed under [Apache License 2.0].
+
+## Trademarks and Copyrights
+
+* Bazel™ is a trademark of Google® LLC.
+* Git™ is a trademark of Software Freedom Conservancy.
+* Linux® is the registered trademark of Linus Torvalds in the U.S. and elsewhere.
+* Python® is a registered trademark of the PSF.
+* Ubuntu® is a registered trademark of Canonical.
+* Tensorflow™ is a trademark of Google® LLC.
+* Docker™ is a trademark of Docker, Inc.
