@@ -1,0 +1,5 @@
+[console_scripts]
+kframe = kframe:kframe
+khandytool = khandytool:core
+toolrun = core:run
+
