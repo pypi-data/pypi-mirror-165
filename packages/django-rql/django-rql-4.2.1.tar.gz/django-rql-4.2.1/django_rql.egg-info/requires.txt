@@ -1,0 +1,5 @@
+lib-rql<2,>=1.1.4
+Django>=2.2.19
+
+[drf]
+djangorestframework>=3.11.1
