@@ -1,0 +1,15 @@
+vru/__init__.py,sha256=6ibwwf55GsW9QnvkAQbiRFa2DEDqCu63SfohHvGtNvA,285
+vru/profile.py,sha256=Y0OeED8dMykGuPYPD-iWE-A3F2mM5yhKjbcgxI-MQhs,1219
+vru/translate.py,sha256=cFgar9ipjmwIK_e27uTlT_EoKl6n3YklLvnJ3LX2xzI,3946
+vru/crypto/__init__.py,sha256=XqpRI9C8WkBwTKz-rhYNjG6BHECQFJeGxqaAh3f_ZmU,162
+vru/crypto/sign.py,sha256=IR4_qWtZGgEdNzRcEN2BKzV3KZHCLT2a_seTE_59j1Q,618
+vru/exceptions/__init__.py,sha256=zDxVZfCuPuDmpKT5bM-u99jSAWzzObYafXTPaod4cAw,527
+vru/exceptions/exceptions.py,sha256=xnvJYaF0-qwJNP-Mjz_XIWDMYCNF2wc9CUd1FREjF84,3972
+vru/exceptions/handlers.py,sha256=p3vvSKCPhBviFaJO9HRWWgHyJc7d-5kMVP00Xp9L3-U,2990
+vru/middleware/__init__.py,sha256=oKpuZGWKtEBBZtjVRRftfMv5XfY0OQIFtcNmUizZbwI,635
+vru/middleware/localization.py,sha256=r3GSN6PrGsl3czNUqg_AFTDfMVsTS-LISurxCyxxMe8,1582
+vr.utils-0.2.0.dist-info/LICENSE,sha256=ofSRMVs-49X249NZbxGZ0KPavnplaBXgR7koohoDIyY,1064
+vr.utils-0.2.0.dist-info/METADATA,sha256=K71Ghn7alFyTGbQzMycvctt1hejRcDlPBi6K-crwKi4,591
+vr.utils-0.2.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+vr.utils-0.2.0.dist-info/top_level.txt,sha256=DMaN_BPjLdYdPMjlU3jm-0LQV7y_jX3YxKnL3UGX3u0,4
+vr.utils-0.2.0.dist-info/RECORD,,
