@@ -1,0 +1,3 @@
+[console_scripts]
+terrascript-core=terrascript.core.cli:cli
+
