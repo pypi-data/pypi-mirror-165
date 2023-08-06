@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: PlotDot
+Version: 0.0.4
+Summary: Utility for plotting perceputally uniform dots.
+Home-page: https://github.com/swamidasslab/plotdot/
+Author: S. Joshua Swamidass
+Author-email: swamidass@wustl.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+This module is alpha and it's API is subject to substantial revisions.
+
+
