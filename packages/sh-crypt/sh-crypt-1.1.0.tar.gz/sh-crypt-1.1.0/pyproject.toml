@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sh-crypt"
+version = "1.1.0"
+description = "Simple symmetric encryption and decryption (ECB) for text"
+readme = "README.md"
+requires-python = ">=3.7"
+keywords = ["encryption", "decryption", "cipher", "AES", "ECB", "crypto", "cryptography"]
+license = {text = "MIT license"}
+classifiers = [
+'Intended Audience :: End Users/Desktop', 'Topic :: Security :: Cryptography',
+'Topic :: Security', 'Development Status :: 5 - Production/Stable',
+'Natural Language :: English', 'License :: OSI Approved :: MIT License',
+'Operating System :: POSIX', 'Operating System :: Unix', 'Programming Language :: Python',
+'Programming Language :: Python :: 3'
+]
+dependencies = [
+    "cryptography>=37.0.4"
+]
+authors = [{name = "Steven HELLEC", email = "steven.hellc@live.fr"}]
+
+[project.urls]
+Source = "https://github.com/steven1909/sh-crypt.git"
+PyPI = "https://pypi.org/project/sh-crypt/"
+
+[tool.setuptools.packages.find]
+where = ["."]  # list of folders that contain the packages (["."] by default)
+exclude = ["*.tests*"]  # exclude packages matching these glob patterns (empty by default)
+namespaces = false  # to disable scanning PEP 420 namespaces (true by default)
+
+[tool.pytest.ini_options]
+minversion = "2.0"
+addopts = "-v"
+python_files = ["test_*.py", "*_test.py", "testing/python/*.py"]
+python_classes = ["Test", "Acceptance"]
+python_functions = ["test"]
+xfail_strict = true
+
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+envlist = py37,py38
+
+[testenv]
+deps = pytest
+commands = pytest
+"""

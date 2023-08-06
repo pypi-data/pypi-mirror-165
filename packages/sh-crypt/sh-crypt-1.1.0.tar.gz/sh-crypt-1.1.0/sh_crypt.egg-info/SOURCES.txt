@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+sh_crypt/__init__.py
+sh_crypt/crypt.py
+sh_crypt/gen_key.py
+sh_crypt.egg-info/PKG-INFO
+sh_crypt.egg-info/SOURCES.txt
+sh_crypt.egg-info/dependency_links.txt
+sh_crypt.egg-info/requires.txt
+sh_crypt.egg-info/top_level.txt
