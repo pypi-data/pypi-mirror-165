@@ -1,0 +1,10 @@
+click
+docker
+python-dotenv
+pyyaml
+requests
+twine
+wheel
+
+[cli]
+click>=5.0

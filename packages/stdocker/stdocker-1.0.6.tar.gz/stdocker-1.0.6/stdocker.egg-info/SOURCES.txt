@@ -1,0 +1,13 @@
+README.md
+setup.py
+stdocker/__init__.py
+stdocker/cli.py
+stdocker/core.py
+stdocker/version.py
+stdocker.egg-info/PKG-INFO
+stdocker.egg-info/SOURCES.txt
+stdocker.egg-info/dependency_links.txt
+stdocker.egg-info/entry_points.txt
+stdocker.egg-info/not-zip-safe
+stdocker.egg-info/requires.txt
+stdocker.egg-info/top_level.txt
