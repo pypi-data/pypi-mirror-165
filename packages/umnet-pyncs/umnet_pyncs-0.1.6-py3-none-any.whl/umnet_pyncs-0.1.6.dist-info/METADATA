@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: umnet-pyncs
+Version: 0.1.6
+Summary: custom python module for NCS helpers
+Author: Nick Grundler
+Author-email: grundler@umich.edu
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: multiprocessing-logging (>=0.3.3,<0.4.0)
+Requires-Dist: ntc-templates (>=3.0.0,<4.0.0)
+Description-Content-Type: text/markdown
+
+## Overview
+
+This module is intended to be installed on the production NCS nodes and imported in other services/actions that need to gather state from the network.  It uses the NCS device manager and the standard python `multiprocessing` library to connect to devices in-parallel and issue commands, returning results as structured data.
+
+## Usage information
+
+Basic usage example in an NCS callback:
+
+``` python
+from umnet_ncs.state import StateManager
+...
+
+
+class DemoAction(Action):
+    @Action.action
+    def cb_action(self, uinfo, name, kp, input, output, trans):
+        ...
+        with StateManager() as m:
+            interfaces = m.get_state(al_devices, ["get-interface-details"])
+            arp = m.get_state(dl_devices, ["get-arp-table"])
+            ...
+```
+
+## Supported commands
+
+We attempt to normalize the output of each command based on how it is implemented.  For example, we might default to just directly returning the data as-parsed by the `ntc_templates` module, or try and emulate for e.g. junos devices where we might have direct access to NETCONF RPCs via the NCS device manager.
+
+Currently supported commands are:
+- `get-mac-table`
+- `get-arp-table`
+- `get-interface-details`
+- `get-transciever-details`
+
+## TODO
+The models are mostly taken verbatim from the `netsplash` NCS package, and additional methods were added on top to support the [stats.py](https://gitlab.umich.edu/its-inf-net/umnet-ncs-dev/-/blob/master/packages/umnet-backbone/python/fabric/stats.py) module.
+
