@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "componentes"
+version = "0.2.2"
+description = "Componetes de uso de teste"
+authors = ["Bruno S"]
+readme = "README.md"
+
+
+[tool.poetry.dependencies]
+nest_asyncio = "^1"
+numpy = "^1.22.2"
+pandas = "^1.4.1"
+pycarol = "^2.54.0"
+pymongo = "^4.1.0"
+requests = "^2.27.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
