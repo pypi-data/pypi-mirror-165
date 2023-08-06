@@ -1,0 +1,5 @@
+include COPYING
+include README.html
+include README.md
+graft maintenance
+graft tests

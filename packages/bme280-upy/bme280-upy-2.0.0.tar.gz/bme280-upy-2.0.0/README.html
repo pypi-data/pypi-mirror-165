@@ -1,0 +1,143 @@
+<!DOCTYPE html><html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"></head><body>
+<h1>BME-280 sensor device driver with Micropython and Linux support (I2C + SPI)</h1>
+
+<p><a href="https://bues.ch/">Project website</a></p>
+
+<p><a href="https://bues.ch/cgit/bme280-upy.git">Git repository</a></p>
+
+<p>This driver runs on Micropython and on regular Python (e.g. Raspberry Pi or other Linux devices).</p>
+
+<p>It has support for both I2C and SPI bus.</p>
+
+<h1>Example: I2C</h1>
+
+<pre><code>import bme280
+
+try:
+    # Connect to BME-280 via I2C-0 hardware with default pinning:
+    bme = bme280.BME280(i2cBus=0)
+
+    # Alternatively:
+    # Connect to BME-280 via I2C-0 hardware with custom pinning (not supported by all microcontrollers):
+    #bme = bme280.BME280(i2cBus={ "index": 0, "scl": 1, "sda": 0 })
+
+    # Alternatively:
+    # Connect to BME-280 via software I2C with custom pinning (not supported by all microcontrollers):
+    #bme = bme280.BME280(i2cBus={ "scl": 1, "sda": 0 })
+
+    # Alternatively:
+    # Connect to BME-280 via pre-initialized Micropython bus object:
+    #bme = bme280.BME280(i2cBus=machine.I2C(0, ...))
+
+    # Synchronously trigger a MODE_FORCED conversion and return the result.
+    temperature, humidity, pressure = bme.readForced(filter=bme280.FILTER_2,
+                                                     tempOversampling=bme280.OVSMPL_4,
+                                                     humidityOversampling=bme280.OVSMPL_4,
+                                                     pressureOversampling=bme280.OVSMPL_4)
+
+    # See help(bme280.BME280) for documentation and more methods.
+
+    # Print the result.
+    print(f"{temperature:.1f} *C; {humidity * 100:.1f} % rel. hum.; {pressure / 100:.1f} hPa")
+
+except bme280.BME280Error as e:
+    print(f"BME280 error: {e}")
+</code></pre>
+
+<h1>Example: SPI</h1>
+
+<pre><code>import bme280
+
+try:
+    # Connect to BME-280 via SPI-0 hardware with default pinning and pin 5 as chip select:
+    bme = bme280.BME280(spiBus=0, spiCS=5)
+
+    # Alternatively:
+    # Connect to BME-280 via SPI-0 hardware with custom pinning (not supported by all microcontrollers):
+    #bme = bme280.BME280(spiBus={ "index": 0, "sck": 1, "mosi": 2, "miso": 3 }, spiCS=5)
+
+    # Alternatively:
+    # Connect to BME-280 via software SPI with custom pinning (not supported by all microcontrollers):
+    #bme = bme280.BME280(spiBus={ "sck": 1, "mosi": 2, "miso": 3 }, spiCS=5)
+
+    # Alternatively:
+    # Connect to BME-280 via pre-initialized Micropython bus object:
+    #bme = bme280.BME280(spiBus=machine.SPI(0, ...), spiCS=machine.Pin(5, ...))
+
+    # Synchronously trigger a MODE_FORCED conversion and return the result.
+    temperature, humidity, pressure = bme.readForced(filter=bme280.FILTER_2,
+                                                     tempOversampling=bme280.OVSMPL_4,
+                                                     humidityOversampling=bme280.OVSMPL_4,
+                                                     pressureOversampling=bme280.OVSMPL_4)
+
+    # See help(bme280.BME280) for documentation and more methods.
+
+    # Print the result.
+    print(f"{temperature:.1f} *C; {humidity * 100:.1f} % rel. hum.; {pressure / 100:.1f} hPa")
+
+except bme280.BME280Error as e:
+    print(f"BME280 error: {e}")
+</code></pre>
+
+<h1>Example: Context Manager</h1>
+
+<p>The BME280 instance can also be used as Context Manager (Python <code>with</code> statement).</p>
+
+<pre><code>import bme280
+
+try:
+    with bme280.BME280(i2cBus=0) as bme:
+        temperature, humidity, pressure = bme.readForced(filter=bme280.FILTER_2,
+                                                         tempOversampling=bme280.OVSMPL_4,
+                                                         humidityOversampling=bme280.OVSMPL_4,
+                                                         pressureOversampling=bme280.OVSMPL_4)
+        # ...
+except bme280.BME280Error as e:
+    print(f"BME280 error: {e}")
+</code></pre>
+
+<h1>Example: Normal mode</h1>
+
+<p>The driver also supports normal mode, where the bme280 does all measurements on its own in the background.
+See the datasheet for more information about normal mode.</p>
+
+<pre><code>import bme280
+
+try:
+    with bme280.BME280(i2cBus=0) as bme:
+        # Start in normal mode with specified measurement interval (standby time).
+        bme.start(mode=bme280.MODE_NORMAL,
+                  standbyTime=bme280.T_SB_10ms,
+                  filter=bme280.FILTER_2,
+                  tempOversampling=bme280.OVSMPL_4,
+                  humidityOversampling=bme280.OVSMPL_4,
+                  pressureOversampling=bme280.OVSMPL_4)
+
+        while True:
+            # Read the most recent values from the device.
+            temperature, humidity, pressure = bme.read()
+
+            # ... do something else here and let the bme280 run measurements in the mean time.
+
+except bme280.BME280Error as e:
+    print(f"BME280 error: {e}")
+</code></pre>
+
+<h1>License</h1>
+
+<p>Copyright (c) 2020-2022 Michael Büsch <a href="&#109;&#x61;&#x69;&#108;&#x74;&#111;:&#109;&#64;b&#x75;&#x65;&#x73;&#x2E;&#99;&#x68;">&#109;&#64;b&#x75;&#x65;&#x73;&#x2E;&#99;&#x68;</a></p>
+
+<p>This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.</p>
+
+<p>This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.</p>
+
+<p>You should have received a copy of the GNU General Public License along
+with this program; if not, write to the Free Software Foundation, Inc.,
+51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.</p>
+</body></html>
