@@ -1,0 +1,5 @@
+[console_scripts]
+is_divisible=divisible.main:is_divisible
+is_even=divisible.main:is_even
+is_odd=divisible.main:is_odd
+
