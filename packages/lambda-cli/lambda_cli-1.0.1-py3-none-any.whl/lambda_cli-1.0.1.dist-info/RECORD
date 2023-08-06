@@ -1,0 +1,9 @@
+lambda_labs/__init__.py,sha256=OzmYhSU_q0iDqUrfB6PcOgFxHnAOASl6llaWrkNji2g,148
+lambda_labs/catalog.csv,sha256=CS5Ib_TeGjP4rWxLCNOVIZfMCybfImSJUgCVmZFE2JQ,1791
+lambda_labs/lambda_api.py,sha256=2KwICHIvPJMAywpbzk0O_PHshJnwV5iec2EekPVkXMI,18552
+lambda_cli-1.0.1.dist-info/LICENSE,sha256=9yQWoIH3K8G6zqc7mV3yJZqmsBzQ_abz5J3E9VQz5-s,1070
+lambda_cli-1.0.1.dist-info/METADATA,sha256=BS40OVoVCKYBa0YzxhqSeVIiMqJaCxeE0ZGTciPeWy8,1185
+lambda_cli-1.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+lambda_cli-1.0.1.dist-info/entry_points.txt,sha256=CvouOJniMOhRFtdf_LsHBhzpJjKvg7ZBhl41_DP_Rbw,45
+lambda_cli-1.0.1.dist-info/top_level.txt,sha256=oYFGCOgUph2k_dmBIj_eUTv6hxwBot7J-uYSHY8fLCI,12
+lambda_cli-1.0.1.dist-info/RECORD,,

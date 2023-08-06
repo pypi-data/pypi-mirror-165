@@ -1,0 +1,3 @@
+[console_scripts]
+lambda = lambda_labs:main
+
