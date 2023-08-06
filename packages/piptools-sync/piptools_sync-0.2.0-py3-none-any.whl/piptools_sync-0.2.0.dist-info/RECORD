@@ -1,0 +1,11 @@
+piptools_sync/__init__.py,sha256=HlfGchrNoHqQBgr0MVIlRbIYrmEKr6bFUYUm_Gcp9yo,1499
+piptools_sync/config.toml,sha256=6lyx5QXlqQJ3EydJTK4DnFamAMjARLEGkilVJyO87Qg,166
+piptools_sync/mapping.json,sha256=41ZrOgZDCGjXHpKH39bGxSCj2gJ6q-oBlR1AfuEx3C8,4
+piptools_sync/piptools_sync.py,sha256=kFlx1wiFDKO9Im01MyhdgYUlX8q60vuXrzPMJkd5vPY,16167
+piptools_sync/tryout.py,sha256=IRpbAU053CYhXWj7e_CAlk_t01hKE7Ff0SL1nyePH1Y,11197
+piptools_sync-0.2.0.dist-info/LICENSE,sha256=50bgsa5ZEVH3iajjz0Iq6W5l-_qSEKJe4RsBDuL-EUU,1074
+piptools_sync-0.2.0.dist-info/METADATA,sha256=FSbqOO8tX-Y5UiZedS9A3YWXXhWxeoYyiL4b7PjEj28,7853
+piptools_sync-0.2.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+piptools_sync-0.2.0.dist-info/entry_points.txt,sha256=I41-MrjV3EnsQEmZtlhJfBgNvSVnTaiaPSXGIip7yxY,67
+piptools_sync-0.2.0.dist-info/top_level.txt,sha256=yUtJPxyWv_3tI6nb3Etck9dvKWxjR6P5t0QjWBOwOLI,14
+piptools_sync-0.2.0.dist-info/RECORD,,
