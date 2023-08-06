@@ -1,0 +1,9 @@
+feature_engine==1.4.1
+joblib==1.1.0
+numpy==1.23.2
+pandas==1.4.3
+pydantic==1.9.2
+pytest==7.1.2
+scikit_learn==1.1.2
+setuptools==65.3.0
+strictyaml==1.6.1
