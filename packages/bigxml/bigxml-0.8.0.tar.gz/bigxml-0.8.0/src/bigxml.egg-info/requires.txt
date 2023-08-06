@@ -1,0 +1,4 @@
+defusedxml>=0.7.1
+
+[:python_version < "3.10"]
+typing-extensions>=4.3.0
