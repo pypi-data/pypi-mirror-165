@@ -1,0 +1,83 @@
+# rpc_reader
+
+[![PyPI version](https://img.shields.io/pypi/v/rpc-reader.svg)](https://pypi.org/project/rpc-reader/)
+[![Build Status](https://gitlab.com/t8237/rpc_reader/badges/master/pipeline.svg)](https://gitlab.com/t8237/rpc_reader/-/commits/master)
+[![codecov](https://gitlab.com/t8237/rpc_reader/badges/master/coverage.svg)](https://gitlab.com/t8237/rpc_reader/-/commits/master)
+
+
+
+A RPC III file is a data file conforming to the RPC III file specification developed by MTS corporation. This utility reads RPC format and store the data using Numpy arrays. 
+
+This reader does not have the capacity to read all variants specified in the [documentation](https://corp.mts.com/cs/groups/public/documents/library/mts_007569.pdf) provided by MTS.
+
+## Installation
+This program can be installed from PyPi or from Gitlab.com
+```bash
+# From PyPi
+python -m pip install rpc-reader  
+
+# From gitlab.com
+python -m pip install git+https://gitlab.com/t8237/rpc_reader.git
+```
+
+
+## Usage
+### Python module
+
+```python
+import pathlib
+from rpc_reader import rpc_reader
+
+# Set path to file
+rpc_file_path = pathlib.Path('rpc_file_path.prc')
+
+# Instantiate reader object
+prc_object = rpc_reader.ReadRPC(rpc_file_path)
+
+# Import data
+prc_object.import_rpc_data_from_file()
+
+# Export data to numpy as compressed npz file
+prc_object.save_npy_data_to_file()
+
+# Get headers
+headers = prc_object.get_headers()
+
+# Get channels
+channels = prc_object.get_channels()
+
+# Get measurement data as a numpy array
+data = prc_object.get_data()
+```
+
+### Command line usage
+The command line version will read the content of the rpc-file and export it as a Numpy compressed npz file.
+
+```bash
+# This will export source data to path_to_file.npz
+rpc_reader path_to_file.rpc
+
+# Add extra headers missing in the source data and export it to path_to_file.npz
+rpc_reader path_to_file.rpc -extra-header MY_HEADER MY_HEADER_VALUE -extra-header ENGINEER_NAME BAT_MAN
+```
+
+# Version history
+## 0.8
+ - Added possibility to add extra headers from command line
+## 0.7
+ - Minor cleanup of code
+## 0.6
+ - Corrected header reading
+ - Allow for reading of demultiplexed data
+## 0.5
+ - Allow for multiple data types from header DATA_TYPE
+ - Contributed by: Zhang Xing Jing
+## 0.4
+ - First  public version with working basic functionality
+
+# Contribution and bug reports
+Please use this issue tracker in the on gitlab.com for issues and enhancements!
+[rpc-reader issues](https://gitlab.com/t8237/rpc_reader/-/issues)  
+
+## Contributors
+Niklas Melin
