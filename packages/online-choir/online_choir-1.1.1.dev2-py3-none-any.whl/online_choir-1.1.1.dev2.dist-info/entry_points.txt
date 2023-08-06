@@ -1,0 +1,4 @@
+[console_scripts]
+online-choir-director = onlinechoir.master:cli
+online-choir-server = onlinechoir.server:cli
+online-choir-singer = onlinechoir.slave:cli
