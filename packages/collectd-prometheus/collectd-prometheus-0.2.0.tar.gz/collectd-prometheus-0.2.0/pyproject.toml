@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "collectd-prometheus"
+version = "0.2.0"
+description = "collectd plugin to read Prometheus metrics endpoints"
+authors = ["Ryar Nyah <ryarnyah@gmail.com>"]
+homepage = "https://github.com/ryarnyah/collectd-prometheus"
+repository = "https://github.com/ryarnyah/collectd-prometheus"
+readme = "README.md"
+license = "Apache-2.0"
+
+[tool.poetry.dependencies]
+python = "~2.7 || ^3.6"
+prometheus-client = "^0.7.1"
+requests = "^2.25.1"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
