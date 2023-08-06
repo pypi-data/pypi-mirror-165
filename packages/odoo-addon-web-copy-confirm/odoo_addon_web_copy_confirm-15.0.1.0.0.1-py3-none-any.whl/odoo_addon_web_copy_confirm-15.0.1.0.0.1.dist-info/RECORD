@@ -1,0 +1,17 @@
+odoo/addons/web_copy_confirm/README.rst,sha256=LYKK510buy0cNFv4k3Q0dxzbXesJxL-kc-KV4hK88Mo,2867
+odoo/addons/web_copy_confirm/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+odoo/addons/web_copy_confirm/__manifest__.py,sha256=GAO-DRXalZvDcHgojqNjBfbV7pUGy_cW2ehDjV-KaTg,712
+odoo/addons/web_copy_confirm/i18n/de.po,sha256=vPkrWgj7wjchWdZxsSw-oV5VrO_frfaeMrvRnZNESeU,947
+odoo/addons/web_copy_confirm/i18n/web_copy_confirm.pot,sha256=Wx_J8SpV-4RCMQnDEd6geocBLr6JJsMd3CCYZhMSjyc,721
+odoo/addons/web_copy_confirm/readme/CONTRIBUTORS.rst,sha256=3rNC4EJBQ4L5brAKHs-vhE9gSuchhTGX_7wjTF3UUqA,84
+odoo/addons/web_copy_confirm/readme/DESCRIPTION.rst,sha256=RI59xDK3co7lDbiRP38axdAgUadCxJXQktn4VlGZhl0,143
+odoo/addons/web_copy_confirm/readme/HISTORY.rst,sha256=YghM7DSWT3jh-RnX_YWPUVOCZtWky6FZdkN4L9zWr5o,71
+odoo/addons/web_copy_confirm/readme/newsfragments/.gitkeep,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+odoo/addons/web_copy_confirm/static/description/icon.png,sha256=6xBPJauaFOF0KDHfHgQopSc28kKvxMaeoQFQWZtfZDo,9455
+odoo/addons/web_copy_confirm/static/description/index.html,sha256=7MAio01MpPjSNz0bRvhYFJQK8-N3pbnsGwo8ZX0679k,12447
+odoo/addons/web_copy_confirm/static/src/js/web_copy_confirm.js,sha256=UA7CUI4ldm9dchQfXf6argjmDfgrFSX8nUp6-7yyHko,1713
+odoo/addons/web_copy_confirm/static/tests/confirm_tests.js,sha256=8V8t531ZAM6lXQvT-2NKYOHF8pODlYzx142mN9vMscM,2957
+odoo_addon_web_copy_confirm-15.0.1.0.0.1.dist-info/METADATA,sha256=En9AZTejOffvJsc0mzLM--uFIEpYJMpkzPG9zqa-MGY,3418
+odoo_addon_web_copy_confirm-15.0.1.0.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+odoo_addon_web_copy_confirm-15.0.1.0.0.1.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+odoo_addon_web_copy_confirm-15.0.1.0.0.1.dist-info/RECORD,,
