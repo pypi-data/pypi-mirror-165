@@ -1,0 +1,9 @@
+README.md
+setup.py
+hakai_api/Client.py
+hakai_api/__init__.py
+hakai_api.egg-info/PKG-INFO
+hakai_api.egg-info/SOURCES.txt
+hakai_api.egg-info/dependency_links.txt
+hakai_api.egg-info/requires.txt
+hakai_api.egg-info/top_level.txt
