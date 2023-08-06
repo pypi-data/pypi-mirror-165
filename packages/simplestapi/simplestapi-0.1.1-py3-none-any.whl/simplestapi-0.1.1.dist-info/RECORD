@@ -1,0 +1,14 @@
+simpleapi/README.md,sha256=-ryK5zLbyFEsAAwGcZX7Eu0GItc0HCo6dRm2E7AcqHw,776
+simpleapi/__init__.py,sha256=SUpYGyGeVSb2ETW5LVYwtqq_zy2hyN0hunVwgpDV9ew,616
+simpleapi/core.py,sha256=INT7k3pZoFS8JzVb9c2n17xRShXn2ylo_Mtshvbsj78,2180
+simpleapi/custom_types.py,sha256=eAoXWaI610JADCuynCbOl-D__EhK2yIYaG7FpZ24AWE,415
+simpleapi/handler.py,sha256=Z_OMFuFbbqksH3SpnBdTGu_JVtD6ci6TXXUwKIwHyVc,6468
+simpleapi/request.py,sha256=VcnIRDT7RbdshVVqBD08FhBSVIhB7Zc-nYxDqyrZHCs,1088
+simpleapi/response.py,sha256=_4lIWNo26bqqocv9Pva4MZ-iM3hnNi5Q5DLG00AbSWI,4470
+simpleapi/router.py,sha256=aU8Fs0hvr819VCCKvYkCeTBY8ISBT2gTI4SamfI2Emc,52
+simpleapi/simpleapi.py,sha256=J3XANFFI9M_qC3UGPN9RnZtxc7qqwxEfGMbSgKcJ6gE,2124
+simpleapi/utils.py,sha256=6LyJq5qvH1-zsFYL8e5o2KDG7elGZLdN7MPSIqLQ7ZI,3000
+simplestapi-0.1.1.dist-info/LICENSE,sha256=pAZXnNE2dxxwXFIduGyn1gpvPefJtUYOYZOi3yeGG94,1068
+simplestapi-0.1.1.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+simplestapi-0.1.1.dist-info/METADATA,sha256=27RVsK7gnHlkdUZdWfyundSv3k4pClpu6Y-TEzDmCS0,1668
+simplestapi-0.1.1.dist-info/RECORD,,
