@@ -1,0 +1,14 @@
+get_coordinates/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+get_coordinates/__main__.py,sha256=ICYED4G-NfxiQqwkUu2MKoPn1LKDyITunhXif0JVG0w,2927
+get_coordinates/boundaries/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+get_coordinates/boundaries/get_world_countries.py,sha256=oBodsJwvFCv5dAz_0ow-NJbBsm46CkioylSgKn1jOmY,238
+get_coordinates/boundaries/world_countries.geojson,sha256=YAmJHIr3ObAvjg-RNwRUdKGlQTrcAqGtBOhLe9GJRYw,290916
+get_coordinates/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+get_coordinates/utils/export.py,sha256=9u8DsJ6KINvFOtSOnqNChyeE2a-EpMayg9tKL_k-loE,498
+get_coordinates/utils/points.py,sha256=Pqjm3Xr1tD--2q0lmv8k9imTZy_5qizSwekNR-z8cR4,1078
+get_coordinates/utils/show.py,sha256=ak4JwYqspTWoYXYyrogLxekyEzg5OtP1XJOVpRRTkv0,1139
+random_spatial_py-0.0.2.dist-info/LICENSE,sha256=FX_LsXEF8JrvvPd6-OgSRgIVFfpXHL2ZLFmw0VBQL7M,1073
+random_spatial_py-0.0.2.dist-info/METADATA,sha256=5am8uTb62_5HKwzKGCfAtSFVq_pWwVdz4Q2iS5Ecnd0,4104
+random_spatial_py-0.0.2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+random_spatial_py-0.0.2.dist-info/top_level.txt,sha256=dGrYW_0j9_Qdu47vfEQf8HjA7rXs1RAqDF8m8MjNQ9k,16
+random_spatial_py-0.0.2.dist-info/RECORD,,
