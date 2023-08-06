@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: supreme-spoon
+Version: 0.1.0
+Summary: Tools for Reduction of NIRISS/SOSS TSOs
+Home-page: https://github.com/radicamc/supreme-spoon
+Author: Michael Radica
+Author-email: michael.radica@umontreal.ca
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.10
+License-File: LICENSE
+
+UNKNOWN
+

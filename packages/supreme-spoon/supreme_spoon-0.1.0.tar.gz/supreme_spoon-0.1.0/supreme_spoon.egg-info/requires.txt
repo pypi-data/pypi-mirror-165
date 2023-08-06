@@ -1,0 +1,10 @@
+applesoss
+astropy
+bottleneck
+corner
+jwst
+matplotlib
+numpy
+pandas
+scipy
+tqdm
