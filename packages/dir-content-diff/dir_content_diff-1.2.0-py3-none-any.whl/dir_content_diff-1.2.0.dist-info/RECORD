@@ -1,0 +1,12 @@
+dir_content_diff/__init__.py,sha256=JYWJzlOUqWgquABZnNfo_x52D4yiUVc7AH-c588nFow,12284
+dir_content_diff/base_comparators.py,sha256=sDMlcxwNaYBtDT2lEhUSBKs1eto3IYUSoDFv8Y9TnkY,17591
+dir_content_diff/pandas.py,sha256=4xJZL-1v8htly0b-GTt9LZw54wCATyvOZ77L5f3Q5F0,6103
+dir_content_diff/pytest_plugin.py,sha256=eXA4zuxXTWIf5AOGNWG9LI_QcrdfktPpPg589TI-yxI,1660
+dir_content_diff/util.py,sha256=IOlKLVoWNXZw0ropmyDqfvrBZS4w9goU9xtM1x7o2H8,3359
+dir_content_diff-1.2.0.dist-info/AUTHORS.md,sha256=wye_V3N5cVTP5JONqhHkC6ws6cTLbN3oPWwGGbYIkRY,63
+dir_content_diff-1.2.0.dist-info/LICENSE.txt,sha256=LB1P9Xb9Oukutayvh31fq7onCNVGQyiesS2oyeZNQO8,11354
+dir_content_diff-1.2.0.dist-info/METADATA,sha256=xipM9yN3N_aDDaSgfi3M-UwPvSf5Ru_Ty88cKLnJ7uM,8647
+dir_content_diff-1.2.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+dir_content_diff-1.2.0.dist-info/entry_points.txt,sha256=kzBMpDaEbrXBsblQ7zk4uvas5c46xaYEYqTjZg0y3Gs,62
+dir_content_diff-1.2.0.dist-info/top_level.txt,sha256=YYKrmU6v4oXoD0vkgEq86rpAuAJq4eeilgQcLzZj1a8,17
+dir_content_diff-1.2.0.dist-info/RECORD,,
