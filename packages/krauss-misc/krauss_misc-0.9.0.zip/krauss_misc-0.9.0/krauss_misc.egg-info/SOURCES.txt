@@ -1,0 +1,5 @@
+setup.py
+krauss_misc.egg-info/PKG-INFO
+krauss_misc.egg-info/SOURCES.txt
+krauss_misc.egg-info/dependency_links.txt
+krauss_misc.egg-info/top_level.txt
