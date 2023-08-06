@@ -1,0 +1,9 @@
+solmate_sdk/__init__.py,sha256=_DHHM4u-m3ifM76Dwu3VU9uOsoL83ET3ImcbvVz4uEA,91
+solmate_sdk/apiclient.py,sha256=DATq-WEohSUEnYITymRrtAaa8Vq5c8NvNWEMU04adOE,4888
+solmate_sdk/connection.py,sha256=0ZEdkWY-pvYD3rOyki3s-RQXSFqlJT15R1x2rYIrZJ8,1291
+solmate_sdk/tests.py,sha256=GqfKX7qrM6nTONH4bPrgrc6mhGJx-3VVXZsD_d-id2A,413
+solmate_sdk/utils.py,sha256=kyzaafPXPVAL1vnaELQqFzUntNhj54qya62m7MQ3ahM,733
+solmate_sdk-0.1.2.dist-info/LICENSE.md,sha256=J5kKPP5JV3eBJBLwKoLA8o14M0XvDAzMCui5L70MXPE,1095
+solmate_sdk-0.1.2.dist-info/WHEEL,sha256=bbU3AyvhQ312rVm7zzRQjs6axI1UYWC3nmFA2E6FFSI,88
+solmate_sdk-0.1.2.dist-info/METADATA,sha256=5abEOzQ4D5sARLINs5Trd1lGhZidISLtgU8krjRueuo,1782
+solmate_sdk-0.1.2.dist-info/RECORD,,
