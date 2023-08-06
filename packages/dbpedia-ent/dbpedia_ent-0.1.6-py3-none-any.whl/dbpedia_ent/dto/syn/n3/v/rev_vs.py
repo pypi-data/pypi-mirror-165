@@ -1,0 +1,43 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_rev_vs = {'vs._ballon_fight': 'nintendo_vs._series',
+ 'vs_of_california': 'bank_of_the_west_classic',
+ 'vs_of_chicago': 'ameritech_cup',
+ 'vs_of_florida': 'delray_beach_winter_championship',
+ 'vs_raw_2009': 'wwe_smackdown_vs._raw_2009',
+ 'vs_rugby_f.c.': 'rugby_town_f.c.',
+ 'vs_sport_tallinn': 'sk_tallinna_sport',
+ 'vsc_high_school': 'valley_stream_central_high_school',
+ 'vseobecna_obcanska_strana': 'general_civic_party',
+ 'vseslav_of_kiev': 'vseslav_of_polotsk',
+ 'vseslav_of_polatsk': 'vseslav_of_polotsk',
+ 'vseslav_the_sorcerer': 'vseslav_of_polotsk',
+ 'vsevolod_big_nest': 'vsevolod_the_big_nest',
+ 'vsevolod_borisovich_bessonov': 'vsevolod_bessonov',
+ 'vsevolod_borisovich_levenstein': 'seva_novgorodsev',
+ 'vsevolod_emilevich_meyerhold': 'vsevolod_meyerhold',
+ 'vsevolod_emilievich_meyerhold': 'vsevolod_meyerhold',
+ 'vsevolod_i_yaroslavich': 'vsevolod_i_of_kiev',
+ 'vsevolod_ii_olgovich': 'vsevolod_ii_of_kiev',
+ 'vsevolod_iii_yuryevich': 'vsevolod_the_big_nest',
+ 'vsevolod_ilarionovich_pudovkin': 'vsevolod_pudovkin',
+ 'vsevolod_illarionovich_pudovkin': 'vsevolod_pudovkin',
+ 'vsevolod_mikhailovich_abramovich': 'vsevolod_abramovich',
+ 'vsevolod_mikhailovich_bobrov': 'vsevolod_bobrov',
+ 'vsevolod_mikhailovich_garshin': 'vsevolod_garshin',
+ 'vsevolod_mikhaylovich_garshin': 'vsevolod_garshin',
+ 'vsevolod_of_kiev': 'vsevolod_i_of_kiev',
+ 'vsevolod_sergeevich_solovyov': 'vsevolod_solovyov',
+ 'vsevolod_sergyeevich_solovyoff': 'vsevolod_solovyov',
+ 'vsevolod_vyacheslavovich_ivanov': 'vsevolod_ivanov',
+ 'vsevolod_yemilyevich_meyerhold': 'vsevolod_meyerhold',
+ 'vsichni_dobri_rodaci': 'all_my_compatriots',
+ 'vsk_osterholz-scharmbeck_ii': 'vsk_osterholz-scharmbeck',
+ 'vsk_osterholz_ii': 'vsk_osterholz-scharmbeck',
+ 'vsk_osterholz_scharmbeck': 'vsk_osterholz-scharmbeck',
+ 'vsmpo_avisma_corporation': 'vsmpo-avisma',
+ 'vss_high_school': 'valley_stream_south_high_school'}
+        

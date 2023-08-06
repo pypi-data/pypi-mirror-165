@@ -1,0 +1,38 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_trie_jk = {'_': ['jk_lakshmipat_university',
+       'jk_kaitseliit_kalev',
+       'jk_rowling_parodies',
+       'jk_viljandi_tulevik',
+       'jk_tulevik_viljandi',
+       'jk_piraaja_tallinn',
+       'jk_virumaa_rakvere',
+       'jk_rakvere_virumaa',
+       'jk_greye_software',
+       'jk_tallinna_sadam',
+       'jk_sillamae_kalev',
+       'jk_maag_tammeka-2',
+       'jk_tallinna_kalev',
+       'jk_kim_dong-wook',
+       'jk_tammeka_tartu',
+       'jk_vaprus_vandra',
+       'jk_kalev_tallinn',
+       'jk_public_school',
+       'jk_merkuur_tartu',
+       'jk_maag_tammeka',
+       'jk_brackens_gaa',
+       'jk_trans_narva',
+       'jk_narva_trans',
+       'jk_tammeka_iii',
+       'jk_place_capri',
+       'jk_maag_tartu',
+       'jk_96_helmet',
+       'jk_and_joel'],
+ 'f': ['jkfa_professional_league'],
+ 'h': ['jkh_gks_jastrzebie'],
+ 'o': ['jkoy_class_sm5'],
+ 's': ['jks_1909_jaroslaw'],
+ 't': ['jkt_oljoro_f.c.', 'jkt_ruvu_stars']}

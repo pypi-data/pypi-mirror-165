@@ -1,0 +1,38 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_trie_jm = {'_': ['jm/wave', 'jm-1232'],
+ 'a': ['jmath666',
+       'jmagick',
+       'jmanga',
+       'jmarr',
+       'jmaia',
+       'jmann',
+       'jmall',
+       'jmag',
+       'jmac',
+       'jma'],
+ 'b': ['jmbras', 'jmba', 'jmbg', 'jmb'],
+ 'c': ['jmchs', 'jmcc', 'jmc'],
+ 'd': ['jmdict', 'jmdb', 'jmdc', 'jmd'],
+ 'e': ['jmeter', 'jmesh', 'jmev', 'jmet', 'jme'],
+ 'f': ['jmf'],
+ 'h': ['jmhs', 'jmh'],
+ 'i': ['jmi-edison', 'jmicron', 'jmirc', 'jmit', 'jmis', 'jmic', 'jmir', 'jmi'],
+ 'j': ['jmjd1c', 'jmjd6', 'jmjb', 'jmj'],
+ 'k': ['jmke.', 'jmke', 'jmk'],
+ 'l': ['jmls', 'jmlr', 'jml'],
+ 'm': ['jmmanuel', 'jmmmm', 'jmml', 'jmm'],
+ 'n': ['jmn'],
+ 'o': ['jmodelica.org', 'jmonkeyengine', 'jmodem', 'jmol', 'jmo'],
+ 'p': ['jmpt', 'jmp'],
+ 'r': ['jmri', 'jmrc', 'jmr'],
+ 's': ['jmsdf', 'jmsfz', 'jmsb', 'jmsn', 'jmsc', 'jms'],
+ 't': ['jmtc', 'jmt'],
+ 'u': ['jmulti', 'jmusic', 'jmule', 'jmucc', 'jmu'],
+ 'v': ['jmv'],
+ 'w': ['jmwave', 'jmw'],
+ 'x': ['jmx'],
+ 'y': ['jmy']}

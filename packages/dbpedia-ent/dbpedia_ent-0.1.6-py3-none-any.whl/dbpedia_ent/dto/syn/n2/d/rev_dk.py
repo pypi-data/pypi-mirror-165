@@ -1,0 +1,41 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_rev_dk = {'dk_64': 'donkey_kong_64',
+ 'dk_adult': 'dorling_kindersley',
+ 'dk_audikesavulu': 'd._k._audikesavulu',
+ 'dk_broster': 'd._k._broster',
+ 'dk_ceti': 'hd_12039',
+ 'dk_chakrabarti': 'd._k._chakrabarti',
+ 'dk_holm': 'd._k._holm',
+ 'dk_jamz': 'the_original_donkey_kong_country_soundtrack',
+ 'dk_jet': 'donkey_kong_barrel_blast',
+ 'dk_kennedys': 'dead_kennedys',
+ 'dk_lac': 'dk_lacertae',
+ 'dk_naiker': 'd._k._naiker',
+ 'dk_pattammal': 'd._k._pattammal',
+ 'dk_publishing': 'dorling_kindersley',
+ 'dk_taknet': 'd._k._taknet',
+ 'dk_tyagi': 'deep_tyagi',
+ 'dk_ulrich': 'd._k._ulrich',
+ 'dka_smolensk': 'fc_iskra_smolensk',
+ 'dke_pong': 'delta_kappa_epsilon',
+ 'dki_jakarta': 'jakarta',
+ 'dki_jaya': 'jakarta',
+ 'dkm_bismarck': 'german_battleship_bismarck',
+ 'dkm_deutschland': 'german_pocket_battleship_deutschland',
+ 'dkm_gneisenau': 'german_battleship_gneisenau',
+ 'dkm_kormoran': 'german_auxiliary_cruiser_kormoran',
+ 'dkm_luetzow': 'german_pocket_battleship_deutschland',
+ 'dkm_lutzow': 'german_pocket_battleship_deutschland',
+ 'dkm_scharnhorst': 'german_battleship_scharnhorst',
+ 'dkm_schleswig-holstein': 'sms_schleswig-holstein',
+ 'dkm_tirpitz': 'german_battleship_tirpitz',
+ 'dkv_joventut': 'joventut_badalona',
+ 'dkw_750': 'dkw_junior',
+ 'dkw_f103': 'audi_f103',
+ 'dkw_f11': 'dkw_junior',
+ 'dkw_f12': 'dkw_junior'}
+        

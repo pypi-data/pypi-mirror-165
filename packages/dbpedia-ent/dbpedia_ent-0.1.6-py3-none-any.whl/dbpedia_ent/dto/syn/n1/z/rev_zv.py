@@ -1,0 +1,41 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_rev_zv = {'zvaezarm': 'svazarm',
+ 'zvariant': 'z-variant',
+ 'zvazarm': 'svazarm',
+ 'zvenigorodka': 'zvenyhorodka',
+ 'zvera': 'saldus_district',
+ 'zveref': 'zverev',
+ 'zverin': 'schwerin',
+ 'zvex': 'z.vex_effects',
+ 'zvezda-2005': 'zvezda_2005_perm',
+ 'zvezdnaya': 'zvyozdnaya',
+ 'zvezdniy': 'zvyozdny',
+ 'zvezdnoye': 'zvyozdny',
+ 'zvezdny': 'zvyozdny',
+ 'zvezdnyi': 'zvyozdny',
+ 'zvezdnyy': 'zvyozdny',
+ 'zviazda': 'zvyazda',
+ 'zvika': 'zvika_greengold',
+ 'zvilpogghua': 'tsathoggua',
+ 'zvilpoggua': 'tsathoggua',
+ 'zvimbutas': 'palemonids',
+ 'zviozdniy': 'zvyozdny',
+ 'zviozdny': 'zvyozdny',
+ 'zviozdnyi': 'zvyozdny',
+ 'zviozdnyy': 'zvyozdny',
+ 'zviozdocica': 'ucrainca',
+ 'zvjaginsev': 'vadim_zvjaginsev',
+ 'zvjezdarnica': 'zagreb_observatory',
+ 'zvonareva': 'vera_zvonareva',
+ 'zvulun': 'tribe_of_zebulun',
+ 'zvyagel': 'novohrad-volynskyi',
+ 'zvyozdniy': 'zvyozdny',
+ 'zvyozdnoye': 'zvyozdny',
+ 'zvyozdnyi': 'zvyozdny',
+ 'zvyozdnyy': 'zvyozdny',
+ 'zvzzt': 'supermontage'}
+        

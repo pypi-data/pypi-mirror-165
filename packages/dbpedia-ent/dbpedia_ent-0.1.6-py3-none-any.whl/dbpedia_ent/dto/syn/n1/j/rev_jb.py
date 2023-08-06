@@ -1,0 +1,41 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_rev_jb = {'jb3d': 'jonas_brothers:_the_3d_concert_experience',
+ 'jbacec': 'jawbone-butterbredt_area_of_critical_environmental_concern',
+ 'jbail': 'byblos',
+ 'jbala': 'jebala',
+ 'jbca': 'jodrell_bank_centre_for_astrophysics',
+ 'jbds': 'jboss_developer_studio',
+ 'jbei': 'joint_bioenergy_institute',
+ 'jbeil': 'byblos',
+ 'jbenchmark': 'kishonti_informatics',
+ 'jbfc': 'johnstone_burgh_f.c.',
+ 'jbhifi': 'jb_hi-fi',
+ 'jbibtexmanager': 'jabref',
+ 'jbic': 'japan_bank_for_international_cooperation',
+ 'jbig1': 'jbig',
+ 'jbims': 'jamnalal_bajaj_institute_of_management_studies',
+ 'jbis': 'journal_of_the_british_interplanetary_society',
+ 'jbl-urei': 'universal_audio',
+ 'jbl/urei': 'universal_audio',
+ 'jblmnhs': 'jose_borromeo_legaspi_memorial_national_high_school',
+ 'jblog': 'j-blogosphere',
+ 'jblogosphere': 'j-blogosphere',
+ 'jblu': 'jetblue_airways',
+ 'jbmp': 'jbpm',
+ 'jbmw': 'journal_for_biblical_manhood_and_womanhood',
+ 'jbnhs': 'journal_of_the_bombay_natural_history_society',
+ 'jbnm': 'next_men',
+ 'jbnsts': 'jagadis_bose_national_science_talent_search',
+ 'jboss': 'jboss_application_server',
+ 'jbossas': 'jboss_application_server',
+ 'jbossws': 'jboss_application_server',
+ 'jbtz-trial': 'jbtz_trial',
+ 'jbu292': 'jetblue_airways_flight_292',
+ 'jbvo': 'johnny_bravo',
+ 'jbwere': 'goldman_sachs',
+ 'jbwkz': 'jabbawockeez'}
+        

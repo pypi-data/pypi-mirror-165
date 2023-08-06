@@ -1,0 +1,42 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_rev_lv = {'lv_board': 'last_vehicle_board',
+ 'lv_locomotives': 'las_vegas_locomotives',
+ 'lv_osprey': 'le_batofar',
+ 'lv_prasad': 'l._v._prasad',
+ 'lv_sem': 'esem',
+ 'lv_zhiwu': 'lu_zhiwu',
+ 'lvea_aem': 'lvea_aem_district',
+ 'lvfcs_awards': 'las_vegas_film_critics_society',
+ 'lvg_b.ii': 'lvg_b.i',
+ 'lvg_b.iii': 'lvg_b.i',
+ 'lvg_c.i': 'lvg_c.ii',
+ 'lvg_c.iii': 'lvg_c.ii',
+ 'lvg_c.iv': 'lvg_c.ii',
+ 'lvi_airport': 'lehigh_valley_international_airport',
+ 'lview_pro': 'lview',
+ 'lviny_bridge': 'bridge_of_four_lions',
+ 'lviv_airport': 'lviv_international_airport',
+ 'lviv_ghetto': 'lemberg_ghetto',
+ 'lviv_land': 'lemberg_land',
+ 'lviv_opera': 'lviv_theatre_of_opera_and_ballet',
+ 'lviv_polytechnics': 'lviv_polytechnic',
+ 'lviv_region': 'lviv_oblast',
+ 'lviv_stadium': 'ukraina_stadium',
+ 'lviv_streetcar': 'trams_in_lviv',
+ 'lviv_tram': 'trams_in_lviv',
+ 'lviv_tramway': 'trams_in_lviv',
+ 'lvivska_oblast': 'lviv_oblast',
+ 'lvmh_group': 'lvmh',
+ 'lvov_airlines': 'lviv_airlines',
+ 'lvov_ghetto': 'lemberg_ghetto',
+ 'lvov_oblast': 'lviv_oblast',
+ 'lvov_pogrom': 'lviv_pogrom',
+ 'lvov_university': 'lviv_university',
+ 'lvt_1': 'landing_vehicle_tracked',
+ 'lvt_2': 'landing_vehicle_tracked',
+ 'lvt_4': 'landing_vehicle_tracked'}
+        

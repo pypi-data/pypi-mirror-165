@@ -1,0 +1,43 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_rev_uw = {'uw-uxga': 'wuxga',
+ 'uwacu': 'louise_uwacu',
+ 'uwahc': 'the_university_of_western_australia_hockey_club',
+ 'uwaiysi': 'uwaisi',
+ 'uwaterloo': 'university_of_waterloo',
+ 'uwaysi': 'uwaisi',
+ 'uwc-usa': 'armand_hammer_united_world_college_of_the_american_west',
+ 'uwcac': 'atlantic_college',
+ 'uwcad': 'united_world_college_of_the_adriatic',
+ 'uwcc': 'cardiff_university',
+ 'uwchmynydd': 'aberdaron',
+ 'uwcsc': 'university_of_waterloo_computer_science_club',
+ 'uwcsea': 'united_world_college_of_south_east_asia',
+ 'uweinat': 'jebel_uweinat',
+ 'uwejohnson': 'uwe_johnson',
+ 'uweo': 'university_of_washington_educational_outreach',
+ 'uwest': 'university_of_the_west',
+ 'uwfc': 'unofficial_football_world_championships',
+ 'uwfi': 'uwf_international',
+ 'uwgg': 'nizhny_novgorod_international_airport',
+ 'uwist': 'cardiff_university',
+ 'uwkb': 'bugulma_airport',
+ 'uwkd': 'kazan_international_airport',
+ 'uwks': 'cheboksary_airport',
+ 'uwll': 'ulyanovsk_baratayevka_airport',
+ 'uwlw': 'ulyanovsk_vostochny_airport',
+ 'uwmc': 'university_of_washington_medical_center',
+ 'uwoo': 'orenburg_tsentralny_airport',
+ 'uwor': 'orsk_airport',
+ 'uwpp': 'penza_airport',
+ 'uwsa': 'united_wa_state_army',
+ 'uwsom': 'university_of_washington_school_of_medicine',
+ 'uwtb': 'the_sirens_of_titan',
+ 'uwua': 'utility_workers_union_of_america',
+ 'uwuhan': 'wuhan_university',
+ 'uwuxga': 'wuxga',
+ 'uwww': 'kurumoch_international_airport'}
+        

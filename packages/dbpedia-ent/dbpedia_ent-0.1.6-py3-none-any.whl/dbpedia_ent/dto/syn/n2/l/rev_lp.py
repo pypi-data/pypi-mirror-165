@@ -1,0 +1,42 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_rev_lp = {'lp_2': 'lp_ii',
+ 'lp_20': 'texas_state_highway_loop_20',
+ 'lp_3': 'lp_iii',
+ 'lp_560-4': 'lamborghini_gallardo',
+ 'lp_band': 'lake_park_marching_band',
+ 'lp_cookingham': 'laurie_perry_cookingham',
+ 'lp_davies': 'l._p._davies',
+ 'lp_decoding': 'linear_programming_decoding',
+ 'lp_discography': 'linkin_park_discography',
+ 'lp_filter': 'low-pass_filter',
+ 'lp_gas': 'liquefied_petroleum_gas',
+ 'lp_hartley': 'l._p._hartley',
+ 'lp_jacks': 'l._p._jacks',
+ 'lp_jai': 'l._p._jai',
+ 'lp_ladouceur': 'l._p._ladouceur',
+ 'lp_mud': 'lpmud',
+ 'lp_norm': 'lp_space',
+ 'lp_problem': 'linear_programming',
+ 'lp_record': 'lp_album',
+ 'lp_relaxation': 'linear_programming_relaxation',
+ 'lp_solve': 'linear_programming',
+ 'lp_spaces': 'lp_space',
+ 'lp_supercell': 'supercell',
+ 'lp_underground': 'linkin_park_discography',
+ 'lp_vidyarthi': 'l._p._vidyarthi',
+ 'lpc_acetyltransferase': 'acyltransferase_like_2',
+ 'lpc_bus': 'low_pin_count',
+ 'lpc_uwc': 'li_po_chun_united_world_college',
+ 'lpg_autogas': 'autogas',
+ 'lpg_scooter': 'lpg_powered_scooters',
+ 'lpga_tour': 'lpga',
+ 'lpm_564': 'gliese_581',
+ 'lpm_645': 'gliese_674',
+ 'lpm_814': 'gliese_849',
+ 'lprc_oilers': 'liberia_petroleum_refining_company_oilers',
+ 'lpt_port': 'lpt'}
+        

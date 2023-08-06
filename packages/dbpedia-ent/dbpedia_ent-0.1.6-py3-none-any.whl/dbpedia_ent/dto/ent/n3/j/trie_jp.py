@@ -1,0 +1,37 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_trie_jp = {'_': ['jp/politikens_hus_a/s',
+       'jp_cooper_discography',
+       'jp_morgan_partners',
+       'jp_schneider_store',
+       'jp_morgan_cazenove',
+       'jp_riddle_stadium',
+       'jp_morgan_chase',
+       'jp_morgan_cup',
+       'jp_den_hartog',
+       'jp_du_plessis',
+       'jp_du_preez'],
+ 'c': ['jpc_de_sprengen'],
+ 'e': ['jpeg_compression_artifacts',
+       'jpeg_lossless_compression',
+       'jpeg_network_graphics',
+       'jpeg_file_format'],
+ 'f': ['jpf_music_awards'],
+ 'l': ['jpl_small-body_database', 'jpl_science_division'],
+ 'm': ['jpmorgan_corporate_challenge',
+       'jpmorgan_russian_securities',
+       'jpmorgan_asset_management',
+       'jpmorgan_chase_building',
+       'jpmorgan_gbi-em_index',
+       'jpmorgan_chase_tower',
+       'jpmorgan_chase_bank',
+       'jpm_03_loiret',
+       'jpm_01_medoc'],
+ 'n': ['jpn_world_econ'],
+ 's': ['jpstevens_high_school', 'jps_health_network', 'jps_team_bmw'],
+ 't': ['jpt_bus_company', 'jpt_scare_band'],
+ 'v': ['jpv_marikina_f.c.'],
+ 'x': ['jpx_pul_425']}

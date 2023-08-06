@@ -1,0 +1,42 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_rev_wn = {'wn_9007': 'william_h._natcher_parkway',
+ 'wn_cobbold': 'william_cobbold',
+ 'wn_colquitt': 'w._n._colquitt',
+ 'wn_herbert': 'w._n._herbert',
+ 'wn_hodgson': 'w._n._hodgson',
+ 'wn_star': 'wolf-rayet_star',
+ 'wnas_radio': 'wnas',
+ 'wnba_attendance': 'template:wnba_attendance',
+ 'wnba_champions': 'wnba_finals',
+ 'wnba_championship': 'wnba_finals',
+ 'wnba_mvp': 'wnba_most_valuable_player_award',
+ 'wnba_tuesday': 'wnba_on_espn',
+ 'wnba_tuesdays': 'wnba_on_espn',
+ 'wnbc_4': 'wnbc',
+ 'wnbc_radio': 'wfan',
+ 'wnbt_tv': 'wnbc',
+ 'wnc_4': 'winnecke_4',
+ 'wnc_object': 'winnecke_catalogue_of_double_stars',
+ 'wncaa_tournament': 'ncaa_tournament',
+ 'wncn_tower': 'wncn',
+ 'wncr_fm': 'wncr-fm',
+ 'wnd_books': 'worldnetdaily',
+ 'wnec_law': 'western_new_england_college_school_of_law',
+ 'wnep_anchors': 'wnep-tv',
+ 'wnet_idents': 'wnet',
+ 'wnew_1130': 'wbbr',
+ 'wnf_342': 'doblhoff_wnf_342',
+ 'wnnj_fm': 'wnnj',
+ 'wnp_barbellion': 'w._n._p._barbellion',
+ 'wnt_beckett': 'w._n._t._beckett',
+ 'wnt_pathway': 'wnt_signaling_pathway',
+ 'wnt_protein': 'wnt_signaling_pathway',
+ 'wnt_proteins': 'wnt_signaling_pathway',
+ 'wnt_signals': 'wnt_signaling_pathway',
+ 'wnur_sports': 'wnur-fm',
+ 'wnyc_radio': 'wnyc'}
+        

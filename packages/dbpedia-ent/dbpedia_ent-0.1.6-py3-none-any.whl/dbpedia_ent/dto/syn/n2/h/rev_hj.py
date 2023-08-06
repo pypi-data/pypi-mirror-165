@@ -1,0 +1,42 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_rev_hj = {'hj._nortamo': 'frans_hjalmar_nortamo',
+ 'hj_4866ab': 'r_arae',
+ 'hj_4949': 'hd_157661',
+ 'hj_5015': 'hd_165493',
+ 'hj_blackham': 'h._j._blackham',
+ 'hj_cockayne-cust': 'henry_cust',
+ 'hj_heinz': 'h._j._heinz_company',
+ 'hj_kania': 'h._j._kania',
+ 'hj_massingham': 'h._j._massingham',
+ 'hj_mcmanus': 'h._j._mcmanus',
+ 'hj_rose': 'h._j._rose',
+ 'hj_round': 'h._j._round',
+ 'hj_rous': 'henry_john_rous',
+ 'hj_stotter': 'h._j._stotter',
+ 'hj_tennant': 'harold_tennant',
+ 'hj_underwood': 'henry_jones_underwood',
+ 'hj_whitley': 'hobart_johnstone_whitley',
+ 'hj_woodall': 'h._j._woodall',
+ 'hj_woods': 'henry_john_woods',
+ 'hjallis_andersen': 'hjalmar_andersen',
+ 'hjallis_harkimo': 'harry_harkimo',
+ 'hjalmar_hoegquist': 'oscar_i_of_sweden',
+ 'hjalmar_hogquist': 'oscar_i_of_sweden',
+ 'hjalmer_rued': 'hjalmar_holand',
+ 'hjalti_skeggjason': 'hjalti_skeggiason',
+ 'hjelm_thurn-basberg': 'hjelm_waage_thurn-basberg',
+ 'hjem-is_europa': 'hjem-is',
+ 'hjem_is': 'hjem-is',
+ 'hjh_fenton': 'henry_john_horstman_fenton',
+ 'hjo_kommun': 'hjo_municipality',
+ 'hjoervard_ylfing': 'granmar',
+ 'hjortstamia_crassa': 'lopharia_crassa',
+ 'hjorvard_ylfing': 'granmar',
+ 'hjr_114': 'iraq_resolution',
+ 'hjr_murray': 'harold_james_ruthven_murray',
+ 'hjt-16_kiran': 'hal_kiran'}
+        

@@ -1,0 +1,42 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_rev_jr = {'jr._high_believe': 'jr_high_believe',
+ 'jr._high_school': 'middle_school',
+ 'jr._pac_man': 'jr._pac-man',
+ 'jr_akihabara_station': 'akihabara_station',
+ 'jr_allen_parkway': 'j._r._allen_parkway',
+ 'jr_and_babe': 'jr_chandler_and_babe_carey',
+ 'jr_bus_tohoku': 'jr_bus_tohoku_company',
+ 'jr_echigo_line': 'echigo_line',
+ 'jr_field_homestead': 'j._r._field_homestead',
+ 'jr_food_stores': 'jr._food_stores',
+ 'jr_gone_wild': 'jr._gone_wild',
+ 'jr_hakushin_line': 'hakushin_line',
+ 'jr_kanjo_sen': 'osaka_loop_line',
+ 'jr_kawachi-eiwa_station': 'kawachi-eiwa_station',
+ 'jr_nambu_line': 'nambu_line',
+ 'jr_nara_line': 'nara_line',
+ 'jr_nara_station': 'nara_station',
+ 'jr_rail_pass': 'japan_rail_pass',
+ 'jr_shuntokumichi_station': 'shuntokumichi_station',
+ 'jr_takarazuka_line': 'fukuchiyama_line',
+ 'jr_yamanote_line': 'yamanote_line',
+ 'jr_yumesaki_line': 'sakurajima_line',
+ 'jrb_fort_worth': 'naval_air_station_joint_reserve_base_fort_worth',
+ 'jrb_new_orleans': 'naval_air_station_joint_reserve_base_new_orleans',
+ 'jrc_nihon_musen': 'japan_radio_company',
+ 'jrd_tata_award': 'j._r._d._tata',
+ 'jrockit_mission_control': 'jrockit',
+ 'jrr_tolkien/frodo_baggins': 'frodo_baggins',
+ 'jrr_tolkien/middle_earth': 'middle-earth',
+ 'jrr_tolkien/quenta_silmarillion': 'quenta_silmarillion',
+ 'jrr_tolkien/the_hobbit': 'the_hobbit',
+ 'jrr_tolkien/the_silmarillion': 'the_silmarillion',
+ 'jrr_tolkien_encyclopedia': 'j.r.r._tolkien_encyclopedia',
+ 'jru_light_bombers': 'jru_heavy_bombers',
+ 'jruby_programming_language': 'jruby',
+ 'jrue_randall_holiday': 'jrue_holiday'}
+        

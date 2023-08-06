@@ -1,0 +1,41 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_rev_oj = {'oj_anderson': 'ottis_anderson',
+ 'oj_atogwe': 'oshiomogho_atogwe',
+ 'oj_brigance': 'o._j._brigance',
+ 'oj_epo': 'official_journal_of_the_european_patent_office',
+ 'oj_hart': 'owen_hart',
+ 'oj_l': 'official_journal_of_the_european_union',
+ 'oj_lodge': 'oliver_joseph_lodge',
+ 'oj_mayo': 'o._j._mayo',
+ 'oj_mcduffie': 'o._j._mcduffie',
+ 'oj_santiago': 'o._j._santiago',
+ 'oj_simpson': 'o._j._simpson',
+ 'oj_simpsons': 'o._j._simpson',
+ 'oj_trial': 'o._j._simpson_murder_case',
+ 'ojai_festival': 'ojai_music_festival',
+ 'ojai_freeway': 'california_state_route_33',
+ 'ojai_fritillary': 'fritillaria_ojaiensis',
+ 'ojamajo_dolemi': 'ojamajo_doremi',
+ 'ojcl_ohio': 'ohio_junior_classical_league',
+ 'oji_hiroi': 'hiroi_oji',
+ 'oji_paper': 'oji_paper_company',
+ 'ojibwa-odawa_language': 'ojibwe_language',
+ 'ojibwa-ottawa_language': 'ojibwe_language',
+ 'ojibwa-potawatomi-ottawa_language': 'ojibwe_language',
+ 'ojibwa_indian': 'ojibwe',
+ 'ojibwa_language': 'ojibwe_language',
+ 'ojibwa_tribe': 'ojibwe',
+ 'ojibway_park': 'ojibway_prairie_complex',
+ 'ojibwe_people': 'ojibwe',
+ 'ojika_peninsula': 'oshika_peninsula',
+ 'ojima_susumu': 'susumu_ojima',
+ 'ojin_guyot': 'ojin_seamount',
+ 'ojsc_dagsvyazinform': 'dagsvyazinform',
+ 'ojsc_giprosvyaz': 'giprosvyaz',
+ 'ojsc_svyazinvest': 'svyazinvest',
+ 'ojsc_uralsvyazinform': 'uralsvyazinform'}
+        

@@ -1,0 +1,43 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_rev_xb = {'xb-0_hresvelgr': 'ace_combat_zero:_the_belkan_war',
+ 'xb-28_dragon': 'north_american_xb-28',
+ 'xb-52_stratofortress': 'b-52_stratofortress',
+ 'xb-70a_valkyrie': 'xb-70_valkyrie',
+ 'xb_15': 'boeing_xb-15',
+ 'xb_browser': 'xerobank_browser',
+ 'xb_falcon': 'ford_xb_falcon',
+ 'xbarr_chart': 'x-bar/r_chart',
+ 'xbiz_awards': 'xbiz_award',
+ 'xbl_2.0': 'xbl',
+ 'xbl_vision': 'xbox_live_vision',
+ 'xbla_unplugged': 'xbox_live_arcade_unplugged',
+ 'xbox360_accessories': 'xbox_360_accessories',
+ 'xbox_1': 'xbox',
+ 'xbox_2': 'xbox_360',
+ 'xbox_3': 'xbox_360',
+ 'xbox_720': 'xbox',
+ 'xbox_camera': 'xbox_live_vision',
+ 'xbox_circle': 'xbox_360',
+ 'xbox_classics': 'platinum_hits',
+ 'xbox_console': 'xbox',
+ 'xbox_executable': 'xbox',
+ 'xbox_exhibition': 'xbox_exhibition_disks',
+ 'xbox_fluid': 'project_natal',
+ 'xbox_fs': 'xbox_360',
+ 'xbox_ii': 'xbox_360',
+ 'xbox_lag': 'xbox_live',
+ 'xbox_magazine': 'official_xbox_magazine',
+ 'xbox_mimesis': 'project_mimesis',
+ 'xbox_natal': 'project_natal',
+ 'xbox_next': 'xbox_360',
+ 'xbox_one': 'xbox',
+ 'xbox_three-sixty': 'xbox_360',
+ 'xbox_threehundredandsixty': 'xbox_360',
+ 'xbox_webcam': 'xbox_live_vision',
+ 'xbox_world': 'xbox_world_360',
+ 'xbx_plan': 'xbx'}
+        

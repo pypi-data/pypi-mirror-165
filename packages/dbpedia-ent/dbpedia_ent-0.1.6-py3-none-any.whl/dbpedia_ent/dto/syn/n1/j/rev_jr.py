@@ -1,0 +1,43 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_rev_jr = {'jr-tokai': 'central_japan_railway_company',
+ 'jr-west': 'west_japan_railway_company',
+ 'jrabiee': 'bedouin_systems_of_justice',
+ 'jrahs': 'james_ruse_agricultural_high_school',
+ 'jrakus': 'ciraquz',
+ 'jrakuys': 'ciraquz',
+ 'jrarat': 'jrarrat',
+ 'jras': 'royal_asiatic_society',
+ 'jrb37': 'judiciary_reorganization_bill_of_1937',
+ 'jrbcafc': 'jarrow_roofing_boldon_community_association_f.c.',
+ 'jrbm': 'international_journal_of_river_basin_management',
+ 'jrc386': 'lm386',
+ 'jrcl': 'japan_revolutionary_communist_league',
+ 'jref': 'james_randi_educational_foundation',
+ 'jrf-5': 'grumman_goose',
+ 'jrfm': 'cjjr-fm',
+ 'jrfu': 'japan_rugby_football_union',
+ 'jrgs': 'johnny_reb_gaming_society',
+ 'jrhs': 'john_rennie_high_school',
+ 'jrib': 'jim_rome_is_burning',
+ 'jric': 'royal_institution_of_cornwall',
+ 'jrmp': 'java_remote_method_protocol',
+ 'jroc': 'joint_requirements_oversight_council',
+ 'jrocker': 'visual_kei',
+ 'jrocket': 'jrockit',
+ 'jroll': 'jimmy_rollins',
+ 'jrrt': 'j._r._r._tolkien',
+ 'jrrtolkien': 'j._r._r._tolkien',
+ 'jrsm': 'journal_of_the_royal_society_of_medicine',
+ 'jrss': 'journal_of_the_royal_statistical_society',
+ 'jrti': 'james_rumsey_technical_institute',
+ 'jrul': 'john_rylands_university_library',
+ 'jrulm': 'john_rylands_university_library',
+ 'jrun': 'macromedia_jrun',
+ 'jrvej': 'jrvezh',
+ 'jrvesh': 'jrvezh',
+ 'jrx2': 'team_losi_jrx2'}
+        

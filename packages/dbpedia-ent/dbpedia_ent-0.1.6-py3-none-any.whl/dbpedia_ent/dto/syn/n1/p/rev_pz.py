@@ -1,0 +1,40 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_rev_pz = {'pz-61': 'panzer_61',
+ 'pz-68': 'panzer_68',
+ 'pz61': 'panzer_61',
+ 'pz865': 'hawker_hurricane_pz865',
+ 'pzed': 'philosophical_zombie',
+ 'pzev': 'partial_zero-emissions_vehicle',
+ 'pzh-2000': 'pzh_2000',
+ 'pzh2000': 'pzh_2000',
+ 'pzich': 'ptsich',
+ 'pzko': 'polish_cultural_and_educational_union',
+ 'pzkpfw': 'panzer',
+ 'pzkw': 'panzer',
+ 'pzkw-iii': 'panzer_iii',
+ 'pzl-104': 'pzl-104_wilga',
+ 'pzl-105': 'pzl-105_flaming',
+ 'pzl-12': 'pzl.12',
+ 'pzl-130': 'pzl-130_orlik',
+ 'pzl-19': 'pzl.19',
+ 'pzl-230': 'pzl-230_skorpion',
+ 'pzl-3': 'ivchenko_ai-26',
+ 'pzl-3s': 'ivchenko_ai-26',
+ 'pzl-5': 'pzl.5',
+ 'pzl-bielsko': 'pzl',
+ 'pzl-franklin': 'franklin_engine_company',
+ 'pzl-mielec': 'pzl_mielec',
+ 'pzl.6': 'pzl_p.6',
+ 'pzl.62': 'pzl.55',
+ 'pzombie': 'philosophical_zombie',
+ 'pzone': 'calzone',
+ 'pzpn': 'polish_football_association',
+ 'pzszach': 'polish_chess_federation',
+ 'pzuk': 'pku',
+ 'pzy-clone': 'amund_svensson',
+ 'pzzl': 'puzzle'}
+        
