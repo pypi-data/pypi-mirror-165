@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: threepwood
+Version: 0.0.1
+Summary: "I'm a pirate"
+Author: Marc (mc7h)
+License: MIT
+Platform: unix
+Platform: linux
+Platform: osx
+Platform: cygwin
+Platform: win32
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.6
+Provides-Extra: testing
+License-File: LICENSE
+
+"Hi, I'm a pirate"
