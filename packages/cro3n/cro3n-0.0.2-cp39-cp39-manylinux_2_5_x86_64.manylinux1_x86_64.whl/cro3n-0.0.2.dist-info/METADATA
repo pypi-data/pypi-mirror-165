@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: cro3n
+Version: 0.0.2
+Classifier: Development Status :: 1 - Planning
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Programming Language :: Rust
+Classifier: License :: OSI Approved :: MIT License
+License-File: LICENSE
+Summary: Another one **cron expression** utils package for python
+Author-email: straydragon <straydragonv@gmail.com>
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Project-URL: Bug Tracker, https://github.com/straydragon/cro3n/issues
+Project-URL: Homepage, https://github.com/straydragon/cro3n
+
+```
+ ██████╗ ██████╗   ██████╗3 ███╗   ██╗
+██╔════╝ ██╔══██╗ ██╔═══██╗ ████╗  ██║
+██║      ██████╔╝ ██║   ██║ ██╔██╗ ██║
+██║      ██╔══██╗ ██║   ██║ ██║╚██╗██║
+╚██████╗ ██║  ██║ ╚██████╔╝ ██║ ╚████║
+ ╚═════╝ ╚═╝  ╚═╝  ╚═════╝  ╚═╝  ╚═══╝
+```
+
+[![Release](https://github.com/StrayDragon/cro3n/actions/workflows/release.yml/badge.svg?branch=main)](https://github.com/StrayDragon/cro3n/actions/workflows/release.yml)
+[![GitHub last commit](https://img.shields.io/github/last-commit/straydragon/cro3n)](https://github.com/StrayDragon/cro3n/commits)
+[![PyPI](https://img.shields.io/pypi/v/cro3n)](https://pypi.org/project/cro3n)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/cro3n)](https://pypi.org/project/cro3n)
+[![PyPI - Implementation](https://img.shields.io/pypi/implementation/cro3n)](https://pypi.org/project/cro3n)
+[![PyPI - License](https://img.shields.io/pypi/l/cro3n)](https://github.com/StrayDragon/cro3n/blob/main/LICENSE)
+
+---
+
+Another one **cron expression** utils package for python, wrapped on rust crate [zslayton/cron](https://github.com/zslayton/cron).
+
+## Installation
+```bash
+pip install -U cro3n
+```
+
+## Example
+see [example/python](./example/python)
+
+## Related Projects
+
+- [zslayton/cron](https://github.com/zslayton/cron)
+
+## LICENSE
+[MIT](./LICENSE)
