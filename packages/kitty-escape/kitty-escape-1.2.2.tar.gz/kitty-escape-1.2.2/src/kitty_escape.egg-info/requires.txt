@@ -1,0 +1,2 @@
+kitty-common>=0.5.4
+pygame>=2.1.2
