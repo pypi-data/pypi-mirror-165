@@ -1,0 +1,3 @@
+[console_scripts]
+hassmpris-agent = hassmpris_agent.server:main
+hassmpris-settings = hassmpris_agent.settings:main
