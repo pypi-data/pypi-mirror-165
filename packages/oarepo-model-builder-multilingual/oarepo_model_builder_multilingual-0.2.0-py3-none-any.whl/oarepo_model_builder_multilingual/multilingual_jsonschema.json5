@@ -1,0 +1,12 @@
+{
+  "jsonschema-property": {
+    "properties": {
+      "type": {
+        "enum": [
+          "multilingual",
+          "i18nStr"
+        ]
+      }
+    }
+  }
+}
