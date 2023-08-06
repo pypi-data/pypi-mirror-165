@@ -1,0 +1,7 @@
+setuptools
+requests
+aiohttp
+pydantic
+aiofile
+eventemitter
+json_minify
