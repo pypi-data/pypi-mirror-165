@@ -1,0 +1,76 @@
+import { Placement } from 'popper.js';
+import AbstractComponent from '../../globals/ts/abstract-component';
+import WebComponentFactory from '../../globals/ts/web-component-factory';
+export default class Tooltip extends AbstractComponent {
+    static readonly NAME: string;
+    protected static readonly DATA_KEY: string;
+    protected static readonly EVENT_KEY: string;
+    private static readonly CLASS_NAME;
+    private static readonly NJCLS_PREFIX_REGEX;
+    private static readonly DEFAULT_TYPE;
+    private static readonly ATTACHMENT_MAP;
+    static readonly DEFAULT_OPTIONS: {
+        animation: boolean;
+        template: string;
+        trigger: string;
+        title: string;
+        delay: number;
+        html: boolean;
+        selector: boolean;
+        placement: string;
+        offset: number;
+        container: boolean;
+        fallbackPlacement: string;
+        boundary: string;
+        arrow: boolean;
+    };
+    private static readonly HOVER_STATE;
+    private static readonly EVENT;
+    static readonly SELECTOR: {
+        default: string;
+        inner: string;
+        arrow: string;
+        tooltip: string;
+    };
+    private static readonly TRIGGER;
+    private isEnabled;
+    timeout: number;
+    hoverState: string;
+    activeTrigger: any;
+    private popper;
+    private tip;
+    constructor(element: HTMLElement, options?: {});
+    enable(): void;
+    disable(): void;
+    toggleEnabled(): void;
+    toggle(event: any): void;
+    dispose(): void;
+    show(): void;
+    hide(callback?: Function): void;
+    update(): void;
+    isWithContent(): boolean;
+    addAttachmentClass(attachment: any): void;
+    getTipElement(): HTMLElement | null;
+    setContent(): void;
+    setElementContent(element: any, content: any): void;
+    getTitle(): string;
+    getContainer(): Element;
+    private setListeners;
+    private fixTitle;
+    enter(event: any, context?: any): void;
+    leave(event: any, context?: any): void;
+    isWithActiveTrigger(): boolean;
+    private static getOptions;
+    private getDelegateConfig;
+    private cleanTipClass;
+    private handlePopperPlacementChange;
+    private fixTransition;
+    static getAttachment(placement: any): Placement;
+    static getInstance(element: HTMLElement): Tooltip;
+    static init(): [];
+}
+export declare class TooltipWC extends WebComponentFactory {
+    static readonly TAG_NAME: string;
+    constructor();
+    static init(): void;
+}
