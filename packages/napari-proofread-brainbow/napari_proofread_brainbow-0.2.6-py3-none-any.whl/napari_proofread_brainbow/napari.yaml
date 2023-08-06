@@ -1,0 +1,15 @@
+name: napari-proofread-brainbow
+display_name: napari proofread brainbow
+contributions:
+  commands:
+    - id: napari-proofread-brainbow.make_qwidget
+      python_name: napari_proofread_brainbow._widget:MainWidget
+      title: Make main proofreading widget
+    - id: napari-proofread-brainbow.threshold_prob
+      python_name: napari_proofread_brainbow._widget:threshold_prob
+      title: Make threshold widget
+  widgets:
+    - command: napari-proofread-brainbow.make_qwidget
+      display_name: Proofread Brainbow
+    - command: napari-proofread-brainbow.threshold_prob
+      display_name: Threshold probability (csv)
