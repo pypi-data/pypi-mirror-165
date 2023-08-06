@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: pysimrel
+Version: 0.6.1
+Summary: Simulation of Linear Model Data
+Home-page: https://github.com/simulatr/pysimrel
+Author: Raju Rimal
+Author-email: therimalaya@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# `pysimrel`: Simulation of Linear Model Data
+
+[![Documentation Status](https://readthedocs.org/projects/pysimrel/badge/?version=latest)](http://pysimrel.readthedocs.io/?badge=latest)
+[![Build Status](https://travis-ci.org/simulatr/pysimrel.svg?branch=master)](https://travis-ci.org/simulatr/pysimrel)
+[![codecov](https://codecov.io/gh/simulatr/pysimrel/branch/master/graph/badge.svg)](https://codecov.io/gh/simulatr/pysimrel)
+
+The package allows users to simulate data from a linear model. With few tuning parameters, users can simulate data with wide range of properties. 
+
