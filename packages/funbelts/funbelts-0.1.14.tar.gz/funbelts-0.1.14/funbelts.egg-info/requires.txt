@@ -1,0 +1,13 @@
+PyGithub
+datasets
+httplib2
+huggingface_hub
+matplotlib
+pandas
+psutil
+python-telegram-bot
+requests
+rich
+sqlalchemy
+waybackpy
+xlsxwriter
