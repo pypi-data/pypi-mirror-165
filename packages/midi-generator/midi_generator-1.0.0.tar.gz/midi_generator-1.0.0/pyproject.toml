@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=42", "wheel", "pybind11>=2.8"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "midi_generator"
+description = "MIDI Generator for Python using genetic algorithms"
+version = "1.0.0"
+authors = [
+  { name = "Gheorghe Andrei", email = "gheorgheandrei13@gmail.com" },
+]
+readme = "README.md"
+requires-python = ">=3.10"
+keywords = ["midi", "music", "music generation", "genetic algorithms"]
+license = { file = "LICENSE" }
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Programming Language :: Python :: 3",
+    "Topic :: Multimedia :: Sound/Audio :: MIDI",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "midiutil",
+    "deap",
+    "pytest",
+]
+
+[project.scripts]
+midi-generator = "midi_generator:print_cli"
+
+[project.urls]
+"Homepage" = "https://github.com/speedypleath/midi_generator"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["*",]
+exclude = [".tests*"]
