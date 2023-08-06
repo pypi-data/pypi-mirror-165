@@ -1,0 +1,3 @@
+djdantic>=0.0.3
+kafka-python
+djutils
