@@ -1,0 +1,7 @@
+confapp
+logging-bootstrap
+opencv-python==4.3.0.36
+PyForms
+PyQtWebEngine
+PyYAML
+safe-and-collaborative-architecture
