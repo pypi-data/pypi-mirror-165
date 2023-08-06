@@ -1,0 +1,42 @@
+[version]
+path = "src/hoist/__about__.py"
+
+[envs.default]
+dependencies = [
+  "ward",
+  "aiohttp",
+  "versions",
+]
+[envs.default.scripts]
+tests = "ward --path tests"
+dbuild = "python3 reference.py && hatch run docs:build"
+pbuild = "npm install --prefix ./page && npm run --prefix ./page build"
+sbuild = "hatch run pbuild && hatch run dbuild"
+build = "hatch run sbuild && hatch build"
+
+[envs.docs]
+dependencies = [
+  "mkdocs",
+  "mkdocs-material",
+  "mkdocstrings[python]",
+]
+[envs.docs.scripts]
+build = "mkdocs build --clean"
+serve = "mkdocs serve --dev-addr localhost:8000"
+
+[[envs.test.matrix]]
+python = ["37", "38", "39", "310"]
+
+# see https://github.com/mypyc/mypyc/issues/947
+
+[build.targets.sdist]
+exclude = [
+  "/.github",
+  "/docs",
+  "/page",
+  "/.mypy_cache",
+  "/.venv",
+  "/tests",
+]
+[build.targets.wheel]
+packages = ["src/hoist"]
