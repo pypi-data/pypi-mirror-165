@@ -1,0 +1,13 @@
+deptry/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+deptry/cli.py,sha256=lgehbpaqzAA5lP51wxhJlKWNpjC-Oit2GcYphF-eTdQ,1785
+deptry/config.py,sha256=81Iu_yabP9RQmDOud4uHoXtR50lsrQeyf04VEz-JPMo,1868
+deptry/core.py,sha256=CXTNihZmCY_vFgcliLtlRwHeVtCXYJ2fvosVeoaBGBo,1002
+deptry/import_parser.py,sha256=_PfxJvBAMS3dvkc6-_IZw2KUSFvZ1WU7LU1Q5-MEue8,1623
+deptry/imports_to_package_names.py,sha256=NvM98RZS79OBg0_-5yuH3az1F1jUtbe37Ua_y8ZTMTo,2666
+deptry/obsolete_dependencies_finder.py,sha256=BNyLN90YluvAeAtY1cNgRF1PEMO9_IG9cH_Q16q-cRI,1622
+deptry/python_file_finder.py,sha256=3QE_jyxTC92XPKAWpXnTOrgiHAsWp4PfWOFrE_Fj6jM,1507
+deptry-0.0.1.dist-info/entry_points.txt,sha256=4QLb-P8qCGcf9kqgJO70TRLX9ZpGp1tUhA7CQgQJdIo,44
+deptry-0.0.1.dist-info/LICENSE,sha256=ssinrSZMaS-ifGthm5BcCpo8_2yj9qkxH11B4fKTdLA,1070
+deptry-0.0.1.dist-info/WHEEL,sha256=bbU3AyvhQ312rVm7zzRQjs6axI1UYWC3nmFA2E6FFSI,88
+deptry-0.0.1.dist-info/METADATA,sha256=mChryCGITank7waSnD7tJe7VJtCN30Y4zFPw_41us54,2995
+deptry-0.0.1.dist-info/RECORD,,
