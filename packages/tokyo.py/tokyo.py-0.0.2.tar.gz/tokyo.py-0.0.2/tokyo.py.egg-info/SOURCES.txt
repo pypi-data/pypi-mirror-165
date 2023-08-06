@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.txt
+setup.py
+tokyo/__init__.py
+tokyo/properties.py
+tokyo.py.egg-info/PKG-INFO
+tokyo.py.egg-info/SOURCES.txt
+tokyo.py.egg-info/dependency_links.txt
+tokyo.py.egg-info/requires.txt
+tokyo.py.egg-info/top_level.txt
+tokyo/endpoints/anime.py
+tokyo/endpoints/buffer.py
+tokyo/endpoints/json.py
