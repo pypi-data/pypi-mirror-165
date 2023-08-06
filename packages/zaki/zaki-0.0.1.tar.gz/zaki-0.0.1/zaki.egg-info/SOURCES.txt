@@ -1,0 +1,4 @@
+zaki.egg-info/PKG-INFO
+zaki.egg-info/SOURCES.txt
+zaki.egg-info/dependency_links.txt
+zaki.egg-info/top_level.txt
