@@ -1,0 +1,14 @@
+http_message_signatures/__init__.py,sha256=5rr1v-1D3KLtFNtdEc-XmqxBeAhSBb0LOEzF8cTHpqY,403
+http_message_signatures/_algorithms.py,sha256=xSjvOhHq0vKxj7pC_Li9E9cppjXahDkiwTf2c2BGZ_I,6695
+http_message_signatures/algorithms.py,sha256=CXHOcleb8dkdTSUxTdNfl-d0XkVxSXGmf9ugKe_xGaY,190
+http_message_signatures/exceptions.py,sha256=lbIJ5Z2feWFKhH2C4knI4bi0mhYB-jmi__ZV-iNIgHI,239
+http_message_signatures/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+http_message_signatures/resolvers.py,sha256=9FpzLWwm7kRtdN8Eo92YJnT936Y61cmHBf2bmY0w_ns,3259
+http_message_signatures/signatures.py,sha256=jfAGmeuAmQOlLSt-aTLN41_D9V9lo2xCSomPvLaCwno,9211
+http_message_signatures/structures.py,sha256=BD1JYI7SX_H80KNY7zfWFfCpNQarkbOGz3_JL0H9p2w,1621
+http_message_signatures/version.py,sha256=W0kYbjRAk8XX-ioVH2wF3kiQ-6mGnmLLhxzsLZbREb8,176
+http_message_signatures-0.4.4.dist-info/LICENSE,sha256=c7p036pSC0mkAbXSFFmoUjoUbzt1GKgz7qXvqFEwv2g,10273
+http_message_signatures-0.4.4.dist-info/METADATA,sha256=QGzFUEthWqx2KI25e__C1Mm-8mXIf-0Qx_cUE0tny6Y,5192
+http_message_signatures-0.4.4.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+http_message_signatures-0.4.4.dist-info/top_level.txt,sha256=9-VThl-09OI1yQ1ejs76InY3ENi24isY60cUUZrviiw,24
+http_message_signatures-0.4.4.dist-info/RECORD,,
