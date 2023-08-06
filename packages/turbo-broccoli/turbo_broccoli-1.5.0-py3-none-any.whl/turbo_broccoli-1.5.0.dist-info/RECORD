@@ -1,0 +1,17 @@
+turbo_broccoli/__init__.py,sha256=4ty432_evbJAJNE0x3WcBnNzib0Et_pSeUSTmrwzwxc,530
+turbo_broccoli/bytes.py,sha256=7Z4c9ZgcfIbuPAH4-WFvirm0gYcRZf-dtSrKAUPHd1E,1437
+turbo_broccoli/collections.py,sha256=whNVEq0Awum26PtsXjMMzZPYbzpDFUz4ItI751CYwrc,4034
+turbo_broccoli/dataclass.py,sha256=OaXTrawEk8bPeODKFeh9oxAFL1vMjp96ecZNebrpAhw,1565
+turbo_broccoli/environment.py,sha256=hW_UoQZ1QfT3AIuCTPLqwrdKumAYAQXO2z6XhflmqRU,5098
+turbo_broccoli/generic.py,sha256=TsksPW8MP32OTo2ZUDgcSRL-psxhWTfv34udGfpYALQ,567
+turbo_broccoli/keras.py,sha256=FJJWflhgcSI7K5rJjRsiv1MI7P49hg1QCJL_1X_FgMg,13472
+turbo_broccoli/numpy.py,sha256=-UVX2VfsH1oeEtMcK1YfznDkAUafsV69fApFZ-h_qZo,5426
+turbo_broccoli/pandas.py,sha256=3Tf0zWyUTmoKsascIYA9d-ApjvLVmxea35DJY4bK1M4,7013
+turbo_broccoli/secret.py,sha256=rcq58w2mSGLz76kaA8Uv8-w_nJ_p0A8F47qX2VmHAyg,3627
+turbo_broccoli/tensorflow.py,sha256=dAYMjyJJ6AygWUDG15bl4xu06RzjehcdwWJQmaovNX8,5123
+turbo_broccoli/turbo_broccoli.py,sha256=Jsbvu08GksGjcZ0BXeMc55n_sgva_5xY8M6NXKNuMWM,3765
+turbo_broccoli-1.5.0.dist-info/LICENSE,sha256=JWWyGSjIQLL8XbWc2aJA_rdO7-g_atlXGV8Z1v8S3HU,1074
+turbo_broccoli-1.5.0.dist-info/METADATA,sha256=I5nVemaBh401fYZIpm4YsXiW860yHmH_cwwQWt6i4TI,9732
+turbo_broccoli-1.5.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+turbo_broccoli-1.5.0.dist-info/top_level.txt,sha256=ne8YPAk86ph0PZE6YxpGpfDXMT8JLGv4aYtpn8qK4MU,15
+turbo_broccoli-1.5.0.dist-info/RECORD,,
