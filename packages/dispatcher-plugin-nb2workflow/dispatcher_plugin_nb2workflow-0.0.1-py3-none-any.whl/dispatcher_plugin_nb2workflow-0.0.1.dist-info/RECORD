@@ -1,0 +1,9 @@
+dispatcher_plugin_nb2workflow/__init__.py,sha256=t-n3emM4ea2TK5wgUg2UMCnPhNwL5odkm8rmA_qkxKc,635
+dispatcher_plugin_nb2workflow/dataserver_dispatcher.py,sha256=IAI7cXJUyv8bNOnj0mjV-E1ebsz1A1LVljQQw5SsbO4,4905
+dispatcher_plugin_nb2workflow/exposer.py,sha256=vXnAFsvosxvr5qWmjYGjsAzZ1QchyIzBtAXlfqxGLUs,2633
+dispatcher_plugin_nb2workflow/products.py,sha256=WIFkVFgWnGdltTetIBUH9G1Vrx1JVyoVmq1w9WpLOVk,2420
+dispatcher_plugin_nb2workflow/queries.py,sha256=j_EwraqQzC2DJozAEh7AKeS4vwtVao-D2yf-QgAUmIE,4240
+dispatcher_plugin_nb2workflow-0.0.1.dist-info/METADATA,sha256=oLEWudqqCD4R1QFacRU1TAFt0z0z9v_5GCDXO8tMGgA,209
+dispatcher_plugin_nb2workflow-0.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+dispatcher_plugin_nb2workflow-0.0.1.dist-info/top_level.txt,sha256=JXom3jNttIw5VL8JU-l09ZgfahNHUo30jbXdheVAxwg,30
+dispatcher_plugin_nb2workflow-0.0.1.dist-info/RECORD,,
