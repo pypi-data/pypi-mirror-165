@@ -1,0 +1,10 @@
+setup.py
+utilsapi/__init__.py
+utilsapi/api.py
+utilsapi.egg-info/PKG-INFO
+utilsapi.egg-info/SOURCES.txt
+utilsapi.egg-info/dependency_links.txt
+utilsapi.egg-info/top_level.txt
+utilsapi/static/__init__.py
+utilsapi/static/funcs.py
+utilsapi/static/values.py
