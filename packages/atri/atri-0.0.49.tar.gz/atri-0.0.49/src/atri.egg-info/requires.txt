@@ -1,0 +1,5 @@
+click
+python-socketio[asyncio_client]
+toml
+questionary
+requests
