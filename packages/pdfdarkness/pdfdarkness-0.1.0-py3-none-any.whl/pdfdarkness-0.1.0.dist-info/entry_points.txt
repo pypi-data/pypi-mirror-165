@@ -1,0 +1,3 @@
+[console_scripts]
+pdfdarkness = pdfdarkness.measure_darkness:main
+

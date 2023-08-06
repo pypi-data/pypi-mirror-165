@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: pdfdarkness
+Version: 0.1.0
+Summary: A command line tool for caluclating the darkness of the pages of PDF files
+Home-page: https://github.com/hiroshi-matsuda/pdfdarkness
+Author: Hiroshi Matsuda
+Author-email: hmtd223@gmail.com
+License: MIT License
+Platform: UNKNOWN
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: pdf2image (<1.17.0,>=1.16.0)
+
+UNKNOWN
+
