@@ -1,0 +1,13 @@
+magnifier/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+magnifier/base.py,sha256=MRkkh6NGynk3RWHQVombJfwbtuTr1Rm2aw9ea837wSs,932
+magnifier/evaluation/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+magnifier/evaluation/classification.py,sha256=RhknyPu0vIzr9CwuqGC5BXujpQIOaaSoyCKbvCtrmWk,1351
+magnifier/io.py,sha256=rXGVEVyoJTrkZHSREvIWc-0l2R7kvuYn6JWdVyxAAIM,413
+magnifier/model_experiment.py,sha256=vim-KHPPLZB6yiN_1udmidvMv24r7OkjWOHc_j_D6mA,1614
+magnifier/transformer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+magnifier/transformer/compressing.py,sha256=54wVg3cQ8zjPW3-Q4mBAQ0OHGwEocBsj0m_YQnR4-n0,2081
+magnifier/transformer/time_series.py,sha256=jg-sMPnWtvVJXkyiugdMFjoLt5fM4y41dQNLgI5LU-0,6427
+magnifier-0.0.6.dist-info/LICENSE,sha256=x7o8mtV80UCIODyk1exiAeYvKx7r6pZDBNg6-CoWmj0,1073
+magnifier-0.0.6.dist-info/WHEEL,sha256=bbU3AyvhQ312rVm7zzRQjs6axI1UYWC3nmFA2E6FFSI,88
+magnifier-0.0.6.dist-info/METADATA,sha256=HeE5XPlbpF9eDE2_sqEsszC54YryQ2GnlfSDEdQhx04,1315
+magnifier-0.0.6.dist-info/RECORD,,
