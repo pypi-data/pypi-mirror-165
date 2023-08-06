@@ -1,0 +1,13 @@
+README.md
+ns.py
+pyproject.toml
+naipy/__init__.py
+naipy/client.py
+naipy/error.py
+naipy/http.py
+naipy/model.py
+naipy/sync.py
+naipy.egg-info/PKG-INFO
+naipy.egg-info/SOURCES.txt
+naipy.egg-info/dependency_links.txt
+naipy.egg-info/top_level.txt
