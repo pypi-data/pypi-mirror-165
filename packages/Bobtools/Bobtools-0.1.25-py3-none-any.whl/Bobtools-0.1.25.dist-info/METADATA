@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: Bobtools
+Version: 0.1.25
+Summary: Bobtools with utility functions for the Bob Best of Breed AI platform
+Home-page: https://github.com/bjelkenhed/bobtools
+Author: Magnus Bjelkenhed
+Author-email: bjelkenhed@gmail.com
+License: Apache 2.0
+Keywords: bobtools
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.8.*
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Bobtools Project
+
+[![image](https://img.shields.io/pypi/v/py-package-template.svg)](https://pypi.org/project/py-package-template/)
+[![Build Status](https://travis-ci.org/AlexIoannides/py-package-template.svg?branch=master)](https://travis-ci.org/AlexIoannides/py-package-template)
+
+## Building a new version and uploading to Pypi:
+
+First step up the version from 0.1.20 to 0.1.21 for example and then build a distrubution and upload it to Pypi:
+
+<code>
+nano bobtools/__version__.py
+
+make dist upload
+</code>
+
+## Installing
+
+Install and update using [pip](https://pip.pypa.io/en/stable/getting-started/)):
+
+
+
+pip install bobtools
+
+## Bobtools Project
+
+We now describe the various components of the Bobtools project and the workflows associated with it:
+
+- `seldon.py`
+
+The `seldon.py` module contains utility functions for managing Seldon Core from Python like deploying servings and manage their state.
+
+

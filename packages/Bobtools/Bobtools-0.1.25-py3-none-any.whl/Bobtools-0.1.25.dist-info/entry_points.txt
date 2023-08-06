@@ -1,0 +1,2 @@
+[console_scripts]
+bobtools = py_pkg.entry_points:main

@@ -1,0 +1,14 @@
+bobtools/__init__.py,sha256=pDOkyhyc-7-4RaK3ImDq58O3vljnLtzMWPH8iqtNkxk,199
+bobtools/__version__.py,sha256=MVpeUdAfPWTpYjGynRrf6v6eCHPGgu8kSlm0LlwdDGw,392
+bobtools/entry_points.py,sha256=hHwFi_zM-I-x5956qFv1bNk6qsmQfSuMH4JuWRAoJjY,1418
+bobtools/mlflow.py,sha256=XNLiXgpWBqkbc82bw7rLUMj0SAW_Fho7g-TPWqcwmNs,4723
+bobtools/seldon.py,sha256=XCMF501mCKbzl-JLOBfVqFyKF2kwWFY90vgu2fJSE4o,1838
+tests/__init__.py,sha256=6VHThuMoW9yGaClDs4Z6zkHpCl8KjBv7e0g32L5zlxI,56
+tests/conftest.py,sha256=MTuwV9WmFuAfQjigF-uCXOkyne2Jk5wO93cn4A57UJ8,1203
+tests/test_curves.py,sha256=Ft2vulo8BzqyHqI1uETSSBFX1di0zZ6wNBCusgUdkLs,6575
+Bobtools-0.1.25.dist-info/LICENSE,sha256=hcMzkligKst6Vz9pXbSQ5vr80xLKp2IGO-ILcvAPwFY,551
+Bobtools-0.1.25.dist-info/METADATA,sha256=cc_a7ynVyjfzIiQJhJr1xM1HUS6CrfsUV2LNnG80Mcc,1414
+Bobtools-0.1.25.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+Bobtools-0.1.25.dist-info/entry_points.txt,sha256=Pnw_L84bwl9KWHNU4MHlFfgIc74_CxUy7UZSnH3yIkQ,54
+Bobtools-0.1.25.dist-info/top_level.txt,sha256=BJXNuijbybubgeUvFtAzitxCExQBbR4qDW0iNaVeraM,15
+Bobtools-0.1.25.dist-info/RECORD,,
