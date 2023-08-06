@@ -1,0 +1,21 @@
+pydantic
+requests
+rich
+
+[client]
+procrunner
+textual
+websocket-client
+xmltodict
+
+[server]
+mysql-connector-python<=8.0.29
+fastapi>=0.75.2
+ispyb
+jinja2
+packaging
+uvicorn[standard]
+zocalo
+
+[server:python_version < "3.9"]
+importlib_resources
