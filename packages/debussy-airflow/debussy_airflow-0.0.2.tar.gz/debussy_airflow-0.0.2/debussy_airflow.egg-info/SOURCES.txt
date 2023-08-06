@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+debussy_airflow.egg-info/PKG-INFO
+debussy_airflow.egg-info/SOURCES.txt
+debussy_airflow.egg-info/dependency_links.txt
+debussy_airflow.egg-info/requires.txt
+debussy_airflow.egg-info/top_level.txt
