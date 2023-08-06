@@ -1,0 +1,26 @@
+#!python
+# This file is placed in the Public Domain.
+# pylint: disable=C0115,C0116,C0301
+
+
+"create documentation"
+
+
+import os
+import sys
+
+
+def popen(txt):
+    for line in os.popen(txt).readlines():
+        print(line.rstrip())
+        sys.stdout.flush()
+
+
+popen("rm -fr ~/.cache/pip")
+popen("rm -fr env")
+if os.path.exists("setup.py"):
+    popen("python3 setup.py sdist")
+popen("python3 -mvirtualenv --no-download gcidenv")
+popen("gcidenv/bin/pip3 install gcid -f dist --force-reinstall --no-deps")
+popen('''gcidenv/bin/python3 gcidenv/bin/pip3 install -I "Jinja2==3.0.0" "mock==1.0.1" "pillow>5.4.1" "alabaster>=0.7,<0.8,!=0.7.5" "commonmark==0.8.1" "recommonmark==0.5.0" "sphinx<2" "sphinx-rtd-theme<0.5" "readthedocs-sphinx-ext<2.2"''')
+popen("gcidenv/bin/python3 gcidenv/bin/sphinx-build /usr/local/share/doc/gcid gcidhtml")
