@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+src/pheatmap/__init__.py
+src/pheatmap/_annotation.py
+src/pheatmap/_heatmap.py
+src/pheatmap/_layout.py
+src/pheatmap/_legend.py
+src/pheatmap/_pheatmap.py
+src/pheatmap/_utils.py
+src/pheatmap.egg-info/PKG-INFO
+src/pheatmap.egg-info/SOURCES.txt
+src/pheatmap.egg-info/dependency_links.txt
+src/pheatmap.egg-info/requires.txt
+src/pheatmap.egg-info/top_level.txt
