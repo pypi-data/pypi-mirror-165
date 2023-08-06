@@ -1,0 +1,3 @@
+[console_scripts]
+tap-mongodb=tap_mongodb.tap:TapMongoDB.cli
+
