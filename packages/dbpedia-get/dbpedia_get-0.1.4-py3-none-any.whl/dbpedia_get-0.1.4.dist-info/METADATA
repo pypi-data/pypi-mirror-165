@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: dbpedia-get
+Version: 0.1.4
+Summary: dbPedia Concept Linking and Redirect Analysis
+Author: Craig Trim
+Author-email: craigtrim@gmail.com
+Requires-Python: ==3.8.5
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: Unidecode
+Requires-Dist: baseblock
+Requires-Dist: datasets (>=2.4.0,<3.0.0)
+Requires-Dist: fast_sentence_segment
+Requires-Dist: openpyxl (>=3.0.7,<4.0.0)
+Requires-Dist: pandas (>=1.2.3,<2.0.0)
+Requires-Dist: spacy (==3.3)
+Requires-Dist: tabulate
+Requires-Dist: unicodedata2
+Requires-Dist: unidecode
+Requires-Dist: wikipedia (>=1.4.0,<2.0.0)
