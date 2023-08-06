@@ -1,0 +1,8 @@
+README.md
+gcpTokenGenerator.py
+setup.py
+gcpTokenGenerator.egg-info/PKG-INFO
+gcpTokenGenerator.egg-info/SOURCES.txt
+gcpTokenGenerator.egg-info/dependency_links.txt
+gcpTokenGenerator.egg-info/requires.txt
+gcpTokenGenerator.egg-info/top_level.txt
