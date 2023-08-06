@@ -1,0 +1,2 @@
+[console_scripts]
+sequana_revcomp = sequana_pipelines.revcomp.main:main

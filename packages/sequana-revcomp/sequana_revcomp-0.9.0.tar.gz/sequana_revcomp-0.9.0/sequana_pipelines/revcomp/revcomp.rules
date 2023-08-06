@@ -1,0 +1,53 @@
+"""reverse complement sequana pipeline
+
+Affiliation: Institut Pasteur @ 2019-2020
+
+This pipeline is part of Sequana software (sequana.readthedocs.io)
+
+"""
+from sequana_pipetools import PipelineManager
+
+
+# This must be defined before the include
+configfile: "config.yaml"
+
+
+# A convenient manager
+#
+def sample_func(filename):
+    import os
+    filename = os.path.basename(filename)
+    filename = filename.split(".", 1)[0]
+    return filename
+
+
+manager = PipelineManager("revcomp", config, sample_func=sample_func)
+
+rule pipeline:
+    input: expand('rc/{sample}.fastq.gz', sample=list(manager.samples.keys()))
+
+
+rule revcomp:
+    input:
+        manager.getrawdata()
+    output:
+        "rc/{sample}.fastq.gz"
+    log:
+        temp("logs/{sample}.logs")
+    container:
+        "https://zenodo.org/record/5729951/files/seqtk_1.3.0.img" 
+    shell:
+        """
+        # -k means keep original data
+        # the container does not contain pigz.
+        #seqtk seq -r  {input}  | pigz -p {threads} -fk - --stdout > {output}  2> {log}
+        seqtk seq -r  {input}  | gzip -fk -c > {output}  2> {log}
+        """
+
+onsuccess:
+    from sequana import logger
+    logger.level = "INFO"
+    manager.teardown(extra_dirs_to_remove=['logs'])
+
+onerror:
+    print("An error occurred. See message above.")
