@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "sec_client"
+version = "0.0.2-alpha.0"
+description = "Client for retrieving and storing company data from SEC EDGAR RESTful API"
+authors = ["_fiz_ <crxz.fiz@gmail.com>"]
+license = "MIT"
+
+classifiers = [
+"Intended Audience :: Financial and Insurance Industry",
+"Operating System :: Microsoft :: Windows :: Windows 10",
+"Operating System :: MacOS :: MacOS X",
+"Programming Language :: Python",
+"Topic :: Office/Business :: Financial",
+"Topic :: Office/Business :: Financial :: Investment",
+"Topic :: Office/Business :: Financial :: Spreadsheet",
+"Development Status :: 1 - Planning"
+]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+sec-edgar-api = "^1.0.0"
+SQLAlchemy = "^1.4.40"
+fake-useragent = "^0.1.11"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.extras]
+black = ["black"]
