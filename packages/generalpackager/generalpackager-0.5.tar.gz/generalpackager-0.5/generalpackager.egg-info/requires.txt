@@ -1,0 +1,7 @@
+generallibrary
+generalfile
+pandas
+gitpython
+requests
+pyinstaller
+coverage
