@@ -1,0 +1,7 @@
+landlock/__init__.py,sha256=dYHGZ3jr3O6WedpG4ghhinAbVxEPq1102i0bR-SbqTc,1101
+landlock/plumbing.py,sha256=Ztolv3BoYhY8-tP6XNqx9rJqI2NfS_QWZFDvx5x_1C0,9144
+landlock/porcelain.py,sha256=kg5t1aVnyk1N-cJVjZBCqDgC90CNKq_EDxxTlpr9GVw,1366
+landlock-1.0.0.dev3.dist-info/LICENSE,sha256=IM5HolFHPmje2TbpIWab_V6OPdj6F1mzk3-LgMolXD0,1080
+landlock-1.0.0.dev3.dist-info/WHEEL,sha256=4TfKIB_xu-04bc2iKz6_zFt-gEFEEDU_31HGhqzOCE8,81
+landlock-1.0.0.dev3.dist-info/METADATA,sha256=wYenDV9rfDmVIOgQiNOdwYrve86Ft_WLCdTY0WtmdQI,3974
+landlock-1.0.0.dev3.dist-info/RECORD,,
