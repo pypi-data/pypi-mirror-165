@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: blusutils
+Version: 0.1.0
+Summary: Library with random functionality.
+Home-page: https://github.com/Blusutils/blusutilspy
+Author: Blusutils
+Author-email: contact@blusutils.net
+Project-URL: Bug Tracker, https://github.com/Blusutils/blusutilspy/issues
+Project-URL: Blusutils GitHub, https://github.com/Blusutils/
+Project-URL: Blusutils Website, https://blusutils.net
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# blusutilspy
+
+Library with random functionality.
+Description will be soon...
