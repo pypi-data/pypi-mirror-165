@@ -1,0 +1,157 @@
+[tool.poetry]
+name = "terramare"
+version = "0.5.0"
+description = "Automatically construct complex objects from simple Python types."
+authors = ["Tom W <796618-tomwatson1024@users.noreply.gitlab.com>"]
+readme = "README.md"
+repository = "https://gitlab.com/tomwatson1024/terramare"
+documentation = "https://tomwatson1024.gitlab.io/terramare"
+license = "MIT"
+include = ["CHANGELOG.md"]
+
+[tool.poetry.dependencies]
+python = "^3.6.2"
+dataclasses = { version = ">=0.7,<0.9", python = "~3.6" }
+python-dateutil = "^2.8.1"
+typing-extensions = "^3.7"
+
+[tool.poetry.dev-dependencies]
+black = "^21.7b0"
+coverage = "^5.5.0"
+flake8 = "^3.9.2"
+flake8-print ="^4.0.0"
+furo = "^2021.8.17-beta.43"
+isort = "^5.9.3"
+mypy = "^0.910"
+pydocstyle = "^6.1.1"
+pygments-onehalf= "^0.1.1"
+pylint = "^2.10.2"
+pytest = "^6.2.4"
+"ruamel.yaml" = "^0.17.10"
+sphinx = "^4.1.2"
+sphinx-copybutton = "^0.4.0"
+toml = "^0.10.1"
+tox = "^3.24.1"
+
+# Type stubs.
+types-dataclasses = "^0.1.6"
+types-setuptools = "^57.0.1"
+types-python-dateutil = "^0.1.5"
+types-toml = "^0.1.4"
+
+[build-system]
+requires = ["poetry_core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.coverage.run]
+# Measure branch (rather than line) coverage. See
+# https://coverage.readthedocs.io/en/stable/branch.html.
+branch = true
+
+source = ["terramare"]
+
+[tool.coverage.report]
+show_missing = true
+
+[tool.isort]
+profile = "black"
+
+[tool.pydocstyle]
+add-ignore = [
+    # "Missing Docstrings"
+    # don't require docstrings for all public items
+    "D1",
+    # "No blank lines allowed after function docstring"
+    # may be introduced by black
+    "D202",
+]
+
+[tool.pylint.messages_control]
+disable = [
+  # covered by flake8
+  "line-too-long",
+  "unused-import",
+  "unused-variable",
+
+  # covered by mypy
+  "abstract-class-instantiated",
+  "abstract-method",
+  "import-error",
+  "inconsistent-return-statements",
+  "no-member",
+  "no-name-in-module",
+  "not-an-iterable",
+  "not-callable",
+  "unpacking-non-sequence",
+  "unsubscriptable-object",
+  "unsupported-assignment-operation",
+  "unsupported-delete-operation",
+  "unsupported-membership-test",
+
+  # covered by pydocstyle
+  "missing-class-docstring",
+  "missing-function-docstring",
+  "missing-module-docstring",
+
+  # too coarse to be useful
+  "design",
+  "similarities",
+
+  # don't enforce a naming convention
+  "invalid-name",
+
+  # produces false positives e.g. when implementing abstract methods
+  "no-self-use",
+
+  # it's sometimes clearer to use `else` even after a return
+  "no-else-return",
+]
+
+[tool.pylint.reports]
+output-format = "colorized"
+score = "n"
+
+[tool.pytest.ini_options]
+addopts = [
+    "-v",
+    "--doctest-glob=*.md",
+    "--doctest-glob=*.rst",
+    "--doctest-modules",
+    # Ignore when running pytest directly from the repo root.
+    "--ignore=docs/conf.py",
+    # Ignore when running pytest via tox.
+    "--ignore=../../../docs/conf.py",
+    "--strict-markers",
+]
+doctest_optionflags = "ELLIPSIS"
+markers = [
+    "py36: mark a test to run on Python 3.6 only",
+    "py37: mark a test to run on Python 3.7 only",
+    "py38: mark a test to run on Python 3.8 only",
+    "py39: mark a test to run on Python 3.9 only",
+]
+testpaths = ["src", "test", "docs", "README.md"]
+
+[tool.mypy]
+files = ["src", "test", "docs"]
+
+# Require all definitions to be typed. The `Any` type may be used to explicitly
+# opt-out of type checking.
+check_untyped_defs = true
+disallow_untyped_defs = true
+
+# Require type parameters of generic types to be explicitly specified. The
+# `Any` type may be used where a more specific type is not appropriate.
+disallow_any_generics = true
+
+# Disable implicit re-exporting of names imported by a module. Names may be
+# explicitly exported using `__all__`.
+implicit_reexport = false
+
+# Error codes can be used to write more specific `type: ignore` comments.
+show_error_codes = true
+
+[[tool.mypy.overrides]]
+module = "ruamel.yaml"
+ignore_missing_imports = true
+implicit_reexport = true
