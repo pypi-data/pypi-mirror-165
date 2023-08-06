@@ -1,0 +1,13 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+setup.py
+popupeasy.egg-info/PKG-INFO
+popupeasy.egg-info/SOURCES.txt
+popupeasy.egg-info/dependency_links.txt
+popupeasy.egg-info/top_level.txt
+popupnow/__init__.py
+popupnow.egg-info/SOURCES.txt
+popupnow.egg-info/dependency_links.txt
+popupnow.egg-info/top_level.txt
