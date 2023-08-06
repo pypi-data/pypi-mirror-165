@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: sequencing
+Version: 1.2.0
+Summary: seQuencing: simulate realistic quantum control sequences using QuTiP
+Home-page: https://github.com/sequencing-dev/sequencing
+Author: Logan Bishop-Van Horn
+Author-email: logan.bvh@gmail.com
+License: BSD
+Keywords: quantum pulse sequence
+Platform: Linux
+Platform: Mac OSX
+Platform: Unix
+Platform: Windows
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Physics
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Provides-Extra: docs
+License-File: LICENSE
+
+# seQuencing
+
+``sequencing`` is a Python package for simulating realistic quantum control sequences using
+[QuTiP](http://qutip.org/docs/latest/index.html). Built for researchers and quantum engineers,
+``sequencing`` provides an intuitive framework for constructing models of quantum systems
+composed of many modes and generating complex time-dependent control Hamiltonians
+for [master equation simulations](http://qutip.org/docs/latest/guide/dynamics/dynamics-master.html).
+
+
