@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+ArabicTextNormalization/ArabbicTextNormalzation.py
+ArabicTextNormalization/__init__.py
+ArabicTextNormalization.egg-info/PKG-INFO
+ArabicTextNormalization.egg-info/SOURCES.txt
+ArabicTextNormalization.egg-info/dependency_links.txt
+ArabicTextNormalization.egg-info/top_level.txt

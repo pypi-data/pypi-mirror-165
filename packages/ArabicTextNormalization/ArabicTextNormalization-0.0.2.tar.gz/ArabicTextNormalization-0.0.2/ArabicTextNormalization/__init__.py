@@ -1,0 +1,2 @@
+from ArabbicTextNormalzation import Normalization
+
