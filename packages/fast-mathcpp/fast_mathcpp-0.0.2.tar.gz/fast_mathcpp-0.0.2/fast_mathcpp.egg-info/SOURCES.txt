@@ -1,0 +1,10 @@
+Matrix.cpp
+Pybinds.cpp
+TabelaVerdade.cpp
+setup.py
+fast_mathcpp.egg-info/PKG-INFO
+fast_mathcpp.egg-info/SOURCES.txt
+fast_mathcpp.egg-info/dependency_links.txt
+fast_mathcpp.egg-info/not-zip-safe
+fast_mathcpp.egg-info/requires.txt
+fast_mathcpp.egg-info/top_level.txt

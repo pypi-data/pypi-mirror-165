@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: fast-mathcpp
+Version: 0.0.2
+Summary: A test project using pybind11
+Home-page: https://github.com/
+Author: Maury Dev
+Author-email: maurygta2@gmail.com
+Requires-Python: >=3.6
+Provides-Extra: test
