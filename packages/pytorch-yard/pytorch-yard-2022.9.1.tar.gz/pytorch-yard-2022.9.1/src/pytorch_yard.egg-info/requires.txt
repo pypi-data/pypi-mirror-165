@@ -1,0 +1,14 @@
+coolname
+GitPython
+hydra-core>=1.2.0
+pytest
+python-dotenv
+pytorch-lightning-bolts>=0.3.2
+pytorch-lightning>=1.3.8
+rich
+setproctitle
+torchstat
+torchsummary
+tqdm
+typer
+wandb
