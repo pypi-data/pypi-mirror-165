@@ -1,0 +1,8 @@
+pyyaml
+logbook
+pysam
+pytest
+ortools
+natsort
+mappy
+indelpost
