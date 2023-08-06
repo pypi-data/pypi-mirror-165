@@ -1,0 +1,12 @@
+clixdev/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+clixdev/terminal.py,sha256=coFmV6cwiV61iOI31s9kfaQa9XekXc6k_xi5zx6Ajuk,700
+clixdev/generators/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+clixdev/generators/django_trc.py,sha256=Bda5wiZm32JqI30ZtWh8tJOmmV4Elv_DmiE9oI-4HoY,9786
+clixdev/generators/django_writer.py,sha256=CTDzKwiIMW6R6qnqVWiLE5X0DRa9pHH5SuOBfqXrNyk,3470
+clixdev/generators/writer.py,sha256=lPQbJanHSjQ2rmjeaDXPL8dbFwmWj1WxGnU8fc3cHHE,1815
+clixdev-0.3.7.dist-info/LICENSE,sha256=__mN1SJPmbzdwhF6lmTotVH_QI-XnpL2XneUhLb2lBw,1066
+clixdev-0.3.7.dist-info/METADATA,sha256=K7HvZqyQUUehGzZ3mwALYPJG5kCq6wWcZrCFOVDpzqA,1690
+clixdev-0.3.7.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+clixdev-0.3.7.dist-info/entry_points.txt,sha256=crQReSnrLqwmh-Sw78eyVAdtr-mPSEdacqBjIW6lA9w,54
+clixdev-0.3.7.dist-info/top_level.txt,sha256=p6As9NSpI5LpVmmPFGalpve2BbdBECw3guDVx6spnPM,8
+clixdev-0.3.7.dist-info/RECORD,,
