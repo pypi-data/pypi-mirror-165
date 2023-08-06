@@ -1,0 +1,6 @@
+setup.py
+SuperPuper_client.egg-info/PKG-INFO
+SuperPuper_client.egg-info/SOURCES.txt
+SuperPuper_client.egg-info/dependency_links.txt
+SuperPuper_client.egg-info/requires.txt
+SuperPuper_client.egg-info/top_level.txt
