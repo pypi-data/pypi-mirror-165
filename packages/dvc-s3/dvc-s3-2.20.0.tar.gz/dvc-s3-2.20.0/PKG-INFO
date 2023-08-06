@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: dvc-s3
+Version: 2.20.0
+Summary: s3 plugin for dvc
+Home-page: http://dvc.org
+Download-URL: https://github.com/iterative/dvc-s3
+License: Apache License 2.0
+Project-URL: Documentation, https://dvc.org/doc
+Project-URL: Source, https://github.com/iterative/dvc-s3
+Keywords: dvc,s3
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.8
+Description-Content-Type: text/x-rst
+Provides-Extra: tests
+License-File: LICENSE
+
+dvc-s3
+
+s3 plugin for dvc
