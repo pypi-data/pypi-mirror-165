@@ -1,0 +1,16 @@
+CHANGES.txt
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+aiomonitor/__init__.py
+aiomonitor/cli.py
+aiomonitor/monitor.py
+aiomonitor/mypy_types.py
+aiomonitor/task.py
+aiomonitor/utils.py
+aiomonitor_ng.egg-info/PKG-INFO
+aiomonitor_ng.egg-info/SOURCES.txt
+aiomonitor_ng.egg-info/dependency_links.txt
+aiomonitor_ng.egg-info/requires.txt
+aiomonitor_ng.egg-info/top_level.txt
