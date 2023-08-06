@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+propersandwich/__init__.py
+propersandwich/googlesheet.py
+propersandwich/postgres.py
+propersandwich.egg-info/PKG-INFO
+propersandwich.egg-info/SOURCES.txt
+propersandwich.egg-info/dependency_links.txt
+propersandwich.egg-info/top_level.txt
