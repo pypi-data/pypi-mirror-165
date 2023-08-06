@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: mtlibs
+Version: 0.0.179
+Summary: This is the SDK for example.
+Home-page: http://example.com
+Author: example
+Author-email: author@example.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
+Requires-Dist: Flask (<2,>=1)
+Requires-Dist: werkzeug (<2,>=1)
+Requires-Dist: flask-session (~=0.3.2)
+Requires-Dist: requests (<3,>=2)
+Requires-Dist: msal (<2,>=1.7)
+Requires-Dist: azure-mgmt-resource (>=18.0.0)
+Requires-Dist: azure-identity (>=1.5.0)
+Requires-Dist: azure-mgmt-web
+Requires-Dist: azure-mgmt-compute
+Requires-Dist: azure-mgmt-network
+Requires-Dist: python-dotenv
+Requires-Dist: gitpython
+Requires-Dist: paramiko
+Requires-Dist: requests
+Requires-Dist: proxy.py
+Requires-Dist: flask-cors
+Requires-Dist: flask-settings
+Requires-Dist: flask-admin
+Requires-Dist: flask-restful
+Requires-Dist: flask-socketio
+Requires-Dist: GitHub-Flask
+Requires-Dist: PyGithub
+Requires-Dist: pyinstaller
+Requires-Dist: pyyaml
+Requires-Dist: docker
+Requires-Dist: PySocks
+Requires-Dist: gunicorn
+Requires-Dist: stem
+
+demo
+
