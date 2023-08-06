@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: google_images_hunter
+Version: 1.0.1
+Summary: Selenium-based web scraper to perform massive image downloads from Google Images search engine.
+Home-page: https://github.com/RomeroRodriguezD/Google-Images-Hunter
+Download-URL: https://github.com/RomeroRodriguezD/Google-Images-Hunter/archive/refs/tags/v1.0.1.tar.gz
+Author: David Romero
+License: MIT
+Keywords: web scraping,scraping,selenium,images,image scraping
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Text Processing :: Markup :: HTML
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+License-File: LICENSE
+
+Selenium-based web scraper to perform massive image downloads from Google Images search engine. First version, hope it helps.
