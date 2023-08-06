@@ -1,0 +1,8 @@
+colorama
+fire
+jinja2
+pandas
+pendulum
+petname
+prettytable
+pyppeteer
