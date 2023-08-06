@@ -1,0 +1,10 @@
+robotframework>=4.0
+
+[dev]
+black
+flake8
+pylint
+mypy
+pytest
+pytest-cov
+pytest-spec
