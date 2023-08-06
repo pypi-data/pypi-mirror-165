@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div>Example: eye circle! </div>
+    <div>Instructions from GT: inspect the html on the browser - the small circle is the handle that lets the
+        user choose a viewing angle. Its id is "eye-control-handle" - you can use a socket to respond to
+    the event of mouse release - any time the user is done changing the angle, the session variable gets
+        updated with the angle (just call the function getAngle());
+    You should import eyeplot.js without changing it and handle all the other logic in game7.js</div>
+    <!-- First example: eye - projection dir plot -->
+    <div></div>
+
+
+    <!-- Code to import eyeplot.js and put it in the right div (do not change the div's id) -->
+    <div id="my-interactive"></div>
+    <script type="module" src="../static/eyeplot.js"></script>
+    <!-- You should import this code without changing it and handle all the other logic in game7.js -->
+
+    {% endblock %}
+  {%  block additional_imports %}
+          <link rel="stylesheet" href="https://vectorjs.org/library.css">
+  {% endblock %}

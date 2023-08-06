@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="container-fluid vh-100">
+        <div class="row h-75 d-flex justify-content-center">
+            <div class="col-3">
+                {% for num in [7,5,3,1] %}
+                <div class="row h-25">
+                    <h3 id='game-card-{{ num }}' class="card col bg-secondary mh-100" href="./games/{{ num }}">
+                        <div class="card-header text-white font-monospace">Game {{ num }}</div>
+                        <div class="card-body">
+                            <a class="card-title text-white font-monospace stretched-link" href="./games/{{ num }}">{{template_dict_games[num-1]}}</a>
+                            <p class="card-body text-white font-monospace">{{ template_dict_info[num-1] }}</p>
+                        </div>
+                    </h3>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="col-6">
+                <object id="the_mountain" style="height:90% ;width:90%;"  data="../static/img/mountain_vector.svg" type="image/svg+xml">
+
+                </object>
+            </div>
+            <div class="col-3">
+                {% for num in [8,6,4,2] %}
+                <div class="row h-25">
+                    <h3 id='game-card-{{ num }}' class="card col bg-secondary mh-100" href="./games/{{ num }}">
+                        <div class="card-header text-white font-monospace">Game {{ num }}</div>
+                        <div class="card-body">
+                            <a class="card-title text-white font-monospace stretched-link" href="./games/{{ num }}">{{template_dict_games[num-1]}}</a>
+                            <p class="card-body text-white font-monospace">{{ template_dict_info[num-1] }}</p>
+                        </div>
+                    </h3>
+                </div>
+                {% endfor %}
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+{% endblock %}
+
+{% block additional_imports %}
+
+
+
+        <script src="../static/index.js"></script>
+{% endblock %}

@@ -1,0 +1,7 @@
+# Include HTML templates and static assets
+recursive-include vstabletop/templates *
+recursive-include vstabletop/static *
+
+# Include initialized database file
+include vstabletop/myDB.db
+
