@@ -1,0 +1,3 @@
+[console_scripts]
+cvet=cvetrends.__main__:main
+
