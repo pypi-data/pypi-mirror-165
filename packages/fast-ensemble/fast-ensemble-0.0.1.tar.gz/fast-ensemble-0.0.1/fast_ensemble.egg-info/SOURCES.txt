@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+fast_ensemble/__init__.py
+fast_ensemble/errors.py
+fast_ensemble/stacking.py
+fast_ensemble/utils.py
+fast_ensemble/wrappers.py
+fast_ensemble.egg-info/PKG-INFO
+fast_ensemble.egg-info/SOURCES.txt
+fast_ensemble.egg-info/dependency_links.txt
+fast_ensemble.egg-info/requires.txt
+fast_ensemble.egg-info/top_level.txt
