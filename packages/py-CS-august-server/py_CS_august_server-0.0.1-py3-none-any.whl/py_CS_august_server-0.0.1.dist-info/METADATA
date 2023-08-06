@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: py-CS-august-server
+Version: 0.0.1
+Summary: Mess Server
+Author: Evtikhova Lera
+Author-email: va_sidorova@inbox.ru
+Requires-Dist: PyQt5
+Requires-Dist: sqlalchemy
+Requires-Dist: pycryptodome
+Requires-Dist: pycryptodomex
+
