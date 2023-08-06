@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: wis-processor
+Version: 0.0.1
+Summary: gistools for WIS
+Home-page: https://github.com/zjf014/wis-processor
+Author: Jeff Zhu
+Author-email: zjf014@gmail.com
+License: MIT license
+Keywords: wis_processor
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# wis-processor
+
+
+[![image](https://img.shields.io/pypi/v/wis-processor.svg)](https://pypi.python.org/pypi/wis-processor)
+[![image](https://img.shields.io/conda/vn/conda-forge/wis-processor.svg)](https://anaconda.org/conda-forge/wis-processor)
+[![image](https://readthedocs.org/projects/wis-processor/badge/?version=latest)](https://wis-processor.readthedocs.io/en/latest/?version=latest)
+
+**WIS数据处理工具**
+
+
+-   Free software: MIT license
+-   Documentation: https://wis-processor.readthedocs.io/en/latest/
+    
+
+## Features
+
+-   TODO
+
+## Credits
+
+This package was created with [Cookiecutter](https://github.com/cookiecutter/cookiecutter) and the [giswqs/pypackage](https://github.com/giswqs/pypackage) project template.
