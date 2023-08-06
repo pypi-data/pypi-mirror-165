@@ -1,0 +1,3 @@
+[console_scripts]
+fletil=fletil.cli:run
+
