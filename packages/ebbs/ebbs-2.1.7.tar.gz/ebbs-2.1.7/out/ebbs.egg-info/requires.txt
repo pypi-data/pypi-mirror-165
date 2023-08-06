@@ -1,0 +1,8 @@
+build
+wheel
+pip
+setuptools
+pytest
+jsonpickle
+twine
+eons
