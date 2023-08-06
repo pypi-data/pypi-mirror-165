@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: clidpy
+Version: 1.0
+Summary: Generic CLI-configured Discord bot
+Author: Lynn
+Author-email: lynn@foldr.moe
+License-File: LICENSE
