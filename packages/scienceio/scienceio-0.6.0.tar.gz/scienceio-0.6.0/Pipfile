@@ -1,0 +1,23 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+flit = "*"
+requests = "*"
+
+[dev-packages]
+pandas = "*"
+fourmat = "*"
+pytest = "*"
+syrupy = "*"
+
+[requires]
+python_version = "3.9"
+
+[scripts]
+format = "fourmat fix"
+build = "flit build"
+publish = "flit publish"
+test = "./test.sh"
