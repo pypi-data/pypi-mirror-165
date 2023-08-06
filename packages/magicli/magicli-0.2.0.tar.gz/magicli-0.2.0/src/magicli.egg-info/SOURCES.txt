@@ -1,0 +1,8 @@
+README.md
+setup.py
+src/magicli.py
+src/magicli.egg-info/PKG-INFO
+src/magicli.egg-info/SOURCES.txt
+src/magicli.egg-info/dependency_links.txt
+src/magicli.egg-info/requires.txt
+src/magicli.egg-info/top_level.txt
