@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+quantizer_pytorch/__init__.py
+quantizer_pytorch/quantizer.py
+quantizer_pytorch.egg-info/PKG-INFO
+quantizer_pytorch.egg-info/SOURCES.txt
+quantizer_pytorch.egg-info/dependency_links.txt
+quantizer_pytorch.egg-info/requires.txt
+quantizer_pytorch.egg-info/top_level.txt
