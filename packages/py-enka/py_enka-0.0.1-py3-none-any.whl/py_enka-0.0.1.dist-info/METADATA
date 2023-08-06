@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: py-enka
+Version: 0.0.1
+Summary: 
+Home-page: https://github.com/ArkoClub/py-enka
+Author: Arko
+Author-email: arko.space.cc@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: aiohttp (>=3.8.1,<4.0.0)
+Requires-Dist: pydantic (>=1.9.2,<2.0.0)
+Project-URL: Repository, https://github.com/ArkoClub/py-enka
+Description-Content-Type: text/markdown
+
+# Py-Enka
+
+用于 Python 的 [Enka.Network](https://enka.network) API
