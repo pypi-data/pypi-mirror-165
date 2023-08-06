@@ -1,0 +1,3 @@
+[console_scripts]
+rbfopt-go-wrapper = rbfoptgo.main:main
+
