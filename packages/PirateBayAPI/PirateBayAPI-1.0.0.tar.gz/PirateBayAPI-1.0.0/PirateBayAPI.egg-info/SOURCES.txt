@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+PirateBayAPI/__init__.py
+PirateBayAPI.egg-info/PKG-INFO
+PirateBayAPI.egg-info/SOURCES.txt
+PirateBayAPI.egg-info/dependency_links.txt
+PirateBayAPI.egg-info/requires.txt
+PirateBayAPI.egg-info/top_level.txt
