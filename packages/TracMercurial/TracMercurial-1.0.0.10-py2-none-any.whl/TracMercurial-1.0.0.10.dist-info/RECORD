@@ -1,0 +1,14 @@
+TracMercurial-1.0.0.10-py2.7-nspkg.pth,sha256=HvWsL-gdEsg4Ixkd1RaTnxxbzTTl6GLdOFMEzczij9I,544
+tracext/hg/__init__.py,sha256=daEdpEyAJIa8b2VkCqSKcw8PaExcB6Qro80XNes_sHA,2
+tracext/hg/backend.py,sha256=3B6eNtrW5HUsRrl7h4LpVXFGgT2NGkyKD5TtZlMOIKE,55232
+tracext/hg/hooks.py,sha256=NGVSugADLFDI77asVnv4K0SQOSdrUKktssO27AQnOvY,4811
+tracext/hg/locale/messages.pot,sha256=67k4u64OZvI8RbHefO50Yy60Z2IqFNfsBIa6ByiinaU,2860
+tracext/hg/locale/fr/LC_MESSAGES/tracmercurial.mo,sha256=6s_tsjA6M9MbBnXnaiDoXRh6bah5Pfea4CgraL9Vw9Y,2779
+tracext/hg/locale/fr/LC_MESSAGES/tracmercurial.po,sha256=JYvet4Vh6yQP3Hxa_jbg_buCA9Q7Bmai3xkQXW_hUVw,4154
+TracMercurial-1.0.0.10.dist-info/COPYING,sha256=2g7KD7UXrJOdFnkkydSz-HUKa3GRky7yyxRaz6YkrH4,18332
+TracMercurial-1.0.0.10.dist-info/METADATA,sha256=eG5IKQr2lL2fbVg1pjhsHsToNNZiGw1XK5-osozRnCo,454
+TracMercurial-1.0.0.10.dist-info/WHEEL,sha256=1VPi6hfNQaRRNuEdK_3dv9o8COtLGnHWJghhj4CQ28k,92
+TracMercurial-1.0.0.10.dist-info/entry_points.txt,sha256=fCxrnPBlB0-5nmFvJER90REYa-Zm9p8ZhIV5mcXd6pg,40
+TracMercurial-1.0.0.10.dist-info/namespace_packages.txt,sha256=YhWkotlpXqcPcUqpS38fII0mqCmzvZj3MrlGdxnYHjk,8
+TracMercurial-1.0.0.10.dist-info/top_level.txt,sha256=YhWkotlpXqcPcUqpS38fII0mqCmzvZj3MrlGdxnYHjk,8
+TracMercurial-1.0.0.10.dist-info/RECORD,,
