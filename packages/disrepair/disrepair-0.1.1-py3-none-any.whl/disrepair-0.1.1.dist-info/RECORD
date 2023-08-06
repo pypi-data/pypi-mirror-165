@@ -1,0 +1,9 @@
+LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+disrepair/__init__.py,sha256=8VLhKSqbmly5Wu_S_Pgj1b3TET2bXNz_9zfGK5Paf4o,49
+disrepair/__main__.py,sha256=vOaOnfpz2kRtVMV761fB6p_MeZAj1up8XI8s78YFyp0,29
+disrepair/check.py,sha256=dMGkY-zrUFkEG4rfjGpnKyjbt50BQMntxSmL9OVxeAQ,10652
+disrepair-0.1.1.dist-info/entry_points.txt,sha256=SapOxqD2gHvWI0LhsZ8JlZ3B9iEyx3V-VXNEEVaamQ8,45
+disrepair-0.1.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+disrepair-0.1.1.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+disrepair-0.1.1.dist-info/METADATA,sha256=4TQqVNhM7-l9rfMA_B2lImV8oM0n-H50eSfNhYiagjo,1122
+disrepair-0.1.1.dist-info/RECORD,,
