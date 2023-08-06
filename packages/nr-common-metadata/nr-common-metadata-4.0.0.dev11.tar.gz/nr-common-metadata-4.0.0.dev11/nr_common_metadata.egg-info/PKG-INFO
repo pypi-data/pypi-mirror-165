@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: nr-common-metadata
+Version: 4.0.0.dev11
+Summary: NR common metadata types
+Home-page: https://github.com/NarodniRepozitar/nr-common-metadata
+Author: CESNET
+Author-email: bauer@cesnet.cz
+License: MIT
+Keywords: National Repository common model Invenio
+Platform: any
+Classifier: Development Status :: 5 - Production/Stable
+Description-Content-Type: text/markdown
+Provides-Extra: tests
+
+<!--
+ Copyright (c) 2022 Miroslav Bauer
+
+ This software is released under the MIT License.
+ https://opensource.org/licenses/MIT
+-->
