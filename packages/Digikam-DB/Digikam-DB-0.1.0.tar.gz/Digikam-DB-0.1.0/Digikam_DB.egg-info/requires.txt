@@ -1,0 +1,9 @@
+sqlalchemy>=1.4
+
+[docs]
+
+[docs:python_version < "3.11"]
+tomli
+
+[mysql]
+pymysql

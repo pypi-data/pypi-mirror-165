@@ -1,0 +1,183 @@
+# Automatic test on push/pull request
+# Derived from: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
+
+name: Test
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - ".github/**"
+      - ".gitignore"
+      - ".readthedocs.yaml"
+      - "docs/**"
+      - MANIFEST.in
+      - README.rst
+  pull_request:
+    branches:
+      - main
+    paths-ignore:
+      - ".github/**"
+      - ".gitignore"
+      - ".readthedocs.yaml"
+      - "docs/**"
+      - MANIFEST.in
+      - README.rst
+  workflow_dispatch: {}
+
+jobs:
+  check:
+    
+    name: Flake8 Sanity Check
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10"]
+    
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v3
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install flake8
+      run: |
+        # Install flake8 
+        pip install flake8
+    - name: Lint with flake8
+      run: |
+        # stop the build if there are Python syntax errors or undefined names
+        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+        # exit-zero treats all errors as warnings.
+        flake8 . --count --exit-zero --statistics
+  
+  build_and_test:
+    
+    name: Run Unit Tests
+    needs:
+    - check
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version:
+          - "3.7"
+          - "3.8"
+          - "3.9"
+          - "3.10"
+        mysql-version:
+          - "mysql-8.0"
+          - "mariadb-10.4"
+          - "mariadb-10.5"
+          - "mariadb-10.6"
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up MySQL ${{ matrix.mysql-version }}
+      uses: shogo82148/actions-setup-mysql@v1
+      with:
+        #distribution:   ${{ matrix.mysql-flavor }}
+        mysql-version:  ${{ matrix.mysql-version }}
+        root-password:  ${{ secrets.MYSQL_ROOT_PW }}
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v3
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install dependencies
+      run: |
+        # There seems to be no easy way to install dependencies
+        # from pyproject.toml, so we just install the package...
+        pip install -e .[mysql]
+        pip install coverage[toml]
+    - name: Prepare database
+      run: |
+        # Prepare the MySQL database
+        mysql -u root -h 127.0.0.1 -p"${{ secrets.MYSQL_ROOT_PW }}" <<EOF
+        CREATE DATABASE digikam;
+        CREATE USER digikam@localhost IDENTIFIED BY '${{ secrets.MYSQL_USER_PW }}';
+        GRANT ALL PRIVILEGES ON digikam.* TO digikam@localhost;
+        EOF
+    - name: Prepare test configuration
+      run: |
+        # Generate test MySQL configuration
+        cat >mysql_data.py <<EOF
+        db_host = '127.0.0.1'
+        db_user = 'digikam'
+        db_pass = '${{ secrets.MYSQL_USER_PW }}'
+        db_name = 'digikam'
+        EOF
+    - name: Test with Python unittest
+      run: |
+        # Run Python test
+        coverage run -m unittest -v
+    - name: Save Coverage Data
+      uses: actions/upload-artifact@v3
+      with:
+        name: coverage-data
+        path: .coverage.*
+    - name: Test log
+      if: ${{ always() }}
+      run: |
+        # Show the test log
+        cat test.log
+    - name: System information for debugging
+      if: ${{ failure() }}
+      run: |
+        # Show some system information
+        echo "Disk devices"
+        for d in /dev/root /dev/sd* /dev/nvme*; do
+            test -e $d && ls -l $d
+        done
+        ls -l /dev/disk/by-uuid
+        echo "Mounted devices"
+        cat /proc/mounts | grep ^/dev/
+  
+  coverage:
+    
+    name: Aggregate Test Coverage
+    needs:
+    - build_and_test
+    
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Install dependencies
+      run: |
+        # coverage report needs _version.py, so install...
+        pip install -e .
+        pip install coverage[toml]
+    - name: Load Coverage Data 
+      uses: actions/download-artifact@v3
+    - name: Aggregate Coverage Data
+      run: |
+        # Run coverage combine
+        cd coverage-data
+        coverage combine
+        cp .coverage ..
+    - name: Coverage report
+      run: |
+        # Run coverage report
+        coverage report -m
+  
+  publish_test:
+    
+    name: Publish to Test PyPi
+    needs:
+    - build_and_test
+    
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Generate Packages
+      run: |
+        pip install build
+        python -m build
+    - name: Upload to text.pypi.org
+      uses: pypa/gh-action-pypi-publish@release/v1
+      with:
+        password: ${{ secrets.TEST_PYPI_API_TOKEN }}
+        repository_url: https://test.pypi.org/legacy/
+
+
+
