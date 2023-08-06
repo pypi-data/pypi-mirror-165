@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: tree-sitter-rst
+Version: 0.0.1
+Summary: Binary Python wheels for tree_sitter_rst parser.
+Home-page: 
+Author: Matthias Bussonnier
+Author-email: bussonniermatthias@gmail.com
+License: BSD
+License-File: LICENSE
+Requires-Dist: tree-sitter
+
