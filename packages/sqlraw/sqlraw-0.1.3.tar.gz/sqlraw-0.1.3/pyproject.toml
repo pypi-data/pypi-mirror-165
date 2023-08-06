@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "sqlraw"
+version = "0.1.3"
+description = "Path base SQL Query"
+authors = ["Uygun Bodur <uygun@dop.com.tr>"]
+repository = "https://github.com/developerkitchentr/sqlraw"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+SQLAlchemy = "^1.4.35"
+redis = "^4.2.2"
+psycopg2 = "^2.9.3"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
