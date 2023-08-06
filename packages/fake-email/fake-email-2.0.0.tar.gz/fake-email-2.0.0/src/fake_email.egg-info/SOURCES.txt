@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+src/fake_email/__init__.py
+src/fake_email/mail.py
+src/fake_email.egg-info/PKG-INFO
+src/fake_email.egg-info/SOURCES.txt
+src/fake_email.egg-info/dependency_links.txt
+src/fake_email.egg-info/requires.txt
+src/fake_email.egg-info/top_level.txt
