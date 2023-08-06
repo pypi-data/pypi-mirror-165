@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/excel2config/__init__.py
+src/excel2config/excel2config.py
+src/excel2config.egg-info/PKG-INFO
+src/excel2config.egg-info/SOURCES.txt
+src/excel2config.egg-info/dependency_links.txt
+src/excel2config.egg-info/entry_points.txt
+src/excel2config.egg-info/requires.txt
+src/excel2config.egg-info/top_level.txt
