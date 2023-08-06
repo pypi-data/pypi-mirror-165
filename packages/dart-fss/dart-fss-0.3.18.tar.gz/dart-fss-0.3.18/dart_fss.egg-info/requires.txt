@@ -1,0 +1,41 @@
+arelle
+attrs
+backcall
+beautifulsoup4
+certifi
+chardet
+decorator
+fake-useragent
+ipython-genutils
+isodate
+pickleshare
+py
+python-dateutil
+pytz
+requests
+six
+soupsieve
+tqdm
+traitlets
+urllib3
+wcwidth
+lxml
+html5lib
+openpyxl
+halo
+xmltodict
+appdirs
+
+[:python_version <= "3.6"]
+pandas<=1.1.5
+
+[:python_version == "3.5"]
+idna==2.9
+numpy==1.18.4
+
+[:python_version >= "3.6"]
+idna>=3.0
+numpy>=1.19.5
+
+[:python_version >= "3.7"]
+pandas>=1.2.0
