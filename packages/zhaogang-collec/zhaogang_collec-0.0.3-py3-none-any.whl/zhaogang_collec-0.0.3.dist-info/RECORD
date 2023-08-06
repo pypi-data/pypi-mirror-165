@@ -1,0 +1,9 @@
+tests/__init__.py,sha256=8bY3H7xEW2Y_DMkFeIMU3R1kRJcKz1DT2na1a92PVlI,147
+tests/test_collection.py,sha256=H4yEOQ598qFqAQWQk7AD3TLLWPY9oo8FFZzxgVGTQgM,267
+zhaogang_collec/__init__.py,sha256=8bY3H7xEW2Y_DMkFeIMU3R1kRJcKz1DT2na1a92PVlI,147
+zhaogang_collec/main.py,sha256=dgg-eUdykYLwBDsYeUx_oVCr55XuyBLmOBX1fjhdY-M,434
+zhaogang_collec-0.0.3.dist-info/METADATA,sha256=9SP6RMeVI__CtKCEO9qq7vPt44f5vh8hFFKCi4usUYo,500
+zhaogang_collec-0.0.3.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+zhaogang_collec-0.0.3.dist-info/entry_points.txt,sha256=1k-85ZGpExnb4ScPPf0BUU69_r6R74JR8es82qWYgZ4,50
+zhaogang_collec-0.0.3.dist-info/top_level.txt,sha256=UZLqEKTLXfLTctQ7PqMBVd0uMYFS8C6XJLJAwOSFzYE,22
+zhaogang_collec-0.0.3.dist-info/RECORD,,
