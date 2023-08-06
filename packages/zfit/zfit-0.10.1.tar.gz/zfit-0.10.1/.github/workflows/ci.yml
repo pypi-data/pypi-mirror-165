@@ -1,0 +1,222 @@
+name: tests
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - "*"
+    branches:
+      - master
+      - develop
+      - "release/*"
+      - "hotfix/*"
+  pull_request:
+    branches-ignore:
+      - "docs/*"
+      - "doc/*"
+
+
+jobs:
+  unittests:
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 180 # for eager mode
+    name: tests on ${{ matrix.os }} with ${{ matrix.python-version }} compiled = ${{ matrix.use-graph }}
+    env:
+      ZFIT_DO_JIT: ${{ matrix.use-graph }}
+    strategy:
+      max-parallel: 15
+      fail-fast: False
+      matrix:
+        use-graph: [ 1 ]
+        python-version: [ "3.7", "3.8", "3.9", "3.10" ]
+        os: [ ubuntu-latest ]
+        extras: [ alldev ]
+        include:
+          - os: ubuntu-latest
+            extras: alldev
+            python-version: "3.10"
+            use-graph: 0
+          - os: macos-latest
+            python-version: "3.10"
+            use-graph: 1
+            extras: alldev-nonlinux
+          - os: windows-latest
+            python-version: "3.10"
+            use-graph: 1
+            extras: alldev-windows
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Get history and tags for SCM versioning to work
+        run: |
+          git fetch --prune --unshallow
+          git fetch --depth=1 origin +refs/tags/*:refs/tags/*
+      - uses: actions/setup-python@v4
+        name: Set up Python ${{ matrix.python-version }}
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Get pip cache dir
+        id: pip-cache
+        run: |
+          echo "::set-output name=dir::$(pip cache dir)"
+      - name: pip cache
+        uses: actions/cache@v3.0.7
+        with:
+          path: ${{ steps.pip-cache.outputs.dir }}
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}-pip-${{ hashFiles('**/requirements_dev.txt') }}-pip-${{ hashFiles('**/pyproject.toml') }}-pip-${{ hashFiles('**/setup.cfg') }}-pip-${{ hashFiles('**/setup.py') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install .[${{ matrix.extras }}]
+      - name: Test with pytest
+        # TODO: maybe reactivate long tests?
+        #          if [ "$GITHUB_REF" == 'refs/heads/develop' ]; then
+        #            echo "PYTEST_ADDOPTS=--longtests-kde --longtests" >> "$GITHUB_ENV"
+        #          fi
+        run: |
+          coverage run --source=. --omit=".tox/*,*/test*,*/minimizers/interface.py,*/core/testing.py" --branch -m pytest .
+          mkdir coverage && coverage-lcov --output_file_path ./coverage/lcov.info
+      - name: Coveralls Parallel
+        uses: coverallsapp/github-action@1.1.3
+        with:
+          github-token: ${{ secrets.github_token }}
+          flag-name: run-${{ matrix.use-graph }}-${{ matrix.python-version }}-ubuntu
+          parallel: true
+  docs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      matrix:
+        python-version: [ "3.10" ]
+    name: Testbuild docs
+    steps:
+      - uses: actions/checkout@v3
+      - name: Get history and tags for SCM versioning to work
+        run: |
+          git fetch --prune --unshallow
+          git fetch --depth=1 origin +refs/tags/*:refs/tags/*
+      - uses: actions/setup-python@v4
+        name: Set up Python ${{ matrix.python-version }}
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Get pip cache dir
+        id: pip-cache
+        run: |
+          echo "::set-output name=dir::$(pip cache dir)"
+      - name: pip cache
+        uses: actions/cache@v3.0.7
+        with:
+          path: ${{ steps.pip-cache.outputs.dir }}
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}-pip-${{ hashFiles('**/requirements_dev.txt') }}-pip-${{ hashFiles('**/pyproject.toml') }}-pip-${{ hashFiles('**/setup.cfg') }}-pip-${{ hashFiles('**/setup.py') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install --ignore-requires-python .[docs]
+      - name: Build the docs, check for failure
+        run: |
+          bash utils/ci/testbuild_docs.sh
+
+  tutorials:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    strategy:
+      max-parallel: 8
+      fail-fast: False
+      matrix:
+        use-graph: [ 0, 1 ]
+        python-version: [ "3.7", "3.10" ]
+    name: Run tutorials, Python ${{ matrix.python-version }}, compiled = ${{ matrix.use-graph }}
+    env:
+      ZFIT_DO_JIT: ${{ matrix.use-graph }}
+    steps:
+      - uses: actions/checkout@v3
+      - name: Get history and tags for SCM versioning to work
+        run: |
+          git fetch --prune --unshallow
+          git fetch --depth=1 origin +refs/tags/*:refs/tags/*
+      - uses: actions/setup-python@v4
+        name: Set up Python ${{ matrix.python-version }}
+
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Clone Tutorials
+        run: |
+          git clone https://github.com/zfit/zfit-tutorials.git
+
+      - name: Get pip cache dir
+        id: pip-cache
+        run: |
+          echo "::set-output name=dir::$(pip cache dir)"
+      - name: pip cache
+        uses: actions/cache@v3.0.7
+        with:
+          path: ${{ steps.pip-cache.outputs.dir }}
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}-pip-${{ hashFiles('**/requirements_dev.txt') }}-pip-${{ hashFiles('**/pyproject.toml') }}-pip-${{ hashFiles('**/setup.cfg') }}-pip-${{ hashFiles('**/setup.py') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install wheel
+          pip install -U .[all]
+          pip install nbval
+          pip install -r zfit-tutorials/requirements.txt
+          pip install -U --force-reinstall .[all]  # yep. Needed. Otherwise i.e. numpy needs to be upgraded
+
+      - name: Run notebooks
+        run: |
+          pytest --nbval-lax zfit-tutorials --ignore=zfit-tutorials/experimental --ignore=zfit-tutorials/_unused --ignore=zfit-tutorials/_website --ignore=zfit-tutorials/
+  examples:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    strategy:
+      max-parallel: 8
+      fail-fast: False
+      matrix:
+        use-graph: [ 0, 1 ]
+        python-version: [ "3.7", "3.10" ]
+    name: Run examples, Python ${{ matrix.python-version }}, compiled = ${{ matrix.use-graph }}
+    env:
+      ZFIT_DO_JIT: ${{ matrix.use-graph }}
+    steps:
+      - uses: actions/checkout@v3
+      - name: Get history and tags for SCM versioning to work
+        run: |
+          git fetch --prune --unshallow
+          git fetch --depth=1 origin +refs/tags/*:refs/tags/*
+      - uses: actions/setup-python@v3
+        name: Set up Python ${{ matrix.python-version }}
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Get pip cache dir
+        id: pip-cache
+        run: |
+          echo "::set-output name=dir::$(pip cache dir)"
+      - name: pip cache
+        uses: actions/cache@v3.0.7
+        with:
+          path: ${{ steps.pip-cache.outputs.dir }}
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}-pip-${{ hashFiles('**/requirements_dev.txt') }}-pip-${{ hashFiles('**/pyproject.toml') }}-pip-${{ hashFiles('**/setup.cfg') }}-pip-${{ hashFiles('**/setup.py') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: Run examples
+        run: |
+          bash utils/ci/install_test_examples.sh
+
+  finish:
+    needs: unittests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Coveralls Finished
+        uses: coverallsapp/github-action@1.1.3
+        with:
+          github-token: ${{ secrets.github_token }}
+          parallel-finished: true

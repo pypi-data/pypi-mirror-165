@@ -1,0 +1,21 @@
+[build-system]
+requires = [
+    "setuptools>=42",
+    "setuptools_scm[toml]>=3.4",
+    "setuptools_scm_git_archive",
+    "wheel"
+]
+
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-Wd -ra -q"
+testpaths = [
+    "tests",
+]
+markers = [
+    "plots: create and safe plots",
+]
+console_output_style = "progress"
+collect_ignore = "setup.py"
