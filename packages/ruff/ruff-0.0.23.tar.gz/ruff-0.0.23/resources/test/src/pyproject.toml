@@ -1,0 +1,17 @@
+[tool.ruff]
+line-length = 88
+exclude = ["excluded.py", "**/migrations"]
+select = [
+    "E501",
+    "F401",
+    "F403",
+    "F541",
+    "F634",
+    "F704",
+    "F706",
+    "F821",
+    "F831",
+    "F832",
+    "F841",
+    "F901",
+]
