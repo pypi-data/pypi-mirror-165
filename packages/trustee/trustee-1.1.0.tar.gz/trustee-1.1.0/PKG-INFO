@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: trustee
+Version: 1.1.0
+Summary: This package implements the Trustee framework to extract decision tree explanation from black-box ML models.
+Author: Arthur Selle Jacobs
+Author-email: asjacobs@inf.ufrgs.br
+Requires-Python: >=3.8
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: graphviz (>=0.8.1)
+Requires-Dist: matplotlib (>=3.3.1,<4.0.0)
+Requires-Dist: numpy (>=1.19.0)
+Requires-Dist: pandas (>=1.1.0,<2.0.0)
+Requires-Dist: prettytable (==3.0.0)
+Requires-Dist: rootpath (>=0.1.1,<0.2.0)
+Requires-Dist: scikit-learn (>=0.23.2)
+Requires-Dist: scipy (>=1.4.1,<2.0.0)
+Requires-Dist: setuptools (>=57.0.0,<58.0.0)
+Requires-Dist: termcolor (>=1.1.0,<2.0.0)
