@@ -1,0 +1,4 @@
+[console_scripts]
+pdfmask = pdfmask.mask:main
+pdfmask_gen = pdfmask.mask_gen:main
+
