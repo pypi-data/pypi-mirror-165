@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+src/flysystem/__init__.py
+src/flysystem/error.py
+src/flysystem/filesystem.py
+src/flysystem/path.py
+src/flysystem/visibility.py
+src/flysystem.egg-info/PKG-INFO
+src/flysystem.egg-info/SOURCES.txt
+src/flysystem.egg-info/dependency_links.txt
+src/flysystem.egg-info/top_level.txt
+src/flysystem/adapters/__init__.py
+src/flysystem/adapters/local.py
+src/flysystem/adapters/s3.py
