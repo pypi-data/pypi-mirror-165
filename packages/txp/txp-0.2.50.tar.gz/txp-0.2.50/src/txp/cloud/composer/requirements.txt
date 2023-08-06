@@ -1,0 +1,5 @@
+google-cloud-firestore==2.3.4
+google-cloud-pubsub
+apache-beam==2.40.0
+numpy==1.21.4
+txp[cloud]
