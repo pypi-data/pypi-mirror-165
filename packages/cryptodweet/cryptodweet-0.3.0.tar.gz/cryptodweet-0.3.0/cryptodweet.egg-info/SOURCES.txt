@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+cryptodweet/__init__.py
+cryptodweet.egg-info/PKG-INFO
+cryptodweet.egg-info/SOURCES.txt
+cryptodweet.egg-info/dependency_links.txt
+cryptodweet.egg-info/requires.txt
+cryptodweet.egg-info/top_level.txt
