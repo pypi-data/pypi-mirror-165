@@ -1,0 +1,71 @@
+.requests-table {
+    border-collapse: collapse;
+    font-size: 0.9em;
+    width: 99%;
+    table-layout: fixed;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.requests-table thead tr {
+    background-color: var(--table-header-bg);
+    color: var(--table-header-text);
+    text-align: center;
+}
+
+.url {
+    text-align: left;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.initiator {
+    text-align: left;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 20%;
+}
+
+.status {
+    text-align: center;
+    width: 36px;
+}
+
+
+.method {
+    text-align: left;
+    width: 78px;
+}
+
+.request {
+    display: none;
+}
+
+.requests-table th {
+    padding: 12px 15px;
+}
+
+.requests-table td {
+    padding: 6px 10px;
+}
+
+.requests-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.requests-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+
+.requests-table tbody tr.active-row {
+    font-weight: bold;
+    color: var(--selected-url-text);
+}
+
+#filter-url {
+    width: 50%;
+    border-width: 0px;
+    padding: 1px 2px;
+}
