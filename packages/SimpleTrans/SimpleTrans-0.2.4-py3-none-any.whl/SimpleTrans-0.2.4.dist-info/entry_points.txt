@@ -1,0 +1,2 @@
+[console_scripts]
+simpletrans = simpletrans.__main__:main
