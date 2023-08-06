@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>com.github.Matoking.protontricks</id>
+  <name>Protontricks</name>
+  <summary>A simple wrapper that does winetricks things for Proton enabled games</summary>
+  <summary xml:lang="pt_BR">Um invólucro simples que executa truques de winetricks para jogos habilitados para usar o Proton</summary>
+  <summary xml:lang="es">Un contenedor simple que realiza trucos de winetricks para juegos habilitados para usar Proton</summary>
+  <icon type="stock">wine</icon>
+  <provides>
+    <binary>protontricks</binary>
+    <binary>protontricks-launch</binary>
+  </provides>
+  <launchable type="desktop-id">protontricks.desktop</launchable>
+  <recommends>com.valvesoftware.Steam</recommends>
+  <screenshots>
+    <screenshot type="default">
+      <image type="source">https://raw.githubusercontent.com/Matoking/protontricks/master/data/screenshot.png</image>
+      <caption>App selection screen</caption>
+    </screenshot>
+  </screenshots>
+  <supports>
+    <control>pointing</control>
+    <control>keyboard</control>
+    <control>console</control>
+  </supports>
+  <content_rating type="oars-1.1"/>
+  <description>
+    <p>This is a wrapper script that allows you to easily run Winetricks commands for Steam Play/Proton games among other common Wine features,
+       such as launching external Windows executables. This is often useful when a game requires closed-source runtime libraries or applications
+       that are not included with Proton.</p>
+  </description>
+  <url type="homepage">https://github.com/Matoking/protontricks</url>
+  <url type="help">https://github.com/Matoking/protontricks#readme</url>
+  <url type="bugtracker">https://github.com/Matoking/protontricks/issues</url>
+  <project_license>GPL-3.0</project_license>
+  <metadata_license>CC0-1.0</metadata_license>
+  <update_contact>janne.pulkkinen@protonmail.com</update_contact>
+  <releases>
+      <release version="1.9.1" date="2022-08-28"/>
+      <release version="1.9.0" date="2022-07-02"/>
+      <release version="1.8.2" date="2022-05-16"/>
+      <release version="1.8.1" date="2022-03-20"/>
+      <release version="1.8.0" date="2022-02-26"/>
+      <release version="1.7.0" date="2022-01-08"/>
+      <release version="1.6.2" date="2021-11-28"/>
+      <release version="1.6.1" date="2021-10-18"/>
+      <release version="1.6.0" date="2021-08-08"/>
+  </releases>
+</component>
