@@ -1,0 +1,11 @@
+jwt_signature_validator/__about__.py,sha256=QqMXHVJs6Mh0abjyoct_OcIt77Rz1dSmEAy-kWDxGc8,18
+jwt_signature_validator/__init__.py,sha256=lbgXuuGR0zV2wx4cuTBre73dO_brYm1X6sYWlzhvp-s,112
+jwt_signature_validator/encoded_payload.py,sha256=6pa5Pkd0RZZAUnZ5HThFK_VL6DaIo0UsUs3K0FShAe0,3365
+jwt_signature_validator/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jwt_signature_validator/datastructures/__init__.py,sha256=llw1TN39dK_vYVHpe6aoO0gQGYrAdHIjLSgBlpcyEPs,6165
+jwt_signature_validator/exceptions/__init__.py,sha256=TXRDl_IxwjvEfTUjgHwSLiKdpxN2uJOoSxHZ8rUIasw,827
+jwt_signature_validator/types/__init__.py,sha256=RbisZ8DEsquztH1HwK6_8Iy5ZvQwddYcDDFW32KEN3o,302
+jwt_signature_validator-0.0.3.dist-info/METADATA,sha256=8n0BYHE1Buz_23rYgsPn9hGFqu9qTtZtSdZ8A2LLEes,2221
+jwt_signature_validator-0.0.3.dist-info/WHEEL,sha256=09RFlvY3aVzvCNk4AXPZt-N-AI7GY_KktGsTb2IqIBU,86
+jwt_signature_validator-0.0.3.dist-info/licenses/LICENSE,sha256=Vj2XA1yQbHNpaM3ZTG0AC2knyYOJmbiHPpwnPTPRiL4,1079
+jwt_signature_validator-0.0.3.dist-info/RECORD,,
