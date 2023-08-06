@@ -1,0 +1,16 @@
+Winkit/__init__.py,sha256=4mkcfo0IqAlx2yjeAfgAU9d_yIrub8DKAtFeA1YGBO0,1330
+Winsdoc/__init__.py,sha256=q7qHLY4tfQF805TcJKSsn4RVTRi70XLhNDvGoom8IRY,81
+Winsdoc/__main__.py,sha256=V98Jn_JZmfXCqMTq3Pu--HMlmgp8i6JfhSG9Y6yzQgc,70
+Winstree/__init__.py,sha256=MXhmu6uV24S4etpMl6_bvhuYBIhWNniZoADtgHdkIZo,457
+Winstree/DotNet/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+Winstree/DotNet/System/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+Winstree/DotNet/System/Drawing/__init__.py,sha256=DT8l1UODI9U7qQeAQ_fEg-a243NBuSenjyrDyb9scII,2088
+Winstree/DotNet/System/Threading/__init__.py,sha256=hfFWS-e2O5TPW5jIC47XQgKdEt1JhBou15Rgw7_G5vA,547
+Winstree/DotNet/System/Windows/__init__.py,sha256=LrlLkkmm-a5lac0eLRKFLCxN8seUlKfns36Bt35CZ-E,881
+Winstree/DotNet/System/Windows/Forms/__init__.py,sha256=sRk3luSht43GHf8cLSLclz4l5IcBUx2U4jqMOjnhwzs,23174
+Winstreer/__init__.py,sha256=GkGZ11M79NOlLCshgEj5NMaylJEBwt2n3L93tOl8ijU,564
+Winstree-0.0.1a3.dist-info/METADATA,sha256=Gs6KqcW0l4PMQVWgeHnbTpqIZ5QjWs_OVT_qf0mjbMs,481
+Winstree-0.0.1a3.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+Winstree-0.0.1a3.dist-info/entry_points.txt,sha256=NW8cRhEYfMT8TN716iQS5Bz3UrQTBsoWkF3Mh7DWl6A,84
+Winstree-0.0.1a3.dist-info/top_level.txt,sha256=QG1ojg3B93Hz7dIQd1yqdNfS9oNu341f9lwWGN1d1Bo,34
+Winstree-0.0.1a3.dist-info/RECORD,,

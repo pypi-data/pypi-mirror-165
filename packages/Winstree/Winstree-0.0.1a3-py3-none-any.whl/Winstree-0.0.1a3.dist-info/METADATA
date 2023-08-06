@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: Winstree
+Version: 0.0.1a3
+Summary: Windows环境.NET快速开发工具包
+Author: XiangQinxi
+Author-email: XiangQinxi@outlook.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pythonnet (>=3.0.0a1)
+
+# Winstree
+Windows环境下的.NET开发，现在用于快速开发WinForms

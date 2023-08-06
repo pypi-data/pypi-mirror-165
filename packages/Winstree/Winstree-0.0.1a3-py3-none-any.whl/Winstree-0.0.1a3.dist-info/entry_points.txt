@@ -1,0 +1,5 @@
+[console_scripts]
+winsdoc = Winsdoc
+
+[gui_scripts]
+winstreer = Winstreer:empty_demo
