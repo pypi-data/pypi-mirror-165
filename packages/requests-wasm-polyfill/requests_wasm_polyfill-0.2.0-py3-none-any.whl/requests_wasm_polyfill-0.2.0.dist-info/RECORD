@@ -1,0 +1,9 @@
+requests/__init__.py,sha256=1HnObWekPHEsl8KyX4ZAmZLYtGgiHEeWjNd5DZxqYws,89
+requests/api.py,sha256=y5CEgV_1rKc8G1oAzjTvkbl1rNOIXZc8JFeyeNKrITg,1582
+requests/models.py,sha256=s_1aOJ1o60fXRONsfd4EKEmrF5iRqiz4Co2qUA9SZk4,958
+requests/sessions.py,sha256=hzMsrmdSyyq3w4oodODP5dRfK5ZRJByt82Ypp_ecSgw,1038
+requests/utils.py,sha256=gbZoL7Ivu2G2nehKMBvfQ0skAgKkn-fcICO3ZJ7GDi8,1162
+requests_wasm_polyfill-0.2.0.dist-info/METADATA,sha256=0JluiWv0LIupgM4cNLDxMFB5qCXXeNCWnFtknXlN8h0,67
+requests_wasm_polyfill-0.2.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+requests_wasm_polyfill-0.2.0.dist-info/top_level.txt,sha256=fMSVmHfb5rbGOo6xv-O_tUX6j-WyixssE-SnwcDRxNQ,9
+requests_wasm_polyfill-0.2.0.dist-info/RECORD,,
