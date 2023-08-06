@@ -1,0 +1,5 @@
+Click
+docker
+python-dotenv
+requests
+croniter
