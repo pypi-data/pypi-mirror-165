@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel", "poetry"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "AGSecurityPostgres"
+version = "1.0.10"
+authors = [
+  { name="Michael Lundager", email="michael@wivvies.com" },
+]
+description = "Security Query Builder"
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "AGCoder",
+    "AGQueryPostgres",
+    "psycopg2-binary"
+]
+
+[tool.poetry]
+include = [
+    { path = 'src/AGSecurityPostgres/sql_queries/*.sql', format = 'wheel' },
+    { path = 'src/AGSecurityPostgres/sql_queries/*.sql', format = 'sdist' },
+]
+
+[tool.setuptools]
+# ...
+# By default, include-package-data is true in pyproject.toml, so you do
+# NOT have to specify this line.
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+mypkg = ["*.sql"]
