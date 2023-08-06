@@ -1,0 +1,11 @@
+django>=2.2
+
+[docs]
+sphinx
+
+[test]
+pytest
+pytest-cov
+pytest-django
+celery
+redis
