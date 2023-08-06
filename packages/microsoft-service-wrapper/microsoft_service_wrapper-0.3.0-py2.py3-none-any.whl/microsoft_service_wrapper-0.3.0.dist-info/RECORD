@@ -1,0 +1,14 @@
+microsoft_service_wrapper/__init__.py,sha256=lQ7wlV8bTDX13bIVw1k1z6gVeELouo81dG8r6jGJfRc,158
+microsoft_service_wrapper/generic/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+microsoft_service_wrapper/generic/client.py,sha256=ky7DPGofrVGdK_ImeIDVzTVG0go21gIUbqInq-YrXvY,2194
+microsoft_service_wrapper/ms_graph/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+microsoft_service_wrapper/ms_graph/client.py,sha256=RMo-XzC9p1LgoTR2ZEz3ymFZZHUnUrxIJR_vxqfdA2Y,2436
+microsoft_service_wrapper/ms_powerbi/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+microsoft_service_wrapper/ms_powerbi/client.py,sha256=i6XBzDZVtQHP-xxzCZ-OOJcahRGXqta7WgfwFS042GE,2306
+microsoft_service_wrapper/ms_powerbi/constants.py,sha256=rIINCVZ7i5-RVdJBBRE7T9BT6q-i9UNYewigI6qoycY,1740
+microsoft_service_wrapper-0.3.0.dist-info/AUTHORS.rst,sha256=AVyHGTXnY80S8F_y5zq7ri1xOeKvUeuLNodhKbYi8nY,155
+microsoft_service_wrapper-0.3.0.dist-info/LICENSE,sha256=pEJ1VMjhgQ5C5mwVL0qVYh3T9JUz4lxr3FVb8qVtZQE,1070
+microsoft_service_wrapper-0.3.0.dist-info/METADATA,sha256=MuJQR0g0VPhOdMBqDsyQCe-FVr_DuWGsJmG2rq2PrHc,2426
+microsoft_service_wrapper-0.3.0.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+microsoft_service_wrapper-0.3.0.dist-info/top_level.txt,sha256=j7g7WZzAcbzLo9bYhuDig7nvLuzOz9wEp6GtyBBFpSs,26
+microsoft_service_wrapper-0.3.0.dist-info/RECORD,,
