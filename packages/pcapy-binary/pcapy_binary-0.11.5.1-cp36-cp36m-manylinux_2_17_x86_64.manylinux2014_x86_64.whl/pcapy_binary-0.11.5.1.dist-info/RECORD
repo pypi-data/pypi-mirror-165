@@ -1,0 +1,12 @@
+pcapy.cpython-36m-x86_64-linux-gnu.so,sha256=fQGowUHHsoTTS2M5JvGzmVvBhwaBbNb_mspU6n5DmoE,194576
+pcapy_binary.libs/libpcap-828cc380.so.1.5.3,sha256=p9gU0nV9iw5-b9g_boDa5E0lhpb8UUzs6BAa3W_Yr9Q,276720
+pcapy_binary-0.11.5.1.data/data/share/doc/pcapy/LICENSE,sha256=rHH0RPfsrFVKr0RF6bF78ZFhQjWM0IyCIftI05LnV3g,2599
+pcapy_binary-0.11.5.1.data/data/share/doc/pcapy/README,sha256=JJ0f-83KQmyB08RIWql3ZLVg3XYNLRpX9z8jWX2raQU,2625
+pcapy_binary-0.11.5.1.data/data/share/doc/pcapy/pcapy.html,sha256=qvLDUBl2pAlISGZoO67eAUJeJMitfvQw72P5_RRO8B8,64092
+pcapy_binary-0.11.5.1.data/data/share/doc/pcapy/tests/96pings.pcap,sha256=TAUKSm1hamgBu-CHDaIiWlBlc9hZVtOqhi-wYEsdX-Y,10776
+pcapy_binary-0.11.5.1.data/data/share/doc/pcapy/tests/pcapytests.py,sha256=kHdPG6i6oDGQpmNm1_dUIOXrHWy2xxwC_er6-ufILDU,4634
+pcapy_binary-0.11.5.1.dist-info/METADATA,sha256=BgJ3gAzcXMMdWenRa2WaCF-tY-S6b7uNe0-k7sEUdJY,2969
+pcapy_binary-0.11.5.1.dist-info/RECORD,,
+pcapy_binary-0.11.5.1.dist-info/top_level.txt,sha256=uSbF_1hgLKJ8ajqADg1KAe_t7h6qs01tRXTugpsM_Vw,6
+pcapy_binary-0.11.5.1.dist-info/WHEEL,sha256=YVAXCacQXnznQ-_lMj8Nvqrs7YPtMP1pHRCw9EcyWRQ,150
+pcapy_binary-0.11.5.1.dist-info/LICENSE,sha256=rHH0RPfsrFVKr0RF6bF78ZFhQjWM0IyCIftI05LnV3g,2599
