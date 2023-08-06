@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: pimelon
+Version: 5.14.0
+Summary: CLI to manage Multi-tenant deployments for Melon apps
+Home-page: https://monakerp.com/pine
+Author: Alphamonak Solutions
+Author-email: amonak@alphamonak.com
+License: GPLv3
+Project-URL: Source, https://github.com/amonak/pine
+Project-URL: Documentation, https://docs.monakerp.com/docs/user/en/pine
+Project-URL: Changelog, https://github.com/amonak/pine/releases
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: Software Development :: User Interfaces
+Classifier: Topic :: System :: Installation/Setup
+Requires-Python: ~=3.6
+Description-Content-Type: text/markdown

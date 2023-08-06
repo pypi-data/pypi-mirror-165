@@ -1,0 +1,59 @@
+[project]
+name = "pimelon"
+description = "CLI to manage Multi-tenant deployments for MonakERP apps"
+readme = "README.md"
+requires-python = ">=3.7"
+authors = [
+    { name = "Alphamonak Solutions", email = "amonak@monakerp.com" },
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Natural Language :: English",
+    "Operating System :: MacOS",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: Software Development :: User Interfaces",
+    "Topic :: System :: Installation/Setup",
+]
+dependencies = [
+    "Click>=7.0",
+    "GitPython~=2.1.15",
+    "honcho",
+    "Jinja2~=3.0.3",
+    "python-crontab~=2.6.0",
+    "requests",
+    "semantic-version~=2.8.2",
+    "setuptools>40.9.0",
+    "tomli;python_version<'3.11'",
+]
+dynamic = [
+    "version",
+]
+
+[project.scripts]
+pine = "pine.cli:cli"
+
+[project.urls]
+Documentation = "https://docs.monakerp.com/docs/user/en/pine"
+Homepage = "https://monakerp.com/pine"
+Source = "https://github.com/amonak/pine"
+
+[build-system]
+requires = [
+    "hatchling>=1.6.0",
+]
+build-backend = "hatchling.build"
+
+[tool.hatch.version]
+path = "pine/__init__.py"
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "/pine"
+]
+
+[tool.hatch.build.targets.wheel]
+include = [
+  "/pine"
+]
