@@ -1,0 +1,14 @@
+cloudpickle
+dask
+fsspec
+zstandard
+
+[:python_version < "3.10"]
+typing_extensions
+
+[dev]
+hypothesis
+pre-commit
+pytest
+serialize
+tox

@@ -1,0 +1,15 @@
+name: dask-checkpoint
+channels:
+  - conda-forge
+dependencies:
+  - cloudpickle
+  - dask
+  - fsspec
+  - zstandard
+  - hypothesis
+  - pre-commit
+  - pytest
+  - tox
+  - pip
+  - pip:
+    - serialize

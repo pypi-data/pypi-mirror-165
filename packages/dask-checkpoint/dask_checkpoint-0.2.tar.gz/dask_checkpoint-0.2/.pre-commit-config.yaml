@@ -1,0 +1,31 @@
+repos:
+-   repo: https://github.com/pycqa/isort
+    rev: 5.10.1
+    hooks:
+    -   id: isort
+        additional_dependencies: ['toml']
+-   repo: https://github.com/psf/black
+    rev: 22.6.0
+    hooks:
+    - id: black
+-   repo: https://gitlab.com/pycqa/flake8
+    rev: 3.9.2
+    hooks:
+    - id: flake8
+
+- repo: https://github.com/executablebooks/mdformat
+  rev: 0.7.14
+  hooks:
+  - id: mdformat
+    additional_dependencies:
+    - mdformat-gfm  # GitHub-flavored Markdown
+    - mdformat-black
+
+-   repo: https://github.com/mwouts/jupytext
+    rev: v1.14.0
+    hooks:
+    - id: jupytext
+      args: [--pipe, black]
+      files: \.ipynb$
+      additional_dependencies:
+        - black==22.6.0
