@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: takeout.py
+Version: 1.2.0
+Summary: A Takeout client for Python.
+Home-page: UNKNOWN
+Author: Takeout by Sourfruit
+Author-email: <hello@def-not-hacking-the.net>
+License: UNKNOWN
+Keywords: python,takeout.py,takeout,sourfruit
+Platform: UNKNOWN
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: certifi
+
+Takeout.py is an API wrapper for Takeout's API. See more information at https://github.com/Takeout-bysourfruit/takeout.py
+
