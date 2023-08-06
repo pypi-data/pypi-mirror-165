@@ -1,0 +1,80 @@
+{
+  "exfile_data": {
+    "DB_data": [
+      "INFO",
+      "SECTIONS",
+      "FILE FORMAT",
+      "FILE DESCRIPTION",
+      "VERSION",
+      "CREATION_DATE",
+      "CREATION_TIME",
+      "DATABASE NAME",
+      "USER EX-FILE",
+      "USER PRE-MODEX EX-FILE",
+      "SHOT",
+      "DDA NAME"
+    ],
+    "exfile_keys": {
+      "SPSI": {
+        "jsp_key": "XPSQ",
+        "unit_conversion": 1
+      },
+      "RA": {
+        "jsp_key": "XA",
+        "unit_conversion": 1
+      },
+      "SB1": {
+        "jsp_key": "SBD1",
+        "unit_conversion": 1
+      },
+      "PRAD": {
+        "jsp_key": "QRAD",
+        "unit_conversion": 1
+      },
+      "DIFF": {
+        "jsp_key": "D1",
+        "unit_conversion": 1
+      },
+      "CHIE": {
+        "jsp_key": "XE",
+        "unit_conversion": 1
+      },
+      "CHII": {
+        "jsp_key": "XI",
+        "unit_conversion": 1
+      },
+      "PSI": {
+        "jsp_key": "XPSI",
+        "unit_conversion": 1
+      },
+      "VINW": {
+        "jsp_key": "VPIN",
+        "unit_conversion": 1
+      },
+      "NIMP2": {
+        "jsp_key": "NIM2",
+        "unit_conversion": 1
+      },
+      "NIMP3": {
+        "jsp_key": "NIM3",
+        "unit_conversion": 1
+      },
+      "NIMP4": {
+        "jsp_key": "NIM4",
+        "unit_conversion": 1
+      },
+      "NIMP5": {
+        "jsp_key": "NIM5",
+        "unit_conversion": 1
+      },
+      "NIMP6": {
+        "jsp_key": "NIM6",
+        "unit_conversion": 1
+      },
+      "NIMP7": {
+        "jsp_key": "NIM7",
+        "unit_conversion": 1
+      }
+    }
+  }
+}
