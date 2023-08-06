@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: pywellbeing
+Version: 0.0.3
+Summary: Computational models of human happiness, wellbeing, and motivation.
+Home-page: https://github.com/pythoro/pywellbeing.git
+Download-URL: https://github.com/pythoro/pywellbeing/archive/v0.0.1.zip
+Author: Reuben Rusk
+Author-email: pythoro@mindquip.com
+Project-URL: Documentation, https://github.com/pythoro/pywellbeing.git
+Project-URL: Source, https://github.com/pythoro/pywellbeing.git
+Project-URL: Tracker, https://github.com/pythoro/pywellbeing/issues
+Keywords: WELLBEING,HAPPINESS,COMPUTATIONAL MODEL,ADAPTIVE MOTIVATION,MOTIVATION
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: English
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Scientific/Engineering
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# pywellbeing
+
+This package is about computational models of human wellbeing. It currently
+contains the Adaptive Motivation Model (AMM).
+
+
+## AMM demo
+
+This demo recreates many of the figures in the original paper by Rusk (2022).
+
+```python
+
+import pywellbeing as pywb
+pop = pywb.examples.run_amm()
+
+```
+
