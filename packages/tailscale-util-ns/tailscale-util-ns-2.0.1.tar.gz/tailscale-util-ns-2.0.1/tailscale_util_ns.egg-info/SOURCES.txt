@@ -1,0 +1,10 @@
+LICENSE
+README.rst
+setup.py
+tailscale_ns/load.py
+tailscale_ns/tailscale_device_ip.py
+tailscale_util_ns.egg-info/PKG-INFO
+tailscale_util_ns.egg-info/SOURCES.txt
+tailscale_util_ns.egg-info/dependency_links.txt
+tailscale_util_ns.egg-info/requires.txt
+tailscale_util_ns.egg-info/top_level.txt
