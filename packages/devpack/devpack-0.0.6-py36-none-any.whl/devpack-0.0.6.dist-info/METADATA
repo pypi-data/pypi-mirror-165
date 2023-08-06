@@ -1,0 +1,80 @@
+Metadata-Version: 2.1
+Name: devpack
+Version: 0.0.6
+Summary: DevPack is a package for managing your dev environment
+Home-page: https://github.com/pything/devpack
+Download-URL: https://github.com/pything/devpack/releases
+Author: Christian Heider Nielsen
+Author-email: christian.heider@alexandra.dk
+Maintainer: Christian Heider Nielsen
+Maintainer-email: christian.heider@alexandra.dk
+License: Apache License, Version 2.0
+Keywords: python interface api
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Natural Language :: English
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Requires-Dist: sorcery
+Requires-Dist: warg[all]
+Requires-Dist: black[d]
+Requires-Dist: draugr[all]
+Requires-Dist: apppath[all]
+Requires-Dist: six
+Provides-Extra: all
+Requires-Dist: black (>=18.9b0) ; extra == 'all'
+Requires-Dist: pytest-cov (>=2.6.1) ; extra == 'all'
+Requires-Dist: mock ; extra == 'all'
+Requires-Dist: pytest (>=4.4.1) ; extra == 'all'
+Requires-Dist: twine (>=1.13.0) ; extra == 'all'
+Requires-Dist: sorcery ; extra == 'all'
+Requires-Dist: pip (>=19.0.3) ; extra == 'all'
+Requires-Dist: warg[all] ; extra == 'all'
+Requires-Dist: black[d] ; extra == 'all'
+Requires-Dist: pytest-runner ; extra == 'all'
+Requires-Dist: coveralls (>=1.6.0) ; extra == 'all'
+Requires-Dist: pytest (>=4.3.0) ; extra == 'all'
+Requires-Dist: draugr[all] ; extra == 'all'
+Requires-Dist: apppath[all] ; extra == 'all'
+Requires-Dist: six ; extra == 'all'
+Requires-Dist: wheel (>=0.33.0) ; extra == 'all'
+Provides-Extra: dev
+Requires-Dist: black (>=18.9b0) ; extra == 'dev'
+Requires-Dist: pytest-cov (>=2.6.1) ; extra == 'dev'
+Requires-Dist: twine (>=1.13.0) ; extra == 'dev'
+Requires-Dist: sorcery ; extra == 'dev'
+Requires-Dist: pip (>=19.0.3) ; extra == 'dev'
+Requires-Dist: warg[all] ; extra == 'dev'
+Requires-Dist: black[d] ; extra == 'dev'
+Requires-Dist: six ; extra == 'dev'
+Requires-Dist: coveralls (>=1.6.0) ; extra == 'dev'
+Requires-Dist: pytest (>=4.3.0) ; extra == 'dev'
+Requires-Dist: apppath[all] ; extra == 'dev'
+Requires-Dist: draugr[all] ; extra == 'dev'
+Requires-Dist: wheel (>=0.33.0) ; extra == 'dev'
+Provides-Extra: setup
+Requires-Dist: pytest-runner ; extra == 'setup'
+Provides-Extra: tests
+Requires-Dist: pytest (>=4.4.1) ; extra == 'tests'
+Requires-Dist: mock ; extra == 'tests'
+
+# DevPack
+
+```bash
+pip install devpack -U
+```
+
+Get a decent development
+
+Contains some useful batching tools for python package development
+
+- Auto add readmes to packages, with breadcrumbs

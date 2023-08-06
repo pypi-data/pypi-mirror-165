@@ -1,0 +1,14 @@
+devpack/__init__.py,sha256=T7CHinLg0eWhvu5Bxm82zTyLRgU9aad1K5YnPzJ2OB0,3039
+devpack/development.py,sha256=-xIQNNdTMrwq828MmsaZ_lICnBODcqkrfxgkVHbz-Rg,1386
+devpack/batch_tools/__init__.py,sha256=Gf5yIHv6X1vmV9erxpFNb--p4RxHOTU4BXCkj3NJrLk,145
+devpack/batch_tools/inits.py,sha256=zJ_ebH-Rjf-brde4ynHGDHVSRaxWQLHDK5_eOlMuzkU,1309
+devpack/batch_tools/readmes.py,sha256=aQLKvdVeP-IVukCWPazO7wITIATCuaGymMpVjCmnDlk,3153
+devpack/entry_points/__init__.py,sha256=DmPjN8IW6pCyOy9WmyQ6NEQcz5dyHf3t3W5mTp99NKU,145
+devpack/entry_points/batch.py,sha256=rMFIJIYBNEkwSnGO8wvkQ3VTL-V8yEJcZifM7Rc7vuk,2031
+devpack/entry_points/cli.py,sha256=Cg6BqM0wHnyjw3jsOQRRGxAdNK1f3I5mTGJ21FmjKOU,1111
+devpack-0.0.6.dist-info/LICENSE.md,sha256=qZgM0QkiHL8PHwySqohk0QhKs6tTwP9yRs83D9lQWZc,10644
+devpack-0.0.6.dist-info/METADATA,sha256=LSivgtVD46i6USsXTr_SmIWfq7a9pzGNyKgstoavalE,2931
+devpack-0.0.6.dist-info/WHEEL,sha256=ooAAk5YJ6bNSTeML7MM1iETtwnSAPO5uF-aPrbGp5-A,93
+devpack-0.0.6.dist-info/entry_points.txt,sha256=lRsFn0dCHlx1Amem7zon7bsneC_9qI2BXNOKMIYCA3g,300
+devpack-0.0.6.dist-info/top_level.txt,sha256=geRXQ6im83oUyHrCFxSxT2KBqUquh8LCn4C3QOy97Ig,8
+devpack-0.0.6.dist-info/RECORD,,
