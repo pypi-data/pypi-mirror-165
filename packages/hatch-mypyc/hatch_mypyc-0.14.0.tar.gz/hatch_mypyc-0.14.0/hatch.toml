@@ -1,0 +1,39 @@
+[envs.default]
+dependencies = [
+  "coverage[toml]>=6.2",
+  "pytest",
+  "pytest-cov",
+  "pytest-mock",
+  "packaging",
+  "build[virtualenv]",
+]
+[envs.default.scripts]
+cov = "pytest --cov-report=term-missing --cov-config=pyproject.toml --cov=hatch_mypyc --cov=tests {args:tests}"
+no-cov = "pytest --no-cov {args:tests}"
+
+[envs.lint]
+detached = true
+dependencies = [
+  "flake8>=4.0.1",
+  "flake8-bugbear>=22.3.23",
+  "flake8-quotes>=3.3.1",
+  "black>=22.3.0",
+  "isort>=5.10.1",
+  "mypy>=0.942",
+]
+[envs.lint.scripts]
+typing = "mypy --install-types --non-interactive {args:hatch_mypyc tests}"
+style = [
+  "flake8 {args:.}",
+  "black --check --diff {args:.}",
+  "isort --check-only --diff {args:.}",
+]
+fmt = [
+  "isort {args:.}",
+  "black {args:.}",
+  "style",
+]
+all = [
+  "style",
+  "typing",
+]
