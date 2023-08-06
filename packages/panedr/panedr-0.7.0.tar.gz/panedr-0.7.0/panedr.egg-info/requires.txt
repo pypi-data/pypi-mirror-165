@@ -1,0 +1,6 @@
+pandas
+pyedr
+pbr
+
+[test]
+pytest
