@@ -1,0 +1,6 @@
+click
+cookiecutter
+django>=3
+djangorestframework
+jinja2>=2.8
+python-dateutil
