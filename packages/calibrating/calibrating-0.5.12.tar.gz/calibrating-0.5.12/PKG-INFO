@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: calibrating
+Version: 0.5.12
+Summary: Calibrate camera's intrinsic/extristric, and build stereo depth camera with OpenCV python.
+Home-page: https://github.com/DIYer22/calibrating
+Author: DIYer22
+Author-email: ylxx@live.com
+License: UNKNOWN
+Description: Calibrate camera's intrinsic/extristric, and build stereo depth camera with OpenCV python.
+Platform: UNKNOWN
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
