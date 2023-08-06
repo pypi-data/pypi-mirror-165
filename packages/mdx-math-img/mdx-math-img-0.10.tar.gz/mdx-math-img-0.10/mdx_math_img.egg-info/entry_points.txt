@@ -1,0 +1,2 @@
+[markdown.extensions]
+mdx_math_img = mdx_math_img:MathExtension
