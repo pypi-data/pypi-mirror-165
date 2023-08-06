@@ -1,0 +1,5 @@
+starlette
+numpy
+opencv-python
+pandas
+pytest
