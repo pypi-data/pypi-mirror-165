@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: myfastlib
+Version: 1.0.1
+Summary: 快捷应用函数的库
+Home-page: https://github.com/
+Author: Jianrui Li
+Author-email: lijianrui7560@qq.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent

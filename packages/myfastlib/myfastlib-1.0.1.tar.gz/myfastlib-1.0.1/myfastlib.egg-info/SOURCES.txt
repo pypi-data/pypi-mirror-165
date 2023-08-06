@@ -1,0 +1,8 @@
+setup.py
+myfastlib/__init__.py
+myfastlib/files.py
+myfastlib/printf.py
+myfastlib.egg-info/PKG-INFO
+myfastlib.egg-info/SOURCES.txt
+myfastlib.egg-info/dependency_links.txt
+myfastlib.egg-info/top_level.txt
