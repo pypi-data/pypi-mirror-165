@@ -1,0 +1,8 @@
+LICENSE
+README.rst
+setup.py
+dompteur.egg-info/PKG-INFO
+dompteur.egg-info/SOURCES.txt
+dompteur.egg-info/dependency_links.txt
+dompteur.egg-info/not-zip-safe
+dompteur.egg-info/top_level.txt

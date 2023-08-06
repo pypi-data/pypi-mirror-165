@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: dompteur
+Version: 0.0.1
+Summary: A configuration tool for Sphinx projects
+Home-page: https://github.com/useblocks/dompteur
+Author: team useblocks
+Author-email: info@useblocks.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Framework :: Sphinx
+Classifier: Framework :: Sphinx :: Theme
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Documentation
+Classifier: Topic :: Software Development :: Documentation
+License-File: LICENSE
+
+Dompteur
+========
+Dompteur is an installation and configuration tool for Sphinx, the documentation generator.
+
+.. hint:: This all this Pre-Alpha. Nothing to install and test yet.
+
+Detailed docs under: https://dompteur.readthedocs.io/
+
+
