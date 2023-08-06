@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/evolutionary_algos/__init__.py
+src/evolutionary_algos.egg-info/PKG-INFO
+src/evolutionary_algos.egg-info/SOURCES.txt
+src/evolutionary_algos.egg-info/dependency_links.txt
+src/evolutionary_algos.egg-info/requires.txt
+src/evolutionary_algos.egg-info/top_level.txt

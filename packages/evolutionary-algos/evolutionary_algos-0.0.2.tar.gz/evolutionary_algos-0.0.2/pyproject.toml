@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "evolutionary_algos"
+version = "0.0.2"
+authors = [
+  { name="Daniel Petersson", email="bgd.petersson@icloud.com" },
+]
+description = "A small evolutionary neural net"
+readme = "README.md"
+license = { file="LICENSE" }
+dependencies = ['numpy']
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/DanielPeterssonAI/EvoMLP"
+"Bug Tracker" = "https://github.com/DanielPeterssonAI/EvoMLP/issues"
