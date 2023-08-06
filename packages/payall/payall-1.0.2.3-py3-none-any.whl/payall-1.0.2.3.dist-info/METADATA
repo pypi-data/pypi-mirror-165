@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: payall
+Version: 1.0.2.3
+Summary: Cross Chain Streamlined Payment Engine
+Home-page: http://www.hashit.ml/
+Author: Hash - It
+Author-email: shahilislam@gmail.com
+License: MIT
+Project-URL: Source, https://github.com/islamshahil/Hash-It
+Keywords: scripting,automation,python,blockchain,solana
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: importlib-metadata
+Requires-Dist: requests
+
+# **Payall**
+
+*Payall* is a Cross Chain Streamlined Payment Engine by Team Hash - It.
+
+
+## **Install**
+
+    pip install payall
+
+## **Usage**
+
+Check our `help` for module details:
+
+```python
+payall -h
+```
+

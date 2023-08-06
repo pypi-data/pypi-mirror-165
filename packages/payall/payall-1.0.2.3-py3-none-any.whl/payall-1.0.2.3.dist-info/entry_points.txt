@@ -1,0 +1,3 @@
+[console_scripts]
+payall = payall.__main__:main
+
