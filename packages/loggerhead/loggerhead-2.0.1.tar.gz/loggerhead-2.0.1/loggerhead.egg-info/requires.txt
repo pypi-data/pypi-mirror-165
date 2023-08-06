@@ -1,0 +1,14 @@
+Chameleon
+Paste>=1.6
+bleach
+breezy>=3.1
+packaging
+
+[:python_version < "3.8"]
+importlib-metadata
+
+[flup]
+flup
+
+[proxied]
+PasteDeploy>=1.3
