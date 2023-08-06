@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: umnet-pyncs
+Version: 0.1.2
+Summary: custom python module for NCS helpers
+Author: Nick Grundler
+Author-email: grundler@umich.edu
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: multiprocessing-logging (>=0.3.3,<0.4.0)
+Requires-Dist: ntc-templates (>=3.0.0,<4.0.0)
