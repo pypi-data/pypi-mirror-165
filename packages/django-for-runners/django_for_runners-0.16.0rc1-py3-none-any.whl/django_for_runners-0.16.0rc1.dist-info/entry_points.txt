@@ -1,0 +1,4 @@
+[console_scripts]
+manage=for_runners_project.manage:main
+publish=for_runners_project.publish:publish
+
