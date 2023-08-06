@@ -1,0 +1,17 @@
+quranbot_schema_registry/__init__.py,sha256=zHFGtcXaU-PW6_q9g0rZWTq-E0woOi9BBYqM8CvloZY,45
+quranbot_schema_registry/schemas/button/pushed/1.json,sha256=xtoiMdYONzrskcDSwi_bjBn-D4l8kfCKvvI9xhMMuPY,856
+quranbot_schema_registry/schemas/file/sendtriggered/1.json,sha256=U3TL6UJLVGnvUELtC85zPcXsaKwSGHjqGPR47_3OdiY,889
+quranbot_schema_registry/schemas/mailing/created/1.json,sha256=OcgsMtL2WtiLSh7SPunZQ1q-MX1J9BaCKVBnaNvDqAQ,771
+quranbot_schema_registry/schemas/mailing/deleted/1.json,sha256=C8A0MyLvBO2f0LATjZg_167pW9LvriDtarQMVHp68qE,784
+quranbot_schema_registry/schemas/messages/created/1.json,sha256=vHnJ4Gn6FOEkxJOCgyOkse4jtyF097sjMpNdkb1Qb6k,1026
+quranbot_schema_registry/schemas/messages/deleted/1.json,sha256=LrPLCxphkMOF7ZUof1M1AHsCGMjQYFimoJFwRdzkhHM,918
+quranbot_schema_registry/schemas/notification/created/1.json,sha256=ra_Z8k2UKB5SCIGRw-a4u0kHias6zANW3U8G0r-3vGQ,854
+quranbot_schema_registry/schemas/user/reactivated/1.json,sha256=sR_FJa13ynM3aepna5buOYf8rAW44H_GdMdkPtGh_Ko,863
+quranbot_schema_registry/schemas/user/subscribed/1.json,sha256=xHJ5hWxM-O2P174n5tZ4kwy2O3KRwQoEfiovSJR4WTk,862
+quranbot_schema_registry/schemas/user/subscribedwithreferrer/1.json,sha256=3mee-bkbiPh2Km8wRxOV6u3V4QQkkyrEM7ifaSIwE_8,969
+quranbot_schema_registry/schemas/user/unsubscribed/1.json,sha256=PWOEIHMt6f-J_uZ1rc6QhovRzGOfGmkl0qIiyv2Za6Y,864
+quranbot_schema_registry/schemas/websocket/notificationcreated/1.json,sha256=sDNZi2yvqDE1M-Ncya-lReld5wRQvZLBTiKxhPa55KY,863
+quranbot_schema_registry/validate_schema.py,sha256=5LG7xgSP1ntsUSirwJpiVJhtWjgqLBMwQM5-gZLINMQ,872
+quranbot_schema_registry-0.0.13.dist-info/WHEEL,sha256=bbU3AyvhQ312rVm7zzRQjs6axI1UYWC3nmFA2E6FFSI,88
+quranbot_schema_registry-0.0.13.dist-info/METADATA,sha256=ZP7DmhZK3SmtXiHl3giRX4WqudkH1CKWPKJuUiT4ASw,428
+quranbot_schema_registry-0.0.13.dist-info/RECORD,,
