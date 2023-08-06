@@ -1,0 +1,24 @@
+[build-system]
+requires = [
+    "setuptools>=42",
+    "wheel",
+]
+build-backend = "setuptools.build_meta"
+
+[tool.isort]
+profile = "black"
+
+[tool.pylint.messages_control]
+disable = [
+  # Ignore refactor and convention categories
+  "R",
+  "C",
+  # Do not warn about TODO and FIXME comments
+  "fixme",
+  "E1136"
+]
+
+[tool.pytest.ini_options]
+testpaths = [
+    "tests",
+]
