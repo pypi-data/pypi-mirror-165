@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: zhinst-deviceutils
+Version: 0.1.2
+Summary: Zurich Instruments utils for device control
+Home-page: https://github.com/zhinst/device-utils
+Author: Zurich Instrument
+Author-email: info@zhinst.com
+Project-URL: Bug Tracker, https://github.com/zhinst/device-utils/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: zhinst-utils (>=0.1)
+
+[![PyPI version](https://badge.fury.io/py/zhinst-deviceutils.svg)](https://badge.fury.io/py/zhinst-deviceutils)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
+[![Twitter URL](https://img.shields.io/twitter/url/https/twitter.com/fold_left.svg?style=social&label=Follow%20%40zhinst)](https://twitter.com/zhinst)
+
+# Device Utils for Zurich Instruments
+
+:warning: This package is deprecated in favor of [zhinst-utils](https://pypi.org/project/zhinst-utils/).
