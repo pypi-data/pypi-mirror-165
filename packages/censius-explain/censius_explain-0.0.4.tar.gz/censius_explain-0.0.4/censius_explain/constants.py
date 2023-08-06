@@ -1,0 +1,1 @@
+no_data_models=['decision_tree', 'xgboost', 'gb', 'random_forest']

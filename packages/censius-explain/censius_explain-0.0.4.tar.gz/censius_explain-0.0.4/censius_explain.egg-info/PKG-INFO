@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: censius-explain
+Version: 0.0.4
+Summary: package for finding explainability_values from censius.ai
+Home-page: https://github.com/Censius/censius-explain.git
+Author: Censius
+Author-email: dev@censius.ai
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
