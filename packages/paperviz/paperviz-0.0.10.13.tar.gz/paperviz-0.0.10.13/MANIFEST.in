@@ -1,0 +1,12 @@
+include paperviz\area.csv
+include paperviz\box.xlsx
+include paperviz\bubble.xlsx
+include paperviz\heatmap.xlsx
+include paperviz\histogram.xlsx
+include paperviz\line.xlsx
+include paperviz\pie.xlsx
+include paperviz\pyramid.csv
+include paperviz\radar.xlsx
+include paperviz\scatter.xlsx
+include paperviz\time_series.csv
+include paperviz\violin.xlsx
