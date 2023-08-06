@@ -1,0 +1,1290 @@
+{
+  "class_name": "Model",
+  "config": {
+    "name": "model",
+    "layers": [
+      {
+        "class_name": "InputLayer",
+        "config": {
+          "batch_input_shape": [
+            null,
+            8
+          ],
+          "dtype": "float32",
+          "sparse": false,
+          "name": "general_input"
+        },
+        "name": "general_input",
+        "inbound_nodes": []
+      },
+      {
+        "class_name": "Dense",
+        "config": {
+          "name": "1.common_hidden_layer",
+          "trainable": true,
+          "dtype": "float32",
+          "units": 64,
+          "activation": "tanh",
+          "use_bias": true,
+          "kernel_initializer": {
+            "class_name": "GlorotUniform",
+            "config": {
+              "seed": null
+            }
+          },
+          "bias_initializer": {
+            "class_name": "Zeros",
+            "config": {}
+          },
+          "kernel_regularizer": {
+            "class_name": "L1L2",
+            "config": {
+              "l1": 0.0,
+              "l2": 9.999999974752427e-07
+            }
+          },
+          "bias_regularizer": null,
+          "activity_regularizer": null,
+          "kernel_constraint": null,
+          "bias_constraint": null
+        },
+        "name": "1.common_hidden_layer",
+        "inbound_nodes": [
+          [
+            [
+              "general_input",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "class_name": "Dense",
+        "config": {
+          "name": "1.hidden_layer_c1_",
+          "trainable": true,
+          "dtype": "float32",
+          "units": 64,
+          "activation": "tanh",
+          "use_bias": true,
+          "kernel_initializer": {
+            "class_name": "GlorotUniform",
+            "config": {
+              "seed": null
+            }
+          },
+          "bias_initializer": {
+            "class_name": "Zeros",
+            "config": {}
+          },
+          "kernel_regularizer": {
+            "class_name": "L1L2",
+            "config": {
+              "l1": 0.0,
+              "l2": 9.999999974752427e-07
+            }
+          },
+          "bias_regularizer": null,
+          "activity_regularizer": null,
+          "kernel_constraint": null,
+          "bias_constraint": null
+        },
+        "name": "1.hidden_layer_c1_",
+        "inbound_nodes": [
+          [
+            [
+              "1.common_hidden_layer",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "class_name": "Dense",
+        "config": {
+          "name": "2.hidden_layer_c1_",
+          "trainable": true,
+          "dtype": "float32",
+          "units": 64,
+          "activation": "tanh",
+          "use_bias": true,
+          "kernel_initializer": {
+            "class_name": "GlorotUniform",
+            "config": {
+              "seed": null
+            }
+          },
+          "bias_initializer": {
+            "class_name": "Zeros",
+            "config": {}
+          },
+          "kernel_regularizer": {
+            "class_name": "L1L2",
+            "config": {
+              "l1": 0.0,
+              "l2": 9.999999974752427e-07
+            }
+          },
+          "bias_regularizer": null,
+          "activity_regularizer": null,
+          "kernel_constraint": null,
+          "bias_constraint": null
+        },
+        "name": "2.hidden_layer_c1_",
+        "inbound_nodes": [
+          [
+            [
+              "1.hidden_layer_c1_",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "class_name": "InputLayer",
+        "config": {
+          "batch_input_shape": [
+            null,
+            1
+          ],
+          "dtype": "float32",
+          "sparse": false,
+          "name": "seperated_input"
+        },
+        "name": "seperated_input",
+        "inbound_nodes": []
+      },
+      {
+        "class_name": "Dense",
+        "config": {
+          "name": "c1_output",
+          "trainable": true,
+          "dtype": "float32",
+          "units": 1,
+          "activation": "linear",
+          "use_bias": true,
+          "kernel_initializer": {
+            "class_name": "GlorotUniform",
+            "config": {
+              "seed": null
+            }
+          },
+          "bias_initializer": {
+            "class_name": "Zeros",
+            "config": {}
+          },
+          "kernel_regularizer": null,
+          "bias_regularizer": null,
+          "activity_regularizer": null,
+          "kernel_constraint": null,
+          "bias_constraint": null
+        },
+        "name": "c1_output",
+        "inbound_nodes": [
+          [
+            [
+              "2.hidden_layer_c1_",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "class_name": "Subtract",
+        "config": {
+          "name": "difference",
+          "trainable": true,
+          "dtype": "float32"
+        },
+        "name": "difference",
+        "inbound_nodes": [
+          [
+            [
+              "seperated_input",
+              0,
+              0,
+              {}
+            ],
+            [
+              "c1_output",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "class_name": "TensorFlowOpLayer",
+        "config": {
+          "name": "Abs",
+          "trainable": true,
+          "dtype": "float32",
+          "node_def": {
+            "name": "Abs",
+            "op": "Abs",
+            "input": [
+              "difference/Identity"
+            ],
+            "attr": {
+              "T": {
+                "type": "DT_FLOAT"
+              }
+            }
+          },
+          "constants": {}
+        },
+        "name": "tf_op_layer_Abs",
+        "inbound_nodes": [
+          [
+            [
+              "difference",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "class_name": "Dense",
+        "config": {
+          "name": "1.hidden_layer_c2_efeITG_GB",
+          "trainable": true,
+          "dtype": "float32",
+          "units": 64,
+          "activation": "tanh",
+          "use_bias": true,
+          "kernel_initializer": {
+            "class_name": "GlorotUniform",
+            "config": {
+              "seed": null
+            }
+          },
+          "bias_initializer": {
+            "class_name": "Zeros",
+            "config": {}
+          },
+          "kernel_regularizer": {
+            "class_name": "L1L2",
+            "config": {
+              "l1": 0.0,
+              "l2": 9.999999974752427e-07
+            }
+          },
+          "bias_regularizer": null,
+          "activity_regularizer": null,
+          "kernel_constraint": null,
+          "bias_constraint": null
+        },
+        "name": "1.hidden_layer_c2_efeITG_GB",
+        "inbound_nodes": [
+          [
+            [
+              "1.common_hidden_layer",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "class_name": "TensorFlowOpLayer",
+        "config": {
+          "name": "Abs_1",
+          "trainable": true,
+          "dtype": "float32",
+          "node_def": {
+            "name": "Abs_1",
+            "op": "Abs",
+            "input": [
+              "difference/Identity"
+            ],
+            "attr": {
+              "T": {
+                "type": "DT_FLOAT"
+              }
+            }
+          },
+          "constants": {}
+        },
+        "name": "tf_op_layer_Abs_1",
+        "inbound_nodes": [
+          [
+            [
+              "difference",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "class_name": "Dense",
+        "config": {
+          "name": "1.hidden_layer_c2_efiITG_GB",
+          "trainable": true,
+          "dtype": "float32",
+          "units": 64,
+          "activation": "tanh",
+          "use_bias": true,
+          "kernel_initializer": {
+            "class_name": "GlorotUniform",
+            "config": {
+              "seed": null
+            }
+          },
+          "bias_initializer": {
+            "class_name": "Zeros",
+            "config": {}
+          },
+          "kernel_regularizer": {
+            "class_name": "L1L2",
+            "config": {
+              "l1": 0.0,
+              "l2": 9.999999974752427e-07
+            }
+          },
+          "bias_regularizer": null,
+          "activity_regularizer": null,
+          "kernel_constraint": null,
+          "bias_constraint": null
+        },
+        "name": "1.hidden_layer_c2_efiITG_GB",
+        "inbound_nodes": [
+          [
+            [
+              "1.common_hidden_layer",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "class_name": "Concatenate",
+        "config": {
+          "name": "concat_layer_pfeITG_GB",
+          "trainable": true,
+          "dtype": "float32",
+          "axis": -1
+        },
+        "name": "concat_layer_pfeITG_GB",
+        "inbound_nodes": [
+          [
+            [
+              "1.common_hidden_layer",
+              0,
+              0,
+              {}
+            ],
+            [
+              "seperated_input",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "class_name": "Dense",
+        "config": {
+          "name": "1.hidden_layer_c3_efeITG_GB",
+          "trainable": true,
+          "dtype": "float32",
+          "units": 64,
+          "activation": "tanh",
+          "use_bias": true,
+          "kernel_initializer": {
+            "class_name": "GlorotUniform",
+            "config": {
+              "seed": null
+            }
+          },
+          "bias_initializer": {
+            "class_name": "Zeros",
+            "config": {}
+          },
+          "kernel_regularizer": {
+            "class_name": "L1L2",
+            "config": {
+              "l1": 0.0,
+              "l2": 9.999999974752427e-07
+            }
+          },
+          "bias_regularizer": null,
+          "activity_regularizer": null,
+          "kernel_constraint": null,
+          "bias_constraint": null
+        },
+        "name": "1.hidden_layer_c3_efeITG_GB",
+        "inbound_nodes": [
+          [
+            [
+              "1.common_hidden_layer",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "class_name": "TensorFlowOpLayer",
+        "config": {
+          "name": "clip_by_value/Minimum",
+          "trainable": true,
+          "dtype": "float32",
+          "node_def": {
+            "name": "clip_by_value/Minimum",
+            "op": "Minimum",
+            "input": [
+              "Abs",
+              "clip_by_value/Minimum/y"
+            ],
+            "attr": {
+              "T": {
+                "type": "DT_FLOAT"
+              }
+            }
+          },
+          "constants": {
+            "1": 1000.0
+          }
+        },
+        "name": "tf_op_layer_clip_by_value/Minimum",
+        "inbound_nodes": [
+          [
+            [
+              "tf_op_layer_Abs",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "class_name": "Dense",
+        "config": {
+          "name": "2.hidden_layer_c2_efeITG_GB",
+          "trainable": true,
+          "dtype": "float32",
+          "units": 64,
+          "activation": "tanh",
+          "use_bias": true,
+          "kernel_initializer": {
+            "class_name": "GlorotUniform",
+            "config": {
+              "seed": null
+            }
+          },
+          "bias_initializer": {
+            "class_name": "Zeros",
+            "config": {}
+          },
+          "kernel_regularizer": {
+            "class_name": "L1L2",
+            "config": {
+              "l1": 0.0,
+              "l2": 9.999999974752427e-07
+            }
+          },
+          "bias_regularizer": null,
+          "activity_regularizer": null,
+          "kernel_constraint": null,
+          "bias_constraint": null
+        },
+        "name": "2.hidden_layer_c2_efeITG_GB",
+        "inbound_nodes": [
+          [
+            [
+              "1.hidden_layer_c2_efeITG_GB",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "class_name": "Dense",
+        "config": {
+          "name": "1.hidden_layer_c3_efiITG_GB",
+          "trainable": true,
+          "dtype": "float32",
+          "units": 64,
+          "activation": "tanh",
+          "use_bias": true,
+          "kernel_initializer": {
+            "class_name": "GlorotUniform",
+            "config": {
+              "seed": null
+            }
+          },
+          "bias_initializer": {
+            "class_name": "Zeros",
+            "config": {}
+          },
+          "kernel_regularizer": {
+            "class_name": "L1L2",
+            "config": {
+              "l1": 0.0,
+              "l2": 9.999999974752427e-07
+            }
+          },
+          "bias_regularizer": null,
+          "activity_regularizer": null,
+          "kernel_constraint": null,
+          "bias_constraint": null
+        },
+        "name": "1.hidden_layer_c3_efiITG_GB",
+        "inbound_nodes": [
+          [
+            [
+              "1.common_hidden_layer",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "class_name": "TensorFlowOpLayer",
+        "config": {
+          "name": "clip_by_value_1/Minimum",
+          "trainable": true,
+          "dtype": "float32",
+          "node_def": {
+            "name": "clip_by_value_1/Minimum",
+            "op": "Minimum",
+            "input": [
+              "Abs_1",
+              "clip_by_value_1/Minimum/y"
+            ],
+            "attr": {
+              "T": {
+                "type": "DT_FLOAT"
+              }
+            }
+          },
+          "constants": {
+            "1": 1000.0
+          }
+        },
+        "name": "tf_op_layer_clip_by_value_1/Minimum",
+        "inbound_nodes": [
+          [
+            [
+              "tf_op_layer_Abs_1",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "class_name": "Dense",
+        "config": {
+          "name": "2.hidden_layer_c2_efiITG_GB",
+          "trainable": true,
+          "dtype": "float32",
+          "units": 64,
+          "activation": "tanh",
+          "use_bias": true,
+          "kernel_initializer": {
+            "class_name": "GlorotUniform",
+            "config": {
+              "seed": null
+            }
+          },
+          "bias_initializer": {
+            "class_name": "Zeros",
+            "config": {}
+          },
+          "kernel_regularizer": {
+            "class_name": "L1L2",
+            "config": {
+              "l1": 0.0,
+              "l2": 9.999999974752427e-07
+            }
+          },
+          "bias_regularizer": null,
+          "activity_regularizer": null,
+          "kernel_constraint": null,
+          "bias_constraint": null
+        },
+        "name": "2.hidden_layer_c2_efiITG_GB",
+        "inbound_nodes": [
+          [
+            [
+              "1.hidden_layer_c2_efiITG_GB",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "class_name": "Dense",
+        "config": {
+          "name": "1.hidden_layer_pfeITG_GB",
+          "trainable": true,
+          "dtype": "float32",
+          "units": 64,
+          "activation": "tanh",
+          "use_bias": true,
+          "kernel_initializer": {
+            "class_name": "GlorotUniform",
+            "config": {
+              "seed": null
+            }
+          },
+          "bias_initializer": {
+            "class_name": "Zeros",
+            "config": {}
+          },
+          "kernel_regularizer": {
+            "class_name": "L1L2",
+            "config": {
+              "l1": 0.0,
+              "l2": 9.999999747378752e-05
+            }
+          },
+          "bias_regularizer": null,
+          "activity_regularizer": null,
+          "kernel_constraint": null,
+          "bias_constraint": null
+        },
+        "name": "1.hidden_layer_pfeITG_GB",
+        "inbound_nodes": [
+          [
+            [
+              "concat_layer_pfeITG_GB",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "class_name": "Dense",
+        "config": {
+          "name": "2.hidden_layer_c3_efeITG_GB",
+          "trainable": true,
+          "dtype": "float32",
+          "units": 64,
+          "activation": "tanh",
+          "use_bias": true,
+          "kernel_initializer": {
+            "class_name": "GlorotUniform",
+            "config": {
+              "seed": null
+            }
+          },
+          "bias_initializer": {
+            "class_name": "Zeros",
+            "config": {}
+          },
+          "kernel_regularizer": {
+            "class_name": "L1L2",
+            "config": {
+              "l1": 0.0,
+              "l2": 9.999999974752427e-07
+            }
+          },
+          "bias_regularizer": null,
+          "activity_regularizer": null,
+          "kernel_constraint": null,
+          "bias_constraint": null
+        },
+        "name": "2.hidden_layer_c3_efeITG_GB",
+        "inbound_nodes": [
+          [
+            [
+              "1.hidden_layer_c3_efeITG_GB",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "class_name": "TensorFlowOpLayer",
+        "config": {
+          "name": "clip_by_value",
+          "trainable": true,
+          "dtype": "float32",
+          "node_def": {
+            "name": "clip_by_value",
+            "op": "Maximum",
+            "input": [
+              "clip_by_value/Minimum",
+              "clip_by_value/y"
+            ],
+            "attr": {
+              "T": {
+                "type": "DT_FLOAT"
+              }
+            }
+          },
+          "constants": {
+            "1": 1.000000013351432e-10
+          }
+        },
+        "name": "tf_op_layer_clip_by_value",
+        "inbound_nodes": [
+          [
+            [
+              "tf_op_layer_clip_by_value/Minimum",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "class_name": "Dense",
+        "config": {
+          "name": "c2_output_efeITG_GB",
+          "trainable": true,
+          "dtype": "float32",
+          "units": 1,
+          "activation": "relu",
+          "use_bias": true,
+          "kernel_initializer": {
+            "class_name": "GlorotUniform",
+            "config": {
+              "seed": null
+            }
+          },
+          "bias_initializer": {
+            "class_name": "Zeros",
+            "config": {}
+          },
+          "kernel_regularizer": null,
+          "bias_regularizer": null,
+          "activity_regularizer": null,
+          "kernel_constraint": null,
+          "bias_constraint": null
+        },
+        "name": "c2_output_efeITG_GB",
+        "inbound_nodes": [
+          [
+            [
+              "2.hidden_layer_c2_efeITG_GB",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "class_name": "Dense",
+        "config": {
+          "name": "2.hidden_layer_c3_efiITG_GB",
+          "trainable": true,
+          "dtype": "float32",
+          "units": 64,
+          "activation": "tanh",
+          "use_bias": true,
+          "kernel_initializer": {
+            "class_name": "GlorotUniform",
+            "config": {
+              "seed": null
+            }
+          },
+          "bias_initializer": {
+            "class_name": "Zeros",
+            "config": {}
+          },
+          "kernel_regularizer": {
+            "class_name": "L1L2",
+            "config": {
+              "l1": 0.0,
+              "l2": 9.999999974752427e-07
+            }
+          },
+          "bias_regularizer": null,
+          "activity_regularizer": null,
+          "kernel_constraint": null,
+          "bias_constraint": null
+        },
+        "name": "2.hidden_layer_c3_efiITG_GB",
+        "inbound_nodes": [
+          [
+            [
+              "1.hidden_layer_c3_efiITG_GB",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "class_name": "TensorFlowOpLayer",
+        "config": {
+          "name": "clip_by_value_1",
+          "trainable": true,
+          "dtype": "float32",
+          "node_def": {
+            "name": "clip_by_value_1",
+            "op": "Maximum",
+            "input": [
+              "clip_by_value_1/Minimum",
+              "clip_by_value_1/y"
+            ],
+            "attr": {
+              "T": {
+                "type": "DT_FLOAT"
+              }
+            }
+          },
+          "constants": {
+            "1": 1.000000013351432e-10
+          }
+        },
+        "name": "tf_op_layer_clip_by_value_1",
+        "inbound_nodes": [
+          [
+            [
+              "tf_op_layer_clip_by_value_1/Minimum",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "class_name": "Dense",
+        "config": {
+          "name": "c2_output_efiITG_GB",
+          "trainable": true,
+          "dtype": "float32",
+          "units": 1,
+          "activation": "relu",
+          "use_bias": true,
+          "kernel_initializer": {
+            "class_name": "GlorotUniform",
+            "config": {
+              "seed": null
+            }
+          },
+          "bias_initializer": {
+            "class_name": "Zeros",
+            "config": {}
+          },
+          "kernel_regularizer": null,
+          "bias_regularizer": null,
+          "activity_regularizer": null,
+          "kernel_constraint": null,
+          "bias_constraint": null
+        },
+        "name": "c2_output_efiITG_GB",
+        "inbound_nodes": [
+          [
+            [
+              "2.hidden_layer_c2_efiITG_GB",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "class_name": "Dense",
+        "config": {
+          "name": "2.hidden_layer_pfeITG_GB",
+          "trainable": true,
+          "dtype": "float32",
+          "units": 64,
+          "activation": "tanh",
+          "use_bias": true,
+          "kernel_initializer": {
+            "class_name": "GlorotUniform",
+            "config": {
+              "seed": null
+            }
+          },
+          "bias_initializer": {
+            "class_name": "Zeros",
+            "config": {}
+          },
+          "kernel_regularizer": {
+            "class_name": "L1L2",
+            "config": {
+              "l1": 0.0,
+              "l2": 9.999999747378752e-05
+            }
+          },
+          "bias_regularizer": null,
+          "activity_regularizer": null,
+          "kernel_constraint": null,
+          "bias_constraint": null
+        },
+        "name": "2.hidden_layer_pfeITG_GB",
+        "inbound_nodes": [
+          [
+            [
+              "1.hidden_layer_pfeITG_GB",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "class_name": "Dense",
+        "config": {
+          "name": "c3_output_efeITG_GB",
+          "trainable": true,
+          "dtype": "float32",
+          "units": 1,
+          "activation": "linear",
+          "use_bias": true,
+          "kernel_initializer": {
+            "class_name": "GlorotUniform",
+            "config": {
+              "seed": null
+            }
+          },
+          "bias_initializer": {
+            "class_name": "Zeros",
+            "config": {}
+          },
+          "kernel_regularizer": null,
+          "bias_regularizer": null,
+          "activity_regularizer": null,
+          "kernel_constraint": null,
+          "bias_constraint": null
+        },
+        "name": "c3_output_efeITG_GB",
+        "inbound_nodes": [
+          [
+            [
+              "2.hidden_layer_c3_efeITG_GB",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "class_name": "ReLU",
+        "config": {
+          "name": "heaviside_function_times_x",
+          "trainable": true,
+          "dtype": "float32",
+          "max_value": null,
+          "negative_slope": 0.0,
+          "threshold": 0.0
+        },
+        "name": "heaviside_function_times_x",
+        "inbound_nodes": [
+          [
+            [
+              "difference",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "class_name": "TensorFlowOpLayer",
+        "config": {
+          "name": "Pow",
+          "trainable": true,
+          "dtype": "float32",
+          "node_def": {
+            "name": "Pow",
+            "op": "Pow",
+            "input": [
+              "clip_by_value",
+              "c2_output_efeITG_GB/Identity"
+            ],
+            "attr": {
+              "T": {
+                "type": "DT_FLOAT"
+              }
+            }
+          },
+          "constants": {}
+        },
+        "name": "tf_op_layer_Pow",
+        "inbound_nodes": [
+          [
+            [
+              "tf_op_layer_clip_by_value",
+              0,
+              0,
+              {}
+            ],
+            [
+              "c2_output_efeITG_GB",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "class_name": "Dense",
+        "config": {
+          "name": "c3_output_efiITG_GB",
+          "trainable": true,
+          "dtype": "float32",
+          "units": 1,
+          "activation": "linear",
+          "use_bias": true,
+          "kernel_initializer": {
+            "class_name": "GlorotUniform",
+            "config": {
+              "seed": null
+            }
+          },
+          "bias_initializer": {
+            "class_name": "Zeros",
+            "config": {}
+          },
+          "kernel_regularizer": null,
+          "bias_regularizer": null,
+          "activity_regularizer": null,
+          "kernel_constraint": null,
+          "bias_constraint": null
+        },
+        "name": "c3_output_efiITG_GB",
+        "inbound_nodes": [
+          [
+            [
+              "2.hidden_layer_c3_efiITG_GB",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "class_name": "TensorFlowOpLayer",
+        "config": {
+          "name": "Pow_1",
+          "trainable": true,
+          "dtype": "float32",
+          "node_def": {
+            "name": "Pow_1",
+            "op": "Pow",
+            "input": [
+              "clip_by_value_1",
+              "c2_output_efiITG_GB/Identity"
+            ],
+            "attr": {
+              "T": {
+                "type": "DT_FLOAT"
+              }
+            }
+          },
+          "constants": {}
+        },
+        "name": "tf_op_layer_Pow_1",
+        "inbound_nodes": [
+          [
+            [
+              "tf_op_layer_clip_by_value_1",
+              0,
+              0,
+              {}
+            ],
+            [
+              "c2_output_efiITG_GB",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "class_name": "Dense",
+        "config": {
+          "name": "output_pfeITG_GB",
+          "trainable": true,
+          "dtype": "float32",
+          "units": 1,
+          "activation": "linear",
+          "use_bias": true,
+          "kernel_initializer": {
+            "class_name": "GlorotUniform",
+            "config": {
+              "seed": null
+            }
+          },
+          "bias_initializer": {
+            "class_name": "Zeros",
+            "config": {}
+          },
+          "kernel_regularizer": null,
+          "bias_regularizer": null,
+          "activity_regularizer": null,
+          "kernel_constraint": null,
+          "bias_constraint": null
+        },
+        "name": "output_pfeITG_GB",
+        "inbound_nodes": [
+          [
+            [
+              "2.hidden_layer_pfeITG_GB",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "class_name": "Multiply",
+        "config": {
+          "name": "final_product_efeITG_GB",
+          "trainable": true,
+          "dtype": "float32"
+        },
+        "name": "final_product_efeITG_GB",
+        "inbound_nodes": [
+          [
+            [
+              "c3_output_efeITG_GB",
+              0,
+              0,
+              {}
+            ],
+            [
+              "heaviside_function_times_x",
+              0,
+              0,
+              {}
+            ],
+            [
+              "tf_op_layer_Pow",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "class_name": "Multiply",
+        "config": {
+          "name": "final_product_efiITG_GB",
+          "trainable": true,
+          "dtype": "float32"
+        },
+        "name": "final_product_efiITG_GB",
+        "inbound_nodes": [
+          [
+            [
+              "c3_output_efiITG_GB",
+              0,
+              0,
+              {}
+            ],
+            [
+              "heaviside_function_times_x",
+              0,
+              0,
+              {}
+            ],
+            [
+              "tf_op_layer_Pow_1",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "class_name": "Multiply",
+        "config": {
+          "name": "final_product_pfeITG_GB",
+          "trainable": true,
+          "dtype": "float32"
+        },
+        "name": "final_product_pfeITG_GB",
+        "inbound_nodes": [
+          [
+            [
+              "output_pfeITG_GB",
+              0,
+              0,
+              {}
+            ],
+            [
+              "heaviside_function_times_x",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      }
+    ],
+    "input_layers": [
+      [
+        "general_input",
+        0,
+        0
+      ],
+      [
+        "seperated_input",
+        0,
+        0
+      ]
+    ],
+    "output_layers": [
+      [
+        "final_product_efeITG_GB",
+        0,
+        0
+      ],
+      [
+        "final_product_efiITG_GB",
+        0,
+        0
+      ],
+      [
+        "final_product_pfeITG_GB",
+        0,
+        0
+      ]
+    ]
+  },
+  "keras_version": "2.2.4-tf",
+  "backend": "tensorflow"
+}

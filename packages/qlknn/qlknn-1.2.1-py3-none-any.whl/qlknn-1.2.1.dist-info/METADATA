@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: qlknn
+Version: 1.2.1
+Summary: Tools to create QuaLiKiz Quasi-linear gyrokinetic code Neural Networks
+Home-page: https://gitlab.com/Karel-van-de-Plassche/QLKNN-develop
+Author: Karel van de Plassche
+Author-email: k.l.vandeplassche@differ.nl
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3
+Classifier: Natural Language :: English
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: ipython
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: xarray
+Requires-Dist: pandas (>=0.15.2)
+Requires-Dist: numexpr
+Requires-Dist: tables
+Requires-Dist: gitpython
+Requires-Dist: netCDF4
+Provides-Extra: all
+Requires-Dist: tensorflow (>=2.2.0) ; extra == 'all'
+Requires-Dist: coverage ; extra == 'all'
+Requires-Dist: pytest ; extra == 'all'
+Requires-Dist: pytest-cov ; extra == 'all'
+Requires-Dist: sphinx (>=3.2.1) ; extra == 'all'
+Requires-Dist: sphinx-rtd-theme (>=0.5) ; extra == 'all'
+Requires-Dist: recommonmark (>=0.6) ; extra == 'all'
+Requires-Dist: sphinx-autosummary-accessors (>=0.1.2) ; extra == 'all'
+Requires-Dist: sphinx-autodoc-typehints (>=1.1.1) ; extra == 'all'
+Requires-Dist: peewee (>=3.0.16) ; extra == 'all'
+Requires-Dist: psycopg2 ; extra == 'all'
+Requires-Dist: matplotlib ; extra == 'all'
+Requires-Dist: sklearn ; extra == 'all'
+Requires-Dist: luigi ; extra == 'all'
+Provides-Extra: dataset
+Requires-Dist: sklearn ; extra == 'dataset'
+Provides-Extra: docs
+Requires-Dist: sphinx (>=3.2.1) ; extra == 'docs'
+Requires-Dist: sphinx-rtd-theme (>=0.5) ; extra == 'docs'
+Requires-Dist: recommonmark (>=0.6) ; extra == 'docs'
+Requires-Dist: sphinx-autosummary-accessors (>=0.1.2) ; extra == 'docs'
+Requires-Dist: sphinx-autodoc-typehints (>=1.1.1) ; extra == 'docs'
+Provides-Extra: gui
+Requires-Dist: matplotlib ; extra == 'gui'
+Provides-Extra: nndb
+Requires-Dist: peewee (>=3.0.16) ; extra == 'nndb'
+Requires-Dist: psycopg2 ; extra == 'nndb'
+Provides-Extra: pipeline
+Requires-Dist: luigi ; extra == 'pipeline'
+Provides-Extra: test
+Requires-Dist: coverage ; extra == 'test'
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: pytest-cov ; extra == 'test'
+Provides-Extra: training
+Requires-Dist: tensorflow (>=2.2.0) ; extra == 'training'
+
+# QLKNN
+
+*A collection of tools to create QuaLiKiz Neural Networks.*
+
+Read the [GitLab Pages](https://qualikiz-group.gitlab.io/QLKNN-develop/) and [wiki](https://gitlab.com/qualikiz-group/QuaLiKiz/-/wikis/QLKNN/QLKNN-overview) for more information.

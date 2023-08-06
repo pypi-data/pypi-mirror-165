@@ -1,0 +1,35 @@
+{
+    "path_data": "../Data/training_gen5_7D_nions0_flat_filter10.h5.1",
+    "path_weights": "../Data/training_weights_7D.h5.1",
+    "plot_weights": false,
+    "GB_scale_length_data" : 1.0,
+    "path_NNs": "../NeuralNets/ITG",
+    "names": ["nn.json"],
+    "nn_labels": ["CGMnet"],
+    "GB_scale_length_NNs": [1.0],
+    "path_plot": "TestITG.png",
+    "plot_dims": ["efeITG_GB", "efiITG_GB", "pfeITG_GB"],
+    "data_labels": ["Heat flux (electrons)", "Heat flux (ions)", "Particle flux (electrons)"],
+
+    "nn_evaluations": 1000,
+    "random_inputs": false,
+    "inputs": {
+        "Zeff": 1,
+        "Ati": 5.8,
+        "Ate": 5.8,
+        "An": 1.5,
+        "q": 3,
+        "smag": 1,
+        "x": 0.57,
+        "Ti_Te": 1,
+        "logNustar": -3
+    },
+    "x_axis": "Ati",
+
+    "xlabel": "Normalized Temperature Gradient",
+    "ylabel": "Turbulent Flux",
+    "xlim": [],
+    "ylim": [],
+    "yticks": [],
+    "save": false
+}

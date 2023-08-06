@@ -1,0 +1,4 @@
+[console_scripts]
+clustering = qlknn.dataset.clustering:main
+qlknn = qlknn.cli:main
+quickslicer = qlknn.plots.quickslicer:main
