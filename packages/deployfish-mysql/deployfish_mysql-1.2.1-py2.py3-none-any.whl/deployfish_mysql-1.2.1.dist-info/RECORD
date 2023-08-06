@@ -1,0 +1,16 @@
+deployfish_mysql/__init__.py,sha256=73KHM24N829RxEHOJ7fkEgZfNzWOA-_c6qVy40w_3dk,406
+deployfish_mysql/adapters/__init__.py,sha256=x_ErSAe5CrvoDlV_ZOKNRppq_hKDxhWaFHCupMq3tPw,44
+deployfish_mysql/adapters/deployfish/__init__.py,sha256=b5vFO6byR5_m-Of-dev-UkuFQLkI62afS_1KHsnmMqs,261
+deployfish_mysql/adapters/deployfish/mysql.py,sha256=4iTdyOxSSpWBgycNFFiwz9IlYzJHpiuAIuy4Q6evUOE,227
+deployfish_mysql/controllers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+deployfish_mysql/controllers/mysql.py,sha256=02e7aKOyw1u-vG__DrCWXeJhjMf3xekYE0SyzWzG1cE,14754
+deployfish_mysql/models/__init__.py,sha256=1JG7L3FNqthur4NGuaP1dtQyN2weHVodWhGz_l36Hxs,39
+deployfish_mysql/models/mysql.py,sha256=ZOThiyoq4c-MxhwnL4iJa77tau3EQ4p9uWRVZbaPnwk,17747
+deployfish_mysql/templates/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+deployfish_mysql-1.2.1.dist-info/AUTHORS.txt,sha256=2SB5zpcZJ0rIKLgYAoxUtifez7-o78XOAFw-4NUZCe8,33
+deployfish_mysql-1.2.1.dist-info/LICENSE.txt,sha256=4Bo7eJnZKaYeiNjQH00RReLNqrQNlD9J-utsDzXImaM,1461
+deployfish_mysql-1.2.1.dist-info/METADATA,sha256=o3YjDRMx4Ra9NiWfy6LgH0ZwfUBd3SxGToyJz7d2Cuw,443
+deployfish_mysql-1.2.1.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+deployfish_mysql-1.2.1.dist-info/entry_points.txt,sha256=jHH6l43xyKvUNuLR7EERcfCxJdWOmFxBu67YEB4KYV0,47
+deployfish_mysql-1.2.1.dist-info/top_level.txt,sha256=e0XlC2yhj8srOCw-Z8cSgPmcrUz6bA3nsKutuClO4zg,17
+deployfish_mysql-1.2.1.dist-info/RECORD,,
