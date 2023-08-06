@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: exdpn
+Version: 1.1.1
+Summary: Tool to mine and evaluate explainable data Petri nets using different classification techniques.
+Author: marairis, aarkue, cpitsch, jonathansc
+License: GPLv3
+Project-URL: Documentation, https://aarkue.github.io/eXdpn/
+Project-URL: GitHub, https://github.com/aarkue/eXdpn
+Keywords: Process mining,Data Petri net
+Platform: any
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Description-Content-Type: text/markdown
+License-File: COPYING
+
+This package implements a convenient interface to mine and evaluate data Petri nets using different machine learning techniques at each decision point. More information on the package as well as a dockerized graphical user interface can be found on [GitHub](https://github.com/aarkue/eXdpn).
