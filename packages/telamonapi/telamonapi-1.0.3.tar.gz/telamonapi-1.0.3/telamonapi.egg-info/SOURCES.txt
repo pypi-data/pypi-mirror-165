@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+telamonapi.egg-info/PKG-INFO
+telamonapi.egg-info/SOURCES.txt
+telamonapi.egg-info/dependency_links.txt
+telamonapi.egg-info/top_level.txt
