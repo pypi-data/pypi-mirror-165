@@ -1,0 +1,36 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_trie_bf = {'_': ['bf_international_village',
+       'bf_homes_paranaque',
+       'bf_homes_caloocan',
+       'bf_in_immunology',
+       'bf_deal_records',
+       'bf:_bad_company'],
+ 'a': ['bfa_senior_league', 'bfa_in_music'],
+ 'b': ['bfbs_live_events', 'bfb_da_packman'],
+ 'c': ['bfc_frankfurt_berlin',
+       'bfc_frankfurt_1885',
+       'bfc_germania_1888',
+       'bfc_viktoria_1889',
+       'bfc_dynamo_berlin',
+       'bfca_awards_1996',
+       'bfc_alemannia_22',
+       'bfca_awards_2008',
+       'bfc_90_alemannia',
+       'bfc_viktoria_89',
+       'bfc_hertha_1892',
+       'bfc_dynamo_ii',
+       'bfc_meteor_06'],
+ 'd': ['bfd_energy_challenger'],
+ 'i': ['bfi_national_archive',
+       'bfi_production_board',
+       'bfi_100_films',
+       'bfi_tv_100'],
+ 'l': ['bfloat16_floating-point_format'],
+ 'r': ['bfr_.50_beowulf'],
+ 'u': ['bfucc_deutschland_berlin'],
+ 'v': ['bfv_hassia_bingen'],
+ 'w': ['bfw_m_23']}

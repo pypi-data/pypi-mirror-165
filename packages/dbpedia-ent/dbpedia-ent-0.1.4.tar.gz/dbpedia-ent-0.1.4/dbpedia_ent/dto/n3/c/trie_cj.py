@@ -1,0 +1,36 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_trie_cj = {'_': ['cj_cherryh_bibliography',
+       "cj_carella's_witchcraft",
+       'cj_international_house',
+       'cj_major_entertainment',
+       "cj's_elephant_antics",
+       'cj_strike_reservoir',
+       'cj_van_rijsbergen',
+       'cj7:_the_cartoon',
+       'cj_high_school',
+       'cj_de_villiers',
+       'cj_strike_dam',
+       'cj_pony_parts',
+       'cj_van_houten',
+       'cj_o_shopping',
+       'cj_dos_santos',
+       'cj_ostl_site',
+       'cj_de_silva',
+       'cj_de_mooi',
+       'cj_van_eyk',
+       'cj_the_dj',
+       'cj_ah_you'],
+ 'a': ['cja_flight_918'],
+ 'd': ['cjd_christophorusschule_konigswinter'],
+ 'f': ['cjfb_performance_award'],
+ 'k': ['cjk_compatibility_ideographs',
+       'cjk_dictionary_institute',
+       'cjk_radicals_supplement',
+       'cjk_compatibility_forms',
+       'cjk_unified_ideographs'],
+ 'l': ['cjls_the_wave'],
+ 'm': ['cjm_fiscal_management']}

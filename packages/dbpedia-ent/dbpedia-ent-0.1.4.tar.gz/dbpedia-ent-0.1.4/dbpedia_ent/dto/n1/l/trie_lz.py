@@ -1,0 +1,36 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_trie_lz = {'_': ['lz-xray',
+       'lz-ben',
+       'lz-129',
+       'lz-130',
+       'lz-127',
+       'lz130',
+       'lz129',
+       'lz127',
+       'lz78',
+       'lz77',
+       'lz7',
+       'lz4',
+       'lz1',
+       'lz3',
+       'lz2'],
+ 'a': ['lza'],
+ 'b': ['lzb'],
+ 'f': ['lzfse', 'lzf'],
+ 'h': ['lzhedmitriy', 'lzh'],
+ 'i': ['lziv', 'lzip', 'lzii', 'lzi'],
+ 'j': ['lzjb'],
+ 'k': ['lzk'],
+ 'm': ['lzma'],
+ 'o': ['lzop', 'lzo'],
+ 'r': ['lzrw', 'lzr'],
+ 's': ['lzss', 'lzse', 'lzs'],
+ 't': ['lztfl1', 'lzts3', 'lzts1', 'lztr1'],
+ 'u': ['lzu'],
+ 'w': ['lzwl'],
+ 'x': ['lzx'],
+ 'y': ['lzy']}

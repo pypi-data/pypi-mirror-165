@@ -1,0 +1,38 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_trie_gg = {'_': ['gg-45', 'gg20b', 'gg-1', 'gg45', 'gg1'],
+ 'a': ['ggangpae',
+       'ggantija',
+       'ggakdugi',
+       'ggaba',
+       'ggaht',
+       'gga2',
+       'gga3',
+       'gga1',
+       'gga'],
+ 'b': ['ggbts', 'ggbs', 'ggb'],
+ 'c': ['ggcd', 'ggcl', 'ggcx', 'ggcc', 'ggc'],
+ 'd': ['ggd'],
+ 'e': ['ggea', 'ggep', 'gge'],
+ 'f': ['ggfh', 'ggf'],
+ 'g': ['gggarth', 'gggn', 'ggg'],
+ 'h': ['gghw', 'ggh'],
+ 'i': ['ggie', 'ggi'],
+ 'j': ['ggj'],
+ 'k': ['ggk'],
+ 'l': ['ggl'],
+ 'm': ['ggmx', 'ggm'],
+ 'n': ['ggnmos', 'ggnra', 'ggn'],
+ 'o': ['ggoolldd', 'ggogle', 'ggotip', 'ggobi', 'ggoc', 'ggo'],
+ 'p': ['ggp2007', 'ggplot2', 'ggps1', 'ggpo', 'ggpl', 'ggp'],
+ 'r': ['ggrobar', 'ggr'],
+ 's': ['ggse-4', 'ggsipu', 'ggse-1', 'ggswa', 'ggsn', 'ggss', 'ggse', 'ggs'],
+ 't': ['ggtp', 'ggt'],
+ 'u': ['gguerra', 'ggulu', 'ggu'],
+ 'w': ['ggws', 'ggw'],
+ 'x': ['ggxx', 'ggx'],
+ 'y': ['ggyc'],
+ 'z': ['ggz']}

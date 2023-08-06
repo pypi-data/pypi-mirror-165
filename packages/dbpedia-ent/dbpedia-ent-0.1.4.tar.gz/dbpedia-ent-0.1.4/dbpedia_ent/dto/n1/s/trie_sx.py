@@ -1,0 +1,37 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_trie_sx = {'_': ['sx-window',
+       'sx-3228',
+       'sx-key',
+       'sx1980',
+       'sx10is',
+       'sx-300',
+       'sx-64',
+       'sx-10',
+       'sx/ew',
+       'sx-70',
+       'sx-ew',
+       'sx125',
+       'sx70',
+       'sx-8',
+       'sx-9',
+       'sx4',
+       'sx1'],
+ 'a': ['sxal8/mbal', 'sxal/mbal', 'sxal8', 'sxal'],
+ 'b': ['sxbl', 'sxb'],
+ 'c': ['sxcheck', 'sxc.hu', 'sxc'],
+ 'd': ['sxdf-nb1006-2'],
+ 'e': ["sxe'xn'x", 'sxephil', 'sxe'],
+ 'g': ['sxga'],
+ 'i': ['sxi'],
+ 'l': ['sxl'],
+ 'm': ['sxml', 'sxms', 'sxm'],
+ 'r': ['sxrd', 'sxr'],
+ 's': ['sxswi', 'sxsw', 'sxs'],
+ 't': ['sxtn', 'sxt'],
+ 'u': ['sxusem', 'sxu'],
+ 'w': ['sxw'],
+ 'y': ['sxy']}

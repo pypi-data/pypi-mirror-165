@@ -1,0 +1,38 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_trie_fh = {'_': ['fh-deggendorf',
+       'fh-1100',
+       'fh-2000',
+       'fh-227',
+       'fh-88',
+       'fh506',
+       'fh-77',
+       'fh70',
+       'fh-1',
+       'fh8'],
+ 'a': ['fha-secure', 'fhad1', 'fhana', 'fhaw', 'fhad', 'fha'],
+ 'b': ['fhb'],
+ 'c': ['fhcrc', 'fhchs', 'fhci', 'fhc'],
+ 'e': ['fhefssa', 'fheq', 'fher', 'fhe'],
+ 'f': ['fhfa', 'fhfs', 'fhf'],
+ 'g': ['fhg'],
+ 'h': ['fhhs', 'fhh'],
+ 'i': ['fhi-aims', 'fhia-01', 'fhimah', 'fhia', 'fhit', 'fhi'],
+ 'j': ['fhj-84', 'fhj'],
+ 'k': ['fhk'],
+ 'l': ['fhlmc', 'fhlbb', 'fhlb', 'fhl3', 'fhl2', 'fhl5', 'fhl1', 'fhl'],
+ 'm': ['fhmonline.com', 'fhmqv', 'fhm'],
+ 'n': ['fhn'],
+ 'o': ['fhourstones', 'fhordism', 'fho3s', 'fhod1', 'fho'],
+ 'p': ['fhproductionhk', 'fhpp', 'fhpa', 'fhp'],
+ 'q': ['fhqwhgads', 'fhqwghads', 'fhqwgads'],
+ 'r': ['fhr'],
+ 's': ['fhsst', 'fhsaa', 'fhsra', 'fhssa', 'fhsr', 'fhsd', 'fhs'],
+ 't': ['fhtagn', 'fhtml', 'fht'],
+ 'u': ['fhu'],
+ 'v': ['fhv-1', 'fhv'],
+ 'w': ['fhwqwgads', 'fhwrg', 'fhwa', 'fhw'],
+ 'y': ['fhy']}
