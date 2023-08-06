@@ -1,0 +1,1 @@
+2021.11.14:14:49:37.239: main Phoenix Miner 5.6d Windows/msvc - Release build
