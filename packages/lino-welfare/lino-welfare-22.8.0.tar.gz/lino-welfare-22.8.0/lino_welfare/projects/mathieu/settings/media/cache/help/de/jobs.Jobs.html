@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>jobs.Jobs (Postes de travail) &#8212; mathieu</title>
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/insipid.css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/atelier.css" />
+    <link rel="stylesheet" type="text/css" href="_static/insipid-cust.css" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/translations.js"></script>
+    <script src="_static/design-tabs.js"></script>
+    <script defer src="_static/insipid.js"></script>
+    <script defer src="_static/insipid-sidebar.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="search" title="Suche" href="search.html" />
+    <link rel="next" title="jobs.JobTypes (Types de poste)" href="jobs.JobTypes.html" />
+    <link rel="prev" title="jobs.ExperiencesByOffer (Expériences professionnelles)" href="jobs.ExperiencesByOffer.html" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+  </head>
+  <body class="sidebar-visible">
+    <script type="text/javascript">
+        (function() {
+            var $body = $(document.body);
+            $body.addClass('js');
+            $body.addClass('sidebar-resizing');  // avoid transitions on load
+            $body.removeClass('sidebar-visible');
+            try {
+                var sidebar = localStorage.getItem('sphinx-sidebar');
+                if (sidebar === 'visible') {
+                    $body.addClass('sidebar-visible');
+                }
+                var sidebar_width = localStorage.getItem('sphinx-sidebar-width');
+                if (sidebar_width) {
+                    $(':root').css('--sidebar-width', sidebar_width);
+                }
+            } catch(e) {
+            }
+        })();
+    </script>
+    <header id="topbar-placeholder">
+      <div id="topbar">
+        <div id="titlebar">
+          <div class="buttons">
+            <button id="sidebar-button" type="button" aria-controls="sphinxsidebar" accesskey="M">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"/></svg>
+            </button><a href="index.html" title="mathieu">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"/></svg>
+</a>
+          </div>
+          <div class="title">
+            <a class="parent" href="actors.html" accesskey="U">Data views</a>
+            <a class="top" href="#"><code class="docutils literal notranslate"><span class="pre">jobs.Jobs</span></code> (Postes de travail)</a>
+          </div>
+          <div class="buttons">
+            <button id="fullscreen-button" type="button" aria-hidden="true">
+              <span class="enable">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M212.686 315.314L120 408l32.922 31.029c15.12 15.12 4.412 40.971-16.97 40.971h-112C10.697 480 0 469.255 0 456V344c0-21.382 25.803-32.09 40.922-16.971L72 360l92.686-92.686c6.248-6.248 16.379-6.248 22.627 0l25.373 25.373c6.249 6.248 6.249 16.378 0 22.627zm22.628-118.628L328 104l-32.922-31.029C279.958 57.851 290.666 32 312.048 32h112C437.303 32 448 42.745 448 56v112c0 21.382-25.803 32.09-40.922 16.971L376 152l-92.686 92.686c-6.248 6.248-16.379 6.248-22.627 0l-25.373-25.373c-6.249-6.248-6.249-16.378 0-22.627z"/></svg>
+              </span>
+              <span class="disable">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M4.686 427.314L104 328l-32.922-31.029C55.958 281.851 66.666 256 88.048 256h112C213.303 256 224 266.745 224 280v112c0 21.382-25.803 32.09-40.922 16.971L152 376l-99.314 99.314c-6.248 6.248-16.379 6.248-22.627 0L4.686 449.941c-6.248-6.248-6.248-16.379 0-22.627zM443.314 84.686L344 184l32.922 31.029c15.12 15.12 4.412 40.971-16.97 40.971h-112C234.697 256 224 245.255 224 232V120c0-21.382 25.803-32.09 40.922-16.971L296 136l99.314-99.314c6.248-6.248 16.379-6.248 22.627 0l25.373 25.373c6.248 6.248 6.248 16.379 0 22.627z"/></svg>
+              </span>
+            </button><a href="https://www.facebook.com/sharer/sharer.php?u=http://127.0.0.1:8000/media/cache/help/jobs.Jobs/" title="Share on Facebook" target="_blank">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>
+</a>
+
+<!---
+<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+---!>
+
+<a href="https://twitter.com/share?ref_src=http://127.0.0.1:8000/media/cache/help/jobs.Jobs/" title="Share on Twitter" target="_blank">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <nav>
+      <a href="jobs.ExperiencesByOffer.html" class="nav-icon previous" title="zurück:&#13;jobs.ExperiencesByOffer (Expériences professionnelles)" aria-label="Vorheriges Thema" accesskey="P" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"/></svg>
+      </a>
+      <a href="jobs.JobTypes.html" class="nav-icon next" title="weiter:&#13;jobs.JobTypes (Types de poste)" aria-label="Nächstes Thema" accesskey="N" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg>
+      </a>
+    </nav>
+
+    <nav class="relbar">
+      <a class="previous" href="jobs.ExperiencesByOffer.html" aria-label="Vorheriges Thema" >
+        <div class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z"/></svg>
+        </div>
+        <div class="title">
+          <span class="text">
+            <span class="direction">zurück</span>
+            <code class="docutils literal notranslate"><span class="pre">jobs.ExperiencesByOffer</span></code> (Expériences professionnelles)
+          </span>
+        </div>
+      </a>
+      <a class="next" href="jobs.JobTypes.html" aria-label="Nächstes Thema" >
+        <div class="title">
+          <span class="text">
+            <span class="direction">weiter</span>
+            <code class="docutils literal notranslate"><span class="pre">jobs.JobTypes</span></code> (Types de poste)
+          </span>
+        </div>
+        <div class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"/></svg>
+        </div>
+      </a>
+    </nav>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+<section id="jobs-jobs-postes-de-travail">
+<h1><code class="docutils literal notranslate"><span class="pre">jobs.Jobs</span></code> (Postes de travail)<a class="headerlink" href="#jobs-jobs-postes-de-travail" title="Permalink to this heading">¶</a></h1>
+<p>No help_text for jobs.Jobs</p>
+<p>Every row of this <a class="reference external" href="https://dev.lino-framework.org/dev/tables/index.html#term-data-view" title="(in Lino Developer Guide v20.1)"><span class="xref std std-term">data view</span></a> is a <a class="reference external" href="https://dev.lino-framework.org/specs/cv.html#lino_xl.lib.cv.SectorFunction" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Poste</span> <span class="pre">de</span> <span class="pre">travail</span></code></a>.</p>
+<p>User Guide: <a class="reference external" href="https://welfare.lino-framework.org/usage/index.html#ug-plugins-jobs" title="(in Lino Welfare v22.5)"><span>Not yet overwritten</span></a>.</p>
+<p class="rubric">Columns</p>
+<ul class="simple">
+<li><p><strong>Nom</strong> (<code class="xref py py-attr docutils literal notranslate"><span class="pre">name</span></code>) : See <code class="xref py py-attr docutils literal notranslate"><span class="pre">Nom</span></code>.</p></li>
+<li><p><strong>Service utilisateur</strong> (<code class="xref py py-attr docutils literal notranslate"><span class="pre">provider</span></code>) : See <code class="xref py py-attr docutils literal notranslate"><span class="pre">Service</span> <span class="pre">utilisateur</span></code>.</p></li>
+<li><p><strong>ID</strong> (<code class="xref py py-attr docutils literal notranslate"><span class="pre">id</span></code>) : See <code class="xref py py-attr docutils literal notranslate"><span class="pre">ID</span></code>.</p></li>
+</ul>
+<p class="rubric">Detail layout</p>
+<ul class="simple">
+<li><ul>
+<li><p>(unformatted: <code class="docutils literal notranslate"><span class="pre">&lt;lino.core.elems.Wrapper</span> <span class="pre">object</span> <span class="pre">at</span> <span class="pre">0x7f7710b035b0&gt;</span></code>)</p></li>
+<li><p>(unformatted: <code class="docutils literal notranslate"><span class="pre">&lt;lino.core.elems.Wrapper</span> <span class="pre">object</span> <span class="pre">at</span> <span class="pre">0x7f7710b03610&gt;</span></code>)</p></li>
+<li><p>(unformatted: <code class="docutils literal notranslate"><span class="pre">&lt;lino.core.elems.Wrapper</span> <span class="pre">object</span> <span class="pre">at</span> <span class="pre">0x7f7710b03760&gt;</span></code>)</p></li>
+<li><p>(unformatted: <code class="docutils literal notranslate"><span class="pre">&lt;lino.core.elems.Wrapper</span> <span class="pre">object</span> <span class="pre">at</span> <span class="pre">0x7f7710b038b0&gt;</span></code>)</p></li>
+<li><p>(unformatted: <code class="docutils literal notranslate"><span class="pre">&lt;lino.core.elems.Wrapper</span> <span class="pre">object</span> <span class="pre">at</span> <span class="pre">0x7f7710b03a00&gt;</span></code>)</p></li>
+</ul>
+</li>
+<li><ul>
+<li><p>(unformatted: <code class="docutils literal notranslate"><span class="pre">&lt;lino.core.elems.Wrapper</span> <span class="pre">object</span> <span class="pre">at</span> <span class="pre">0x7f7710b0a490&gt;</span></code>)</p></li>
+<li><p>(unformatted: <code class="docutils literal notranslate"><span class="pre">&lt;lino.core.elems.Wrapper</span> <span class="pre">object</span> <span class="pre">at</span> <span class="pre">0x7f7710b0a4f0&gt;</span></code>)</p></li>
+<li><p>(unformatted: <code class="docutils literal notranslate"><span class="pre">&lt;lino.core.elems.Wrapper</span> <span class="pre">object</span> <span class="pre">at</span> <span class="pre">0x7f7710b0a640&gt;</span></code>)</p></li>
+<li><p>(unformatted: <code class="docutils literal notranslate"><span class="pre">&lt;lino.core.elems.Wrapper</span> <span class="pre">object</span> <span class="pre">at</span> <span class="pre">0x7f7710b0a790&gt;</span></code>)</p></li>
+</ul>
+</li>
+<li><ul>
+<li><p>(unformatted: <code class="docutils literal notranslate"><span class="pre">&lt;lino.core.elems.Wrapper</span> <span class="pre">object</span> <span class="pre">at</span> <span class="pre">0x7f7710b12100&gt;</span></code>)</p></li>
+<li><p><strong>Candidatures</strong> (<a class="reference internal" href="jobs.CandidaturesByJob.html"><span class="doc">jobs.CandidaturesByJob</span></a>)</p></li>
+</ul>
+</li>
+<li><p><strong>Mises à l’emploi art60§7</strong> (<a class="reference internal" href="jobs.ContractsByJob.html"><span class="doc">jobs.ContractsByJob</span></a>)</p></li>
+</ul>
+<p class="rubric">Toolbar actions</p>
+<ul class="simple">
+<li><p><strong>HTML</strong> (show_as_html) : Show this table in Bootstrap3 interface</p></li>
+<li><p><strong>Table (landscape)</strong> (as_pdf) : Show this table as a pdf document.</p></li>
+<li><p><strong>Table (portrait)</strong> (as_pdf_p) : Show this table as a pdf document.</p></li>
+<li><p><strong>Export to .xls</strong> (export_excel) : Export this table as an .xls document</p></li>
+<li><p><strong>None</strong> (grid_post) : See (unformatted: <code class="docutils literal notranslate"><span class="pre">&lt;lino.core.actions.CreateRow</span> <span class="pre">grid_post&gt;</span></code>).</p></li>
+<li><p><strong>None</strong> (grid_put) : See (unformatted: <code class="docutils literal notranslate"><span class="pre">&lt;lino.core.actions.SaveGridCell</span> <span class="pre">grid_put&gt;</span></code>).</p></li>
+<li><p><strong>Nouveau</strong> (insert) : Open a dialog window to insert a new Poste de travail.</p></li>
+<li><p><strong>Créer</strong> (submit_insert) : Create the record and open a detail window on it</p></li>
+<li><p><strong>Détail</strong> (detail) : Open a detail window on records of jobs.</p></li>
+<li><p><strong>Supprimer</strong> (delete_selected) : Supprimer cet enregistrement</p></li>
+<li><p><strong>None</strong> (grid) : See (unformatted: <code class="docutils literal notranslate"><span class="pre">&lt;lino.core.actions.ShowTable</span> <span class="pre">grid&gt;</span></code>).</p></li>
+<li><p><strong>None</strong> (validate) : See (unformatted: <code class="docutils literal notranslate"><span class="pre">&lt;lino.core.actions.ValidateForm</span> <span class="pre">validate&gt;</span></code>).</p></li>
+<li><p><strong>Enregistrer</strong> (submit_detail) : Enregistrer les changements dans ce formulaire</p></li>
+</ul>
+<p class="rubric">Hidden columns</p>
+<ul class="simple">
+<li><p><strong>Secteur d’activité</strong> (<a class="reference external" href="https://dev.lino-framework.org/specs/cv.html#lino_xl.lib.cv.SectorFunction.sector" title="(in Lino Developer Guide v20.1)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">sector</span></code></a>) : Pointer to the Sector.</p></li>
+<li><p><strong>Fonction professionnelle</strong> (<a class="reference external" href="https://dev.lino-framework.org/specs/cv.html#lino_xl.lib.cv.SectorFunction.function" title="(in Lino Developer Guide v20.1)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">function</span></code></a>) : Pointer to the Function.</p></li>
+<li><p><strong>Type de poste</strong> (<code class="xref py py-attr docutils literal notranslate"><span class="pre">type</span></code>) : See <code class="xref py py-attr docutils literal notranslate"><span class="pre">Type</span> <span class="pre">de</span> <span class="pre">poste</span></code>.</p></li>
+<li><p><strong>Type de contrat</strong> (<code class="xref py py-attr docutils literal notranslate"><span class="pre">contract_type</span></code>) : See <code class="xref py py-attr docutils literal notranslate"><span class="pre">Type</span> <span class="pre">de</span> <span class="pre">contrat</span></code>.</p></li>
+<li><p><strong>coût horaire</strong> (<code class="xref py py-attr docutils literal notranslate"><span class="pre">hourly_rate</span></code>) : See <code class="xref py py-attr docutils literal notranslate"><span class="pre">coût</span> <span class="pre">horaire</span></code>.</p></li>
+<li><p><strong>Capacité</strong> (<code class="xref py py-attr docutils literal notranslate"><span class="pre">capacity</span></code>) : See <code class="xref py py-attr docutils literal notranslate"><span class="pre">Capacité</span></code>.</p></li>
+<li><p><strong>Remarque</strong> (<code class="xref py py-attr docutils literal notranslate"><span class="pre">remark</span></code>) : See <code class="xref py py-attr docutils literal notranslate"><span class="pre">Remarque</span></code>.</p></li>
+</ul>
+</section>
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/logo_web3.png" alt="Logo"/>
+            </a></p>
+          <div class="sidebar-resize-handle"></div>
+<p align="center"></p>
+<h3><a href="index.html">Inhaltsverzeichnis</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="actors.html">Data views</a></li>
+</ul>
+
+<hr class="docutils" />
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Schnellsuche</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Los" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+<ul>
+</ul><p align="center">
+</p>
+
+<div id="ethical-ad-placement"></div>
+        </div>
+      </div>
+    <footer role="contentinfo">
+      &#169; Copyright 2022-07-19 ÖSHZ Kettenis.
+      Zuletzt aktualisiert am 2022-07-19.
+      Created using <a class="reference external" href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
+      <a class="reference external" href="https://insipid-sphinx-theme.readthedocs.io/">Insipid Theme</a>.
+
+Online link: <a href="http://127.0.0.1:8000/media/cache/help/jobs.Jobs.html">http://127.0.0.1:8000/media/cache/help/jobs.Jobs.html</a>.
+
+
+    </footer>
+    <div class="sidebar-resize-handle"></div>
+    <div id="overlay"></div>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+-r requirements-install.txt
+-e git+https://gitlab.com/lino-framework/atelier.git#egg=atelier
+-e git+https://gitlab.com/lino-framework/lino.git#egg=lino
+-e git+https://gitlab.com/lino-framework/xl.git#egg=lino_xl
+-e git+https://gitlab.com/lino-framework/weleup.git#egg=lino_weleup
+-e git+https://gitlab.com/lino-framework/welcht.git#egg=lino_welcht
+# Django<=3.2

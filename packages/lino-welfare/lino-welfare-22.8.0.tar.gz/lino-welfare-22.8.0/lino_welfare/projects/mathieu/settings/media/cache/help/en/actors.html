@@ -1,0 +1,1795 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Data views &#8212; mathieu</title>
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/insipid.css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/atelier.css" />
+    <link rel="stylesheet" type="text/css" href="_static/insipid-cust.css" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/design-tabs.js"></script>
+    <script defer src="_static/insipid.js"></script>
+    <script defer src="_static/insipid-sidebar.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="system.YesNo (Oui ou non)" href="system.YesNo.html" />
+    <link rel="prev" title="mathieu" href="index.html" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+  </head>
+  <body class="sidebar-visible">
+    <script type="text/javascript">
+        (function() {
+            var $body = $(document.body);
+            $body.addClass('js');
+            $body.addClass('sidebar-resizing');  // avoid transitions on load
+            $body.removeClass('sidebar-visible');
+            try {
+                var sidebar = localStorage.getItem('sphinx-sidebar');
+                if (sidebar === 'visible') {
+                    $body.addClass('sidebar-visible');
+                }
+                var sidebar_width = localStorage.getItem('sphinx-sidebar-width');
+                if (sidebar_width) {
+                    $(':root').css('--sidebar-width', sidebar_width);
+                }
+            } catch(e) {
+            }
+        })();
+    </script>
+    <header id="topbar-placeholder">
+      <div id="topbar">
+        <div id="titlebar">
+          <div class="buttons">
+            <button id="sidebar-button" type="button" aria-controls="sphinxsidebar" accesskey="M">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"/></svg>
+            </button><a href="index.html" title="mathieu">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"/></svg>
+</a>
+          </div>
+          <div class="title">
+            <a class="parent" href="index.html" accesskey="U">mathieu</a>
+            <a class="top" href="#">Data views</a>
+          </div>
+          <div class="buttons">
+            <button id="fullscreen-button" type="button" aria-hidden="true">
+              <span class="enable">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M212.686 315.314L120 408l32.922 31.029c15.12 15.12 4.412 40.971-16.97 40.971h-112C10.697 480 0 469.255 0 456V344c0-21.382 25.803-32.09 40.922-16.971L72 360l92.686-92.686c6.248-6.248 16.379-6.248 22.627 0l25.373 25.373c6.249 6.248 6.249 16.378 0 22.627zm22.628-118.628L328 104l-32.922-31.029C279.958 57.851 290.666 32 312.048 32h112C437.303 32 448 42.745 448 56v112c0 21.382-25.803 32.09-40.922 16.971L376 152l-92.686 92.686c-6.248 6.248-16.379 6.248-22.627 0l-25.373-25.373c-6.249-6.248-6.249-16.378 0-22.627z"/></svg>
+              </span>
+              <span class="disable">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M4.686 427.314L104 328l-32.922-31.029C55.958 281.851 66.666 256 88.048 256h112C213.303 256 224 266.745 224 280v112c0 21.382-25.803 32.09-40.922 16.971L152 376l-99.314 99.314c-6.248 6.248-16.379 6.248-22.627 0L4.686 449.941c-6.248-6.248-6.248-16.379 0-22.627zM443.314 84.686L344 184l32.922 31.029c15.12 15.12 4.412 40.971-16.97 40.971h-112C234.697 256 224 245.255 224 232V120c0-21.382 25.803-32.09 40.922-16.971L296 136l99.314-99.314c6.248-6.248 16.379-6.248 22.627 0l25.373 25.373c6.248 6.248 6.248 16.379 0 22.627z"/></svg>
+              </span>
+            </button><a href="https://www.facebook.com/sharer/sharer.php?u=http://127.0.0.1:8000/media/cache/help/actors/" title="Share on Facebook" target="_blank">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>
+</a>
+
+<!---
+<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+---!>
+
+<a href="https://twitter.com/share?ref_src=http://127.0.0.1:8000/media/cache/help/actors/" title="Share on Twitter" target="_blank">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <nav>
+      <a href="index.html" class="nav-icon previous" title="previous:&#13;mathieu" aria-label="Previous topic" accesskey="P" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"/></svg>
+      </a>
+      <a href="system.YesNo.html" class="nav-icon next" title="next:&#13;system.YesNo (Oui ou non)" aria-label="Next topic" accesskey="N" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg>
+      </a>
+    </nav>
+
+    <nav class="relbar">
+      <a class="previous" href="index.html" aria-label="Previous topic" >
+        <div class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z"/></svg>
+        </div>
+        <div class="title">
+          <span class="text">
+            <span class="direction">previous</span>
+            mathieu
+          </span>
+        </div>
+      </a>
+      <a class="next" href="system.YesNo.html" aria-label="Next topic" >
+        <div class="title">
+          <span class="text">
+            <span class="direction">next</span>
+            <code class="docutils literal notranslate"><span class="pre">system.YesNo</span></code> (Oui ou non)
+          </span>
+        </div>
+        <div class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"/></svg>
+        </div>
+      </a>
+    </nav>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+<section id="data-views">
+<h1>Data views<a class="headerlink" href="#data-views" title="Permalink to this heading">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 72%" />
+<col style="width: 28%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Nom</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="system.YesNo.html"><span class="doc">Oui ou non</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/system.html#lino.modlib.system.YesNo" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">system.YesNo</span></code></a>)</p></td>
+<td><p>A choicelist with two values “Yes” and “No”.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="system.Genders.html"><span class="doc">Genders</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/system.html#lino.modlib.system.Genders" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">system.Genders</span></code></a>)</p></td>
+<td><p>Defines the two possible choices “male” and “female” for the gender of a
+person.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="system.PeriodEvents.html"><span class="doc">Évènements observés</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/system.html#lino.modlib.system.PeriodEvents" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">system.PeriodEvents</span></code></a>)</p></td>
+<td><p>The list of things you can observe on a
+lino.mixins.periods.DateRange.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="system.DashboardLayouts.html"><span class="doc">DashboardLayouts</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">system.DashboardLayouts</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="checkdata.Checkers.html"><span class="doc">Tests de données</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/checkdata.html#lino.modlib.checkdata.Checkers" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">checkdata.Checkers</span></code></a>)</p></td>
+<td><p>The list of data checkers known by this application.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="printing.BuildMethods.html"><span class="doc">BuildMethods</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/printing.html#lino.modlib.printing.BuildMethods" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">printing.BuildMethods</span></code></a>)</p></td>
+<td><p>The choicelist of build methods offered on this site.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="system.SiteConfigs.html"><span class="doc">Site configurations</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">system.SiteConfigs</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="system.Dashboard.html"><span class="doc">Dashboard</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/system.html#lino.modlib.system.Dashboard" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">system.Dashboard</span></code></a>)</p></td>
+<td><p>This is your main page.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="users.UserTypes.html"><span class="doc">Types d’utilisateur</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/users.html#lino.modlib.users.UserTypes" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">users.UserTypes</span></code></a>)</p></td>
+<td><p>The list of user types available in this application.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="about.TimeZones.html"><span class="doc">Time zones</span></a> (<a class="reference external" href="https://dev.lino-framework.org/plugins/about.html#lino.modlib.about.TimeZones" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">about.TimeZones</span></code></a>)</p></td>
+<td><p>The list of time zones available on this site.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="about.DateFormats.html"><span class="doc">Date formats</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">about.DateFormats</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="about.About.html"><span class="doc">à propos</span></a> (<a class="reference external" href="https://dev.lino-framework.org/plugins/about.html#lino.modlib.about.About" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">about.About</span></code></a>)</p></td>
+<td><p>A dialog window which displays some information about the site.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="xl.Priorities.html"><span class="doc">Priorités</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/xl.html#lino_xl.lib.xl.Priorities" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">xl.Priorities</span></code></a>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="countries.PlaceTypes.html"><span class="doc">PlaceTypes</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/countries.html#lino_xl.lib.countries.PlaceTypes" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">countries.PlaceTypes</span></code></a>)</p></td>
+<td><p>A choicelist of possible place types.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="countries.Countries.html"><span class="doc">Pays</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/countries.html#lino_xl.lib.countries.Countries" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">countries.Countries</span></code></a>)</p></td>
+<td><p>The table of all countries.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="countries.Places.html"><span class="doc">Endroits</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/countries.html#lino_xl.lib.countries.Places" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">countries.Places</span></code></a>)</p></td>
+<td><p>The table of known geographical places.
+A geographical place can be a city, a town, a suburb,
+a province, a lake… any named geographic entity,
+except for countries because these have their own table.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="countries.PlacesByPlace.html"><span class="doc">Subdivisions</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">countries.PlacesByPlace</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="countries.PlacesByCountry.html"><span class="doc">Endroits</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">countries.PlacesByCountry</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="uploads.Shortcuts.html"><span class="doc">Upload shortcuts</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/uploads.html#lino.modlib.uploads.Shortcuts" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">uploads.Shortcuts</span></code></a>)</p></td>
+<td><p>The list of available upload shortcut fields in this application.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="uploads.UploadAreas.html"><span class="doc">Domaines de téléchargement</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">uploads.UploadAreas</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="contacts.PartnerEvents.html"><span class="doc">Évènements observés</span></a> (<a class="reference external" href="https://using.lino-framework.org/plugins/contacts.html#lino_xl.lib.contacts.PartnerEvents" title="(in Lino User Guide)"><code class="xref py py-class docutils literal notranslate"><span class="pre">contacts.PartnerEvents</span></code></a>)</p></td>
+<td><p>A choicelist of observable partner events.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="contacts.CivilStates.html"><span class="doc">Etats civils</span></a> (<a class="reference external" href="https://using.lino-framework.org/plugins/contacts.html#lino_xl.lib.contacts.CivilStates" title="(in Lino User Guide)"><code class="xref py py-class docutils literal notranslate"><span class="pre">contacts.CivilStates</span></code></a>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="contacts.Partners.html"><span class="doc">Partenaires</span></a> (<a class="reference external" href="https://using.lino-framework.org/plugins/contacts.html#lino_xl.lib.contacts.Partners" title="(in Lino User Guide)"><code class="xref py py-class docutils literal notranslate"><span class="pre">contacts.Partners</span></code></a>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="contacts.PartnersByCity.html"><span class="doc">Partenaires</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">contacts.PartnersByCity</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="contacts.PartnersByCountry.html"><span class="doc">Partenaires</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">contacts.PartnersByCountry</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="contacts.Persons.html"><span class="doc">Personnes</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">contacts.Persons</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="contacts.CompanyTypes.html"><span class="doc">Types d’organisation</span></a> (<a class="reference external" href="https://using.lino-framework.org/plugins/contacts.html#lino_xl.lib.contacts.CompanyTypes" title="(in Lino User Guide)"><code class="xref py py-class docutils literal notranslate"><span class="pre">contacts.CompanyTypes</span></code></a>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="contacts.Companies.html"><span class="doc">Organisations</span></a> (<a class="reference external" href="https://using.lino-framework.org/plugins/contacts.html#lino_xl.lib.contacts.Companies" title="(in Lino User Guide)"><code class="xref py py-class docutils literal notranslate"><span class="pre">contacts.Companies</span></code></a>)</p></td>
+<td><p>Base table for all tables showing companies.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="contacts.RoleTypes.html"><span class="doc">Fonctions</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">contacts.RoleTypes</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="contacts.Roles.html"><span class="doc">Personnes de contact</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">contacts.Roles</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="contacts.RolesByCompany.html"><span class="doc">Personnes de contact</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">contacts.RolesByCompany</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="contacts.RolesByPerson.html"><span class="doc">contact pour</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">contacts.RolesByPerson</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="users.My.html"><span class="doc">My</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">users.My</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="gfks.ContentTypes.html"><span class="doc">Types de contenu</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">gfks.ContentTypes</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="gfks.HelpTexts.html"><span class="doc">Textes d’aide</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">gfks.HelpTexts</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="gfks.HelpTextsByModel.html"><span class="doc">Textes d’aide</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">gfks.HelpTextsByModel</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="gfks.BrokenGFKs.html"><span class="doc">Broken GFKs</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">gfks.BrokenGFKs</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="gfks.BrokenGFKsByModel.html"><span class="doc">Broken GFKs</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">gfks.BrokenGFKsByModel</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="notify.MessageTypes.html"><span class="doc">Message Types</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/notify.html#lino.modlib.notify.MessageTypes" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">notify.MessageTypes</span></code></a>)</p></td>
+<td><p>The list of possible choices for the message_type field
+of a Message.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="notify.MailModes.html"><span class="doc">Notification modes</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/notify.html#lino.modlib.notify.MailModes" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">notify.MailModes</span></code></a>)</p></td>
+<td><p>How the system should send email notifications to a user.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="notify.Messages.html"><span class="doc">Notifications</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/notify.html#lino.modlib.notify.Messages" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">notify.Messages</span></code></a>)</p></td>
+<td><p>Base for all tables of messages.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="notify.AllMessages.html"><span class="doc">Notifications</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/notify.html#lino.modlib.notify.AllMessages" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">notify.AllMessages</span></code></a>)</p></td>
+<td><p>The gobal list of all messages.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="notify.MyMessages.html"><span class="doc">Mes Notifications</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/notify.html#lino.modlib.notify.MyMessages" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">notify.MyMessages</span></code></a>)</p></td>
+<td><p>Shows messages emitted to me.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="changes.ChangeTypes.html"><span class="doc">Change Types</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">changes.ChangeTypes</span></code>)</p></td>
+<td><p>The list of possible choices for the type field
+of a Change.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="changes.Changes.html"><span class="doc">Changes</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">changes.Changes</span></code>)</p></td>
+<td><p>The default table for Change.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="changes.ChangesByObject.html"><span class="doc">Changes</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">changes.ChangesByObject</span></code>)</p></td>
+<td><p>Slave Table showing the direct changes related to the current
+object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="changes.ChangesByMaster.html"><span class="doc">Changes</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">changes.ChangesByMaster</span></code>)</p></td>
+<td><p>Slave Table showing the changes related to the current object,
+including those applied to “child” objects.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="checkdata.Problems.html"><span class="doc">Problèmes de données</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/checkdata.html#lino.modlib.checkdata.Problems" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">checkdata.Problems</span></code></a>)</p></td>
+<td><p>The base table for problem messages.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="checkdata.AllProblems.html"><span class="doc">Problèmes de données</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">checkdata.AllProblems</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="checkdata.ProblemsByOwner.html"><span class="doc">Problèmes de données</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">checkdata.ProblemsByOwner</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="checkdata.ProblemsByChecker.html"><span class="doc">Problèmes de données</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">checkdata.ProblemsByChecker</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="checkdata.MyProblems.html"><span class="doc">Mes problèmes de données</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/checkdata.html#lino.modlib.checkdata.MyProblems" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">checkdata.MyProblems</span></code></a>)</p></td>
+<td><p>Shows the problem messages assigned to me.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="addresses.AddressTypes.html"><span class="doc">Types d’adresses</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/addresses.html#lino_xl.lib.addresses.AddressTypes" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">addresses.AddressTypes</span></code></a>)</p></td>
+<td><p>A choicelist with all available address types.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="addresses.DataSources.html"><span class="doc">Sources de données</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/addresses.html#lino_xl.lib.addresses.DataSources" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">addresses.DataSources</span></code></a>)</p></td>
+<td><p>A choicelist with all available data sources.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="addresses.Addresses.html"><span class="doc">Adresses</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/addresses.html#lino_xl.lib.addresses.Addresses" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">addresses.Addresses</span></code></a>)</p></td>
+<td><p>Shows all addresses in the database.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="addresses.AddressesByPartner.html"><span class="doc">Adresses</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/addresses.html#lino_xl.lib.addresses.AddressesByPartner" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">addresses.AddressesByPartner</span></code></a>)</p></td>
+<td><p>Shows all addresses of this partner.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="addresses.AddressesByCity.html"><span class="doc">Adresses</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">addresses.AddressesByCity</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="excerpts.Shortcuts.html"><span class="doc">Excerpt shortcuts</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/excerpts.html#lino_xl.lib.excerpts.Shortcuts" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">excerpts.Shortcuts</span></code></a>)</p></td>
+<td><p>A choicelists of excerpt shortcut fields.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="excerpts.ExcerptTypes.html"><span class="doc">Types d’extrait</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/excerpts.html#lino_xl.lib.excerpts.ExcerptTypes" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">excerpts.ExcerptTypes</span></code></a>)</p></td>
+<td><p>Displays all rows of ExcerptType.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="excerpts.Excerpts.html"><span class="doc">Extraits</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/excerpts.html#lino_xl.lib.excerpts.Excerpts" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">excerpts.Excerpts</span></code></a>)</p></td>
+<td><p>Base class for all tables on Excerpt.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="excerpts.AllExcerpts.html"><span class="doc">Extraits</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/excerpts.html#lino_xl.lib.excerpts.AllExcerpts" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">excerpts.AllExcerpts</span></code></a>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="excerpts.MyExcerpts.html"><span class="doc">Mes Extraits</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/excerpts.html#lino_xl.lib.excerpts.MyExcerpts" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">excerpts.MyExcerpts</span></code></a>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="excerpts.ExcerptsByType.html"><span class="doc">Extraits</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/excerpts.html#lino_xl.lib.excerpts.ExcerptsByType" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">excerpts.ExcerptsByType</span></code></a>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="excerpts.ExcerptsByOwner.html"><span class="doc">Existing excerpts</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/excerpts.html#lino_xl.lib.excerpts.ExcerptsByOwner" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">excerpts.ExcerptsByOwner</span></code></a>)</p></td>
+<td><p>Shows all excerpts whose owner field is
+this.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="excerpts.ExcerptsByProject.html"><span class="doc">Existing excerpts</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/excerpts.html#lino_xl.lib.excerpts.ExcerptsByProject" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">excerpts.ExcerptsByProject</span></code></a>)</p></td>
+<td><p>Only used if lino.core.site.Site.project_model is set.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="uploads.Volumes.html"><span class="doc">Libraries de fichiers</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">uploads.Volumes</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="uploads.UploadTypes.html"><span class="doc">Types de téléchargement</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">uploads.UploadTypes</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="uploads.Uploads.html"><span class="doc">Fichiers téléchargés</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">uploads.Uploads</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="uploads.AllUploads.html"><span class="doc">Fichiers téléchargés</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/uploads.html#lino.modlib.uploads.AllUploads" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">uploads.AllUploads</span></code></a>)</p></td>
+<td><p>Shows all upload files on this Lino site.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="uploads.UploadsByType.html"><span class="doc">Fichiers téléchargés</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">uploads.UploadsByType</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="uploads.MyUploads.html"><span class="doc">Mes Fichiers téléchargés</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">uploads.MyUploads</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="uploads.AreaUploads.html"><span class="doc">Fichiers téléchargés</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">uploads.AreaUploads</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="uploads.UploadsByController.html"><span class="doc">Fichiers téléchargés</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">uploads.UploadsByController</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cal.DisplayColors.html"><span class="doc">Display colors</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/cal.html#lino_xl.lib.cal.DisplayColors" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">cal.DisplayColors</span></code></a>)</p></td>
+<td><p>A list of colors to be specified for displaying.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cal.Weekdays.html"><span class="doc">Weekdays</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/cal.html#lino_xl.lib.cal.Weekdays" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">cal.Weekdays</span></code></a>)</p></td>
+<td><p>A choicelist with the seven days of a week.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cal.YearMonths.html"><span class="doc">YearMonths</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cal.YearMonths</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cal.DurationUnits.html"><span class="doc">DurationUnits</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/cal.html#lino_xl.lib.cal.DurationUnits" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">cal.DurationUnits</span></code></a>)</p></td>
+<td><p>The list of possible duration units defined by this application.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cal.Recurrencies.html"><span class="doc">Recurrencies</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/cal.html#lino_xl.lib.cal.Recurrencies" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">cal.Recurrencies</span></code></a>)</p></td>
+<td><p>List of possible choices for a ‘recurrency’ field.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cal.AccessClasses.html"><span class="doc">Classes d’accès</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/cal.html#lino_xl.lib.cal.AccessClasses" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">cal.AccessClasses</span></code></a>)</p></td>
+<td><p>The sitewide list of access classes.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cal.PlannerColumns.html"><span class="doc">Colonnes planificateur</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cal.PlannerColumns</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cal.TaskStates.html"><span class="doc">Task states</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/cal.html#lino_xl.lib.cal.TaskStates" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">cal.TaskStates</span></code></a>)</p></td>
+<td><p>Possible values for the state of a Task. The list of
+choices for the Task.state field.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cal.GuestStates.html"><span class="doc">Presence states</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/cal.html#lino_xl.lib.cal.GuestStates" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">cal.GuestStates</span></code></a>)</p></td>
+<td><p>Global choicelist of possible guest states.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cal.EventEvents.html"><span class="doc">Évènements observés</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cal.EventEvents</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cal.EntryStates.html"><span class="doc">Entry states</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/cal.html#lino_xl.lib.cal.EntryStates" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">cal.EntryStates</span></code></a>)</p></td>
+<td><p>The list of possible states of a calendar entry.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cal.NotifyBeforeUnits.html"><span class="doc">Notify Units</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/cal.html#lino_xl.lib.cal.NotifyBeforeUnits" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">cal.NotifyBeforeUnits</span></code></a>)</p></td>
+<td><p>The list of choices for Event.notify_unit.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="clients.ClientEvents.html"><span class="doc">Évènements observés</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/clients.html#lino_xl.lib.clients.ClientEvents" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">clients.ClientEvents</span></code></a>)</p></td>
+<td><p>The list of observable client events.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="clients.ClientStates.html"><span class="doc">Etats bénéficiaires</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/clients.html#lino_xl.lib.clients.ClientStates" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">clients.ClientStates</span></code></a>)</p></td>
+<td><p>The list of client states.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="clients.KnownContactTypes.html"><span class="doc">Types de contact connus</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/clients.html#lino_xl.lib.clients.KnownContactTypes" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">clients.KnownContactTypes</span></code></a>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="uploads.MyExpiringUploads.html"><span class="doc">Mes fichiers téléchargés à renouveler</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/avanti/uploads.html#lino_xl.lib.uploads.MyExpiringUploads" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">uploads.MyExpiringUploads</span></code></a>)</p></td>
+<td><p>Shows the upload files that are marked as Upload.needed and whose
+Upload.end_date is within a given period.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="uploads.UploadsByProject.html"><span class="doc">Fichiers téléchargés</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">uploads.UploadsByProject</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="outbox.RecipientTypes.html"><span class="doc">RecipientTypes</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">outbox.RecipientTypes</span></code>)</p></td>
+<td><p>A list of possible values for the type field of a
+Recipient.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="outbox.Recipients.html"><span class="doc">Recipients</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">outbox.Recipients</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="outbox.RecipientsByMail.html"><span class="doc">Recipients</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">outbox.RecipientsByMail</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="outbox.Mails.html"><span class="doc">Mails envoyés</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">outbox.Mails</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="outbox.MyOutbox.html"><span class="doc">Mon courrier sortant</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">outbox.MyOutbox</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="outbox.MailsByController.html"><span class="doc">Mails envoyés</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">outbox.MailsByController</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="outbox.MailsByUser.html"><span class="doc">Courrier sortant</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">outbox.MailsByUser</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="outbox.MailsByProject.html"><span class="doc">Courrier sortant</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">outbox.MailsByProject</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="outbox.SentByPartner.html"><span class="doc">Courrier sortant</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">outbox.SentByPartner</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="outbox.Attachments.html"><span class="doc">Pièces jointes</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">outbox.Attachments</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="outbox.AttachmentsByMail.html"><span class="doc">Pièces jointes</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">outbox.AttachmentsByMail</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="outbox.AttachmentsByController.html"><span class="doc">Pièces jointes</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">outbox.AttachmentsByController</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cal.ReservationStates.html"><span class="doc">États</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cal.ReservationStates</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cal.RemoteCalendars.html"><span class="doc">Calendriers externes</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cal.RemoteCalendars</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cal.Rooms.html"><span class="doc">Locaux</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/cal.html#lino_xl.lib.cal.Rooms" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">cal.Rooms</span></code></a>)</p></td>
+<td><p>Base class for all list of rooms.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cal.AllRooms.html"><span class="doc">Locaux</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/cal.html#lino_xl.lib.cal.AllRooms" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">cal.AllRooms</span></code></a>)</p></td>
+<td><p>Show a list of all rooms.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cal.Calendars.html"><span class="doc">Calendriers</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/cal.html#lino_xl.lib.cal.Calendars" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">cal.Calendars</span></code></a>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cal.Subscriptions.html"><span class="doc">Abonnements</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/cal.html#lino_xl.lib.cal.Subscriptions" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">cal.Subscriptions</span></code></a>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cal.SubscriptionsByUser.html"><span class="doc">Abonnements</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/cal.html#lino_xl.lib.cal.SubscriptionsByUser" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">cal.SubscriptionsByUser</span></code></a>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cal.SubscriptionsByCalendar.html"><span class="doc">Abonnements</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/cal.html#lino_xl.lib.cal.SubscriptionsByCalendar" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">cal.SubscriptionsByCalendar</span></code></a>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cal.Tasks.html"><span class="doc">Tâches</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/cal.html#lino_xl.lib.cal.Tasks" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">cal.Tasks</span></code></a>)</p></td>
+<td><p>Global table of all tasks for all users.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cal.TasksByController.html"><span class="doc">Tâches</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cal.TasksByController</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cal.TasksByUser.html"><span class="doc">Tâches</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/cal.html#lino_xl.lib.cal.TasksByUser" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">cal.TasksByUser</span></code></a>)</p></td>
+<td><p>Shows the list of tasks for this user.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cal.MyTasks.html"><span class="doc">Mes tâches</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/cal.html#lino_xl.lib.cal.MyTasks" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">cal.MyTasks</span></code></a>)</p></td>
+<td><p>Shows my tasks whose start date is today or in the future.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cal.TasksByProject.html"><span class="doc">Tâches</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cal.TasksByProject</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cal.GuestRoles.html"><span class="doc">Rôles de participants</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/cal.html#lino_xl.lib.cal.GuestRoles" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">cal.GuestRoles</span></code></a>)</p></td>
+<td><p>Global table of guest roles.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cal.Guests.html"><span class="doc">Présences</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/cal.html#lino_xl.lib.cal.Guests" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">cal.Guests</span></code></a>)</p></td>
+<td><p>The default table of presences.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cal.AllGuests.html"><span class="doc">Présences</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cal.AllGuests</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cal.GuestsByEvent.html"><span class="doc">Présences</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/cal.html#lino_xl.lib.cal.GuestsByEvent" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">cal.GuestsByEvent</span></code></a>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cal.GuestsByRole.html"><span class="doc">Présences</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/cal.html#lino_xl.lib.cal.GuestsByRole" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">cal.GuestsByRole</span></code></a>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cal.GuestsByPartner.html"><span class="doc">Présences</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/cal.html#lino_xl.lib.cal.GuestsByPartner" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">cal.GuestsByPartner</span></code></a>)</p></td>
+<td><p>Show the calendar entries having this partner as a guest.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cal.MyPresences.html"><span class="doc">Mes présences</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/cal.html#lino_xl.lib.cal.MyPresences" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">cal.MyPresences</span></code></a>)</p></td>
+<td><p>Shows all my presences in calendar events, independently of their
+state.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cal.MyPendingPresences.html"><span class="doc">My pending invitations</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/cal.html#lino_xl.lib.cal.MyPendingPresences" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">cal.MyPendingPresences</span></code></a>)</p></td>
+<td><p>Received invitations waiting for my feedback (accept or reject).</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cal.MyGuests.html"><span class="doc">Mes visiteurs</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cal.MyGuests</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cal.EventTypes.html"><span class="doc">Types d’entrée calendrier</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/cal.html#lino_xl.lib.cal.EventTypes" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">cal.EventTypes</span></code></a>)</p></td>
+<td><p>The list of entry types defined on this site.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cal.RecurrentEvents.html"><span class="doc">Évènements periodiques</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/cal.html#lino_xl.lib.cal.RecurrentEvents" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">cal.RecurrentEvents</span></code></a>)</p></td>
+<td><p>The list of all recurrent events (RecurrentEvent).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cal.Events.html"><span class="doc">Entrées calendrier</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/cal.html#lino_xl.lib.cal.Events" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">cal.Events</span></code></a>)</p></td>
+<td><p>Table which shows all calendar events.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cal.AllEntries.html"><span class="doc">Entrées calendrier</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cal.AllEntries</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cal.EntriesByType.html"><span class="doc">Entrées calendrier</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cal.EntriesByType</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p>:doc:` ⚔  &lt;cal.ConflictingEvents&gt;` (<a class="reference external" href="https://dev.lino-framework.org/specs/cal.html#lino_xl.lib.cal.ConflictingEvents" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">cal.ConflictingEvents</span></code></a>)</p></td>
+<td><p>Shows events conflicting with this one (the master).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cal.PublicEntries.html"><span class="doc">Entrées calendrier</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cal.PublicEntries</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cal.EntriesByDay.html"><span class="doc">Rendez-vous aujourd’hui</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/cal.html#lino_xl.lib.cal.EntriesByDay" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">cal.EntriesByDay</span></code></a>)</p></td>
+<td><p>This table is usually labelled “Appointments today”. It has no
+“date” column because it shows events of a given date.It is ordred
+with increasing times.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cal.EntriesByRoom.html"><span class="doc">Entrées calendrier</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/cal.html#lino_xl.lib.cal.EntriesByRoom" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">cal.EntriesByRoom</span></code></a>)</p></td>
+<td><p>Displays the calendar entries at a given Room.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cal.EntriesByController.html"><span class="doc">Entrées calendrier</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cal.EntriesByController</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cal.EntriesByProject.html"><span class="doc">Entrées calendrier</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/cal.html#lino_xl.lib.cal.EntriesByProject" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">cal.EntriesByProject</span></code></a>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cal.EntriesByGuest.html"><span class="doc">Entrées calendrier</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/cal.html#lino_xl.lib.cal.EntriesByGuest" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">cal.EntriesByGuest</span></code></a>)</p></td>
+<td><p>Show the calendar entries having this partner as a guest.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cal.OneEvent.html"><span class="doc">Entrées calendrier</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/cal.html#lino_xl.lib.cal.OneEvent" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">cal.OneEvent</span></code></a>)</p></td>
+<td><p>Show a single calendar event.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cal.MyEntries.html"><span class="doc">Mes rendez-vous</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/cal.html#lino_xl.lib.cal.MyEntries" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">cal.MyEntries</span></code></a>)</p></td>
+<td><p>Shows the appointments for which I am responsible.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cal.MyEntriesToday.html"><span class="doc">Mes rendez-vous aujourd’hui</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/cal.html#lino_xl.lib.cal.MyEntriesToday" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">cal.MyEntriesToday</span></code></a>)</p></td>
+<td><p>Like MyEntries, but only today.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cal.MyAssignedEvents.html"><span class="doc">Appointments assigned to me</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/cal.html#lino_xl.lib.cal.MyAssignedEvents" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">cal.MyAssignedEvents</span></code></a>)</p></td>
+<td><p>Shows the calendar entries that are assigned to me.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cal.OverdueAppointments.html"><span class="doc">Rendez-vous dépassés</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/cal.html#lino_xl.lib.cal.OverdueAppointments" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">cal.OverdueAppointments</span></code></a>)</p></td>
+<td><p>Shows overdue appointments, i.e. appointments that happened before today
+and are still in a nonstable state.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cal.MyOverdueAppointments.html"><span class="doc">Mes rendez-vous dépassés</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/cal.html#lino_xl.lib.cal.MyOverdueAppointments" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">cal.MyOverdueAppointments</span></code></a>)</p></td>
+<td><p>Like OverdueAppointments, but only for myself.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cal.MyUnconfirmedAppointments.html"><span class="doc">Mes rendez-vous à confirmer</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/cal.html#lino_xl.lib.cal.MyUnconfirmedAppointments" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">cal.MyUnconfirmedAppointments</span></code></a>)</p></td>
+<td><p>Shows my appointments in the near future which are in suggested or
+draft state.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cal.EventPolicies.html"><span class="doc">Règles de récurrence</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/cal.html#lino_xl.lib.cal.EventPolicies" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">cal.EventPolicies</span></code></a>)</p></td>
+<td><p>Global table of all possible recurrency policies.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="extensible.CalendarPanel.html"><span class="doc">Calendrier</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">extensible.CalendarPanel</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="extensible.PanelCalendars.html"><span class="doc">Calendriers</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">extensible.PanelCalendars</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="extensible.PanelEvents.html"><span class="doc">Entrées calendrier</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">extensible.PanelEvents</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cal.EntriesByClient.html"><span class="doc">Entrées calendrier</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cal.EntriesByClient</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cal.TasksByClient.html"><span class="doc">Tâches</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cal.TasksByClient</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="reception.AppointmentsByPartner.html"><span class="doc">Rendez-vous</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">reception.AppointmentsByPartner</span></code>)</p></td>
+<td><p>Show the participations in upcoming calendar events for a given
+partner.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="reception.ExpectedGuests.html"><span class="doc">Visiteurs attendus</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">reception.ExpectedGuests</span></code>)</p></td>
+<td><p>General table of all expected guests.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="reception.BusyVisitors.html"><span class="doc">Visiteurs occupés</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">reception.BusyVisitors</span></code>)</p></td>
+<td><p>Show busy visitors (with any user).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="reception.WaitingVisitors.html"><span class="doc">Salle d’attente</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">reception.WaitingVisitors</span></code>)</p></td>
+<td><p>Show waiting visitors (for any user).</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="reception.GoneVisitors.html"><span class="doc">Visiteurs repartis</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">reception.GoneVisitors</span></code>)</p></td>
+<td><p>Show gone visitors (for any user).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="reception.MyWaitingVisitors.html"><span class="doc">Visiteurs qui m’attendent</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">reception.MyWaitingVisitors</span></code>)</p></td>
+<td><p>Show visitors waiting for me.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="reception.MyBusyVisitors.html"><span class="doc">Visiteurs occupés avec moi</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">reception.MyBusyVisitors</span></code>)</p></td>
+<td><p>Show the visitors with whom I am busy.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="reception.MyGoneVisitors.html"><span class="doc">Mes visiteurs repartis</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">reception.MyGoneVisitors</span></code>)</p></td>
+<td><p>Show my visitors who have gone.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="notes.SpecialTypes.html"><span class="doc">Special note types</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">notes.SpecialTypes</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cv.EducationEntryStates.html"><span class="doc">EducationEntryStates</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/cv.html#lino_xl.lib.cv.EducationEntryStates" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">cv.EducationEntryStates</span></code></a>)</p></td>
+<td><p>The possible states of an education entry.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cv.HowWell.html"><span class="doc">HowWell</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/cv.html#lino_xl.lib.cv.HowWell" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">cv.HowWell</span></code></a>)</p></td>
+<td><p>A list of possible answers to questions of type “How well …?”:
+“not at all”, “a bit”, “moderate”, “quite well” and “very well”
+which are stored in the database as ‘0’ to ‘4’,
+and whose __str__() returns their translated text.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cv.CefLevel.html"><span class="doc">Niveaux CEF</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/cv.html#lino_xl.lib.cv.CefLevel" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">cv.CefLevel</span></code></a>)</p></td>
+<td><p>Levels of the Common European Framework of Reference (CEFR) for Languages.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cv.HistoryByPerson.html"><span class="doc">HistoryByPerson</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/cv.html#lino_xl.lib.cv.HistoryByPerson" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">cv.HistoryByPerson</span></code></a>)</p></td>
+<td><p>Table mixin for StudiesByPerson and ExperiencesByPerson.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cv.LanguageKnowledges.html"><span class="doc">Connaissances de langue</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cv.LanguageKnowledges</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cv.AllLanguageKnowledges.html"><span class="doc">Connaissances de langue</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cv.AllLanguageKnowledges</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cv.LanguageKnowledgesByPerson.html"><span class="doc">Connaissances de langue</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cv.LanguageKnowledgesByPerson</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cv.KnowledgesByLanguage.html"><span class="doc">Connaissances de langue</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cv.KnowledgesByLanguage</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cv.EducationLevels.html"><span class="doc">Niveaux académiques</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cv.EducationLevels</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cv.StudyTypes.html"><span class="doc">Types d’éducation</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cv.StudyTypes</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cv.StudyTypesByLevel.html"><span class="doc">Types d’éducation</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cv.StudyTypesByLevel</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cv.PeriodTable.html"><span class="doc">PeriodTable</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cv.PeriodTable</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cv.Trainings.html"><span class="doc">Formations</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cv.Trainings</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cv.AllTrainings.html"><span class="doc">Formations</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cv.AllTrainings</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cv.TrainingsByCountry.html"><span class="doc">Formations</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cv.TrainingsByCountry</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cv.TrainingsByType.html"><span class="doc">Formations</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cv.TrainingsByType</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cv.TrainingsByPerson.html"><span class="doc">Formations</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cv.TrainingsByPerson</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cv.Studies.html"><span class="doc">Études</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cv.Studies</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cv.StudiesByCountry.html"><span class="doc">Études</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cv.StudiesByCountry</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cv.StudiesByLevel.html"><span class="doc">Études</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cv.StudiesByLevel</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cv.StudiesByPlace.html"><span class="doc">Études</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cv.StudiesByPlace</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cv.StudiesByType.html"><span class="doc">Études</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cv.StudiesByType</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cv.StudiesByPerson.html"><span class="doc">Études</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cv.StudiesByPerson</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cv.Statuses.html"><span class="doc">Statuts</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cv.Statuses</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cv.Regimes.html"><span class="doc">Régimes de travail</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cv.Regimes</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cv.Durations.html"><span class="doc">Types de contrat</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cv.Durations</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cv.Sectors.html"><span class="doc">Secteurs d’activité</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cv.Sectors</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cv.Functions.html"><span class="doc">Fonctions professionnelles</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cv.Functions</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cv.FunctionsBySector.html"><span class="doc">Fonctions professionnelles</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cv.FunctionsBySector</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cv.Experiences.html"><span class="doc">Expériences professionnelles</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cv.Experiences</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cv.ExperiencesBySector.html"><span class="doc">Expériences professionnelles</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cv.ExperiencesBySector</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cv.ExperiencesByFunction.html"><span class="doc">Expériences professionnelles</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cv.ExperiencesByFunction</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cv.ExperiencesByPerson.html"><span class="doc">Expériences professionnelles</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cv.ExperiencesByPerson</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cv.ExperiencesByStatus.html"><span class="doc">Expériences professionnelles</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cv.ExperiencesByStatus</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cv.ExperiencesByRegime.html"><span class="doc">Expériences professionnelles</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cv.ExperiencesByRegime</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cv.ExperiencesByDuration.html"><span class="doc">Expériences professionnelles</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cv.ExperiencesByDuration</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cv.Proofs.html"><span class="doc">Preuves de qualification</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cv.Proofs</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cv.PropsByPerson.html"><span class="doc">PropsByPerson</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cv.PropsByPerson</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cv.Skills.html"><span class="doc">Compétences professionnelles</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cv.Skills</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cv.SkillsByPerson.html"><span class="doc">Compétences professionnelles</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cv.SkillsByPerson</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cv.SoftSkillTypes.html"><span class="doc">Types de compétence sociale</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cv.SoftSkillTypes</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cv.SoftSkills.html"><span class="doc">Compétences sociales</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cv.SoftSkills</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cv.SoftSkillsByPerson.html"><span class="doc">Compétences sociales</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cv.SoftSkillsByPerson</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cv.ObstacleTypes.html"><span class="doc">Types de freins</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cv.ObstacleTypes</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cv.Obstacles.html"><span class="doc">Freins</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cv.Obstacles</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cv.ObstaclesByPerson.html"><span class="doc">Freins</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cv.ObstaclesByPerson</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="beid.ResidenceTypes.html"><span class="doc">Titres de séjour</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/beid.html#lino_xl.lib.beid.ResidenceTypes" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">beid.ResidenceTypes</span></code></a>)</p></td>
+<td><p>The list of Belgian resident registers
+(Einwohnerregister, Registre de résidents).</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="beid.BeIdCardTypes.html"><span class="doc">Types de carte eID</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/beid.html#lino_xl.lib.beid.BeIdCardTypes" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">beid.BeIdCardTypes</span></code></a>)</p></td>
+<td><p>A list of Belgian identity card types.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cbss.RequestStates.html"><span class="doc">États cbss request</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cbss.RequestStates</span></code>)</p></td>
+<td><p>The status of a CBSSRequest.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cbss.ManageActions.html"><span class="doc">ManageActions</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cbss.ManageActions</span></code>)</p></td>
+<td><p>Possible values for the action field of a
+lino_welfare.modlib.cbss.models.ManageAccessRequest.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cbss.QueryRegisters.html"><span class="doc">QueryRegisters</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cbss.QueryRegisters</span></code>)</p></td>
+<td><p>Possible values for the query_register field of a
+lino_welfare.modlib.cbss.models.ManageAccessRequest.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cbss.RequestLanguages.html"><span class="doc">RequestLanguages</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cbss.RequestLanguages</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pcsw.RefusalReasons.html"><span class="doc">Raisons de refus</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">pcsw.RefusalReasons</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="pcsw.Clients.html"><span class="doc">Bénéficiaires</span></a> (<a class="reference external" href="https://welfare.lino-framework.org/specs/pcsw.html#lino_welfare.modlib.pcsw.Clients" title="(in Lino Welfare v22.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pcsw.Clients</span></code></a>)</p></td>
+<td><p>The list that opens by Contacts ‣ Clients.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pcsw.CoachedClients.html"><span class="doc">Bénéficiaires</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">pcsw.CoachedClients</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="pcsw.ClientsByNationality.html"><span class="doc">Bénéficiaires</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">pcsw.ClientsByNationality</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pcsw.AllClients.html"><span class="doc">Bénéficiaires</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">pcsw.AllClients</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="pcsw.PersonGroups.html"><span class="doc">Phases d’intégration</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">pcsw.PersonGroups</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pcsw.Activities.html"><span class="doc">Activités</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">pcsw.Activities</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="pcsw.DispenseReasons.html"><span class="doc">Motifs de dispense</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">pcsw.DispenseReasons</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pcsw.Dispenses.html"><span class="doc">Dispenses</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">pcsw.Dispenses</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="pcsw.DispensesByClient.html"><span class="doc">Dispenses</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">pcsw.DispensesByClient</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pcsw.ExclusionTypes.html"><span class="doc">Types d’exclusion du chômage</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">pcsw.ExclusionTypes</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="pcsw.Exclusions.html"><span class="doc">Exclusions du chômage</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">pcsw.Exclusions</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pcsw.ExclusionsByClient.html"><span class="doc">Situation chômage</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">pcsw.ExclusionsByClient</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="pcsw.Convictions.html"><span class="doc">Antécédents judiciaires</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">pcsw.Convictions</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pcsw.ConvictionsByClient.html"><span class="doc">Antécédents judiciaires</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">pcsw.ConvictionsByClient</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="pcsw.AidTypes.html"><span class="doc">Types d’aide sociale</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">pcsw.AidTypes</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pcsw.FollowedFORem.html"><span class="doc">FollowedFORem</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">pcsw.FollowedFORem</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="pcsw.UnemploymentRights.html"><span class="doc">Droits chômage</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">pcsw.UnemploymentRights</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="coachings.CoachingTypes.html"><span class="doc">Services</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/coachings.html#lino_xl.lib.coachings.CoachingTypes" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">coachings.CoachingTypes</span></code></a>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="coachings.CoachingEndings.html"><span class="doc">Raisons d’arrêt d’intervention</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/coachings.html#lino_xl.lib.coachings.CoachingEndings" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">coachings.CoachingEndings</span></code></a>)</p></td>
+<td><p>A list of reasons expressing why a coaching was ended.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="coachings.Coachings.html"><span class="doc">Interventions</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/coachings.html#lino_xl.lib.coachings.Coachings" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">coachings.Coachings</span></code></a>)</p></td>
+<td><p>A table showing a set of coachings.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="coachings.CoachingsByClient.html"><span class="doc">Interventions</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/coachings.html#lino_xl.lib.coachings.CoachingsByClient" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">coachings.CoachingsByClient</span></code></a>)</p></td>
+<td><p>The Coachings table in a clients detail.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="coachings.CoachingsByEnding.html"><span class="doc">Interventions</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">coachings.CoachingsByEnding</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="coachings.CoachingsByUser.html"><span class="doc">Interventions</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/coachings.html#lino_xl.lib.coachings.CoachingsByUser" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">coachings.CoachingsByUser</span></code></a>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="coachings.MyCoachings.html"><span class="doc">Mes Interventions</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">coachings.MyCoachings</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="reception.FindDateByClientTable.html"><span class="doc">Trouver rendez-vous avec…</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">reception.FindDateByClientTable</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="reception.Clients.html"><span class="doc">Bénéficiaires</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">reception.Clients</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="reception.AgentsByClient.html"><span class="doc">Créer rendez-vous avec</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">reception.AgentsByClient</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="reception.CoachingsByClient.html"><span class="doc">Créer rendez-vous avec</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">reception.CoachingsByClient</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="calview.Planners.html"><span class="doc">Planners</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">calview.Planners</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="calview.DailyPlannerRows.html"><span class="doc">Lignes de planificateur</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">calview.DailyPlannerRows</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="calview.DailyPlanner.html"><span class="doc">Planificateur quotidien</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/calview.html#lino_xl.lib.calview.DailyPlanner" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">calview.DailyPlanner</span></code></a>)</p></td>
+<td><p>The virtual table used to render the daily planner.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="calview.DailySlave.html"><span class="doc">None</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">calview.DailySlave</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="calview.WeeklySlave.html"><span class="doc">None</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">calview.WeeklySlave</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="calview.MonthlySlave.html"><span class="doc">None</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">calview.MonthlySlave</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="calview.DailyView.html"><span class="doc">Daily view</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/calview.html#lino_xl.lib.calview.DailyView" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">calview.DailyView</span></code></a>)</p></td>
+<td><p>Shows a calendar navigator with a configurable daily view.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="calview.WeeklyView.html"><span class="doc">Weekly view</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/calview.html#lino_xl.lib.calview.WeeklyView" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">calview.WeeklyView</span></code></a>)</p></td>
+<td><p>Shows a calendar navigator with a configurable weekly view.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="calview.MonthlyView.html"><span class="doc">Monthly view</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/calview.html#lino_xl.lib.calview.MonthlyView" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">calview.MonthlyView</span></code></a>)</p></td>
+<td><p>Shows a calendar navigator with a configurable monthly view.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="badges.Badges.html"><span class="doc">Savoirs de base</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">badges.Badges</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="badges.Awards.html"><span class="doc">Tests de niveau</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">badges.Awards</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="badges.AwardsByHolder.html"><span class="doc">Tests de niveau</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">badges.AwardsByHolder</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="badges.AwardsByBadge.html"><span class="doc">Tests de niveau</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">badges.AwardsByBadge</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="boards.Boards.html"><span class="doc">Conseils</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">boards.Boards</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="boards.Members.html"><span class="doc">Membres du conseil</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">boards.Members</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="boards.MembersByBoard.html"><span class="doc">Membres du conseil</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">boards.MembersByBoard</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="clients.PartnersByClientContactType.html"><span class="doc">Partenaires</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/clients.html#lino_xl.lib.clients.PartnersByClientContactType" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">clients.PartnersByClientContactType</span></code></a>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="households.MemberDependencies.html"><span class="doc">Dépendances de membres de ménage</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/households.html#lino_xl.lib.households.MemberDependencies" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">households.MemberDependencies</span></code></a>)</p></td>
+<td><p>The list of allowed choices for the charge of a household member.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="households.MemberRoles.html"><span class="doc">Rôles de membres de ménage</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/households.html#lino_xl.lib.households.MemberRoles" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">households.MemberRoles</span></code></a>)</p></td>
+<td><p>The list of allowed choices for the role of a household member.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="households.Types.html"><span class="doc">Types de ménage</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/households.html#lino_xl.lib.households.Types" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">households.Types</span></code></a>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="households.Households.html"><span class="doc">Ménages</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">households.Households</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="households.HouseholdsByType.html"><span class="doc">Ménages</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/households.html#lino_xl.lib.households.HouseholdsByType" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">households.HouseholdsByType</span></code></a>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="households.Members.html"><span class="doc">Membres de ménage</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/households.html#lino_xl.lib.households.Members" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">households.Members</span></code></a>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="households.MembersByHousehold.html"><span class="doc">Membres de ménage</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/households.html#lino_xl.lib.households.MembersByHousehold" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">households.MembersByHousehold</span></code></a>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="households.SiblingsByPerson.html"><span class="doc">Composition de ménage</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">households.SiblingsByPerson</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="households.MembersByPerson.html"><span class="doc">Appartenance aux ménages</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">households.MembersByPerson</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="households.RefundsByPerson.html"><span class="doc">Composition de ménage</span></a> (<a class="reference external" href="https://welfare.lino-framework.org/specs/households.html#lino_welfare.modlib.households.RefundsByPerson" title="(in Lino Welfare v22.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">households.RefundsByPerson</span></code></a>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="isip.ContractEvents.html"><span class="doc">Évènements observés</span></a> (<a class="reference external" href="https://welfare.lino-framework.org/specs/isip.html#lino_welfare.modlib.isip.ContractEvents" title="(in Lino Welfare v22.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">isip.ContractEvents</span></code></a>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="isip.OverlapGroups.html"><span class="doc">Groupes de chevauchement</span></a> (<a class="reference external" href="https://welfare.lino-framework.org/specs/isip.html#lino_welfare.modlib.isip.OverlapGroups" title="(in Lino Welfare v22.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">isip.OverlapGroups</span></code></a>)</p></td>
+<td><p>The list of all known overlap groups to be selected for the
+overlap_group
+of a contract type.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="isip.ContractBaseTable.html"><span class="doc">ContractBaseTable</span></a> (<a class="reference external" href="https://welfare.lino-framework.org/specs/isip.html#lino_welfare.modlib.isip.ContractBaseTable" title="(in Lino Welfare v22.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">isip.ContractBaseTable</span></code></a>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="isip.ContractTypes.html"><span class="doc">Types de PIIS</span></a> (<a class="reference external" href="https://welfare.lino-framework.org/specs/isip.html#lino_welfare.modlib.isip.ContractTypes" title="(in Lino Welfare v22.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">isip.ContractTypes</span></code></a>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="isip.ExamPolicies.html"><span class="doc">Régimes d’évaluation</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">isip.ExamPolicies</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="isip.ContractEndings.html"><span class="doc">Motifs d’arrêt de contrat</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">isip.ContractEndings</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="isip.ContractPartners.html"><span class="doc">Services utilisateurs</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">isip.ContractPartners</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="isip.PartnersByContract.html"><span class="doc">Services utilisateurs</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">isip.PartnersByContract</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="isip.Contracts.html"><span class="doc">PIISs</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">isip.Contracts</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="isip.MyContracts.html"><span class="doc">PIISs</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">isip.MyContracts</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="isip.ContractsByClient.html"><span class="doc">PIISs</span></a> (<a class="reference external" href="https://welfare.lino-framework.org/specs/isip.html#lino_welfare.modlib.isip.ContractsByClient" title="(in Lino Welfare v22.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">isip.ContractsByClient</span></code></a>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="isip.ContractsByPolicy.html"><span class="doc">PIISs</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">isip.ContractsByPolicy</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="isip.ContractsByType.html"><span class="doc">PIISs</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">isip.ContractsByType</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="isip.ContractsByEnding.html"><span class="doc">PIISs</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">isip.ContractsByEnding</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="isip.ContractsByStudyType.html"><span class="doc">PIISs</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">isip.ContractsByStudyType</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="isip.DelegatedTasksByContract.html"><span class="doc">Tâches</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">isip.DelegatedTasksByContract</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="isip.EntriesByContract.html"><span class="doc">Entrées calendrier</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">isip.EntriesByContract</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="jobs.Schedules.html"><span class="doc">Horaires</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">jobs.Schedules</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="jobs.JobProviders.html"><span class="doc">Services utilisateurs</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">jobs.JobProviders</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="jobs.ContractTypes.html"><span class="doc">Types de mise à l’emploi art60§7</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">jobs.ContractTypes</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="jobs.Contracts.html"><span class="doc">Mises à l’emploi art60§7</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">jobs.Contracts</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="jobs.ContractsByClient.html"><span class="doc">Mises à l’emploi art60§7</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">jobs.ContractsByClient</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="jobs.ContractsByProvider.html"><span class="doc">Mises à l’emploi art60§7</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">jobs.ContractsByProvider</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="jobs.ContractsByPolicy.html"><span class="doc">Mises à l’emploi art60§7</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">jobs.ContractsByPolicy</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="jobs.ContractsByType.html"><span class="doc">Mises à l’emploi art60§7</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">jobs.ContractsByType</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="jobs.ContractsByEnding.html"><span class="doc">Mises à l’emploi art60§7</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">jobs.ContractsByEnding</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="jobs.ContractsByJob.html"><span class="doc">Mises à l’emploi art60§7</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">jobs.ContractsByJob</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="jobs.ContractsByRegime.html"><span class="doc">Mises à l’emploi art60§7</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">jobs.ContractsByRegime</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="jobs.ContractsBySchedule.html"><span class="doc">Mises à l’emploi art60§7</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">jobs.ContractsBySchedule</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="jobs.MyContracts.html"><span class="doc">Mises à l’emploi art60§7</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">jobs.MyContracts</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="jobs.Offers.html"><span class="doc">Offres d’emploi</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">jobs.Offers</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="jobs.CandidatureStates.html"><span class="doc">États de candidatures</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">jobs.CandidatureStates</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="jobs.Candidatures.html"><span class="doc">Candidatures</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">jobs.Candidatures</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="jobs.CandidaturesByPerson.html"><span class="doc">Candidatures</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">jobs.CandidaturesByPerson</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="jobs.CandidaturesBySector.html"><span class="doc">Candidatures</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">jobs.CandidaturesBySector</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="jobs.CandidaturesByFunction.html"><span class="doc">Candidatures</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">jobs.CandidaturesByFunction</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="jobs.CandidaturesByJob.html"><span class="doc">Candidatures</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">jobs.CandidaturesByJob</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="jobs.SectorFunctionByOffer.html"><span class="doc">SectorFunctionByOffer</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">jobs.SectorFunctionByOffer</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="jobs.CandidaturesByOffer.html"><span class="doc">Candidats</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">jobs.CandidaturesByOffer</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="jobs.ExperiencesByOffer.html"><span class="doc">Expériences professionnelles</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">jobs.ExperiencesByOffer</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="jobs.Jobs.html"><span class="doc">Postes de travail</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">jobs.Jobs</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="jobs.JobTypes.html"><span class="doc">Types de poste</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">jobs.JobTypes</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="jobs.JobsByProvider.html"><span class="doc">Postes de travail</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">jobs.JobsByProvider</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="jobs.JobsByType.html"><span class="doc">Postes de travail</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">jobs.JobsByType</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="jobs.ContractsSearch.html"><span class="doc">Recherche contrats de travail</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">jobs.ContractsSearch</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="jobs.JobsOverviewByType.html"><span class="doc">Situation contrats Art 60-7</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">jobs.JobsOverviewByType</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="jobs.JobsOverview.html"><span class="doc">Situation contrats Art 60-7</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">jobs.JobsOverview</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="courses.CourseStates.html"><span class="doc">États Atelier</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/courses.html#lino_xl.lib.courses.CourseStates" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">courses.CourseStates</span></code></a>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="courses.EnrolmentStates.html"><span class="doc">États Inscription</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/courses.html#lino_xl.lib.courses.EnrolmentStates" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">courses.EnrolmentStates</span></code></a>)</p></td>
+<td><p>The list of possible states of an enrolment.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="courses.ActivityLayouts.html"><span class="doc">Course layouts</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/courses.html#lino_xl.lib.courses.ActivityLayouts" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">courses.ActivityLayouts</span></code></a>)</p></td>
+<td><p>The global choicelist of activity layouts.  Every
+choice is an instance of ActivityLayout.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="languages.Languages.html"><span class="doc">Langues</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">languages.Languages</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="integ.Clients.html"><span class="doc">Bénéficiaires</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">integ.Clients</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="integ.UsersWithClients.html"><span class="doc">Agents et leurs clients</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">integ.UsersWithClients</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="integ.CompareRequestsTable.html"><span class="doc">Evolution générale</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">integ.CompareRequestsTable</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="integ.PeriodicNumbers.html"><span class="doc">Indicateurs d’activité</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">integ.PeriodicNumbers</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="integ.CoachingEndingsByUser.html"><span class="doc">Fins d’intervention par agent</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">integ.CoachingEndingsByUser</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="integ.CoachingEndingsByType.html"><span class="doc">Fins d’intervention par service</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">integ.CoachingEndingsByType</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="integ.ContractsByType.html"><span class="doc">ContractsByType</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">integ.ContractsByType</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="integ.ContractEndingsByType.html"><span class="doc">Contract endings by type</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">integ.ContractEndingsByType</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="integ.JobsContractEndingsByType.html"><span class="doc">Contract endings by type</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">integ.JobsContractEndingsByType</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="users.AllUsers.html"><span class="doc">Utilisateurs</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/users.html#lino.modlib.users.AllUsers" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">users.AllUsers</span></code></a>)</p></td>
+<td><p>Shows the list of all users on this site.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="users.UsersOverview.html"><span class="doc">Utilisateurs</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/users.html#lino.modlib.users.UsersOverview" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">users.UsersOverview</span></code></a>)</p></td>
+<td><p>A variant of Users showing only active users and only some
+fields.  This is used on demo sites in admin_main.html to
+display the list of available users.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="users.Me.html"><span class="doc">Mes préférences</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">users.Me</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="users.Authorities.html"><span class="doc">Procurations</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">users.Authorities</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="users.AuthoritiesGiven.html"><span class="doc">Procurations accordées</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">users.AuthoritiesGiven</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="users.AuthoritiesTaken.html"><span class="doc">Procurations reçues</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">users.AuthoritiesTaken</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="users.UserRoles.html"><span class="doc">Rôles d’utilisateur</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/users.html#lino.modlib.users.UserRoles" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">users.UserRoles</span></code></a>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="users.Sessions.html"><span class="doc">Sessions utilisateurs</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/users.html#lino.modlib.users.Sessions" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">users.Sessions</span></code></a>)</p></td>
+<td><p>Show a list of all user sessions.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="integ.ContractsPerUserAndContractType.html"><span class="doc">PIIS par agent et type</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">integ.ContractsPerUserAndContractType</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="integ.JobsContractsPerUserAndContractType.html"><span class="doc">Art60§7 par agent et type</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">integ.JobsContractsPerUserAndContractType</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="integ.StudyTypesAndContracts.html"><span class="doc">PIIS et types de formation</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">integ.StudyTypesAndContracts</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="integ.CompaniesAndContracts.html"><span class="doc">Organisations externes et contrats</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">integ.CompaniesAndContracts</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="integ.JobProvidersAndContracts.html"><span class="doc">Job providers and contrats</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">integ.JobProvidersAndContracts</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="integ.ActivityReport.html"><span class="doc">Rapport d’activité</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">integ.ActivityReport</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="art61.Subsidizations.html"><span class="doc">Subsidiations</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">art61.Subsidizations</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="art61.ContractTypes.html"><span class="doc">Types de mise à l’emploi art.61</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">art61.ContractTypes</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="art61.Contracts.html"><span class="doc">Mises à l’emploi art61</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">art61.Contracts</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="art61.ContractsByClient.html"><span class="doc">Mises à l’emploi art.61 et activations</span></a> (<a class="reference external" href="https://welfare.lino-framework.org/specs/welcht/art61.html#lino_welfare.modlib.art61.ContractsByClient" title="(in Lino Welfare v22.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">art61.ContractsByClient</span></code></a>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="art61.ContractsByProvider.html"><span class="doc">Mises à l’emploi art61</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">art61.ContractsByProvider</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="art61.ContractsByPolicy.html"><span class="doc">Mises à l’emploi art61</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">art61.ContractsByPolicy</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="art61.ContractsByType.html"><span class="doc">Mises à l’emploi art61</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">art61.ContractsByType</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="art61.ContractsByEnding.html"><span class="doc">Mises à l’emploi art61</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">art61.ContractsByEnding</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="art61.MyContracts.html"><span class="doc">Mises à l’emploi art61</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">art61.MyContracts</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="immersion.Goals.html"><span class="doc">Objectifs</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">immersion.Goals</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="immersion.ContractTypes.html"><span class="doc">Types de stage d’immersion</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">immersion.ContractTypes</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="immersion.Contracts.html"><span class="doc">Stages d’immersion</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">immersion.Contracts</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="immersion.ContractsByClient.html"><span class="doc">Stages d’immersion</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">immersion.ContractsByClient</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="immersion.ContractsByProvider.html"><span class="doc">Stages d’immersion</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">immersion.ContractsByProvider</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="immersion.ContractsByPolicy.html"><span class="doc">Stages d’immersion</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">immersion.ContractsByPolicy</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="immersion.ContractsByType.html"><span class="doc">Stages d’immersion</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">immersion.ContractsByType</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="immersion.ContractsByGoal.html"><span class="doc">Stages d’immersion</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">immersion.ContractsByGoal</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="immersion.ContractsByEnding.html"><span class="doc">Stages d’immersion</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">immersion.ContractsByEnding</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="immersion.MyContracts.html"><span class="doc">Stages d’immersion</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">immersion.MyContracts</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="active_job_search.Proofs.html"><span class="doc">Preuves de recherche</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">active_job_search.Proofs</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="active_job_search.ProofsByClient.html"><span class="doc">Preuves de recherche</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">active_job_search.ProofsByClient</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="newcomers.Brokers.html"><span class="doc">Intermédiaires</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">newcomers.Brokers</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="newcomers.Faculties.html"><span class="doc">Spécificités</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">newcomers.Faculties</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="newcomers.Competences.html"><span class="doc">Compétences</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">newcomers.Competences</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="newcomers.CompetencesByUser.html"><span class="doc">Compétences</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">newcomers.CompetencesByUser</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="newcomers.CompetencesByFaculty.html"><span class="doc">Compétences</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">newcomers.CompetencesByFaculty</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="newcomers.MyCompetences.html"><span class="doc">Mes Compétences</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">newcomers.MyCompetences</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="newcomers.NewClients.html"><span class="doc">Nouveaux bénéficiaires</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">newcomers.NewClients</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="newcomers.ClientsByFaculty.html"><span class="doc">Bénéficiaires</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">newcomers.ClientsByFaculty</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="newcomers.AvailableCoaches.html"><span class="doc">Agents disponibles</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">newcomers.AvailableCoaches</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="newcomers.AvailableCoachesByClient.html"><span class="doc">Agents disponibles</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">newcomers.AvailableCoachesByClient</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cbss.Sectors.html"><span class="doc">Secteurs</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cbss.Sectors</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cbss.Purposes.html"><span class="doc">Codes fonction</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cbss.Purposes</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cbss.CBSSRequests.html"><span class="doc">CBSSRequests</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cbss.CBSSRequests</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cbss.IdentifyPersonRequests.html"><span class="doc">Requêtes IdentifyPerson</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cbss.IdentifyPersonRequests</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cbss.AllIdentifyPersonRequests.html"><span class="doc">Requêtes IdentifyPerson</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cbss.AllIdentifyPersonRequests</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cbss.MyIdentifyPersonRequests.html"><span class="doc">Mes Requêtes IdentifyPerson</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cbss.MyIdentifyPersonRequests</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cbss.IdentifyRequestsByPerson.html"><span class="doc">Requêtes IdentifyPerson</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cbss.IdentifyRequestsByPerson</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cbss.IdentifyPersonResult.html"><span class="doc">Résultats</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cbss.IdentifyPersonResult</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cbss.ManageAccessRequests.html"><span class="doc">Requêtes ManageAccess</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cbss.ManageAccessRequests</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cbss.AllManageAccessRequests.html"><span class="doc">Requêtes ManageAccess</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cbss.AllManageAccessRequests</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cbss.ManageAccessRequestsByPerson.html"><span class="doc">Requêtes ManageAccess</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cbss.ManageAccessRequestsByPerson</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cbss.MyManageAccessRequests.html"><span class="doc">Mes Requêtes ManageAccess</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cbss.MyManageAccessRequests</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cbss.RetrieveTIGroupsRequests.html"><span class="doc">Requêtes Tx25</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cbss.RetrieveTIGroupsRequests</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cbss.AllRetrieveTIGroupsRequests.html"><span class="doc">Requêtes Tx25</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cbss.AllRetrieveTIGroupsRequests</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cbss.RetrieveTIGroupsRequestsByPerson.html"><span class="doc">Requêtes Tx25</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cbss.RetrieveTIGroupsRequestsByPerson</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cbss.MyRetrieveTIGroupsRequests.html"><span class="doc">Mes Requêtes Tx25</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cbss.MyRetrieveTIGroupsRequests</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="cbss.RetrieveTIGroupsResult.html"><span class="doc">Résultats</span></a> (<a class="reference external" href="https://welfare.lino-framework.org/specs/topics/tx25.html#lino_welfare.modlib.cbss.tx25.RetrieveTIGroupsResult" title="(in Lino Welfare v22.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">cbss.RetrieveTIGroupsResult</span></code></a>)</p></td>
+<td><p>Displays the response of an RetrieveTIGroupsRequest
+as a table.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="humanlinks.LinkTypes.html"><span class="doc">Types de parenté</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/humanlinks.html#lino_xl.lib.humanlinks.LinkTypes" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">humanlinks.LinkTypes</span></code></a>)</p></td>
+<td><p>The global list of human link types.  This is used as choicelist for the
+Link.type field of a human link.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="humanlinks.Links.html"><span class="doc">Liens de parenté</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">humanlinks.Links</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="humanlinks.LinksByHuman.html"><span class="doc">Liens de parenté</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/humanlinks.html#lino_xl.lib.humanlinks.LinksByHuman" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">humanlinks.LinksByHuman</span></code></a>)</p></td>
+<td><p>Show all links for which this human is either parent or child.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="debts.AccountTypes.html"><span class="doc">Account types</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">debts.AccountTypes</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="debts.TableLayouts.html"><span class="doc">Table layouts</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">debts.TableLayouts</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="debts.Clients.html"><span class="doc">Bénéficiaires</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">debts.Clients</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="debts.Groups.html"><span class="doc">Groupes de comptes</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">debts.Groups</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="debts.Accounts.html"><span class="doc">Comptes</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">debts.Accounts</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="debts.AccountsByGroup.html"><span class="doc">Comptes</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">debts.AccountsByGroup</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="debts.Actors.html"><span class="doc">Acteurs</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">debts.Actors</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="debts.ActorsByBudget.html"><span class="doc">Acteurs</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">debts.ActorsByBudget</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="debts.ActorsByPartner.html"><span class="doc">Is actor in these budgets:</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">debts.ActorsByPartner</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="debts.Budgets.html"><span class="doc">Budgets</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">debts.Budgets</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="debts.MyBudgets.html"><span class="doc">Mes Budgets</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">debts.MyBudgets</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="debts.BudgetsByPartner.html"><span class="doc">Is partner of these budgets:</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">debts.BudgetsByPartner</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="debts.Entries.html"><span class="doc">Entrées</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">debts.Entries</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="debts.EntriesByType.html"><span class="doc">EntriesByType</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">debts.EntriesByType</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="debts.EntriesByAccount.html"><span class="doc">Entrées</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">debts.EntriesByAccount</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="debts.EntriesByBudget.html"><span class="doc">Entrées</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">debts.EntriesByBudget</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="debts.ExpensesByBudget.html"><span class="doc">Dépenses</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">debts.ExpensesByBudget</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="debts.IncomesByBudget.html"><span class="doc">Incomes</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">debts.IncomesByBudget</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="debts.LiabilitiesByBudget.html"><span class="doc">Passifs</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">debts.LiabilitiesByBudget</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="debts.AssetsByBudget.html"><span class="doc">Actifs</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">debts.AssetsByBudget</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="debts.PrintEntriesByBudget.html"><span class="doc">PrintEntriesByBudget</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">debts.PrintEntriesByBudget</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="debts.SummaryTable.html"><span class="doc">SummaryTable</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">debts.SummaryTable</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="debts.ResultByBudget.html"><span class="doc">Revenus &amp; dépenses</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">debts.ResultByBudget</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="debts.DebtsByBudget.html"><span class="doc">Passifs</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">debts.DebtsByBudget</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="debts.AssetsByBudgetSummary.html"><span class="doc">Actifs</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">debts.AssetsByBudgetSummary</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="debts.DistByBudget.html"><span class="doc">Répartition au marc-le-franc</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">debts.DistByBudget</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="notes.NoteTypes.html"><span class="doc">Types d’observation</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">notes.NoteTypes</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="notes.EventTypes.html"><span class="doc">Types d’événements</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">notes.EventTypes</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="notes.Notes.html"><span class="doc">Observations</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">notes.Notes</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="notes.AllNotes.html"><span class="doc">Observations</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">notes.AllNotes</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="notes.MyNotes.html"><span class="doc">Mes Observations</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">notes.MyNotes</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="notes.NotesByType.html"><span class="doc">Observations</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">notes.NotesByType</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="notes.NotesByEventType.html"><span class="doc">Observations</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">notes.NotesByEventType</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="notes.NotesByProject.html"><span class="doc">Observations</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">notes.NotesByProject</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="notes.NotesByOwner.html"><span class="doc">Observations</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">notes.NotesByOwner</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="notes.NotesByCompany.html"><span class="doc">Observations</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">notes.NotesByCompany</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="notes.NotesByPerson.html"><span class="doc">Observations</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">notes.NotesByPerson</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="aids.ConfirmationTypes.html"><span class="doc">Types de confirmation d’aide</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">aids.ConfirmationTypes</span></code>)</p></td>
+<td><p>A list of the models that may be used as confirmation.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="aids.AidRegimes.html"><span class="doc">AidRegimes</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">aids.AidRegimes</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="aids.ConfirmationStates.html"><span class="doc">Aid confirmation states</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">aids.ConfirmationStates</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="aids.Categories.html"><span class="doc">Catégories</span></a> (<a class="reference external" href="https://welfare.lino-framework.org/specs/aids/index.html#lino_welfare.modlib.aids.Categories" title="(in Lino Welfare v22.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">aids.Categories</span></code></a>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="aids.AidTypes.html"><span class="doc">Types d’aide sociale</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">aids.AidTypes</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="aids.Grantings.html"><span class="doc">Octrois d’aide</span></a> (<a class="reference external" href="https://welfare.lino-framework.org/specs/aids/index.html#lino_welfare.modlib.aids.Grantings" title="(in Lino Welfare v22.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">aids.Grantings</span></code></a>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="aids.AllGrantings.html"><span class="doc">Octrois d’aide</span></a> (<a class="reference external" href="https://welfare.lino-framework.org/specs/aids/index.html#lino_welfare.modlib.aids.AllGrantings" title="(in Lino Welfare v22.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">aids.AllGrantings</span></code></a>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="aids.MyPendingGrantings.html"><span class="doc">Octrois à confirmer</span></a> (<a class="reference external" href="https://welfare.lino-framework.org/specs/aids/index.html#lino_welfare.modlib.aids.MyPendingGrantings" title="(in Lino Welfare v22.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">aids.MyPendingGrantings</span></code></a>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="aids.GrantingsByClient.html"><span class="doc">Octrois d’aide</span></a> (<a class="reference external" href="https://welfare.lino-framework.org/specs/aids/index.html#lino_welfare.modlib.aids.GrantingsByClient" title="(in Lino Welfare v22.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">aids.GrantingsByClient</span></code></a>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="aids.GrantingsByType.html"><span class="doc">Octrois d’aide</span></a> (<a class="reference external" href="https://welfare.lino-framework.org/specs/aids/index.html#lino_welfare.modlib.aids.GrantingsByType" title="(in Lino Welfare v22.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">aids.GrantingsByType</span></code></a>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="aids.Confirmations.html"><span class="doc">Confirmations</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">aids.Confirmations</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="aids.ConfirmationsByGranting.html"><span class="doc">Attestations émises</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">aids.ConfirmationsByGranting</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="aids.SimpleConfirmations.html"><span class="doc">Confirmations simple</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">aids.SimpleConfirmations</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="aids.AllSimpleConfirmations.html"><span class="doc">Confirmations simple</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">aids.AllSimpleConfirmations</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="aids.SimpleConfirmationsByGranting.html"><span class="doc">Confirmations simple</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">aids.SimpleConfirmationsByGranting</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="aids.IncomeConfirmations.html"><span class="doc">Certificats de revenu</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">aids.IncomeConfirmations</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="aids.AllIncomeConfirmations.html"><span class="doc">Certificats de revenu</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">aids.AllIncomeConfirmations</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="aids.IncomeConfirmationsByGranting.html"><span class="doc">Certificats de revenu</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">aids.IncomeConfirmationsByGranting</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="aids.IncomeConfirmationsByCategory.html"><span class="doc">Certificats de revenu</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">aids.IncomeConfirmationsByCategory</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="aids.RefundConfirmations.html"><span class="doc">Refund confirmations</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">aids.RefundConfirmations</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="aids.AllRefundConfirmations.html"><span class="doc">Refund confirmations</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">aids.AllRefundConfirmations</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="aids.RefundConfirmationsByGranting.html"><span class="doc">Refund confirmations</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">aids.RefundConfirmationsByGranting</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="polls.PollStates.html"><span class="doc">Poll states</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">polls.PollStates</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="polls.ResponseStates.html"><span class="doc">Response states</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">polls.ResponseStates</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="polls.ChoiceSets.html"><span class="doc">Listes de choix</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/polls.html#lino_xl.lib.polls.ChoiceSets" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">polls.ChoiceSets</span></code></a>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="polls.Choices.html"><span class="doc">Choix</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/polls.html#lino_xl.lib.polls.Choices" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">polls.Choices</span></code></a>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="polls.ChoicesBySet.html"><span class="doc">Choix</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/polls.html#lino_xl.lib.polls.ChoicesBySet" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">polls.ChoicesBySet</span></code></a>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="polls.Polls.html"><span class="doc">Questionnaires</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/polls.html#lino_xl.lib.polls.Polls" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">polls.Polls</span></code></a>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="polls.AllPolls.html"><span class="doc">Questionnaires</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/polls.html#lino_xl.lib.polls.AllPolls" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">polls.AllPolls</span></code></a>)</p></td>
+<td><p>Show all polls of all users.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="polls.MyPolls.html"><span class="doc">Mes Questionnaires</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">polls.MyPolls</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="polls.Questions.html"><span class="doc">Questions</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/polls.html#lino_xl.lib.polls.Questions" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">polls.Questions</span></code></a>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="polls.QuestionsByPoll.html"><span class="doc">Questions</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/polls.html#lino_xl.lib.polls.QuestionsByPoll" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">polls.QuestionsByPoll</span></code></a>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="polls.Responses.html"><span class="doc">Interviews</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/polls.html#lino_xl.lib.polls.Responses" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">polls.Responses</span></code></a>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="polls.AllResponses.html"><span class="doc">Interviews</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/polls.html#lino_xl.lib.polls.AllResponses" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">polls.AllResponses</span></code></a>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="polls.MyResponses.html"><span class="doc">Mes Interviews</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/polls.html#lino_xl.lib.polls.MyResponses" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">polls.MyResponses</span></code></a>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="polls.ResponsesByPoll.html"><span class="doc">Interviews</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/polls.html#lino_xl.lib.polls.ResponsesByPoll" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">polls.ResponsesByPoll</span></code></a>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="polls.ResponsesByPartner.html"><span class="doc">Interviews</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/polls.html#lino_xl.lib.polls.ResponsesByPartner" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">polls.ResponsesByPartner</span></code></a>)</p></td>
+<td><p>Show all responses for a given partner.  Default view shows a
+summary of all responses for a that partner using a bullet list
+grouped by poll.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="polls.AnswerChoices.html"><span class="doc">Choix de réponse</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">polls.AnswerChoices</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="polls.AnswerRemarks.html"><span class="doc">Answer Remarks</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">polls.AnswerRemarks</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="polls.AnswerRemarksByAnswer.html"><span class="doc">Answer Remarks</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">polls.AnswerRemarksByAnswer</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="polls.AllAnswerRemarks.html"><span class="doc">Answer Remarks</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">polls.AllAnswerRemarks</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="polls.AnswersByResponseBase.html"><span class="doc">AnswersByResponseBase</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/polls.html#lino_xl.lib.polls.AnswersByResponseBase" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">polls.AnswersByResponseBase</span></code></a>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="polls.AnswersByResponseEditor.html"><span class="doc">Réponses</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/polls.html#lino_xl.lib.polls.AnswersByResponseEditor" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">polls.AnswersByResponseEditor</span></code></a>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="polls.AnswersByResponsePrint.html"><span class="doc">AnswersByResponsePrint</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/polls.html#lino_xl.lib.polls.AnswersByResponsePrint" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">polls.AnswersByResponsePrint</span></code></a>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="polls.AnswersByQuestion.html"><span class="doc">Réponses</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/polls.html#lino_xl.lib.polls.AnswersByQuestion" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">polls.AnswersByQuestion</span></code></a>)</p></td>
+<td><p>The rows of this table are volatile AnswersByQuestionRow
+instances.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="polls.PollResult.html"><span class="doc">Questions</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/polls.html#lino_xl.lib.polls.PollResult" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">polls.PollResult</span></code></a>)</p></td>
+<td><p>Shows a summay of responses to this poll.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="esf.ParticipationCertificates.html"><span class="doc">Participation Certificates</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">esf.ParticipationCertificates</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="esf.StatisticalFields.html"><span class="doc">Champs FSE</span></a> (<a class="reference external" href="https://welfare.lino-framework.org/specs/esf.html#lino_welfare.modlib.esf.StatisticalFields" title="(in Lino Welfare v22.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">esf.StatisticalFields</span></code></a>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="esf.Summaries.html"><span class="doc">Fiches FSE</span></a> (<a class="reference external" href="https://welfare.lino-framework.org/specs/esf.html#lino_welfare.modlib.esf.Summaries" title="(in Lino Welfare v22.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">esf.Summaries</span></code></a>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="esf.AllSummaries.html"><span class="doc">Fiches FSE</span></a> (<a class="reference external" href="https://welfare.lino-framework.org/specs/esf.html#lino_welfare.modlib.esf.AllSummaries" title="(in Lino Welfare v22.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">esf.AllSummaries</span></code></a>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="esf.SummariesByClient.html"><span class="doc">Fiches FSE</span></a> (<a class="reference external" href="https://welfare.lino-framework.org/specs/esf.html#lino_welfare.modlib.esf.SummariesByClient" title="(in Lino Welfare v22.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">esf.SummariesByClient</span></code></a>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="dashboard.Widgets.html"><span class="doc">Widgets</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">dashboard.Widgets</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="dashboard.AllWidgets.html"><span class="doc">All dashboard widgets</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">dashboard.AllWidgets</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="dashboard.WidgetsByUser.html"><span class="doc">Dashboard</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">dashboard.WidgetsByUser</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="tinymce.TextFieldTemplates.html"><span class="doc">Text Field Templates</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/tinymce.html#lino.modlib.tinymce.TextFieldTemplates" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tinymce.TextFieldTemplates</span></code></a>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="tinymce.MyTextFieldTemplates.html"><span class="doc">Mes Text Field Templates</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/tinymce.html#lino.modlib.tinymce.MyTextFieldTemplates" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tinymce.MyTextFieldTemplates</span></code></a>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="clients.ClientContactTypes.html"><span class="doc">Types de contact client</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/clients.html#lino_xl.lib.clients.ClientContactTypes" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">clients.ClientContactTypes</span></code></a>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="clients.ClientContacts.html"><span class="doc">Contacts client</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/clients.html#lino_xl.lib.clients.ClientContacts" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">clients.ClientContacts</span></code></a>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="clients.ContactsByClient.html"><span class="doc">Contacts</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">clients.ContactsByClient</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="clients.ClientContactsByType.html"><span class="doc">Contacts</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">clients.ClientContactsByType</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="clients.ClientContactsByCompany.html"><span class="doc">Contacts client</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">clients.ClientContactsByCompany</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="clients.ClientContactsByPerson.html"><span class="doc">Contacts client</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">clients.ClientContactsByPerson</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="courses.Slots.html"><span class="doc">Timetable Slots</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">courses.Slots</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="courses.Topics.html"><span class="doc">Topics</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">courses.Topics</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="courses.Lines.html"><span class="doc">Séries d’ateliers</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">courses.Lines</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="courses.LinesByTopic.html"><span class="doc">Séries d’ateliers</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">courses.LinesByTopic</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="courses.EntriesByTeacher.html"><span class="doc">Entrées calendrier</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">courses.EntriesByTeacher</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="courses.Activities.html"><span class="doc">Ateliers</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">courses.Activities</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="courses.ActivitiesByLayout.html"><span class="doc">Ateliers d’insertion sociale</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">courses.ActivitiesByLayout</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="courses.AllActivities.html"><span class="doc">Ateliers</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">courses.AllActivities</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="courses.ActivitiesByTeacher.html"><span class="doc">Ateliers</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">courses.ActivitiesByTeacher</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="courses.MyActivities.html"><span class="doc">Mes Ateliers</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/courses.html#lino_xl.lib.courses.MyActivities" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">courses.MyActivities</span></code></a>)</p></td>
+<td><p>Show the courses authored by me (i.e. where I am the responsible
+manager).  Compare MyCoursesGiven.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="courses.MyCoursesGiven.html"><span class="doc">My courses given</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/courses.html#lino_xl.lib.courses.MyCoursesGiven" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">courses.MyCoursesGiven</span></code></a>)</p></td>
+<td><p>Show the courses given by me (i.e. where I am the teacher).
+Compare MyActivities.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="courses.ActivitiesByLine.html"><span class="doc">Ateliers</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/courses.html#lino_xl.lib.courses.ActivitiesByLine" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">courses.ActivitiesByLine</span></code></a>)</p></td>
+<td><p>Show the courses per course line.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="courses.ActivitiesByTopic.html"><span class="doc">Ateliers</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/courses.html#lino_xl.lib.courses.ActivitiesByTopic" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">courses.ActivitiesByTopic</span></code></a>)</p></td>
+<td><p>Shows the courses of a given topic.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="courses.ActivitiesBySlot.html"><span class="doc">Ateliers</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">courses.ActivitiesBySlot</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="courses.DraftActivities.html"><span class="doc">Ateliers en préparation</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">courses.DraftActivities</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="courses.ActiveActivities.html"><span class="doc">Ateliers actifs</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">courses.ActiveActivities</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="courses.InactiveActivities.html"><span class="doc">Ateliers inactifs</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">courses.InactiveActivities</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="courses.ClosedActivities.html"><span class="doc">Ateliers terminés</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">courses.ClosedActivities</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="courses.Enrolments.html"><span class="doc">Inscriptions</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/courses.html#lino_xl.lib.courses.Enrolments" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">courses.Enrolments</span></code></a>)</p></td>
+<td><p>Base class for all tables that show Enrolment.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="courses.AllEnrolments.html"><span class="doc">Inscriptions</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/courses.html#lino_xl.lib.courses.AllEnrolments" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">courses.AllEnrolments</span></code></a>)</p></td>
+<td><p>Show global list of all enrolments.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="courses.PendingRequestedEnrolments.html"><span class="doc">Demandes d’inscription en attente</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/courses.html#lino_xl.lib.courses.PendingRequestedEnrolments" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">courses.PendingRequestedEnrolments</span></code></a>)</p></td>
+<td><p>Show all requested enrolments.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="courses.PendingConfirmedEnrolments.html"><span class="doc">Demandes d’inscription confirmées</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/courses.html#lino_xl.lib.courses.PendingConfirmedEnrolments" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">courses.PendingConfirmedEnrolments</span></code></a>)</p></td>
+<td><p>Show all confirmed enrolments.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="courses.EnrolmentsByPupil.html"><span class="doc">Inscriptions dans Ateliers</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/courses.html#lino_xl.lib.courses.EnrolmentsByPupil" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">courses.EnrolmentsByPupil</span></code></a>)</p></td>
+<td><p>Show all enrolments of a given pupil.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="courses.EnrolmentsByCourse.html"><span class="doc">Inscriptions</span></a> (<a class="reference external" href="https://dev.lino-framework.org/specs/courses.html#lino_xl.lib.courses.EnrolmentsByCourse" title="(in Lino Developer Guide v20.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">courses.EnrolmentsByCourse</span></code></a>)</p></td>
+<td><p>Show the enrolments of a this course.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="courses.StatusReport.html"><span class="doc">Aperçu des évènements</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">courses.StatusReport</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="courses.JobCourses.html"><span class="doc">Ateliers d’Insertion socioprofessionnelle</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">courses.JobCourses</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="courses.BasicEnrolmentsByPupil.html"><span class="doc">Inscriptions dans Ateliers d’insertion sociale</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">courses.BasicEnrolmentsByPupil</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="courses.JobEnrolmentsByPupil.html"><span class="doc">Inscriptions dans Ateliers d’Insertion socioprofessionnelle</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">courses.JobEnrolmentsByPupil</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="cal.EntryRepeaterTable.html"><span class="doc">Cal entry repeaters</span></a> (<code class="xref py py-class docutils literal notranslate"><span class="pre">cal.EntryRepeaterTable</span></code>)</p></td>
+<td><p>None</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/logo_web3.png" alt="Logo"/>
+            </a></p>
+          <div class="sidebar-resize-handle"></div>
+<p align="center"></p>
+<h3><a href="index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Data views</a></li>
+</ul>
+
+<hr class="docutils" />
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+<ul>
+</ul><p align="center">
+</p>
+
+<div id="ethical-ad-placement"></div>
+        </div>
+      </div>
+    <footer role="contentinfo">
+      &#169; Copyright 2022-07-19 ÖSHZ Kettenis.
+      Last updated on 2022-07-19.
+      Created using <a class="reference external" href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
+      <a class="reference external" href="https://insipid-sphinx-theme.readthedocs.io/">Insipid Theme</a>.
+
+Online link: <a href="http://127.0.0.1:8000/media/cache/help/actors.html">http://127.0.0.1:8000/media/cache/help/actors.html</a>.
+
+
+    </footer>
+    <div class="sidebar-resize-handle"></div>
+    <div id="overlay"></div>
+  </body>
+</html>

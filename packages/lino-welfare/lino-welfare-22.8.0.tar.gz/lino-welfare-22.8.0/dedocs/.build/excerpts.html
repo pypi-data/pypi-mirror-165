@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auszüge &#8212; Lino für ÖSHZ</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="_static/linodocs.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystyles.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/translations.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="author" title="Über dieses Dokument" href="about.html" />
+    <link rel="index" title="Stichwortverzeichnis" href="genindex.html" />
+    <link rel="search" title="Suche" href="search.html" />
+    <link rel="next" title="Beihilfen" href="aids.html" />
+    <link rel="prev" title="Allgemeines" href="general.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             accesskey="I">Index</a></li>
+        <li class="right" >
+          <a href="aids.html" title="Beihilfen"
+             accesskey="N">weiter</a> |</li>
+        <li class="right" >
+          <a href="general.html" title="Allgemeines"
+             accesskey="P">zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">⌘</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="handbuch.html" accesskey="U">Lino Welfare Benutzerhandbuch</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Auszüge</a></li> 
+      </ul>
+    </div>
+
+
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  
+  <div class="section" id="auszuge">
+<h1>Auszüge<a class="headerlink" href="#auszuge" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="section" id="was-ist-ein-auszug">
+<h2>Was ist ein Auszug?<a class="headerlink" href="#was-ist-ein-auszug" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Wenn man mit Lino etwas druckt, nennt Lino das einen <strong>Auszug aus
+seiner Datenbank</strong>.  Jeder Ausdruck wird als <em>Auszug</em> in der Tabelle
+der <em>Auszüge</em> gespeichert.</p>
+<p>Statt <strong>Auszug</strong> kann man also in der Praxis einfachheitshalber auch
+<strong>Ausdruck</strong> sagen.  Aber es ist eben nicht genau das Gleiche.  Ein
+Auszug kann entweder „ausgedruckt“ sein oder auch nicht – wobei
+Letzteres natürlich anormal ist und wahrscheinlich irgendeinen
+technischen Grund hat. Ungedruckte Auszüge werden voraussichtlich in
+Zukunft mal jede Nacht automatisch gelöscht.</p>
+<p>Ein Auszug hat folgende Datenfelder:</p>
+<ul class="simple">
+<li><p>Autor : welcher Bentuzer den Auszug erstellt hat.</p></li>
+<li><p>Auszugsart : welche Auszugsart es ist. Siehe <a class="reference internal" href="#auszugsarten">Auszugsarten</a></p></li>
+<li><p>Klient : welchem Klienten der Auszug zugewiesen ist.</p></li>
+</ul>
+<p>Auszugsarten sind <span class="menuselection">Konfigurierung
+‣ Büro ‣ Auszugsarten</span> konfigurierbar.</p>
+</div>
+<div class="section" id="auszugsarten">
+<h2>Auszugsarten<a class="headerlink" href="#auszugsarten" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Pro Auszugsart gibt es folgende Datenfelder:</p>
+<ul class="simple">
+<li><p>ID</p></li>
+<li><p>Bezeichnung</p></li>
+<li><p>Modell</p></li>
+<li><p>Konstruktionsmethode : welche Druckmethode verwendet wird.</p></li>
+<li><p>Vorlage : Welche Vorlage beim Ausdruck verwendet wird</p></li>
+<li><p>Textkörper-Vorlage</p></li>
+<li><p>E-Mail-Vorlage</p></li>
+<li><p>Ecerpt-Shortcur</p></li>
+<li><p>Primär</p></li>
+<li><p>Kontakt drucken</p></li>
+<li><p>Bescheinigend</p></li>
+<li><p>Empfänger drucken</p></li>
+<li><p>Backward compatible</p></li>
+<li><p>Als Anhang per E-Mail</p></li>
+</ul>
+</div>
+<div class="section" id="anwesenheitsbescheinigung">
+<h2>Anwesenheitsbescheinigung<a class="headerlink" href="#anwesenheitsbescheinigung" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Um eine Anwesenheitsbescheinigung auszustellen, muss der Klient
+„anwesend“ gewesen sein.  Also es muss ein <a class="reference internal" href="cal.html#term-Termin"><span class="xref std std-term">Termin</span></a> oder eine
+<a class="reference internal" href="cal.html#term-Visite"><span class="xref std std-term">Visite</span></a> existieren, für die dieser Klient als Gast eingetragen
+ist.  Diese Einträge sind es, die man sieht im Feld „Termine“ des
+Reiters „Person“ im Detail des Klienten.</p>
+</div>
+<div class="section" id="hilfebestatigungen">
+<h2>Hilfebestätigungen<a class="headerlink" href="#hilfebestatigungen" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Siehe <a class="reference internal" href="aids.html"><span class="doc">Beihilfen</span></a>.</p>
+</div>
+<div class="section" id="beispiele-von-ausdrucken-aus-der-demo-datenbank">
+<span id="welfare-excerpts-examples-de"></span><h2>Beispiele von Ausdrucken aus der Demo-Datenbank<a class="headerlink" href="#beispiele-von-ausdrucken-aus-der-demo-datenbank" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Siehe technische Dokumentation in <a class="reference external" href="https://welfare.lino-framework.org/specs/aids/index.html#welfare-specs-aids" title="(in Lino Welfare v21.3)"><span>aids : Aid grantings</span></a>.</p>
+</div>
+</div>
+
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/logo_web3.png" alt="Logo"/>
+            </a></p>
+<h3><a href="index.html">Inhalt</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="tour/index.html">Lino-Tour</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="handbuch.html">Benutzerhandbuch</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="klienten.html">Klienten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coachings.html">Begleitungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="partner.html">Partner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="watch_tim.html">watch_tim</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cal.html">Kalender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="general.html">Allgemeines</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Auszüge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aids.html">Beihilfen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contracts.html">Verträge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="system.html">Systemkonfigurierung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="help/index.html">Selbsthilfe</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="changes/index.html">Release-Notizen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testlauf.html">Allgemeine Testanweisungen</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="about.html">Über Lino Welfare</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kontakt.html">Kontakt</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Schnellsuche</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Los" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script><p align="center">
+<a href="https://github.com/lsaffre/lino-welfare" target="_blank">GitHub</a>
+<a href="http://pypi.python.org/pypi/lino-welfare" target="_blank">pypi</a>
+</p>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Stichwortverzeichnis"
+             >Index</a></li>
+        <li class="right" >
+          <a href="aids.html" title="Beihilfen"
+             >weiter</a> |</li>
+        <li class="right" >
+          <a href="general.html" title="Allgemeines"
+             >zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">⌘</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="handbuch.html" >Lino Welfare Benutzerhandbuch</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Auszüge</a></li> 
+      </ul>
+    </div>
+
+
+    <div class="footer">
+        &copy; Copyright 2012-2021 Rumma &amp; Ko OÜ.
+      Zuletzt aktualisiert am Apr. 27, 2021.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 3.5.4.
+    <a href="https://raw.github.com/lino-framework/welcht/master/dedocs/excerpts.rst"
+           rel="nofollow">Quellcode anzeigen</a>.
+    <a href="http://de.welfare.lino-framework.org/excerpts.html">Online Link</a>.
+    </div>
+  </body>
+</html>
