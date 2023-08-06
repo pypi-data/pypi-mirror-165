@@ -1,0 +1,85 @@
+# Arteria – Python client library
+
+Read [arteria docs](https://docs.arteria.xyz/0ypQNxcwRg1U5vqPeGwv/connect/connect-guides) for all integration details. 
+# Installation
+
+`pip install arteria-python`
+
+# Authentication
+
+To configure manually your credentials:
+```python
+import arteria
+
+ARTERIA_API_KEY = 'PKxxxx'
+ARTERIA_API_SECRET= 'yyyyyy'
+
+arteria.configure(api_key=ARTERIA_API_KEY, api_secret=ARTERIA_API_SECRET)
+```
+
+## Transfers
+
+### Create transfer
+
+```python
+import arteria
+arteria.configure(sandbox=True)  # if using sandbox
+local_transfer_id = '078efdc20bab456285437309c4b75673'
+transfer = arteria.Transfer.create(
+    recipient_name='Benito Juárez',
+    account_number='646180157042875763',  # CLABE or card number
+    amount=12345,  # Mx$123.45
+    descriptor='sending money',  # As it'll appear for the customer
+    idempotency_key=local_transfer_id
+)
+# To get updated status
+transfer.refresh()
+```
+
+
+### Retrieve by `id`
+
+```python
+import arteria
+transfer = arteria.Transfer.retrieve('tr_123')
+```
+
+### Query by `idempotency_key`, `account_number` and `status`
+
+Results are always returned in descending order of `created_at`
+
+The methods that can be used:
+- `one()` - returns a single result. Raises `NoResultFound` if there are no
+results and `MultipleResultsFound` if there are more than one
+- `first()` - returns the first result or `None` if there aren't any
+- `all()` - returns a generator of all matching results. Pagination is handled
+automatically as you iterate over the response
+- `count()` - returns an integer with the count of the matching results
+
+```python
+import arteria
+
+# find the unique transfer using the idempotency key
+local_transfer_id = '078efdc20bab456285437309c4b75673'
+transfer = arteria.Transfer.one(idempotency_key=local_transfer_id)
+# returns a generator of all succeeded transfers to the specific account
+transfers = arteria.Transfer.all(
+    account_number='646180157000000004',
+    status='succeeded'
+)
+# the total number of succeeded transfers
+count = arteria.Transfer.count(status='succeeded')
+```
+
+## Api Keys
+
+### Create new `ApiKey` and deactivate old
+```python
+import arteria
+# Create new ApiKey
+new = arteria.ApiKey.create()
+# Have to use the new key to deactivate the old key
+old_id = arteria.session.auth[0]
+arteria.session.configure(new.id, new.secret)
+arteria.ApiKey.deactivate(old_id, 60)  # revoke prior API key in an hour
+```
