@@ -1,0 +1,12 @@
+caniusethat/__init__.py,sha256=PE3SH7dSgMFCuVfPpqTjbiSF_AU2pQpfsEOurzIkkBg,28
+caniusethat/_thread.py,sha256=08lf7j_OXe8TOZdqt_aFBS1o8QdG-CSKse75UirWEQ8,548
+caniusethat/logging.py,sha256=47qBrDiySdqp-3k6hwiHzlyM14dxsm_gtWv3qnD_P7I,547
+caniusethat/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+caniusethat/shareable.py,sha256=emKIrmebh-K9RiTbK7fkYhPp7GZpN140xiZCeOFjP68,12862
+caniusethat/thing.py,sha256=acRRbT2VFVmTpZqtEYOArVYvJhRPBZKI8MQBStvpKI8,3398
+caniusethat/types.py,sha256=5zW1uVO0RrNVmHF4OUJ92QTvqqTusQwHO4ebETkwd-A,799
+caniusethat-0.2.0b0.dist-info/LICENSE,sha256=7t6EIDb969PMZhwmb1rf3kW4mDHP1otl4EfpPpG4iew,1092
+caniusethat-0.2.0b0.dist-info/METADATA,sha256=rgHliLSfx53QixSJq9_jJnQAitFXVCY-f0gsjEwKi8s,805
+caniusethat-0.2.0b0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+caniusethat-0.2.0b0.dist-info/top_level.txt,sha256=YNVo8z-R1tkNt2i2W6gOrLXkMAJ_ux5u92oVa2T9nXI,12
+caniusethat-0.2.0b0.dist-info/RECORD,,

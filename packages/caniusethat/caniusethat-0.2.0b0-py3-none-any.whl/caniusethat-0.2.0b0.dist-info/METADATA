@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: caniusethat
+Version: 0.2.0b0
+Summary: TODO.
+Author: Matteo Pompili
+Project-URL: Home, https://github.com/matpompili/caniusethat
+Project-URL: Documentation, https://caniusethat.readthedocs.io/
+Project-URL: Changelog, https://github.com/matpompili/caniusethat/blob/main/CHANGELOG.md
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyzmq (==23.2.1)
+
+# caniusethat
+Can I Use That is a wrapper around PyZMQ that enables easy RPC (remote procedure call) functionality
