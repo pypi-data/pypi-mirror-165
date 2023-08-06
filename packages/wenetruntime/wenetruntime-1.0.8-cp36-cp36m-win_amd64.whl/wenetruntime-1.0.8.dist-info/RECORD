@@ -1,0 +1,15 @@
+_wenet.pyd,sha256=gR1dsBhOeJ1cMR6HWi2DMLYXVw1k5Q5ITydjX9Q2nhE,123392
+asmjit.dll,sha256=KXnzi01_JzqUcERhKVS9OEKPbjUWdl3rpYQk0NWt1IM,273408
+c10.dll,sha256=yHxQ_ulMvQ5Hhu70z98oy0n9zE-BLsDQ0bBSDmfiJm4,391168
+fbgemm.dll,sha256=o_HcWhO0Cury_dkL6ojmGzKUG3KEz_ELFcttBexVoMI,3476480
+libiomp5md.dll,sha256=DSQe2RaoPuaM0SYmfin97Dt17btpjAfK_4Ru8gZJcG0,1919904
+torch_cpu.dll,sha256=2ob_FS5roDtHyoe4gQERNntP_BexDDOacjpKLaTi9PQ,218723840
+uv.dll,sha256=1uUXCEQlCSBm1LJmeDIOtg7fLHmt6FW9Z7gpET-ZnaY,195072
+wenet_api.dll,sha256=8g2vnbEgvMSylWN6svs4ZM9YZ9xffNZRR91MwKVxcxA,1655296
+wenetruntime/__init__.py,sha256=z1DyMYCMf3TupMuL_GFdAF4dLb8UaywvF72padbOVAk,103
+wenetruntime/decoder.py,sha256=ReaXHnVeuk6fK0JaATtfIPktTCZEeyHkMZCSwcG4cjI,3960
+wenetruntime/hub.py,sha256=FeY0qoXDGRqTBAT1irZiXYlXqekxOCuuClVGeXxAGUQ,3355
+wenetruntime-1.0.8.dist-info/METADATA,sha256=ZQmMtiENpQKCQi51an-6vOY80VjaC8ShTvqiyL6E9No,3353
+wenetruntime-1.0.8.dist-info/WHEEL,sha256=zukbZftcRdNfJ55Q_RYV9JZ3uVyqWKyq-wDJbmszs_U,101
+wenetruntime-1.0.8.dist-info/top_level.txt,sha256=CPpyAd_UVWAX6_Noia8XuzCkXvrw97ReQF07u1UCES0,20
+wenetruntime-1.0.8.dist-info/RECORD,,
