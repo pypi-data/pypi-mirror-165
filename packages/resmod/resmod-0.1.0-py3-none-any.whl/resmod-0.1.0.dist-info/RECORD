@@ -1,0 +1,9 @@
+resmod/__init__.py,sha256=aCCXvMK3zB7aDkpr5yr9dG_R1gguWOEuBV1ilNDwbS4,42
+resmod/single/__init__.py,sha256=3R9auLny1_dU-M-52Xlcr3A1J5yi3bPkJNPS0ws_n5c,47
+resmod/single/residual_center.py,sha256=fgay3TnnpiQrexaM5EJL8NsC2PUP2JYQdIFEd_O3RbM,3424
+resmod-0.1.0.dist-info/AUTHORS.md,sha256=qvn9Ns982PWXoUkoJ_Ns_Qkywx-HQ6pkDg8puJHmrHQ,151
+resmod-0.1.0.dist-info/LICENSE,sha256=ab2duajo7xaWtXRqGYoZRlZLv8fJJuDQC5ILsX8kyqA,1060
+resmod-0.1.0.dist-info/METADATA,sha256=fryJsxSwa1fzH7VZNKc0BnpLDSUUfDKkbFaQ7OwA6C0,4374
+resmod-0.1.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+resmod-0.1.0.dist-info/top_level.txt,sha256=2NLDuZAoI5oMzHkY-UAf0sDprqT336yOALqECzGHvz4,7
+resmod-0.1.0.dist-info/RECORD,,
