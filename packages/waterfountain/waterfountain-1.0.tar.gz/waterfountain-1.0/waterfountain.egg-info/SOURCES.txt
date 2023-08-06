@@ -1,0 +1,8 @@
+README.rst
+setup.cfg
+setup.py
+waterfountain.egg-info/PKG-INFO
+waterfountain.egg-info/SOURCES.txt
+waterfountain.egg-info/dependency_links.txt
+waterfountain.egg-info/requires.txt
+waterfountain.egg-info/top_level.txt
