@@ -1,0 +1,8 @@
+README.md
+pargv.py
+setup.py
+pargv.egg-info/PKG-INFO
+pargv.egg-info/SOURCES.txt
+pargv.egg-info/dependency_links.txt
+pargv.egg-info/requires.txt
+pargv.egg-info/top_level.txt
