@@ -1,0 +1,6 @@
+[babel.extractors]
+ckan = ckan.lib.extract:extract_ckan
+
+[ckan.plugins]
+search_preset = ckanext.search_preset.plugin:SearchPresetPlugin
+search_preset_test = ckanext.search_preset.tests.plugin:SearchPresetTestPlugin
