@@ -1,0 +1,15 @@
+# See: https://docs.readthedocs.io/en/latest/yaml-config.html
+version: 2
+
+python:
+  version: "3.7"
+  install:
+    - requirements: docs/requirements.txt
+    - method: pip
+      path: .
+      extra_requirements:
+        - requirements.txt
+
+mkdocs:
+  configuration: mkdocs.yml
+  fail_on_warning: false
