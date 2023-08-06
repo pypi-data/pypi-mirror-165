@@ -1,0 +1,12 @@
+pydantic<2,>=1.9
+django<5,>=4.0
+
+[dev]
+black
+mypy==0.961
+flake8==4.0.*
+pytest==7.0.*
+djangorestframework<4,>=3.13
+django-stubs[compatible-mypy]
+djangorestframework-stubs[compatible-mypy]
+pytest-django<5,>=4.5
