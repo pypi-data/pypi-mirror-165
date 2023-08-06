@@ -1,0 +1,17 @@
+[console_scripts]
+donv-attach = donv.attach:main
+donv-build = donv.build:main
+donv-info = donv.base:main
+donv-remove = donv.remove:main
+donv-restart = donv.restart:main
+donv-restart-attach = donv.restart_attach:main
+donv-run = donv.run:main
+donv-stop = donv.stop:main
+donva = donv.attach:main
+donvb = donv.build:main
+donvi = donv.base:main
+donvr = donv.run:main
+donvra = donv.restart_attach:main
+donvrm = donv.remove:main
+donvrst = donv.restart:main
+donvs = donv.stop:main
