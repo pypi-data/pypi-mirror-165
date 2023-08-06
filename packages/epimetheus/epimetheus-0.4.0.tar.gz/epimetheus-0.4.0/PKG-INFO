@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: epimetheus
+Version: 0.4.0
+Summary: Simplified prometheus client library
+Author-email: neumond <knifeslaughter@gmail.com>
+Requires-Python: >=3.8
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: sortedcontainers
+Requires-Dist: pytest ; extra == "test"
+Requires-Dist: pytest-freezegun ; extra == "test"
+Requires-Dist: pytest-mock ; extra == "test"
+Project-URL: Home, https://github.com/neumond/epimetheus
+Provides-Extra: test
