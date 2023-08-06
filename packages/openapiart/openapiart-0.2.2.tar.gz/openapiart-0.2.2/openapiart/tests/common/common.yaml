@@ -1,0 +1,83 @@
+components:
+  schemas:
+    GlobalObject:
+      type: object
+      properties:
+        name:
+          type: string
+          x-field-uid: 1
+    ListObject:
+      type: object
+      properties:
+        name:
+          type: string
+          x-field-uid: 1
+    MultiParamObject:
+      type: object
+      properties:
+        m_param1:
+          type: string
+          x-field-uid: 1
+        m_param2:
+          type: string
+          x-field-uid: 2
+    Error:
+      type: object
+      properties:
+        errors:
+          type: array
+          items:
+            type: string
+          x-field-uid: 1
+    Error.Details:
+      type: object
+      properties:
+        errors:
+          type: array
+          items:
+            type: string
+          x-field-uid: 1
+    Warning.Details:
+      type: object
+      properties:
+        warnings:
+          type: array
+          items:
+            type: string
+          x-field-uid: 1
+  responses:
+    Success:
+      200:
+        description: 'Standard success binary payload'
+        content:
+          application/octet-stream:
+            schema:
+              type: string
+              format: binary
+    Warnings:
+      description: 'Success warning payload similar to otg Success'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Warning.Details'
+    Error.400:
+      '400':
+        description: 'error 4xx'
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Error.Details'
+    Error.404:
+      '404':
+        description: 'error 404'
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Error.Details'
+    Error500:
+      '500':
+        description: 'error 5xx'
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Error'
