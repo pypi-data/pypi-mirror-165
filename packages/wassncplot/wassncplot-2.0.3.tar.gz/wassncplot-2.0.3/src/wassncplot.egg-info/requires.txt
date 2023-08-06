@@ -1,0 +1,9 @@
+numpy
+scipy
+pyopengl
+PyQt6
+matplotlib
+vispy
+tqdm
+opencv-python>=4.0
+netcdf4
