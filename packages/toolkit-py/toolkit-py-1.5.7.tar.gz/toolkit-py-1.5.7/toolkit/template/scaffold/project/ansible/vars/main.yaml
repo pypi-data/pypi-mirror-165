@@ -1,0 +1,8 @@
+---
+assets_directory: {{ assets_directory }}
+config_file: {{ config_file }}
+executable_file: {{ executable_file }}
+http_port: 8080
+install_location: {{ install_location }}
+screen_id: {{ screen_id }}
+start_command: {{ start_command }}
