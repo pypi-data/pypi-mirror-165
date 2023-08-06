@@ -1,0 +1,5 @@
+[UECLICommands]
+command = uetools.plugins.ml:ML
+
+[console_scripts]
+uecli = uetools.core.cli:main
