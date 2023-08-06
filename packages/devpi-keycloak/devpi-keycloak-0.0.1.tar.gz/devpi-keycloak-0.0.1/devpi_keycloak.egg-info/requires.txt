@@ -1,0 +1,2 @@
+devpi-server>=4.0.0
+keycloak-basic>=1.2.1
