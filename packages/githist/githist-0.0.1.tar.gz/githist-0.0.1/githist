@@ -1,0 +1,29 @@
+#!/usr/bin/python3
+
+import itertools
+import re
+import subprocess
+
+
+def pairwise(x):
+    a, b = itertools.tee(x)
+    next(b, None)
+    return zip(a, b)
+
+
+r = subprocess.run(
+    "git reflog --date=relative",
+    shell=True,
+    universal_newlines=True,
+    stdout=subprocess.PIPE,
+)
+r.check_returncode()
+
+moving_from = (
+    re.match(".*\\{(.*)\\}.*moving from (.*) to (.*)", l).groups()
+    for l in reversed(r.stdout.splitlines())
+    if "moving from" in l
+)
+
+for (dp, fp, tp), (dn, fn, tn) in pairwise(itertools.chain(moving_from, ((None, None, None),))):
+    print(dp, "—", f"{dn or 'now'}:", f"{tp}{' (' + fn + ')' if fn and fn != tp else ''}")
