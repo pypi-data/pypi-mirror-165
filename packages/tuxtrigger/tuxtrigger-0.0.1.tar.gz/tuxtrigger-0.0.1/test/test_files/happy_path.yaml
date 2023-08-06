@@ -1,0 +1,19 @@
+repositories:
+- url: https://gitlab.com/Linaro/lkft/mirrors/stable/linux-stable
+  squad_group: ~non.existing
+  branches:
+    - name: master
+      squad_project: example_project
+      plan: stable.yaml
+    - name: linux-5.18.y
+      squad_project: example_project
+      plan: stable-next.yaml
+- url: https://gitlab.com/Linaro/lkft/mirrors/stable/linux-stable-rc
+  squad_group: ~non.existing
+  branches:
+    - name: master
+      squad_project: example_project
+      plan: stable.yaml
+    - name: queue/5.4
+      squad_project: example_project
+      plan: stable-next.yaml

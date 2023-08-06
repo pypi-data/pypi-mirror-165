@@ -1,0 +1,13 @@
+.venv
+venv/
+__pycache__/
+*.pyc
+/dist
+/htmlcov
+/public
+.coverage*
+share/
+.vscode/
+debian/
+log.txt
+tags

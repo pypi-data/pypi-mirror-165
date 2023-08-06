@@ -1,0 +1,14 @@
+https://gitlab.com/Linaro/lkft/mirrors/stable/linux-stable:
+  linux-5.18.y:
+    ref: refs/heads/linux-5.18.y
+    sha: 07e0b709cab7dc987b5071443789865e20481119
+  master:
+    ref: refs/heads/master
+    sha: 568035b01cfb107af8d2e4bd2fb9aea22cf5b868
+https://gitlab.com/Linaro/lkft/mirrors/stable/linux-stable-rc:
+  master:
+    ref: refs/heads/master
+    sha: 568035b01cfb107af8d2e4bd2fb9aea22cf5b868
+  queue/5.4:
+    ref: refs/heads/queue/5.4
+    sha: 0fba1e2c641159e7be376caca88e26bca49d72e5

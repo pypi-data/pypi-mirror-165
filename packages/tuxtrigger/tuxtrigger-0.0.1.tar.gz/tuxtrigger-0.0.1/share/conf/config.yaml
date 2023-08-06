@@ -1,0 +1,17 @@
+squad:
+  url: https://qa-reports.linaro.org
+  group: ~pawel.szymaszek
+  project: tuxtrigger
+repositories:
+- url: https://gitlab.com/Linaro/lkft/mirrors/stable/linux-stable
+  branches:
+    - name: master
+      plan: stable.yaml
+    - name: linux-5.18.y
+      plan: stable_next.yaml
+- url: https://gitlab.com/Linaro/lkft/mirrors/stable/linux-stable-rc
+  branches:
+    - name: master
+      plan: stable.yaml
+    - name: queue/5.4
+      plan: stable_next.yaml

@@ -1,0 +1,5 @@
+FROM debian:bullseye-slim
+
+
+RUN apt-get update \
+    && apt-get install --yes diction codespell black mypy flake8 make git python3-pip
