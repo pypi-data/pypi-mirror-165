@@ -1,0 +1,4 @@
+[console_scripts]
+bx=blockbax_sdk.console:main
+user-agent=blockbax_sdk.console:user_agent
+
