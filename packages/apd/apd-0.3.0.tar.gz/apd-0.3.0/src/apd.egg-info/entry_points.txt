@@ -1,0 +1,5 @@
+[console_scripts]
+apd-cache = apd.command:cmd_cache_ap_info
+apd-list-pfns = apd.command:cmd_list_pfns
+apd-list-samples = apd.command:cmd_list_samples
+apd-summary = apd.command:cmd_summary
