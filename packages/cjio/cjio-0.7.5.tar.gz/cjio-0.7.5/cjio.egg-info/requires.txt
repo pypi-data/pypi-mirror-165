@@ -1,0 +1,17 @@
+numpy
+Click>=8.1.0
+
+[develop]
+pytest
+bump2version
+
+[export]
+pandas
+mapbox-earcut
+triangle
+
+[reproject]
+pyproj>=3.0.0
+
+[validate]
+cjvalpy
