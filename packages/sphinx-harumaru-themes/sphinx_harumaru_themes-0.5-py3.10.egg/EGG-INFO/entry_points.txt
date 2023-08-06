@@ -1,0 +1,8 @@
+[sphinx.html_themes]
+daimaru_dark = sphinx_harumaru_themes
+daimaru_hw = sphinx_harumaru_themes
+daimaru_light = sphinx_harumaru_themes
+erika_hw = sphinx_harumaru_themes
+haruki_dark = sphinx_harumaru_themes
+haruki_hw = sphinx_harumaru_themes
+haruki_light = sphinx_harumaru_themes
