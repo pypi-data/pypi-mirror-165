@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: corecon
+Version: 0.5.1
+Summary: an open collection of constraints on the Epoch of Reionization
+Home-page: https://github.com/EGaraldi/corecon
+Download-URL: https://github.com/EGaraldi/corecon/archive/v0.5.1.tar.gz
+Author: Enrico Garaldi
+Author-email: enrico.garaldi@gmail.com
+License: gpl-3.0
+Keywords: constraints,reionization,cosmic,observations,data
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+License-File: LICENSE.txt
+
+![](logo.png)
+
+![](https://travis-ci.org/EGaraldi/corecon.svg?branch=master)
+
+CoReCon: open collection of Reionization Constraints
+====================================================
+
+**CoReCon** is an open collection of constraints on various physical
+quantities linked to the *Epoch of Reionization (EoR)*.
+
+It is built to be easily complemented by contribution from the scientific
+community, thanks to a simple data form that supports two different ways of
+input data.
+
+CoReCon takes care of loading and interpreting the data, and presenting them
+in an organic and ready-to-use way. It also implement simple slicing capabilities,
+which allow to perform simple data filtering.
+
+See https://corecon.readthedocs.io/en/latest/ for the latest documentation.
+
+
