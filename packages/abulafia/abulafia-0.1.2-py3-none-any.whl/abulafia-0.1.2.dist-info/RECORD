@@ -1,0 +1,16 @@
+abulafia/__init__.py,sha256=rnObPjuBcEStqSO0S6gsdS_ot8ITOQjVj_-P1LUUYpg,22
+abulafia/actions/__init__.py,sha256=oOOzxoO3lfmf_u2zjjiuq_QqO5LRdZ226HZZcZgT3Vk,64
+abulafia/actions/actions.py,sha256=0Gje6PJvY2KxoAxj1w1DjRds5X9TeEVZUJ28YNnT5fs,23580
+abulafia/functions/__init__.py,sha256=pd2zBUKluz_VVGY2MUmELJfjCpztZVltkVp-15TODcg,31
+abulafia/functions/core_functions.py,sha256=y_97m2VjMsqKkdy-9QtDnN8cuJ3vhhuXMEhUCZgJKcc,22516
+abulafia/observers/__init__.py,sha256=5NENP0o4AYwgVRbZd793maw_t_8E4h29WreKqwSu8OM,25
+abulafia/observers/observers.py,sha256=rD6PhfyS0-GDoX885kWx1RdWWvp8SWa4byT7OhbNlr8,4599
+abulafia/task_specs/__init__.py,sha256=jKTy99MecZgJU7elVNy7g5iGoKtUU3cs3zl87OZNSlM,75
+abulafia/task_specs/core_task.py,sha256=EStYk6FuSpIJLhmnrGkHD_w15bRrFD5lS6K0nZT2xyA,46950
+abulafia/task_specs/pipeline.py,sha256=sLbl6ubF-4bFrbiyqPQ1sLBhrMxD32BlnNjJjU-BJgw,15826
+abulafia/task_specs/task_specs.py,sha256=8DABw2cjjlVRLpwYEUqIl9tG4s60vuDuVVBDHU9AtVM,44055
+abulafia-0.1.2.dist-info/LICENSE,sha256=N3ei-EcxETMhwe_2qZ1N0WOpIBEpJo_GExmCN8x0jdQ,1073
+abulafia-0.1.2.dist-info/METADATA,sha256=p-ju8n4O9hWkkHS1owji4hXqJfCNNy09DQGsdFRWNCE,11231
+abulafia-0.1.2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+abulafia-0.1.2.dist-info/top_level.txt,sha256=QOFJqdpOZUAWbLn6zqhwNqDPaculAvpTNwEZ9U9dhWo,9
+abulafia-0.1.2.dist-info/RECORD,,
