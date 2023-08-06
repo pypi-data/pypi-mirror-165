@@ -1,0 +1,10 @@
+name: napari-proofread-brainbow
+display_name: napari proofread brainbow
+contributions:
+  commands:
+    - id: napari-proofread-brainbow.make_qwidget
+      python_name: napari_proofread_brainbow._widget:MainWidget
+      title: Make example QWidget
+  widgets:
+    - command: napari-proofread-brainbow.make_qwidget
+      display_name: Proofread Brainbow
