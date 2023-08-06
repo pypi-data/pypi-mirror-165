@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: atomsciflow
+Version: 0.0.1a6
+Summary: A workflow manger for scientific research involving atoms
+Home-page: https://github.com/deqitang/atomsciflow
+Author-email: deqitang@gmail.com
+License: MIT
+Keywords: Atom Science,Workflow
+Platform: any
+Requires-Python: >=3.0
+License-File: LICENSE
+License-File: NOTICE
+Requires-Dist: pybind11
+Requires-Dist: numpy
+Requires-Dist: scipy
+
