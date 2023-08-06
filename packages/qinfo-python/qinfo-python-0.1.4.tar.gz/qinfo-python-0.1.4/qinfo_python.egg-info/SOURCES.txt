@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+qinfo/library/ini.c
+qinfo/src/config.c
+qinfo/src/cpu.c
+qinfo/src/statx.c
+qinfo/src/unix.c
+qinfo_python.egg-info/PKG-INFO
+qinfo_python.egg-info/SOURCES.txt
+qinfo_python.egg-info/dependency_links.txt
+qinfo_python.egg-info/top_level.txt
+src/modules/qinfomodule.c
