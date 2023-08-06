@@ -1,0 +1,16 @@
+netskope_api/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+netskope_api/iterator/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+netskope_api/iterator/const.py,sha256=WS0PrfiGPYV8ubJAxFSY-W1jgLYbhXV2igVu4efeqpQ,422
+netskope_api/iterator/netskope_iterator.py,sha256=Q_3Ik7Wi6Xox4LUGe4wyiGwq48RPJBYh3mHa8qH1Yms,2892
+netskope_api/iterator/netskope_iterator_client.py,sha256=Qx6f2ZrG6UnZSXn27FOq09w4qSiEBX1o_4XbtKlHlhc,3734
+netskope_api/iterator/operation.py,sha256=gUhoo8mPEszVo6R_R_9dL5IOC3_jRR0p3VS9FcowXb4,244
+netskope_api/webtxn/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+netskope_api/webtxn/const.py,sha256=6LfHDmcuqyp_Yk2GgvY3QE6t9XYPtEJ7_sTp3KFi9nA,821
+netskope_api/webtxn/netskope_subscriber.py,sha256=VfL7o9m8F8DnIkjiENcSfP2HruTjuvY6icJYfyuVfmE,2322
+netskope_api/webtxn/netskope_subscriber_client.py,sha256=Pp8nEElnyeUaCWo7BrMOMQnAY1J8ccDpPWY7AMFyMgM,5753
+netskope_api/webtxn/test_webtxn.py,sha256=NG603QpYA2v4JNULDiKxllDYkjziJmKiBLi3cBmgsAQ,3666
+netskopesdk-0.0.19.dist-info/LICENSE,sha256=GcXt57BXdiM5qPBiQJj2MQP_59bPwyIidxYQWmgwbuQ,1516
+netskopesdk-0.0.19.dist-info/METADATA,sha256=Uw8RLzGGSqdh1hctaQaWISGWJmhmeOSQgoxamwHItS0,2338
+netskopesdk-0.0.19.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+netskopesdk-0.0.19.dist-info/top_level.txt,sha256=4av3fp_eEFWxxsJnGkY45BJr07VqoP7ZSuk8vTwPyiA,13
+netskopesdk-0.0.19.dist-info/RECORD,,
