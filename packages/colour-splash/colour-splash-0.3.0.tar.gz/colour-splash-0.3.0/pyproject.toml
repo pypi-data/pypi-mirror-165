@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "colour-splash"
+version = "0.3.0"
+authors = [
+  { name = "Lachlan Rehder" }, { email = "lachlan2357@outlook.com" },
+]
+description = "A simple tool enabling easy colouring of terminal outputs"
+readme = "README.md"
+license = { text = "GPLv3" }
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+    "Development Status :: 4 - Beta",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/lachlan2357/python-colour-splash"
+"Changelog" = "https://github.com/lachlan2357/python-colour-splash/blob/main/CHANGELOG.md"
+"Bug Tracker" = "https://github.com/lachlan2357/python-colour-splash/issues"
+"Source" = "https://github.com/lachlan2357/python-colour-splash"

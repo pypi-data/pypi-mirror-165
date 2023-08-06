@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/colour_splash/__init__.py
+src/colour_splash/colour_splash.py
+src/colour_splash.egg-info/PKG-INFO
+src/colour_splash.egg-info/SOURCES.txt
+src/colour_splash.egg-info/dependency_links.txt
+src/colour_splash.egg-info/top_level.txt
