@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: pbsrollout
+Version: 0.2.6
+Summary: 
+Author: dimitri
+Author-email: dimitriwyzlic@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: kubernetes (>=24.2.0,<25.0.0)
+Requires-Dist: pync (>=2.0.3,<3.0.0)
+Requires-Dist: rich (>=12.5.1,<13.0.0)
+Requires-Dist: shellpy (>=0.5.1,<0.6.0)
+Requires-Dist: simple-term-menu (>=1.5.0,<2.0.0)
