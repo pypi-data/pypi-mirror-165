@@ -1,0 +1,5 @@
+/.eggs/
+/venv/
+/dist/
+/.idea/
+/x_and_y.glassbox_sdk.egg-info/
