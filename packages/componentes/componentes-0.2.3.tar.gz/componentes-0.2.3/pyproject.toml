@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "componentes"
+version = "0.2.3"
+description = "Componetes de uso de teste"
+authors = ["Bruno S"]
+readme = "README.md"
+
+
+[tool.poetry.dependencies]
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
