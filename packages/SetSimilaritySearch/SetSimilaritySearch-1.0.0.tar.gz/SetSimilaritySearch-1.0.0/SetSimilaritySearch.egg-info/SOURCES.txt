@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+SetSimilaritySearch/__init__.py
+SetSimilaritySearch/all_pairs.py
+SetSimilaritySearch/search.py
+SetSimilaritySearch/utils.py
+SetSimilaritySearch.egg-info/PKG-INFO
+SetSimilaritySearch.egg-info/SOURCES.txt
+SetSimilaritySearch.egg-info/dependency_links.txt
+SetSimilaritySearch.egg-info/requires.txt
+SetSimilaritySearch.egg-info/top_level.txt
+scripts/all_pairs.py
