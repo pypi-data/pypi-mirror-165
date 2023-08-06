@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: libraryArsein
+Version: 4.2.5
+Summary:  library robot Rubika
+Home-page: https://github.com/Arseinlibrary/Arsein__library.git
+Author: arian abasi nedamane
+Author-email: aryongram@gmail.com
+License: MIT
+Keywords: rubika,bot,robot,library,rubikalib,rubikalib.ml,rubikalib.ir,rubika.ir,libraryArsein,libraryarsein,Rubika,Python
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+License-File: LICENCE
+
+How to import Arsin's library is as follows:
+
+<< from libraryArsein.Arsein import Robot_Rubika >>
+
+An example:
+
+from libraryArsein.Arsein import Robot_Rubika
+
+bot = Robot_Rubika("Your Auth Account")
+
+
+Made by Team ArianBot
+
+Address of our team's GitHub :
+
+https://github.com/Arseinlibrary/Arsein__library.git
