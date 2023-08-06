@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+fps_uvicorn/__init__.py
+fps_uvicorn/cli.py
+fps_uvicorn/config.py
+fps_uvicorn.egg-info/PKG-INFO
+fps_uvicorn.egg-info/SOURCES.txt
+fps_uvicorn.egg-info/dependency_links.txt
+fps_uvicorn.egg-info/entry_points.txt
+fps_uvicorn.egg-info/requires.txt
+fps_uvicorn.egg-info/top_level.txt

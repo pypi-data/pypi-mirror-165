@@ -1,0 +1,5 @@
+[console_scripts]
+fps-uvicorn = fps_uvicorn.cli:app
+
+[fps_config]
+fps_uvicorn_config = fps_uvicorn.config
