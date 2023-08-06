@@ -1,0 +1,6 @@
+[gui_scripts]
+timechart = timechart_launcher.main:main
+
+[pydm.tool]
+timechart = timechart.tool:PydmTimeChartTool
+

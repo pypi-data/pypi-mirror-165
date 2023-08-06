@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: timechart
+Version: 1.5.1
+Summary: Time Chart Tool based on PyDM
+Home-page: https://github.com/slaclab/timechart
+Author: SLAC National Accelerator Laboratory
+License: BSD
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+License-File: LICENSE.md
+
+UNKNOWN
+
