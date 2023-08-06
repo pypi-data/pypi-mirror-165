@@ -1,0 +1,25 @@
+argcomplete
+humanize
+numpy
+pillow
+pyyaml>=5.1
+requests
+rich
+upolygon==0.1.8
+jsonschema==3.2.0
+deprecation
+pydantic
+
+[:python_version < "3.7"]
+dataclasses
+
+[ml]
+sklearn
+torch
+torchvision
+
+[test]
+responses
+pytest
+pytest-describe
+sklearn
