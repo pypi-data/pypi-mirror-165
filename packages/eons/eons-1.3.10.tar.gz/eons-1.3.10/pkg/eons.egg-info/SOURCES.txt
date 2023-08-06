@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.cfg
+pkg/eons/__init__.py
+pkg/eons/eons.py
+pkg/eons.egg-info/PKG-INFO
+pkg/eons.egg-info/SOURCES.txt
+pkg/eons.egg-info/dependency_links.txt
+pkg/eons.egg-info/requires.txt
+pkg/eons.egg-info/top_level.txt
