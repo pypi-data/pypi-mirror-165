@@ -1,0 +1,20 @@
+[tool.poetry]
+authors = ["Craig Trim <craigtrim@gmail.com>"]
+description = "Helper Microservice to create yWorks Graphs in Jupyter"
+name = "yworks-helper"
+version = "0.1.6"
+
+[tool.poetry.dependencies]
+baseblock = "*"
+ipykernel = "*"
+jupyter = "^1.0.0"
+python = "3.8.5"
+yfiles_jupyter_graphs = "*"
+
+[tool.poetry.dev-dependencies]
+autopep8 = "*"
+pytest = "*"
+
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core>=1.0.0"]
