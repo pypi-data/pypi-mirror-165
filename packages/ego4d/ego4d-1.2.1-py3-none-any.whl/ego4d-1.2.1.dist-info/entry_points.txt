@@ -1,0 +1,4 @@
+[console_scripts]
+ego4d = ego4d.cli.cli:main
+ego4d_internal = ego4d.internal.cli:main
+
