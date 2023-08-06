@@ -1,0 +1,7 @@
+aiohttp
+validators
+typing_extensions
+requests
+
+[:python_version < "3.7"]
+dataclasses
