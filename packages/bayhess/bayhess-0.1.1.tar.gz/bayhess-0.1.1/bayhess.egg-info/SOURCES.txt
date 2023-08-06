@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.rst
+REQUIREMENTS
+pyproject.toml
+setup.py
+bayhess/__init__.py
+bayhess/bayhess.py
+bayhess/cg.py
+bayhess/distributions.py
+bayhess/newton.py
+bayhess.egg-info/PKG-INFO
+bayhess.egg-info/SOURCES.txt
+bayhess.egg-info/dependency_links.txt
+bayhess.egg-info/requires.txt
+bayhess.egg-info/top_level.txt

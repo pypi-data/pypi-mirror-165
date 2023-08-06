@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: bayhess
+Version: 0.1.1
+Summary: Bayesian Hessian Approximation for Stochastic Optimization
+Home-page: https://bitbucket.org/agcarlon/bayhess
+Author: Andre Gustavo Carlon
+Author-email: agcarlon@gmail.com
+License: GPLv3
+Keywords: stochastic optimization,Bayesian inference
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Information Technology
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Education
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3 :: Only
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+
+Bayesian Hessian Approximation for Stochastic Optimization
+----------------------------------------------------------
+
+We use Bayesian inference to approximate the Hessian of a function given noisy observations of its gradient.
+This package can be used in combination with MICE_.
+
+.. _MICE: https://pypi.org/project/mice/
