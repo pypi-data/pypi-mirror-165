@@ -1,0 +1,42 @@
+[tool.poetry]
+name = "environ-loader"
+version = "0.0.1"
+description = "Environ Loader"
+authors = ["CD Clark III <clifton.clark@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/CD3/environ-loader"
+repository = "https://github.com/CD3/environ-loader"
+documentation = "https://environ-loader.readthedocs.io"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+]
+
+[tool.poetry.urls]
+Changelog = "https://github.com/CD3/environ-loader/releases"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+click = ">=8.0.1"
+
+[tool.poetry.dev-dependencies]
+black = ">=21.10b0"
+mypy = ">=0.930"
+pytest = ">=6.2.5"
+nox-poetry = ">=1.0.0"
+
+[tool.poetry.scripts]
+environ-loader = "environ_loader.__main__:main"
+
+
+[tool.mypy]
+strict = true
+warn_unreachable = true
+pretty = true
+show_column_numbers = true
+show_error_codes = true
+show_error_context = true
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
