@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: badger-opt
+Version: 0.9.1
+Summary: Core of the Badger optimizer
+Home-page: https://github.com/SLAC-ML/Badger
+Author: Zhe Zhang
+Author-email: zhezhang@slac.stanford.edu
+License: GPL
+Requires-Python: >=3.6
+Provides-Extra: dev
+License-File: LICENSE
