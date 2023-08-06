@@ -1,0 +1,11 @@
+jax_dataclasses/__init__.py,sha256=rG6cZ2Ebs3x3Q5_b1E_fMmXQgCpv_kPzDIbmczuO6cs,1491
+jax_dataclasses/_copy_and_mutate.py,sha256=MxU-R6vO00ktqvZvio5M46-9IPZFz0ON2YNjeG48YT0,4175
+jax_dataclasses/_dataclasses.py,sha256=dc2gA9yYcsmRlmKm9PSLPGU4Sje06p2AgTc7r2FbGjw,5312
+jax_dataclasses/_enforced_annotations.py,sha256=MbvjI4thf0iMhk9HqdGcP5NOl0ZSFdNzF6SbE4mA4TM,6625
+jax_dataclasses/_get_type_hints.py,sha256=Wsx6XHIfBm-PAn2iMY3Upqqqb6jCTUKJ6YDJo6iGPvY,2109
+jax_dataclasses/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jax_dataclasses-1.4.4.dist-info/LICENSE,sha256=MnBlxH5pv0ksFfdZjJDYTrijT9_9XFTaeVti2loT828,1065
+jax_dataclasses-1.4.4.dist-info/METADATA,sha256=c16OgHJtetQ3B_SsP0uKJvNXur911Hec-OCJYs0uUgI,9138
+jax_dataclasses-1.4.4.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+jax_dataclasses-1.4.4.dist-info/top_level.txt,sha256=CmeIP24sEeWyaIZfAr2ixJs4csOlfHEfkdlmvq8nm84,16
+jax_dataclasses-1.4.4.dist-info/RECORD,,
