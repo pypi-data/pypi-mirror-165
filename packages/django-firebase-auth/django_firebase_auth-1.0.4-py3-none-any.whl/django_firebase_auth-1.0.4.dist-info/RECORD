@@ -1,0 +1,12 @@
+django_firebase_auth/__init__.py,sha256=LeIvAa1BS1_-Zd0PN1cUepAEEmyFaaBT_QVWHd0HS_c,23
+django_firebase_auth/firebase_auth.py,sha256=_XDAkmTetpoMJlZN4YLIitGnLRrL1Y0GI9AQbXgGTLM,4562
+django_firebase_auth/managers.py,sha256=gk7pw6h0ZKhd-Jfxqj3VLSszYSv9pnqIF1tQfqK30_Y,1575
+django_firebase_auth/models.py,sha256=UGtjY1z4aZMPo3hb6TH0O-7EegfcvnWCnrkHojj20-Q,540
+django_firebase_auth/settings.py,sha256=NXoJvN3Yyp1aaNpg8wStp4rcD1HbteyKXQtJ2S4i3kU,1084
+django_firebase_auth/migrations/0001_initial.py,sha256=aVI4roVzTTeRSQg2ndqTIxYksQCD0HS909_z5h4MAq4,1191
+django_firebase_auth/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_firebase_auth-1.0.4.dist-info/LICENSE,sha256=Yv-iT5lPrQg_9QUR76-xQUZJ1o81RQDC_HyaNggmIME,1075
+django_firebase_auth-1.0.4.dist-info/METADATA,sha256=_OhlsKt_aW3QPpQgXpLknNnSdHVrrwJcRwKz5SO91lI,2607
+django_firebase_auth-1.0.4.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+django_firebase_auth-1.0.4.dist-info/top_level.txt,sha256=wodqNm_zK-VFLmbyipqRL_jlo3nAR4uIbsUZiwwhj9c,21
+django_firebase_auth-1.0.4.dist-info/RECORD,,
