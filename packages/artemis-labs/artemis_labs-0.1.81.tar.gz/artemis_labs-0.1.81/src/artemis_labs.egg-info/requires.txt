@@ -1,0 +1,7 @@
+imageio
+websockets
+numpy
+matplotlib
+seaborn
+pandas
+licensing
