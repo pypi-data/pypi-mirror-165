@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: drmanagement
+Version: 0.1
+Summary: An all in one tool for data scientists and project managers to analyze, visualize the project status
+Home-page: UNKNOWN
+Author: Team Dr.pinnacle
+Author-email: nandanr094@gmail.com
+License: UNKNOWN
+Description: Dr.Management By Dr.Pinnacle
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

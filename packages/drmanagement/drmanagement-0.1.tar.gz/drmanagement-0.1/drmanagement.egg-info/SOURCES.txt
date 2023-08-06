@@ -1,0 +1,8 @@
+README.md
+setup.py
+drmanagement/__init__.py
+drmanagement.egg-info/PKG-INFO
+drmanagement.egg-info/SOURCES.txt
+drmanagement.egg-info/dependency_links.txt
+drmanagement.egg-info/requires.txt
+drmanagement.egg-info/top_level.txt
