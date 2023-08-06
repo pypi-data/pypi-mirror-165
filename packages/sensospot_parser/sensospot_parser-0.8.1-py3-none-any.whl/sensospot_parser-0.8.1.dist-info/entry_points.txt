@@ -1,0 +1,3 @@
+[console_scripts]
+sensospot_parse=sensospot_parser:main
+
