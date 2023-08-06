@@ -1,0 +1,8 @@
+automation_frame/__init__.py,sha256=7d_igny5Qh3wLAJWQ45iWlsW_yA464h3PpyBrLNzq54,128
+automation_frame/tools/__init__.py,sha256=WrKcNvoL0QKJVmSHChLJLL3cs2BSXd-cNHZhIbfMts0,128
+automation_frame/tools/tool_http.py,sha256=V4Z43Jzrtplcu5RxAir5rEduXjp2ALGHzN0I-WZ0mSc,4203
+automation_frame-1.0.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+automation_frame-1.0.dist-info/METADATA,sha256=qZd-4AtcnRGzycDUGRPhKFvCEwh1pzW1VXJkWVecU9c,389
+automation_frame-1.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+automation_frame-1.0.dist-info/top_level.txt,sha256=I9PzGf4odsiwEzFTdD9ftWRjMiLCJzS4ffmh7jvoAfI,17
+automation_frame-1.0.dist-info/RECORD,,
