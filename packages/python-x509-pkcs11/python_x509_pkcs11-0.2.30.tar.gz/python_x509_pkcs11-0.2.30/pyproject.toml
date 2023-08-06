@@ -1,0 +1,24 @@
+description = "Python async library for signing x509 using keys in an pkcs11 device such as a HSM"
+version = "0.2.30"
+
+[build-system]
+requires = [
+    "flit_core >=2.0",
+]
+
+[tool.flit.metadata]
+module = "python_x509_pkcs11"
+
+description-file = "README.md"
+requires-python = ">=3.7"
+
+keywords = "x509,pkcs11,HSM"
+license = "MIT"
+author = "Victor Näslund"
+author-email = "victor@sunet.se"
+home-page = "https://github.com/SUNET/python_x509_pkcs11"
+
+requires = [
+    "asn1crypto>=1.4.0",
+    "python-pkcs11>=0.7.0"
+]
