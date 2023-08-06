@@ -1,0 +1,15 @@
+{
+  "command": "ping",
+  "cluster_command": "sbatch",
+  "sbatch_args": {
+    "--time": "23:59:59",
+    "--mem": "16GB"
+  },
+  "array_config": {
+    "concurrent_max": 16
+  },
+  "args": [
+    {"arg": "wikipedia.org"},
+    {"arg": "-c", "values": [4, 5, 6]}
+  ]
+}
