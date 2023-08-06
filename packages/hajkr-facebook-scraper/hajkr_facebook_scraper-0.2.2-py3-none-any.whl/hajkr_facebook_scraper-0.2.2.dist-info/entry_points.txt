@@ -1,0 +1,3 @@
+[console_scripts]
+hajkr-facebook-scraper=hajkr_facebook_scraper.__main__:run
+
