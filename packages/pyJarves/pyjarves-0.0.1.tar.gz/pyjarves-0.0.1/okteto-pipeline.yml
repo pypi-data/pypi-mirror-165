@@ -1,0 +1,3 @@
+icon: https://raw.githubusercontent.com/MrCode403/Jarves/main/resources/extras/logo_readme.jpg
+deploy:
+    - okteto deploy --build -f docker-compose.yml
