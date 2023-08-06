@@ -1,0 +1,14 @@
+kasearch/__init__.py,sha256=az3JHO4XiLd0ytnsnGp7wf9KruMPn4ab9ub-xGmWkY4,180
+kasearch/canonical_alignment.py,sha256=dg1J-5ZxjDnGTQSEchuSmcMXI3YwdsVbNFHPP-rj3Jw,4768
+kasearch/identity_calculations.py,sha256=drXqU0F-Mkm7_4Sjpx0WIREmiaERcJhnz6zopfdX1RM,4174
+kasearch/initiate_db.py,sha256=D9xmGbIvlLKFGUghknU_s579qIqENKvTJsdR6EUC3EU,2341
+kasearch/kasearch.py,sha256=SqgDEukVN0k3fizbjZr4bdbSvjdzo3Ue3eFG3OntqCc,5303
+kasearch/merge_db.py,sha256=Hbt2xLYx8pBoFe0qrc0H85C3yfI9GqlVTJbRqBX_EAI,1710
+kasearch/meta_extract.py,sha256=QPlXDrJk1k1gtVD4U6gYeJlRqwG_92OlPQiYrmOLJdw,2408
+kasearch/prepare_db.py,sha256=sURUuhBFc3IJiRLF2R07TPezlU1mvMHxBRvgtmXGTJw,5978
+kasearch/prepare_query.py,sha256=ucF3MIyM7jMWpSFLq2YKq3F1qYT3vNS9GGlUEsN6dSo,1554
+kasearch/species_anarci.py,sha256=dIPeF5KU4a8W5AvMnvkaIJu60C2MVTdPB-vhwujhlio,2304
+kasearch-0.0.7.dist-info/METADATA,sha256=w1vSNnHb6mNteJQL_van5hM-FGPvj3Q1m_x-IKdPICw,2517
+kasearch-0.0.7.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+kasearch-0.0.7.dist-info/top_level.txt,sha256=1AcL5euDORezGwwbqUjHc4b6eKpNrhXD1rimF4vkqAE,9
+kasearch-0.0.7.dist-info/RECORD,,
