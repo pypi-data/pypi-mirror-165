@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: labctrl
+Version: 0.4
+Summary: A unified framework for controlling and visualizing data collected from programmable lab instruments
+Author: Atharv Joshi
+Author-email: atharvjoshi@ymail.com
+Requires-Python: >=3.10,<3.11
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: PySide6 (>=6.2.3,<7.0.0)
+Requires-Dist: PyVISA (>=1.11.3,<2.0.0)
+Requires-Dist: PyVISA-py (>=0.5.2,<0.6.0)
+Requires-Dist: PyYAML (>=6.0,<7.0)
+Requires-Dist: Pyro5 (>=5.13.1,<6.0.0)
+Requires-Dist: h5py (>=3.6.0,<4.0.0)
+Requires-Dist: loguru (>=0.6.0,<0.7.0)
+Requires-Dist: matplotlib (>=3.5.2,<4.0.0)
+Requires-Dist: numpy (>=1.21.3,<2.0.0)
+Requires-Dist: pyqtgraph (>=0.12.4,<0.13.0)

@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "labctrl"
+version = "0.4"
+description = "A unified framework for controlling and visualizing data collected from programmable lab instruments"
+authors = ["Atharv Joshi <atharvjoshi@ymail.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.11"
+numpy = "^1.21.3"
+PyYAML = "^6.0"
+PyVISA = "^1.11.3"
+PyVISA-py = "^0.5.2"
+PySide6 = "^6.2.3"
+loguru = "^0.6.0"
+Pyro5 = "^5.13.1"
+pyqtgraph = "^0.12.4"
+h5py = "^3.6.0"
+matplotlib = "^3.5.2"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+Sphinx = "^4.2.0"
+black = "^22.3.0"
+
+[tool.poetry.scripts]
+server = "labctrl.server:main"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
