@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: ACETH
+Version: 0.0.6
+Summary: Analytics Club ETHZ helper package
+Home-page: UNKNOWN
+Author: Karim Galal, Walid Chatt
+Author-email: karim.galal@analytics-club.org, walid.chatt@analytics-club.org
+License: MIT
+Keywords: ETHZ,ethz,eth,AI,artificial intelligence,machine learning,data processing,chatbot,education,ML
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: emoji
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: sklearn
+Requires-Dist: tensorflow
+Requires-Dist: torch
+Requires-Dist: transformers
+
+UNKNOWN
+
+
