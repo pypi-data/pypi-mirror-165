@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+prob_distr_amoghx/Binomialdistribution.py
+prob_distr_amoghx/Gaussiandistribution.py
+prob_distr_amoghx/Generaldistribution.py
+prob_distr_amoghx/__init__.py
+prob_distr_amoghx.egg-info/PKG-INFO
+prob_distr_amoghx.egg-info/SOURCES.txt
+prob_distr_amoghx.egg-info/dependency_links.txt
+prob_distr_amoghx.egg-info/not-zip-safe
+prob_distr_amoghx.egg-info/top_level.txt

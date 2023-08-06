@@ -1,0 +1,1 @@
+Contains useful classes and methods for working with probability distributions: Gaussian and Binomial
