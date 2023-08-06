@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+freenlpc/__init__.py
+freenlpc/freenlpc.py
+freenlpc.egg-info/PKG-INFO
+freenlpc.egg-info/SOURCES.txt
+freenlpc.egg-info/dependency_links.txt
+freenlpc.egg-info/requires.txt
+freenlpc.egg-info/top_level.txt
