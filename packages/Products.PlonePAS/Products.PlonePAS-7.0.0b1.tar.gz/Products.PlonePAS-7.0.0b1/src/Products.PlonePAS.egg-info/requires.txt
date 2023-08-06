@@ -1,0 +1,13 @@
+plone.base
+plone.i18n
+plone.memoize
+plone.protect>=2.0.3
+plone.session
+Products.GenericSetup
+Products.PluggableAuthService>=2.0b2.dev0
+setuptools
+
+[test]
+plone.app.testing
+plone.testing
+plone.app.robotframework
