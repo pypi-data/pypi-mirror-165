@@ -1,0 +1,2 @@
+import natalie
+natalie.start()
