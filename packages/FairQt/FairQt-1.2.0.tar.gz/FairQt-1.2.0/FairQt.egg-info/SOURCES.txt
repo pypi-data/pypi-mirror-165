@@ -1,0 +1,11 @@
+setup.py
+FQt/Dialog.py
+FQt/MainWindow.py
+FQt/__init__.py
+FQt/FTemplates/__init__.py
+FQt/FTemplates/default.ui
+FairQt.egg-info/PKG-INFO
+FairQt.egg-info/SOURCES.txt
+FairQt.egg-info/dependency_links.txt
+FairQt.egg-info/requires.txt
+FairQt.egg-info/top_level.txt

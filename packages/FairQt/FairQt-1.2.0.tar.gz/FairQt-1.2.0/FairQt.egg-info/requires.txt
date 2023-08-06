@@ -1,0 +1,2 @@
+faircore>=1.0.0
+pyqt6
