@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: knarto
+Version: 0.1.5
+Summary: knada wrapper for quarto
+Home-page: UNKNOWN
+Author: NAV IKT
+Author-email: nada@nav.no
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.7
+Requires-Dist: pyyaml (==6.0)
+Requires-Dist: ipython (==7.31.1)
+Requires-Dist: requests (==2.27.1)
+
+UNKNOWN
+
