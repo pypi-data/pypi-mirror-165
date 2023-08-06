@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: pynb-dag-runner-snapshot
+Version: 0.0.6.dev1661696642
+Summary: UNKNOWN
+Home-page: https://github.com/pynb-dag-runner/pynb-dag-runner
+Author: Matias Dahl
+Author-email: matias.dahl@iki.fi
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: jinja2 (<3.1.0)
+Requires-Dist: jupytext (==1.13.5)
+Requires-Dist: notebook (==6.4.12)
+Requires-Dist: opentelemetry-api (==1.8.0)
+Requires-Dist: opentelemetry-exporter-otlp (==1.8.0)
+Requires-Dist: opentelemetry-sdk (==1.8.0)
+Requires-Dist: papermill (==2.3.3)
+Requires-Dist: protobuf (==3.20.0)
+Requires-Dist: ray[default] (==1.9.1)
+
+UNKNOWN
+
+

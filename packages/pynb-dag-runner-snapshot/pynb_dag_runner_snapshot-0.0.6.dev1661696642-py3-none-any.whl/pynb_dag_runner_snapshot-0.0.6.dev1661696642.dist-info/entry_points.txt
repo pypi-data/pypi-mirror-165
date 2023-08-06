@@ -1,0 +1,3 @@
+[console_scripts]
+pynb_log_parser = pynb_log_parser.cli:entry_point
+
