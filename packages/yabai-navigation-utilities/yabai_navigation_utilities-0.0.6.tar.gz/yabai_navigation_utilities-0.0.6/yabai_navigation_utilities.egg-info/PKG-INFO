@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: yabai-navigation-utilities
+Version: 0.0.6
+Summary: Collection of scripts to make navigating Yabai easier.
+Author: Sendhil Panchadsaram
+License: MIT
+Project-URL: GitHub, https://github.com/sendhil/yabai-navigation-utilities
+
+A set of utilities to make navigating around Yabai(https://github.com/koekeishiya/yabai) easier. Details at https://github.com/sendhil/yabai-navigation-utilities.
