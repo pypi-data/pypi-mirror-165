@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: ayllu-iot
+Version: 1.0.6
+Summary: Python Library to run IoT systems.
+Author-email: Ayllu Academy <Ayllu.Academy@ayllu.io>
+Maintainer: Moxie
+Maintainer-email: Giancarlo P <gpablo@ayllu.io>
+License: MIT License
+        
+        Copyright (c) 2021 galperins4
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+Project-URL: Homepage, http://ayllu.io/
+Project-URL: GitHub, https://github.com/AylluAcademy-org
+Keywords: iot,ayllu
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Provides-Extra: AWS
+License-File: LICENSE
+
+# Python Library for IoT
+
+This is an ongoing project to allow the creation of IoT based systems and services.
+Currently we are focusing on IoT Core from AWS, but we expect to add more providers in the future.
+
+### About Us
+Ayllu Academy is a Descentralized Education platform that is currently build on-top of the Cardano ecosystem.

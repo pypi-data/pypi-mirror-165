@@ -1,0 +1,5 @@
+python-dotenv==0.20.0
+
+[AWS]
+awscrt==0.13.11
+awsiotsdk==1.11.2
