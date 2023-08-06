@@ -1,0 +1,2 @@
+[console_scripts]
+eco_aprs_weather = eco_aprs_weather.main:main

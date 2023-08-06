@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: eco_aprs_weather
+Version: 1.0.1
+Summary: eco_aprs_weather - Python based HTTP bridge to DireWolf to beacon WX packets
+Home-page: https://github.com/jondkelley/eco_aprs_weather
+Author: N5IPT Jonathan Kelley
+Author-email: jonk@omg.lol
+License: BSD
+Platform: UNKNOWN
+
+UNKNOWN
+

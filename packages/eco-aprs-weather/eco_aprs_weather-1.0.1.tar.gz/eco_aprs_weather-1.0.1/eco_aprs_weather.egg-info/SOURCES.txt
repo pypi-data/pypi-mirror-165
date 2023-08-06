@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+eco_aprs_weather/__init__.py
+eco_aprs_weather/main.py
+eco_aprs_weather.egg-info/PKG-INFO
+eco_aprs_weather.egg-info/SOURCES.txt
+eco_aprs_weather.egg-info/dependency_links.txt
+eco_aprs_weather.egg-info/entry_points.txt
+eco_aprs_weather.egg-info/requires.txt
+eco_aprs_weather.egg-info/top_level.txt
+eco_aprs_weather/templates/sensor_overview.html
