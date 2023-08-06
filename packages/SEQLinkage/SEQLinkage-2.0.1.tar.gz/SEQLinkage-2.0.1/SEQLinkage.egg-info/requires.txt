@@ -1,0 +1,9 @@
+pip
+packaging
+numpy
+pandas
+scipy
+matplotlib
+rpy2
+
+[dev]
