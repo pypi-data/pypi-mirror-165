@@ -1,0 +1,2 @@
+[console_scripts]
+ant-walk = lant.__main__:main
