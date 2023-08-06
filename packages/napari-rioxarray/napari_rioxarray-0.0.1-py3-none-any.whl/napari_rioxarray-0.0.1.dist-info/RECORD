@@ -1,0 +1,13 @@
+napari_rioxarray/__init__.py,sha256=oHQPZKNYN5xD-hA0aFHXGes3lJa131ISkSZuyl9IZQ0,96
+napari_rioxarray/_reader.py,sha256=FNtrbaUoMw0tv1Vp8FvS5iqsgZ9sT06TXef1zopa9aA,3081
+napari_rioxarray/napari.yaml,sha256=1u1hd4X9mWWBvm2WQnP542kfEpgbglW802cDFyBNiD4,460
+napari_rioxarray/_tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+napari_rioxarray/_tests/test_reader.py,sha256=wnUz8SAAe30G0e6zaIcJ8G1Vo62i7Ec-3KtBg22x-ms,949
+napari_rioxarray/_tests/data/S2A_MSIL1C_20170102T111442_N0204_R137_T30TXT_20170102T111441_TCI_cloudoptimized_512_200m.tif,sha256=x0nVknUclhsc5J07NJzvqnNo5QwpyzQzGXg-tK96sOE,103218
+napari_rioxarray/_tests/data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+napari_rioxarray-0.0.1.dist-info/LICENSE,sha256=IWhZBlzA9bNVEK8QW8YGGCWpCLCAtvE312tudBATIaw,1491
+napari_rioxarray-0.0.1.dist-info/METADATA,sha256=tYV9E9QSPbNakZoLDe8MBnbw9jkZMhKnVqwoSm2w8ug,4182
+napari_rioxarray-0.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+napari_rioxarray-0.0.1.dist-info/entry_points.txt,sha256=cQHmeesD1VEiHTdGkkblzB6-NZ0DDqKC81QyrsheYtA,66
+napari_rioxarray-0.0.1.dist-info/top_level.txt,sha256=EAZEsHOcDdZlxfaE8Fa0EBh-9-cLXWGMUv_GfmmTLAE,17
+napari_rioxarray-0.0.1.dist-info/RECORD,,

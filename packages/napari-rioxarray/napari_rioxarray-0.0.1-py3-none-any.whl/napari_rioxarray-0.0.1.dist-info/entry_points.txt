@@ -1,0 +1,2 @@
+[napari.manifest]
+napari-rioxarray = napari_rioxarray:napari.yaml
