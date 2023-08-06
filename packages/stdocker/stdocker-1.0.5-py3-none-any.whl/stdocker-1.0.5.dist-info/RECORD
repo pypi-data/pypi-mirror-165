@@ -1,0 +1,10 @@
+stdocker/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+stdocker/cli.py,sha256=qsbOXLr95VDcpDn8vLKsQO65ohxkavns8Dgbr6ztdmg,10904
+stdocker/core.py,sha256=83_kAnyviCqWJ-mFKSuSVbhjDCarujwyZKLiDS7izAs,2348
+stdocker/version.py,sha256=A2hyo7so0ekhMgLqX7oCoQZq9eN8grvMFanPPMDXD7w,22
+stdocker-1.0.5.dist-info/LICENSE,sha256=RTpcRQX3uBNLtzyjkQyq18rO-FlNLRqXPirW5RuB_5Y,1065
+stdocker-1.0.5.dist-info/METADATA,sha256=AFps0C7w_ZMY2rqXF1fXNcnDaF5aScRAoCMPjkmUiFM,12409
+stdocker-1.0.5.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+stdocker-1.0.5.dist-info/entry_points.txt,sha256=W61A2BRFhU_FzwAX7B6sZuX_trhRuWg5hGkxntYi5Kc,48
+stdocker-1.0.5.dist-info/top_level.txt,sha256=EuvhTRlqvDRugGjoGN9jvCUjP9Mj54EG-98DJBmCRjU,9
+stdocker-1.0.5.dist-info/RECORD,,
