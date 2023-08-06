@@ -1,0 +1,5 @@
+cdci_data_analysis
+
+[test]
+pytest
+psutil

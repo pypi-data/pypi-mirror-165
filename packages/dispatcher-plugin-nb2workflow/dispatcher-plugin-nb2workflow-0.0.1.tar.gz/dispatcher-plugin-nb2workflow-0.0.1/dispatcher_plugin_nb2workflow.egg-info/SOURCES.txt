@@ -1,0 +1,12 @@
+pyproject.toml
+setup.cfg
+dispatcher_plugin_nb2workflow/__init__.py
+dispatcher_plugin_nb2workflow/dataserver_dispatcher.py
+dispatcher_plugin_nb2workflow/exposer.py
+dispatcher_plugin_nb2workflow/products.py
+dispatcher_plugin_nb2workflow/queries.py
+dispatcher_plugin_nb2workflow.egg-info/PKG-INFO
+dispatcher_plugin_nb2workflow.egg-info/SOURCES.txt
+dispatcher_plugin_nb2workflow.egg-info/dependency_links.txt
+dispatcher_plugin_nb2workflow.egg-info/requires.txt
+dispatcher_plugin_nb2workflow.egg-info/top_level.txt
