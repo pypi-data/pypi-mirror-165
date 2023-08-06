@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: climail
+Version: 2.0.2
+Summary: A Command Line Interface email client written in python.
+License: MIT
+Author: HRLO77
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: colorama (>=0.4.5,<0.5.0)
