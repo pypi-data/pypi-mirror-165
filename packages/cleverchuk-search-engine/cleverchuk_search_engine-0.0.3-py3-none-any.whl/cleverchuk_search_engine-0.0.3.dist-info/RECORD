@@ -1,0 +1,15 @@
+cleverchuk/engine/__init__.py,sha256=ikjNS09gd-fRlQw6nPqKfKbcgozaPG3OfIqL5iaeSOQ,140
+cleverchuk/engine/engine.py,sha256=yPpjpqtRtg6NTd6-TqVQ5CTbi-Qvc1--ldSqosZGRlg,1290
+cleverchuk/engine/scorer.py,sha256=-4eZZr93_dM2BiP-2UZed2nW2cN2E2o59FkA-zgvDww,2618
+cleverchuk/lib/__init__.py,sha256=sqx-POIB2KWbMnzPuhlwPm-AhJig0brSu82sjxNsH7M,746
+cleverchuk/lib/algorithm.py,sha256=LYZLAIQ1778f6vOmt8QghbJI2kUo9ganzi1pgLrgE3Y,8955
+cleverchuk/lib/codec.py,sha256=zmG_Lcb-8-wzkfHVdPWSRoCy4nVkSgPjqD_JKhxwthc,2925
+cleverchuk/lib/dstructures.py,sha256=pRZD5kKaC2In9wQ2tWLso_XIg0hWsIk1QvP_-Gr28TU,644
+cleverchuk/lib/fs.py,sha256=QaxVV1PZligu1dOuWWQ1yKezJkN-HAP6XUTXzXzXb3M,4189
+cleverchuk/lib/indexing.py,sha256=Lm9VxH2H-wi6i5t0Xgh_Ic-5H1W9Z7giTXB8rYfkzNo,6040
+cleverchuk/lib/lexers.py,sha256=FAybTLuWcqBmvjX_bdAYJIQSbgGGkSoLDpFWm4IPNA8,2243
+cleverchuk_search_engine-0.0.3.dist-info/LICENSE,sha256=tuC7DSwtYexhj7aUI9ZZokQJbuIgUO83r-YyNMexOEs,1067
+cleverchuk_search_engine-0.0.3.dist-info/METADATA,sha256=HsbAArlO5UkE4hnUeKsXwCmtKGzrUYGSJTjQQKNlxew,964
+cleverchuk_search_engine-0.0.3.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+cleverchuk_search_engine-0.0.3.dist-info/top_level.txt,sha256=dABrI-j7NytAoyqiQDWlZ2_lmpH_d8RdA4BMfkZW5xU,11
+cleverchuk_search_engine-0.0.3.dist-info/RECORD,,
