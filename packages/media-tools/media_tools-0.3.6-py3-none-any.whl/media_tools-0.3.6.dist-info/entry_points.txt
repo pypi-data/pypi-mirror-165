@@ -1,0 +1,8 @@
+[console_scripts]
+backup_lastfm_data=media_tools.backup_lastfm_data:entry
+buy_most_played=media_tools.buy_most_played:main
+clean_filenames=media_tools.clean_filenames:main
+copy_from_playlist=media_tools.copy_from_playlist:main
+mixcloud_upload=media_tools.mixcloud_upload:main
+print_length=media_tools.print_length:main
+
