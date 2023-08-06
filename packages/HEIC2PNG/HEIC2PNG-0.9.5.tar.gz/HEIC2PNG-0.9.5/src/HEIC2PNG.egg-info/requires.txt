@@ -1,0 +1,6 @@
+pillow
+pillow-heif
+fire
+
+[dev]
+check-manifest
