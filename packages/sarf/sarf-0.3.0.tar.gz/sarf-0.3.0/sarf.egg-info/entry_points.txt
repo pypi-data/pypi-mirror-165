@@ -1,0 +1,3 @@
+[console_scripts]
+sarf = sarf.sarf:main
+
