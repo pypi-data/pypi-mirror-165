@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/pyswitchbee.egg-info/PKG-INFO
+src/pyswitchbee.egg-info/SOURCES.txt
+src/pyswitchbee.egg-info/dependency_links.txt
+src/pyswitchbee.egg-info/requires.txt
+src/pyswitchbee.egg-info/top_level.txt
+src/switchbee/__init__.py
+src/switchbee/const.py
+src/switchbee/api/__init__.py
+src/switchbee/api/utils.py
+src/switchbee/device/__init__.py
