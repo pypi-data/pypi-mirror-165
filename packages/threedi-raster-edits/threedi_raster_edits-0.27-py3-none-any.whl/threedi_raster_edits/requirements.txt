@@ -1,0 +1,4 @@
+-e .[test]
+scipy
+rtree==0.9.7
+cached_property
