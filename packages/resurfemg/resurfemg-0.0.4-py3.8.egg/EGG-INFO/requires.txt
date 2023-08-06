@@ -1,0 +1,14 @@
+pyxdf
+mne
+textdistance
+pandas
+scipy
+matplotlib
+h5py
+sklearn
+
+[dev]
+pytest
+codestyle
+isort
+wheel
