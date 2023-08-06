@@ -1,0 +1,2 @@
+[console_scripts]
+puppet-tools = puppet_tools.main:entry
