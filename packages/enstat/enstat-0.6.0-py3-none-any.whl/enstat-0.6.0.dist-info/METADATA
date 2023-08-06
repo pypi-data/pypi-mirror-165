@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: enstat
+Version: 0.6.0
+Summary: Ensemble averages
+Home-page: https://github.com/tdegeus/enstat
+Author: Tom de Geus
+Author-email: tom@geus.me
+License: MIT
+Keywords: Statistics,Ensemble
+License-File: LICENSE
+Requires-Dist: numpy
+
+Ensemble averages
