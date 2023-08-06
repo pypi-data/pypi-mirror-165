@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: zaki
+Version: 0.0.2
+Summary: A small pack of function
+Home-page: https://github.com/muhammadzaki693/zaky
+Author: muhammad zaky ramadhan
+Author-email: rzaki9353@gmail.com
+License: UNKNOWN
+Description: # zaki
+        also know as zak is the author of this package
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
