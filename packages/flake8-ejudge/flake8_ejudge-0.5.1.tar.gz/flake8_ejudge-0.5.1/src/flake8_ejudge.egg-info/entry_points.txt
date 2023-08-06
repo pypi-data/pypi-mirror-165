@@ -1,0 +1,8 @@
+[console_scripts]
+flake8ejudge = flake8_ejudge.flake8_ejudge_runner:main
+
+[flake8.extension]
+N179 = flake8_ejudge.flake8_returnyesno:returnyesno
+
+[flake8.report]
+flake8ejudgeformatter = flake8_ejudge.flake8_ejudgeformatter:Flake8EjudgeFormatter

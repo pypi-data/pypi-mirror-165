@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+src/flake8_ejudge/__init__.py
+src/flake8_ejudge/flake8_ejudge_runner.py
+src/flake8_ejudge/flake8_ejudgeformatter.py
+src/flake8_ejudge/flake8_returnyesno.py
+src/flake8_ejudge/flake8_ruerrors.py
+src/flake8_ejudge.egg-info/PKG-INFO
+src/flake8_ejudge.egg-info/SOURCES.txt
+src/flake8_ejudge.egg-info/dependency_links.txt
+src/flake8_ejudge.egg-info/entry_points.txt
+src/flake8_ejudge.egg-info/requires.txt
+src/flake8_ejudge.egg-info/top_level.txt
