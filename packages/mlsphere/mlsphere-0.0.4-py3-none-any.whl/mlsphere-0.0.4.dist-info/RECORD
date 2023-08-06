@@ -1,0 +1,11 @@
+mlsphere/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mlsphere/cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mlsphere/cli/mls.py,sha256=qcbHBpKUp4cNfwbhovjv3tS0gi_g8ltD5fg4VRTnz_0,2205
+mlsphere/pkg/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mlsphere/pkg/builder.py,sha256=Bak_3UtcL6MV5YcWlxST1mGgRkgNPXCer_r9EZK0RlA,967
+mlsphere/pkg/runner.py,sha256=aYfg8zHf0wxV35R7g0y7GpzlRLheJnQMejoZTvZLLU0,1491
+mlsphere-0.0.4.data/scripts/mls.py,sha256=JinEojmgdtOE0Ypt_aJLzK6sLlpiHJsk_YCD1L4AHgI,2204
+mlsphere-0.0.4.dist-info/METADATA,sha256=fV8HqsfwesoQnj1N9R3WihKdZUI4h5r5WiveU_rnk_s,455
+mlsphere-0.0.4.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+mlsphere-0.0.4.dist-info/top_level.txt,sha256=KsNs4pMx1hNzCJrhfcjvzU-y552oxzP1pcmJsziy8UQ,9
+mlsphere-0.0.4.dist-info/RECORD,,
