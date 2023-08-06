@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: mask2former
+Version: 0.1.5
+Summary: Mask2Former
+Home-page: https://github.com/antecessor/mask2former
+Author: Reza Mohebbian
+Author-email: 
+License: Apache License 2.0
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Requires-Python: >=3.7, <3.8
+Description-Content-Type: text/markdown
+Requires-Dist: setuptools (==59.5.0)
+Requires-Dist: tensorboard
+Requires-Dist: tensorboard-pytorch
+Requires-Dist: torch (==1.9.1+cu111)
+Requires-Dist: detectron2
+Requires-Dist: deepspeed (==0.7.2)
+Requires-Dist: fairscale (==0.4.6)
+Requires-Dist: pytorch-lightning (==1.7.3)
+
