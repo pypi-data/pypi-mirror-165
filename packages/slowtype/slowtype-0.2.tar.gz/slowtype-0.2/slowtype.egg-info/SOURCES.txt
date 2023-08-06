@@ -1,0 +1,14 @@
+README.md
+setup.cfg
+setup.py
+slowtype/__init__.py
+slowtype/delaygenerators.py
+slowtype/examples.py
+slowtype/more_functions.py
+slowtype/progressbars.py
+slowtype/slowtypes.py
+slowtype.egg-info/PKG-INFO
+slowtype.egg-info/SOURCES.txt
+slowtype.egg-info/dependency_links.txt
+slowtype.egg-info/not-zip-safe
+slowtype.egg-info/top_level.txt
