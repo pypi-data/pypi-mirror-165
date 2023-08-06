@@ -1,0 +1,17 @@
+pedroai/__init__.py,sha256=42STGor_9nKYXumfeV5tiyD_M8VdcddX7CEexmibPBk,22
+pedroai/altair.py,sha256=pKwwGYxaWCEcaqiXtYVvZELfN6isrNuZ7ojC6pdn6E8,514
+pedroai/download.py,sha256=dVE34Z8G4rzYntJOwErYHy9kJernTJbwq6gJ-MicHbQ,3316
+pedroai/io.py,sha256=7387MqAyc30qxRO6XE13pMkkP5JofIBiiU3VWArF_pU,3513
+pedroai/iter.py,sha256=KMwolg1A_gspeimAGvTkEXDQhYYucGJWMkGktlBjkRU,384
+pedroai/log.py,sha256=9bg3EneuXfun4fieJr-kUn2tvA-YXqqSimkBYDfEd-w,241
+pedroai/main.py,sha256=ObUBPIc5bL5B_QoHedMOPhK-oqcv3pRv3iCMl_GwBF0,257
+pedroai/math.py,sha256=XGxmUKEmD4qVKqj7SqMo3YOOH4sz7kJNxBK_omX_82A,1391
+pedroai/notifications.py,sha256=7ReHcE8jvcafZZlDjhTYTXvU4e47Dk09C-iNY7tXSkQ,1063
+pedroai/plot.py,sha256=eyL3GI8C2shuDFuF28XkHW7FV28nRBuH68KkEb2iWSQ,1373
+pedroai/result.py,sha256=yM5peW_aHv7Uo8agRtVMZ4hF2_AP4pV6wTwdi8Rk6jk,2999
+pedroai/tex.py,sha256=o_o1PcAt2NzuuUkSNmdYCiASNzNIf1aWscM2fHyn7xE,97
+pedroai-0.4.0.dist-info/entry_points.txt,sha256=yZzH4BYZRWH5GOgpIwtkH9q7ejDz6kQ_YT2AtgZlxYg,44
+pedroai-0.4.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+pedroai-0.4.0.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+pedroai-0.4.0.dist-info/METADATA,sha256=hW4iUnctbhuwlA6buGu6k1fwQ8VVy5n326FNKlFmcoI,746
+pedroai-0.4.0.dist-info/RECORD,,
