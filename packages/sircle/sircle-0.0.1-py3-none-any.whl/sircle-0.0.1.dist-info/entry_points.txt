@@ -1,0 +1,3 @@
+[console_scripts]
+sircle = sircle.__main__:main
+
