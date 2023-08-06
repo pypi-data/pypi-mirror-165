@@ -1,0 +1,8 @@
+[
+  "gridlock/test/test_grid.py::test_draw_2shift_4x4",
+  "gridlock/test/test_grid.py::test_draw_oncenter_2x2",
+  "gridlock/test/test_grid.py::test_draw_ongrid_2x2",
+  "gridlock/test/test_grid.py::test_draw_ongrid_4x4",
+  "gridlock/test/test_grid.py::test_draw_xshift_4x4",
+  "gridlock/test/test_grid.py::test_draw_yshift_4x4"
+]
