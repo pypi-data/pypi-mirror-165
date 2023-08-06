@@ -1,0 +1,36 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_trie_nx = {'_': ['nx-74205',
+       'nx2000',
+       'nx-bit',
+       'nx-fm',
+       'nx686',
+       'nx300',
+       'nx211',
+       'nx586',
+       'nx587',
+       'nx2',
+       'nx1'],
+ 'a': ['nxamasere', 'nxamaseri', 'nxaunxau', 'nxasana', 'nxa'],
+ 'c': ['nxchange', 'nxc'],
+ 'd': ['nxdoom', 'nxdn', 'nxd'],
+ 'e': ['nxea', 'nxec'],
+ 'f': ['nxf1', 'nxf2', 'nxfm'],
+ 'g': ['nxgames', 'nxg'],
+ 'i': ['nxingha', 'nxivm'],
+ 'l': ['nxlog'],
+ 'm': ['nxmakaqu'],
+ 'n': ['nxne', 'nxnw'],
+ 'o': ['nxor'],
+ 'p': ['nxph1', 'nxph3'],
+ 'q': ['nxquake'],
+ 's': ['nxstage'],
+ 't': ['nxtosek', 'nxtv', 'nxt1', 'nxt'],
+ 'u': ['nxumalo'],
+ 'v': ['nxv'],
+ 'w': ['nxworries', 'nxwisten', 'nxwrth', 'nxwm'],
+ 'x': ['nxx'],
+ 'y': ['nxy-059']}

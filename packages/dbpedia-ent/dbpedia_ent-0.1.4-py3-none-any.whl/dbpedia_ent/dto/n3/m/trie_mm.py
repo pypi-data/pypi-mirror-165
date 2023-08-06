@@ -1,0 +1,36 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_trie_mm = {'_': ['mm_research_foundation',
+       'mm_roberts_stadium',
+       'mm_college,_bikram',
+       'mm_support_network',
+       'mm_pattison_muir',
+       'mm._de_goncourt',
+       'mm._alam_road',
+       'mm_nawab_ali',
+       'mm_alam_road',
+       'mm_1_mine',
+       'mm_2_mine',
+       'mm_of_hg'],
+ 'a': ['mmankogaedupe_secondary_school',
+       "mmabatho_people's_party",
+       'mma_weight_classes',
+       'mma_sunday_school',
+       'mma_on_cbs'],
+ 'b': ['mmbara_hulisani_kevin'],
+ 'c': ['mmc_corporation_berhad', 'mmc_norilsk_nickel', 'mmc_norlisk_nickel'],
+ 'e': ['mme._ernestine_schumann-heink',
+       'mme_de_pompadour',
+       'mme_de_beaumont',
+       'mme_de_campan',
+       'mme_du_barry',
+       'mme_de_maux'],
+ 'i': ['mmi_preparatory_school', 'mmist_cq-10_snowgoose'],
+ 'l': ['mml_capital_partners'],
+ 'm': ['mmmbop:_the_collection', 'mmm,_mmm,_mmm'],
+ 'o': ['mmo_games_magazine'],
+ 'r': ['mmr_vaccine_controversy'],
+ 'w': ['mmwr_surveillance_summaries']}

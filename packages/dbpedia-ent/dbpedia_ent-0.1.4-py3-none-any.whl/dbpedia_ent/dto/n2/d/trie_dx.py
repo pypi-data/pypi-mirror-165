@@ -1,0 +1,37 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_trie_dx = {'_': ['dx_communication',
+       'dx:iw_characters',
+       'dx_geothermal',
+       'dx_andromedae',
+       'dx_encoding',
+       'dx_services',
+       'dx_station',
+       'dx_barcode',
+       'dx7_rhodes',
+       'dx_cluster',
+       'dx_freight',
+       'dx_express',
+       'dx_studio',
+       'dx_cancri',
+       'dx-ball_2',
+       'dx_coding',
+       'dx_number',
+       'dx_group',
+       'dx_ball',
+       'dx_cas',
+       'dx_200',
+       'dx_tv',
+       'dx_11',
+       'dx_10'],
+ 'b': ['dxbr_butuan'],
+ 'c': ['dxc_technology'],
+ 'd': ['dxdt_racing'],
+ 'f': ['dxf_file'],
+ 'm': ['dxmj-tv_davao', 'dxmb_butuan'],
+ 'n': ['dxn_bridge'],
+ 'o': ['dxo_photolab', 'dxo_one'],
+ 'p': ['dxp_reductoisomerase', 'dxp_synthase']}

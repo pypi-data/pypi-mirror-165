@@ -1,0 +1,35 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_trie_xf = {'_': ['xf-84h_thunderscreech',
+       'xf-91_thunderceptor',
+       'xf-87_blackhawk',
+       'xf-15_reporter',
+       'xf2r_darkshark',
+       'xf5f_skyrocket',
+       'xf-108_rapier',
+       'xf-12_rainbow',
+       'xf-85_goblin',
+       'xf10f_jaguar',
+       'xf4u_corsair',
+       'xf-88_voodoo',
+       'xf-7_wasp',
+       'xf_73'],
+ 'a': ['xfatshedera_lizei', 'xfa_forms'],
+ 'f': ['xff_header'],
+ 'i': ['xfinity_streampix',
+       'xfinity_theatre',
+       'xfiles_episodes',
+       'xfinity_center',
+       'xfinity_flex',
+       'xfinity_500',
+       'xfinity_3d'],
+ 'l': ['xfl_airabonita', 'xfl_draft'],
+ 'm': ['xfm_manchester', 'xfm_96.3', 'xfm_92.3', 'xfm_uk'],
+ 'n': ['xfny_uav'],
+ 'p': ['xfp_transceiver'],
+ 'r': ['xfree86_modeline', 'xfree86_license'],
+ 'x': ['xfx_780i'],
+ 'y': ['xfy_pogo']}

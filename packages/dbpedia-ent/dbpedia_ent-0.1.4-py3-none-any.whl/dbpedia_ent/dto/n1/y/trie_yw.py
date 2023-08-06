@@ -1,0 +1,35 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_trie_yw = {'a': ['ywathitkon',
+       'ywathitgyi',
+       'ywadanshe',
+       'ywathit',
+       'ywaine',
+       'ywashe',
+       'ywatha',
+       'ywaba',
+       'ywain',
+       'ywama',
+       'ywam',
+       'ywa'],
+ 'c': ['ywca', 'ywc'],
+ 'g': ['ywg'],
+ 'h': ['ywhag',
+       'ywhab',
+       'ywhah',
+       'ywhaq',
+       'ywhae',
+       'ywhaz',
+       'ywhas',
+       'ywha',
+       'ywh'],
+ 'k': ['ywk'],
+ 'l': ['ywla', 'ywl'],
+ 'm': ['ywm'],
+ 'o': ['ywo'],
+ 'p': ['ywp'],
+ 's': ['yws'],
+ 'y': ['ywya', 'ywy']}

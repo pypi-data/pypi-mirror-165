@@ -1,0 +1,37 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_trie_uq = {'a': ['uqayrabah',
+       'uqayribat',
+       'uqailids',
+       'uqaylids',
+       'uqaylid',
+       'uqailid',
+       'uqayl',
+       'uqair',
+       'uqah'],
+ 'c': ['uqcrfs1',
+       'uqcrc2',
+       'uqcr11',
+       'uqcrc1',
+       'uqcrb',
+       'uqcrh',
+       'uqcc2',
+       'uqchi',
+       'uqcrq',
+       'uqcc3',
+       'uqcc'],
+ 'f': ['uqfc'],
+ 'h': ['uqhu'],
+ 'i': ['uqiyyah'],
+ 'm': ['uqm'],
+ 'n': ['uqn'],
+ 'o': ['uqo'],
+ 'p': ['uqp'],
+ 'q': ['uqqummiut'],
+ 'r': ['uqroo', 'uqrop'],
+ 's': ['uqsha'],
+ 't': ['uqturpan'],
+ 'u': ['uquiasaurus', 'uquian', 'uquia', 'uqu']}

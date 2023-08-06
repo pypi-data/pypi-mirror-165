@@ -1,0 +1,38 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_trie_vd = {'_': ['vd-dev', 'vd/vt', 'vd17'],
+ 'a': ['vdare.com',
+       'vda-fs',
+       'vdara',
+       'vdare',
+       'vdac1',
+       'vdac3',
+       'vdac2',
+       'vdax',
+       'vda'],
+ 'b': ['vdbg', 'vdbl', 'vdb'],
+ 'c': ['vdcc', 'vdcp', 'vdc'],
+ 'd': ['vddm', 'vdd'],
+ 'e': ['vde-gallo', 'vde'],
+ 'f': ['vdfy.com', 'vdfm', 'vdf'],
+ 'g': ['vdgif', 'vdgg', 'vdgs', 'vdg'],
+ 'h': ['vdh'],
+ 'i': ['vdiworks', 'vdiac', 'vdiff', 'vdisc', 'vdir', 'vdim', 'vdio', 'vdi'],
+ 'j': ['vdj'],
+ 'k': ['vdk'],
+ 'l': ['vdl'],
+ 'm': ['vdmsound', 'vdm-11', 'vdm-sl', 'vdm-1', 'vdm'],
+ 'n': ['vdnkh', 'vdnxh', 'vdnps', 'vdnx'],
+ 'o': ['vdovichenko', 'vdovolsky', 'vdovin', 'vdop', 'vdot', 'vdo'],
+ 'p': ['vdpau', 'vdps', 'vdp'],
+ 'r': ['vdrift', 'vdre', 'vdrl', 'vdr'],
+ 's': ['vdsl2', 'vdso', 'vdsl', 'vds'],
+ 't': ['vdt'],
+ 'u': ['vdub', 'vdu'],
+ 'v': ['vdv'],
+ 'w': ['vdwsa', 'vdw'],
+ 'x': ['vdx'],
+ 'z': ['vdz']}

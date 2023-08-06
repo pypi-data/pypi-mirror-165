@@ -1,0 +1,35 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_trie_fg = {'_': ['fg_hemisphere',
+       'fg_syndrome',
+       'fg_episodes',
+       'fg_sagittae',
+       'fg_burnaby',
+       'fg_endeley',
+       'fg_corsair',
+       'fg_jackson',
+       'fg_falcon',
+       'fg_method',
+       'fg_bailey',
+       'fg_bishop',
+       'fg_7142',
+       'fg_1250',
+       'fg_offr',
+       'fg_off',
+       'fg_ep',
+       'fg_42'],
+ 'c': ['fgc_ues'],
+ 'd': ['fgd_bedford'],
+ 'e': ['fged_society'],
+ 'f': ['fgf_receptor'],
+ 'g': ['fgg_labori'],
+ 'k': ['fgk_algorithm'],
+ 'l': ['fgl_productions', 'fglm_algorithm', 'fgl_sports'],
+ 'm': ['fgm-148_javelin', 'fgm-77_dragon', 'fgm-172_sraw'],
+ 'p': ['fgp_227'],
+ 'r': ['fgr-17_viper'],
+ 'u': ['fgura_united'],
+ 'v': ['fgv_management', 'fgv_brasilia']}
