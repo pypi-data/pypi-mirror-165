@@ -1,0 +1,40 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_rev_yb = {'yb-11': 'douglas_yoa-5',
+ 'yb-35': 'northrop_yb-35',
+ 'yb-40': 'yb-40_flying_fortress',
+ 'yb-43': 'xb-43_jetmaster',
+ 'yb-49': 'northrop_yb-49',
+ 'yb-52': 'b-52_stratofortress',
+ 'yb-60': 'convair_yb-60',
+ 'yb-9': 'b-9_death_angel',
+ 'yb12': 'yttrium_borides',
+ 'yb25': 'yttrium_borides',
+ 'yb66': 'yttrium_borides',
+ 'yb:yag': 'yttrium_aluminium_garnet',
+ 'yba2cu3o7': 'yttrium_barium_copper_oxide',
+ 'ybacuo': 'yttrium_barium_copper_oxide',
+ 'ybanag': 'ibanag_language',
+ 'ybanak': 'ibanag_people',
+ 'ybar': 'barcaldine_airport',
+ 'ybarro': 'ybrahim',
+ 'ybase': 'y-str',
+ 'ybau': 'badu_island_airport',
+ 'ybbn': 'brisbane_airport',
+ 'ybbsthalbahn-bergstrecke': 'ybbstalbahn',
+ 'ybcg': 'gold_coast_airport',
+ 'ybco': 'yttrium_barium_copper_oxide',
+ 'ybcs': 'cairns_airport',
+ 'ybdv': 'birdsville_airport',
+ 'ybie': 'bedourie_airport',
+ 'ybit': 'yottabit',
+ 'ybln': 'busselton_regional_airport',
+ 'ybsc': 'bright_star_catalogue',
+ 'ybud': 'bundaberg_airport',
+ 'ybuk': 'youthbank_uk',
+ 'ybx1': 'y_box_binding_protein_1',
+ 'ybyd': 'y_byd'}
+        

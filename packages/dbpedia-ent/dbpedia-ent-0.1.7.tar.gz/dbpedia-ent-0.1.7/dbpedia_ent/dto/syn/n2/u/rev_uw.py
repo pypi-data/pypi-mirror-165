@@ -1,0 +1,40 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_rev_uw = {'uw-med_school': 'university_of_wisconsin_school_of_medicine_and_public_health',
+ 'uw_colleges': 'university_of_wisconsin_colleges',
+ 'uw_everett': 'university_of_washington_north_sound',
+ 'uw_extension': 'university_of_washington_educational_outreach',
+ 'uw_fieldhouse': 'wisconsin_field_house',
+ 'uw_huskies': 'washington_huskies',
+ 'uw_law': 'university_of_washington_school_of_law',
+ 'uw_marysville': 'university_of_washington_north_sound',
+ 'uw_math': 'university_of_waterloo_faculty_of_mathematics',
+ 'uw_medflight': 'uw_med_flight',
+ 'uw_press': 'university_of_wisconsin_press',
+ 'uw_solution': 'viaspan',
+ 'uw_system': 'university_of_wisconsin_system',
+ 'uw_tacoma': 'university_of_washington_tacoma',
+ 'uwa_guild': 'university_of_western_australia_student_guild',
+ 'uwa_press': 'uwa_publishing',
+ 'uwagawa_emi': 'emi_uwagawa',
+ 'uwai_akitane': 'uwai_satokane',
+ 'uwajimaya_village': 'uwajimaya',
+ 'uways_al-gharani': 'uwais_al-qarni',
+ 'uways_al-qarani': 'uwais_al-qarni',
+ 'uways_al-qarni': 'uwais_al-qarni',
+ 'uwc_consortium': 'universal_wireless_communications_consortium',
+ 'uwe_bewersdorff': 'uwe_bewersdorf',
+ 'uwe_bol': 'uwe_boll',
+ 'uwe_bullets': 'bristol_bullets',
+ 'uwe_geertz': 'fishman_affidavit',
+ 'uwe_gemballa': 'gemballa',
+ 'uwe_laysiepen': 'ulay',
+ 'uwe_mugge': 'uwe_muegge',
+ 'uwe_winsch': 'uwe_wunsch',
+ 'uwechue_emmanuel': 'hao_ge',
+ 'uwharrie_lakes': 'uwharrie_lakes_region',
+ 'uwi_press': 'university_of_the_west_indies_press'}
+        

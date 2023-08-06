@@ -1,0 +1,42 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_rev_vy = {'vy_holden_commodore': 'holden_vy_commodore',
+ 'vyachaslau_frantsavich_kebich': 'vyachaslau_kebich',
+ 'vyacheslau_frantsavich_kebich': 'vyachaslau_kebich',
+ 'vyacheslav_aleksandrovich_ovchinnikov': 'vyacheslav_ovchinnikov',
+ 'vyacheslav_anatolyevich_shtyrov': 'vyacheslav_shtyrov',
+ 'vyacheslav_frantsevich_kebich': 'vyachaslau_kebich',
+ 'vyacheslav_kirillovich_ivankov': 'vyacheslav_ivankov',
+ 'vyacheslav_konstantinovich_plehve': 'vyacheslav_von_plehve',
+ 'vyacheslav_konstantinovich_pleve': 'vyacheslav_von_plehve',
+ 'vyacheslav_m._molotov': 'vyacheslav_molotov',
+ 'vyacheslav_maximovich_chornovil': 'vyacheslav_chornovil',
+ 'vyacheslav_mihailovich_molotov': 'vyacheslav_molotov',
+ 'vyacheslav_mikhailovich_molotov': 'vyacheslav_molotov',
+ 'vyacheslav_mikhailovich_zaitsev': 'slava_zaitsev',
+ 'vyacheslav_mikhaylovich_molotov': 'vyacheslav_molotov',
+ 'vyacheslav_mikhaylovich_skryabin': 'vyacheslav_molotov',
+ 'vyacheslav_moshe_kantor': 'viatcheslav_moshe_kantor',
+ 'vyacheslav_n._borisov': 'vyacheslav_borisov',
+ 'vyacheslav_nikolaevich_borisov': 'vyacheslav_borisov',
+ 'vyacheslav_of_kiev': 'viacheslav_i_of_kiev',
+ 'vyacheslav_petrovich_artyomov': 'vyacheslav_artyomov',
+ 'vyacheslav_rudolfovich_menzhinsky': 'vyacheslav_menzhinsky',
+ 'vyacheslav_v._ivanov': 'vyacheslav_vsevolodovich_ivanov',
+ 'vyacheslav_yevgenevich_kovalenko': 'vyacheslav_kovalenko',
+ 'vyell_edward_walker': 'v._e._walker',
+ 'vyke_communications_plc': 'vyke',
+ 'vykin_the_black': 'forever_people',
+ 'vylko_velyev_chervenkov': 'vulko_chervenkov',
+ 'vyner_of_sarawak': 'charles_vyner_brooke',
+ 'vysotsky_aleksej_vladimirovich': 'aleksey_vysotsky',
+ 'vysya_bank_ltd': 'ing_vysya_bank',
+ 'vysya_enzyme_deficiency': 'pseudocholinesterase_deficiency',
+ 'vytautas_k._jonynas': 'vytautas_kazimieras_jonynas',
+ 'vytautas_of_lithuania': 'vytautas',
+ 'vytautas_the_great': 'vytautas',
+ 'vytenis_of_lithuania': 'vytenis'}
+        

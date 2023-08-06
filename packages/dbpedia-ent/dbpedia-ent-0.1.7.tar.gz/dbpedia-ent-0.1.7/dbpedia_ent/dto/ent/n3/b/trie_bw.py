@@ -1,0 +1,37 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_trie_bw = {'_': ['bw_summer_festival', 'bw_rhode_island', 'bw_goes_c&w', 'bw_90_if'],
+ 'a': ['bwabwata_national_park', 'bwanabwana_rural_llg'],
+ 'd': ['bwda_polytechnic_college'],
+ 'e': ['bwendero_sugar_factory',
+       'bwera_general_hospital',
+       'bwesigye_bwa_mwesigire',
+       'bwe_media_networks',
+       'bwe_karen_language'],
+ 'f': ['bwf_international_challenge',
+       'bwf_international_series',
+       'bwf_world_championships',
+       'bwf_world_championship',
+       'bwf_world_ranking',
+       'bwf_future_series',
+       'bwf_super_series',
+       'bwf_world_tour'],
+ 'i': ['bwin.party_digital_entertainment',
+       'bwindi_impenetrable_forest',
+       'bwindi_community_hospital',
+       'bwi_business_district',
+       'bwire_alfred_odhiambo',
+       'bwindi_national_park',
+       'bwi_airport_station',
+       'bwi_train_station',
+       'bwia_west_indies',
+       'bwi_rail_station'],
+ 'l': ['bwlch_rangers_a.f.c.',
+       'bwlch_pen_barras',
+       'bwlch_y_ddwyallt',
+       'bwlch_y_ddeufaen',
+       'bwlch_y_groes'],
+ 't': ['bwt-stadion_am_hardtwald']}

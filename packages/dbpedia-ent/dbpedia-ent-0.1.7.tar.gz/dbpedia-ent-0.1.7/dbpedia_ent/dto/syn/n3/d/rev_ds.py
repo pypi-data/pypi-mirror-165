@@ -1,0 +1,42 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_rev_ds = {'ds9:_the_fallen': 'star_trek:_deep_space_nine:_the_fallen',
+ 'ds_al_fine': 'dal_segno',
+ 'ds_download_stations': 'ds_download_station',
+ 'ds_luke_french': 'luke_french',
+ 'ds_mel_silver': 'mel_silver',
+ 'ds_opera_browser': 'nintendo_ds_browser',
+ 'ds_option_pak': 'nintendo_ds',
+ 'ds_ray_carling': 'ray_carling',
+ 'ds_senanayake_college': 'd._s._senanayake_college',
+ 'ds_soap_awards': 'digital_spy_soap_awards',
+ 'ds_supernova_2': 'dancing_stage_supernova_2',
+ 'ds_universe_2': 'dancing_stage_universe_2',
+ 'ds_web_browser': 'nintendo_ds_browser',
+ 'dsa-58osw_battle_carbine': 'fn_fal',
+ 'dsa_practical_test': 'united_kingdom_driving_test',
+ 'dsb_class_mq': 'desiro',
+ 'dsc_arminia_bielefeld': 'arminia_bielefeld',
+ 'dschinghis_khan_family': 'dschinghis_khan',
+ 'dsg_international_ltd': 'dsg_international_ltd.',
+ 'dshk_machine_gun': 'dshk',
+ 'dsl_access_multiplexer': 'digital_subscriber_line_access_multiplexer',
+ 'dsl_blue_jays1': 'dominican_summer_blue_jays1',
+ 'dsl_blue_jays2': 'dominican_summer_blue_jays2',
+ 'dsl_red_sox': 'dominican_summer_red_sox',
+ 'dsm_cautionary_statement': 'diagnostic_and_statistical_manual_of_mental_disorders',
+ 'dsm_iv_tr': 'diagnostic_and_statistical_manual_of_mental_disorders',
+ 'dso_banik_kladno': 'sk_kladno',
+ 'dso_dynamo_praha': 'slavia_prague',
+ 'dso_tatran_teplice': 'fk_teplice',
+ 'dsrm_national_bank': 'valero_energy_corporation',
+ 'dst_systems_inc.': 'dst_systems',
+ 'dstl_porton_down': 'porton_down',
+ 'dsv-4_sea_cliff': 'dsv_sea_cliff',
+ 'dsv_1878_hannover': 'dsv_78/08_ricklingen',
+ 'dsv_alpine_donawitz': 'dsv_leoben',
+ 'dsw_heavyweight_championship': 'deep_south_heavyweight_championship'}
+        

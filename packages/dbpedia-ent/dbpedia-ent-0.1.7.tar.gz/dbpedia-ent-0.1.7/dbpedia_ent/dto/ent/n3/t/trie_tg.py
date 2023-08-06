@@ -1,0 +1,35 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_trie_tg = {'_': ['tg_shevchenko_university',
+       'tg_viktoria_augsburg',
+       'tg_henderson_house',
+       'tg_millner_field',
+       'tg_rayong_f.c.',
+       'tg_lee_dairy',
+       'tg_norba_24'],
+ 'a': ['tga_za_jug'],
+ 'b': ['tgb_akros_tec'],
+ 'f': ['tgf-beta_signaling_pathway',
+       'tgf-beta_receptor_family',
+       'tgf-beta_receptor_type-2',
+       'tgfb_signaling_pathway',
+       'tgf_beta_activation',
+       'tgf_beta_receptors',
+       'tgf_beta_receptor',
+       'tgf_beta_3',
+       'tgf_beta_2',
+       'tgf_beta_1'],
+ 'i': ['tgi_justice_project'],
+ 'm': ['tgm-79_gm_trainer', 'tgm_sv_jugesheim'],
+ 'r': ['tgr_y_class'],
+ 's': ['tgs-nopec_geophysical_systems',
+       'tgs-nopec_geophysical_company',
+       'tgs_hates_women'],
+ 'v': ['tgv_haute-picardie_station',
+       'tgv_track_construction',
+       'tgv_thalys_pbka',
+       'tgv_la_poste'],
+ 'w': ['tgw_logistics_group']}

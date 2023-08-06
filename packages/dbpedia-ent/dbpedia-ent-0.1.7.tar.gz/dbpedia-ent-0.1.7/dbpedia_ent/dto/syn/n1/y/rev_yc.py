@@ -1,0 +1,40 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_rev_yc = {'yc-122': 'yc-122_avitruc',
+ 'yc-125': 'yc-125_raider',
+ 'yc-130': 'c-130_hercules',
+ 'yc-14': 'boeing_yc-14',
+ 'yc-15': 'mcdonnell_douglas_yc-15',
+ 'yc-20': 'fokker_f.32',
+ 'yc-97j': 'c-97_stratofreighter',
+ 'ycac': 'yolo_county_arts_council',
+ 'ycat-tv': 'york_community_access_television',
+ 'ycatapom': 'ycatapom_peak',
+ 'ycbm': 'you_could_be_mine',
+ 'ycbo': 'yttrium_barium_copper_oxide',
+ 'yccc': 'yorkshire_county_cricket_club',
+ 'ycce': 'yeshwantrao_chavan_college_of_engineering',
+ 'ycdi': 'youth_of_the_centrist_democrat_international',
+ 'ycdsb': 'york_catholic_district_school_board',
+ 'yceg': 'conservative_europe_group',
+ 'ycfc': 'york_city_f.c.',
+ 'ycfs': 'coffs_harbour_airport',
+ 'ycge': 'conservative_europe_group',
+ 'ych-1b': 'ch-47_chinook',
+ 'ychezkel': 'book_of_ezekiel',
+ 'ychismb': 'you_could_have_it_so_much_better',
+ 'ycis': 'yew_chung_international_school',
+ 'ycja': 'youth_criminal_justice_act',
+ 'ycmes': 'yemen_college_of_middle_eastern_studies',
+ 'ycmhs': 'yarmouth_consolidated_memorial_high_school',
+ 'ycnagnnisssz': 'tsathoggua',
+ 'ycom': 'yokohama_commodity_exchange',
+ 'ycombinator': 'y_combinator',
+ 'ycrcb': 'ycbcr',
+ 'ycsd': 'york_county_school_division',
+ 'ycsg': 'yale_center_for_the_study_of_globalization',
+ 'ycsu': 'ycsu_young_democrats'}
+        

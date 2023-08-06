@@ -1,0 +1,37 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_trie_rg = {'_': ['rg_shepard_plantation',
+       'rg-6_grenade_launcher',
+       'rg_prestige_series',
+       'rg_postcode_area',
+       'rg_color_space',
+       'rg_postal_area'],
+ 'a': ['rgabi_ait_hassou'],
+ 'b': ['rgbe_image_format',
+       'rgb_color_spaces',
+       'rgb_colour_model',
+       'rgba_color_model',
+       'rgb_colour_space',
+       'rgba_color_space',
+       'rgb_color_space',
+       'rgb_color_model'],
+ 'c': ['rgc-80_gm_cannon'],
+ 'i': ['rgis_inventory_specialists'],
+ 'm': ['rgm-84_harpoon_missile',
+       'rgm-79c_powered_gm',
+       'rgm-79g_gm_command',
+       'rgm-15_regulus_ii',
+       'rgm-79n_gm_custom',
+       'rgm-79q_gm_quel',
+       'rgm-86r_gm_iii',
+       'rgm-79c_gm_kai',
+       'rgm-79r_gm_ii'],
+ 'n': ['rgn_hand_grenade'],
+ 'o': ['rgo_hand_grenade'],
+ 'p': ['rgp_contact_lenses'],
+ 'v': ['rgv_barracudas_fc', 'rgv_killer_bees'],
+ 'x': ['rgx-00_testament_gundam'],
+ 'y': ['rgya_gram_shad']}

@@ -1,0 +1,41 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_rev_jj = {'jj-2': 'mikoyan-gurevich_mig-15',
+ 'jj-3054': 'tam_airlines_flight_3054',
+ 'jj-4': 'mikoyan-gurevich_mig-17',
+ 'jj-5': 'shenyang_j-5',
+ 'jj-7': 'chengdu_j-7',
+ 'jj-coupling': 'angular_momentum_coupling',
+ 'jj/wbgsp': 'world_bank_scholarship',
+ 'jj3054': 'tam_airlines_flight_3054',
+ 'jjajangmyeon': 'jajangmyeon',
+ 'jjam': 'cjwa-fm',
+ 'jjam-fm': 'cjwa-fm',
+ 'jjambbong': 'korean_chinese_cuisine',
+ 'jjamppong': 'korean_chinese_cuisine',
+ 'jjap': 'japanese_journal_of_applied_physics',
+ 'jjaro': 'marathon_trilogy',
+ 'jjcet': 'j._j._college_of_engineering_and_technology',
+ 'jjdp': 'juvenile_justice_and_delinquency_prevention_act',
+ 'jjfes': 'school_board_of_alachua_county',
+ 'jjif': 'ju-jitsu_international_federation',
+ 'jjige': 'jjigae',
+ 'jjms': 'john_jay_middle_school',
+ 'jjokbali': 'jjokbari',
+ 'jjol-myeon': 'jjolmyeon',
+ 'jjol-myon': 'jjolmyeon',
+ 'jjol-myun': 'jjolmyeon',
+ 'jjolmyon': 'jjolmyeon',
+ 'jjolmyun': 'jjolmyeon',
+ 'jjr2': 'jazz_jackrabbit_2',
+ 'jjrousseau': 'jean-jacques_rousseau',
+ 'jjrtc': 'james_j._rowley_training_center',
+ 'jjs-ch': 'castleson_high',
+ 'jjs-phhc': 'jack_and_jill_school',
+ 'jjss': 'jean-jacques_servan-schreiber',
+ 'jjthomson': 'j._j._thomson',
+ 'jjwbgsp': 'world_bank_scholarship'}
+        

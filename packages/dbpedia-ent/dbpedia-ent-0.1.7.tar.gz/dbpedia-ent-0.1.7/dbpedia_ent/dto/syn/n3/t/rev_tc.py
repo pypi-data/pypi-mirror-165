@@ -1,0 +1,40 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_rev_tc = {'tc_daily_planet': 'twin_cities_daily_planet',
+ 'tc_music._llc': 'tc_music',
+ 'tc_taliaferro_house': 't._c._taliaferro_house',
+ 'tca_grade_cricket': 'tasmanian_grade_cricket',
+ 'tcd_ms_1318': 'yellow_book_of_lecan',
+ 'tcd_ms_52': 'book_of_armagh',
+ 'tcf_financial_corp.': 'tcf_financial_corporation',
+ 'tcg_muavenet-i_milliye': 'ottoman_torpedo_boat_muavenet-i_milliye',
+ 'tchaikovsky_international_competition': 'international_tchaikovsky_competition',
+ 'tchaikovsky_symphony_orchestra': 'tchaikovsky_symphony_orchestra_of_moscow_radio',
+ 'tchang_kai_check': 'chiang_kai-shek',
+ 'tchetin_hussein_kazak': 'tchetin_kazak',
+ 'tchouk_tchouk_music': 'tchouk_tchouk_musik',
+ 'tck_tck_tck': 'tcktcktck',
+ 'tcl_dev_kit': 'activestate_komodo',
+ 'tcl_multimedia_technology': 'tcl_corporation',
+ 'tcl_programming_language': 'tcl',
+ 'tcm:_the_begining': 'the_texas_chainsaw_massacre:_the_beginning',
+ 'tcm:_the_beginning': 'the_texas_chainsaw_massacre:_the_beginning',
+ 'tcm_movie_database': 'turner_classic_movies',
+ 'tcn_channel_9': 'nine_network',
+ 'tcp/ip_offload_engine': 'tcp_offload_engine',
+ 'tcp/ip_port_number': 'transmission_control_protocol',
+ 'tcp/ip_protocol_stack': 'internet_protocol_suite',
+ 'tcp/ip_protocol_suite': 'internet_protocol_suite',
+ 'tcp/ip_reference_model': 'tcp/ip_model',
+ 'tcp/ip_stack_fingerprint': 'tcp/ip_stack_fingerprinting',
+ 'tcp_ip_model': 'internet_protocol_suite',
+ 'tcp_receive_offload': 'large_receive_offload',
+ 'tcp_receive_window': 'tcp_tuning',
+ 'tcp_segmentation_offload': 'large_segment_offload',
+ 'tcp_segmentation_offloading': 'large_segment_offload',
+ 'tcp_sequence_prediction': 'tcp_sequence_prediction_attack',
+ 'tcp_slow_start': 'slow-start'}
+        

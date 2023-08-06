@@ -1,0 +1,43 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_rev_fp = {'fp_1': 'f.p.1',
+ 'fp_dimer': 'cyclopentadienyliron_dicarbonyl_dimer',
+ 'fp_dunne': 'finley_peter_dunne',
+ 'fp_haines': 'frederick_haines',
+ 'fp_journe': 'f._p._journe',
+ 'fp_receptor': 'prostaglandin_f_receptor',
+ 'fp_santangelo': 'f._p._santangelo',
+ 'fp_trophy': 'friends_provident_trophy',
+ 'fp_wood': 'frank_porter_wood',
+ 'fpa_india': 'family_planning_association_india',
+ 'fpc_alderson': 'alderson_federal_prison_camp',
+ 'fpd_chaplin': 'francis_chaplin',
+ 'fpf_cup': 'copa_paulista_de_futebol',
+ 'fpi_script': 'fps_creator',
+ 'fpk_pascal': 'free_pascal',
+ 'fpm_dram': 'dynamic_random_access_memory',
+ 'fpm_forum': 'the_orange_room',
+ 'fpm_ram': 'dynamic_random_access_memory',
+ 'fpp_scale': 'fujita_scale',
+ 'fppf_topology': 'flat_topology',
+ 'fpqc_topology': 'flat_topology',
+ 'fpr_yugoslavia': 'socialist_federal_republic_of_yugoslavia',
+ 'fps_108': 'cobra_dane',
+ 'fps_115': 'pave_paws',
+ 'fps_117': 'an/fps-117',
+ 'fps_120': 'pave_paws',
+ 'fps_123': 'pave_paws',
+ 'fps_124': 'an/fps-124',
+ 'fps_126': 'pave_paws',
+ 'fps_129': 'an/fps-129',
+ 'fps_95': 'cobra_mist',
+ 'fps_computing': 'floating_point_systems',
+ 'fps_economy': 'fps_economy_belgium',
+ 'fps_engine': 'first-person_shooter_engine',
+ 'fps_football': 'front_page_sports_football',
+ 'fpt_corporation': 'fpt_group',
+ 'fpx_file': 'flashpix'}
+        
