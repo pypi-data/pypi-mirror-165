@@ -1,0 +1,11 @@
+konoise-1.0.7.6.dist-info/METADATA,sha256=0uaBjw7J0sB1eikgFv6CdrerpuB_D7h7M1BXc-JQUJ4,7094
+konoise-1.0.7.6.dist-info/RECORD,,
+konoise-1.0.7.6.dist-info/top_level.txt,sha256=fhQG6QSlsf1qv7wxCK11fnPM8ZaQPWcvIFw4uvy9jHw,8
+konoise-1.0.7.6.dist-info/WHEEL,sha256=-ijGDuALlPxm3HbhKntps0QzHsi-DPlXqgerYTTJkFE,148
+konoise/utils.py,sha256=UBTsmfN1X8vnHWy3YazOjyJ4GbKmbMY1actoP2vENPM,1038
+konoise/rust_generator.cpython-38-x86_64-linux-gnu.so,sha256=ARUkUHDLmdQs2JzMcyNdfeajG0zWusNLTHh9SJ9upXE,4049136
+konoise/phoneme.py,sha256=JQT99Nm9VEriGMEa91noscJGuoGgw62xWKZOPbD5rOY,2573
+konoise/__init__.py,sha256=JCpqhJI8EkR-Ja9S2P8vBz4uSEmiRJA834AyQ759Xbk,90
+konoise/yamin.py,sha256=-zDAWdI7TKXejotiJCd2AOOUTv2JkzX1PeL3mLzDfEw,994
+konoise/segments.py,sha256=OCtzSz20FarqtB-lv8vhSQhYU4XE0Ojo5WfkPZlEqTM,1166
+konoise/generator.py,sha256=1j3bL41JcA1AAmEq2yirLfQYrL_G1lmoc644PX85pe0,2855
