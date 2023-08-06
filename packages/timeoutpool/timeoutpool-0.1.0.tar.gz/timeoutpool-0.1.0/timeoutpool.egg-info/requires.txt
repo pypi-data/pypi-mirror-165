@@ -1,0 +1,10 @@
+
+[docs]
+sphinx
+sphinx-gallery
+sphinx_rtd_theme
+matplotlib
+pandas
+
+[tests]
+pytest
