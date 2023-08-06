@@ -1,0 +1,9 @@
+[console_scripts]
+dc = dc:main
+gitup = gitup:main
+mtgp = mtgp_init:main
+mtxp = mtxp.app:entry
+
+[flask.commands]
+cmd1 = mtxp.commands:cli
+
