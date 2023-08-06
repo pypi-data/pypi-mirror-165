@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: foyou-down
+Version: 0.0.1
+Summary: python simple downloader
+Home-page: https://github.com/foyoux/foyou-down
+Author: foyou
+Author-email: yimi.0822@qq.com
+License: GPL-3.0
+Project-URL: Source, https://github.com/foyoux/foyou-down
+Project-URL: Bug Tracker, https://github.com/foyoux/foyou-down/issues
+Keywords: downloader
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Environment :: Console
+Classifier: Natural Language :: Chinese (Simplified)
+Classifier: Development Status :: 4 - Beta
+Requires-Python: >=3.7.*
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# foyou-down
+
+python 简单下载库
+
+## 快速入门
+
+安装
+
+```shell
+pip install -U foyou-down
+```
+
+安装完成后，会有一个 `pydown` 的命令行命令，供 cli 调用，支持断点续传 & 进度显示
+
+作为库调用
+
+```python
+from simpledown import SimpleDown
+
+if __name__ == '__main__':
+    url = 'https://w.wallhaven.cc/full/72/wallhaven-72rd8e.jpg'
+    down = SimpleDown()
+
+    down.download(url)
+```
+

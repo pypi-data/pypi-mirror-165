@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/foyou_down.egg-info/PKG-INFO
+src/foyou_down.egg-info/SOURCES.txt
+src/foyou_down.egg-info/dependency_links.txt
+src/foyou_down.egg-info/entry_points.txt
+src/foyou_down.egg-info/requires.txt
+src/foyou_down.egg-info/top_level.txt
+src/simpledown/__init__.py
