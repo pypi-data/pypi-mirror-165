@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: myca
+Version: 0.1.1
+Summary: Personalized Text Classification dataset
+Home-page: https://github.com/StefanHeng/Personalized-Productivity-Dataset
+Download-URL: https://github.com/StefanHeng/Personalized-Productivity-Dataset/archive/refs/tags/v0.1.1.tar.gz
+Author: Yuzhao Stefan Heng
+Author-email: stefan.hg@outlook.com
+License: MIT
+Keywords: python,nlp,deep-learning,text-classification,dataset
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: MacOS X
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: MacOS
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Database
+License-File: LICENSE
+
+Personalized Text Classification dataset with transient labels inspired by Myca productivity tool
+
