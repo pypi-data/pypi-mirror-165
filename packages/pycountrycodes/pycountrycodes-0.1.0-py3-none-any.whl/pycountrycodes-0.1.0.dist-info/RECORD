@@ -1,0 +1,16 @@
+pycountrycodes/__init__.py,sha256=EThOasK__7MoZRQsfdZ0fb59oDIu3NvQuq09n3M3iy8,242
+pycountrycodes/core/__init__.py,sha256=U4kngc22wU8BT5Y5PwOrSLLTRTjWtML3eSSC-GOJZLs,48
+pycountrycodes/core/binary_search.py,sha256=XK5WULAXWvul6MmQBV1jEy_Ucu5OhnTTbd6G3jlkT0k,1117
+pycountrycodes/core/config.py,sha256=0Dp8bZqW4j3MT-SKMNhj2S43G11nqdUA5YRVeB7gWzY,76
+pycountrycodes/core/models.py,sha256=Za99yXSlZLuAvx-qXHzNj7VoP4Ss9iYjJGH2Zx46VYY,7777
+pycountrycodes/core/utils.py,sha256=dMGHpNUOBBI3qukEzyVPw0TFVpHAakuU0tE-QmlKr_s,542
+pycountrycodes/countries_3166_1/__init__.py,sha256=mk3ACcF0fGFu59CGUt_j7BTMXPuMNhm_XwjmcYX_An4,61
+pycountrycodes/countries_3166_1/models.py,sha256=UT_Uk75ncqSZQM0L_kSBWT6vzWzVrd_eoIP7zpftwII,930
+pycountrycodes/iso/3166-1.json,sha256=99xVQqaSrY4jubhaahgApj96BeUkYGX6we3gTtIJzgA,43192
+pycountrycodes/iso/3166-2.json,sha256=BpDxuHy1ZFUXq4h67-2-SbltNJKLO-R28bg8X5iUGNA,495146
+pycountrycodes/subdivisions_3166_2/__init__.py,sha256=XM0ekkyjp_nUS4rlulppVjYmVVWaFTX4sS2DWFQ6YdE,67
+pycountrycodes/subdivisions_3166_2/models.py,sha256=8teSEuHMO900r8YJ6LqcWyz8t6YunsSFEKI0DgsNXwQ,2435
+pycountrycodes-0.1.0.dist-info/LICENSE,sha256=CrZGOvaH0WdFDyBJnqoJCNGZNxxJXJPMvcdk7CTbgfk,1087
+pycountrycodes-0.1.0.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+pycountrycodes-0.1.0.dist-info/METADATA,sha256=emVytuDNbD2PbtWuzTcKeX-lyB32DI60xQhjDDrNPZk,3633
+pycountrycodes-0.1.0.dist-info/RECORD,,
