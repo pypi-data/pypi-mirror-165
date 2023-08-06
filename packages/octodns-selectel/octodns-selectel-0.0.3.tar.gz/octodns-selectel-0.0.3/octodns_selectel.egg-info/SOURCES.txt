@@ -1,0 +1,8 @@
+README.md
+setup.py
+octodns_selectel/__init__.py
+octodns_selectel.egg-info/PKG-INFO
+octodns_selectel.egg-info/SOURCES.txt
+octodns_selectel.egg-info/dependency_links.txt
+octodns_selectel.egg-info/requires.txt
+octodns_selectel.egg-info/top_level.txt
