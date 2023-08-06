@@ -1,0 +1,616 @@
+<!DOCTYPE html>{% load static websockets %}
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>df_websockets</title>
+    <script src="{% static 'js/df_websockets.min.js' %}"></script>
+    <script src="{% static 'demo.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'demo.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
+            integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc"
+            crossorigin="anonymous"></script>
+</head>
+<body class="h-100 m-3">
+<h1 class="text-center">Available Javascripts signals </h1>
+<div class="accordion" id="mainAccordion">
+
+
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading_html_after">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse_html_after" aria-expanded="false" aria-controls="collapse_html_after">
+                "html.after"
+            </button>
+        </h2>
+        <div id="collapse_html_after" class="accordion-collapse collapse" aria-labelledby="heading_html_after"
+             data-bs-parent="#mainAccordion">
+            <div class="accordion-body">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <button class="btn btn-success" {% js_call 'demo.html.after' on='click' %}>Click here to trigger
+                            the signal from the server.
+                        </button>
+                    </li>
+                    <li class="after list-group-item"><i class="original">A text will be inserted after this
+                        paragraph.</i></li>
+                    <li class="after list-group-item"><i class="original">A text will be inserted after this
+                        paragraph.</i></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading_html_append">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse_html_append" aria-expanded="false" aria-controls="collapse_html_append">
+                "html.append"
+            </button>
+        </h2>
+        <div id="collapse_html_append" class="accordion-collapse collapse" aria-labelledby="heading_html_append"
+             data-bs-parent="#mainAccordion">
+            <div class="accordion-body">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <button class="btn btn-success" {% js_call 'demo.html.append' on='click' %}>Click here to
+                            trigger
+                            the signal from the server.
+                        </button>
+                    </li>
+                    <li class="append list-group-item">
+                        <i class="original">A text will be inserted at the end of this
+                            paragraph.</i>
+                    </li>
+                    <li class="append list-group-item">
+                        <i class="original">A text will be inserted at the end of this
+                            paragraph.</i>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading_html_prepend">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse_html_prepend" aria-expanded="false" aria-controls="collapse_html_prepend">
+                "html.prepend"
+            </button>
+        </h2>
+        <div id="collapse_html_prepend" class="accordion-collapse collapse" aria-labelledby="heading_html_prepend"
+             data-bs-parent="#mainAccordion">
+            <div class="accordion-body">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <button class="btn btn-success" {% js_call 'demo.html.prepend' on='click' %}>Click here to
+                            trigger
+                            the signal from the server.
+                        </button>
+                    </li>
+                    <li class="prepend list-group-item">
+                        <i class="original">A text will be inserted at the beginning of this paragraph.</i>
+                    </li>
+                    <li class="prepend list-group-item">
+                        <i class="original">A text will be inserted at the beginning of this paragraph.</i>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading_html_before">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse_html_before" aria-expanded="false" aria-controls="collapse_html_before">
+                "html.before"
+            </button>
+        </h2>
+        <div id="collapse_html_before" class="accordion-collapse collapse" aria-labelledby="heading_html_before"
+             data-bs-parent="#mainAccordion">
+            <div class="accordion-body">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <button class="btn btn-success" {% js_call 'demo.html.before' on='click' %}>Click here to
+                            trigger
+                            the signal from the server.
+                        </button>
+                    </li>
+                    <li class="before list-group-item">
+                        <i class="original">A text will be inserted before this paragraph.</i>
+                    </li>
+                    <li class="before list-group-item">
+                        <i class="original">A text will be inserted before this paragraph.</i>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading_html_content">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse_html_content" aria-expanded="false" aria-controls="collapse_html_content">
+                "html.content"
+            </button>
+        </h2>
+        <div id="collapse_html_content" class="accordion-collapse collapse" aria-labelledby="heading_html_content"
+             data-bs-parent="#mainAccordion">
+            <div class="accordion-body">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <button class="btn btn-success" {% js_call 'demo.html.content' on='click' %}>Click here to
+                            trigger
+                            the signal from the server.
+                        </button>
+                    </li>
+                    <li class="content list-group-item">
+                        <i class="original">This text will be replaced.</i>
+                    </li>
+                    <li class="content list-group-item">
+                        <i class="original">This text will be replaced.</i>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading_html_replace_with">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse_html_replace_with" aria-expanded="false"
+                    aria-controls="collapse_html_replace_with">
+                "html.replace_with"
+            </button>
+        </h2>
+        <div id="collapse_html_replace_with" class="accordion-collapse collapse"
+             aria-labelledby="heading_html_replace_with"
+             data-bs-parent="#mainAccordion">
+            <div class="accordion-body">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <button class="btn btn-success" {% js_call 'demo.html.replace_with' on='click' %}>Click here to
+                            trigger
+                            the signal from the server.
+                        </button>
+                    </li>
+                    <li class="replace_with list-group-item">
+                        <i class="original">This text will be replaced.</i>
+                    </li>
+                    <li class="replace_with list-group-item">
+                        <i class="original">This text will be replaced.</i>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading_html_empty">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse_html_empty" aria-expanded="false" aria-controls="collapse_html_empty">
+                "html.empty"
+            </button>
+        </h2>
+        <div id="collapse_html_empty" class="accordion-collapse collapse" aria-labelledby="heading_html_empty"
+             data-bs-parent="#mainAccordion">
+            <div class="accordion-body">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <button class="btn btn-success" {% js_call 'demo.html.empty' on='click' %}>Click here to
+                            trigger
+                            the signal from the server.
+                        </button>
+                    </li>
+                    <li class="empty list-group-item">
+                        <i class="original">This text will be removed but the englobing element will remain.</i>
+                    </li>
+                    <li class="empty list-group-item">
+                        <i class="original">This text will be removed but the englobing element will remain.</i>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading_html_remove">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse_html_remove" aria-expanded="false" aria-controls="collapse_html_remove">
+                "html.remove"
+            </button>
+        </h2>
+        <div id="collapse_html_remove" class="accordion-collapse collapse" aria-labelledby="heading_html_remove"
+             data-bs-parent="#mainAccordion">
+            <div class="accordion-body">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <button class="btn btn-success" {% js_call 'demo.html.remove' on='click' %}>Click here to
+                            trigger
+                            the signal from the server.
+                        </button>
+                    </li>
+                    <li class="remove list-group-item">
+                        <i class="original">This text will be removed.</i>
+                    </li>
+                    <li class="remove list-group-item">
+                        <i class="original">This text will be removed.</i>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading_html_add_class">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse_html_add_class" aria-expanded="false"
+                    aria-controls="collapse_html_add_class">
+                "html.add_class"
+            </button>
+        </h2>
+        <div id="collapse_html_add_class" class="accordion-collapse collapse" aria-labelledby="heading_html_add_class"
+             data-bs-parent="#mainAccordion">
+            <div class="accordion-body">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <button class="btn btn-success" {% js_call 'demo.html.add_class' on='click' %}>Click here to
+                            trigger
+                            the signal from the server.
+                        </button>
+                    </li>
+                    <li class="add_class list-group-item">
+                        A CSS class will be added.
+                    </li>
+                    <li class="add_class list-group-item">
+                        A CSS class will be added.
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading_html_remove_class">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse_html_remove_class" aria-expanded="false"
+                    aria-controls="collapse_html_remove_class">
+                "html.remove_class"
+            </button>
+        </h2>
+        <div id="collapse_html_remove_class" class="accordion-collapse collapse"
+             aria-labelledby="heading_html_remove_class"
+             data-bs-parent="#mainAccordion">
+            <div class="accordion-body">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <button class="btn btn-success" {% js_call 'demo.html.remove_class' on='click' %}>Click here to
+                            trigger
+                            the signal from the server.
+                        </button>
+                    </li>
+                    <li class="remove_class list-group-item text-danger">
+                        A CSS class "text-danger" will be removed.
+                    </li>
+                    <li class="remove_class list-group-item text-danger">
+                        A CSS class "text-danger" will be removed.
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading_html_remove_attr">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse_html_remove_attr" aria-expanded="false"
+                    aria-controls="collapse_html_remove_attr">
+                "html.remove_attr"
+            </button>
+        </h2>
+        <div id="collapse_html_remove_attr" class="accordion-collapse collapse"
+             aria-labelledby="heading_html_remove_attr"
+             data-bs-parent="#mainAccordion">
+            <div class="accordion-body">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <button class="btn btn-success" {% js_call 'demo.html.remove_attr' on='click' %}>Click here to
+                            trigger
+                            the signal from the server.
+                        </button>
+                    </li>
+                    <li class="remove_attr list-group-item">
+                        <label for="html_remove_attr">It will be unchecked</label> <input type="checkbox" checked
+                                                                                          id="html_remove_attr">
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading_html_add_attribute">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse_html_add_attribute" aria-expanded="false"
+                    aria-controls="collapse_html_add_attribute">
+                "html.add_attribute"
+            </button>
+        </h2>
+        <div id="collapse_html_add_attribute" class="accordion-collapse collapse"
+             aria-labelledby="heading_html_add_attribute"
+             data-bs-parent="#mainAccordion">
+            <div class="accordion-body">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <button class="btn btn-success" {% js_call 'demo.html.add_attribute' on='click' %}>Click here to
+                            trigger
+                            the signal from the server.
+                        </button>
+                    </li>
+                    <li class="add_attribute list-group-item">
+                        <label for="html_add_attribute">It will be checked</label> <input type="checkbox"
+                                                                                          id="html_add_attribute">
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading_html_boolean_attribute">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse_html_boolean_attribute" aria-expanded="false"
+                    aria-controls="collapse_html_boolean_attribute">
+                "html.boolean_attribute"
+            </button>
+        </h2>
+        <div id="collapse_html_boolean_attribute" class="accordion-collapse collapse"
+             aria-labelledby="heading_html_boolean_attribute"
+             data-bs-parent="#mainAccordion">
+            <div class="accordion-body">
+                <ul class="list-group boolean_attribute">
+                    <li class="list-group-item">
+                        <button class="btn btn-success" {% js_call 'demo.html.boolean_attribute' on='click' %}>Click
+                            here to
+                            trigger
+                            the signal from the server.
+                        </button>
+                    </li>
+                    <li class="true list-group-item">
+                        <label for="html_boolean_attribute_true">It will be checked</label> <input type="checkbox"
+                                                                                                   id="html_boolean_attribute_true">
+                    </li>
+                    <li class="false list-group-item">
+                        <label for="html_boolean_attribute_false">It will be unchecked</label> <input type="checkbox"
+                                                                                                      id="html_boolean_attribute_false"
+                                                                                                      checked>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading_html_text">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse_html_text" aria-expanded="false" aria-controls="collapse_html_text">
+                "html.text"
+            </button>
+        </h2>
+        <div id="collapse_html_text" class="accordion-collapse collapse" aria-labelledby="heading_html_text"
+             data-bs-parent="#mainAccordion">
+            <div class="accordion-body">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <button class="btn btn-success" {% js_call 'demo.html.text' on='click' %}>Click here to
+                            trigger
+                            the signal from the server.
+                        </button>
+                    </li>
+                    <li class="text list-group-item">
+                        <i class="original">This text will be replaced.</i>
+                    </li>
+                    <li class="text list-group-item">
+                        <i class="original">This text will be replaced.</i>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading_html_download_file">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse_html_download_file" aria-expanded="false"
+                    aria-controls="collapse_html_download_file">
+                "html.download_file"
+            </button>
+        </h2>
+        <div id="collapse_html_download_file" class="accordion-collapse collapse"
+             aria-labelledby="heading_html_download_file"
+             data-bs-parent="#mainAccordion">
+            <div class="accordion-body">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <button class="btn btn-success" {% js_call 'demo.html.download_file' on='click' %}>A file named
+                            "django.png" will be downloaded, as required by the server.
+                        </button>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading_html_focus">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse_html_focus" aria-expanded="false" aria-controls="collapse_html_focus">
+                "html.focus"
+            </button>
+        </h2>
+        <div id="collapse_html_focus" class="accordion-collapse collapse" aria-labelledby="heading_html_focus"
+             data-bs-parent="#mainAccordion">
+            <div class="accordion-body">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <button class="btn btn-success" {% js_call 'demo.html.focus' on='click' %}>Click here to
+                            trigger
+                            the signal from the server.
+                        </button>
+                    </li>
+                    <li class="list-group-item">
+                        <label for="html_focus"></label>
+                        <input type="text" class="focus form-control" value="The focus will be on this field"
+                               id="html_focus">
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading_html_forms_set">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse_html_forms_set" aria-expanded="false"
+                    aria-controls="collapse_html_forms_set">
+                "html.forms.set"
+            </button>
+        </h2>
+        <div id="collapse_html_forms_set" class="accordion-collapse collapse" aria-labelledby="heading_html_forms_set"
+             data-bs-parent="#mainAccordion">
+            <div class="accordion-body">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <button class="btn btn-success" {% js_call 'demo.html.forms.set' on='click' %}>Click here to
+                            trigger
+                            the signal from the server.
+                        </button>
+                    </li>
+                    <li class="list-group-item">
+                        <form class="forms-set">
+                            <ul>
+                                <li><textarea cols="30" rows="8" name="textarea"></textarea></li>
+                                <li>
+                                    <input type="radio" name="radio" value="1" checked="checked">1
+                                    <input type="radio" name="radio" value="2">2
+                                    <input type="radio" name="radio" value="3">3 (will be selected)
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="checkbox" value="1" checked="checked">1 (will be
+                                    unchecked)
+                                    <input type="checkbox" name="checkbox" value="2">2
+                                    <input type="checkbox" name="checkbox" value="3">3 (will be checked)
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="single-checkbox" value="1">
+                                    <input type="checkbox" name="single-checkbox" value="2">
+                                    <input type="radio" name="single-checkbox" value="3"> (all checkboxes will be
+                                    checked)
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="no-single-checkbox" value="1" checked>
+                                    <input type="checkbox" name="no-single-checkbox" value="2">
+                                    <input type="radio" name="no-single-checkbox" value="3" checked> (all checkboxes
+                                    will be unchecked)
+                                </li>
+                                <li><select id="simple" name="simple">
+                                    <option value="banana">Big, beautiful yellow banana</option>
+                                    <option value="cherry">Succulent, juicy cherry</option>
+                                    <option value="lemon">Sharp, powerful lemon (will be selected)</option>
+                                </select></li>
+                                <li><select id="groups" name="groups">
+                                    <optgroup label="fruits">
+                                        <option value="banana">Banana</option>
+                                        <option value="cherry" selected>Cherry</option>
+                                        <option value="lemon">Lemon</option>
+                                    </optgroup>
+                                    <optgroup label="vegetables">
+                                        <option value="carrot">Carrot</option>
+                                        <option value="eggplant">Eggplant</option>
+                                        <option value="potato">Potato</option>
+                                    </optgroup>
+                                </select></li>
+                                <li><select id="multi" name="multi" multiple size="2">
+                                    <optgroup label="fruits">
+                                        <option value="banana">Banana</option>
+                                        <option value="cherry" selected>Cherry</option>
+                                        <option value="lemon">Lemon</option>
+                                    </optgroup>
+                                    <optgroup label="vegetables">
+                                        <option value="carrot">Carrot</option>
+                                        <option value="eggplant">Eggplant</option>
+                                        <option value="potato">Potato</option>
+                                    </optgroup>
+                                </select></li>
+                            </ul>
+                        </form>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+
+        <div class="accordion-item">
+        <h2 class="accordion-header" id="heading_exceptions_server">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse_exceptions_server" aria-expanded="false"
+                    aria-controls="collapse_exceptions_server">
+                "demo.exceptions.server"
+            </button>
+        </h2>
+        <div id="collapse_exceptions_server" class="accordion-collapse collapse"
+             aria-labelledby="heading_exceptions_server"
+             data-bs-parent="#mainAccordion">
+            <div class="accordion-body">
+                <ul class="list-group exceptions_server">
+                    <li class="list-group-item">
+                        <button class="btn btn-success" {% js_call 'demo.exceptions.server' on='click' %}>
+                            Click here to trigger an error on the server.
+                        </button>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+</body>
+</html>
