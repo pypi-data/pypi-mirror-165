@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: wordnet-lookup
+Version: 0.1.0
+Summary: Static Dictionaries for Rapid Wordnet Lookups
+Author: Craig Trim
+Author-email: craigtrim@gmail.com
+Requires-Python: ==3.8.5
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: baseblock
