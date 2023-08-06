@@ -1,0 +1,2 @@
+retico_core~=0.2
+transformers~=4.21
