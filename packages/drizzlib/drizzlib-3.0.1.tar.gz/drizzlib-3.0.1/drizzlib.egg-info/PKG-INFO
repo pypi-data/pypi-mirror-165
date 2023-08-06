@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: drizzlib
+Version: 3.0.1
+Summary: Drizzlib is a drizzling module to convert from HEALPIX to WCS FITS files.
+Home-page: https://gitlab.irap.omp.eu/cade/drizzlib-python
+Author: Deborah Paradis
+Author-email: deborah.paradis@irap.omp.eu
+Maintainer: Jean-Michel Glorian
+Maintainer-email: jean-michel.glorian@irap.omp.eu
+License: CECILL v2.1
+Provides: drizzlib
+License-File: LICENSE

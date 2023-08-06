@@ -1,0 +1,18 @@
+# Customize the list of files to be added in the distribution build.
+# See https://docs.python.org/2/distutils/sourcedist.html#manifest-template
+
+# Include the init (such a pitfall!)
+include __init__.py
+
+# Include the documentation
+include README.md
+recursive-include doc *
+
+# Include PIP's requirements file
+include requirements.txt
+
+# Include the version
+include VERSION
+
+# Include the C sources
+recursive-include drizzlib/c_package *.c
