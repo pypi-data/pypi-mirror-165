@@ -1,0 +1,2 @@
+[console_scripts]
+moydomjkh = moydomjkh.command_line:main
