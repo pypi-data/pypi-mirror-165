@@ -1,0 +1,20 @@
+<datasource enabled="true" jndi-name="{jndi-name}" jta="false" pool-name="{pool-name}" use-ccm="false">
+    <connection-url>{connection-url}</connection-url>
+    <driver-class>org.postgresql.Driver</driver-class>
+    <driver>{driver}</driver>
+    <security>
+        <user-name>{ds-user}</user-name>
+        <password>{ds-pass}</password>
+    </security>
+	  <validation>
+      	<valid-connection-checker class-name="org.jboss.jca.adapters.jdbc.extensions.postgres.PostgreSQLValidConnectionChecker"/>
+	  	  <validate-on-match>false</validate-on-match>
+	  	  <background-validation>true</background-validation>
+	  	  <background-validation-millis>60000</background-validation-millis>
+	  	  <use-fast-fail>true</use-fast-fail>
+	  	  <check-valid-connection-sql>SELECT 1</check-valid-connection-sql>
+	  </validation>
+    <statement>
+        <share-prepared-statements>false</share-prepared-statements>
+    </statement>
+</datasource>
