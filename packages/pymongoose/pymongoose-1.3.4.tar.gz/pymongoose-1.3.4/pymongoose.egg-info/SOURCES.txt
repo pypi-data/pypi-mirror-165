@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+pymongoose/__init__.py
+pymongoose/logger.py
+pymongoose/methods.py
+pymongoose/mongo_types.py
+pymongoose/version.py
+pymongoose.egg-info/PKG-INFO
+pymongoose.egg-info/SOURCES.txt
+pymongoose.egg-info/dependency_links.txt
+pymongoose.egg-info/requires.txt
+pymongoose.egg-info/top_level.txt
