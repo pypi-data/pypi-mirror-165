@@ -1,0 +1,30 @@
+[package]
+name = "xmodits-lib"
+authors = ["B0ney <https://github.com/B0ney>"]
+version = "0.1.8"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+# libxmodits ~307KiB
+[dependencies]
+byteorder = "1.4.3"
+thiserror = "1.0.32"
+
+[dev-dependencies]
+sha2 = "0.10.2"
+
+[workspace]
+members = [
+    "app",
+    "pylib"
+]
+
+[profile.release]
+strip = true
+opt-level = 3       # We want to make it fast
+lto = true          # Enable Link Time Optimization
+codegen-units = 1   # Reduce number of codegen units to increase optimizations.
+# panic = 'abort'  
+
+[profile.test]
+opt-level = 1
