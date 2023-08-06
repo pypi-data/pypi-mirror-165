@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+sparkaid/__init__.py
+sparkaid/__main__.py
+sparkaid.egg-info/PKG-INFO
+sparkaid.egg-info/SOURCES.txt
+sparkaid.egg-info/dependency_links.txt
+sparkaid.egg-info/requires.txt
+sparkaid.egg-info/top_level.txt
