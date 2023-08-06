@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: monitor-logs
+Version: 0.1.2
+Summary: Monitor your logs from anywhere
+Home-page: https://github.com/Vinithavn/Monitor-model-logs/
+Description-Content-Type: text/markdown
+
+# Monitor the metrics of a model remotely, while training the model.
+
+## How to install the package?
+
+### 1. Install the monitor-logs package using.
+```pip install monitor-logs```
+				
+###	2. Import the package.
+```from monitor-logs import api```
+				
+## How to use the package?
+
+### 1. Call the API from the training script using.
+```api.call(epoch_num, actual, preds, "username", "session_name")```
+	
+**epoch_num** - Epoch num from the training\
+**actual** - 1D array of ground truth labels\
+**preds** - 1D array of predicted labels\
+**username** - username of the user\
+**session_name** - Name of the session(can be defined inside the training script)
+	
+### 2. Login to our website or Create a new account here: [Home Page](http://139.162.6.184:5000/). 
+
+### 3. Once the model starts training, go to this website: [http://139.162.6.184:5000/](http://139.162.6.184:5000/). Select your session name and metric to view the model logs.
+
+## Find the [GitHub Page here](https://github.com/Vinithavn/Monitor-model-logs).
