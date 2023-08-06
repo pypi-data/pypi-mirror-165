@@ -1,0 +1,2 @@
+[devpi_server]
+devpi-discord = devpi_discord.entrypoint
