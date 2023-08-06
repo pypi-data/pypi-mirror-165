@@ -1,0 +1,4 @@
+mistune==0.8.4
+tortilla==0.5.0
+PyYAML==6.0
+gitignore_parser==0.0.8
