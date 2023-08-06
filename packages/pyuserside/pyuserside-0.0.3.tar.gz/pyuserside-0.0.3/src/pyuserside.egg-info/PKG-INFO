@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: pyuserside
+Version: 0.0.3
+Summary: Small module to work with Userside ERP
+Home-page: https://github.com/nekonekun/pyuserside
+Author: Ivan Balakin
+Author-email: nekonekun@gmail.com
+Project-URL: Bug Tracker, https://github.com/nekonekun/pyuserside/issues/
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Utilities
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Userside ERP модуль для Python
+
+## Установка
+
+`pip install pyuserside`
+
+## Использование
+
+#### Синхронная версия
+
+`На оформлении`
+
+`Не забыть про контекстный менеджер`
+
+#### Асинхронная версия
+
+`На оформлении`
+
+`Не забыть про контекстный менеджер`
+
+## Особенности
+
+#### Валидация до отправки
+
+#### Response-классы для избранных методов
