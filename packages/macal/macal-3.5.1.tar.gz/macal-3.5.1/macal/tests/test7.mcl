@@ -1,0 +1,75 @@
+include system;
+
+var  = array;
+var[] = record;
+var[] = record;
+var[] = record;
+var[] = record;
+var[0]["id"] = 1;
+var[1]["id"] = 2;
+var[2]["id"] = 3;
+var[3]["id"] = 4;
+var[0]["title"] = "The Hobbit";
+var[1]["title"] = "Foundation";
+var[2]["title"] = "The Hitch Hikers Guide to the Galaxy";
+var[3]["title"] = "The Lord of The Rings";
+var[0]["author"] = "J.R.R. Tolkien";
+var[1]["author"] = "Isaac Asimov";
+var[2]["author"] = "Douglas Adams";
+var[3]["author"] = "J.R.R. Tolkien";
+
+console("Select tests.");
+
+
+select * from var into y;
+
+foreach y {
+	console(it);
+}
+
+console();
+console("Select statement with renaming fields and a where condition.");
+console();
+
+select author as Author, title as Title from var where author == 'J.R.R. Tolkien' into y;
+
+foreach y {
+	console(it);
+}
+
+console();
+console("Select statement with distinct.");
+console();
+
+select distinct author as Author, title as Title from var where author == 'J.R.R. Tolkien' into y;
+console(y);
+
+console();
+console("Select statement with merge.");
+console();
+
+select distinct author as Author, title as Title from var where author == 'J.R.R. Tolkien' into y;
+select distinct author as Author, title as Title from var where author == 'Douglas Adams' merge into y;
+
+foreach y {
+	console(it);
+}
+
+
+console();
+console("Select statement with non existing fields.");
+console();
+
+select author as Author, test from var where author == 'J.R.R. Tolkien' into y;
+
+console(y);
+
+def => (){
+	a = 1;
+	if a == 1 {
+		console("a is 1.");
+	}
+	console("a was not 1");
+}
+
+def();

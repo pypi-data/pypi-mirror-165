@@ -1,0 +1,26 @@
+include system;
+
+console("Tests for System Library.");
+console();
+
+x = 42;
+y = 1.1;
+hello = "Hello World";
+test = true;
+undefined = nil;
+data = array;
+data[] = 10;
+data[] = 1.1;
+moredata = record;
+moredata["test"] = 1;
+moredata["hitchhikers"] = "guidetothegalaxy";
+
+// Display the values:
+console(x, " ", y);
+console(hello);
+console(test);
+console(undefined);
+console(data[0], " : ", data[1]);
+console(moredata["test"]);
+console(moredata["hitchhikers"]);
+console();

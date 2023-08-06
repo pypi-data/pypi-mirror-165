@@ -1,0 +1,78 @@
+include system, strings, math;
+
+/*
+paramtest => (params val) {
+	//console(type(val));
+	console(len(val));
+	foreach val {
+		console(it);
+	}
+}
+
+paramtest(1, "test");
+
+
+console(2, "test2");
+
+console($"{} is a list.","this");
+*/
+var1 = 42;
+var2 = 3.14;
+var3 = "Hello World!";
+var4 = true;
+var5 = nil;
+var6 = array;
+var7 = record;
+/*
+console($"{}, {}, {}, {}, {}, {}, {}", var1, var2, var3, var4, var5, var6, var7);
+
+console();
+
+console(PI);
+
+console(type(PI));
+
+var = paramtest;
+
+console(type(var));
+
+paramtest(PI, 'PI');
+
+vartest => (variable var) {
+	console(type(var));
+	console(getValue(var));
+	console(getType(var));
+}
+
+vartest(PI);
+vartest('PI');
+
+var = 10;
+getValue(var);
+
+console("Round(PI,2): ", round(PI,2));
+console("Floor(PI):   ", floor(PI));
+console("Ceil(PI):    ", ceil(PI));
+console("E:           ", E);
+console("TAU:         ", TAU);
+console("POW(2,10):   ", pow(2,10));
+console("SQRT(25):    ", sqrt(25));
+
+*/
+
+lst = list(var1, var2, var3, var4, var5, var6, var7);
+
+foreach lst {
+	if it == nil 
+	{ 
+		continue;
+	}
+	console(it);
+}
+
+lst = list('item 1', 'item 2', 'item 3', false, 'item 4', 'item 5');
+
+foreach lst {
+	if it == false { continue; }
+	console(it);
+}

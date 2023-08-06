@@ -1,0 +1,37 @@
+%YAML 1.2
+---
+name: Macal
+scopeName: source.mcl
+fileTypes: [mcl]
+#based upon https://github.com/jordonbrill/sublime-pickbasic/blob/master/pick.YAML-tmLanguage
+
+patterns:
+- name: comment.line.asterisk.mcl
+  match: \*.*
+
+#entities
+- name: entity.name.function.mcl
+  match: (SUBROUTINE) ([A-Z_-]+)
+  captures:
+      '1': {name: storage.type.mcl}
+      '2': {name: entity.name.function.mcl}
+  comment: this will highlight the subroutine keyword and the name of the subroutine seperately
+
+#strings
+- name: string.other.quoted-or-unquoted.mcl
+  match: (\'[A-Za-z0-9\:\-\_ ]*\'|\"[A-Za-z0-9\:\-\_ ]*\")
+
+#keywords
+- name: keyword.control.mcl
+  match: \b(if|elif|else|select|distinct|as|from|where|merge|into|foreach|break|halt|return|continue|include|external)\b
+ 
+#operators
+- name: keyword.operator.mcl
+  match: (=|<|>|==|!=|\band\b|\bor\b|\bnot\b|$|\bref\b|=>)
+
+#constants
+- name: constant.numeric.mcl
+  match: \b([0-9]+)\b
+
+
+    

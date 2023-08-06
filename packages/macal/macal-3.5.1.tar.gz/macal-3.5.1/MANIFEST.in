@@ -1,0 +1,7 @@
+include LICENSE.txt
+include README.md
+include history.txt
+#//recursive-include macal/libraries *.mcl
+#//recursive-include macal/external *.py
+#//recursive-include macal/tests *
+#//recursive-include macal/sublime *

@@ -1,0 +1,77 @@
+include system;
+
+var  = array;
+var[] = record;
+var[] = record;
+var[] = record;
+var[] = record;
+var[0]["id"] = 1;
+var[1]["id"] = 2;
+var[2]["id"] = 3;
+var[3]["id"] = 4;
+var[0]["title"] = "The Hobbit";
+var[1]["title"] = "Foundation";
+var[2]["title"] = "The Hitch Hikers Guide to the Galaxy";
+var[3]["title"] = "The Lord of The Rings";
+var[0]["author"] = "J.R.R. Tolkien";
+var[1]["author"] = "Isaac Asimov";
+var[2]["author"] = "Douglas Adams";
+var[3]["author"] = "J.R.R. Tolkien";
+
+console("Tests with terminating instructions.");
+
+
+console();
+console("The return statement.");
+console();
+
+def => () {
+	a = 1;
+	if a == 1 {
+		console("a == 1");
+		return;
+	}
+	console("a != 1");
+}
+
+
+def();
+
+
+console();
+console("The break statement.");
+console();
+
+foreach var {
+	console(it["title"]);
+	break;
+	console("this doesn’t show");
+}
+
+
+console();
+console("A conditional break statement.");
+console();
+
+foreach var {
+	console(it["title"]);
+	if it["title"] == "Foundation" {
+		break;
+	}
+	console("this only shows once");
+}
+
+
+console();
+console("The halt statement.");
+console();
+
+var = "a";
+if var == "a" {
+	console("This is shown.");
+	halt 1;
+	console("This does not show.");
+}
+console("This also is not shown.");
+
+

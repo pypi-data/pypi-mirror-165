@@ -1,0 +1,18 @@
+include system;
+include array;
+
+console(type(var[0]['id']));
+console(var[0]['id'] == 1);
+
+halt 1;
+if var[0]['id'] == '1' {
+	console("hello world!");
+}
+
+
+foreach var {
+	console(it['id']);
+	if it['id'] == 3 {
+		console(it);	
+	}
+}

@@ -1,0 +1,15 @@
+include system;
+
+print => (arg) {
+    c = arg();
+    return c; 
+}
+
+fourty_two => () {
+  return 42;
+}
+
+result = print(fourty_two);
+console(result);
+
+

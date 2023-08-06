@@ -1,0 +1,7 @@
+// This is the syslog library for Macal
+// You can use it by issuing this command:
+// include syslog;
+
+syslog => (level, message) external "macal_library_syslog", "Syslog";
+syslog_init => (remote) external "macal_library_syslog", "SyslogInit";
+syslog_set_address => (address, port) external "macal_library_syslog", "SyslogSetAddress";

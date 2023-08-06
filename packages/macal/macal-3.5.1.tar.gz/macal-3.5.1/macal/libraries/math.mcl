@@ -1,0 +1,33 @@
+/*
+ This is the math library for Macal
+ You can use it by issuing this command:
+ include math;
+ Author: Marco Caspers
+ Copyright 2022 Westcon Security Netherlands
+*/
+
+PI  = 3.141592653589793;
+E   = 2.718281828459045;
+TAU = 6.283185307179586;
+
+round => (arg, digits) external "macal_library_math", "math_round";
+floor => (arg) external "macal_library_math", "math_floor";
+ceil => (arg) external "macal_library_math", "math_ceil";
+
+cos => (x) external "macal_library_math", "math_cos";
+sin => (x) external "macal_library_math", "math_sin";
+tan => (x) external "macal_library_math", "math_tan";
+acos => (x) external "macal_library_math", "math_acos";
+asin => (x) external "macal_library_math", "math_asin";
+atan => (x) external "macal_library_math", "math_atan";
+
+pow => (x, y) external "macal_library_math", "math_pow";
+sqrt => (x) external "macal_library_math", "math_sqrt";
+
+log => (x) external "macal_library_math", "math_log";
+log2 => (x) external "macal_library_math", "math_log2";
+log10 => (x) external "macal_library_math", "math_log10";
+
+exp => (x) external "macal_library_math", "math_exp";
+expm1 => (x) external "macal_library_math", "math_expm1";
+

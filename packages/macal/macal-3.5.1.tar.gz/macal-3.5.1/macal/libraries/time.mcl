@@ -1,0 +1,15 @@
+// This is the time library for Macal
+// You can use it by issuing this command:
+// include time;
+
+
+date_to_unix=> (date_str) external "macal_library_time", "DateToUnix";
+iso_to_unix=> (date_str) external "macal_library_time", "IsoToUnix";
+date_from_unix=> (seconds) external "macal_library_time", "DateFromUnix";
+iso_from_unix=> (seconds) external "macal_library_time", "IsoFromUnix";
+utcnow=> () external "macal_library_time", "UtcNow";
+utcisonow=> () external "macal_library_time", "UtcIsoNow";
+isonow=> () external "macal_library_time", "IsoNow";
+now=> () external "macal_library_time", "Now";
+perf_counter=> () external "macal_library_time", "PerfCounter";
+        

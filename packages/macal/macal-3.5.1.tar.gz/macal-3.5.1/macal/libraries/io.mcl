@@ -1,0 +1,12 @@
+// This is the io library for Macal
+// You can use it by issuing this command:
+// include io;
+
+
+load => (filename) external "macal_library_io", "Load";
+ReadJSON => (filename) external "macal_library_io", "ReadJSON";
+exists => (filename) external "macal_library_io", "Exists";
+save => (filename, content) external "macal_library_io", "Save";
+WriteJSON => (filename, content) external "macal_library_io", "WriteJSON";
+get_last_run => (org_name, iso_now) external "macal_library_io", "GetLastRun";
+set_last_run => (org_name, iso_now) external "macal_library_io", "SetLastRun";

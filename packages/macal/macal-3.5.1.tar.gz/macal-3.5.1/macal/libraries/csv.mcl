@@ -1,0 +1,7 @@
+// This is the csv library for Macal
+// You can use it by issuing this command:
+// include csv;
+
+headersToCsv => (record rec) external "macal_library_csv", "HeadersToCsv";
+valueToCsv => (record rec) external "macal_library_csv", "ValuesToCsv";
+arrayToCsv => (array arr) external "macal_library_csv", "ArrayToCsv";

@@ -1,0 +1,33 @@
+/*
+ This is the system library for Macal
+ You can use it by issuing this command:
+ include system;
+ Author: Marco Caspers
+ Copyright 2022 Westcon Security Netherlands
+*/
+
+
+console => (params args) external "macal_library_system", "console";
+//print => (params args) external "macal_library_system", "console";
+list => (params args) external "macal_library_system", "create_list";
+record_has_field => (rec, fieldname) external "macal_library_system", "record_has_field";
+type => (variable var) external "macal_library_system", "Type";
+isString => (variable var) external "macal_library_system", "IsString";
+isInt => (variable var) external "macal_library_system", "IsInt";
+isFloat => (variable var) external "macal_library_system", "IsFloat";
+isBool => (variable var) external "macal_library_system", "IsBool";
+isRecord => (variable var) external "macal_library_system", "IsRecord";
+isArray => (variable var) external "macal_library_system", "IsArray";
+isAny => (variable var) external "macal_library_system", "IsAny";
+isParams => (variable var) external "macal_library_system", "IsParams";
+isFunction => (variable var) external "macal_library_system", "IsFunction";
+isNil => (variable var) external "macal_library_system", "IsNil";
+platform => () external "macal_library_system", "GetPlatform";
+ShowVersion => () external "macal_library_system", "ShowVersion";
+items => (variable var) external "macal_library_system", "Items";
+key => (variable var) external "macal_library_system", "RecordKeyValue";
+value => (variable var) external "macal_library_system", "RecordItemValue";
+keys => (variable var) external "macal_library_system", "RecordKeys";
+values => (variable var) external "macal_library_system", "RecordValues";
+getValue => (variable var) external "macal_library_system", "GetVariableValue";
+getType => (variable var) external "macal_library_system", "GetVariableType";

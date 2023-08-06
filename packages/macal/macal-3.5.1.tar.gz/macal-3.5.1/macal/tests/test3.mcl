@@ -1,0 +1,46 @@
+include system, strings, csv, io;
+
+console("Tests for system, strings, csv and io libraries");
+
+a = array;
+
+a[] = "element 1";
+a[] = '2';
+a[] = 'test3';
+
+
+r = record;
+
+r["one"] = "a";
+r["two"] = "b";
+r["three"] = "19";
+r["four"] = "99";
+
+console("a:               ", a);
+console("Length of a[0]:  ", len(a[0]));
+console("Length of a:     ", len(a));
+console("arrayToCsv(a):   ", arrayToCsv(a));
+console();
+console("r:               ", r);
+console("Length of r:     ", len(r));
+console("headersToCsv(r): ", headersToCsv(r));
+console("valueToCsv(r):   ", valueToCsv(r));
+console();
+text = load("loremipsum.txt");
+console("Loaded text from file: loremipsum.txt");
+console();
+console(text);
+console();
+console("length of text:   ", len(text));
+console("left(text, 10):   ", left(text, 10));
+console("mid(text, 6, 11): ", mid(text, 6, 11));
+console("startswith(text, 'Lorem'): ", startswith(text,'Lorem'));
+
+console();
+console($"This format ({}) can be used to insert {} and display it in the console as if it was a single {}.", "in the first argument", 42, "string");
+
+console();
+console("Version information:");
+ShowVersion();
+
+console();
