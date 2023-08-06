@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: qlknn
+Version: 1.2.1
+Summary: Tools to create QuaLiKiz Quasi-linear gyrokinetic code Neural Networks
+Home-page: https://gitlab.com/Karel-van-de-Plassche/QLKNN-develop
+Author: Karel van de Plassche
+Author-email: k.l.vandeplassche@differ.nl
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3
+Classifier: Natural Language :: English
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Provides-Extra: training
+Provides-Extra: test
+Provides-Extra: docs
+Provides-Extra: nndb
+Provides-Extra: gui
+Provides-Extra: dataset
+Provides-Extra: pipeline
+Provides-Extra: all
+License-File: LICENSE
+
+# QLKNN
+
+*A collection of tools to create QuaLiKiz Neural Networks.*
+
+Read the [GitLab Pages](https://qualikiz-group.gitlab.io/QLKNN-develop/) and [wiki](https://gitlab.com/qualikiz-group/QuaLiKiz/-/wikis/QLKNN/QLKNN-overview) for more information.

@@ -1,0 +1,8 @@
+*.h5
+*.nc
+checkpoints
+__pycache__
+*.egg-info
+.coverage
+.cache
+qlknn/version.py
