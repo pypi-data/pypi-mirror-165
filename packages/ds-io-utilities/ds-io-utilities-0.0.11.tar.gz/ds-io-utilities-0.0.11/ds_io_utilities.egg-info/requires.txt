@@ -1,0 +1,5 @@
+hdfs>=2.0.0
+bda-service-utils
+s3fs==2022.1.0
+minio==7.1.8
+alida-arg-parser>=0.0.21
