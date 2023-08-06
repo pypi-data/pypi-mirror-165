@@ -1,0 +1,9 @@
+dimredtools_pybind.cpython-37m-darwin.so,sha256=js1_tGiISXVOB-6yFaTdB5FAOWYi8ch1hqlV4dBr6WI,230176
+dimredtools-0.1.0.dist-info/RECORD,,
+dimredtools-0.1.0.dist-info/LICENSE,sha256=gx_KffolQOEA8mKRlnVUPq_dZrcSCyJ6p_PWambCPpw,1055
+dimredtools-0.1.0.dist-info/WHEEL,sha256=t-yJnV7ncEuoOkGIUUhH14bb9iMbJ4DANdZCkJ-k_2s,110
+dimredtools-0.1.0.dist-info/top_level.txt,sha256=kQWcrOj6umlCC-WM79yKv486VRcLzIjw3pUPSDS_pzY,31
+dimredtools-0.1.0.dist-info/METADATA,sha256=6iW5CtWRN81BB6OPrXHu384rM0Di7GSfHXdl1hiFDB8,461
+dimredtools/__init__.py,sha256=N8Xd6_JH6IgJfLCc5u-1_YVlUwfhtofw9RnBjDOxn1g,342
+dimredtools/helper.py,sha256=46fM0g24M9qtqvMVtUaQ4EELQt7UPDJOV3LtHOFJplg,25
+dimredtools/.dylibs/libomp.dylib,sha256=I9-nkDzhJRGQ7T0FuKVGF_bxzUp6_g8gMcpOoS6wA5E,721088

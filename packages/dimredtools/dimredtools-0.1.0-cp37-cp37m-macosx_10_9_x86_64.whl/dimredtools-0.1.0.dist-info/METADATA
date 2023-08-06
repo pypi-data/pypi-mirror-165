@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: dimredtools
+Version: 0.1.0
+Summary: DimRedTools is a set of algorithms and data structures for dimensionality reduction
+Home-page: https://github.com/Keeper318/DimRedTools
+Author: Filipp Zapolskikh
+Author-email: fmzapolskikh@edu.hse.ru
+License: MIT
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy (>=1.15.0)
+
+DimRedTools is a set of algorithms and data structures for dimensionality reduction. WIP
