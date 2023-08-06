@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+PyDonno.egg-info/PKG-INFO
+PyDonno.egg-info/SOURCES.txt
+PyDonno.egg-info/dependency_links.txt
+PyDonno.egg-info/top_level.txt
