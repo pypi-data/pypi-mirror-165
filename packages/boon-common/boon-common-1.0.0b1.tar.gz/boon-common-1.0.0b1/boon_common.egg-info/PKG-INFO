@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: boon-common
+Version: 1.0.0b1
+Summary: Common Modules
+Home-page: https://github.com/bobobozzz/boon.git
+Author: bobobocode
+Author-email: bobobomail@yeah.net
+License: GPL v3.0
+Keywords: common,utils,protocol
+Platform: any
+License-File: LICENSE
