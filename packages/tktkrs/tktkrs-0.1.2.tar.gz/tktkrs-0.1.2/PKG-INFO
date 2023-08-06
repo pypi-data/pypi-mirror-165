@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: tktkrs
+Version: 0.1.2
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+
+# tktkrs
+for tktk pakage
+
+pip install tktkrs
+pip install tktk
+
