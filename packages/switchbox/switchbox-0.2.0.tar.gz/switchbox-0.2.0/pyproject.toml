@@ -1,0 +1,47 @@
+[tool.poetry]
+name = "switchbox"
+version = "0.2.0"
+readme = "README.md"
+description = "Tools for working with Git repositories."
+homepage = "https://pypi.org/project/switchbox/"
+repository = "https://github.com/borntyping/switchbox"
+authors = ["Sam Clements <sam@borntyping.co.uk>"]
+license = "MPL-2.0"
+packages = [
+    { include = "switchbox" }
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)",
+    "Topic :: Software Development :: Version Control :: Git",
+    "Topic :: Software Development :: Version Control",
+    "Topic :: Software Development",
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+rich = "^12.5.1"
+click = "^8.1.3"
+giturl = "^0.1.3"
+inflect = "^6.0.0"
+PyGithub = "^1.55"
+GitPython = "^3.1.27"
+
+[tool.poetry.dev-dependencies]
+black = "^22.6.0"
+mypy = "^0.971"
+pytest = "^7.1.2"
+
+[tool.poetry.scripts]
+git-switchbox = "switchbox.cli:main"
+switchbox = "switchbox.cli:main"
+
+[tool.mypy]
+files = [
+    "switchbox"
+]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
