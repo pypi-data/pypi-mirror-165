@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: rabbitfixture
+Version: 0.5.2
+Summary: Magic.
+Requires-Dist: amqp (>=2.0.0)
+Requires-Dist: fixtures (>=0.3.6)
+Requires-Dist: setuptools
+Requires-Dist: testtools (>=0.9.12)
+Requires-Dist: subprocess32 ; python_version < "3"
+Provides-Extra: test
+Requires-Dist: six ; extra == 'test'
+
