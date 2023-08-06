@@ -1,0 +1,10 @@
+README.md
+setup.py
+datasette_block_robots/__init__.py
+datasette_block_robots/hookspecs.py
+datasette_block_robots.egg-info/PKG-INFO
+datasette_block_robots.egg-info/SOURCES.txt
+datasette_block_robots.egg-info/dependency_links.txt
+datasette_block_robots.egg-info/entry_points.txt
+datasette_block_robots.egg-info/requires.txt
+datasette_block_robots.egg-info/top_level.txt
