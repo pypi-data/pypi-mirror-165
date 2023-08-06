@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: psan-mr0rang3
+Version: 1.0
+Summary: TACACS+ Passed Authentication Logs Analyzer
+Author-email: Wilfredo Davila <wildavila11@gmail.com>
+Requires-Python: >=3.10
+Requires-Dist: inquirer (==2.10.0)
+Requires-Dist: pandas (==1.4.3)
+
