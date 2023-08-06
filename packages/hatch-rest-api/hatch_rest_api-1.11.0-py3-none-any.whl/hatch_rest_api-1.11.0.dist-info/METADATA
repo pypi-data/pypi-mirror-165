@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: hatch-rest-api
+Version: 1.11.0
+Summary: Hatch Rest mini Api Wrapper
+Home-page: https://github.com/dahlb/hatch_rest_api
+Author: Brendan Dahl
+Author-email: dahl.brendan@gmail.com
+Project-URL: Bug Reports, https://github.com/dahlb/hatch_rest_api/issues
+Project-URL: Source, https://github.com/dahlb/hatch_rest_api
+Keywords: hatch,rest-mini,api
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: AsyncIO
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Python: >=3.9, <4
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aiohttp (>=3.8.1)
+Requires-Dist: awsiotsdk (>=1.10.0)
+
+Api Wrapper for Hatch Rest mini API using async in python, this was inspired by [this guide](https://developers.home-assistant.io/docs/api_lib_index) to be a lightweight wrapper, with simple error handling.
+
+a lot of this is a port of [homebridge-hatch-baby-rest](https://github.com/dgreif/homebridge-hatch-baby-rest) from node.
+
