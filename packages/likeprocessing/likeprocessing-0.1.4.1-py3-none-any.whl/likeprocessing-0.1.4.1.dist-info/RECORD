@@ -1,0 +1,14 @@
+likeprocessing/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+likeprocessing/affichage.py,sha256=hn4fYZPq0gzg2HW2k-GNihHFCDp-o4se8rpZkujaSM4,4689
+likeprocessing/couleur.py,sha256=qkwfvQYXErIka77MdflNYmHCE4dZGGKGkyHoq7bpaFw,109
+likeprocessing/formes.py,sha256=e9FO8yofw512FoH8YEqbZkNuUAjx3iMiQ3jHeMmXDKQ,12967
+likeprocessing/images.py,sha256=Rrr4rh4kVlo23zWO-GDrEQTDv1iZUHm6ulryo-B95cs,761
+likeprocessing/list_tools.py,sha256=eEEtzKlby8aG9GGSb5F9NjReQ_zW_WnfYKpcHQX7dJA,615
+likeprocessing/processing.py,sha256=6ZzNo2cYdI965mAOrC8Ou5FXeUl32o7fjuoTGfMlFBw,7577
+likeprocessing/pyDialog.py,sha256=zQixU7ZVJ8IfM2KRZWbpPEjxXNhavLLaNLE30Bg_uT4,25043
+likeprocessing/tempos.py,sha256=jn_kJlENk3ZhFGFJVHWVmA4dtZg_e_T8uJ8SxZSltUs,759
+likeprocessing/texte.py,sha256=5lGbewtR2wvTGP5ARS7BndVUgh0hdwdEnoiVTQV6lhE,2937
+likeprocessing/trigo.py,sha256=kGdJjM5FjPCFs3EYsjyRLEU57CX4K9fqHs20tts3msc,3477
+likeprocessing-0.1.4.1.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+likeprocessing-0.1.4.1.dist-info/METADATA,sha256=lpUQi5FUzHbzWlHHgNYc_waIKLWYCnCk5-1XzDjTkoE,376
+likeprocessing-0.1.4.1.dist-info/RECORD,,
