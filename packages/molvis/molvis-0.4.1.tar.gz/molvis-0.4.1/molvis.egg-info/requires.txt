@@ -1,0 +1,3 @@
+numpy
+deprecation
+xyz_py

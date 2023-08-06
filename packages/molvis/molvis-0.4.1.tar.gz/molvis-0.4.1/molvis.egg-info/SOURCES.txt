@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+molvis/__init__.py
+molvis/cli.py
+molvis/core.py
+molvis/utils.py
+molvis/version.py
+molvis.egg-info/PKG-INFO
+molvis.egg-info/SOURCES.txt
+molvis.egg-info/dependency_links.txt
+molvis.egg-info/entry_points.txt
+molvis.egg-info/requires.txt
+molvis.egg-info/top_level.txt
