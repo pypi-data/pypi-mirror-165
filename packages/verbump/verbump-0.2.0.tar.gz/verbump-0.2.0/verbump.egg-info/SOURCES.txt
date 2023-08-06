@@ -1,0 +1,12 @@
+README.md
+setup.py
+verbump/__init__.py
+verbump/cli.py
+verbump/constants.py
+verbump/git.py
+verbump/version.py
+verbump.egg-info/PKG-INFO
+verbump.egg-info/SOURCES.txt
+verbump.egg-info/dependency_links.txt
+verbump.egg-info/entry_points.txt
+verbump.egg-info/top_level.txt
