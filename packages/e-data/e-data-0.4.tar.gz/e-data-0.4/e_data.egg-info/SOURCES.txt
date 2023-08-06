@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+e_data.egg-info/PKG-INFO
+e_data.egg-info/SOURCES.txt
+e_data.egg-info/dependency_links.txt
+e_data.egg-info/requires.txt
+e_data.egg-info/top_level.txt
+edata/__init__.py
+edata/connectors.py
+edata/helpers.py
+edata/processors.py
