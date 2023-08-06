@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: LiveSync
+Version: 0.0.6
+Summary: Repeatedly synchronize local workspace with a (slow) remote machine
+Home-page: https://github.com/zauberzeug/livesync
+Author: Zauberzeug GmbH
+Author-email: info@zauberzeug.com
+License: MIT
+Keywords: snyc remote watch filesystem development deploy live hot reload
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# LiveSync
+
+Repeatedly synchronize local workspace with a (slow) remote machine
