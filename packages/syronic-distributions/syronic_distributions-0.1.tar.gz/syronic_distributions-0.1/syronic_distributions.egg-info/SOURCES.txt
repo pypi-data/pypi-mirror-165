@@ -1,0 +1,10 @@
+setup.py
+distributions/Binomialdistribution.py
+distributions/Gaussiandistribution.py
+distributions/Generaldistribution.py
+distributions/__init__.py
+syronic_distributions.egg-info/PKG-INFO
+syronic_distributions.egg-info/SOURCES.txt
+syronic_distributions.egg-info/dependency_links.txt
+syronic_distributions.egg-info/not-zip-safe
+syronic_distributions.egg-info/top_level.txt
