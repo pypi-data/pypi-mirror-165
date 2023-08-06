@@ -1,0 +1,14 @@
+numpy
+scipy
+soprano
+lark
+
+[dev]
+flake8
+black>=22.3.0
+pytest
+pre-commit
+
+[docs]
+mkdocs
+pymdown-extensions
