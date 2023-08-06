@@ -1,0 +1,3 @@
+shopline
+shopline/resources
+shopline/utils
