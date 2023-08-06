@@ -1,0 +1,12 @@
+setup.py
+MCsecdemo.egg-info/PKG-INFO
+MCsecdemo.egg-info/SOURCES.txt
+MCsecdemo.egg-info/dependency_links.txt
+MCsecdemo.egg-info/namespace_packages.txt
+MCsecdemo.egg-info/top_level.txt
+google/__init__.py
+google/unit.py
+google/auth/__init__.py
+google/auth/version.py
+sphinxcontrib/__init__.py
+sphinxcontrib/phpdomain.py
