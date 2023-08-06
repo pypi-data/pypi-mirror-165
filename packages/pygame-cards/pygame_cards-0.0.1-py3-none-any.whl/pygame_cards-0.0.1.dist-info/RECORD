@@ -1,0 +1,8 @@
+pygame_cards/__init__.py,sha256=SBuY0-404krKKuHdUNsn08FiQDB13t5agoXus9zDhQw,163
+pygame_cards/abstract.py,sha256=9uxFh3nqzFMC2oVxj9VVDV9llk_5l-5K81tEriPHoSo,3658
+pygame_cards/set.py,sha256=z4TK65WpZcBzsDdkPS2SoYuvTIvHXh8M4GkO3IMf47c,9956
+pygame_cards/utils.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pygame_cards-0.0.1.dist-info/METADATA,sha256=-BBtpAbJPfn_zhQloZqmxiQpNnIahyDY2OsC3Xfi5oA,1804
+pygame_cards-0.0.1.dist-info/WHEEL,sha256=09RFlvY3aVzvCNk4AXPZt-N-AI7GY_KktGsTb2IqIBU,86
+pygame_cards-0.0.1.dist-info/licenses/LICENSE,sha256=HNlkd0e2W8whX4N_PneP3Nxm4mb5wZCyODNcnA43PEI,1069
+pygame_cards-0.0.1.dist-info/RECORD,,
