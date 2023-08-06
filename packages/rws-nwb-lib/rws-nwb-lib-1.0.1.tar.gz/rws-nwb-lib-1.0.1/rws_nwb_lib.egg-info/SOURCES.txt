@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+rws_nwb_lib/__init__.py
+rws_nwb_lib/config.py
+rws_nwb_lib/download_nwb.py
+rws_nwb_lib.egg-info/PKG-INFO
+rws_nwb_lib.egg-info/SOURCES.txt
+rws_nwb_lib.egg-info/dependency_links.txt
+rws_nwb_lib.egg-info/requires.txt
+rws_nwb_lib.egg-info/top_level.txt
+tests/__init__.py
+tests/test_rws_nwb_lib.py
