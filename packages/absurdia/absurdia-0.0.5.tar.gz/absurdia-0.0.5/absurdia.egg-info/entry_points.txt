@@ -1,0 +1,3 @@
+[console_scripts]
+absurdia = absurdia.cli:cli
+
