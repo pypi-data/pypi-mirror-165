@@ -1,0 +1,4 @@
+aiohttp
+attrs
+discord-typings>=0.5.1
+tomli
