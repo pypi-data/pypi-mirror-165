@@ -1,0 +1,3 @@
+[console_scripts]
+hm-python=hm_python.console:main
+
