@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: roomy
+Version: 0.3.0
+Summary: A game engine specialised for building 2D non-scrolling games, written in python
+Home-page: https://github.com/immijimmi/roomy
+Author: immijimmi
+Author-email: imranhamid99@msn.com
+License: MIT
+Download-URL: https://github.com/immijimmi/roomy/archive/refs/tags/v0.3.0.tar.gz
+Description: # roomy
+        
+        ###### A game engine specialised for building 2D non-scrolling games, written in python
+        
+        ## Quickstart
+        
+        ##### TODO
+        
+Keywords: game,engine,2D
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Software Development :: Libraries :: pygame
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
