@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: hikari-yuyo
+Version: 1.1.1a1
+Summary: A collection of utility functions and classes designed to enhances Hikari.
+Keywords: hikari
+Author-email: Faster Speeding <lucina@lmbyrne.dev>
+Requires-Python: >=3.8.0,<3.12
+Description-Content-Type: text/markdown
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Communications :: Chat
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Classifier: Typing :: Typed
+Requires-Dist: asgiref~=3.0
+Requires-Dist: hikari~=2.0.0.dev109
+Project-URL: changelog, https://github.com/FasterSpeeding/Yuyo/blob/master/CHANGELOG.md
+Project-URL: documentation, https://yuyo.cursed.solutions/
+Project-URL: homepage, https://github.com/FasterSpeeding/Yuyo
+Project-URL: repository, https://github.com/FasterSpeeding/Yuyo
+
+# Yuyo
+
+A collection of utility classes and functions designed to expand Hikari.
+
+# Instillation
+
+You can install yuyo from PyPI using the following command.
+
+```
+python -m pip install -U hikari-yuyo
+```
+
+# Quick Usage.
+
+For usage see the the [documentation](https://yuyo.cursed.solutions/) and soon to come examples.
+
+# Support
+
+[Hikari's support guild](https://discord.gg/hikari) provides for support for Yuyo.
+
+# Contributing
+
+Before contributing you should read through the
+[contributing guidelines](https://github.com/FasterSpeeding/Yuyo/blob/master/CONTRIBUTING.md) and
+the [code of conduct](https://github.com/FasterSpeeding/Yuyo/blob/master/CODE_OF_CONDUCT.md)
+
