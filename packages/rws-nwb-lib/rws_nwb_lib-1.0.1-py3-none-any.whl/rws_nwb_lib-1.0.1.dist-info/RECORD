@@ -1,0 +1,11 @@
+rws_nwb_lib/__init__.py,sha256=xSRQjLpFixEZ3KhlIdsnUQSmmJr2O0mvkQ6g28JVQKg,284
+rws_nwb_lib/config.py,sha256=mCtCzbQXQvt4JR48mGk91Sw6k6Aizs_C5UobLB_XeGg,4446
+rws_nwb_lib/download_nwb.py,sha256=mKljXGgmhnOOFohXeplHRSEPtBiMmM51LeLEjLcc1MY,5189
+tests/__init__.py,sha256=iwhKnzeBJLKxpRVjvzwiRE63_zNpIBfaKLITauVph-0,24
+tests/test_rws_nwb_lib.py,sha256=Uf4tWB2RdNO2Br83nUxGFPvOTMDs77OanLzkd4p-KUw,3000
+rws_nwb_lib-1.0.1.dist-info/LICENSE,sha256=psuoW8kuDP96RQsdhzwOqi6fyWv0ct8CR6Jr7He_P_k,10173
+rws_nwb_lib-1.0.1.dist-info/METADATA,sha256=1ek2ak0-2njSYmJsBJHyhQ5V8AcQnH1iU9CeFpvktNQ,2448
+rws_nwb_lib-1.0.1.dist-info/NOTICE,sha256=4y-cfszTXNSrQgZ18EvQ1XyYxMUn9gFLIqEvvdf3IAY,110
+rws_nwb_lib-1.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+rws_nwb_lib-1.0.1.dist-info/top_level.txt,sha256=PqKUdZh7oVXC1huRfNbIIRMDfhfPdN2iCrQjWDWZfsw,18
+rws_nwb_lib-1.0.1.dist-info/RECORD,,
