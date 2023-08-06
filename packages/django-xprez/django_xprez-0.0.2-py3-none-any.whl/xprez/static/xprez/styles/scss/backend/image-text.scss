@@ -1,0 +1,66 @@
+.xprez-image-text-image,
+.xprez-image-text-text {
+	@include boxSizing;
+
+	.xprez-cell-label {
+		width: auto;
+		text-align: left;
+		display: block;
+		img {
+			width: 100%;
+			max-width: 500px;
+		}
+	}
+	.xprez-cell {
+		width: auto;
+		display: block;
+		padding-left: 0;
+		a {
+			word-break: break-all;
+		}
+	}
+}
+.xprez-image-text-text {
+	font-size: 18px;
+}
+.xprez-image-text-image {	
+	@media only screen and (min-width: 600px) {
+		float: left;
+		width: 50%;
+		padding-right: 20px;
+		.image-right & {
+			float: right;
+			padding-right: 0px;
+			padding-left: 20px;
+		}
+	}
+	.xprez-form-row {
+		display: block;
+	}
+}
+.xprez-image-text-text {
+	@media only screen and (min-width: 600px) {
+		float: right;
+		width: 50%;
+		.image-right & {
+			float: left;
+		}
+	}
+	.xprez-form-row {
+		display: block;
+	}
+}
+// .xprez-module-text-image {
+// 	.xprez-form-row {
+// 		display: block;
+// 		&:before,
+// 		&:after {
+// 		    content: " "; /* 1 */
+// 		    display: table; /* 2 */
+// 		}
+
+// 		&:after {
+// 		    clear: both;
+// 		}
+// 	}
+// }

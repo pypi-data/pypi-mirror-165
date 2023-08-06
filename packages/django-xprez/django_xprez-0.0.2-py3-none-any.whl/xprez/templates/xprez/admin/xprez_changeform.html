@@ -1,0 +1,32 @@
+{% extends change_form_extend_template %}
+{% load static i18n %}
+
+{% block content %}
+    {% with has_file_field=True %}
+        {{ block.super }}
+    {% endwith %}
+{% endblock %}
+
+{% block extrahead %}
+    {{ block.super }}
+    <script>
+        var $ = $ || django.jQuery;
+        var jQuery = jQuery || django.jQuery;
+    </script>
+    <script type="text/javascript" src="{% static 'xprez/admin/libs/jquery_ui/jquery-ui.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'xprez/admin/js/contents.js' %}"></script>
+    {% include 'xprez/includes/media.html' %}
+    <link rel="stylesheet" href="{% static "xprez/styles/xprez-backend.css" %}">
+{% endblock %}
+
+{% block inline_field_sets %}
+    {{ block.super }}
+    {% include 'xprez/admin/xprez.html' %}
+{% endblock %}
+
+{% block object-tools-items %}
+    {% if copy_supported %}
+        <li><a href="{% url copy_url_name original.pk %}">Copy</a></li>
+    {% endif %}
+    {{ block.super }}
+{% endblock %}
