@@ -1,0 +1,8 @@
+tensormodel/__init__.py,sha256=W2mh5aCFdgDyYppamocTX386QlbNSNZfFxmn0P68oWQ,29
+tensormodel/nsfw/__init__.py,sha256=qHjSdX6FurHkK6r0SjrMaoD7OELK6yzOvex7LnVkXTw,37
+tensormodel/nsfw/_nsfw.py,sha256=OspjEWItCn5IY72Ux2AzW-gQ9uYDPNMawrgESjKQLUo,7939
+tensormodel-0.1.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+tensormodel-0.1.0.dist-info/METADATA,sha256=hZBwXOcHm5_Q65dLtgFQIYNyh2JQpOdWxOzIdOW21qo,1105
+tensormodel-0.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+tensormodel-0.1.0.dist-info/top_level.txt,sha256=wKQyPo0jOPbs8D85YL6QZfNpCiAC5bk4ZZzFcBg4eQM,12
+tensormodel-0.1.0.dist-info/RECORD,,
