@@ -1,0 +1,15 @@
+plapperkasten/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+plapperkasten/config.py,sha256=TrdY0TMCNcEM_74rKMRnekszCkc5FBhrbxTL_uRLAxs,17955
+plapperkasten/event.py,sha256=rlhT4UX-K9V_YsuEOHV1hSjXf3PJGv1ytVwePLyDeFk,1028
+plapperkasten/eventmap.py,sha256=MBX-rG4rbKrXdpRX9T9iKCBv4TzgphUWGrL4P20BAY8,3433
+plapperkasten/keymap.py,sha256=8pyb8dGuaH_Xi8pDURKyVayM4Znat0kQBfnEzBQHJJA,7219
+plapperkasten/plapperkasten.py,sha256=5EoeQVr5Dk_H7WRBrRSKXTU9fMsZHPc2V8hzH92N_FM,21748
+plapperkasten/plugin.py,sha256=2vvZl-mjvv4xDrGJB2G1fHlNfOQGHzLyHZNF0SvuIkQ,7020
+plapperkasten/plapperkastenlogging/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+plapperkasten/plapperkastenlogging/plapperkastenlogging.py,sha256=5ko6_qI2-2svClIcNP7G9QdEAYp24oRf3CTTov_thC8,2746
+plapperkasten-0.1.0.dist-info/LICENSE,sha256=fhLl30uuEsshWBuhV87SDhmGoFCN0Q0Oikq5pM-U6Fw,1211
+plapperkasten-0.1.0.dist-info/METADATA,sha256=EnodC_5BGGRKCx644Mg1AM_BN-I1bJnTGh15XkpzN00,328
+plapperkasten-0.1.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+plapperkasten-0.1.0.dist-info/entry_points.txt,sha256=p9ja8Ztcg7eJhdr4RWOwuWpP5OoLYKdbkmGsDTTj7BQ,68
+plapperkasten-0.1.0.dist-info/top_level.txt,sha256=TTk8rfi_De8nE83yA0vATbmBQDa3-Fwr9h7-e8VygVA,14
+plapperkasten-0.1.0.dist-info/RECORD,,

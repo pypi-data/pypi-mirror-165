@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: plapperkasten
+Version: 0.1.0
+Summary: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+License-File: LICENSE
+Requires-Dist: pyyaml (~=6.0)
+Requires-Dist: evdev (~=1.4.0)
+Requires-Dist: python-mpd2 (~=3.0.5)
+Provides-Extra: inputgpiod
+Requires-Dist: gpiodmonitor (~=1.1.2) ; extra == 'inputgpiod'
+
+UNKNOWN
+
