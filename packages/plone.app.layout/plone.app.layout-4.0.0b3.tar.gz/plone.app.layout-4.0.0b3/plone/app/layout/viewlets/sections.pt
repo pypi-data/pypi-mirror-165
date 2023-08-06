@@ -1,0 +1,15 @@
+<tal:sections xmlns:tal="http://xml.zope.org/namespaces/tal"
+  xmlns:metal="http://xml.zope.org/namespaces/metal"
+  xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+  tal:condition="python:view.navtree" i18n:domain="plone">
+
+  <ul class="navbar-nav" id="portal-globalnav">
+    <navtree tal:replace="structure python:view.render_globalnav()" />
+  </ul>
+
+  <button class="navbar-toggler" type="button"
+    aria-label="Toggle navigation" i18n:attributes="aria-label label_toggle_navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+</tal:sections>
