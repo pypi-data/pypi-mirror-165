@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+friendly_styles/__init__.py
+friendly_styles/friendly_dark.py
+friendly_styles/friendly_light.py
+friendly_styles.egg-info/PKG-INFO
+friendly_styles.egg-info/SOURCES.txt
+friendly_styles.egg-info/dependency_links.txt
+friendly_styles.egg-info/entry_points.txt
+friendly_styles.egg-info/requires.txt
+friendly_styles.egg-info/top_level.txt
