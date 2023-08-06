@@ -1,0 +1,33 @@
+[build-system]
+requires = [
+    "setuptools>=45",
+    "setuptools_scm>=6.4",
+    "wheel>=0.37",
+    "ninja>=1.10; sys_platform != 'win32'",
+    "cmake>=3.14",
+]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+
+[tool.cibuildwheel]
+build = "cp3*"
+archs = "auto64"
+skip = "*-musllinux*"
+test-skip = "cp311-* *-macosx_arm64 *-musllinux* *aarch64"
+test-extras = ["test"]
+test-command = "python -m pytest {project}/test/python"
+environment = { DEPLOY = "ON" }
+build-frontend = "build"
+build-verbosity = 3
+manylinux-x86_64-image = "manylinux_2_28"
+
+[tool.cibuildwheel.linux]
+before-all = "/opt/python/cp39-cp39/bin/python -m pip install --upgrade pip && /opt/python/cp39-cp39/bin/python -m pip install z3-solver"
+environment = { LD_LIBRARY_PATH = "$LD_LIBRARY_PATH:/opt/python/cp39-cp39/lib/python3.9/site-packages/z3/lib", Z3_ROOT = "/opt/python/cp39-cp39/lib/python3.9/site-packages/z3", Z3_DIR = "/opt/python/cp39-cp39/lib/python3.9/site-packages/z3", DEPLOY = "ON" }
+
+[tool.cibuildwheel.macos]
+archs = "x86_64"
+environment = { MACOSX_DEPLOYMENT_TARGET = "10.15", DEPLOY = "ON" }
+
+[tool.cibuildwheel.windows]
