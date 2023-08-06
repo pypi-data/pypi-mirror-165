@@ -1,0 +1,13 @@
+setup.py
+ZiCutter/He2Zi.py
+ZiCutter/ZiCutter.py
+ZiCutter/__init__.py
+ZiCutter.egg-info/PKG-INFO
+ZiCutter.egg-info/SOURCES.txt
+ZiCutter.egg-info/dependency_links.txt
+ZiCutter.egg-info/requires.txt
+ZiCutter.egg-info/top_level.txt
+ZiCutter/HanZi/ChaiZi.txt
+ZiCutter/HanZi/HeZi.txt
+ZiCutter/HanZi/JiZi.txt
+ZiCutter/HanZi/YiTiZi.txt
