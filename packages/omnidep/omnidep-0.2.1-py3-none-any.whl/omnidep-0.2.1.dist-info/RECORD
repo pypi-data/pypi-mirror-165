@@ -1,0 +1,17 @@
+omnidep/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+omnidep/command.py,sha256=FvoFbixmd8uMZPtQZ2OrU-SzguEOrElw5NzVw-z9Awg,4905
+omnidep/errors.py,sha256=L_7jSR_9TjgCoqdGCTDq8biX-rlTpFrM1Y7f_r0JPzQ,3130
+omnidep/imports.py,sha256=txrVGY63MotVyupC0dZdZtKaCVz29DzIFNxIA7iCWxA,2083
+omnidep/main.py,sha256=eGmmN0paOSbjFQYjmo3aNn9zc_mEAh3XZxLSobXsEhc,1348
+omnidep/packages.py,sha256=V8aUjt6zoqbXXWC_0lgjJ-HHtF_L-80oWDCjVz3FLC0,3045
+omnidep/project.py,sha256=QKv0FQ3FJeqhLb5_T6cKsby0JPnR3xMM-uQORk1XEt0,6977
+omnidep/tst/errors_test.py,sha256=h0O7hv7hEQ8A1ACbv9Vv_wn4RC7V92dB9sc0shKpTM4,9452
+omnidep/tst/imports_test.py,sha256=4r6eKeQ4cpP3cYuvUSYocepzxDbtB-6BFvrc5lkA6pA,1504
+omnidep/tst/packages_test.py,sha256=18y5Czg2o5dZIz0topER9wZTGruG2ZFEc76oyCVAWtM,2602
+omnidep/tst/project_test.py,sha256=rajrY_XieNfi_OxINyuFcqMcd7KUgemepN7kMkCJFxY,273
+omnidep/tst/test_cases/every_import.py~,sha256=VQcyct_RCPQ5tXi7uPUoD3YivtYsON0otOPptoK1V7w,2266
+omnidep-0.2.1.dist-info/entry_points.txt,sha256=BNkwAdI_ARS3_ZBIK_ZoOiUqRGhniXri_QhGXXVx1GA,59
+omnidep-0.2.1.dist-info/LICENSE,sha256=rHlnlV3r9MuF_wTBQqnVokWKJfmpkI8fW5zhu-F68rE,1069
+omnidep-0.2.1.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+omnidep-0.2.1.dist-info/METADATA,sha256=conb-eOFzkjDKnqIKgnxNNNjCFrp-4Xhhcs6NCjDZk0,8540
+omnidep-0.2.1.dist-info/RECORD,,
