@@ -1,0 +1,8 @@
+setup.py
+fairdetect_groupb_Ra/__init__.py
+fairdetect_groupb_Ra.egg-info/PKG-INFO
+fairdetect_groupb_Ra.egg-info/SOURCES.txt
+fairdetect_groupb_Ra.egg-info/dependency_links.txt
+fairdetect_groupb_Ra.egg-info/not-zip-safe
+fairdetect_groupb_Ra.egg-info/requires.txt
+fairdetect_groupb_Ra.egg-info/top_level.txt
