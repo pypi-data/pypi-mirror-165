@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: hypermodern-python-example
+Version: 0.1.0
+Summary: The hypermodern Python example
+Home-page: https://github.com/username/hypermodern-python-example
+License: MIT
+Keywords: hypermodern
+Author: Paul
+Author-email: paulrousset@hotmail.fr
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: click (>=8.1.3,<9.0.0)
+Requires-Dist: importlib-metadata (>=4.12.0,<5.0.0)
+Requires-Dist: requests (>=2.28.1,<3.0.0)
+Project-URL: Repository, https://github.com/username/hypermodern-python-example
+Description-Content-Type: text/markdown
+
+[![Tests](https://github.com/paulrousset/hypermodern-python-example/workflows/Tests/badge.svg)](https://github.com/paulrousset/hypermodern-python-example/actions?workflow=Tests)
+[![Codecov](https://codecov.io/gh/paulrousset/hypermodern-python-example/branch/master/graph/badge.svg)](https://codecov.io/gh/paulrousset/hypermodern-python-example)
+[![PyPI](https://img.shields.io/pypi/v/hypermodern-python-example.svg)](https://pypi.org/project/hypermodern-python-example/)
+[![Read the Docs](https://readthedocs.org/projects/hypermodern-python-example/badge/)](https://hypermodern-python-example.readthedocs.io/)
+
+# hypermodern-python-example
+Example of setup with hypermodern python tooling
+
+
