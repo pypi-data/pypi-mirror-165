@@ -1,0 +1,11 @@
+blissful_basics/__init__.py,sha256=3xf2DrRE5e1-_cYku_2LzJmORIRVTzx7DUmqJgKttr0,42005
+blissful_basics/__dependencies__/__init__.py,sha256=5X-4M4uBa6ota5tn1iq-VO9zeJuPT94rUonLOY-9eZY,3451
+blissful_basics/__dependencies__/file_system_py/main/setup.py,sha256=syrve--czcDrVd3Vi_Ku8oJxyhpzBBKIeSkhD4UF3_U,1202
+blissful_basics/__dependencies__/file_system_py/main/file_system_py/__init__.py,sha256=3QU1WwXI3n4CryfqMepWTzY2BV4WN9taMzZ0o2nldwo,10002
+blissful_basics/__dependencies__/file_system_py/tests/main.py,sha256=5y--7HqeEcqpF8rEn_nL_YKs3JvCVM2VSN4WwQwZ7TE,525
+blissful_basics/__dependencies__/json_fix/main/setup.py,sha256=Z1-a1X6f3419GgLbGJhm8VY53cg_K55Mlv-j43clVok,1232
+blissful_basics/__dependencies__/json_fix/main/json_fix/__init__.py,sha256=4HV0B82eS0BoIDnOalr2eui_N8nRIfXysn7EfamJ8ic,2318
+blissful_basics-0.2.6.dist-info/METADATA,sha256=eyHhm3-QYUCiFzIhs5EzZEiWl6AsyW2SmTVZ9RlOG78,2801
+blissful_basics-0.2.6.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+blissful_basics-0.2.6.dist-info/top_level.txt,sha256=qMU2Sn_oGBzV5veOdq3YeIiPIFZojo_mnl3T7ez1zWM,16
+blissful_basics-0.2.6.dist-info/RECORD,,
