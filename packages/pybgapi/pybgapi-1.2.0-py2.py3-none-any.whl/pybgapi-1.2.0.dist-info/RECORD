@@ -1,0 +1,14 @@
+bgapi/__init__.py,sha256=63nYkE9IfSJviaebzI6NOjy4Y7li0t36Q6MJvnsYKUw,1354
+bgapi/apihelper.py,sha256=Hb5VSWU9MX8_9pxosBJjOvnlZ-_1BIfZ3iN0mRHgTxg,4317
+bgapi/apiparser.py,sha256=0oWJ5ohrF-FwzPEnXfeGHt2BGxKeCil9BoosIadzc9A,6700
+bgapi/bglib.py,sha256=wYq7ZYEbkOYzpgDhfuMLYspuvS0JXDCUsiCVkE5f--c,17910
+bgapi/connector.py,sha256=XeqIcZA08vRV3yJNiNYWKErcP2JhAqLL9RouBZ2ZHZM,2235
+bgapi/serdeser.py,sha256=eB51oHZxMZDHPJn8rioMsPAZ0pZFWSIx1PT0p3bmhWg,12882
+bgapi/serialconnector.py,sha256=48UlgMwKVHXOvOtL2Xs4VHNyNvtfnzxAXRIakS2_dac,2418
+bgapi/socketconnector.py,sha256=Juxy9H1_pMKu3Kkl7FFWl0Nkr8leaDjDouvNMcPHzhE,3792
+pybgapi-1.2.0.data/data/CHANGELOG.md,sha256=oE8ZPIpDhhC8w4z0qSdOWPmvQDzCV0w8snsxFeXT3Ss,506
+pybgapi-1.2.0.dist-info/LICENSE,sha256=u7nTu8CjbBvpZHZH7geUrJlYjXDsNzbRCsD2lEe8eAQ,966
+pybgapi-1.2.0.dist-info/METADATA,sha256=2rLgRTnwIgepLL0iojICFKe9hUqRXPwBdHWBVLwDMVc,6342
+pybgapi-1.2.0.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+pybgapi-1.2.0.dist-info/top_level.txt,sha256=8lXSFY2tW2cJWprULsAj52pSYDvPNhcoZKobZkZ9iEw,6
+pybgapi-1.2.0.dist-info/RECORD,,
