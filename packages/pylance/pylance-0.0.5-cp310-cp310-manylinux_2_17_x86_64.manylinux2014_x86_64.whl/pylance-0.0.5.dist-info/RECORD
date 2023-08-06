@@ -1,0 +1,9 @@
+pylance-0.0.5.dist-info/METADATA,sha256=j4oYEa6Scn13hd-aK6obSzovDOIuuMl0n6br0DIeWQQ,3529
+pylance-0.0.5.dist-info/RECORD,,
+pylance-0.0.5.dist-info/WHEEL,sha256=AENPUwuTc6qB95Mrn5JB5boXegWw6oDhuwuuX0q_ONg,152
+pylance-0.0.5.dist-info/top_level.txt,sha256=R6tqktavaZZZs6QkUJCi4-4Ya2XEmxXovGN2K04lNuk,6
+pylance.libs/liblance-3c0eeacf.so,sha256=HJKbtNm91sGoCROpLEjW4adSYQOeM1NN9JNIrmQtii0,1935720
+pylance.libs/libprotobuf-4f32d2e5.so.17.0.0,sha256=TEM4-i_5E5nfTnC_nojLnH1zzZgRMeSV8r4WG9OuHsE,3570560
+lance/lib.cpython-310-x86_64-linux-gnu.so,sha256=YuzQv-gMN_zABoxqci0ZysXr3U60tFxTfA-tzfm1Psg,1964896
+lance/types.py,sha256=wfJJ-IakWUuLx6cGv50-gG7LHQma8kg5xceBXDEW-FI,4132
+lance/__init__.py,sha256=hKQDEpYUJ9jDbVTTUtoLRlH_s5vdIdw5PqxsoTtZenI,2072
