@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: lant
+Version: 0.0.1
+Summary: Implements Langton\'s ant in Python
+Home-page: https://github.com/jacanchaplais/lant
+Author: Jacan Chaplais
+Author-email: jacanchaplais@gmail.com
+License: BSD 3-Clause License
+Platform: unix
+Platform: linux
+Platform: osx
+Platform: cygwin
+Platform: win32
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+
+# Langton's Ant
+
+An implementation of [Langton's Ant][wiki] in Python for fun.
+
+## Installation
+
+```bash
+pip install lant
+```
+
+## Usage
+
+To get started, you may invoke the program with:
+
+```bash
+ant-walk 100000 output.mp4
+```
+
+This produces the evolution of the ant on the grid until it walks over the
+edge, or the maximum number of steps is met, in this case 100k.
+
+For more advanced usage, see the helptext:
+
+```bash
+ant-walk --help
+```
+
+[wiki]: https://en.wikipedia.org/wiki/Langton%27s_ant
