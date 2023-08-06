@@ -1,0 +1,2 @@
+[console_scripts]
+lingtreemaps = lingtreemaps.cli:main
