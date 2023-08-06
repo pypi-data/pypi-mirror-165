@@ -1,0 +1,123 @@
+Metadata-Version: 2.1
+Name: WecomBot
+Version: 0.1.0
+Summary: This is a msg-robot for wecom.
+Home-page: https://github.com/liukecode/qywechat
+License: MIT
+Keywords: wecom,wechat,qywechat,weixin,qyweixin,api,bot,robot
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Communications
+Classifier: Topic :: Office/Business
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: requests (==2.26.0)
+Requires-Dist: tenacity (==8.0.1)
+
+# WecomBot
+[![GitHub issues](https://img.shields.io/github/issues/liukecode/qywechat)](https://github.com/liukecode/qywechat/issues)
+[![GitHub forks](https://img.shields.io/github/forks/liukecode/qywechat)](https://github.com/liukecode/qywechat/network)
+[![GitHub stars](https://img.shields.io/github/stars/liukecode/qywechat)](https://github.com/liukecode/qywechat/stargazers)
+[![GitHub license](https://img.shields.io/github/license/liukecode/qywechat)](https://github.com/liukecode/qywechat/blob/main/LICENSE)
+[![contributors](https://img.shields.io/github/contributors/liukecode/qywechat)](https://github.com/liukecode/qywechat/graphs/contributors)
+[![PyPI](https://img.shields.io/pypi/v/wecombot)](https://pypi.org/project/wecombot/)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/wecombot)](https://pypi.org/project/wecombot/)
+[![Downloads](https://pepy.tech/badge/wecombot/month)](https://pepy.tech/project/wecombot)
+
+This is a msg-robot for [Wecom](https://developer.work.weixin.qq.com/document/path/91770)
+
+## Install
+```
+python -m pip install WecomBot
+```
+## Getting Started
+send text msg
+```
+import wecombot
+key = "b8cxxx"
+bot = wecombot.Bot(key)
+data = {
+    	"msgtype": "text",
+    	"text": {
+        	"content": "hello world"
+    	}
+   }
+# @ user, all user
+# data = {
+#    "msgtype": "text",
+#    "text": {
+#        "content": "LiuKeTest Msg",
+#		"mentioned_list":["liuke","@all"],
+#		"mentioned_mobile_list":["13800001111","@all"]
+#    }
+#}
+bot.send_msg(data)
+```
+
+send markdown msg
+```
+data = {
+    "msgtype": "markdown",
+    "markdown": {
+        "content": "实时新增用户反馈<font color=\"warning\">132例</font>，请相关同事注意。\n
+         >类型:<font color=\"comment\">用户反馈</font>
+         >普通用户反馈:<font color=\"comment\">117例</font>
+         >VIP用户反馈:<font color=\"comment\">15例</font>"
+    }
+}
+```
+
+send image
+```
+bot.img_msg("path/test.jpg")
+```
+send file
+```
+media_id = bot.upload_file("path/liuke.zip")
+data = {
+    "msgtype": "file",
+    "file": {
+ 		"media_id": media_id
+    }
+}
+bot.send_msg(data)
+```
+
+send image & text msg
+```
+data = {
+    "msgtype": "news",
+    "news": {
+       "articles" : [
+           {
+               "title" : "LiuKeTest",
+               "description" : "qywechat",
+               "url" : "https://xxx",
+               "picurl" : "http://xxx.png"
+           }
+        ]
+    }
+}
+bot.send_msg(data)
+```
+
+## Features
+- Support all types message
+- Support send image
+- Support upload file
+
+
+## Contributing
+
+Contributions are welcome.<br/>
+If you've found a bug within this project, please open an issue to discuss what you would like to change.<br/>
+If it's an issue with the API, please report any new issues at [wecombot issues](https://github.com/liukecode/qywechat)
+

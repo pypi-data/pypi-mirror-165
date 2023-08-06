@@ -1,0 +1,10 @@
+wecombot/__init__.py,sha256=n2ZL1jHTGT3mjP-KhWF960KX94qfIEggxHu_3-tBTjU,37
+wecombot/__version__.py,sha256=QTYqXqSTHFRkM9TEgpDFcHvwLbvqHDqvqfQ9EiXkcAM,23
+wecombot/bot.py,sha256=KnoUnSUKVq9v3SZ7HPakUEKpHKUSyxpSlem_gzMdmlw,3003
+wecombot/errors.py,sha256=ti8Zl3VhISc2HTW9LEU_G5Bgi5EA1LLB-SB0sIlikNA,330
+wecombot/log.py,sha256=h-tieC5J-J3hOY7VyE1AbQzYChU5qD1FLnIcH7fySeA,56
+WecomBot-0.1.0.dist-info/LICENSE,sha256=JXgOR9MuQIGQqdvgDz9EqrVDc0QcTSmgnv-BB1-5MrE,1085
+WecomBot-0.1.0.dist-info/METADATA,sha256=MEpz2vH9YZrLcjEBdEPCTVd425NnQ7mN4aQemoHz3_M,3687
+WecomBot-0.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+WecomBot-0.1.0.dist-info/top_level.txt,sha256=Rv84rnDbEdvAwZe-veBLfNhQVO_cIBFsrn9RzvNaFfc,9
+WecomBot-0.1.0.dist-info/RECORD,,
