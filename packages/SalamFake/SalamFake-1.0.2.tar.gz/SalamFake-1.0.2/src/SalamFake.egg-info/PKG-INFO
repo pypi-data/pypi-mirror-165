@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: SalamFake
+Version: 1.0.2
+Summary: Fake Email & Generate Email
+Home-page: https://github.com/salammzere3/SalamFake
+Author: salammzere3
+Author-email: salamhunter@gmail.com
+Project-URL: Bug Tracker, https://github.com/pypa/sampleproject/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# SalamFake
+### to install:
+```bash
+pip install SalamFake  
+```
+### Example
+```python
+from SalamFake import Email
+
+
+mail=Email().Mail()
+print(mail)
+
+
+
+while True:
+	mass=Email(mail["session"]).inbox()
+	if mass:
+		print(mass)
+		break
+	
+```
+
+### Follow us on social media accounts
+
+* telegram : @T5B55
