@@ -1,0 +1,15 @@
+gym
+box2d
+pybullet
+tensorflow_probability
+wandb
+
+[all]
+tensorflow
+dm-reverb
+
+[reverb]
+dm-reverb
+
+[tf]
+tensorflow
