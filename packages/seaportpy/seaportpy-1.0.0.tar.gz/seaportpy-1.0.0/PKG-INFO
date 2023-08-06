@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: seaportpy
+Version: 1.0.0
+Summary: 
+Author: OpenSea Developers
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: pydantic (>=1.9.0,<2.0.0)
+Requires-Dist: web3 (>=5.27.0,<6.0.0)
