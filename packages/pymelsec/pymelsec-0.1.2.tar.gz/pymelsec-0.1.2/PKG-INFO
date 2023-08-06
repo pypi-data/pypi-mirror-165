@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: pymelsec
+Version: 0.1.2
+Summary: A Python MELSEC Communication library for communicating with Mitsubishi PLCs.
+Home-page: https://github.com/NothinRandom/pymelsec
+Author: Tri Quach
+Author-email: nothinrandom@gmail.com
+License: MIT
+Requires-Python: >=3.7.0
+License-File: LICENSE

@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+pymelsec/__init__.py
+pymelsec/constants.py
+pymelsec/exceptions.py
+pymelsec/tag.py
+pymelsec/type3e.py
+pymelsec/type4e.py
+pymelsec.egg-info/PKG-INFO
+pymelsec.egg-info/SOURCES.txt
+pymelsec.egg-info/dependency_links.txt
+pymelsec.egg-info/top_level.txt
