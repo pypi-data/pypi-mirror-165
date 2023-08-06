@@ -1,0 +1,46 @@
+#!/usr/bin/env python3
+
+import os
+import sys
+import re
+from version_parser import Version
+from pathlib import Path
+import shutil
+def main():
+    """"""    
+    def version_patch():        
+        init_py_path = "__init__.py"
+        version = ""
+        with open(init_py_path, 'r') as fd:
+            version = re.search(r'^__version__\s*=\s*[\'"]([^\'"]*)[\'"]',
+                                fd.read(), re.MULTILINE).group(1)  
+
+        v1 = Version(version)
+        build_version = int(v1.get_build_version()) +1
+        newVersion = f"{v1.get_major_version()}.{v1.get_minor_version()}.{build_version}"
+        print(f"new version: {newVersion}")
+        with open(init_py_path, 'w') as fd:
+            fd.write(f"""__version__="{newVersion}" """)
+    
+    def clear_dist():
+        print("清理目录")
+        dist_dir = os.path.join(os.getcwd(),"dist")
+        print(f"dist_dir: {dist_dir}")
+        if Path(dist_dir).exists():        
+            shutil.rmtree(dist_dir)
+            
+    def clear_build():
+        print("清理目录")
+        build_dir = os.path.join(os.getcwd(),"build")
+        print(f"build_dir: {build_dir}")
+        if Path(build_dir).exists():        
+            shutil.rmtree(build_dir)
+            
+    version_patch()
+    clear_dist()
+    clear_build()
+    os.system(f"""python3 setup.py bdist_wheel""")
+    os.system(f"""twine upload dist/*""")
+    
+if __name__ == "__main__":
+    main()
