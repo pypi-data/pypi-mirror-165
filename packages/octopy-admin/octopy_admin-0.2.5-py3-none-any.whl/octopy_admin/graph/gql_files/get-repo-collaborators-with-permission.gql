@@ -1,0 +1,17 @@
+query getRepoCollaboratorsWithPermisson($owner: String!, $name: String!, $cursor: String) {
+  repository(owner: $owner, name: $name) {
+    collaborators(first: 100, after: $cursor) {
+      totalCount
+      edges {
+        permission
+        node {
+          login
+        }
+      }
+      pageInfo {
+        hasNextPage
+        endCursor
+      }
+    }
+  }
+}
