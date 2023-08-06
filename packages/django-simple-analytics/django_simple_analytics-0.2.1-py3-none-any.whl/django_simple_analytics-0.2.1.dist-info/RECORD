@@ -1,0 +1,11 @@
+simple_analytics/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+simple_analytics/admin.py,sha256=mTnwKeg2ZfHDdN6OW0WTrZYSxtOnhcsbEraj1XnFEyE,461
+simple_analytics/apps.py,sha256=S4XYE3bNWD9k0EnMZuLo9ja0dfKSudIDvq_caqiFEYI,163
+simple_analytics/middleware.py,sha256=6NhFdPb1muNaRJZYKnAMfNAkFg84Sk4LZHK7icHzQ0s,1510
+simple_analytics/migrations/0001_initial.py,sha256=CrV9JpsoTxjV1Uun5lrK8R8QzLk90MCkMi628l-IfHs,1133
+simple_analytics/migrations/0002_visitperpage_origin.py,sha256=NpvjpY1CzoGs8W6trVsUiweWI0W4EREr95gwqJaOBkI,402
+simple_analytics/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+simple_analytics/models.py,sha256=xKT9itVLekBqPhRQ3rnUlRdOFM6KpQRtXAMnWbIuPN8,583
+django_simple_analytics-0.2.1.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+django_simple_analytics-0.2.1.dist-info/METADATA,sha256=4tohzLXbygM4aqddylp2PgdmjzPmRn0XrgWe8Y2NWF4,2264
+django_simple_analytics-0.2.1.dist-info/RECORD,,
