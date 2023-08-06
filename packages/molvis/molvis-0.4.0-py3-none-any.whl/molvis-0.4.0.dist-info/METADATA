@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: molvis
+Version: 0.4.0
+Summary: A package for generating html scripts to visualise chemical structures using 3dmol.js
+Home-page: https://gitlab.com/jonkragskow/molvis
+Author: Jon Kragskow
+Author-email: jonkragskow@gmail.com
+Project-URL: Bug Tracker, https://gitlab.com/jonkragskow/molvis/-/issues
+Project-URL: Documentation, https://jonkragskow.gitlab.io/molvis
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: deprecation
+Requires-Dist: xyz-py
+
+# molvis
+
+A simple python module for creating html/js files that use [3dmol.js](https://3dmol.csb.pitt.edu/) to visualise structures
+
+## Installation
+
+To install, use `pip`
+
+
+```shell
+pip install molvis
+```
+
+## Documentation
+Documentation for this package can be found here, and documentation for 3dmol.js can be found [here](https://3dmol.csb.pitt.edu/)
