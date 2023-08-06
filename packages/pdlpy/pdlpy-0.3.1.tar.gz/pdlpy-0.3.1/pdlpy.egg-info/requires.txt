@@ -1,0 +1,10 @@
+
+[dev]
+black
+coverage
+isort
+twine
+
+[docs]
+mkdocs
+mkdocs-material

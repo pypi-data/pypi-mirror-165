@@ -1,0 +1,71 @@
+Metadata-Version: 2.1
+Name: pdlpy
+Version: 0.3.1
+Summary: Probability Distribution Library for Python
+Home-page: https://github.com/andrebienemann/pdlpy
+Author: André Bienemann
+Author-email: andre.bienemann@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Provides-Extra: docs
+License-File: LICENSE
+
+# Probability Distribution Library for Python
+
+[![PyPI](https://img.shields.io/pypi/v/pdlpy)](https://pypi.org/project/pdlpy)
+[![Python Version](https://img.shields.io/pypi/pyversions/pdlpy)](https://python.org)
+[![Downloads](https://pepy.tech/badge/pdlpy)](https://pepy.tech/project/pdlpy)
+[![GitHub Build](https://img.shields.io/github/workflow/status/andrebienemann/pdlpy/github-ci)](https://github.com/andrebienemann/pdlpy/actions/workflows/ci.yml)
+[![Codecov](https://img.shields.io/codecov/c/github/andrebienemann/pdlpy)](https://app.codecov.io/gh/andrebienemann/pdlpy)
+[![License](https://img.shields.io/github/license/andrebienemann/genetix)](https://github.com/andrebienemann/pdlpy/blob/main/LICENSE)
+[![Code Style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
+**Probability Distribution Library for Python** is a library for simulation and analysis of random processes.
+It contains classes for descrete and continious distributions as listed below.
+
+Discrete distributions:
+
+- [Bernoulli](https://andrebienemann.github.io/pdlpy/discrete/bernoulli)
+- [Binomial](https://andrebienemann.github.io/pdlpy/discrete/binomial)
+- [Geometric](https://andrebienemann.github.io/pdlpy/discrete/geometric)
+- [Hypergeometric](https://andrebienemann.github.io/pdlpy/discrete/hypergeometric)
+- [Poisson](https://andrebienemann.github.io/pdlpy/discrete/poisson)
+
+Continuous distributions:
+
+- [Exponential](https://andrebienemann.github.io/pdlpy/continuous/exponential)
+- [Normal](https://andrebienemann.github.io/pdlpy/continuous/normal)
+- [Uniform](https://andrebienemann.github.io/pdlpy/continuous/uniform)
+
+## Installation
+
+Install and update using [pip](https://pip.pypa.io/en/stable/getting-started/):
+
+```shell
+pip install -U pdlpy
+```
+
+## Demo
+
+Create and analyse probability distributions as simple as:
+
+![demo](https://github.com/andrebienemann/pdlpy/blob/main/docs/assets/demo.gif)
+
+## Links
+
+- [Documentation](https://andrebienemann.github.io/pdlpy/)
+- [PyPI Releases](https://pypi.org/project/pdlpy/)
+- [Source Code](https://github.com/andrebienemann/pdlpy/)
+- [Issue Tracker](https://github.com/andrebienemann/pdlpy/issues/)
+
+
