@@ -1,0 +1,10 @@
+tree_sitter_builds-2022.8.29.dist-info/top_level.txt,sha256=_HRrA9sauZSHQqyWB11YHqgn0givlXbg5_cUDlBss7A,34
+tree_sitter_builds-2022.8.29.dist-info/WHEEL,sha256=AENPUwuTc6qB95Mrn5JB5boXegWw6oDhuwuuX0q_ONg,152
+tree_sitter_builds-2022.8.29.dist-info/METADATA,sha256=soisDTrFZ20slctX2bgUSTqfOmhWiK-UHnpy_INOU28,3350
+tree_sitter_builds-2022.8.29.dist-info/RECORD,,
+tree_sitter_builds-2022.8.29.dist-info/LICENSE,sha256=u8BqZQWU6Dz2I-eZWEIMD1VJMOL3vW6zNPWsHd9TGLM,546
+tree_sitter/binding.cpython-310-x86_64-linux-gnu.so,sha256=HUGBEe1uNFAKfsHlM_eY_lrKA_v5jGUf0HKrZAjmy8M,1242880
+tree_sitter/__init__.py,sha256=-3tGqm4Aux8TSTe8s029ii1a6j_9rZSbhp43tb0LfVM,3442
+tree_sitter_languages/core.cpython-310-x86_64-linux-gnu.so,sha256=yxAU6ggobZkCNLM96_8MmVmYI2X7lSgHyqzhin-Jcys,160128
+tree_sitter_languages/languages.so,sha256=BNeCs6NOgvsBI0SNLgFwwMZ9R9skv-u5LO_1EIYpE2c,64307072
+tree_sitter_languages/__init__.py,sha256=hQ-P_BgH0vHUC0sxnE95HowK1rU8CjRDL6REIyH6WVQ,227
