@@ -1,0 +1,4 @@
+---
+modules:
+  encarno:
+    class: encarno.EncarnoExecutor
