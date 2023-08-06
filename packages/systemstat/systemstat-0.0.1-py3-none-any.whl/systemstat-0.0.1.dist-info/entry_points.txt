@@ -1,0 +1,5 @@
+[console_scripts]
+gridstat3=systemstat.gridstat3:cli
+gridstat4=systemstat.gridstat4:cli
+sutstat=systemstat.sutstat:cli
+
