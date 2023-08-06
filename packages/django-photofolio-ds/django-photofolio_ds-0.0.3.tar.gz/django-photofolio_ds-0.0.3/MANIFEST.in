@@ -1,0 +1,9 @@
+include LICENSE
+include README.md
+recursive-include photofolio/static *
+recursive-include photofolio/templates *
+recursive-exclude photofolio/migrations *
+recursive-exclude staticfiles *
+recursive-exclude mytester *
+recursive-exclude _data *
+recursive-exclude _static *

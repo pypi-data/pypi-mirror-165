@@ -1,0 +1,40 @@
+{% load static %}
+
+<section id="testimonials" class="testimonials">
+  <div class="container">
+
+    <div class="section-header">
+      <h2>Testimonials</h2>
+      <p>{{ testimonials.subtitle }}</p>
+    </div>
+
+    <div class="slides-3 swiper">
+      <div class="swiper-wrapper">
+
+        {% for item in testimonials.stories %}
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <div class="stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            {% autoescape off %}
+            <p>
+              {{ item.desc }}
+            </p>
+            {% endautoescape %}
+
+            <div class="profile mt-auto">
+              <img src="{% static 'img/testimonials/'|add:item.photo %}" class="testimonial-img" alt="">
+              <h3>{{ item.name }}</h3>
+              <h4>{{ item.job }}</h4>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+  </div>
+</section>
