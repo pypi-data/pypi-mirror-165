@@ -1,0 +1,6 @@
+datasette
+
+[test]
+pytest
+pytest-asyncio
+datasette-block-robots
