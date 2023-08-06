@@ -1,0 +1,10 @@
+# name: No License - all rights reserved
+# rpm: None
+# pypi: License :: Other/Proprietary License
+# url: https://choosealicense.com/no-permission/
+# header:
+#    Copyright (C) $year $author
+# header: end
+# interactive:
+#    $program  Copyright (C) $year  $author
+# interactive: end
