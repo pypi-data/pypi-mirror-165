@@ -1,0 +1,4 @@
+aiohttp
+pyserial
+python-socketio
+sensapex
