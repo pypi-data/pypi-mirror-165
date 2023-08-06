@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmrx_link=self.webpackChunkmrx_link||[]).push([[122],{22122:(r,n,t)=>{function e(){return e=Object.assign||function(r){for(var n=1;n<arguments.length;n++){var t=arguments[n];for(var e in t)Object.prototype.hasOwnProperty.call(t,e)&&(r[e]=t[e])}return r},e.apply(this,arguments)}t.d(n,{Z:()=>e})}}]);
