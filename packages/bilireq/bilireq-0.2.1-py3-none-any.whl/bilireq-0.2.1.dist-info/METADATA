@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: bilireq
+Version: 0.2.1
+Summary: 
+License: MIT
+Author: SK-415
+Author-email: 2967923486@qq.com
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Provides-Extra: qrcode
+Requires-Dist: grpcio (>=1.46.3,<2.0.0)
+Requires-Dist: httpx (>=0.23.0,<0.24.0)
+Requires-Dist: protobuf (==3.20.1)
+Requires-Dist: qrcode[pil] (>=7.3.1,<8.0.0); extra == "qrcode"
+Requires-Dist: rsa (>=4.8,<5.0)
