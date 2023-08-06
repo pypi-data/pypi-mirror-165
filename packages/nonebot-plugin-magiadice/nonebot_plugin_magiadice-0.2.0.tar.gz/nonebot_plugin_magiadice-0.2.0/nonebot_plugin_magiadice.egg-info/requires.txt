@@ -1,0 +1,4 @@
+notion
+numpy
+nonebot-adapter-onebot
+nonebot2
