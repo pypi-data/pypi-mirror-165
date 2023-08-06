@@ -1,0 +1,55 @@
+name: py3dep-tests
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  # async_retriever
+  - aiodns
+  - aiohttp>=3.8.1
+  - aiohttp-client-cache>=0.5.1
+  - aiosqlite
+  - brotli
+  - cchardet
+  - cytoolz
+  - ujson
+
+  # pygeoogc deps
+  - defusedxml
+  - owslib>=0.27.2
+  - pydantic
+  - pyyaml
+  - pyproj>=1.2
+  - requests
+  - requests-cache>=0.9.6
+  - shapely
+  - urllib3
+
+  # pygeoutils deps
+  - dask-core
+  - geopandas>=0.8
+  - netcdf4
+  - numpy>=1.17
+  - pygeos
+  - rasterio>=1.2
+  - scipy
+  - xarray>=2022.03.0
+  - rioxarray>=0.11
+
+  # py3dep
+  - click>=0.7
+  - richdem>=0.3.4
+
+  # optional deps to speed up xarray
+  - bottleneck
+
+  # test deps
+  - psutil
+  - pytest
+  - pytest-cov
+  - pytest-xdist
+
+  - pip
+  - pip:
+    - git+https://github.com/cheginit/async_retriever.git
+    - git+https://github.com/cheginit/pygeoogc.git
+    - git+https://github.com/cheginit/pygeoutils.git
