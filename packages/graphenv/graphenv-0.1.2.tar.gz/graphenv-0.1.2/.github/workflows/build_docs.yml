@@ -1,0 +1,51 @@
+name: Create Docs
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events
+  push:
+    branches:
+      - 'main'
+    tags:
+      - 'v*'
+  #pull_request:
+  #  branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  builddocs:
+    name: Build docs using conda and sphinx
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash -l {0}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install package
+        shell: bash -l {0}
+        run: |
+          sudo apt install pandoc
+          python -m pip install --upgrade pip setuptools_scm build
+          python -m pip install .[dev]
+      - name: Build docs with Sphinx
+        run: |
+          cd docs
+          pip install -r requirements_for_docs.txt
+          #sphinx-apidoc -f -o source/ ../graphenv/
+          make html
+          touch build/html/.nojekyll
+      - name: Deploy to gh-pages
+        uses: JamesIves/github-pages-deploy-action@v4.2.5
+        with:
+          branch: gh-pages # The branch the action should deploy to.
+          folder: docs/build/html # The folder the action should deploy.
