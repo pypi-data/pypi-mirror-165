@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: pypkgpack
+Version: 0.1.0
+Summary: 
+Author: thautwarm
+Author-email: twshere@outlook.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: ast-compat (>=0.11.1,<0.12.0)
+Requires-Dist: wisepy2 (>=1.3,<2.0)
