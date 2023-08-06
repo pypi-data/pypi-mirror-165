@@ -1,0 +1,2 @@
+[console_scripts]
+blockdataapis = blockapiwrapper.base
