@@ -1,0 +1,345 @@
+{
+    "openapi": "3.0.3",
+    "info": {
+        "title": "PydanticLambdaHandler",
+        "version": "0.0.0"
+    },
+    "servers": [
+        {
+            "url": "/"
+        }
+    ],
+    "paths": {
+        "/hello": {
+            "get": {
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                },
+                "deprecated": false
+            },
+            "post": {
+                "parameters": [],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Item"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/": {
+            "post": {
+                "responses": {
+                    "201": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/error_much": {
+            "get": {
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                },
+                "deprecated": false
+            },
+            "post": {
+                "responses": {
+                    "201": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/context": {
+            "get": {
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/query": {
+            "get": {
+                "parameters": [
+                    {
+                        "name": "skip",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/query_required": {
+            "get": {
+                "parameters": [
+                    {
+                        "name": "secret",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/response_model": {
+            "get": {
+                "parameters": [
+                    {
+                        "name": "secret",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/FunModel"
+                                }
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/list_response": {
+            "get": {
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/list_response_model": {
+            "get": {
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ListFunModel"
+                                }
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/teapot": {
+            "get": {
+                "responses": {
+                    "418": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/pets/{petId}": {
+            "get": {
+                "operationId": "Create Pet",
+                "parameters": [
+                    {
+                        "name": "petId",
+                        "in": "path",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/items/{item_id}": {
+            "get": {
+                "parameters": [
+                    {
+                        "name": "item_id",
+                        "in": "path",
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/item_enum/{item_id}": {
+            "get": {
+                "parameters": [
+                    {
+                        "name": "item_id",
+                        "in": "path",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "FunModel": {
+                "title": "FunModel",
+                "required": [
+                    "item_name"
+                ],
+                "type": "object",
+                "properties": {
+                    "item_name": {
+                        "title": "Item Name",
+                        "type": "string"
+                    },
+                    "item_value": {
+                        "title": "Item Value",
+                        "type": "integer"
+                    }
+                }
+            },
+            "Item": {
+                "title": "Item",
+                "required": [
+                    "name",
+                    "price"
+                ],
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "title": "Name",
+                        "type": "string"
+                    },
+                    "description": {
+                        "title": "Description",
+                        "type": "string"
+                    },
+                    "price": {
+                        "title": "Price",
+                        "type": "number"
+                    },
+                    "tax": {
+                        "title": "Tax",
+                        "type": "number"
+                    }
+                }
+            },
+            "ListFunModel": {
+                "title": "ListFunModel",
+                "type": "array",
+                "items": {
+                    "$ref": "#/components/schemas/FunModel"
+                }
+            }
+        }
+    }
+}

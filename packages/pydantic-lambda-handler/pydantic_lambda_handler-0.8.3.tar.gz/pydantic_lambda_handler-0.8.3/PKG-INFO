@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: pydantic_lambda_handler
+Version: 0.8.3
+Summary: Pydantic lambda handler modelled on FastAPI
+Author-email: Mark Harvey <inspiredharvey@gmail.com>
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: orjson>=3.7.5
+Requires-Dist: pydantic>=1.9.1
+Requires-Dist: pydantic-core
+Requires-Dist: coverage>=5.0.3 ; extra == "dev"
+Requires-Dist: pytest ; extra == "dev"
+Requires-Dist: pytest-benchmark[histogram]>=3.2.1 ; extra == "dev"
+Requires-Dist: aws-cdk-lib ; extra == "dev"
+Requires-Dist: requests ; extra == "dev"
+Requires-Dist: invoke ; extra == "dev"
+Requires-Dist: awslambdaric ; extra == "dev"
+Requires-Dist: boto3>=1.20.32 ; extra == "dev"
+Requires-Dist: botocore>=1.23.32 ; extra == "dev"
+Requires-Dist: openapi-schema-pydantic ; extra == "dev"
+Requires-Dist: pytest ; extra == "tests"
+Requires-Dist: pytest-cov ; extra == "tests"
+Requires-Dist: requests ; extra == "tests"
+Requires-Dist: awslambdaric ; extra == "tests"
+Requires-Dist: boto3>=1.20.32 ; extra == "tests"
+Requires-Dist: botocore>=1.23.32 ; extra == "tests"
+Requires-Dist: openapi-schema-pydantic ; extra == "tests"
+Project-URL: Home, https://github.com/harvey251/pydantic-lambda-handler
+Provides-Extra: dev
+Provides-Extra: tests
+
+![example workflow](https://github.com/harvey251/pydantic-lambda-handler/actions/workflows/main.yml/badge.svg) [![codecov](https://codecov.io/gh/harvey251/pydantic-lambda-handler/branch/main/graph/badge.svg?token=PX0GRFCYQE)](https://codecov.io/gh/harvey251/pydantic-lambda-handler) ![pypi package](https://img.shields.io/pypi/v/pydantic-lambda-handler?color=%2334D058&label=pypi%20package)
+
+# Vision
+
+Aim to create an easy-to-use decorator on a lambda for quick development of apis on AWS lambda using AWS Gateway.
+
+Inspired by, and attempting to match the [Fast API](https://fastapi.tiangolo.com) api.
+
+Currently, I'm working through the first steps to hit the basics.
+
+This is very much at the beginning of the project, so I could do with all the help I can get :D
+
+## MUST HAVE
+* creates open api schema
+
+API Gateway Lambda proxy integration
+https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-lambda-proxy-integrations.html#api-gateway-simple-proxy-for-lambda-input-format
+
+https://docs.aws.amazon.com/lambda/latest/dg/services-apigateway-tutorial.html
+
+```commandline
+pip install --target ./demo_app ../.
+```
+
