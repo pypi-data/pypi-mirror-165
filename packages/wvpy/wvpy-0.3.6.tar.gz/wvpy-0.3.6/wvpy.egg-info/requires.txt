@@ -1,0 +1,9 @@
+IPython
+nbformat
+nbconvert
+
+[code_format]
+black
+
+[pdf_export]
+pdfkit
