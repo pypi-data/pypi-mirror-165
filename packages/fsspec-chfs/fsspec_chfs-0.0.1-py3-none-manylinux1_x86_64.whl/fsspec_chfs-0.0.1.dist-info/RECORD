@@ -1,0 +1,10 @@
+chfs/__init__.py,sha256=fyuEIJnha8kkwMBLPqiJsyt4udFacpeV28WIW0KaxCA,45
+chfs/core.py,sha256=ovdtoxZnUX26Lgzc0m68Yad7g7tTHnqpshI_jGN_Dm4,6905
+chfs/dask/__init__.py,sha256=rKzLf5KSVXYelftJSmz3F0KtSHTEBgKbOyTmbnUUlXM,41
+chfs/dask/distributed.py,sha256=PpK-ayXsjr0tMruP6XwFekwP3UXLdDa4yXS9DUlhfHo,473
+fsspec_chfs-0.0.1.dist-info/LICENSE,sha256=ez8jC05qCg3ZxGuw5SWMXaC_isrvzwhn0wsmIcC1ikA,1086
+fsspec_chfs-0.0.1.dist-info/METADATA,sha256=7UZh0Z0c8ca_YulJlNu6pLHqCf_zZCqmaViuuD8f8I0,1893
+fsspec_chfs-0.0.1.dist-info/WHEEL,sha256=-kQi_VMfvRQozZJT7HUPMfY-5vLo0LVTmAylNJ3Ft98,106
+fsspec_chfs-0.0.1.dist-info/entry_points.txt,sha256=AkEn22DVQqzIGuAn19KDceYjDZfcx-g4I6nhOwXPBq0,70
+fsspec_chfs-0.0.1.dist-info/top_level.txt,sha256=QJp-1Z2fvHbTukWPvNL9aem9PdC7Hoh6wFIa8vj-_LI,5
+fsspec_chfs-0.0.1.dist-info/RECORD,,
