@@ -1,0 +1,2 @@
+[console_scripts]
+clinical_benchmarks = clinical_benchmarks.__main__:main
