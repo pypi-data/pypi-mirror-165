@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: Growtopia_Info
+Version: 1.0.0
+Summary: This code can search any info in Growtopia, including server status, sprite, description, and more!
+Home-page: https://github.com/Gabrielbjb/growtopia-item-finder
+Author: Gabrielbjb
+Author-email: 
+License: MIT
+Keywords: Growtopia
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE.txt
+
+For more information, click this link: https://github.com/Gabrielbjb/growtopia-item-finder
+
+Change Log
+====================
+
+0.0.1 (02/09/2022)
+-------------------------
+- First Release
+

@@ -1,0 +1,7 @@
+LICENSE.txt
+README.txt
+setup.py
+Growtopia_Info.egg-info/PKG-INFO
+Growtopia_Info.egg-info/SOURCES.txt
+Growtopia_Info.egg-info/dependency_links.txt
+Growtopia_Info.egg-info/top_level.txt
