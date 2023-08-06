@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: pyroll-work-roll-elastic-deformation
+Version: 1.0.0
+Summary: Plugin for PyRoll calculating the bending of the work roll by matrix method
+Home-page: https://pyroll-project.github.io/
+License: BSD-3-Clause
+Author: Christoph Renzing
+Author-email: christoph.renzing@imf.tu-freiberg.de
+Requires-Python: >=3.9,<3.11
+Classifier: Intended Audience :: Manufacturing
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Scientific/Engineering
+Requires-Dist: cad-to-shapely (>=0.3.0,<0.4.0)
+Requires-Dist: pyroll-basic (>=1.0.0,<2.0.0)
+Project-URL: Documentation, https://pyroll-project.github.io/modules/work_roll_elastic_deformation/docs/docs
+Project-URL: Repository, https://github.com/pyroll-project/work_roll_elastic_deformation
+Description-Content-Type: text/markdown
+
+# PyRoll Work Roll Elastic Deformation
+
+Plugin for PyRolL providing the calculation of elastic work roll deformation by matrix method.
+
+For the docs, see [here](docs/docs.pdf).
+
+This project is licensed under the [BSD-3-Clause license](LICENSE).
+
+The package is available via [PyPi](https://pypi.org/project/pyroll-work-roll-elastic-deformation/) and can be installed with
+    
+    pip install pyroll-work-roll-elastic-deformation
