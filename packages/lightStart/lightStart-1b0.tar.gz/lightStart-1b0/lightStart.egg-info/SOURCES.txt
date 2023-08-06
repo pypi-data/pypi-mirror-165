@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+lightStart/__init__.py
+lightStart/__main__.py
+lightStart/main.py
+lightStart.egg-info/PKG-INFO
+lightStart.egg-info/SOURCES.txt
+lightStart.egg-info/dependency_links.txt
+lightStart.egg-info/entry_points.txt
+lightStart.egg-info/not-zip-safe
+lightStart.egg-info/top_level.txt
