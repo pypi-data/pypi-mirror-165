@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: simple-api-framework
+Version: 0.0.45
+Summary: Simple async API framework
+Author: Ihor Maiorov
+Author-email: ihor.maioroff@gmail.com
+License: MIT
+Keywords: tornado,api,simple-api
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+
+
+This package contains simple async API framework, based on Tornado.
+
+Sources can be found on GitHub: https://github.com/ihormaioroff/simple-api-framework
