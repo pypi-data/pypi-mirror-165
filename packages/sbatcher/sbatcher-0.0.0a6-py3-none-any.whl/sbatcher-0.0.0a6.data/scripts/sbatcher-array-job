@@ -1,0 +1,9 @@
+#!python
+
+import sbatcher.array_job
+
+"""
+Wrapping sbatcher.array_job in a hashbanged script file that sbatch can use
+"""
+
+sbatcher.array_job.main(**vars(sbatcher.array_job.get_args()))
