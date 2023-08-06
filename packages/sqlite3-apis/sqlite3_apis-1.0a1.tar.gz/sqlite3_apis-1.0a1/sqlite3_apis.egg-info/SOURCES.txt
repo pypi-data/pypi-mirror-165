@@ -1,0 +1,5 @@
+setup.py
+sqlite3_apis.egg-info/PKG-INFO
+sqlite3_apis.egg-info/SOURCES.txt
+sqlite3_apis.egg-info/dependency_links.txt
+sqlite3_apis.egg-info/top_level.txt
