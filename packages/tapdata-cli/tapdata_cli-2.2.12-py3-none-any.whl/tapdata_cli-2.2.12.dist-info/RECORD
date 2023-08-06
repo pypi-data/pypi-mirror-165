@@ -1,0 +1,15 @@
+tapdata_cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tapdata_cli/check.py,sha256=-ILXnBFA99MwYOKEJOUSDyH1CE0XPOOBcIKzPvT7G7g,2680
+tapdata_cli/cli.py,sha256=ZQnmzpHxs2s_DOQepvYUzRDv9QYFUrzF7FPXPa7gOAo,121577
+tapdata_cli/config_parse.py,sha256=OXmdHitUOv0ViitK2Zk9tUeo1ZY-g2LywK05ZEUyqss,1251
+tapdata_cli/default.ini,sha256=gHZD-o2DkD05rHBO-zzHOVLWpxZ1Q1Nhr6eHYg7CCGE,142
+tapdata_cli/graph.py,sha256=8l76_zaU3u-h5yFjhk1fUJ2WfjoCgjeEYN2T6jl8UP8,2543
+tapdata_cli/history.sqlite,sha256=Ifbsss16gQIgw3ZoL-sRSCZBxFMfnewe5Cxq5qTSR7o,73728
+tapdata_cli/ipython_config.py,sha256=r-wJ3wGAoIj2P4lwQs_Jow4T1RuVOVmPctEKGVff-ns,41387
+tapdata_cli/log.py,sha256=d2CmCiw0RJeLGGRJi395_ysX1kuvjYsvhQjCuzoG7_8,3887
+tapdata_cli/request.py,sha256=ynWqfzvpQsIsjUiUvVgk4PFKe_OKV59Mc2ldvVBJK-s,448
+tapdata_cli/rules.py,sha256=iEFD3_MHbqIabFIJJ_22SCVANnRLzzJMah0K_W2w94o,3533
+tapdata_cli/startup/README,sha256=Y47GtYQkWy6pdzkqylUNL6eBSZMUIRGwTxXPUF_BBBc,371
+tapdata_cli-2.2.12.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+tapdata_cli-2.2.12.dist-info/METADATA,sha256=bmib_2TwZ5AP58kDUs1fN9g9T1qgLKgCl8LyRhGhFmc,7636
+tapdata_cli-2.2.12.dist-info/RECORD,,
