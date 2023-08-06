@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: mfreport
+Version: 0.1.0
+Summary: mfreport
+Home-page: https://github.com/bobuhiro11/mfreport
+Author: Nobuhiro MIKI
+Author-email: nob@bobuhiro11.net
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: selenium
+Requires-Dist: pandas
+Requires-Dist: webdriver-manager
+Requires-Dist: reportlab
+Requires-Dist: matplotlib
+Requires-Dist: beautifulsoup4
+Requires-Dist: lxml
+Requires-Dist: yfinance
+Requires-Dist: plotext
+
+# mfreport

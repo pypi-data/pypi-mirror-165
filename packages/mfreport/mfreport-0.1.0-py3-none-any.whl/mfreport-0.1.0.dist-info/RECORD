@@ -1,0 +1,17 @@
+mfreport/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mfreport/client.py,sha256=NYwULsolmwMeeEW9FJ5cfmxfPCys_otqR3-mkWv5oEE,2305
+mfreport/logger.py,sha256=QQ012b9r8yElKZzQxUazN1WQSaD3m-RqqleUZmzXYTA,290
+mfreport/main.py,sha256=mAZ14L88czTnox1G-gDCTiPV540t3v3N22YMZiakRhc,1138
+mfreport/parser.py,sha256=BpfBDZj2w-Xs_wFjo1NQUmPZP8ZDxuCKXJRu7ROZh84,1135
+mfreport/writer.py,sha256=Lt_sThqJyQbX1zjPdWhH52g9H8UhTZeNYI7iuNhWEH4,1120
+mfreport/yfwrapper.py,sha256=_PDC5vkXBDkeqWzN_Dti6ADCI5QRpxWdanFsR8SneG8,1841
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_main.py,sha256=X50ppyvBuyg1BZh-25jBgw3OTP65nxnYRFdCO4zYNrk,156
+tests/test_parser.py,sha256=ERQboHF20erdmSLvS21rjNBUKzbvT2y7bMEP0C31Rk4,1846
+tests/test_yfwrapper.py,sha256=KhbOQ426RJEzD5NN8EjTo3x6Ks_YM1C-xJdgtrpwRec,473
+mfreport-0.1.0.dist-info/LICENSE,sha256=Rn7H7DhoEMX7bSa4FVZZ5p3O_9teLQgia0jETrXPz1U,1070
+mfreport-0.1.0.dist-info/METADATA,sha256=QrFoaPGubi0tj0biW7L9PJsZaOBIATNTBHjPQ1rAC7s,658
+mfreport-0.1.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+mfreport-0.1.0.dist-info/entry_points.txt,sha256=iK7BSlVvu3-10ixFVln5yjys_eJALK8uBW-dmKCdH6s,48
+mfreport-0.1.0.dist-info/top_level.txt,sha256=-5kdthRVr8aJA8DAh-nWdPaF9tXtMO5qql8BTczPb3I,15
+mfreport-0.1.0.dist-info/RECORD,,
