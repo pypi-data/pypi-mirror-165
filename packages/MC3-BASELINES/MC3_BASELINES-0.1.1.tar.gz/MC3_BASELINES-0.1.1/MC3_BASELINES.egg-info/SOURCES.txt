@@ -1,0 +1,7 @@
+README.md
+setup.py
+MC3_BASELINES.egg-info/PKG-INFO
+MC3_BASELINES.egg-info/SOURCES.txt
+MC3_BASELINES.egg-info/dependency_links.txt
+MC3_BASELINES.egg-info/requires.txt
+MC3_BASELINES.egg-info/top_level.txt
