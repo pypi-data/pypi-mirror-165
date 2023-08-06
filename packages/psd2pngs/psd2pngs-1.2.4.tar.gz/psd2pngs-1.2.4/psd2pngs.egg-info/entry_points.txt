@@ -1,0 +1,2 @@
+[console_scripts]
+psd2pngs = psd2pngs.__main__:psd2pngs
