@@ -1,0 +1,12 @@
+[console_scripts]
+ds_freeze_nb = dsblocks.utils.test_exporter:freeze_all
+ds_unfreeze_nb = dsblocks.utils.test_exporter:unfreeze_all
+dsblocks_conda_hook = dsblocks.utils.cli:main_dsblocks_install_git_hooks
+nbdev_build_all = dsblocks.utils.nbdev_utils:nbdev_build_all
+nbdev_build_test = dsblocks.utils.nbdev_utils:nbdev_build_test
+nbdev_sync = dsblocks.utils.nbdev_utils:nbdev_sync
+nbdev_test_nb = dsblocks.utils.test_exporter:build_test_nb
+nbdev_update_all = dsblocks.utils.nbdev_utils:nbdev_update_all
+
+[nbdev]
+dsblocks = dsblocks._modidx:d
