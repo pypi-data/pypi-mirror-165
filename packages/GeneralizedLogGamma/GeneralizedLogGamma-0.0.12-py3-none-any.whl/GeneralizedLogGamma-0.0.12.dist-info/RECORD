@@ -1,0 +1,14 @@
+GeneralizedLogGamma/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+GeneralizedLogGamma/dglg.py,sha256=tA-GqI2oRkAPu66Von6_DnvqyGHqUp-U0DDFpq9NnxQ,703
+GeneralizedLogGamma/entropy.py,sha256=IG25KD07lw_sn7YfUbBZGvlpyyhrfuSIrbLSDkKKL80,539
+GeneralizedLogGamma/hazardgg.py,sha256=L8Go_q9Nl54L4ZK2S55oSzPr9t2FFIwOw9ptABoi768,688
+GeneralizedLogGamma/orderglg.py,sha256=Y4x5_uQWSvQBbrExCI_PT5CgtsFSIONc5jp1AN58zxg,1740
+GeneralizedLogGamma/pglg.py,sha256=MQFv4FDu84H-ATQul2OqYKX4c-6O_yNfOMsJoAVHb1U,587
+GeneralizedLogGamma/qglg.py,sha256=dTJ1giHhfHlF6DGQgT-Y7lmv8iFpUW0EQbQmWSRh7no,598
+GeneralizedLogGamma/rglg.py,sha256=dduzHMnygx-g5NFUAyJ7mA1-4x1TUQ0lDGH3AiZUXhg,575
+GeneralizedLogGamma/survgg.py,sha256=wrK3_T9igc6vxQy5QZ28zvzKRbLe1IguMiXAMA19Nyo,621
+GeneralizedLogGamma-0.0.12.dist-info/LICENSE.txt,sha256=IdK678vuAIxu9LnT2JRLMiBkcKjjLekORBLhIDJMrGQ,1116
+GeneralizedLogGamma-0.0.12.dist-info/METADATA,sha256=qa5kgLVc64oJrdG8e4_8dZejOaiHKovvrC-wQdWHHz8,1436
+GeneralizedLogGamma-0.0.12.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+GeneralizedLogGamma-0.0.12.dist-info/top_level.txt,sha256=OjBI6uoYzuXjdvhHp_mFuqoZPeAmrFmsyBfKW8iTCA8,20
+GeneralizedLogGamma-0.0.12.dist-info/RECORD,,
