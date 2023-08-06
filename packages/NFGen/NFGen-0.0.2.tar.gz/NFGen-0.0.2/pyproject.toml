@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "NFGen"
+version = "0.0.2"
+authors = [
+  { name="Xiaoyu Fan", email="fanxy20@mails.tsinghua.edu.cn" },
+]
+description = "NFGen: Automatic Non-Linear Function Evaluation Code Generator for General-purpose MPC Platforms"
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/Fannxy/NFGen"
+"Bug Tracker" = "https://github.com/Fannxy/NFGen"
