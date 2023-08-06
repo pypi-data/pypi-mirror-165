@@ -1,0 +1,3 @@
+[console_scripts]
+pyechelle=pyechelle.simulator:main
+
