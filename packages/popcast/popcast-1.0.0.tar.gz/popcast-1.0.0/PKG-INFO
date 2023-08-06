@@ -1,0 +1,76 @@
+Metadata-Version: 2.1
+Name: popcast
+Version: 1.0.0
+Summary: Long-term forecasts for pathogen populations
+Author-email: John Huddleston <huddlej@gmail.com>
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: jellyfish >=0.8.2, ==0.8.*
+Requires-Dist: opencv-python >=4.5, ==4.*
+Requires-Dist: pandas >=1.2.0, ==1.2.*
+Requires-Dist: scipy >=1.5.4, ==1.5.*
+Requires-Dist: coverage[toml] >=5.2.1, ==5.* ; extra == "test"
+Requires-Dist: cram >=0.7, ==0.* ; extra == "test"
+Requires-Dist: deepdiff[cli] >=5.2.0, ==5.* ; extra == "test"
+Requires-Dist: flake8 >=3.9.0, ==3.* ; extra == "test"
+Requires-Dist: pylint >=2.14.5, ==2.* ; extra == "test"
+Project-URL: Bug Tracker, https://github.com/blab/popcast/issues
+Project-URL: Homepage, https://github.com/blab/popcast
+Provides-Extra: test
+
+# popcast: Long-term forecasts for pathogen populations
+
+## Install
+
+Install [Flit](https://flit.pypa.io/en/latest/index.html).
+
+``` bash
+python3 -m pip install flit
+```
+
+Install popcast with the current environment's Python 3.
+
+``` bash
+flit install --python `which python3`
+```
+
+## Usage
+
+Download seasonal influenza A/H3N2 data for model fitting.
+
+``` bash
+curl "https://github.com/blab/flu-forecasting/raw/master/results/builds/natural/natural_sample_1_with_90_vpm_sliding/tip_attributes_with_weighted_distances.tsv" > tip_attributes_with_weighted_distances.tsv
+```
+
+Fit a model using default 6 year training windows and 12-month forecasts.
+
+``` bash
+popcast fit \
+  --tip-attributes tip_attributes_with_weighted_distances.tsv \
+  --output lbi_model.json \
+  --predictors lbi
+```
+
+## Publish
+
+Install or upgrade publishing tools.
+
+``` bash
+python3 -m pip install --upgrade build twine
+```
+
+Build the distribution packages.
+
+``` bash
+python3 -m build
+```
+
+Upload the distribution packages.
+
+``` bash
+python3 -m twine upload dist/*
+```
+
