@@ -1,0 +1,6 @@
+
+[:python_version < "3.0"]
+jwcrypto<1.0.0,>=0.4.2
+
+[:python_version >= "3.0"]
+jwcrypto>=1.0.0
