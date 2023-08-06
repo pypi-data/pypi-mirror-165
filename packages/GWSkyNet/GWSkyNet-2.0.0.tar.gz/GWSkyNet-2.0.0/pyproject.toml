@@ -1,0 +1,41 @@
+[build-system]
+requires        = ['setuptools>=60.6.0', 'wheel']
+build-backend   = 'setuptools.build_meta'
+
+[project]
+name            = 'GWSkyNet'
+version         = '2.0.0'
+description     = 'GWSkyNet : a machine learning algorithm used for estimating the probabiliy that a gravitational wave candidate is of astrophysical origin'
+readme          = 'README.md'
+authors         = [{ name = 'Man Leong (Mervyn) Chan', email = 'mervync@phas.ubc.ca'}]
+license         = { text = 'GPL-2.0+' }
+classifiers     = [
+    'License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)',
+    'Programming Language :: Python',
+    'Programming Language :: Python :: 3',
+]
+dependencies    = ['numpy>=1.20.3',
+                   'tensorflow>=2.9.1',
+                   'ligo.skymap>=0.5.3',
+                   'astropy>=4.3.1',
+                   'reproject>=0.7.1',
+                   'scipy>=1.8.0']
+requires-python = '>=3.8'
+ 
+[tool.bumpver]
+current_version = '2.0.0'
+version_pattern = 'MAJOR.MINOR.PATCH'
+commit_message  = 'bump version {old_version} -> {new_version}'
+commit = true
+tag = true
+push = true
+
+[tool.bumpver.file_patterns]
+'pyproject.toml' = [
+    "current_version = '{version}'",
+    "version         = '{version}'"       
+]
+'src/GWSkyNet/__init__.py' = [
+    "__version__ = '{version}'"
+]
+

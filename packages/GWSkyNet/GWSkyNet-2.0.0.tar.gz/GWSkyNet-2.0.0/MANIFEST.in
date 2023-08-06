@@ -1,0 +1,4 @@
+include src/GWSkyNet/GWSkyNet_data/models/*.h5
+include src/GWSkyNet/GWSkyNet_data/models/*.json
+include src/GWSkyNet/GWSkyNet_data/models/*.txt
+include src/GWSkyNet/GWSkyNet_data/rates/*.txt
