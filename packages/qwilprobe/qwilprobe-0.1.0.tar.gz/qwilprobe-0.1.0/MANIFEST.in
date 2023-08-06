@@ -1,0 +1,17 @@
+include LICENSE
+include README.md
+include CHANGELOG.md
+include pyproject.toml
+include setup.cfg
+include Makefile
+include tox.ini
+include .bumpversion.cfg
+include .gitignore
+
+recursive-include tests *
+recursive-exclude * __pycache__
+recursive-exclude * *.py[cod]
+
+recursive-include docs index.rst conf.py *.css *.jpg *.png *.gif .gitignore
+
+include proto/qwilprobe.proto

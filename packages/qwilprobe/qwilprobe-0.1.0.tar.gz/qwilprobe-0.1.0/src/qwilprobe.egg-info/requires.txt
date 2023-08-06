@@ -1,0 +1,11 @@
+protobuf>=3.19.0
+grpcio>=1.43.0
+
+[dev]
+pytest>=7.1.2
+tox>=3.25.0
+bump2version>=1.0.1
+build>=0.8.0
+isort>=5.10.1
+sphinx>=5.0.0
+flake8>=4.0.1
