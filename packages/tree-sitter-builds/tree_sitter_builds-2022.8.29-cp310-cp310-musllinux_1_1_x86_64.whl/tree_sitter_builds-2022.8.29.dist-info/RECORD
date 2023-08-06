@@ -1,0 +1,12 @@
+tree_sitter_builds-2022.8.29.dist-info/top_level.txt,sha256=_HRrA9sauZSHQqyWB11YHqgn0givlXbg5_cUDlBss7A,34
+tree_sitter_builds-2022.8.29.dist-info/WHEEL,sha256=3ltB5TaRdhkt3YYqx2XrZvyTyaxp5dXZb3HWw510bG0,113
+tree_sitter_builds-2022.8.29.dist-info/METADATA,sha256=soisDTrFZ20slctX2bgUSTqfOmhWiK-UHnpy_INOU28,3350
+tree_sitter_builds-2022.8.29.dist-info/RECORD,,
+tree_sitter_builds-2022.8.29.dist-info/LICENSE,sha256=u8BqZQWU6Dz2I-eZWEIMD1VJMOL3vW6zNPWsHd9TGLM,546
+tree_sitter_builds.libs/libstdc++-a9383cce.so.6.0.28,sha256=AQF8xpA7y538aY2feICyHGJkLWgDpwHYribC_iWn8Bw,2447392
+tree_sitter_builds.libs/libgcc_s-a04fdf82.so.1,sha256=E2_sw1FhiQZsCQiywTDdBDMlSUsazp7QUYpklMz_w_s,81256
+tree_sitter/binding.cpython-310-x86_64-linux-gnu.so,sha256=cbiUgecojBP5dvYrH5ACLqp8sn20Qkg5fITUkBTa96M,1236744
+tree_sitter/__init__.py,sha256=-3tGqm4Aux8TSTe8s029ii1a6j_9rZSbhp43tb0LfVM,3442
+tree_sitter_languages/core.cpython-310-x86_64-linux-gnu.so,sha256=JMaSt8b9z9QGpLVwERz21ufLdHDl4-Bnme6Va6l1auo,169000
+tree_sitter_languages/languages.so,sha256=difl6Bp1btBCzAYK9pD9h2CirarVl7VvLeIued8iOHs,64774928
+tree_sitter_languages/__init__.py,sha256=hQ-P_BgH0vHUC0sxnE95HowK1rU8CjRDL6REIyH6WVQ,227
