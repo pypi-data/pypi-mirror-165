@@ -1,0 +1,10 @@
+pandas
+click
+requests
+six
+tabulate
+tqdm
+typeguard
+typing_extensions
+pyparsing
+websocket-client
