@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: bluenav-ipc-thread
+Version: 0.0.2
+Summary: AWS wrapper around IPC
+Author: bluedev
+Author-email: theo.lanique@bluenav.fr
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+<h1>bluenav-ipc-thread</h1>
+<p>A python package to be use in a GreengrassCoreV2 runtime environment</p>
+<p>This package encapsulates the Greengrass IPC(v1) API in order to exchange data
+between different processes or send MQTT messages to AWS IOT Core</p>
+<hr/>
