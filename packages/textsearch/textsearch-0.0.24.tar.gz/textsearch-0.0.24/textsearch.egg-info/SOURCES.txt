@@ -1,0 +1,17 @@
+.coveragerc
+.gitignore
+.travis.yml
+README.md
+deploy.py
+setup.cfg
+setup.py
+tox.ini
+resources/tslogo.png
+tests/all_test.py
+textsearch/__init__.py
+textsearch.egg-info/PKG-INFO
+textsearch.egg-info/SOURCES.txt
+textsearch.egg-info/dependency_links.txt
+textsearch.egg-info/not-zip-safe
+textsearch.egg-info/requires.txt
+textsearch.egg-info/top_level.txt
