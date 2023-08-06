@@ -1,0 +1,6 @@
+bs4
+matplotlib
+pycodestyle
+requests
+sphinx-rtd-theme
+wordcloud
