@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: hepai-client
+Version: 1.0.0
+Summary: The Client for High energy phscis Artificial Intelligence plateform, HAI.
+Home-page: https://github.com/zhangzhengde0225/hai-client
+Author: Zhengde Zhang
+Author-email: zdzhang@163.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
+
+
+
+This is the client of High Energy Physics AI platform (HAI).
+
+The hai platform is a gprc service that provides artificial intellegence algorithms.
+
+THe hai_client is calling tool that support languages (python, java, c/c++ etc.) and systems (linux, macos, windows etc.)
+
+## Get Started
+
+### start server
+In the server computer with GPU. 
+```
+pip install hepai
+hai server start  # start server
+```
+
+### run client
+In the client computer.
+```
+pip install hepai-client
+```
+
+
+
