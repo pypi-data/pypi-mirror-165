@@ -1,0 +1,10 @@
+jsons
+numpy
+Pyomo==6.1.2
+rbfopt==4.2.2
+requests
+urllib3
+pandas
+matplotlib
+scipy
+colorhash==1.0.4
