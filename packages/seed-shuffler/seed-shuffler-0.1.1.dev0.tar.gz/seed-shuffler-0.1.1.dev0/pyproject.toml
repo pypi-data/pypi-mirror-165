@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=45", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+#[tool.setuptools_scm]
+#write_to = "shuffler/_version.py"
+#version_scheme = "post-release"
+
+[tool.poetry]
+name = "Seed Shuffler"
+description = ""
+authors = ["Tony M.Jenkins <tonymj@protonmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+embit = "0.5.0"
+pytest = "7.1.2"
