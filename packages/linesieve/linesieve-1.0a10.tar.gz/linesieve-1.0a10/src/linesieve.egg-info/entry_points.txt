@@ -1,0 +1,2 @@
+[console_scripts]
+linesieve = linesieve.cli:cli
