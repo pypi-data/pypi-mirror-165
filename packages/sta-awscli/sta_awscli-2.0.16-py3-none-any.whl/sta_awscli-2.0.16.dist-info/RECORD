@@ -1,0 +1,7 @@
+sta_awscli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sta_awscli/sta_awscli.py,sha256=Rn8J2toCTm4A19aFdFRoXe7WK3WYvvrfmPhhHUTTczM,37164
+sta_awscli-2.0.16.dist-info/entry_points.txt,sha256=P8xzo_ISksU1G_3MSsxEdJvsJCzgDzLYfuttPpFfj5E,57
+sta_awscli-2.0.16.dist-info/LICENSE,sha256=2Yymlrwb96S6XLYTr-Dv4ypQmBVY8UOMYQi-yLP2YM0,1077
+sta_awscli-2.0.16.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+sta_awscli-2.0.16.dist-info/METADATA,sha256=q62Ian1NhWmZYxq0Dw_LZTQq6wLIGCLfpz4V1QY-cmo,5118
+sta_awscli-2.0.16.dist-info/RECORD,,
