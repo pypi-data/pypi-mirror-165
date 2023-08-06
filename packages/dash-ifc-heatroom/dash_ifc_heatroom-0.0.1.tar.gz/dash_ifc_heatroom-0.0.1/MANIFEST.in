@@ -1,0 +1,11 @@
+include dash_ifc_heatroom/dash_ifc_heatroom.min.js
+include dash_ifc_heatroom/dash_ifc_heatroom.min.js.map
+include dash_ifc_heatroom/async-*.js
+include dash_ifc_heatroom/async-*.js.map
+include dash_ifc_heatroom/*-shared.js
+include dash_ifc_heatroom/*-shared.js.map
+include dash_ifc_heatroom/metadata.json
+include dash_ifc_heatroom/package-info.json
+include README.md
+include LICENSE
+include package.json

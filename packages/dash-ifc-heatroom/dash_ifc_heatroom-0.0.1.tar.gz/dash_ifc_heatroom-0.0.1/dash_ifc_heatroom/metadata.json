@@ -1,0 +1,23 @@
+{
+  "src/lib/components/DashIfcHeatroom.react.js": {
+    "description": "",
+    "displayName": "DashIfcHeatroom",
+    "methods": [],
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": true,
+        "description": "The ID used to identify the container for the IFC viewer component."
+      },
+      "ifcData": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The contents of the ifc file"
+      }
+    }
+  }
+}

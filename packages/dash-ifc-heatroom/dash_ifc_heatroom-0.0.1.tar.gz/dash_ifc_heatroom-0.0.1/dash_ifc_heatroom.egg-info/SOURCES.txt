@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+package.json
+setup.py
+dash_ifc_heatroom/DashIfcHeatroom.py
+dash_ifc_heatroom/__init__.py
+dash_ifc_heatroom/_imports_.py
+dash_ifc_heatroom/dash_ifc_heatroom.min.js
+dash_ifc_heatroom/dash_ifc_heatroom.min.js.map
+dash_ifc_heatroom/metadata.json
+dash_ifc_heatroom/package-info.json
+dash_ifc_heatroom.egg-info/PKG-INFO
+dash_ifc_heatroom.egg-info/SOURCES.txt
+dash_ifc_heatroom.egg-info/dependency_links.txt
+dash_ifc_heatroom.egg-info/top_level.txt

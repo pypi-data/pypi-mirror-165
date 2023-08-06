@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: dash-ifc-heatroom
+Version: 0.0.1
+Summary: Residential heating system design tool using IFC.js
+Home-page: UNKNOWN
+Author: Ben Cannell <bean.can.design@gmail.com>
+License: GPL-3.0
+Platform: UNKNOWN
+Classifier: Framework :: Dash
+License-File: LICENSE
+
+UNKNOWN
+
