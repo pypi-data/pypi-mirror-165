@@ -1,0 +1,3 @@
+[console_scripts]
+fedsim-cli = fedsim_cli.fedsim_cli:cli
+
