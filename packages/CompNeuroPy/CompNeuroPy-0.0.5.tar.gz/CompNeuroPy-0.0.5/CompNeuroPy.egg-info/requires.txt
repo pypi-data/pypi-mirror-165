@@ -1,0 +1,10 @@
+numpy
+scipy
+matplotlib
+cython
+sympy
+hyperopt
+ANNarchy
+pandas
+sbi
+torch

@@ -1,0 +1,9 @@
+*__pycache__/
+build/
+CompNeuroPy.egg-info/
+dist/
+*annarchy_folders/
+*dataRaw/
+*.png
+*.svg
+*annarchy/
