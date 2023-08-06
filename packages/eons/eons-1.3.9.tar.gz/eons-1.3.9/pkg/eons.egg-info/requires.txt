@@ -1,0 +1,9 @@
+twine
+tqdm
+pytest
+pip
+jsonpickle
+setuptools
+wheel
+build
+requests
