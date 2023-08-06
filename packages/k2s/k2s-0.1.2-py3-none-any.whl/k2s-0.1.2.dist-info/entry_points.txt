@@ -1,0 +1,2 @@
+[console_scripts]
+k2s = k2s.cli:CLI
