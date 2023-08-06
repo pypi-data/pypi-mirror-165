@@ -1,0 +1,2 @@
+[console_scripts]
+siena = siena.siena_cli:run_siena_cli
