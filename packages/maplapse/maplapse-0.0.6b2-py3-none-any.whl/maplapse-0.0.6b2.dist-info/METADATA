@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: maplapse
+Version: 0.0.6b2
+Summary: A python library to create animated timelapse of maps
+Home-page: https://github.com/souravbhadra/maplapse
+Author: Sourav Bhadra
+Author-email: sbhadra019@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: fiona (==1.8.21)
+Requires-Dist: pyproj (==3.3.1)
+Requires-Dist: rtree (==1.0.0)
+Requires-Dist: shapely (==1.8.4)
+Requires-Dist: geopandas (==0.11.1)
+Requires-Dist: matplotlib (==3.5.3)
+Requires-Dist: pandas (==1.4.3)
+Requires-Dist: imageio (==2.21.1)
+Requires-Dist: imageio-ffmpeg (==0.4.7)
+Requires-Dist: tqdm (==4.64.0)
+
+![check-status](https://img.shields.io/github/checks-status/souravbhadra/maplapse/main)
+![license](https://img.shields.io/github/license/souravbhadra/maplapse)
+![downloads](https://img.shields.io/github/downloads/souravbhadra/maplapse/total)
+
+
+![maplapse-logo](https://raw.githubusercontent.com/souravbhadra/maplapse/master/docs/images/logo.gif)
+
+`MapLapse` is a Python-based library to create animated timelapse maps from given shapefiles. It is mainly built on top of `geopandas` and `matplotlib`, along with other open-source geospatial packages.
+
+## Key Features
+- Animated **choropleth** maps
+- Animated **proportional circle** maps
+- Supports output in `.gif` and `.mp4`
+
+## Example
+The `Animator` object of `maplapse` can easily create the animations. Here is a code snippet:
+
+```
+anim = Animator(shape='/county_shape.shp',
+                value='/century_data.csv',
+                time_column='Year',
+                data_column='Value',
+                shape_unique_column='ST_CNT',
+                map_type='choropleth',
+                out_path='/animation.gif')
+anim.animate()
+```
+Output:
+![maplapse-ex1](https://raw.githubusercontent.com/souravbhadra/maplapse/master/docs/images/corn_yield.gif)
+
+![maplapse-ex2](https://raw.githubusercontent.com/souravbhadra/maplapse/master/docs/images/covid.gif)
+
+## Installation
+Simply use `pip install maplapse`.
+
+## Problems
+If you face any issues with the library, please create an issue by following up the steps [here](https://docs.github.com/en/issues/tracking-your-work-with-issues/creating-an-issue)
+
+
+
+
+
