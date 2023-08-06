@@ -1,0 +1,12 @@
+kw/__init__.py,sha256=q3JNmHn0CMPtEqkMR40lkjKQzuWUtT39xIFUYJ-MKIE,56
+kw/json/__init__.py,sha256=EWkitR4L0vfzA5ssItHR4bm72dHA7PZEeeL-uX18cpw,404
+kw/json/_compat.py,sha256=a1L4_fybO9bgqj0_qFyD8HXzBVV3Q95aytT6APBXuvg,1939
+kw/json/encode.py,sha256=dqaPxUytIpbk6Vh9tin57g26F84kZR5UvYeXHmbek5Y,5021
+kw/json/exceptions.py,sha256=RIhDmVxvgUjH8lut8YjyHSJcbZcSpH7jACDaS1w7FNA,41
+kw/json/flask.py,sha256=IExi-FBlCWEt53P7FM2YU17cZMXFnji0aOg54un1pJ8,606
+kw/json/utils.py,sha256=X-jHbIKbZQrLI78pqlG8-Hvl1HOg-Xr0OJdpYzQ1UPI,917
+kiwi_json-0.10.0.dist-info/LICENSE,sha256=UWmiHDL_McEeMpY2BixxsfIinafoqz9zvy80-y6Agyk,1065
+kiwi_json-0.10.0.dist-info/METADATA,sha256=GB8E6UeSKnHFaNAd9Rx17l9qLn8OuWVhLLyD-0_Itzg,3540
+kiwi_json-0.10.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+kiwi_json-0.10.0.dist-info/top_level.txt,sha256=fc-quQsXn99seW90Up2G_4fExMQRWOwqkDSsfAy_980,3
+kiwi_json-0.10.0.dist-info/RECORD,,
