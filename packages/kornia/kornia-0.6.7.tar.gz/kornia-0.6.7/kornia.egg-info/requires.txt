@@ -1,0 +1,42 @@
+torch>=1.8.1
+packaging
+
+[all]
+accelerate==0.12.0
+pytest==7.1.2
+flake8==5.0.4
+pytest-cov==3.0.0
+pytest-mypy==0.9.1
+pydocstyle
+pre-commit>=2.0
+isort
+numpy
+scipy
+opencv-python
+
+[all:python_version < "3.7"]
+dataclasses
+
+[all:python_version >= "3.7"]
+kornia_rs==0.0.5
+
+[dev]
+pytest==7.1.2
+flake8==5.0.4
+pytest-cov==3.0.0
+pytest-mypy==0.9.1
+pydocstyle
+pre-commit>=2.0
+isort
+numpy
+scipy
+opencv-python
+
+[dev:python_version >= "3.7"]
+kornia_rs==0.0.5
+
+[x]
+accelerate==0.12.0
+
+[x:python_version < "3.7"]
+dataclasses
