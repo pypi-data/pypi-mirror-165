@@ -1,0 +1,3 @@
+from .imdb import IMDB
+
+__version__ = "0.1.2"
