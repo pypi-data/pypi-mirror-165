@@ -1,0 +1,9 @@
+README.md
+setup.py
+deepdanbooru_onnx/__init__.py
+deepdanbooru_onnx/deepdanbooru_onnx.py
+deepdanbooru_onnx.egg-info/PKG-INFO
+deepdanbooru_onnx.egg-info/SOURCES.txt
+deepdanbooru_onnx.egg-info/dependency_links.txt
+deepdanbooru_onnx.egg-info/requires.txt
+deepdanbooru_onnx.egg-info/top_level.txt

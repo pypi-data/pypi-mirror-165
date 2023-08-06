@@ -1,0 +1,6 @@
+onnx
+onnxruntime
+tqdm
+numpy
+pillow
+requests
