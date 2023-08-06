@@ -1,0 +1,9 @@
+LICENSE.txt
+README.md
+setup.py
+dpi/__init__.py
+dpi_sc.egg-info/PKG-INFO
+dpi_sc.egg-info/SOURCES.txt
+dpi_sc.egg-info/dependency_links.txt
+dpi_sc.egg-info/requires.txt
+dpi_sc.egg-info/top_level.txt
