@@ -1,0 +1,119 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "camera_solution": {
+      "type": "array",
+      "items": [
+        { "title": "camera", "type": "string" },
+        { "title": "exposure_no", "type": "integer" },
+        { "title": "solved", "type": "boolean" },
+        { "title": "racen", "type": "number" },
+        { "title": "deccen", "type": "number" },
+        { "title": "x_rotation", "type": "number" },
+        { "title": "y_rotation", "type": "number" },
+        { "title": "rotation", "type": "number" }
+      ]
+    },
+    "acquisition_valid": { "type": "boolean" },
+    "did_correct": { "type": "boolean" },
+    "correction_applied": {
+      "type": "array",
+      "items": [
+        { "title": "ra_correction", "type": "number" },
+        { "title": "dec_correction", "type": "number" },
+        { "title": "rot_correction", "type": "number" },
+        { "title": "scale_correction", "type": "number" },
+        { "title": "focus_correction", "type": "number" }
+      ]
+    },
+    "guider_status": { "type": "string" },
+    "fwhm_camera": {
+      "type": "array",
+      "items": [
+        { "title": "camera", "type": "string" },
+        { "title": "exposure_no", "type": "integer" },
+        { "title": "fwhm", "type": "number" },
+        { "title": "n_regions", "type": "integer" },
+        { "title": "n_valid", "type": "integer" }
+      ]
+    },
+    "astrometry_fit": {
+      "type": "array",
+      "items": [
+        { "title": "exposure_no", "type": "integer" },
+        { "title": "nsolved", "type": "integer" },
+        { "title": "racen", "type": "number" },
+        { "title": "deccen", "type": "number" },
+        { "title": "fwhm", "type": "number" },
+        { "title": "ellipticity", "type": "number" },
+        { "title": "camera_rotation", "type": "number" },
+        {
+          "title": "delta_ra",
+          "type": "number",
+          "$comment": "RA measured delta in arcsec"
+        },
+        {
+          "title": "delta_dec",
+          "type": "number",
+          "$comment": "Dec measured delta in arcsec"
+        },
+        {
+          "title": "delta_rot",
+          "type": "number",
+          "$comment": "Rotator measured delta in arcsec"
+        },
+        {
+          "title": "delta_scale",
+          "type": "number",
+          "$comment": "Scale measured delta factor"
+        }
+      ]
+    },
+    "focus_fit": {
+      "type": "array",
+      "items": [
+        { "title": "exposure_no", "type": "integer" },
+        { "title": "fwhm_fit", "type": "number" },
+        { "title": "a", "type": "number" },
+        { "title": "b", "type": "number" },
+        { "title": "c", "type": "number" },
+        { "title": "r2", "type": "number" },
+        { "title": "delta_focus", "type": "number" }
+      ]
+    },
+    "guide_rms": {
+      "type": "array",
+      "items": [
+        { "title": "exposure_no", "type": "integer" },
+        { "title": "xrms", "type": "number" },
+        { "title": "yrms", "type": "number" },
+        { "title": "rms", "type": "number" }
+      ]
+    },
+    "offset": {
+      "type": "array",
+      "items": [
+        { "title": "ra_offset", "type": "number" },
+        { "title": "dec_offset", "type": "number" },
+        { "title": "pa_offset", "type": "number" }
+      ]
+    },
+    "enabled_axes": { "type": "array" },
+    "pid_radec": {
+      "type": "array",
+      "items": [{ "title": "radec_kp", "type": "number" }]
+    },
+    "pid_rot": {
+      "type": "array",
+      "items": [{ "title": "rot_kp", "type": "number" }]
+    },
+    "pid_focus": {
+      "type": "array",
+      "items": [{ "title": "focus_kp", "type": "number" }]
+    },
+    "scale_median": { "type": "number" },
+    "focus_data": { "type": "array", "items": { "type": "number" } }
+  },
+  "additionalProperties": false
+}
