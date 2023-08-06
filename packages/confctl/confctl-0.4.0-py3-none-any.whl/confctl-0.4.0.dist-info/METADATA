@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: confctl
+Version: 0.4.0
+Summary: Simple configuration management
+Home-page: https://github.com/miphreal/confctl
+License: MIT
+Author: miphreal
+Author-email: miphreal@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: jinja2 (>=2.11.1,<4)
+Project-URL: Repository, https://github.com/miphreal/confctl
+Description-Content-Type: text/markdown
+
+<p align="center">
+    <a href="https://pypi.org/project/confctl/">
+        <img src="https://badge.fury.io/py/confctl.svg" alt="Package version">
+    </a>
+</p>
+
+# confctl
+
+Build-system-like approach to manage your configs.
+
+```sh
+$ confctl //tools/kitty
+```
+
+TBD
+

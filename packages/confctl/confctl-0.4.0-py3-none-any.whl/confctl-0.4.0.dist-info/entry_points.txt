@@ -1,0 +1,3 @@
+[console_scripts]
+confctl=confctl.cli:main
+
