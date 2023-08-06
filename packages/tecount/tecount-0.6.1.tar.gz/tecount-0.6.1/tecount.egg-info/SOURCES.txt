@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+tecount/main.py
+tecount.egg-info/PKG-INFO
+tecount.egg-info/SOURCES.txt
+tecount.egg-info/dependency_links.txt
+tecount.egg-info/entry_points.txt
+tecount.egg-info/requires.txt
+tecount.egg-info/top_level.txt
