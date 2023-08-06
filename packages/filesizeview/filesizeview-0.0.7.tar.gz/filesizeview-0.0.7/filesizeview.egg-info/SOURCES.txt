@@ -1,0 +1,8 @@
+README.md
+filesizeview.py
+setup.py
+filesizeview.egg-info/PKG-INFO
+filesizeview.egg-info/SOURCES.txt
+filesizeview.egg-info/dependency_links.txt
+filesizeview.egg-info/entry_points.txt
+filesizeview.egg-info/top_level.txt
