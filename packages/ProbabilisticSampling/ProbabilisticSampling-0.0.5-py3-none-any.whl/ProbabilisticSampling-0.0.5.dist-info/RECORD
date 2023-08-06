@@ -1,0 +1,10 @@
+sampling_designs/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sampling_designs/ber.py,sha256=mcIBI2SAOGhErRDmMHIYieQ_wlNG0G2rpmhgfV8p_Kw,859
+sampling_designs/hh.py,sha256=6FRt8eDmpj2GS5mm30KLtYOyL45l3BYY2-pTZSoCH6c,828
+sampling_designs/ht.py,sha256=8U8v40pTEvdLNn_8NqszKqV2a15LfiFoS-kLpOPmK8w,837
+sampling_designs/srswor.py,sha256=wytgFSAwxNxEaxVT4EoGohiApHN67FtaafIL7CNCpIE,884
+ProbabilisticSampling-0.0.5.dist-info/LICENSE.txt,sha256=2SDmTdTOAedc5wEwHBm9zpw53X5kTLnmnWIV1g8kx2M,1091
+ProbabilisticSampling-0.0.5.dist-info/METADATA,sha256=WXn1iiHQwkYPTRjDYU8rvybk9gX6VkzX7csEssCGeqo,1258
+ProbabilisticSampling-0.0.5.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+ProbabilisticSampling-0.0.5.dist-info/top_level.txt,sha256=hH4fO1qHR5Nwwvosbi8vbO1y9CnB-SXgebnUk1rIV1o,17
+ProbabilisticSampling-0.0.5.dist-info/RECORD,,
