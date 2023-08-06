@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: AcraNetwork
+Version: 0.15.18
+Summary: Classes and utilities to support Flight Test Instrumentation Ethernet networks
+Home-page: https://github.com/diarmuidcwc/AcraNetwork
+Author: Diarmuid Collins
+Author-email: dcollins@curtisswright.com
+Classifier: Programming Language :: Python
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+License-File: LICENSE
+
+A collection of classes that can be used to decom network or PCM based FTI traffic
