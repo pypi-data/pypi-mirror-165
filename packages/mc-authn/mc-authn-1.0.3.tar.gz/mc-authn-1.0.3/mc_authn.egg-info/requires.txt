@@ -1,0 +1,6 @@
+setuptools
+typing_extensions
+fastapi~=0.81.0
+uvicorn~=0.18.3
+ruamel.yaml
+hypy_utils>=1.0.13
