@@ -1,0 +1,5 @@
+streamdeck_ui
+jinja2
+clockify
+click
+xdg
