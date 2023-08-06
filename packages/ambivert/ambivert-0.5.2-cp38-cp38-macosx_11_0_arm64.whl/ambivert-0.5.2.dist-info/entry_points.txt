@@ -1,0 +1,6 @@
+[console_scripts]
+ambivert = ambivert.ambivert:main
+ambivert_insert_variants = ambivert.insert_variants:main
+ambivert_simulate_variants = ambivert.simulate_variants:main
+ambivert_truseq_manifest = ambivert.truseq_manifest:main
+
