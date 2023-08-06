@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/parse2excel/__init__.py
+src/parse2excel/parse2excel.py
+src/parse2excel.egg-info/PKG-INFO
+src/parse2excel.egg-info/SOURCES.txt
+src/parse2excel.egg-info/dependency_links.txt
+src/parse2excel.egg-info/entry_points.txt
+src/parse2excel.egg-info/requires.txt
+src/parse2excel.egg-info/top_level.txt
