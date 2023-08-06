@@ -1,0 +1,154 @@
+# GitHub Actions configuration **EXAMPLE**,
+# MODIFY IT ACCORDING TO YOUR NEEDS!
+# Reference: https://docs.github.com/en/actions
+
+name: tests
+
+on:
+  push:
+    # Avoid using all the resources/limits available by checking only
+    # relevant branches and tags. Other branches can be checked via PRs.
+    branches: [main]
+    tags: ['v[0-9]*', '[0-9]+.[0-9]+*']  # Match tags that resemble a version
+  pull_request:  # Run in every PR
+  workflow_dispatch:  # Allow manually triggering the workflow
+  schedule:
+    # Run roughly every 15 days at 00:00 UTC
+    # (useful to check if updates on dependencies break the package)
+    - cron: '0 0 1,16 * *'
+
+concurrency:
+  group: >-
+    ${{ github.workflow }}-${{ github.ref_type }}-
+    ${{ github.event.pull_request.number || github.sha }}
+  cancel-in-progress: true
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    outputs:
+      wheel-distribution: ${{ steps.wheel-distribution.outputs.path }}
+    steps:
+      - uses: actions/checkout@v3
+        with: {fetch-depth: 0}  # deep clone for setuptools-scm
+      - uses: actions/setup-python@v4
+        with: {python-version: "3.10"}
+      - name: Run static analysis and format checkers
+        run: pipx run pre-commit run --all-files --show-diff-on-failure
+      - name: Build package distribution files
+        run: pipx run tox -e clean,build
+      - name: Record the path of wheel distribution
+        id: wheel-distribution
+        run: echo "::set-output name=path::$(ls dist/*.whl)"
+      - name: Store the distribution files for use in other stages
+        # `tests` and `publish` will use the same pre-built distributions,
+        # so we make sure to release the exact same package that was tested
+        uses: actions/upload-artifact@v3
+        with:
+          name: python-distribution-files
+          path: dist/
+          retention-days: 1
+
+  test:
+    needs: prepare
+    strategy:
+      matrix:
+        python:
+        - "3.9"  # oldest Python supported by PSF
+        - "3.10"  # newest Python that is stable
+        platform:
+        - ubuntu-latest
+        - macos-latest
+        - windows-latest
+    runs-on: ${{ matrix.platform }}
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Install tox
+        run: python -m pip install tox
+      - name: Setup Miniconda
+        uses: conda-incubator/setup-miniconda@v2.1.1
+        with:
+          miniconda-version: "latest"
+          python-version: ${{ matrix.python }}
+      - name: Retrieve pre-built distribution files
+        uses: actions/download-artifact@v3
+        with: {name: python-distribution-files, path: dist/}
+      - name: Update tox test environments
+        shell: python
+        run: |
+          import subprocess; import json; import os
+          major, minor, impl = json.loads(subprocess.check_output(["python", "-c", "import json; import sys; import platform; print(json.dumps([sys.version_info[0], sys.version_info[1], platform.python_implementation()]));"], universal_newlines=True))
+          with open(os.environ['GITHUB_ENV'], 'a') as file_handler:
+                file_handler.write('TOXENV=' + ("py" if impl == "CPython" else "pypy") + ("{}{}".format(major, minor) if impl == "CPython" else "3") + "\n")
+      - name: Run tests
+        run: >-
+          pipx run tox
+          --installpkg '${{ needs.prepare.outputs.wheel-distribution }}'
+          -- -rFEx --durations 10 --color yes
+      - name: Generate coverage report
+        run: pipx run coverage lcov -o coverage.lcov
+      - name: Upload partial coverage report
+        uses: coverallsapp/github-action@master
+        with:
+          path-to-lcov: coverage.lcov
+          github-token: ${{ secrets.github_token }}
+          flag-name: ${{ matrix.platform }} - py${{ matrix.python }}
+          parallel: true
+
+  finalize:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Finalize coverage report
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          parallel-finished: true
+
+  publish:
+    needs: finalize
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with: {python-version: "3.10"}
+      - name: Extract branch name
+        shell: bash
+        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+        id: extract_branch
+      - name: Check tag
+        run: |
+          export VERSION=$(git describe --always)
+          echo ::set-output name=mode::none
+          if [[ $VERSION =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo ::set-output name=mode::release
+          elif [[ $VERSION =~ ^((?!\+|\-).)*$ ]]; then
+            echo ::set-output name=mode::develop
+          fi
+        id: check_tag
+      - name: Retrieve pre-built distribution files
+        uses: actions/download-artifact@v3
+        with: {name: python-distribution-files, path: dist/}
+      - name: Publish Release Package
+        if: contains(steps.extract_branch.outputs.branch, 'main') && contains(steps.check_tag.outputs.mode, 'release')
+        env:
+          # To set PYPI_TOKEN as a secret using GitHub UI
+          # - https://pypi.org/help/#apitoken
+          # - https://docs.github.com/en/actions/security-guides/encrypted-secrets
+          TWINE_REPOSITORY: pypi
+          TWINE_USERNAME: __token__
+          TWINE_PASSWORD: ${{ secrets.PYPI_TOKEN }}
+        run: pipx run tox -e publish -- --repository pypi
+      - name: Publish Develop Package
+        if: contains(steps.extract_branch.outputs.branch, 'main') && contains(steps.check_tag.outputs.mode, 'develop')
+        env:
+          # To set TESTPYPI_TOKEN as a secret using GitHub UI
+          # - https://pypi.org/help/#apitoken
+          # - https://docs.github.com/en/actions/security-guides/encrypted-secrets
+          TWINE_REPOSITORY: testpypi
+          TWINE_USERNAME: __token__
+          TWINE_PASSWORD: ${{ secrets.TESTPYPI_TOKEN }}
+        run: pipx run tox -e publish
