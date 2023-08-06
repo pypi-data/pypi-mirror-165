@@ -1,0 +1,12 @@
+dawgz/__init__.py,sha256=gZEcpnm3n8r2rivAMZs3FeKtZd9nWjR7s07BasPk37Q,978
+dawgz/__main__.py,sha256=Tw5wo1_ddNLQzwAqEZBaEHpBnZ4z8fGUrOivsNqNB4g,84
+dawgz/cli.py,sha256=aP8n-vC0Mx6RTF1gUGPEiMOimIAUqpVmfQIzUJOx0eU,2146
+dawgz/schedulers.py,sha256=GBld3MN7fM0DhdIWZT06_hgfjfRIWLkgxXdt29yyos8,12245
+dawgz/utils.py,sha256=yQcg9eZCx9v_8Qof8HanqU45OdSTY0UsKIVv87ji0H0,2692
+dawgz/workflow.py,sha256=fpokMHp254q9lhllI8SizOwkK5b9KaU0n9YcGa4jBXQ,6484
+dawgz-0.4.0.dist-info/LICENSE,sha256=Ky7iFioaAAZxBew89qZDyJe-Kr_7VC4WGBqKb2W1CoM,1072
+dawgz-0.4.0.dist-info/METADATA,sha256=y_LC5ym-W2WQq-1jAHQaj8qHc07_3tIAzuJV7Qal6yQ,8238
+dawgz-0.4.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+dawgz-0.4.0.dist-info/entry_points.txt,sha256=f_V7-kM1JrTdCa_A2ZpCfs1_tYccbHdDYkfTbIsgmxM,42
+dawgz-0.4.0.dist-info/top_level.txt,sha256=P3Qhf15iMvZfrKHDS-CuWHSXfZ6kk41y3Z_VNLc-OGo,6
+dawgz-0.4.0.dist-info/RECORD,,
