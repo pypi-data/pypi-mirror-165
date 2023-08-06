@@ -1,0 +1,10 @@
+LICENSE
+setup.py
+Topsis_Apurvi_101953006/__init__.py
+Topsis_Apurvi_101953006/topsis.py
+Topsis_Apurvi_101953006.egg-info/PKG-INFO
+Topsis_Apurvi_101953006.egg-info/SOURCES.txt
+Topsis_Apurvi_101953006.egg-info/dependency_links.txt
+Topsis_Apurvi_101953006.egg-info/entry_points.txt
+Topsis_Apurvi_101953006.egg-info/requires.txt
+Topsis_Apurvi_101953006.egg-info/top_level.txt
