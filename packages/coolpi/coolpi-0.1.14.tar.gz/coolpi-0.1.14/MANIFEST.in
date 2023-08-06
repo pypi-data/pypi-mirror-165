@@ -1,0 +1,8 @@
+include src/coolpi/data/cie/*.json
+include src/coolpi/data/colourchecker/coordinates/*.json
+include src/coolpi/data/colourchecker/reflectance/*.json
+include src/coolpi/data/colourchecker/XYZ/*.json
+include src/coolpi/gui/assets/config/*.json
+include src/coolpi/gui/assets/icon/*.png
+include src/coolpi/gui/assets/logo/*.png
+include src/coolpi/gui/assets/temp/*.jpg

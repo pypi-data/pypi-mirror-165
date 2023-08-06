@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "coolpi"
+version = "0.1.14"
+authors = [
+  { name="Adolfo Molada Tebar", email="admote@doctor.upv.es"}]
+
+dependencies = [
+  "numpy>=1.22", 
+  "opencv-python>=4.6", 
+  "pandas>=1.4", 
+  "PySide6>=6.3", 
+  "rawpy>=0.17", 
+  "scipy>=1.8", 
+  "seaborn>=0.11",
+  "matplotlib>=3.5"]
+
+description = "COlour Operations Library for Processing Images"
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3.9",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+namespaces = true
+where = ["src", "data", "assets"]
+
+[project.urls]
+"Coolpi Documentation" ="https://graffitiprojectindigo.github.io/coolpi/"
+"Coolpi Source" = "https://github.com/GraffitiProjectINDIGO/coolpi/tree/main/src/coolpi"
+"Coolpi Tests" = "https://github.com/GraffitiProjectINDIGO/coolpi/tree/main/tests"
+"GitHub" = "https://github.com/GraffitiProjectINDIGO/coolpi"
+"GitHub Notebooks" = "https://github.com/GraffitiProjectINDIGO/coolpi/tree/main/notebooks"
+"INDIGO" = "https://projectindigo.eu"
+"LBI - ARCHPRO" = "https://archpro.lbg.ac.at"
+"TU Wien - GEO Department"="https://www.geo.tuwien.ac.at/"
