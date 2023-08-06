@@ -1,0 +1,10 @@
+numpy
+matplotlib
+pandas
+astropy
+lmfit
+scipy
+specutils
+pylatex
+openpyxl
+joblib
