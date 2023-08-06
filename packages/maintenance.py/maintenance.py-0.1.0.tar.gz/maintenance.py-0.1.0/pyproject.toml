@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "maintenance.py"
+version = "0.1.0"
+description = "Maintain your code"
+readme = "README.md"
+requires-python = ">=3.6"
+keywords = [
+    "deprecate",
+    "experimental",
+    "maintain",
+    "maintenance",
+]
+license = {text = "MIT"}
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Programming Language :: Python",
+    "Typing :: Typed",
+]
