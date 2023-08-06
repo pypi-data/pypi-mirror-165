@@ -1,0 +1,40 @@
+.drafts/
+
+# lib
+service/__pycache__/
+service/log/__pycache__/
+servuce/command/__pycache__/
+service/backend/__pycache__/
+service/setup/__pycache__/
+service/ext/__pycache__/
+service/types/__pycache__/
+service/logging/__pycache__/
+tests/.pytest_cache/
+tests/__pycache__/
+tests/ext/__pycache__/
+tests/i18n/__pycache__/
+tests/fn/__pycache__/
+
+# third-party
+assets/
+dist/
+
+# caches
+.pytest_cache/
+
+# tools
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# envs
+.env
+.venv/
+.env/
+env/
+venv/
+
