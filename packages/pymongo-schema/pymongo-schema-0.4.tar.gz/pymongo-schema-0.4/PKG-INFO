@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: pymongo-schema
+Version: 0.4
+Summary: A schema analyser for MongoDB written in Python
+Home-page: https://github.com/pajachiet/pymongo-schema
+Author: Pierre-Alain Jachiet
+Author-email: pajachiet@gmail.com
+License: GNU General Public License v3.0
+Keywords: mongo,mongodb,schema,mongo-connector,mongo-connector-postgresql
+License-File: LICENSE
