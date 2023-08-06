@@ -1,0 +1,9 @@
+LICENSE.txt
+README.md
+setup.py
+pycord/multicog/__init__.py
+pycord_multicog.egg-info/PKG-INFO
+pycord_multicog.egg-info/SOURCES.txt
+pycord_multicog.egg-info/dependency_links.txt
+pycord_multicog.egg-info/requires.txt
+pycord_multicog.egg-info/top_level.txt
