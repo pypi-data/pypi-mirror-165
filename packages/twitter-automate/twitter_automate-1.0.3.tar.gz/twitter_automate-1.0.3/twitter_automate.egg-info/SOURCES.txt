@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+bot_twitter/__init__.py
+bot_twitter/automate_twitter.py
+docs/index.rst
+requirements/requirements.txt
+twitter_automate.egg-info/PKG-INFO
+twitter_automate.egg-info/SOURCES.txt
+twitter_automate.egg-info/dependency_links.txt
+twitter_automate.egg-info/requires.txt
+twitter_automate.egg-info/top_level.txt
