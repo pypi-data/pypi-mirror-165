@@ -1,0 +1,122 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>User’s Manual &#8212; vkvh 0.2 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Code documentation" href="code.html" />
+    <link rel="prev" title="Welcome to VKVH’s documentation!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="user-s-manual">
+<h1>User’s Manual<a class="headerlink" href="#user-s-manual" title="Permalink to this headline"></a></h1>
+<div class="section" id="installation">
+<span id="instalation"></span><h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline"></a></h2>
+<p>To use <code class="docutils literal"><span class="pre">vkvh</span></code>, first install it using pip:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$ </span>pip install vkvh
+</pre></div>
+</div>
+</div>
+<div class="section" id="open-save-close-quit">
+<h2>Open/Save/Close/Quit<a class="headerlink" href="#open-save-close-quit" title="Permalink to this headline"></a></h2>
+<p>In the menu bar, click on <em>File &gt; Open</em> (or press <em>Ctrl-O</em> as keyboard shortcut) to choose a file (or several ones) to open. They can also be opened from a command line:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$ </span>vkvh file.kvh <span class="o">[</span>file2.kvh <span class="o">[</span>...<span class="o">]]</span>
+</pre></div>
+</div>
+<p>Each file is opened in its own tab on a notebook shown in the main window.</p>
+<p>To save an edited file click on <em>File &gt; Save</em> (or <em>Ctrl-S</em>) or <em>File &gt; Save As …</em> to save the current tab under a new name.</p>
+<p>To close a file in <code class="docutils literal"><span class="pre">vkvh</span></code>, click on the cross icon on the corresponding tab. If the file to close was edited and not saved yet, a confirmation will be asked.</p>
+<p>To quit the application, do one of the following:</p>
+<blockquote>
+<div><ul class="simple">
+<li>click on <em>File &gt; Quit</em> (or <em>Ctrl-Q</em>)</li>
+<li>close the <code class="docutils literal"><span class="pre">vkvh</span></code> window.</li>
+</ul>
+</div></blockquote>
+<p>If one the open tabs was edited but not saved, a confirmation will be asked before closing.</p>
+</div>
+<div class="section" id="expand-collapse">
+<h2>Expand/Collapse<a class="headerlink" href="#expand-collapse" title="Permalink to this headline"></a></h2>
+<p>The file content is represented in an hierarchical tree form organized in 3 columns:</p>
+<blockquote>
+<div><ul class="simple">
+<li><em>N°</em> indicating the flat number of the item in the content</li>
+<li><em>Key</em></li>
+<li><em>Value</em>.</li>
+</ul>
+</div></blockquote>
+<p>An item with sub-items can be expanded or collapsed by clicking on the triangle (or “+”/”-” sign depending on platform) on the left side of a key. To expand all sub-items of a key, right-click on it and select <em>Expand all in &lt;key name&gt;</em>. The same is true for collapsing all sub-items. Please note, that on big trees, these operations can take considerable time. To find a particular item, it is much more fast to use <em>Search</em> tool.</p>
+</div>
+<div class="section" id="search-text-in-keys-and-values">
+<h2>Search text in keys and values<a class="headerlink" href="#search-text-in-keys-and-values" title="Permalink to this headline"></a></h2>
+<p>In search field in the toolbar, enter some text and press Enter. By default, the text is searched in keys only, with partial word matching, in downward direction and in case insensitive manner. To search the text in values too or in values exclusively, or for whole words only etc. check or uncheck the corresponding options in <em>Options</em> menu. Options include:</p>
+<blockquote>
+<div><ul class="simple">
+<li><em>Search in Keys</em></li>
+<li><em>Search in Values</em></li>
+<li><em>Whole world</em> (match the whole words only)</li>
+<li><em>Backward</em> (make a search in backward direction)</li>
+<li><em>Match Case</em> (make the search case sensitive).</li>
+</ul>
+</div></blockquote>
+<p>If the text is found, the corresponding Key/Value pair is selected and made visible. It is also shown in status bar. Otherwise, an error message is shown.</p>
+<p>To search for the next occurrence, press Enter again.</p>
+<p>During a session, the last 5 searched terms are saved in a search history which can be accessed by clicking on the <em>Search</em> icon in the search field (most often it takes the shape of a <em>magnifying glass</em>). The search history is lost when you restart <code class="docutils literal"><span class="pre">vkvh</span></code>.</p>
+</div>
+<div class="section" id="edit-key-value">
+<h2>Edit Key/Value<a class="headerlink" href="#edit-key-value" title="Permalink to this headline"></a></h2>
+<p>To change the label of a key or value just double click on it. An in-place editing form appears letting to edit new content. Note that the <em>Root</em> key cannot be edited.</p>
+<p>To add a new key, right-click on an existing key and choose from floating menu:</p>
+<blockquote>
+<div><ul class="simple">
+<li>add a sub-key or</li>
+<li>add a key at the same level before or after the current key.</li>
+</ul>
+</div></blockquote>
+<p>Once the new key is created, double click on its value column to create corresponding value if needed. Note that no new sub-key can be created for a key having non empty <em>Value</em> field.</p>
+<p>To delete an item and all its sub-items, right-click on a key and choose <em>Delete item &lt;key name&gt;</em>.</p>
+<p>If a tree was edited, a star character “*” is shown before the file name in the tab title. When the tab is saved, the star is removed.</p>
+</div>
+<div class="section" id="help">
+<h2>Help<a class="headerlink" href="#help" title="Permalink to this headline"></a></h2>
+<p>Menu <em>Help &gt; Manual</em> provides this page as well as some legal information in <em>Help &gt; About</em>.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+  </body>
+</html>

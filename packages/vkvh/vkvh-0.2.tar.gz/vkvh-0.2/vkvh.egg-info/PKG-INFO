@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: vkvh
+Version: 0.2
+Summary: KVH Format Reader/Editor with Graphical User Interface
+Home-page: https://forgemia.inra.fr/mathscell/vkvh
+Author: Maria Morozova, Serguei Sokol
+Author-email: sokol@insa-toulouse.fr
+License: GNU General Public License v2 or later (GPLv2+)
+Project-URL: Source, https://forgemia.inra.fr/mathscell/vkvh
+Project-URL: Tracker, https://forgemia.inra.fr/mathscell/vkvh/-/issues
+Keywords: Key-Value Hierarchy
+Classifier: Environment :: Console
+Classifier: Environment :: X11 Applications :: GTK
+Classifier: Environment :: Win32 (MS Windows)
+Classifier: Environment :: MacOS X
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Text Processing :: Markup
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6
+License-File: LICENSE
+
+Multi-platform GUI for KVH format reader/editor based on wxpython

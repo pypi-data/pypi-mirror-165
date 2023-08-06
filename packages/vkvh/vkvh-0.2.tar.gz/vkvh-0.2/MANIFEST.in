@@ -1,0 +1,4 @@
+include README.md
+include vkvh/version.txt
+recursive-include tests *.py *.kvh
+recursive-include vkvh/help *
