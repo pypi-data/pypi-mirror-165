@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: PyOpenGL-Demo
+Version: 3.1.1
+Summary: Demonstration scripts for the PyOpenGL library
+Home-page: https://github.com/mcfletch/pyopengl-demo
+Maintainer: Mike C. Fletcher
+Maintainer-email: mcfletch@vrplumber.com
+License: BSD

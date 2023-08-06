@@ -1,0 +1,2 @@
+recursive-include OpenGL_Demo *.py *.bmp *.png *.jpg *.ppm *.face *.frag *.vert *.xyzr *.ttf *.txt
+recursive-include py2exe-example *.py
