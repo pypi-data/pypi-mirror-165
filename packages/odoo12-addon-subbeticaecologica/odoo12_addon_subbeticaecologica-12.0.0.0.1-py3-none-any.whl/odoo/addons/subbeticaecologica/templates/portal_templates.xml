@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <template id="portal_layout_subbetica" inherit_id="portal.portal_layout" name="Portal layout">
+    <xpath expr="//div[@t-field='user_id.partner_id']" position="after">
+      <div class="s_btn text-left pt16 pb16" data-name="Buttons">
+        <a href="/contactus" class="btn btn-primary flat">Contact us</a>
+      </div>
+    </xpath>
+  </template>
+</odoo>
