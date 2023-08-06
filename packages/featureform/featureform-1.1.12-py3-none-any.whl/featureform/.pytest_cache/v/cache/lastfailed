@@ -1,0 +1,21 @@
+{
+  "register_test.py::test_register_firestore[args0]": true,
+  "register_test.py::test_register_firestore[args1]": true,
+  "register_test.py::test_register_dynamodb[args0]": true,
+  "register_test.py::test_register_dynamodb[args1]": true,
+  "register_test.py::test_register_redshift[args0]": true,
+  "register_test.py::test_register_redshift[args1]": true,
+  "register_test.py::test_register_cassandra[args0]": true,
+  "register_test.py::test_register_cassandra[args1]": true,
+  "register_test.py::test_register_primary_data_with_registrars": true,
+  "register_test.py::test_register_primary_data_with_default_owner": true,
+  "register_test.py::test_register_table_offline_store": true,
+  "register_test.py::test_sql_transformation_decorator_with_registrar": true,
+  "register_test.py::test_offline_store_sql_transformation_decorator": true,
+  "register_test.py::test_register_sql_transformation_with_registrar": true,
+  "register_test.py::test_register_sql_transformation_default_owner": true,
+  "register_test.py::test_register_column_resources": true,
+  "register_test.py::test_register_column_labels": true,
+  "register_test.py::test_register_column_resources_with_registrar": true,
+  "resources_test.py": true
+}
