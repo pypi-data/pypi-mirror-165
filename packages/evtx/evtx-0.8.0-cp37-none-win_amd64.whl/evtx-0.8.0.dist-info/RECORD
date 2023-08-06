@@ -1,0 +1,5 @@
+evtx-0.8.0.dist-info/METADATA,sha256=UbUsU05YprauldLySLXsYXEY-dWommJ8H_kIIRjgN5g,2944
+evtx-0.8.0.dist-info/WHEEL,sha256=KPRzZu2U0PORW9zLiko6LJswdLgugS6yfQ0XWwGl2GM,96
+evtx/__init__.py,sha256=WoZgCFnLaBdgqYnjBqI_YSPHmuNcTr8kcPMTLBeIwzQ,99
+evtx/evtx.pyd,sha256=z9dsGK-BY2YvmcPwWxPodgJOCN7jGw7S7DNaip7tNyQ,1483264
+evtx-0.8.0.dist-info/RECORD,,
