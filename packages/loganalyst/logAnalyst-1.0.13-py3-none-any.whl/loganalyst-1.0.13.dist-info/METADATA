@@ -1,0 +1,72 @@
+Metadata-Version: 2.1
+Name: loganalyst
+Version: 1.0.13
+Summary: Analyse some log files
+Home-page: https://github.com/fdev31/loganalyst
+License: MIT
+Author: fdev31
+Author-email: fdev31@gmail.com
+Requires-Python: >=3.8
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: pydantic (>=1.9.2,<2.0.0)
+Requires-Dist: python-dateutil (>=2.8.2,<3.0.0)
+Requires-Dist: termcolor (>=1.1.0,<2.0.0)
+Requires-Dist: tomli (>=2.0.1,<3.0.0)
+Requires-Dist: typed-argument-parser (>=1.7.2,<2.0.0)
+Description-Content-Type: text/markdown
+
+# Log analyst
+
+## Features
+
+- parse log files
+- filters by date / timestamps
+- correlates log lines (start and end of some processing)
+   - show total duration
+- friendly colored output
+- able to output short summaries
+- "folding" lines
+   - keeps lines not matching an iso timestamp attached to the matching ones
+- supports gzipped files
+
+## Usage
+
+```
+usage: loga [--extra] [--summary] [--nolog] [--max] [-b DATE] [-e DATE] [-h]
+            TOML_FILE LOG_FILE
+
+positional arguments:
+  TOML_FILE             (Path, default=None) correlation rules to use
+  LOG_FILE              (Path, default=None) (possibly gzipped) log file
+
+options:
+  --extra               (bool, default=False) show extra log lines (not
+                        matched by iso_regex)
+  --summary             (bool, default=False) show summary
+  --nolog               (bool, default=False) don't show log
+  --max                 (bool, default=False) show max durations
+  -b DATE, --begin DATE
+                        (Optional[str], default=None) start from a date
+  -e DATE, --end DATE   (Optional[str], default=None) stop to a date
+  -h, --help            show this help message and exit
+```
+
+For instance, with systemd logs:
+
+```
+journalctl -b 5 -o short-iso | loga -s correlators/sample.toml -
+```
+
+## Sample correlation
+
+
+*Note*: the "loganalyst" section is a configuration, which is optional, use only in case overriding values is needed.
+
+Use the documented correlation file in [correlators/sample.toml](https://github.com/fdev31/loganalyst/blob/main/correlators/sample.toml). You can also [download the file](https://raw.githubusercontent.com/fdev31/loganalyst/main/correlators/sample.toml).
+
