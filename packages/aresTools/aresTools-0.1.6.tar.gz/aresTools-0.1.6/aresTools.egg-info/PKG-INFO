@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: aresTools
+Version: 0.1.6
+Summary: A Python package that transforms a pandas DataFrame based on mathematical operations
+Home-page: https://github.com/aresmaterials/arestools
+Author: Erik Gutierrez-Valladares
+Author-email: erik@aresmaterials.com
+License: Apache License 2.0

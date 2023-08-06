@@ -1,0 +1,9 @@
+setup.py
+aresTools/featurizer.py
+aresTools/test.py
+aresTools/transformers.py
+aresTools.egg-info/PKG-INFO
+aresTools.egg-info/SOURCES.txt
+aresTools.egg-info/dependency_links.txt
+aresTools.egg-info/requires.txt
+aresTools.egg-info/top_level.txt
