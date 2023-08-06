@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+requests/__init__.py
+requests/api.py
+requests/models.py
+requests/sessions.py
+requests/utils.py
+requests_wasm_polyfill.egg-info/PKG-INFO
+requests_wasm_polyfill.egg-info/SOURCES.txt
+requests_wasm_polyfill.egg-info/dependency_links.txt
+requests_wasm_polyfill.egg-info/top_level.txt
