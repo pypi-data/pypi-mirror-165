@@ -1,0 +1,16 @@
+LICENSE,sha256=Wyc8la8njq9jmFVPlVYp4AVT8hYYbl6nFUlXtbeHAo4,11317
+README.md,sha256=D7a44ZrnF-5eIOBLa98FH6nb_L_DF4b8vq-dM4p53gQ,1913
+theoneapisdk/__init__.py,sha256=SKb6aVFTvmqLqI581mzv19KFf9fTp2yf4NXEM8-DFZw,498
+theoneapisdk/__metadata__.py,sha256=MBlkdeTWXDNHXfQ2sx8OFSuaOZhKO8rB8CMxPmXztC0,215
+theoneapisdk/_config.py,sha256=O2d3bJxaR2sYofM-fjuTlzrdJ3Q1TNTPzDKZZcNJ7B4,6008
+theoneapisdk/_utils.py,sha256=8t72XV-u_xELS5-QZM9wHQBu4-IivBhHsYAtGqxeIU4,2038
+theoneapisdk/books.py,sha256=6WMhrETtOt_fgXqg0Eh2v1X0alIbzI0BkZuqiqTTce4,4503
+theoneapisdk/chapters.py,sha256=st1qR0JWqn-CpBuT9xL0ps_7uoeWxx0NXPlM99hhTjk,2485
+theoneapisdk/characters.py,sha256=WaZx1Pf3OgMjrkc9bNQopTzT72R3rRZSIyKQs-MA8bE,6127
+theoneapisdk/exceptions.py,sha256=Z8HsnDAL-xJKQ2fZufWqPWO5BiasT1FdX2_sFUFrSUY,1192
+theoneapisdk/movies.py,sha256=er48eqy9LTvClnJF2qOpqa2pLcaSkwwztbn7EHAeZXs,6129
+theoneapisdk/quotes.py,sha256=TmOGp92tl4poQk-AjDCrs9JrKoRtM-hf4MqTm6WR3D0,2590
+the_one_api_sdk-0.1.0.dist-info/LICENSE,sha256=Wyc8la8njq9jmFVPlVYp4AVT8hYYbl6nFUlXtbeHAo4,11317
+the_one_api_sdk-0.1.0.dist-info/WHEEL,sha256=KXNDfOTTCr-VyxnCJDozfJ6nmi3hNN9RABDaCXBsNak,85
+the_one_api_sdk-0.1.0.dist-info/METADATA,sha256=qCWmVvTNAPqZqpTL52UajiGKK72Q1eW-_wlmSjhIUjg,2659
+the_one_api_sdk-0.1.0.dist-info/RECORD,,
