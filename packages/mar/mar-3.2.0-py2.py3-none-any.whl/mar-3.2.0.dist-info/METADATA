@@ -1,0 +1,158 @@
+Metadata-Version: 2.1
+Name: mar
+Version: 3.2.0
+Summary: Package for handling Mozilla Archive files.
+Home-page: https://github.com/mozilla-releng/build-mar
+Author: Chris AtLee
+Author-email: catlee@mozilla.com
+License: MPL 2.0
+Keywords: mozilla,mar,archive
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Utilities
+License-File: LICENSE
+License-File: AUTHORS.rst
+Requires-Dist: asn1crypto
+Requires-Dist: click
+Requires-Dist: construct
+Requires-Dist: cryptography
+Requires-Dist: six
+
+========
+Overview
+========
+
+
+
+Package for handling Mozilla Archive files. MAR file format is documented at https://wiki.mozilla.org/Software_Update:MAR
+
+* Free software: MPL 2.0 license
+
+Usage
+=====
+
+To list the contents of a mar::
+
+    mar -t complete.mar
+
+To list the contents of a mar with extra detail::
+
+    mar -T complete.mar
+
+To extract a mar::
+
+    mar -x complete.mar
+
+To extract, and uncompress a bz2 compressed mar::
+
+    mar -j -x complete.mar
+
+To verify a mar::
+
+    mar -k :mozilla-nightly -v complete.mar
+
+To create a mar, using bz2 compression::
+
+    mar -j -c complete.mar *
+
+To create a mar, using xz compression::
+
+    mar -J -c complete.mar *
+
+To create a signed mar::
+
+    mar -J -c complete.mar -k private.key -H nightly -V 123 tests
+
+Installation
+============
+
+::
+
+    pip install mar
+
+Documentation
+=============
+
+https://mar.readthedocs.io/en/latest/
+
+Development
+===========
+
+To run the all tests run::
+
+    tox
+
+Changelog
+=========
+3.2.0 (2022-09-01)
+------------------
+* Dropped python3.6 support
+* Added python3.9 and python3.10 support
+* Fixed file descriptor leaks
+
+3.1.0 (2019-02-19)
+------------------
+* Added new autograph stage public key
+* Dropped python3.5 support
+
+3.0.0 (2018-09-06)
+------------------
+* Support extracting mar hash for external signing, and injecting signatures
+  into unsigned files.
+* File modes are set on extraction
+* `mar -v` can now verify that unsigned mar files are well formed
+* Added helper productinfo property to MarReader to allow convenient access to
+  the product information information
+* Internal signing API changed:
+  * Got rid of Verifier/Signer classes
+* Internal API for the mar format changed:
+  * offets added for the beginning and end of signature and additional blocks
+  * correctly represent additional section padding
+* Support MAR files without additional sections
+
+2.3.0 (2018-07-23)
+------------------
+* Remove deprecated usage of signature generation and verification in
+  cryptography library. This changes the type of object returned by the
+  make_signer and make_verifier functions.
+
+2.2.3 (2018-01-18)
+------------------
+* Update dependencies; dependencies are now also pinned in setup.py
+* Correct the key size in exception messages
+* Fix for construct 2.8.22 and higher
+* Fix for hypothesis 3.44.16
+
+2.2.2 (2017-07-06)
+-----------------------------------------
+* Fix bug when writing MAR files: the index size was incorrect
+* Support writing interable streams
+* Add new Mozilla SHA384 public keys
+
+2.2.1 (2017-08-23)
+-----------------------------------------
+* Output compression and signature type
+
+2.1.0 (2017-06-28)
+-----------------------------------------
+* Implement XZ compression
+
+2.0.0 (2017-01-12)
+-----------------------------------------
+* First release on PyPI.
+
+
