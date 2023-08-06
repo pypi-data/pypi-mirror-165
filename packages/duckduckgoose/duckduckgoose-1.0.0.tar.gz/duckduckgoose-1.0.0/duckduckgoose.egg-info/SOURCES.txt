@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+duckduckgoose/__init__.py
+duckduckgoose.egg-info/PKG-INFO
+duckduckgoose.egg-info/SOURCES.txt
+duckduckgoose.egg-info/dependency_links.txt
+duckduckgoose.egg-info/requires.txt
+duckduckgoose.egg-info/top_level.txt
