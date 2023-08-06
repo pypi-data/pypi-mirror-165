@@ -1,0 +1,60 @@
+[tool.poetry]
+name = "empower-cli"
+version = '0.0.1'
+description = "PLACEHOLDER"
+authors = [
+    "Brian Aiken <baiken@hitachisolutions.com>",
+    "Empower Team <empower@hitachisolutions.com>"
+]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/hitachisolutionsamerica/empower/tree/development/tools/empower_cli"
+repository = "https://github.com/hitachisolutionsamerica/empower/tree/development/tools/empower_cli"
+
+packages = [
+    { include = "cli" },
+    { include = "cli/**/*.py"}
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+typer = "^0.5.0"
+pydantic = "^1.9.1"
+pickleDB = "^0.9.2"
+requests = "^2.28.1"
+python-dotenv = "^0.20.0"
+PyYAML = "^6.0"
+python-keycloak = "^2.0.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0", "wheel"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+exclude = '''
+
+(
+  /(
+      \.eggs         # exclude a few common directories in the
+    | \.git          # root of the project
+    | \.github
+    | \.pytest_cache
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | _build
+    | buck-out
+    | build
+    | dist
+    | seed
+  )/
+  | example.py           # also separately exclude a file named example.py in
+                     # the root of the project
+)
+'''
+
+[tool.poetry.scripts]
+empowercli = 'cli.main:app'
