@@ -1,0 +1,1 @@
+recursive-include taurus_datamover/mock_cluster_files *

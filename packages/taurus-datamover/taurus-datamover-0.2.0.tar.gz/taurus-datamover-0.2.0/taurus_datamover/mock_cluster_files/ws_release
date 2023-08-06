@@ -1,0 +1,9 @@
+#!/bin/bash
+dir=$(dirname "$0")
+dir=$(dirname "$dir")
+dir="$dir/scratch/$1"
+if [ -d "$dir" ]; then
+    rm -r "$dir"
+else
+    echo "directory not found: $dir"
+fi

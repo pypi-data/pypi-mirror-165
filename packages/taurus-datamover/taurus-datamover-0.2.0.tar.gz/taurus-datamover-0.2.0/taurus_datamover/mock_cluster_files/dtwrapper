@@ -1,0 +1,4 @@
+#!/bin/bash
+cmd=$(basename "$0")
+cmd=${cmd#dt}
+"$cmd" "$@"
