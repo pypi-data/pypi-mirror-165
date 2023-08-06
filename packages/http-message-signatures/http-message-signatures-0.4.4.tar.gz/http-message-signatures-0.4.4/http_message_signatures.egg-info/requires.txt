@@ -1,0 +1,10 @@
+http-sfv>=0.9.3
+cryptography>=36.0.2
+
+[tests]
+flake8
+coverage
+build
+wheel
+mypy
+requests
