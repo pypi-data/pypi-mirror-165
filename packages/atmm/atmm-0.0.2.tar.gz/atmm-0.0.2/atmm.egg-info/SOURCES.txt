@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+atmm/__init__.py
+atmm.egg-info/PKG-INFO
+atmm.egg-info/SOURCES.txt
+atmm.egg-info/dependency_links.txt
+atmm.egg-info/top_level.txt
