@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: pydantic-changedetect
+Version: 0.2.0
+Summary: Extend pydantic models to also detect and record changes made to the model attributes.
+License: MIT
+Author: TEAM23 GmbH
+Author-email: info@team23.de
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: pydantic (>=1.9.0)
