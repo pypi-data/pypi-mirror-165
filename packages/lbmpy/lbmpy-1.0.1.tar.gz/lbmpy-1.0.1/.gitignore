@@ -1,0 +1,28 @@
+__pycache__
+.ipynb_checkpoints
+.coverage
+*.pyc
+*.vti
+/build
+/html_doc
+/dist
+/*.egg-info
+.cache
+_build
+/.idea
+_local_tmp
+**/.vscode
+**/pylintrc
+*.bak
+*.tmp
+/lbmpy_tests/db
+doc/bibtex.json
+/db
+/lbmpy/phasefield/simplex_projection.*.so
+/lbmpy/phasefield/simplex_projection.c
+
+# macOS
+**/.DS_Store
+
+# benchmark database
+/lbmpy_tests/benchmark/db

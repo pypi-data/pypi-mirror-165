@@ -1,0 +1,6 @@
+#!/bin/bash
+
+python3 setup.py develop
+
+export MPMATH_NOGMPY=1
+exec "$@"
