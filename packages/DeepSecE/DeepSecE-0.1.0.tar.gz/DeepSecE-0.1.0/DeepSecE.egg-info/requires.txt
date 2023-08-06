@@ -1,0 +1,12 @@
+torch
+biopython
+einops
+fair-esm
+tqdm
+numpy
+scikit-learn
+matplotlib
+seaborn
+tensorboardX
+umap-learn
+warmup-scheduler
