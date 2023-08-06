@@ -1,0 +1,10 @@
+version: "3.2"
+
+services:
+  package:
+    image: halem:latest
+    build:
+      context: .
+    container_name: halem
+    ports:
+      - "8820:8888"
