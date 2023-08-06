@@ -1,0 +1,106 @@
+Metadata-Version: 2.1
+Name: jetto-tools
+Version: 1.8.5
+Summary: Tools for plotting and manipulating JETTO runs.
+Home-page: https://gitlab.com/jintrac/jetto-pythontools
+Author: Karel van de Plassche
+Author-email: k.l.vandeplassche@differ.nl
+License: MIT
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Natural Language :: English
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Provides-Extra: test
+Provides-Extra: docs
+Provides-Extra: netcdf
+Provides-Extra: gui
+Provides-Extra: all
+License-File: LICENSE
+
+# jetto-pythontools
+
+Python tools for plotting and manipulating JETTO runs.
+
+## A word of caution
+These tools are under development, and probably always will be. 
+Please [open an issue at JET](https://git.ccfe.ac.uk/jintrac/jetto-pythontools/issues),
+so the responsible person can be identified and notified. 
+
+## Getting Started
+A current easy 'getting started' is under investigation. A simple way 
+to get up and running is to install this repository in developer mode.
+
+``` bash
+python --version # Make sure you have at least python3.7
+pip --version # Make sure you have at least version 20.0 of pip to read pyproject.toml files
+git clone git@git.ccfe.ac.uk:jintrac/jetto-pythontools.git # Clone from JET repository
+# Or git clone https://gitlab.com/jintrac/jetto-pythontools.git for the public read-only version
+pip install -e jetto-pythontools
+python -c "import jetto_tools; print(jetto_tools.__version__)" # Check if you indeed installed the right version and can call it in python
+```
+
+However, on Freia, editable mode does not always work, unless pip is updated.  For Freia testing of GUI changes, use
+```
+module unload jintrac-pythontools
+pip install --user --upgrade pip
+cd jetto-pythontools
+python -m pip install --user -e .
+python -m pip install --user -e .[gui]  #GUI needs to be installed explicitly
+```
+
+We try to follow the Python Package Authority recommendations. A full guide to
+install Python packages can be found [on their website](https://packaging.python.org/tutorials/installing-packages/)
+
+### Prerequisites
+We try to keep jetto-pythontools modular and easy-to-install. However, to
+keep our sanity, we request at least a recent version of:
+- `python >= 3.7.0`
+- `pip >= 20.0.0 `
+
+Different scripts might require different dependecies. Whenever a module is
+missing, not provided by the default environment of the machine you are at, 
+and not installed by our `pip install` process, please open an issue. 
+
+### Non-pip builds (e.g. pure setuptools)
+It is possible to build and install this package with other tool. In that case,
+make sure your tools can read `pyproject.toml` files, and be able to generate
+a version number somehow. For setuptools, that means:
+- `setuptools >=40.8.0`
+- `setuptools_scm[toml]>=3.4`
+
+## Missing features
+As these tools are community developed, there might not always be a responsible
+person, or the responsible person might not want to implement your feature. In
+that case we are very happy with merge requests or feature requests! Feature
+requests can be opened like regular issues on GitLab.
+
+## Developer notes
+Do not add JET data to this repository! This repository is synced to
+a non-password protected gitlab repository on [gitlab.com](https://gitlab.com/jintrac/jetto-pythontools)
+
+## Documentation
+
+Some introductory user docs are maintained on the JINTRAC pages:
+* https://users.euro-fusion.org/pages/data-cmg/wiki/JETTO_python_tool.html
+
+Developer API docs are deployed on gitlab pages:
+* https://jintrac.gitlab.io/jetto-pythontools/
+
+The API documentation is written using reStructuredText and Sphinx. In order to build the 
+documentation, run the commands:
+
+```
+$ cd docs/
+$ make html
+```
+They can then be viewed in the browser of your choice e.g.
+```
+$ firefox docs/_build/html/index.html
+```
+The packages required to build the documentation are listed in `requirements_docs.txt`.
+If this pakage was installed via `pip`, as above, then the prerequisites should have
+been installed automatically.

@@ -1,0 +1,4 @@
+[console_scripts]
+jetto_gray_analysis = jetto_tools.analysis.gray:main
+jpyplot = jetto_tools.results_gui:main
+jsp2ex = jetto_tools.convert_jsp_to_exfile:jsp2ex_write
