@@ -1,0 +1,10 @@
+LICENSE.txt
+README.rst
+setup.cfg
+setup.py
+cpbdm/cpbdm.egg-info/PKG-INFO
+cpbdm/cpbdm.egg-info/SOURCES.txt
+cpbdm/cpbdm.egg-info/dependency_links.txt
+cpbdm/cpbdm.egg-info/requires.txt
+cpbdm/cpbdm.egg-info/top_level.txt
+tests/__init__.py
