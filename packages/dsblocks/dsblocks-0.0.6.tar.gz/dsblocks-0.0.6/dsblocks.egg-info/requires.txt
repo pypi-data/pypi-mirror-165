@@ -1,0 +1,17 @@
+pandas
+scikit-learn
+pyarrow
+numpy
+pytest
+pytest-cov
+ipython
+jupyter
+ipykernel
+matplotlib
+graphviz
+optuna
+sh
+ipynbname
+tensorflow
+
+[dev]
