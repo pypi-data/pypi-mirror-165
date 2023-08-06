@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+genepro/__init__.py
+genepro/evo.py
+genepro/node.py
+genepro/node_impl.py
+genepro/scikit.py
+genepro/selection.py
+genepro/util.py
+genepro/variation.py
+genepro.egg-info/PKG-INFO
+genepro.egg-info/SOURCES.txt
+genepro.egg-info/dependency_links.txt
+genepro.egg-info/requires.txt
+genepro.egg-info/top_level.txt
