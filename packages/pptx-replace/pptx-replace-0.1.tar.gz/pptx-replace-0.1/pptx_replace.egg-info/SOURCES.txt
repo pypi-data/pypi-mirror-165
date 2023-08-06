@@ -1,0 +1,17 @@
+.gitignore
+.pre-commit-config.yaml
+README.md
+pyproject.toml
+.github/workflows/python-package.yml
+.github/workflows/python-publish.yml
+pptx_replace/__init__.py
+pptx_replace/replace_core.py
+pptx_replace/utils.py
+pptx_replace.egg-info/PKG-INFO
+pptx_replace.egg-info/SOURCES.txt
+pptx_replace.egg-info/dependency_links.txt
+pptx_replace.egg-info/requires.txt
+pptx_replace.egg-info/top_level.txt
+tests/__init__.py
+tests/test_pptx_replace.py
+tests/templates/test_template.pptx
