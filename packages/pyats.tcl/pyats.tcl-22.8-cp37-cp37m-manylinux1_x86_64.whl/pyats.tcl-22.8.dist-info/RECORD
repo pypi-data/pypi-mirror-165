@@ -1,0 +1,15 @@
+pyats.tcl-22.8-py3.7-nspkg.pth,sha256=e0Aa4MZQ9F423CwtNHHpsEDtEBEJtZolebDzazoPJyI,534
+pyats/tcl/__init__.py,sha256=yaJa8TB3pa0-8sViM22P3z-4HDdzPII905B8YpLhiBU,1478
+pyats/tcl/array.cpython-37m-x86_64-linux-gnu.so,sha256=YBYtSL6onD3tGG6R1_0pOlIUbRfEMzMkcjydD5y5ulA,356944
+pyats/tcl/history.cpython-37m-x86_64-linux-gnu.so,sha256=AdlQTkeH3sN1uQuNmhp3iXlpjpjJwHyvE-iRSNJwZpk,566944
+pyats/tcl/internal.cpython-37m-x86_64-linux-gnu.so,sha256=j-Ry2ty2PMLGLVT83Qo5dHGiRRlXK149ykY_YjTINy4,857128
+pyats/tcl/interpreter.cpython-37m-x86_64-linux-gnu.so,sha256=Ed80zGBG5KiL1dJ4_G1eqO2Gnp9i349RyRolDiydflI,1017616
+pyats/tcl/keyedlist.cpython-37m-x86_64-linux-gnu.so,sha256=itE6rL8uVQH5Ca9fo00ObM0AHJIypr7foXYVLgk5K44,753576
+pyats/tcl/namespace.cpython-37m-x86_64-linux-gnu.so,sha256=ICmryvjxtP7uZ3acqwOBN0adLVztmlQgiqB1TM18-9k,3000504
+pyats/tcl/q.cpython-37m-x86_64-linux-gnu.so,sha256=0kswU0UxGb03QCFPtvgDlZUnVuRE3Ziy65dOl4qpSKw,396800
+pyats/tcl/tclstr.cpython-37m-x86_64-linux-gnu.so,sha256=eMm0K3ZbroTM_pJ1InIsLMNaH0zYdJ6YUvXhNIg6qMs,557032
+pyats.tcl-22.8.dist-info/METADATA,sha256=1ykQT08N4pVYxb-k0yuGxrYJ5eOn04HsISA2zvOIZXo,3062
+pyats.tcl-22.8.dist-info/WHEEL,sha256=Z4FzB2xqw6vYQxoyakqd002-5PYy8veBCmol_EQUEco,109
+pyats.tcl-22.8.dist-info/namespace_packages.txt,sha256=jGeyqyHwW1slwU9TmXM_iib2O5fPdh4peKwkj0m-bZU,6
+pyats.tcl-22.8.dist-info/top_level.txt,sha256=jGeyqyHwW1slwU9TmXM_iib2O5fPdh4peKwkj0m-bZU,6
+pyats.tcl-22.8.dist-info/RECORD,,
