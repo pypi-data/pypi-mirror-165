@@ -1,0 +1,70 @@
+Metadata-Version: 2.1
+Name: simmate
+Version: 0.10.0
+Summary: Simmate is a toolbox for computational materials research.
+Author-email: "Jack D. Sundberg" <jacksund@live.unc.edu>
+License: BSD 3-Clause License
+Project-URL: homepage, https://simmate.org/
+Project-URL: repository, https://github.com/jacksund/simmate
+Project-URL: documentation, https://jacksund.github.io/simmate/home/
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy (<=1.23.1,>=1.22.0)
+Requires-Dist: pandas (<=1.4.3,>=1.3.5)
+Requires-Dist: django (<=4.1.0,>=4.0.0)
+Requires-Dist: dask (<=2022.8.0,>=2021.12.0)
+Requires-Dist: distributed (<=2022.8.0,>=2022.7.1)
+Requires-Dist: typer (<=0.6.1,>=0.4.1)
+Requires-Dist: django-allauth (<=0.51.0,>=0.50.0)
+Requires-Dist: django-crispy-forms (<=1.14.0,>=1.13.0)
+Requires-Dist: django-pandas (<=0.6.6,>=0.6.6)
+Requires-Dist: dj-database-url (<=0.5.0,>=0.5.0)
+Requires-Dist: djangorestframework (<=3.13.1,>=3.13.1)
+Requires-Dist: django-filter (<=22.1,>=21.1)
+Requires-Dist: pyyaml (<=6.0,>=6.0)
+Requires-Dist: plotly (<=5.9.0,>=5.4.0)
+Requires-Dist: markdown (<=3.4.1,>=3.4.1)
+Requires-Dist: requests (<=2.28.1,>=2.28.1)
+Requires-Dist: scikit-learn (<=1.1.1,>=1.1.1)
+Requires-Dist: cloudpickle (<=2.1.0,>=2.1.0)
+Requires-Dist: rich (<=12.5.1,>=11.0)
+Requires-Dist: pymatgen (<=2022.7.25,>=2022.1.9)
+Requires-Dist: pymatgen-analysis-diffusion (<=2022.7.21,>=2021.4.29)
+Requires-Dist: matminer (<=0.7.8,>=0.7.6)
+Requires-Dist: ase (<=3.22.1,>=3.22.1)
+Provides-Extra: data
+Requires-Dist: mp-api (<=0.26.3,>=0.26.3) ; extra == 'data'
+Provides-Extra: dev
+Requires-Dist: pytest (<=7.1.2,>=6.2.5) ; extra == 'dev'
+Requires-Dist: pytest-django (<=4.5.2,>=4.5.2) ; extra == 'dev'
+Requires-Dist: pytest-mock (<=3.8.2,>=3.7.0) ; extra == 'dev'
+Requires-Dist: pytest-xdist (<=2.5.0,>=2.5.0) ; extra == 'dev'
+Requires-Dist: black (<=22.6.0,>=22.1.0) ; extra == 'dev'
+Requires-Dist: coverage (<=6.4.3,>=6.2) ; extra == 'dev'
+Requires-Dist: isort (<=5.10.1,>=5.10.1) ; extra == 'dev'
+Requires-Dist: mkdocs-material (<=8.4.1,>=8.4.1) ; extra == 'dev'
+Requires-Dist: mkdocstrings (<=0.19.0,>=0.19.0) ; extra == 'dev'
+Requires-Dist: mkdocstrings-python (<=0.7.1,>=0.7.1) ; extra == 'dev'
+Provides-Extra: exe
+Requires-Dist: prefect (<=2.0.4,>=2.0.0) ; extra == 'exe'
+Requires-Dist: dask-jobqueue (<=0.7.4,>=0.7.3) ; extra == 'exe'
+Requires-Dist: anyio (>=3.6.1) ; extra == 'exe'
+Requires-Dist: nest-asyncio (<=1.5.5,>=1.5.5) ; extra == 'exe'
+Provides-Extra: extras
+Requires-Dist: numba (>=0.53.0) ; extra == 'extras'
+Requires-Dist: psycopg2-binary (>=2.9.2) ; extra == 'extras'
+Requires-Dist: selenium ; extra == 'extras'
+Requires-Dist: spyder ; extra == 'extras'
+Requires-Dist: gunicorn ; extra == 'extras'
+Requires-Dist: graphviz (==1.7) ; extra == 'extras'
+Requires-Dist: pygraphviz (==0.19) ; extra == 'extras'
+Requires-Dist: scikit-learn (>=1.0.1) ; extra == 'extras'
+Requires-Dist: fabric (>=2.6.0) ; extra == 'extras'
+Requires-Dist: django-extensions (>=3.1.5) ; extra == 'extras'
+
