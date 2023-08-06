@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: m3py
+Version: 0.0.1
+Summary: "Pseudo" (min) Processing API module, based on tkinter, for Python.
+Home-page: https://github.com/KouichiMatsuda/m3py
+Author: MATSUDA, Kouichi
+Author-email: kouichi.matsuda@gmail.com
+License: MIT
+Keywords: Processing graphics library
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
+
+# m3py
+"Pseudo" (min) Processing API module, based on tkinter, for Python.  
+
+# How to install
+
+pip install m3py
+pip install Pillow
+
+# How to use
+```python:sample
+import m3py as m3
+m3.rect(10, 10, 100, 100)
+run()
+```
+
+```
+from m3py import *
+rect(10, 10, 100, 100)
+run()
+```
+
+```
+from m3py import *
+def mouseClicked(x, y):
+    line(100, 100, x, y)
+run()
+```
+
+```
+from m3py import *
+def mouseClicked():
+    line(100, 100, getX(), getY())
+run()
+```
+
+
