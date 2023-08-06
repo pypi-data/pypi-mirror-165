@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: habu-python-api
+Version: 2.0.0
+Summary: Habu Python API
+Home-page: https://github.com/deklareddotcom/habu-api
+Author: Habu
+Author-email: support@habu.com
+Project-URL: Bug Tracker, https://github.com/deklareddotcom/habu-api/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# habu-api
+
+This is python package for Habu API. This follows the patterns defined at:
+https://packaging.python.org/tutorials/packaging-projects/
