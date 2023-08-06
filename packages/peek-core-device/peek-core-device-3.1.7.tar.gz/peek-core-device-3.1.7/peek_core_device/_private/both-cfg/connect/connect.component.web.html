@@ -1,0 +1,66 @@
+<div class="peek-details-section">
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="title">There are no config options for Device yet
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!--
+<ScrollView>
+    <StackLayout>
+
+        <StackLayout class="peek-information-section">
+
+            <label class="information-section-title"
+                   text="Update Peek Server Connection"></label>
+
+        </StackLayout>
+
+        <StackLayout class="peek-details-section p-20">
+
+            <GridLayout rows="auto, auto" columns="*">
+                <Label row="0" col="0" class="details-section-title"
+                       text="Peek Server Hostname or IP:"></Label>
+                <TextField row="1" col="0"
+                           class="details-section-value  editable"
+                           autocorrect="false"
+                           hint="Insert Hostname or IP"
+                           returnKeyType="done"
+                           (returnPress)="connectClicked()"
+                           [(ngModel)]="server.host"></TextField>
+
+            </GridLayout>
+
+            <GridLayout rows="auto, auto" columns="*, *, *">
+
+                <Label row="0" col="0" class="details-section-title"
+                       text="Http Port"></Label>
+                <TextField row="1" col="0" class="details-section-value editable"
+                           [(ngModel)]="httpPortStr"></TextField>
+
+                <Label row="0" col="1" class="details-section-title"
+                       text="WebSocket Port"></Label>
+                <TextField row="1" col="1" class="details-section-value editable"
+                           [(ngModel)]="websocketPortStr"></TextField>
+
+                <Label row="0" col="2" class="details-section-title"
+                       text="Use SSL"></Label>
+                <Switch row="1" col="2" class="" #useSslSw [checked]="server?.useSsl"
+                        (checkedChange)="setUseSsl(useSslSw.checked)"></Switch>
+
+            </GridLayout>
+
+            <Button class="btn" text="Save" (tap)="saveClicked()"></Button>
+
+        </StackLayout>
+    </StackLayout>
+</ScrollView>
+
+
+-->

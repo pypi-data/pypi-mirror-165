@@ -1,0 +1,57 @@
+<div class="panel panel-default">
+    <div class="panel-body">
+        <table class="table">
+            <tr>
+                <th>Type</th>
+                <th>Description</th>
+                <th>Last Online</th>
+                <th>Enrollment</th>
+                <th>Current Location</th>
+                <th></th>
+            </tr>
+            <tr *ngFor="let item of items">
+                <td>
+                    {{ item.deviceType }}
+                </td>
+                <td>
+                    {{ item.description }}
+                </td>
+                <td>
+                    <p>{{deviceStatus(item)}}</p>
+
+                </td>
+                <td>
+                    <button
+                        (click)="toggleEnrollClicked(item)"
+                        [class.btn-success]="item.isEnrolled"
+                        [class.btn-warning]="!item.isEnrolled"
+                        class="btn"
+                    >
+                        {{item.isEnrolled ? "Enrolled" : "Not Enrolled"}}
+                    </button>
+                </td>
+                <td>
+                    <div *ngIf="item.hasCurrentLocation()">
+                        {{ item.currentLocation.latitude }},
+                        {{ item.currentLocation.longitude }}
+                        <br>
+                        <a target="_blank" href="{{ item.googleMapLink }}">View
+                            on
+                            Google Maps</a>
+                    </div>
+                </td>
+                <td>
+                    <div
+                            (click)="deleteDeviceClicked(item)"
+                            class="btn btn-default"
+                    >
+                        <span
+                                aria-hidden="true"
+                                class="glyphicon glyphicon-minus"
+                        ></span>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
