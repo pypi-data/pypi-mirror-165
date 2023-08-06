@@ -1,0 +1,14 @@
+s2spy/__init__.py,sha256=uYZqAUKw-O7QinH-9aQoehumR6EYrNx50j5PzHaY9Rc,492
+s2spy/_base_calendar.py,sha256=93yiIHqdyb1k4M4dXDM-AeEvC1cQBGxzNS-BeU-8AP8,9479
+s2spy/_resample.py,sha256=K0kjIC2TMX5LjctZMMUO-GMtvNlkzDygdvyDHY8XSk8,9041
+s2spy/time.py,sha256=RX-DETQGKq8J9wuuzSaFeBRBzuv3WhAkuSRzUcahYvI,11183
+s2spy/traintest.py,sha256=hnjEoUK_vSvyo8vEYj3YBiIH6rKxuGg_iip_aRwz7fk,3855
+s2spy/utils.py,sha256=0ICrHLiM_iLZGjZ45fbM87PfDiXM-7jrJ0XZ2-GHy80,3616
+s2spy/rgdr/__init__.py,sha256=iXzEPIByrbpgouAuoECMX4jO4zMoOJgQDRHuXjPKtiQ,48
+s2spy/rgdr/rgdr.py,sha256=I87tO79LFFdoKdSGYt0rJKevp2SW3ZJByrx4dEmWdwI,21537
+s2spy/rgdr/utils.py,sha256=_Heq6By9yWl208VYMVQVfyallJgZ6VRx8vwhLixMCf0,4112
+s2spy-0.2.0.dist-info/LICENSE,sha256=OPzV6bHGPCXFylyiCR3GYAK-EP8seLDbcbgO87DYM1o,11359
+s2spy-0.2.0.dist-info/METADATA,sha256=FlvWJdxqegg5izU0RP4hGK6zAzrZ4xTjSBHwCYPLj5Y,9923
+s2spy-0.2.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+s2spy-0.2.0.dist-info/top_level.txt,sha256=6gHG85cd2htyj15dWu_GgV1_Xl_2W04qFkoUfo9vKkQ,6
+s2spy-0.2.0.dist-info/RECORD,,
