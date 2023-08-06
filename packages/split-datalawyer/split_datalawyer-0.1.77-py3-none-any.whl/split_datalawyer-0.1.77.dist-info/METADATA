@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: split-datalawyer
+Version: 0.1.77
+Summary: UNKNOWN
+Author: Datalawyer
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: pandas
+Requires-Dist: nltk
+Requires-Dist: boto3
+Requires-Dist: filelock
+Requires-Dist: requests
+Requires-Dist: stanza
+
+UNKNOWN
+
