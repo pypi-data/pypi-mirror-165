@@ -1,0 +1,3 @@
+[pennylane.plugins]
+braket.aws.qubit = braket.pennylane_plugin:BraketAwsQubitDevice
+braket.local.qubit = braket.pennylane_plugin:BraketLocalQubitDevice
