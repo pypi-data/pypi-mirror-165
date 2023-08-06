@@ -1,0 +1,86 @@
+Metadata-Version: 2.1
+Name: HectareaDictionaryEncryption
+Version: 4.20.68.2
+Summary: HectareaDictionaryEncryption
+Home-page: https://hectarea.netlify.app/
+Author: Héctarea
+Author-email: gonzalez.craqenll@gmail.com
+License: MIT
+Download-URL: https://github.com/Hectarea/DictionaryEncryption/archive/refs/tags/4.20.68.2.tar.gz
+Keywords: Encryption,Dictionary,Hectarea,Secrets
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+
+# Hectarea Dictionary Encryption
+
+
+
+Encryption algorithm by Hectarea and Qrab & Nell, made to securely transmit messages using a key, an IV, and a dictionary of 256 words, representing the 8 bits of a byte.
+
+It returns a natural-lenguage-lilke sentence compossed of the provided dictionary of words. each representing a byte of the encrypted object.
+
+## Installation
+
+```bash
+pip install HectareaDictionaryEncryption  
+```
+## Basic Example
+```python
+
+import HectareaDictionaryEncryption as hdc
+
+
+# Dictionary with 256 words
+
+dictionary = [
+'camera', 'jun', 'girl', 'currently', 'construction', 'toys', 'registered', 'clear', 'golf', 'receive', 'domain', 'methods', 'chapter', 'makes', 'protection', 'policies', 'loan', 'wide', 'beauty', 'manager', 'india', 'position', 'taken', 'sort', 'listings', 'models', 'michael', 'known', 'half', 'cases', 'step', 'engineering', 'florida', 'simple', 'quick', 'none', 'wireless', 'license', 'paul', 'friday', 'lake', 'whole', 'annual', 'published', 'later', 'basic', 'sony', 'shows', 'corporate', 'google', 'church', 'method', 'purchase', 'customers', 'active', 'response', 'practice', 'hardware', 'figure', 'materials', 'fire', 'holiday', 'chat', 'enough', 'designed', 'along', 'among', 'death', 'writing', 'speed', 'html', 'countries', 'loss', 'face', 'brand', 'discount', 'higher', 'effects', 'created', 'remember', 'standards', 'oil', 'bit', 'yellow', 'political', 'increase', 'advertise', 'kingdom', 'base', 'near', 'environmental', 'thought', 'stuff', 'french', 'storage', 'oh', 'japan', 'doing', 'loans', 'shoes', 'entry', 'stay', 'nature', 'orders', 'availability', 'africa', 'summary', 'turn', 'mean', 'growth', 'notes', 'agency', 'king', 'monday', 'european', 'activity', 'copy', 'although', 'drug', 'pics', 'western', 'income', 'force', 'cash', 'employment', 'overall', 'bay', 'river', 'commission', 'ad', 'package', 'contents', 'seen', 'players', 'engine', 'port', 'album', 'regional', 'stop', 'supplies', 'started', 'administration', 'bar', 'institute', 'views', 'plans', 'double', 'dog', 'build', 'screen', 'exchange', 'types', 'soon', 'sponsored', 'lines', 'electronic', 'continue', 'across', 'benefits', 'needed', 'season', 'apply', 'someone', 'held', 'ny', 'anything', 'printer', 'condition', 'effective', 'believe', 'organization', 'effect', 'asked', 'eur', 'mind', 'sunday', 'selection', 'casino', 'pdf', 'lost', 'tour', 'menu', 'volume', 'cross', 'anyone', 'mortgage', 'hope', 'silver', 'corporation', 'wish', 'inside', 'solution', 'mature', 'role', 'rather', 'weeks', 'addition', 'came', 'supply', 'nothing', 'certain', 'usr', 'executive', 'running', 'lower', 'necessary', 'union', 'jewelry', 'according', 'dc', 'clothing', 'mon', 'com', 'particular', 'fine', 'names', 'robert', 'homepage', 'hour', 'gas', 'skills', 'six', 'bush', 'islands', 'advice', 'career', 'military', 'rental', 'decision', 'leave', 'british', 'teens', 'pre', 'huge', 'sat', 'woman', 'facilities', 'zip', 'bid', 'kind', 'sellers', 'middle', 'move', 'cable', 'opportunities', 'taking', 'values', 'division', 'coming', 'tuesday', 'object', 'lesbian', 'appropriate', 'machine', 'logo', 'length', 'actually'
+]
+
+
+
+
+# Any length encoded password
+
+password = b'any length password'
+
+
+# Any length IV
+
+iv = b'some random length IV'
+
+
+# Any length encoded message
+
+message = b'I know what amber heard...'
+
+
+# Returns a string
+encryptedString = hdc.Encrypt(message, iv, password, dictionary)
+
+print("Encrypted String: \n" + encryptedString  + "\n")
+print("IV: \n" + iv.decode() + "\n\n")
+
+"""
+Encrypted String:                                                                                                       
+islands india wide sony cross stay india wide japan oil purchase mature division policies construction oh corporation mean camera lesbian increase listings wireless drug half quick
+
+IV:                                                                                                                     
+some random length IV 
+"""
+
+
+# Returns a bytes object
+decryptedString = hdc.Decrypt(encryptedString, iv, password, dictionary)
+
+print("Decrypted String: \n" + decryptedString.decode() + "\n")
+
+"""
+Decrypted String:                                                                                                       
+I know what amber heard... 
+"""
+
+
+```
+
+
