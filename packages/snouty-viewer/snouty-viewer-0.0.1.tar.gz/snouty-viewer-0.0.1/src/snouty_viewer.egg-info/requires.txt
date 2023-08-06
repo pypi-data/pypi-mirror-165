@@ -1,0 +1,12 @@
+numpy
+magicgui
+napari
+tifffile
+
+[testing]
+tox
+pytest
+pytest-cov
+pytest-qt
+napari
+pyqt5

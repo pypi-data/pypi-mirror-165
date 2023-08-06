@@ -1,0 +1,2 @@
+[napari.manifest]
+snouty-viewer = snouty_viewer:napari.yaml
