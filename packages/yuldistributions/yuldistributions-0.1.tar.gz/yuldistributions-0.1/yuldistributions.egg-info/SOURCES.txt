@@ -1,0 +1,10 @@
+setup.py
+yuldistributions/Binomialdistribution.py
+yuldistributions/Gaussiandistribution.py
+yuldistributions/Generaldistribution.py
+yuldistributions/__init__.py
+yuldistributions.egg-info/PKG-INFO
+yuldistributions.egg-info/SOURCES.txt
+yuldistributions.egg-info/dependency_links.txt
+yuldistributions.egg-info/not-zip-safe
+yuldistributions.egg-info/top_level.txt
