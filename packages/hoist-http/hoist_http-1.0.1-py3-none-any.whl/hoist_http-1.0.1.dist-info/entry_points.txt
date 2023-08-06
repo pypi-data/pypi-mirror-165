@@ -1,0 +1,2 @@
+[console_scripts]
+hoist = hoist.__main__:main
