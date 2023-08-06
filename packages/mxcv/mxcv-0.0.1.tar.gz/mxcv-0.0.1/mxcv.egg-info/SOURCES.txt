@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+mxcv/__info__.py
+mxcv/__init__.py
+mxcv.egg-info/PKG-INFO
+mxcv.egg-info/SOURCES.txt
+mxcv.egg-info/dependency_links.txt
+mxcv.egg-info/requires.txt
+mxcv.egg-info/top_level.txt

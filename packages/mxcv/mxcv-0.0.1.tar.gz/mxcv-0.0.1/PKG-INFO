@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: mxcv
+Version: 0.0.1
+Summary: mxcv
+Home-page: https://github.com/DIYer22/mxcv
+Author: DIYer22
+Author-email: ylxx@live.com
+License: UNKNOWN
+Description: mxcv
+Platform: UNKNOWN
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
