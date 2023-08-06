@@ -1,0 +1,49 @@
+[tool.poetry]
+name = "mccoy"
+version = "0.1.0"
+description = ""
+authors = ["Wytamma Wirth <wytamma.wirth@me.com>", "Simon Mutch <smutch@unimelb.edu.au>", "Rob Turnbull <robert.turnbull@unimelb.edu.au>"]
+readme = "README.md"
+exclude = ["resources/"]
+
+[tool.poetry.scripts]
+mccoy = "mccoy.main:app"
+
+[tool.poetry.dependencies]
+python = ">=3.7,<4.0"
+typer = "^0.4.1"
+snakemake = "^7.5.0"
+tqdm = "^4.64.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.0"
+DendroPy = "^4.5.2"
+Sphinx = "<5.0.0"
+sphinx-immaterial = "^0.8.0"
+snakedoc = {git = "https://github.com/smutch/snakedoc.git", rev = "main"}
+sphinxcontrib-mermaid = "^0.7.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 120
+skip_string_normalization = true
+
+[tool.isort]
+profile = "black"
+
+[tool.pylint.messages_control]
+disable = "C0330, C0326"
+
+[tool.pylint.format]
+max-line-length = "120"
+
+[tool.snakefmt]
+line_length = 120
+include = '\.smk$|^Snakefile$'
+
+[tool.pytest]
+minversion = "6.0"
+testpaths = [".tests"]
