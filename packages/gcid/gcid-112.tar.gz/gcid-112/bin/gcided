@@ -1,0 +1,64 @@
+#!/usr/bin/env python3
+# pylint: disable=E1101,E0611,C0116,C0115,C0413,R0903,W0613,W0212
+# This file is placed in the Public Domain.
+
+
+"Prosecutor. Court. Reconsider OTP-CR-117/19."
+
+
+import os
+import sys
+import time
+
+
+sys.path.insert(0, os.getcwd())
+
+
+from gcid.scan import scancls
+from gcid.workdir import Wd
+
+Wd.workdir = "/var/lib/gcid"
+
+
+from gcid import irc, log, model, rss, tdo
+
+
+scancls(irc)
+scancls(log)
+scancls(model)
+scancls(rss)
+scancls(tdo)
+
+
+def daemon():
+    pid = os.fork()
+    if pid != 0:
+        os._exit(0)
+    os.setsid()
+    os.umask(0)
+    sis = open("/dev/null", 'r')
+    sos = open("/dev/null", 'a+')
+    ses = open("/dev/null", 'a+')
+    os.dup2(sis.fileno(), sys.stdin.fileno())
+    os.dup2(sos.fileno(), sys.stdout.fileno())
+    os.dup2(ses.fileno(), sys.stderr.fileno())
+
+
+def hup(sig, frame):
+    print("signal 15 called")
+    sys.stdout.flush()
+
+
+#signal.signal(signal.SIGHUP, hup)
+
+
+def main():
+    #daemon()
+    irc.init()
+    rss.init()
+    model.init()
+    while 1:
+        time.sleep(1.0)
+
+
+main()
