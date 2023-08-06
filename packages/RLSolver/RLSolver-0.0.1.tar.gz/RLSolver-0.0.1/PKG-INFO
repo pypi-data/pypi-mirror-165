@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: RLSolver
+Version: 0.0.1
+Summary: RLSolver: High-performance RL solvers.
+Home-page: https://github.com/AI4Finance-Foundation/RLSolver
+Author: Shixun Wu, Xiaoyang Liu, Ming Zhu
+Author-email: zhumingpassional@gmail.com
+License: MIT
+Keywords: Reinforcement Learning,Solver,Combinatorial optimization,Non-convex optimization,
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.7
+
+Version 0.0.0 notes: High-performance RL solvers
