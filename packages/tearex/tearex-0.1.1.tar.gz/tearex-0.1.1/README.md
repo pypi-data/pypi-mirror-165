@@ -1,0 +1,45 @@
+# TeaRex AI Python SDK 
+This package provides a Python SDK for the [tearex.ai](https://tearex.ai) Recommendation Engine API.
+If you don't have a tearex.ai account, you can request one here: [tearex.ai](https://tearex.ai/#contact).
+
+## Documentation
+For more information about the API, please refer to the [documentation](https://docs.tearex.ai/).
+
+## Installation
+To install the SDK, run the following command:
+```shell
+pip install tearex-ai
+```
+
+## Usage
+Import the SDK:
+```python
+import tearex
+```
+
+### Initialize the SDK
+Provide the url of the API and your API KE as an environment variable `TEAREX_URL` and `TEAREX_API_KEY`, or pass them as an argument to the `init` function:
+
+```python
+trx = tearex.Client(uri='YOUR_TEAREX_API_URL', apiKey='YOUR_TEAREX_API_KEY')
+```
+
+## Example
+```python
+import tearex
+
+trx = tearex.Client()
+
+# Define the entities where Alice is a new user and Kale is an existing product.
+alice = {"id": "user-1", "label": "User", "properties": {"name": "Alice"}}
+kale = {"id": "product-1", "label": "User", "properties": {"name": "Kale"}}
+
+# Create Alice since she is a new user
+trx.create_entity(alice)
+
+# Alice purchases Kale, so we create the "Purchased" event
+trx.create_event(alice, "Purchased", kale)
+
+# Recommend Alice the next "Product" to purchase
+trx.recommend(alice, "Product")
+```

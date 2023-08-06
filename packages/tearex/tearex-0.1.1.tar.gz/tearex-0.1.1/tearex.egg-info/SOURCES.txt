@@ -1,0 +1,9 @@
+README.md
+setup.py
+tearex/__init__.py
+tearex/client.py
+tearex.egg-info/PKG-INFO
+tearex.egg-info/SOURCES.txt
+tearex.egg-info/dependency_links.txt
+tearex.egg-info/requires.txt
+tearex.egg-info/top_level.txt
