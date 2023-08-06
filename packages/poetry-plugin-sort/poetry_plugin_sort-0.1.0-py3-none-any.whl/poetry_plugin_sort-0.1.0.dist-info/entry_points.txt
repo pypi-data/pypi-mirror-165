@@ -1,0 +1,3 @@
+[poetry.application.plugin]
+sort=poetry_plugin_sort.plugins:SortDependenciesPlugin
+
