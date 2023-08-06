@@ -1,0 +1,12 @@
+numpy>=1.23.1
+hitran-api>=1.2.2.0
+tqdm>=4.64.0
+scipy>=1.9.0
+pandas>=1.4.3
+
+[dev]
+black
+bumpver
+isort
+pip-tools
+pytest
