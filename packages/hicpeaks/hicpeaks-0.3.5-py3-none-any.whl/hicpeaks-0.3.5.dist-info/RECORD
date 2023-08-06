@@ -1,0 +1,15 @@
+hicpeaks/__init__.py,sha256=wVpJagHB9GAv9LDrbGHsqLHvl6f3Ny-wif_6_ca1Xfw,152
+hicpeaks/apa.py,sha256=lZP6PoXIW0r6FXImRSO4SJa9-sBuMFfoWRSMdl0MiIU,1141
+hicpeaks/callers.py,sha256=Y-f8dpR-Gu-y2PkLnd9WTCcJk4W6BjQoBfoSbh9fs78,28971
+hicpeaks/utilities.py,sha256=zw0i7hIuZaQ6kiYJc4SxwS6MV4sVW8z88bDH2ddCRa4,20808
+hicpeaks-0.3.5.data/scripts/apa-analysis,sha256=7TVVkd1Yzmm8C-jAXm7YvPeZJo_3jVHMkfN_9nYCOtk,5455
+hicpeaks-0.3.5.data/scripts/combine-resolutions,sha256=F-c8Atmxq_3dji4v61YLBm94m8C9jp1Lt8RWNKYV5x4,3091
+hicpeaks-0.3.5.data/scripts/peak-plot,sha256=PaiaAJ6DwFSt0imTJkT-pR8uZc8RhP_OIsv-boMNzuo,8602
+hicpeaks-0.3.5.data/scripts/pyBHFDR,sha256=eaD-KVGV-23rC-LU1sxIzEVCrxHcvIILXR861b3UYY4,7692
+hicpeaks-0.3.5.data/scripts/pyHICCUPS,sha256=sAiPy42Y0fL4Ei_D6cMPsWrr5sNS1SH082SLv7jbQc8,10025
+hicpeaks-0.3.5.data/scripts/toCooler,sha256=gbmq70etmybjk0JkH7xdLJJBN0KkIZqsqRycF7OoK_c,5835
+hicpeaks-0.3.5.dist-info/LICENSE,sha256=EqxQR_KvBSLwZ5ixWJ_8RZm8KckflU14dOAyBjTnd8A,35122
+hicpeaks-0.3.5.dist-info/METADATA,sha256=kp0649gHdclI9IC0OqZ1to0IOyN1cFrbI3HYSVkkEU8,16467
+hicpeaks-0.3.5.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+hicpeaks-0.3.5.dist-info/top_level.txt,sha256=FCos664f_fwMRaQYSc_xkzstY8esbo8RYZ6ptSJyJ0c,9
+hicpeaks-0.3.5.dist-info/RECORD,,
