@@ -1,0 +1,56 @@
+{% extends "admin/base_site.html" %}
+{% load i18n static %}
+
+{% block extrastyle %}
+  {{ block.super }}
+  <link rel="stylesheet" type="text/css" href="{% static "admin/css/dashboard.css" %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'django-rrweb/rrweb-player-0-7-14-style.css' %}">
+  <style>
+   #player { font-family: sans-serif !important }
+  </style>
+{% endblock %}
+
+{% block extrahead %}
+  {{ block.super }}
+  <script src="{% static 'django-rrweb/rrweb-player-0-7-14.js' %}"></script>
+{% endblock %}
+
+{% block coltype %}colMS{% endblock %}
+
+{% block bodyclass %}{{ block.super }} dashboard{% endblock %}
+
+{% block breadcrumbs %}
+  <div class="breadcrumbs">
+    <a href="{% url 'admin:index' %}">{% translate 'Home' %}</a>
+    &rsaquo; <a href="{% url 'admin:app_list' 'django_rrweb' %}">Django_Rrweb</a>
+    &rsaquo; <a href="{% url 'admin:django_rrweb_page_changelist' %}">Pages</a>
+    &rsaquo; <a href="{% url 'admin:django_rrweb_page_change' page.id %}">{{ page }}</a>
+    &rsaquo; Replay
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div id="content-main">
+    <div id="player"></div>
+    <script>
+     /* <!-- */
+     const events = [
+         {% for event in events %}
+         {
+             "type": {{ event.kind }},
+             "data": {{ event.data|safe }},
+             "timestamp": {{ event.timestamp }},
+         },
+         {% endfor %}
+     ];
+     /* --> */
+     let divPlayer = document.getElementById("player");
+     let player = new rrwebPlayer({
+         target: divPlayer,
+         props: {
+             events,
+         },
+     });
+    </script>
+  </div>
+{% endblock %}
