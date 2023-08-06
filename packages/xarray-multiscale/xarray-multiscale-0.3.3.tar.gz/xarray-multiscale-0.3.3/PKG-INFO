@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: xarray-multiscale
+Version: 0.3.3
+Summary: 
+Author: Davis Vann Bennett
+Author-email: davis.v.bennett@gmail.com
+Requires-Python: >=3.8,<4
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: dask (>=2020.12.0)
+Requires-Dist: numpy (>=1.19.4,<2.0.0)
+Requires-Dist: scipy (>=1.5.4,<2.0.0)
+Requires-Dist: xarray (>=2022.03.0)
