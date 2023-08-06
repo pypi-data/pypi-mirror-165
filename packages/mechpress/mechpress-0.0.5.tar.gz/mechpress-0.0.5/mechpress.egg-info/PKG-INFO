@@ -1,0 +1,88 @@
+Metadata-Version: 1.1
+Name: mechpress
+Version: 0.0.5
+Summary: package for mechanical press design
+Home-page: UNKNOWN
+Author: Sanchit
+Author-email: sanchitsharma84@gmail.com
+License: MIT
+Description: This package contains set of modules for mechanical press design.
+        In this version there are total 5 modules.
+        Usage of each module is explained below:
+        
+        Module 1: ed
+        ed is for Eccentric Drive press. It is similar to Slider crank mechanism. Crankshaft is driven by a motor. Connecting rod connects crankpin (connecting rod journal) of Crankshaft at one end (called big end) and Slider at other end through pin. Rotary motion of Crankshaft is converted to linear movement of Slider. Slider motion is used to apply pressing force on a die to shape a component. The maximum force the Slider can apply is called rated force. Number of rotations of Crankshaft in one minute is called RPM (rotations per minute). Number of strokes per minute of Slider is called SPM. As the Slider crank mechanism is symmetrical, the forward motion time of Slider is equal to return time. At a given position (angle) of Crankshaft, Slider position, linear velocity and  acceleration can be of interest. For this, we need to define the position of crakshaft at 0 degree angle. The convention is to define 0 degree angle of Crankshaft when it is at extremely top position (TDC or TOS), similarly, 180 degree is extremely bottom position (BDC or BOS). 
+        Two parameters are extremely important in sizing of a press with Slider crank mechanism. One is the maximum pressing force you can take from Slider. Another is the maximum Crankshaft torque. Force is simple to understand and implement in design, but Crankshaft torque is a bit tricky to understand. With higher Crankshaft torque, we can get higher force throughout the storke of Slider. This can be quantified by a parameter named Rated Distance. Rated distance is the distance of Slider from BDC where we can take rated press force from Slider. Higher the rated distance, higher will be the torque required at Crankshaft.
+        Because of the kinematics of Slider crank mechanism, Slider can give theoritically infinite force at 180 degree (BDC) with almost neglegible torque requirement at Crankshaft. This can be a matter of concern for the structure of press because any structure can take finite amount of load only. To prevent overloading of structure, a separare overload prevention device is required. Generally, connecting rod length should be more than or equal to 3 times of the stroke. For large strokes of slide, Eccentric gear is used in place of Crankshaft. The calculations for eccentric gear are same as with Crankshaft.
+        
+        This module can be used to calculate torque required for an eccentric drive press. The torque output is based on the consideration of only 1 eccentric gear. Besides torque, it can also calculate slide position "from bottom of stroke" (FBOS) and acceleration at a given angle of Crankshaft.
+        
+        Module 2: ld
+        Please read about ed press before reading further.
+        ld is for Link Drive press. It is slightly different from Eccentric drive press in construction. To reduce the speed of slider in forming zone, few extra links are provided in this mechanism. Generally, these presses are driven by eccentric gears rather than crankshaft. Eccnetric gear is driven by a pinion which is driven by a  motor. There are 3 links in this system: Ternary link with 3 joints, rocker link with 2 joints and connecting rod with 2 joints. Rocker link is connected to Crown at one end and with ternary link at other. Connecting rod is connected with ternary link at oner end and slide to another. Ternary link is also connected to eccentric gear's eccentric portion. Eccentric gears rotates at constant speed. Due to linkage mechanism, Slide moves slowly in forming zone (bottom 1/3rd zone of forward motion) and fast in return stroke.
+        
+        This module can be used to calculate torque required for link drive press. The torque output is based on the consideration of only 1 eccentric gear. Besides torque, it can also calculate TDC and BDC angle, slide position "from bottom of stroke" (FBOS) and velocity at all the angles of Eccentric gear.
+        
+        Module 3: crown
+        Crown is one of the main structural component of mechanical press. It houses drive components like gears, shafts links etc. It also transfers press force to tie rods. It acts like a simply supported beam where tie rod acts as supports and eccentric gear pin acts as load points.
+        Bending and shear stresses are generated in crown when press applies load. Crown also deflects due to bending and shear forces.
+        This module can be used to determine stresses and defelction in crown due to load. The maximum stress and deflection comes in the center of the crown in left to right direction.
+        Generally stresses are limited to 50 N/mm2 and deflection is limited to 0.2mm/m at center. Deflection calculated by this module is the total deflection at center. It should be divided by tie rod center distance to get the value in mm/m. For example, if the tie rod center distance is 5000 mm and deflection at center is 0.8 mm, then deflection in mm/m = 0.8 / 5 = 0.16 mm/m
+        
+        Module 4: bed
+        Bed (also known as Bottom Head) is one of the main structural component of mechanical press. It is the bottom most part of structure. It takes the vertical load of forming which comes from the bolster plate which is mounted on top of the bed. It also transfers press force to tie rods. It acts like a simply supported beam where tie rod acts as supports and bolster acts as Uniformly distributed load.
+        Bending and shear stresses are generated in bed when press applies load. Bed also deflects due to bending and shear forces.
+        This module can be used to determine stresses and defelction in bed due to load. The maximum stress and deflection comes in the center of the bed in left to right direction.
+        Generally stresses are limited to 50 N/mm2 and deflection is limited to 0.17mm/m at center. Deflection calculated by this module is the total deflection at center. It should be divided by tie rod center distance to get the value in mm/m. For example, if the tie rod center distance is 6000 mm and deflection at center is 1 mm, then deflection in mm/m = 1 / 6 = 0.167 mm/m
+        
+        Module 5: slide
+        Slide is one of the main structural component of mechanical press. It is the moving part of press which applies load on the die. It takes the vertical load of forming which comes from the upper die which is mounted on the slide. It also transfers press force from top die to connecting rods. It acts like a simply supported beam where connecting rod acts as supports and top die acts as Uniformly distributed load.
+        Bending and shear stresses are generated in slide when press applies load. Slide also deflects due to bending and shear forces.
+        This module can be used to determine stresses and defelction in slide due to load. The maximum stress and deflection comes in the center of the slide in left to right direction. 
+        Generally stresses are limited to 50 N/mm2 and deflection is limited to 0.17mm/m at center. Deflection calculated by this module is the total deflection at center. It should be divided by suspension center distance to get the value in mm/m. For example, if the susepnsion center distance is 4000mm and deflection at center is 0.6 mm, then deflection in mm/m = 0.6 / 4 = 0.15 mm/m
+        
+        Module 6: section_mi
+        This module is used to calculate section properties like centroid, second moment of area etc of I beam. I beam consists of 3 main rectangular sections: Top flange, Web and bottom flange. This module also gives provision to include top and bottom reinforced plates. 
+        
+        Change Log
+        ==========
+        
+        
+        0.0.5 (28/08/2022)
+        -------------------
+        some uploading errors corrected
+        
+        
+        0.0.4 (28/08/2022)
+        -------------------
+        some uploading errors corrected
+        
+        
+        0.0.3 (28/08/2022)
+        -------------------
+        some uploading errors corrected
+        
+        
+        0.0.2 (28/08/2022)
+        -------------------
+        1. 4 new modules added:
+        
+        a. section_mi
+        b. crown
+        c. slide
+        d. bed
+        
+        2. Included implemenation example in readme file for all modules.
+        
+        
+        0.0.1 (15/08/2022)
+        -------------------
+        first release
+        
+Keywords: mechanical press
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
