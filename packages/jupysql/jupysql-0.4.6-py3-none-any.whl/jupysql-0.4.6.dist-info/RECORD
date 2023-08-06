@@ -1,0 +1,13 @@
+sql/__init__.py,sha256=0T1QA7BnREdrOLcwUrSLHUjm1h9_2pi0Cz2kLcmCQRk,44
+sql/column_guesser.py,sha256=9L176wo5oFuByyEjD4NPR4TjkDPrccSl91jwGTEztKc,2853
+sql/connection.py,sha256=nLjK5V8N4oNSWJwkQIdmMnpOFaL5NhqZbZCYoxXBsnQ,4009
+sql/magic.py,sha256=j8avw7S-G0zZZqh7t_lM7YvOIRfSgXC4hfXsSrP8pKU,11954
+sql/parse.py,sha256=h51ld3AeH6Jj_7vf7MR-JDnX8Xj9DsBQ4AALyGZlCCU,2657
+sql/plot.py,sha256=5SUcGgpm4-IqAcuhy7PJhtS4-mZ-CIRmVMrmCCuQWlI,6170
+sql/run.py,sha256=7zT53SpwO_qPKPb3iRSvbZguCqvZmMndUhfwjKZCSo0,13153
+sql/store.py,sha256=9EZtN9_-GsVOiYkCBLo6VQBnn49mGgE1-R6EHHZ_DGM,2314
+jupysql-0.4.6.dist-info/LICENSE,sha256=KQyHYjQnG_7bt_7C8liIGidAA3G3KaO5fiTfVVUrK9o,1102
+jupysql-0.4.6.dist-info/METADATA,sha256=aOa4YZuNRiWGs3fBgnB0Mx0DFWRUydw4xq7BalgUJCE,2174
+jupysql-0.4.6.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+jupysql-0.4.6.dist-info/top_level.txt,sha256=hwJHmWfbRP5a_XNfqgHwi2zrjAAzAJk24QZoTocslow,4
+jupysql-0.4.6.dist-info/RECORD,,
