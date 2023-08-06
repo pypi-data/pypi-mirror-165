@@ -1,0 +1,13 @@
+modernauth/__init__.py,sha256=lwRNBrdssKguVo7SM5hhqs16vF3auqdovpnonaatQv0,101
+modernauth/admin.py,sha256=-yWQ6rpWN8hOX96-uDyi4EwDCm247T6tNDiW3UuKsXo,1182
+modernauth/apps.py,sha256=2RY35O5dnNa-uQLTYTQM39ESSAbtd6BrGjNOQXGMutI,95
+modernauth/models.py,sha256=_s_szy4VmMkoRIJ54JjFL_PQWjCxD_UM5a5GD0seXF4,1871
+modernauth/tests.py,sha256=AcO1RO99_Hp0eUJnPAxVURt65gPxxBWMz4BIpCizYGw,832
+modernauth/views.py,sha256=xc1IQHrsij7j33TUbo-_oewy3vs03pw_etpBWaMYJl0,63
+modernauth/migrations/0001_initial.py,sha256=PybMqJ-dRsIvhwhujR6VRk6k2JihCUWmgyBW1v3UfUA,2489
+modernauth/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_rapyd_modernauth-0.0.4.dist-info/LICENSE,sha256=W7IoB2He_7Z0DFR8iyf_Wp9EITYmBzhnuF8G1snpWBk,11348
+django_rapyd_modernauth-0.0.4.dist-info/METADATA,sha256=D6q4sbQPu-Jd-tdXZFsBWTzD--9LcogblAOCisCMCd4,2180
+django_rapyd_modernauth-0.0.4.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+django_rapyd_modernauth-0.0.4.dist-info/top_level.txt,sha256=PaXsdALGXC0yIdTvtvPyRh819m1Tsnp0X4R0GmCLJcI,11
+django_rapyd_modernauth-0.0.4.dist-info/RECORD,,
