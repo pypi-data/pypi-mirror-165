@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: dsmemail
+Version: 0.0.3
+Summary: A simple way to send email. for dsm
+Home-page: https://gitlab.com/public-project2/dsm-email
+Author: DigitalStoreMesh Co.,Ltd
+Author-email: contact@storemesh.com
+License: MIT License
+Description: # DSM Email
+        
+        ## install
+        ```
+        pip install dsmemail
+        ```
+        
+        ## how to use
+        1. set env
+        
+        ```
+        DSM_EMAIL_URI=<DSM_EMAIL_URI>
+        DSM_EMAIL_APIKEY=<DSM_EMAIL_APIKEY>
+        ```
+        
+        2. send email
+        
+        ```python
+        import dsmemail
+        
+        status, msg = dsmemail.sendEmail(
+            subject="test", 
+            message="helloworld", 
+            emails=["admin@admin.com"]
+        )
+        
+        print(status, msg)
+        ```
+        output
+        ```
+        (True, 'email send sucess')
+        ```
+        
+        #
+        status
+        ```
+        True = send email sucess
+        False = send email fail
+        ```
+        
+        msg
+        ```
+        string describe status
+        ```
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
