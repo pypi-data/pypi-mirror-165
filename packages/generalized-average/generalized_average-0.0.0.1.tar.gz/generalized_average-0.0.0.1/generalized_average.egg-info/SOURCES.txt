@@ -1,0 +1,8 @@
+README.md
+setup.py
+generalized_average/__init__.py
+generalized_average/gen_ave_object.py
+generalized_average.egg-info/PKG-INFO
+generalized_average.egg-info/SOURCES.txt
+generalized_average.egg-info/dependency_links.txt
+generalized_average.egg-info/top_level.txt

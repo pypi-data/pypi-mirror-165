@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: generalized_average
+Version: 0.0.0.1
+Summary: Calcalating different of averages for DL pooling tasks
+Author: Uri Itai Alexander Molak &  Natan Katz
+Description-Content-Type: text/markdown
+
+Generalized Average 
+
+Creating a set of routines that calcualte different types of averages
+
+The motivation is handling polling problems where we wish to mdofiy max and mean to a wider set of tools
+
