@@ -1,0 +1,14 @@
+api-name: 
+  - mandatory: True
+kaggle-json-file-name:
+  - mandatory: True
+kaggle-data-type:
+  - mandatory: True
+dataset-name:
+  - mandatory: True
+dataset-format:
+  - mandatory: True
+output-dirname:
+  - mandatory: True
+train-val-test-split: 
+  - mandatory: True

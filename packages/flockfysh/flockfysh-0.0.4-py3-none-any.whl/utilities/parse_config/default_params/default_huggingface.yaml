@@ -1,0 +1,8 @@
+api-name: 
+  - mandatory: True
+dataset-name:
+  - mandatory: True
+output-dirname:
+  - mandatory: True
+train-val-test-split: 
+  - mandatory: True
