@@ -1,0 +1,16 @@
+odoo/addons/web_button_no_save/README.rst,sha256=u_KPisIYYjKKMUCe9O99xI28uC14HFDdMwA5nczXvaI,3202
+odoo/addons/web_button_no_save/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+odoo/addons/web_button_no_save/__manifest__.py,sha256=9mQcYQb9d9ZpHARP5gLhuegje4kPwFw_LDLiGZUCGY4,538
+odoo/addons/web_button_no_save/i18n/web_button_no_save.pot,sha256=2T_62s-OoonWUW5mCPeLA8WOQV-FszQcdurSAtvuYmA,344
+odoo/addons/web_button_no_save/readme/CONFIGURE.rst,sha256=02Rh0HvCyXTb5bwcxtUAJNL6WvUmW70xtI04J088XPg,246
+odoo/addons/web_button_no_save/readme/CONTRIBUTORS.rst,sha256=oIzikxXKOvWqDOj44ny9excNKHjlxI7GMq9iVsyC84M,76
+odoo/addons/web_button_no_save/readme/DESCRIPTION.rst,sha256=ZWO762pWft5pr3A32gIychI9OnVtrw87MxTN9j3SM-w,282
+odoo/addons/web_button_no_save/readme/ROADMAP.rst,sha256=x4OL1WOgbfs3tUwrVLR8RwnFeO0r_98huCWdEf_rLW4,59
+odoo/addons/web_button_no_save/static/description/icon.png,sha256=6xBPJauaFOF0KDHfHgQopSc28kKvxMaeoQFQWZtfZDo,9455
+odoo/addons/web_button_no_save/static/description/index.html,sha256=_vyFwUDZFzaRjmRb00wqNOHOQw87cDeU-rMz9Fln13c,13092
+odoo/addons/web_button_no_save/static/src/js/web_button_no_save.js,sha256=4CgX-mzgVj9FD-Jl4vwFggiPcUbdqmYaP21Tfl_3FiY,629
+odoo/addons/web_button_no_save/templates/assets.xml,sha256=26_HEydCkep0VOz-zpJkLYs_YQKAOLTAfbH7CMfK0rM,451
+odoo12_addon_web_button_no_save-12.0.1.0.0.99.dev3.dist-info/METADATA,sha256=kTcuFioOgWd-zhpDzFru9uL0oGwBv0b55ExZz-6BEEE,3807
+odoo12_addon_web_button_no_save-12.0.1.0.0.99.dev3.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+odoo12_addon_web_button_no_save-12.0.1.0.0.99.dev3.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+odoo12_addon_web_button_no_save-12.0.1.0.0.99.dev3.dist-info/RECORD,,
