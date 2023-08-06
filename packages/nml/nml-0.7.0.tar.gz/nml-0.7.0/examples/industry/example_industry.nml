@@ -1,0 +1,136 @@
+/*
+ * This file is aimed to provide an example on how to code a basic industry in NML.
+ * To keep the code readable, not every property or variable is documented in
+ * detail, refer to the object-specific reference in the documentation.
+ *
+ * This version shows only how to modify a built-in industry.
+ *
+ * Apart from this file, you will also need the following
+ * - Language files, to be placed in the 'lang' folder.
+ *      Currently english.lng is supplied.
+ */
+
+/**********************************************
+ * Header, containing some general stuff:
+ **********************************************/
+
+ /*
+ * First, define a grf block. This defines some basic properties of the grf,
+ * which are required for the grf to be valid and loadable.
+ */
+grf {
+    /* This grf is part of NML, therefore "NML" is chosen as the first three
+     * characters of the GRFID. It is the third real grf defined as part of
+     * NML, therefore the last character is set to 2. Successive grfs will
+     * have 3, 4, etc. there, to make sure each example grf has a unique GRFID.
+     */
+    grfid : "NML\04";
+    name : string(STR_GRF_NAME);
+    desc : string(STR_GRF_DESCRIPTION);
+    version : 0; // must be numeric
+    min_compatible_version : 0;
+}
+
+
+/* this example assumes we're just matching to the default temperate cargos, this wouldn't be the usual case */
+cargotable {
+ 	PASS, COAL, MAIL, OIL_, LVST, GOOD, GRAI, WOOD, IORE, STEL, VALU
+}
+
+/*
+* This example extends the cargos accepted and produce by the default temperate factory.
+*/
+
+produce(consume_all_prod,
+    // Consume the full amount of all waiting cargos (stored by factory_production_switch below).
+    [COAL: LOAD_TEMP(1); IORE: LOAD_TEMP(2); GRAI: LOAD_TEMP(3);],
+    // Produce steel from coal and ore, goods from grain.
+    [STEL: LOAD_TEMP(1) / 2 + LOAD_TEMP(2); GOOD: LOAD_TEMP(3) * 2;],
+    0
+)
+
+produce(do_nothing_prod, [], [])
+
+// Make the factory produce cargo only when coal is delivered.
+// Other cargos will be stockpiled until then.
+switch(FEAT_INDUSTRIES, SELF, factory_production_switch, [
+    STORE_TEMP(incoming_cargo_waiting("COAL"), 1),
+    STORE_TEMP(incoming_cargo_waiting("IORE"), 2),
+    STORE_TEMP(incoming_cargo_waiting("GRAI"), 3),
+    incoming_cargo_waiting("COAL")
+]) {
+    // If no coal, don't produce anything.
+    0: do_nothing_prod;
+    // Otherwise consume all waiting cargo.
+    consume_all_prod;
+}
+
+switch(FEAT_INDUSTRIES, SELF, extra_text_switch,
+        // Put the production amount on the textstack for use in a string parameter.
+        // See https://newgrf-specs.tt-wiki.net/wiki/NML:Language_files#String_parameters
+        [STORE_TEMP(this_month_production("GOOD"), 256)]) {
+        return string(STR_INDUSTRY_EXTRA_TEXT);
+}
+
+item(FEAT_INDUSTRIES, factory) {
+    property {
+        substitute: INDUSTRYTYPE_TEMPERATE_FACTORY;
+        override: INDUSTRYTYPE_TEMPERATE_FACTORY;
+        cargo_types: [
+            accept_cargo("COAL"),
+            accept_cargo("IORE"),
+            accept_cargo("GRAI"),
+            // Output production amount by callback above, but must be listed here.
+            produce_cargo("STEL", 0),
+            produce_cargo("GOOD", 0)
+        ];
+    }
+    graphics {
+        produce_cargo_arrival: factory_production_switch;
+        extra_text_industry: extra_text_switch;
+    }
+}
+
+item(FEAT_INDUSTRYTILES, factory_tile_1) {
+    property {
+        substitute:        39;
+        override:          39;
+        special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
+}
+item(FEAT_INDUSTRYTILES, factory_tile_2) {
+    property {
+        substitute:        40;
+        override:          40;
+        special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
+}
+item(FEAT_INDUSTRYTILES, factory_tile_3) {
+    property {
+        substitute:        41;
+        override:          41;
+        special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
+}
+item(FEAT_INDUSTRYTILES, factory_tile_4) {
+    property {
+        substitute:        42;
+        override:          42;
+        special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+    }
+}
+
+/*
+* This example causes the default farm to produce livestock, grain, and wood.
+*/
+item(FEAT_INDUSTRIES, farm) {
+    property {
+        substitute: INDUSTRYTYPE_TEMPERATE_ARCTIC_FARM;
+        override: INDUSTRYTYPE_TEMPERATE_ARCTIC_FARM;
+        cargo_types: [
+            produce_cargo("LVST", 8),
+            produce_cargo("GRAI", 12),
+            produce_cargo("WOOD", 4),
+        ];
+    }
+}
