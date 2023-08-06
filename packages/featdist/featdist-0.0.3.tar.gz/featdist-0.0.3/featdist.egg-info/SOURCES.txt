@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+featdist/__init__.py
+featdist/base.py
+featdist.egg-info/PKG-INFO
+featdist.egg-info/SOURCES.txt
+featdist.egg-info/dependency_links.txt
+featdist.egg-info/requires.txt
+featdist.egg-info/top_level.txt
