@@ -1,0 +1,15 @@
+xtremcache/__init__.py,sha256=0dTDVww0LU75wFF9mw3z5dTIcUvI7vr3r5E4z8uC5Rk,95
+xtremcache/__main__.py,sha256=x7vEHZMUVNtg16nAwGvjf2-LfTTRiVAIbv_KVF2QCP4,135
+xtremcache/archivermanager.py,sha256=DewKaXsYaW3r5F3XU8qBvjwyi9AgNeLWQIrRql3C1OU,2445
+xtremcache/bddmanager.py,sha256=Ik0akkeic_66pS50_9_Ra1N_MyIECEPbddlZVgDnb_g,5413
+xtremcache/cachemanager.py,sha256=U-Fv1hobIVYeBGEZR9snVJyrttVaob9WHMgk-w4xZ5M,4622
+xtremcache/configuration.py,sha256=QDCdSrm1FKwflqB0d1cX8JNsWcqvhK9lv_YmGXxIp1E,2775
+xtremcache/exceptions.py,sha256=HQq5BfxMD21aTsD9omhQU-yngw_0Tecb5G5UM-NJXoA,1479
+xtremcache/main.py,sha256=q0iljvHOcIoRVGvjhpoh3oMOE3FavV81e1JKMP4FcwQ,3956
+xtremcache/utils.py,sha256=l7o4epyH-RmHftdIRALMHPkwwo05zrbeMNS9feGuo_s,1013
+xtremcache-1.0.0.dist-info/LICENSE,sha256=gcuuhKKc5-dwvyvHsXjlC9oM6N5gZ6umYbC8ewW1Yvg,35821
+xtremcache-1.0.0.dist-info/METADATA,sha256=SXuj6ll8njdiCV9MIuE6_v8iUB3-lIRaWozLh5wKBDw,4071
+xtremcache-1.0.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+xtremcache-1.0.0.dist-info/entry_points.txt,sha256=k2Ictvc3mYLBq1Kq9GcVbHA1_rnKXzQzBkTSfB-lxJw,56
+xtremcache-1.0.0.dist-info/top_level.txt,sha256=AQ_i1IPfXkgax0vvvkvb20O2MFYrk2pwYUdnV1uZXIE,11
+xtremcache-1.0.0.dist-info/RECORD,,
