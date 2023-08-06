@@ -1,0 +1,3 @@
+[console_scripts]
+mitchell-portal-gun=mitchell_portal_gun.main:app
+

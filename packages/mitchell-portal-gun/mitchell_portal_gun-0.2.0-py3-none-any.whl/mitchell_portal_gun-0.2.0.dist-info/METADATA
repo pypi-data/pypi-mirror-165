@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: mitchell-portal-gun
+Version: 0.2.0
+Summary: 
+Author: Mitchell Mirano
+Author-email: mitchellmirano25@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: typer[all] (>=0.6.1,<0.7.0)
+Description-Content-Type: text/markdown
+
+# `mitchell-portal-gun`
+
+Awesome Mitchell Portal Gun
+
+**Usage**:
+
+```console
+$ mitchell-portal-gun [OPTIONS] COMMAND [ARGS]...
+```
+
+**Options**:
+
+* `--install-completion`: Install completion for the current shell.
+* `--show-completion`: Show completion for the current shell, to copy it or customize the installation.
+* `--help`: Show this message and exit.
+
+**Commands**:
+
+* `load`: Load the portal gun
+* `shoot`: Shoot the portal gun
+
+## `mitchell-portal-gun load`
+
+Load the portal gun
+
+**Usage**:
+
+```console
+$ mitchell-portal-gun load [OPTIONS]
+```
+
+**Options**:
+
+* `--help`: Show this message and exit.
+
+## `mitchell-portal-gun shoot`
+
+Shoot the portal gun
+
+**Usage**:
+
+```console
+$ mitchell-portal-gun shoot [OPTIONS]
+```
+
+**Options**:
+
+* `--help`: Show this message and exit.
+
