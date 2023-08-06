@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+lectioscraper/__init__.py
+lectioscraper/lectioscraper.py
+lectioscraper.egg-info/PKG-INFO
+lectioscraper.egg-info/SOURCES.txt
+lectioscraper.egg-info/dependency_links.txt
+lectioscraper.egg-info/requires.txt
+lectioscraper.egg-info/top_level.txt
