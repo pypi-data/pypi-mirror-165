@@ -1,0 +1,8 @@
+setup.py
+monitor_logs/__init__.py
+monitor_logs/monitor_logs.py
+monitor_logs.egg-info/PKG-INFO
+monitor_logs.egg-info/SOURCES.txt
+monitor_logs.egg-info/dependency_links.txt
+monitor_logs.egg-info/not-zip-safe
+monitor_logs.egg-info/top_level.txt
