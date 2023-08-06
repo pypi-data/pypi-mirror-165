@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: pmeshlab
+Version: 0.0.2
+Summary: 3D Mesh processing
+Author: Jean Maximilien Cadic
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+Requires-Dist: pymeshlab
+Requires-Dist: numpy
+Requires-Dist: NMesh
+
