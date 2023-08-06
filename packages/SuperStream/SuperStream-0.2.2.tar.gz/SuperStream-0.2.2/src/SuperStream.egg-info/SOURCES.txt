@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+src/SuperStream.egg-info/PKG-INFO
+src/SuperStream.egg-info/SOURCES.txt
+src/SuperStream.egg-info/dependency_links.txt
+src/SuperStream.egg-info/top_level.txt
+src/superstream/__init__.py
+src/superstream/stream.py
+src/superstream/util.py
