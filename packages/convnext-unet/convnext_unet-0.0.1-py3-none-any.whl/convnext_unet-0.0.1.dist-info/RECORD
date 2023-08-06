@@ -1,0 +1,8 @@
+convnext_unet/__init__.py,sha256=P9q1Wyy8fWthHgiqnNLqY5mpJqus994HgL0vMfQHvK8,2080
+convnext_unet/decoder.py,sha256=vVIaopcNWsKwVamIYQ_iMESklpfikV6g-x2D8Xx1uMk,2946
+convnext_unet/encoder.py,sha256=TEijn9EWSDOFpg7E5P8FPk6feHx-YVSp_iKeER1XUoQ,8868
+convnext_unet-0.0.1.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+convnext_unet-0.0.1.dist-info/METADATA,sha256=B-guJDnHq_RdtK3I4iB4Azw6Y6bsiBdCA8IVezmvI-Q,43104
+convnext_unet-0.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+convnext_unet-0.0.1.dist-info/top_level.txt,sha256=eAR0P7SwwITlQQTTuhXXaWjoV0XGAuaSuEiY25hDQ9Y,14
+convnext_unet-0.0.1.dist-info/RECORD,,
