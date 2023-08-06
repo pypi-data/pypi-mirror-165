@@ -1,0 +1,18 @@
+[project]
+name = "api_code_tools"
+version = "0.0.1"
+authors = [
+  { name="alhumsi", email="alhomsidev@gamil.com" },
+]
+description = "own tools"
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+[project.urls]
+"Homepage" = "https://t.me/api_tele"
+"Bug Tracker" = "https://t.me/alhumsi"
