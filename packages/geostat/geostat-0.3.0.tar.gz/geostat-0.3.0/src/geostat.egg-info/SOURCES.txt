@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/geostat/__init__.py
+src/geostat/covfunc.py
+src/geostat/gp.py
+src/geostat/krige.py
+src/geostat/mesh.py
+src/geostat/param.py
+src/geostat/spatialinterpolator.py
+src/geostat.egg-info/PKG-INFO
+src/geostat.egg-info/SOURCES.txt
+src/geostat.egg-info/dependency_links.txt
+src/geostat.egg-info/requires.txt
+src/geostat.egg-info/top_level.txt
