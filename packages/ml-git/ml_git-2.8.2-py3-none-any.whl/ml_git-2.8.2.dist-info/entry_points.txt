@@ -1,0 +1,3 @@
+[console_scripts]
+ml-git = ml_git.main:run_main
+
