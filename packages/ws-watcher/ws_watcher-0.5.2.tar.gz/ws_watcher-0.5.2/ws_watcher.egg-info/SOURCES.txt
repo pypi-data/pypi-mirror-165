@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+ws_watcher/ws_watcher.py
+ws_watcher.egg-info/PKG-INFO
+ws_watcher.egg-info/SOURCES.txt
+ws_watcher.egg-info/dependency_links.txt
+ws_watcher.egg-info/requires.txt
+ws_watcher.egg-info/top_level.txt
