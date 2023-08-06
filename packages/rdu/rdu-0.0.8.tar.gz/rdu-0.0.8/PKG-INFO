@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: rdu
+Version: 0.0.8
+Summary: reaction data utils
+Home-page: https://github.com/zbc0315/rdu
+Author: zbc
+Author-email: zbc@mail.ustc.edu.cn
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Reaction Data Utils
+
+## install
+```shell
+pip install rdu
+```
+## data type
+* Molecule
+* Reaction
+* Reaction Template
+
+## contact
+
+zbc@mail.ustc.edu.cn
+
+
