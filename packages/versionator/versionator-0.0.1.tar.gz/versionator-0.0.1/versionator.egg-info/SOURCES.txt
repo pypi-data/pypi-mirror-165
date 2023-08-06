@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+versionator/__init__.py
+versionator/__main__.py
+versionator.egg-info/PKG-INFO
+versionator.egg-info/SOURCES.txt
+versionator.egg-info/dependency_links.txt
+versionator.egg-info/entry_points.txt
+versionator.egg-info/requires.txt
+versionator.egg-info/top_level.txt
