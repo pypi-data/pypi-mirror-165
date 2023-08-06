@@ -1,0 +1,15 @@
+sonouno_lhc/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sonouno_lhc/__main__.py,sha256=sCpXy7NoZ91tqQz0By4EgVEvuPQEnpJq2xZnIkh8GRE,902
+sonouno_lhc/bip.wav,sha256=oFp734iq5tuQzLO65FhFdjzy8lGnqRTSb99tUu9oj3k,7182
+sonouno_lhc/io.py,sha256=GRRvLx5Lw9GEfyLiDsuR63SgkzUPlEhkghI1ed8qeVM,2583
+sonouno_lhc/lhc_data.py,sha256=j-NUu67BhE5j7zTmkBUwXGUlsiJSdWks8ieik8tlOcI,7805
+sonouno_lhc/lhc_plot.py,sha256=zWY5Py89fZEhF2XyBHsvXHDzinRwR7G9KORv86fxdno,5049
+sonouno_lhc/lhc_sonification.py,sha256=7evPVYQYC34ejNH6WVqdqREIjZ1tjePbWgkQR9XgbyQ,4525
+sonouno_lhc/models.py,sha256=fyUQ2qHBabzU3SttmDS23HJGT076Ur4OkLpfGZECW3Q,2093
+sonouno_lhc/data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sonouno_lhc/data/sonification_reduced.txt,sha256=sDo5OPmkNu3gaOotBpdxLnjERJ0Srf4WrESRAN3litI,5226
+sonouno_lhc-1.1.0.dist-info/LICENSE,sha256=ae9RJcPH7mRMXfQngHcCAiA1pxjZTt6eUz8sNbx-B_Q,1069
+sonouno_lhc-1.1.0.dist-info/METADATA,sha256=xNXjOVwiJZOboQJyxFQr0n4dMMUroskWGK_4ePjYCe8,2335
+sonouno_lhc-1.1.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+sonouno_lhc-1.1.0.dist-info/top_level.txt,sha256=qspeZfiSZQfzDFG1AVDzkFcE30_BBHdO2QluRTSmfzw,12
+sonouno_lhc-1.1.0.dist-info/RECORD,,
