@@ -1,0 +1,2 @@
+[console_scripts]
+idem = idem.scripts:start
