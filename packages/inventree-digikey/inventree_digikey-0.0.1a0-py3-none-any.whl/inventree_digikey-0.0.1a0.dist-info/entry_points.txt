@@ -1,0 +1,2 @@
+[inventree_plugins]
+inventree-digikey = inventree_digikey:digikey.DigikeyPlugin
