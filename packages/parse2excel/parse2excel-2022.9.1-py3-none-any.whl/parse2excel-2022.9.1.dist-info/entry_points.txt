@@ -1,0 +1,2 @@
+[console_scripts]
+parse2excel = parse2excel.parse2excel:main
