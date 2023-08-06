@@ -1,0 +1,5 @@
+docker_py
+kubernetes
+protobuf
+PyYAML
+requests
