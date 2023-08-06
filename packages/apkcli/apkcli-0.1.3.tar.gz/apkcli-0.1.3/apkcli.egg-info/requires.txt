@@ -1,0 +1,4 @@
+androguard==3.3.5
+ipython
+yara-python==4.1.0
+lxml>=4.2.6
