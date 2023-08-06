@@ -1,0 +1,4 @@
+tk
+tcl
+configparser
+screeninfo

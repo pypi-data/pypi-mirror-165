@@ -1,0 +1,10 @@
+README.md
+setup.py
+bin/banner
+desktop_banner/__init__.py
+desktop_banner/banner.py
+desktop_banner.egg-info/PKG-INFO
+desktop_banner.egg-info/SOURCES.txt
+desktop_banner.egg-info/dependency_links.txt
+desktop_banner.egg-info/requires.txt
+desktop_banner.egg-info/top_level.txt
