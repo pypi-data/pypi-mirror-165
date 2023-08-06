@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: whitebox_workflows
+Version: 0.9.2
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+License-File: LICENSE.txt
+Summary: whitebox_workflows is a Python library for advanced spatial analysis.
+Keywords: spatial analysis,GIS,remote sensing
+Author: Whitebox Geospatial Inc.
+Author-email: support@whiteboxgeo.com
+Requires-Python: >=3.6
+Description-Content-Type: text/x-rst; charset=UTF-8
+
+=============================
+Whitebox Workflows for Python
+=============================
+
+
+What is Whitebox Workflows?
+===========================
+
+Whitebox Workflows (WbW) is a Python library for advanced geoprocessing, including many GIS and remote sensing analysis operations for manipulating common types of raster, vector and lidar geospatial data.
+
+
+Why Whitebox Workflows when there is already WhiteboxTools Open Core?
+=====================================================================
+
+**Whitebox Workflows** (WbW) is based on the **WhiteboxTools Open Core** (WbOC) open-source codebase. While the two products share many characteristics and functionality, there are important differences.
+
+The WhiteboxTools Open Core is a command line back-end program that interfaces with various front-end applications, such as QGIS, ArcGIS and the R and Python scripting languages. Front-end/back-end communication is very limited. Front-ends can only communicate with WbOC by passing text-based commands and receive text-based outputs. Data files are provided as file names and are read into memory during tool operation and output data are written to disc. This design allows WbOC to be readily integrated into other projects. However, it doesn't allow front-ends to directly interact with Whitebox data, and it isn't well suited to longer geoprocessing workflows. Tools in a WbOC based geoprocessing script are essentially run independently of other tools in the same workflow.
+
+Whitebox Workflows by comparison, is a **native Python extension library**; it has been designed to work with Python, providing a geoprocessing scripting environment. Like the open-core, WbW is developed using the fast programming language Rust, but is compiled to a shared library that can be directly imported into Python scripts, much like NumPy and other common Python scientific libraries. 
+
+**Each of the more than 400 geoprocessing tools that users love about the WbOC are also found in WbW.** The library design of WbW affords a much more intimate level of communication between it and your Python geoprocessing script. For instance, with WbW **you can directly manipulate raster, vector, and lidar data objects**, to perform low-level geoprocessing in a way that is impossible with the open-core. For example, below we manipulate raster data directly in Python using WbW:
+
+. code-block:: Python
+    import whitebox_workflows
+
+    wbw = whitebox_workflows.WbEnvironment()
+    dem = wbw.read_raster('/path/to/data/dem.tif')
+    high_areas = wbw.new_raster(dem.configs)
+
