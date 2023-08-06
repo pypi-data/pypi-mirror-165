@@ -1,0 +1,10 @@
+sakuraParisAPI/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sakuraParisAPI/sakura.py,sha256=9mO_PTvH1N0pNChO9tlWRVrMVPnoGtvzvnB9Gjuus3o,2943
+sakuraParisAPI/fetch/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sakuraParisAPI/fetch/entryClass.py,sha256=UvrYcWUP7PI3CSlYOeixzqa-vY08Xj9RzvzAt3iqd9s,357
+sakuraParisAPI/fetch/query.py,sha256=2CKS79M6OO-XxapJhgDdtYGejekvCELfLrUvM-ZjIHI,3322
+sakuraParisAPI-0.1.0.dist-info/LICENSE,sha256=9tKggt7HWjnrmmOpQ4uUIYSRNLEgblupPZUuKkTBdOw,1065
+sakuraParisAPI-0.1.0.dist-info/METADATA,sha256=Fe_gbTPubLoZjV2wp96IEgZr-C2ceYbN9n03ZBcsrnM,5154
+sakuraParisAPI-0.1.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+sakuraParisAPI-0.1.0.dist-info/top_level.txt,sha256=nZTAEleHK5xdizFQ0n6os12uWtm1U3ZwUGugAchVHHQ,15
+sakuraParisAPI-0.1.0.dist-info/RECORD,,
