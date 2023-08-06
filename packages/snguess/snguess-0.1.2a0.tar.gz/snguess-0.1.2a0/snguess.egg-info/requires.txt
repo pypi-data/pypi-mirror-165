@@ -1,0 +1,7 @@
+ampel-ztf>=0.8.3a2
+scikit-learn
+xgboost
+pandas
+numpy
+astropy
+seaborn

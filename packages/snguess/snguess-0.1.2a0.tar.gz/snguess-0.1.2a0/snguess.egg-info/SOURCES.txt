@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+snguess/__init__.py
+snguess/data.py
+snguess.egg-info/PKG-INFO
+snguess.egg-info/SOURCES.txt
+snguess.egg-info/dependency_links.txt
+snguess.egg-info/requires.txt
+snguess.egg-info/top_level.txt
