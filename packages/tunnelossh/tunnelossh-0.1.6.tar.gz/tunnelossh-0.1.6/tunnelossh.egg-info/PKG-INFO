@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: tunnelossh
+Version: 0.1.6
+Summary: CETT SSH Tunneling
+Home-page: https://github.com/gpcortes/tunnelossh.git
+Author: Gustavo Côrtes
+Author-email: gpcortes@gmail.com
+License: BSD 2-clause
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3.7
+License-File: LICENSE
