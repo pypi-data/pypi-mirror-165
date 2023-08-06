@@ -1,0 +1,25 @@
+---
+- name: Install deps
+  yum:
+    name:
+      - policycoreutils-python
+      - selinux-policy-devel
+    state: present
+  when: ansible_distribution == 'CentOS'
+
+- name: Check enabled SELinux modules
+  shell: semanage module -l
+  register: enabled_modules
+  when: ansible_distribution == 'CentOS'
+
+- name: Copy harpiya_selinux policy
+  copy: src=harpiya_selinux.te dest=/root/harpiya_selinux.te
+  register: dest_harpiya_selinux_te
+  when: ansible_distribution == 'CentOS'
+
+- name: Compile harpiya_selinux policy
+  shell: "make -f /usr/share/selinux/devel/Makefile harpiya_selinux.pp && semodule -i harpiya_selinux.pp"
+  args:
+    chdir: /root/
+  when: "ansible_distribution == 'CentOS' and enabled_modules.stdout.find('harpiya_selinux') == -1 or dest_harpiya_selinux_te.changed"
+...
