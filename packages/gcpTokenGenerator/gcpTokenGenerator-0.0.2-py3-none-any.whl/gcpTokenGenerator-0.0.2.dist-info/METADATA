@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: gcpTokenGenerator
+Version: 0.0.2
+Summary: google token generator
+Author: oribrau@gmail.com
+License: MIT
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: google-api-python-client
+Requires-Dist: oauth2client
+
+# how to use
+```python
+
+from gcpTokenGenerator import tokenGenerator
+
+conf = {
+    "STG_Conf": {
+        "account": '{your service account}',  # need to get from dev ops
+        "host": '{your project id}',
+        "target_audience": '{your client id}',
+        "iap": True,
+    },
+    "PRD_Conf": {
+        "account": '{your service account}',  # need to get from dev ops
+        "host": '{your project id}',
+        "target_audience": '{your client id}',
+        "iap": True,
+    }
+}
+instance = tokenGenerator(conf)
+token = instance.generateToken('STG_Conf')
+print('token', token)
+````
+
+* when reusing same instance, generated token will renew the token only if it's expired after one hour <br>
+  meaning it remember the last token generated to one of the configs was used on init <br>
+
+example:
+```python
+    from gcpTokenGenerator import tokenGenerator
+
+conf = {
+    "STG_Conf": {
+        "account": '{your service account}',  # need to get from dev ops
+        "host": '{your project id}',
+        "target_audience": '{your client id}',
+        "iap": True,
+    },
+    "PRD_Conf": {
+        "account": '{your service account}',  # need to get from dev ops
+        "host": '{your project id}',
+        "target_audience": '{your client id}',
+        "iap": True,
+    }
+}
+instance = tokenGenerator(conf)
+stg_token = instance.generateToken('STG_Conf')
+prd_token = instance.generateToken('PRD_Conf')
+print('stg_token', stg_token)
+print('prd_token', prd_token)
+
+# this will generate new token only if it's expired
+stg_token = instance.generateToken('STG_Conf')
+prd_token = instance.generateToken('PRD_Conf')
+```
