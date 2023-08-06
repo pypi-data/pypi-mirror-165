@@ -1,0 +1,6 @@
+pydeck>=0.8.0b1
+requests
+
+[bigquery]
+google-auth
+google-cloud-bigquery
