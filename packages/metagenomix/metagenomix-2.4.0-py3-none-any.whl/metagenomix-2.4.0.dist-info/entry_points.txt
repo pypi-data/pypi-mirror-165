@@ -1,0 +1,3 @@
+[console_scripts]
+metagenomix = metagenomix.scripts._standalone_metagenomix:standalone_metagenomix
+
