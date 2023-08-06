@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+sakuraParisAPI/__init__.py
+sakuraParisAPI/sakura.py
+sakuraParisAPI.egg-info/PKG-INFO
+sakuraParisAPI.egg-info/SOURCES.txt
+sakuraParisAPI.egg-info/dependency_links.txt
+sakuraParisAPI.egg-info/requires.txt
+sakuraParisAPI.egg-info/top_level.txt
+sakuraParisAPI/fetch/__init__.py
+sakuraParisAPI/fetch/entryClass.py
+sakuraParisAPI/fetch/query.py
