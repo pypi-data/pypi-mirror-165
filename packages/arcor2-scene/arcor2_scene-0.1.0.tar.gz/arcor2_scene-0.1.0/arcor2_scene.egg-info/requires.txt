@@ -1,0 +1,6 @@
+Flask~=2.2.2
+arcor2~=0.24.2
+numpy-quaternion[numba,scipy]~=2022.4.2
+numpy~=1.23.2
+open3d~=0.15.2
+pyhumps~=3.7.2
