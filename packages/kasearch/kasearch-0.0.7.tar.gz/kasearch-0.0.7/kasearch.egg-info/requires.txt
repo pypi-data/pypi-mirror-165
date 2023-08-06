@@ -1,0 +1,6 @@
+pandas
+joblib
+requests
+numpy
+jax
+jaxlib
