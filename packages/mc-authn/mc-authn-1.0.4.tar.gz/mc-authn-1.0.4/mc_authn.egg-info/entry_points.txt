@@ -1,0 +1,2 @@
+[console_scripts]
+mc-authn = mc_authn:full_login
