@@ -1,0 +1,40 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "incant"
+authors = [{name = "Tin Tvrtkovic", email = "tinchester@gmail.com"}]
+classifiers = ["License :: OSI Approved :: Apache Software License"]
+version = "22.1.0"
+requires-python = ">=3.8"
+description = "Magical function composition"
+readme = "README.rst"
+dependencies = ["typing_extensions; python_version == '3.8'"]
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "cattrs == 1.10.0",
+    "coverage",
+    "flake8",
+    "httpx",
+    "isort",
+    "mypy",
+    "pytest-asyncio",
+    "pytest",
+    "quart",
+    "quattro",
+    "rich",
+    "structlog",
+    "uvicorn",
+]
+
+[project.urls]
+Home = "https://github.com/Tinche/incant"
+
+[tool.isort]
+profile = "attrs"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
