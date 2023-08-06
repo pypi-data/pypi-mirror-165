@@ -1,0 +1,42 @@
+<h1>{{effective_title}}</h1>
+
+{{{text_html}}}
+
+<a href="https://{{{provider_url}}}/courses/{{course_id}}/exercises/{{exercise_id}}/summary">Vaata ülesannet
+    Lahenduses</a>
+<br/>
+<br/>
+<hr>
+
+{{#grade_auto}}
+    <h2>Automaatne hinnang</h2>
+    <div>Automaatne hinne: {{grade_auto}}/100</div>
+    <br/>
+    <pre><code>{{feedback_auto}}</code></pre>
+    <br/>
+{{/grade_auto}}
+
+{{#latest_grade_teacher}}
+    <h2>Õpetaja hinnang</h2>
+    <div>Hinne: {{latest_grade_teacher}}/100</div>
+    <br/>
+{{/latest_grade_teacher}}
+
+{{#latest_feedback_teacher}}
+    <div>{{latest_feedback_teacher}}</div>
+    <br/>
+{{/latest_feedback_teacher}}
+
+
+{{#solution}}
+    <h2>Viimane esitus</h2>
+    <br/>
+    <pre><code>{{solution}}</code></pre>
+    <br/>
+    <br/>
+{{/solution}}
+
+<form action="/student/courses/{{course_id}}/exercises/{{exercise_id}}/submissions">
+    <input type="hidden" name="{{EDITOR_CONTENT_NAME}}"/>
+    <input type="submit" value="Esita aktiivse redaktori sisu"/>
+</form>
