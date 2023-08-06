@@ -1,0 +1,71 @@
+---
+- name: Block
+  block:
+    - name: Synchronize-in-block
+      ansible.posix.synchronize:
+        src: dummy
+        dest: dummy
+
+- name: Synchronize
+  ansible.posix.synchronize:
+    src: dummy
+    dest: dummy
+
+- name: Nested-block
+  block:
+    - name: Synchronize
+      block:
+        - name: Synchronize-in-deep-block
+          ansible.posix.synchronize:
+            src: dummy
+            dest: dummy
+  rescue:
+    - name: Synchronize-in-rescue
+      ansible.posix.synchronize:
+        src: dummy
+        dest: dummy
+  always:
+    - name: Synchronize-in-always
+      ansible.posix.synchronize:
+        src: dummy
+        dest: dummy
+
+- name: Unarchive-bz2
+  ansible.builtin.unarchive:
+    src: "{{ file }}.tar.bz2"
+    dest: dummy
+
+- name: Unarchive delegated
+  ansible.builtin.unarchive:
+    src: "{{ file }}.tar.bz2"
+    dest: dummy
+  delegate_to: localhost
+
+- name: Unarchive-gz
+  ansible.builtin.unarchive:
+    src: "{{ file }}.tar.gz"
+    dest: dummy
+
+- name: Unarchive-tar
+  ansible.builtin.unarchive:
+    src: "{{ file }}.tar"
+    dest: dummy
+
+- name: Unarchive-xz
+  ansible.builtin.unarchive:
+    src: "{{ file }}.tar.xz"
+    dest: dummy
+
+- name: Unarchive-zip
+  ansible.builtin.unarchive:
+    src: "{{ file }}.zip"
+    dest: dummy
+    extra_opts:
+      - -X
+
+- name: Unarchive-zip-same-owner
+  ansible.builtin.unarchive:
+    src: "{{ file }}.zip"
+    dest: dummy
+    extra_opts:
+      - -X
