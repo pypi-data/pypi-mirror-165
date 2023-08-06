@@ -1,0 +1,12 @@
+README.md
+ns.py
+pyproject.toml
+pixivery/__init__.py
+pixivery/client.py
+pixivery/error.py
+pixivery/http.py
+pixivery/utils.py
+pixivery.egg-info/PKG-INFO
+pixivery.egg-info/SOURCES.txt
+pixivery.egg-info/dependency_links.txt
+pixivery.egg-info/top_level.txt
