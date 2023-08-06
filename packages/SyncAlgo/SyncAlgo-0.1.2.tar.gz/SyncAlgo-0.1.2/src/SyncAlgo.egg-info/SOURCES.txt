@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+src/SyncAlgo/DataSync.py
+src/SyncAlgo/DataTraining.py
+src/SyncAlgo/__init__.py
+src/SyncAlgo/example_run.py
+src/SyncAlgo/functions.py
+src/SyncAlgo/utils.py
+src/SyncAlgo/utils_function.py
+src/SyncAlgo.egg-info/PKG-INFO
+src/SyncAlgo.egg-info/SOURCES.txt
+src/SyncAlgo.egg-info/dependency_links.txt
+src/SyncAlgo.egg-info/requires.txt
+src/SyncAlgo.egg-info/top_level.txt
