@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+README.rst
+setup.py
+sentence_embedding_evaluation_german/__init__.py
+sentence_embedding_evaluation_german/data.py
+sentence_embedding_evaluation_german/model.py
+sentence_embedding_evaluation_german.egg-info/PKG-INFO
+sentence_embedding_evaluation_german.egg-info/SOURCES.txt
+sentence_embedding_evaluation_german.egg-info/dependency_links.txt
+sentence_embedding_evaluation_german.egg-info/requires.txt
+sentence_embedding_evaluation_german.egg-info/top_level.txt
+sentence_embedding_evaluation_german.egg-info/zip-safe
