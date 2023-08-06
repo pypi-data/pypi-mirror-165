@@ -1,0 +1,2 @@
+covalent_ec2_plugin
+tests
