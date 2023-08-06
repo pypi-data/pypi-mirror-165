@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: tensorflow_privacy
+Version: 0.8.5
+Home-page: https://github.com/tensorflow/privacy
+License: Apache-2.0
+License-File: LICENSE
