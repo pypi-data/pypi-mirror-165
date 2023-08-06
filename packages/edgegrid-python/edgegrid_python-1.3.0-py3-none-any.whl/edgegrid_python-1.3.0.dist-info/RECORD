@@ -1,0 +1,15 @@
+edgegrid_python-1.3.0-py3.10-nspkg.pth,sha256=ZsTL3mV2wd8q1i3YmEwniuB8NSRTtt1Kn_X6mhWt1F0,539
+akamai/edgegrid/__init__.py,sha256=fZWDPcnMExzxmVXQXDu5NQkVSf8OAxgITWNuI3UNzvM,1955
+akamai/edgegrid/edgegrid.py,sha256=Jp0VM0mZFqbEyPRm7A2ZghWZeQQmHOwTlFkZeZ1JSFI,10168
+akamai/edgegrid/edgerc.py,sha256=GAPvUPHuckHTwf575dw0aH9S4w0j9OMJGR84qtQRg4c,1886
+akamai/edgegrid/test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+akamai/edgegrid/test/edgerc_that_doesnt_parse,sha256=B9tfXUW597FLjETC7T40bUwS-YiUP9KNZRsXYukRNfM,136
+akamai/edgegrid/test/sample_edgerc,sha256=0DsP3KEoLXjd7fhkKcVoCT5cM1S69iNZmO8VvdwKWLA,1084
+akamai/edgegrid/test/test_edgegrid.py,sha256=XD-jgaSUikULX6Fr-rNIsTmX3Obx-RAeG1jkBHV1fFs,13783
+akamai/edgegrid/test/testdata.json,sha256=3o8rkYUQjsF8RB4i8l6XODQEe5YOHg9crxZTm_l2gMk,13329
+edgegrid_python-1.3.0.dist-info/LICENSE,sha256=c7p036pSC0mkAbXSFFmoUjoUbzt1GKgz7qXvqFEwv2g,10273
+edgegrid_python-1.3.0.dist-info/METADATA,sha256=in6EN83iC9ZzprTBPVD-aVv0eWFH-EOEHkhIhxCzsy8,754
+edgegrid_python-1.3.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+edgegrid_python-1.3.0.dist-info/namespace_packages.txt,sha256=szjzYJ0FacUGu9R1JEkJrBHjlQroKtnCz0zkAhCvyKw,7
+edgegrid_python-1.3.0.dist-info/top_level.txt,sha256=szjzYJ0FacUGu9R1JEkJrBHjlQroKtnCz0zkAhCvyKw,7
+edgegrid_python-1.3.0.dist-info/RECORD,,
