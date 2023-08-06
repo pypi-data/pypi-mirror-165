@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: violetear
+Version: 0.12.3
+Summary: A minimalist CSS generator
+License: MIT
+Author: Alejandro Piad
+Author-email: apiad@apiad.net
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
