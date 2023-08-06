@@ -1,0 +1,3 @@
+[console_scripts]
+yaqd-brooks-mfc-gf=yaqd_brooks._brooks_mfc_gf:BrooksMfcGf.main
+

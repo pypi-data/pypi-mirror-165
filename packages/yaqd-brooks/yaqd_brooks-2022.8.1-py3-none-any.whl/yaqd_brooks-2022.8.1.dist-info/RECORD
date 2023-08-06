@@ -1,0 +1,12 @@
+yaqd_brooks/VERSION,sha256=iNDexyYFP-D2_MjxqvoJzFtMS1C0xQ2qxm-wI52-4Lo,9
+yaqd_brooks/__init__.py,sha256=xNN-00zGNaugDjL9-47NjAvDB8o79o441ebUGfjVdPY,77
+yaqd_brooks/__version__.py,sha256=aIq6BYZ2Vu4z6qhpulwJjQVwfXWBRNlRKwBX_hECB00,493
+yaqd_brooks/_brooks_mfc_gf.py,sha256=yU4hHMtiRXMyhibp1nFjpBsFNV5S2Uz5vu5sM4-2dyE,2099
+yaqd_brooks/_dispatcher.py,sha256=r1B--00-0N_tsHXuCcOeBNMptLGJlxc_noE2mz6DuV4,1221
+yaqd_brooks/brooks-mfc-gf.avpr,sha256=fQg_IjF8tdyR3C0Z4MJ6RWmQ4DKAo558KGLQjV46a0I,11237
+yaqd_brooks/brooks-mfc-gf.toml,sha256=Mus_nwWxdxT20hN4JhrQ1HwU6YbOVaXs2T9CZv_N07Q,1113
+yaqd_brooks-2022.8.1.dist-info/entry_points.txt,sha256=JDUfcHSxX100OiRLyUyq1LSrCua1TPUc5yQZ5kFhuOE,82
+yaqd_brooks-2022.8.1.dist-info/LICENSE,sha256=gQ0onXQnjXJoTSbNwqxcuw8B8tGCEvORxsRGc5mnrdU,7633
+yaqd_brooks-2022.8.1.dist-info/WHEEL,sha256=4TfKIB_xu-04bc2iKz6_zFt-gEFEEDU_31HGhqzOCE8,81
+yaqd_brooks-2022.8.1.dist-info/METADATA,sha256=iIFZ5tQI4EpEMG55UgK1sPwuLVeesKH95RP_DwNBkAw,1789
+yaqd_brooks-2022.8.1.dist-info/RECORD,,
