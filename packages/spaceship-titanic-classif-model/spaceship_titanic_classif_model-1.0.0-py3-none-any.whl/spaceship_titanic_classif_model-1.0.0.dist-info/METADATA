@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: spaceship-titanic-classif-model
+Version: 1.0.0
+Summary: This is an toy project to learn the basics of MLOps and software design in the machine learning context
+Home-page: https://github.com/kojr1234/mlops_exercise.git
+Author: FabioFujii
+Author-email: fujii.kimio.k@gmail.com
+License: BSD-3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: ==3.9.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: feature-engine (==1.4.1)
+Requires-Dist: joblib (==1.1.0)
+Requires-Dist: numpy (==1.23.2)
+Requires-Dist: pandas (==1.4.3)
+Requires-Dist: pydantic (==1.9.2)
+Requires-Dist: pytest (==7.1.2)
+Requires-Dist: scikit-learn (==1.1.2)
+Requires-Dist: setuptools (==65.3.0)
+Requires-Dist: strictyaml (==1.6.1)
+
+This is an toy project to learn the basics of MLOps and software design in the machine learning context

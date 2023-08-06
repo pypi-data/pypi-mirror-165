@@ -1,0 +1,75 @@
+# Package
+package_name: spaceship_titanic_model
+
+####################### Input data #######################
+train_data: train.csv
+test_data: test.csv
+
+####################### Variables ########################
+target: 'Transported'
+
+features:
+  - HomePlanet
+  - CryoSleep
+  - Destination
+  - Age
+  - VIP
+  - RoomService
+  - FoodCourt
+  - ShoppingMall
+  - Spa
+  - VRDeck
+  - Cabin
+
+numerical_vars:
+  - Age
+  - RoomService
+  - FoodCourt
+  - ShoppingMall
+  - Spa
+  - VRDeck
+
+categorical_vars:
+  - HomePlanet
+  - Destination
+  - Cabin
+  - VIP
+  - CryoSleep
+  - CabinDeck
+  - CabinSide
+
+num_mean_impute_vars:
+  - Age
+  - RoomService
+  - FoodCourt
+  - ShoppingMall
+  - Spa
+  - VRDeck
+
+cat_woe_encoding:
+  - HomePlanet
+  - Destination
+  - CabinDeck
+  - CabinSide
+
+cat_missing_impute_vars:
+  - Cabin
+  - Destination
+  - HomePlanet
+
+cat_arbitrary_impute_vars: 
+  - CryoSleep
+  - VIP
+
+###################### Pipeline ##########################
+pipeline_name: spaceship_titanic_model
+pipeline_save_file: spaceship_titanic_pipeline_model_output_v
+
+################ Training Parameters #####################
+test_size: 0.1
+random_state: 0
+
+######################### Misc ##########################
+unused_fields: 
+  - PassengerId
+  - Name
