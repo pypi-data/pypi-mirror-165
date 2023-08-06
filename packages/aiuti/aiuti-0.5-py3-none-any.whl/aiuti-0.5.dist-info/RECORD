@@ -1,0 +1,16 @@
+aiuti/__init__.py,sha256=UxINnQyarc2LWHKSSL_VF7-XCjnWB3wP8eMqaKGfF2c,108
+aiuti/_version.py,sha256=KjG5xG6Vcsd3W5ufdnK3VfytQXS1CXLXRhjpfBUodDA,495
+aiuti/asyncio.py,sha256=gk80TmKJVDysJealWWOVBGsFjiejaCStahvJEd4ZLr8,37629
+aiuti/filelock.py,sha256=CpL0E27b4e3UZA5hYPC1q5QP8s_UKGlDx7fh2ajHUHQ,11009
+aiuti/itertools.py,sha256=E1iZqqPLd8CWPow9guOCt4fPqAyB74DZ6KylmoNxuXQ,2123
+aiuti/parsing.py,sha256=9WtAnNVWhGGWMHPeASgPCzw908yAo1oOn2ftQ4peaBo,2728
+aiuti/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aiuti/typing.py,sha256=b_0Pg4lW3NyTPDTlNTSPlrMKOc4hz0yJsAUth0s2Qug,2839
+aiuti/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aiuti/tests/test_buffer_async_calls.py,sha256=0Xs_is8vMVHX5f18JSv8THPC1jQDujF-5ySjYcTeoGo,6525
+aiuti/tests/test_filelock.py,sha256=tv4ZCCcOb_k5M0Ywv2P5YbTkAQuQXIOTI57cTWfNWt4,7927
+aiuti-0.5.dist-info/LICENSE,sha256=6ujn9FEkREW5dcW1xUVMu1lqYB9UZHRK4wl3Mo-Wko0,1078
+aiuti-0.5.dist-info/METADATA,sha256=poFsrKd4D_uiECIAIXX0ezkIXGKpfkZDvQZFWH5Sd3o,2107
+aiuti-0.5.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+aiuti-0.5.dist-info/top_level.txt,sha256=LnoOC6vi1gU2zFfETmUuRA_wYoxbISKkGq96VSyiFrw,6
+aiuti-0.5.dist-info/RECORD,,
