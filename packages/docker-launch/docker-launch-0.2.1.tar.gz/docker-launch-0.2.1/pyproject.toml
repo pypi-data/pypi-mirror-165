@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "docker-launch"
+version = "0.2.1"
+description = "Create and launch docker containers on multiple hosts."
+license = "MIT"
+readme = "README.md"
+authors = ["KaoruNishikawa <k.nishikawa@a.phys.nagoya-u.ac.jp>"]
+homepage = "https://github.com/necst-telescope/docker-launch"
+repository = "https://github.com/necst-telescope/docker-launch"
+
+[tool.poetry.scripts]
+docker-launch = "docker_launch.console:main"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+cleo = "^0.8.1"
+docker = "^5.0.3"
+importlib-metadata = { version = "^4.4", python = "<3.8" }
+paramiko = "^2.11.0"
+tomlkit = "^0.11.1"
+typing-extensions = { version = "^4.1", python = "<3.8" }
+
+[tool.poetry.dev-dependencies]
+black = { version = "^22.4", python = ">=3.6.2" }
+flake8 = "^3.8"
+ipykernel = { version = "^6.10", python = ">=3.7" }
+jupyter = { version = "^1.0", python = ">=3.7" }
+myst-parser = { version = "^0.18", python = ">=3.7" }
+notebook = { version = "^6.4", python = ">=3.7" }
+pydata-sphinx-theme = "^0.7"
+pytest = "^6.2.5"
+pytest-xdist = "^2.5.0"
+sphinx = "^4.4"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
