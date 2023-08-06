@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: mu-repo
+Version: 1.8.2
+Summary: Tool to work with multiple git repositories
+Home-page: http://fabioz.github.io/mu-repo
+Author: Fabio Zadrozny
+Classifier: Development Status :: 6 - Mature
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Version Control
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+mu-repo enables dealing with multiple git and provides features such as:
+
+* Cloning multiple repositories
+* Creating groups of repositories
+* Diffing changes for edition with WinMerge or meld.
+* Checking out branches by partial name matching.
+* Preview incoming changes on current branch.
+* Shortcuts for common git operations.
+* Open Url for opening the browser to create pull requests over multiple repositories.
+* Run **arbitrary commands** on registered repositories.
+
+See: http://fabioz.github.io/mu-repo for more information.
