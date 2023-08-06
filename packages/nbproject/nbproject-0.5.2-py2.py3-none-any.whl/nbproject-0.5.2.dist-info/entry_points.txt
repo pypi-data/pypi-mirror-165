@@ -1,0 +1,3 @@
+[console_scripts]
+nbproject=nbproject.__main__:main
+
