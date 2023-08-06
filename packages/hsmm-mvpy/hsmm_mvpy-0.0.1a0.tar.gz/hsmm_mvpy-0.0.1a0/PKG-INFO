@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: hsmm_mvpy
+Version: 0.0.1a0
+Summary: UNKNOWN
+Home-page: https://github.com/GWeindel/hsmm_mvpy
+Author: Gabriel Weindel, Leendert van Maanen, Jelmer Borst
+Author-email: gabriel.weindel@gmail.com
+License: BSD-3-Clause
+Keywords: neuroscience EEG stage brain Hidden Semi Markov Model
+Platform: UNKNOWN
+License-File: LICENSE.md
+
+UNKNOWN
+

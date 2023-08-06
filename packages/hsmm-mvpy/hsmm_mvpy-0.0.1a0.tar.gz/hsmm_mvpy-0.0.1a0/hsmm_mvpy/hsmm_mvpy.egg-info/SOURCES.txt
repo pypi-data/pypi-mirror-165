@@ -1,0 +1,9 @@
+LICENSE.md
+README.md
+setup.cfg
+setup.py
+hsmm_mvpy/hsmm_mvpy.egg-info/PKG-INFO
+hsmm_mvpy/hsmm_mvpy.egg-info/SOURCES.txt
+hsmm_mvpy/hsmm_mvpy.egg-info/dependency_links.txt
+hsmm_mvpy/hsmm_mvpy.egg-info/requires.txt
+hsmm_mvpy/hsmm_mvpy.egg-info/top_level.txt
