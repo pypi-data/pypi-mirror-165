@@ -1,0 +1,3 @@
+
+[dev]
+testflows.core>=1.6

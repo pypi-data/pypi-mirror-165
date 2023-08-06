@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+testflows.uexpect.egg-info/PKG-INFO
+testflows.uexpect.egg-info/SOURCES.txt
+testflows.uexpect.egg-info/dependency_links.txt
+testflows.uexpect.egg-info/not-zip-safe
+testflows.uexpect.egg-info/requires.txt
+testflows.uexpect.egg-info/top_level.txt
+testflows/uexpect/__init__.py
+testflows/uexpect/uexpect.py
