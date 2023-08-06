@@ -1,0 +1,26 @@
+syntax = "proto3";
+// 定义下面的选项，表示生成service服务类和rpc方法描述，默认不生成
+option cc_generic_services = true;
+
+//定义服务接口
+service GrpcService {
+  rpc _request (Request) returns (Response) {}  //一个服务中可以定义多个接口，也就是多个函数功能
+}
+
+//请求的参数
+message Request {
+  //请求参数为一个字符串
+  repeated  string data = 1;   //数字1,2是参数的位置顺序，并不是对参数赋值
+  bytes bytes_data = 2;
+
+};
+
+//返回的对象
+message Response {
+  //返回对象为一个字符串列表
+  repeated string data = 1;
+  bytes bytes_data = 2;
+
+};
+
+//python -m grpc_tools.protoc -I ./ --python_out=./ --grpc_python_out=. base.proto
