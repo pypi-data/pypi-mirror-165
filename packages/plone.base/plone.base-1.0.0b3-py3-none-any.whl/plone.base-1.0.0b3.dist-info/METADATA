@@ -1,0 +1,153 @@
+Metadata-Version: 2.1
+Name: plone.base
+Version: 1.0.0b3
+Summary: Plone Interface contracts, plus basic features and utilities
+Home-page: https://github.com/plone/plone.base
+Author: Jens W. Klein
+Author-email: jk@kleinundpartner.at
+Maintainer: Plone Release Team
+Maintainer-email: releaseteam@plone.org
+License: GPLv2
+Keywords: plone
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Plone :: 6.0
+Classifier: Framework :: Plone :: Core
+Classifier: Framework :: Zope :: 5
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: setuptools
+Requires-Dist: plone.batching
+Requires-Dist: plone.registry
+Requires-Dist: plone.z3cform
+Requires-Dist: Products.BTreeFolder2
+Requires-Dist: Products.CMFCore
+Requires-Dist: Products.CMFDynamicViewFTI
+Requires-Dist: Zope (>=5)
+Provides-Extra: test
+Requires-Dist: plone.testing ; extra == 'test'
+Requires-Dist: plone.subrequest ; extra == 'test'
+
+plone.base
+==========
+
+This package is the base package of the `CMS Plone <https://plone.org>`_.
+It contains only interface contracts and basic features and utilities.
+It was created to be able to maintain a clean dependency graph (`PLIP 3395 <https://github.com/plone/Products.CMFPlone/issues/3395>`_).
+
+In details this package contains:
+
+``interfaces`` (package)
+    All ``zope.interface`` based contracts for the Plone core packages.
+    In Plone 5 and below this was at ``Products.CMFPlone.interfaces``.
+
+``i18nl10n`` (module)
+    Plone specific internationalization and localization helpers.
+    In Plone 5 and below this was at ``Products.CMFPlone.i18nl10n``.
+
+``batch`` (module)
+    Plone specific Batch based on ``plone.batching``.
+    In Plone 5 and below this was at ``Products.CMFPlone.PloneBatch``.
+
+``defaultpage`` (module)
+    Plone specific handling of default pages with ``CMFDynamicViewFTI``.
+    In Plone 5 and below this was at ``Products.CMFPlone.defaultpage``.
+
+``permissions`` (module)
+    CMFCore permissions declared public.
+    In Plone 5 and below this was at ``Products.CMFPlone.permissions``.
+
+``utils`` (module)
+    A subset of commonly used and low-dependency utilities.
+    In Plone 5 and below those been at ``Products.CMFPlone.utils`` (but not all were moved).
+
+``__init__``
+    ``PloneMessageFactory`` with ``plone`` i18n-domain and ``PloneLocalesMessageFactory`` with ``plonelocales`` domain.
+    In Plone 5 and below this was at ``Products.CMFPlone.__init__``.
+
+
+Source Code
+===========
+
+Contributors please read the document `Process for Plone core's development <https://docs.plone.org/develop/coredev/docs/index.html>`_
+
+Sources are at the `Plone code repository hosted at Github <https://github.com/plone/plone.base>`_.
+
+File issues at the `Products.CMFPlone issue tracker hosted at Github <https://github.com/plone/Products.CMFPlone/issues>`_.
+
+Changelog
+=========
+
+.. You should *NOT* be adding new change log entries to this file.
+   You should create a file in the news directory instead.
+   For helpful instructions, please see:
+   https://github.com/plone/plone.releaser/blob/master/ADD-A-NEWS-ITEM.rst
+
+.. towncrier release notes start
+
+1.0.0b3 (2022-08-31)
+--------------------
+
+Bug fixes:
+
+
+- Fix returning of item_id if given in `pretty_title_or_id`.
+  Remove unused code and outdated comment.
+  [jensens] (#16)
+
+
+1.0.0b2 (2022-07-21)
+--------------------
+
+Bug fixes:
+
+
+- Fix Boolean Fields in ISiteSyndicationSettings, IFeedSettings, selection of true/false now possible
+  [1letter] (#14)
+
+
+1.0.0b1 (2022-06-23)
+--------------------
+
+New features:
+
+
+- Add Add image srcset's configuration including JSON schema definition to imaging-controlpanel [MrTango] (#5)
+- Enable images in search results by default.
+  [agitator] (#6)
+- Add inline mode to tinymce config.
+  [pbauer] (#7)
+- Move ``Products.CMFPlone.utils._createObjectByType`` to here as ``utils.unrestricted_construct_instance``.
+  [jensens] (#8)
+- Add ``images`` interface with ``IImageScalesAdapter`` and ``IImageScalesFieldAdapter``.
+  See https://github.com/plone/Products.CMFPlone/pull/3521
+  [cekk, maurits] (#3521)
+- ``ulocalized_time``: accept a string argument to long_format.
+  For example: ``${a} ${d} hello guys ${b} ${Y}``.
+  Taken over from `experimental.ulocalized_time <https://pypi.org/project/experimental.ulocalized_time/>`_.
+  [maurits] (#3549)
+
+
+Bug fixes:
+
+
+- Support dollar signs in registry override for date formats.
+  Then it uses the correct language in multilingual sites.
+  [maurits] (#3550)
+
+
+1.0.0a1 (2022-04-08)
+--------------------
+
+New features:
+
+
+- Extend search controlpanel with options for results with images.
+  [agitator] (#2)
+- Initial structure and contents.
+  [jensens] (#1)
