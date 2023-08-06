@@ -1,0 +1,3 @@
+#!python
+from desktop_banner import banner
+banner.main()

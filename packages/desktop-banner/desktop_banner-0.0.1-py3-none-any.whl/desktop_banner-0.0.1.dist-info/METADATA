@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: desktop-banner
+Version: 0.0.1
+Summary: Display the classification of the system on the desktop
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.0
+Requires-Dist: tk
+Requires-Dist: tcl
+Requires-Dist: configparser
+Requires-Dist: screeninfo
+
