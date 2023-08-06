@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        install-glue-kernels = aws_glue_interactive_sessions_kernel.glue_kernel:install
+    
