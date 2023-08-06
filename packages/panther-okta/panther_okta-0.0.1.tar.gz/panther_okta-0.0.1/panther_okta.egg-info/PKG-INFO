@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: panther-okta
+Version: 0.0.1
+Summary: UNKNOWN
+Home-page: https://panther.com
+Author: Panther Labs Inc.
+Author-email: support@panther.io
+License: UNKNOWN
+Keywords: security detection
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Security
+Classifier: Typing :: Typed
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+## panther-okta
+Panther Config SDK repo for Okta content
+
+
+### Install all content with defaults:
+```python
+import panther_okta as okta
+
+okta.use_all_with_defaults()
+```
+
+
+### Install a single rule with overrides:
+```python
+from panther_config import detection
+import panther_okta as okta
+
+okta.rules.account_support_access(
+    overrides=detection.RuleOptions(
+        # override the default "reference"
+        reference="https://security-wiki.megacorp.internal/okta-incident-response",
+    )
+)
+```
+
