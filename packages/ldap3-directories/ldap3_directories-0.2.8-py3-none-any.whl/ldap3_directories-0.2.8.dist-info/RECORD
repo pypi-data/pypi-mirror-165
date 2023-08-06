@@ -1,0 +1,8 @@
+ldap3_directories/__init__.py,sha256=sCpfQt1HGZrTuqCGxHUjOs1ymDeU5PvGPbvzoeEEBjU,259
+ldap3_directories/freeipa.py,sha256=RjYUyz0S0tWelv63CkrLcTXdou5s3d9JTSrdHDCOnRc,14504
+ldap3_directories/ldap3_.py,sha256=eQDG_C4HHH1ILETAP2wdzdhjtiamF-FtbtuWwtzN4U4,15304
+ldap3_directories-0.2.8.dist-info/LICENSE,sha256=0oSQ3jJWqWxSqLs6EkpooljAgTQeOqfPdMylpYVKVhE,1324
+ldap3_directories-0.2.8.dist-info/METADATA,sha256=8BfGk1uf3j7urjHIJru0Dsqez1w6HBctzoycfoo6cus,1257
+ldap3_directories-0.2.8.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+ldap3_directories-0.2.8.dist-info/top_level.txt,sha256=oh6j1s-76ZrqV5zlhkW2iUI9s-KfYCsTSd2qrw1BDgA,18
+ldap3_directories-0.2.8.dist-info/RECORD,,
