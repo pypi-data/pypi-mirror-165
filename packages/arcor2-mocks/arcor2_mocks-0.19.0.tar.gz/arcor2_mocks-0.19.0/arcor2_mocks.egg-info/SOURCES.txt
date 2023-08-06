@@ -1,0 +1,16 @@
+MANIFEST.in
+backend_shim.py
+setup.py
+arcor2_mocks/VERSION
+arcor2_mocks/__init__.py
+arcor2_mocks/exceptions_project.py
+arcor2_mocks/py.typed
+arcor2_mocks.egg-info/PKG-INFO
+arcor2_mocks.egg-info/SOURCES.txt
+arcor2_mocks.egg-info/dependency_links.txt
+arcor2_mocks.egg-info/entry_points.txt
+arcor2_mocks.egg-info/namespace_packages.txt
+arcor2_mocks.egg-info/requires.txt
+arcor2_mocks.egg-info/top_level.txt
+arcor2_mocks/scripts/__init__.py
+arcor2_mocks/scripts/mock_project.py
