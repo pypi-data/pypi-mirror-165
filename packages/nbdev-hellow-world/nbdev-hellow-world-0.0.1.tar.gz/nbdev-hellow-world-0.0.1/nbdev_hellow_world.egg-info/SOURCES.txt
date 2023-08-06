@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+settings.ini
+setup.py
+nbdev_hellow_world/__init__.py
+nbdev_hellow_world/_modidx.py
+nbdev_hellow_world/card.py
+nbdev_hellow_world/deck.py
+nbdev_hellow_world.egg-info/PKG-INFO
+nbdev_hellow_world.egg-info/SOURCES.txt
+nbdev_hellow_world.egg-info/dependency_links.txt
+nbdev_hellow_world.egg-info/entry_points.txt
+nbdev_hellow_world.egg-info/not-zip-safe
+nbdev_hellow_world.egg-info/requires.txt
+nbdev_hellow_world.egg-info/top_level.txt
