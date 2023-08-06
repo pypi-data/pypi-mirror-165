@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+scsims/__init__.py
+scsims/data.py
+scsims/lightning_train.py
+scsims/model.py
+scsims/pretraining.py
+scsims/scvi_api.py
+scsims/testing.py
+scsims.egg-info/PKG-INFO
+scsims.egg-info/SOURCES.txt
+scsims.egg-info/dependency_links.txt
+scsims.egg-info/not-zip-safe
+scsims.egg-info/requires.txt
+scsims.egg-info/top_level.txt
