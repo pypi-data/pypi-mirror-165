@@ -1,0 +1,348 @@
+/////////////////////////////////////////////////////////////////////////////
+// This C file has been created automatically. Do not edit!!!
+/////////////////////////////////////////////////////////////////////////////
+
+/** @file gen_leech_reduce_n.c
+Given a vector \f$v\f$ in the extraspecial group \f$Q_{x0}\f$, the
+functions in this module compute a transformation from \f$v\f$ to
+a standard representative of the class \f$v^N\f$.
+
+Here \f$Q_{x0}\f$ and \f$N = N_{x0}\f$ are as in the project
+documentation.
+
+We use the terminology defined in
+the document *The C interface of the mmgroup project*,
+section *Description of the mmgroup.generators extension*.
+*/
+
+
+/*************************************************************************
+** External references 
+*************************************************************************/
+
+/// @cond DO_NOT_DOCUMENT 
+#include <string.h>
+#include "mat24_functions.h"
+#define MMGROUP_GENERATORS_INTERN
+#include "mmgroup_generators.h"
+/// @endcond 
+
+
+
+
+// %%EXPORT_KWD MAT24_API
+
+
+// %%GEN ch
+#ifdef __cplusplus
+extern "C" {
+#endif
+// %%GEN c
+
+
+//  %%GEN h
+//  %%GEN c
+
+
+
+
+
+
+/*************************************************************************
+*** Auxiliary functions to find and apply permutations in Mat24
+*************************************************************************/
+
+/// @cond DO_NOT_DOCUMENT 
+
+
+static uint8_t OCTAD_PLUS[7] = {0,1,2,3,4, 8,9};
+
+
+static uint8_t STD_DODECAD[12] = {
+    // %%TABLE LEECH_RED_STD_DODECAD, uint8
+0x00,0x04,0x08,0x0d,0x0e,0x0f,0x11,0x12,
+0x13,0x15,0x16,0x17
+};
+
+static uint8_t CPL_DODECAD[12] = {
+    // %%TABLE LEECH_RED_CPL_DODECAD, uint8
+0x01,0x02,0x03,0x05,0x06,0x07,0x09,0x0a,
+0x0b,0x0c,0x10,0x14
+};
+
+static uint16_t TABLE_OCTAD[15] = {
+    // %%TABLE LEECH_RED_TABLE_OCTAD, uint16
+0x000f,0x0401,0x0000,0x0000,0x0001,0x0000,0x0001,0x0080,
+0x0040,0x0200,0x0100,0x0001,0x0001,0x002f,0x040d
+};
+
+static uint16_t TABLE_DODECAD[15] = {
+    // %%TABLE LEECH_RED_TABLE_DODECAD, uint16
+0x0400,0x000e,0x000f,0x0009,0x0005,0x0020,0x0010,0x0080,
+0x0040,0x0200,0x0100,0x0002,0x0001,0x040e,0x040b
+};
+
+
+
+
+static uint8_t TABLE_SUBOCTADS[] = {
+    // %%TABLE LEECH_RED_TABLE_MAP_SUBOCTADS, uint8
+0x00,0x20,0x21,0x22,0x31,0x34,0x33,0x36,
+0x40,0x42,0x43,0x44,0x46,0x48
+};
+
+static uint32_t TABLE_MAP_VECTORS[] = {
+    // %%TABLE LEECH_RED_TABLE_MAP_VECTORS, uint32
+0x01000000UL,0x00000200UL,0x00000800UL,0x0080f00fUL,
+0x00800800UL,0x0080f401UL,0x00800c00UL,0x00c0e400UL,
+0x00000400UL,0x0000f00fUL,0x00000c00UL,0x0080f42fUL,
+0x00c0e00dUL,0x00800000UL
+};
+
+
+/** @brief Find a suitable permutation for an octad.
+
+  Similar to function ``find_octad_permutation``.
+  Here ``v, o, c`` are as in that function; but the scalar
+  product of ``o`` and ``c`` must be 1. Apart from that
+  operation is as in function ``find_octad_permutation``.
+
+  We compute a permutation that maps octad ``o`` to the standard
+  octad (0,1,2,3,4,5,6,7). If the cocode part ``c`` of ``v`` is 
+  not a suboctad of octad ``o`` then we map (one shortest 
+  representative of) ``c`` into the set (0,1,2,3,...7,8). 
+*/
+static inline uint32_t find_octad_permutation_odd(uint32_t v, uint32_t *p_res)
+{
+    uint8_t src[8], sextet[24];
+    uint32_t theta, w, vect, coc, syn, i, special;
+    // Here ``v`` is a (possibly complemented) octad.
+    // Put ``w = 0`` if v is an octad and ``w = 1`` otherwise.
+    theta = MAT24_THETA_TABLE[(v >> 12) & 0x7ff];
+    w = ((theta >> 13) ^ (v >> 23) ^ 1) & 1;
+    // Store octad as a bit vector in ``vect``.
+    vect = mat24_def_gcode_to_vect((v ^ (w << 23)) >> 12);
+    // Store the first five entries of octad in ``src``.
+    mat24_vect_to_list(vect, 5, src);
+    // Let ``syn`` be the syndrome of the cocode part as a bit vector.
+    // Put ``syn`` = 0xff000000 if the syndrome has bit weight 4.
+    coc = (v ^  mat24_ploop_theta(v >> 12)) & 0xfff;
+    syn = mat24_cocode_syndrome(coc, 24);
+    // If syndrome has weight 4 then find the tetrad of the 
+    // corresponding sextet intersecting with the octad in more 
+    // than one entry. Store that tetrad in ``syn``.
+    if (syn & 0xff000000) {
+         mat24_cocode_to_sextet(coc, sextet);
+         for (i = 0; i < 24; i += 4) {
+             syn = (1 << sextet[i]) |  (1 << sextet[i+1])
+                | (1 << sextet[i+2]) |  (1 << sextet[i+3]);
+             special = syn & vect;
+             if (special & (special - 1)) break;
+         }
+    }
+    // revove entries of the octad from ``syn``. 
+    syn &= ~vect;
+    // Now ``syn`` is a singleton. Store that entry in src[5]
+    src[5] = (uint8_t)(mat24_lsbit24(syn));  
+    // Compute the permutation that maps the first 6 entries
+    // of ``src`` to the entries given by ``OCTAD``.
+    return apply_perm(v, src, OCTAD_PLUS, 6, p_res);
+}
+
+
+
+void op_y_x(uint32_t v, uint16_t *table, uint32_t *out)
+{
+   uint32_t c, y, i, x;
+
+    v = gen_leech2_op_atom(v, out[0]);
+    c = (v ^ table[0]) & 0x7ff;
+    y = 0;
+    for (i = 0; i < 11; ++i) y ^= table[i + 1] & (0 - ((c >> i) & 1));
+    out[1] = 0xC0000000 + y;
+    v = gen_leech2_op_atom(v, out[1]);
+    if (((v >> 23) ^ table[12]) & 1) {
+        y =  table[13];
+        v = gen_leech2_op_atom(v, 0xC0000000 + y);
+        out[1] ^= y ; 
+    }      
+    c = (v ^ table[0]) & 0x7ff;
+    x = (v & 0x1000000) ? table[14] : 0;
+    out[2] = 0x90000000 + x;
+}
+
+
+
+/// @endcond  
+
+
+
+
+/*************************************************************************
+*** Reduce Leech lattice vector modulo N_x0
+*************************************************************************/
+
+/** 
+  @brief  Reduce Leech lattice vector modulo the group N_x0
+
+  Given a vector \f$v\f$ in the extraspecial group \f$Q_{x0}\f$, we
+  want to find a standard representative of the class \f$v^N\f$,
+  where \f$Q_{x0}\f$ and \f$N = N_{x0}\f$ are as in the project
+  documentation. Here \f$v\f$ is  given in parameter ``v``
+  in **Leech lattice encoding**.
+
+  This function computes such a representative \f$v_1 \in Q_{x0}\f$.
+  It returns an element \f$r\f$ of \f$N_{x0}\f$
+  with \f$v_1 = v^r\f$ as a word of length three in the generators
+  of \f$N_{x0}\f$. That word is stored in the buffer referred
+  by ``pg_out`` as an array of 3 integers of type ``uint32_t`` as
+  described in section **The monster group** in the API reference.
+
+  The user may call function ``gen_leech2_op_word`` in
+  file ``gen_leech.c`` for computing \f$v_1 = v^r\f$. There is
+  a faster alternative for  computing \f$v_1\f$ described in the
+  documetnation of function ``gen_leech2_reduce_n``.
+
+  The representative \f$v_1\f$ depends on the **subtype** of \f$v\f$
+  only, with one exception listed below. Here the subtype can be
+  also computed by function ``gen_leech2_subtype``in
+  file ``gen_leech.c``; it is explained
+  in **The mmgroup guide for developers** in
+  section **Computations in the Leech lattice modulo 2**.
+
+  If the subtype of \f$v\f$ is ``00``then we have \f$v_1 =v\f$
+  for the two vectors \f$v = x_{\pm 1}\f$ of that subtype.
+
+  We compute a mapping \f$r = x_\pi y_e x_f\f$, where \f$r\f$ is
+  an automorphism of the Parker loop, \f$e\f$ is in the Parker
+  loop, and \f$f\f$ is either in the Parker loop or in the Golay
+  cocode.
+
+  The result \f$r\f$ is in the even subgroup of \f$N_{x0}\f$
+  except in case \f$v = x_{-\Omega}\f$, where this is not possible.
+  
+  See section  **Orbits of the group N_x0 in the group Q_x0**
+  in **The mmgroup guide for developers** for our choice of
+  the representative of the  \f$N_{x0}\f$ orbits.
+*/
+// %%EXPORT px
+MAT24_API
+int32_t gen_leech2_reduce_n(uint32_t v, uint32_t *pg_out)
+{
+    int32_t vtype, subtype, res = 0; 
+
+    vtype = gen_leech2_subtype(v);
+    subtype = vtype & 0xf;
+ 
+    *pg_out = 0xA0000000;    
+    switch (subtype) {
+        case 1:
+        case 3:
+        {
+            uint8_t src[3];
+            uint32_t coc, tab, l;
+            coc = (v ^  mat24_ploop_theta(v >> 12)) & 0xfff;
+            tab = MAT24_SYNDROME_TABLE[coc & 0x7ff];
+            src[0] = tab & 31; src[1] = (tab >> 5) & 31;
+            src[2] = (tab >> 10) & 31;
+            l =  (src[1] < 24) ? 3 : 1;
+            res = apply_perm(v, src, OCTAD_PLUS + (l >> 1), l, pg_out);
+            v = gen_leech2_op_atom(v, pg_out[0]);
+            pg_out[1] = 0xC0000000 + ((v >> 12) & 0x7ff);
+            v = gen_leech2_op_atom(v, pg_out[1]);
+            pg_out[2] = 0xB0000000 + ((v >> 13) & 0x800);
+            return res < 0 ? -1 : vtype;
+        }
+        case 6:
+        {
+            uint8_t pi[24], src[12], *dest;
+            uint32_t gv, vect, coc, w;
+
+            gv = (v >> 12) & 0xfff; 
+            vect = mat24_gcode_to_vect(gv);
+            mat24_vect_to_list(vect, 12, src);
+            dest = STD_DODECAD;
+            if (vtype == 0x36) {
+                coc = (v ^  mat24_ploop_theta(v >> 12)) & 0xfff;
+                w =  mat24_bw24(mat24_cocode_as_subdodecad(coc, gv, 24));
+                if (w & 2) dest = CPL_DODECAD; 
+            }
+            mat24_perm_from_dodecads(dest, src, pi);
+            pg_out[0] = 0xA0000000 + mat24_perm_to_m24num(pi);
+            op_y_x(v, TABLE_DODECAD, pg_out);
+            return vtype;
+        }
+        case 2:
+        case 4:
+            res = (vtype == 0x34) ? find_octad_permutation_odd(v, pg_out)
+                                  : find_octad_permutation(v, pg_out);
+            op_y_x(v, TABLE_OCTAD, pg_out);
+            return res < 0 ? -1 : vtype;
+        case 0:
+        case 8:
+        {
+            uint8_t src[4];
+            uint32_t syn, j, y0, y, x;
+            if ((v & 0x7ff) == 0) {
+                pg_out[0] = 0xA0000000;  pg_out[1] = 0xC0000000;              
+                pg_out[2] = (v & 0x1800000) == 0x1800000 ? 
+                             0x90000800 : 0x90000000;
+            } else {
+                syn = mat24_cocode_syndrome(v & 0x7ff, 0);
+                mat24_vect_to_list(syn, 4, src);
+                j = mat24_bw24(syn) & 2;
+                res = apply_perm(v, src, OCTAD_PLUS  + j, 4 - j, pg_out);
+                v = gen_leech2_op_atom(v, pg_out[0]);
+                y0  = j ?  0x200 : 0x400;
+                y = v & 0x800000 ? y0 : 0;
+                pg_out[1] = 0xC0000000 + y;
+                v = gen_leech2_op_atom(v, pg_out[1]);
+                x = v & 0x1000000 ? y0 :  0;
+                pg_out[2] = 0xB0000000 + x;
+            } 
+            return res < 0 ? -1 : vtype;         
+        }
+        default:
+            return -1;
+    } 
+}
+
+
+
+/** 
+  @brief  Compute standard representative of Q_x0 modulo the group N_x0
+
+  Given a subtype ``subtype`` in the Leech lattice modulo 2, the
+  function returns a representative of a nonzero orbit of \f$Q_{x0}\f$
+  under the action of \f$N_{x0}\f$.
+
+  See the table in
+  section **Orbits of the group N_x0 in the group Q_x0**
+  in **The mmgroup guide for developers** for our choice of such
+  a representative.
+*/
+// %%EXPORT px
+MAT24_API
+int32_t gen_leech2_reduce_n_rep(uint32_t subtype)
+{
+    uint32_t i;
+    for (i = 0; i < sizeof(TABLE_SUBOCTADS)/sizeof(uint8_t); ++i) {
+        if (subtype == TABLE_SUBOCTADS[i]) return TABLE_MAP_VECTORS[i];
+    }
+    return -1;
+};
+
+
+//  %%GEN h
+//  %%GEN c
+
+
+
+// %%GEN ch
+#ifdef __cplusplus
+}
+#endif
+
+
+
+

@@ -1,0 +1,974 @@
+/** @file xsp2co1_elem.c
+  File ``xsp2co1_elem.c`` contains  functions for 
+  analyzing elements of the  subgroup \f$G_{x0}\f$ 
+  (of structure \f$2^{1+24}.\mbox{Co}_1\f$)  of the monster. 
+*/
+
+
+/*************************************************************************
+** External references 
+*************************************************************************/
+
+/// @cond DO_NOT_DOCUMENT 
+#include <string.h>
+#include "mat24_functions.h"
+#define MMGROUP_GENERATORS_INTERN
+#include "mmgroup_generators.h"
+#define CLIFFORD12_INTERN
+#include "clifford12.h"
+/// @endcond  
+
+
+// %%EXPORT_KWD CLIFFORD12_API
+
+
+// %%GEN ch
+#ifdef __cplusplus
+extern "C" {
+#endif
+// %%GEN c
+
+
+//  %%GEN h
+/// @cond DO_NOT_DOCUMENT 
+//  %%GEN c
+
+
+/*************************************************************************
+*** Functions
+*************************************************************************/
+
+/// @cond DO_NOT_DOCUMENT 
+// In the following procedure we'll store 1 << LSTEPS vectors for speed up
+#define LSTEPS 7
+/// @endcond  
+
+/*************************************************************************
+*** Conversion between G_x0 and N_0
+*************************************************************************/
+
+/**
+   @brief Convert element of \f$G_{x0}\f$ to element of \f$N_{0}\f$.
+
+   Let \f$g \in G_{x0}\f$ be stored in the array ``elem1``
+   in **G_x0 representation**. The function converts \f$g\f$ to
+   an element \f$N_0\f$, as described in the documentation of 
+   file ``mm_group_n.c``. The result is stored in the array
+   of length 5 referred by parameter ``g``.
+
+   The function returns 0 in case of success 
+   and ``ERR_QSTATE12_GX0_BAD_ELEM`` if \f$g\f$  is not
+   and \f$N_0\f$.
+*/
+// %%EXPORT px
+int32_t xsp2co1_elem_to_N0(uint64_t *elem, uint32_t *g)
+{
+   uint32_t a[10], len_a;
+   int32_t res;
+   len_a = res = xsp2co1_elem_to_word(elem, a);
+   if (res < 0) return res;
+   mm_group_n_clear(g);
+   if (mm_group_n_mul_word_scan(g, a, len_a) < len_a)
+                           return ERR_QSTATE12_GX0_BAD_ELEM;
+   return 0;
+}
+
+
+
+/**
+   @brief Convert element of \f$N_{0}\f$ to element of \f$G_{x0}\f$.
+
+   Let \f$g \in N_{0}\f$ be stored in the array of length 5 
+   referred by parameter ``g`` as described in the documentation
+   of file ``mm_group_n.c``. We convert  \f$g\f$ to an element
+   in **G_x0 representation** and store the result in the
+   array ``elem``.
+
+   The function returns 0 in case of success 
+   and ``ERR_QSTATE12_GX0_BAD_ELEM`` if \f$g\f$  is not
+   in \f$G_{x0}\f$.
+*/
+// %%EXPORT px
+int32_t xsp2co1_elem_from_N0(uint64_t *elem, uint32_t *g)
+{
+   uint32_t g1[5], len_g;
+   mm_group_n_reduce_element(g);
+   if (g[0]) return ERR_QSTATE12_GX0_BAD_ELEM;
+   len_g = mm_group_n_to_word(g, g1);
+   return xsp2co1_set_elem_word(elem, g1, len_g);
+}
+
+/*************************************************************************
+*** Conjugation of an element of G_x0
+*************************************************************************/
+
+
+
+/**
+   @brief Conjugate element of \f$G_{x0}\f$ by an element of monster group.
+   
+   Let \f$g \in G_{x0}\f$ be stored in the array ``elem``
+   in **G_x0 representation**. Let \f$w\f$ be a word in the 
+   generators of  the monster group  of length ``n``. \f$w\f$ is 
+   stored in the array ``a``, and each entry of ``a`` encodes a 
+   generator of the monster group described in 
+   file ``mmgroup_generators.h``.
+
+   The function tries to replace  \f$g\f$ by \f$h = w^{-1} g w\f$. The
+   function succeeds if for any prefix \f$w_i\f$ of the word \f$w\f$ we 
+   have \f$w_i^{-1} g w_i \in G_{x0}\f$.
+*/
+// %%EXPORT px
+int32_t xsp2co1_conjugate_elem(uint64_t *elem, uint32_t *a, uint32_t n)
+{
+    int32_t res;
+    int32_t k;   // Number of atoms scanned from ``a`` in one step
+    uint64_t elem_a[26]; // Internal buffer for the part of ``a``
+                         // scanned (as an element of G_x0).
+    uint32_t a_N[5];     // Internal buffer for the part of ``a``
+                         // scanned (as an element of N_x).
+    uint32_t e_N[5];     // Temporary buffer for ``elem``
+                         // (as an element of N_x0).
+    uint32_t a_pending;  // Data in ``elem_a`` are yet to
+                         // be processed if this is nonzero
+    a_pending = 0;
+    while (n) {
+        // Scan a prefix of the word ``a`` that is in G_x0 and store
+        // it in ``elem_a`` (or rigth multiply it with ``elem_a``
+        // if ``elem_a`` is not empty)
+        k = xsp2co1_set_elem_word_scan(elem_a, a, n, a_pending);
+        if (k < 0) return k;    // abort in case of error
+        if (k > 0) {         
+            // If such a prefix has been found:
+            a_pending = 1;      // Declare ``elem_a`` not empty
+            a += k; n -= k;     // Eat up the prefix of ``a``
+            if (n == 0) break;  // Done if no atom left in ``a``
+        }
+        // Next Scan a prefix of the word ``a`` that is in N_0 and 
+        // store that prefix in a_N
+        mm_group_n_clear(a_N);
+        k = mm_group_n_mul_word_scan(a_N, a, n);
+        if (k < 0) return k;    // Abort in case of error
+        // Give up if no such prefix has been found
+        if (k == 0) return ERR_QSTATE12_GX0_BAD_ELEM;
+        // If a prefix of ``a`` has been found then eat it up
+        a += k; n -= k;  
+        // Continue if that prefix is the neutral element
+        if (mm_group_n_reduce_element(a_N) == 0) continue;
+
+        // If a_N is in N_x0 then copy it to ``elem_a`` (or right 
+        // multipy it with ``elem_a`` if  ``elem_a`` is not empty) 
+        if (a_N[0] == 0) {
+            // First convert a_N to a word of atoms
+            uint32_t len_a_N = mm_group_n_to_word(a_N, a_N);
+            // Then copy it to or multiply it with ``elem_a``
+            res = xsp2co1_set_elem_word_scan(elem_a, 
+                a_N, len_a_N, a_pending);
+            if (res != (int32_t)len_a_N) { // Abort in case of error
+                return res < 0 ? res : ERR_QSTATE12_GX0_BAD_ELEM;
+            }
+            a_pending = 1;  // Mark ``elem_a`` as not empty
+            continue;       // This case has been done
+        } 
+
+        // Here a_N is not in N_0. First get rid of ``elem_a``.
+        if (a_pending) {
+            // Conjugate ``elem`` with ``elem_a`` if ``elem_a``
+            // is not empty; and then mark ``elem_a`` as empty
+            res = xsp2co1_conj_elem(elem, elem_a, elem);
+            if (res < 0) return res; // abort in case of error
+            a_pending = 0;           // Mark ``elem_a`` as not empty
+        }
+            
+        // Now convert ``elem`` to an element of N_0 and store 
+        // the result in e_N; abort if this fails
+        res = xsp2co1_elem_to_N0(elem, e_N);
+        if (res < 0) return res;
+        // Conjugate e_N with a_N
+        mm_group_n_conjugate_element(e_N, a_N, e_N);
+        // Convert e_N back to an element of G_x_0; store
+        // the result in ``elem``; abort if this fails.
+        res = xsp2co1_elem_from_N0(elem, e_N);
+        if (res < 0) return res;  
+    }  
+
+    // Finally, process a pending element ``elem_a`` if not empty
+    if (a_pending) {
+        // Conjugate ``elem`` with ``elem_a``
+        res = xsp2co1_conj_elem(elem, elem_a, elem);
+        if (res < 0) return res; // abort in case of error
+    }
+    return 0;  // Well done: report success
+}
+
+
+
+/*************************************************************************
+*** Power and order of an element of G_x0
+*************************************************************************/
+
+/**
+   @brief Exponentiation of an element of the group \f$G_{x0}\f$.
+   
+   Let \f$g \in G_{x0}\f$ be stored in the array ``elem1``
+   in **G_x0 representation**. The function computes the
+   power \f$g^e\f$ and stores the result in the array  ``elem2``
+   in **G_x0 representation**. Here \f$-2^{63} < e < 2^{63}\f$
+   must hold.
+   
+   A negative return value indicates an error.
+   
+   Any kind of overlapping beween the arrays ``elem1`` and ``elem2``
+   is allowed.
+*/
+// %%EXPORT px
+int32_t xsp2co1_power_elem(uint64_t *elem1, int64_t e, uint64_t *elem2)
+{
+    uint64_t elem[26], ee, mask = ONE;
+    int32_t res;
+
+    // Deal with exponent 0
+    if (e == 0) {
+        xsp2co1_unit_elem(elem2);
+        return 0;
+    }
+
+    // Put ``elem2 = elem == elem2**sign(e)``, ``ee = abs(e)``
+    if (e < 0) {
+        ee = e = -e;
+        if (e < 0) return ERR_QSTATE12_SCALAR_OVFL; // case e == -2**63
+        res =  xsp2co1_inv_elem(elem1, elem);
+        if (res < 0) return res;
+    } else {
+        ee = e;
+        xsp2co1_copy_elem(elem1, elem);
+    }
+    if (ee >= (ONE << 63)) return ERR_QSTATE12_SCALAR_OVFL;
+    xsp2co1_copy_elem(elem, elem2);
+
+    // Put ``mask = 1 << (bit_length(ee) - 1)``
+    while (mask <= (uint64_t)ee)  mask += mask;
+    mask >>= 1; mask >>= 1;
+
+    // Compute ``elem2 = elem**ee`` with square and multiply
+    while (mask) {
+        res = xsp2co1_mul_elem(elem2, elem2, elem2);
+        if (res < 0) return res;
+        if (ee & mask) {
+            res = xsp2co1_mul_elem(elem, elem2, elem2);
+            if (res < 0) return res;
+        }
+        mask >>= 1;
+    }
+    return 0;
+}
+
+
+/**
+  @brief Exponentiation of an word of the group \f$G_{x0}\f$.
+
+  Let \f$w\f$ be a word in the generators of  \f$G_{x0}\f$
+  of length ``n``. \f$w\f$ is stored in the array ``a1``, and each
+  entry of ``a1`` encodes a generator of   \f$G_{x0}\f$ as
+  described in file ``mmgroup_generators.h``.
+
+  The function stores\f$w^e\f$ in the array  ``a2`` in the same 
+  format as the word \f$w\f$ and returns the length of the
+  computed word, which is at most 10.
+
+  A negative return value indicates an error.
+   
+  Any kind of overlapping beween the arrays ``a1`` and ``a2``
+  is allowed.
+*/
+// %%EXPORT px
+int32_t xsp2co1_power_word(uint32_t *a1, uint32_t n, int64_t e, uint32_t *a2)
+{
+    int32_t res;
+    uint64_t elem[26];
+
+    // Deal with empty word ``w``
+    if (n == 0) return 0;
+
+    // Convert word ``w`` to element ``elem`` 
+    res = xsp2co1_set_elem_word(elem, a1, n);
+    if (res < 0) return res;
+
+    // Compute  ``elem ** e``
+    res = xsp2co1_power_elem(elem, e, elem);
+    if (res) return res;
+
+    // Output result 
+    return xsp2co1_elem_to_word(elem, a2);
+}
+
+/// @cond DO_NOT_DOCUMENT 
+
+// Return 1 if ``bm`` refers to a 24 x 24 unit bit matrix an 0 otherwise
+static inline uint32_t is_neutral_Co1(uint64_t *bm)
+{
+    uint64_t i, acc = 0;
+    for (i = 0; i < 24; ++i) acc |= bm[i] ^ (ONE << i);
+    return (acc & 0xffffff) == 0;
+}
+
+
+// Return the odd part ``i`` of the order of the element ``elem``
+// such that ``elem**(2**k*odd) = 1`` for an integer k.
+static inline int32_t elem_odd_order(uint64_t *elem)
+{
+    uint64_t bm1[24], bm2[24];
+    int32_t i, res;
+
+    // Let ``bm1`` be the 24 times 24 bit matrix representing
+    // the image of ``elem`` in ``Co_1`` 
+    for (i = 0; i < 24; ++i) bm1[i] = 1ULL << i;
+    res = xsp2co1_xspecial_conjugate(elem, 24, bm1, 0);
+    for (i = 0; i < 24; ++i) bm1[i]  &= 0xffffff;
+    if (res < 0) return res;
+
+    // Raise ``bm1`` to the power of 16. Note that the group
+    // ``Co_1`` has no element of order 32.
+    for (i = 0; i < 2; ++i) {
+        bitmatrix64_mul(bm1, bm1, 24, 24, bm2);
+        bitmatrix64_mul(bm2, bm2, 24, 24, bm1);
+    }
+
+    // Return 1 if ``bm1`` is the unit matrix
+    if (is_neutral_Co1(bm1)) return 1;
+
+    // Put ``bm2 = bm1 ** 2``
+    bitmatrix64_mul(bm1, bm1, 24, 24, bm2);
+
+    // Return ``i`` if ``bm1**i == 1`` for odd ``3 <= i < 39``
+    // Note that the group ``Co_1`` has no element of order 
+    // ``2**k * i`` for any ``i > 39``.
+    for (i = 3; i <= 39; i += 2) {
+        bitmatrix64_mul(bm1, bm2, 24, 24, bm1); 
+        if (is_neutral_Co1(bm1)) return i;
+    }
+    
+    return ERR_QSTATE12_REP_GX0;
+}
+
+/// @endcond 
+
+
+/**
+   @brief Compute (halved) order of an element of the group \f$G_{x0}\f$.
+   
+   Let \f$g \in G_{x0}\f$ be stored in the array ``elem1``
+   in **G_x0 representation**. The function returns the order
+   of the element \f$g\f$.
+
+   If the order  \f$o\f$ of \f$g\f$ is even then the function
+   stores \f$g^{o/2}\f$ in the array  ``elem2``
+   in **G_x0 representation**. Otherwise it stores the
+   neutral element in ``elem2``.
+
+   A negative return value indicates an error.
+   
+   Any kind of overlapping beween the arrays ``elem1`` and ``elem2``
+   is allowed.
+*/
+// %%EXPORT px
+int32_t xsp2co1_half_order_elem(uint64_t *elem1, uint64_t *elem2)
+{
+    int32_t i, o, res;
+    uint64_t elem_h[26];
+
+    o = elem_odd_order(elem1);
+    if (o <=  0) return o ? o : ERR_QSTATE12_REP_GX0;
+    res = xsp2co1_power_elem(elem1, o, elem_h);
+    if (res < 0) return res;
+    if (elem2 != NULL) xsp2co1_unit_elem(elem2);
+    for (i = 0; i < 6; ++i) {
+        if (xsp2co1_is_unit_elem(elem_h)) return o;
+        if (elem2 != NULL) xsp2co1_copy_elem(elem_h, elem2);
+        res = xsp2co1_mul_elem(elem_h, elem_h, elem_h);
+        if (res < 0) return res;
+        o += o;
+    }
+    return ERR_QSTATE12_REP_GX0;
+}
+
+
+/**
+   @brief Compute order of an element of the group \f$G_{x0}\f$.
+   
+   Let \f$g \in G_{x0}\f$ be stored in the array ``elem1``
+   in **G_x0 representation**. The function returns the order
+   of the element \f$g\f$.
+
+   A negative return value indicates an error.
+*/
+// %%EXPORT px
+int32_t xsp2co1_order_elem(uint64_t *elem)
+{
+    return xsp2co1_half_order_elem(elem, NULL);
+}
+
+
+
+/**
+  @brief Compute (halved) order of a word of the group \f$G_{x0}\f$.
+   
+  Let \f$w\f$ be a word in the generators of  \f$G_{x0}\f$
+  of length ``n``. \f$w\f$ is stored in the array ``a1``, and each
+  entry of ``a1`` encodes a generator of   \f$G_{x0}\f$ as
+  described in file ``mmgroup_generators.h``.
+
+  If the order  \f$o\f$ of the word \f$w\f$ is even then the function
+  stores \f$w^{o/2}\f$ in the array  ``a2`` in the same format
+  as the word \f$w\f$. Otherwise it stores the empty word in ``a2``.
+  The length ``k`` of the word in ``a2`` is at most 10.
+
+  The function returns the value ``0x100 *o + k``.
+
+  A negative return value indicates an error.
+*/
+// %%EXPORT px
+int32_t xsp2co1_half_order_word(uint32_t *a1, uint32_t n, uint32_t *a2)
+{
+    int32_t len = 0, o, res;
+    uint64_t elem[26];
+
+    // Deal with empty word ``w``
+    if (n == 0) return 0x100;
+
+    // Convert word ``w`` to element ``elem`` 
+    res = xsp2co1_set_elem_word(elem, a1, n);
+    if (res < 0) return res;
+
+    // Compute order ``o`` of ``elem``; put ``elem``= ``elem ** (o/2)``
+    o = xsp2co1_half_order_elem(elem, elem);
+    if (o < 0) return o;
+
+    // Output ``elem ** (o/2)`` if available and requested
+    if ((o & 1) == 0 && a2 != NULL) {
+        len = xsp2co1_elem_to_word(elem, a2);
+        if (len < 0) return len;
+    }  
+
+    // return result
+    return (o << 8) + len;     
+}
+
+
+/**
+  @brief Compute order of a word of the group \f$G_{x0}\f$.
+   
+  Let \f$w\f$ be a word in the generators of  \f$G_{x0}\f$ 
+  of length ``n``. \f$w\f$ is stored in the array ``a``, and each
+  entry of ``a`` encodes a generator of   \f$G_{x0}\f$ as 
+  described in file ``mmgroup_generators.h``. 
+
+  The function returns the order of \f$w\f$ .
+
+  A negative return value indicates an error.
+*/
+// %%EXPORT px
+int32_t xsp2co1_order_word(uint32_t *a, uint32_t n)
+{
+    int32_t res = xsp2co1_half_order_word(a, n, NULL);
+    return (res < 0) ?  res : (res >> 8);
+}
+
+
+/*************************************************************************
+*** Count type-2 vectors in subspaces of the Leech lattice mod 2
+*************************************************************************/
+
+
+/**
+  @brief Count type-2 vectors in an affine subspace of the Leech lattice mod 2
+
+  This function returns the number of type-2 vectors in an affine 
+  subspace \f$V\f$  of the Leech lattice mod 2. Subspace \f$V\f$ is
+  defined by an array \f$a\f$ of length \f$n\f$ of bit vectors. 
+  \f$V\f$ is  given by:
+
+  \f$V = \{a_0 + \sum_{i=1}^{n-1} \lambda_i a_i \mid \lambda_i=0,1\}\f$.
+  
+  Caution:
+   
+  The function may change the description of the affine space \f$V\f$ in
+  the array \f$a\f$ to a different description of the same space \f$V\f$. 
+   
+  Remark:
+   
+  This function is a much faster version of the
+  function ``gen_leech2_count_type2`` in file ``gen_leech.c``.
+  The implementation of the latter function is much simpler; so we
+  keep it for test purposes.
+*/
+// %%EXPORT px
+uint32_t  xsp2co1_leech2_count_type2(uint64_t *a, uint32_t n)
+{
+    uint16_t b[1 << LSTEPS];
+    uint_fast32_t v, count, i, j, nh, babysteps, bigsteps;
+
+    if (n == 0) return 0;
+    bitmatrix64_xch_bits(a, n, 12, 0x800);
+    v = (uint_fast32_t)a[0];
+    ++a; --n; babysteps = 1;
+    n = bitmatrix64_echelon_h(a, n, 24, 24);
+    b[0] = 0;
+    for (nh = 0; nh < n; ) {
+        uint64_t vh = a[n - nh - 1];
+        uint16_t vh1 = (uint16_t)(vh & 0xfff);
+        if (nh == LSTEPS || vh & 0xfff000L) break;
+        for (j = 0; j < babysteps; ++j) b[j + babysteps] = b[j] ^ vh1;
+        babysteps <<= 1;
+        ++nh;
+    }
+    n -= nh;
+    bigsteps = 1UL << n;
+    
+
+    count = 0;
+    for (i = 1; ; ++i) {
+        if (v & 0x800000L) {
+            // Deal with odd cocode words
+            uint_fast32_t theta, tab, scalar, gcode;
+            gcode = (v >> 12) & 0xfff;
+            theta = MAT24_THETA_TABLE[gcode & 0x7ff] ^ v;
+            for (j = 0; j < babysteps; ++j) {
+                // Let tab be the syndrome table entry for the cocode part
+                tab = MAT24_SYNDROME_TABLE[(theta ^ b[j]) & 0x7ff];
+                // Abort if tab does not encode a cocode word of length 1
+                if ((tab & 0x3ff) < (24 << 5)) continue;
+                // Put scalar = scalar product <code, cocode> + 1  (mod 2)
+                scalar = gcode &  (v ^ b[j]);
+                scalar ^= scalar >> 6;
+                scalar ^= scalar >> 3;
+                scalar = (0x69 >> (scalar & 7)) & 1;
+                count += scalar;
+            }
+        } else if ((v & 0x7ff000L) == 0) {
+            // Deal with Golay code word 0
+            uint_fast32_t basis0, tab, b0, b1;
+            basis0 = MAT24_RECIP_BASIS[0] ^ v;
+            for (j = 0; j < babysteps; ++j) {
+                // Let tab be the syndrome table entry for the cocode
+                // part  ORed with basis vector 0. 
+                tab = MAT24_SYNDROME_TABLE[(b[j] ^ basis0) & 0x7ff];
+                // Set b1 True iff tab encodes a cocode word of length 3
+                b1 =  (tab & 0x3ff) < (24 << 5);
+                // Set b0 True iff tab encodes a cocode word with bit 0 = 0
+                b0 =  (tab & 0x1f) !=  0;
+                //  b0 ^ b1 is True iff (the even) cocode word has length 2
+                count += b0 ^ b1;
+            }
+        } else if (mat24_def_not_nonstrict_octad(v >> 12) == 0) {
+            uint_fast32_t vect, w0, lsb, theta, tab, syn, b0, b1;
+            // Deal with octads
+            // let vect = Golay code in vector representation
+            vect = mat24_gcode_to_vect((v >> 12) & 0x7ff);
+            // Put  w0 =  weight(code word) / 8     (mod 2);
+            // so w0 is True iff the Golay code word is an octad.
+            theta = MAT24_THETA_TABLE[(v >> 12) & 0x7ff];
+            w0 = (theta >> 13) & 1;  
+            // Complement vect if it is not an octad
+            vect ^= w0 - 1;
+            // Adjust w0
+            w0 ^= (v >> 11) & 1;
+            // let lsb be the least significant bit of vect
+            lsb = mat24_def_lsbit24(vect);
+            // Adjust theta 
+            theta ^= v ^ MAT24_RECIP_BASIS[lsb];
+            for (j = 0; j < babysteps; ++j) {
+                // Let tab be the table entry for the cocode part XORed
+                // with basis vector ``lsb``. 
+                tab = MAT24_SYNDROME_TABLE[(b[j] ^ theta) & 0x7ff];
+                // Compute cocode syndrome from tab
+                syn = (1 << (tab & 31)) ^ (1 << ((tab >> 5) & 31))   
+                                ^ (1 << ((tab >> 10) & 31));
+                // Abort if syndrome is not a subword of ``vect``
+                if ((vect & syn) != syn) continue;
+                // Set b1 True iff tab encodes a cocode word of length 3
+                b1 =  (tab & 0x3ff) < (24 << 5);
+                // Set b0 True iff tab encodes a cocode word with 
+                // bit ``lsb`` not set
+                b0 =  (tab & 0x1f) !=  lsb;
+                // Put b0 = 0 if cocode word has length 0 or 4 
+                // Put b0 = 1 if cocode word has length 2 
+                b0 ^= b1;
+                count += b0 ^ w0 ^ (b[j] >> 11);
+            }
+        }
+ 
+        if (i == bigsteps) break;
+        v ^= (uint_fast32_t)(a[mat24_def_lsbit24(i)]);
+    }
+
+    --a; n += nh + 1;
+    bitmatrix64_xch_bits(a, n, 12, 0x800);
+    return count;
+}
+
+
+
+#undef LSTEPS
+
+/*************************************************************************
+*** Compute traces of an element of G_x0
+*************************************************************************/
+
+
+/**
+  @brief Compute character of \f$\rho_{98280}\f$ of element of \f$G_{x0}\f$
+
+  This function is for internal use only.
+
+  Let \f$g \in G_{x0}\f$ be stored in the array ``elem``
+  in **G_x0 representation**. The function returns the
+  character of the representation  \f$\rho_{98280}\f$.
+
+  This function may takes a long time is it does not use precomputed
+  tables. However, precomputing such tables may requires this
+  function (being alled without any precomputed tables).
+
+  In parameter ``f_fast`` the user may specify a function with
+  signature ``int32_t (*f_fast)(uint64_t *elem)`` that returns the
+  character \f$\rho_{98280}\f$ in some cases. That function
+  should use precomputed tables for computing that character
+  and return an error code if it cannot compute a character.
+  In this case we use the standard method form computing the
+  requested character. If ``f_fast`` is ``NULL`` then we always
+  use the standard method.
+   
+  Any value less than -0x1000000 returned by function ``f_fast``
+  or by this function is to be interpreted as an error.
+*/
+// %%EXPORT p
+int32_t xsp2co1_trace_98280(uint64_t *elem, int32_t (*f_fast)(uint64_t*))
+{
+    uint64_t data[25], *pa, mask = 0x1000001ULL;
+    uint_fast32_t i, n;
+    int_fast32_t res;
+
+    pa = data + 1;
+    for (i = 0; i < 24; ++i) pa[i] = ONE << i;
+    res = xsp2co1_xspecial_conjugate(elem, 24, pa, 0);
+    if (res < 0) return (res - 0x10000000L) | -0x20000000L ;
+    for (i = 0; i < 24; ++i) {
+         pa[i] = ((pa[i] & 0xffffffULL) << 24) ^ mask;
+         mask <<= 1;
+    }
+    n = bitmatrix64_echelon_h(pa, 24, 48, 24);
+    pa += n;
+    n = 24 - n;
+    if (n == 0) return 0;
+
+    // Try to use a fast table-based function if present
+    if (f_fast != NULL && n >= 12) {
+        res = f_fast(elem);
+        if (res >= -0x1000000) return res;
+    }
+
+    res = xsp2co1_xspecial_conjugate(elem, n, pa, 1);
+    if (res < 0) return res;
+    i = bitmatrix64_echelon_h(pa, n, 25, 1);
+    if (i) {
+        res = 0 - xsp2co1_leech2_count_type2(pa, n);
+    } else {
+        --pa; ++n; 
+    }
+    pa[0] = 0;
+    res += xsp2co1_leech2_count_type2(pa, n);
+    return res;
+}
+
+
+
+/// @cond DO_NOT_DOCUMENT 
+
+/**
+  @brief Compute character of \f$\rho_{4096}\f$ of element of \f$G_{x0}\f$
+
+  Let \f$g \in G_{x0}\f$ be stored in the array ``elem``
+  in **G_x0 representation**. The function computes the
+  character of the representation  \f$\rho_{4096}\f$ and stores
+  the result in the integer referred by the pointer ``ptrace``.
+
+  This function returns 0 in case of success and a nonzero value
+  otherwise.
+
+  Note that \f$\rho_{4096}\f$ is defined up to sign only, but
+  the tensor product \f$\rho_{24} \otimes \rho_{4096}\f$ is well
+  defined. The product of the two corresponding characters (as
+  computed by the functions ``xsp2co1_traces_small``
+  and ``xsp2co1_trace_4096``) has the correct value.
+*/
+static inline
+int32_t trace_4096(uint64_t *elem, int32_t *ptrace)
+{
+    qstate12_type qs, qs1;
+    uint64_t data[26];
+    int32_t res;
+
+    res = xsp2co1_elem_to_qs_i(elem, &qs);
+    if (res < 0) return res;
+    res = qstate12_copy_alloc(&qs, &qs1, data, 26);
+    if (res < 0) return res;
+    return qstate12_mat_itrace(&qs1, ptrace);
+}
+
+/**
+  @brief Compute characters of \f$\rho_{24}, \rho_{576}\f$ of element of \f$G_{x0}\f$
+
+  Let \f$g \in G_{x0}\f$ be stored in the array ``elem``
+  in **G_x0 representation**. The function computes the
+  characters of the representations  \f$\rho_{24}, \rho_{576}\f$
+  and stores the results in ``ptrace[0], ptrace[1]`` in that
+  order. Here  \f$\rho_{576}\f$ is the tensor square of
+  \f$\rho_{24}\f$.
+
+  This function returns 0 in case of success and a nonzero value
+  otherwise.
+
+  Note that \f$\rho_{24}\f$ is defined up to sign only, but
+  the tensor product \f$\rho_{24} \otimes \rho_{4096}\f$ is well
+  defined. The product of the two corresponding characters (as
+  computed by the functions ``traces_very_small``
+  and ``trace_4096``) has the correct value.
+*/
+static inline
+int32_t traces_very_small(uint64_t *elem, int32_t *ptrace)
+{
+    int8_t a[576];
+    int32_t res;
+    int_fast32_t i, j, acc;
+    res = xsp2co1_elem_to_leech_op(elem, a);
+    if (res < 0) return res;
+
+    acc = 0;
+    for (i = 0; i < 24; ++i) acc+= a[25*i];
+    if (acc & 7) return ERR_QSTATE12_SCALAR_OVFL;
+    ptrace[0] = acc >> 3; 
+
+    acc = 0;
+    for (i = 0; i < 24; ++i) {
+        for (j = 0; j < 24; ++j) acc+= a[24*i+j] * a[24*j+i];
+    }
+    if (acc & 63) return ERR_QSTATE12_SCALAR_OVFL;
+    ptrace[1] = acc >> 6; 
+    
+    if ((ptrace[0] + ptrace[1]) & 1) return ERR_QSTATE12_SCALAR_OVFL;  
+    return 0;
+}
+
+/// @endcond 
+
+
+/**
+  @brief  Workhorse for function ``xsp2co1_traces_all``
+
+  This function is for internal use only.
+
+  Parameters and operation are are as in function ``xsp2co1_traces_all``. 
+  But this function does not compute the character of the 
+  representation  \f$\rho_{24}\f$ in ``ptrace[3]``.
+*/
+// %%EXPORT px
+int32_t xsp2co1_traces_small(uint64_t *elem, int32_t *ptrace)
+{
+    int32_t res;
+    ptrace[3] = -0x2000000; // Some erroneous value
+    res = traces_very_small(elem, ptrace);
+    if (res < 0) return res;
+    res = trace_4096(elem, ptrace + 2);
+    if (res < 0) return res;
+    if (ptrace[0] < 0) {
+        ptrace[0] = -ptrace[0]; 
+        ptrace[2] = -ptrace[2]; 
+    } else if (ptrace[0] == 0 && ptrace[2] < 0) {
+        ptrace[2] = -ptrace[2]; 
+    } 
+    return 0;    
+}
+
+
+
+/**
+  @brief Compute relevant characters of element of \f$G_{x0}\f$
+
+  This function is for internal purposes only.
+
+  Let \f$g \in G_{x0}\f$ be stored in the array ``elem``
+  in **G_x0 representation**. The function computes the
+  characters of the representations
+  \f$\rho_{24}, \rho_{576}, \rho_{4096}, \rho_{98280}\f$
+  and stores the result in ``ptrace[0],..., ptrace[3]`` in
+  that order.
+
+  This function returns 0 in case of success and a nonzero value
+  otherwise.
+
+  There is a considerably faster function ``xsp2co1_traces_all``
+  in module ``xsp2co1_traces.c`` performing exactly the same
+  operation depending in the same input parameters. More details
+  are given in the documentation of that function.
+
+  In contrast to function ``xsp2co1_traces_fast``, this function
+  does not use any precomputed tables. Actually, this function
+  is used for precomputing those tables.
+*/
+// %%EXPORT px
+int32_t xsp2co1_traces_all(uint64_t *elem, int32_t *ptrace)
+{
+    int32_t res;
+    res = xsp2co1_traces_small(elem, ptrace);
+    if (res < 0) return res;
+    res = xsp2co1_trace_98280(elem, NULL); 
+    if (res < -0x1000000) return res;
+    ptrace[3] = res;
+    return 0;    
+}
+
+
+/*************************************************************************
+*** Generate a random element of the subgroup N of the monster
+*************************************************************************/
+
+
+
+/**
+  @brief Generate a random element of the group \f$N_0\f$.
+   
+  The function computes a uniform distributed random
+  element \f$g\f$ of the subgroup \f$N_0\f$ of
+  structure \f$2^{2+11+22}.(M_{24} \times \mbox{Sym}_3)\f$ of the
+  monster. The group \f$N_0\f$ is generated by the generators with
+  tags ``x, y, d, p, t``.
+
+  Thw function stores a word representing the element \f$g\f$ in
+  the buffer ``w`` and returns the length of that word.
+  
+  The length of the word in the buffer ``w`` is at most 5.
+
+  If parameter ``in_N_x0`` is nonzero then we compute a random
+  element of the subgroup \f$N_{x0}\f$ of index 3 in \f$N_0\f$
+  generated by the generators with tags ``x, y, d, p``.
+
+  If parameter ``even`` is nonzero then we compute a random
+  element of the  subgroup \f$N_{\mbox{even}}\f$ of index 2
+  in \f$N_{0}\f$  generated by the generators with
+  tags ``x, y, d, p, t``, where all generators with tag ``d``
+  correspond to even Golay cocode words.
+
+  If both, ``in_N_x0`` and ``even``, are nonzero then we compute
+  a random element
+  of \f$N_{xyz0} = N_{\mbox{even}} \cap N_{x0}\f$.
+
+  The function uses the internal random generator in
+  file ``gen_random.c``. Parameter ``seed`` must be a seed for
+  a random generator as  described in file ``gen_random.c``.
+*/
+// %%EXPORT px
+int32_t xsp2co1_rand_word_N_0(uint32_t *w, uint32_t in_N_x0, uint32_t even, uint64_t *seed)
+{
+    static uint32_t w_tag_sizes[5] = {
+        MMGROUP_ATOM_TAG_T +  3,
+        MMGROUP_ATOM_TAG_Y +  0x800,
+        MMGROUP_ATOM_TAG_X + 0x2000,
+        MMGROUP_ATOM_TAG_D + 0x1000,
+        MMGROUP_ATOM_TAG_P + MAT24_ORDER
+    };
+    
+    uint32_t *pw = w, *p_tag = w_tag_sizes;
+    uint32_t n = 5, i;
+    if (in_N_x0) {
+        ++p_tag; --n;
+    }
+
+    // Generate random product g  of atoms with tags t, y, x, d, p.
+    // Then g is a random element of ``N_x0``.
+    // Exclude tag  t  if ``in_N_x0`` is nonzero.
+    // Force atom for tag  d  to be even if ``even`` is nonzero. 
+    for (i = 0; i < n; ++i) {
+        uint32_t t = p_tag[i];
+        uint32_t k = gen_rng_modp(t & ~MMGROUP_ATOM_TAG_ALL, seed);
+        if (even && t == MMGROUP_ATOM_TAG_D + 0x1000) k &= 0x7ff;
+        if (k) *pw++ = (t & MMGROUP_ATOM_TAG_ALL) + k;
+    }
+
+    // Return length of result
+    return (int32_t)(pw - w);
+}
+
+
+/*************************************************************************
+*** Generate a random element of the subgroup G_x0 of the monster
+*************************************************************************/
+
+
+
+/**
+  @brief Generate a random element of the group \f$G_{x0}\f$.
+   
+  The function computes a uniform distributed random element \f$g\f$
+  of the group \f$G_{x0}\f$. It stores a word representing the
+  element \f$g\f$ in the buffer ``w`` and returns the length of
+  that word.
+  
+  The length of the word in the buffer ``w`` is at most 10.
+
+  The function uses the internal random generator in 
+  file ``gen_random.c``. Parameter ``seed`` must be a seed for 
+  a random generator as  described in file ``gen_random.c``.
+
+  A negative return value indicates an error.
+*/
+// %%EXPORT px
+int32_t xsp2co1_rand_word_G_x0(uint32_t *w, uint64_t *seed)
+{
+    static uint32_t w_tag_sizes[4] = {
+        MMGROUP_ATOM_TAG_Y +  0x800,
+        MMGROUP_ATOM_TAG_X + 0x2000,
+        MMGROUP_ATOM_TAG_D + 0x1000,
+        MMGROUP_ATOM_TAG_P + MAT24_ORDER
+    };
+    
+    uint32_t *pw = w;
+    uint32_t v, ag1[6];
+    int_fast32_t i, length;
+
+    // Generate random product g_0 of atoms with tags y, x, d, p.
+    // Then g_0 is a random element of the centralizer of the
+    // standard type-4 vector \Omega. 
+    for (i = 0; i < 4;++i) {
+        uint32_t t = w_tag_sizes[i];
+        uint32_t k = gen_rng_modp(t & ~MMGROUP_ATOM_TAG_ALL, seed);
+        if (k) *pw++ = (t & MMGROUP_ATOM_TAG_ALL) + k;
+    }
+
+    // Let v be a random type 4 vector in the Leech lattice mod 2
+    do {
+        v =  gen_rng_modp(0x1000000, seed);
+    } while (gen_leech2_type(v) != 4);
+
+    // Generate an element g_1 of G_x0 that maps v to \Omega. Store the 
+    // element g_1 (of length 'length') in the array referred by ag1. 
+    length = gen_leech2_reduce_type4(v, ag1);
+    if (length < 0) return length;
+
+    // Compute the result  g = g_0 * g_1**(-1)  in w
+    for (i = 0; i < length; ++i) pw[i] = ag1[length-1-i] ^ 0x80000000;
+
+    // Return length of the result g
+    return (int32_t)((pw - w) + length);
+}
+
+
+
+//  %%GEN h
+/// @endcond 
+//  %%GEN c
+
+
+// %%GEN ch
+#ifdef __cplusplus
+}
+#endif

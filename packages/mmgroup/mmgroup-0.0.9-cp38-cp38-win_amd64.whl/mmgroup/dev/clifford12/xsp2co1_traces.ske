@@ -1,0 +1,637 @@
+/** @file xsp2co1_traces.c
+  File ``xsp2co1_traces.c`` contains functions for computing
+  characters of some representations of the subgroup \f$G_{x0}\f$
+  (of structure \f$2^{1+24}.\mbox{Co}_1\f$) of the monster.
+
+  Such computations can be very expensive, especially for some
+  classes of involutions, or for elements that map to involutions
+  in the factor group \f$\mbox{Co}_1\f$ of \f$G_{x0}\f$.
+
+  This file contains a function ``xsp2co1_elem_involution_class``
+  for the classification of elements that map to involutions
+  in \f$\mbox{Co}_1\f$.
+
+  Function ``xsp2co1_traces_fast`` uses a precomputed table for
+  computing the characters of elements of \f$G_{x0}\f$. That
+  table is addressed by the class information computed by
+  function ``xsp2co1_elem_involution_class``. The functions in
+  module ``mmgroup\tests\test_involutions.make_involution_samples.py``
+  precompute that table. We simply copy and paste the table
+  from the output of that python function to to this file.
+  
+  The precomputation of the table requires the
+  function ``xsp2co1_traces_all`` in file ``xsp2co1_elem.c``. That
+  function computes the same characters as
+  function ``xsp2co1_traces_fast`` without using precomputed tables. 
+
+  Function ``xsp2co1_elem_involution_class`` does not use a
+  precomputed table, but the verification of this function requires
+  inspection of the output of the
+  module ``make_involution_samples.py`` mentioned above.
+*/
+
+
+/*************************************************************************
+** External references 
+*************************************************************************/
+
+/// @cond DO_NOT_DOCUMENT 
+#include <string.h>
+#include "mat24_functions.h"
+#define MMGROUP_GENERATORS_INTERN
+#include "mmgroup_generators.h"
+#define CLIFFORD12_INTERN
+#include "clifford12.h"
+/// @endcond  
+
+
+// %%EXPORT_KWD CLIFFORD12_API
+
+
+// %%GEN ch
+#ifdef __cplusplus
+extern "C" {
+#endif
+// %%GEN c
+
+
+//  %%GEN h
+/// @cond DO_NOT_DOCUMENT 
+//  %%GEN c
+
+
+
+
+/*************************************************************************
+*** Compute traces of an element of G_x0
+*************************************************************************/
+
+
+/** 
+  Compute class information for certain elements of \f$G_{x0}\f$ 
+
+  Let \f$g \in G_{x0}\f$ be stored in the array ``elem``
+  in **G_x0 representation**. If \f$g\f$ maps to an involution
+  in the factor group \f$\mbox{Co}_1\f$ of \f$G_{x0}\f$ then
+  the function returns a nonzero value indicating some class
+  information about \f$g\f$. Otherwise the function returns 0.
+
+  The class information in the return value is to interpreted as follows:
+
+        bits  7 .. 0: class of element  g  in the Monster group, e.g
+                      0x21 means class 2A,
+                      0x41 means class 2A, 0x42 means class 4B, etc.
+
+        bits 11 .. 8: Class of element  g  in the factor group Co_1
+                      0 means class 1A in Co_1
+                      1 means class 2A in Co_1
+                      2 means class 2B in Co_1
+                      3 means class 2C in Co_1
+
+        bit 12:       0 if  g  and  -g  are in the same class in the Monster
+                      1 otherwise
+
+        bit 13:       1 if q g  is equal to or powers up to -1
+                      0 otherwise
+
+  All other bits in the return value are set to zero.
+
+  Here \f$-1\f$ is the central involution \f$x_{-1}\f$ in \f$G_{x0}\f$,
+  and \f$-g = x_{-1} \cdot g\f$ .
+
+  Write \f$h(g)\f$ as an abbreviation for the result of this function
+  applied to an element \f$g\f$ of \f$G_{x0}\f$. Then the following
+  assertions have been checked computationally in
+  files ``make_involution_samples.py``, or ``test_xp2_traces.py``,
+  or can easily be checked mathematically.
+
+  Possible values \f$h(g)\f$ (depending on the class of \f$g Q_{x0}\f$)
+  in \f$\mbox{Co}_1\f$ are:
+
+       class 1A: 0x1011, 0x3022, 0x0022, 0x0021, 0x2041
+       class 2A: 0x1121, 0x1122, 0x0143, 0x2143, 0x0142, 0x0141, 0x0122
+       class 2B: 0x0244, 0x2244
+       class 2C: 0x0322, 0x0341, 0x0344, 0x2382, 0x0343, 0x0342
+ 
+  The value \f$h(g)\f$ determines the characters of the
+  representations \f$98280_x, 299_x, 24_x, 4096_x\f$ of \f$g\f$
+  uniquely, where by construction of \f$G_{x0}\f$ the last two
+  characters are determined up to sign only.
+
+  The class of an involution \f$g\f$ is determined uniquely
+  by \f$h(g)\f$.
+*/
+// %%EXPORT px
+int32_t xsp2co1_elem_involution_class(uint64_t *elem)
+{
+    uint64_t invar[12];   
+    int_fast32_t v, t, inv0,  n, n2;
+    int32_t traces[4];
+    static uint16_t v_types[] = {0x22, 0, 0x21, 0x2041};
+
+    // Compute involution invariants; abort if this fails.
+    // Let \f$A, A_1, I_1, (I_1^+)\f$, and \f$(\ker A_1^+)\f$ 
+    // be as in  function ``xsp2co1_involution_invariants``.
+    n = xsp2co1_involution_invariants(elem, invar);
+    if (n < 0) return 0;
+
+    // The following calculation can be verified by inspecting
+    // the list INVOLUTION_SAMPLES in the python module
+    // ``mmgroup.tests.test_involutions.involution_samples``.
+
+    switch (n) {
+        case 0:
+            // Co_1 class 1A: v = +- 1
+            return xsp2co1_is_unit_elem(elem) ? 0x1011 : 0x3022;
+        case 1:
+            // Co_1 class 1A: v in Q_x0, v != +-1
+            if ((v = xsp2co1_xspecial_vector(elem)) < 0) return 0;
+            return v_types[gen_leech2_type(v) & 3];
+        case 8:
+            // Co_1 class 2A, element not fused with its negative
+            if (xsp2co1_traces_small(elem, traces) < 0) return 0;
+            return traces[2] > 0 ? 0x1121 : 0x1122;
+        case 9:
+            // Co_1 class 2A, element fused with its negative
+            t =  (invar[1] >> 24) & 1;
+            n2 = xsp2co1_leech2_count_type2(invar, 9);
+            switch(n2) {
+                case 0:
+                    return t ? 0x143 : 0x2143;
+                case 2:
+                    return 0x142;
+                case 16:
+                    return t ? 0x141 : 0x122;
+                default:
+                    return 0;
+            } 
+        case 12:
+            inv0 =  (invar[0] >> 24) & 3;
+            t =  (invar[1] >> 24) & 1;
+            if (inv0 & 2) {
+                // Co_1 class 2C
+                if (t) {
+                    invar[1] = 0;
+                    n2 = xsp2co1_leech2_count_type2(invar + 1, 11);
+                    switch (n2) {
+                        case 120:
+                            return 0x344;
+                        case 132:
+                            return 0x2382;
+                        case 136:
+                            return 0x343;
+                        case 152:
+                            return 0x342;
+                        default:
+                            return 0;
+                    }
+                } else {
+                    return (inv0 & 1) ?  0x322 : 0x341;
+                }
+            } else {
+                // Co_1 class 2B
+                return (inv0 & 1) ? 0x244 : 0x2244;
+            }
+        default:            
+            return 0;
+    }
+}
+
+
+
+
+/*************************************************************************
+*** Fast table-based function for computing trace of rep 08280_x
+*************************************************************************/
+
+
+/// @cond DO_NOT_DOCUMENT 
+
+
+// The following tables have been created automatically
+// by executing file ``test_display_characters.py``
+// in module ``mmgroup.tests.test_involutions``.
+
+// Table f0r character chi_98280
+#define LEN_I_CHI_98280_TABLE 20
+static uint16_t KEYS_I_CHI_98280_TABLE[20] = {
+ 0x21, 0x22, 0x122, 0x141, 0x142, 0x143, 0x244, 0x322, 
+ 0x341, 0x342, 0x343, 0x344, 0x1011, 0x1121, 0x1122, 0x2041, 
+ 0x2143, 0x2244, 0x2382, 0x3022
+};
+static int32_t DATA_I_CHI_98280_TABLE[20] = {
+ 4072, -24, 232, 232, 8, -24, 0, 264, 
+ 264, 40, 8, -24, 98280, 2280, 2280, -24, 
+ -24, 0, 0, 98280
+};
+
+
+/**
+  @brief Try to compute the character \f$98280_x\f$ of \f$G_{x0}\f$
+
+  Let \f$g \in G_{x0}\f$ be stored in the array ``elem``
+  in **G_x0 representation**. The function computes the
+  class information about \f$g\f$ using 
+  function ``xsp2co1_elem_involution``. If this succeeds
+  then the function reads the character of the 
+  representation \f$98280_x\f$ of \f$g\f$ and returns
+  that information. Otherwise this function fails 
+  and returns -0x2000000.
+*/
+static inline int32_t trace_98280_fast(uint64_t *elem)
+// Yet to be documented!!!
+{
+    int32_t i, cl = xsp2co1_elem_involution_class(elem);
+    if (cl > 0) {
+        for (i = 0; i < LEN_I_CHI_98280_TABLE; ++i) {
+            if (cl == (int32_t)KEYS_I_CHI_98280_TABLE[i]) {
+                return  DATA_I_CHI_98280_TABLE[i];
+            }
+        }
+    }
+    return -0x2000000;
+}
+
+
+/// @endcond 
+
+
+
+
+/**
+  @brief Compute relevant characters of element of \f$G_{x0}\f$
+
+  Let \f$g \in G_{x0}\f$ be stored in the array ``elem``
+  in **G_x0 representation**. The function computes the
+  characters of the representations
+  \f$\rho_{24}, \rho_{576}, \rho_{4096}, \rho_{98280}\f$
+  and stores the result in ``ptrace[0],..., ptrace[3]`` in
+  that order. Here  \f$\rho_{576}\f$ is the tensor square of
+  \f$\rho_{24}\f$.
+
+  This function returns 0 in case of success and a nonzero value
+  otherwise.
+ 
+  Note that the tensor product \f$\rho_{24} \otimes \rho_{4096}\f$
+  is well defined, but the factors of that product are defined
+  up to sign only.
+  We normalize the characters corresponding to \f$\rho_{24}\f$
+  and \f$\rho_{4096}\f$ so that the first nonzero value of these
+  two characters (in the order given above) is positive.
+
+  So this function performs the same action as
+  function ``xsp2co1_traces_all`` in file ``xsp2co1_elem.c``,
+  but it is considerably faster, since it uses precomputed
+  tables for som hard cases.
+*/
+// %%EXPORT px
+int32_t xsp2co1_traces_fast(uint64_t *elem, int32_t *ptrace)
+{
+    int32_t res;
+    res = xsp2co1_traces_small(elem, ptrace);
+    if (res < 0) return res;
+    // Try to compute the character of the rep 99280_x
+    // with function ``trace_98280_fast``; and fall back
+    // to the standard method if this fails.
+    res = xsp2co1_trace_98280(elem, trace_98280_fast); 
+    if (res < -0x1000000) return res;
+    ptrace[3] = res;
+    return 0;    
+}
+
+
+/*************************************************************************
+*** Auxiliary structure for function xsp2co1_elem_conjugate_involution_Gx0
+*************************************************************************/
+
+/// @cond DO_NOT_DOCUMENT 
+
+
+// The stuff in this section is an almost literal translation of
+// the python class 
+// mmgroup.tests.test_involutions.test_involution_Gx0.N_x0_involution
+// into C.
+// That class is an auxiliary class for the python function
+// ``xsp2co1_elem_conjugate_involution_in_Gx0_py`` in the same
+// module. That function is equivalent to the C function
+// ``xsp2co1_elem_conjugate_involution_Gx0`` in this module.
+// The structure ``s_N_x0_involution`` defined in this section
+// stores the data of an instance of class ``N_x0_involution``.
+// The functions ``s_N_x0_xxx`` correspond to the methods ``xxx``
+// of class ``N_x0_involution``.  Here the C function 
+// ``s_N_x0_init`` corresponds to the constructor of 
+//  class ``N_x0_involution``.
+// For further details we refer to the documentation
+// of class ``N_x0_involution``.  
+
+
+#define s_N_x0_IND_y 1 
+#define s_N_x0_IND_x 2 
+
+typedef struct {
+    uint32_t gn0[5];
+    uint32_t tf_n0[5];
+} s_N_x0_involution;
+
+static inline
+int32_t s_N_x0_init(s_N_x0_involution *p_i, uint64_t *elem)
+{    
+    int32_t res;
+    if ((res = xsp2co1_elem_to_N0(elem, p_i->gn0)) < 0) return res;
+    if (p_i->gn0[0] | p_i->gn0[4]) return ERR_QSTATE12_GX0_BAD_ELEM;
+    mm_group_n_mul_element(p_i->gn0, p_i->gn0, p_i->tf_n0);
+    if (mm_group_n_reduce_element(p_i->tf_n0))
+        return ERR_QSTATE12_GX0_BAD_ELEM;
+    mm_group_n_reduce_element(p_i->gn0);
+    return 0;
+}
+
+static inline
+int32_t s_N_x0_get_xy(s_N_x0_involution *p_i, uint32_t index)
+{    
+    return p_i->gn0[index] & 0x7ff;
+}
+
+static inline
+int32_t s_N_x0_get_q(s_N_x0_involution *p_i)
+{ 
+    uint32_t q = p_i->gn0[2];
+    if (p_i->gn0[0] | p_i->gn0[1] | p_i->gn0[4]) 
+        return ERR_QSTATE12_GX0_BAD_ELEM;
+    return (q << 12) ^ (MAT24_THETA_TABLE[q & 0x7ff] & 0x7ff) 
+        ^ p_i->gn0[3];
+}
+
+static inline
+int32_t s_N_x0_transform(s_N_x0_involution *p_i, uint32_t *a, uint32_t len_a)
+{
+    if (mm_group_n_conj_word_scan(p_i->gn0,  a, len_a) < len_a
+        || mm_group_n_mul_word_scan(p_i->tf_n0, a, len_a) < len_a)
+        return ERR_QSTATE12_GX0_TAG;
+    mm_group_n_reduce_element(p_i->gn0); 
+    return 0;   
+}
+
+
+static inline
+int32_t s_N_x0_out(s_N_x0_involution *p_i, uint32_t *a_out)
+// This destroys *p_i
+{
+    uint32_t length;
+    mm_group_n_inv_element(p_i->tf_n0, p_i->gn0);
+    length = mm_group_n_to_word(p_i->gn0, a_out);
+    mm_group_invert_word(a_out, length);
+    return (int32_t)length;
+}
+
+
+/// @endcond
+
+
+/*************************************************************************
+*** Conjugating an involution to a standard value
+*************************************************************************/
+
+
+/// @cond DO_NOT_DOCUMENT 
+
+static inline
+int32_t conj_involution_Gx0_type2(uint32_t vx, uint32_t guide, uint32_t *a)
+// This function implements a specific case of function 
+// ``xsp2co1_elem_conjugate_involution_Gx0``. It corresponds to the
+// python function with the same name in module
+// ``mmgroup.tests.test_involutions.test_involution_Gx0``
+{
+    int32_t len_a = 0, len_a2;
+    if  (gen_leech2_type(guide) == 4 && gen_leech2_type(guide ^ vx) == 2) {
+        len_a = gen_leech2_reduce_type4(guide, a);
+        if (len_a < 0) return len_a;
+        vx = gen_leech2_op_word(vx, a, len_a);
+    }      
+    len_a2 = gen_leech2_reduce_type2(vx, a + len_a);
+    if  (len_a2 < 0) return len_a2;
+    vx =  gen_leech2_op_word(vx, a + len_a, len_a2);      
+    len_a += len_a2;
+    if (vx & 0x1000000) a[len_a++] = 0xB0000200;
+    return len_a;
+}
+
+
+static inline int32_t _get_class(uint32_t vy) {
+    static uint32_t src[4] = {0x80f00f, 0x80f42f, 0xf00f, 0xc0e00d};
+    static int16_t img[4] = {0x1121, 0x122, 0x1122, 0x322};
+    int i;
+    for (i = 0; i < 4; ++i) if (vy == src[i]) return img[i];
+    return ERR_QSTATE12_GX0_BAD_ELEM;
+}
+
+/// @endcond  
+
+
+
+/**
+   Map an involution in \f$G_{x0}\f$ to a standard form.
+
+   Let \f$g\f$ be an involution in the group \f$G_{x0}\f$ stored
+   in the array given by parameter ``elem`` 
+   in **G_x0 representation**.
+
+   The function computes an element \f$a\f$ in \f$G_{x0}\f$ such
+   that \f$h = a^{-1} g a\f$ is a (fixed) representative of the
+   class of \f$g\f$ in the group \f$G_{x0}\f$.
+
+   The element \f$a\f$ is stored in the array ``a`` as a word of
+   generators of  the monster group. In case of success the
+   function returns  ``0x100 * iclass + len(a)``, where ``len(a)``
+   is the length  of the data in the array ``a``, and ``iclass``
+   is explained below. The function  returns a negative value
+   in case of failure, e.g. if \f$g\f$ has order greater than 2.
+   The array ``a`` must have length at least \f$10\f$.
+ 
+   In the sequel we list the representatives of all classes of
+   involutions in \f$G_{x0}\f$ computed by this function. For
+   any such representative we also list the number ``iclass``
+   indicating the class of the involution as computed by
+   function ``xsp2co1_elem_involution_class``.
+
+   ``iclass = 0x1101``: the neutral element \f$x_1\f$
+
+   ``iclass = 0x3022``: the central involution \f$x_{-1}\f$
+   
+   ``iclass = 0x0021``: the element \f$x_{\{2,3\}}\f$
+
+   ``iclass = 0x0022``: the element \f$x_{\Omega}\f$
+
+   ``iclass = 0x1121``: the element \f$y_o\f$
+
+   ``iclass = 0x1122``: the element \f$x_{-1} y_o\f$
+
+   ``iclass = 0x0122``: the element \f$y_o x_{\{8,9\}}\f$
+
+   ``iclass = 0x0322``: the element \f$y_D x_{\{0, 12\}}\f$
+
+
+   Here in \f$x_{\{i,j\}}\f$ the index \f$\{i,j\}\f$ indicates a Golay
+   cocode word of length 2 given by the entries \f$i\f$ and \f$j\f$.
+   Octad \f$o\f$ is the standard octad  \f$\{0,1,2,3,4,5,6,7\}\f$.
+   Dodecad \f$D\f$ is the standard
+   dodecad \f$\{0, 4, 8, 13, 14, 15, 17, 18, 19, 21, 22, 23\}\f$.
+ 
+   Parameter ``guide`` should usually be zero. If ``guide`` is a
+   type-4 vector \f$v_4\f$ in the Leech lattice mod 2 such that
+   the two  conditions \f$h = a^{-1} g a\f$
+   and \f$v_4 \cdot a = \Omega\f$ can both be achieved then we
+   compute an element \f$a\f$ satisfying these two conditions.
+   Otherwise parameter ``guide`` is ignored. Here \f$\Omega\f$
+   is the standard frame in the Leech lattice.    
+*/
+// %%EXPORT px
+int32_t xsp2co1_elem_conjugate_involution_Gx0(uint64_t *elem, uint32_t guide, uint32_t *a)
+{
+    int32_t v4, len_a, res, iclass;
+    uint64_t elem1[26];
+    s_N_x0_involution invol;
+
+    // The implementation of this function is along the lines of the
+    // python function ``xsp2co1_elem_conjugate_involution_in_Gx0_py``
+    // in module ``mmgroup.tests.test_involutions.test_involution_Gx0``.
+    // For details, we refer to the documentation of that function.
+
+    if ((v4 = xsp2co1_elem_find_type4(elem, guide)) < 0) return v4;
+    if ((len_a = gen_leech2_reduce_type4(v4, a)) < 0) return len_a;
+    xsp2co1_copy_elem(elem, elem1);
+    if ((res = xsp2co1_conjugate_elem(elem1, a, len_a)) < 0) return res;
+    if ((res = s_N_x0_init(&invol, elem1)) < 0) return res;
+
+    if (s_N_x0_get_xy(&invol,s_N_x0_IND_y)) {
+        uint32_t b[3], vy, len_a2;
+        if (s_N_x0_get_xy(&invol,s_N_x0_IND_x)) {
+            b[0] = 0x10000800;
+            if ((res = s_N_x0_transform(&invol, b, 1)) < 0) return res;
+        }
+        b[0] = 0x50000002;   // (this is t**2)
+        if ((res = s_N_x0_transform(&invol, b, 1)) < 0) return res;
+        vy = res = s_N_x0_get_q(&invol);
+        if (res < 0) return res;
+        gen_leech2_reduce_n(vy, b);
+        if ((res = s_N_x0_transform(&invol, b, 3)) < 0) return res;
+        iclass = res = _get_class(s_N_x0_get_q(&invol));
+        if (res < 0) return res;
+        b[0] = 0x50000001;   // (this is t**1)
+        if ((res = s_N_x0_transform(&invol, b, 1)) < 0) return res;
+        len_a2 = res = s_N_x0_out(&invol, a + len_a);
+        if (res < 0) return res;
+        len_a += len_a2;
+    } else {
+        uint32_t vx, t;
+        if (len_a) return ERR_QSTATE12_GX0_BAD_ELEM;
+        vx = res = s_N_x0_get_q(&invol);
+        if (res < 0) return res;
+        t =  gen_leech2_type(vx);
+        switch(t) {
+            case 0:
+                len_a = 0;
+                iclass = vx & 0x1000000 ? 0x3022 : 0x1011;
+                if  ((gen_leech2_type(guide)) == 4) {
+                    len_a = gen_leech2_reduce_type4(guide, a);
+                    if  (len_a < 0) return len_a;
+                }
+                break;
+            case 4:
+                len_a = gen_leech2_reduce_type4(vx, a);
+                if  (len_a < 0) return len_a;
+                vx = gen_leech2_op_word(vx, a, len_a);
+                if (vx & 0x1000000) a[len_a++] = 0x90000800;
+                iclass = 0x22;
+                break;
+            case 2:
+                len_a = conj_involution_Gx0_type2(vx, guide, a);
+                iclass = 0x21;
+                break;
+             default:
+                return ERR_QSTATE12_GX0_BAD_ELEM;
+        }
+    }
+    return (iclass << 8) + len_a;
+}
+
+/*************************************************************************
+*** Map numbers of involution classes of G_x0 to representatives
+*************************************************************************/
+
+/// @cond DO_NOT_DOCUMENT 
+
+
+// Here is a mapping from the numbers of the involution classes
+// to the elements of ``G_x0``. Images are given as alements of
+// the Monster. This mapping has been computed by function
+// ``display_involution_map`` in module ``test_involution_G_x0.py.
+
+static uint16_t _MAP_INVOLUTION_KEYS[] = {
+0x1011,
+0x3022,
+0x0021,
+0x0022,
+0x1121,
+0x0122,
+0x1122,
+0x0322
+};
+static uint32_t _MAP_INVOLUTION_VALUES[][2] = {
+{0x0, 0x0},
+{0x30001000, 0x0},
+{0x10000200, 0x0},
+{0x30000800, 0x0},
+{0x4000080f, 0x0},
+{0x4000080f, 0x10000420},
+{0x4000000f, 0x0},
+{0x40000c0e, 0x1000040d}
+};
+
+/// @endcond 
+
+
+/**
+   Map an involution class in \f$G_{x0}\f$ to its representative.
+
+   Here parameter ``class`` must be a class number of an
+   involution in the group \f$G_{x0}\f$ as returned by
+   function ``xsp2co1_elem_conjugate_involution_Gx0``.
+
+   Then the function computes the representative \f$h\f$ of the
+   class of involutions in \f$G_{x0}\f$ as it is computed by
+   function ``xsp2co1_elem_conjugate_involution_Gx0``.
+
+   The element \f$h\f$ is stored in the array ``a`` as a word
+   of generators of  the monster group. In case of success the
+   function returns  the length ``len(a)`` of the data in the
+   array ``a``. The function  returns a negative value
+   in case of failure, e.g. if ``iclass`` does not
+   correspond to an involution.
+   The array ``a`` must have length at least \f$2\f$.
+*/
+// %%EXPORT px
+int32_t xsp2co1_map_involution_class_Gx0(uint32_t iclass, uint32_t *a)
+{
+    uint32_t i, length;
+    for (i = 0; i < 8; ++i) if (_MAP_INVOLUTION_KEYS[i] == iclass) {
+        length = 0;
+        while (length < 2 && _MAP_INVOLUTION_VALUES[i][length]) {
+            a[length] = _MAP_INVOLUTION_VALUES[i][length];
+            ++length;
+        }
+        return length;
+    }
+    return -1;
+}
+
+
+//  %%GEN h
+/// @endcond 
+//  %%GEN c
+
+
+// %%GEN ch
+#ifdef __cplusplus
+}
+#endif
