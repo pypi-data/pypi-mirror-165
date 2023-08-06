@@ -1,0 +1,40 @@
+# SETUPTOOLS
+[build-system]
+requires = [
+    "setuptools>=42",
+    "wheel",
+    "setuptools_scm[toml]>=3.4",
+]
+
+[tool.setuptools_scm]
+
+# BLACK
+[tool.black]
+line-length = 100
+target-version = [
+    "py38",
+    "py39",
+]
+include = 'dir_content_diff\/.*\.py$|tests\/.*\.py$|docs\/source\/conf\.py$|setup\.py$'
+
+# PYDOCSTYLE
+[tool.pydocstyle]
+# ignore the following:
+#   - D107: Missing docstring in __init__
+add-ignore = [
+    "D107",
+]
+convention = "google"
+match = "[dir_content_diff, tests, docs/source/conf.py, setup.py]"
+
+# ISORT
+[tool.isort]
+profile = "black"
+line_length = 100
+force_single_line = true
+
+# PYTEST
+[tool.pytest.ini_options]
+testpaths = [
+    "tests",
+]
