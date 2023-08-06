@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: dori-orm
+Version: 4.5.8
+Summary: simple orm, to manage your database.
+Home-page: https://github.com/dori-dev/my-orm
+Author: Mohammad Dori
+Author-email: mr.dori.dev@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# My ORM
+
+It's a simple ORM built with Python and sqlite.<br>This is not a real ORM to use in your project.
+
+#
+
+## Install My ORM
+
+```
+pip install xrm
+```
+
+#
+
+## Use My ORM
+
+```python
+# TODO
+```
+
+#
+
+## Links
+
+Download Source Code: [Click Here](https://github.com/dori-dev/my-orm/archive/refs/heads/main.zip)
+
+My Github Account: [Click Here](https://github.com/dori-dev/)
