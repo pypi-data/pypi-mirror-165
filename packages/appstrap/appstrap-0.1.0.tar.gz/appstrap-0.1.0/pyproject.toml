@@ -1,0 +1,110 @@
+[tool.poetry]
+name = "appstrap"
+version = "0"  # This is set dynamically via current git tag.
+description = "A modern configuration interface for Python applications."
+authors = ["Mark Beacom <m@beacom.dev>"]
+include = [
+    "CHANGELOG.md",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+]
+readme = "README.md"
+repository = "https://github.com/mbeacom/appstrap"
+homepage = "https://mbeacom.github.io/appstrap/"
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: User Interfaces",
+    "Topic :: Utilities",
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.group.dev.dependencies]
+isort = "^5.10.1"
+black = "^22.6.0"
+pydocstyle = "^6.1.1"
+pylint = "^2.15.0"
+bandit = "^1.7.4"
+safety = "^2.1.1"
+debugpy = "^1.6.3"
+mypy = "^0.971"
+poethepoet = "^0.16.0"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^7.1.2"
+coverage = "^6.4.4"
+pytest-mock = "^3.8.2"
+pytest-sugar = "^0.9.5"
+pytest-cov = "^3.0.0"
+pytest-xdist = "^2.5.0"
+
+[tool.poetry.group.docs.dependencies]
+mkdocs = "^1.3.1"
+mkdocs-material = "^8.4.2"
+novella = "^0.2.3"
+
+[tool.poetry.scripts]
+appstrap = "appstrap.core:main"
+
+[tool.poetry-version-plugin]
+source = "git-tag"
+fallback = "true"
+
+# Styling and linting Configurations
+[tool.isort]
+profile = "black"
+line_length = 120
+
+[tool.black]
+line-length = 120
+target-version = ["py310"]
+
+[tool.poe.tasks]
+isort = "isort --profile=black ."
+black = "black ."
+check-black = {cmd = "black . --check --diff", help = "Check code for black styling"}
+check-isort = {cmd = "isort --check --profile=black .", help = "Check code for import styling"}
+check-docstrings = "pydocstyle -e ."
+check-pylint = "pylint appstrap"
+check = ["check-isort", "check-black", "check-docstrings"]
+lint = ["check-docstrings", "check-pylint"]
+fix = ["isort", "black"]
+test = "pytest --cov=appstrap --cov-report=xml --cov-report=term"
+docs = "pydoc-markdown --build --site-dir public/"
+safety = "safety check"
+bandit = "bandit -r appstrap"
+security = ["safety", "bandit"]
+# requires poethepoet outside of poetry.
+install = "poetry install"
+build = "poetry build"
+
+[tool.pylint]
+
+[tool.pylint.messages_control]
+max-line-length = 120
+
+[tool.pylint.format]
+max-line-length = 120
+max-module-lines = 1000
+
+# Documentation Configuration
+[tool.portray.mkdocs.theme]
+name = "material"
+palette = {primary = "green", accent = "light green"}
+
+# Build System Configuration
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
