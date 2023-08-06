@@ -1,0 +1,1 @@
+select{margin-right:1.5625rem}select,select.nj-form-control{-moz-appearance:none;-webkit-appearance:none}select[size],select[multiple],select.nj-form-control[size],select.nj-form-control[multiple]{height:auto}select ~ .material-icons{position:absolute;right:0;bottom:5px;z-index:0;pointer-events:none}select .nj-form-control:focus::-ms-value{color:#212121;background-color:#fff}
