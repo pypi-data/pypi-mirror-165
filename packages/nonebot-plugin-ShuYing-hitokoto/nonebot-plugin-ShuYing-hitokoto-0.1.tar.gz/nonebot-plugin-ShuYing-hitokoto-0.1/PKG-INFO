@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: nonebot-plugin-ShuYing-hitokoto
+Version: 0.1
+Summary: A hitokoto plugin for NoneBot
+Home-page: https://github.com/SakuraPuare/nonebot-plugin-ShuYing-hitokoto
+Author: SakuraPuare
+Author-email: java20131114@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# ShuYing-hitokoto
+
+这是一个由书樱编写的 一言 Nonebot插件
+
+## issue
+
+右对齐由于腾讯蛋疼的排版设计，还无法完美对齐
+
+## 使用
+
+本插件使用关键词识别：
+
+以 `一言`、`hitokoto` 开头的消息均会被认为为获取一言消息
