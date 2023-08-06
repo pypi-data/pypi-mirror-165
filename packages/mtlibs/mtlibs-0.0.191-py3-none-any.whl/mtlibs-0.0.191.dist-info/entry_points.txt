@@ -1,0 +1,8 @@
+[console_scripts]
+dc = mtlibs.cli.dc:main
+dockerdev = mtlibs.cli.dockerdev:main
+gitup = mtlibs.cli.gitup:main
+mtdp = mtlibs.cli.mtdp:main
+mtgp = mtlibs.cli.mtgp_init:main
+mtpub = mtlibs.cli.mtpublish:main
+
