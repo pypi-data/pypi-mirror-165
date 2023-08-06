@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: unfolded.map-sdk
+Version: 1.1.0
+Summary: Jupyter Widget for Unfolded.ai Maps
+Author: UnfoldedInc.
+Author-email: info@unfolded.ai
+License: (c) 2022 Foursquare Labs, Inc. Terms available at https://www.unfolded.ai/terms-of-service/
+Keywords: Jupyter,Widgets,IPython
+Platform: Linux
+Platform: Mac OS X
+Platform: Windows
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Framework :: Jupyter
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Provides-Extra: test
+Provides-Extra: geopandas
+Provides-Extra: examples
+Provides-Extra: docs
+
+# unfolded.map_sdk
+
+Unfolded Map SDK for Jupyter (Python).
+
+Refer to the documentation website for [how to install](https://docs.unfolded.ai/jupyter/cloud-notebooks/jupyter), [API documentation](https://docs.unfolded.ai/map-sdk/api), and [examples](https://docs.unfolded.ai/map-sdk/examples).

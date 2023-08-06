@@ -1,0 +1,25 @@
+// Ideally most of the compiler options would be consolidated across apps
+// Revisit once we start splitting tsconfigs up
+{
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "declaration": true,
+    "esModuleInterop": true,
+    "lib": ["es2015", "dom"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noEmitOnError": true,
+    "outDir": "lib",
+    "resolveJsonModule": true,
+    "rootDir": "src",
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strict": true,
+    "strictPropertyInitialization": false,
+    "target": "es2015"
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+  ]
+}
