@@ -1,0 +1,7 @@
+README.md
+setup.py
+flatten_everything/__init__.py
+flatten_everything.egg-info/PKG-INFO
+flatten_everything.egg-info/SOURCES.txt
+flatten_everything.egg-info/dependency_links.txt
+flatten_everything.egg-info/top_level.txt
