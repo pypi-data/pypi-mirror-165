@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: pyplots
+Version: 0.2.4
+Summary: Wraps matplotlib for easier plotting.
+Home-page: https://github.com/jakkes/pyplots
+Author: Jakob Stigenberg
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# PyPlots
+[![Build status](https://github.com/jakkes/pyplots/actions/workflows/python-app.yml/badge.svg?branch=main)](https://github.com/jakkes/pyplots/actions/workflows/python-app.yml)
+
+Wraps matplotlib into easier plotting utilities. 
+
+## Installation
+```
+pip install pyplots
+```
+
+## Documentation
+https://jakkes.github.io/pyplots/
+
+## Examples
+https://github.com/jakkes/pyplots/tree/main/examples
+
+
