@@ -1,0 +1,65 @@
+Metadata-Version: 2.1
+Name: django-last-active-4S
+Version: 0.2
+Summary: A Django app to track when a user is last active and eventually provide weekly active user stats
+Home-page: https://4sigma.it/
+Author: Francesco Iacovelli @4Sigma
+Author-email: f.iacovelli@4sigma.it
+License: MIT
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 3.2
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Requires-Python: >=3.9
+License-File: LICENSE
+
+last_active
+===========
+
+last_active is a Django app to track when a user is last active on a
+website. The last active time is kept on the database.
+
+It was forked from ``django-last-seen``.
+
+The intention is to eventually add weekly active user tracking feature
+as well.
+
+Installation
+------------
+
+1. Add “last_active” to your INSTALLED_APPS setting like this
+
+::
+
+       INSTALLED_APPS = [
+           ...
+           'last_active',
+       ]
+
+2. Add ‘last_active.middleware.LastActiveMiddleware’ to
+   MIDDLEWARE_CLASSES tuple found in your settings file.
+
+3. Run ``python manage.py migrate`` to create the last_active models.
+
+Settings
+--------
+
+**LAST_SEEN_DEFAULT_MODULE**
+
+The default module used on the middleware. The default value is default.
+
+**LAST_SEEN_INTERVAL**
+
+How often is the last seen timestamp updated to the database. The
+default is 2 hours.
+
+
