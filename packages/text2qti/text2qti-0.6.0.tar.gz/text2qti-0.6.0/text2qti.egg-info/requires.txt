@@ -1,0 +1,2 @@
+bespon>=0.4
+markdown>=3.2
