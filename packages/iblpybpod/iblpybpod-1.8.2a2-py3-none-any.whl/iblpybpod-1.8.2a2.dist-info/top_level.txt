@@ -1,0 +1,15 @@
+pge_plugin_terminal
+pybpod_alyx_module
+pybpod_gui_plugin_emulator
+pybpod_rotaryencoder_module
+pybpod_soundcard_module
+pybpodapi
+pybpodgui_api
+pybpodgui_plugin
+pybpodgui_plugin_session_history
+pybpodgui_plugin_stmdiagram
+pybpodgui_plugin_timeline
+pybpodgui_plugin_trial_timeline
+pybpodgui_plugin_waveplayer
+pyforms_generic_editor
+pyforms_gui
