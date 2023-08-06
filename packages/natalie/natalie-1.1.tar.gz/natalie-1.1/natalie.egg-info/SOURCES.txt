@@ -1,0 +1,9 @@
+setup.py
+natalie/__init__.py
+natalie/__main__.py
+natalie/natalie.py
+natalie.egg-info/PKG-INFO
+natalie.egg-info/SOURCES.txt
+natalie.egg-info/dependency_links.txt
+natalie.egg-info/requires.txt
+natalie.egg-info/top_level.txt
