@@ -1,0 +1,7 @@
+-c requirements-all.txt
+
+coverage
+pytest
+pytest-cov
+responses
+hypothesis

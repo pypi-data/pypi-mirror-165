@@ -1,0 +1,5 @@
+-c requirements-all.txt
+
+aiohttp
+requests
+user_agents
