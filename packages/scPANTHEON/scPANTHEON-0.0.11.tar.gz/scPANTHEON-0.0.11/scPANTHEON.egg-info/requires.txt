@@ -1,0 +1,7 @@
+bokeh
+json
+pandas
+anndata
+colorcet
+scanpy
+numpy
