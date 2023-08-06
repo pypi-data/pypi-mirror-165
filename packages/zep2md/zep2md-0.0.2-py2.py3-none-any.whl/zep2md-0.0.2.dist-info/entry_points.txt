@@ -1,0 +1,2 @@
+[console_scripts]
+zep2md = zep2md.__main__:app
