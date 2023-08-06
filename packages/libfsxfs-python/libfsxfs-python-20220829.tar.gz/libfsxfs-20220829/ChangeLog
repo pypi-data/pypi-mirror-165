@@ -1,0 +1,35 @@
+TODO:
+* add libfsxfs_volume_get_number_of_file_entries
+
+* add support for extended attributes
+** check v1 and v2 attributes
+** add support for reading v5 remote attribute value data blocks
+
+* complete basic format version 4 and 5 support
+** complete libfsxfs_file_entry_get_sub_file_entry_by_utf8_name
+** complete libfsxfs_file_entry_get_sub_file_entry_by_utf16_name
+
+* for extended attributes by name look up use native XFS B+ tree structures
+
+* implement or remove libfsxfs_file_entry_is_empty from info_handle
+
+* move code to read directory table entry into directory entry?
+
+* store (directory table) parent inode number in directory entry?
+
+* change btree_block into btree_node
+
+* add support for XFS_SB_VERSION_BORGBIT
+
+* add support for format version 1 (need test data)
+* add support for format version 2 (need test data)
+* add support for format version 3 (need test data)
+
+* create test data with unwritten extent
+
+* determine if out of order extents are allowed, create test data
+
+20200105
+* see `git log' for more recent change log
+* Initial version
+
