@@ -1,0 +1,11 @@
+README.md
+setup.py
+bin/dms-collector
+dms_collector/__init__.py
+dms_collector/__main__.py
+dms_collector/dms.py
+dms_collector.egg-info/PKG-INFO
+dms_collector.egg-info/SOURCES.txt
+dms_collector.egg-info/dependency_links.txt
+dms_collector.egg-info/requires.txt
+dms_collector.egg-info/top_level.txt
