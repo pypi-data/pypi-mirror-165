@@ -1,0 +1,13 @@
+shellfire/__init__.py,sha256=pFh7Np5tHZKQ7wETHa5wykuwF8d0VvcnYj6LEYmf-Ho,3843
+shellfire/commands.py,sha256=mZ9GcVKpGFTvYW3u4sNJxW7jgTlJ_EN3YyF8PRkqkFM,19572
+shellfire/config.py,sha256=2gzFGf-mcsb1s1Ee0NGgIIzR5qjbPj9JiIIKTdEOHf0,1476
+shellfire/payloads.py,sha256=BB34w4rcjWLvcOOJfVOy1Xfvk-m9S-Yx6WMtC1y8HCE,809
+shellfire/plugin_collection.py,sha256=93uQXUyXlKAYfHyk7KzxC-aT5iQOk7brHf-8fwm4Jzw,4296
+shellfire/default_plugins/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+shellfire/default_plugins/default.py,sha256=qfEYFk7onqZhN2oT9c6wFCfbYyi7fElRcvbZPIBTIPc,559
+shellfire-0.8.1.dist-info/LICENSE,sha256=vEknRZfCNCuNBK97HjHGfCFUL_0qTTjmQzaYVH3QLhU,1305
+shellfire-0.8.1.dist-info/METADATA,sha256=-F6b_mvQCmKKAmiIw9D1b5S6bNWYn1oNK1QML-3hDDM,398
+shellfire-0.8.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+shellfire-0.8.1.dist-info/entry_points.txt,sha256=PfikdWbXKyGuhInInhsjVdpF1ZyGYO3KG4evpy8ZCrk,44
+shellfire-0.8.1.dist-info/top_level.txt,sha256=u5Z9BXzw53RwSeqw2pjRUbKEeMCru-3WqlGO200n9kA,10
+shellfire-0.8.1.dist-info/RECORD,,
