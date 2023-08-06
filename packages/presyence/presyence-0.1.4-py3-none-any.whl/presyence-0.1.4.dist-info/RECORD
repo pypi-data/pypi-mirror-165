@@ -1,0 +1,10 @@
+presyence/__init__.py,sha256=IMjkMO3twhQzluVTo8Z6rE7Eg-9U79_LGKMcsWLKBkY,22
+presyence/main.py,sha256=JzRvsOAJeV9UubK6-I17yFQlMBsEaLnYS8QsiFsZvYw,859
+presyence/reporter/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+presyence/simpletests.py,sha256=0SxSm1nO06LjXgaZgD7MAeYZaUSb5VnJG2cdXBTcRag,2442
+presyence/testrunner/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+presyence/testrunner/discovery.py,sha256=G8NH3njyb7AYmDkadNGt3Q5klF92ekTZ_doO9v8zq9o,1108
+presyence-0.1.4.dist-info/entry_points.txt,sha256=HMflf2SesbrJ5KENKUhWiCBxwy9o31Ik89QWfz2chzs,48
+presyence-0.1.4.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+presyence-0.1.4.dist-info/METADATA,sha256=5DbiySsdMODIbZtpSjCo-WYimrkoW-UmUYI9lYMDluA,414
+presyence-0.1.4.dist-info/RECORD,,
