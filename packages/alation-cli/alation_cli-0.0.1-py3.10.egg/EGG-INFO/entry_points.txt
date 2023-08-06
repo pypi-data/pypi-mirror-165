@@ -1,0 +1,3 @@
+[console_scripts]
+al = alation.cli.main:main
+

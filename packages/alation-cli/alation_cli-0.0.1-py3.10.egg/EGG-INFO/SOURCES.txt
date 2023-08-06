@@ -1,0 +1,12 @@
+setup.py
+alation/__init__.py
+alation/cli/__init__.py
+alation/cli/main.py
+alation/cli/command_modules/__init__.py
+alation/cli/core/__init__.py
+alation/cli/core/auth.py
+alation_cli.egg-info/PKG-INFO
+alation_cli.egg-info/SOURCES.txt
+alation_cli.egg-info/dependency_links.txt
+alation_cli.egg-info/entry_points.txt
+alation_cli.egg-info/top_level.txt
