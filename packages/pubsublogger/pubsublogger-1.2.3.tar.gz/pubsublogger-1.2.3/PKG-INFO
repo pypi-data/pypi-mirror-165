@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: pubsublogger
+Version: 1.2.3
+Summary: Logging system using the PubSub functionality of Redis.
+Home-page: https://github.com/ail-project/PubSubLogger
+Author: Raphaël Vinot
+Author-email: raphael.vinot@circl.lu
+Maintainer: Aurélien Thirion, Raphaël Vinot
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Telecommunications Industry
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: System :: Logging
+License-File: LICENSE.txt
+
+UNKNOWN
+
