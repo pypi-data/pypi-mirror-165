@@ -1,0 +1,24 @@
+lfdocs-conf v0.2.0 Release Notes
+================================
+
+Thanks to Thanh and Trevor for contributing to this release.
+
+Notable changes since v0.1.4
+----------------------------
+
+346bfb7	Trevor Bramwell	Conditionally import OPNFV Theme
+If the 'opnfv' html_theme is specified, sphinx_opnfv_theme will be
+imported and used as the theme.
+
+
+Full Change Log
+---------------
+255554f	Trevor Bramwell	Use Sphinx defaults when config values are missing
+6706ac9	Trevor Bramwell	Fix capitalization for Sphinx requirement
+467dfa8	Thanh Ha	Default release to version if not in use
+e3993cb	Trevor Bramwell	Update URL listed in setup.py
+3eda248	Thanh Ha	Add missing links to docs-conf and valid defaults
+5cc20a8	Thanh Ha	Add details on what to include in tox.ini
+d4d7ae6	Thanh Ha	Add a step to test the docs generation
+346bfb7	Trevor Bramwell	Conditionally import OPNFV Theme
+cb6923f	Trevor Bramwell	Update OPNFV Defaults

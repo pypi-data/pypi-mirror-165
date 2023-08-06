@@ -1,0 +1,15 @@
+lfdocs-conf v0.2.1 Release Notes
+================================
+
+Thanks to Trevor for contributing to this release.
+
+Notable changes since v0.2.0
+----------------------------
+
+6e81618 Trevor Bramwell Set _static defaults for LF Projects
+Fixed an issue introduced in 255554f which would have removed static
+assets from downstream projects docs output.
+
+Full Change Log
+---------------
+6e81618 Trevor Bramwell Set _static defaults for LF Projects

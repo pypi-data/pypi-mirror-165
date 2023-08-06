@@ -1,0 +1,12 @@
+PyYAML
+Sphinx>=4.2.0
+sphinx_bootstrap_theme
+sphinx-tabs
+sphinxcontrib-blockdiag
+sphinxcontrib-needs
+sphinxcontrib.plantuml
+sphinxcontrib-nwdiag
+sphinxcontrib-seqdiag
+sphinxcontrib-swaggerdoc
+sphinx-rtd-theme
+funcparserlib>=1.0.0a0

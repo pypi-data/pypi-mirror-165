@@ -1,0 +1,16 @@
+lfdocs-conf v0.2.5 Release Notes
+================================
+
+Thanks to everyone who contributed to this release.
+
+Notable changes since v0.2.4
+----------------------------
+
+Fixes solution from lfdocs-conf which removed Sphinx from requirements.txt.
+we need lfdocs-conf to ship Sphinx to our consumers so removing it was a bad
+idea.
+
+Full Change Log
+---------------
+
+b90afb2 Thanh Ha        Move docs reqs back to reqs.txt

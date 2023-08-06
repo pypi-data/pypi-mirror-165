@@ -1,0 +1,3 @@
+pytest  # MIT
+reno<3;python_version<'3.6'  # Apache-2.0
+reno;python_version>='3.6'  # Apache-2.0

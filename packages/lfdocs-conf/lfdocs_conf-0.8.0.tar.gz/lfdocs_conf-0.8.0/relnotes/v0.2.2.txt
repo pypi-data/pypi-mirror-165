@@ -1,0 +1,16 @@
+lfdocs-conf v0.2.2 Release Notes
+================================
+
+Thanks to Thanh for contributing to this release.
+
+Notable changes since v0.2.1
+----------------------------
+
+The default intersphinx mapping now includes a link to the common-packer
+docs.
+
+Full Change Log
+---------------
+1f043ef Thanh Ha  Add common-packer intersphinx mapping
+16e03ef Thanh Ha  Add flag to fail with warnings in instructions
+050e97b Thanh Ha  Fail Sphinx build even on warnings

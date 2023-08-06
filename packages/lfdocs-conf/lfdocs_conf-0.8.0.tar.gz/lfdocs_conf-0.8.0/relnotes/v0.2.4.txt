@@ -1,0 +1,20 @@
+lfdocs-conf v0.2.4 Release Notes
+================================
+
+Thanks to everyone who contributed to this release.
+
+Notable changes since v0.2.3
+----------------------------
+
+The Sphinx version is limited to < 1.8.0 due to issues that
+have yet to be identified and resolved.
+
+Full Change Log
+---------------
+
+1c0cbeb Trevor Bramwell Release lfdocs-conf v0.2.4
+240ae4b Thanh Ha        Pin Sphinx to version <1.8.0
+d4f2706 Thanh Ha        Add PBR files to .gitignore
+378ea00 Thanh Ha        Setup universal wheel
+6c80e98 Thanh Ha        Setup PBR
+0ceeea2 Thanh Ha        Bump lfdocs-conf to 0.3.0-dev

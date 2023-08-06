@@ -1,0 +1,14 @@
+PyYAML  # MIT
+Sphinx>=4.2.0  # BSD
+sphinx_bootstrap_theme
+sphinx-tabs
+sphinxcontrib-blockdiag  # BSD
+sphinxcontrib-needs
+sphinxcontrib.plantuml
+sphinxcontrib-nwdiag  # BSD
+sphinxcontrib-seqdiag # BSD
+sphinxcontrib-swaggerdoc
+sphinx-rtd-theme
+
+# ONAP needs this, should not affect any others.
+funcparserlib>=1.0.0a0

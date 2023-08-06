@@ -1,0 +1,17 @@
+lfdocs-conf v0.2.3 Release Notes
+================================
+
+Thanks to everyone who contributed to this release.
+
+Notable changes since v0.2.2
+----------------------------
+
+lfdocs links now use https:// rather than http://
+
+Full Change Log
+---------------
+
+da42118 Thanh Ha        Remove echo of docs path
+7544e9e Thanh Ha        Add "skipsdist = true" to tox.ini
+4b31e9a Thanh Ha        Add pre-commit hook for trailing-whitespace
+36a5aca Thanh Ha        Update lfdocs links to https
