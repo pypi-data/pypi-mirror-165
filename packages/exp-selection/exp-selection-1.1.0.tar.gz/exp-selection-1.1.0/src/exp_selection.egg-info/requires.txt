@@ -1,0 +1,7 @@
+scikit-allel
+zarr
+argparse
+numpy
+pandas
+matplotlib
+seaborn
