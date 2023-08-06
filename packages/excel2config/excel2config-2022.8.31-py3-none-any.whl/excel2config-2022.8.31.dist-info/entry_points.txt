@@ -1,0 +1,2 @@
+[console_scripts]
+excel2config = excel2config.excel2config:main
