@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: SmiToText
+Version: 0.1656
+Summary: test processing
+Home-page: https://github.com/jjeaby/SmiToText
+Author: Lee Yong Jin
+Author-email: jjeaby@gmail.com
+License: Apache 2.0
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: mecab-python3
+Requires-Dist: nltk
+Requires-Dist: spacy
+Requires-Dist: langdetect
+Requires-Dist: soyspacing
+Requires-Dist: scipy
+Requires-Dist: scikit-learn
+Requires-Dist: python-crfsuite
+Requires-Dist: tensorflow
+Requires-Dist: caret
+Requires-Dist: krwordrank
+Requires-Dist: wordcloud
+Requires-Dist: matplotlib
+Requires-Dist: pillow
+Requires-Dist: konlpy
+
+## 이 프로젝트는 형태소 분석, 자막 취합 등을 위한 프로젝트입니다. 
+
+
+
+
+### * 추가 라이브러리 설치 방법 
+#### 1. spacy tokenizer 를 위한 english 설치 
+```
+python -m spacy download en
+
+
+python
+import nltk
+nltk.download()
+
+```
+#### 2. 카카오 형태소 분석기 설치
+```
+https://github.com/kakao/khaiii
+
+https://github.com/kakao/khaiii/wiki/%EB%B9%8C%EB%93%9C-%EB%B0%8F-%EC%84%A4%EC%B9%98
+
+```
+
+
+
