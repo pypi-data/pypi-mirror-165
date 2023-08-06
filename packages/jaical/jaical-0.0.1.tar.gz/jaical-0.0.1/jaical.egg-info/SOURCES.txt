@@ -1,0 +1,6 @@
+README.txt
+setup.py
+jaical.egg-info/PKG-INFO
+jaical.egg-info/SOURCES.txt
+jaical.egg-info/dependency_links.txt
+jaical.egg-info/top_level.txt
