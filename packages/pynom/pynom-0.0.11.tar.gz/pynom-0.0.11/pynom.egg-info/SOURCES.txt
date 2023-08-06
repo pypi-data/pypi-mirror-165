@@ -1,0 +1,10 @@
+README.md
+setup.py
+pynom/__init__.py
+pynom/pynom.py
+pynom/test_pynom.py
+pynom.egg-info/PKG-INFO
+pynom.egg-info/SOURCES.txt
+pynom.egg-info/dependency_links.txt
+pynom.egg-info/requires.txt
+pynom.egg-info/top_level.txt
