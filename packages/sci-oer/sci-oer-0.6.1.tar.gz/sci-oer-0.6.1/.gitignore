@@ -1,0 +1,11 @@
+.venv
+Pipfile
+Pipfile.lock
+*.egg-info
+build
+dist
+__pycache__
+*.log
+
+
+config.yml
