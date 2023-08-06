@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: PyBayfile
+Version: 1.0
+Summary: Module to integrate bayfiles and control them in your code
+Home-page: https://github.com/CSM-BlueRed/PyBayfile
+Author: BlueRed
+License: UNKNOWN
+Keywords: python,files,api,web,bayfile
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: aiohttp
+
+# PyBayfile
+PyBayfile is a Python module for handling bayfiles
+bayfiles is a website that allows users to upload and share files
+
+## exmaple of usage:
+```python
+from PyBayfile import Archive
+
+# make the archive
+path = './etc/file_to_upload.exe'
+archive: Archive = Archive.make_from_path(path)
+
+# print the link of the archive: link is str(archive) or archive.link
+print(f'your file is uploaded to: {archive} and the size is {archive.size} bytes')
+```
+
+## Bayfile class (Archive)
+__attributes__
+| name | value
+| --- | --- |
+| .url | the short url of the bayfile
+| .long_url | the long url of the bayfile
+| .id | the ID of the bayfile
+| .name | the name of the bayfile
+| .size | the size of the bayfile's content in bytes
+| .api_data | the data that returned the API
+
+__class methods__
+| name | usage
+| --- | --- |
+| make_from_path | create a Bayfile from the file path
+| make_from_text | create a Bayfile with the given text in it
+| from_id | get a bayfile by his ID
+| from_url | get a bayfile by his URL
+
+
+> by [BlueRed](https://github.com/CSM-BlueRed)
+
