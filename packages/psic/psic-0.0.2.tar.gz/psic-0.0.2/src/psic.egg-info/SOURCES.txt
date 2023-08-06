@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+src/psic/__init__.py
+src/psic/calc_fraction.py
+src/psic/packing_spheres_in_cube.py
+src/psic.egg-info/PKG-INFO
+src/psic.egg-info/SOURCES.txt
+src/psic.egg-info/dependency_links.txt
+src/psic.egg-info/top_level.txt
