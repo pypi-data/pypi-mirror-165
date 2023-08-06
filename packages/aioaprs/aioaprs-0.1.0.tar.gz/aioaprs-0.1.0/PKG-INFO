@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: aioaprs
+Version: 0.1.0
+Summary: Async Python3 libraray implementing an APRS-IS client
+Author-email: Luca Cireddu <sardylan@gmail.com>
+License: GNU General Public License v3 or later (GPLv3+)
+Project-URL: Homepage, https://github.com/sardylan/aioaprs
+Keywords: aprs,aprs-is,socket,aiosocket,ham,hamradio
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: AsyncIO
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+License-File: LICENSE.md
+
+# aioaprs
+
+> Async Python3 libraray implementing an APRS-IS client
+
+This library aims to implement a complete APRS-IS client based on the modern async pattern in Python 3.
+
+It's heavily based on `aprslib`, available on
+[https://github.com/rossengeorgiev/aprs-python](https://github.com/rossengeorgiev/aprs-python).

@@ -1,0 +1,16 @@
+LICENSE.md
+README.md
+pyproject.toml
+setup.py
+src/__init__.py
+src/aioaprs.py
+src/config.py
+src/default.py
+src/packets.py
+src/parser.py
+src/serializer.py
+src/aioaprs.egg-info/PKG-INFO
+src/aioaprs.egg-info/SOURCES.txt
+src/aioaprs.egg-info/dependency_links.txt
+src/aioaprs.egg-info/requires.txt
+src/aioaprs.egg-info/top_level.txt
