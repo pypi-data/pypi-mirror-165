@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: jdv-funcutils
+Version: 1.0.1
+Summary: Function utilties.
+Author: Justin Vrana
+Author-email: justin.vrana@justbiotherapeutics.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Provides-Extra: documentation
+Requires-Dist: PyYAML (>=6.0,<7.0); extra == "documentation"
+Requires-Dist: Sphinx (>=5.0.1,<6.0.0); extra == "documentation"
+Requires-Dist: sphinx-autodoc-typehints (>=1.18.2,<2.0.0); extra == "documentation"
+Requires-Dist: sphinx-rtd-theme (>=1.0.0,<2.0.0); extra == "documentation"
