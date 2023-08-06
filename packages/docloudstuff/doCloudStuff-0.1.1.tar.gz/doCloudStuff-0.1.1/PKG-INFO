@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: docloudstuff
+Version: 0.1.1
+Summary: 
+Home-page: https://github.com/stephenbawks/docloudstuff
+License: MIT-0
+Author: Stephen Bawks
+Author-email: stephen@bawks.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: License :: Other/Proprietary License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.9
+Project-URL: Repository, https://github.com/stephenbawks/docloudstuff
+Description-Content-Type: text/markdown
+
+
