@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+pipyadc/ADS1256_default_config.py
+pipyadc/ADS1256_definitions.py
+pipyadc/__init__.py
+pipyadc/_version.py
+pipyadc/pipyadc.py
+pipyadc.egg-info/PKG-INFO
+pipyadc.egg-info/SOURCES.txt
+pipyadc.egg-info/dependency_links.txt
+pipyadc.egg-info/requires.txt
+pipyadc.egg-info/top_level.txt
+pipyadc/utils/__init__.py
+pipyadc/utils/text_screen.py
