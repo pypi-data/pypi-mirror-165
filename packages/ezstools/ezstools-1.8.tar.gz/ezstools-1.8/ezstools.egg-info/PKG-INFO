@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: ezstools
+Version: 1.8
+Summary: Libreria Multi proposito, con funciones variadas
+Home-page: 
+Author: Hendrick Y. "NoVa
+Author-email: hendrickrodriguez.nova@gmail.com
+License: MIT
+Description-Content-Type: text/markdown
+
+### ezstools
+Libreria con funciones y utilidades variadas
+
+#### Modulos:
+- console
+- datastructures
+- funcs
+- json_tools
+- random_generator
+- templates
+- html_slice
