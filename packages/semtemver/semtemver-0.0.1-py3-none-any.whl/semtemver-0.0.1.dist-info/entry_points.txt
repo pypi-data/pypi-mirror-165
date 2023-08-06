@@ -1,0 +1,3 @@
+[console_scripts]
+semtemver=semtemver.__main__:main
+

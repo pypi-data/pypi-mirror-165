@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: semtemver
+Version: 0.0.1
+Summary: 
+License: MIT
+Author: dskard
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Description-Content-Type: text/markdown
+
+# semtemver
+playing with semantic versioning and publishing
+
