@@ -1,0 +1,13 @@
+virgo/__init__.py,sha256=AW-jNOXuuU6gnnPyPNAeHX6zQunPuGObkDXDA1djmCI,179
+virgo/ftf.grc,sha256=L2skQFAybDKgoqjnamhCp1N_5TIdtZxa46diXR2A1Sw,14222
+virgo/map.txt,sha256=FQcKynR-DhoLfifhwS0YDk-gwncRj2mAU9YbujXAQ8U,8000000
+virgo/run_ftf.py,sha256=BNGgodIku7M5Xeyp7BbaEjhX3Y_nBm7pWx8kH1fgjfo,8845
+virgo/run_wola.py,sha256=Tiwr91do1fV3zmQKKz6qTfgjhizzAFeZtM2uyk4B1eo,12014
+virgo/virgo.py,sha256=Lv6EgxxJ0XyCqeOjJPzQbVHv2eAd-xhnnjdXnAQXOGY,42264
+virgo/wola.grc,sha256=MtfZ5BdDnC18XY_wBKg2zc_knQwnmyhzabr4DmQ0PI0,19110
+astro_virgo-3.8.2.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+astro_virgo-3.8.2.dist-info/METADATA,sha256=Bp5u_CViu99RNM-PrzX8YO8PYynG5HM5saPd4hCv9yI,9294
+astro_virgo-3.8.2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+astro_virgo-3.8.2.dist-info/entry_points.txt,sha256=ks9ghkoWqq4_hgfkbG18ou3oCjxDTPqR1Z6nbgCbBVM,43
+astro_virgo-3.8.2.dist-info/top_level.txt,sha256=_MSlYat0rv8SlZUJ6UwjzR80vkux5ZBDoPMxw1s8Xd8,6
+astro_virgo-3.8.2.dist-info/RECORD,,
