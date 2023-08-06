@@ -1,0 +1,2 @@
+[console_scripts]
+duviz = duviz:main
