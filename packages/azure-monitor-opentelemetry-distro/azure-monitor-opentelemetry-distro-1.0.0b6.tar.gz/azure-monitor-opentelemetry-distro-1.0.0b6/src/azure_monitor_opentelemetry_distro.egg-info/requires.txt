@@ -1,0 +1,2 @@
+azure-monitor-opentelemetry-exporter==1.0.0b7
+opentelemetry-instrumentation==0.32b0
