@@ -1,0 +1,4 @@
+include src/rhdzmota/VERSION
+include requirements.txt
+include requirements-develop.txt
+include bin/rhdzmota
