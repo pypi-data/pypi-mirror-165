@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+pyproject.toml
+src/__init__.py
+src/utils.py
+src/visual_edge.py
+src/visual_graph.py
+src/visual_node.py
+src/visual_graph.egg-info/PKG-INFO
+src/visual_graph.egg-info/SOURCES.txt
+src/visual_graph.egg-info/dependency_links.txt
+src/visual_graph.egg-info/requires.txt
+src/visual_graph.egg-info/top_level.txt
