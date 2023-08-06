@@ -1,0 +1,2 @@
+[console_scripts]
+owl = owl_client.cli:main
