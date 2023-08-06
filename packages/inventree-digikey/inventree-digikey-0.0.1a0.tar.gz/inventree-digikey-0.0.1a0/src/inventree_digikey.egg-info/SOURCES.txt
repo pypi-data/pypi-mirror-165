@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.cfg
+src/inventree_digikey/__init__.py
+src/inventree_digikey/digikey.py
+src/inventree_digikey.egg-info/PKG-INFO
+src/inventree_digikey.egg-info/SOURCES.txt
+src/inventree_digikey.egg-info/dependency_links.txt
+src/inventree_digikey.egg-info/entry_points.txt
+src/inventree_digikey.egg-info/requires.txt
+src/inventree_digikey.egg-info/top_level.txt
