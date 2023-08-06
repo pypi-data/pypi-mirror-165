@@ -1,0 +1,11 @@
+reader/__init__.py,sha256=AVDvTBnvgUsmBppRMjq-OcT5_9z3nYxo4F7TcJnzcAk,789
+reader/__main__.py,sha256=f65TY-SW7m7nJEvdOiK9TIifeG0Gk6oZIsPGgDt6ObE,1603
+reader/config.toml,sha256=7VPI2hoCis_xQxA_qukhJ17IOYtDBeH0zXbaS-LNtIA,46
+reader/feed.py,sha256=qazq267X1-d-9Nx-9VUAk59VodufNBDzWSvj0vf_ZWc,1518
+reader/viewer.py,sha256=N71CXhlm0WqoVK8nFx95oabCZpppedPLWaBbrlQPQJE,428
+lauris_real_python_reader-1.0.0.dist-info/LICENSE,sha256=3KfruSCUwwkdhpz-mxrz3YGyGaZg2puBkGTOY5hwQi8,1067
+lauris_real_python_reader-1.0.0.dist-info/METADATA,sha256=VX2xQ5cp5-AEUUMIri7f57hKEVoykmYmVyscG258oI4,5107
+lauris_real_python_reader-1.0.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+lauris_real_python_reader-1.0.0.dist-info/entry_points.txt,sha256=j4KgHXbVGbGyfTySc1ypBdERpfihO4WNjppvCdE9HjE,52
+lauris_real_python_reader-1.0.0.dist-info/top_level.txt,sha256=zVRv6FulXZWKf9Gycz9vjxul5OCZ3fCq2Attdwsu7Z4,7
+lauris_real_python_reader-1.0.0.dist-info/RECORD,,
