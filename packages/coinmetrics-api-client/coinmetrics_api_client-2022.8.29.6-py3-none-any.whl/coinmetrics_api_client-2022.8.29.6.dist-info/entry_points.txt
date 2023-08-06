@@ -1,0 +1,4 @@
+[console_scripts]
+coinmetrics=coinmetrics.typer_cli:main
+poetry=poetry.console:run
+
