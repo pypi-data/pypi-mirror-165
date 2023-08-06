@@ -1,0 +1,3 @@
+[console_scripts]
+p3man=p3man:cli
+

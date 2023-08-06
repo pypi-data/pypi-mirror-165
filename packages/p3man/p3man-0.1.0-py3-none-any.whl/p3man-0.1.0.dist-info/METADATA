@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: p3man
+Version: 0.1.0
+Summary: Password manager. Manage your passwords through encryption.
+Author: curtis
+Author-email: curtis.hu688@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: click (>=8.1.3,<9.0.0)
+Requires-Dist: cryptography (>=37.0.4,<38.0.0)
