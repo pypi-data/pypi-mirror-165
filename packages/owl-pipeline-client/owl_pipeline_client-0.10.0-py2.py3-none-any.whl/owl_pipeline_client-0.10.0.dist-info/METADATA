@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: owl-pipeline-client
+Version: 0.10.0
+Summary: Pipeline Framework
+Home-page: https://github.com/eddienko/owl-pipeline-client
+Author: Eduardo Gonzalez Solares
+Author-email: eglez@ast.cam.ac.uk
+License: GNU General Public License v3
+Project-URL: Documentation, https://eddienko.github.io/owl-pipeline/
+Project-URL: Tracker, https://github.com/eddienko/owl-pipeline-client/issues
+Keywords: owl,pipeline
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.7
+License-File: LICENSE
+License-File: AUTHORS.rst
+Requires-Dist: requests
+Requires-Dist: pyyaml
+Requires-Dist: dask
+Requires-Dist: distributed
+Requires-Dist: voluptuous
+Requires-Dist: loky
+
+Owl Pipeline Client
+===================
+
+
+Client for submitting Owl pipelines to a remote cluster running Dask on Kubernetes.
+
+Owl is a framework for submitting jobs (a.k.a. pipelines) in a remote cluster.
+The Owl server runs jobs in Kubernetes using Dask. The Owl client authenticates
+with the remote server and submits the jobs as specified in a pipeline
+definition file.
+
+See documentation_ for more information.
+
+.. _documentation: https://eddienko.github.io/owl-pipeline/
