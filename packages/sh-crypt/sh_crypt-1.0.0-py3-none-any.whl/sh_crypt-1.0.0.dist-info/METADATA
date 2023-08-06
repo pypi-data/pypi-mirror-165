@@ -1,0 +1,68 @@
+Metadata-Version: 2.1
+Name: sh-crypt
+Version: 1.0.0
+Summary: Simple symmetric encryption and decryption (ECB) for text
+Home-page: https://github.com/steven1909/sh-crypt.git
+Author: Steven HELLEC
+Author-email: steven.hellc@live.fr
+License: MIT license
+Keywords: encryption,decryption,cipher,AES,ECB,crypto,cryptography
+Platform: any
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Topic :: Security :: Cryptography
+Classifier: Topic :: Security
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: cryptography (==37.0.4)
+Requires-Dist: cffi (>=1.12)
+Requires-Dist: pycparser
+
+SH Crypt
+========
+A simple symetric encyption decryption algorithm
+------------------------------------------------
+About
+-----
+SH Crypt is base on library cryptography algorithm and use more specifically the Electronic Code Book (ECB) for symetric encryption and decryption.
+
+Here are some code example to use the library.
+
+Generate a key, encrypt and decrypt text
+----------------------------------------
+```python
+from sh_crypt import GenKeySH,CryptSH
+
+key = GenKeySH().gen_sym_key()
+# Ex : 'e169344ae15719669ed2fecea1ac4773'
+
+password = "Hello World !!"
+
+crypt = CryptSH(key)
+
+encrypt_password = crypt.encrypt_password(password)
+# Ex : '469feb93adc2af609a98e6b7cee859bb'
+
+crypt.decrypt_password(encrypt_password)
+# 'Hello World !!'
+```
+
+Install
+-------
+You can install sh-crypt with [pip](https://pypi.org/project/sh-crypt/):
+
+```python
+pip install sh-crypt
+```
+
+or download the [sh-crypt source](https://github.com/steven1909/sh-crypt/archive/refs/heads/master.zip), unpack it, navigate to the top level directory, and install with the command:
+
+```python
+python setup.py install
+```
