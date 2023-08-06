@@ -1,0 +1,123 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+#
+# Copyright 2022 Greg Albrecht <oss@undef.net>
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# Author:: Greg Albrecht W2GMD <oss@undef.net>
+#
+
+"""PyTAK Command Line."""
+
+import argparse
+import asyncio
+import importlib
+import logging
+import os
+import platform
+import sys
+
+from configparser import ConfigParser, SectionProxy
+
+import pytak
+
+__author__ = "Greg Albrecht W2GMD <oss@undef.net>"
+__copyright__ = "Copyright 2022 Greg Albrecht"
+__license__ = "Apache License, Version 2.0"
+
+
+# Python 3.6 support:
+if sys.version_info[:2] >= (3, 7):
+    from asyncio import get_running_loop
+else:
+    from asyncio import get_event_loop as get_running_loop
+
+
+async def main(
+    app_name: str, config: SectionProxy, original_config: ConfigParser
+) -> None:
+    """
+    Abstract implementation of an async main function.
+
+    Parameters
+    ----------
+    app_name : `str`
+        Name of the app calling this function.
+    config : `SectionProxy`
+        A dict of configuration parameters & values.
+    """
+    app = importlib.__import__(app_name)
+    clitool: pytak.CLITool = pytak.CLITool(config)
+    create_tasks = getattr(app, "create_tasks")
+    await clitool.setup()
+    clitool.add_tasks(create_tasks(config, clitool, original_config))
+    await clitool.run()
+
+
+def cli(app_name: str = "inrcot") -> None:
+    """
+    Abstract implementation of a Command Line Interface (CLI).
+
+    Parameters
+    ----------
+    app_name : `str`
+        Name of the app calling this function.
+    """
+    app = importlib.__import__(app_name)
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "-c",
+        "--CONFIG_FILE",
+        dest="CONFIG_FILE",
+        default="config.ini",
+        type=str,
+        help="Optional configuration file. Default: config.ini",
+    )
+    namespace = parser.parse_args()
+    cli_args = {k: v for k, v in vars(namespace).items() if v is not None}
+
+    # Read config:
+    env_vars = os.environ
+    env_vars["COT_URL"] = env_vars.get("COT_URL", pytak.DEFAULT_COT_URL)
+    env_vars["COT_HOST_ID"] = f"{app_name}@{platform.node()}"
+    env_vars["COT_STALE"] = getattr(app, "DEFAULT_COT_STALE", pytak.DEFAULT_COT_STALE)
+    config: ConfigParser = ConfigParser(env_vars)
+
+    config_file = cli_args.get("CONFIG_FILE")
+    if os.path.exists(config_file):
+        logging.info("Reading configuration from %s", config_file)
+        config.read(config_file)
+    else:
+        config.add_section(app_name)
+
+    original_config: ConfigParser = config
+    config: SectionProxy = config[app_name]
+
+    debug = config.getboolean("DEBUG")
+    if debug:
+        import pprint  # pylint: disable=import-outside-toplevel
+
+        # FIXME: This doesn't work with weird bash escape stuff.
+        print("Showing Config: %s", config_file)
+        print("=" * 10)
+        pprint.pprint(config)
+        print("=" * 10)
+
+    if sys.version_info[:2] >= (3, 7):
+        asyncio.run(main(app_name, config, original_config), debug=debug)
+    else:
+        loop = get_running_loop()
+        try:
+            loop.run_until_complete(main(app_name, config, original_config))
+        finally:
+            loop.close()
