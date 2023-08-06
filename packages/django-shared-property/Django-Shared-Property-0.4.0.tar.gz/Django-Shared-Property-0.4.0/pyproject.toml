@@ -1,0 +1,51 @@
+[tool.poetry]
+name = "Django-Shared-Property"
+version = "0.4.0"
+description = "Properties that are both ORM expressions and python code."
+authors = ["Matthew Schinckel <matt@schinckel.net>"]
+license = "MIT license"
+
+readme = "README.rst"
+
+repository = "https://github.com/schinckel/django-shared-property"
+
+homepage = "https://django-shared-property.readthedocs.io"
+
+
+packages = [
+    { include = "django_shared_property", from = "src"},
+]
+
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+]
+[tool.poetry.dependencies]
+python = ">3.8"
+
+[tool.poetry.dev-dependencies]
+bump2version = "*"
+pip = "*"
+wheel = "*"
+watchdog = "*"
+flake8 = "*"
+tox = "*"
+coverage = "*"
+Sphinx = "*"
+twine = "*"
+
+pytest = "*"
+pytest-runner = "*"
+pytest-cov = "*"
+rstcheck = "*"
+ptpython = "*"
+
+[build-system]
+requires = ["poetry>=1.0"]
+build-backend = "poetry.masonry.api"
