@@ -1,0 +1,14 @@
+[build-system]
+requires = ['setuptools>=61.0.0', 'wheel']
+build-backend = 'setuptools.build_meta'
+
+[project]
+name = 'msqd'
+version = '0.0.1'
+description = 'Trading strategy development and deployment'
+readme = 'README.md'
+authors = [{ name='Samuel Naughton Baldwin', email='sam.naughton2000@gmail.com' }]
+license = { file = 'LICENSE' }
+
+[project.urls]
+Homepage = 'https://github.com/samnaughtonb/msqd'

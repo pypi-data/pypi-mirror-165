@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+msqd.egg-info/PKG-INFO
+msqd.egg-info/SOURCES.txt
+msqd.egg-info/dependency_links.txt
+msqd.egg-info/top_level.txt
