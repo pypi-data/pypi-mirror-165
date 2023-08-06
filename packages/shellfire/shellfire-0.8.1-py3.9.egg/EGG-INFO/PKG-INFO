@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: shellfire
+Version: 0.8.1
+Summary: shellfire is an exploitation shell focusing on exploiting command injection vulnerabilities, eg., LFI, RFI, SSTI, etc.
+Home-page: https://github.com/unix-ninja/shellfire
+Author: unix-ninja
+Author-email: chris@unix-ninja.com
+License: BSD
+Platform: UNKNOWN
+Requires-Python: >=3.9.0
+License-File: LICENSE
+
+UNKNOWN
+
