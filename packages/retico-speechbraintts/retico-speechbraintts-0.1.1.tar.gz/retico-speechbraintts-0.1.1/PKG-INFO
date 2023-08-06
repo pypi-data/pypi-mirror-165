@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: retico-speechbraintts
+Version: 0.1.1
+Summary: Local speechbrain speech synthesis for retico.
+Home-page: https://github.com/retico-team/retico-speechbraintts
+Download-URL: https://github.com/retico-team/retico-speechbraintts
+Author: Thilo Michael
+Author-email: uhlomuhlo@gmail.com
+Keywords: retico,framework,incremental,dialogue,dialog
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Python: >=3.6, <4
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# retico-speechbraintts
+
+Local speechbrain speech synthesis for retico.
+
+## Installation and requirements
+
+You can install the module via pip:
+
+```bash
+$ pip install retico-speechbraintts
+```
+
+For this, PyTorch has to be installed:
+
+```bash
+$ pip install torch
+```
+
+## Example
+
+```python
+from retico_core import *
+import retico_wav2vecasr
+import retico_speechbraintts
+
+microphone = audio.MicrophoneModule()
+asr = retico_wav2vecasr.Wav2VecASRModule("en")
+tts = retico_speechbraintts.SpeechBrainTTSModule("en")
+speaker = audio.SpeakerModule(rate=22050)
+
+microphone.subscribe(asr)
+asr.subscribe(tts)
+tts.subscribe(speaker)
+
+network.run(asr)
+
+print("Running the TTS. Press enter to exit")
+input()
+
+network.stop(asr)
+```
