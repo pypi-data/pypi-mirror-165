@@ -1,0 +1,16 @@
+spotter/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spotter/api.py,sha256=mULlxvfr37QAPbwm-VE-JetkB3x3RoeYASTeELUxseo,10044
+spotter/cli.py,sha256=sy5h38BCwLXf3xTlLbDns0L1Bc7GiaYIb-SZgf-QvW0,3051
+spotter/environment.py,sha256=Y0U3xL-zDlypCSmK_H6eEfu1f7IOIBYu6mdgQVgikw0,9043
+spotter/parsing.py,sha256=dmQetnzWX7fXbtY4QhBHP2-Q8i-4-g-XTOgQ7LI0zX0,19011
+spotter/rewriting.py,sha256=CTFrWk25cH7Ws9Oli33RATQy7Ar8evAENubdJlV9W4s,2878
+spotter/storage.py,sha256=POcZz0le0KpyvV-k8VEf9sGnj9qvNvaCuIWZBwuwtYY,3804
+spotter/commands/__init__.py,sha256=NBojhOSqkFRgO5RtjvK1cSU_SILQyVPJ_Wt5vTRvftI,56
+spotter/commands/scan.py,sha256=uwoV2rxE8mR6HhEUp-BkOAOmxMmcOunLwuHbuf_oGgM,14593
+steampunk_spotter-0.8.1.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+steampunk_spotter-0.8.1.dist-info/METADATA,sha256=10NIY9niI0EpHzcui9jOJe0JlD6FqCgDVIFXu5RqArA,22124
+steampunk_spotter-0.8.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+steampunk_spotter-0.8.1.dist-info/entry_points.txt,sha256=_94aMdgSgx7FY17kO5nvQ5NaEqYQM1oetU0Iwq2NK6c,45
+steampunk_spotter-0.8.1.dist-info/top_level.txt,sha256=3FpgMM0g2fECUU_GuaBTKGXYeWTG5uDxJXqqRD3YTck,8
+steampunk_spotter-0.8.1.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+steampunk_spotter-0.8.1.dist-info/RECORD,,
