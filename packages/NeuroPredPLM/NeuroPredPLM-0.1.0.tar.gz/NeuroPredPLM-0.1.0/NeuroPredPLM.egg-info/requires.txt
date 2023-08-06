@@ -1,0 +1,4 @@
+einops
+fair-esm
+torch
+numpy
