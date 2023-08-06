@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: lifeguard-tinydb
+Version: 0.0.4
+Summary: Lifeguard integration with TinyDB
+Home-page: https://github.com/LifeguardSystem/lifeguard-tinydb
+Author: Diego Rubin
+Author-email: contact@diegorubin.dev
+License: GPL2
+Classifier: Development Status :: 3 - Alpha
+Requires-Dist: lifeguard
+Requires-Dist: tinydb
+
