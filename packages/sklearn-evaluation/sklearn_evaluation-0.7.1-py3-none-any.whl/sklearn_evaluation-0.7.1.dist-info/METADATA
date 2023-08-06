@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: sklearn-evaluation
+Version: 0.7.1
+Summary: scikit-learn model evaluation made easy: plots, tables andmarkdown reports.
+Home-page: http://github.com/edublancas/sklearn-evaluation
+Download-URL: https://github.com/ploomber/sklearn-evaluation/tarball/0.7.1
+Author: Eduardo Blancas Reyes
+Author-email: github@blancas.io
+License: MIT
+Keywords: datascience,machinelearning
+License-File: LICENSE
+Requires-Dist: ploomber-core (>=0.0.4)
+Requires-Dist: scikit-learn
+Requires-Dist: matplotlib
+Requires-Dist: decorator
+Requires-Dist: tabulate
+Requires-Dist: jinja2
+Requires-Dist: mistune
+Requires-Dist: pandas
+Requires-Dist: nbformat
+Requires-Dist: ipython
+Requires-Dist: black
+Requires-Dist: parso
+Provides-Extra: all
+Requires-Dist: sphinx ; extra == 'all'
+Requires-Dist: sphinx-rtd-theme ; extra == 'all'
+Requires-Dist: ploomber ; extra == 'all'
+Requires-Dist: nbsphinx ; extra == 'all'
+Requires-Dist: seaborn ; extra == 'all'
+Requires-Dist: ipywidgets ; extra == 'all'
+Requires-Dist: jupysql ; extra == 'all'
+Requires-Dist: jupytext ; extra == 'all'
+Requires-Dist: papermill ; extra == 'all'
+Requires-Dist: ipykernel ; extra == 'all'
+Requires-Dist: pytest ; extra == 'all'
+Requires-Dist: pytest-cov ; extra == 'all'
+Requires-Dist: coveralls (<3) ; extra == 'all'
+Requires-Dist: flake8 ; extra == 'all'
+Requires-Dist: yapf ; extra == 'all'
+Requires-Dist: twine ; extra == 'all'
+Requires-Dist: pkgmt ; extra == 'all'
+
