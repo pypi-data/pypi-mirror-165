@@ -1,0 +1,11 @@
+CreatePackage/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+CreatePackage/asgi.py,sha256=9JTteZmcd1EFajwmBQPxQwEoF0FCN9ZQz7MVRNm8A5o,419
+CreatePackage/settings.py,sha256=wut5pZkTjYTbM1RMJenIzyb_Yi2BU1yAYKAH3N6aFdY,3395
+CreatePackage/urls.py,sha256=nFWtdqCes-Xf-zGZ7y0MOyDvDa9sUvyp9JBcCNood_A,776
+CreatePackage/wsgi.py,sha256=T74oTwWzzpuakKLeIlOW7-IcJsSDPLRlPOrWM-LXehk,419
+rabbiCalculator/__init__.py,sha256=q4zAH2arBr2KGzfM8K60BSUYq_Fn2fhWiGBWZImzICs,156
+rabbiCalculator-0.1.dist-info/LICENCE.txt,sha256=zu9Y-DtZLznH8zKMHeWKfKlbtQ02X18KftYkUYOXSl0,1059
+rabbiCalculator-0.1.dist-info/METADATA,sha256=lnkaPWlpVLjtq7a6lcYRFtaH1CNXu34l95kCYx1McgE,326
+rabbiCalculator-0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+rabbiCalculator-0.1.dist-info/top_level.txt,sha256=szy_ZK0n8GdLOr1dk7x-HaO6uAT1IiShUHC-yIIoHXQ,30
+rabbiCalculator-0.1.dist-info/RECORD,,
