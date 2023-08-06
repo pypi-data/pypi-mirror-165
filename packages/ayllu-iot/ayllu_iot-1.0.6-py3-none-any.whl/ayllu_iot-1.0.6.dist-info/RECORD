@@ -1,0 +1,14 @@
+aylluiot/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aylluiot/core.py,sha256=0kaBEhSHK3ApudsxBqayZqQLjc3WSrYmnwbvc5WOFjs,2897
+aylluiot/devices.py,sha256=Vi2krwszLGEV7TJbOYj196LSbFccia8-109s72Q9os8,4229
+aylluiot/aws/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aylluiot/aws/service.py,sha256=k4yBg7VFTt8hzTLddf76GNh1Cy5qpQcpJEYisPWNyPE,5232
+aylluiot/aws/thing.py,sha256=acqkqG8lwNvz1qXG-CBMsnREIoFS56kYzGmLIExnnNw,23240
+aylluiot/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aylluiot/utils/data_utils.py,sha256=0ugqJgZWqfwm5aglDChqBEqpiBW5GQIQmTQ3uRk2PrE,8810
+aylluiot/utils/path_utils.py,sha256=1WX1HwAaNyckapeHFlU3O85EVWTZUgTA-jqFrX6robI,9058
+ayllu_iot-1.0.6.dist-info/LICENSE,sha256=EN1i5gV0cksuPPaeS46nN9LqjqzO0aB0rRQRyuqaMxQ,1066
+ayllu_iot-1.0.6.dist-info/METADATA,sha256=2S-22CyMz216R4evYyi5uuoRkRm8vEbI3vROyZMajn0,2294
+ayllu_iot-1.0.6.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+ayllu_iot-1.0.6.dist-info/top_level.txt,sha256=o1lc5H5JzKpFtoZjZkU_gNoiLgoeixXZiMV81ctg3Ug,9
+ayllu_iot-1.0.6.dist-info/RECORD,,
