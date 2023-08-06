@@ -1,0 +1,13 @@
+mypy_baseline/__init__.py,sha256=aC_h3rodTtWg5-YKuUmjkMLxuo148x-c14Nj4zkHj1c,138
+mypy_baseline/__main__.py,sha256=ZPGytkQ2AZkJkbvPNhYmk7XH9lL6WO4K9U96G9-rQwM,43
+mypy_baseline/_cli.py,sha256=QEb_nyIsu1clSD1tNQGNDhS45AfNEsm3fWZ3QhdTgbI,1429
+mypy_baseline/_cmd_filter.py,sha256=vXXg2PFmZEk7uE7MUhBXV1xmpxdC_s_mDIv2ImV5l2s,5915
+mypy_baseline/_config.py,sha256=sYyz6l0GMQYoZQI1MtbbMNTqQ__N2VwlPbgmo8NKJ_k,3108
+mypy_baseline/_core.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_baseline/_error.py,sha256=wT3D4RL8_Y4BHD7qTs6b26MGEPHrSKqlOdcWqKZNRqE,1759
+mypy_baseline/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_baseline-0.1.0.dist-info/entry_points.txt,sha256=bDjfmFvVt12JrurqRfycp-drNohapN7cZyeyQQAOdRE,58
+mypy_baseline-0.1.0.dist-info/LICENSE,sha256=s1X_JkJciAgWY1Lw4f4cxSHrpocUTbDsKvF3814zEZw,1048
+mypy_baseline-0.1.0.dist-info/WHEEL,sha256=4TfKIB_xu-04bc2iKz6_zFt-gEFEEDU_31HGhqzOCE8,81
+mypy_baseline-0.1.0.dist-info/METADATA,sha256=6XUvMhDTVeEq7EEe8lgba3oPPs-TkiPAkytAYILPoow,3054
+mypy_baseline-0.1.0.dist-info/RECORD,,
