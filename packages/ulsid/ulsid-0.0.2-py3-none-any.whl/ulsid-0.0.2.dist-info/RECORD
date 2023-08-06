@@ -1,0 +1,10 @@
+ulsid/__init__.py,sha256=cBwOBwNDwtS__Q04rrVig38PZcGJBgUW1W0yH4xxcI4,984
+ulsid/access.py,sha256=SlGGRWCFYbWasANVOKbFm9MNkm1cNc1RWywhX2drGas,3676
+ulsid/analyse.py,sha256=CKSmw1Nf22eK1iq5d8DufB2BwD-7mRtzwyLd3cRAkPA,7878
+ulsid/exceptions.py,sha256=3xy_q_3ms5wrcfb1uBUZe03KZMYojxx46sslK-LtHM4,4072
+ulsid/generate.py,sha256=V5UwAAVvAFeq2xhliNz-vu-f5x6F_v8ELo6bBvqffes,19655
+ulsid-0.0.2.dist-info/LICENSE,sha256=BG77YuGBfCBGn9u4ZDNez1RUdIQju_eU8opfKUIRpoE,1083
+ulsid-0.0.2.dist-info/METADATA,sha256=ugUcvlId7dDcv5-tY8oq_zse5Txq3MQIiP4ujyZSXM0,7443
+ulsid-0.0.2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+ulsid-0.0.2.dist-info/top_level.txt,sha256=dQVDX1J7zBFpWse0f5xHaYj-j4jh34p1GmUFelDWLmU,6
+ulsid-0.0.2.dist-info/RECORD,,
