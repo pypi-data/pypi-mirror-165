@@ -1,0 +1,90 @@
+Metadata-Version: 2.1
+Name: yastyleguide
+Version: 0.1.0
+Summary: Yet another styleguide.
+Home-page: https://github.com/levkovalenko/yastyleguide
+License: MIT
+Keywords: flake8,flake8-plugin,linter,yastyleguide,styleguide,code quality,pycqa
+Author: levkovalenko
+Author-email: levozavr@mail.ru
+Requires-Python: >=3.8,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Framework :: Flake8
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Quality Assurance
+Requires-Dist: black (>=22.3.0,<23.0.0)
+Requires-Dist: flake8 (>=4.0.1,<5.0.0)
+Requires-Dist: flake8-annotations-complexity (>=0.0.7,<0.0.8)
+Requires-Dist: flake8-bandit (>=3.0.0,<4.0.0)
+Requires-Dist: flake8-black (>=0.3.3,<0.4.0)
+Requires-Dist: flake8-bugbear (>=22.4.25,<23.0.0)
+Requires-Dist: flake8-builtins (>=1.5.3,<2.0.0)
+Requires-Dist: flake8-comprehensions (>=3.9.0,<4.0.0)
+Requires-Dist: flake8-docstrings (>=1.6.0,<2.0.0)
+Requires-Dist: flake8-eradicate (>=1.2.1,<2.0.0)
+Requires-Dist: flake8-expression-complexity (>=0.0.11,<0.0.12)
+Requires-Dist: flake8-isort (>=4.1.1,<5.0.0)
+Requires-Dist: flake8-requirements (>=1.5.3,<2.0.0)
+Requires-Dist: flake8-string-format (>=0.3.0,<0.4.0)
+Requires-Dist: nitpick (>=0.32.0,<0.33.0)
+Requires-Dist: pandas-vet (>=0.2.3,<0.3.0)
+Requires-Dist: pep8-naming (>=0.12.1,<0.13.0)
+Project-URL: Repository, https://github.com/levkovalenko/yastyleguide
+Description-Content-Type: text/markdown
+
+# yastyleguide
+Yet another styleguide
+
+
+## Install
+
+```bash
+poetry add -D yastyleguide
+```
+
+```bash
+pip install yastyleguide
+```
+
+## Nitpick styleguide
+
+You can use base settings for linters with [nitpick](https://github.com/andreoliwa/nitpick):
+```toml
+[tool.nitpick]
+style = "https://gitlab.com/ds.team/general/yastyleguide/-/blob/master/styles/nitpick-yastyle.toml"
+```
+<details><summary>Публичный вариант</summary>
+
+```toml
+[tool.nitpick]
+style = "https://raw.githubusercontent.com/levkovalenko/yastyleguide/master/styles/nitpick-yastyle.toml"
+```
+</details>
+
+## Running
+It's just plugin **flake8**, so:
+```bash
+flake8 .
+```
+
+## Violations
+Our own codes:
+|Code|Description|
+|----|-----------|
+|YASG101|`Don't use any 'for' loops.`|
+|YASG102|`Don't use any 'while' loops.`|
+|YASG201|`Line is to complex, {0} > {1}. To many ast nodes per line.`|
+|YASG202|`To big median line complexity in module, {0} > {1}.`|
+|YASG203|`To many lines per module, {0} > {1}.`|
+|YASG204|`To many function definitions per module, {0} > {1}.`|
+|YASG205|`To many class definitions per module, {0} > {1}.`|
+
+You can read about external plugins violations at [/docs/eng/plugin_list.md](docs/eng/plugin_list.md)

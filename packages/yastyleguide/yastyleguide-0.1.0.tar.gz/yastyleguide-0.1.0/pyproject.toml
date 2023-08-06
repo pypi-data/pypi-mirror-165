@@ -1,0 +1,68 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.nitpick]
+style = "styles/nitpick-yastyle.toml"
+
+[tool.poetry]
+name = "yastyleguide"
+version = "0.1.0"
+description = "Yet another styleguide."
+authors = ["levkovalenko <levozavr@mail.ru>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/levkovalenko/yastyleguide"
+keywords = [
+  "flake8",
+  "flake8-plugin",
+  "linter",
+  "yastyleguide",
+  "styleguide",
+  "code quality",
+  "pycqa"
+]
+
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Console",
+  "Framework :: Flake8",
+  "Intended Audience :: Developers",
+  "Operating System :: OS Independent",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Topic :: Software Development :: Quality Assurance",
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+flake8 = "^4.0.1"
+flake8-bugbear = "^22.4.25"
+flake8-comprehensions = "^3.9.0"
+flake8-docstrings = "^1.6.0"
+flake8-eradicate = "^1.2.1"
+flake8-isort = "^4.1.1"
+pep8-naming = "^0.12.1"
+flake8-string-format = "^0.3.0"
+flake8-bandit = "^3.0.0"
+flake8-builtins = "^1.5.3"
+pandas-vet = "^0.2.3"
+flake8-black = "^0.3.3"
+flake8-expression-complexity = "^0.0.11"
+flake8-annotations-complexity = "^0.0.7"
+flake8-requirements = "^1.5.3"
+nitpick = "^0.32.0"
+black = "^22.3.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+mypy = "^0.910"
+
+
+[tool.poetry.plugins."flake8.extension"]
+YASG = "yastyleguide.plugin:YASGPlugin"
+
+
+[[tool.poetry.source]]
+name = "yastyleguide"
+url = "https://gitlab.com/api/v4/projects/31783240/packages/pypi/simple"
+secondary = true
