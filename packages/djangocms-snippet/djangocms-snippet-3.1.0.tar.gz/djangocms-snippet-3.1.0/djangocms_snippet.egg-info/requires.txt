@@ -1,0 +1,5 @@
+django-cms>=3.7
+django-treebeard<4.5,>=4.3
+
+[static-ace]
+djangocms-static-ace
