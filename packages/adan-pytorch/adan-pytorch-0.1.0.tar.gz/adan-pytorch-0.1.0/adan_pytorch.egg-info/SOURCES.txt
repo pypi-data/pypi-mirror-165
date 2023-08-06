@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+adan_pytorch/__init__.py
+adan_pytorch/adan.py
+adan_pytorch.egg-info/PKG-INFO
+adan_pytorch.egg-info/SOURCES.txt
+adan_pytorch.egg-info/dependency_links.txt
+adan_pytorch.egg-info/requires.txt
+adan_pytorch.egg-info/top_level.txt
