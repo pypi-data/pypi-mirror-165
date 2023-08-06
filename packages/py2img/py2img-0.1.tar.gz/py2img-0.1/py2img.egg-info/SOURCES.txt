@@ -1,0 +1,10 @@
+setup.py
+py2img/__init__.py
+py2img/decoder.py
+py2img/encoder.py
+py2img/settings.py
+py2img.egg-info/PKG-INFO
+py2img.egg-info/SOURCES.txt
+py2img.egg-info/dependency_links.txt
+py2img.egg-info/requires.txt
+py2img.egg-info/top_level.txt

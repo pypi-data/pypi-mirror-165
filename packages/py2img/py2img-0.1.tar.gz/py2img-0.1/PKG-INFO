@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: py2img
+Version: 0.1
+Summary: Python Source to Image converter
+Home-page: https://github.com/Itzsten/py2img
+Author: Itzsten
+Author-email: itzsten@gmail.com
+Keywords: python,python to image,py to image,python converter,python run image
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+
+A tiny Python package to convert Python source code/files into images that can be executed.
