@@ -1,0 +1,6 @@
+alignments/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+alignments/dataset.py,sha256=Ru0fsy9WiVkvGN7O-UyQMEGZNHWPrBP7vBq2rUslJL8,16268
+alignments/datasets/libritts.py,sha256=GRse_am9M8z4Q71Ft0pK1H--q-hqKIrdp_RL-vvmSes,1183
+alignments-0.0.9.dist-info/WHEEL,sha256=g_UdFZqm-k6b0W64OcndB0YT_D2mFFPAYBj7-_YsSPA,87
+alignments-0.0.9.dist-info/METADATA,sha256=tXf-5xMI8LuT5kGVnc6n2omxB4_tMYzsfJOuSs_FvvI,389
+alignments-0.0.9.dist-info/RECORD,,
