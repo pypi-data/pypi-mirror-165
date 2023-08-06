@@ -1,0 +1,8 @@
+{
+  "degree": ["degree", "degree එක",  "ඩිග්\u200Dරි එක", "ඩිග්\u200Dරී එක","ඩිග්\u200Dරී", "ඩිග්\u200Dරි", "ඩිග්\u200Dරිය", "ඩිග්\u200Dරීය", "උපාධිය"],
+  "course": ["course එක", "course", "කෝර්ස් එක", "කෝස් එක", "පාඨමාලාව"],
+  "payment": ["payment එක", "payment", "පේමන්ට් එක", "පේමන්ට්", "ගෙවීම"],
+  "viva": ["viva එක", "viva", "වයිවා එක", "වයිවා"],
+  "SLIIT": ["SLIIT එක", "sliit එක","sliit", "SLIIT", "ස්ලිට් එක", "ස්ලිට්"],
+  "IT": ["IT", "Information Technology", "information technology", "අයිටී", "තොරතුරු තාක්ෂණය", "අයි ටී"]
+}

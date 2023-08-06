@@ -1,0 +1,1 @@
+this directory contains all seetm rule_based mapping exports

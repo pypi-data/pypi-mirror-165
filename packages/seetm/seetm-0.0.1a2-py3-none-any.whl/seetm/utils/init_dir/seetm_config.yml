@@ -1,0 +1,13 @@
+# Configuration for SEETM Interfaces.
+# https://seetm.github.io/seetm-configs
+
+# Configurations that applies to both SEETM CLI and Server
+seetm_base_configs:
+  - data_path: ./data/
+  - method: rule-based
+  - metric: edit-distance
+
+# Configurations that applies to SEETM Server
+seetm_server_configs:
+  - host: localhost
+  - port: 6067

@@ -1,0 +1,95 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - හෙලෝ කොහොමද
+    - ආයුබෝවන්
+    - හෙලෝ සැලී
+    - hi sally
+    - හෙලෝ මට ස්ලිට් එක ගැන විස්තර දැනගන්න ඕන
+    - හායි
+    - හෙලෝඕඕ
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - බායි සැලී
+    - බොහොම ස්තුතියි, සුබ දවසක්!
+    - පස්සේ හම්බවෙමු
+    - පස්සේ වෙලාවක කතා කරමුකෝ
+    - හරි ටටා
+    - බයි බයී
+    - ගුඩ්බායි
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - ඔව්
+    - ඔව්ව්ව්
+    - අනිවා
+    - අනිවාර්යෙන්ම
+    - ඔව් දැනගන්න තිබ්බනම් හොඳයි
+    - හරී
+    - ඒක හරි
+    - යස්
+    - ඔව් පුලුවන්
+    - yes පුලුවන්
+    - හොඳයි
+    - නයිස්
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - නැහැ
+    - නෑ
+    - මට බෑ
+    - කවදාවත් බැහැ
+    - මම කැමති නෑ
+    - මට මගෙ ඩීටේල්ස් නම් දෙන්න බෑ
+    - මගෙ details දෙන්න බෑ
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - ඔයා බොට් කෙනෙක්ද
+    - ඔයා චැට් බොට් කෙනෙක්ද
+    - මම කතාකරන්නේ ඇත්ත කෙනෙක්ටද?
+    - මේ රොබෝ කෙනෙක්ද
+    - ඔයා කවුද?

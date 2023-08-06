@@ -1,0 +1,46 @@
+version: "2.0"
+
+nlu:
+- intent: modules_credit_weightage
+  examples: |
+    - ITPM module එකේ credit කොපමණද?
+    - IP module එකට ලැබෙන credit කීයද
+    - සබ්ජෙක්ට්ස් වලට දෙන ක්‍රෙඩිට් ගාන බලාගන්නේ කොහොමද
+    - හැම module එකට ම credit ප්‍රමාණය එකම ද?
+    - හැම module එකට ම ලැබෙන credit ප්‍රමාණය එකම ද?
+    - මේ සබ්ජෙක්ට් එකට හම්බවෙන ක්‍රෙඩිට් ගාන බලාගන්න ඕන
+    - මේ subject එකට හම්බවෙන credit ගාණ කීයද?
+    - මට ක්‍රෙඩිට්ස් දෙන විදිහ බලාගන්න ඕන
+    - SPM subject එකට දෙන credits ගාන කීයද
+    - එක එක සබ්ජෙක්ට්ස් වලට දෙන ක්‍රෙඩිට් ගාන බලාගන්නේ කොහොමද
+    - මේ මොඩියුල් එකට ක්‍රෙඩිට් කීයක් දෙනවද
+
+- intent: modules_lectures_incharge
+  examples: |
+    - මේ මොඩියුල් එකේ ලෙක්චරර් ඉන්චාර්ජ් කවුද
+    - මේ සබ්ජෙක්ට් එක උගන්නන ලෙක්චරර් කවුද
+    - SE එක කරන සර් කව්ද
+    - මේ subject එකේ LIC කවුද
+    - SPM LIC කව්ද
+    - මට OOP module එකේ lic කවුද කියලා දැනගන්න ඕන
+    - සබ්ජෙක්ස් වල ඉන්චාර්ජ් ලෙක්චරර්ස්ලාව බලන්නේ කොහොමද
+    - මොඩියුල් එල් අයි සී ලා බලන්නේ කොහොමද
+    - LICලා චෙක් කරන්නේ කොතනින්ද
+    - මට DSDA වල LIC හොයලා දෙන්න
+
+- intent: modules_enrollment_keys
+  examples: |
+    - SE වල enrollment key එක මොකක්ද ?
+    - සබ්ජෙක්ට්ස් වල එන්රෝල්මන්ට් කීස් බලාගන්නේ කොහොමද
+
+- intent: modules_online_lectures
+  examples: |
+    - Online lectures compulsory ද?
+    - ඔන්ලයින් lectures wala attendance බලනවා ද?
+    - ඔන්ලයින් lectures wala පැමිණීම බලනවා ද?
+    - ඔන්ලයින් lectures wala attendance check කරනවා ද? 
+    - ඔන්ලයින් lectures wala පැමිණීම check කරනවා ද?
+    - Online lecture recodings ගන්න පුලුවන් කොහෙන් ද?
+    - Online lecture recodings බලන්න පුලුවන් online විතර ද?
+    - Online lectures යන්නේ නැතුව recodings බැලුවා ම මදි ද? 
+    - Online lecture recodings download කිරීමට නොහැකි ද?

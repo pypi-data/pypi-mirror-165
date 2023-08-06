@@ -1,0 +1,369 @@
+eval:
+- token: greet
+  test_token: ග්‍රීට්
+
+- token: goodbye
+  test_token: ගුඩ්බායි
+
+- token: hi
+  test_token: හායි
+
+- token: sliit
+  test_token: ස්ලිට්
+
+- token: viva
+  test_token: වයිවා
+
+- token: test
+  test_token: ටෙස්ට්
+
+- token: faculty
+  test_token: ෆැකල්ටි
+
+- token: degree
+  test_token: ඩිග්‍රී
+
+- token: course
+  test_token: කෝස්
+
+- token: message
+  test_token: මැසේජ්
+
+- token: it
+  test_token: ඉට්
+
+- token: information
+  test_token: ඉන්ෆොමේශන්
+
+- token: technology
+  test_token: ටෙක්නොලොජි
+
+- token: data
+  test_token: ඩේටා
+
+- token: science
+  test_token: සයන්ස්
+
+- token: software
+  test_token: සොෆ්ට්වෙයා
+
+- token: engineering
+  test_token: ඉන්ජිනේරින්ග්
+
+- token: humanity
+  test_token: හියුමෑනිටි
+
+- token: and
+  test_token: ඇන්ඩ්
+
+- token: sciences
+  test_token: සයන්සස්
+
+- token: web
+  test_token: වෙබ්
+
+- token: website
+  test_token: වෙබ්සයිට්
+
+- token: internet
+  test_token: ඉන්ටර්නෙට්
+
+- token: wifi
+  test_token: වයිෆයි
+
+- token: prorata
+  test_token: ප්‍රෝරාටා
+
+- token: advanced
+  test_token: ඇඩ්වාන්ස්ඩ්
+
+- token: level
+  test_token: ලෙවල්
+
+- token: presentation
+  test_token: ප්‍රසන්ටේශන්
+
+- token: assignment
+  test_token: අසයින්ග්මන්ට්
+
+- token: deadline
+  test_token: ඩෙඩ්ලයින්
+
+- token: exam
+  test_token: එග්සෑම්
+
+- token: timetable
+  test_token: ටයිම්ටේබල්
+
+- token: hall
+  test_token: හෝල්
+
+- token: building
+  test_token: බිල්ඩින්ග්
+
+- token: build
+  test_token: බිල්ඩ්
+
+- token: results
+  test_token: ‍රිසල්ට්ස්
+
+- token: batch
+  test_token: බැච්
+
+- token: top
+  test_token: ටොප්
+
+- token: dean
+  test_token: ඩීන්
+
+- token: repeat
+  test_token: ‍රිපීට්
+
+- token: password
+  test_token: පාස්වර්ඩ්
+
+- token: domain
+  test_token: ඩොමේන්
+
+- token: laptop
+  test_token: ලැප්ටොප්
+
+- token: mobile
+  test_token: මොබයිල්
+
+- token: phone
+  test_token: ෆෝන්
+
+- token: disk
+  test_token: ඩිස්ක්
+
+- token: drive
+  test_token: ඩ්‍රයිව්
+
+- token: park
+  test_token: පාක්
+
+- token: canteen
+  test_token: කැන්ටීන්
+
+- token: bird
+  test_token: බර්ඩ්
+
+- token: nest
+  test_token: නෙස්ට්
+
+- token: olive
+  test_token: ඔලිව්
+
+- token: main
+  test_token: මේන්
+
+- token: gate
+  test_token: ගේට්
+
+- token: vehicle
+  test_token: වෙහිකල්
+
+- token: id
+  test_token: අයිඩී
+
+- token: library
+  test_token: ලයිබ්‍රි
+
+- token: office
+  test_token: ඔෆිස්
+
+- token: floor
+  test_token: ෆ්ලෝර්
+
+- token: shoes
+  test_token: ශූස්
+
+- token: token
+  test_token: ටෝකන්
+
+- token: open
+  test_token: ඕපන්
+
+- token: source
+  test_token: සෝස්
+
+- token: systems
+  test_token: සිස්ටම්
+
+- token: subject
+  test_token: සබ්ජෙක්ට්
+
+- token: server
+  test_token: සවර්
+
+- token: bag
+  test_token: බෑග්
+
+- token: bill
+  test_token: බිල්
+
+- token: scholarship
+  test_token: ස්කොලර්ශිප්
+
+- token: letter
+  test_token: ලෙටර්
+
+- token: payment
+  test_token: පේමන්ට්
+
+- token: internship
+  test_token: ඉන්ටර්න්ශිප්
+
+- token: research
+  test_token: රිසර්ච්
+
+- token: lecturer
+  test_token: ලෙක්චරර්
+
+- token: lecture
+  test_token: ලෙක්චර්
+
+- token: period
+  test_token: පීරියඩ්
+
+- token: sri
+  test_token: ශ්‍රී
+
+- token: lanka
+  test_token: ලන්කා
+
+- token: institute
+  test_token: ඉන්ස්ටිටුට්
+
+- token: of
+  test_token: ඔෆ්
+
+- token: the
+  test_token: ද
+
+- token: a
+  test_token: අ
+
+- token: youtube
+  test_token: යූටුබ්
+
+- token: google
+  test_token: ගූගල්
+
+- token: stack
+  test_token: ස්ටැක්
+
+- token: overflow
+  test_token: ඕවර්ෆ්ලෝ
+
+- token: wall
+  test_token: වෝල්
+
+- token: firewall
+  test_token: ෆයර්වෝල්
+
+- token: fire
+  test_token: ෆයර්
+
+- token: ball
+  test_token: බෝල්
+
+- token: certificate
+  test_token: සෙටිෆිකේට්
+
+- token: duration
+  test_token: ඩියුරේශන්
+
+- token: shuttle
+  test_token: ෂට්ල්
+
+- token: bus
+  test_token: බස්
+
+- token: assistant
+  test_token: ඇසිස්ටන්ට්
+
+- token: group
+  test_token: ගෲප්
+
+- token: team
+  test_token: ටීම්
+
+- token: work
+  test_token: වර්ක්
+
+- token: past
+  test_token: පාස්ට්
+
+- token: paper
+  test_token: පේපර්
+
+- token: island
+  test_token: අයිලන්ඩ්
+
+- token: start
+  test_token: ස්ටාර්ට්
+
+- token: leader
+  test_token: ලීඩර්
+
+- token: leadership
+  test_token: ලීඩර්ශිප්
+
+- token: student
+  test_token: ස්ටුඩන්ට්
+
+- token: undergraduate
+  test_token: අන්ඩර්ග්‍රැජුඅට්
+
+- token: fee
+  test_token: ෆී
+
+- token: free
+  test_token: ෆ්‍රී
+
+- token: form
+  test_token: ෆෝම්
+
+- token: process
+  test_token: ප්‍රොසෙස්
+
+- token: reception
+  test_token: ‍රිසෙප්ශන්
+
+- token: students
+  test_token: ස්ටුඩන්ට්ස්
+
+- token: project
+  test_token: ප්‍රොජෙක්ට්
+
+- token: proposal
+  test_token: ප්‍රොපෝසල්
+
+- token: requirements
+  test_token: ‍රික්වයර්මන්ට්ස්
+
+- token: distance
+  test_token: ඩිස්ටන්ස්
+
+- token: community
+  test_token: කමියුනිටි
+
+- token: contact
+  test_token: කන්ටැක්ට්
+
+- token: lab
+  test_token: ලැබ්
+
+- token: sports
+  test_token: ස්පෝර්ට්ස්
+
+- token: club
+  test_token: ක්ලබ්
+
+- token: society
+  test_token: සොසයිටි
+
+- token: pc
+  test_token: පීසී

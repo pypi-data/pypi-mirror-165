@@ -1,0 +1,173 @@
+version: "2.0"
+
+nlu:
+- intent: internships_why
+  examples: |
+    - Internship එක කියන්නේ මොකක්ද
+    - industrial training module  එක fail  වෙන්න පුලුවන්ද
+    - Industrial placement module එකේ වෙන්නේ මොකකද
+    - ඉන්ඩස්ට්‍රියල් ප්ලේස්මන්ට් මොඩියුල් එක කියන්නේ මොකක්ද
+    - ඉන්ඩස්ට්‍රියල් ප්ලේස්මන්ට් එක අනිවාර්යද?
+    - Internship එකක් කරන්න ඕනේ මොකටද
+    - ඉන්ටර්න්ශිප් එක කරන්නම ඕනෙද
+    - Internship එකෙන් මොකක්ද වෙන්නේ
+    - ඉන්ටර්න්ශිප් එකක් කරන්නේ ඇයි
+
+- intent: internships_when
+  examples: |
+    - internship එක කරන්න පුළුවන් මොන year එකෙන් පස්සෙද?
+    - internship එක කරන්න පුළුවන් මොන semester එකෙන් පස්සෙද?
+    - internship එක කරන්න පුළුවන් කොයි year එකෙන් පස්සෙද?
+    - internship එක කරන්න පුළුවන් කොයි semester එකෙන් පස්සෙද?
+    - කොයි කාලෙට කලින්ද internship එකක් හොයාගන්න ගන්න ඕනේ?
+    - intern එකකට යන්න හොද කාලේ මොකද්ද
+    - Regular batch එකත් එක්ක graduate වෙන්න internship එක පටන් ගන්න ඕන අවසාන දවස කවදා ද?
+    - intern එකක් පටන් ගන්න හොඳකාලේ මොකද්ද
+    - ඉගනගෙන ඉවර වෙලා Internship එක කරන්න පටන් ගන්න පුළුවන්ද?
+    - කොයි කාලෙට කලින්ද internship එක පටන් ගන්න ඕනේ?
+
+- intent: internships_duration
+  examples: |
+    - Internship එක කොච්චර කාලයක් කරන්න ඕනෙද
+    - Internship එකක් මාස කීයක් කරන්න ඕනෙද?
+    - Internship එක මාස 6ට අඩු වෙන්න බැරිද 
+    - Internship එක මාස 6ට වැඩි වෙන්න බැරිද  
+    - Internship duration එක මාස 6යි ද
+    - මාස කීයක් Internship එක කරන්න ඕනද
+    - ඉන්ටර්න්ශිප් එක ගොඩක් කල් කරන්න ඕනද
+    - මිනිමම් ඉන්ටර්න්ශිප් ඩියුරේශන් එක මාස කීයද?
+    - minimum internship duration එක කීයද
+
+- intent: internships_docs_involved
+  examples: |
+    - Internship කරද්දී fill කරන්න ඕනේ documents මොනවද?
+    - Internship කරද්දී fill කරන්න ඕනේ documents මොනවාද?
+    - Internship කරද්දී documents හදන්න තියනවාද?
+    - Internship කරද්දී documents හදන්න තියනවද?
+
+- intent: internships_process
+  examples: |
+    - Internship එකක ක්‍රියාපටිපාටිය විස්තර කරන්න පුලුවන්ද?
+    - intern එකේ ක්‍රියාවලිය විස්තර කරන්න පුලුවන්ද?
+    - intern එකක ක්‍රියාවලිය ගැන කියන්න
+    - Internship එකක ක්‍රියාවලිය ගැන කියන්න පුලුවන්ද?
+    - internship process එක ගැන දැනගන්න පුළුවන්ද?
+    - internship process එක ගැන දැනගන්න පුළුවන්ද?
+    - intern එකට ගියාම මුලින්ම submit කරන්න ඕනේ මොකද්ද
+    - intern එකට ගියහම මුලින්ම submit කරන්න ඕනේ මොකද්ද
+    - Internship එකකට ගිය කියල sliit එකට කියන්නේ කොහොමද?
+    - intern එකකට ගියා කියල sliit එකට කියන්නේ කොහොමද?
+    - intern එකකට ගියා කියල sliit එකට දන්වන්නේ කොහොමද?
+    - Internship එක පටන් ගත්තා කියල sliit එකට කියන්නේ කොහොමද?
+    - Internship එක පටන් ගත්තා කියල sliit එකට inform කරන්නෙ කොහොමද?
+    - 4th year එක ඉවර වෙන්න කලින් internship එක ඉවර කරන්න ඕනද
+
+- intent: internships_submissions
+  examples: |
+    - daily diary submit කරන්නෙ කොහෙටද?
+    - daily diary submit කරන්නෙ කොතනටද?
+    - daily diary submit කරන්න ඕනෙ කොහෙටද?
+    - daily diary submit කරන්න ඕනෙ කොතනටද?
+    - daily diary එක submit කරන්නෙ කොහෙටද?
+    - daily diary එක submit කරන්නෙ කොතනටද?
+    - daily diary submission එක කරන්න ඕනෙ කොහෙටද?
+    - daily diary submission එක කරන්න ඕනෙ කොතනටද?
+    - daily diary කොහෙටද submit කරන්නෙ ඕනෙ?
+    - daily diary කොතනටද submit කරන්නෙ ඕනෙ?
+    - internship report submit කරන්නෙ කොහෙටද?
+    - internship report submit කරන්නෙ කොතනටද?
+    - internship report submit කරන්න ඕනෙ කොහෙටද?
+    - internship report submit කරන්න ඕනෙ කොතනටද?
+    - internship report එක submit කරන්නෙ කොහෙටද?
+    - internship report එක submit කරන්නෙ කොතනටද?
+    - internship report submission එක කරන්න ඕනෙ කොහෙටද?
+    - daily diary එක සබ්මිට් කරන්නේ කොහෙටද
+    - daily diary submission link එක දැනගන්න පුලුවන්ද
+    - ඩේලි ඩයරි එක දාන්නේ කොහාටද
+    - daily diary එක submit කරන්නේ කොතනටද
+    - daily diary submit කරන්නේ කොහාටද?
+    - Daily Diary කොහාටද submit  කරන්නේ?
+    - Daily Diary කොහෙටද submit  කරන්න ඕන?
+    - daily diary folder access ඉල්ල ගන්නෙ කගෙන්ද?
+    - ඩේලි ඩයරි එක upload කරන්නේ කොතනටද
+    - මට ඩේලි ඩයරීස් සබ්මිට් කරන විදිහ දැනගන්න ඕන
+    - මට internship එකේ report එක දාන්න folder access ගන්න ඕන
+    - මට ඉන්ටර්න්ශිප් රිපෝට් එක දාන ෆෝල්ඩර් එකට ඇක්සස් ගන්න පුලුවන්ද
+    - මට internship folder access එක ගන්න ඕනෙ
+    - internship report එක upload කරන්න කාගෙන්ද folder access ඕනෙ?
+    - internship report එක upload කරන්න folder access ඉල්ලා ගන්න ඕනේ කාගෙන්ද
+    - internship report එක upload කරන්න folder access ඕනේ
+    - ඉන්ටර්න්ශිප් රිපෝට් එක දාන්නේ කොහෙටද
+    - ඉන්ටර්න්ශිප් රිපෝට් එක අප්ලෝඩ් කරන ෆෝල්ඩර් එක කොහෙද තියෙන්නේ
+    - final internship report එක upload කරන්නේ කොතනටද
+    - මට final internship report එක දාන folder එකට access නෑනේ
+    - internship report submission එක කරන්න ඕනෙ කොතනටද?
+    - internship report කොහෙටද submit කරන්නෙ ඕනෙ?
+    - internship report කොතනටද submit කරන්නෙ ඕනෙ?
+
+- intent: internships_viva
+  examples: |
+    - internship viva schedule කරන්නෙ කොහොමද?
+    - internship viva schedule කරාම අපිට call කරලා කියනවද?
+    - internship viva schedule කරාම අපිට email කරලා කියනවද?
+    - internship viva schedule කරාම අපිට mail කරලා කියනවද?
+    - internship viva schedule කරාම අපිට කියනවද?
+    - internship viva schedule කරාම අපිට notify කරනවද?
+    - internship viva schedule කරන්න ඕනෙ අපිද?
+    - internship viva එක schedule කරන්නෙ කොහොමද?
+
+- intent: internships_changing_supervisors
+  examples: |
+    - internship එකේ supervisor මාරුකරන්නෙ කොහොමද?
+    - internship එකේ supervisor මාරුකරන්න පුළුවන්ද?
+    - internship එකේ supervisor මාරුකරන්න fill කරන්න ඕන form එක මොකක්ද?
+    - internship supervisor මාරු කරගන්නෙ කොහොමද?
+    - දැනට ඉන්න supervisor ව මාරුකරන්න පුළුවන්ද?
+    - අපේ research group එකේ supervisor ව මාරුකරන්න පුළුවන්ද?
+    - internship supervisor මාරු කරගන්න විදියක් තියනවද
+    - දැනට ඉන්න supervisor ව මාරුකරන්න විදියක් තියනවද
+    - අපේ research group එකේ supervisor ව මාරුකරන්න  විදියක් තියනවද
+
+- intent: internships_specializations
+  examples: |
+    - Internship එක specialization related ම වෙන්න ඕන ද
+    - Specializations අනුව හොයාගන්න ඕන internships වෙනස් වෙනවද?
+    - Specialisations අනුව හොයාගන්න ඕන internship වෙනස් වෙනවද?
+    - SE කරන ලමයින්ට කරන්න පුලුවන් internships මොනවද?
+    - SE කරන ළමයින්ට කරන්න පුලුවන් internship මොනවද?
+    - SE කරන අයට කරන්න පුලුවන් internship මොනවද? 
+    - IT වලට ගැලපෙන internships මොනවද
+    - Data science කරන ළමයින්ට software engineering internship එකක් කරන්නන පුළුවන්ද  
+    - ඉන්ටර්න්ශිප් එකක් කරන්න තියෙන්න ඕන රික්වයර්මන්ට්ස් මොනවද
+
+- intent: internships_oppertunities
+  examples: |
+    - මට internship එකක් හොයාගන්න ඕන
+    - මට internship එකක් ඕන
+    - මට intern එකක් ඕන 
+    - අලුත් Internships ගැන දැනගන්න තැනක් තියෙනවද
+    - internship oppertunities ගැන විස්තර තියන තැන් මොනවද
+    - ස්ලිට් එකේ තියෙන internships මොනවද
+    - SLIIT එකේ internships ගැන details share කරන website එකක් තියනවද
+    - SLIIT එකෙන් internship හොයල දෙනවද?
+    - SLIIT එකේ internship එකක් කරන්න පුලුවන්ද
+
+- intent: internships_careerweek
+  examples: |
+    - career week එක කියන්නේ මොකද්ද
+    - career වීක් කියන්නේ මොකක්ද
+    - career week එකේ වෙන්නෙ මොකක්ද
+
+- intent: internships_contact
+  examples: |
+    - Internship coordinatiorsලාගේ විස්තර ගන්නේ කොහෙන්ද
+    - Software engineering කරන අයට ඉන්න coordinatorsලා කවුද?
+    - මට ඉන්ටර්න්ශිප් කෝඩිනේටර්ස්ලාගෙ තොරතුරු බලාගන්න ඕන
+    - internship එක ගැන විස්තර අහගන්නේ කාගෙන්ද?
+    - මගේ internship එක valid ද කියලා දැනගන්නේ කොහොමද?
+    - specialization එක අනුව ගැලපෙන internship එකක් තෝරගන්න උදව් ගන්න කෙනෙක් ඉන්නවද
+    - ගැලපෙන internship එකක් ගැන අහගන්න ඕන කාගෙන්ද
+    - internship එක හරියනවද නැද්ද කියලා අහගන්නේ කාගෙන්ද
+    - මට internship එක ගැලපෙනවද නැද්ද කියලා දැනගන්න පුලුවන්ද?
+    - Internship එකක් select කරගන්න උදව් ගන්න කෙනෙක් ඉන්නවද
+    - internship එක ගැන අහන්න ඕන ලෙක්චරර්ස්ලා කවුද

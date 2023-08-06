@@ -1,0 +1,45 @@
+version: "2.0"
+
+nlu:
+- intent: context_ask_must_follow_course
+  examples: |
+    - මේක කරන්නම ඕනද
+    - මේ කෝස් එක කරන්නම ඕනෙද
+    - මේක කරන්නෙ නැතුව ඩිග්‍රිය ෆලෝ කරන්න බැරිද
+    - මේක කරන්නෙ නැතුව degree එක follow කරන්න බැරිද
+    - මේක කරන්නෙ නැතුව කෙලින්ම ඩිග්‍රිය කරන්න පුලුවන්ද
+
+- intent: context_ask_requirements
+  examples: |
+    - මේකට මොනවද ඕන රික්වයර්මන්ට්ස්
+    - මේකට තියෙන්න ඕන requirements මොනවද
+
+- intent: context_ask_duration
+  examples: |
+    - මේකේ ඩියුරේශන් එක කීයද
+    - මේක කරන්න කොච්චර කල් යනවද
+
+- intent: context_ask_how_to_pay
+  examples: |
+    - පේමන්ට්ස් කරන්නේ කොහොමද
+    - මේකට පේ කරන්නේ කොහොමද
+    - සල්ලි ගෙවන විදිහත් කියන්න
+
+- intent: context_ask_how_to_apply
+  examples: |
+    - මට මේකට ඇප්ලයි කරන විදිහ ටිකක් කියන්න පුලුවන් ද
+    - මේකට ඇප්ලයි කරන්නේ කොහොමද
+
+- intent: context_ask_more_info
+  examples: |
+    - මට මේක ගැන විස්තර ටිකක් කියනවද
+    - මට මේ ගැන ටිකක් කියන්න
+
+- intent: context_ask_timetables
+  examples: |
+    - time tables දාලද?
+    - time tables update කරලද??
+    - අළුත් time tables update කරලද??
+    - අළුත් time tables දාලද?
+    - time tables අලුතින් දාලද?
+    - time table අළුත් කරලද

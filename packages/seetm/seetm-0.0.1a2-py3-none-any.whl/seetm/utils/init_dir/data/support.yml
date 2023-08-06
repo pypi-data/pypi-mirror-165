@@ -1,0 +1,136 @@
+version: "2.0"
+
+nlu:
+- intent: support_hotlines
+  examples: |
+    - sliit එකේ Hotline number එක මොකද්ද
+    - ස්ලිට් එකේ Hotline number එක දෙන්න
+    - ස්ලිට් එකේ number එක දෙන්න
+    - ස්ලිට් එකේ phone number එක දෙන්න
+    - sliit එකේ phone number එක මොකද්ද
+    - sliit එකේ ෆෝන් නම්බ එක මොකද්ද
+    - මට sliit එකට call එකක් ගන්න ඕනේ
+    - මට sliit එකට කෝල් එකක්  ගන්න ඕනේ
+    - SLIIT එකට call එකක් අරන් දෙන්න
+    - SLIIT එකට කෝල් එකක් අරන් දෙන්න
+    - SLIIT එකට කෝල් එකක් අරන් දෙන්න පුළුවන්ද
+    - ස්ලිට් එකේ හොට්ලයින් එක මොකක්ද
+    - sliit එකේ Examination Department එකේ number එක මොකද්ද
+    - ස්ලිට් එකේ Examination Department එකේ number දෙන්න
+    - මට sllit එකේ Examination Department එකේ number දෙන්න
+    - මට sllit එකේ Examination Department එකට call එකක් අරන් දෙන්න
+    - මට sllit එකේ Examination Department එකට call එකක් අරන් දෙන්න පුළුවන්ද
+    - Examination Department එකේ number දෙන්න
+    - Examination Department එකට call එකක් අරන් දෙන්න
+    - Examination Department එකට call එකක් අරන් දෙන්න පුළුවන්ද
+    - Examination Department එකේ number එක මොකද්ද?
+    - Examination Department එකේ number එක කියන්න පුලුවන්ද?
+    - exam department එකට call එකක් ගන්න ඕනේ
+    - එග්සෑම් ඩිපාර්ට්මන්ට් එකේ නම්බරේ ඕන
+    - මට එග්සෑම් ඩිපාට්මන්ඩ් එකේ නම්බර් එක දෙනවද
+    - මට විභාග දෙපාර්තුමේන්තුවේ ෆෝන් නම්බර් එක ගන්න පුලුවන්ද
+    - emergency එකකදී කාවද contact කරන්නෙ?
+    - emergency එකකදී කාටද contact කරන්නෙ?
+    - හදිසි ඇමතුම් number එක දෙන්න
+    - emergency number එක දෙන්න
+    - emergency number එක දෙනවද මට
+    - හදිස්සියකදී call එකක් ගන්න ඕනේ number එක මොකද්ද
+    - හදිස්සියකදී අවස්ථාවකදී call එකක් ගන්නේ කාටද
+    - student affairs එකේ contact details මොනවද?
+    - student affairs එක contact කරගන්නෙ කොහොමද?
+    - student affairs එකේ number එක දෙන්න
+    - student affairs එකේ email එක දෙන්න
+    - student affairs එකේ mail address එක දෙන්න
+    - ශිෂ්ය කටයුතු සම්බන්දව කතා කරන්න ඕනේ අංකය මොකද්ද
+
+- intent: support_contact_lecturers
+  examples: |
+    - මට lecturersla ගේ contact details ඕන
+    - මට ලෙක්චරර්ස්ලාගේ ඇමතුම් විස්තර ඕන
+
+- intent: support_contact_career_guidence
+  examples: |
+    - career guidance unit එකේ contact details මොනවද?
+    - career guidance unit එක contact කරගන්නෙ කොහොමද?
+
+- intent: support_sliit_vpn
+  examples: |
+    - SLIIT VPN එක කියන්නේ මොකක්ද
+    - VPN එකෙන් මොකක්ද වෙන්නේ
+    - VPN එක use කරන්නේ මොනවගේ දේවල් වලටද
+    - VPN එක ඕන වෙන්නේ මොනවා කරන්නද
+    - මට VPN එකට යන හැටි දැනගන්න ඕන
+    - වීපීඑන් එකෙන් මොකද වෙන්නේ
+    - ස්ලිට් එකේ වී පී එන් එකක් තියෙනවද?
+    - vpn එක ඇක්ටිවේට් කරගන්නේ කොහොමද?
+    - VPN එකෙන් free data දෙනවද
+    - SLIIT එකේ VPN එකට යන්නේ කොහොමද
+
+- intent: support_cloud_services
+  examples: |
+    - ms office 365 කියන්නේ මොකද්ද
+    - office 365 එක sliit එකෙන් අයින් උනාට පස්සෙත් use කරන්න පුලුවන්ද
+    - google drive එක sliit එකෙන් අයින් උනාට පස්සෙත් use කරන්න පුලුවන්ද
+    - sliit එකෙන් gsuite එක දෙනවද
+    - azure කියන්නේ මොකද්ද
+
+- intent: support_cloud_services_installation
+  examples: |
+    - Office 365 devices කීයකට install කරන්න පුලුවන්ද
+    - Office 365 mac වලට support කරනව ද
+    - Office 365 linux වලට support කරනව ද
+
+- intent: support_cloud_services_storage
+  examples: |
+    - onedrive එකේ stroage ලිමිට් එක කීයද
+    - google drive එකේ stroage ලිමිට් එක කීයද
+    - Microsoft azure කියන්නේ මොකද්ද
+
+- intent: support_cloud_services_free_credits
+  examples: |
+    - Azure account එකට සල්ලි ගෙවන්න ඕනෙද
+    - Azure account එකට සල්ලි ගෙවන්න ඕනෙ නැද්ද
+    - Azure account හදන්න credit card එකක් හරි debit card එකක් හරි ඕනෙද
+    - Azure account හදන්න credit card එකක් ඕනෙද
+    - Azure account හදන්න debit card එකක් ඕනෙද
+    - azure account එක free ද
+    - azure account එක ෆ්‍රී ද
+    - Microsoft azure account එක free ද
+    - Microsoft azure account එක ෆ්‍රී ද
+    - Microsoft azure account එක එක්ක dollar කීයක් free ලැබෙනවා ද
+    - azure account එක එක්ක dollar කීයක් free ලැබෙනවා ද
+
+- intent: support_sliit_supportdesk
+  examples: |
+    - Student Helpdesk එක කියන්නේ මොකද්ද
+    - මට Helpdesk එක ගැන කියන්න පුලුවන්ද?
+    - මට student Helpdesk එක ගැන පොඩ්ඩක් කියන්න පුලුවන්ද?
+    - helpdesk එක කියන්නේ මොකද්ද?
+    - helpdesk එක යනු කුමක්ද?
+
+- intent: support_access_supportdesk
+  examples: |
+    - Student Helpdesk එක access කරන්නේ කොහොමද
+    - Student Helpdesk එක use කරන්නේ කොහොමද
+    - Student Helpdesk එක පාවිච්චි කරන්නේ කොහොමද
+    - Helpdesk එක use කරන හැටි කියන්න
+    - Helpdesk එක use කරන හැටි කියන්න පුලුවන්ද
+
+- intent: support_supportdesk_tickets
+  examples: |
+    - ticket එකක් create කරන්නේ කොතනින්ද
+    - ticket එකක් හදන්නෙ කොතනින්ද
+    - ticket එකක් දාන්න කොහාටද යන්න ඕනේ
+    - ටිකට් එකක් දාන්න කොතැනට ද යන්න ඕන
+    - ටිකට් එකක් හදන්නේ කොහොමද
+
+- intent: support_domain_password
+  examples: |
+    - password reset කරන්නෙ කොහොමද?
+    - password එක reset කරන්නෙ කොහොමද?
+    - account password reset කරන්නෙ කොහොමද?
+    - account password එක reset කරන්නෙ කොහොමද?
+    - PC එකේ password reset කරන්නෙ කොහොමද?
+    - PC එකේ password එක reset කරන්නෙ කොහොමද?
+    - PC එකේ windows account එකේ  password reset කරන්නෙ කොහොමද?
+    - pc password එක reset කරන්නෙ කොහොමද?

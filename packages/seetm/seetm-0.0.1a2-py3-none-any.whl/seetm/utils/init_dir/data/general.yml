@@ -1,0 +1,39 @@
+version: "2.0"
+
+nlu:
+- intent: general_what_is_possible
+  examples: |
+    - ඔයාට මොනවද කරන්න පුලුවන් දේවල්
+    - මට ඔයාගෙන් මොනවද අහන්න පුලුවන්?
+    - ඔයාට මොනවගේ ප්‍රශ්න වලට ද උත්තර දෙන්න පුලුවන්?
+    - ඔයාට මට උදව් කරන්න පුලුවන් කොහොමද?
+    - මට ඔයාගෙ උදව් ඕනෙ
+    - මට ඔයාගෙන් help එකක් ඕන
+
+- intent: general_entrance
+  examples: |
+    - SLIIT ID එක නැතුව enter වෙන්න පුළුවන්ද?
+    - ID එක නැති වෙලා නම් SLIIT එකට enter වෙන්නෙ කොහොමද?
+    - ID එක expire වෙලා නම් ඇතුලට එන්නේ කොහොමද
+
+- intent: general_dresscode
+  examples: |
+    - SLIIT එකට sleeveless t-shirt ඇඳගෙන එන්න පුළුවන්ද?
+    - SLIIT එකට සපත්තු ඇඳගෙන එන එක අනිවාර්යද?
+    - SLIIT එකට සපත්තු ඇඳගෙන එන එක අනිවාර්යද?
+    - SLIIT එකට අදාල dress code එකක් තියෙනවද?
+    - SLIIT එකේ කොන්ඩෙ colour කරන්න පුළුවන්ද?
+
+- intent: general_faculties
+  examples: |
+    - Faculties කීයක් තියනව ද
+    - Faculties කීයක් විතර තියනව ද 
+    - Computer faculty එක කොහෙද තියෙන්නේ?
+    - Engineering faculty එක කොහෙද තියෙන්නේ?
+    - Business faculty එක කොතන ද තියෙන්නේ?
+    - Humanity and Science faculty එක තියෙන්නේ කොහෙද ?
+    - IT faculty එක තියෙන්නේ කොහෙද ?
+    - IT faculty යේ HOD කව්ද 
+    - IT ෆැකල්ටි එක කොහෙද තියෙන්නේ ?
+    - IT ෆැකල්ටිය එක කොහෙද තියෙන්නේ ?
+    - IT ෆැකල්ටියේ පිහිටි ස්ථානය මොකද්ද

@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: seetm
+Version: 0.0.1a2
+Summary: Converts English tokens into the equivalent Sinhala representation using IPA (International Phonetic Alphabet)
+Home-page: https://github.com/dinushiTJ/seetm
+Author: Dinushi Jayasinghe
+Author-email: dinushitj@gmail.com
+License: Apache License 2.0
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Framework :: Flask
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Description-Content-Type: text/markdown
+Requires-Dist: eng-to-ipa (~=0.0.2)
+Requires-Dist: gensim (~=4.1.2)
+Requires-Dist: rich (~=12.0.0)
+Requires-Dist: python-dotenv (~=0.20.0)
+Requires-Dist: waitress (~=2.1.2)
+Requires-Dist: flask (~=2.1.2)
+Requires-Dist: werkzeug (~=2.1.2)
+Requires-Dist: flask-cors (~=3.0.10)
+Requires-Dist: regex (<2021.8,>=2020.6)
+
+# SEETM 0.0.1a1 Release
+
+### SEETM (Sinhala-English Equivalent Token Mapper) allows creating equivalent token maps and replace them with a base token to avoid OOV tokens and generate a single feature for all equivalent tokens in a Sinhala-English code-switching dataset in rasa-based conversational AIs.
+
+## Features
+- Allows mapping multiple equivalent tokens into a base token
+- Fully supports rasa 2.8.x projects
+- Provides an easy-to-use CLI
+- Provides an efficient server-based GUI
+- Provides a fully-functional custom whitespace tokenizer
+- Fully-supports Sinhala in the GUI
+
+## What's Cooking?
+- Mapping suggestions in the SEETM server GUI
+- Automatically generated mappings
+
+## Limitations and Known Issues
+- Should manually add the SEETM tokenizer to the rasa pipeline or else the token maps are not taking any effect
+- IPA-based suggestions could contain slight changes based on th IPA mapping origin. (SEETM uses CMU)
+
+## Resources and References
+- [CMU](http://www.speech.cs.cmu.edu/cgi-bin/cmudict) Pronunciation Dictionary
+- [eng-to-ipa](https://pypi.org/project/eng-to-ipa/) pip package ([GitHub](https://github.com/mphilli/English-to-IPA))
+
+📒 Docs: https://seetm.github.io  
+📦 PyPi: https://pypi.org/project/seetn/0.0.1a1/  
+🪵 Full Changelog: Refer the relevant GitHub branch (v0.0.1a1) 
+

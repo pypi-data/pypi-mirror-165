@@ -1,0 +1,1 @@
+this directory contains all seetm ipa mapping exports

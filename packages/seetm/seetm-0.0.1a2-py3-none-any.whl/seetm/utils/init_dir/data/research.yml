@@ -1,0 +1,106 @@
+version: "2.0"
+
+nlu:
+- intent: research_why
+  examples: |
+    - ගවේෂණ ව්‍යාපෘතිය ගැන විස්තර කියන්න
+    - මට රිසර්ච් එක කරන විදිහ ගැන විස්තර දැනගන්න ඕන
+    - රිසර්ච් එකක් කොහොමද කරන්නේ 
+    - Research project එක ගැන විස්තර කියන්න පුලුවන්ද
+    - research එක ගැන විස්තර දැනගන්න ඕන
+    - rp එක හැමෝම කරන්න ඕනද
+    - rp module එක ගැන විස්තර දැනගන්න පුලුවන්ද
+    - Research project එක කියන්නේ මොකද්ද
+    - ආර් පී මොඩියුල් එක කියන්නේ මොකක්ද
+    - research project module එකට credits කීයක් ලැබෙනවද?
+    - research project module එක credits කීයද?
+    - රිසර්ච් එක කරන්න තියෙන්නේ කීවෙනි අවුරුද්දෙද
+    - රිසර්ච් එක කරන්න තියෙන්නේ මොන සෙමෙස්ටර් එකේද
+    - Research project එක පිලිබඳ මට විස්තර දැනගන්න ඕනේ
+
+- intent: research_requirements
+  examples: |
+    - ගවේෂණ ව්‍යාපෘතියක් කරන්න අවශ්‍ය දේවල් මොනවද
+    - Research එක කරන්න තියෙන්න ඕන requirements මොනවද
+    - research එකට ඕන වෙන දේවල් මොනවද
+    - රිස‍ර්ච් එකක් කරන්න තියෙන්න ඕන සුදුසුකම් මොනවද
+    - ‍රිසච් එක කරන්න තියෙන්න ඕන රික්වයමන්ට්ස් මොනවද කියල දැනගන්න ඕන
+    - research එකක් කරන්න කලින් සම්පුර්ණ කරන්න ඕනේ දේවල් මොනවද 
+    - research group එකක ඉන්න පුළුවන් එකම specialization එකකට අදාල අයද  
+    - research group එකක ඉන්න පුළුවන් එකම specialization එකක ඉන්න අයද?
+    - external supervisor නැතුව research group එකක් හදන්න බැරිද
+    - external supervisor කෙනෙක් ඉන්න ඕනෙමද
+    - research group එකක උපරිම කීදෙනෙක්ට ඉන්න පුළුවන් ද 
+    - research group එකක් හැදෙන්න අවම කීදෙනෙක් ඕනෙද  
+    - research එකක් කරන්න කලින් සපුරන්න ඕනේ දේවල් මොනවද 
+    - research එකක් කරන්න කලින් සපුරන්න ඕනේ දේවල් මොනවාද 
+    - රිසර්ච් ටීම් එකක ලමයි කී දෙනෙක් ඉන්න ඕනද
+    - group membersලා එකම specialization එකේ අය වෙන්න ඕනෙද?
+    - research project group එකේ කීදෙනෙක් ඉන්න ඕනෙද?
+    - research project group එකේ membersලා ඔක්කොම එකම specialisation එකේ වෙන්න ඕනෙද?
+    - research project group එකේ අඩුම කීදෙනෙක් ඉන්න ඕනෙද?
+    - රිසර්ච් ගෲප් එකේ මෙම්බර්ස්ලා ඔක්කොම එකම ස්පෙශලයිසේශන් එකේම වෙන්න ඕනෙද?
+    - එක්ස්ටර්නල් සුපවයිසර්ස්ලා අනිවාර්යද
+    - research එකකට එක්ස්ටර්නල් සුපවයිසර් කෙනෙක් හොයාගන්නම ඕනද
+    - රිසර්ච් එකක් කරද්දි co-supervisor කෙනෙක් ඉන්නම ඕනෙද
+    - research team එකකට ඉන්න ඕන membersලා ගාන කීයද
+
+- intent: research_find_supervisors
+  examples: |
+    - ගවේෂණ ව්‍යාපෘති සඳහා කථිකාචාර්ය වරුන්ගේ කැමැත්ත මොනවද
+    - lecturersලගේ research interests බලාගන්නේ කොහොමද
+    - ලෙක්චරර්ස්ලගෙ රිසර්ච් ඒරියාස් බලාගන්න ඕන
+    - Machine Learning කරන Lecturersලා හොයාගන්න විදිහක් තියනවාද?
+    - IT කරන අයට ගැලපෙන lecturers ලා කවුද කියලා දැනගන්න ඕන
+    - එක එක research areas වලට කැමති lecturersලාව හොයාගන්නේ කොහොමද
+    - රිසර්ච් ඒරියාස් වලට අයිති වෙන ලෙක්චරර්ස්ලව හොයාගන්න විදිහක් තියනවාද
+    - අපේ research area එකට ගැලපෙන supervisors ල හොයාගන්න ඕනේ
+    - Lecturers ල කැමති research areas බලාගන්න විදියක් තියනවද  
+    - Lecturers ල කැමති research areas බලාගන්න විදිහක් තියනවද 
+    - Research වලට ගැලපෙන supervisors ලා හොයාගන්නේ කොහොමද
+    - lecturersලගේ research interests දැනගන්න පුළුවන්ද?
+    - රිසර්ච් එකට හරියන සුපවයිසර් කෙනෙක් හොයාගන්නේ කොහොමද
+    - රිසර්ච් වලට හරියන ලෙක්චරර්ස්ලා හොයාගන්නේ කොහොමද
+
+- intent: research_resources
+  examples: |
+    - ගවේෂණ ව්‍යාපෘති සඳහා මුලාශ්‍ර මොනවාද
+    - research එකට online resource හොයාගන්නේ කොහොමද 
+    - මගෙ research එකට ඕන කරන referebces හොයාගන්න websites තියනවද
+    - research එකට references හොයාගන්න තැනක් දැනගන්න ඕන
+    - research එකට අදාල විස්තර හොයාගන්න website එකක් කියන්න පුලුවන්ද
+    - online resource references විදියට දාන්නේ කොහොමද?
+    - online resource references විදියට දාන්න පුලුවන්ද?
+    - ‍රිසර්ච් එකට ඕන තොරතුරු හොයාගන්නේ කොහෙන්ද
+    - රිස්ච් එකට ඕන කරන දේවල් හොයාගන්න පුලුවන් මොනවගේ තැන්වලින් ද
+    - research ideas ගන්න තැනක් කියන්න පුලුවන්ද
+
+- intent: research_milestones
+  examples: |
+    - Research Project එකේ තියෙන milestones මොනවද?
+    - Research එකේ තියෙන milestones මොනවද?
+    - Research milestones මොනවද?
+    - මට research milestones ගැන දැනගන්න ඕන
+    - research project milestones කියන්නේ මොනවද?
+    - RP milestones ගැන දැනගන්න ඕන
+    - රිසර්ච් එකේ milestones මොනවද
+    - රිසර්ච් එකේ ප්‍රදාන සන්ධිස්ථාන මොනවද
+    - රිසර්ච් එකේ තියෙන මේන් ස්ටෙප්ස් මොනවද
+    - research එකේ steps ටික දැනගන්න ඕන
+
+- intent: research_marking_distribution
+  examples: |
+    - RP එකේ semesters වලට ලකුණු ලැබෙන විදිහ දැනගන්න පුලුවන්ද?
+    - Research project එකේ semesters වලට ලකුණු ලැබෙන විදිහ කියන්න පුලුවන්ද?
+    - Research එකට marks දෙන හැටි දැනගන්න ඕන?
+    - Research එකට ලකුණු දෙන හැටි දැනගන්න ඕන?
+    - Research project එකට ලකුණු හම්බවෙන්නේ කොහොමද?
+    - research project  එකට ලකුනු දෙන්නේ කොහොමද?
+    - RP එකේ marks දෙන විදිහ කියනවද?
+    - රිසර්ච් එකට marks දෙන්නේ කොහොමද?
+    - Research එකට marks දෙන්නේ මොනව පදනම් කරගෙන ද?
+    - Research එකට marks දෙනව ද?
+    - Research එකට ලකුණු දෙනව ද? 
+    - කොහොමද Research එකට ලකුණු දෙන්නේ?
+    - ‍රිසච් එකේ ලකුණු කොහොමද දෙන්නෙ
+    - රිසර්ච් එකට ලකුනු ගොඩක් දෙනවද
