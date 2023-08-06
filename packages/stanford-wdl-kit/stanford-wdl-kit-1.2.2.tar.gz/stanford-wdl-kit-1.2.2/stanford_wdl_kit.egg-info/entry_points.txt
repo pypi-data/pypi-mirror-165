@@ -1,0 +1,6 @@
+[console_scripts]
+mailer = utils.mailer:main
+slacker = utils.slacker:main
+wbq = gcp.bigquery:main
+wgcs = gcp.gcs:main
+yaml2wdl = utils.yaml2wdl:main
