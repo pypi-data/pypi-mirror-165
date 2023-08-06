@@ -1,0 +1,17 @@
+kilroy_face_twitter/__init__.py,sha256=ZSwkm8GqYh-N1NP0XPI6vrN8gRnSpGoSLoUiOBY5ZiQ,44
+kilroy_face_twitter/__main__.py,sha256=0wJFfRr8Q_oYADqhQ3Qq72RaLXUnsb1QVUErwawFF6E,3541
+kilroy_face_twitter/client.py,sha256=hjAQKp0MS4I3M682zgTx2Vm3nqiHxVE3RzA0xgP5z7k,981
+kilroy_face_twitter/config.py,sha256=p5Qor7xzZ2xohrp5PFbP8Jk0Ts2BTuuXbodG0EQwRAc,824
+kilroy_face_twitter/face.py,sha256=oCu6BzMjQKAjNYSzRB5Phv_UNrW34YVl5hn1vNcebyc,9705
+kilroy_face_twitter/models.py,sha256=6xuACcWUFd3-o42-5MX5jpBeQ7J6V01v8H8WIeGlRgA,3342
+kilroy_face_twitter/processors.py,sha256=rt2O_yjydmWeJsH3Aiw-GqQc9onIt_C2SyzKqR5sGEg,7991
+kilroy_face_twitter/resources/__init__.py,sha256=_wezS5TKy-o2hQfQak0vUBf27KjqF5KOy-jVODFFTTE,1573
+kilroy_face_twitter/resources/config.yaml,sha256=H-V6TxK7DmBQvxvm1tGxpPPgpVJfFLexQWUvaAHTQ7k,369
+kilroy_face_twitter/scorers.py,sha256=hmnXhFgcB6czdlcLyUJge_Lyj-_WYNZrNHP2iXbdqCo,1681
+kilroy_face_twitter/scrapers.py,sha256=JxaNpqqw7tEWtJkIBWOORVFD8k9mX7Yj1-kC2vc7WZc,1977
+kilroy_face_twitter/utils.py,sha256=HYXyqTm0N3ls3NoUP-7iPr4hp8DAmq4VC0BQITqB_74,326
+kilroy_face_twitter-0.4.1.dist-info/entry_points.txt,sha256=j8NpsDY_BiWtiWP7xiUpOq258pRU8CWXamqv1mszYXI,72
+kilroy_face_twitter-0.4.1.dist-info/LICENSE,sha256=jX4FG3WEtoz7iCbng5k7DLrQhDMs0fDnD2vGC6hQU_A,1063
+kilroy_face_twitter-0.4.1.dist-info/WHEEL,sha256=N0LZrBtofpkS5mJXgVHTCEy52Sam4D6PHQWC8HnMeTs,83
+kilroy_face_twitter-0.4.1.dist-info/METADATA,sha256=kmmjpkbgCSiCzRKC_HAAjt1rlU5aMKw2gMmBPtjc1iA,1827
+kilroy_face_twitter-0.4.1.dist-info/RECORD,,
