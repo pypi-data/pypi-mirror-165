@@ -1,0 +1,60 @@
+[tool.poetry]
+name = "omnidep"
+version = "0.2.1"
+description = "Linter to compare project dependencies against imports in source code"
+readme = "README.rst"
+authors = ["Steve Jessop <68118527+sjjessop@users.noreply.github.com>"]
+license = "MIT"
+homepage = "https://github.com/sjjessop/omnidep"
+packages = [{ include = "omnidep" }]
+
+[tool.poetry.dependencies]
+python = "^3.7.0"
+
+importlib-metadata = ">=1.0.0"
+isort = { version = ">=5.0.1", python = "<3.10" }  # 5.0.1 fixes some issue importing vendored toml
+tomli = ">=1.1.0"  # 1.1.0 adds support for binary filehandles
+
+[tool.poetry.dev-dependencies]
+coverage = { version = "*", extras = ["toml"] }
+flake8 = "*"
+isort = "*"
+mypy = "*"
+pyOpenSSL = "*"  # Used as a test case
+pytest = "*"
+pytest-cov = "*"
+
+[tool.poetry.scripts]
+omnidep = 'omnidep.main:script_entry_point'
+
+
+[tool.omnidep]
+local-test-paths = ["omnidep/tst/"]
+
+
+[tool.isort]
+force_sort_within_sections = true
+lines_after_imports=1
+multi_line_output = "VERTICAL_GRID_GROUPED"
+include_trailing_comma = true
+src_paths = ["omnidep"]
+known_first_party = ["omnidep"]
+
+
+[tool.mypy]
+pretty = true
+strict = true
+allow_untyped_calls = true
+
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "raise NotImplementedError",
+    "if 0:",
+    "if __name__ == .__main__.:",
+]
+
+[build-system]
+requires = ["poetry_core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
