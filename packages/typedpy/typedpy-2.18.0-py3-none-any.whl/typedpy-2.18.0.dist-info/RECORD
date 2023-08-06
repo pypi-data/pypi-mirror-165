@@ -1,0 +1,11 @@
+typedpy/__init__.py,sha256=QJAED6lCI_K3mY0-ay1DuJhnCQ6rGp2Hfvik4yJvUDw,2294
+typedpy/commons.py,sha256=ssgJwQtki5G5zQx_Do8lxyxwjTmMQb2jexIsImdu7Rk,6769
+typedpy/errors.py,sha256=5Vs_nJFZ5-Cp7rBxvJLm2W1OhTJKmZ6EJVwUrCtDC7k,3452
+typedpy/testing.py,sha256=7mAjVOglpadhPYc78M_dp3DSHV9WnTX1NG6JF2hRZcw,7658
+typedpy/utility.py,sha256=YljCdB7PmngzfqIcwGPN9V-6dv5SSBFb7CI0VidXRjo,2289
+typedpy-2.18.0.dist-info/LICENSE.txt,sha256=iZ2PoOEc4eMu4y4D_a0qOnbaYbxqvdBASuyGZFxvceE,1057
+typedpy-2.18.0.dist-info/METADATA,sha256=lbDGk_znK2-gtg4qSe12UEZS5iC3_JZyuq2JHN5y8_A,3671
+typedpy-2.18.0.dist-info/WHEEL,sha256=ewwEueio1C2XeHTvT17n8dZUJgOvyCWCt0WVNLClP9o,92
+typedpy-2.18.0.dist-info/entry_points.txt,sha256=s0w6ds42qUyLFqsT0JzuhG-kuT0NjOScPPCuNrYDFvo,123
+typedpy-2.18.0.dist-info/top_level.txt,sha256=b3kz4cgV3f8Fvco57oXJVjvE7DTow18fVwAdoiTPKBM,8
+typedpy-2.18.0.dist-info/RECORD,,
