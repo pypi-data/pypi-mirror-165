@@ -1,0 +1,19 @@
+include *.txt
+include *.md
+include *.pkl
+recursive-include ./classifier_model/*
+
+include classifier_model/dataset/train.csv
+include classifier_model/dataset/test.csv
+include classifier_model/models/*.pkl
+include classifier_model/VERSION
+include classifier_model/config.yml
+
+include ./requirements/requirements.txt
+include ./requirements/test_requirements.txt
+exclude *.log
+exclude *.cfg
+
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]
+recursive-exclude * ipynb_checkpoints

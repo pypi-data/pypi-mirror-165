@@ -1,0 +1,697 @@
+PassengerId,HomePlanet,CryoSleep,Cabin,Destination,Age,VIP,RoomService,FoodCourt,ShoppingMall,Spa,VRDeck,Name,Transported
+5323_01,Mars,True,F/1091/P,TRAPPIST-1e,38.0,False,0.0,0.0,0.0,,0.0,Coakey Cort,True
+5637_01,Earth,False,F/1168/P,TRAPPIST-1e,43.0,False,1.0,8.0,0.0,0.0,715.0,Sonard Simson,False
+7588_02,Earth,False,G/1219/P,55 Cancri e,15.0,False,0.0,714.0,0.0,0.0,0.0,Aude Hersons,True
+0428_01,Europa,False,C/16/S,TRAPPIST-1e,29.0,False,0.0,4118.0,0.0,715.0,3139.0,Chargin Chocaters,True
+8186_01,Earth,False,G/1319/S,55 Cancri e,4.0,False,0.0,0.0,0.0,0.0,0.0,Leneva Jenkinnedy,True
+2261_01,Earth,False,F/441/S,TRAPPIST-1e,29.0,False,0.0,0.0,885.0,0.0,0.0,Millia Bairdford,True
+7200_01,Europa,False,C/264/S,TRAPPIST-1e,37.0,False,300.0,3434.0,0.0,1.0,171.0,Aldah Coustive,True
+7984_02,Mars,True,F/1653/P,TRAPPIST-1e,24.0,False,0.0,0.0,0.0,0.0,0.0,Murs Birt,True
+6620_01,Earth,False,G/1079/S,PSO J318.5-22,22.0,False,0.0,115.0,273.0,,218.0,Allie Smalls,True
+8342_02,Europa,True,E/548/S,TRAPPIST-1e,33.0,False,0.0,0.0,0.0,0.0,0.0,Skatik Sprender,True
+8430_01,Earth,False,F/1621/S,TRAPPIST-1e,29.0,False,324.0,0.0,546.0,0.0,0.0,Wenten Carlsonney,False
+3511_01,Mars,False,F/661/S,55 Cancri e,22.0,False,124.0,0.0,1763.0,0.0,1014.0,Basps Horte,False
+4842_01,Mars,False,D/152/S,TRAPPIST-1e,23.0,False,2260.0,0.0,152.0,106.0,60.0,Panzel Meate,False
+1946_01,Earth,False,G/313/P,TRAPPIST-1e,34.0,False,0.0,0.0,53.0,731.0,0.0,Rayley Castannison,False
+3439_01,Europa,True,B/130/S,TRAPPIST-1e,28.0,False,0.0,,0.0,0.0,0.0,Alarmus Modent,True
+5414_02,Earth,False,G/872/P,TRAPPIST-1e,11.0,False,0.0,0.0,0.0,0.0,0.0,Bryany Buckentry,False
+2900_01,Mars,True,,TRAPPIST-1e,26.0,False,0.0,0.0,0.0,0.0,0.0,Corse Snoff,True
+0669_01,Earth,False,F/143/P,TRAPPIST-1e,26.0,False,0.0,530.0,2.0,9.0,403.0,Elanie Hardson,False
+5218_01,Earth,False,F/1000/S,TRAPPIST-1e,28.0,False,0.0,0.0,0.0,525.0,1889.0,Leony Powery,False
+4178_01,Earth,False,G/687/P,TRAPPIST-1e,19.0,False,0.0,0.0,4.0,6.0,773.0,Almara Sweenez,False
+8886_03,Earth,False,G/1433/S,PSO J318.5-22,1.0,False,0.0,0.0,0.0,0.0,0.0,Ale Mclarseney,True
+1130_01,Mars,True,E/81/S,TRAPPIST-1e,23.0,False,,0.0,0.0,0.0,0.0,Guaney Cako,False
+4196_01,Earth,True,G/688/S,TRAPPIST-1e,13.0,False,0.0,0.0,0.0,0.0,0.0,Antony Jacostaney,True
+1655_01,Earth,False,,TRAPPIST-1e,28.0,False,3202.0,,0.0,0.0,5.0,Karay Dicksons,False
+4295_01,Mars,False,D/147/P,55 Cancri e,23.0,False,49.0,0.0,2716.0,0.0,0.0,Sweal Manda,True
+3311_01,Europa,False,E/221/S,TRAPPIST-1e,26.0,False,0.0,1638.0,0.0,476.0,226.0,Neutrin Alenter,False
+9161_01,Earth,True,G/1493/P,55 Cancri e,38.0,False,0.0,0.0,0.0,0.0,0.0,Olgary Lopelases,False
+4223_02,Mars,False,E/275/S,55 Cancri e,24.0,False,469.0,0.0,,196.0,0.0,Dous Grean,True
+1211_06,Earth,True,G/186/S,TRAPPIST-1e,60.0,False,0.0,0.0,0.0,0.0,0.0,Ianna Alvasquez,False
+9225_01,Earth,False,F/1787/S,TRAPPIST-1e,45.0,False,1.0,197.0,0.0,660.0,15.0,Lynnon Meyersones,False
+1671_01,Europa,False,B/73/S,55 Cancri e,,False,0.0,859.0,0.0,6704.0,64.0,Muonan Mosteraked,False
+0672_01,Earth,False,G/103/P,TRAPPIST-1e,25.0,False,1.0,0.0,38.0,7.0,740.0,Josey Carreralend,False
+8018_01,Earth,False,F/1532/S,TRAPPIST-1e,54.0,False,0.0,0.0,5.0,1268.0,26.0,Juane Popelazquez,False
+2897_01,Earth,False,G/461/S,TRAPPIST-1e,38.0,False,1.0,0.0,288.0,0.0,556.0,Guye Meadoney,True
+0220_04,Earth,False,E/10/P,TRAPPIST-1e,25.0,False,122.0,84.0,,0.0,0.0,Dont Wilsoney,False
+7644_01,Earth,True,G/1227/P,PSO J318.5-22,17.0,False,0.0,0.0,0.0,0.0,0.0,Hanry Moorez,True
+0138_02,Earth,False,E/5/P,,34.0,False,0.0,22.0,0.0,564.0,207.0,Monah Gambs,False
+3805_01,Earth,False,F/784/P,TRAPPIST-1e,36.0,False,357.0,0.0,114.0,0.0,,Frandy Pacerty,False
+2936_01,Earth,False,G/468/S,TRAPPIST-1e,21.0,False,15.0,30.0,11.0,2.0,388.0,Jimmyn Berreranks,False
+1797_01,Europa,True,B/57/P,55 Cancri e,33.0,False,0.0,0.0,0.0,0.0,0.0,Dhenar Blanspe,True
+2149_01,Europa,True,B/89/S,TRAPPIST-1e,18.0,False,0.0,0.0,0.0,0.0,0.0,Altares Persed,True
+4917_01,Europa,False,B/195/S,55 Cancri e,36.0,True,1.0,10029.0,1.0,1679.0,27.0,Brab Neceriont,True
+2702_01,Earth,True,G/437/P,TRAPPIST-1e,24.0,False,0.0,0.0,0.0,0.0,0.0,Mollen Garnettiz,True
+6220_01,Earth,False,F/1284/P,PSO J318.5-22,42.0,False,0.0,168.0,0.0,113.0,461.0,Rica Jacostaffey,False
+4208_01,Mars,False,D/144/P,55 Cancri e,37.0,False,326.0,0.0,455.0,2.0,0.0,Aarjel Jaff,False
+4774_03,Mars,False,F/972/P,TRAPPIST-1e,34.0,False,2130.0,0.0,1.0,1.0,0.0,Wins Perty,False
+2822_02,Earth,,G/450/S,TRAPPIST-1e,5.0,,0.0,0.0,0.0,0.0,,Salley Harverez,False
+7573_01,Earth,True,G/1217/P,PSO J318.5-22,19.0,False,0.0,0.0,0.0,0.0,0.0,Teryla Welltonces,False
+0773_01,Earth,False,F/143/S,TRAPPIST-1e,30.0,False,558.0,4.0,0.0,175.0,0.0,Gwendy Beston,False
+8129_05,Earth,False,E/522/P,TRAPPIST-1e,39.0,False,44.0,1620.0,0.0,6.0,0.0,Rona Casonston,False
+6669_01,Earth,False,E/423/P,55 Cancri e,28.0,False,32.0,0.0,304.0,291.0,2.0,Delley Kiddley,True
+6302_07,Earth,True,G/1015/P,TRAPPIST-1e,,False,0.0,0.0,0.0,0.0,0.0,Neilda Rostarks,True
+2858_01,Europa,True,C/109/S,TRAPPIST-1e,36.0,False,0.0,0.0,0.0,0.0,0.0,Iononus Fictful,True
+7578_01,Earth,False,F/1572/P,55 Cancri e,14.0,False,653.0,0.0,4.0,0.0,0.0,Idace Popelacruz,False
+6760_01,Mars,False,F/1404/P,PSO J318.5-22,30.0,False,51.0,0.0,1373.0,0.0,5.0,Shex Pri,True
+9199_01,Europa,True,E/590/P,55 Cancri e,33.0,False,0.0,0.0,0.0,0.0,0.0,Sterion Dianket,True
+3255_01,Earth,True,G/517/S,PSO J318.5-22,20.0,False,0.0,0.0,0.0,0.0,0.0,Fayel Morandry,True
+5552_02,Mars,True,F/1150/P,TRAPPIST-1e,11.0,False,0.0,0.0,0.0,0.0,0.0,Oatch Potie,True
+7447_01,Mars,False,F/1539/P,TRAPPIST-1e,24.0,False,,0.0,299.0,814.0,0.0,Chees Oncy,False
+7250_01,Mars,False,F/1501/P,55 Cancri e,51.0,False,40.0,716.0,1907.0,0.0,0.0,Pold Chmad,True
+4632_03,Europa,False,C/176/S,55 Cancri e,26.0,False,0.0,431.0,28.0,10941.0,26.0,Cellus Dightent,False
+1312_01,Earth,True,G/194/P,55 Cancri e,21.0,False,0.0,0.0,0.0,0.0,0.0,Darley Blandez,True
+8624_01,Earth,False,F/1661/S,TRAPPIST-1e,46.0,False,135.0,0.0,0.0,0.0,928.0,Penne Kramorry,False
+5977_03,Europa,False,B/230/S,TRAPPIST-1e,,False,0.0,0.0,0.0,0.0,0.0,Alhaula Inesely,True
+6614_01,Mars,True,F/1268/S,TRAPPIST-1e,29.0,False,0.0,0.0,0.0,0.0,0.0,Naffsh Katte,True
+8871_01,Earth,False,G/1432/S,TRAPPIST-1e,33.0,False,0.0,116.0,412.0,379.0,0.0,Nelly Benney,True
+0989_01,Earth,False,G/146/P,TRAPPIST-1e,6.0,False,0.0,0.0,0.0,0.0,0.0,Kayd Moranthons,False
+1861_01,Mars,True,F/358/S,TRAPPIST-1e,32.0,False,0.0,0.0,0.0,0.0,0.0,Choney Clake,True
+3737_01,Earth,False,G/614/S,TRAPPIST-1e,48.0,False,0.0,0.0,632.0,250.0,0.0,Ryany Bucklandez,False
+3287_01,Earth,False,G/522/S,PSO J318.5-22,2.0,False,,0.0,0.0,0.0,0.0,Jeron Carlsonney,True
+7565_01,Europa,False,B/247/P,TRAPPIST-1e,37.0,False,2.0,7272.0,0.0,50.0,1282.0,Zaurion Praded,True
+5889_01,Earth,False,G/954/P,TRAPPIST-1e,48.0,False,0.0,0.0,790.0,2368.0,1292.0,Leony Perrerojass,False
+1836_01,Earth,False,F/362/P,TRAPPIST-1e,23.0,False,1639.0,1218.0,0.0,1.0,0.0,Ronne Meleon,True
+3166_01,Mars,True,F/657/P,TRAPPIST-1e,,False,,0.0,0.0,0.0,0.0,Morms Cheen,True
+3384_03,Earth,True,G/554/P,55 Cancri e,20.0,False,0.0,0.0,0.0,0.0,0.0,Lyney Pettyreeman,True
+0475_01,Earth,False,E/29/P,TRAPPIST-1e,36.0,False,0.0,0.0,38.0,9.0,943.0,Danie Gilesonston,False
+9203_01,Mars,True,F/1780/S,55 Cancri e,22.0,False,0.0,0.0,0.0,0.0,0.0,Kies Fort,True
+4333_01,Europa,False,B/141/P,55 Cancri e,28.0,False,0.0,3345.0,0.0,2143.0,27.0,Sadach Excionging,False
+2308_01,Europa,True,D/77/S,TRAPPIST-1e,25.0,False,0.0,0.0,0.0,0.0,0.0,Plas Pringrous,True
+8380_01,Earth,True,G/1367/P,PSO J318.5-22,25.0,False,0.0,0.0,0.0,0.0,0.0,Craine Carpentley,True
+5069_01,Earth,False,F/965/S,PSO J318.5-22,56.0,False,1309.0,0.0,69.0,1.0,0.0,Andary Hurchez,False
+3988_01,Mars,False,D/134/P,TRAPPIST-1e,26.0,False,1632.0,0.0,80.0,7.0,0.0,Beal Soun,False
+2822_05,,True,G/450/S,TRAPPIST-1e,8.0,False,0.0,0.0,0.0,0.0,0.0,Melvia Harverez,False
+1255_02,Mars,True,F/242/S,TRAPPIST-1e,15.0,False,0.0,0.0,0.0,0.0,0.0,Razzle Potte,True
+8744_01,Earth,False,E/570/S,TRAPPIST-1e,53.0,False,1613.0,0.0,0.0,0.0,7.0,Jilly Holton,False
+4030_02,Earth,True,,TRAPPIST-1e,10.0,False,0.0,0.0,0.0,0.0,0.0,Luise Carpennels,False
+3068_01,Earth,False,G/500/P,TRAPPIST-1e,62.0,False,379.0,453.0,0.0,7.0,0.0,Tyrona Mcfarley,False
+2945_01,Earth,True,G/479/P,55 Cancri e,39.0,False,0.0,0.0,0.0,0.0,0.0,Jeanie Moodsey,True
+2055_01,Earth,False,G/330/P,TRAPPIST-1e,,False,0.0,0.0,0.0,0.0,0.0,Belly Woodwinez,False
+8956_08,Earth,False,F/1838/P,TRAPPIST-1e,26.0,False,0.0,0.0,0.0,0.0,741.0,Harvin Bonnondry,False
+8988_05,Earth,False,F/1741/S,TRAPPIST-1e,30.0,False,0.0,1028.0,0.0,80.0,0.0,Melara Fowlesterez,False
+4916_01,Mars,True,F/1001/P,TRAPPIST-1e,19.0,False,0.0,0.0,0.0,0.0,0.0,Unch Mity,True
+2117_01,Europa,False,,TRAPPIST-1e,31.0,False,0.0,8718.0,0.0,13036.0,267.0,Azet Rocketedy,False
+1406_01,Mars,False,E/106/S,TRAPPIST-1e,17.0,False,36.0,0.0,1013.0,0.0,0.0,Muffs Gres,False
+5023_01,Earth,False,G/813/P,55 Cancri e,36.0,False,0.0,0.0,0.0,474.0,12.0,Briney Griffy,False
+5224_01,Earth,False,F/1003/S,TRAPPIST-1e,24.0,False,0.0,0.0,56.0,564.0,880.0,Diandy Mckinn,False
+0712_02,Mars,,F/150/P,TRAPPIST-1e,2.0,False,0.0,0.0,0.0,0.0,0.0,Crans Apeau,True
+8383_05,Earth,False,G/1368/P,TRAPPIST-1e,8.0,,0.0,0.0,0.0,0.0,0.0,Gwenda Gibbsonton,False
+7337_01,Europa,False,A/89/S,TRAPPIST-1e,25.0,False,0.0,115.0,0.0,1823.0,4041.0,Ranons Folkshbox,False
+1718_01,Earth,True,,TRAPPIST-1e,20.0,False,0.0,0.0,0.0,0.0,0.0,Elindy Reyervaney,True
+4172_05,Mars,False,F/856/P,TRAPPIST-1e,56.0,False,128.0,0.0,959.0,0.0,42.0,Barks Flell,False
+0636_01,Earth,False,F/136/P,55 Cancri e,13.0,False,0.0,7.0,0.0,339.0,359.0,Craine Santantines,False
+7950_03,Earth,False,E/516/P,55 Cancri e,22.0,False,10.0,0.0,624.0,0.0,85.0,Done Ingston,True
+6727_01,Earth,False,G/1090/P,TRAPPIST-1e,29.0,False,0.0,316.0,0.0,,338.0,Andyn Humphreyes,True
+3188_01,Mars,True,E/209/S,55 Cancri e,31.0,False,0.0,0.0,0.0,0.0,0.0,Mass Reau,False
+5909_01,Earth,False,F/1127/S,55 Cancri e,19.0,False,0.0,716.0,0.0,0.0,0.0,Luisy Fryan,True
+4932_02,Mars,True,F/1005/P,55 Cancri e,3.0,False,0.0,0.0,0.0,0.0,0.0,Cird Fisty,True
+2660_01,Earth,False,F/550/P,TRAPPIST-1e,27.0,False,0.0,0.0,,2.0,1215.0,Chael Avidson,False
+1979_01,Earth,False,F/376/S,TRAPPIST-1e,26.0,False,401.0,0.0,693.0,62.0,0.0,Delley Moodson,False
+0813_01,Mars,True,F/169/P,TRAPPIST-1e,59.0,False,0.0,0.0,0.0,0.0,0.0,Frouse Katte,True
+0221_06,Mars,False,E/13/S,TRAPPIST-1e,16.0,False,915.0,0.0,221.0,234.0,0.0,Gran Reke,False
+3608_02,Europa,True,D/122/P,TRAPPIST-1e,16.0,False,0.0,0.0,0.0,0.0,0.0,Alhail Mormonized,True
+8992_01,Mars,False,D/283/P,TRAPPIST-1e,46.0,False,479.0,4.0,699.0,0.0,0.0,Tos Brin,False
+4878_01,Mars,False,F/929/S,TRAPPIST-1e,36.0,False,108.0,0.0,941.0,861.0,0.0,Cine Gene,False
+8064_02,Mars,False,E/534/S,TRAPPIST-1e,0.0,False,0.0,0.0,0.0,0.0,0.0,Elos Erte,True
+0382_01,,False,G/64/P,,23.0,False,348.0,0.0,0.0,4.0,368.0,Blanie Floydendley,False
+3461_01,Earth,False,G/569/P,PSO J318.5-22,26.0,False,86.0,377.0,0.0,0.0,77.0,Samana Handertiz,False
+6016_02,Earth,False,G/973/P,TRAPPIST-1e,20.0,False,3.0,0.0,0.0,806.0,0.0,Norahe Gardonadox,False
+1676_01,Earth,True,G/270/P,TRAPPIST-1e,26.0,False,0.0,0.0,0.0,0.0,0.0,Pennie Staffersby,False
+5312_01,Europa,True,B/182/P,TRAPPIST-1e,27.0,False,0.0,0.0,0.0,0.0,0.0,Sulaton Prefule,True
+5070_01,Earth,False,F/966/S,,20.0,,542.0,175.0,0.0,5.0,0.0,Lillia Collinson,True
+7724_01,Mars,False,F/1472/S,TRAPPIST-1e,25.0,False,338.0,319.0,32.0,15.0,0.0,Kris Trad,False
+1694_01,Earth,True,G/263/S,PSO J318.5-22,31.0,False,0.0,,0.0,0.0,0.0,Iria Chavezalez,True
+7954_01,Earth,False,G/1284/S,55 Cancri e,29.0,False,30.0,0.0,0.0,0.0,780.0,Juline Waltonson,False
+3767_01,Europa,False,B/146/S,55 Cancri e,44.0,False,0.0,280.0,112.0,0.0,9244.0,Sadaton Alenat,False
+4723_01,Earth,False,F/888/S,55 Cancri e,17.0,False,0.0,262.0,0.0,0.0,502.0,Myrace Savaraldez,True
+0572_01,Earth,False,F/105/S,TRAPPIST-1e,19.0,False,1911.0,0.0,21.0,854.0,0.0,Lesley Lamberguson,False
+5927_06,Europa,False,B/201/P,55 Cancri e,35.0,False,4.0,3857.0,324.0,899.0,375.0,Grastab Sysilstict,False
+3563_01,Earth,True,G/581/P,TRAPPIST-1e,14.0,False,0.0,0.0,0.0,0.0,0.0,Genee Williotters,True
+3866_01,,False,F/797/P,TRAPPIST-1e,43.0,False,0.0,0.0,7.0,0.0,963.0,Lis Hendrys,False
+0031_02,Mars,False,F/9/P,TRAPPIST-1e,2.0,False,0.0,0.0,0.0,0.0,0.0,Cinets Datie,True
+1378_02,Earth,False,F/275/P,TRAPPIST-1e,22.0,False,926.0,0.0,0.0,0.0,78.0,Ellena Caineson,True
+1391_02,Mars,False,F/276/P,TRAPPIST-1e,21.0,False,1072.0,79.0,46.0,16.0,0.0,Cines Apie,False
+8796_06,Earth,False,F/1704/S,TRAPPIST-1e,14.0,False,0.0,1427.0,148.0,0.0,7.0,Felice Traverdy,True
+4847_01,Earth,False,F/917/S,TRAPPIST-1e,19.0,False,0.0,0.0,699.0,18.0,86.0,Blancy Domington,True
+5167_01,Earth,False,F/990/S,TRAPPIST-1e,47.0,False,1.0,17.0,0.0,1069.0,0.0,Joana Crayeson,False
+7708_01,Earth,False,F/1471/S,TRAPPIST-1e,18.0,False,110.0,103.0,471.0,11.0,1.0,Arl Chavezalez,False
+5438_01,Earth,True,G/875/P,PSO J318.5-22,52.0,False,0.0,0.0,0.0,0.0,0.0,Eriky Puckley,False
+7510_01,Mars,False,F/1435/S,55 Cancri e,18.0,False,1092.0,0.0,208.0,150.0,0.0,Pars Horte,False
+4612_01,Earth,False,G/755/S,55 Cancri e,14.0,False,0.0,166.0,603.0,1.0,0.0,Essara Wilsoney,True
+0600_01,Europa,False,C/23/S,TRAPPIST-1e,24.0,False,0.0,3385.0,826.0,9.0,793.0,Muonon Ormler,True
+3719_01,Mars,False,,TRAPPIST-1e,28.0,True,1193.0,0.0,2509.0,0.0,0.0,Spros Mone,False
+4335_01,Mars,True,E/281/S,TRAPPIST-1e,34.0,False,0.0,0.0,0.0,0.0,0.0,Oareel Paska,False
+4338_02,Europa,False,C/156/S,TRAPPIST-1e,41.0,False,0.0,545.0,0.0,2740.0,293.0,Halsham Aroodint,True
+3063_02,Earth,True,G/499/P,TRAPPIST-1e,7.0,False,0.0,0.0,0.0,0.0,0.0,Joana Daughttley,True
+0642_01,Europa,False,C/25/S,55 Cancri e,29.0,False,0.0,3344.0,0.0,118.0,972.0,Dilatik Kiling,True
+4915_01,Earth,True,G/793/P,PSO J318.5-22,49.0,False,0.0,0.0,0.0,0.0,0.0,Mon Lamberguson,False
+3443_01,Earth,False,F/648/S,TRAPPIST-1e,38.0,False,792.0,0.0,,1.0,29.0,Marix Poperez,True
+5106_01,Earth,True,G/834/S,TRAPPIST-1e,29.0,False,0.0,0.0,0.0,0.0,0.0,Helle Barrez,True
+9011_01,Earth,False,F/1746/S,TRAPPIST-1e,45.0,False,2.0,338.0,307.0,64.0,0.0,Billex Anthompson,False
+4259_01,Mars,True,F/796/S,TRAPPIST-1e,41.0,False,0.0,0.0,0.0,0.0,0.0,Rispid Raste,True
+7692_01,Europa,False,C/287/S,55 Cancri e,32.0,True,0.0,48.0,0.0,3204.0,112.0,Meropus Aroodint,False
+8420_01,Earth,False,E/554/S,TRAPPIST-1e,20.0,False,4210.0,4.0,0.0,58.0,0.0,Janne Hayder,False
+6601_01,Earth,False,F/1372/P,TRAPPIST-1e,24.0,False,2.0,0.0,0.0,52.0,638.0,Debora Farrez,False
+8889_01,,False,G/1439/P,55 Cancri e,17.0,False,0.0,0.0,615.0,0.0,0.0,Erman Russelloyd,False
+5133_04,Earth,False,F/1046/P,55 Cancri e,19.0,False,107.0,0.0,505.0,48.0,0.0,Done Litthews,False
+5243_02,Earth,True,G/855/S,TRAPPIST-1e,33.0,False,0.0,0.0,0.0,0.0,0.0,Dont Melez,True
+2625_02,Earth,False,E/160/P,TRAPPIST-1e,22.0,False,0.0,1.0,271.0,0.0,1348.0,Karlie Stanleyd,False
+7450_01,Earth,False,G/1205/P,TRAPPIST-1e,23.0,False,509.0,0.0,193.0,0.0,2.0,Armene Sykess,False
+0608_01,Earth,False,G/94/P,TRAPPIST-1e,7.0,False,0.0,0.0,0.0,0.0,0.0,Maril Rilley,True
+5625_03,Mars,False,E/352/P,TRAPPIST-1e,15.0,False,890.0,9.0,0.0,1250.0,57.0,Ming Cart,False
+2752_03,Earth,False,E/165/P,TRAPPIST-1e,58.0,False,0.0,82.0,0.0,758.0,0.0,Thel Ballocks,True
+9104_01,Europa,True,C/302/P,55 Cancri e,25.0,False,0.0,0.0,0.0,0.0,0.0,Izares Foraud,True
+6593_02,Earth,False,F/1370/P,TRAPPIST-1e,26.0,False,0.0,666.0,0.0,0.0,58.0,Scotty Matts,False
+4005_02,Earth,False,G/657/P,TRAPPIST-1e,17.0,False,3.0,83.0,927.0,0.0,1.0,Aarone Castannison,True
+1860_02,Europa,False,A/13/P,55 Cancri e,35.0,False,95.0,3441.0,0.0,391.0,318.0,Krazet Headfair,False
+8729_02,Europa,False,E/559/P,TRAPPIST-1e,20.0,False,,7759.0,18.0,4925.0,12685.0,Charda Rewmid,False
+4026_01,Europa,True,B/154/S,55 Cancri e,42.0,False,0.0,0.0,0.0,0.0,0.0,Azham Chsere,True
+1015_01,Earth,False,F/189/S,TRAPPIST-1e,44.0,,0.0,131.0,267.0,554.0,0.0,Wilmay Antoshipson,False
+9069_01,Europa,True,B/297/P,TRAPPIST-1e,22.0,False,0.0,0.0,0.0,0.0,0.0,Azhat Brakeng,True
+2762_02,Earth,False,G/439/S,55 Cancri e,15.0,False,254.0,0.0,10.0,180.0,0.0,Paulah Leonzaley,False
+0811_01,Mars,False,F/152/S,PSO J318.5-22,41.0,False,1209.0,0.0,0.0,0.0,833.0,Ranutz Knik,False
+0128_01,Mars,False,D/3/S,TRAPPIST-1e,61.0,True,2353.0,334.0,9.0,316.0,2.0,Grohs Fles,False
+8119_01,Earth,True,F/1555/S,55 Cancri e,2.0,False,0.0,0.0,0.0,0.0,0.0,Harvin Tersimpson,False
+2542_01,Mars,False,E/153/P,TRAPPIST-1e,29.0,False,834.0,0.0,28.0,117.0,41.0,Quid Dutte,False
+1767_04,Europa,True,C/65/S,TRAPPIST-1e,46.0,False,0.0,0.0,0.0,0.0,0.0,Coxah Gleroling,True
+4043_01,Earth,False,E/248/P,TRAPPIST-1e,,False,0.0,0.0,0.0,32.0,1577.0,Marvey Mirandry,False
+4371_03,,True,C/158/S,TRAPPIST-1e,22.0,False,0.0,0.0,0.0,0.0,0.0,Ranon Shricatory,True
+6011_01,Earth,False,F/1239/P,TRAPPIST-1e,58.0,False,0.0,0.0,0.0,1989.0,18.0,Kurta Hoodgers,False
+5628_01,Earth,True,G/900/P,TRAPPIST-1e,27.0,False,0.0,0.0,0.0,0.0,0.0,Ebonya Potthews,False
+5885_05,Earth,True,G/954/S,55 Cancri e,23.0,False,0.0,0.0,0.0,0.0,0.0,Philda Oneiles,True
+0444_02,,False,F/99/P,TRAPPIST-1e,26.0,True,1869.0,0.0,136.0,0.0,0.0,Colal Curte,False
+0504_06,,True,B/19/S,55 Cancri e,53.0,False,0.0,0.0,0.0,0.0,0.0,Alheneb Unpasine,True
+8617_01,Earth,False,F/1768/P,TRAPPIST-1e,21.0,False,11.0,1475.0,0.0,0.0,0.0,Jeroy Cartiz,True
+0693_02,Europa,False,C/27/S,TRAPPIST-1e,34.0,False,0.0,3488.0,0.0,4343.0,38.0,Tetraix Dedometeel,False
+7176_02,Europa,False,C/232/P,TRAPPIST-1e,26.0,False,0.0,6050.0,0.0,662.0,920.0,Kochard Chhaft,False
+2724_01,Mars,True,F/564/P,55 Cancri e,17.0,False,0.0,0.0,0.0,0.0,0.0,Swack Merte,True
+6376_01,Mars,True,F/1217/S,55 Cancri e,26.0,False,0.0,0.0,0.0,0.0,0.0,Cird Barte,True
+7179_01,Earth,False,E/460/P,TRAPPIST-1e,53.0,False,3.0,2251.0,0.0,95.0,12.0,Denis Mullon,True
+3492_01,Earth,False,E/238/S,TRAPPIST-1e,33.0,False,44.0,630.0,18.0,96.0,0.0,Vina Waterson,False
+1267_01,Earth,True,G/191/S,PSO J318.5-22,34.0,,0.0,0.0,0.0,0.0,0.0,Hencey Jacostaffey,True
+5887_02,Earth,False,F/1217/P,,51.0,False,201.0,574.0,40.0,0.0,11.0,Ryanne Cochrisons,False
+5040_02,Europa,False,C/195/S,55 Cancri e,39.0,False,10.0,199.0,0.0,6216.0,101.0,Alsha Dynigic,False
+4084_01,Europa,False,D/132/S,TRAPPIST-1e,26.0,False,0.0,1549.0,0.0,0.0,766.0,Arix Rentruing,True
+2233_01,Earth,False,G/359/P,TRAPPIST-1e,39.0,False,9.0,18.0,0.0,2.0,878.0,Nelle Alfordonard,False
+6954_01,Mars,False,E/445/P,TRAPPIST-1e,28.0,,1998.0,0.0,13.0,87.0,0.0,Blug Flie,False
+9136_01,Earth,False,G/1471/S,TRAPPIST-1e,,False,6.0,0.0,0.0,800.0,3.0,Sall Hestes,False
+4837_01,Earth,False,F/912/S,TRAPPIST-1e,21.0,,0.0,198.0,559.0,19.0,44.0,Jorgie Jarvey,True
+3602_01,Mars,,F/678/S,TRAPPIST-1e,11.0,False,0.0,0.0,0.0,0.0,0.0,Dakes Vicke,True
+2764_01,Earth,False,E/189/S,TRAPPIST-1e,42.0,False,0.0,0.0,213.0,166.0,1209.0,Racily Reyervaney,True
+1030_01,Earth,False,F/213/P,TRAPPIST-1e,23.0,False,1081.0,0.0,0.0,0.0,7.0,Jorgie Farleyatton,False
+3204_02,Europa,False,A/27/P,TRAPPIST-1e,47.0,False,3865.0,3810.0,0.0,12.0,196.0,Alphah Wirdley,False
+7084_01,Earth,False,F/1355/S,55 Cancri e,26.0,False,0.0,158.0,0.0,0.0,912.0,Faithy Hunterton,False
+3521_01,Europa,True,,55 Cancri e,23.0,False,0.0,0.0,0.0,0.0,0.0,Minoton Radisiouss,True
+6305_02,Europa,False,B/248/S,TRAPPIST-1e,46.0,False,3616.0,564.0,0.0,15.0,3303.0,Ashird Parbleake,False
+0504_03,Europa,True,B/19/S,,24.0,False,0.0,0.0,0.0,0.0,0.0,Sterops Unpasine,True
+2040_01,Europa,True,B/85/S,TRAPPIST-1e,50.0,False,0.0,0.0,0.0,0.0,0.0,Lesaten Stiven,True
+8703_01,Earth,False,F/1685/S,TRAPPIST-1e,44.0,False,84.0,0.0,308.0,0.0,1179.0,Lynnie Simpsonks,False
+1709_02,Mars,False,D/61/S,TRAPPIST-1e,23.0,False,2210.0,0.0,89.0,0.0,0.0,Bet Minen,True
+8681_02,Mars,False,F/1787/P,TRAPPIST-1e,1.0,False,0.0,0.0,0.0,0.0,0.0,Rionk Facle,True
+9124_01,Mars,False,E/599/S,TRAPPIST-1e,26.0,False,733.0,0.0,1296.0,80.0,0.0,Eggies Tert,False
+5185_01,Mars,False,E/330/S,TRAPPIST-1e,29.0,False,523.0,0.0,21.0,4.0,811.0,Cruts Flie,False
+3195_05,Earth,False,,55 Cancri e,0.0,False,0.0,0.0,0.0,0.0,0.0,Allena Litthews,False
+8462_01,Earth,False,F/1629/S,TRAPPIST-1e,21.0,False,32.0,640.0,0.0,0.0,0.0,Maen Klindsey,True
+0665_02,Mars,False,F/141/P,TRAPPIST-1e,15.0,False,1264.0,0.0,2.0,23.0,0.0,Lix Winie,False
+8015_01,Europa,,B/315/S,TRAPPIST-1e,2.0,False,0.0,0.0,0.0,0.0,,Kitauon Pulgaly,True
+5353_01,Europa,True,B/205/S,55 Cancri e,13.0,False,0.0,0.0,0.0,0.0,0.0,Ranan Reelest,True
+6254_01,Europa,True,B/243/S,TRAPPIST-1e,37.0,False,0.0,0.0,0.0,0.0,0.0,Errak Pokeck,True
+3162_01,Earth,False,G/500/S,TRAPPIST-1e,0.0,False,0.0,0.0,0.0,0.0,0.0,Diandi Kellyons,True
+1233_01,Earth,True,G/184/P,PSO J318.5-22,22.0,False,0.0,0.0,0.0,0.0,0.0,Aarone Burryerson,True
+0926_02,Europa,False,B/39/S,TRAPPIST-1e,30.0,False,0.0,760.0,234.0,2761.0,81.0,Alkeson Asticit,False
+3971_01,Earth,False,G/651/P,TRAPPIST-1e,44.0,False,39.0,821.0,0.0,7.0,41.0,Joanry Brighttt,False
+2234_03,Mars,False,E/134/P,TRAPPIST-1e,19.0,False,0.0,0.0,0.0,0.0,0.0,Apench Flité,False
+8076_02,Europa,False,C/263/P,55 Cancri e,29.0,False,2686.0,0.0,0.0,2854.0,2553.0,Achbah Emetillove,False
+5746_01,Earth,False,G/932/S,TRAPPIST-1e,19.0,False,0.0,,0.0,5381.0,139.0,Rica Vandan,False
+3680_01,Europa,False,C/121/P,55 Cancri e,35.0,False,0.0,388.0,0.0,1792.0,2891.0,Weias Platch,False
+6065_01,,False,E/398/S,TRAPPIST-1e,19.0,False,3.0,785.0,0.0,0.0,0.0,Sharie Rodricker,True
+6921_01,Europa,False,C/255/S,TRAPPIST-1e,22.0,False,0.0,1914.0,2090.0,100.0,0.0,Sadrix Stersetery,True
+6085_01,Earth,False,F/1257/P,TRAPPIST-1e,46.0,False,0.0,0.0,868.0,0.0,3.0,Jimmyn Gainney,True
+6341_01,Mars,False,D/191/S,55 Cancri e,39.0,False,1884.0,0.0,1435.0,5.0,469.0,Colf Cre,False
+1746_01,Mars,True,F/331/S,TRAPPIST-1e,50.0,False,0.0,0.0,0.0,0.0,0.0,Clers Bache,True
+3703_02,Mars,False,F/768/P,TRAPPIST-1e,20.0,False,1377.0,267.0,36.0,0.0,0.0,Shersp Coflé,False
+4169_02,Europa,False,D/140/P,TRAPPIST-1e,41.0,False,0.0,1562.0,0.0,2.0,16.0,Acruxon Susent,True
+0697_01,Earth,False,F/147/P,55 Cancri e,24.0,False,21.0,0.0,689.0,12.0,0.0,Dixiel Buchansen,True
+5738_01,Earth,True,G/929/S,TRAPPIST-1e,18.0,False,0.0,0.0,0.0,0.0,0.0,Ritany Morelly,True
+8085_01,Earth,False,F/1549/S,PSO J318.5-22,35.0,False,635.0,3.0,0.0,,25.0,Nandy Avisley,False
+1782_02,Earth,False,F/341/S,TRAPPIST-1e,40.0,,596.0,,135.0,73.0,0.0,Carold Moodson,False
+7839_01,Earth,False,G/1259/P,TRAPPIST-1e,20.0,False,0.0,0.0,0.0,0.0,0.0,Jilla Leson,False
+9077_01,Earth,False,F/1856/P,55 Cancri e,22.0,False,23.0,100.0,1353.0,0.0,0.0,Kimmie Sawyerson,True
+5173_01,Mars,True,F/1057/P,TRAPPIST-1e,19.0,False,0.0,0.0,0.0,0.0,0.0,Supies Biba,True
+4646_01,Earth,False,F/873/S,PSO J318.5-22,22.0,False,141.0,16.0,0.0,177.0,336.0,Pennie Mcgoway,True
+1937_01,Earth,False,F/368/S,TRAPPIST-1e,47.0,False,7.0,877.0,17.0,0.0,0.0,Therly Knoxtones,False
+4758_01,Earth,False,F/966/P,TRAPPIST-1e,44.0,False,248.0,0.0,0.0,0.0,623.0,Luzel Woody,False
+0401_01,Mars,False,D/14/S,TRAPPIST-1e,30.0,True,1056.0,0.0,0.0,0.0,0.0,Luse Pimne,False
+4356_01,Europa,True,B/167/S,55 Cancri e,28.0,False,0.0,0.0,0.0,0.0,0.0,Dabik Brantcable,True
+5555_01,,False,G/896/S,,43.0,,1.0,0.0,213.0,7.0,701.0,Winia Blanglison,True
+9231_03,Mars,False,E/592/P,TRAPPIST-1e,22.0,False,0.0,0.0,0.0,0.0,0.0,Cus Paie,False
+0776_01,Earth,False,F/161/P,TRAPPIST-1e,19.0,False,0.0,2.0,1399.0,0.0,18.0,Breney Roycentes,True
+9030_02,,False,G/1465/P,TRAPPIST-1e,27.0,False,0.0,0.0,0.0,298.0,511.0,Stace Ericksonga,False
+6462_02,Mars,False,F/1233/S,TRAPPIST-1e,21.0,False,899.0,1.0,1686.0,13.0,0.0,Gibers Cure,True
+6334_02,Earth,True,G/1028/S,PSO J318.5-22,7.0,False,0.0,0.0,0.0,0.0,0.0,Dondy Jenson,True
+5987_01,Earth,False,G/973/S,TRAPPIST-1e,29.0,False,0.0,5.0,6.0,0.0,,Searla Stannondez,True
+8881_01,Earth,False,F/1719/S,55 Cancri e,34.0,False,0.0,0.0,717.0,0.0,0.0,Timmy Garnettiz,True
+5447_02,Mars,,F/1126/P,TRAPPIST-1e,36.0,False,0.0,0.0,0.0,0.0,0.0,Poselk Coune,True
+5313_01,Earth,False,F/1085/P,TRAPPIST-1e,23.0,False,0.0,491.0,0.0,61.0,0.0,Tracia Guezaley,True
+2678_01,Earth,False,F/517/S,TRAPPIST-1e,21.0,False,0.0,680.0,0.0,10.0,0.0,Gera Sosanturney,True
+5794_01,Europa,False,D/182/P,TRAPPIST-1e,45.0,False,0.0,1202.0,149.0,1472.0,3379.0,Winopus Shoeweely,False
+8884_01,Earth,False,F/1830/P,TRAPPIST-1e,26.0,False,1471.0,0.0,7.0,5.0,0.0,Jenne Mckins,True
+6674_01,Europa,False,E/426/P,TRAPPIST-1e,29.0,False,0.0,841.0,0.0,1733.0,11.0,Wezna Swirring,False
+6139_02,Europa,True,C/230/S,TRAPPIST-1e,4.0,False,0.0,0.0,0.0,0.0,0.0,Atonea Reedall,True
+1976_06,Europa,True,B/82/S,TRAPPIST-1e,64.0,False,0.0,0.0,0.0,0.0,0.0,Wasaleh Lansuffle,True
+1510_01,Mars,False,F/291/S,TRAPPIST-1e,31.0,False,1226.0,0.0,1.0,0.0,0.0,Yakers Swin,False
+3013_01,,False,F/629/P,TRAPPIST-1e,13.0,False,,256.0,0.0,207.0,409.0,Morrie Moongton,False
+3252_01,Earth,False,F/613/S,55 Cancri e,53.0,False,8.0,0.0,236.0,0.0,2049.0,Dwin Melez,False
+8537_03,Mars,True,F/1643/S,TRAPPIST-1e,16.0,,0.0,0.0,0.0,0.0,0.0,Tonch Nutte,True
+2524_01,Europa,True,D/74/P,55 Cancri e,27.0,False,0.0,0.0,0.0,,0.0,Ashir Witeronfus,True
+2347_05,Earth,True,G/377/P,55 Cancri e,15.0,False,0.0,0.0,0.0,0.0,0.0,Lewise Wellierras,True
+4371_02,Europa,False,C/158/S,55 Cancri e,39.0,False,106.0,243.0,126.0,7.0,4967.0,Taurak Shricatory,False
+7498_03,Mars,False,F/1550/P,TRAPPIST-1e,27.0,True,30.0,0.0,910.0,0.0,0.0,Beals Cola,True
+4764_01,Earth,False,E/308/S,TRAPPIST-1e,22.0,False,0.0,669.0,121.0,0.0,56.0,Faithy Bookerson,True
+5723_01,Mars,True,E/372/S,TRAPPIST-1e,24.0,False,0.0,0.0,0.0,0.0,0.0,Quakes Puff,False
+2838_01,Mars,False,E/174/P,TRAPPIST-1e,22.0,False,0.0,0.0,0.0,0.0,0.0,Whee Cure,False
+4249_01,Europa,False,B/166/S,TRAPPIST-1e,58.0,False,0.0,2946.0,0.0,101.0,387.0,Nusoton Inghting,True
+4211_01,Europa,True,C/134/P,TRAPPIST-1e,26.0,False,0.0,0.0,0.0,0.0,0.0,Sulabik Covale,True
+3569_01,Mars,True,F/741/P,TRAPPIST-1e,19.0,False,0.0,0.0,0.0,0.0,0.0,Prah Bine,True
+1758_01,Earth,False,G/274/S,TRAPPIST-1e,55.0,False,587.0,0.0,0.0,318.0,3.0,Maril Fielsenders,False
+6172_01,Earth,True,G/1001/S,TRAPPIST-1e,36.0,False,0.0,0.0,0.0,0.0,0.0,Ricard Dombsoney,True
+3276_01,Europa,False,A/29/P,TRAPPIST-1e,33.0,False,20.0,653.0,0.0,121.0,483.0,Prope Wirdley,False
+2891_01,Earth,False,G/460/S,TRAPPIST-1e,18.0,False,4.0,904.0,0.0,0.0,1.0,Gleney Ortinericey,False
+1230_01,Earth,False,G/189/S,TRAPPIST-1e,38.0,False,354.0,34.0,0.0,291.0,229.0,Catha Gainebergan,False
+3301_01,Earth,True,G/525/S,55 Cancri e,8.0,False,0.0,0.0,0.0,0.0,0.0,Tyle Domington,True
+1345_01,Earth,False,F/260/S,TRAPPIST-1e,25.0,False,1174.0,0.0,18.0,721.0,0.0,Mistie Flowensley,False
+2060_01,,False,G/327/S,55 Cancri e,22.0,False,1430.0,0.0,0.0,0.0,423.0,Anniey Baketton,False
+5822_01,Earth,True,G/939/P,TRAPPIST-1e,12.0,False,0.0,0.0,0.0,0.0,0.0,Joandy Chapmaney,True
+3039_01,Europa,False,A/37/S,TRAPPIST-1e,32.0,False,0.0,0.0,0.0,0.0,0.0,Acraban Conamminal,False
+8828_01,Earth,False,F/1711/S,55 Cancri e,19.0,,0.0,6.0,0.0,0.0,1179.0,Charly Robersondez,True
+3401_01,Earth,False,G/545/S,TRAPPIST-1e,18.0,False,0.0,0.0,1435.0,0.0,,Karene Fisheparks,True
+3275_01,Earth,False,F/617/S,55 Cancri e,35.0,False,256.0,0.0,341.0,35.0,0.0,Darley Gibbsonton,True
+6066_01,Europa,False,C/226/S,TRAPPIST-1e,33.0,False,0.0,357.0,2366.0,1612.0,2137.0,Altan Mallisly,False
+0585_01,Mars,True,F/120/P,TRAPPIST-1e,48.0,False,0.0,0.0,0.0,0.0,0.0,Graven Fone,True
+2123_01,Earth,True,G/342/P,PSO J318.5-22,23.0,False,0.0,0.0,0.0,0.0,0.0,Dianya Johnsondez,False
+7259_01,Earth,False,F/1503/P,PSO J318.5-22,22.0,False,28.0,194.0,2.0,0.0,370.0,Sterry Meadoney,True
+6725_01,Europa,False,C/214/P,TRAPPIST-1e,32.0,False,0.0,390.0,60.0,5015.0,211.0,Caphira Cratrave,False
+3021_01,Earth,False,G/476/S,TRAPPIST-1e,31.0,False,517.0,1.0,301.0,60.0,4.0,Deanny Spencervan,False
+8322_01,Europa,False,,PSO J318.5-22,45.0,True,,49.0,0.0,4864.0,3902.0,Hamelik Briouse,False
+7234_01,Earth,False,G/1163/P,TRAPPIST-1e,22.0,False,593.0,34.0,0.0,0.0,0.0,Annard Merce,False
+5729_01,Mars,True,F/1186/P,TRAPPIST-1e,29.0,False,0.0,0.0,0.0,0.0,0.0,Honjay Merie,True
+5290_01,Earth,False,F/1083/P,TRAPPIST-1e,31.0,False,1177.0,2.0,0.0,,1.0,Bretty Patthews,False
+4632_01,Europa,True,C/176/S,TRAPPIST-1e,57.0,False,0.0,0.0,0.0,0.0,0.0,Bellus Dightent,True
+9176_01,Earth,False,F/1773/S,TRAPPIST-1e,24.0,False,0.0,537.0,0.0,5.0,197.0,Willy Mcneiderson,True
+1602_01,Earth,False,F/307/S,TRAPPIST-1e,18.0,False,0.0,0.0,0.0,2681.0,55.0,Vina Chardsons,False
+3124_02,Mars,False,F/648/P,TRAPPIST-1e,47.0,False,1130.0,8.0,299.0,0.0,0.0,Gech Hapie,True
+7034_01,Mars,False,F/1341/S,TRAPPIST-1e,,False,1216.0,0.0,30.0,43.0,0.0,Walmon Curle,False
+8313_01,Earth,False,G/1341/S,TRAPPIST-1e,30.0,False,467.0,0.0,0.0,0.0,287.0,Sallie Gainney,False
+6450_01,Europa,False,C/200/P,TRAPPIST-1e,23.0,False,0.0,596.0,57.0,259.0,4666.0,Anyoni Unative,False
+1581_01,Mars,True,F/312/P,TRAPPIST-1e,38.0,False,0.0,0.0,0.0,0.0,0.0,Cor Che,True
+2876_01,Earth,False,G/456/S,TRAPPIST-1e,42.0,False,173.0,656.0,0.0,0.0,23.0,Andyn Brenney,False
+6191_04,Europa,True,A/59/P,TRAPPIST-1e,18.0,False,0.0,0.0,0.0,0.0,0.0,Miatrix Ametic,True
+2497_01,Earth,False,,55 Cancri e,36.0,False,0.0,0.0,0.0,33.0,619.0,Glasey Foledges,False
+4181_06,Europa,False,C/133/P,55 Cancri e,41.0,True,0.0,9463.0,0.0,1022.0,1562.0,Ranan Frattyring,True
+1330_01,Mars,False,D/46/S,TRAPPIST-1e,47.0,False,405.0,0.0,193.0,458.0,0.0,Sts Mare,False
+1234_01,Earth,False,F/236/S,PSO J318.5-22,23.0,False,0.0,0.0,1250.0,0.0,0.0,Derina Lambles,True
+2958_01,Earth,False,F/561/S,TRAPPIST-1e,26.0,False,1822.0,0.0,4.0,107.0,1204.0,Min Parrett,False
+9125_02,Mars,True,E/586/P,TRAPPIST-1e,55.0,False,0.0,0.0,0.0,0.0,0.0,Luse Corie,True
+5639_01,Earth,False,G/913/S,TRAPPIST-1e,22.0,False,19.0,9.0,0.0,0.0,594.0,Bel Ewins,True
+5561_02,Europa,False,A/51/P,TRAPPIST-1e,28.0,False,0.0,175.0,0.0,214.0,7461.0,Cellus Fueling,False
+3464_01,Earth,False,G/561/S,TRAPPIST-1e,14.0,False,0.0,0.0,533.0,266.0,93.0,Murie Hardsonerry,False
+1235_01,Earth,False,F/237/S,TRAPPIST-1e,32.0,False,27.0,393.0,1061.0,27.0,0.0,Lyn Scottuez,True
+0599_03,Mars,False,F/124/P,TRAPPIST-1e,26.0,False,1252.0,0.0,46.0,124.0,6.0,Apple Crité,False
+3284_01,Earth,True,G/535/P,PSO J318.5-22,17.0,False,0.0,0.0,0.0,0.0,0.0,Kaye Holsen,True
+8128_01,Mars,True,F/1682/P,TRAPPIST-1e,24.0,False,0.0,0.0,0.0,0.0,0.0,Mele Queke,True
+0925_02,Mars,True,F/191/P,TRAPPIST-1e,11.0,False,0.0,0.0,0.0,0.0,0.0,Varkes Kraie,True
+6988_02,Europa,False,C/226/P,TRAPPIST-1e,28.0,False,0.0,4340.0,0.0,186.0,0.0,Azharga Obnoftle,True
+0454_01,Europa,,B/15/S,55 Cancri e,28.0,True,5.0,4288.0,0.0,745.0,5.0,Tabius Geoconne,True
+3797_01,Europa,False,B/122/P,TRAPPIST-1e,26.0,False,0.0,0.0,0.0,0.0,0.0,Kleeiak Couseced,False
+9128_01,Earth,False,F/1870/P,TRAPPIST-1e,36.0,False,794.0,371.0,0.0,228.0,1.0,Jacque Briggston,False
+6061_01,Earth,False,F/1153/S,TRAPPIST-1e,18.0,False,33.0,0.0,455.0,167.0,48.0,Aliedy Jacostaney,True
+0585_02,Mars,True,F/120/P,TRAPPIST-1e,5.0,False,0.0,0.0,0.0,0.0,0.0,Sugard Fone,True
+6432_01,Europa,False,D/202/P,55 Cancri e,55.0,False,114.0,222.0,0.0,2575.0,2919.0,Asch Stradick,False
+2389_01,Earth,False,G/384/S,TRAPPIST-1e,22.0,False,0.0,46.0,0.0,676.0,0.0,Annon Solon,False
+4708_01,Mars,False,E/304/S,TRAPPIST-1e,26.0,False,0.0,25.0,13.0,11.0,998.0,,False
+3412_01,Europa,False,B/107/P,TRAPPIST-1e,48.0,False,0.0,12.0,0.0,7967.0,15.0,Alraixa Ainserfle,False
+5842_01,Europa,True,C/220/S,55 Cancri e,28.0,False,0.0,0.0,0.0,0.0,0.0,Hekark Maging,True
+5238_01,Earth,True,G/845/P,PSO J318.5-22,13.0,False,0.0,0.0,0.0,0.0,0.0,Gailia Blainson,False
+3775_02,Mars,True,F/712/S,TRAPPIST-1e,46.0,False,0.0,0.0,0.0,0.0,,Colax Killé,True
+6968_01,Earth,False,F/1447/P,TRAPPIST-1e,13.0,False,0.0,114.0,682.0,0.0,7.0,Dandra Yanton,False
+0770_01,Earth,True,G/117/S,TRAPPIST-1e,0.0,False,0.0,0.0,0.0,0.0,0.0,Alendy Mclardson,False
+0179_01,Earth,False,G/26/P,TRAPPIST-1e,19.0,False,1.0,219.0,673.0,2.0,11.0,Elaney Webstephrey,True
+1046_01,Earth,False,F/196/S,TRAPPIST-1e,16.0,False,507.0,0.0,0.0,0.0,,Wena Beachez,False
+1348_02,Europa,True,B/57/S,TRAPPIST-1e,,False,0.0,0.0,0.0,0.0,0.0,Aske Balightal,True
+4482_02,Earth,False,G/732/S,TRAPPIST-1e,9.0,False,0.0,0.0,0.0,0.0,0.0,Idave Anthompson,True
+4695_02,Mars,False,F/882/S,TRAPPIST-1e,21.0,False,3148.0,0.0,1.0,0.0,0.0,Wifts Snoff,False
+5981_03,Mars,False,F/1140/S,TRAPPIST-1e,0.0,False,0.0,0.0,0.0,0.0,0.0,Cark Quart,True
+4645_01,Europa,False,B/184/S,TRAPPIST-1e,48.0,False,0.0,9633.0,0.0,1.0,2.0,Aton Bacistion,True
+0756_02,Europa,False,B/27/S,TRAPPIST-1e,34.0,False,47.0,287.0,0.0,4302.0,0.0,Ranon Geraing,False
+0220_05,Earth,False,F/48/P,TRAPPIST-1e,16.0,False,0.0,3.0,0.0,0.0,1099.0,Velyne Wilsoney,False
+6558_01,Earth,False,F/1363/P,TRAPPIST-1e,31.0,False,3.0,0.0,0.0,747.0,43.0,Philda Cleminglas,True
+4508_02,Mars,False,E/283/P,TRAPPIST-1e,21.0,False,572.0,584.0,128.0,14.0,0.0,Eet Pepie,False
+7004_01,Earth,False,F/1337/S,55 Cancri e,14.0,False,,1.0,400.0,297.0,0.0,Karena Woodwardy,False
+5279_01,Earth,False,G/852/P,TRAPPIST-1e,28.0,False,467.0,,0.0,0.0,307.0,Antony Flynnis,False
+4752_01,Mars,False,F/964/P,PSO J318.5-22,56.0,False,233.0,0.0,1356.0,0.0,171.0,Terek Knike,False
+4329_01,Earth,False,F/812/S,,22.0,False,39.0,0.0,63.0,3.0,654.0,Colly Benderez,False
+3133_01,Earth,False,G/513/P,PSO J318.5-22,31.0,False,0.0,140.0,394.0,0.0,0.0,Aliey Chanash,False
+1284_01,Mars,True,F/247/S,,,False,0.0,,0.0,0.0,0.0,Hal Knité,True
+2589_02,Europa,True,C/91/P,55 Cancri e,50.0,False,0.0,0.0,0.0,0.0,0.0,Alphact Meteet,True
+4017_03,Mars,True,F/761/S,TRAPPIST-1e,,False,0.0,0.0,0.0,0.0,0.0,Chrice Mele,True
+3680_02,Europa,True,C/121/P,55 Cancri e,23.0,False,0.0,0.0,0.0,0.0,0.0,,True
+1404_01,Europa,False,B/60/S,TRAPPIST-1e,47.0,False,1.0,734.0,28.0,78.0,3471.0,Alaton Mornaned,False
+8161_01,Earth,False,F/1688/P,TRAPPIST-1e,18.0,False,1157.0,28.0,50.0,0.0,0.0,Marina Pooles,False
+8561_01,Earth,True,G/1375/S,PSO J318.5-22,29.0,False,0.0,0.0,,0.0,0.0,Dandra Sandry,False
+3123_01,Earth,True,G/511/P,,17.0,False,0.0,0.0,0.0,0.0,0.0,Derina Prinson,True
+4254_01,Europa,False,B/136/P,55 Cancri e,33.0,False,5493.0,9401.0,23.0,3013.0,303.0,Alasmon Idercaling,False
+0282_01,Earth,False,F/54/S,TRAPPIST-1e,21.0,False,0.0,918.0,0.0,0.0,0.0,Valex Baketton,True
+2291_01,Earth,,G/365/S,55 Cancri e,6.0,False,0.0,0.0,0.0,,0.0,Patoya Pittler,False
+1211_01,Earth,True,G/186/S,PSO J318.5-22,53.0,False,0.0,0.0,0.0,0.0,0.0,Andyn Alvasquez,False
+8346_01,Earth,False,F/1718/P,TRAPPIST-1e,,False,41.0,23.0,63.0,0.0,647.0,Stelle Woodwinez,False
+7396_01,Europa,False,C/271/S,55 Cancri e,28.0,False,6.0,3392.0,3944.0,987.0,0.0,Zibah Queldry,True
+2617_01,Earth,False,G/424/P,PSO J318.5-22,32.0,False,59.0,0.0,469.0,0.0,0.0,Yolas Peckerson,False
+7788_01,Earth,False,F/1488/S,PSO J318.5-22,43.0,False,0.0,0.0,110.0,538.0,0.0,Julin Guerson,False
+2787_01,Earth,False,F/535/S,55 Cancri e,21.0,False,13.0,,1098.0,64.0,1.0,Stelly Salez,False
+1956_01,Mars,False,D/68/S,TRAPPIST-1e,37.0,False,2765.0,0.0,1134.0,0.0,0.0,,False
+3630_01,Earth,False,F/754/P,PSO J318.5-22,61.0,False,0.0,1.0,276.0,410.0,54.0,Darry Micknightt,False
+1325_02,Earth,False,E/97/S,TRAPPIST-1e,24.0,False,70.0,160.0,340.0,0.0,336.0,Wilmay Barbes,False
+2892_04,Earth,False,F/598/P,TRAPPIST-1e,29.0,False,0.0,1311.0,0.0,0.0,0.0,Kendre Coolerson,False
+8903_01,Earth,False,G/1437/S,TRAPPIST-1e,18.0,False,0.0,0.0,0.0,0.0,810.0,Darrie Herreras,False
+3756_01,Mars,True,F/707/S,TRAPPIST-1e,18.0,False,,0.0,0.0,0.0,0.0,Blus Snoaf,True
+0417_03,Europa,True,B/18/P,TRAPPIST-1e,59.0,False,0.0,0.0,0.0,0.0,0.0,Enifik Unhearfus,True
+5133_08,Earth,False,F/1046/P,TRAPPIST-1e,35.0,False,0.0,116.0,51.0,0.0,701.0,Lawren Josey,False
+5213_01,Earth,False,F/1064/P,TRAPPIST-1e,25.0,False,10.0,0.0,908.0,5.0,0.0,Nathy Pottley,True
+7689_01,Earth,False,F/1597/P,,24.0,False,0.0,96.0,0.0,597.0,0.0,Erie Sextones,False
+7993_02,Europa,True,A/96/S,55 Cancri e,47.0,True,0.0,0.0,0.0,0.0,0.0,Dyonon Frakepeed,True
+6276_01,Earth,True,G/1011/P,55 Cancri e,23.0,False,0.0,0.0,0.0,0.0,0.0,Coracy Grifford,True
+5090_06,Earth,False,G/821/P,,11.0,False,0.0,0.0,0.0,0.0,0.0,Scotte Willy,True
+1739_01,Earth,True,G/269/S,PSO J318.5-22,20.0,False,0.0,0.0,0.0,0.0,0.0,Wine Jarvey,True
+2268_01,Earth,True,G/366/P,TRAPPIST-1e,19.0,False,0.0,0.0,0.0,0.0,0.0,Camiet Mcbriggins,False
+3350_01,Earth,False,F/633/S,TRAPPIST-1e,17.0,False,3.0,2126.0,0.0,0.0,0.0,Dianya Josey,True
+8279_01,Earth,False,G/1349/P,TRAPPIST-1e,31.0,False,0.0,4334.0,55.0,56.0,,Monah Villenson,True
+4940_01,Earth,True,G/805/S,,19.0,False,0.0,0.0,0.0,0.0,0.0,Dony Vantonson,True
+8880_01,Mars,True,F/1829/P,TRAPPIST-1e,28.0,False,0.0,0.0,0.0,0.0,0.0,Croo Cure,True
+6178_01,Earth,True,G/1001/P,PSO J318.5-22,28.0,False,0.0,0.0,0.0,0.0,0.0,Idarry Nichaner,False
+7360_01,Earth,True,G/1194/S,55 Cancri e,29.0,False,0.0,0.0,0.0,0.0,0.0,Chery Joycerton,True
+6408_01,Earth,False,G/1034/P,PSO J318.5-22,22.0,False,431.0,40.0,0.0,10.0,0.0,Naomin Crosbornes,False
+8981_01,Earth,False,E/589/S,TRAPPIST-1e,29.0,False,311.0,7.0,665.0,0.0,0.0,Deanny Rames,False
+5301_01,Europa,True,B/181/P,TRAPPIST-1e,21.0,False,0.0,0.0,0.0,0.0,0.0,Altara Pretive,True
+6090_01,Mars,True,F/1259/P,TRAPPIST-1e,36.0,False,0.0,0.0,0.0,0.0,0.0,Cants Bra,True
+3973_01,Europa,True,E/240/P,,29.0,False,0.0,0.0,0.0,0.0,0.0,Astorux Reedectied,True
+0798_01,Mars,True,F/147/S,PSO J318.5-22,38.0,False,0.0,0.0,0.0,0.0,0.0,Ecco Gelle,True
+2091_01,Earth,False,F/414/P,TRAPPIST-1e,33.0,False,356.0,,0.0,245.0,0.0,Arlie Woodwinez,False
+5034_01,Earth,False,G/824/S,TRAPPIST-1e,36.0,False,0.0,52.0,8.0,0.0,4160.0,Briany Sellahaney,False
+2925_02,Mars,True,F/609/P,55 Cancri e,23.0,False,0.0,0.0,0.0,0.0,0.0,Goleer Minen,True
+0196_01,Mars,False,D/5/P,PSO J318.5-22,25.0,False,1052.0,0.0,719.0,0.0,7.0,Caper Emead,False
+1481_01,Mars,False,E/91/P,TRAPPIST-1e,27.0,False,555.0,0.0,744.0,0.0,0.0,Krus Prist,False
+1453_01,Earth,,G/229/P,55 Cancri e,16.0,,0.0,2838.0,32.0,5.0,3404.0,Kimena Thorney,False
+1500_03,Earth,False,G/230/S,55 Cancri e,17.0,False,0.0,55.0,913.0,0.0,55.0,Joandy Barbes,True
+8301_01,Europa,False,C/275/P,TRAPPIST-1e,28.0,False,1722.0,5063.0,0.0,87.0,920.0,Bosonon Horbox,False
+1666_01,Europa,False,D/59/S,TRAPPIST-1e,38.0,False,158.0,787.0,2820.0,,86.0,Askedus Retefule,True
+6299_01,Europa,False,C/192/P,55 Cancri e,46.0,False,0.0,8943.0,0.0,0.0,159.0,Merops Femoused,True
+5840_01,Earth,True,G/946/P,TRAPPIST-1e,23.0,False,0.0,0.0,0.0,0.0,0.0,Jerrye Potters,False
+3318_05,Europa,True,B/123/S,TRAPPIST-1e,36.0,False,0.0,0.0,0.0,0.0,0.0,Betenar Openduave,True
+7436_01,Earth,,G/1202/P,TRAPPIST-1e,28.0,False,0.0,0.0,0.0,0.0,0.0,Letty Meyersones,False
+4938_01,Earth,False,G/804/S,55 Cancri e,20.0,False,0.0,0.0,847.0,0.0,0.0,Lynnee Traverdy,True
+9165_01,Earth,False,F/1771/S,TRAPPIST-1e,23.0,False,9.0,2.0,1.0,0.0,727.0,Leria Cofferson,False
+1531_01,Earth,False,G/237/S,TRAPPIST-1e,46.0,False,0.0,0.0,533.0,277.0,0.0,Kimena Puckley,False
+7056_01,Europa,False,D/217/S,55 Cancri e,43.0,False,0.0,2093.0,0.0,3409.0,30.0,Alramix Secont,False
+2709_04,Mars,False,F/523/S,TRAPPIST-1e,12.0,,0.0,0.0,0.0,0.0,0.0,Worms Ble,True
+4744_02,Europa,True,C/152/P,55 Cancri e,34.0,False,0.0,0.0,0.0,0.0,0.0,Sulaton Ingent,True
+5941_01,Earth,False,E/386/S,TRAPPIST-1e,,False,72.0,914.0,0.0,0.0,7.0,,True
+6613_01,Earth,True,G/1078/S,TRAPPIST-1e,15.0,False,0.0,0.0,0.0,0.0,0.0,Darry Sawyerson,True
+7014_01,Europa,False,C/257/S,55 Cancri e,25.0,False,0.0,3512.0,20.0,24.0,1459.0,Edar Speery,True
+0181_01,Earth,False,G/27/P,TRAPPIST-1e,20.0,False,0.0,0.0,3.0,299.0,92.0,Nancis Brighttt,False
+6318_01,Earth,True,G/1018/P,TRAPPIST-1e,15.0,False,0.0,0.0,0.0,0.0,0.0,Bonya Pughanders,True
+5019_01,Earth,False,F/955/S,TRAPPIST-1e,15.0,False,0.0,0.0,19.0,352.0,326.0,Olly Hebernandry,False
+3665_01,Earth,True,G/595/S,55 Cancri e,29.0,False,0.0,0.0,,0.0,0.0,Rickie Hendrewsons,True
+0746_01,Earth,True,G/112/S,TRAPPIST-1e,19.0,False,0.0,0.0,0.0,0.0,0.0,Milyla Waltonnedy,False
+6077_01,Earth,True,G/985/P,TRAPPIST-1e,17.0,False,0.0,,0.0,0.0,0.0,Armene Lewintos,True
+2726_01,Earth,True,G/440/P,TRAPPIST-1e,2.0,False,0.0,0.0,0.0,0.0,0.0,Kimmie Leson,False
+7083_01,Europa,True,C/259/S,TRAPPIST-1e,32.0,False,0.0,0.0,0.0,0.0,0.0,Betenar Pirejus,True
+0944_02,Earth,False,G/137/P,55 Cancri e,8.0,False,0.0,0.0,0.0,0.0,0.0,Terrie Weaverays,False
+0385_01,Earth,False,G/65/P,TRAPPIST-1e,23.0,False,13.0,747.0,0.0,0.0,128.0,Tanley Klinson,False
+9013_03,Earth,False,G/1461/P,55 Cancri e,0.0,False,0.0,0.0,0.0,0.0,0.0,Brancy Prestonard,True
+4365_01,,False,F/898/P,TRAPPIST-1e,13.0,False,552.0,247.0,0.0,4.0,0.0,Edgary Kinson,False
+1390_01,Earth,True,G/215/P,PSO J318.5-22,1.0,False,0.0,0.0,,0.0,0.0,Mathy Meltoney,True
+7696_01,Mars,False,E/499/P,TRAPPIST-1e,34.0,False,751.0,0.0,185.0,0.0,77.0,Sceres Hooff,False
+6169_01,Earth,False,G/1000/S,TRAPPIST-1e,18.0,,382.0,10.0,291.0,90.0,9.0,Carley Harley,True
+9081_08,Earth,True,G/1476/P,PSO J318.5-22,3.0,False,0.0,0.0,0.0,0.0,0.0,Virgie Clemondsey,True
+9169_01,Mars,False,D/295/P,TRAPPIST-1e,38.0,False,48.0,2318.0,5.0,11.0,0.0,Los Iccle,True
+4714_01,Earth,True,G/765/P,TRAPPIST-1e,24.0,False,0.0,0.0,0.0,0.0,0.0,Roydo Mayson,False
+9023_01,Earth,False,E/593/S,TRAPPIST-1e,18.0,False,0.0,1.0,0.0,618.0,21.0,,True
+0114_01,Earth,False,G/20/S,TRAPPIST-1e,27.0,False,82.0,157.0,429.0,238.0,1.0,Maura Beckerson,False
+0680_03,Earth,True,G/105/P,TRAPPIST-1e,5.0,,0.0,0.0,0.0,0.0,0.0,Joandy Camerrison,False
+6026_01,Mars,False,F/1246/P,TRAPPIST-1e,41.0,False,982.0,64.0,380.0,0.0,0.0,Stray Prie,True
+5523_01,Earth,False,G/885/P,PSO J318.5-22,29.0,False,0.0,0.0,20.0,0.0,402.0,Rician Pearsalason,False
+0283_02,Earth,False,F/64/P,TRAPPIST-1e,22.0,False,146.0,654.0,1.0,0.0,2.0,Roydo Santin,True
+4082_01,Mars,False,E/252/P,TRAPPIST-1e,22.0,False,0.0,0.0,0.0,0.0,0.0,Gray Cres,False
+5598_01,Earth,False,G/903/S,,19.0,False,0.0,0.0,500.0,2.0,208.0,Lulah Thony,True
+3015_01,Earth,False,E/199/S,TRAPPIST-1e,35.0,False,0.0,1438.0,0.0,112.0,74.0,Dord Pottley,True
+5514_01,Earth,True,G/889/S,TRAPPIST-1e,18.0,False,0.0,0.0,0.0,0.0,0.0,Bretty Monroellynn,True
+5868_01,Earth,False,E/379/S,TRAPPIST-1e,62.0,False,104.0,53.0,194.0,436.0,0.0,Yolace Blangibson,False
+3476_03,Earth,False,G/571/P,55 Cancri e,0.0,False,0.0,0.0,0.0,,0.0,,True
+0360_01,Earth,False,F/67/S,TRAPPIST-1e,15.0,False,358.0,212.0,33.0,0.0,112.0,Elancy Staffersby,False
+4006_05,Earth,False,F/759/S,55 Cancri e,52.0,False,0.0,704.0,0.0,0.0,,Evaned Wolfaddox,True
+6645_01,Earth,True,G/1083/S,55 Cancri e,17.0,False,0.0,0.0,0.0,0.0,0.0,Lanedy Scotterkins,True
+5871_01,Earth,False,F/1120/S,55 Cancri e,24.0,False,0.0,1369.0,848.0,0.0,0.0,Anda Flemaney,True
+3142_02,Mars,False,F/591/S,TRAPPIST-1e,32.0,False,1087.0,0.0,71.0,0.0,0.0,Fres Cla,False
+6223_01,Mars,False,E/398/P,TRAPPIST-1e,23.0,False,1696.0,46.0,82.0,235.0,17.0,Chonk Nache,False
+6175_01,Earth,False,G/1000/P,TRAPPIST-1e,18.0,False,628.0,0.0,0.0,31.0,150.0,Thel Pittler,False
+3726_01,Earth,True,G/604/P,TRAPPIST-1e,35.0,False,0.0,0.0,0.0,,0.0,Brence Bardina,True
+3434_01,Earth,True,G/562/P,TRAPPIST-1e,23.0,False,0.0,0.0,0.0,0.0,0.0,Millia Smalloney,True
+3131_03,,True,G/492/S,TRAPPIST-1e,4.0,False,0.0,0.0,0.0,0.0,0.0,Jamela Griffy,True
+6801_01,Europa,False,B/259/S,TRAPPIST-1e,50.0,True,0.0,7293.0,136.0,97.0,440.0,Syrmino Imprank,True
+1865_01,Earth,True,G/292/S,TRAPPIST-1e,4.0,,0.0,0.0,0.0,0.0,0.0,Elanda Roses,False
+4904_01,Earth,False,E/317/S,TRAPPIST-1e,44.0,False,2.0,0.0,0.0,788.0,0.0,Tamin Willynnedy,False
+8823_01,Mars,True,F/1710/S,TRAPPIST-1e,19.0,False,0.0,0.0,0.0,0.0,0.0,Stax Jamad,True
+2411_01,Earth,False,F/493/P,TRAPPIST-1e,29.0,False,19.0,2115.0,17.0,,0.0,Brinez Howenters,True
+7650_03,Earth,True,G/1242/S,PSO J318.5-22,3.0,False,0.0,0.0,0.0,0.0,0.0,Meline Potters,True
+3895_01,Mars,True,E/233/P,TRAPPIST-1e,36.0,False,0.0,0.0,0.0,0.0,0.0,Wolous Anpie,False
+8403_01,Europa,True,C/316/S,55 Cancri e,35.0,False,0.0,0.0,0.0,0.0,0.0,Antitak Goortedant,True
+6405_03,Earth,True,G/1039/S,TRAPPIST-1e,25.0,False,0.0,0.0,0.0,0.0,0.0,Andary Toddleton,True
+0445_01,Earth,False,F/80/S,TRAPPIST-1e,25.0,False,1352.0,0.0,0.0,24.0,799.0,Loria Marshopper,False
+2305_01,Earth,True,G/368/S,TRAPPIST-1e,60.0,False,0.0,0.0,0.0,0.0,0.0,,False
+0875_01,Earth,False,G/131/S,TRAPPIST-1e,38.0,False,0.0,0.0,0.0,0.0,0.0,,False
+5471_01,Earth,False,G/877/S,TRAPPIST-1e,57.0,False,685.0,,0.0,0.0,,Jeanie Loway,False
+4206_01,Earth,False,F/865/P,TRAPPIST-1e,22.0,False,0.0,13.0,524.0,7.0,0.0,Analdy Bucknersony,False
+3862_04,Mars,False,D/124/S,TRAPPIST-1e,13.0,False,974.0,0.0,1883.0,0.0,505.0,Herms Cako,False
+0499_01,Mars,True,F/89/S,55 Cancri e,27.0,False,0.0,0.0,0.0,0.0,0.0,Eclass Meake,True
+1269_01,Mars,False,E/80/P,TRAPPIST-1e,21.0,False,2066.0,0.0,15.0,0.0,1.0,Gorn Pane,False
+5039_04,Mars,False,F/958/S,TRAPPIST-1e,35.0,False,1307.0,0.0,0.0,2.0,0.0,Cakes Bate,False
+5427_03,Mars,False,F/1118/P,TRAPPIST-1e,25.0,False,948.0,0.0,1.0,170.0,0.0,Craird Stie,False
+0834_01,Earth,False,F/173/P,TRAPPIST-1e,31.0,False,0.0,0.0,0.0,838.0,27.0,Garry Pacerty,False
+4565_01,Earth,False,G/746/P,TRAPPIST-1e,24.0,False,191.0,497.0,0.0,0.0,16.0,Paulie Patteraley,False
+7334_01,Earth,False,E/490/S,TRAPPIST-1e,22.0,False,0.0,0.0,787.0,1.0,,Essara Schwardson,False
+5201_01,Earth,,F/1060/P,TRAPPIST-1e,21.0,False,1961.0,96.0,0.0,54.0,40.0,Melara Daughtson,False
+3708_01,Earth,True,G/600/P,55 Cancri e,,False,0.0,0.0,0.0,0.0,0.0,Deandy Trankliney,True
+5501_01,Earth,False,G/885/S,TRAPPIST-1e,35.0,False,702.0,104.0,5.0,76.0,0.0,Camily Alldson,True
+9224_01,Mars,False,F/1786/S,TRAPPIST-1e,24.0,False,745.0,639.0,977.0,4.0,0.0,Bants Reke,False
+7628_01,Mars,False,F/1584/P,TRAPPIST-1e,19.0,False,37.0,0.0,1288.0,0.0,0.0,Hoces Wala,True
+4099_01,Earth,True,G/673/P,TRAPPIST-1e,,False,0.0,0.0,0.0,0.0,0.0,Willey Fryersonis,True
+2631_01,Mars,True,F/545/P,55 Cancri e,50.0,False,0.0,0.0,0.0,0.0,0.0,Sealfs Queke,True
+1116_03,Earth,True,G/174/S,TRAPPIST-1e,26.0,False,0.0,0.0,0.0,0.0,0.0,Colly Barnolaney,True
+4900_01,Earth,False,F/994/P,PSO J318.5-22,35.0,False,0.0,0.0,2.0,672.0,10.0,Idace Gaington,False
+0407_03,Earth,True,G/69/P,TRAPPIST-1e,39.0,False,0.0,0.0,0.0,0.0,0.0,Dennya Mirez,False
+2607_04,Europa,False,B/99/S,TRAPPIST-1e,12.0,False,0.0,0.0,0.0,0.0,0.0,Ainoxa Plattering,True
+4388_01,Europa,False,B/171/S,TRAPPIST-1e,33.0,False,0.0,0.0,0.0,0.0,0.0,,True
+7096_03,Europa,True,C/260/S,TRAPPIST-1e,30.0,False,0.0,0.0,0.0,0.0,0.0,Aspica Tashal,True
+5090_03,,False,G/821/P,PSO J318.5-22,12.0,False,0.0,0.0,0.0,0.0,0.0,Joyton Willy,True
+1033_01,Earth,True,G/154/P,TRAPPIST-1e,61.0,False,0.0,0.0,0.0,0.0,0.0,Ericky Gonzaley,True
+1340_01,Earth,True,G/203/S,TRAPPIST-1e,23.0,False,0.0,0.0,0.0,0.0,0.0,Pamiea Harrenoldez,False
+4296_01,Earth,True,G/703/S,TRAPPIST-1e,35.0,False,0.0,0.0,0.0,0.0,0.0,Eriney Whitersone,False
+5647_02,Europa,False,C/178/P,55 Cancri e,52.0,False,0.0,1425.0,31.0,0.0,1320.0,Chabih Matoltuble,True
+8502_01,Mars,False,D/254/S,TRAPPIST-1e,33.0,True,1264.0,1787.0,36.0,473.0,337.0,Cole Purte,False
+6194_01,Earth,False,F/1185/S,TRAPPIST-1e,15.0,False,1042.0,0.0,36.0,0.0,0.0,,False
+0992_05,Europa,True,D/35/S,55 Cancri e,17.0,False,0.0,0.0,0.0,0.0,0.0,Sinon Kiling,True
+9167_01,Earth,False,F/1772/S,TRAPPIST-1e,35.0,False,0.0,0.0,0.0,684.0,0.0,Rhonya Donson,False
+6265_01,Earth,False,,TRAPPIST-1e,20.0,False,379.0,,29.0,39.0,91.0,Natald Puckenton,False
+7058_01,Mars,True,F/1347/S,55 Cancri e,30.0,False,0.0,0.0,,0.0,0.0,Hal Bane,True
+6970_01,Mars,False,,TRAPPIST-1e,65.0,,3358.0,1.0,12.0,0.0,0.0,Ret Gin,False
+7886_01,Earth,False,G/1274/P,TRAPPIST-1e,16.0,False,0.0,11.0,0.0,8.0,827.0,Gracey Gaington,False
+0727_01,Earth,False,F/133/S,TRAPPIST-1e,23.0,False,139.0,0.0,1.0,152.0,354.0,Branda Potthews,True
+3742_01,Earth,True,G/607/P,55 Cancri e,2.0,False,0.0,0.0,,0.0,0.0,Luzel Hickett,False
+7716_01,Europa,True,E/500/P,55 Cancri e,49.0,False,0.0,0.0,0.0,0.0,0.0,Marazha Panspic,True
+4197_02,Earth,False,F/786/S,TRAPPIST-1e,27.0,False,0.0,867.0,0.0,128.0,363.0,Stald Cooks,True
+1434_03,Earth,True,G/222/P,TRAPPIST-1e,0.0,False,0.0,0.0,0.0,0.0,0.0,Emilla Cartez,False
+7401_01,Mars,,E/479/P,55 Cancri e,20.0,False,0.0,0.0,,0.0,0.0,Diles Merte,False
+5557_01,Earth,True,G/890/P,TRAPPIST-1e,37.0,False,0.0,0.0,0.0,0.0,0.0,Jerek Mathison,True
+0099_01,Earth,False,F/19/P,PSO J318.5-22,23.0,False,311.0,427.0,526.0,37.0,0.0,Aliey Leetersoney,False
+8559_02,Mars,False,F/1758/P,TRAPPIST-1e,3.0,False,0.0,0.0,0.0,0.0,0.0,Eclass Make,True
+7324_01,Europa,False,C/238/P,TRAPPIST-1e,27.0,False,15.0,2886.0,0.0,249.0,71.0,Wezna Clugnobse,True
+3147_01,Earth,False,F/594/S,TRAPPIST-1e,21.0,False,17.0,427.0,31.0,257.0,0.0,Colle Steinardson,True
+7786_01,Earth,False,F/1616/P,TRAPPIST-1e,38.0,False,0.0,0.0,0.0,45.0,3372.0,Stelle Adkinson,False
+3384_02,Earth,False,E/207/P,TRAPPIST-1e,25.0,False,106.0,46.0,,0.0,843.0,Keithy Pettyreeman,False
+8723_01,Earth,False,F/1794/P,TRAPPIST-1e,38.0,False,32.0,1163.0,0.0,52.0,1935.0,Aleen Traverdy,False
+3521_02,Europa,True,B/135/S,TRAPPIST-1e,70.0,False,0.0,0.0,0.0,0.0,0.0,Atrinon Radisiouss,True
+7585_02,Europa,False,C/281/S,TRAPPIST-1e,39.0,,8209.0,18.0,432.0,3560.0,54.0,Azhasim Admingried,False
+1379_01,Earth,False,F/268/S,TRAPPIST-1e,16.0,False,0.0,30.0,0.0,769.0,4.0,Lillen Mcgowaymond,False
+0556_01,Earth,False,F/100/S,TRAPPIST-1e,19.0,False,0.0,1428.0,0.0,1.0,19.0,Jilla Rames,True
+4351_01,Earth,False,F/895/P,,21.0,,641.0,0.0,409.0,0.0,0.0,Timmy Carezquez,False
+5876_01,Mars,False,D/184/P,TRAPPIST-1e,52.0,False,1364.0,131.0,444.0,0.0,0.0,Eles Cone,True
+4182_01,Europa,False,A/51/S,55 Cancri e,33.0,False,0.0,2020.0,0.0,1817.0,182.0,Maiamak Tabloory,False
+0615_01,Earth,True,G/92/S,TRAPPIST-1e,58.0,False,0.0,0.0,0.0,0.0,0.0,Blancy Pollarkeeks,False
+8573_02,Earth,True,G/1378/S,TRAPPIST-1e,18.0,False,0.0,0.0,0.0,0.0,0.0,Toniel Mirezavis,True
+0901_01,Mars,False,F/167/S,TRAPPIST-1e,32.0,False,47.0,0.0,2552.0,0.0,0.0,Grake Porki,True
+8759_01,Mars,False,F/1695/S,TRAPPIST-1e,25.0,False,520.0,0.0,139.0,0.0,77.0,Tart Chate,False
+8092_02,Europa,True,D/238/S,55 Cancri e,33.0,True,0.0,,0.0,0.0,0.0,Hekabih Pulgaly,True
+2306_04,Europa,False,C/82/P,55 Cancri e,27.0,False,0.0,12077.0,0.0,75.0,0.0,Izarkab Ticiontral,True
+1594_01,Earth,False,G/253/P,TRAPPIST-1e,,False,0.0,3.0,0.0,2.0,923.0,Lis Delazarson,True
+1721_01,Earth,False,F/341/P,TRAPPIST-1e,15.0,False,320.0,36.0,5.0,0.0,640.0,Frandy Alest,False
+4371_04,Europa,False,C/158/S,TRAPPIST-1e,25.0,False,0.0,4384.0,4285.0,812.0,360.0,Canonon Shricatory,True
+2823_01,Mars,True,F/587/P,TRAPPIST-1e,21.0,False,0.0,0.0,0.0,0.0,0.0,Smark Parté,True
+8544_01,Earth,False,F/1647/S,TRAPPIST-1e,15.0,False,114.0,161.0,22.0,419.0,0.0,Yolana Booters,False
+5287_01,Earth,False,G/861/S,PSO J318.5-22,42.0,False,0.0,,0.0,214.0,50.0,Shanya Webstephrey,True
+4212_01,,True,G/690/S,TRAPPIST-1e,28.0,False,0.0,0.0,0.0,,0.0,Kenny Yanton,True
+0403_01,Mars,False,D/13/P,TRAPPIST-1e,43.0,True,353.0,896.0,0.0,0.0,2.0,Push Wate,True
+1918_02,Europa,True,A/23/S,TRAPPIST-1e,52.0,False,0.0,0.0,0.0,0.0,0.0,Sheleb Assibler,True
+2853_01,Earth,False,F/544/S,TRAPPIST-1e,20.0,False,56.0,757.0,111.0,0.0,0.0,Lonnez Browlerson,True
+7367_02,Mars,False,F/1523/P,TRAPPIST-1e,55.0,False,1236.0,0.0,52.0,0.0,0.0,Melios Letty,False
+2384_05,Earth,True,G/383/S,TRAPPIST-1e,17.0,False,0.0,0.0,0.0,,0.0,Ronia Pollarkeeks,False
+7920_01,Mars,True,F/1515/S,TRAPPIST-1e,42.0,False,0.0,0.0,0.0,0.0,0.0,Anamse Backe,True
+8633_01,Earth,False,F/1665/S,TRAPPIST-1e,17.0,False,2.0,33.0,97.0,553.0,,Jenne Daughessey,False
+5487_01,Mars,True,F/1136/P,TRAPPIST-1e,24.0,False,0.0,0.0,0.0,0.0,0.0,Flams Nan,True
+9205_02,Europa,True,B/300/P,TRAPPIST-1e,15.0,False,0.0,0.0,0.0,0.0,0.0,,True
+3223_01,Earth,False,G/523/P,TRAPPIST-1e,,False,16.0,0.0,799.0,0.0,37.0,Elany Prickmantes,False
+0911_01,Mars,False,F/189/P,TRAPPIST-1e,32.0,True,2492.0,0.0,,136.0,4.0,Angars Blate,False
+1460_01,Earth,False,F/285/P,,19.0,False,,905.0,387.0,0.0,0.0,Bony Williotters,True
+4927_04,Mars,False,F/937/S,TRAPPIST-1e,0.0,False,0.0,0.0,0.0,0.0,0.0,Toat Brele,True
+1976_05,Europa,True,B/82/S,55 Cancri e,15.0,False,0.0,0.0,0.0,0.0,0.0,Plas Lansuffle,True
+0437_01,Earth,False,F/78/S,TRAPPIST-1e,39.0,False,382.0,0.0,22.0,467.0,0.0,Lynnee Oneiles,False
+4049_01,Europa,True,A/47/S,55 Cancri e,25.0,False,0.0,0.0,0.0,0.0,0.0,Schyon Pokematic,False
+4415_01,Mars,False,F/833/S,TRAPPIST-1e,45.0,False,941.0,281.0,36.0,12.0,39.0,Froon Parta,False
+5981_01,Mars,False,F/1140/S,TRAPPIST-1e,27.0,False,441.0,0.0,397.0,471.0,0.0,Harz Quart,False
+5527_04,Earth,True,G/886/P,55 Cancri e,0.0,False,0.0,0.0,0.0,0.0,0.0,Almara Dickman,True
+2015_01,Earth,False,F/387/S,TRAPPIST-1e,19.0,False,1139.0,18.0,0.0,0.0,671.0,Fayene Hickett,True
+3324_01,Mars,True,F/630/S,TRAPPIST-1e,31.0,False,0.0,0.0,0.0,0.0,0.0,Yalmon Buche,True
+7438_01,Earth,False,E/483/P,55 Cancri e,42.0,False,0.0,279.0,30.0,409.0,0.0,Gaylah Hanner,True
+0313_03,Earth,False,F/68/P,55 Cancri e,49.0,False,331.0,0.0,0.0,318.0,0.0,Jaimer Mckinsond,True
+3986_01,Mars,False,F/755/S,TRAPPIST-1e,54.0,False,1217.0,0.0,1.0,4.0,0.0,Poot Pine,False
+0655_01,Mars,False,E/39/P,TRAPPIST-1e,37.0,False,237.0,2.0,708.0,0.0,0.0,Phios Cure,True
+0036_01,Earth,False,F/8/S,55 Cancri e,15.0,,0.0,492.0,48.0,20.0,401.0,Marina Leodger,False
+8343_01,Earth,False,F/1717/P,TRAPPIST-1e,27.0,False,1403.0,169.0,1081.0,0.0,0.0,Raceky Norrison,False
+6829_03,Earth,True,G/1109/P,TRAPPIST-1e,32.0,False,0.0,0.0,0.0,0.0,0.0,Enryn Hubbarrison,False
+7858_01,Earth,False,G/1264/P,TRAPPIST-1e,21.0,False,9.0,0.0,0.0,25.0,811.0,Grette Kramorry,False
+8442_01,Mars,False,E/540/P,TRAPPIST-1e,32.0,False,857.0,158.0,0.0,33.0,0.0,Dakes Fatte,False
+8751_01,Earth,False,F/1694/S,TRAPPIST-1e,24.0,False,0.0,0.0,124.0,4.0,471.0,Byront Weavesend,False
+5812_05,Earth,True,G/943/S,TRAPPIST-1e,41.0,False,0.0,0.0,0.0,0.0,0.0,Dian Domington,True
+1423_02,Europa,True,B/61/S,TRAPPIST-1e,39.0,False,0.0,0.0,0.0,0.0,0.0,Beneb Asoppor,True
+3812_01,Earth,False,F/717/S,TRAPPIST-1e,18.0,False,14.0,651.0,11.0,17.0,,Sonnie Floways,False
+1094_01,Earth,False,F/224/P,TRAPPIST-1e,60.0,,437.0,2.0,0.0,0.0,365.0,Carona Webstenson,False
+5876_02,Mars,True,F/1213/P,55 Cancri e,35.0,False,0.0,0.0,0.0,0.0,0.0,Eloos Cone,True
+7774_01,Mars,False,D/245/P,55 Cancri e,67.0,False,1146.0,16.0,39.0,0.0,518.0,Lar Kinad,True
+4038_01,Earth,True,G/664/S,PSO J318.5-22,24.0,False,0.0,0.0,0.0,0.0,0.0,Elice Reenez,False
+8937_01,Europa,True,E/574/P,TRAPPIST-1e,25.0,False,0.0,0.0,0.0,0.0,0.0,Zosmark Unaasor,True
+0925_03,Mars,True,F/191/P,TRAPPIST-1e,41.0,False,0.0,,0.0,0.0,0.0,Almone Kraie,True
+5048_01,Earth,False,,TRAPPIST-1e,38.0,False,0.0,0.0,0.0,0.0,0.0,Lerion Moodson,True
+7430_01,Earth,False,G/1205/S,PSO J318.5-22,24.0,False,549.0,3.0,201.0,0.0,0.0,Isa Vantonson,False
+7247_01,Earth,False,F/1396/S,TRAPPIST-1e,30.0,False,0.0,0.0,0.0,0.0,1150.0,Chrisa Hurchanney,False
+6851_01,Earth,False,E/456/S,TRAPPIST-1e,22.0,False,0.0,752.0,18.0,0.0,18.0,Glorey Bookerson,True
+3928_01,Europa,False,E/264/S,,28.0,False,3.0,1300.0,0.0,1250.0,1148.0,Anchird Witeronfus,False
+4667_01,Earth,True,,TRAPPIST-1e,41.0,False,0.0,0.0,0.0,0.0,0.0,Dian Sextones,True
+7210_01,Earth,False,F/1493/P,TRAPPIST-1e,25.0,False,0.0,0.0,879.0,0.0,0.0,Jonard Puckenton,False
+8642_01,Earth,False,F/1774/P,PSO J318.5-22,20.0,False,0.0,4.0,0.0,0.0,625.0,Yolace Berreranks,False
+6997_02,Mars,False,F/1453/P,TRAPPIST-1e,24.0,False,2261.0,0.0,95.0,10.0,0.0,Weet Sfin,False
+7088_01,Earth,False,F/1468/P,TRAPPIST-1e,63.0,False,0.0,742.0,0.0,125.0,3.0,Rossie Berges,False
+7515_01,Mars,True,F/1437/S,TRAPPIST-1e,24.0,False,0.0,0.0,0.0,0.0,,Monam Gre,False
+8338_02,Mars,False,F/1716/P,TRAPPIST-1e,45.0,False,506.0,0.0,2.0,829.0,0.0,Rail Empie,False
+3648_01,Earth,False,F/687/S,PSO J318.5-22,39.0,False,0.0,0.0,0.0,1144.0,0.0,Tany Mcculley,False
+6180_01,Earth,True,G/1002/S,PSO J318.5-22,16.0,False,0.0,0.0,0.0,0.0,0.0,Benry Floways,True
+4141_01,Earth,False,G/679/P,TRAPPIST-1e,11.0,False,0.0,0.0,0.0,0.0,0.0,Rhonya Philliames,False
+7199_01,Earth,False,G/1174/S,TRAPPIST-1e,54.0,False,1.0,0.0,109.0,,1.0,Lewise Bardinard,False
+5058_01,Mars,True,F/963/S,TRAPPIST-1e,11.0,False,,0.0,0.0,0.0,0.0,Goos Apie,True
+5016_01,Mars,False,F/1023/P,TRAPPIST-1e,18.0,False,1092.0,31.0,309.0,0.0,0.0,Honda Bert,False
+1973_01,Europa,True,A/24/S,55 Cancri e,39.0,False,0.0,0.0,0.0,0.0,0.0,Gomeron Clindy,True
+5485_01,Earth,False,G/880/P,TRAPPIST-1e,20.0,False,0.0,9.0,82.0,14.0,704.0,Kennie Portananney,False
+8764_01,Mars,True,F/1697/S,55 Cancri e,25.0,False,0.0,0.0,0.0,0.0,0.0,Zers Gene,True
+8541_02,Mars,False,D/266/P,55 Cancri e,33.0,False,1914.0,5.0,0.0,0.0,228.0,Booss Rekle,True
+1562_01,Earth,False,F/306/P,TRAPPIST-1e,18.0,False,341.0,0.0,332.0,102.0,0.0,Shelle Simmonders,False
+0463_01,Mars,False,F/100/P,TRAPPIST-1e,34.0,False,865.0,0.0,257.0,,35.0,Grats Staf,False
+7660_01,Europa,True,B/294/S,55 Cancri e,25.0,False,0.0,0.0,0.0,0.0,0.0,Atrino Lisholtery,True
+7018_01,Mars,False,E/467/S,TRAPPIST-1e,30.0,False,0.0,0.0,0.0,0.0,0.0,Set Sturt,False
+8637_01,,True,F/1773/P,TRAPPIST-1e,28.0,False,0.0,0.0,0.0,0.0,0.0,Sinkes Spien,True
+7271_01,Earth,False,G/1171/P,55 Cancri e,21.0,False,61.0,201.0,222.0,161.0,60.0,,False
+3962_01,Earth,,G/647/P,55 Cancri e,13.0,False,0.0,0.0,0.0,0.0,0.0,Hughy Guerson,True
+0453_02,Europa,True,,55 Cancri e,34.0,False,0.0,0.0,0.0,0.0,0.0,Minopus Taptiritty,True
+8404_02,Earth,True,G/1346/S,TRAPPIST-1e,15.0,False,0.0,0.0,0.0,0.0,0.0,Kimmy Hurles,True
+3210_02,Europa,False,E/211/S,55 Cancri e,20.0,False,11.0,596.0,0.0,3583.0,266.0,Aldun Clugeadry,False
+1393_01,Mars,False,F/270/S,TRAPPIST-1e,36.0,False,42.0,0.0,212.0,151.0,1853.0,Mes Kake,False
+8552_02,Mars,False,F/1756/P,TRAPPIST-1e,17.0,False,387.0,0.0,28.0,2183.0,0.0,Mins Hapie,False
+3380_01,Earth,False,F/696/P,55 Cancri e,23.0,False,664.0,17.0,0.0,0.0,,Stalie Arner,False
+7090_01,Earth,False,F/1469/P,TRAPPIST-1e,15.0,False,0.0,610.0,267.0,,0.0,Samie Wiggs,False
+4848_01,Earth,False,F/986/P,TRAPPIST-1e,30.0,False,148.0,0.0,0.0,619.0,34.0,Nathy Griffince,True
+5718_01,Earth,True,G/927/S,TRAPPIST-1e,20.0,False,0.0,0.0,0.0,0.0,0.0,Racyle Kaney,True
+8787_01,Earth,False,G/1416/S,TRAPPIST-1e,20.0,False,11.0,0.0,0.0,843.0,0.0,,False
+8306_03,Earth,False,G/1351/P,,41.0,False,836.0,0.0,0.0,,49.0,Bonya Hardonald,False
+8130_03,Earth,True,G/1308/S,TRAPPIST-1e,0.0,False,0.0,0.0,0.0,0.0,0.0,Ferry Mcbriddley,False
+2205_01,Earth,False,E/157/S,TRAPPIST-1e,31.0,False,0.0,0.0,187.0,602.0,0.0,Brance Vandan,False
+2491_01,Earth,False,G/401/S,PSO J318.5-22,25.0,False,2.0,2762.0,552.0,0.0,1391.0,Eila Haydenzier,False
+2892_03,Earth,True,G/469/P,55 Cancri e,0.0,False,0.0,0.0,0.0,0.0,0.0,Sharie Gallenry,True
+4219_01,Mars,True,F/868/P,TRAPPIST-1e,3.0,False,0.0,0.0,0.0,,0.0,Unfly Min,True
+2443_01,,False,D/72/P,TRAPPIST-1e,31.0,False,1458.0,421.0,76.0,0.0,0.0,,False
+6153_01,Europa,True,B/236/S,55 Cancri e,41.0,False,0.0,0.0,0.0,0.0,0.0,Weionan Genuild,True
+6806_01,Earth,False,G/1104/S,TRAPPIST-1e,39.0,False,14.0,583.0,310.0,0.0,0.0,Anniey Gallenry,True
+3714_01,Mars,,F/702/S,TRAPPIST-1e,45.0,False,48.0,1652.0,761.0,138.0,0.0,All Harta,False
+4535_01,Earth,False,F/934/P,TRAPPIST-1e,20.0,False,631.0,93.0,0.0,0.0,0.0,Randa Cardners,False
+4927_02,Mars,True,F/937/S,TRAPPIST-1e,22.0,False,0.0,0.0,0.0,0.0,0.0,Naish Brele,True
+2045_01,Earth,True,G/324/S,55 Cancri e,42.0,False,0.0,0.0,0.0,0.0,,Gaylah Whitneyes,True
+5036_01,Earth,True,G/814/P,PSO J318.5-22,34.0,False,0.0,0.0,0.0,0.0,0.0,Robyny Walterson,False
+1036_01,Earth,True,G/161/S,PSO J318.5-22,24.0,False,0.0,,0.0,0.0,0.0,Laude Georgasey,True
+7442_02,Earth,True,,PSO J318.5-22,17.0,False,0.0,0.0,0.0,0.0,0.0,Franda Morrencis,False
+7097_02,Europa,False,A/75/P,TRAPPIST-1e,14.0,False,0.0,3124.0,40.0,219.0,189.0,Kumark Dedometeel,False
+3606_01,Earth,True,G/593/P,TRAPPIST-1e,46.0,False,0.0,0.0,0.0,0.0,0.0,Blance Daughttley,False
+2063_01,Earth,True,G/328/S,PSO J318.5-22,38.0,False,0.0,0.0,0.0,0.0,0.0,Mistie Leonaldez,False
+0476_02,Mars,True,F/103/P,TRAPPIST-1e,27.0,False,0.0,0.0,0.0,0.0,0.0,Book Chiff,True
+3495_02,Europa,False,C/127/S,TRAPPIST-1e,34.0,False,0.0,6229.0,0.0,2279.0,587.0,Izaron Volloor,True
+7279_01,Europa,True,C/236/P,55 Cancri e,38.0,False,0.0,0.0,0.0,0.0,0.0,Halsham Prombled,True
+2532_02,Mars,True,F/489/S,TRAPPIST-1e,69.0,False,0.0,0.0,0.0,0.0,0.0,Goldch Traie,True
+8043_01,Europa,False,A/97/S,55 Cancri e,45.0,False,5.0,17901.0,0.0,79.0,281.0,Hadalm Oppont,True
+5890_01,Earth,True,G/955/S,TRAPPIST-1e,27.0,False,0.0,0.0,0.0,0.0,0.0,Ambert Woody,True
+0709_02,Europa,True,A/7/S,55 Cancri e,25.0,,0.0,,0.0,0.0,0.0,Thaban Missefle,True
+9079_01,Earth,False,E/595/S,TRAPPIST-1e,55.0,False,1.0,0.0,58.0,0.0,802.0,Maryne Kellyons,True
+8315_01,Earth,False,F/1598/S,TRAPPIST-1e,21.0,False,380.0,177.0,161.0,0.0,85.0,Lette Mcneiley,False
+1709_01,Mars,False,F/326/S,TRAPPIST-1e,23.0,False,31.0,0.0,1247.0,0.0,47.0,Jurbet Minen,False
+6766_01,Earth,False,G/1098/P,PSO J318.5-22,16.0,False,399.0,0.0,3.0,0.0,137.0,Viviay Nieldson,False
+6757_01,Mars,False,F/1292/S,TRAPPIST-1e,53.0,False,1964.0,0.0,635.0,0.0,0.0,Eaturs Dato,False
+5478_01,Mars,False,F/1048/S,TRAPPIST-1e,29.0,False,518.0,0.0,10.0,1245.0,0.0,Hocorz Prity,False
+6302_05,Earth,False,G/1015/P,55 Cancri e,35.0,False,1669.0,0.0,7.0,0.0,90.0,Glasey Rostarks,False
+4563_01,Europa,True,C/169/S,55 Cancri e,19.0,False,0.0,0.0,0.0,0.0,0.0,Altanin Switud,True
+7678_02,Earth,True,G/1231/P,TRAPPIST-1e,54.0,False,0.0,,0.0,0.0,0.0,Garyan Rocknight,True
+8841_01,Mars,True,F/1822/P,TRAPPIST-1e,28.0,False,0.0,0.0,0.0,0.0,0.0,Asinch Derry,True
+0010_01,Earth,False,G/1/S,TRAPPIST-1e,48.0,False,719.0,1.0,65.0,0.0,24.0,Reney Baketton,False
+0039_01,Earth,True,G/1/P,55 Cancri e,30.0,False,0.0,0.0,,0.0,0.0,Jorgie Batthewitt,False
+2163_01,Earth,False,G/349/P,TRAPPIST-1e,27.0,False,0.0,0.0,6.0,745.0,22.0,Adanne Mosepherry,False
+1022_01,Earth,False,,TRAPPIST-1e,15.0,,48.0,6.0,0.0,954.0,0.0,Melvia Blanglison,False
+2595_04,Mars,False,F/533/P,TRAPPIST-1e,8.0,False,0.0,0.0,0.0,0.0,0.0,Treynx Fle,True
+4101_01,Mars,False,F/773/S,TRAPPIST-1e,38.0,False,1100.0,43.0,163.0,3.0,0.0,Tyog Rapie,False
+3189_02,Mars,,D/102/P,TRAPPIST-1e,25.0,False,1299.0,0.0,0.0,0.0,0.0,Womel Che,False
+1130_02,Mars,False,D/38/S,55 Cancri e,20.0,False,,3.0,3505.0,199.0,17.0,Camonk Cako,True
+4498_03,Earth,True,G/734/S,PSO J318.5-22,4.0,False,0.0,0.0,0.0,0.0,0.0,Lorie Beckeetter,True
+4587_01,Europa,False,A/42/P,TRAPPIST-1e,,False,0.0,4020.0,0.0,1635.0,4899.0,Asellux Assibler,False
+1428_01,Earth,False,E/109/S,TRAPPIST-1e,44.0,False,0.0,200.0,128.0,460.0,0.0,Artis Hanghanson,False
+2028_01,Earth,False,F/391/S,PSO J318.5-22,24.0,False,662.0,0.0,0.0,0.0,9.0,Louisa Pooles,False
+7679_01,Earth,True,G/1232/P,TRAPPIST-1e,33.0,False,0.0,0.0,0.0,0.0,0.0,Kyley Valezaley,False
+5298_01,Earth,True,G/862/S,TRAPPIST-1e,14.0,False,0.0,0.0,0.0,0.0,0.0,Rician Sweett,True
+5343_01,Mars,False,E/332/P,TRAPPIST-1e,17.0,False,13.0,0.0,565.0,367.0,1.0,Rahars Resty,False
+8658_01,Mars,False,E/568/S,TRAPPIST-1e,49.0,False,0.0,1.0,1364.0,226.0,0.0,Ney Forne,True
+4663_01,Earth,True,G/765/S,TRAPPIST-1e,2.0,False,0.0,0.0,0.0,0.0,0.0,Lonna Cartez,True
+9231_02,Mars,False,F/1888/P,TRAPPIST-1e,0.0,False,0.0,0.0,0.0,0.0,0.0,Walls Paie,True
+1402_02,Earth,True,G/215/S,55 Cancri e,33.0,False,0.0,0.0,,0.0,0.0,Leony Blacks,True
+7870_01,Europa,True,B/257/P,TRAPPIST-1e,37.0,False,0.0,0.0,0.0,0.0,0.0,Caphirk Matimple,True
+9247_01,Earth,True,G/1491/S,TRAPPIST-1e,33.0,False,0.0,0.0,0.0,0.0,,Phia Cleang,False
+4782_04,Europa,True,C/189/S,55 Cancri e,27.0,False,0.0,0.0,0.0,0.0,,Hadirk Slable,True
+7353_03,Europa,False,,TRAPPIST-1e,58.0,False,0.0,1386.0,2.0,128.0,2577.0,Auvam Openduave,True
+4832_01,Earth,False,E/301/P,,37.0,False,542.0,440.0,1.0,0.0,0.0,Erman Estron,False
+4218_02,Mars,False,F/867/P,TRAPPIST-1e,30.0,False,176.0,0.0,2310.0,0.0,,Relix Tert,True
+5814_05,Mars,True,D/176/S,TRAPPIST-1e,54.0,False,0.0,0.0,0.0,0.0,0.0,Caper Bine,True
+7784_01,Mars,True,F/1615/P,TRAPPIST-1e,28.0,False,0.0,0.0,0.0,0.0,0.0,Cray Berte,True
+2619_01,Earth,False,F/504/S,55 Cancri e,17.0,False,2000.0,0.0,0.0,0.0,0.0,Elaney Chanan,False
+8203_02,Europa,True,C/307/S,TRAPPIST-1e,24.0,False,0.0,0.0,0.0,0.0,0.0,Geno Pernised,True
+4030_01,,False,G/661/S,TRAPPIST-1e,2.0,False,0.0,0.0,0.0,0.0,0.0,Evaley Flowensley,True
+6471_01,Earth,False,G/1050/S,TRAPPIST-1e,12.0,False,0.0,0.0,0.0,0.0,0.0,Adria Cardners,True
+7219_05,Europa,True,C/235/P,TRAPPIST-1e,40.0,False,0.0,0.0,0.0,0.0,0.0,Anchab Arible,True
+2367_01,Earth,False,F/483/P,TRAPPIST-1e,19.0,False,0.0,0.0,1.0,644.0,0.0,Mela Brookes,False
+1060_01,Earth,False,G/166/S,TRAPPIST-1e,57.0,False,,20.0,157.0,21.0,689.0,Willip Clayson,False
+0025_01,Earth,False,F/6/S,TRAPPIST-1e,15.0,False,0.0,225.0,0.0,998.0,0.0,Karard Brookenson,False
+2310_03,Europa,False,D/68/P,TRAPPIST-1e,59.0,False,0.0,2210.0,0.0,4085.0,11.0,Elebara Pleele,False
+5374_01,Earth,False,F/1029/S,,29.0,False,0.0,61.0,942.0,2.0,0.0,Candyn Loverthyo,True
+3774_01,Earth,False,F/778/P,TRAPPIST-1e,30.0,False,513.0,0.0,0.0,0.0,317.0,Wayney Willy,False
+6709_01,Earth,True,G/1092/S,TRAPPIST-1e,22.0,False,0.0,0.0,0.0,0.0,,Lanedy Antoshipson,True
+2426_01,Mars,True,F/466/S,TRAPPIST-1e,70.0,False,0.0,0.0,0.0,0.0,0.0,Colatz Gine,True
