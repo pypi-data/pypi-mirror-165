@@ -1,0 +1,10 @@
+LICENSE.txt
+README.rst
+setup.cfg
+setup.py
+pysci/__init__.py
+pysci/pysci.py
+pysciname.egg-info/PKG-INFO
+pysciname.egg-info/SOURCES.txt
+pysciname.egg-info/dependency_links.txt
+pysciname.egg-info/top_level.txt
