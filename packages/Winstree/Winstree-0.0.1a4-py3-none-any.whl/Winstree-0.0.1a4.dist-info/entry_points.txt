@@ -1,0 +1,2 @@
+[gui_scripts]
+winstreer = Winstreer:empty_demo
