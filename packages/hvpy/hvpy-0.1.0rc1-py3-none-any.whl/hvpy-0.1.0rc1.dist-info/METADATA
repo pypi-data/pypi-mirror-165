@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: hvpy
+Version: 0.1.0rc1
+Summary: Helioviewer Python API Wrapper
+Home-page: https://helioviewer.org/
+Author: The Helioviewer Project
+Author-email: contact@helioviewer.org
+License: BSD 2-Clause
+Keywords: solar physics,solar,science,sun,data,helioviewer
+Platform: any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Scientific/Engineering :: Physics
+Requires-Python: >=3.8
+License-File: licenses/LICENSE.rst
+Requires-Dist: requests (>=2.27.0)
+Requires-Dist: pydantic (>=1.9.1)
+Provides-Extra: docs
+Requires-Dist: sphinx (<5.1.0) ; extra == 'docs'
+Requires-Dist: sphinx-autodoc-typehints ; extra == 'docs'
+Requires-Dist: sphinx-automodapi ; extra == 'docs'
+Requires-Dist: sphinx-book-theme ; extra == 'docs'
+Provides-Extra: tests
+Requires-Dist: pytest-astropy (>=0.10) ; extra == 'tests'
+Requires-Dist: pytest (>=6.0) ; extra == 'tests'
+
+Helioviewer Python API Wrapper
+------------------------------
+
+|Latest Version| |codecov|
+
+.. |Latest Version| image:: https://img.shields.io/pypi/v/hvpy.svg
+   :target: https://pypi.python.org/pypi/hvpy/
+.. |codecov| image:: https://codecov.io/gh/Helioviewer-Project/python-api/branch/main/graph/badge.svg
+   :target: https://app.codecov.io/gh/Helioviewer-Project/python-api/
+
+``hvpy`` is a Python API wrapper around the formal `Helioviewer API <https://api.helioviewer.org/docs/v2/>`__.
+
+`Python API documentation <https://hvpy.readthedocs.io/en/latest/>`__
+
+This work was supported by the `2022 Google Summer of Code <https://summerofcode.withgoogle.com/>`__, the `SunPy Project <https://sunpy.org>`__, and the `Helioviewer Project <https://github.com/Helioviewer-Project/>`__.
