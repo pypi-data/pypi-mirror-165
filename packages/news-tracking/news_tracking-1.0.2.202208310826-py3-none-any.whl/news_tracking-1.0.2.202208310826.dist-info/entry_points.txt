@@ -1,0 +1,6 @@
+[console_scripts]
+news_tracking_evaluation = news_tracking.news_tracking_evaluation:main
+news_tracking_kmeans = news_tracking.news_tracking_kmeans:main
+news_tracking_miranda = news_tracking.news_tracking_miranda:main
+news_tracking_miranda_training = news_tracking.news_tracking_miranda_training:main
+

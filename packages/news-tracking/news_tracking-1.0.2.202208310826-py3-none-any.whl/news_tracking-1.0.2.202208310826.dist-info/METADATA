@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: news-tracking
+Version: 1.0.2.202208310826
+Summary: Programs used to manage experiments with the document_tracking infrastructure.
+Home-page: https://gitlab.univ-lr.fr/cross-lingual-event-tracking/developpement/from-documents-to-events/news_clustering_in_multiple_languages
+Author: Guillaume Bernard
+Author-email: contact@guillaume-bernard.fr
+License: GPLv3 License and 3-Clause BSD Licence
+Project-URL: Bug Tracker, https://gitlab.univ-lr.fr/cross-lingual-event-tracking/developpement/from-documents-to-events/news_clustering_in_multiple_languages/-/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Intended Audience :: Science/Research
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: AUTHORS
+Requires-Dist: document-tracking-resources (~=1.0.0)
+Requires-Dist: document-tracking (~=1.0)
+Requires-Dist: matplotlib (~=3.5.1)
+Requires-Dist: numpy (~=1.19.5)
+Requires-Dist: pandas (~=1.3.5)
+Requires-Dist: scikit-learn (~=1.0.2)
+Requires-Dist: setuptools (~=53.0.0)
+Requires-Dist: tqdm (~=4.62.3)
+
+# Track news stories from news articles
+
+This project is the front-end of the [`document_tracking`](https://gitlab.univ-lr.fr/cross-lingual-event-tracking/developpement/from-documents-to-events/document_tracking) package, which proposes algorithms to track news documents (long articles, telegraphic dispatches, etc.) into news stories (group of documents reporting similar events). It manipulates data following the [`document_tracking_resources`](https://gitlab.univ-lr.fr/cross-lingual-event-tracking/developpement/from-documents-to-events/documents_tracking_resources) format, and all your datasets should complain with it.
+
+## Installation
+
+```bash
+pip install news_tracking
+```
+
+## Utilities
+
+Once installed, you will be provided new commands which act as a front-end to the utilities your need.
+
+* `news_tracking_miranda`: run the Miranda et al. algorithm (see the `document_tracking` package for more information). on you datasets. It needs to have a model, as the algorithm is supervised. 
+* `news_tracking_miranda_training`: train and export a model for the Miranda et al. algorithm.
+* `news_tracking_kmeans`: run K-Means on a dataset, it can act as a baseline algorithm.
+* `news_tracking_evaluation`: evaluate the clustering of algorithms using Standard and BCubed metrics.
+
+
+
