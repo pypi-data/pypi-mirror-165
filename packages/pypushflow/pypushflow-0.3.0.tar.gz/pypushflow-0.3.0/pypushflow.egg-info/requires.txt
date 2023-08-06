@@ -1,0 +1,17 @@
+
+[dev]
+pytest>=7
+pytest-subtests>=0.4
+psutil>=5.8
+mongita>=1
+black>=22
+flake8>=4
+
+[mx]
+pymongo>=4
+
+[test]
+pytest>=7
+pytest-subtests>=0.4
+psutil>=5.8
+mongita>=1
