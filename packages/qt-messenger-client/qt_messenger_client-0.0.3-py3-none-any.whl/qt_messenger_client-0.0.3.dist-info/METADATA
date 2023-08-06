@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: qt-messenger-client
+Version: 0.0.3
+Summary: Messenger Client
+Home-page: UNKNOWN
+Author: Nikuha
+Author-email: yoginika@yandex.ru
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: PyQt5
+Requires-Dist: sqlalchemy
+Requires-Dist: pycryptodome
+Requires-Dist: pycryptodomex
+
+UNKNOWN
+
