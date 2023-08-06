@@ -1,0 +1,13 @@
+typeworks/__init__.py,sha256=SqnVhDXxhyWh_8aL3Kq0lyBmNNJZlBmCzEZ1U85PQ8g,450
+typeworks/cls_decorator_base.py,sha256=IrBa2zPCTDqY2OKP0jnpODgbTFAkd0CoDuBH3nbTDmM,4206
+typeworks/method_decorator_base.py,sha256=RlSvVCT3RxiOZlzy4IjV0YTXOX1_qq9a8cNGZlpWeiM,130
+typeworks/registration_decorator_base.py,sha256=WTb9dRmEmYLqrCxinIVtSjWtafmezVsmUcPsYHBGRNY,525
+typeworks/type_rgy.py,sha256=8i8vTRo21zjljUFuHjrwwCn1z_1DAqLhQXUd1olMAhk,2203
+typeworks/impl/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+typeworks/impl/decl_rgy.py,sha256=AXoJXQw4kUk2dLKEMHH_lIWLD3GSZTbSkdfa4_T_HrI,1254
+typeworks/impl/typeinfo.py,sha256=D5XOreq9a7qkycFQMq88KPUuR6rFEbCvyCsL_Dyn5vg,631
+pytypeworks-0.1.0.2972659111.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+pytypeworks-0.1.0.2972659111.dist-info/METADATA,sha256=VyhN55fIT0jTdja6N1HYE6mVaif9WtWGah6vwHepoLo,426
+pytypeworks-0.1.0.2972659111.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+pytypeworks-0.1.0.2972659111.dist-info/top_level.txt,sha256=lXrs4kKxSmnPMytK1VWynj2Wfp53-DYZOPPsG6VSSYA,10
+pytypeworks-0.1.0.2972659111.dist-info/RECORD,,
