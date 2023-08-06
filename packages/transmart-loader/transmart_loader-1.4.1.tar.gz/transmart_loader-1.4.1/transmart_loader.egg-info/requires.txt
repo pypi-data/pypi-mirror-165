@@ -1,0 +1,7 @@
+importlib-metadata<4.12,>=4.11
+pydantic<1.11,>=1.10
+
+[dev]
+prospector[with_pyroma]
+yapf
+isort
