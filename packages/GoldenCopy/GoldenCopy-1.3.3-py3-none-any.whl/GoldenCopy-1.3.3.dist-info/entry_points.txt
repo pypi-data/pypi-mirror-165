@@ -1,0 +1,2 @@
+[console_scripts]
+goldencopy = goldencopy:main
