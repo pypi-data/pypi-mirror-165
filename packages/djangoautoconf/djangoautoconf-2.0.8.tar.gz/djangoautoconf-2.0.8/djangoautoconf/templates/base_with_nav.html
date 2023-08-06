@@ -1,0 +1,33 @@
+{% extends "admin/base.html" %}
+{% load i18n %}
+
+{% load static %}
+{% block extrahead %}
+	{% block css %}
+        <link rel='stylesheet' type='text/css' href="{% static 'css/jquery-ui/smoothness/jquery-ui.css' %}" />
+	{% endblock %}
+
+	{% block js %}
+        <script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+        <script type='text/javascript' src="{% static 'js/jquery-ui.js' %}"></script>
+	{% endblock %}
+{% endblock %}
+
+{% block content %}
+    {% block container %}
+    {% endblock %}
+	{% block main %}
+    {% endblock %}
+    {% block body %}
+    {% endblock %}
+{% endblock %}
+
+
+<!-- Admin activities -->
+{% block logs %}
+{% endblock %}
+
+<!-- Admin docs -->
+{% block userlinks %}
+{% endblock %}
+
