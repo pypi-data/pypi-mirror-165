@@ -1,0 +1,12 @@
+[console_scripts]
+clean = naveen.naveen:clean
+experiment = naveen.naveen:experiment
+filter = naveen.naveen:filter
+group = naveen.naveen:group
+html2text = naveen.naveen:html2text
+ngrams = naveen.naveen:ngrams
+pages = naveen.naveen:pages
+pluck = naveen.naveen:pluck
+remove = naveen.naveen:remove
+stream = naveen.naveen:stream
+urls = naveen.naveen:urls
