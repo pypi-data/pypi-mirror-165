@@ -1,0 +1,106 @@
+Metadata-Version: 2.1
+Name: donv
+Version: 0.1.0
+Summary: Easy setup for docker env.
+Home-page: https://github.com/nemodleo/donv
+Author: Hyun Park
+Author-email: nemod.leo@snu.ac.kr
+License: MIT
+Keywords: docker build dockerfile run env images ps
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: python-version (>="3.5")
+
+# donv: docker-env
+Easy setup for docker env.
+
+## How to install
+
+```
+pip install donv
+```
+
+## How to donv use
+
+0. Docker Info
+
+    ```
+    donv-info
+    ```
+    ```
+    donvi
+    ```
+    ```
+    donvi --help
+    ```
+
+1. Docker Build
+
+    ```
+    donv-build --dockerfile ./donvdonv/Dockerfile --image donv/donv:0.0.1
+    ```
+    ```
+    donvb
+    ```
+
+2. Docker Run
+
+    ```
+    donv run --gpus 0,1,2,3,4,5,6,7 --name noname --rm
+    ```
+    ```
+    donvr -g 0,1,2,3,4,5,6,7 -n noname -r
+    ```
+
+3. Docker restart
+
+    ```
+    donv-restart noname 
+    ```
+    ```
+    donvrst noname 
+    ```
+
+4. Docker attach
+
+    ```
+    donv-attach noname 
+    ```
+    ```
+    donva noname 
+    ```
+
+5. Docker restart and attach
+
+    ```
+    donv-restart-attach noname 
+    ```
+    ```
+    donvra noname 
+    ```
+
+6. Docker stop
+
+    ```
+    donv-stop noname 
+    ```
+    ```
+    donvs noname 
+    ```
+
+7. Docker remove
+
+    ```
+    donv-remove noname 
+    ```
+    ```
+    donvr noname 
+    ```
+
+## How to build package.
+
+```
+python setup.py bdist_wheel && pip install -e .
+twine upload dist/{generated dist file path}
+```
