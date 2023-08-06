@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+pyopcxmlda/__init__.py
+pyopcxmlda/client.py
+pyopcxmlda/constants.py
+pyopcxmlda/tag.py
+pyopcxmlda.egg-info/PKG-INFO
+pyopcxmlda.egg-info/SOURCES.txt
+pyopcxmlda.egg-info/dependency_links.txt
+pyopcxmlda.egg-info/requires.txt
+pyopcxmlda.egg-info/top_level.txt
