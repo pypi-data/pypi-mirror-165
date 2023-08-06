@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/ChatbotAPI/__init__.py
+src/ChatbotAPI/chatbasics.py
+src/ChatbotAPI/errors.py
+src/ChatbotAPI/utils.py
+src/ChatbotAPI.egg-info/PKG-INFO
+src/ChatbotAPI.egg-info/SOURCES.txt
+src/ChatbotAPI.egg-info/dependency_links.txt
+src/ChatbotAPI.egg-info/requires.txt
+src/ChatbotAPI.egg-info/top_level.txt
