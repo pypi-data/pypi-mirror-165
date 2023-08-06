@@ -1,0 +1,16 @@
+[tool.black]
+line-length = 119
+include = '\.pyi?$'
+exclude = '''
+/(
+  \.git
+  | venv
+  | build
+  | dist
+)/
+'''
+
+[tool.isort]
+atomic = true
+profile = "black"
+line_length = 119
