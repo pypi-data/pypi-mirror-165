@@ -1,0 +1,5 @@
+pika
+requests
+paho-mqtt
+prometheus-client
+psutil
