@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: custolint
+Version: 0.0.3.dev1
+Summary: Another custom linter layer
+License: MIT License
+Keywords: ["static code analysis","linter","python","lint","coverage","flake8"]
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Debuggers
+Classifier: Topic :: Software Development :: Quality Assurance
+Classifier: Topic :: Software Development :: Testing
+Requires-Dist: bash (==0.6)
+Requires-Dist: isort (==5.10.1)
+Provides-Extra: deploy_to_pip
+Requires-Dist: twine ; extra == 'deploy_to_pip'
+Requires-Dist: build ; extra == 'deploy_to_pip'
+Provides-Extra: dev
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: pylint ; extra == 'dev'
+Requires-Dist: coverage ; extra == 'dev'
+Requires-Dist: flake8 ; extra == 'dev'
+
+=========================
+custolint - custom linter
+=========================
+
+Motivation
+----------
+
+When you have a big old code base with thousands of lines, you can not just include a linter and enable 100% checks.
+
+.. image:: https://www.meme-arsenal.com/memes/fb7dcfc4064d5b75e281d354590b13a5.jpg
+  :width: 400
+  :alt: You cannot just take and (Boromir meme)
+  
+Instead, you just enable 1% of the checks, which is very sad for a decent developer.
+
+*Could you just enable to only check your changes ?* **YES**, you can.
+
+There is a better solution for this ! Welcome **custolint** - custom linter.
+
+Idea
+----
+
+TODO: draw a diagram.
+Given we have a project alike custolint, where we:
+
+- changed a the function ``custolint/git.py:_blame``
+- added a new function ``custolint/generics.py:filer_output``
