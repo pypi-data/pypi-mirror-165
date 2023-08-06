@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+python/pdstools/pdstools.egg-info/PKG-INFO
+python/pdstools/pdstools.egg-info/SOURCES.txt
+python/pdstools/pdstools.egg-info/dependency_links.txt
+python/pdstools/pdstools.egg-info/requires.txt
+python/pdstools/pdstools.egg-info/top_level.txt
