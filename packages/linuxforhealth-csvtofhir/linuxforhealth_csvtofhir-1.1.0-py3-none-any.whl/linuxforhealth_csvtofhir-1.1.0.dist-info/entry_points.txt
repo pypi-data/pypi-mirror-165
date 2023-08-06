@@ -1,0 +1,2 @@
+[console_scripts]
+csvtofhir = linuxforhealth.csvtofhir.cli.main:main
