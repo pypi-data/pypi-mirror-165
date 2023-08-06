@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: conan_package_tools
+Version: 0.38.1
+Summary: Packaging tools for Conan C/C++ package manager
+Home-page: https://github.com/conan-io/conan-package-tools
+Author: JFrog LTD
+Author-email: info@conan.io
+License: MIT
+Keywords: conan,C/C++,package,libraries,developer,manager,dependency,tool,c,c++,cpp
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE.md
