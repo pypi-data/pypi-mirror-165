@@ -1,0 +1,18 @@
+[build-system]
+
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+[project]
+
+name = "psan_mr0rang3"
+version = '1.0'
+description = "TACACS+ Passed Authentication Logs Analyzer"
+authors = [
+  {name="Wilfredo Davila", email="wildavila11@gmail.com"},
+]
+requires-python=">=3.10"
+license = {file = "COPYING"}
+dependencies = [
+  "inquirer == 2.10.0",
+  "pandas == 1.4.3",
+]

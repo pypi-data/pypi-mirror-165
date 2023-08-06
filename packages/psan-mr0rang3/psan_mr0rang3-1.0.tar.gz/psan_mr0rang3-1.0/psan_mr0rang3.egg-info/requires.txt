@@ -1,0 +1,2 @@
+inquirer==2.10.0
+pandas==1.4.3
