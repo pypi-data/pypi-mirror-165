@@ -1,0 +1,15 @@
+celery
+cryptography
+email-validator
+flask
+flask-login
+flask-mail
+flask-migrate
+flask-sqlalchemy
+flask-wtf
+gunicorn
+influxdb
+ldap3
+paramiko
+redislite
+requests
