@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+gitlab_job.egg-info/PKG-INFO
+gitlab_job.egg-info/SOURCES.txt
+gitlab_job.egg-info/dependency_links.txt
+gitlab_job.egg-info/requires.txt
+gitlab_job.egg-info/top_level.txt
+tests/__init__.py
+tests/test_gitlab_job.py
