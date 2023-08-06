@@ -1,0 +1,3 @@
+[console_scripts]
+environ-loader=environ_loader.__main__:main
+

@@ -1,0 +1,15 @@
+environ_loader/.linux.py.swp,sha256=9SMwxrqz2tGbhRYZEHRP5epmkl0cYwV0oocm7p9-fQk,12288
+environ_loader/.var_list.py.swp,sha256=mkBouL6b_nzw5eypJjJxqXunYvGbPzCj3Kr64r2MUok,12288
+environ_loader/.windows.py.swp,sha256=eQP33oN15GRoW1kP_9GBb4J9Pr9-wzZySh_RFQ5T7sI,12288
+environ_loader/__init__.py,sha256=ORATIOu9GVi43kNWqmN6IdlBRVl2uzzWv4TZ48HSZPg,22
+environ_loader/__main__.py,sha256=KYLaRh8a_v89FY0y0J2R_jNjXC2sZXLxKHPYK16pYgk,218
+environ_loader/linux.py,sha256=W1FsCKQj6EQndWU7lpcPQ2VWH4e9S63ayuzd-soyxzA,959
+environ_loader/loader.py,sha256=ZDnwFVi1LVn159tjgFu0LMIJdtSLd6TpXnFMgxWZNIQ,809
+environ_loader/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+environ_loader/var_list.py,sha256=IN4wjMZW4t1rfUunxnlQieqgaH14YtBlnmez-syDKtI,1220
+environ_loader/windows.py,sha256=Isgc8I-VmRt215GGzEETMb4AGIg0o7JXog10_th81Zo,1264
+environ_loader-0.0.1.dist-info/entry_points.txt,sha256=GRBrinEJZ7c3z4zEzwL3zreeu4GQrL9tL-5Ax3JXu6U,63
+environ_loader-0.0.1.dist-info/LICENSE,sha256=5sRQTGykiX-jBSB3nY3gOjOvPn2CzitN6ybUpLu3sG8,1068
+environ_loader-0.0.1.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+environ_loader-0.0.1.dist-info/METADATA,sha256=edSOIryDujt6nFKEZoWbHRJGqULYUK-QnRGL0eNKzvM,1945
+environ_loader-0.0.1.dist-info/RECORD,,
