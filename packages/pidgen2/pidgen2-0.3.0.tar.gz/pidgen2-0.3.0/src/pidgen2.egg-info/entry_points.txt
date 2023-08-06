@@ -1,0 +1,11 @@
+[console_scripts]
+pidgen2.cache = pidgen2.cache:main
+pidgen2.correct = pidgen2.correct:main
+pidgen2.create_correct_example = pidgen2.create_correct_example:main
+pidgen2.create_correct_photon_example = pidgen2.create_correct_photon_example:main
+pidgen2.create_resample_example = pidgen2.create_resmaple_example:main
+pidgen2.list_mc_variables = pidgen2.list_mc_variables:main
+pidgen2.list_samples = pidgen2.list_samples:main
+pidgen2.list_variables = pidgen2.list_variables:main
+pidgen2.resample = pidgen2.resample:main
+pidgen2.validate = pidgen2.validate:main
