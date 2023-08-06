@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='utf-8'?>
+<vdex xmlns="http://www.imsglobal.org/xsd/imsvdex_v1p0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsvdex_v1p0 imsvdex_v1p0.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd" orderSignificant="false" profileType="hierarchicalTokenTerms" language="en">
+  <vocabName>
+    <langstring language="en">Topics</langstring>
+  </vocabName>
+  <vocabIdentifier>eea.topics.taxonomy</vocabIdentifier>
+
+  <term>
+    <termIdentifier>Agriculture</termIdentifier>
+    <caption>
+      <langstring language="en">Agriculture</langstring>
+    </caption>
+  </term>
+
+  <term>
+    <termIdentifier>Air pollution</termIdentifier>
+    <caption>
+      <langstring language="en">Air pollution</langstring>
+    </caption>
+  </term>
+
+  <term>
+    <termIdentifier>Biodiversity - Ecosystems</termIdentifier>
+    <caption>
+      <langstring language="en">Biodiversity - Ecosystems</langstring>
+    </caption>
+  </term>
+
+  <term>
+    <termIdentifier>Chemicals</termIdentifier>
+    <caption>
+      <langstring language="en">Chemicals</langstring>
+    </caption>
+  </term>
+
+  <term>
+    <termIdentifier>Climate change adaptation</termIdentifier>
+    <caption>
+      <langstring language="en">Climate change adaptation</langstring>
+    </caption>
+  </term>
+
+  <term>
+    <termIdentifier>Climate change mitigation</termIdentifier>
+    <caption>
+      <langstring language="en">Climate change mitigation</langstring>
+    </caption>
+  </term>
+
+  <term>
+    <termIdentifier>Energy</termIdentifier>
+    <caption>
+      <langstring language="en">Energy</langstring>
+    </caption>
+  </term>
+
+  <term>
+    <termIdentifier>Environment and health</termIdentifier>
+    <caption>
+      <langstring language="en">Environment and health</langstring>
+    </caption>
+  </term>
+
+  <term>
+    <termIdentifier>Land use</termIdentifier>
+    <caption>
+      <langstring language="en">Land use</langstring>
+    </caption>
+  </term>
+
+  <term>
+    <termIdentifier>Marine</termIdentifier>
+    <caption>
+      <langstring language="en">Marine</langstring>
+    </caption>
+  </term>
+
+  <term>
+    <termIdentifier>Policy instruments</termIdentifier>
+    <caption>
+      <langstring language="en">Policy instruments</langstring>
+    </caption>
+  </term>
+
+  <term>
+    <termIdentifier>Resource efficiency and waste</termIdentifier>
+    <caption>
+      <langstring language="en">Resource efficiency and waste</langstring>
+    </caption>
+  </term>
+
+  <term>
+    <termIdentifier>Soil</termIdentifier>
+    <caption>
+      <langstring language="en">Soil</langstring>
+    </caption>
+  </term>
+
+  <term>
+    <termIdentifier>Sustainability transitions</termIdentifier>
+    <caption>
+      <langstring language="en">Sustainability transitions</langstring>
+    </caption>
+  </term>
+
+  <term>
+    <termIdentifier>Transport</termIdentifier>
+    <caption>
+      <langstring language="en">Transport</langstring>
+    </caption>
+  </term>
+
+  <term>
+    <termIdentifier>Various other issues</termIdentifier>
+    <caption>
+      <langstring language="en">Various other issues</langstring>
+    </caption>
+  </term>
+
+  <term>
+    <termIdentifier>Water and marine environment</termIdentifier>
+    <caption>
+      <langstring language="en">Water and marine environment</langstring>
+    </caption>
+  </term>
+
+  <term>
+    <termIdentifier>Industry</termIdentifier>
+    <caption>
+      <langstring language="en">Industry</langstring>
+    </caption>
+  </term>
+
+  <term>
+    <termIdentifier>Specific regions</termIdentifier>
+    <caption>
+      <langstring language="en">Specific regions</langstring>
+    </caption>
+  </term>
+
+  <term>
+    <termIdentifier>Environmental technology</termIdentifier>
+    <caption>
+      <langstring language="en">Environmental technology</langstring>
+    </caption>
+  </term>
+
+</vdex>
