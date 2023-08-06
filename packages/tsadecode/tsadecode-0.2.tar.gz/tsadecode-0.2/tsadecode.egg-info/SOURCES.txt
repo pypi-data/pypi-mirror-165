@@ -1,0 +1,6 @@
+setup.py
+tsadecode.cpp
+tsadecode.egg-info/PKG-INFO
+tsadecode.egg-info/SOURCES.txt
+tsadecode.egg-info/dependency_links.txt
+tsadecode.egg-info/top_level.txt
