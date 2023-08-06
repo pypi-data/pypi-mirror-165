@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/flake8_forelse/__init__.py
+src/flake8_forelse.egg-info/PKG-INFO
+src/flake8_forelse.egg-info/SOURCES.txt
+src/flake8_forelse.egg-info/dependency_links.txt
+src/flake8_forelse.egg-info/entry_points.txt
+src/flake8_forelse.egg-info/not-zip-safe
+src/flake8_forelse.egg-info/top_level.txt
