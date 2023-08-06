@@ -1,0 +1,13 @@
+Click
+dask==2021.4.1
+dask-image==2021.12.0
+numpy==1.21.2
+h5py==3.6.0
+matplotlib
+tables
+graphviz
+scipy==1.7.1
+zarr==2.11.3
+xmltodict
+scikit-image
+pandas
