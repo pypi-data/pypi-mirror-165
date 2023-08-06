@@ -1,0 +1,4 @@
+thriftpy2>=0.4.0
+
+[protobuf]
+protobuf>=3.12.4
