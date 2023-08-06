@@ -1,0 +1,10 @@
+tokyo/__init__.py,sha256=_PbL9ku9RA5HO52umX_rYgMR0wff7YdQCwqpYQXdDwM,249
+tokyo/properties.py,sha256=lKueVirMb8Angk9BjGh5tuOqXBn0JN_sdZsIdj-gAHs,2950
+tokyo/endpoints/anime.py,sha256=hVdWlzff-10qoX6Eapjbmu53725D_6aMNSKyPPoDtSw,2133
+tokyo/endpoints/buffer.py,sha256=KmvpmxwEGL1Dcgvh2gaWgCOixK4ddkwYOg0S50mVglY,1133
+tokyo/endpoints/json.py,sha256=_ynJcy4zd4bhkRIxmpfjMZDz0ajxOGoK0PgsRiJvetU,1078
+tokyo.py-0.0.1.dist-info/LICENSE,sha256=ODlcGudbs9TGOg1-dBPCsJiXNghYhWCrAaeN6hD293g,1081
+tokyo.py-0.0.1.dist-info/METADATA,sha256=QRwIMdQDWgevW6LaQgo04rcQfSuxEaKJ9ZVRtLOP7Cs,3013
+tokyo.py-0.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+tokyo.py-0.0.1.dist-info/top_level.txt,sha256=oNj00b-7p8ZNHU0nVRJ2YKVgJG5SYQoCsVNftcFKkzo,6
+tokyo.py-0.0.1.dist-info/RECORD,,
