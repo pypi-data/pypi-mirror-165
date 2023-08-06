@@ -1,0 +1,5 @@
+input-dir: 
+  - mandatory: True
+output-dir:
+  - mandatory: True
+delete-input-dir: False
