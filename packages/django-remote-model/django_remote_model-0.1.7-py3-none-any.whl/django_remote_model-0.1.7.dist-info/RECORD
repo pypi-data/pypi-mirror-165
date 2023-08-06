@@ -1,0 +1,10 @@
+django_remote_model/provider/provider_fields_generator.py,sha256=bK9xNya71WtRsJXdm2e1PO5Lx-A52l-bgTyxFnu2XJ4,771
+django_remote_model/provider/provider_serializer.py,sha256=WyXQBACs20Cm2gRQcr4OFDKL4kvspGU7eBRG2PtWN9Y,1087
+django_remote_model/provider/provider_view_set.py,sha256=MrmgfDk9Oxm8poKTwdgpDjNbZNkjZJQ9jLJ4gifgsXE,2175
+django_remote_model/remote_model/__init__.py,sha256=FGp9zSCV_xg4bS5DvXc66AaojT9zl0NyzMESSqNBayU,34
+django_remote_model/remote_model/get_model.py,sha256=iQOQarQq_EvlA4j0-W0lDyL88hFYx-koSJqJ3EE3EVk,5064
+django_remote_model/remote_model/queryset.py,sha256=39JcR4Lu1WUI_r7ySl2-LMolbJzzPjzx7Q0OQOQVkLg,4944
+django_remote_model-0.1.7.dist-info/METADATA,sha256=xD-K22DoLvp-QRr3vuBpMymRsfyc_AMnvo6muP0qJ1g,4379
+django_remote_model-0.1.7.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+django_remote_model-0.1.7.dist-info/top_level.txt,sha256=qxqhPaLQ-2p2Y7H09B5Pj8SIe7mMFK4ZMHRX4a5pbic,20
+django_remote_model-0.1.7.dist-info/RECORD,,
