@@ -1,0 +1,3 @@
+[console_scripts]
+dsc_labs-config = dsc_labs.cli.config:main
+
