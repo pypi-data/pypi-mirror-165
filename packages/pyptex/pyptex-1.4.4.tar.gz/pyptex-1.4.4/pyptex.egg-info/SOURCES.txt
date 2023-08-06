@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+pyptex/__init__.py
+pyptex/__main__.py
+pyptex.egg-info/PKG-INFO
+pyptex.egg-info/SOURCES.txt
+pyptex.egg-info/dependency_links.txt
+pyptex.egg-info/not-zip-safe
+pyptex.egg-info/requires.txt
+pyptex.egg-info/top_level.txt
+scripts/pyptex
