@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: easyspex
+Version: 0.0.1
+Summary: Utilities for spectroscopic pre-processing, modelling, and evaluations.
+Home-page: UNKNOWN
+Author: Zefang Shen
+Author-email: zefang2455@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: pandas
+
+# easySpeX
+Utilities for spectroscopic pre-processing and modelling.
+
+# Current Status
+Version 0.0.1 under development.
+
+
