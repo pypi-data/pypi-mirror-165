@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: ncov-zit
+Version: 0.0.2
+Summary: A cli tool  to obtain the health reporting and submission information of Zzhou Institute of science and technology.
+Home-page: https://github.com/WildboarG/ncov-zit
+Author: WildboarG
+Author-email: mm62633482@gmail.com
+License: MIT
+Keywords: zit,ncov
+Platform: UNKNOWN
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+
+test  Module
+
