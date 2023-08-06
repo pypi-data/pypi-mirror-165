@@ -1,0 +1,1 @@
+.fade{transition:opacity 0.15s linear}@media screen and (prefers-reduced-motion: reduce){.fade{transition:none}}.fade:not(.show){opacity:0}

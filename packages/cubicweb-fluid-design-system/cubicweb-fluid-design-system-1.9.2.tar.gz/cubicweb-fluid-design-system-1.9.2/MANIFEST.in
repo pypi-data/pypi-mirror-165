@@ -1,0 +1,16 @@
+include scripts/*
+include *.json
+include *.py
+include */*.py
+include README.rst
+include tox.ini
+recursive-include cubicweb_fluid_design_system *.py
+recursive-include cubicweb_fluid_design_system/data *.gif *.png *.ico *.css *.js *.eot *.svg *.ttf *.woff *.woff2 *.map *.ts *.txt
+recursive-include cubicweb_fluid_design_system/i18n *.po
+recursive-include test/data fluid_design_system_cubes *.py
+recursive-include doc *.rst Makefile README.rst
+
+prune debian
+exclude cubicweb-fluid-design-system.spec
+exclude .gitlab-ci.yml
+exclude .yamllint

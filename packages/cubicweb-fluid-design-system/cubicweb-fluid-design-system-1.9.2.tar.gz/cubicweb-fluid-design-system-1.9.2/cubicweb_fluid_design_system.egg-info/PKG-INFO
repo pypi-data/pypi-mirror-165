@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: cubicweb-fluid-design-system
+Version: 1.9.2
+Home-page: https://www.cubicweb.org/project/cubicweb-fluid-design-system
+Author: LOGILAB S.A. (Paris, FRANCE)
+Author-email: contact@logilab.fr
+License: LGPL
+Classifier: Environment :: Web Environment
+Classifier: Framework :: CubicWeb
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: JavaScript
+Requires-Python: >=3.7
