@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+kbbi_scraper/__init__.py
+kbbi_scraper/constants.py
+kbbi_scraper/utils.py
+kbbi_scraper/word.py
+kbbi_scraper.egg-info/PKG-INFO
+kbbi_scraper.egg-info/SOURCES.txt
+kbbi_scraper.egg-info/dependency_links.txt
+kbbi_scraper.egg-info/not-zip-safe
+kbbi_scraper.egg-info/requires.txt
+kbbi_scraper.egg-info/top_level.txt
