@@ -1,0 +1,13 @@
+pathspec/__init__.py,sha256=otpErEISku5kD9bdPsTCrG4cKeHNYaV_aod2eX8S-vM,1284
+pathspec/_meta.py,sha256=S8wYX0JJ6T2VRi1zXlNCUPXrLQ984ooXxsww-Tt3iKc,1897
+pathspec/gitignore.py,sha256=HOCnbRNNad5Yo1e5IVOPCQDG2BvEKO6Vuid9UOyyaxE,3388
+pathspec/pathspec.py,sha256=LgJP92Oi0ADiYmwII3RLtsTS1Bqe5VGg3nrazJR5zls,8279
+pathspec/pattern.py,sha256=tEvOBHXbI2nBRj5lnB1scqwGJ7mf9dt1OSP9pbxj3GE,5779
+pathspec/util.py,sha256=Qu8q2gnbN59TiDR4UTm-1QNd2fP1SslbazimI4d6Tck,19639
+pathspec/patterns/__init__.py,sha256=Falv9rzI0S-Sjc-t-vCS9nUPcKwBptmdNderY9Kok50,184
+pathspec/patterns/gitwildmatch.py,sha256=kSeabErxAFhOboWr6-Vm7Je17eE-tpK_5-0bEdB1fzU,12106
+pathspec-0.10.0.dist-info/LICENSE,sha256=-rPda9qyJvHAhjCx3ZF-Efy07F4eAg4sFvg6ChOGPoU,16726
+pathspec-0.10.0.dist-info/METADATA,sha256=shTGhrppaKLpEgUsz52AsFa3YF_wV6hAKnRsZopQ1uw,15819
+pathspec-0.10.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+pathspec-0.10.0.dist-info/top_level.txt,sha256=0NA6IbW6iCUZ4p402IRSyZpvx4yqoltHzMoAxVQHI1M,9
+pathspec-0.10.0.dist-info/RECORD,,
