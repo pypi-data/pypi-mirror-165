@@ -1,0 +1,15 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "py_inception"
+authors = [{name = "Sergey Shirobokih", email = "divetoh@yandex.ru"}]
+readme = "README.md"
+requires-python=">=3.10"
+license = {file = "LICENSE"}
+classifiers = ["License :: OSI Approved :: MIT License"]
+dynamic = ["version", "description"]
+
+[project.urls]
+Home = "https://github.com/divetoh/py-inception"
