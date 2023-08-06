@@ -1,0 +1,6 @@
+__init__
+bbobbenchmarks
+doe2vec
+models
+modulesRandFunc
+test_doe2vec
