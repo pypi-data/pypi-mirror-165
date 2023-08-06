@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: pykickstart
+Version: 3.43
+Summary: Python module for manipulating kickstart files
+Home-page: https://fedoraproject.org/wiki/pykickstart
+Author: Chris Lumens
+Author-email: clumens@redhat.com
+License: COPYING
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Operating System :: OS Independent
+Provides-Extra: docs
+Provides-Extra: test
+License-File: COPYING
+
+UNKNOWN
+
