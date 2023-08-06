@@ -1,0 +1,15 @@
+pymongo_schema/__init__.py,sha256=S3lo3fCjW2HIIvI6NlFwFbMyo38PuCVBtvlcoS6EyT4,124
+pymongo_schema/__main__.py,sha256=_v4tli5FMQGGCq_X8XIRPPOw2jdRtGqEAoWzHGUv0Uo,10273
+pymongo_schema/compare.py,sha256=-vdnWE2ub_J-YnaQcnGh5rmFNFhFDekcgmhj4B_nY3I,4766
+pymongo_schema/export.py,sha256=M0zTkPwIalIzxHjBioUdI3FiAhdZkfRp8DbewD0ks6A,27241
+pymongo_schema/extract.py,sha256=I67ujTTDEdPydMrVo30Qe4LTvzKy5QnaJ2FX3GJM3S8,10123
+pymongo_schema/filter.py,sha256=lSOystz3mNLY-dH8LT4JCsmfcAbQ_Vr3MlpPOV2kqgA,8089
+pymongo_schema/mongo_sql_types.py,sha256=Y1VdNtCrocC5-tEhjHQltIUC_PKLiGnhCwyRIErT8Jw,4192
+pymongo_schema/tosql.py,sha256=mDyNQ7Lw4R6M5-feUhYNsqUyaEIoBKaRmhWePsO4IRk,8043
+pymongo_schema-0.4.dist-info/LICENSE,sha256=2n6rt7r999OuXp8iOqW9we7ORaxWncIbOwN1ILRGR2g,7651
+pymongo_schema-0.4.dist-info/METADATA,sha256=S0gANDPUUhqRHY224-VIfUc4n-nsLavueyMVcTKvEbM,634
+pymongo_schema-0.4.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+pymongo_schema-0.4.dist-info/dependency_links.txt,sha256=-HVrjHF8eQiuAK9_6CbmeAnBoz09fcsxjFFF0QH1jZ8,34
+pymongo_schema-0.4.dist-info/entry_points.txt,sha256=9YAuZE3E3oSIsoH6EA-yBFoy6SlgXR7McrnwW-nu6N0,64
+pymongo_schema-0.4.dist-info/top_level.txt,sha256=KptlUDde6WuHYv9gshBFiIWdTVl6SyutAVDYCfs4Ciw,15
+pymongo_schema-0.4.dist-info/RECORD,,
