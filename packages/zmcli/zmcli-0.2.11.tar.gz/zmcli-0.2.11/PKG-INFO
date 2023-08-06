@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: zmcli
+Version: 0.2.11
+Summary: A Simple Command Line Tool
+Home-page: https://git.zoom.us/zackary.huang/zmcli
+Author: Zackary
+Author-email: zackaryhuang96@gmail.com
+License: MIT License
+Platform: any
+Requires-Python: >3.6
+
+UNKNOWN
+
