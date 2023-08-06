@@ -1,0 +1,9 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = ["setuptools", "wheel"]
+[tool.commitizen]
+version = "0.2.3"
+version_files = [
+    "naveen/__version__.py",
+    "setup.cfg"
+]
