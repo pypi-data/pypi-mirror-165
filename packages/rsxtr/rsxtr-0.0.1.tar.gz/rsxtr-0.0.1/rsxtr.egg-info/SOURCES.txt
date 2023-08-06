@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+rsxtr/__init__.py
+rsxtr/logo.png
+rsxtr/main.py
+rsxtr.egg-info/PKG-INFO
+rsxtr.egg-info/SOURCES.txt
+rsxtr.egg-info/dependency_links.txt
+rsxtr.egg-info/entry_points.txt
+rsxtr.egg-info/requires.txt
+rsxtr.egg-info/top_level.txt
+rsxtr/include/rsxtrio/init.rsxh
+rsxtr/include/rsxtrio/rsxtrio.py

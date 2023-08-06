@@ -1,0 +1,3 @@
+[console_scripts]
+rsxtr = rsxtr.main:main
+
