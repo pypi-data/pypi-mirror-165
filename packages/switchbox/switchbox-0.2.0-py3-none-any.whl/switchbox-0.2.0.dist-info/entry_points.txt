@@ -1,0 +1,4 @@
+[console_scripts]
+git-switchbox=switchbox.cli:main
+switchbox=switchbox.cli:main
+
