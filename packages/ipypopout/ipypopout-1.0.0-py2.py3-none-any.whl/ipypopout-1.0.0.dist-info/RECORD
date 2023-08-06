@@ -1,0 +1,11 @@
+ipypopout/__init__.py,sha256=OZI7yjRLwz2mvyRbeVJGQGgYZPUznSTQPcQvZVJGRZw,83
+ipypopout/_version.py,sha256=Ayt8_xZ-i6l0GfVQlGTnzKIZzb01sCpSt57FXR18rGI,289
+ipypopout/popout_button.py,sha256=3UgsGGFPh_0lzPDgPbxO_rqve0ATvpE5_PlNZoMP54M,2360
+ipypopout/popout_button.vue,sha256=oxk7G6fUUFSxAQltB-pSqh4KKI50cKkI_NctQdppxJU,1826
+ipypopout-1.0.0.data/data/share/jupyter/voila/templates/ipypopout/static/popout.html,sha256=VsVekqDVMY02p6_K2v5TXfbfohYla8tXuhEqn0gjeyk,237
+ipypopout-1.0.0.data/data/share/jupyter/voila/templates/ipypopout/static/popout.js,sha256=-01cPI1bPWFTgjQl4h3VwveltuzKtlRvDH9qgm3akAs,2452
+ipypopout-1.0.0.dist-info/LICENSE,sha256=bzxwKPAFBiC0Dwy6Bsu95UoEjgaWvLpKYyrmCzGSrBw,1073
+ipypopout-1.0.0.dist-info/METADATA,sha256=HI1SuJQ5nG7MkBpp-iGog6hmBoCqPikjCLxFA6uTpfE,363
+ipypopout-1.0.0.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+ipypopout-1.0.0.dist-info/top_level.txt,sha256=oDZEU63DH1tUT8KVB2hQEfavwqSnouU7DGIEZtXaNPU,10
+ipypopout-1.0.0.dist-info/RECORD,,
