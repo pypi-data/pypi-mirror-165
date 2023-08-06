@@ -1,0 +1,10 @@
+pydingtalk/__init__.py,sha256=Sgky9lcOHxRkC82PTfvAuGM3Mqvhi26_ygBhNEKx6fs,37
+pydingtalk/__version__.py,sha256=QTYqXqSTHFRkM9TEgpDFcHvwLbvqHDqvqfQ9EiXkcAM,23
+pydingtalk/bot.py,sha256=WT_0iD-uxKXLj_MP_Oq7rrbuZj6mMZQAYr-7Hftr31Q,3264
+pydingtalk/errors.py,sha256=y86-zuMAaO2WZlg5h5hS8-Nk4gr6TDj9FTqV6PCuKaY,500
+pydingtalk/log.py,sha256=rosnoT0IUsdiK8gQRXi9YxYqB5xa6X5hzqdJm1x5kSo,58
+PyDingTalk-0.1.0.dist-info/LICENSE,sha256=JXgOR9MuQIGQqdvgDz9EqrVDc0QcTSmgnv-BB1-5MrE,1085
+PyDingTalk-0.1.0.dist-info/METADATA,sha256=hBrCQcllYXU9SYPDY1fuz3fBXJVgVSWhuO4SpjEQDhI,3273
+PyDingTalk-0.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+PyDingTalk-0.1.0.dist-info/top_level.txt,sha256=lln4umOhBPKHlFOM6IDLGiTbc3wqf_cqYk4BzWj7yNs,11
+PyDingTalk-0.1.0.dist-info/RECORD,,
