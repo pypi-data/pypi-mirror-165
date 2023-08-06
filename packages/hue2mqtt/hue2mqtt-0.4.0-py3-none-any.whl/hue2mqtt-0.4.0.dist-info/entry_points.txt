@@ -1,0 +1,3 @@
+[console_scripts]
+hue2mqtt=hue2mqtt.app:app
+
