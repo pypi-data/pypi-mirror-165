@@ -1,0 +1,11 @@
+pysel/__init__.py,sha256=qjQiLGNcQ0FiKoMfG4sJZaX6_FzekayNLhsrgF47XDg,2045
+pysel/ast.py,sha256=R3yGNRxybJX5WvZp_vRFFutiU9vwb2cGDnh4Ey1CJ18,16081
+pysel/errors.py,sha256=w3P9A6hWKC-249AMN-sPWjpF37dHUMCmDphhw4eB5So,1731
+pysel/lexer.py,sha256=dPkP5V2RPPztSPbi5xFpRAO-uABLxcqpvrMxkO4rR_Q,4955
+pysel/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pysel/tokens.py,sha256=zgFylAxBGMCE1YWEFhrntcidehCb17naGsOiKgURqaY,4173
+pysel_lang-0.0.2.dist-info/LICENSE,sha256=n2rXosgLuhKpQ5XzeE6sOiiqBYuff2bbk8LfD1Tj7AA,1081
+pysel_lang-0.0.2.dist-info/METADATA,sha256=pIQgYYx-tXRAZjWs2kvc0sSHDGN-ARXH9nupPmHLfRM,10242
+pysel_lang-0.0.2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+pysel_lang-0.0.2.dist-info/top_level.txt,sha256=NiYof8E65OW-rB3zQubXo4THF5rW_0cXrkhrGrDwFXg,6
+pysel_lang-0.0.2.dist-info/RECORD,,
