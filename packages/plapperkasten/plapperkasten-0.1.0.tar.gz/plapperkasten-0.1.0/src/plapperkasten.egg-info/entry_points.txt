@@ -1,0 +1,3 @@
+[console_scripts]
+plapperkasten = plapperkasten.plapperkasten:main
+
