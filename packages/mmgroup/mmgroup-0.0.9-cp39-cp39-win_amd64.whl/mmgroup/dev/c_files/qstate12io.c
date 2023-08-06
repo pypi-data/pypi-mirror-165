@@ -1,0 +1,917 @@
+/////////////////////////////////////////////////////////////////////////////
+// This C file has been created automatically. Do not edit!!!
+/////////////////////////////////////////////////////////////////////////////
+
+// For this module we refer to the section
+// 'Computation in the Clifford group' in the guide, see
+// https://mmgroup.readthedocs.io/en/latest/
+
+
+/** @file qstate12io.c
+  File ``qstate12io.c`` contains  functions for converting quadratic
+  state matrices as described in the *API reference* in 
+  section **Computation in the Clifford group** to complex numbers.
+
+
+  The function in this module are coded according the conventions
+  in  module  ``qstate12.c``.
+*/
+
+
+/*************************************************************************
+** External references 
+*************************************************************************/
+
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
+
+/// @cond DO_NOT_DOCUMENT 
+#define CLIFFORD12_INTERN
+/// @endcond 
+#include "clifford12.h"
+
+
+// %%EXPORT_KWD CLIFFORD12_API
+
+
+
+
+// %%GEN ch
+#ifdef __cplusplus
+extern "C" {
+#endif
+// %%GEN c
+
+
+// %%GEN h
+// %%GEN c
+
+
+
+
+/*************************************************************************
+*** Converting a state to a complex vector
+*************************************************************************/
+
+
+// Suggestions for treatment of complex numbers in C and Cython see:
+// https://numpy.org/devdocs/user/c-info.python-as-glue.html#complex-addition-in-cython
+// https://stackoverflow.com/questions/31932781/how-to-interface-a-numpy-complex-array-with-c-function-using-ctypes
+// https://stackoverflow.com/questions/6418807/how-to-work-with-complex-numbers-in-c
+// https://en.cppreference.com/w/c/numeric/complex
+
+
+/// @cond DO_NOT_DOCUMENT 
+
+static int32_t set_complex_factors(int32_t e, double  *p_real, double *p_imag)
+// Let ``c`` be the complex number ``qstate12_factor_to_complex(e)``.
+// We store ``c * (1 + 0j)**k)`` in ``(p_real[k], p_imag[k]``.
+// for  ``k = 0,...,3``.
+{
+     int32_t res = qstate12_factor_to_complex(e, p_real);
+     // Put (p_real, p_imag)[0] = complex result
+     p_imag[0] = p_real[1];
+     // Put (p_real, p_imag)[2] = - result
+     // We don't like a negative floatingg point zero
+     p_real[2] = p_real[0] ? -p_real[0] : 0;
+     p_imag[2] = p_imag[0] ? -p_imag[0] : 0;
+     // (p_real, p_imag)[1] = (0 + 1j) * result;
+     p_real[1] = p_imag[2];
+     p_imag[1] = p_real[0];
+     // (p_real, p_imag)[1] = (0 - 1j) * result;
+     p_real[3] = p_imag[0];
+     p_imag[3] = p_real[2];
+     return res;
+}
+
+static inline int32_t qf_result_type(int32_t res, uint64_t qf_all)
+{
+     return (qf_all & 1 && res < 4) ? 4 : res;
+}
+
+
+// qstate12_lsbtab[i] is the position of least significant bit of i | 0x40
+const uint8_t qstate12_lsbtab[64] = {
+    6,0,1,0,2,0,1,0, 3,0,1,0,2,0,1,0, 
+    4,0,1,0,2,0,1,0, 3,0,1,0,2,0,1,0, 
+    5,0,1,0,2,0,1,0, 3,0,1,0,2,0,1,0, 
+    4,0,1,0,2,0,1,0, 3,0,1,0,2,0,1,0 
+};
+
+
+/// @endcond
+
+
+/**
+  @brief Expand a state to an array of complex numbers
+  
+  Expand the state ``qs`` referred by ``pqs`` to the array
+  referred by the pointer ``pc``. The real part of ``qs[i]`` is
+  stored in ``pc[2*i]`` and the imaginary part of ``qs[i]`` is
+  stored in ``pc[2*i+1]``. The function reduces ``qs``. Here the
+  integer ``i`` is interpreted as a bit vector as usual.
+  
+  ``pqs->shape1`` is ignored. The user has to care for the
+  shape of the returned array. The state ``qs`` is reduced.
+
+  Caution: The function sets ``2 * 2**pqs->ncols`` entries
+  in the array ``pc``.
+
+  Return value is as in function ``qstate12_entries``.
+*/
+// %%EXPORT p
+CLIFFORD12_API
+int32_t qstate12_complex(qstate12_type *pqs,  double *pc)
+{    
+    uint64_t qf = 0;    // current value of quadratic form Q[i]
+    uint64_t qf_all = 0; // OR sum of all values qf obtained
+    uint64_t *m;        // pointer to pqs->data
+    uint64_t *m_end;    // pointer to pqs->data + pqs->nrows - 1
+    uint64_t ncols;     // equal to pqs->ncols
+    uint64_t nrc;       // equal to pqs->ncols + pqs->nrows - 1; 
+    uint64_t n_iterations; // Number 1 << (pqs->nrows-1) of nonzero entries
+    uint64_t mask;      // mask (1 << ncols) - 1; 
+    uint64_t assoc;     // Current value of row  A[i] and Q[i]
+    uint64_t i;         // Index running thru n_iterations nonzero entries
+    double freal[4], fimag[4]; // The complex number (freal[k], fimag[k]) is
+                               // the value of an entry where qf = k (mod 4) 
+    int32_t res;        // Return value of subroutines
+
+    if ((res = qstate12_reduce(pqs)) < 0) return res;
+    ncols = pqs->ncols; 
+    for (i = 0; i < (2*ONE) << ncols; ++i) pc[i] = 0.0;
+    if (pqs->nrows == 0) return 0;
+    m = pqs->data;
+    assoc = m[0]; 
+    m_end = pqs->data + pqs->nrows - 1;
+    nrc = ncols + pqs->nrows - 1; 
+    n_iterations = ONE << (pqs->nrows - 1); 
+    mask = (ONE << ncols) - 1; 
+    res = set_complex_factors(pqs->factor & FACTOR_MASK , freal, fimag);
+   
+    for (i = 1; i <= n_iterations; ++i) {
+        uint64_t i1, diag, index;
+        int64_t d, d1;
+        index = (assoc & mask) << 1;
+        qf_all |= qf;
+        pc[index] = freal[qf & 3];
+        pc[index + 1] = fimag[qf & 3];
+        d1 = d = qstate12_lsbtab[(i1 = i) & 63];
+        while (d1 == 6) {
+            i1 >>= 6;
+            d1 = qstate12_lsbtab[i1 & 63];
+            d += d1;
+        } 
+        diag = (m_end[-d] >> (nrc - d)) & 1;
+        qf += ((assoc >> (nrc - 1 - d)) & 2) + diag;
+        assoc ^= m_end[-d];
+        /* A simpler implementation of the last 3 lines would be:
+        diag = (m[d+1] >> (ncols + d + 1)) & 1;
+        qf += ((assoc >> (ncols + d)) & 2) + diag;
+        assoc ^= m[d+1];
+        // But our implementation has a better locality of
+        // write accesses to the array ``pc``.
+        */
+    } 
+    return qf_result_type(res, qf_all);       
+}
+
+
+/**
+  @brief Convert entries of a state to complex numbers
+  
+  The function computes the entries ``qs[v[i]]`` of the state
+  ``qs`` referred by ``pqs``  for ``0 <= i < n`` and stores these
+  entries in the array  ``pc``. The real part of ``qs[v[i]]`` is
+  stored in ``pc[2*i]`` and the imaginary part is stored in
+  ``pc[2*i+1]``. The state ``qs`` is reduced.
+
+  Caution: The function sets ``2 * n`` entries in the
+  array ``pc``.
+
+  Depending on the computed matrix entries, the function returns
+ 
+       4  if all entries are complex, but not all are real.
+ 
+       3  if all entries are real, but not all are rational.
+ 
+       2  if all entries are rational, but not all are integers.
+
+       1  if all entries are integers, but not all are zero.
+
+       0  if all entries are zero.
+
+  A negative return value indicates an error.
+*/
+// %%EXPORT p
+CLIFFORD12_API
+int32_t qstate12_entries(qstate12_type *pqs, uint32_t n, uint32_t *v, double *pc)
+// Obtain complex entries of state vector ``qs`` referred by ``pqs``
+// Here ``v`` is an array of indices of length ``n``.
+// The values ``qs[v[i]], 0 <= i < n`` are stored in  
+// ``(pc[2*i], pc[2*i+1])`` as a complex number
+// ``pqs`` is reduced. ``pqs->shape1`` is ignored.
+{
+    uint8_t row_table[MAXCOLS+1];
+    int32_t factor, factor_all = 0, res, j;
+    uint32_t i,sh; 
+    uint64_t *m = pqs->data, vmask = (ONE << pqs->ncols) - 1, m0;
+    double freal[5], fimag[5];
+    
+    if ((res = qstate12_reduce(pqs)) < 0) return res;
+    if (pqs->nrows == 0) {
+        while (n--) {
+            *pc++ = 0.0; *pc++ = 0.0;
+        }
+        return 0;
+    }
+
+    res = set_complex_factors(pqs->factor, freal, fimag);
+    freal[4] = fimag[4] = 0.0;
+    qstate12_row_table(pqs, row_table);
+    while (n--) {
+        factor = 0;
+        m0 = m[0] ^ (vmask & *v++);
+        // m0 is a copy of row 0 with bits of index equal to 1 flipped
+        for (j = pqs->ncols - 1; j >= 0; --j) {
+            if ((m0 >> j) & 1) {
+                i = row_table[j];
+                if (i == QSTATE12_UNDEF_ROW) {
+                    // Then the entry is 0
+                    factor = 4;
+                    goto factor_done;
+                }
+                // Otherwise add row j to row 0 as in qstate12_pivot()
+                sh = pqs->ncols + i;
+                factor += (((m0 >> sh) & 1) << 1) + ((m[i] >> sh) & 1);
+                m0 ^= m[i];
+            }
+        }
+        factor &= 3;
+        factor_all |= factor | 4;
+      factor_done:           
+        *pc++ = freal[factor];
+        *pc++ = fimag[factor];
+    }
+    if ((factor_all & 4) == 0) return 0;
+    return qf_result_type(res, factor_all);
+}
+
+
+
+/*************************************************************************
+*** Convering a state to an integer vector
+*************************************************************************/
+
+
+
+/**
+  @brief Expand a state to an array of 32-bit integers
+  
+  Expand the state ``qs`` referred by ``pqs`` to the array of integers
+  (of type ``int32_t``)  referred by the pointer ``pi``. Here ``qs[i]``
+  is stored in ``pi[i]``. The function  reduces ``qs``. The
+  integer ``i`` is interpreted as a bit vector as usual.
+  
+  ``pqs->shape1`` is ignored. The user has to care for the
+  shape of the returned array. The state ``qs`` is reduced.
+
+  Caution: The function sets ``2**pqs->ncols`` entries in the
+  array ``pc``.
+
+  The function returns 0 in case of success, and a negative value
+  in case of error, e.g. if ``qs`` is not integral or in case of
+  integer overflow.
+*/
+// %%EXPORT p
+CLIFFORD12_API
+int32_t qstate12_int32(qstate12_type *pqs,  int32_t *pi)    
+{    
+    // Implementation is along the lines of function ``qstate12_complex``
+
+    uint64_t qf = 0;    // current value of quadratic form Q[i]
+    uint64_t *m;        // pointer to pqs->data
+    uint64_t *m_end;    // pointer to pqs->data + pqs->nrows - 1
+    uint64_t ncols;     // equal to pqs->ncols
+    uint64_t nrc;       // equal to pqs->ncols + pqs->nrows - 1; 
+    uint64_t n_iterations; // Number 1 << (pqs->nrows-1) of nonzero entries
+    uint64_t mask;      // mask (1 << ncols) - 1; 
+    uint64_t assoc;     // Current value of row  A[i] and Q[i]
+    uint64_t i;         // Index running thru n_iterations nonzero entries
+    uint64_t y;         // general purpose
+    int32_t res;        // Return value of subroutines
+    int32_t entry[2];  // nonzero entry of ``qs`` and its negative
+
+  
+    if ((res = qstate12_reduce(pqs)) < 0) return res;
+    ncols = pqs->ncols; 
+    for (i = 0; i < ONE << ncols; ++i) pi[i] = 0;
+    if (pqs->nrows == 0) return 0;
+    m = pqs->data;
+    assoc = m[0]; 
+    m_end = pqs->data + pqs->nrows - 1;
+    nrc = ncols + pqs->nrows - 1; 
+    n_iterations = ONE << (pqs->nrows - 1); 
+    mask = (ONE << ncols) - 1; 
+
+    y = 0; // accumulate diagonal of Q part of ``qs`` in bit 0 of ``y``
+    for (i = 1; i < pqs->nrows; ++i) y |= m[i] >> i;
+    y = (y >> ncols) & 1;
+    y |= pqs->factor;
+    if (y & 0x13 || y < 0) return ERR_QSTATE12_DOMAIN;
+    if (y >= 31 << 5) return ERR_QSTATE12_SCALAR_OVFL;
+    y = (ONE << (y >> 5)) * (ONE - ((y >> 1) & 2L)); // The scalar factor
+    entry[0] = (int32_t)y; 
+    entry[1] = -entry[0];
+   
+    for (i = 1; i <= n_iterations; ++i) {
+        uint64_t i1;
+        int64_t d, d1;
+        pi[assoc & mask] = entry[qf];
+        d1 = d = qstate12_lsbtab[(i1 = i) & 63];
+        while (d1 == 6) {
+            i1 >>= 6;
+            d1 = qstate12_lsbtab[i1 & 63];
+            d += d1;
+        } 
+        qf ^= (assoc >> (nrc - d)) & 1;
+        assoc ^= m_end[-d];
+    }
+    return 0;
+}
+
+
+
+
+
+
+/*************************************************************************
+*** Converting the signs of a real state to an array
+*************************************************************************/
+
+
+
+
+
+/**
+  @brief Store the signs of a real quadratic state in an array
+  
+  Let ``qs`` be the quadratic state matrix referred by ``pqs``.
+  Assume that ``qs`` is real and has shape ``(I, J)``.
+  Let ``t[i * 2**J + j] = 0, 1, or 3``, if entry ``qs[i, j]``
+  is zero, positive, or negative, respectively. Then we
+  store ``t[k]`` in  bits ``2 * l + 1, 2 * l``
+  of ``bmap[k >> 5]``, with ``l = k & 0x1f``.
+
+  The function returns 0 in case of success, and a negative value
+  in case of error, e.g. if ``qs`` is not a real matrix.
+*/
+// %%EXPORT p
+CLIFFORD12_API
+int32_t qstate12_to_signs(qstate12_type *pqs,  uint64_t *bmap)
+{    
+    uint64_t qf;     // current value of quadratic form Q[i]
+    uint64_t *m;     // pointer to pqs->data
+    uint64_t *m_mid; // equal to m or pointer to highest pqs->data + i,
+                     // 1 <= i < pqs->nrows such that part A of
+                     // *pqs has entries != 0 in column >= 5
+    uint64_t *m_end; // pointer to pqs->data + pqs->nrows - 1
+    uint64_t d_mid;  // equal to m_end - m_mid
+    uint64_t ncols;  // equal to pqs->ncols
+    uint32_t n_out;  // number of entries of output bmap
+    uint64_t nrc;    // equal to pqs->ncols + pqs->nrows - 2 
+    uint64_t i_it;   // equal to 1 << (m_mid - m - 1)
+    uint64_t j_it;   // equal to 1 << (m_end - m_mid)
+                     // bmap has 1 << (i_it+j_it) nonzero entries
+    uint64_t mask;   // eventually: mask = (1 << ncols) - 1 
+    uint64_t lmask;  // ((1 << ncols) - 1) & 0x1f 
+    uint64_t assoc;  // Current value of row  A[i] and Q[i]
+    uint64_t i;      // Index for m_end[-i], 0 <= i < i_it
+    uint64_t j;      // Index for m_mid[-j], 0 <= i < j_it
+    uint64_t v;      // 
+    int32_t res;     // Return value of subroutines
+
+    if ((res = qstate12_reduce(pqs)) < 0) return res;
+    ncols = pqs->ncols; 
+    n_out = 1 << (ncols < 5 ? 0 : ncols - 5);
+    for (i = 0; i < n_out; ++i) bmap[i] = 0;
+    if (pqs->nrows == 0) return 0;
+    if (pqs->factor & 3) return ERR_QSTATE12_DOMAIN;
+    m = pqs->data;
+    mask = 0;
+    for (i = 1; i < pqs->nrows; ++i) mask |= m[i] >> i;
+    if ((mask >> ncols) & 1) return ERR_QSTATE12_DOMAIN; 
+
+    m_mid = m_end = m + pqs->nrows - 1;
+    mask = ((ONE << ncols) - 1) & ~0x1f;
+    while (m_mid > m && (*m_mid & mask) == 0) --m_mid;
+    d_mid = m_end - m_mid;
+    nrc = ncols + pqs->nrows - 2; 
+    j_it = ONE << d_mid; 
+    i_it = ONE << (m_mid - m); 
+    mask = (ONE << ncols) - 1; 
+    lmask = mask & 0x1f; 
+    assoc = m[0]; 
+    qf = ((pqs->factor >> 1) & 2) + 1;
+   
+    for (i = 1; i <= i_it; ++i) {
+        uint64_t i1;
+        int64_t d, d1;
+        v = qf << ((assoc & lmask) << 1);
+        for (j = 1; j < j_it; ++j) {
+            d = qstate12_lsbtab[j];
+            qf ^= (assoc >> (nrc - d)) & 2;
+            assoc ^= m_end[-d];
+            v |=  qf << ((assoc & lmask) << 1);
+        }
+        bmap[(assoc & mask) >> 5] = v;
+        d1 = d = qstate12_lsbtab[(i1 = i) & 63];
+        while (d1 == 6) {
+            i1 >>= 6;
+            d1 = qstate12_lsbtab[i1 & 63];
+            d += d1;
+        }
+        d += d_mid; 
+        qf ^= (assoc >> (nrc - d)) & 2;
+        assoc ^= m_end[-d];
+    }
+    return 0; 
+}
+
+
+
+/*************************************************************************
+*** Comparing the signs of a real state with an array
+*************************************************************************/
+
+
+
+/// @cond DO_NOT_DOCUMENT 
+
+
+/**
+  @brief Workhorse for function ``qstate12_compare_signs``.
+
+  Let ``qs`` and ``bmap`` as in function ``qstate12_to_signs``.
+  The function returns 1 if the signs of ``qs`` are stored in
+  in ``bmap`` as described in function ``qstate12_to_signs``.
+  Otherwise the function returns 0. It returns a negative
+  value in case of an error.
+  
+  This function is more or less a clone of the (rather
+  complicated) function ``qstate12_to_signs``.
+  Differences to function ``qstate12_to_signs`` are
+  indicated by the word **CHANGE** in the comments.
+
+  The function requires an additional array ``a_nonzero`` of 
+  ``max(1, pqs->ncols >> 11)`` integers of type ``uint64_t``.
+*/
+static inline 
+int32_t _compare_signs(qstate12_type *pqs,  uint64_t *bmap,
+    uint64_t *a_nonzero)
+{    
+    uint64_t qf;     // current value of quadratic form Q[i]
+    uint64_t *m;     // pointer to pqs->data
+    uint64_t *m_mid; // equal to m or pointer to highest pqs->data + i,
+                     // 1 <= i < pqs->nrows such that part A of
+                     // *pqs has entries != 0 in column >= 5
+    uint64_t *m_end; // pointer to pqs->data + pqs->nrows - 1
+    uint64_t d_mid;  // equal to m_end - m_mid
+    uint64_t ncols;  // equal to pqs->ncols
+    uint32_t n_out;  // number of entries of output bmap
+    uint64_t nrc;    // equal to pqs->ncols + pqs->nrows - 2 
+    uint64_t i_it;   // equal to 1 << (m_mid - m - 1)
+    uint64_t j_it;   // equal to 1 << (m_end - m_mid)
+                     // bmap has 1 << (i_it+j_it) nonzero entries
+    uint64_t mask;   // eventually: mask = (1 << ncols) - 1 
+    uint64_t lmask;  // ((1 << ncols) - 1) & 0x1f 
+    uint64_t assoc;  // Current value of row  A[i] and Q[i]
+    uint64_t i;      // Index for m_end[-i], 0 <= i < i_it
+    uint64_t j;      // Index for m_mid[-j], 0 <= i < j_it
+    uint64_t v;      // 
+    int32_t res;     // Return value of subroutines
+    uint64_t msk_out;// CHANGE: this is (1 << (2 << ncols)) - 1 
+    uint64_t index;  // CHANGE: Current index of bmap
+
+    if ((res = qstate12_reduce(pqs)) < 0) return res;
+    ncols = pqs->ncols; 
+    n_out = 1 << (ncols < 5 ? 0 : ncols - 5);
+
+    // CHANGE: put msk_out as defined above; do not change bmap[] 
+    msk_out = ncols < 5 ? (ONE << (2 << ncols)) - 1 : 0ULL - ONE;
+    // CHANGE: process a zero matrix
+    if (pqs->nrows == 0) {
+        for (i = 0; i < n_out; ++i) if (bmap[i] & msk_out) return 0;
+        return 1;
+    }
+    // CHANGE: return 0 if matrix is not real
+    if (pqs->factor & 3) return 0;
+    m = pqs->data;
+    mask = 0;
+    for (i = 1; i < pqs->nrows; ++i) mask |= m[i] >> i;
+    if ((mask >> ncols) & 1) return 0; 
+    // CHANGE: zero array ``a_nonzero``
+    a_nonzero[0] = 0;
+    for (i = 1; i < n_out >> 6; ++i) a_nonzero[i] = 0;
+    // END CHANGES
+
+    m_mid = m_end = m + pqs->nrows - 1;
+    mask = ((ONE << ncols) - 1) & ~0x1fULL;
+    while (m_mid > m && (*m_mid & mask) == 0) --m_mid;
+    d_mid = m_end - m_mid;
+    nrc = ncols + pqs->nrows - 2; 
+    j_it = ONE << d_mid; 
+    i_it = ONE << (m_mid - m); 
+    mask = (ONE << ncols) - 1; 
+    lmask = mask & 0x1f; 
+    assoc = m[0]; 
+    qf = ((pqs->factor >> 1) & 2) + 1;
+   
+    for (i = 1; i <= i_it; ++i) {
+        uint64_t i1;
+        int64_t d, d1;
+        v = qf << ((assoc & lmask) << 1);
+        for (j = 1; j < j_it; ++j) {
+            d = qstate12_lsbtab[j];
+            qf ^= (assoc >> (nrc - d)) & 2;
+            assoc ^= m_end[-d];
+            v |=  qf << ((assoc & lmask) << 1);
+        }
+        // CHANGE: compare entry of bmap with v instead of setting it
+        index = (assoc & mask) >> 5;
+        if ((bmap[index] ^ v) & msk_out) return 0;
+        // CHANGE: indicate index of the nonzero entry in a_nonzero
+        a_nonzero[index >> 6] |= ONE << (index & 0x3f);
+        // END CHANGE
+        d1 = d = qstate12_lsbtab[(i1 = i) & 63];
+        while (d1 == 6) {
+            i1 >>= 6;
+            d1 = qstate12_lsbtab[i1 & 63];
+            d += d1;
+        }
+        d += d_mid; 
+        qf ^= (assoc >> (nrc - d)) & 2;
+        assoc ^= m_end[-d];
+    }
+
+    // CHANGE: check that bmap[i] is zero if bit in a_nonzero is cleared
+    if (n_out > 64) {
+        for (i = 0; i < n_out; i += 64) {
+            v = a_nonzero[i >> 6];
+            for (j = 0; j < 64; ++j) if (!((v >> j) & 1) && bmap[i+j])
+                return 0;
+        }
+    } else { 
+        v = a_nonzero[0];
+        for (j = 0; j < n_out; ++j) if (!((v >> j) & 1) && bmap[j])
+            return 0;
+    } 
+    return 1;    
+    // END CHANGE
+}
+
+
+// Binary logarithm of length of array a_nonzero allocated on stack
+#define LB_LEN_A_NONZERO  6
+
+/// @endcond 
+
+
+
+/**
+  @brief Compare signs of a real quadratic state with an array
+
+  Let ``qs`` and ``bmap`` as in function ``qstate12_to_signs``.
+  The function returns 1 if the signs of ``qs`` are stored in
+  in ``bmap`` as described in function ``qstate12_to_signs``.
+  Otherwise the function returns 0. The function also
+  returns 0 if matrix ``qs`` is not real.
+  It returns a negative value in case of an error.
+*/
+// %%EXPORT p
+CLIFFORD12_API
+int32_t qstate12_compare_signs(qstate12_type *pqs, uint64_t *bmap)
+{ 
+    int32_t res;
+    uint64_t a_nonzero[ONE << LB_LEN_A_NONZERO];
+    uint64_t *p_nonzero = a_nonzero;
+    if (pqs->ncols > LB_LEN_A_NONZERO + 6 + 5) {
+        p_nonzero = malloc(
+            (ONE << (pqs->ncols - 6 - 5)) * sizeof(uint64_t)
+        );
+        if (p_nonzero == NULL) return ERR_QSTATE12_TOOLARGE;
+    } 
+    res = _compare_signs(pqs, bmap, p_nonzero);
+    if (p_nonzero != &a_nonzero[0]) free(p_nonzero);
+    return res;  
+}
+
+
+/// @cond DO_NOT_DOCUMENT 
+#undef LB_LEN_A_NONZERO
+/// @endcond  
+
+
+
+
+/*************************************************************************
+*** Reading a real state with an array of signs
+*************************************************************************/
+
+
+
+/// @cond DO_NOT_DOCUMENT 
+
+
+
+/**
+ @brief Returns highest bit (at its position) of a 64-bit integer ``v``.      
+*/ 
+static inline uint64_t hibit(uint64_t v)
+{
+    v |= v >> 1;
+    v |= v >> 2;
+    v |= v >> 4;
+    v |= v >> 8;
+    v |= v >> 16;
+    v |= v >> 32;
+    return v & ~(v >> 1); 
+}
+
+
+
+#define find_low_bit(bmap, imin, imax) \
+  (bitmatrix64_find_low_bit(bmap, (imin) << 1, (imax) << 1) >> 1)
+
+
+/**
+  @brief Find affine support for state vector given by sign matrix
+
+  Let ``bmap`` be an array with ``2**n`` entries representing 0 or
+  (positive or negative) signs as in function ``qstate12_to_signs``.
+  Then ``bmap`` may correspond to a quadratic state vector
+  with entries 0, 1, and -1.
+  The function tries to find an affine subspace ``V`` of ``GF_2^n``
+  containing the indices of the nonzero entries in that state 
+  vector. It encodes ``V`` in the quadratic state vector ``qs`` 
+  referred by ``pqs``. 
+
+  If such a affine space ``V`` exists then the function sets the
+  entries of ``qs`` with index in ``V`` to one and the other
+  entries of ``qs`` to zero, yet ignoring the signs. If no such 
+  space ``V`` exists then the function selects an (arbitrary 
+  undefined) affine space ``V`` instead. The returned state ``qs``
+  is a (column) vector of shape ``(0, n)``.
+
+  At this stage there is no (efficient) way to decide whether
+  such an affine space ``V`` exists or not.
+
+  The function returns zero in case of success and a negative 
+  value in case of an error.
+*/
+static inline 
+int32_t _scan_affine(uint64_t *bmap, uint32_t n, qstate12_type *pqs)
+{
+   uint32_t imax, imin, rows, mask, maxlen = ONE << n;
+   int32_t res;
+   uint64_t *m = pqs->data, m0;
+
+   if ((res = qstate12_zero(pqs, n)) < 0) return res; 
+   if (n >= pqs->maxrows || n > 30) return ERR_QSTATE12_BUFFER_OVFL;
+   m0 =  find_low_bit(bmap, 0, maxlen);
+   if (m0 >= maxlen) return 0;
+   rows = 1;
+     
+   for (mask = 1; mask <= m0; mask <<= 1) if ((mask & m0) == 0) {
+       imin = (m0 & (0ULL - mask)) + mask;
+       imax = imin + mask;
+       imin = find_low_bit(bmap, imin, imax);
+       if (imin < imax) m[rows++] = imin ^ m0; 
+   }
+   for (; mask < ONE << n; mask <<= 1) {
+       imax = mask << 1;
+       imin = find_low_bit(bmap, mask, imax);
+       if (imin < imax) m[rows++] = imin ^ m0; 
+   }
+   m[0] = (uint64_t)m0 | maxlen;
+   pqs->nrows = bitmatrix64_echelon_h(m, rows, n+1, n+1);
+   pqs->nrows = rows;
+   m[0] &= ~maxlen;
+   return 0;    
+}
+
+
+#undef find_low_bit
+
+
+
+#define _LOAD_BMAP(bmap, i) (bmap[(i) >> 5] >> (((i) & 31) << 1))
+
+
+
+static inline 
+int32_t _fill_affine(uint64_t *bmap, qstate12_type *pqs)
+{
+   uint64_t *m = pqs->data;
+   uint64_t ncols1 = pqs->ncols;
+   uint64_t nrows = pqs->nrows;
+   uint64_t amask = (ONE << ncols1) - 1;
+   uint64_t bmap_acc = 1;
+   uint64_t m0, index, entry, sign;
+   uint64_t row0, sign_row0, sum_index, sum_entry;
+   uint32_t i, j;
+
+   if (nrows == 0) return 0;
+
+   // Load factor from entry m[0]
+   sum_index = index = m0 = m[0] & amask;
+   entry = _LOAD_BMAP(bmap, index);
+   bmap_acc &= entry;
+   sum_entry = sign = entry & 2;
+   pqs->factor |= sign << 1;
+   row0 = 0ULL;
+   sign_row0 = 0UL - (sign >> 1);
+   if (ncols1-- == 0) {
+       if (bmap_acc) return 0;
+       pqs->factor = 0;
+       return -1;
+   }
+    
+   for (i = 1; i < nrows; ++i) {
+       // Compute Q[0, i] and Q[i, 0]
+       index = (m0 ^ m[i]) & amask;
+       entry = _LOAD_BMAP(bmap, index);
+       sum_index = (sum_index ^ m[i]) & amask;
+       bmap_acc &= entry; 
+       entry = (entry ^ sign) & 2;
+       sum_entry ^= entry;
+       m[i] |= entry << ncols1;
+       entry <<= i;
+       row0 |= entry;
+       sign_row0 ^= entry;
+       for (j = 1; j < i; ++j) {
+           // Compute Q[i, j] and Q[j, i]
+           index = (m0 ^ m[i] ^ m[j]) & amask;
+           entry = _LOAD_BMAP(bmap, index);
+           bmap_acc &= entry;
+           entry ^= (row0 >> i) ^ (sign_row0 >> j);
+           entry &= 2;
+           m[i] |= entry << (ncols1 + j);
+           m[j] |= entry << (ncols1 + i);
+           sum_entry ^= entry;
+       }
+       // Check that entry m[0] ^ m[1] ^ ... 1 m[i] of bmap is correct
+       // and return -1 if not
+       entry = _LOAD_BMAP(bmap, sum_index & amask) & 3;
+       entry ^= sum_entry & 2;
+       entry &= (2 | bmap_acc);
+       if (entry != 1) {
+           qstate12_zero(pqs, (uint32_t)ncols1 + 1);
+           return -1;
+       }
+   }
+   m[0] |= row0 << ncols1;
+   return 0; 
+}
+
+
+/// @endcond  
+
+
+
+
+/**
+  @brief Construct a state vector from a sign matrix
+
+  Let ``bmap`` be an array with ``2**n`` entries representing 0 or
+  (positive or negative) signs as in function ``qstate12_to_signs``.
+  Then ``bmap`` may correspond to a quadratic state vector
+  with entries 0, 1, and -1.
+
+  If these enrties correspond to a quadratic state vector ``V``
+  (with entries 0, 1, and -1) then the function stores ``V`` in
+  the quadratic state vector ``qs`` referred by ``pqs`` and
+  returns 0. The returned state ``qs`` is a (column) vector of
+  shape ``(0, n)``. If the array ``bmap``  does not correspond
+  to any quadtatic state vector then the function sets ``qs``
+  to the zero vector of shape ``(0, n)``and returns -1.
+
+  The function returns negative value less than -1 in case of
+  an error.
+*/
+// %%EXPORT p
+CLIFFORD12_API
+int32_t qstate12_from_signs(uint64_t *bmap, int32_t n, qstate12_type *pqs)
+{ 
+   int32_t res;
+   if ((res = _scan_affine(bmap, n, pqs)) < 0) return res;
+   if ((res = _fill_affine(bmap, pqs)) < 0) return res;
+   if ((res = qstate12_compare_signs(pqs, bmap)) < 0) return res;
+   return res ? 0 : -1;
+}
+
+/*************************************************************************
+*** Sum up vector of integers mod 3
+*************************************************************************/
+
+
+
+/**
+  @brief Compute a certain product modulo 3 with a state matrix
+
+  Let ``qs`` be the quadratic state matrix referred by ``pqs``.
+  Assume that ``qs`` is rational and has shape ``(I, J)``.
+  Let ``q`` be the row vector of length ``2**(I+J)``
+  with ``q[i * 2**J + j] = qs[i, j]``.
+
+  We consider ``v``  as a ``2**(I+J)`` times ``32`` matrix ``M``
+  of integers modulo 3 with ``M[k,l]`` stored in  bits ``2*l+1``
+  and ``2*l`` of entry ``v[k]``. We consider ``w``  as a column
+  vector of ``32`` integers mod 3 with ``w[l]`` stored in
+  bits ``2*l+1`` and ``2*l`` of the variable ``w``.
+
+  Then the function returns the matrix product ``q * M * v``
+  (modulo 3) as a nonnegative integer less than 3. It returns a 
+  negative value in case of error, e.g. if ``qs`` is not rational.
+*/
+// %%EXPORT p
+CLIFFORD12_API
+int32_t qstate12_mul_matrix_mod3(qstate12_type *pqs, uint64_t *v, uint64_t w)
+{    
+    // Implementation is along the lines of function ``qstate12_complex``
+
+    uint64_t qf = 0;    // current value of quadratic form Q[i]
+    uint64_t *m;        // pointer to pqs->data
+    uint64_t *m_end;    // pointer to pqs->data + pqs->nrows - 1
+    uint64_t ncols;     // equal to pqs->ncols
+    uint64_t nrc;       // equal to pqs->ncols + pqs->nrows - 1; 
+    uint64_t n_iterations; // Number 1 << (pqs->nrows-1) of nonzero entries
+    uint64_t mask;      // mask (1 << ncols) - 1; 
+    uint64_t assoc;     // Current value of row  A[i] and Q[i]
+    uint64_t i;         // Index running thru n_iterations nonzero entries
+    uint64_t acc = 0;   // Accumulator for result
+    uint64_t hi_acc = 0;   // High part of accumulator for result
+    uint64_t w_and;     // value to be 'and_ed' to a row of v 
+    uint64_t w_xor;     // value to be 'xor_ed' to a row of v 
+    uint64_t y;         // general purpose
+    int32_t res;        // Return value of subroutines
+  
+    if ((res = qstate12_reduce(pqs)) < 0) return res;
+    ncols = pqs->ncols; 
+    if (pqs->nrows == 0) return 0;
+    m = pqs->data;
+    assoc = m[0]; 
+    m_end = pqs->data + pqs->nrows - 1;
+    nrc = ncols + pqs->nrows - 1; 
+    n_iterations = ONE << (pqs->nrows - 1); 
+    mask = (ONE << ncols) - 1; 
+
+    y = 0; // accumulate diagonal of Q part of ``qs`` in bit 0 of ``y``
+    for (i = 1; i < pqs->nrows; ++i) y |= m[i] >> i;
+    y = (y >> ncols) & 1;
+    y |= pqs->factor;
+    if (y & 0x13) return ERR_QSTATE12_DOMAIN;
+    y = 0ULL - (((y >> 2) ^ (y >> 5)) & 1); // - scalar factor (mod 3)
+    w_and = (w ^ (w >> 1)) & 0x5555555555555555ULL;
+    w_and ^= w_and << 1;
+    w_xor = w & 0xaaaaaaaaaaaaaaaaULL;
+    w_xor ^= (w_xor >> 1) ^ y;
+
+   
+    for (i = 1; i <= n_iterations; ++i) {
+        uint64_t i1;
+        int64_t d, d1;
+        y = (v[assoc & mask] ^ w_xor ^ qf) & w_and;
+        acc += y; 
+        hi_acc += y >> 32;
+
+        d1 = d = qstate12_lsbtab[(i1 = i) & 63];
+        while (d1 == 6) {
+            i1 >>= 6;
+            d1 = qstate12_lsbtab[i1 & 63];
+            d += d1;
+        } 
+        qf ^= 0ULL - ((assoc >> (nrc - d)) & 1);
+        assoc ^= m_end[-d];
+    }
+
+    hi_acc += ((acc >> 32) - hi_acc) & 0xffffffffULL;
+    acc = (acc & 0xffffffffULL) +  (hi_acc & 0xffffffffULL)
+        + (hi_acc >> 32);
+    return (int32_t)(acc % 3);
+}
+
+
+
+
+
+//  %%GEN h
+//  %%GEN c
+
+
+// %%GEN ch
+#ifdef __cplusplus
+}
+#endif
+

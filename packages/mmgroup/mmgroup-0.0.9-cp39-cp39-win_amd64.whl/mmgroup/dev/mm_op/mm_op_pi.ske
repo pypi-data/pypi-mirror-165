@@ -1,0 +1,617 @@
+/** @file mm%{P}_op_pi.c
+
+ File ``mm%{P}_op_pi.c`` implements the operation of the
+ generators \f$x_\pi\f$ and \f$x_\delta\f$ of the monster group
+ on a vector in the representation \f$\rho_{%{P}}\f$ of the
+ monster.
+
+ Here generators \f$x_\pi\f$ and \f$x_\delta\f$ are defined as
+ automorphisms of the Parker loop as in section **The monster group**
+ of the **API reference**. An automophism of the Parker loop is
+ specified by a pair of integers ``d, p`` as in the constructor
+ of the Python class ``AutPL``, see
+ section **Automophisms of the Parker loop** in the **API reference**.
+
+ The representation \f$\rho_{%{P}}\f$ is equal to the
+ 196884-dimensional representation  \f$\rho\f$ of the monster,
+ with coefficients taken modulo %{P}, as defined in
+ section **The representation of the monster group**
+ in the **API reference**.
+
+ An element of \f$\rho_{%{P}}\f$ is implemented as an array of
+ integers of type ``uint_mmv_t`` as described in
+ section **Description of the mmgroup.mm extension** 
+ in this document.
+
+ The exact operation of an automorphism of the Parker loop on
+ \f$\rho\f$ is as defined in [Seysen19].
+
+ Note that the integers ``d, p`` mentioned above describe the
+ number of an element of the Golay cocode and the number of a
+ permutation in the Mathieu group  \f$M_{24}\f$, respectively.
+ Internally, we use the C functions in file ``mat24_functions.c`` 
+ and the function ``mm_sub_prep_pi`` in file ``mm_tables.c`` for
+ converting the  integers ``d, p`` to mathematical objects that
+ can be used for implementing the operation on \f$\rho_{%{P}}\f$.
+ These conversions are very fast compared to the cost for
+ the operation on \f$\rho_{%{P}}\f$. This helps us to keep
+ the C interface for these  operations simple.
+
+*/
+
+#include <string.h>
+#include "mm_op%{P}.h"   
+
+// %%EXPORT_KWD MM_OP%{P}_API
+
+
+//  %%GEN h
+/// @cond DO_NOT_DOCUMENT 
+//  %%GEN c
+
+
+// %%IF* GENERATE_CODE
+
+/// @cond DO_NOT_DOCUMENT 
+   
+static const uint_mmv_t MM%{P}_TBL_SCALPROD_HIGH[] = { 
+// %%TABLE MMV_TBL_SCALPROD_HIGH, uint%{INT_BITS}
+};
+
+static const uint_mmv_t MM%{P}_TBL_SCALPROD_LOW[] = { 
+// %%TABLE MMV_TBL_SCALPROD_LOW, uint%{INT_BITS}
+};
+
+/// @endcond 
+
+
+// %%END IF  # GENERATE_CODE
+
+/***************************************************************
+* Auxiliary functions
+***************************************************************/
+
+/// @cond DO_NOT_DOCUMENT 
+
+// %%EXPORT
+void mm_op%{P}_neg_scalprod_d_i(uint_mmv_t* v)
+// negate entries d (x) i with sclar product equal to 1
+{
+  // %%IF* GENERATE_CODE
+    const uint_mmv_t* p0 = MM%{P}_TBL_SCALPROD_HIGH;
+    const uint_mmv_t* p0_end = p0 + 32 * %{V24_INTS};
+
+    // inversion of entries (d (x) i) with scalar product 1
+    for (; p0 < p0_end; p0 += %{V24_INTS}) {
+        const uint_mmv_t* p1 = MM%{P}_TBL_SCALPROD_LOW;
+        const uint_mmv_t* p1_end = p1 + 16 * %{V24_INTS};
+        for (; p1 < p1_end; p1 += %{V24_INTS}) {
+            // %%SCALAR_PROD_2048_UNROLL p0, p1, v 
+            v +=   4 * %{V24_INTS};
+        }
+    }
+  // %%END IF # GENERATE_CODE
+}
+
+/// @endcond
+
+
+
+/// @cond DO_NOT_DOCUMENT 
+
+/**
+   @brief perform permutation on rows of length 24
+
+*/
+static void pi24_n(
+   uint_mmv_t * p_src,
+   uint16_t * p_perm,
+   uint8_t * pf,
+   uint_mmv_t * p_dest,
+   uint32_t n
+)
+{
+  // %%IF* GENERATE_CODE
+    uint_fast32_t i1;
+    for (i1 = 0; i1 < n; ++i1) {
+        uint_mmv_t sgn_perm = p_perm[i1];
+        uint_mmv_t *ps = p_src + ((sgn_perm & 0x7ff) << %{LOG_V24_INTS});
+
+        sgn_perm >>= 15;  // sign for permutation
+        sgn_perm = 0 - (sgn_perm & 1);
+        // %%FOR i in range(V24_INTS_USED)  
+        // %%IF* i == 0
+        sgn_perm &= %{smask:P};
+        // %%ELSE IF i == V24_INTS_USED - 1 and 24 % INT_FIELDS
+        sgn_perm &= %{smask:P, range(24 % INT_FIELDS)};
+        // %%END IF
+        p_dest[%{i}] = sgn_perm  ^ (
+        // %%JOIN*  " |", ");"
+        // %%FOR* j in range(i * INT_FIELDS, min(24, (i+1) * INT_FIELDS))
+        // %%WITH* j2, j_mod  =  2 * j, j * FIELD_BITS % INT_BITS
+            (((ps[pf[%{j2}]] >> pf[%{int:j2+1}]) & %{P}) << %{j_mod})
+        // %%END WITH
+        // %%END FOR   #  FOR j
+        // %%END FOR   #  FOR i
+        // %%FOR* i in range(V24_INTS_USED, V24_INTS)
+        p_dest[%{i}] = 0;
+        // %%END FOR
+        p_dest +=  %{V24_INTS};      
+    }
+  // %%END IF # GENERATE_CODE
+}
+
+
+// %%IF* GENERATE_CODE
+
+// %%IF PERM24_USE_BENES_NET
+
+static void pi24_2048(
+   uint_mmv_t * p_src,
+   uint16_t * p_perm,
+   uint_mmv_t * benes_mask,
+   uint_fast32_t sign_shift,
+   uint_mmv_t * p_dest
+)
+{
+    uint_fast32_t i1;
+    for (i1 = 0; i1 < 2048; i1 += 4) {
+        // %%FOR* i in range(4)
+        uint_mmv_t sgn_perm%{i} = p_perm[%{i}];
+        uint_mmv_t *ps%{i} = p_src + ((sgn_perm%{i} & 0x7ff) << %{LOG_V24_INTS});
+        // %%PERM24_BENES_DECLARE "v%{i}"
+        // %%END FOR
+
+        // %%FOR* i in range(4)
+        // Load 'ps' to temporary variables v%{i}0,...
+        // %%PERM24_BENES_LOAD ps%{i}, v%{i}
+        // %%END FOR
+
+        // %%FOR* i in range(4)
+        sgn_perm%{i} >>= sign_shift;  // sign for permutation
+        // Permute and possibly negate data in temp. variables
+        // %%PERM24_BENES_PERMUTE benes_mask, sgn_perm%{i}, v%{i}
+        // Store temporary variables to 'p_dest'
+        // %%PERM24_BENES_STORE "p_dest + %{int: i * V24_INTS}", v%{i}
+        // %%END FOR
+
+        p_perm += 4;
+        p_dest += %{int: 4 * V24_INTS};
+        }
+}
+
+
+static void pi24_72(
+   uint_mmv_t * p_src,
+   uint16_t * p_perm,
+   uint_mmv_t * benes_mask,
+   uint_mmv_t * p_dest
+)
+{
+    uint_fast32_t i1;
+    for (i1 = 0; i1 < 72; ++i1) {
+        uint_mmv_t sgn_perm = p_perm[i1];
+        uint_mmv_t *ps = p_src + ((sgn_perm & 0x7ff) << %{LOG_V24_INTS});
+        // The following mask is used by the actual permutation code
+        // %%PERM24_BENES_DECLARE "v"
+
+        sgn_perm >>= 15;  // sign for permutation
+        // Load 'ps' to temporary variables v0,...
+        // %%PERM24_BENES_LOAD ps
+        // Permute and possibly negate data in temp. variables
+        // %%PERM24_BENES_PERMUTE benes_mask, sgn_perm
+        // Store temporary variables to 'p_dest'
+        // %%PERM24_BENES_STORE p_dest
+        p_dest +=  %{V24_INTS};      
+        }
+}
+
+// %%ELSE
+
+static void pi24_2048(
+   uint_mmv_t * p_src,
+   uint16_t * p_perm,
+   uint8_t * pf,
+   uint_fast32_t sign_shift,
+   uint_mmv_t * p_dest
+)
+{
+    uint_fast32_t i1;
+    for (i1 = 0; i1 < 2048; ++i1) {
+        uint_mmv_t sgn_perm = p_perm[i1];
+        uint_mmv_t *ps = p_src + ((sgn_perm & 0x7ff) << %{LOG_V24_INTS});
+
+        sgn_perm >>= sign_shift;  // sign for permutation
+        sgn_perm = -(sgn_perm & 1);
+        // %%FOR i in range(V24_INTS_USED)  
+        // %%IF* i == 0
+        sgn_perm &= %{smask:P};
+        // %%ELSE IF i == V24_INTS_USED - 1 and 24 % INT_FIELDS
+        sgn_perm &= %{smask:P, range(24 % INT_FIELDS)};
+        // %%END IF
+        p_dest[%{i}] = sgn_perm  ^ (
+        // %%JOIN*  " |", ");"
+        // %%FOR* j in range(i * INT_FIELDS, (i+1) * INT_FIELDS)
+        // %%WITH* j2, j_mod = 2 * j, j * FIELD_BITS % INT_BITS
+            (((ps[pf[%{j2}]] >> pf[%{int:j2+1}]) & %{P}) << %{j_mod})
+        // %%END WITH
+        // %%END FOR   #  FOR j
+        // %%END FOR   #  FOR i
+        // %%FOR* i in range(V24_INTS_USED, V24_INTS)
+        p_dest[%{i}] = 0;
+        // %%END FOR
+        p_dest +=  %{V24_INTS};      
+        }
+}
+
+
+
+
+
+// %%END IF
+
+
+
+// %%END IF  # GENERATE_CODE
+
+
+/// @endcond  
+
+
+/***************************************************************
+* Operation x_delta * x_pi
+***************************************************************/
+
+/// @cond DO_NOT_DOCUMENT 
+
+
+/**
+  @brief Workhorse for function ``mm_op%{P}_pi``
+
+  ``mm_op%{P}_pi(v_in, delta, pi, v_out)`` is equivalent to
+
+        mm_sub_op_pi_type s_op; // defined in mm_basics.h
+        // Borrow memory from v_out suficient for an array of 759
+        // entries of type  ``mm_sub_op_pi64_type``
+        s_op.tbl_perm64 = (mm_sub_op_pi64_type*)(v_out + MM_OP%{P}_OFS_X);
+        mm_sub_prep_pi(delta, pi, &s_op);
+        mm_op%{P}_do_pi(v_in, &s_op, v_out);
+
+   So the functions called by function ``mm_op%{P}_pi``
+   can be tested individually.
+*/
+static
+void mm_op%{P}_do_pi(uint_mmv_t *v_in, mm_sub_op_pi_type *p_op, uint_mmv_t * v_out)
+{
+    uint_mmv_t *a_src[3], *a_dest[3];
+    uint16_t *p_perm1 = p_op->tbl_perm24_big;
+
+  // %%IF* GENERATE_CODE
+    // %%IF PERM24_USE_BENES_NET
+    uint_mmv_t small_perm[%{PERM24_BENES_MASK_LEN}]; 
+
+    // Prepare mask array from Benes network
+    // %%PERM24_BENES_PREPARE "p_op->benes_net", small_perm
+    pi24_72(v_in, p_perm1 + 2048, small_perm, v_out);
+    // %%ELSE
+    // The following array will store a version of the permutation 
+    // optimized for fast operation on a vector of 24 small integers: 
+    uint8_t small_perm[48];
+    {
+        uint_fast8_t i, j;
+        for(i = 0; i < 24; ++i) {
+            j = p_op->perm[i];
+            small_perm[j+j] = (i >> %{LOG_INT_FIELDS});
+            small_perm[j+j+1] 
+                   = (i & %{hex:INT_FIELDS-1}) << %{LOG_FIELD_BITS};
+        }
+    }    
+    pi24_n(v_in, p_perm1 + 2048, small_perm, v_out, 72);
+    // %%END IF
+    
+
+    // Step 1: do rows with 64 entries // TODO: comment properly!!!!
+    {
+        // TODO: check this !!!!!!!!!!!!
+        mm_sub_op_pi64_type *p_perm = p_op->tbl_perm64;
+        uint8_t bytes[64];
+        uint_mmv_t *p_out = v_out + MM_OP%{P}_OFS_T;
+        uint_mmv_t *p_end = p_out + 759 * %{V64_INTS};
+        uint_mmv_t *v1_in =  v_in + MM_OP%{P}_OFS_T;
+        for (; p_out < p_end; p_out += %{V64_INTS}) {
+            {
+               uint_mmv_t v = p_perm->preimage;
+               uint_mmv_t *p_in = v1_in + ((v & 0x3ff) << %{LOG_V64_INTS});
+               // %%LOAD_PERM64 p_in, bytes, v, uint8_t
+            }
+            {
+               // %%STORE_PERM64 bytes, p_out, "(p_perm->perm)"
+            }
+            ++p_perm;
+        } 
+    }
+
+    // Step 2: do rows with 24 entries 
+    // TODO: comment properly!!!!
+    a_src[0] = v_in + MM_OP%{P}_OFS_X;
+    a_dest[0] = v_out + MM_OP%{P}_OFS_X;
+    a_src[1] = v_in + MM_OP%{P}_OFS_Z;
+    a_src[2] = v_in + MM_OP%{P}_OFS_Y;
+    if (p_op->eps & 0x800) {
+        a_dest[1] = v_out + MM_OP%{P}_OFS_Y;
+        a_dest[2] = v_out + MM_OP%{P}_OFS_Z;
+    } else {
+        a_dest[1] = v_out + MM_OP%{P}_OFS_Z;
+        a_dest[2] = v_out + MM_OP%{P}_OFS_Y;
+    }
+
+    {
+        uint_fast32_t i;
+        for (i = 0; i < 3; ++i) 
+            pi24_2048(a_src[i], p_perm1, small_perm, i + 12, a_dest[i]);
+    }
+
+
+    // If d is odd: negate some entries    
+    if (p_op->eps & 0x800) {
+        uint_fast16_t i;
+        uint_mmv_t *v = v_out + MM_OP%{P}_OFS_T;
+
+        // Step odd 1:  negate suboctads of weight 4n+2 for tag T
+        for (i = 0; i < 759; ++i) {
+            // %%INVERT_PERM64 v
+            v += %{V64_INTS};
+        }
+
+        mm_op%{P}_neg_scalprod_d_i(v); 
+    }
+  // %%END IF  # GENERATE_CODE
+} 
+
+/// @endcond 
+
+
+
+/**
+  @brief Compute automophism of the Parker loop on a vector
+
+  Let ``v_in`` be a vector of the representation \f$\rho_{%{P}}\f$
+  of the monster group. 
+
+  The integers ``d`` and ``p`` describe an automorphism of the
+  Parker loop as indicated in the header of this file. The function
+  computes this automorphism on the input  vector ``v_in`` and 
+  stores the result in the output vector ``v_out.`` 
+
+  Input vector  ``v_in`` is not changed.
+*/
+// %%EXPORT px
+void mm_op%{P}_pi(uint_mmv_t *v_in, uint32_t delta, uint32_t pi, uint_mmv_t * v_out)
+{
+  // %%IF* GENERATE_CODE
+    mm_sub_op_pi_type s_op;
+    // Borrow memory from v_out
+    s_op.tbl_perm64 = (mm_sub_op_pi64_type *)(v_out + MM_OP%{P}_OFS_X);
+    mm_sub_prep_pi(delta, pi, &s_op);
+    mm_op%{P}_do_pi(v_in, &s_op, v_out);
+  // %%END IF  # GENERATE_CODE
+}
+
+
+/**
+  @brief Simplified version of function ``mm_op%{P}_pi``
+
+  ``mm_op%{P}_delta(v_in, delta, v_out)`` is equivalent to
+  ``mm_op%{P}_pi(v_in, 0, delta, v_out)``, but much faster.
+  
+*/
+// %%EXPORT px
+void mm_op%{P}_delta(uint_mmv_t *v_in, uint32_t delta, uint_mmv_t * v_out)
+{
+    uint_fast32_t i, i1;
+    // Borrow space from ``v_out`` sufficient for an array of length 2048
+    uint8_t *signs = (uint8_t*)(v_out + MM_OP%{P}_OFS_T);
+    uint_mmv_t *a_src[3], *a_dest[3];
+
+  // %%IF* GENERATE_CODE
+    mat24_op_all_cocode(delta, signs);
+    for (i = 0; i < 72; ++i) signs[i] &= 7;
+    for (i = 48; i < 72; ++i) signs[i] |= (delta & 0x800) >> (11 - 3);
+
+    a_src[0] = v_in + MM_OP%{P}_OFS_X;
+    a_dest[0] = v_out + MM_OP%{P}_OFS_X;
+    a_src[1] = v_in + MM_OP%{P}_OFS_Z;
+    a_src[2] = v_in + MM_OP%{P}_OFS_Y;
+    if (delta & 0x800) {
+        a_dest[1] = v_out + MM_OP%{P}_OFS_Y;
+        a_dest[2] = v_out + MM_OP%{P}_OFS_Z;
+    } else {
+        a_dest[1] = v_out + MM_OP%{P}_OFS_Z;
+        a_dest[2] = v_out + MM_OP%{P}_OFS_Y;
+    }
+
+    // Step 1: do rows with 24 entries 
+    // TODO: comment properly!!!!
+    for (i = 0; i < 3; ++i)  {
+        for (i1 = 0; i1 < 2048; ++i1) {
+            uint_mmv_t *p_src = a_src[i] + (i1 << %{LOG_V24_INTS});
+            uint_mmv_t *p_dest = a_dest[i] + (i1 << %{LOG_V24_INTS});
+            uint_mmv_t sgn = -((signs[i1] >> i) & 1);
+            // %%FOR i in range(V24_INTS_USED)
+            // %%IF* i == 0
+            sgn &= %{smask:P};
+            // %%ELSE IF i == V24_INTS_USED - 1 and 24 % INT_FIELDS
+            sgn &= %{smask:P, range(24 % INT_FIELDS)};
+            // %%END IF
+            p_dest[%{i}] = p_src[%{i}]  ^ sgn;
+            // %%END FOR
+            // %%FOR* i in range(V24_INTS_USED, V24_INTS)
+            p_dest[%{i}] = 0;
+            // %%END FOR
+        }        
+    }    
+
+    {
+        uint_mmv_t *p_src = v_in + MM_OP%{P}_OFS_A;
+        uint_mmv_t *p_dest = v_out + MM_OP%{P}_OFS_A;
+        for (i1 = 0; i1 < 72; ++i1) {
+            uint_mmv_t sgn = -((signs[i1] >> i) & 1);
+            // %%FOR i in range(V24_INTS_USED)
+            // %%IF* i == 0
+            sgn &= %{smask:P};
+            // %%ELSE IF i == V24_INTS_USED - 1 and 24 % INT_FIELDS
+            sgn &= %{smask:P, range(24 % INT_FIELDS)};
+            // %%END IF
+            p_dest[%{i}] = p_src[%{i}]  ^ sgn;
+            // %%END FOR
+            // %%FOR* i in range(V24_INTS_USED, V24_INTS)
+            p_dest[%{i}] = 0;
+            // %%END FOR
+            p_src +=  %{V24_INTS};      
+            p_dest +=  %{V24_INTS};      
+        }        
+    }    
+
+
+    // Step 2: do rows with 64 entries 
+    // TODO: comment properly!!!!
+    {
+        v_in +=  MM_OP%{P}_OFS_T;
+        v_out += MM_OP%{P}_OFS_T;
+        for (i = 0; i < 759; ++i) {
+            uint_mmv_t sign = mat24_def_octad_to_gcode(i) & delta;
+            mat24_def_parity12(sign);
+            sign = 0 - sign;
+            sign &= %{smask:P};
+            // %%FOR i in range(%{V64_INTS})
+            v_out[%{i}] = v_in[%{i}]  ^  sign;
+            // %%END FOR
+            v_in += %{V64_INTS};
+            v_out += %{V64_INTS};
+        } 
+        v_out -= 759 * %{V64_INTS} +  MM_OP%{P}_OFS_T; // restore v_out
+    }
+
+    // If d is odd: negate some entries    
+    if (delta & 0x800) {
+        uint_mmv_t *v = v_out + MM_OP%{P}_OFS_T;
+
+        // Step odd 1:  negate suboctads of weight 4n+2 for tag T
+        for (i = 0; i < 759; ++i) {
+            // %%INVERT_PERM64 v
+            v += %{V64_INTS};
+        }
+
+        mm_op%{P}_neg_scalprod_d_i(v); 
+    }
+  // %%END IF  # GENERATE_CODE
+}
+
+/**
+  @brief Restriction of function ``mm_op%{P}_pi`` to tag ``ABC``
+
+  Function ``mm_op%{P}_pi`` computes an automorphism of the
+  Parker loop on a vector ``v_in`` and stores the result
+  in ``v_out``. That automorphism depends on parameters
+  ``delta``  and ``p``.
+  
+  Function ``mm_op%{P}_pi_tag_ABC`` computes the same
+  automorphism on the entries of the vector ``v = v_in`` with
+  tags ``ABC`` only, and ignores the other entries of ``v``.
+  See section **The representation of the monster group**
+  in the **API reference** for tags of entries of a vector in
+  the representation of the monster.
+
+  The function overwrites the vector ``v`` with the result.
+  Here only entries of ``v`` with tag ``ABC`` are changed.
+
+  If parameter ``mode`` is set then we perform the operation on
+  entries with tag ``A`` only. This  function is much faster 
+  than function ``mm_op%{P}_pi``.
+*/
+// %%EXPORT px
+void mm_op%{P}_pi_tag_ABC(uint_mmv_t *v, uint32_t delta, uint32_t pi, uint32_t mode)
+{
+    uint_mmv_t v_tmp[24 *  %{V24_INTS}];
+    uint16_t row_perm[24];
+    uint8_t perm[24], col_perm[48];
+    uint_fast32_t i, j;
+
+  // %%IF* GENERATE_CODE
+    pi %= MAT24_ORDER;
+    mat24_m24num_to_perm(pi, perm);
+    
+    for(i = 0; i < 24; ++i) {
+        j = perm[i];
+        row_perm[j] = (uint16_t)i;
+        col_perm[j+j] = ((uint8_t)i >> %{LOG_INT_FIELDS});
+        col_perm[j+j+1] 
+            = ((uint8_t)i & %{hex:INT_FIELDS-1}) << %{LOG_FIELD_BITS};
+    }
+    pi24_n(v, row_perm, col_perm, v_tmp, 24);
+    for (i = 0; i < 24 *  %{V24_INTS}; ++i) v[i] = v_tmp[i];
+    if (mode) return;
+
+    v += 24 *  %{V24_INTS};
+    pi24_n(v, row_perm, col_perm, v_tmp, 24);
+    for (i = 0; i < 24 *  %{V24_INTS}; ++i) v[i] = v_tmp[i];
+
+    v += 24 *  %{V24_INTS};
+    if (delta & 0x800) for(i = 0; i < 24; ++i) row_perm[i] ^= 0x8000;
+    pi24_n(v, row_perm, col_perm, v_tmp, 24);
+    for (i = 0; i < 24 *  %{V24_INTS}; ++i) v[i] = v_tmp[i];
+ 
+  // %%END IF  # GENERATE_CODE
+}
+
+
+
+
+/**
+  @brief Restriction of function ``mm_op%{P}_pi`` to tag ``ABC``
+
+  Function ``mm_op%{P}_delta`` computes an automorphism of the
+  Parker loop on a vector ``v_in`` and stores the result
+  in ``v_out``. That automorphism depends on parameter ``d``.
+  
+  Function ``mm_op%{P}_delta_tag_ABC`` computes the same
+  automorphism on the entries of the vector ``v = v_in`` with
+  tags ``ABC`` only, and ignores the other entries of ``v``.
+  See section **The representation of the monster group**
+  in the **API reference** for tags of entries of a vector in
+  the representation of the monster.
+
+  The function overwrites the vector ``v`` with the result.
+  Here only entries of ``v`` with tag ``ABC`` are changed.
+
+  If parameter ``mode`` is set then we perform the operation on
+  entries with tag ``A`` only. This  function is much faster 
+  than function ``mm_op%{P}_delta``.
+*/
+// %%EXPORT px
+void mm_op%{P}_delta_tag_ABC(uint_mmv_t *v, uint32_t d, uint32_t mode)
+{
+    uint32_t i1;
+
+  // %%IF* GENERATE_CODE
+    if (mode || (d & 0x800) == 0) return;
+    v += 2 * 24 * %{V24_INTS};
+    for (i1 = 0; i1 < 24; ++i1) {
+        // %%FOR* i in range(V24_INTS_USED)  
+        // %%IF* i == V24_INTS_USED - 1 and 24 % INT_FIELDS
+        v[%{i}] ^= %{smask:P, range(24 % INT_FIELDS)};
+        // %%ELSE 
+        v[%{i}] ^=  %{smask:P};
+        // %%END IF
+        // %%END FOR   #  FOR i
+        v +=  %{V24_INTS};      
+    }
+  // %%END IF  # GENERATE_CODE
+}
+
+
+
+//  %%GEN h
+/// @endcond 
+//  %%GEN c
+
