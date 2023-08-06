@@ -1,0 +1,80 @@
+Metadata-Version: 2.1
+Name: py-racoon
+Version: 0.0.6
+Summary: Racoon
+Home-page: https://github.com/nymann/racoon
+Maintainer: Kristian Nymann Jakobsen
+Maintainer-email: kristian@nymann.dev
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: typer (>=0.4.1)
+Requires-Dist: cookiecutter (>=1.7.3)
+Requires-Dist: PyGithub (>=1.55)
+Provides-Extra: all
+Requires-Dist: isort ; extra == 'all'
+Requires-Dist: wemake-python-styleguide ; extra == 'all'
+Requires-Dist: mypy ; extra == 'all'
+Requires-Dist: black ; extra == 'all'
+Requires-Dist: nitpick ; extra == 'all'
+Requires-Dist: add-trailing-comma ; extra == 'all'
+Requires-Dist: pytest ; extra == 'all'
+Requires-Dist: pytest-cov ; extra == 'all'
+Requires-Dist: pytest-mock ; extra == 'all'
+Provides-Extra: dev
+Requires-Dist: isort ; extra == 'dev'
+Requires-Dist: wemake-python-styleguide ; extra == 'dev'
+Requires-Dist: mypy ; extra == 'dev'
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: nitpick ; extra == 'dev'
+Requires-Dist: add-trailing-comma ; extra == 'dev'
+Provides-Extra: tests
+Requires-Dist: pytest ; extra == 'tests'
+Requires-Dist: pytest-cov ; extra == 'tests'
+Requires-Dist: pytest-mock ; extra == 'tests'
+
+# Racoon
+
+_View on [PyPI](https://pypi.org/project/py-racoon)_
+
+## What is it?
+
+A Python3 template initializer based on [nymann/python-template](https://github.com/nymann/python-template). That automatically sets up a GitHub project for you.
+
+Example of generated project: [nymann/racoon-example](https://github.com/nymann/racoon-example)
+
+## Installation
+
+```sh
+pip install py-racoon
+```
+
+## Usage
+
+```sh
+$ racoon --help
+Usage: racoon [OPTIONS] PROJECT_NAME
+
+Arguments:
+  PROJECT_NAME  [required]
+
+Options:
+  --github-access-token TEXT      [env var: GITHUB_ACCESS_TOKEN; required]
+  --src-dir TEXT                  [default: src]
+  --template-url TEXT             [default: https://github.com/nymann/python-
+                                  template.git]
+```
+
+### Example
+
+```sh
+# Export your github access token as an environment variable, can also be provided via --github-access-token
+export GITHUB_ACCESS_TOKEN='YOUR_ACCESS_TOKEN'
+
+# Create a new project "my-project" which will be created under https://github.com/YOUR_USERNAME/my-project
+racoon my-project
+```
+
+## Development
+
+For help getting started developing check [DEVELOPMENT.md](DEVELOPMENT.md)
