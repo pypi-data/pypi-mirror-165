@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: HectareaDictionaryEncryption
+Version: 4.20.68.1
+Summary: HectareaDictionaryEncryption
+Home-page: https://hectarea.netlify.app/
+Author: Héctarea
+Author-email: gonzalez.craqenll@gmail.com
+License: MIT
+Download-URL: https://github.com/Hectarea/DictionaryEncryption/archive/refs/tags/1.0.tar.gz
+Keywords: Encryption,Dictionary,Hectarea,Secrets
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+## Hectarea Dictionary Encryption
+
+
+
+Encryption algorithm by Hectarea and Qrab & Nell, made to securely transmit messages using a key, an IV, and a dictionary of 256 words, representing the 8 bits of a byte.
+
+
+```
+
+import HectareaDictionaryEncryption as hdc
+
+dictionary = [
+"chicken",
+...,
+"curry"
+]
+
+password = b'any length password'
+
+iv = b'some random length IV'
+
+message = b'I know what amber heard...'
+
+
+encryptedString = hdc.Encrypt(message, iv, password, dictionary)
+
+
+decryptedString= hdc.Decrypt(message, iv, password, dictionary)
+```
+
+
