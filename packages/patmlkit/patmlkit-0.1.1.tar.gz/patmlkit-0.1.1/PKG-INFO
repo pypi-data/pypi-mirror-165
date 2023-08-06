@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: patmlkit
+Version: 0.1.1
+Summary: Pain and tears ML kit - library created to support my journey via PHD
+Author: Michal Karol
+Author-email: michal.p.karol@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
