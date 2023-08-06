@@ -1,0 +1,69 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "lamindb"
+authors = [{name = "Lamin Labs", email = "laminlabs@gmail.com"}]
+readme = "README.md"
+dynamic = ["version", "description"]
+dependencies = [
+    "lnschema_core==0.5.1",
+    "lnschema_wetlab==0.3.5",
+    "lnschema_bionty>=0.2.3",
+    "lndb_setup==0.6.1",
+    "lndb_hub==0.5.5",
+    "lamin_logger",
+    "bioreadout==0.1.0",
+    "lnbfx==0.3.1",
+    "bionty>=0.2.4",
+    "anndata",
+    "boto3",
+    "hjson",
+    "cloudpathlib",
+    "loguru",
+    "requests",
+    "sqlmodel>=0.0.8",
+    "typeguard",
+    "tabulate",
+    "erdiagram",
+    "appdirs",
+    "supabase",
+    "python-dotenv",
+    "nbproject>=0.5.1",
+    "nbproject_test>=0.2.0",
+    "readfcs",
+]
+
+[project.urls]
+Home = "https://github.com/laminlabs/lamindb"
+
+[project.optional-dependencies]
+dev = [
+    "pre-commit",
+    "nox",
+]
+test = [
+    "bionty>=0.1.6",
+    "pytest>=6.0",
+    "coverage",
+    "pytest-cov",
+    "nbmake",
+    "scanpy",
+    "scikit-learn>=1.1.1",
+]
+
+[tool.black]
+preview = true
+
+[tool.pytest.ini_options]
+testpaths = [
+    "tests",
+    "docs/guides",
+    "docs/tutorials",
+]
+
+[tool.coverage.run]
+omit = [
+    "lamindb/*",
+]
