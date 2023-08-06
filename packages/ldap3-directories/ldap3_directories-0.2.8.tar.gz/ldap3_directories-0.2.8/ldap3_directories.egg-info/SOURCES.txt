@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+ldap3_directories/__init__.py
+ldap3_directories/freeipa.py
+ldap3_directories/ldap3_.py
+ldap3_directories.egg-info/PKG-INFO
+ldap3_directories.egg-info/SOURCES.txt
+ldap3_directories.egg-info/dependency_links.txt
+ldap3_directories.egg-info/requires.txt
+ldap3_directories.egg-info/top_level.txt

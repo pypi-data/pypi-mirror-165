@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: ldap3_directories
+Version: 0.2.8
+Summary: LDAP3 directories
+Home-page: https://github.com/irvingleonard/ldap3_directories
+Author: Irving Leonard
+Author-email: irvingleonard@gmail.com
+License: BSD 2-Clause "Simplified" License
+Keywords: ldap ldap3 freeipa
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: System :: Systems Administration :: Authentication/Directory
+Classifier: Topic :: System :: Systems Administration :: Authentication/Directory :: LDAP
+Requires-Python: >=3.7
+License-File: LICENSE
+
+Includes some enhancements to the contents of the ldap3 module and adds some functionality to simplify the use of LDAP directories. Each submodule will target a specific directory.
