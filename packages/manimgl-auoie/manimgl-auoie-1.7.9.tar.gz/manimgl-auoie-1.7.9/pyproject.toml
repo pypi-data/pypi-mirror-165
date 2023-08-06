@@ -1,0 +1,77 @@
+[tool.poetry]
+name = "manimgl-auoie"
+version = "1.7.9"
+description = "Animation engine for explanatory math videos"
+authors = [
+  "3b1b <grant@3blue1brown.com>",
+  "auoie <105099407+auoie@users.noreply.github.com>",
+]
+license = "MIT"
+repository = "https://github.com/auoie/manim"
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "License :: OSI Approved :: MIT License",
+  "Topic :: Scientific/Engineering",
+  "Topic :: Multimedia :: Video",
+  "Topic :: Multimedia :: Graphics",
+  "Programming Language :: Python :: 3.10",
+  "Natural Language :: English",
+]
+packages = [{ include = "manimlib" }]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.12"
+colour = "^0.1.5"
+ipython = "^8.4.0"
+isosurfaces = "^0.1.0"
+ManimPango = "^0.4.1"
+mapbox-earcut = "^1.0.0"
+matplotlib = "^3.5.3"
+moderngl = "^5.6.4"
+moderngl-window = "^2.4.1"
+numpy = "^1.23.2"
+pydub = "^0.25.1"
+Pygments = "^2.13.0"
+pyperclip = "^1.8.2"
+PyYAML = "^6.0"
+rich = "^12.5.1"
+scipy = "^1.9.0"
+screeninfo = "^0.8"
+skia-pathops = "^0.7.2"
+svgelements = "^1.7.2"
+sympy = "^1.11"
+tqdm = "^4.64.0"
+validators = "^0.20.0"
+Pillow = "^9.2.0"
+PyOpenGL = "^3.1.6"
+
+[tool.poetry.dev-dependencies]
+pyright = "^1.1.268"
+black = "^22.6.0"
+flake8 = "^5.0.4"
+isort = "^5.10.1"
+typing-extensions = "^4.3.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+profile = "black"
+
+[tool.black]
+line-length = 120
+target-version = ['py310']
+
+[tool.pyright]
+reportMissingTypeStubs = false
+strictParameterNoneValue = true
+strictDictionaryInference = true
+strictListInference = true
+verboseOutput = false
+pythonVersion = "3.10"
+pythonPlatform = "Linux"
+
+[tool.poetry.plugins."console_scripts"]
+"manimgl" = "manimlib.__main__:main"
+"manim-render" = "manimlib.__main__:main"
