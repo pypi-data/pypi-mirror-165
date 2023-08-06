@@ -1,0 +1,7 @@
+toml
+fastapi
+pluggy<2.0,>=1.0
+click
+
+[uvicorn]
+fps-uvicorn
