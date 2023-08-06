@@ -1,0 +1,10 @@
+README.md
+setup.py
+stockx_parser/__init__.py
+stockx_parser/parser.py
+stockx_parser/queries.py
+stockx_parser/utils.py
+stockx_parser.egg-info/PKG-INFO
+stockx_parser.egg-info/SOURCES.txt
+stockx_parser.egg-info/dependency_links.txt
+stockx_parser.egg-info/top_level.txt
