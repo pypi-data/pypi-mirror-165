@@ -1,0 +1,2 @@
+[console_scripts]
+cidc = cli.cli:cidc
