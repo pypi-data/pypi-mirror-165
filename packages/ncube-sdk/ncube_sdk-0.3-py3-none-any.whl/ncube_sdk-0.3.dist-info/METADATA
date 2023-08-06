@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: ncube-sdk
+Version: 0.3
+Summary: N-cube Event Ingest SDK
+Home-page: https://github.com/ncubeanalytics/ncube-python/
+Author: N Cube Single Member Private Company
+Author-email: contact@n-cube.gr
+License: Apache License, Version 2.0
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=2.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests (<2.28)
+Requires-Dist: urllib3 (<2)
+Requires-Dist: typing ; python_version < "3.5"
+Provides-Extra: jsonschema
+Requires-Dist: jsonschema ; extra == 'jsonschema'
+
+# N-cube Python SDK
+
+## Install
+
+```shell
+pip install ncube-sdk
+```
+
+## Use
+
+```python
+import os
+import ncube_sdk.client
+
+# initialize
+client = ncube_sdk.client.init(
+    service_url=os.environ["INGEST_URL"],
+    schema_id=os.environ["INGEST_SCHEMA_ID"],
+    service_auth=(os.environ["INGEST_AUTH_USER"], os.environ["INGEST_AUTH_PASS"]))
+
+# emit events
+client.emit({"field1": "value1", "field2": "value2"})
+```
+
