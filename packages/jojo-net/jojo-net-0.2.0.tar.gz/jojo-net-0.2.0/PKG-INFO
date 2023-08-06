@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: jojo-net
+Version: 0.2.0
+Summary: network utilities
+Home-page: https://www.jostudio.com.cn/python
+Author: JoStudio
+Author-email: jostudio@189.cn
+License: Apache License 2.0
+Platform: all
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development :: Libraries
+License-File: LICENSE.txt
