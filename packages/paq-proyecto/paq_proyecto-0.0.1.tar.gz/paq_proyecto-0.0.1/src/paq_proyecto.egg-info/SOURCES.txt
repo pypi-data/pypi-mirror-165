@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/paq_proyecto/__init__.py
+src/paq_proyecto/estadisticos.py
+src/paq_proyecto.egg-info/PKG-INFO
+src/paq_proyecto.egg-info/SOURCES.txt
+src/paq_proyecto.egg-info/dependency_links.txt
+src/paq_proyecto.egg-info/top_level.txt
