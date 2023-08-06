@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: testrail_api_reporter
+Version: 0.0.2
+Summary: TestRail API reporter tools
+Project-URL: Homepage, https://github.com/wwakabobik/testrail_api_reporter
+Project-URL: Bug Tracker, https://github.com/wwakabobik/testrail_api_reporter/issues
+Author-email: Iliya Vereshchagin <o.vereshchagin@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2022 Ilya Vereshchagin
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# TestRail reporter
+This is Testrail API reporter tools.
+
+This package contains several tools to interact with TestRail via API.
+
+General part is *TestRailResultsReporter* which is designed to report test results via api. This part is close to trcli, but without nasty bugs.
+
+Firstly, you need to obtain test results in xml format. You can do it via running your testsuite, i.e. using pytest:
+
+`pytest --junitxml "junit-report.xml" "./tests"`
+
+Also you need to add custom field (string type) to TestRails with name "*automation_id*".
+
+Now, you ready to upload results to TestRails.
+To it, use:
+
+`url=https://your_tr.testrail.io`
+`email=your@email.com`
+`password=your_password`
+`project_number=42`
+`test_suite_number=66`
+`api=TestRailResultsReporter(url, email, password, project_number, test_suite_number)`
+`# then just call:`
+`api.send_results()`
+After this new testcases, test run and test results will be created. Testrun will have a name like "*AT run 2022-09-01T20:25:51*"
+
+If you fill *automation_id* for existing testcases using correct format (*path.to.testfile.filename.test_class.test_step*), then in such case results will be added to existing testcases.
+
+Also, you can customize test run by passing:
+- *title* param to send_results function - it will replace whole test run title.
+- *environment* - it will be added to end of string like "*AT run 2022-09-01T20:25:51* on Dev"
+- *timestamp* - it will replace timestamp, obtained from XML file)
+- *close_run* - may be True (by default) or False - if *True*, then eery testrun will be closed.
