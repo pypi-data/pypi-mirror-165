@@ -1,0 +1,5 @@
+numpy
+pandas
+prophet
+pmdarima
+packaging
