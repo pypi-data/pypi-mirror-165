@@ -1,0 +1,9 @@
+setuptools_scm
+nbformat
+ipython
+ipykernel
+sphinx
+sphinx_rtd_theme
+nbsphinx
+m2r2
+pyro-ppl
