@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: ghcTestPkg
+Version: 0.1.2
+Summary: to test how to release a pkg
+Home-page: https://github.com/LimerenceGL/ghcTestPkg.git
+Author: ghc
+Author-email: g51301727@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: pip (==19.0.3)
+Requires-Dist: wheel (==0.33.1)
+Requires-Dist: jsonrpcserver (>=5.0.0)
+Requires-Dist: xlrd (>=2.0.1)
+Requires-Dist: cryptography (>=1.3.4)
+Requires-Dist: a-wrong-pkg (>=1.0.0)
+
+# ghcTestPkg
+try to release this pkg on PyPI
+
+
