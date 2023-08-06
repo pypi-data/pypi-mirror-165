@@ -1,0 +1,87 @@
+Metadata-Version: 2.1
+Name: rdf-sql-bulkloader
+Version: 0.1.2
+Summary: rdf-sql-bulkloader
+License: BSD 3
+Author: Chris Mungall
+Author-email: cjmungall@lbl.gov
+Requires-Python: >=3.8,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Provides-Extra: docs
+Requires-Dist: click (>=8.1.3,<9.0.0)
+Requires-Dist: curies (>=0.2.0,<0.3.0)
+Requires-Dist: importlib (>=1.0.4,<2.0.0)
+Requires-Dist: lightrdf (>=0.2.1,<0.3.0)
+Requires-Dist: prefixmaps (>=0.1.2,<0.2.0)
+Requires-Dist: setuptools (>=64.0.1,<65.0.0)
+Requires-Dist: tox (>=3.25.1,<4.0.0)
+Description-Content-Type: text/markdown
+
+# rdf-sql-bulkloader
+
+Bulk load of SQL table from RDF in Python
+
+## Install
+
+```bash
+pip install rdf-sql-bulkloader
+```
+
+## Usage (Command Line)
+
+```
+rdf-sql-bulkloader load-sqlite  -o cl.db cl.owl
+```
+
+Note: currently only sqlite supported
+
+## Usage (Programmatic)
+
+See tests
+
+## Core table
+
+```
+CREATE TABLE statement (
+	id TEXT,
+	subject TEXT,
+	predicate TEXT,
+	object TEXT,
+	value TEXT,
+	datatype TEXT,
+	language TEXT,
+        graph TEXT
+);
+```
+
+## Prefixes
+
+this uses the merged prefixmap from [prefixmaps](https://github.com/linkml/prefixmaps) by default
+
+This can be overridden programmatically when instantiating a loader, e.g
+
+Explicit map:
+
+```python
+loader = SqliteBulkloader(path=path, prefix_map={...})
+```
+
+Using pre-registered:
+
+```python
+loader = SqliteBulkloader(path=path, named_prefix_maps=["obo", "prefixcc"])
+```
+
+- TODO: add override from CLI
+
+
+## Acknowledgements
+
+This work was entirely inspired by James Overton's [rdftab.rs](https://github.com/ontodev/rdftab.rs
+
+This [cookiecutter](https://cookiecutter.readthedocs.io/en/stable/README.html) project was developed from the [sphintoxetry-cookiecutter](https://github.com/hrshdhgd/sphintoxetry-cookiecutter) template and will be kept up-to-date using [cruft](https://cruft.github.io/cruft/).
+
