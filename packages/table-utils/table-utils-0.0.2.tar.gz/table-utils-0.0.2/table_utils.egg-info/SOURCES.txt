@@ -1,0 +1,9 @@
+README.md
+setup.py
+table_utils/__init__.py
+table_utils/table_writer.py
+table_utils.egg-info/PKG-INFO
+table_utils.egg-info/SOURCES.txt
+table_utils.egg-info/dependency_links.txt
+table_utils.egg-info/requires.txt
+table_utils.egg-info/top_level.txt
