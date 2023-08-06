@@ -1,0 +1,11 @@
+[invenio_assets.webpack]
+nr_common_metadata = nr_common_metadata.theme.webpack:theme
+
+[invenio_base.api_apps]
+nr_common_metadata = nr_common_metadata:NRCommonMetadataExt
+
+[invenio_base.apps]
+nr_common_metadata = nr_common_metadata:NRCommonMetadataExt
+
+[invenio_base.blueprints]
+nr_common_metadata = nr_common_metadata.theme.views:create_blueprint
