@@ -1,0 +1,5 @@
+Metadata-Version: 2.1
+Name: unispeak
+Version: 1.0.1
+Summary: adds speech capabilities, nvda, NSS, sapi.
+License-File: LICENSE

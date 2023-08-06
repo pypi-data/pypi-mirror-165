@@ -1,0 +1,11 @@
+LICENSE
+pyproject.toml
+src/__init__.py
+src/mactalk.py
+src/unisapi.py
+src/unispeak.py
+src/unispeak_nvda.py
+src/unispeak.egg-info/PKG-INFO
+src/unispeak.egg-info/SOURCES.txt
+src/unispeak.egg-info/dependency_links.txt
+src/unispeak.egg-info/top_level.txt
