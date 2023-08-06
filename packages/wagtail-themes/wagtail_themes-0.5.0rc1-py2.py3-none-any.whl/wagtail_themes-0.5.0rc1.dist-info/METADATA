@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: wagtail-themes
+Version: 0.5.0rc1
+Summary: Site specific theme loader for Django Wagtail.
+Home-page: https://github.com/moorinteractive/wagtail-themes
+Author: Rob Moorman
+Author-email: rob@moori.nl
+License: MIT
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+License-File: LICENSE
+Requires-Dist: django (>=3.1)
+Requires-Dist: wagtail (>=2.12)
+Provides-Extra: aws
+Requires-Dist: django-storages (>=1.12) ; extra == 'aws'
+Provides-Extra: test
+Requires-Dist: black ; extra == 'test'
+Requires-Dist: flake8 ; extra == 'test'
+Requires-Dist: isort ; extra == 'test'
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: pytest-cov ; extra == 'test'
+Requires-Dist: pytest-django ; extra == 'test'
+Requires-Dist: wagtail ; extra == 'test'
+
+UNKNOWN
+
