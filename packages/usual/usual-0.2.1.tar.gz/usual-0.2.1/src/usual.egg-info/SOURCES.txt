@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+src/usual/__init__.py
+src/usual/basic.py
+src/usual/ds.py
+src/usual.egg-info/PKG-INFO
+src/usual.egg-info/SOURCES.txt
+src/usual.egg-info/dependency_links.txt
+src/usual.egg-info/top_level.txt
