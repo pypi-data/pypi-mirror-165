@@ -1,0 +1,23 @@
+colcon-core>=0.3.7
+
+[:sys_platform == "linux"]
+notify2
+
+[:sys_platform == "win32"]
+pywin32
+
+[test]
+flake8-blind-except
+flake8-builtins
+flake8-class-newline
+flake8-comprehensions
+flake8-deprecated
+flake8-docstrings
+flake8-import-order
+flake8-quotes
+flake8>=3.6.0
+pep8-naming
+pylint
+pytest
+pytest-cov
+scspell3k>=2.2
