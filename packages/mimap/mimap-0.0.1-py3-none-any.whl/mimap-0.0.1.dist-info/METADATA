@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: mimap
+Version: 0.0.1
+Summary: Maps references to its metadata to help in accessing it based on its metadata.
+Home-page: https://github.com/sekgobela-kevin/mimap
+Author: Sekgobela Kevin
+Author-email: kevinnoko23@gmail.com
+Project-URL: Bug Tracker, https://github.com/sekgobela-kevin/mimap/issues
+Keywords: mapping,metadata,access
+Classifier: Intended Audience :: Developers
+Classifier: Development Status :: 1 - Planning
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
