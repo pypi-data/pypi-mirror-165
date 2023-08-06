@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+src/pyqai/__init__.py
+src/pyqai/deploy.py
+src/pyqai/getDeployments.py
+src/pyqai/logs.py
+src/pyqai/pods.py
+src/pyqai.egg-info/PKG-INFO
+src/pyqai.egg-info/SOURCES.txt
+src/pyqai.egg-info/dependency_links.txt
+src/pyqai.egg-info/entry_points.txt
+src/pyqai.egg-info/requires.txt
+src/pyqai.egg-info/top_level.txt
