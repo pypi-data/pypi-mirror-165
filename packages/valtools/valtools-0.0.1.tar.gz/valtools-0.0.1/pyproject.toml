@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "valtools"
+version = "0.0.1"
+description = "Various tools to help in valuation and fundamental analysis"
+authors = ["_fiz_ <crxz.fiz@gmail.com>"]
+license = "MIT"
+
+classifiers = [
+"Intended Audience :: Financial and Insurance Industry",
+"Operating System :: Microsoft :: Windows :: Windows 10",
+"Operating System :: MacOS :: MacOS X",
+"Programming Language :: Python",
+"Topic :: Office/Business :: Financial",
+"Topic :: Office/Business :: Financial :: Investment",
+"Topic :: Office/Business :: Financial :: Spreadsheet",
+"Development Status :: 1 - Planning"
+]
+
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+cytoolz = "^0.12.0"
+numpy = "^1.23.2"
+pandas = "^1.4.3"
+yfinance = "^0.1.74"
+pandas-datareader = "^0.10.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.extras]
+black = ["black"]
