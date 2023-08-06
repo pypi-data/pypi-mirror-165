@@ -1,0 +1,9 @@
+LICENSE.txt
+README.txt
+setup.py
+debitcr/__init__.py
+debitcr.egg-info/PKG-INFO
+debitcr.egg-info/SOURCES.txt
+debitcr.egg-info/dependency_links.txt
+debitcr.egg-info/requires.txt
+debitcr.egg-info/top_level.txt
