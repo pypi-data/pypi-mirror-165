@@ -1,0 +1,10 @@
+amqp>=2.0.0
+fixtures>=0.3.6
+setuptools
+testtools>=0.9.12
+
+[:python_version < "3"]
+subprocess32
+
+[test]
+six

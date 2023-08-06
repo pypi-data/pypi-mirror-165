@@ -1,0 +1,5 @@
+Metadata-Version: 2.1
+Name: rabbitfixture
+Version: 0.5.2
+Summary: Magic.
+Provides-Extra: test
