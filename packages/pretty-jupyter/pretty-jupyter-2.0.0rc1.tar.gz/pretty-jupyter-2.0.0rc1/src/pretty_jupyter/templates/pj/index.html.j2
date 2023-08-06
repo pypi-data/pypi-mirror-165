@@ -1,0 +1,208 @@
+{%- extends 'base.html.j2' -%}
+
+{% from 'mathjax.html.j2' import mathjax %}
+{% from 'celltags.j2' import celltags %}
+
+{%- block header -%}
+
+{% set title = resources["pj_metadata"]["title"] %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  {% block meta %}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    {% set metadata = resources["pj_metadata"] %}
+    {% for k, v in metadata.items() if k != "output" %}
+    <meta property="{{ k | e }}" content="{{ v | e}}" />
+    {% endfor %}
+  {% endblock meta %}
+
+  <title>{{ title | e }}</title>
+
+  <!-- jquery -->
+  <script src="{{ resources.include_url('static/libs/jquery.min.js') }}"></script>
+
+  <!-- notebook theme (bootstrap 3) -->
+  {%- block theme_css -%}
+  {% set html_metadata = resources["pj_metadata"]["output"]["html"] %}
+  {% set theme = html_metadata["theme"] %}
+  {%- if theme in ["paper", "slate", "journal"] -%}
+  <link href="{{ resources.include_url('static/themes/{}.css'.format(theme)) | e }}" rel="stylesheet" />
+  {%- else -%}
+  <link href="{{ theme | e }}" rel="stylesheet" />
+  {%- endif -%}
+  {%- endblock theme_css %}
+  <!-- bootstrap 3 -->
+  <script src="{{ resources.include_url('static/libs/bootstrap.min.js') }}"></script>
+  <!-- jquery-ui -->
+  <script src="{{ resources.include_url('static/libs/jquery-ui.min.js') }}"></script>
+
+  <!-- jquery tocify -->
+  {% if resources.pj_metadata.output.html.toc -%}
+  <script src="{{ resources.include_url('static/libs/jquery.tocify.js') }}"></script>
+  <link href="{{ resources.include_url('static/libs/jquery.tocify.css') }}" rel="stylesheet" />
+  {{ resources.include_css("static/pj-toc.css") }}
+  {%- endif %}
+
+  <!-- jQuery Plugin: Sticky Tabs -->
+  {% if resources.pj_metadata.output.html.tabset %}
+  <script src="{{ resources.include_url('static/libs/jquery.stickytabs.js') }}" ></script>
+  {{ resources.include_css("static/pj-tabset.css") }}
+  {% endif%}
+
+  <!-- MathJax -->
+  {{ mathjax("https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS_CHTML-full,Safe") }}
+  
+  <!-- plotly -->
+  {% if resources.pj_metadata.output.html.include_plotlyjs %}
+    <script src="{{ resources.include_url('static/libs/plotly.min.js') }}" ></script>
+  {% endif %}
+  <!-- require -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" type="text/javascript"></script>
+  
+  {# css files for notebooks: extend this to provide custom styles #}
+  {% block notebook_css %}
+    {{ resources.include_css("static/pj.css") }}
+  {% endblock notebook_css %}
+
+  {% for css in resources.inlining.css -%}
+    <style type="text/css">
+    {{ css }}
+    </style>
+  {% endfor %}
+</head>
+
+{%- endblock header -%}
+
+{%- block body_header -%}
+<body>
+  <div class="container-fluid main-container">
+    {% block main_container_start %}{% endblock main_container_start %}
+{%- endblock body_header -%}
+
+
+{# show/hide all code cells #}
+{% set code_all_s %}
+{% block code_all %}
+    {% set html_metadata = resources["pj_metadata"]["output"]["html"] %}
+    {% if html_metadata["code_tools"] and resources.global_content_filter.include_input %}
+    <div class="row" style="margin-bottom: 10px;">
+        <div id="jup-show-hide-all-menu" class="btn-group pull-right">
+          <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code All</span> <span class="caret"></span></button>
+          <ul class="dropdown-menu" style="min-width: 50px;">
+          <li><a id="jup-show-all-code" href="#">Show All Code</a></li>
+          <li><a id="jup-hide-all-code" href="#">Hide All Code</a></li>
+          </ul>
+        </div>
+    </div>
+    {% endif %}
+{% endblock code_all %}
+{% endset %}
+
+{# main body loop #}
+{%- block body_loop -%}
+    <div class="row">
+      {% set html_metadata = resources["pj_metadata"]["output"]["html"] %}
+
+      {% set toc = html_metadata["toc"] %}
+      {% if toc %}
+      <div class="col-xs-12 col-sm-4 col-md-3">
+        <div id="TOC" class="tocify"></div>
+      </div>
+      {% endif %}
+
+      {% set container_layout = "col-xs-12 col-sm-8 col-md-9" if toc else "col-xs-12 col-sm-12 col-md-12" %}
+      <div class="{{ container_layout }}">
+        {% block page_header %}
+        <header id="pageHeader">
+          {% set metadata = resources["pj_metadata"] %}
+          <h1 class="title">{{ metadata["title"] | e }}</h1>
+          {% if "author" in metadata %}
+          <h4>{{ metadata["author"] | e }}</h4>
+          {% endif %}
+          {% if "date" in metadata %}
+          <h4>{{ metadata["date"] | e }}</h4>
+          {% endif %}
+        </header>
+        {% endblock page_header %}
+        {% block main_content_before %}{% endblock main_content_before %}
+        <div id="main-content" class="toc-content">
+          {% block main_content_start %}{% endblock main_content_start %}
+          {{ code_all_s }}
+          {{ super() }}
+          {% block main_content_end %}{% endblock main_content_end %}
+        </div>
+        {% block main_content_after %}{% endblock main_content_after %}
+      </div>
+    </div>
+{%- endblock body_loop -%}
+
+{%- block body_footer -%}
+    {% block main_container_end %}{% endblock main_container_end %}
+  </div>
+
+  {# js files for notebooks: extend this to provide custom javascript #}
+  {% block notebook_js %}
+    <!-- hotfix to support interactive tables package  -->
+    <script type="text/javascript">
+      if ($(".output_subarea.output_javascript").length > 0) {
+        jQuery.noConflict(false);
+      }
+    </script>
+
+    {{ resources.include_js("static/pj.js") }}
+
+    <script type="text/javascript">
+      {% set html_metadata = resources.pj_metadata.output.html %}
+
+      $(document).ready(function() {
+        window.fixElementIds();
+
+        // remove useless anchor from Jupyter
+        $("a.anchor-link").remove();
+        window.initializeSections();
+        window.processTokens(tokenSep={{ resources["token_sep"] | tojson }});
+        window.processHeaders(tokenSep={{ resources["token_sep"] | tojson }});
+
+        {% if html_metadata.tabset %}
+        // tabsets 
+        window.initializeTabsets();
+        {% endif %}
+
+        {% if html_metadata.number_sections %}
+        // number sections
+        window.numberSections();
+        {% endif %}
+
+        {% if html_metadata.toc %}
+        // TOC
+        let tocDepth = {{ html_metadata["toc_depth"] | tojson }};
+        let tocCollapsed = {{ html_metadata['toc_collapsed'] | tojson }};
+        let tocSmoothScroll = {{ html_metadata['toc_smooth_scroll'] | tojson }};
+        window.initializeTOC(tocDepth=tocDepth, tocCollapsed=tocCollapsed, tocSmoothScroll=tocSmoothScroll);
+        {% endif %}
+
+        {% if html_metadata["code_folding"] in ["show", "hide"] and resources.global_content_filter.include_input %}
+        // code folding
+        window.initializeCodeFolding({{ html_metadata['code_folding'] | tojson }} === "show");
+        {% endif %}
+
+        // prettify tables (that aren't ignored)
+        $("table:not(.pj-table-ignore)").addClass("table").addClass("table-striped").addClass("table-hover");
+        $("table.dataframe:not(.pj-table-ignore)").removeAttr("border");
+      });
+    </script>
+  {% endblock notebook_js %}
+
+</body>
+{%- endblock body_footer -%}
+
+{%- block footer -%}
+
+</html>
+{%- endblock footer -%}
