@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+src/foyou_http.egg-info/PKG-INFO
+src/foyou_http.egg-info/SOURCES.txt
+src/foyou_http.egg-info/dependency_links.txt
+src/foyou_http.egg-info/entry_points.txt
+src/foyou_http.egg-info/requires.txt
+src/foyou_http.egg-info/top_level.txt
+src/simplehttp/__init__.py
+src/simplehttp/templates/404.html
+src/simplehttp/templates/index.html
