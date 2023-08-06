@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+syngenta_digital_dbv/__init__.py
+syngenta_digital_dbv.egg-info/PKG-INFO
+syngenta_digital_dbv.egg-info/SOURCES.txt
+syngenta_digital_dbv.egg-info/dependency_links.txt
+syngenta_digital_dbv.egg-info/requires.txt
+syngenta_digital_dbv.egg-info/top_level.txt
+tests/__init__.py
+tests/syngenta_digital_dbv/__init__.py
+tests/syngenta_digital_dbv/test__init__.py
+tests/syngenta_digital_dbv/test_get_ssm_param.py
