@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: ismrmrd
+Version: 1.12.5
+Summary: Python implementation of the ISMRMRD
+Home-page: https://ismrmrd.github.io
+Author: ISMRMRD Developers
+License: Public Domain
+Keywords: ismrmrd
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: Public Domain
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Medical Science Apps.
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+Python implementation of the ISMRMRD
