@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: pyvespa
+Version: 0.25.0
+Summary: Python API for vespa.ai
+Author: Thiago G. Martins
+Author-email: tmartins@verizonmedia.com
+Keywords: vespa,search engine,data science
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Python: >=3.6
+Provides-Extra: ml
+Provides-Extra: full
+License-File: LICENSE
