@@ -1,0 +1,13 @@
+sgqlc>=13
+click>=8
+tqdm
+requests
+Pillow
+jsonschema
+semver==2.13.0
+
+[:platform_system == "Windows"]
+pyreadline
+
+[:python_version < "3.7"]
+dataclasses
