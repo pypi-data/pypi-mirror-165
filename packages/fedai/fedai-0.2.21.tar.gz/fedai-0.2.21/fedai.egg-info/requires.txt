@@ -1,0 +1,9 @@
+numpy
+pandas
+torch
+tqdm
+pyradiomics
+SimpleITK
+sk-video
+opencv-contrib-python
+tensorflow
