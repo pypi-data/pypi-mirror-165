@@ -1,0 +1,199 @@
+CHANGES
+=======
+
+1.0.0.0b2
+---------
+
+* Rename venus to openstack-venus
+* Add a test case of typical\_stats to the test file
+* Add a test case of typical\_stats to the test file
+* Supplement test case for typical\_stats
+* Add a use case for the test unit
+* A test case for typical\_stats
+* Add a use case for the test unit
+* Add a test case of analyse\_logs to the test file
+* Add a test case of logs to the test file
+* Add a use case for the test unit
+* Supplement test case for analyse\_logs
+* A test case for analyse\_logs
+* Solve the decode problem and add A test case
+* Add a use case for the test unit
+
+1.0.0.0b1
+---------
+
+* Supplement test cases for logs
+* Add a test cases for 'logs'
+* Add a test case of logs to the test file
+* Add a use case for the test unit
+* Supplement a test case for 'logs'
+* Another test case to supplement logs
+* Add a test case of logs to the test file
+* fmt the collect parse for barbican
+* add module senlin log collect
+* Supplement test cases for test\_generate\_must
+* Add a test cases for unit tests
+* Add test cases to unit tests
+* Put the class init in the setup function
+* Remove None for get method, the default value is None
+* The Python 3.6 and Python 3.7 Support has been dropped since zed
+* Bump oslo.log version for py36/py37/py38
+* change venus log output dir to /var/log/
+* collect zun logs from defalut location of /var/log
+* collect vitrage logs from defalut location of /var/log
+* collect swift logs from defalut location of /var/log
+* collect placement logs from defalut location of /var/log
+* collect octivia logs from defalut location of /var/log
+* collect  nova logs from defalut location of /var/log
+* collect  neutron logs from defalut location of /var/log
+* collect manila logs from defalut location of /var/log
+* collect magnum logs from defalut location of /var/log
+* collect keystone logs from defalut location of /var/log
+* collect ironic logs from defalut location of /var/log
+* collect heat logs from defalut location of /var/log
+* use system logdir /var/log/ for collect glance
+* designate log use system logdir  /var/log
+* use system log dir as the cybrog log output
+* use system log dir as default output
+* use system log dir as default output
+* Add default keystone interface
+* change venus defalut log style for  collect
+* Add default log\_dir argument
+* Update python testing as per zed cycle teting runtime
+* rename file name of num
+* add log collector config of magnum
+* Fix wrong attribute to find remote address
+* add apscheduler
+* Fix manage to manager
+* Dict get properties default is None
+* Add unit test for params
+* add heat log input config
+* add placement log input config
+* Add unit test for get index names
+* add designate log input config
+* add octavia log input config
+* add manila log input config
+* add swift log input config
+* add cyborg log input config
+* add ironic log input config
+* add zun log input config
+* add barbican log input config
+* Enable fast8 check
+* Enable unit test
+* Add unit test for get\_all\_index api
+* remove useless content from version.py
+* Add missing elasticsearch module
+* set log dir if not exits
+* Completment readme doc
+* Fix the ut
+* Fix the project years
+* Drop python2 check
+* Fix the wrong url for contribution
+* Add py39 to tox.ini
+* change the api-ref of the venus doc
+* fluentd support glance logs collect
+* fluentd support nova logs collect
+* delete useless file on doc
+* fix the project name error on doc
+* fix key-word
+* update the venus doc
+* remove unused description on MANIFEST.in
+* Fix where long\_description\_content\_type is placed
+* Revert "add support of Python3.10"
+* docs:Add contributor pages
+* zuul:Add docs zuul task
+* gerrit storge from inspur to openstack
+* remove useless code
+* add support of Python3.10
+* add default VENUS\_DEPLOY=mod\_wsgi
+* fix VENUS\_FILES directory
+* remove db sync from stack script
+* fix stack.sh issue
+* repair the elasticsearch store day result to json
+* the call chian only return the orign data
+* Fix elasticsearch version issues
+* Add pip package about openpyxl and networkx
+* delete mysql storage and use config file store data
+* format the requirements.txt file
+* add supported python version
+* setup.cfg: Replace dashes with underscores
+* Add devstack support
+* Implements: Init commit
+* Remove \_\_unicode\_\_() from  Venus Exception
+* remove \_\_unicode\_\_
+* remove six in HACKING.rst
+* remove six
+* remove py37
+* fix json file formmat in policy.json
+* test
+* remove unicode from code
+* fix msg config
+* fix hacking msg
+* correct the wrong word in docstring
+* remove imp module since it has been deprecated
+* correct the right parameters
+* remove six module in common.py
+* remove six module in gettextutils.py
+* remove six module in delete\_es\_index\_task.py
+* delete redundant parenthese and variable name
+* remove six module in venus/api/openstack/wsgi.py
+* remove six module in venus/openstack/common/config/generator.py
+* fix log configurition
+* fix webob 'You cannot set Response.body to a text object'
+* update CONF import location
+* remove six module in venus/context.py
+* version request url move to the dir of module
+* move the controller to model dir
+* change the globale CONF
+* delete useless configure file
+* transform api config to confdir
+* remove six module in venus/api/xmlutil.py
+* remove six in venus/common/utils.py, add urlib3 in requirement.txt
+* fix wsgi configuration
+* fix task configuration
+* remove six in venus/api/middleware/fault.py
+* fix the configuration
+* fix the configure error
+* remove six module in env.py
+* update profiler conf register
+* function to lowercase
+* cariable lowercase and remove redundant parenthese
+* fanction variable lowercase and remove redundant parentheses
+* Remove redundant parentheses
+* parameter name is lowercase
+* Remove redundant brackets
+* unified the  config register
+* Function names in lowercase
+* remove six module in venus/api/openstack/wsgi.py since venus supports python3 only
+* Function variable names in lowercase
+* add lxml  to requirements
+* Remove redundant parentheses
+* remove six module in venus/utils.py since venus supports python3 only remove unused module
+* add webob to requirements
+* add paste to requirements
+* remove wrong expression if list is empty ,it will still go into 'if' , not 'else'
+* remove unused params
+* Tune the public method \_create\_facade\_lazily()
+* modify the wrong word
+* Add git ignore files
+* Remove babel configure file
+* remove unneccessary brackets
+* Add a superclass call
+* Change code style
+* fix the spelling mistake
+* delete definition of meaninglessness
+* add wsgi entry\_point
+* get elasticsearch index list using python-lib
+* add the missing dependence APScheduler
+* delete the section of useless in venus.conf
+* make venus wsgi support NT platform
+* add the ability to run script directly
+* get elasticsearch indexes using json format
+* get elasticsearch indexes using json format
+* Hello Venus
+* Rename readme file
+* Add Venus repository link to README
+* Add pep8 job for venus
+* Initialize the Venus project
+* .zuul.yaml: add Zuul support to new repo
+* Added .gitreview

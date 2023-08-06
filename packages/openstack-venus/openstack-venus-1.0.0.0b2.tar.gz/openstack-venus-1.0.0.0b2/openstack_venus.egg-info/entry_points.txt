@@ -1,0 +1,4 @@
+[console_scripts]
+venus-api = venus.cmd.api:main
+venus-manager = venus.cmd.manage:main
+
