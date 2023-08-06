@@ -1,0 +1,79 @@
+Metadata-Version: 2.1
+Name: lkbodysegmentation
+Version: 0.0.1
+Summary: Subtract the background from orignal Image.
+Home-page: https://www.lakshaykumar.tech/
+Author: Lakshay Kumar
+Author-email: contact@lakshaykumar.tech
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.3
+Description-Content-Type: text/markdown
+Requires-Dist: mediapipe
+Requires-Dist: cvzone
+
+About
+==============================
+This package will help in segmentation of the body from the background. This package is based on mediapipe selfie segmentation and cvzone.
+
+
+
+Function
+=====================
+
+`bodySegmentation(orignalImg,backgroundImg=(255,255,255),threshold=0.3)`
+
+- **Function Parameter** : This function takes `orignalImg` i.e. the image on which the segmentation has to happen. Other parameters i.e. `backgroundImg` sets the background color, by default it is white, but it can be changed as per user's need. threshold defines the level at which background has to be removed.
+- **Output** : The functions returns a frame as output where the background is segmented.
+
+Usage
+=====================
+
+> bodySegmentation(img)
+
+Default Segmentation (White Background)
+____________
+```
+from lkbodysegmentation import bodySegmentation
+import cv2
+
+cap = cv2.VideoCapture(0)
+
+
+while True:
+    success, img = cap.read()
+    img = bodySegmentation(img)
+    cv2.imshow('Image',img)
+    cv2.waitKey(1)
+```
+
+
+> bodySegmentation(img, backgroundColor, threshold)
+
+Customized Segmentation
+____________
+```
+from lkbodysegmentation import bodySegmentation
+import cv2
+
+cap = cv2.VideoCapture(0)
+
+
+while True:
+    success, img = cap.read()
+    backgroundColor = (255,0,255) #You can replace with an image too
+    threshold = 0.45 #Level of background to be erased
+    img = bodySegmentation(img,backgroundColor,threshold)
+    cv2.imshow('Image',img)
+    cv2.waitKey(1)
+```
+
+
+Developer
+=================
+This package is developed by [Lakshay Kumar](https://www.lakshaykumar.tech/) an enthusiastic AI Researcher. This is developed keeping in mind the pain to write lengthy lines of code just to detect faces. This will enable other developers to focus more on implementation part rather than spending time on coding the face detection module.<br>
+Feel free to share your feedback via [mail](mailto:contact@lakshaykumar.tech)
+
