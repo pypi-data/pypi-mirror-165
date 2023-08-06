@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: rdsline
+Version: 0.4.2
+Summary: The RDS REPL
+Home-page: https://github.com/hpolloni/rdsline
+Author: Herman Polloni
+Author-email: hpolloni@gmail.com
+License: MIT
+License-File: LICENSE.txt
+Requires-Dist: pyyaml
+Requires-Dist: boto3
+Requires-Dist: tabulate
+
+RDS REPL
