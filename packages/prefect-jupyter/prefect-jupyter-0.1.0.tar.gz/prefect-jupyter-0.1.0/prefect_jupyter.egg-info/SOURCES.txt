@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+versioneer.py
+prefect_jupyter/__init__.py
+prefect_jupyter/_version.py
+prefect_jupyter/notebook.py
+prefect_jupyter.egg-info/PKG-INFO
+prefect_jupyter.egg-info/SOURCES.txt
+prefect_jupyter.egg-info/dependency_links.txt
+prefect_jupyter.egg-info/requires.txt
+prefect_jupyter.egg-info/top_level.txt
