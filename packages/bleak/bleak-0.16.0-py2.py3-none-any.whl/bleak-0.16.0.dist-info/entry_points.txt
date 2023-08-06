@@ -1,0 +1,2 @@
+[console_scripts]
+bleak-lescan = bleak:cli
