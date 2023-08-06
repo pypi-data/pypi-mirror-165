@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: Growtopia-Info
+Version: 1.0.1
+Summary: This code can search any information in Growtopia, including Sprite, Description, Player Online, and more!
+Home-page: https://github.com/Gabrielbjb/growtopia-info
+Author: Gabrielbjb
+Author-email: gabrielbjb@protonmail.com
+License: MIT
+Keywords: Growtopia,Growtopia Wiki,Growtopia Fandom
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE.txt
+
+For more information, click this link: https://github.com/Gabrielbjb/growtopia-item-finder
+

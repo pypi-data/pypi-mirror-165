@@ -1,0 +1,1 @@
+For more information, click this link: https://github.com/Gabrielbjb/growtopia-item-finder
