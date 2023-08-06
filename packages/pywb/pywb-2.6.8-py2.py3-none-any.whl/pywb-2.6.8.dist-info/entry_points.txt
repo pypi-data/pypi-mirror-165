@@ -1,0 +1,8 @@
+[console_scripts]
+cdx-indexer = pywb.indexer.cdxindexer:main
+cdx-server = pywb.apps.cli:cdx_server
+live-rewrite-server = pywb.apps.cli:live_rewrite_server
+pywb = pywb.apps.cli:wayback
+warcserver = pywb.apps.cli:warcserver
+wayback = pywb.apps.cli:wayback
+wb-manager = pywb.manager.manager:main_wrap_exc
