@@ -1,0 +1,16 @@
+
+[dev]
+sphinx
+sphinx-rtd-theme
+m2r2
+green
+mypy
+
+[docs]
+sphinx
+sphinx-rtd-theme
+m2r2
+
+[tests]
+green
+mypy
