@@ -1,0 +1,13 @@
+Django
+django-filter
+django-model-utils
+django-simple-history
+djangorestframework
+edx-django-utils
+edx-drf-extensions
+edx-enterprise
+edx-opaque-keys
+edx-toggles>=1.2.0
+jsonfield
+pytz
+requests
