@@ -1,0 +1,4 @@
+orangecontrib
+orangecontrib.panosc
+orangecontrib.panosc.shadow
+orangecontrib.panosc.shadow.widgets
