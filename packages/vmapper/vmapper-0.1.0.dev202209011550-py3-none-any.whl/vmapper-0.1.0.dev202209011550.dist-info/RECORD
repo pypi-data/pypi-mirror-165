@@ -1,0 +1,7 @@
+vmapper/__init__.py,sha256=gIeqLbDqESlhi9URKoKaz2cbZY_C8SuqyLX99BcqrxE,52
+vmapper/color.py,sha256=JL_d4Z_OU6s92DybdF71hsK7dxn2srmA6uaHja36C8g,7759
+vmapper/meta_func.py,sha256=pvKpf6YltTaLkNQEYP1vPTImfKsIiQwTzrg3CuxOZDY,3395
+vmapper/vmapper.py,sha256=5sVxAPWcQJTgKqXnbVI07IEXtbZPf44QUcs00_wwyqo,29656
+vmapper-0.1.0.dev202209011550.dist-info/WHEEL,sha256=bbU3AyvhQ312rVm7zzRQjs6axI1UYWC3nmFA2E6FFSI,88
+vmapper-0.1.0.dev202209011550.dist-info/METADATA,sha256=_HVzpd66yaKYqlEn8x4amLZSNibRm7Xii31L5T4FF3g,1655
+vmapper-0.1.0.dev202209011550.dist-info/RECORD,,
