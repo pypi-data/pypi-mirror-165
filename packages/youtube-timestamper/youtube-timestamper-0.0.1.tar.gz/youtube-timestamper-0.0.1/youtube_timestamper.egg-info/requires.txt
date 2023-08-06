@@ -1,0 +1,10 @@
+fastcore
+youtube_transcript_api
+deepmultilingualpunctuation
+spacy
+sentencepiece
+protobuf==3.20
+
+[dev]
+nb_black
+nbdev
