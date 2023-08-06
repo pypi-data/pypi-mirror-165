@@ -1,0 +1,8 @@
+include license.txt
+include README.MD
+include requirements.txt
+include biasmonitor/config/*.ini
+include biasmonitor/config/*
+include biasmonitor/resources/data/credit_score_dict.pickle
+include biasmonitor/resources/data/credit_score_sample.pickle
+include biasmonitor/resources/widget/*

@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: biasmonitor
+Version: 1.0.14
+Summary: BiasMonitor Diagnosis tool for fairness assessment.
+Author: MAS BiasMonitor
+Requires-Python: >=3.9.5
+License-File: license.txt
