@@ -1,0 +1,13 @@
+README.md
+setup.py
+sirox/utils/__init__.py
+sirox/utils/constants.py
+sirox/utils/flashbots_rpc.py
+sirox/utils/telegram.py
+sirox/utils/utils.py
+sirox/utils/web3.py
+sirox_utils.egg-info/PKG-INFO
+sirox_utils.egg-info/SOURCES.txt
+sirox_utils.egg-info/dependency_links.txt
+sirox_utils.egg-info/requires.txt
+sirox_utils.egg-info/top_level.txt
