@@ -1,0 +1,17 @@
+jestor/Client.py,sha256=44bT0iXggtGCRtX82L7vG3nFAxjlEoz80qT8uXypwQ8,1126
+jestor/File.py,sha256=Rc-Y8KOUKCPUUuFkKBJcdLQeAQaNrZ6IRG7dqldqThM,2253
+jestor/Jestor.py,sha256=_85Cf62oK0Zbv1prl04PYvWKIo5kcIkFuSNSUOPuQCc,1591
+jestor/Table.py,sha256=OWE_tdlSWBrnT2Uy1Cyd0NQSIGB9tfsTvfOZnQRqulk,2382
+jestor/User.py,sha256=-mFljQI52a-YnVI3gGqbt-EcmsYISMQ7yIzZ2COErzc,1195
+jestor/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jestor/exception/ErrorApi.py,sha256=wIFfHB24b6Unosa0zbrIMBrC7GQUO97CtUGFG52VdrI,260
+jestor/exception/JestorApiException.py,sha256=y1rAIWb3r2iArTWbM4R8whKm1I9eda7JQLzte7RfV-w,389
+jestor/exception/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jestor/filter/Filter.py,sha256=CwZNjiB0vX3RsB0sGjZXxjWXuPMF8qOsH0ZJTGuMqlA,270
+jestor/filter/Operators.py,sha256=9dmJOvlN4QxXn2mRfnkTtWx3kpZSl8UBMJiWQCoeICU,565
+jestor/filter/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jestor-0.0.1.dist-info/LICENSE,sha256=be3CnbZRFmb7wHmw_qhBjBY8Y7AqLPPJtUzdCEfeCHk,1086
+jestor-0.0.1.dist-info/METADATA,sha256=M51wYIoy9QruG9K6bJBt300MO2tuzVLinzjnIDmnuAE,1765
+jestor-0.0.1.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+jestor-0.0.1.dist-info/top_level.txt,sha256=3XhwE9_vVTjAnuMt2ovXaRqFTYoAOgefHA0ER7c4_Wo,7
+jestor-0.0.1.dist-info/RECORD,,
