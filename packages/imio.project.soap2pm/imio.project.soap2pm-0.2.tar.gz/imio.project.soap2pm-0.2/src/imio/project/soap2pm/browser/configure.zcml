@@ -1,0 +1,35 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="imio.project.soap2pm">
+
+    <!-- Publish static files -->
+    <browser:resourceDirectory
+      name="imio.project.soap2pm"
+      directory="static"
+      />
+
+    <browser:page
+        for="imio.project.pst.content.action.IPSTAction"
+        name="ProjectWSClient"
+        permission="zope2.Public"
+        class=".views.ProjectActionSoapClientView"
+    />
+
+    <browser:page
+        for="imio.project.pst.content.action.IPSTSubAction"
+        name="ProjectWSClient"
+        permission="zope2.Public"
+        class=".views.ProjectSubActionSoapClientView"
+    />
+
+    <browser:page
+        for="collective.task.interfaces.ITaskContent"
+        name="ProjectWSClient"
+        permission="zope2.Public"
+        class=".views.ProjectTaskSoapClientView"
+    />
+
+
+</configure>

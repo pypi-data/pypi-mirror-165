@@ -1,0 +1,32 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="imio.project.soap2pm">
+
+    <five:registerPackage package="." initialize=".initialize" />
+
+    <include package="plone.api" />
+
+    <include package=".browser" />
+
+    <adapter for="imio.project.pst.content.action.IPSTAction"
+             factory=".adapters.SendableAnnexes"
+             provides="imio.pm.wsclient.interfaces.ISendableAnnexesToPM" />
+
+    <genericsetup:registerProfile
+        name="default"
+        title="imio.project.soap2pm"
+        directory="profiles/default"
+        description="Installs the imio.project.soap2pm add-on."
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+        />
+
+    <genericsetup:importStep
+        name="imio.project.soap2pm-postInstall"
+        title="imio.project.soap2pm post_install import step"
+        description="Post install import step from imio.project.soap2pm"
+        handler=".setuphandlers.post_install">
+    </genericsetup:importStep>
+
+</configure>

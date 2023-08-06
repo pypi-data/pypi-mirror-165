@@ -1,0 +1,9 @@
+plone.api
+setuptools
+imio.project.pst
+imio.pm.wsclient
+
+[test]
+ecreall.helpers.testing
+plone.app.testing
+plone.app.robotframework
