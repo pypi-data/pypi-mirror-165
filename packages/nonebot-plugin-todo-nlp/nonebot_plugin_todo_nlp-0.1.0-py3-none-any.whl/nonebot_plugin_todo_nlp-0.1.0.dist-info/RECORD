@@ -1,0 +1,10 @@
+nonebot_plugin_todo_nlp/__init__.py,sha256=jWwJzQAXtJ78xBKTe3Mv8BATMQCZQfzEKExEivA4MUA,91
+nonebot_plugin_todo_nlp/config.py,sha256=rkbLFSxY1V-S7G1zk9X5UhbnY2fjHA7uP6kJARRZd8M,567
+nonebot_plugin_todo_nlp/nlp_util.py,sha256=lfrRKddCmW-Bk-YHbBChdT4xGboi41ZxPsd93VYc3GM,1759
+nonebot_plugin_todo_nlp/templates/css/style.css,sha256=o2dlcrwi1c6wR1a53FlF7S8LFVn7kKOU8AYE17BU3Hs,1615
+nonebot_plugin_todo_nlp/templates/template.html,sha256=1eUgAxJXhPWXJkSfeHw_Rfq_8h3zfgHTOFDt5l0HfEc,987
+nonebot_plugin_todo_nlp/todo.py,sha256=m_Rn3pY0mVaGWLBpy8aXS7-ygopfi3IgdCRYTCR9SSs,8588
+nonebot_plugin_todo_nlp/todo_manage.py,sha256=w2PWNK8h_dF960dyEUPXhqb5t5y78pitFeMoWAN52HQ,4546
+nonebot_plugin_todo_nlp-0.1.0.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+nonebot_plugin_todo_nlp-0.1.0.dist-info/METADATA,sha256=8i1SKM9YITIrEUFUatpMV5bU_W6uoeCczt9ojy5Uzak,2064
+nonebot_plugin_todo_nlp-0.1.0.dist-info/RECORD,,
