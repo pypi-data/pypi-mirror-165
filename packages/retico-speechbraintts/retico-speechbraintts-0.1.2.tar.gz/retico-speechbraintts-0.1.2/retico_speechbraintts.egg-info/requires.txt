@@ -1,0 +1,4 @@
+retico_core~=0.2
+speechbrain~=0.5
+numpy~=1.23
+torch~=1.12

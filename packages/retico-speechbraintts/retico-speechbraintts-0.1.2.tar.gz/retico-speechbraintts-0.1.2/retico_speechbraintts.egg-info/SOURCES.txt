@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+retico_speechbraintts/__init__.py
+retico_speechbraintts/speechbraintts.py
+retico_speechbraintts/version.py
+retico_speechbraintts.egg-info/PKG-INFO
+retico_speechbraintts.egg-info/SOURCES.txt
+retico_speechbraintts.egg-info/dependency_links.txt
+retico_speechbraintts.egg-info/requires.txt
+retico_speechbraintts.egg-info/top_level.txt
