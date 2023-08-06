@@ -1,0 +1,2 @@
+[console_scripts]
+review = hyperstyle.src.python.review.run_tool:main
