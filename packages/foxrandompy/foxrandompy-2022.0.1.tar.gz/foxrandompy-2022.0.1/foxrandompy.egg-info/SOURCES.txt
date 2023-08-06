@@ -1,0 +1,8 @@
+setup.cfg
+setup.py
+foxrandompy/__init__.py
+foxrandompy/foxRandomPy.py
+foxrandompy.egg-info/PKG-INFO
+foxrandompy.egg-info/SOURCES.txt
+foxrandompy.egg-info/dependency_links.txt
+foxrandompy.egg-info/top_level.txt
