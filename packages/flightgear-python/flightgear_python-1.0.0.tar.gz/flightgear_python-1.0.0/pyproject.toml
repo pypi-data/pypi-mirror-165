@@ -1,0 +1,28 @@
+[build-system]
+requires = ["poetry_core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "flightgear_python"
+version = "1.0.0"
+description = "Interface for FlightGear network connections"
+authors = ["Julianne Swinoga <julianneswinoga@gmail.com>"]
+readme = "README.md"
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+construct = ">=2.10"
+pytest-cov = "^3.0.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "==7.0.1"
+sphinx = ">=5.1.1"
+sphinx-rtd-theme = ">=1.0.0"
+sh = "^1.14.3"
+GitPython = "3.1.20"
+
+[tool.poetry.urls]
+"Repository" = "https://github.com/julianneswinoga/flightgear-python"
+"Documentation" = "https://flightgear-python.readthedocs.io/en/latest"
+"Bug Tracker" = "https://github.com/julianneswinoga/flightgear-python/issues"
