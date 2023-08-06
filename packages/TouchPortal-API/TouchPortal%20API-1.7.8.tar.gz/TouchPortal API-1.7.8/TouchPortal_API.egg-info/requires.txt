@@ -1,0 +1,8 @@
+pyee
+requests
+
+[dev]
+pdoc
+
+[optional]
+Pyinstaller
