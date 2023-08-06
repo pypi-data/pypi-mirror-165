@@ -1,0 +1,17 @@
+/*
+    See the JupyterLab Developer Guide for useful CSS Patterns:
+
+    https://jupyterlab.readthedocs.io/en/stable/developer/css.html
+*/
+
+.sn-file-library-dialog{
+    resize: none;
+    max-height: 99%;
+    max-width: 95%;
+    width: 85%;
+  }
+
+.sn-file-library-frame{
+    height: 600px;
+    min-height: 600px;
+}
