@@ -1,0 +1,46 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "sphinx-watch"
+version = "0.1.0"
+description = "Helper CLI for Sphinx to realtime build"
+authors = ["Kazuya Takei <myself@attakei.net>"]
+license = "Apache-2.0"
+readme = "README.rst"
+homepage = "https://github.com/attakei-lab/sphinx-watch"
+repository = "https://github.com/attakei-lab/sphinx-watch"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Environment :: Web Environment",
+    "Framework :: Sphinx",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Documentation :: Sphinx",
+    "Topic :: Internet :: WWW/HTTP :: Site Management",
+    "Topic :: Software Development",
+    "Topic :: Software Development :: Documentation",
+]
+include = ["CHANGES.rst"]
+
+[tool.poetry.dependencies]
+python = "^3.6 | ^3.7 | ^3.8 | ^3.9 | ^3.10"
+watchdog = "*"
+Sphinx = "*"
+click = "*"
+
+[tool.poetry.dev-dependencies]
+
+[tool.poetry.scripts]
+sphinx-watch = "sphinx_watch.cli:main"
