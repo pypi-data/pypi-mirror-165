@@ -1,0 +1,2 @@
+[console_scripts]
+racoon = racoon.main:app
