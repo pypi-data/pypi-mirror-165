@@ -1,0 +1,14 @@
+django>=3.1
+wagtail>=2.12
+
+[aws]
+django-storages>=1.12
+
+[test]
+black
+flake8
+isort
+pytest
+pytest-cov
+pytest-django
+wagtail
