@@ -1,0 +1,14 @@
+LICENSE.txt
+README.rst
+setup.cfg
+setup.py
+certbot_dns_metaname/__init__.py
+certbot_dns_metaname/dns_metaname.py
+certbot_dns_metaname/dns_metaname_test.py
+certbot_dns_metaname/metaname.py
+certbot_dns_metaname.egg-info/PKG-INFO
+certbot_dns_metaname.egg-info/SOURCES.txt
+certbot_dns_metaname.egg-info/dependency_links.txt
+certbot_dns_metaname.egg-info/entry_points.txt
+certbot_dns_metaname.egg-info/requires.txt
+certbot_dns_metaname.egg-info/top_level.txt
