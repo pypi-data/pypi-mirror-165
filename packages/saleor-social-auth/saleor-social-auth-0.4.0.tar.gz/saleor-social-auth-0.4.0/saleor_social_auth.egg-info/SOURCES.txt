@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+saleor_social_auth.egg-info/PKG-INFO
+saleor_social_auth.egg-info/SOURCES.txt
+saleor_social_auth.egg-info/dependency_links.txt
+saleor_social_auth.egg-info/entry_points.txt
+saleor_social_auth.egg-info/requires.txt
+saleor_social_auth.egg-info/top_level.txt
+saleor_social_auth.egg-info/zip-safe
+social_auth/__init__.py
+social_auth/apps.py
+social_auth/plugin.py
+social_auth/strategy.py
+social_auth/utils.py

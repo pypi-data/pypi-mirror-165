@@ -1,0 +1,3 @@
+[saleor.plugins]
+social_auth = social_auth.plugin:SocialAuthPlugin
+

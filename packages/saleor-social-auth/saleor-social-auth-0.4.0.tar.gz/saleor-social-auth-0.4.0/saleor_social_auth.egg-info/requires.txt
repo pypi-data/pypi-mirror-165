@@ -1,0 +1,15 @@
+social-auth-app-django
+
+[all]
+python-jose>=3.0.0
+python3-saml>=1.2.1
+cryptography>=2.1.1
+
+[azuread]
+cryptography>=2.1.1
+
+[openidconnect]
+python-jose>=3.0.0
+
+[saml]
+python3-saml>=1.2.1
