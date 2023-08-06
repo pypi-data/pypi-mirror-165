@@ -1,0 +1,59 @@
+[project]
+name = "natcap.invest"
+description = "InVEST Ecosystem Service models"
+readme = "README_PYTHON.rst"
+requires-python = ">=3.8,<3.11"
+license = {file = "LICENSE.txt"}
+maintainers = [
+    {name = "Natural Capital Project Software Team"}
+]
+keywords = ["gis", "invest", "ecosystem services"]
+classifiers = [
+    "Intended Audience :: Developers",
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Science/Research",
+    "Natural Language :: English",
+    "Operating System :: MacOS :: MacOS X",
+    "Operating System :: Microsoft",
+    "Operating System :: POSIX",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Cython",
+    "License :: OSI Approved :: BSD License",
+    "Topic :: Scientific/Engineering :: GIS"
+]
+# the version is provided dynamically by setuptools_scm
+# `dependencies` and `optional-dependencies` are provided by setuptools
+# using the corresponding setup args `install_requires` and `extras_require`
+dynamic = ["version", "dependencies", "optional-dependencies"]
+
+[project.urls]
+homepage = "http://github.com/natcap/invest"
+
+[project.scripts]
+invest = "natcap.invest.cli:main"
+
+[build-system]
+# these are the minimum packages needed in order to execute the natcap.invest
+# build.
+# NOTE: GDAL is *not* required here because the compiled cython module
+# will dynamically import GDAL via python's import system.  This behavior means
+# that we can provide a much easier build experience so long as GDAL is
+# available at runtime.
+requires = [
+    'setuptools>=45', 'wheel', 'setuptools_scm>=6.4.0', 'cython', 'babel',
+    # use minimum compatible numpy for each python version
+    # https://github.com/cython/cython/issues/4452
+    'numpy==1.17.3; python_version=="3.8"',
+    'numpy==1.19.3; python_version=="3.9"',
+    'numpy==1.21.3; python_version=="3.10"']
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+version_scheme = "post-release"
+local_scheme = "node-and-date"
+
+[tool.setuptools.packages.find]
+where = ["src"]
