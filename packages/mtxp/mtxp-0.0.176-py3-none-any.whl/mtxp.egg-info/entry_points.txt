@@ -1,0 +1,7 @@
+[console_scripts]
+mtxp = app:main
+mtxpa = app_mtxpagent:main
+
+[flask.commands]
+cmd1 = mtxp.commands:cli
+
