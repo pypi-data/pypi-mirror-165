@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+pyIVA/__init__.py
+pyIVA.egg-info/PKG-INFO
+pyIVA.egg-info/SOURCES.txt
+pyIVA.egg-info/dependency_links.txt
+pyIVA.egg-info/top_level.txt

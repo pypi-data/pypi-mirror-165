@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: pyIVA
+Version: 0.0.1
+Summary: IVA MCU Clients API (2.13.3)
+Home-page: https://github.com/batonogov/pyIVA
+Author: Fedor Batonogov
+Author-email: batonogov@icloud.com
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# pyIVA
+IVA MCU Clients API (2.13.3)
