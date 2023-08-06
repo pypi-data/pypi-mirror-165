@@ -1,0 +1,102 @@
+Metadata-Version: 2.1
+Name: puts
+Version: 0.0.10
+Summary: Python Utility Tools
+Home-page: https://github.com/MarkHershey/puts
+Author: Mark H. Huang
+Author-email: dev@markhh.com
+License: MIT
+Keywords: utilities,toolkit,toolbox,logger
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Utilities
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: English
+Classifier: Framework :: Pytest
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: colorlog (>=4.1.0)
+Requires-Dist: numpy
+Provides-Extra: dev
+Requires-Dist: check-manifest ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: tox ; extra == 'dev'
+Requires-Dist: twine ; extra == 'dev'
+Requires-Dist: wheel ; extra == 'dev'
+
+# puts - Python Utility Tools
+
+Python high-level helper classes and functions.
+
+[![](https://img.shields.io/pypi/v/puts)](https://pypi.org/project/puts/)
+[![](https://img.shields.io/pypi/dm/puts)](https://pypistats.org/packages/puts)
+[![](https://img.shields.io/badge/license-MIT-blue)](https://github.com/MarkHershey/puts/blob/master/LICENSE)
+[![](https://img.shields.io/badge/code%20style-black-black)](https://github.com/psf/black)
+
+## Install
+
+-   Prerequisite: Python 3.6+
+
+```bash
+pip install --upgrade puts
+```
+
+## Usage
+
+### Logging with Colored Output
+
+```python
+from puts import get_logger
+
+logger = get_logger()
+
+logger.debug("Hello world!")
+logger.info("Hello world!")
+logger.warning("Hello world!")
+logger.error("Hello world!")
+logger.critical("Hello world!")
+```
+
+## Development
+
+### Set up dev environment
+
+-   _clone this repo_
+    ```bash
+    $ git clone https://github.com/MarkHershey/puts.git
+    ```
+-   _go to project root_
+    ```bash
+    $ cd puts
+    ```
+-   _create virtual env for this project_
+    ```bash
+    $ python -m venv venv
+    $ source venv/bin/activate
+    $ pip install --upgrade pip wheel setuptools
+    ```
+-   _install this package in **editable** mode_
+    ```bash
+    $ pip install -e ".[dev]"
+    ```
+
+### Run tests
+
+```bash
+$ pytest
+```
+
+## Disclaimer
+
+-   This package is highly opinionated, it does not intend to cater to every use case.
+-   It is only intended for personal projects usage (for now).
+
+
