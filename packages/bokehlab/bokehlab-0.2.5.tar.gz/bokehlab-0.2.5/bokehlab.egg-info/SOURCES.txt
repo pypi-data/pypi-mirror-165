@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+bokehlab/__init__.py
+bokehlab/bokehlab_magic.py
+bokehlab/config.py
+bokehlab/fix_copy_paste.py
+bokehlab/install_magic.py
+bokehlab/palettes.py
+bokehlab.egg-info/PKG-INFO
+bokehlab.egg-info/SOURCES.txt
+bokehlab.egg-info/dependency_links.txt
+bokehlab.egg-info/not-zip-safe
+bokehlab.egg-info/requires.txt
+bokehlab.egg-info/top_level.txt
