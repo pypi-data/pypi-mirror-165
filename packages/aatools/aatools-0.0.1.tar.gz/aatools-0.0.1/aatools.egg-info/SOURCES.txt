@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+settings.ini
+setup.py
+aatools/__init__.py
+aatools/_modidx.py
+aatools/core.py
+aatools.egg-info/PKG-INFO
+aatools.egg-info/SOURCES.txt
+aatools.egg-info/dependency_links.txt
+aatools.egg-info/entry_points.txt
+aatools.egg-info/not-zip-safe
+aatools.egg-info/requires.txt
+aatools.egg-info/top_level.txt
