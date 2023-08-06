@@ -1,0 +1,14 @@
+.gitignore
+LICENSE
+README.md
+nojsoncomments.c
+nojsoncomments.pyx
+pyproject.toml
+setup.cfg
+setup.py
+nojsoncomments.egg-info/PKG-INFO
+nojsoncomments.egg-info/SOURCES.txt
+nojsoncomments.egg-info/dependency_links.txt
+nojsoncomments.egg-info/top_level.txt
+tests/__init__.py
+tests/removecomments_test.py

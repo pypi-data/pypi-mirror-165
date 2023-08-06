@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: nojsoncomments
+Version: 0.1
+Summary: Library to remove js-style comments from JSON strings
+Home-page: https://github.com/koodaamo/nojsoncomments
+Author: linjackson
+Author-email: linjackson78@gmail.com
+Maintainer: petri
+Maintainer-email: petri@koodaamo.fi
+License: MIT
+Keywords: json,comment,javascript,parse
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.5
+License-File: LICENSE
