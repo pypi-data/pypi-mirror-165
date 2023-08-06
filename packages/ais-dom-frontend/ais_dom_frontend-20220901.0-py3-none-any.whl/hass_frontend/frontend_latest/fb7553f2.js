@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkhome_assistant_frontend=self.webpackChunkhome_assistant_frontend||[]).push([[32811],{32811:(t,e,n)=>{n.r(e),n.d(e,{default:()=>a});var s=n(56087);s.default.mount(s.OnSpill,new s.AutoScroll);const a=s.default}}]);
