@@ -1,0 +1,12 @@
+click
+papermill
+ploomber-core>=0.0.4
+ipykernel
+sklearn-evaluation
+
+[dev]
+pytest
+flake8
+nbformat
+ipykernel
+invoke
