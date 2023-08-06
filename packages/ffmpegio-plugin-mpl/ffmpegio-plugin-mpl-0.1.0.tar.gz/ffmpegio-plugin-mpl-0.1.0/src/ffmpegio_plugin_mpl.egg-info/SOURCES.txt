@@ -1,0 +1,11 @@
+LICENSE
+README.rst
+pyproject.toml
+setup.cfg
+src/ffmpegio_plugin_mpl/__init__.py
+src/ffmpegio_plugin_mpl.egg-info/PKG-INFO
+src/ffmpegio_plugin_mpl.egg-info/SOURCES.txt
+src/ffmpegio_plugin_mpl.egg-info/dependency_links.txt
+src/ffmpegio_plugin_mpl.egg-info/entry_points.txt
+src/ffmpegio_plugin_mpl.egg-info/requires.txt
+src/ffmpegio_plugin_mpl.egg-info/top_level.txt
