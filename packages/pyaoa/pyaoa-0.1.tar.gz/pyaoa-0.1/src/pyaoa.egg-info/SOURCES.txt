@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/pyaoa/__init__.py
+src/pyaoa/aoa.py
+src/pyaoa.egg-info/PKG-INFO
+src/pyaoa.egg-info/SOURCES.txt
+src/pyaoa.egg-info/dependency_links.txt
+src/pyaoa.egg-info/requires.txt
+src/pyaoa.egg-info/top_level.txt
