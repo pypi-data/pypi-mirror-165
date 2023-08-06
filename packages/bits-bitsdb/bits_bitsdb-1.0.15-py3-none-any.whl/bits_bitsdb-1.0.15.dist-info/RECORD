@@ -1,0 +1,12 @@
+bits/__init__.py,sha256=EtOD91ivU_kXxRA8lopap-Ihis3DvCkFVpiaQIdypM4,89
+bits/bitsdb/__init__.py,sha256=-_T7LXCPubPNuzJYHQQ4YhwZfxBY5YQ6jOtMPMmOlTQ,741
+bits/bitsdb/bitsdbapi.py,sha256=xZp5Ie4-ut7Tys6FUsQbip2QBNddUryRHWiKyyUfzdY,140
+bits/bitsdb/cloudfunctions.py,sha256=O1TT2Tm4L38nEPrQ2HIYpS-KRii9kRqjnydoedBwUSE,1899
+bits/bitsdb/datastore.py,sha256=rdIdC9R794B3kWw9DAFtoOAcfrtqb0s0Pv3QBptuN1Y,165
+bits/bitsdb/firestore.py,sha256=QLY_5ZqtZjmcmv8M24ZkU0dnOmDINDPJE0gdHDPdFZQ,165
+bits/bitsdb/mongodb.py,sha256=XTB-7-I3hft04vDsoPTu9M3BLn8luVlJvWFT1ez9dMo,129
+bits/bitsdb/update.py,sha256=pKEB35Qm5Zgem0PnSgMw5GRayRTa_PF95nLkpZROJFk,15583
+bits_bitsdb-1.0.15.dist-info/METADATA,sha256=SGzPc9j0UFHprdsljAHJXnliQ7YYd_UC80fvPgUiggk,229
+bits_bitsdb-1.0.15.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+bits_bitsdb-1.0.15.dist-info/top_level.txt,sha256=r0CPtEdvhPhtNI1RzFMKlSds-wmUFadHdR_o8lZNEOg,5
+bits_bitsdb-1.0.15.dist-info/RECORD,,
