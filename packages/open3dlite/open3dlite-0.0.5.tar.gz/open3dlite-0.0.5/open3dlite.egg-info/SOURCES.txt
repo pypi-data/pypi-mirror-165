@@ -1,0 +1,10 @@
+.gitignore
+LICENSE
+README.md
+setup.py
+open3dlite/__init__.py
+open3dlite/open3dlite.py
+open3dlite.egg-info/PKG-INFO
+open3dlite.egg-info/SOURCES.txt
+open3dlite.egg-info/dependency_links.txt
+open3dlite.egg-info/top_level.txt
