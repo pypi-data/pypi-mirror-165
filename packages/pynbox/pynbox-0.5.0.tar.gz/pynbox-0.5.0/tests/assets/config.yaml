@@ -1,0 +1,8 @@
+---
+database_url: fake://
+types:
+  - name: task
+    regexp: t\.
+    priority: 4
+  - name: idea
+    regexp: i\.
