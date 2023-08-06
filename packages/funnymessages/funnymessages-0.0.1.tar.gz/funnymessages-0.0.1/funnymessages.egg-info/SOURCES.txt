@@ -1,0 +1,10 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+README.txt
+setup.py
+funnymessages/__init__.py
+funnymessages.egg-info/PKG-INFO
+funnymessages.egg-info/SOURCES.txt
+funnymessages.egg-info/dependency_links.txt
+funnymessages.egg-info/top_level.txt

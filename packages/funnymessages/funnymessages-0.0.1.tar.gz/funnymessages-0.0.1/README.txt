@@ -1,0 +1,1 @@
+Display funny messages to the users

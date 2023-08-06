@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: funnymessages
+Version: 0.0.1
+Summary: Display funny messages to the users
+Home-page: 
+Author: Andre Fagundes
+Author-email: afagund@gmail.com
+License: MIT
+Keywords: funnymessages
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: POSIX :: Linux
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+Display funny messages to the users
+
+Change Log
+===========
+
+0.0.1 (08/28/2022)
+------------------
+- First release
