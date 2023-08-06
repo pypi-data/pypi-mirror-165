@@ -1,0 +1,14 @@
+cryoassess/__init__.py,sha256=RLGbixXmz8DHgga6FAd12r18dxqg-vbqf2E1CaeMLLc,4676
+cryoassess/bibtex.py,sha256=kWWPZ9qr91DmpINQG17WEa-OUDndgk97GS584xXURc8,1575
+cryoassess/constants.py,sha256=ETN0CuVIjq4sGdoesVRg9HDWsVxCsPu8m03ehjNxrN0,1500
+cryoassess/protocols/__init__.py,sha256=_96_2en1erFW4HX-zSuGtfVaVaQ95hMgZQzHKLXGtLk,1224
+cryoassess/protocols/protocol_2dassess.py,sha256=y8wIR3G4k5BzL2kTekj8uhEVz-5t0XyrVG4_Cs8zE_U,5578
+cryoassess/protocols/protocol_micassess.py,sha256=iQ18Es2HBLFbFTvfeEQLsd7tAnrb7UzPH2o01omC90w,15194
+cryoassess/tests/__init__.py,sha256=JUR2PtctkCQK22ZZtFzp4ZsckOFxf3Asrz4v-LIdhhY,1179
+cryoassess/tests/test_protocols_cryoassess.py,sha256=DiIEPqM3Yfj1v91ajmU_FIA1VC2eCGIV0w7Gir2bpMo,3221
+scipion_em_cryoassess-3.1.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+scipion_em_cryoassess-3.1.1.dist-info/METADATA,sha256=PbrS_HQuypn3BOarmNMZEuhTrZJgoD6XwauRm5tSdig,3998
+scipion_em_cryoassess-3.1.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+scipion_em_cryoassess-3.1.1.dist-info/entry_points.txt,sha256=XJ8NbjdvaEdCJ09XhB5gXVGR8XRdTXD8WZ9D4Sj-Cl0,45
+scipion_em_cryoassess-3.1.1.dist-info/top_level.txt,sha256=ZivoUVzP5Fwun1jx-VN9TXmormZrSKxhfubbxet49Dk,11
+scipion_em_cryoassess-3.1.1.dist-info/RECORD,,
