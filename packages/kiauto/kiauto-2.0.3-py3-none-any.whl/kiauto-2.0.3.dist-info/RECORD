@@ -1,0 +1,15 @@
+kiauto/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kiauto/file_util.py,sha256=cg5MMeZhVPbQynrSm5uUFiPWAX3lR-8Sl21gOR0VGFE,14772
+kiauto/interposer.py,sha256=AsjHQRZbTPG_0eOp3i7XsME1eCayZ-JOhR7T1z5WMs4,25138
+kiauto/log.py,sha256=WtpdKRmELkg0DOWf7QNWbLx_zO9MYLBU6_dsKTImpKg,3755
+kiauto/misc.py,sha256=N9GEc-fwjo135KDAADcHElUnNJjZfbzSB2RXb4o6ufc,12166
+kiauto/ui_automation.py,sha256=zR90cnkBUnTRPIekVB-OsSkHJCZG_uUtqHu7tE37K84,18743
+kiauto/interposer/libinterposer.so,sha256=g_Ti5I3o0ML4f6jTZXG_7sHBY6iwNPNZSC177STe_gQ,27344
+kiauto-2.0.3.data/scripts/eeschema_do,sha256=WlZ8nyOnE6svHN23zRGADAWAVhGdcA-0qrQvedDxUnA,35735
+kiauto-2.0.3.data/scripts/kicad2step_do,sha256=Tw_x9PGTpAdcJAJxTCglGthg2nDqdcg_lk2GQQ0EQws,6892
+kiauto-2.0.3.data/scripts/pcbnew_do,sha256=PJRBj8fD8979Jl0bIKAnKjCItBucmO6-zF5vO0C4JUk,67688
+kiauto-2.0.3.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+kiauto-2.0.3.dist-info/METADATA,sha256=K-oQ1aVOviF3r11mZyYq_P72_9H37vvBUhB1dDYd5IE,14714
+kiauto-2.0.3.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+kiauto-2.0.3.dist-info/top_level.txt,sha256=txHagn2kbZqT8uFXa7rIWheTvHfg5KvFh-aj873hc6Q,7
+kiauto-2.0.3.dist-info/RECORD,,
