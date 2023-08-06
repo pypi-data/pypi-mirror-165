@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+aioaquarea/__init__.py
+aioaquarea/const.py
+aioaquarea/core.py
+aioaquarea/data.py
+aioaquarea/errors.py
+aioaquarea.egg-info/PKG-INFO
+aioaquarea.egg-info/SOURCES.txt
+aioaquarea.egg-info/dependency_links.txt
+aioaquarea.egg-info/requires.txt
+aioaquarea.egg-info/top_level.txt
