@@ -1,0 +1,86 @@
+[tool.poetry]
+name = "weather-command"
+version = "3.2.8"
+description = "Command line weather app"
+authors = ["Paul Sanders <psanders1@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/sanders41/weather-command"
+homepage = "https://github.com/sanders41/weather-command"
+documentation = "https://github.com/sanders41/weather-command"
+keywords = ["weather", "cli"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+rich = "12.1.0"
+httpx = "0.23.0"
+pydantic = "1.9.2"
+camel-converter = {version = "1.0.6", extras = ["pydantic"]}
+typer = "0.6.1"
+tenacity = "8.0.1"
+textual = "0.1.17"
+uvloop = {version = "^0.16.0", markers = "sys_platform != 'win32'"}
+
+[tool.poetry.dev-dependencies]
+black = "^22.6"
+flake8 = "^5.0.4"
+isort = "^5.10.1"
+mypy = "^0.971"
+pre-commit = "^2.20.0"
+pytest = "^7.1.2"
+pytest-cov = "^3.0.0"
+tox = "^3.25.1"
+tomlkit = "^0.11.4"
+pytest-asyncio = "^0.19.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+weather-command = "weather_command.main:app"
+
+[tool.poetry.extras]
+uvloop = ["uvloop"]
+
+[tool.black]
+line-length = 100
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.egg
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.nox
+  | \.tox
+  | \.venv
+  | \venv
+  | _build
+  | buck-out
+  | build
+  | dist
+  | setup.py
+)/
+'''
+
+[tool.isort]
+profile = "black"
+line_length = 100
+src_paths = ["weather_command", "tests"]
+
+[tool.mypy]
+check_untyped_defs = true
+disallow_untyped_defs = true
+
+[[tool.mypy.overrides]]
+module = ["tests.*"]
+disallow_untyped_defs = false
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "--cov=weather_command --cov-report term-missing"
+asyncio_mode = "auto"
+
+[tool.coverage.report]
+exclude_lines = ["if __name__ == .__main__.:", "pragma: no cover"]
