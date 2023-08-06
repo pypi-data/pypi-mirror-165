@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/phontext/__init__.py
+src/phontext/corpus.py
+src/phontext/io.py
+src/phontext/word.py
+src/phontext.egg-info/PKG-INFO
+src/phontext.egg-info/SOURCES.txt
+src/phontext.egg-info/dependency_links.txt
+src/phontext.egg-info/top_level.txt
