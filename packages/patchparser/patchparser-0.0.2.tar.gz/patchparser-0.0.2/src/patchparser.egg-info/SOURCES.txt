@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/patchparser/__init__.py
+src/patchparser/github_parser.py
+src/patchparser.egg-info/PKG-INFO
+src/patchparser.egg-info/SOURCES.txt
+src/patchparser.egg-info/dependency_links.txt
+src/patchparser.egg-info/requires.txt
+src/patchparser.egg-info/top_level.txt
