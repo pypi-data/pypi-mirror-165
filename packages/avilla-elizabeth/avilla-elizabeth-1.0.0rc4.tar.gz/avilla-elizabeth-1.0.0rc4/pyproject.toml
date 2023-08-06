@@ -1,0 +1,105 @@
+[project]
+name = "avilla-elizabeth"
+version = "1.0.0rc4"
+authors = [
+    { name = "GreyElaina", email = "GreyElaina@outlook.com" },
+]
+dependencies = []
+description = ""
+readme = "README.md"
+requires-python = ">=3.9"
+
+[project.license]
+text = "MIT"
+
+[project.urls]
+homepage = "https://github.com/GraiaProject/Avilla"
+repository = "https://github.com/GraiaProject/Avilla"
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "black>=22.3.0",
+    "flake8>=4.0.1",
+    "isort>=5.10.1",
+    "typing-extensions>=4.2.0",
+    "graia-scheduler>=0.0.8",
+    "mina-build>=0.2.6",
+    "pre-commit>=2.20.0",
+    "devtools>=0.9.0",
+    "richuru>=0.1.1",
+]
+
+[tool.mina]
+enabled = false
+
+[tool.mina.packages.core]
+includes = [
+    "avilla/core",
+    "avilla/core/py.typed",
+]
+
+[tool.mina.packages.core.project]
+name = "avilla-core"
+version = "1.0.0rc4"
+authors = [
+    { name = "GreyElaina", email = "GreyElaina@outlook.com" },
+]
+dependencies = [
+    "graia-broadcast",
+    "graia-amnesia",
+    "loguru",
+    "yarl",
+    "launart",
+]
+description = ""
+readme = "README.md"
+requires-python = ">=3.9"
+
+[tool.mina.packages.core.project.license]
+text = "MIT"
+
+[tool.mina.packages.core.project.urls]
+homepage = "https://github.com/GraiaProject/Avilla"
+repository = "https://github.com/GraiaProject/Avilla"
+
+[tool.mina.packages.elizabeth]
+includes = [
+    "avilla/elizabeth",
+]
+raw-dependencies = [
+    "avilla-core>=1.0.0rc4",
+]
+
+[tool.mina.packages.elizabeth.project]
+name = "avilla-elizabeth"
+version = "1.0.0rc4"
+authors = [
+    { name = "GreyElaina", email = "GreyElaina@outlook.com" },
+]
+dependencies = []
+description = ""
+readme = "README.md"
+requires-python = ">=3.9"
+
+[tool.mina.packages.elizabeth.project.license]
+text = "MIT"
+
+[tool.mina.packages.elizabeth.project.urls]
+homepage = "https://github.com/GraiaProject/Avilla"
+repository = "https://github.com/GraiaProject/Avilla"
+
+[tool.black]
+include = "\\.pyi?$"
+line-length = 120
+target-version = [
+    "py39",
+]
+
+[tool.isort]
+profile = "black"
+
+[build-system]
+requires = [
+    "mina-build",
+]
+build-backend = "mina.backend"
