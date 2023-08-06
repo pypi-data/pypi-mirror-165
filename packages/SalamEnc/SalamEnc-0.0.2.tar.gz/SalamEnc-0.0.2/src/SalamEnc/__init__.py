@@ -1,0 +1,1 @@
+from .SalamEnc import encode,encrypt,decode,decrypt,key_gen
