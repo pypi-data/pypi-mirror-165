@@ -1,0 +1,11 @@
+README.md
+setup.py
+pytgrd/__init__.py
+pytgrd/by.py
+pytgrd/core.py
+pytgrd/utils.py
+pytgrd.egg-info/PKG-INFO
+pytgrd.egg-info/SOURCES.txt
+pytgrd.egg-info/dependency_links.txt
+pytgrd.egg-info/requires.txt
+pytgrd.egg-info/top_level.txt
