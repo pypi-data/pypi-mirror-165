@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/Falderal.egg-info/PKG-INFO
+src/Falderal.egg-info/SOURCES.txt
+src/Falderal.egg-info/dependency_links.txt
+src/Falderal.egg-info/entry_points.txt
+src/Falderal.egg-info/top_level.txt
+src/falderal/__init__.py
+src/falderal/driver.py
+src/falderal/objects.py
+src/falderal/tests.py
