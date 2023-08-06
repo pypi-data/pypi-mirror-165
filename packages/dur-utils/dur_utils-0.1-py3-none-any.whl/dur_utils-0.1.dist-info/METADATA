@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: dur-utils
+Version: 0.1
+Summary: Durham Colours, as rgb tuples.
+Author-email: Sean Craven <seanpietercraven@gmail.com>
+Project-URL: Homepage, https://seancraven.github.io/CDS_book/
+Project-URL: Github, https://seancraven.github.io/CDS_book/
+Keywords: Durham,Colours
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: bumpver ; extra == 'dev'
+Requires-Dist: isort ; extra == 'dev'
+Requires-Dist: pip-tools ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+
