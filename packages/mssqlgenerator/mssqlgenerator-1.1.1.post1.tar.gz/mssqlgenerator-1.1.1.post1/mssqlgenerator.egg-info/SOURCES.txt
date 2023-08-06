@@ -1,0 +1,13 @@
+setup.py
+mssqlgenerator/__init__.py
+mssqlgenerator/app.py
+mssqlgenerator/formats.py
+mssqlgenerator/gen.py
+mssqlgenerator/log.py
+mssqlgenerator/options.py
+mssqlgenerator/pyfunc.py
+mssqlgenerator/tdparse.py
+mssqlgenerator.egg-info/PKG-INFO
+mssqlgenerator.egg-info/SOURCES.txt
+mssqlgenerator.egg-info/dependency_links.txt
+mssqlgenerator.egg-info/top_level.txt
