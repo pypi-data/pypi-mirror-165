@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+rosahami_processor/__init__.py
+rosahami_processor.egg-info/PKG-INFO
+rosahami_processor.egg-info/SOURCES.txt
+rosahami_processor.egg-info/dependency_links.txt
+rosahami_processor.egg-info/top_level.txt
