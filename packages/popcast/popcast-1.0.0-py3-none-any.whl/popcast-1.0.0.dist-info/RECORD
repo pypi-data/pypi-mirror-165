@@ -1,0 +1,14 @@
+popcast/__init__.py,sha256=H9OHQRAW3Cm44bOmOtC6P6h827-QAmQeMSuXiAkCykc,127
+popcast/cli.py,sha256=M3S6Cz3eckodTl9EiAr0oYwQB0PM5QRxty5YpLD3I8A,959
+popcast/cross_immunity.py,sha256=_2pLYQs9iCGy6Qkx3srP3duufT15xOqD1YQfzd8Sk6Y,4239
+popcast/fit.py,sha256=xIF2deFfC7cfCVGyknz4NZ2qKHQTGNr2TO0_2g4D2BE,49134
+popcast/forecast.py,sha256=iWe6gu3hTzBEOgnAMVd543rzp6FxCJm3I-1Kfdb2vik,6517
+popcast/metrics.py,sha256=UP0Fb_qaXy6Hwh7S3IVwEJwrFqqUs8plbyCmkDQW-SY,5557
+popcast/nextcast.py,sha256=h0hwdogXGFqerm-5ZPeT-irPn91pCcQRjiHThXsRzEk,19
+popcast/utils.py,sha256=IvlzKsOIJuTOySZim5EPjotQLe1jmH_xvi0LKzO_iiM,10248
+popcast/weighted_distances.py,sha256=pvNFHe1--5ihmGZinaffLiZFCkXpWPC-SIh07vOwZoQ,5791
+popcast-1.0.0.dist-info/entry_points.txt,sha256=okFjossw61KbHyUyz4wDUPl7pbSXPk62ZrOvwQBKH5s,44
+popcast-1.0.0.dist-info/LICENSE,sha256=3sAy3B41zdPdu5nRbluTWuWJykvhb5_EtGLRbvcCTUo,1074
+popcast-1.0.0.dist-info/WHEEL,sha256=4TfKIB_xu-04bc2iKz6_zFt-gEFEEDU_31HGhqzOCE8,81
+popcast-1.0.0.dist-info/METADATA,sha256=aMjhAQqzqPy09S1qHxRJKSruZuRTihJi2uMH_aoC4lk,1993
+popcast-1.0.0.dist-info/RECORD,,
