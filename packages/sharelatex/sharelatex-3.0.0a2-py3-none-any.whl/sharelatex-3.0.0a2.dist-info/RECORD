@@ -1,0 +1,10 @@
+sharelatex/__init__.py,sha256=DKLqkzZ_64XY86RanvwaMHXEZ4JhOFfEnGRi5lQL5r0,34027
+sharelatex/__version__.py,sha256=JCltpn6OE1Z5gkY8KvXe4sBdx3Ivb6VLWGuu4QOlkdY,30
+sharelatex/admin.py,sha256=NAeaYrk2cFt6qb8DY-vCGdZD8fTLWs52UBWzZ6UtXS4,6053
+sharelatex/cli.py,sha256=5ouA5K9prwKtATE-4ShA5HtbY1UMkJ2N4E7V6uw793Q,29937
+sharelatex-3.0.0a2.dist-info/LICENSE,sha256=WJ7YI-moTFb-uVrFjnzzhGJrnL9P2iqQe8NuED3hutI,35141
+sharelatex-3.0.0a2.dist-info/METADATA,sha256=-V5T4dE2dQQpZWqRwALR21cSFF5wt2HHA9_rM5MYRt8,4776
+sharelatex-3.0.0a2.dist-info/WHEEL,sha256=ewwEueio1C2XeHTvT17n8dZUJgOvyCWCt0WVNLClP9o,92
+sharelatex-3.0.0a2.dist-info/entry_points.txt,sha256=qg9lzT0-zmFuXq_wOf6Jgh7fdpJ8Qpa4EnIuG6_kloY,79
+sharelatex-3.0.0a2.dist-info/top_level.txt,sha256=7e_7Udtlnr8i2uClHV480QPQqz6-FJ-xUnTOqFLjdJI,11
+sharelatex-3.0.0a2.dist-info/RECORD,,
