@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/advanced/databases/__init__.py
+src/advanced/databases/_src/__init__.py
+src/advanced/databases/_src/big_list.py
+src/advanced/databases/_src/mutable_sequence_islice.py
+src/advanced/databases/_src/mutable_sequence_islice_proxy.py
+src/advanced/databases/_src/sequence_islice.py
+src/advanced/databases/_src/sequence_islice_proxy.py
+src/advanced/databases/_src/viewable_mutable_sequence.py
+src/advanced/databases/_src/viewable_sequence.py
+src/advanced_databases.egg-info/PKG-INFO
+src/advanced_databases.egg-info/SOURCES.txt
+src/advanced_databases.egg-info/dependency_links.txt
+src/advanced_databases.egg-info/top_level.txt
