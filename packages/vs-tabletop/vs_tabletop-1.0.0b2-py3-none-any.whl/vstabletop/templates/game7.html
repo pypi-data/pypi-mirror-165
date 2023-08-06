@@ -1,0 +1,443 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="seperate"><canvas id="canvas"></canvas></div>
+
+    <div class="row g-0 w-100 h-50">
+        <div class="col-4">
+            <div class="card h-100">
+                        <div class="card-header">
+                            <button class="btn btn-lg btn-info" id="button-3d-model">Load 3D model</button>
+                            <div type="button" class="btn btn-sm shadow-none"
+                                      data-mdb-container="body"
+                                      data-mdb-toggle="popover"
+                                      data-mdb-placement="right"
+                                      title='3D coordinates'
+                                      data-mdb-content="Any point in 3D space can be located with a position vector (x,y,z).
+                                                 A 3D model is defined by surfaces, which are defined by triangles,
+                                                 which are in turn defined by three vertices each. ">
+                                    <i class="bi bi-question-circle-fill"></i>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="chart h-100" id="chart-G7-3D"></div>
+                        </div>
+                    </div>
+        </div>
+        <div class="col-4">
+            <div class="card h-100">
+                        <div class="card-header">
+
+                            <div class="btn btn-lg btn-success" id="button-2d-proj">2D projection</div>
+                            <div type="button" class="btn btn-sm shadow-none"
+                                 data-mdb-container="body"
+                                 data-mdb-toggle="popover"
+                                 data-mdb-placement="left"
+                                 title='2D projection'
+                                 data-mdb-content="A 2D projection of a 3D function along an axis can be calculated by
+                                                 summing up the function f(x,y,z) across all values on that axis.
+                                                 For example, a projection along the z axis can be calculated by creating a function g(x,y), where
+                                                 g(x0,y0) = (sum of f(x0,y0,z) for all z between negative infinity and positive infinity) ">
+                                 <i class="bi bi-question-circle-fill"></i>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="chart h-100" id="chart-G7-2D"></div>
+                        </div>
+                    </div>
+        </div>
+        <div class="col-4">
+            <div class="card h-100">
+                        <div class="card-header">
+
+                            <div class="btn btn-lg btn-success" id="button-1d-proj">1D projection</div>
+                            <div type="button" class="btn btn-sm shadow-none"
+                                 data-mdb-container="body"
+                                 data-mdb-toggle="popover"
+                                 data-mdb-placement="left"
+                                 title='1D projection'
+                                 data-mdb-content="A 2D image can be collapsed in the y direction (90 degrees) to create a 1D curve that shows
+                                                   how much total intensity there is for each y location. This can also be done along
+                                                   any direction such as x (0 degree), 45 degrees, etc. to have different views of the same object.">
+                                 <i class="bi bi-question-circle-fill"></i>
+                            </div>
+                    </div>
+                        <div class="card-body">
+                            <div class="chart h-100" id="chart-G7-1D"></div>
+                        </div>
+                    </div>
+        </div>
+        </div>
+
+    <div class="row g-0 w-100 h-50">
+        <div class="col-4 mh-100">
+            <div class="card">
+                        <div class="card-header">Projection settings</div>
+                        <div class="card-body h-75">
+                            <div class="row h-100">
+                                <div class="col-5">
+                                <form action="/games/7" method="POST">
+                                    {{ G7Form.hidden_tag() }}
+                                    <!-- 3D model choice -->
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <label for="model" class="form-label">Select model <span type="button" class="btn btn-sm shadow-none"
+                                                 data-mdb-container="body"
+                                                 data-mdb-toggle="popover"
+                                                 data-mdb-placement="top"
+                                                 title='3D model'
+                                                 data-mdb-content="Select among a list of pre-made 3D models with cutouts that fills with water which generate signal.">
+                                                <i class="bi bi-question-circle-fill"></i>
+                                            </span>
+                                            </label>
+                                        {{ G7Form.phantom_type_field(class="form-control",id='model')}}
+                                        </div>
+                                    </div>
+
+                                <!-- 2D projection axis -->
+                                    <div class="form-group">
+                                    <div class="col">
+
+                                        {{ G7Form.proj_2d_axis_field.label(class="form-label col") }}
+                                        <div type="button" class="btn btn-sm shadow-none"
+                                             data-mdb-container="body"
+                                             data-mdb-toggle="popover"
+                                             data-mdb-placement="top"
+                                             title='2D projection axis'
+                                             data-mdb-content="The axis along which the water-filled parts of the 3D volume is summed.">
+                                            <i class="bi bi-question-circle-fill"></i>
+                                        </div>
+                                     </div>
+
+
+                                    <div class="row">
+                                    {% for subfield in G7Form.proj_2d_axis_field %}
+                                        <div class="form-control col">
+                                            {{ subfield(id='proj2d_axis',class='form-check-input proj-2d-xyz') }}
+                                            {{ subfield.label(class='form-check-label') }}
+                                        </div>
+                                    {% endfor %}
+                                    </div>
+                                </div>
+                                <!-- 1D projection angle -->
+                                    {{ G7Form.proj_1d_angle_field.label(class="form-label")}}
+                                        <div type="button" class="btn btn-sm shadow-none"
+                                             data-mdb-container="body"
+                                             data-mdb-toggle="popover"
+                                             data-mdb-placement="bottom"
+                                             title='1D projection angle'
+                                             data-mdb-content="The angle at which we pass parallel rays through an 2D image.
+                                                            The total image intensity along each ray is summed to form the projection
+                                                           on a line/surface at a right angle to the rays.">
+                                             <i class="bi bi-question-circle-fill"></i>
+                                        </div>
+
+                                    <div class="form-group row">
+                                        <div class="col-8">
+                                    {{ G7Form.proj_1d_angle_field(class='form-control',id='proj1d_angle',disabled=true)}}
+                                        </div>
+                                        <div class="col-4">
+                                            deg.
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group pt-3">
+                                        <div class="btn btn-lg btn-info" id="lines-toggle">Show/hide lines</div>
+                                </div>
+                                </form>
+
+                                </div>
+                                <div class="col-7">
+                                    <div class="row">
+                                        <div id="my-interactive"></div>
+                                        <script type="module" src="../static/eyeplot.js"></script>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+            </div>
+        </div>
+                <!-- Task panel -->
+        <div class="col-4 mh-100">
+            <div class="card">
+                    <div class="card-header h3">
+                        Tasks
+                    </div>
+                    <div class="card-body">
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar"
+                             style="width: {{ session['game7']['task_completed']*20 }}%"
+                             aria-valuenow="0" aria-valuemin="{{ session['game7']['task_completed']*20 }}" aria-valuemax="100"></div>
+                    </div>
+                    <!-- Show tab for each lab procedure -->
+                    <ul class="nav nav-tabs nav-justified" id="7-tab" role="tablist">
+                        {% for tab in instructions['tabs'] %}
+                            {% if loop.index == session['game7']['task_completed'] + 1 %}
+                                {% set active = 'active' %}
+                            {% else %}
+                                {% set active = '' %}
+                            {% endif %}
+
+                            {% set disabled = 'disabled' if loop.index > 1 + session['game7']['task_completed'] else '' %}
+                            {% set aria_disabled = (disabled == 'disabled') %}
+
+                            <li class="nav-item" role="presentation">
+                                <button class="col nav-link {{ active }} {{ disabled }} text-info" id="task{{ loop.index }}-tab" data-bs-toggle="tab" data-bs-target="#step{{ loop.index }}"
+                                        type="button" role="tab"  aria-controls="step{{ loop.index }}"
+                                        aria-selected="{{ loop.index==1 }}" aria-disabled= "{{ aria_disabled }}">
+                                    {{ tab }}
+                                </button>
+                            </li>
+                        {% endfor %}
+                    </ul>
+
+                    <!-- Show content for each lab procedure -->
+                    <div class="tab-content" id="game7-tab-content">
+                        {% for task, task_details in instructions['tasks'].items() %}
+                            {% if loop.index == session['game7']['task_completed'] + 1 %}
+                                {% set show_text = 'show' %}
+                                {% set active_text = 'active' %}
+                            {% else %}
+                                {% set show_text = '' %}
+                                {% set active_text = '' %}
+                            {% endif %}
+
+
+
+                            <div class="tab-pane fade {{ show_text }} {{ active_text }}" id="step{{ loop.index }}" role="tabpanel" aria-labelledby="step{{ loop.index }}-tab">
+                                <div class="h4 text-info">{{ instructions['titles'][loop.index0] }}</div>
+                                {% set task_index = loop.index %}
+
+                                <ul class="accordion" id="instructions-accordion-{{ task_index }}"> <!-- TODO make accordion work and add inside instructions -->
+                                {% for step, details in instructions['explorations'][loop.index0].items() %}
+                                      <li class="accordion-item">
+                                          <div class="accordion-header row d-flex justify-content-center" id="heading-{{ task_index }}-{{ loop.index }}">
+                                              <div class="col-2 d-flex align-items-center justify-content-center">
+                                              <input class="form-check-input task-{{ task_index }}-check" type="checkbox" value="" aria-label="">
+                                              </div>
+                                            <div class="col-10">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-{{ task_index }}-{{ loop.index }}" aria-expanded="false" aria-controls="collapse-{{ task_index }}-{{ loop.index }}">
+                                                <strong>{{ step }}</strong>
+                                            </button>
+                                          </div>
+                                          </div>
+                                          <div class="accordion-collapse collapse" id="collapse-{{ task_index }}-{{ loop.index }}" aria-labelledby="heading-{{ task_index }}-{{ loop.index }}" data-bs-parent="#instructions-accordion-{{ task_index }}">
+                                              <div class="accordion-body">
+                                                    <span>{{ details }}</span>
+                                              </div>
+                                          </div>
+                                      </li>
+                                {% endfor %}
+                                    <!-- Last task -->
+                                    <li class="accordion-item text-info">
+                                          <div class="accordion-header row d-flex justify-content-center" id="heading-final-{{ task_index }}">
+
+                                              <div class="col-2 d-flex align-items-center justify-content-center">
+                                                <input class="form-check-input task-{{ task_index }}-check" id="final-task-of-{{ task_index }}" type="checkbox">
+                                              </div>
+
+                                            <div class="col-10">
+                                            <button class="accordion-button collapsed final-task-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-final-{{ task_index }}" aria-expanded="false" aria-controls="collapse-final-{{ loop.index }}">
+                                                <strong class="text-info">{{ task }}</strong>
+                                            </button>
+                                          </div>
+                                          </div>
+                                          <div class="accordion-collapse collapse" id="collapse-final-{{ task_index }}" aria-labelledby="heading-final-{{ task_index }}" data-bs-parent="#instructions-accordion-{{ task_index }}">
+                                              <div class="accordion-body">
+                                                    <span>{{ task_details }}</span>
+                                              </div>
+                                          </div>
+                                      </li>
+
+                                </ul>
+                                <!-- Step 4 special part -->
+                                {% if task_index == 4 %}
+                                    <!-- TODO display the 3 options -->
+                                    <div class="d-none form-check" id="image-opts">
+                                    <div class="row">
+                                        <div class="col" id="challenge-info-2d"></div>
+                                        <div class="col" id="challenge-feedback-2d"></div>
+                                    </div>
+                                        <div class="row">
+                                            {% for q in range(3) %}
+                                                <div class="col d-flex justify-content-center">
+                                                    <label for='choice_2d_{{ q }}' id='img2d-label-{{ q }}'></label>
+                                                </div>
+                                            {% endfor %}
+                                        </div>
+                                        <div class="row">
+                                            {% for p in range(3) %}
+                                            <div class="col d-flex justify-content-center">
+                                                <input type="radio" class="form-check-input" name="choice-2d" id='choice_2d_{{ p }}'>
+                                            </div>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col btn btn-light btn-outline-primary randomize" id="randomize">Randomize!</div>
+                                        <div class="col btn btn-dark" id="check-answer-2d">Submit</div>
+                                    </div>
+                                {% endif %}
+
+                                <!-- Step 5 special part -->
+                                {% if task_index == 5 %}
+                                    <div class="d-none form-check" id="image-opts-2">
+                                    <div class="row">
+                                        <div class="col" id="challenge-info-1d"></div>
+                                        <div class="col" id="challenge-feedback-1d"></div>
+                                    </div>
+                                        <div class="row">
+                                            {% for q in range(3) %}
+                                                <div class="col d-flex justify-content-center">
+                                                    <label for='choice_1d_{{ q }}' id='img1d-label-{{ q }}'></label>
+                                                </div>
+                                            {% endfor %}
+                                        </div>
+                                        <div class="row">
+                                            {% for p in range(3) %}
+                                            <div class="col d-flex justify-content-center">
+                                                <input type="radio" class="form-check-input" name="choice-1d" id='choice_1d_{{ p }}'>
+                                            </div>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col btn btn-light btn-outline-primary randomize" id="randomize-2">Randomize!</div>
+                                        <div class="col btn btn-dark" id="check-answer-1d">Submit</div>
+                                    </div>
+                                {% endif %}
+
+
+
+
+                                <div class="btn btn-info task-next-button" id="task{{ loop.index }}-next">Next</div>
+
+                                <p class="d-none text-danger" id="task-message-{{ task_index }}">
+                                    Complete and check all steps to move on.
+                                </p>
+                                {% set dnone = '' if session['game7']['task_completed'] >= task_index else 'd-none' %}
+
+                                {% set success_message = 'This step has been completed' if task_index < 4 else
+                                        'All steps complete. Congratulations! Now, you can answer the multiple choice questions to earn more stars.' %}
+
+                                <p class="{{ dnone }} text-success" id="task-success-{{ task_index }}">
+                                    {{ success_message }}
+                                </p>
+
+                            </div>
+
+
+
+                        {% endfor %}
+
+                    </div>
+
+                    </div>
+                </div>
+        </div>
+        <div class="col-4">
+          <!-- Questions panel -->
+          <div class="card">
+          <div class="card-header h3">Questions</div>
+
+          <div id="slide" class="carousel slide card-body h-75" data-bs-interval="false">
+                <div class="carousel-inner">
+                    {% for ind in range(success_text | length) %}
+                        {% set letters = ['a','b','c','d'] %}
+                        {% set active_text = 'active' if ind==0 else '' %}
+                        <div class="carousel-item {{active_text}}">
+                            <div class="row d-flex justify-content-center align-items-baseline">
+                                <p class="h5">Q{{ ind + 1 }}:{{ questions[ind]['text']}}</p>
+                            </div>
+
+                            <div class="row d-flex justify-content-center">
+
+                            <div class="form-check col-8">
+                            {% for ind2 in range(questions[ind]['choices'] | length) %}
+                                {% if not uses_images[ind] %}
+                                <div class="form-group">
+                                <input type="radio" class="q{{ind}}-choice form-check-input" id="q{{ind}}-{{letters[ind2]}}" name="mc-question" value="{{ letters[ind2] }}">
+                                <label for="q{{ind}}-{{letters[ind2]}}" class="form-check-label">{{ questions[ind]['choices'][ind2] }}</label>
+                                    </div>
+                                {% else %}
+                                <div class="form-group">
+                                <input type="radio"  class="q{{ind}}-choice form-check-input" id="q{{ind}}-{{letters[ind2] }}" name="mc-question" value="{{ letters[ind2] }}">
+                                <label for="q{{ind}}-{{letters[ind2]}}" class="form-check-label"><img src=".{{ questions[ind]['choices'][ind2] }}" style="height: 150px; width:150px;"></label>
+                                </div>
+                                {% endif %}
+                            {% endfor %}
+                            </div>
+
+                            </div>
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-4">
+                                    <div class="btn btn-large btn-primary answer-mc" id="answer-mc-{{ind}}">Submit</div>
+                                </div>
+                                <div class="col-8">
+                                <p id="mc-success-text-{{ ind }}" class="d-none" style="color:palegreen">{{ success_text[ind] }}</p>
+                                <p id="mc-failure-text-{{ ind }}" class="d-none" style="color:#ffb500">Wrong answer. Try again!</p>
+                                </div>
+                            </div>
+
+                            <p class="d-none">Correct choice: <span id="mc-correct-choice-{{ind}}">{{ questions[ind]['correct']}}</span></p>
+
+                        </div>
+                    {% endfor %}
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#slide" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#slide" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+
+            </div>
+
+
+
+
+
+    </div>
+
+        </div>
+
+
+            </div>
+
+
+
+
+{% endblock %}
+
+{% block additional_imports %}
+
+    <!-- vector.js -->
+    <link rel="stylesheet" href="https://vectorjs.org/library.css">
+    <script src="../static/game7.js"></script>
+
+
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script type="text/javascript">
+        const layout = {
+            autosize: true
+        };
+        const config = {
+            responsive: true,
+            displayModeBar: false
+        };
+
+        let img3d = {{ graphJSON_3dimg | safe }};
+        Plotly.newPlot('chart-G7-3D', img3d, layout, config);
+        let img2d = {{ graphJSON_2dimg | safe }};
+        Plotly.newPlot('chart-G7-2D', img2d, layout, config);
+        let img1d = {{ graphJSON_1dimg | safe}};
+        Plotly.newPlot('chart-G7-1D', img1d, layout, config);
+    </script>
+
+    <link rel="stylesheet" href="../static/styles/style_game7.css">
+
+
+{% endblock %}

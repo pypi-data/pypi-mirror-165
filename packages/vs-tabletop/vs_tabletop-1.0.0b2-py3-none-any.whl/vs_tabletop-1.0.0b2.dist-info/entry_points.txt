@@ -1,0 +1,2 @@
+[console_scripts]
+vstabletop = vstabletop.app: launch_virtualscanner
