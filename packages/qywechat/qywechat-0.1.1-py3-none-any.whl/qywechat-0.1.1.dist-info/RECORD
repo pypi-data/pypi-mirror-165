@@ -1,0 +1,10 @@
+qywechat/__init__.py,sha256=0eehZJngELQKz8zMPSPR0D1nCzeZjlYrpClL63sAYu0,36
+qywechat/__version__.py,sha256=rnObPjuBcEStqSO0S6gsdS_ot8ITOQjVj_-P1LUUYpg,22
+qywechat/bot.py,sha256=jJ2D2lYpQ741pFQu90NrAdubna_lwfX0IvCbPVirYMw,2912
+qywechat/errors.py,sha256=rnSe_d0ENWZbtzc3aDB6CjAJD21QUt5Jo0mKMmbbAns,317
+qywechat/log.py,sha256=7kmAkY6yAxVcrvExEeAaQbA8reEOzbV1qbeFCZObkGM,54
+qywechat-0.1.1.dist-info/LICENSE,sha256=2Eu1iTYrKFoJ7r202iJi6iCBTANHBjaxf291Z0nFKN8,1065
+qywechat-0.1.1.dist-info/METADATA,sha256=WbZfdQ4u8p7KOyL7IJ6gRCXshCXGbr9oO0D4vFZhUo4,3693
+qywechat-0.1.1.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+qywechat-0.1.1.dist-info/top_level.txt,sha256=lBvfLrqHXALck78vxgu-C-WboIqVHoIaONf6kfUBA7M,9
+qywechat-0.1.1.dist-info/RECORD,,
