@@ -1,0 +1,10 @@
+README.md
+setup.py
+easyspex/__init__.py
+easyspex/preprocessing.py
+easyspex.egg-info/PKG-INFO
+easyspex.egg-info/SOURCES.txt
+easyspex.egg-info/dependency_links.txt
+easyspex.egg-info/requires.txt
+easyspex.egg-info/top_level.txt
+easyspex.egg-info/zip-safe
