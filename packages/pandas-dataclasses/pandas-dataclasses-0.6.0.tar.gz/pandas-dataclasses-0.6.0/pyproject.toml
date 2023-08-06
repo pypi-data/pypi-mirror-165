@@ -1,0 +1,46 @@
+[tool.poetry]
+name = "pandas-dataclasses"
+version = "0.6.0"
+description = "pandas data creation made easy by dataclass"
+authors = ["Akio Taniguchi <taniguchi@a.phys.nagoya-u.ac.jp>"]
+keywords = ["pandas", "dataclass", "series", "dataframe", "typing"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/astropenguin/pandas-dataclasses/"
+documentation = "https://astropenguin.github.io/pandas-dataclasses/"
+
+[tool.poetry.dependencies]
+python = ">=3.7.1, <3.11"
+morecopy = "^0.2"
+numpy = [
+    { version = ">=1.20, <1.22", python = ">=3.7.1, <3.8" },
+    { version = "^1.20", python = ">=3.8, <3.11" },
+]
+pandas = [
+    { version = ">=1.3, <1.4", python = ">=3.7.1, <3.8" },
+    { version = "^1.3", python = ">=3.8, <3.11" },
+]
+typing-extensions = "^4.1"
+
+[tool.poetry.dev-dependencies]
+black = "^22.6"
+ipython = [
+    { version = "^7.34", python = ">=3.7.1, <3.8" },
+    { version = "^8.4", python = ">=3.8, <3.11" },
+]
+myst-parser = "^0.18"
+pandas-stubs = "^1.2"
+pydata-sphinx-theme = "^0.9"
+pyright = "^1.1"
+pytest = "^7.1"
+sphinx = "^5.1"
+
+[tool.pyright]
+reportUnknownArgumentType = "warning"
+reportUnknownMemberType = "warning"
+reportUnknownVariableType = "warning"
+typeCheckingMode = "strict"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
