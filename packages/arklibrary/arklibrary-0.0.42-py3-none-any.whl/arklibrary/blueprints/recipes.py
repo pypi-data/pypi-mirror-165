@@ -1,0 +1,17 @@
+
+class Recipes:
+    NOTE = "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Notes/PrimalItem_Note.PrimalItem_Note'"
+    NOTES_ON_ROCKWELL_RECIPES = "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Notes/PrimalItem_RecipeNote_Measurements.PrimalItem_RecipeNote_Measurements'"
+    ROCKWELL_RECIPES_BATTLE_TARTARE = "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Notes/PrimalItem_RecipeNote_BattleTartare.PrimalItem_RecipeNote_BattleTartare'"
+    ROCKWELL_RECIPES_CALIEN_SOUP = "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Notes/PrimalItem_RecipeNote_CalienSoup.PrimalItem_RecipeNote_CalienSoup'"
+    ROCKWELL_RECIPES_DECORATIVE_COLORING = "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Notes/PrimalItem_RecipeNote_Dye.PrimalItem_RecipeNote_Dye'"
+    ROCKWELL_RECIPES_EGG_BASED_KIBBLE = "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Notes/PrimalItem_RecipeNote_Kibble.PrimalItem_RecipeNote_Kibble'"
+    ROCKWELL_RECIPES_ENDURO_STEW = "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Notes/PrimalItem_RecipeNote_EnduroStew.PrimalItem_RecipeNote_EnduroStew'"
+    ROCKWELL_RECIPES_ENERGY_BREW = "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Notes/PrimalItem_RecipeNote_StaminaSoup.PrimalItem_RecipeNote_StaminaSoup'"
+    ROCKWELL_RECIPES_FOCAL_CHILI = "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Notes/PrimalItem_RecipeNote_FocalChili.PrimalItem_RecipeNote_FocalChili'"
+    ROCKWELL_RECIPES_FRIA_CURRY = "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Notes/PrimalItem_RecipeNote_FriaCurry.PrimalItem_RecipeNote_FriaCurry'"
+    ROCKWELL_RECIPES_LAZARUS_CHOWDER = "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Notes/PrimalItem_RecipeNote_LazarusChowder.PrimalItem_RecipeNote_LazarusChowder'"
+    ROCKWELL_RECIPES_MEAT_JERKY = "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Notes/PrimalItem_RecipeNote_Jerky.PrimalItem_RecipeNote_Jerky'"
+    ROCKWELL_RECIPES_MEDICAL_BREW = "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Notes/PrimalItem_RecipeNote_HealSoup.PrimalItem_RecipeNote_HealSoup'"
+    ROCKWELL_RECIPES_MINDWIPE_TONIC = "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Notes/PrimalItem_RecipeNote_RespecSoup.PrimalItem_RecipeNote_RespecSoup'"
+    ROCKWELL_RECIPES_SHADOW_STEAK_SAUTE = "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Notes/PrimalItem_RecipeNote_ShadowSteak.PrimalItem_RecipeNote_ShadowSteak'"
