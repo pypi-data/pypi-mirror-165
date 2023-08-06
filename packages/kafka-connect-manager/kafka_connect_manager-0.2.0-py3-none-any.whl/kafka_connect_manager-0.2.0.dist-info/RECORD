@@ -1,0 +1,11 @@
+kafka_connect_manager/__init__.py,sha256=IMjkMO3twhQzluVTo8Z6rE7Eg-9U79_LGKMcsWLKBkY,22
+kafka_connect_manager/__main__.py,sha256=PKsHyHhUXY9qhxV3dvCfLov_nSTkh-OKW0eWJRSLwus,162
+kafka_connect_manager/cli.py,sha256=1LV4qBK-NiB8ZaRJX5VV6sf6CrxqZlGzB4fc9mAhuXg,1342
+kafka_connect_manager/constants.py,sha256=hdqumRAhzkX-tt9IzlTxyFU-v4tdvFRm5F_BzPFDqhc,191
+kafka_connect_manager/main.py,sha256=DyU-XACBH1HiW948VJ_l1lPZ-NnxkD6FDedFuSxBum8,4450
+kafka_connect_manager/utils.py,sha256=sMDZp-bN91rmGJlK6YSlt4L9EPHaA2X9v_Jkb1GH7ZE,223
+kafka_connect_manager-0.2.0.dist-info/entry_points.txt,sha256=NbWegoPFBgkPDjbZWpGsXkjbe_ktWaucJwTAYZe-xko,53
+kafka_connect_manager-0.2.0.dist-info/LICENSE,sha256=L_fQW7hUig43ixjr72P4GpHCgeqHEbZtkl4jPA7iUEU,1068
+kafka_connect_manager-0.2.0.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+kafka_connect_manager-0.2.0.dist-info/METADATA,sha256=3stvVZTmtsORQV06eaKFPt7bL7MUsW_-Ft7vJuSMl8k,1732
+kafka_connect_manager-0.2.0.dist-info/RECORD,,
