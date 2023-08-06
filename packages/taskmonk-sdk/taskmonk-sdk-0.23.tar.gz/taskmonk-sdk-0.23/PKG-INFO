@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: taskmonk-sdk
+Version: 0.23
+Summary: SDK for accessing TaskMonk functionality
+Home-page: https://github.com/taskmonk/taskmonk-sdk-python
+Author: Taskmonk
+Author-email: info@taskmonk.com
+License: apache-2.0
+Download-URL: https://github.com/taskmonk/taskmonk-sdk-python/archive/v_0.10.tar.gz
+Description: UNKNOWN
+Keywords: TaskMonk,SDK
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
