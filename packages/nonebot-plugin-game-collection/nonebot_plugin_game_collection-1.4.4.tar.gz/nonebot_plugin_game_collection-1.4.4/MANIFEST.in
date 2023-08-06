@@ -1,0 +1,3 @@
+
+recursive-include nonebot_plugin_game_collection/events/horserace *.json
+recursive-include nonebot_plugin_game_collection/events/fonts *.ttc
