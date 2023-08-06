@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+slise/__init__.py
+slise/data.py
+slise/initialisation.py
+slise/optimisation.py
+slise/plot.py
+slise/slise.py
+slise/utils.py
+slise.egg-info/PKG-INFO
+slise.egg-info/SOURCES.txt
+slise.egg-info/dependency_links.txt
+slise.egg-info/requires.txt
+slise.egg-info/top_level.txt
