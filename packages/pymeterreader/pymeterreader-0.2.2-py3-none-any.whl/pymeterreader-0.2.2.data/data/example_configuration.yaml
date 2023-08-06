@@ -1,0 +1,40 @@
+devices:
+  electric meter:
+    #channels: only need to be configured for the volkszaehler middleware
+    meter_address: /dev/serial0 # All pySerial URL formats are supported(https://pyserial.readthedocs.io/en/latest/url_handlers.html#urls)
+    meter_id: 1 EMH00 12345678 # Optional Check that enforces a specific meter id
+    protocol: sml
+    baudrate: 9600
+    cache_interval: 1s
+  heat meter:
+    channels:
+      6.8:
+        uuid: 83b52b26-1c1a-444d-bf46-d9c702fee644
+        factor: 1000  # convert kWh to Wh
+        interval: 12h
+    meter_id: 888777666 # Optional Check that enforces a specific meter id
+    protocol: plain
+    meter_address: rfc2217://1.2.3.4:4001
+    cache_interval: 3s
+  climate basement:
+    channels:
+      humidity:
+        uuid: ca5a59ee-5de5-4a20-a24a-fdb5f64e5db0
+        interval: 1h
+      temperature:
+        uuid: 397eda02-7909-4af8-b1a6-3d6c8535229a
+        interval: 1h
+      pressure:
+        uuid: 250ca04a-02ee-4a1b-98dd-3423b21008b7
+        interval: 1h
+    meter_address: 0x76  # Default I2C address
+    protocol: BME280  # A sensor, not a real meter
+
+middleware:
+  type: volkszaehler
+  middleware_url: http://localhost/middleware.php  # optional, defaults to local host
+  interpolate: True  # Interpolate hourly values, if interval >=2h
+
+metrics:
+  http_port: 8080 # This is the default Port
+  listen_address: 127.0.0.1 # Deploy a reverse proxy and listen on localhost if you need authentication or https support

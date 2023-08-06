@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: pymeterreader
+Version: 0.2.2
+Summary: pymeterreader is a service to poll smart meters and sensors.It supports uploading to volkszaehler middleware via its REST API.
+Home-page: https://github.com/Schwaneberg/pymeterreader
+Author: Oliver Schwaneberg
+Author-email: Oliver.Schwaneberg@gmail.com
+License: BSD-2-Clause
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3.7
+License-File: LICENSE
+Requires-Dist: pysml (>=0.0.2)
+Requires-Dist: pyserial
+Requires-Dist: humanfriendly
+Requires-Dist: requests
+Requires-Dist: PyYAML
+Requires-Dist: smbus2
+Requires-Dist: construct
+Requires-Dist: curses-menu (==0.5.0)
+Requires-Dist: prometheus-client
+Provides-Extra: test
+Requires-Dist: nose ; extra == 'test'
+Requires-Dist: prospector ; extra == 'test'
+
