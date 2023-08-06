@@ -1,0 +1,5 @@
+fps>=0.0.8
+websockets
+
+[:platform_system == "Windows"]
+pywinpty
