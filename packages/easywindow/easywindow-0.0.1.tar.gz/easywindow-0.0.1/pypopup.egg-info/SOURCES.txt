@@ -1,0 +1,10 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+setup.py
+easywindow/__init__.py
+pypopup.egg-info/PKG-INFO
+pypopup.egg-info/SOURCES.txt
+pypopup.egg-info/dependency_links.txt
+pypopup.egg-info/top_level.txt
