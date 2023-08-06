@@ -1,0 +1,15 @@
+.gitignore
+.pre-commit-config.yaml
+README.md
+pyproject.toml
+.github/workflows/python-package.yml
+.github/workflows/python-publish.yml
+streamlit_ext/__init__.py
+streamlit_ext/st_ext.py
+streamlit_ext.egg-info/PKG-INFO
+streamlit_ext.egg-info/SOURCES.txt
+streamlit_ext.egg-info/dependency_links.txt
+streamlit_ext.egg-info/requires.txt
+streamlit_ext.egg-info/top_level.txt
+tests/__init__.py
+tests/test_ext.py
