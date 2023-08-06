@@ -1,0 +1,22 @@
+Metadata-Version: 2.0
+Name: emuemuJP
+Version: 0.0.2
+Summary: This is a package for me.
+Home-page: UNKNOWN
+Author: emuemuJP
+Author-email: k.matsumoto.0807@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Operating System :: OS Independent
+Requires-Python: ~=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: twine (>=3.8.0)
+Requires-Dist: wheel (>=0.37.1)
+
+UNKNOWN
+
+
