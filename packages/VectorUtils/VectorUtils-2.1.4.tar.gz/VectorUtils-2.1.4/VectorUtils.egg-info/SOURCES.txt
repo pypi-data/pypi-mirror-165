@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+VectorUtils/__init__.py
+VectorUtils/vector2.py
+VectorUtils.egg-info/PKG-INFO
+VectorUtils.egg-info/SOURCES.txt
+VectorUtils.egg-info/dependency_links.txt
+VectorUtils.egg-info/top_level.txt
