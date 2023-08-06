@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <style>
+        p {
+            margin-top: 5px;
+            margin-bottom: 5px;
+            font-size: 13px;
+        }
+        .main-border {
+            border-radius: 15px;
+            border: 2px solid black;
+            width: 475px;
+            margin: auto;
+        }
+
+        .divider {
+            border-bottom: 3px solid #333;
+            width: 465px;
+            margin: 0 auto;
+        }
+
+        .h-organizer {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .bottom-organizer {
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .item-left {
+            display: inline-block;
+        }
+
+        .item-right {
+            float: right;
+            text-align: right;
+        }
+
+        .item-right-info{
+            margin-right: 5px;
+        }
+
+        .metric-text {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .material-symbols-outlined.green {
+            color: green;
+            font-size: 30px;
+        }
+
+        .material-symbols-outlined.yellow {
+            color: #fce303;
+            font-size: 30px;
+        }
+
+        .v-line {
+            border-left: 2px solid;
+            height: 90px;
+            float: right;
+        }
+
+        .logo {
+            float: right;
+            height: 80px;
+            margin-top: 5px;
+            margin-left: 5px;
+        }
+
+        .figure {
+            margin: 0 auto;
+            width: 475px;
+        }
+
+        .doclink {
+            text-align: center;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            font-size: 11px;
+        }
+
+        .comment{
+            font-size: 16px;
+            text-align: center ;
+        }
+
+        .energy-icon {
+            width: 32px;
+        }
+
+        .a-remover {
+            color: inherit;
+            text-decoration: inherit; 
+        }
+
+        @page{
+            size: 500px 750px;
+            margin: 0
+        }
+    </style>
+</head>
+
+<body style="font-family: Arial, Helvetica, sans-serif;">
+
+    <div class="main-border">
+        <h1 style="text-align: center; margin: 10px;">EES Report</h1>
+        <div class="divider"></div>
+        <div id="metricAppend"></div>
+        <div class="divider"></div>
+        <div id="businessAppend"></div>
+        <div class="divider"></div>
+        <div id="graphAppend"></div>
+        <div class="divider"></div>
+        <div class="bottom-organizer">
+            <div class="item-left" id="bottomNameAppend">
+            </div>
+            <img class="logo" id="logo_grip">
+            <div class="v-line"></div>
+            <div class="item-right item-right-info" id="bottomValueAppend">
+            </div>            
+        </div>
+        <div class="doclink">
+            <a href="http://opendc-eesr.readthedocs.io/" target="_blank" >Methodology and Documentation</a>
+        </div>
+    </div>
+
+</body>
+</html>
