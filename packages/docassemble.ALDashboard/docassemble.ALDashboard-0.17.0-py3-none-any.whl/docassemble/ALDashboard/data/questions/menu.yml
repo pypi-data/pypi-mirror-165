@@ -1,0 +1,48 @@
+---
+metadata:
+  title: ALDashboard
+  short title: Dashboard
+  description: |
+    A management dashboard
+  temporary session: True
+  required privileges:
+    - admin
+    - developer
+---
+features: 
+  css: al_dashboard.css
+---
+mandatory: True
+code: |
+  command('exit', url=dashboard)
+---
+question: |
+  ALDashboard 
+Subquestion: |
+  This tool is used by admin users and developers to manage certain tasks.
+field: dashboard
+buttons:
+  - Admin only - manage users: ${ interview_url(i=user_info().package + ":manage_users.yml", reset=1) }
+    image: users-cog    
+  - Admin only - stats: ${ interview_url(i="docassemble.InterviewStats:data/questions/stats.yml", reset=1) }
+    image: chart-bar
+  - Install assembly line: ${ interview_url(i=user_info().package + ":install_assembly_line.yml", reset=1) }
+    image: tasks
+  - Install packages: ${ interview_url(i=user_info().package + ":install_packages.yml", reset=1) }
+    image: cogs    
+  - Update packages: ${ interview_url(i=user_info().package + ":update_packages.yml", reset=1) }
+    image: sync
+  - Package scanner: ${ interview_url(i=user_info().package + ":package_scanner.yml", reset=1) }
+    image: search
+  - View answer files: ${ interview_url(i=user_info().package + ":list_sessions.yml", reset=1) }
+    image: file-alt  
+  - Generate a review screen draft: ${ interview_url(i=user_info().package + ":review_screen_generator.yml", reset=1) }
+    image: pencil-alt    
+  - Validate docx template: ${ interview_url(i=user_info().package + ":validate_docx.yml", reset=1) }
+    image: file-word
+  - Validate translation files: ${ interview_url(i=user_info().package + ":validate_translation.yml", reset=1) }
+    image: language
+  - Validate an attachment fields block: ${ interview_url(i=user_info().package + ":validate_attachment.yml", reset=1) }
+    image: paperclip
+  - PDF tools:  ${ interview_url(i=user_info().package + ":pdf_wrangling.yml", reset=1) }
+    image: file-pdf
