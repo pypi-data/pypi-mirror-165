@@ -1,0 +1,15 @@
+COPYING
+MANIFEST.in
+setup.cfg
+setup.py
+bin/igwn_alert_overseer
+bin/overseer_test_client
+igwn_alert_overseer/__init__.py
+igwn_alert_overseer.egg-info/PKG-INFO
+igwn_alert_overseer.egg-info/SOURCES.txt
+igwn_alert_overseer.egg-info/dependency_links.txt
+igwn_alert_overseer.egg-info/namespace_packages.txt
+igwn_alert_overseer.egg-info/requires.txt
+igwn_alert_overseer.egg-info/top_level.txt
+igwn_alert_overseer/overseer/__init__.py
+igwn_alert_overseer/overseer/overseer_client.py

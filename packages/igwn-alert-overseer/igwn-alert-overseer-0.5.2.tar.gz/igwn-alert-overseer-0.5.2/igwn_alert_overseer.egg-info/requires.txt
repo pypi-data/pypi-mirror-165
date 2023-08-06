@@ -1,0 +1,2 @@
+twisted
+igwn-alert>=0.2.2

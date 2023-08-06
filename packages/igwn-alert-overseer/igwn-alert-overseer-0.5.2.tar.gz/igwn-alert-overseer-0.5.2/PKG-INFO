@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: igwn-alert-overseer
+Version: 0.5.2
+Summary: igwn-alert Overseer Server and Client Tools
+Home-page: UNKNOWN
+Author: Alexander Pace
+Author-email: alexander.pace@ligo.org
+License: GPLv3
+Platform: UNKNOWN
+License-File: COPYING
+
+The igwn-alert overseer provides a way to maintain an open
+connection to igwn-alert for sending message, and to log the outgoing and
+incoming messages and measure latencies.
+
