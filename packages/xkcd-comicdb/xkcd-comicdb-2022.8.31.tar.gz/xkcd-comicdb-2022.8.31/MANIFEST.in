@@ -1,0 +1,2 @@
+include xkcd_comicdb/xkcd.sqlite3
+global-exclude .DS_Store

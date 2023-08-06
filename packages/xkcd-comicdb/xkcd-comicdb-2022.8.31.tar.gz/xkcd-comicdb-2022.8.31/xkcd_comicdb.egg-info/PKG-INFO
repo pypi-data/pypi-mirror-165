@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: xkcd-comicdb
+Version: 2022.8.31
+Summary: SQLite3 database of every xkcd comic, scraped from the xkcd JSON API.
+Author: Noah Tanner
+Author-email: noahtnr@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: Free for non-commercial use
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Database
+Requires-Python: >=3.7

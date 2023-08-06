@@ -1,0 +1,8 @@
+MANIFEST.in
+setup.py
+xkcd_comicdb/__init__.py
+xkcd_comicdb/xkcd.sqlite3
+xkcd_comicdb.egg-info/PKG-INFO
+xkcd_comicdb.egg-info/SOURCES.txt
+xkcd_comicdb.egg-info/dependency_links.txt
+xkcd_comicdb.egg-info/top_level.txt
