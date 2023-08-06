@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: cipwizard
+Version: 0.1.3
+Summary: Twitter2SQL: A toolset for uploading Twitter JSON data pulled from
+Home-page: https://github.com/uwcip-research/CIPWizard
+Author: Andrew Beers
+Author-email: albeers@uw.edu
+License: UNKNOWN
+Download-URL: https://github.com/uwcip-research/CIPWizard/0.1.3
+Description: UNKNOWN
+Keywords: twitter,sql
+Platform: UNKNOWN
