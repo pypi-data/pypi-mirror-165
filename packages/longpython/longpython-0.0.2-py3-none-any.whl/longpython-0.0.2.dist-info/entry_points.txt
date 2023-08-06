@@ -1,0 +1,3 @@
+[console_scripts]
+longpython=longpython.main:main
+
