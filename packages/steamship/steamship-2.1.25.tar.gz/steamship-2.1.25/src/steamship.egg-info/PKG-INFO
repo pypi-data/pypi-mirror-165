@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: steamship
+Version: 2.1.25
+Summary: TEST
+Home-page: https://www.steamship.com
+Author: Steamship Team
+Author-email: developers@steamship.com
+License: MIT
+Project-URL: Documentation, https://steamship.com/
+Project-URL: Source, https://github.com/steamship-core/python-client/
+Project-URL: Twitter, https://twitter.com/GetSteamship
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown; charset=UTF-8
+Provides-Extra: testing
+License-File: LICENSE
+License-File: AUTHORS.rst
