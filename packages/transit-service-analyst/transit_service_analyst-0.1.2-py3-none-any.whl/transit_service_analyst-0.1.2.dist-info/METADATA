@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: transit-service-analyst
+Version: 0.1.2
+Summary: Tools to support transit service analysis
+Author: psrc staff
+Author-email: scoe@psrc.org
+Requires-Python: >=3.6
+License-File: LICENSE
+
