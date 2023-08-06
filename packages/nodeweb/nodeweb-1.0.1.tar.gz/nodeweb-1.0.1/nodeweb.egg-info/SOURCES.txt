@@ -1,0 +1,6 @@
+setup.py
+nodeweb/__init__.py
+nodeweb.egg-info/PKG-INFO
+nodeweb.egg-info/SOURCES.txt
+nodeweb.egg-info/dependency_links.txt
+nodeweb.egg-info/top_level.txt
