@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: deeplake
+Version: 0.0.4
+Summary: C++ backend for hub
+Author: activeloop.ai
+Author-email: support@activeloop.ai
+Project-URL: Documentation, https://docs.activeloop.ai/
+Project-URL: Source, https://github.com/activeloopai/indra
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: torch
+Requires-Dist: pathos
+
