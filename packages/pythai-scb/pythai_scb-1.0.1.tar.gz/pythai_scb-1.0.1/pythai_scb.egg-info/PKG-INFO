@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: pythai-scb
+Version: 1.0.1
+Summary: Unofficial SCB Bank Account Balance Check
+Home-page: https://github.com/ktantikarun/pythai-scb-unofficial
+Author: Krittaboon Tantikarun
+Author-email: krittaboon.t@gmail.com
+License: MIT License
+Project-URL: Bug Reports & Feature Request, https://github.com/ktantikarun/pythai-scb-unofficial/issues
+Project-URL: Source, https://github.com/ktantikarun/pythai-scb-unofficial
+Keywords: scb,investing-api,accounting-data,financial-data,accountbalance
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: Intended Audience :: Information Technology
+Classifier: Topic :: Office/Business :: Financial
+Classifier: Topic :: Office/Business :: Financial :: Accounting
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# pythai-scb-unofficial
+
+## Description
+PyThaiSCB is an unofficial python library to pull bank account balances data from SCB (Siam Commercial Bank) Easy Net website using Selenium webdriver. Using web crawling under the hood, the function call is slow as it depends solely on the performance of SCB Easy Net website.
+
+### Available features:
+
+1. Get the list of all the bank accounts and their relevant information: account type, account number, account nickname and outstanding balance
+2. Feel free to reach out to me to request for more features !
+
+## Disclaimer
+This is a non-profit project that was initiated to solve the pain of having no official open APIs made available from the bank. The library DOES NOT keep your credentials. Nevertheless, use it at your own risk.
+
+## Installation
+```bash
+pip install pythai-scb
+```
+
+## Usage
+```python
+from pythai_scb import PyThaiSCB
+
+scb_acc = PyThaiSCB(username='your_scbeasynet_username', password='your_scbeasynet_password')
+bank_acc_df = scb_acc.get_account_bal_df()
+```
+
