@@ -1,0 +1,6 @@
+meutils
+fastapi[all]
+uvicorn
+streamlit
+gradio
+thriftpy2
