@@ -1,0 +1,7 @@
+Pillow
+pyperclip
+yt-dlp
+youtube-search-python
+mutagen
+requests
+validators

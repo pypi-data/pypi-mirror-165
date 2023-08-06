@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: Youtube_Video_Audio_Downloader
+Version: 0.2.0
+Summary: A Simple GUI interface to help download videos and audio files from Youtube using Youtube-dl and FFMPEG
+Home-page: https://github.com/Alex-Au1/Youtube_Downloader
+Author: Alex Au
+Author-email: AlexXianZhenYuAu@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+## Youtube Video Downloader
+A GUI interface to help download videos and audio files from Youtube using **Youtube-dl** and **FFMPEG**
