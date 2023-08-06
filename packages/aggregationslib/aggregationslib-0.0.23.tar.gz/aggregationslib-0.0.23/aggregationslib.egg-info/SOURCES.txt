@@ -1,0 +1,12 @@
+README.md
+setup.py
+aggregationslib/__init__.py
+aggregationslib/aggregation.py
+aggregationslib/decimalaggregations.py
+aggregationslib/example.py
+aggregationslib/purepython.py
+aggregationslib.egg-info/PKG-INFO
+aggregationslib.egg-info/SOURCES.txt
+aggregationslib.egg-info/dependency_links.txt
+aggregationslib.egg-info/requires.txt
+aggregationslib.egg-info/top_level.txt
