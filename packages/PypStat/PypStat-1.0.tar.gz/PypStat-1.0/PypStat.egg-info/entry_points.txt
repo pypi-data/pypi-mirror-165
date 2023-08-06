@@ -1,0 +1,3 @@
+[console_scripts]
+PyStat = PStat:Main
+PyStats = PStat:Main
