@@ -1,0 +1,2 @@
+aws-xray-sdk<3,>=2.9
+celery<6,>=5

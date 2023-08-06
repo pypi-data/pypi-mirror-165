@@ -1,0 +1,1 @@
+celery_aws_xray_sdk_extension
