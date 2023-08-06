@@ -1,0 +1,23 @@
+Changes to Design Aug 29, 2022 by N2ADR
+=======================================
+
+Create a radio of type "Control Head", and on the Radio/Remote screen enter the IP address of the
+remote radio and a password. Change the hardware file to ac2yd/control_softrock.py or
+ac2yd/control_hermes.py. Enter the usual widget file if any. Create sound devices for radio sound
+and microphone sound. Do not create devices for samples.
+
+Create a radio of the correct type at the remote site. For example, SoftRock USB or Hermes. Set up
+the radio to correctly control the hardware. You should be able to operate successfully at the remote.
+Then change the hardware file to ac2yd/remote_softrock.py or ac2yd/remote_hermes.py. Enter the usual
+widget file if any. Enter the same password on the Radio/Remote screen. The password only needs to be
+entered once at each end. It is a "shared secret". Use a somewhat lengthy pass phrase of random words,
+at least 20 characters long.
+
+You can use Windows, Mac or Linux at either end. But for Windows, the Windows Firewall will interfere.
+Do not turn the firewall off. Change the network profile type from the default Public to Private if
+you are on a private home network. The setting is under Settings, Network, WiFi or Ethernet, Network Profile.
+If you are on a public network, you should use a VPN for security. 
+
+For security, Quisk will not accept remote operation unless the special hardware files are used. And the
+password or pass phrase must match. But you must (as usual) make sure both computers are secure and can not
+be broken into. You must (as usual) have a good router password and secure settings to protect your home network.
