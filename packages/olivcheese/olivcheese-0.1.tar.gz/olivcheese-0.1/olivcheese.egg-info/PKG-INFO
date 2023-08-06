@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: olivcheese
+Version: 0.1
+Home-page: http://google.com
+Author: oliverstech
+Author-email: imrolii9876@gmail.com
+License: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
