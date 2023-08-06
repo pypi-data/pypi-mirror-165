@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "norsvinpy"
+version = "0.1.1"
+description = "Demo environement for ML development"
+authors = ["Christopher <christopher.coello@norsvin.no>"]
+packages = [{include = "norsvinpy"}]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+requests = "^2.28.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+black = "^22.6.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
