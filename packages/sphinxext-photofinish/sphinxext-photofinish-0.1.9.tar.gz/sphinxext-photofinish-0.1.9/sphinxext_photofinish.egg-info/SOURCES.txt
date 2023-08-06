@@ -1,0 +1,10 @@
+LICENSE.md
+README.md
+setup.py
+sphinxext/photofinish/__init__.py
+sphinxext/photofinish/svgtopng.py
+sphinxext_photofinish.egg-info/PKG-INFO
+sphinxext_photofinish.egg-info/SOURCES.txt
+sphinxext_photofinish.egg-info/dependency_links.txt
+sphinxext_photofinish.egg-info/requires.txt
+sphinxext_photofinish.egg-info/top_level.txt
