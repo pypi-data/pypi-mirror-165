@@ -1,0 +1,2 @@
+[gui_scripts]
+pamet = pamet.desktop_app.main:main
