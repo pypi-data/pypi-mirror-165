@@ -1,0 +1,30 @@
+estnltk-core
+regex>=2015.07.19
+python-crfsuite>=0.8.3
+cached-property>=1.2.0
+bs4
+html5lib
+lxml
+requests
+tqdm
+conllu
+pandas
+pyahocorasick
+
+[:python_version == "3.6"]
+networkx==2.5
+matplotlib==3.3.4
+ipython<7.17.0
+
+[:python_version == "3.7"]
+networkx<=2.6.3
+matplotlib<=3.5.3
+ipython<=7.32.0
+
+[:python_version > "3.7"]
+networkx
+matplotlib
+ipython
+
+[:python_version >= "3.6"]
+nltk>=3.4.1
