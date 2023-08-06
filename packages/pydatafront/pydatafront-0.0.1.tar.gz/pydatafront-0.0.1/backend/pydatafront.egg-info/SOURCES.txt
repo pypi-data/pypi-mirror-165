@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+setup.cfg
+backend/pydatafront/__init__.py
+backend/pydatafront/__main__.py
+backend/pydatafront.egg-info/PKG-INFO
+backend/pydatafront.egg-info/SOURCES.txt
+backend/pydatafront.egg-info/dependency_links.txt
+backend/pydatafront.egg-info/requires.txt
+backend/pydatafront.egg-info/top_level.txt
+backend/pydatafront/app/__init__.py
+backend/pydatafront/decorator/__init__.py
