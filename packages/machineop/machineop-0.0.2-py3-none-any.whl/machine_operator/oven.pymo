@@ -1,0 +1,51 @@
+events
+  bakeOn            E_BKON
+  cleanOn           E_CLON
+  cleanOff          E_CLOF
+end
+
+commands
+  timerInitial      C_TMIN  
+  timerRunning      C_TMRN
+  lockDoor          C_D1LK
+  unlockDoor        C_D1UL
+  magnetronOn       C_MGON
+  magnetronOff      C_MGOF
+  internalLightOn   C_ILON
+  internalLightOff  C_ILOF
+  turnTableOn       C_TTON
+  turnTableOff      C_TTOF
+  cleanerOn         C_CLON    
+  cleanerOff        C_CLOF
+end
+
+commandgroups
+  group resetCommands
+    unlockDoor
+    timerInitial
+    magnetronOff
+    internalLightOff
+    turnTableOff
+    cleanerOff
+  groupend
+  group commonActiveCommands
+    lockDoor  
+    internalLightOn
+    timerRunning  
+  groupend
+end
+
+state idle
+  actions {resetCommands}
+  bakeOn => baking
+  cleanOn => cleaning
+end
+
+state baking
+  actions {commonActiveCommands magnetronOn turnTableOn}
+end
+
+state cleaning
+  actions {commonActiveCommands cleanerOn turnTableOff}
+  cleanOff => idle
+end
