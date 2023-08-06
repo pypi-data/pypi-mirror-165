@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: downfile
+Version: 0.0.2
+Summary: Serialize data as a zip file of json and other formats
+Home-page: https://github.com/emerald-geomodelling/downfile
+Author: Egil Moeller
+Author-email: em@emrld.no
+License: UNKNOWN
+Description: Serialize data as a zip file of json and other formats
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
