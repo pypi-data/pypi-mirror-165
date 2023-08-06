@@ -1,0 +1,8 @@
+calmap
+fit2gpx
+gpxpy
+matplotlib
+pandas
+plotnine
+rich
+seaborn
