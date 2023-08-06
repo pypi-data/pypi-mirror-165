@@ -1,0 +1,12 @@
+currency_converter/__init__.py,sha256=JL0wf5_6fMcRrIeYf9QqR8FClMg34EdKEjtNHtNpFgI,107
+currency_converter/__main__.py,sha256=V6G1ImLlIfcFOgX6ssal_aTdAbtbd6bqh-_ww9KaYho,3175
+currency_converter/_version.py,sha256=mrwBkyZNcMowMG4-KslRvuWjlT2xdlnWDSWDZEK270s,23
+currency_converter/currency_converter.py,sha256=0IjWE5ZxEQQ_A1NF-lvHgUwDnGs5fnSJpIIQ4BQ9fd8,13531
+currency_converter/eurofxref-hist.zip,sha256=TLb-owGReM0S_MulDPCAQBU5A0ZhPtECnXJyOS6auqg,540276
+currency_converter/eurofxref.csv,sha256=yax7eytKE_oi3SItB_9ZghU45tYBi0PZJ4nKL-6j-DI,436
+CurrencyConverter-0.17.1.dist-info/LICENSE,sha256=qj4sIc8SNMG5iqJkG4M4cjaG98LJfOWr_oxannOhPZk,11311
+CurrencyConverter-0.17.1.dist-info/METADATA,sha256=JG8nTk8RdknUSPkbcAHLNHkTzv6BYgfErbb47m93j0M,6430
+CurrencyConverter-0.17.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+CurrencyConverter-0.17.1.dist-info/entry_points.txt,sha256=-kPlaD7UeqTBGzA0MPAlYa_0EfM1hhlSBtXuqDtzwTQ,72
+CurrencyConverter-0.17.1.dist-info/top_level.txt,sha256=rfUaeIdIM_3mF9JiK3NGSSz8W3t-Lwc2Hs4pj0gTOpk,19
+CurrencyConverter-0.17.1.dist-info/RECORD,,
