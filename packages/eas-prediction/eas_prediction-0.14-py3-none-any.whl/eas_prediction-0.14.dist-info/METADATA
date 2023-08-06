@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: eas-prediction
+Version: 0.14
+Summary: Python client sdk for eas inference service
+Home-page: http://gitlab.alibaba-inc.com/eas/eas-python-sdk
+License: UNKNOWN
+Platform: UNKNOWN
+License-File: LICENSE.txt
+Requires-Dist: urllib3
+Requires-Dist: protobuf (==3.14)
+Requires-Dist: pyfarmhash
+Requires-Dist: numpy (>=1.9)
+
+UNKNOWN
+
