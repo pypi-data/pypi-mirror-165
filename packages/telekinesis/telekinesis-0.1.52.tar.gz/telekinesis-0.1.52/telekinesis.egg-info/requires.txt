@@ -1,0 +1,5 @@
+websockets
+cryptography
+bson
+ujson
+packaging
