@@ -1,0 +1,26 @@
+# pyproject.toml
+
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyptx-templar"
+version = "0.1.1"
+description = "Easily fill PowerPoint templates with Python"
+readme = "README.md"
+license = { file = "LICENSE" }
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+keywords = ["template", "PowerPoint"]
+dependencies = [
+    "python-pptx >= 0.6",
+    "Pillow >= 9.2"
+]
+requires-python = ">=3.9"
+
+[project.urls]
+Homepage = "https://github.com/pgimalac/pyptx-templar"
