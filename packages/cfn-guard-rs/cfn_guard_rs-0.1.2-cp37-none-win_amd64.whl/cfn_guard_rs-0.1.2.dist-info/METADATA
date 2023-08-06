@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: cfn_guard_rs
+Version: 0.1.2
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+
+# cfn_guard_rs
+
+Converts [CloudFormation Guard](https://github.com/aws-cloudformation/cloudformation-guard) into a Python library that can be used in your Python packages
+
+# How to use
+1. Include `cfn_guard_rs` in your project
+1. Use `run_checks` function to run guard with `rules` (str) against resource `data` (dict)
+1. Use the output (`DataOutput`) to parse the results and see if the data is compliant or not
+
