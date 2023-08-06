@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+code/gnoll/__init__.py
+code/gnoll/parser.py
+code/gnoll.egg-info/PKG-INFO
+code/gnoll.egg-info/SOURCES.txt
+code/gnoll.egg-info/dependency_links.txt
+code/gnoll.egg-info/top_level.txt
