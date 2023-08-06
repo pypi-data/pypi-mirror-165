@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+optumi_core/__init__.py
+optumi_core/_version.py
+optumi_core/core.py
+optumi_core/logging.py
+optumi_core/login.py
+optumi_core/sessions.py
+optumi_core/utils.py
+optumi_core.egg-info/PKG-INFO
+optumi_core.egg-info/SOURCES.txt
+optumi_core.egg-info/dependency_links.txt
+optumi_core.egg-info/not-zip-safe
+optumi_core.egg-info/requires.txt
+optumi_core.egg-info/top_level.txt
