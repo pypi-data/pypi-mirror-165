@@ -1,0 +1,6 @@
+# SPDX-FileCopyrightText: Copyright (c) 2022 Graham N Beland
+#
+# SPDX-License-Identifier: MIT
+
+Adafruit-Blinka
+adafruit-circuitpython-busdevice
