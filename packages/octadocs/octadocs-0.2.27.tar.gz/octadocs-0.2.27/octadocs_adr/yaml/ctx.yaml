@@ -1,0 +1,35 @@
+# Do not rename this to context.yaml. Breaks loading of octadocs-adr.yaml
+$context:
+  xsd: https://www.w3.org/2001/XMLSchema#
+  adr: https://adr.octadocs.io/
+  octa: https://octadocs.io/
+
+  symbol: octa:symbol
+
+  title:
+    $id: octa:title
+
+  number:
+    $id: adr:number
+    $type: xsd:integer
+
+  date:
+    $id: adr:date
+    $type: xsd:date
+
+  status:
+    $id: adr:status
+    $type: $id
+
+  accepted:
+    $id: adr:accepted
+
+  rejected:
+    $id: adr:rejected
+
+  created:
+    $id: adr:created
+
+  author:
+    $id: adr:author
+    $type: $id

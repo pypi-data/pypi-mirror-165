@@ -1,0 +1,21 @@
+{% extends "main.html" %}
+
+
+{% block content %}
+    {{ super() }}
+
+    {% set pages = octiron.query(
+        '''
+        SELECT * WHERE {
+            ?index octa:isChildOf ?directory .
+            ?directory octa:isParentOf ?adr .
+            ?adr adr:number ?number .
+        } ORDER BY DESC(?number)
+        ''',
+        index=page.iri
+    ) %}
+
+    {% for page in pages %}
+        <h2>{{ link(page.adr) }}</h2>
+    {% endfor %}
+{% endblock %}

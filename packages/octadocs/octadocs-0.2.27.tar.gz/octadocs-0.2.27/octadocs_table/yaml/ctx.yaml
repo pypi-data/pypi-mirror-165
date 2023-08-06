@@ -1,0 +1,15 @@
+$context:
+  table: https://octadocs.io/table/
+
+  table:columns:
+    $id: table:columns
+    $type: $id
+    $container: $list
+
+  table:class:
+    $type: $id
+
+  table:ordering:
+    $id: table:ordering
+    $type: $id
+    $container: $list

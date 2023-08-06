@@ -1,0 +1,63 @@
+- $id: table:Table
+  comment: "Definition of a table."
+  iolanta:instanceFacet:
+    - $id: python://octadocs_table.facets.Table
+      iolanta:supports: iolanta:html
+    - $id: templates://octadocs-table/table.html
+      $type: octa:PageFacet
+  ≡:
+    onProperty: iolanta:isSupportedBy
+    hasValue:
+      $id: python://octadocs_table.facets.self.SelfFacet
+
+- $id: table:columns
+  domain: table:Table
+  range: table:ColumnList
+
+
+- $id: table:ColumnList
+  comment: RDF List of table columns
+  ≡:
+    - onProperty: rdf:first
+      ∀: table:Column
+      comment: Head of the list is always a column
+    - onProperty: rdf:rest
+      ∀: table:ColumnList
+      comment: remainder of a list is always a list. These two clauses exist in order to mark `table:Column` instances as such.
+
+
+- $id: table:Column
+  iolanta:instanceFacet:
+    $id: python://octadocs_table.facets.legend.ColumnLegend
+    iolanta:supports: iolanta:html
+
+- $id: table:thead
+  subClassOf: iolanta:html
+  label: Render nodes as content of <th> tags in table column headers.
+  iolanta:hasDefaultFacet:
+    $id: python://octadocs_table.facets.Th
+
+#- $id: octa:Page
+#  iolanta:instanceFacet:
+#    $id: python://octadocs.facets.link
+#    iolanta:supports:
+#      $id: table:th
+
+- $id: table:th
+  $type: iolanta:Environment
+  iolanta:hasDefaultFacet:
+    $id: python://octadocs.facets.Default
+
+- $id: table:td
+  $type: iolanta:Environment
+  has-broader: iolanta:html
+  label: <td>
+  iolanta:hasDefaultFacet:
+    $id: python://octadocs.facets.Default
+
+- $id: python://octadocs.facets.bool_literal.BoolLiteral
+  iolanta:supports: table:td
+
+- $id: table:self
+  iolanta:facet:
+    $id: python://octadocs_table.facets.self.SelfFacet

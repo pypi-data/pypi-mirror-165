@@ -1,0 +1,13 @@
+$context:
+  - $import: telegram
+  - $import: iolanta
+  - $import: table
+  - $import: ibis
+
+$included:
+  - $id: telegram:TelegramLink
+    iolanta:instanceFacet:
+      $id: python://octadocs_telegram.facets.TelegramLink
+      iolanta:supports:
+        - iolanta:html
+        - table:td

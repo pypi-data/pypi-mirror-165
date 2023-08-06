@@ -1,0 +1,59 @@
+{
+  "@context": {
+    "ibis": "https://vocab.methodandstructure.com/ibis#",
+    "ibis:concern-of": {
+      "@type": "@id"
+    },
+    "ibis:concerns": {
+      "@type": "@id"
+    },
+    "ibis:endorsed-by": {
+      "@type": "@id"
+    },
+    "ibis:endorses": {
+      "@type": "@id"
+    },
+    "ibis:generalizes": {
+      "@type": "@id"
+    },
+    "ibis:opposed-by": {
+      "@type": "@id"
+    },
+    "ibis:opposes": {
+      "@type": "@id"
+    },
+    "ibis:questioned-by": {
+      "@type": "@id"
+    },
+    "ibis:questions": {
+      "@type": "@id"
+    },
+    "ibis:replaced-by": {
+      "@type": "@id"
+    },
+    "ibis:replaces": {
+      "@type": "@id"
+    },
+    "ibis:responds-to": {
+      "@type": "@id"
+    },
+    "ibis:response": {
+      "@type": "@id"
+    },
+    "ibis:specializes": {
+      "@type": "@id"
+    },
+    "ibis:suggested-by": {
+      "@type": "@id"
+    },
+    "ibis:suggests": {
+      "@type": "@id"
+    },
+    "ibis:supported-by": {
+      "@type": "@id"
+    },
+    "ibis:supports": {
+      "@type": "@id"
+    }
+  }
+}
