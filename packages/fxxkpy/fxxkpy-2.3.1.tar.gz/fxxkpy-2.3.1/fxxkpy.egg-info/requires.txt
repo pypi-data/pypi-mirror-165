@@ -1,0 +1,4 @@
+colorama
+pygame
+pywin32
+sympy
