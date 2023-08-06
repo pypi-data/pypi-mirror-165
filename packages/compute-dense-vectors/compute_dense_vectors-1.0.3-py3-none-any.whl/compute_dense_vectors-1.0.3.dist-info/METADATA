@@ -1,0 +1,123 @@
+Metadata-Version: 2.1
+Name: compute-dense-vectors
+Version: 1.0.3
+Summary: Utility to compute dense vector representation for dataset in the document_tracking_resources format base on dense transformers models.
+Home-page: https://gitlab.univ-lr.fr/cross-lingual-event-tracking/datasets/dataset_manipulation_tools/compute_dense_vectors
+Author: Guillaume Bernard
+Author-email: contact@guillaume-bernard.fr
+License: UNKNOWN
+Project-URL: Bug Tracker, https://gitlab.univ-lr.fr/cross-lingual-event-tracking/datasets/dataset_manipulation_tools/compute_dense_vectors/-/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Intended Audience :: Science/Research
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: AUTHORS
+Requires-Dist: document-tracking-resources (~=1.0.0)
+Requires-Dist: pandas (~=1.3.5)
+Requires-Dist: sentence-transformers (~=2.1.0)
+Requires-Dist: tqdm (~=4.62.3)
+
+# Compute dense representation of texts
+
+This software is used to compute dense vectorisations (sentence embeddings) of sequences of sentences of natural text. It is able to handle multilingual documents until the model used is a multilingual one. This relies on the S-BERT architecture, software and models (https://www.sbert.net/). It computes dense vector representations for tokens, lemmas, entities, etc. of your datasets.
+
+The idea of computing dense representation of documents is inspired by some previous works:
+
+```text
+Reimers, Nils, et Iryna Gurevych. 2019. ’Sentence-BERT: Sentence Embeddings 
+Using Siamese BERT-Networks’. In Proceedings of the 2019 Conference on 
+Empirical Methods in Natural Language Processing and the 9th International 
+Joint Conference on Natural Language Processing (EMNLP-IJCNLP), 3982‑92. 
+Hong Kong, China: Association for Computational Linguistics. 
+https://doi.org/10.18653/v1/D19-1410.
+```
+
+```text
+Linger, Mathis, et Mhamed Hajaiej. 2020. ’Batch Clustering for Multilingual 
+News Streaming’. In Proceedings of Text2Story - Third Workshop on Narrative
+Extraction From Texts Co-Located with 42nd European Conference on 
+Information Retrieval, 2593:55‑61. CEUR Workshop Proceedings. Lisbon, 
+Portugal. http://ceur-ws.org/Vol-2593/paper7.pdf.
+```
+
+```text
+Staykovski, Todor, Alberto Barron-Cedeno, Giovanni da San Martino, et Preslav 
+Nakov. 2019. ‘Dense vs. Sparse Representations for News Stream Clustering’. 
+In Proceedings of Text2Story - 2nd Workshop on Narrative Extraction From 
+Texts, Co-Located with the 41st European Conference on Information, 
+2342:47‑52. Cologne, Germany: CEUR-WS.org. 
+https://ceur-ws.org/Vol-2342/paper6.pdf.
+```
+
+## Installation
+
+```bash
+pip install compute_dense_vectors
+```
+
+## Pre-requisites
+
+### Dependencies
+
+This project relies on two other packages: [`document_tracking_resources`](https://gitlab.univ-lr.fr/cross-lingual-event-tracking/developpement/from-documents-to-events/documents_tracking_resources). This code needs to have access to this packages. It relies on [`sentence-transformers`](https://www.sbert.net/) to compute dense representation of documents.
+
+## Transformers Models
+
+To compute dense representation of documents, we use the [`sentence-transformers`](https://www.sbert.net/) package is used with two multilingual models: `paraphrase-multilingual-mpnet-base-v2` and `distiluse-base-multilingual-cased-v1`. According to [the documentation](https://www.sbert.net/docs/pretrained_models.html), and at the time of writing, they are the two models to give the best results in multilingual semantic similarity.
+
+## The corpus to process
+
+The script can process two different types of Corpus from `document_tracking_resources`. The one for News (`NewsCorpusWithSparseFeatures`), the other one for Tweets (`TwitterCorpusWithSparseFeatures`). The datafiles should be loaded by `document_tracking_resources` in order to have this project to work.
+
+For instance, below an example of a `TwitterCorpusWithSparseFeatures`:
+
+```text
+                                         date lang                                text               source  cluster
+1218234203361480704 2020-01-17 18:10:42+00:00  eng  Q: What is a novel #coronavirus...      Twitter Web App   100141
+1218234642186297346 2020-01-17 18:12:27+00:00  eng  Q: What is a novel #coronavirus...                IFTTT   100141
+1219635764536889344 2020-01-21 15:00:00+00:00  eng  A new type of #coronavirus     ...            TweetDeck   100141
+...                                       ...  ...                                 ...                  ...      ...
+1298960028897079297 2020-08-27 12:26:19+00:00  eng  So you come in here WITHOUT A M...   Twitter for iPhone   100338
+1310823421014573056 2020-09-29 06:07:12+00:00  eng  Vitamin and mineral supplements...            TweetDeck   100338
+1310862653749952512 2020-09-29 08:43:05+00:00  eng  FACT: Vitamin and mineral suppl...  Twitter for Android   100338
+```
+
+And an example of a `NewsCorpusWithSparseFeatures`:
+```text
+                              date lang                     title               text                     source  cluster
+24290965 2014-11-02 20:09:00+00:00  spa  Ponta gana la prim   ...  Las encuestas...                    Publico     1433
+24289622 2014-11-02 20:24:00+00:00  spa  La cantante Katie Mel...  La cantante b...          La Voz de Galicia      962
+24290606 2014-11-02 20:42:00+00:00  spa  Los sondeos dan ganad...  El Tribunal  ...                    RTVE.es     1433
+...                            ...  ...                       ...               ...                        ...      ...
+47374787 2015-08-27 12:32:00+00:00  deu  Microsoft-Betriebssys...  San Francisco...               Handelsblatt      170
+47375011 2015-08-27 12:44:00+00:00  deu  Microsoft-Betriebssy ...  San Francisco...               WiWo Gründer      170
+47394969 2015-08-27 20:35:00+00:00  deu  Windows 10: Mehr als ...  In zwei Tagn ...                  gamona.de      170
+```
+
+## Command line arguments
+
+Once installed, the command `compute_dense_vectors` can be used directly, as registered in your PATH.
+
+
+```text
+usage: compute_dense_vectors [-h] --corpus CORPUS --dataset-type {twitter,news} [--model-name MODEL_NAME] --output-corpus OUTPUT_CORPUS
+
+Take a document corpus (in pickle format) and compute dense vectors for every feature
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --corpus CORPUS       Path to the pickle file containing the corpus to process.
+  --dataset-type {twitter,news}
+                        The kind of dataset to process. ‘twitter’ will use the ’TwitterCorpus’ class, the ‘Corpus’ class otherwise
+  --model-name MODEL_NAME
+                        The name of the model that can be used to encode sentences using the S-BERT library
+  --output-corpus OUTPUT_CORPUS
+                        Path where to export the new corpus with computed TF-IDF vectors.
+```
+
+
