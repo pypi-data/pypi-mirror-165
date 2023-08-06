@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: racoon
+Version: 0.0.0
+Summary: Racoon
+Home-page: https://github.com/nymann/racoon
+Maintainer: Kristian Nymann Jakobsen
+Maintainer-email: kristian@nymann.dev
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Provides-Extra: all
+Provides-Extra: dev
+Provides-Extra: tests
+
+# Racoon
+
+## Development
+
+For help getting started developing check [DEVELOPMENT.md](DEVELOPMENT.md)
