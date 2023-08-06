@@ -1,0 +1,14 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "mollier"
+authors = [{name = "Guillem Borrell", email = "guillemborrell@guillemborrell.es"}]
+readme = "README.md"
+license = {file = "LICENSE"}
+classifiers = ["License :: OSI Approved :: GNU Affero General Public License v3"]
+dynamic = ["version", "description"]
+
+[project.urls]
+Home = "https://mollier.dev"

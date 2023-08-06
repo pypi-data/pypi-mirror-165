@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: mollier
+Version: 0.0.1
+Summary: Mollier is he fastest way to implement, configure, and deploy data applications
+Author-email: Guillem Borrell <guillemborrell@guillemborrell.es>
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Project-URL: Home, https://mollier.dev
+
+# mollier
+
+Mollier makes the development, setup, and deployment of data applications easy
