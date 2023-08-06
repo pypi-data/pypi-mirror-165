@@ -1,0 +1,123 @@
+Metadata-Version: 2.1
+Name: onx
+Version: 0.2.0
+Summary: Noughts & Crosses (Tic Tac Toe) terminal based, client-server online game with your partner through websockets.
+Home-page: https://github.com/vyalovvldmr/onx
+License: GPL-3.0-or-later
+Keywords: Noughts & Crosses,Tic Tac Toe,terminal based game,online game,websockets
+Author: Vladimir Vyalov
+Author-email: vyalov.v@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Framework :: AsyncIO
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows :: Windows 11
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Games/Entertainment :: Board Games
+Classifier: Typing :: Typed
+Requires-Dist: aiohttp[speedups] (==3.8.1)
+Requires-Dist: cachetools (==5.2.0)
+Requires-Dist: click (==8.1.3)
+Requires-Dist: pydantic (==1.9.2)
+Requires-Dist: pyfiglet (==0.8.post1)
+Requires-Dist: schema (==0.7.5)
+Requires-Dist: single-source (==0.3.0)
+Requires-Dist: textual (==0.1.18)
+Project-URL: Repository, https://github.com/vyalovvldmr/onx
+Description-Content-Type: text/markdown
+
+# Noughts & Crosses (Tic Tac Toe)
+
+[![RunTests](https://github.com/vyalovvldmr/onx/actions/workflows/run_tests.yml/badge.svg)](https://github.com/vyalovvldmr/onx/actions/workflows/run_tests.yml)
+
+Noughts & Crosses (Tic Tac Toe) terminal based, client-server online game with your partner through websockets.
+
+## Requires
+
+Python 3.10
+
+## Install
+
+```
+$ pip install onx
+```
+
+or
+
+```
+$ poetry shell
+$ poetry add onx
+```
+
+## Play Game
+
+For running your game board just type in a terminal:
+
+```
+$ onx
+```
+
+You will see a game board in a waiting for your partner state.
+
+Then ask your partner to run the same cli command with **exactly** the same cli options.
+You will be matched to your partner by cli options (size and winning sequence length) on a server side.
+
+If you are running a game with a public server than I'll suggest you to make a shorter delay between running your game board and your partners board. Just for reducing the probability to be matched with somebody else.
+
+
+![TUI screenshot 1](https://github.com/vyalovvldmr/onx/blob/master/static/screen1.png?raw=true)
+
+There are command line options for changing game board settings.
+`-g` or `--grid-size` changes grid size.
+`-w` or `--wining-length` changes winning sequence length.
+`-h` or `--help` prints help.
+
+```
+$ onx -g14 -w3
+```
+
+![TUI screenshot 1](https://github.com/vyalovvldmr/onx/blob/master/static/screen2.png?raw=true)
+
+## Run Server and Client Locally
+
+Set up env variables.
+
+```
+$ export LOCALHOST="0.0.0.0"
+$ export PORT=8888
+```
+
+Run server.
+
+```
+$ onx -d
+```
+
+Run client.
+
+```
+$ onx
+```
+
+## Run Tests
+
+```
+$ git clone git@github.com:vyalow/onx.git
+$ cd onx
+$ poetry shell
+$ poetry install --no-root
+$ pytest --cov
+```
+
+## Known Limitations
+
+- **onx** is currently based on [textual](https://github.com/Textualize/textual) TUI framework which is awesome
+  but is at an extremely early development stage. As a result you may be faced with some rendering problem like [711](https://github.com/Textualize/textual/issues/711), [710](https://github.com/Textualize/textual/issues/710).
+  I'll suggest you to run a game board in a fullscreen mode for now.
+- Public server is currently running on a free Heroku app. It means that a good enough SLA is not expected.
+
