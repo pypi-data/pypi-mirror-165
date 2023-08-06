@@ -1,0 +1,4 @@
+boto3>=1.17.49
+botocore>=1.20.49
+PyYAML>=5.1.2
+bugsnag>=3.6.0
