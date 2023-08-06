@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: puan
+Version: 0.4.4
+Summary: Function tools for combinatorial optimization
+Home-page: https://puan.io
+Author: Our Studio Void AB
+Author-email: moa@ourstudio.se
+License-File: LICENSE
