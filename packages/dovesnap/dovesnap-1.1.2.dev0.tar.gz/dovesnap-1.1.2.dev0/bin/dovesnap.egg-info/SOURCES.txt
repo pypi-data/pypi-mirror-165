@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+main.go
+pyproject.toml
+setup.cfg
+setup.py
+bin/dovesnap.egg-info/PKG-INFO
+bin/dovesnap.egg-info/SOURCES.txt
+bin/dovesnap.egg-info/dependency_links.txt
+bin/dovesnap.egg-info/requires.txt
+bin/dovesnap.egg-info/top_level.txt
