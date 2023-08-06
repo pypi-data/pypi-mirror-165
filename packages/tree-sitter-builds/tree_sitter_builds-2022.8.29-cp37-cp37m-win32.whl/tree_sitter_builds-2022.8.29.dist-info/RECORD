@@ -1,0 +1,10 @@
+tree_sitter/__init__.py,sha256=KYxj0ktZiEiD-LvrQjUlVFEk7kLKlVJ7JdoJ14mWQYc,3535
+tree_sitter/binding.cp37-win32.pyd,sha256=XUxPR4Bx_C7VF_P2wFAPDRC63st6kBYStqXNcDImNtI,123904
+tree_sitter_languages/__init__.py,sha256=hguXEZ8gntPQAmoiISSceYApf4daOdMEZXTYeWiBfpM,237
+tree_sitter_languages/core.cp37-win32.pyd,sha256=Gk-XkGpDESSBm2-SkusSGGAQn7hBU77JpC0Mm1ZV9TI,22528
+tree_sitter_languages/languages.dll,sha256=n0c9O2ta-YwRhetliEXpnvUonQK7djnq7HvCBhUw_Cw,62847488
+tree_sitter_builds-2022.8.29.dist-info/LICENSE,sha256=QIE0FQr4mJB5JZ4o33c8G4jPmf9aQrlNqQm26oYye_o,559
+tree_sitter_builds-2022.8.29.dist-info/METADATA,sha256=soisDTrFZ20slctX2bgUSTqfOmhWiK-UHnpy_INOU28,3350
+tree_sitter_builds-2022.8.29.dist-info/WHEEL,sha256=cpY2CIQibwgnIWFRKvRDp2Kii5IPBXf6TQxjD0tLibE,97
+tree_sitter_builds-2022.8.29.dist-info/top_level.txt,sha256=_HRrA9sauZSHQqyWB11YHqgn0givlXbg5_cUDlBss7A,34
+tree_sitter_builds-2022.8.29.dist-info/RECORD,,
