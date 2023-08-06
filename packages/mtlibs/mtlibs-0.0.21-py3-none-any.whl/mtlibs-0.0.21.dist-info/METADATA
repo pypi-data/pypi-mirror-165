@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: mtlibs
+Version: 0.0.21
+Summary: This is the SDK for example.
+Home-page: http://example.com
+Author: example
+Author-email: author@example.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
+
+demo
+
