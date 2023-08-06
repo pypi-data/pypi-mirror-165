@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: pynbox
+Version: 0.5.0
+Summary: Task management inbox tool
+License: GPL-3.0-only
+Author-email: Lyz <lyz-code-security-advisories@riseup.net>
+Requires-Python: >=3.7
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Utilities
+Requires-Dist: click>=8.0.3
+Requires-Dist: goodconf[yaml]>=2.0.1
+Requires-Dist: questionary>=1.10.0
+Requires-Dist: repository-orm>=0.7.0
+Requires-Dist: rich>=10.16.1
+Project-URL: Issues, https://github.com/lyz-code/pynbox/issues
+Project-URL: documentation, https://lyz-code.github.io/pynbox
+Project-URL: homepage, https://github.com/lyz-code/pynbox
+Description-Content-Type: text/markdown
+
+# pynbox
+
+[![Actions Status](https://github.com/lyz-code/pynbox/workflows/Tests/badge.svg)](https://github.com/lyz-code/pynbox/actions)
+[![Actions Status](https://github.com/lyz-code/pynbox/workflows/Build/badge.svg)](https://github.com/lyz-code/pynbox/actions)
+[![Coverage Status](https://coveralls.io/repos/github/lyz-code/pynbox/badge.svg?branch=main)](https://coveralls.io/github/lyz-code/pynbox?branch=main)
+
+Task management inbox tool
+
+## Help
+
+See [documentation](https://lyz-code.github.io/pynbox) for more details.
+
+## Installing
+
+```bash
+pip install pynbox
+```
+
+## Contributing
+
+For guidance on setting up a development environment, and how to make
+a contribution to *pynbox*, see [Contributing to
+pynbox](https://lyz-code.github.io/pynbox/contributing).
+
+## License
+
+GPLv3
+
