@@ -1,0 +1,15 @@
+scim2_filter_parser/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scim2_filter_parser/ast.py,sha256=zsCTI5DETkk9SXIwLmoQE2bCiCBn--8siF6H-4_-_9M,6356
+scim2_filter_parser/attr_paths.py,sha256=gnTHLf6YCtLSXGetb6ygjOAOo6tPM7bPhsaKzHqLxBg,3951
+scim2_filter_parser/lexer.py,sha256=I6sIysVu2k63sVlkF1nwmnQakWW0EsKD4QIo5GOG37c,12965
+scim2_filter_parser/parser.py,sha256=ugBDx2XN4xBbtTm5qBqB9idAi88pvAMp4L6Bm1ypNfs,9036
+scim2_filter_parser/queries/__init__.py,sha256=2faMZrVlTdlvdWg11z-LKR7Buj6iH88tp_za8POu-xA,49
+scim2_filter_parser/queries/sql.py,sha256=8prvFE2GGce9butGbJmQvIUsUxLpL6CZtayDlVW8gQU,3540
+scim2_filter_parser/transpilers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scim2_filter_parser/transpilers/django_q_object.py,sha256=PP6BfmsxvGr_0olb1tARwKaJIRAcHNTfMrA165c0HSw,7094
+scim2_filter_parser/transpilers/sql.py,sha256=ItRwSU9hV2htTGMBg5JI7F7nRMK1ydnHVmYScIIPoEI,8320
+scim2_filter_parser-0.4.0.dist-info/entry_points.txt,sha256=nHbZ2W_I2N-Ore5hHTH3zG0aB240HYjTc38UquQUmzw,206
+scim2_filter_parser-0.4.0.dist-info/LICENSE.txt,sha256=KGV1PMnR3yQtRWbTTdIw8-SwPPr2kuSzW9iaE4Cz0Lk,1126
+scim2_filter_parser-0.4.0.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+scim2_filter_parser-0.4.0.dist-info/METADATA,sha256=HjNxrhVPeKZtfBXjcDNhqhSGnKcE6i7AyL7pRNJtcNw,12065
+scim2_filter_parser-0.4.0.dist-info/RECORD,,
