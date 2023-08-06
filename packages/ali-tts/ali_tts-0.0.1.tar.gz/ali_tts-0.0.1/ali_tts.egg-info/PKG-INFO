@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: ali-tts
+Version: 0.0.1
+Summary: a pyttsx3 driver for ios device, it use AVFoundation.AVSpeechSynthesizer
+Home-page: https://github.com/yumoqing/ali_tts
+Author: Yu Moqing
+Author-email: yumoqing@gmail.com
+Keywords: alibaba,unitts,tts
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Programming Language :: Python :: 3
