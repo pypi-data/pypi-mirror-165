@@ -1,0 +1,91 @@
+Metadata-Version: 2.1
+Name: vmu-tools
+Version: 0.1.9
+Summary: A set of tools for Dreamcast VMUcle icon
+Home-page: https://github.com/slurmking/vmu-tools
+Author: slurmking
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.0
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/vmu-tools)![PyPI - PyPi Version](https://img.shields.io/pypi/v/vmu-tools.svg)
+
+# VMU Tools
+
+This python project is designed to be a fully loaded suite of VMU tools for the Dreamcast.
+
+## Features
+* Read and extract data from .VMS and  .VMI files
+* Generate icons from ICONDATA and VMS files
+* Generate VMI files from VMS 
+* Read and manipulate VMU dumps files
+* Extract and upload save games from VMU dump files
+* update VMS icons from PNG and JPEG
+> Checkout examples.py and example files for all features
+
+## Install 
+``` python
+pip install vmu-tools --upgrade
+```
+
+
+## Examples
+### As a python package
+```python
+import vmut
+
+# Load .VMS file
+VMS = vmut.vms.load_vms("example_files/SCALIBUR.VMS")
+
+# Print info
+print(VMS.info)
+
+# Save icon
+VMS.image_save("animaed.gif")
+
+# Generate Checksum
+print(VMS.generated_crc())
+
+#Generate VMI
+VMS.vmi_gen("test.vmi", "slurmking.com", "test VMI file")
+
+#Fix crc
+VMS.fix_crc()
+```
+### Convert image to VMU Icon
+> For best results use a square image scaled to 32x32
+
+<img src="https://raw.githubusercontent.com/slurmking/vmu-tools/main/example_files/slurm.png" width="100" /><img src="https://raw.githubusercontent.com/slurmking/vmu-tools/main/example_files/ICONDATA_GEN.png" width="100" /><img src="https://raw.githubusercontent.com/slurmking/vmu-tools/main/example_files/ICONDATA_GEN_MONO.png" width="100" />
+
+```python
+vmut.Icon(image="example_files/slurm.png", threshold=160, invert=True).save()
+```
+
+
+
+
+## Roadmap
+* Change VMU color
+* Convert VMU dumps to and from .DCI files
+* Modify VMU ICONDATA from VMU dumps
+* Possible GUI / Electron app
+* Possibly implement a built-in webserver for file transfers from Dreamcast
+
+
+
+
+----
+##### Special Thanks  to:
+* Marcus Comstedt https://mc.pp.se/dc/
+	* For providing the best documentation on the Dreamcast 
+* [mrneo240](https://github.com/mrneo240)
+	* for assistance on creating ICONDATA tools
+*  [bucanero](https://github.com/bucanero)
+	* For providing a dump of usefull test files
+
+
