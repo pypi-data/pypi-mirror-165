@@ -1,0 +1,32 @@
+.steplist {
+  counter-reset: li;
+  list-style: none;
+  position: relative;
+  padding-left: 0;
+  margin-left: 0!important;
+  box-sizing: inherit;
+  }
+  
+.steplist li {
+  padding: .5rem 0 .5rem 3rem;
+  position: relative;
+  box-sizing: inherit;
+  }
+
+.steplist > li::before {
+  content: counter(li);
+  counter-increment: li;
+  position: absolute;
+  top: .5rem;
+  left: 0;
+  height: 100%;
+  width: 2rem;
+  padding: 0 1rem 0 0;
+  color: #ccc;
+  font-size: 1.5625rem;
+  font-weight: 600;
+  line-height: 1.1;
+  text-align: center;
+  border-right: 1px solid #dddddf;
+  box-sizing: border-box;
+}

@@ -1,0 +1,13 @@
+div.definition p {
+    padding: 10px;
+    background-color: #d9eaf2;
+    border-radius: 5px;
+    border-left: 6px solid #1481b8;
+    font: normal 14px "Source Sans Pro", Menlo, Consolas, Monaco, monospace;
+}
+
+div.definition p::before { 
+  content: "Definition: ";
+  font-weight: bold;
+  display: inline;
+}
