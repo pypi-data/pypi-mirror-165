@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: molint
+Version: 1.0.4
+Summary: 扫描py文件
+Author: mzg
+Requires-Dist: pylint (==2.9.5)
+
