@@ -1,0 +1,17 @@
+README.md
+setup.py
+spode/__init__.py
+spode.egg-info/PKG-INFO
+spode.egg-info/SOURCES.txt
+spode.egg-info/dependency_links.txt
+spode.egg-info/requires.txt
+spode.egg-info/top_level.txt
+spode/core/__init__.py
+spode/core/const.py
+spode/core/model.json
+spode/core/model.py
+spode/core/solver.py
+spode/util/__init__.py
+spode/util/dummy.py
+spode/util/generator.py
+spode/util/visual.py
