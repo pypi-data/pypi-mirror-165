@@ -1,0 +1,3 @@
+[fsspec.specs]
+chfs = chfs.CHFSClient
+chfs_stub = chfs.CHFSStubClient
