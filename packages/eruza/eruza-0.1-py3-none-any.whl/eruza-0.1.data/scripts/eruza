@@ -1,0 +1,5 @@
+#!python
+
+from eruza.app import main
+
+main()

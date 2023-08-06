@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: eruza
+Version: 0.1
+Summary: Azure + CLI
+Home-page: https://github.com/f0rk/eruza
+Author: Ryan P. Kelly
+Author-email: ryan@ryankelly.us
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: System :: Systems Administration
+License-File: LICENSE
+
+UNKNOWN
+
