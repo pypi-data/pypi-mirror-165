@@ -1,0 +1,4 @@
+[console_scripts]
+PyStats = PypStat:Main
+PypStat = PypStat:Main
+PypStats = PypStat:Main
