@@ -1,0 +1,9 @@
+picologging/_picologging.cpython-38-i386-linux-gnu.so,sha256=jvAdYr4wsKnc6Nz5XY9LpZH_EHYyDylgDFH3S6DoB-k,383576
+picologging/config.py,sha256=mDSJQjwREsTfHbhspJlkNjsXZx978pGgCty6kxJIavc,13000
+picologging/handlers.py,sha256=1SFgknqsgbINEFXFxgt-6Bb8bl8g1ZPeYCVbcBip28c,36176
+picologging/__init__.py,sha256=6v8c6YfmfHQNs2SqR0oSSBayFazefiVCl8yTsRkMXno,14743
+picologging-0.8.0.dist-info/top_level.txt,sha256=6tTFxD0eMWuY7YICfAuDId2wyC9JnrwV4ms--9fNSWk,12
+picologging-0.8.0.dist-info/WHEEL,sha256=gfgpSa_g5IQE9_1bwhTXPwGM48y17BIvtk1m1HGXUUs,138
+picologging-0.8.0.dist-info/METADATA,sha256=Lv9dcsLPLmcDV7COcJ4KB-0r1VMnZW0dn6G9VImGY9o,6293
+picologging-0.8.0.dist-info/RECORD,,
+picologging-0.8.0.dist-info/LICENSE,sha256=ws_MuBL-SCEBqPBFl9_FqZkaaydIJmxHrJG2parhU4M,1141
