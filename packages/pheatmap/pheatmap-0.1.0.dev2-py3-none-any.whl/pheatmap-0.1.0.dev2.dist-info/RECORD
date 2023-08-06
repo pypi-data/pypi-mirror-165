@@ -1,0 +1,12 @@
+pheatmap/__init__.py,sha256=z6c_pCM0CDwn_0AFoM9zZfxEV8IutiXF9BOhLJJWUyE,32
+pheatmap/_annotation.py,sha256=YMc0Z4MRZeWJ1CjtMZ6AsicD8wTFUcy5OQMxKuI887k,7911
+pheatmap/_heatmap.py,sha256=MRyrUjkSpuMaq0rliHH5chh9E_73LlvJCYhbDr8zp6U,6687
+pheatmap/_layout.py,sha256=bA0HXR-ECUu_9WidpICc-OViv0Ivvf0yvGHjSn-pX2s,6261
+pheatmap/_legend.py,sha256=0g5h-5w-5W-9yB-ETJE291LSIUl6W1nJwT0jtqS4CvA,2597
+pheatmap/_pheatmap.py,sha256=h3WhTfzUqy0twS_kfax_ysZQyVcUj6L-rouXvc58yIY,15294
+pheatmap/_utils.py,sha256=mW8-fM3ocBna7HV0Mx9hPNsPna1tVyabLpqaQSHY08Y,2419
+pheatmap-0.1.0.dev2.dist-info/LICENSE,sha256=pZTY4z8d_dLlBBi_3AxYctSyfdmt4mC5F-3notBOQK8,1518
+pheatmap-0.1.0.dev2.dist-info/METADATA,sha256=X2zYuWqHYtQatVcs1XJ2EC2vyRGRaYX2c-TZMwbDkf8,2917
+pheatmap-0.1.0.dev2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+pheatmap-0.1.0.dev2.dist-info/top_level.txt,sha256=x-eZKpomAheZmYGPjaqal58PyRg08eaFxVwoTWH7KbE,9
+pheatmap-0.1.0.dev2.dist-info/RECORD,,
