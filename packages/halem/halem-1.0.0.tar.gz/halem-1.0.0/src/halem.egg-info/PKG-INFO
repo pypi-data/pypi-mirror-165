@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: halem
+Version: 1.0.0
+Summary: The Route optimization for dynamic flow field searches the optimal route for a given flow field.
+Home-page: https://github.com/pyscaffold/pyscaffold/
+Author: Pieter van Halem
+Author-email: pieter.vanhalem@vanoord.com
+License: MIT
+Project-URL: Documentation, https://pyscaffold.org/
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Requires-Python: >=3.8
+Description-Content-Type: text/x-rst; charset=UTF-8
+Provides-Extra: testing
+Provides-Extra: docs
+License-File: LICENSE.txt
