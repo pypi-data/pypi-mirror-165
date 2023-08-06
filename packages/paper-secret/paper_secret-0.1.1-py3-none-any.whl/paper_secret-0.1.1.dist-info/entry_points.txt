@@ -1,0 +1,3 @@
+[console_scripts]
+depaper = paper_secret.depaper:main
+enpaper = paper_secret.enpaper:main

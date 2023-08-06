@@ -1,0 +1,10 @@
+paper_secret/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+paper_secret/depaper.py,sha256=-0_ZBSFhM6GE5WvryfxLboQBlDjJqcS4itIeOtdGe0Y,1458
+paper_secret/enpaper.py,sha256=TTG7iRpVfHQzgJfD8Ui4Plf4lCVrL1qfKenn0kIOwA8,3277
+paper_secret/util.py,sha256=fLNTp-hpC8586aVGtOEK6RLEdjo5bzUwirO8C_0C3wY,946
+paper_secret-0.1.1.dist-info/LICENSE,sha256=ogEPNDSH0_dhiv_lT3ifVIdgIzHAqNA_SemnxUfPBJk,7048
+paper_secret-0.1.1.dist-info/METADATA,sha256=r-niOaEl0UIRzFCIpVFKMySusgHGq2C0PECuBcnUQZ0,1830
+paper_secret-0.1.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+paper_secret-0.1.1.dist-info/entry_points.txt,sha256=GtxDKrBv60ZdoFODC0Ofw8HAr-NLD2DwfUzlW4NzqPE,90
+paper_secret-0.1.1.dist-info/top_level.txt,sha256=EGHzDHme68estlSmuHtwx7tDtncELc3zPo95eaT70yA,13
+paper_secret-0.1.1.dist-info/RECORD,,
