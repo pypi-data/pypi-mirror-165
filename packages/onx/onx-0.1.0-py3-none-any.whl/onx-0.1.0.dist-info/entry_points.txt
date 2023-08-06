@@ -1,0 +1,3 @@
+[console_scripts]
+onx=run:main
+
