@@ -1,0 +1,23 @@
+inquirer>=2
+importlib-metadata>=4
+
+[autopep8 >]
+1.0
+
+[build >]
+0.8
+
+[flake8 >]
+4.0
+
+[pytest >]
+7.0
+
+[pytest-cov >]
+3.0
+
+[tox >]
+3.0
+
+[twine >]
+3.0

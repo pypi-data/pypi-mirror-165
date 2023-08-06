@@ -1,0 +1,78 @@
+{} = English Meaning of KEYWORD
+
+statements: NEWLINE* statement (NEWLINE+ statement)* NEWLINE*
+
+statement: KEYWORD:redi{return} expr?
+	     : KEYWORD:continua{continue}
+		 : KEYWORD:confringe{break}
+		 : expr
+
+expr: IDENTIFIER (IDENTIFIER TOKEN:COMMA)* (TOKEN:LSQUARE IDENTIFIER (IDENTIFIER, TOKEN:COMMA)* TOKEN:RSQUARE)* (TOKEN:EQ || TOKEN:PLUSEQ || TOKEN:MIN_EQ || TOKEN:MUL_EQ || TOKEN:DIV_EQ ) expr
+    : comp_expr ((KEYWORD:et{and}|KEYWORD:aut{or}) comp_expr)*
+
+comp_expr: non{not} comp_expr
+         : arith_expr ((EE|LT|GT|LTE|GTE) arith_expr)*
+
+arith_expr: term ((PLUS|MINUS) term)*
+
+term: factor ((MUL|DIV) factor)*
+
+factor: (PLUS|MINUS) factor
+      : power
+
+power: call (POW factor)*
+
+call: atom (LPAREN (expr (TOKEN:COMMA expr)*)? RPAREN)?
+
+atom: LPAREN expr RPAREN
+    : var_access_expr
+    : list_expr
+    : if_expr
+    : try_expr
+    : for_expr
+    : while_expr
+    : raise_expr
+    : func-def
+
+var_access_expr: INT|FLOAT|STRING|IDENTIFIER([idx])*(.attribute)?
+
+dict_expr: LBACE (expr (TOKEN:COMMA expr)*)? RBRACE
+
+list_expr: LSQUARE (expr (TOKEN:COMMA expr)*)? RSQUARE
+
+if_expr: KEYWORD:si{if} expr TOKEN:COLON
+       (statement if_expr-b|if_expr-c?)
+       (NEWLINE statements|if_expr-b|if_expr-c)
+
+if_expr-b: KEYWORD:alioquinsi{elif} expr TOKEN:COLON
+         (statement if_expr-b|if_expr-c?)
+         | (NEWLINE statements|if_expr-b|if_expr-c)
+
+if_expr-c: KEYWORD:alioquin{else}
+         statement
+         | (NEWLINE statements)
+
+try_expr: KEYWORD:tempta{try} TOKEN:COLON
+         statement
+         | (NEWLINE statements)
+
+         (KEYWORD:praeter{except} (Exception)?
+         (as name)? TOKEN:COLON
+         statement
+         | NEWLINE statements)?
+
+for_expr: KEYWORD:pro{for} IDENTIFIER TOKEN:EQ expr KEYWORD:ad{to} expr 
+        (KEYWORD:gradus{step} expr)? TOKEN:COLON
+        statement
+        | (NEWLINE statements)
+
+while_expr: KEYWORD:dum{while} expr TOKEN:COLON
+          statement
+          | (NEWLINE statements)
+
+raise_expr: KEYWORD:attolle{raise} Exception(*message")
+
+func-def: KEYWORD:opus{fun} IDENTIFIER?
+        LPAREN (IDENTIFIER (TOKEN:COMMA IDENTIFIER)*)? RPAREN
+        (ARROW expr)
+        | TOKEN:COLON (NEWLINE statements)
