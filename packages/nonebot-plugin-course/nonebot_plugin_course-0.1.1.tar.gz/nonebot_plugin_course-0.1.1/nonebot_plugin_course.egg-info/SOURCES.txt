@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+nonebot_plugin_course/__init__.py
+nonebot_plugin_course/template.py
+nonebot_plugin_course/utils.py
+nonebot_plugin_course.egg-info/PKG-INFO
+nonebot_plugin_course.egg-info/SOURCES.txt
+nonebot_plugin_course.egg-info/dependency_links.txt
+nonebot_plugin_course.egg-info/requires.txt
+nonebot_plugin_course.egg-info/top_level.txt
