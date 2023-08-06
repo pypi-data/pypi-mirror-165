@@ -1,0 +1,28 @@
+os: linux
+dist: xenial
+sudo: enabled
+language: python
+python:
+  - "3.6"
+  - "3.7"
+
+env:
+  - CHROME_DRIVER_VERSION="80.0.3987.106"
+
+before_install:
+  - sudo apt-get update -qq
+  - sudo apt-get install -qq build-essential zlib1g-dev libtiff5-dev libjpeg8-dev libfreetype6-dev
+  - sudo apt-get install -qq liblcms2-dev libwebp-dev libpq-dev graphviz-dev
+
+addons:
+  chrome: stable
+
+install: pip install -U tox-travis
+
+before_script:
+  - wget -N http://chromedriver.storage.googleapis.com/$CHROME_DRIVER_VERSION/chromedriver_linux64.zip -P ~/
+  - unzip ~/chromedriver_linux64.zip -d ~/
+  - sudo mv -f ~/chromedriver /usr/bin/chromedriver
+  - sudo chmod ugo+rx /usr/bin/chromedriver
+
+script: tox
