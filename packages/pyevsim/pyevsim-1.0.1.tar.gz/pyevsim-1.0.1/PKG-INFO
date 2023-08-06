@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: pyevsim
+Version: 1.0.1
+Summary: A library that provides a Modeling & Simulation Environment for Discrete Event System Formalism
+Home-page: https://github.com/eventsim/eventsim
+Author: Changbeom Choi
+Author-email: me@cbchoi.info
+License: MIT
+Description: # evsim
+        Discrete Event Simulation Engine using Python
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
