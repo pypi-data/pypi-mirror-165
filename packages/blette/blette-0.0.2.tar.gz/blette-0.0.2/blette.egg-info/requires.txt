@@ -1,0 +1,7 @@
+matplotlib
+scikit-learn
+scikit-image
+prettytable
+cityscapesscripts
+mmsegmentation
+pyEdgeEval

@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: blette
+Version: 0.0.2
+Summary: Edge Detection Toolbox and Benchmark
+Home-page: http://github.com/haruishi43/blette
+Author: Haruya Ishikawa
+Author-email: 
+Keywords: computer vision,edge detection,semantic edge detection
+Classifier: Development Status :: 4 - Beta
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# blette
+
+A toolbox for edge detection tasks (binary and multi-label edges).
+
+Currently only supports multi-label edge tasks on Cityscapes.
+However, I'm working on using this toolbox for binary edge detection and adding support for various tasks and datasets.
+
+## Installation
+
+```Bash
+pip install -r requirements.txt
+
+# global package
+pip install -e .
+```
+
+## Usage
+
+- [Cityscapes](./.readme/cityscapes.md)
