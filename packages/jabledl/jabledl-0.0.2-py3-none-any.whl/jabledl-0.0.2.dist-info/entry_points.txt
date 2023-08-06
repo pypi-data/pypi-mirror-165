@@ -1,0 +1,5 @@
+[console_scripts]
+jabletvdl = jabledl.cmd:_main
+
+[nbdev]
+jabledl = jabledl._modidx:d
