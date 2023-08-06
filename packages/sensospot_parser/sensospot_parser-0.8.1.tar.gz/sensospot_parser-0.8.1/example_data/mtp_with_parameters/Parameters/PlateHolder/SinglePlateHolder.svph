@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Single plate holder configuration-->
+<PlateHolder>
+  <Layout OffsetXMm="-12.5" OffsetYMm="-10.0" NofMountsX="1" NofMountsY="1" MountDistXMm="0" MountDistYMm="0.00" MountSizeXMm="129.0" MountSizeYMm="85.0"></Layout>
+  <Rotate>
+    <Settings Direction="ROTATE_NONE"></Settings>
+  </Rotate>
+</PlateHolder>

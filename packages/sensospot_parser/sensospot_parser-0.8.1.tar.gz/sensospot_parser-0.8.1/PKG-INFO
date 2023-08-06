@@ -1,0 +1,119 @@
+Metadata-Version: 2.1
+Name: sensospot_parser
+Version: 0.8.1
+Summary: Sensospot Data Parser
+Author-email: Holger Frey <frey@imtek.de>
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: License :: Freely Distributable
+Requires-Dist: pandas >=1.0.0
+Requires-Dist: defusedxml >=0.6.0
+Requires-Dist: tables >=3.6.1
+Requires-Dist: click
+Requires-Dist: black ; extra == "dev"
+Requires-Dist: flake8 ; extra == "dev"
+Requires-Dist: flake8-comprehensions ; extra == "dev"
+Requires-Dist: flake8-bandit ; extra == "dev"
+Requires-Dist: isort >= 5.0.0 ; extra == "dev"
+Requires-Dist: keyring ; extra == "dev"
+Requires-Dist: pre-commit ; extra == "dev"
+Requires-Dist: pytest >=4.0.0 ; extra == "test"
+Requires-Dist: pytest-cov ; extra == "test"
+Requires-Dist: pytest-mock ; extra == "test"
+Requires-Dist: pytest-randomly >=3.5.0 ; extra == "test"
+Requires-Dist: tox ; extra == "test"
+Project-URL: Source, https://git.cpi.imtek.uni-freiburg.de/holgi/sensospot_parser.git
+Provides-Extra: dev
+Provides-Extra: test
+
+Sensospot Data Parser
+=====================
+
+Parsing the numerical output from [SensoSpot][sensospot] microarray analysis.
+
+The [SensoSpot][sensospot] microarray analyzer is an automated fluorescence microscope with an image analysis software for detecting and measuring microarrays. The original name of the product was "FLAIR" by the company Sensovation, that was later acquired by Miltenyi. 
+
+There is no affiliation on my side regarding Sensovation or Miltenyi, I just use the product and needed a way to make the data available for further analysis.
+
+
+## Example:
+
+```python
+
+    import sensospot_parser
+
+    # read the raw data of a folder
+    raw_data = sensospot_parser.parse_folder(<path to results directory>)
+
+    sorted(raw_data.columns) == [
+        'Analysis.Name', 
+        'Bkg.Area', 'Bkg.Mean', 'Bkg.Median', 'Bkg.StdDev', 'Bkg.Sum', 
+        'Exposure.Id', 
+        'Parameters.Channel', 'Parameters.Time', 
+        'Pos.Id', 'Pos.Nom.X', 'Pos.Nom.Y', 'Pos.X', 'Pos.Y', 
+        'Spot.Area', 'Spot.Diameter', 'Spot.Found', 'Spot.Mean', 'Spot.Median', 
+        'Spot.Saturation', 'Spot.StdDev', 'Spot.Sum', 
+        'Well.Column', 'Well.Name', 'Well.Row'
+    ]
+```
+
+## Constants
+
+There is a `columns` module available, providing constans that define the column names.
+
+```python
+
+    import sensospot_parser
+
+    sensospot_parser.columns.ANALYSIS_NAME == "Analysis.Name"
+```
+
+
+## Avaliable public functions:
+
+ - **parse_folder(path_to_folder)**
+   Searches the folder for parsable Sensospot .csv files, parses them into one 
+   big pandas data frame and will add additional meta data from parameters folder, 
+   if it is present.
+- **parse_file(path_to_csv_file)**
+   Parses a Sensospot csv file into a pandas data frame and will add some additional
+   meta data from the file name. Is internally also used by `parse_folder()`
+
+
+## CLI
+
+For the (propably) most important function, there is even a cli command
+```sh
+Usage: sensospot_parse [OPTIONS] SOURCE
+
+Arguments:
+  SOURCE:             Folder with Sensospot measurement
+
+Options:
+  -o, --outfile TEXT  Output file name, use a dash '-' for stdout, default:
+                      'collected_data.csv'
+  -q, --quiet         Ignore Sanity Check
+  -r, --recurse       Recurse into folders one level down
+  --help              Show this message and exit.
+```
+
+## Development
+
+To install the development version of Sensovation Data Parser:
+
+    git clone https://git.cpi.imtek.uni-freiburg.de/holgi/sensospot_data.git
+
+    # create a virtual environment and install all required dev dependencies
+    cd sensospot_data
+    make devenv
+
+To run the tests, use `make tests` (failing on first error) or `make coverage` for a complete report.
+
+
+[sensospot]: https://www.miltenyi-imaging.com/products/sensospot

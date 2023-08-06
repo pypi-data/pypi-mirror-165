@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<Assay>
+  <Channels>
+    <ChannelConfig1 IlluminationID="4" Description="Cy3/Cy5 Green" ExposureTimeMs="100" Intensity="100">
+    </ChannelConfig1>
+    <ChannelConfig2 IlluminationID="3" Description="Cy3/Cy5 Red" ExposureTimeMs="150" Intensity="100">
+    </ChannelConfig2>
+    <ChannelConfig3 IlluminationID="3" Description="Cy3/Cy5 Red" ExposureTimeMs="15" Intensity="100">
+    </ChannelConfig3>
+  </Channels>
+  <Components MicroArray="S QC 10x10 Cy3 100ms Cy5 150-15ms" AlgoConfig="S QC 10x10 Cy3 100ms Cy5 150-15ms">
+  </Components>
+  <DebugSwitches DoImageProcessing="True" DoDarkImageCorrection="True" SaveResultAsCSVFile="True" SaveResultAsXmlFile="True">
+  </DebugSwitches>
+  <RefPattern ChannelConfig="Channel1">
+  </RefPattern>
+  <WorkbookAnalysis Active="True" UseSingleWorkbook="YES" TemplateWorkbookName="160212_wb10x10_Spectra_V3_Ver03.2.3.xlsx" PasteWorksheetName="Input_Data" PasteStartingCell="W300" ParameterWorksheetName="parameter" ResultWorksheetName="Net Intensity" KeepDataWorkbookOpen="NO">
+  </WorkbookAnalysis>
+</Assay>
