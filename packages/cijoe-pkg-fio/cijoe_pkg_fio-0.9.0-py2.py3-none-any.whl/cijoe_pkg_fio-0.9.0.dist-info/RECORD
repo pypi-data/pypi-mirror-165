@@ -1,0 +1,17 @@
+cijoe/fio/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cijoe/fio/wrapper.py,sha256=FvmEquI2xc7NB89vf7uSPQxnfmlxgFDjwobrkMwdyks,7149
+cijoe/fio/configs/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cijoe/fio/configs/default.config,sha256=Rv3AM_gZ-BUry1cMZqSOlxOifm7VqtJShCZ5taSt8bg,682
+cijoe/fio/selftest/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cijoe/fio/selftest/test_fio_wrapper.py,sha256=xoeKg7tw_QLuGqQ9eMcRj-lsoxZQ28-78nWpcFwqp-o,782
+cijoe/fio/workflows/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cijoe/fio/workflows/example.workflow,sha256=6lrqopZPavxmZJJ5vu2G8_9wwnvrZ6AT3TZ3uQXMLW4,193
+cijoe/fio/worklets/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cijoe/fio/worklets/build.py,sha256=Bp1odz5d31TGFuHbhBMwBwRACpXPH2gIl4lsENuaWrc,597
+cijoe/fio/worklets/check.py,sha256=9fOXiMlLLmfrQvaF6n6Q2x2MULv1gnY6QT9LzQwIYfE,375
+cijoe/fio/worklets/install.py,sha256=0NVN6BiE7dIxjBGVOPe9GFlF8vSKGuX2dkAvhhYlXcs,365
+cijoe_pkg_fio-0.9.0.dist-info/LICENSE,sha256=TrjUDr0ahtUm1K15JcgkWqkphCObzSi25U2qJnU3CvQ,1524
+cijoe_pkg_fio-0.9.0.dist-info/METADATA,sha256=rJZjSS85zVPMpOOibtMrld1G6sjMR2T8dAiHPzm1_RE,780
+cijoe_pkg_fio-0.9.0.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+cijoe_pkg_fio-0.9.0.dist-info/top_level.txt,sha256=MJS7Mr0103yPU9rsSeFpJxYnDEzDeuh6j5XgcMo8jZw,6
+cijoe_pkg_fio-0.9.0.dist-info/RECORD,,
