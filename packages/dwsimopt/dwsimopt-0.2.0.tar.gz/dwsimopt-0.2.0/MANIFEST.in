@@ -1,0 +1,16 @@
+include LICENSE
+recursive-include examples *.dwxmz
+recursive-include examples *.ipynb
+recursive-include examples *.png
+recursive-include examples *.py
+recursive-include examples *.csv
+recursive-include examples *.txt
+recursive-include docs *.bat
+recursive-include docs *.py
+recursive-include docs *.rst
+recursive-include docs Makefile
+include *.yaml
+include tox.ini
+recursive-include docs *.txt
+recursive-include dwsimopt *.dll        
+recursive-include dwsimopt/tests *.dwxmz
