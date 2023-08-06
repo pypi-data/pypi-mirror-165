@@ -1,0 +1,12 @@
+setup.py
+ascii_animator/__init__.py
+ascii_animator/animator.py
+ascii_animator/cli.py
+ascii_animator.egg-info/PKG-INFO
+ascii_animator.egg-info/SOURCES.txt
+ascii_animator.egg-info/dependency_links.txt
+ascii_animator.egg-info/entry_points.txt
+ascii_animator.egg-info/namespace_packages.txt
+ascii_animator.egg-info/requires.txt
+ascii_animator.egg-info/top_level.txt
+ascii_animator.egg-info/zip-safe
