@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: handyscikit
+Version: 0.0.7.13
+Summary: Hp change system frame.
+Home-page: https://github.com/minho-hong/handyscikit.git
+Author: Hong Peng
+License: GPL
+Platform: UNKNOWN
+Requires-Python: >=3.7.0
+License-File: LICENSE
+Requires-Dist: cython
+Requires-Dist: gmsh
+Requires-Dist: numpy
+Requires-Dist: vtk
+
+UNKNOWN
+
