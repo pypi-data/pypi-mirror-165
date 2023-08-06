@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: SimpleTrans
+Version: 0.2.5
+Summary: Simple atmosphere model, solving the Two stream equation on a grid.
+Author-email: Sean Craven <seanpietercraven@gmail.com>
+Project-URL: Homepage, https://seancraven.github.io/CDS_book/
+Project-URL: Github, https://seancraven.github.io/CDS_book/
+Keywords: radiation,model,learning
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: numpy (>=1.23.1)
+Requires-Dist: hitran-api (>=1.2.2.0)
+Requires-Dist: tqdm (>=4.64.0)
+Requires-Dist: scipy (>=1.9.0)
+Requires-Dist: pandas (>=1.4.3)
+Provides-Extra: dev
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: bumpver ; extra == 'dev'
+Requires-Dist: isort ; extra == 'dev'
+Requires-Dist: pip-tools ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+
+# SimpleTrans
+The SimpleTrans package provides an easy to use wrapper for the hitran database as well as a two stream equation solver on a wavnumber altitude grid for the international standard atmosphere.
