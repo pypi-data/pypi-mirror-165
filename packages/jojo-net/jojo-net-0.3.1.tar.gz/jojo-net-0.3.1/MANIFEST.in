@@ -1,0 +1,7 @@
+# include data files
+
+# include single file
+# include net/requirements.txt
+
+# include multiple files
+recursive-include net/doc *
