@@ -1,0 +1,9 @@
+__pycache__
+.eggs
+.pytest_cache
+build
+dist
+docs/_build
+_renameat2.*
+*.egg-info
+*.o
