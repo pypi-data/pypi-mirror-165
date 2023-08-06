@@ -1,0 +1,10 @@
+LICENCE.txt
+MANIFEST.in
+setup.py
+DailyProjectFolder/__init__.py
+DailyProjectFolder/hello.py
+HelloworldJohnson.egg-info/PKG-INFO
+HelloworldJohnson.egg-info/SOURCES.txt
+HelloworldJohnson.egg-info/dependency_links.txt
+HelloworldJohnson.egg-info/top_level.txt
+MileStone/main.py
