@@ -1,0 +1,13 @@
+flysystem/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+flysystem/error.py,sha256=YRsfdycJDTn7ssVnRNKOnWFCB2RaCMFLTNiCLwuEyyo,234
+flysystem/filesystem.py,sha256=ebQ7dODLU833Q0xlbFFVeb9ene5sxq2fQKAswpuw-tY,8768
+flysystem/path.py,sha256=L_uMUfRvuAGaOaM8R2IfCxTIAU0Bv9qKH23jYkIVOUI,1487
+flysystem/visibility.py,sha256=kYadwVekML2Jh55rwt8DovX85hUTEHH00Y82o1WDPZg,193
+flysystem/adapters/__init__.py,sha256=J5FNjovvmozrJVpbG5SxbUXyou-ZFqFF-IG0lMbEmEI,4722
+flysystem/adapters/local.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+flysystem/adapters/s3.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+flysystem-0.0.1.dist-info/LICENSE,sha256=BEeHdViKyG505VvXL48_5WqNttprDzMRsU1MhAKwyjg,1102
+flysystem-0.0.1.dist-info/METADATA,sha256=O-dnbglaApnCOOBssGQx0Ayq0J4Ybb7oSV7D0i_AHm4,3839
+flysystem-0.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+flysystem-0.0.1.dist-info/top_level.txt,sha256=FhkxmUAoDadBTYrloGcorIfp1MFXbrikoI2g4v1ZegA,10
+flysystem-0.0.1.dist-info/RECORD,,
