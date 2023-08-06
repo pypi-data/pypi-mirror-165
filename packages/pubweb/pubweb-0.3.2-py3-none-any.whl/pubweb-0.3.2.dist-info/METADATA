@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: pubweb
+Version: 0.3.2
+Summary: CLI tool for interacting with the PubWeb platform
+Home-page: https://github.com/FredHutch/PubWeb-client
+Author: Fred Hutch
+Author-email: viz@fredhutch.org
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: click (<8.1,>=8.0)
+Requires-Dist: boto3 (<1.30,>=1.20)
+Requires-Dist: questionary (==1.10.0)
+Requires-Dist: gql[requests] (==3.0.0)
+Requires-Dist: requests (==2.27.1)
+Requires-Dist: requests-aws4auth (==1.1.2)
+Requires-Dist: pycognito (==2022.1.0)
+Requires-Dist: tqdm (==4.62.3)
+Requires-Dist: pygithub (>=1.55)
+Requires-Dist: jsonschema (==4.6.1)
+Provides-Extra: all
+Requires-Dist: click (<8.1,>=8.0) ; extra == 'all'
+Requires-Dist: boto3 (<1.30,>=1.20) ; extra == 'all'
+Requires-Dist: questionary (==1.10.0) ; extra == 'all'
+Requires-Dist: gql[requests] (==3.0.0) ; extra == 'all'
+Requires-Dist: requests (==2.27.1) ; extra == 'all'
+Requires-Dist: requests-aws4auth (==1.1.2) ; extra == 'all'
+Requires-Dist: pycognito (==2022.1.0) ; extra == 'all'
+Requires-Dist: tqdm (==4.62.3) ; extra == 'all'
+Requires-Dist: pygithub (>=1.55) ; extra == 'all'
+Requires-Dist: jsonschema (==4.6.1) ; extra == 'all'
+Requires-Dist: pandas (<1.5.0,>=1.4.0) ; extra == 'all'
+Requires-Dist: s3fs (==2022.5.0) ; extra == 'all'
+Provides-Extra: analysis
+Requires-Dist: pandas (<1.5.0,>=1.4.0) ; extra == 'analysis'
+Requires-Dist: s3fs (==2022.5.0) ; extra == 'analysis'
+
+UNKNOWN
+
+
