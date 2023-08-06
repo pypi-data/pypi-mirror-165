@@ -1,0 +1,6 @@
+#!/usr/bin/env python3.10
+
+from aga.gradescope.main import gradescope_main
+
+if __name__ == "__main__":
+    gradescope_main()

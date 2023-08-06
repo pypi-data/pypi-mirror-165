@@ -1,0 +1,3 @@
+[console_scripts]
+aga=aga.cli:aga_app
+
