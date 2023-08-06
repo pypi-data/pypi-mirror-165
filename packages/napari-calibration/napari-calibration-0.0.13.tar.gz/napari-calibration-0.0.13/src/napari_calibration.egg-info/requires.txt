@@ -1,0 +1,4 @@
+napari
+numpy
+qt-material
+opencv-python
