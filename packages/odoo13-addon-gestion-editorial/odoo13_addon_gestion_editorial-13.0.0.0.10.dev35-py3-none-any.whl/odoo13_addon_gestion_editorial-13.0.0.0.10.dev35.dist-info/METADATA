@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: odoo13-addon-gestion-editorial
+Version: 13.0.0.0.10.dev35
+Summary: Módulo para gestión de la editorial Descontrol.
+Home-page: https://framagit.org/devcontrol
+Author: Colectivo DEVCONTROL
+License: OPL-1
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Classifier: Framework :: Odoo :: 13.0
+Requires-Python: >=3.5
+Requires-Dist: odoo13-addon-account-invoice-pricelist
+Requires-Dist: odoo (<13.1dev,>=13.0a)
+
+Módulo para gestión de la editorial Descontrol.
