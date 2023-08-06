@@ -1,0 +1,7 @@
+cx-Oracle
+SQLAlchemy
+tqdm
+google-auth
+requests
+pandas
+mlflow-skinny
