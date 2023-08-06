@@ -1,0 +1,10 @@
+README.md
+setup.py
+openzim_uploader/__init__.py
+openzim_uploader.egg-info/PKG-INFO
+openzim_uploader.egg-info/SOURCES.txt
+openzim_uploader.egg-info/dependency_links.txt
+openzim_uploader.egg-info/entry_points.txt
+openzim_uploader.egg-info/requires.txt
+openzim_uploader.egg-info/top_level.txt
+openzim_uploader.egg-info/zip-safe
