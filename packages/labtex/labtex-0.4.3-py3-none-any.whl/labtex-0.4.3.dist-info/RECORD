@@ -1,0 +1,11 @@
+labtex/__init__.py,sha256=HnwXXCPniWXY32d3-kAYZLdP2lhYhvi5GE2AJbKVAfQ,236
+labtex/document.py,sha256=8iKAHIPWDdfjF1vnmWFfRcpR_BTfWtu5x9tHlQuf_9U,6196
+labtex/linear.py,sha256=_wnxsf5rE4_kCGp3VhDHzZXN453cGjshQjQGsVaxE0I,1890
+labtex/measurement.py,sha256=0ixNg1zhuQlzNeZFp5vfkUo9LkWMs-P3D6fAB5Bec0s,10507
+labtex/measurementlist.py,sha256=fudRvfAReacIp5v9eZRClbPgNzSlDrOfm7dokiiuPkc,9375
+labtex/unit.py,sha256=b0_ChfAfvvwF8V10yrHwBBeqeWtdb-kUAAhoLPpAEj4,9769
+labtex-0.4.3.dist-info/LICENSE,sha256=H2euEZRipGYvkx7mbBGi7HVHJOHd45XtqQ91D91UzAs,1054
+labtex-0.4.3.dist-info/METADATA,sha256=TTuUbm6Rm9S4DT7NZNCPBXXwixEg0qAfcLaJz9gllTw,6597
+labtex-0.4.3.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+labtex-0.4.3.dist-info/top_level.txt,sha256=p05E-2IEHEJ0Hg9XBk2CUUne773okmTHj-vMWZzT7To,7
+labtex-0.4.3.dist-info/RECORD,,
