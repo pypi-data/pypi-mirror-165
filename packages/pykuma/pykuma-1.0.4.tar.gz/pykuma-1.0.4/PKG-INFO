@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: pykuma
+Version: 1.0.4
+Summary: An API for Python and Uptime Kuma integration
+Home-page: https://github.com/oliverstech/pykuma
+Author: oliverstech
+Author-email: mail@oliverstech.tk
+License: MIT
+Keywords: uptime,api,pykuma,kuma
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+License-File: LICENSE.txt
