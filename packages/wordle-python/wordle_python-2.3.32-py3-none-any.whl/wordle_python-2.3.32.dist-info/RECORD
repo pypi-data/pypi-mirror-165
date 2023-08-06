@@ -1,0 +1,8 @@
+wordle/__init__.py,sha256=ux3kdfN-wPiZdVwqeJElLsn3JuuuGM-t3lbnFY1d80E,79
+wordle/dictionary.py,sha256=IqX_T4u4QvYN-83dGVDAYtZJaNFrjp5PK5B8FYbo7S0,110949
+wordle/randomanswer.py,sha256=AJJefKTCx1vFqVpNUQTSPVQPl1rs8NraRLsttHY3lcc,368
+wordle/wordle.py,sha256=07rgy_8G2diV9NG85Hza9yo5o68cvZECRl7Au5xsN6I,7318
+wordle_python-2.3.32.dist-info/METADATA,sha256=fDSRGr396y8-6uAeBur54y7xDottZKVDJyyCZzxzNS8,10257
+wordle_python-2.3.32.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+wordle_python-2.3.32.dist-info/top_level.txt,sha256=adlsjdgkxm3Zc979l_4jIDyGfIKbXqk9WT4uoA41QfI,7
+wordle_python-2.3.32.dist-info/RECORD,,
