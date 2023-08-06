@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+jarvis_ui.egg-info/PKG-INFO
+jarvis_ui.egg-info/SOURCES.txt
+jarvis_ui.egg-info/dependency_links.txt
+jarvis_ui.egg-info/requires.txt
+jarvis_ui.egg-info/top_level.txt
+jarvis_ui.egg-info/zip-safe
