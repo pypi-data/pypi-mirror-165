@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+pytrading212/__init__.py
+pytrading212/order.py
+pytrading212/position.py
+pytrading212/trading212.py
+pytrading212.egg-info/PKG-INFO
+pytrading212.egg-info/SOURCES.txt
+pytrading212.egg-info/dependency_links.txt
+pytrading212.egg-info/top_level.txt
