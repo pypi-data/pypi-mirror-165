@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: kioblog
+Version: 0.1.2a0
+Summary: Simple blog for Django
+Home-page: https://github.com/Eric-Bujeque/kioblog
+Author: Eric Bujeque
+Author-email: noikzyr3@gmail.com
+License: MIT
+Download-URL: https://github.com/Eric-Bujeque/kioblog/archive/refs/tags/v0.1.2-alpha.tar.gz
+Keywords: blog,django
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+License-File: LICENSE.txt
+
+UNKNOWN
+
