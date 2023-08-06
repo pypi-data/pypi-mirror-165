@@ -1,0 +1,13 @@
+LICENSE
+setup.py
+splatplost/__init__.py
+splatplost/generate_route.py
+splatplost/plot.py
+splatplost/splatplan
+splatplost/splatplot
+splatplost/tsp_solver.py
+splatplost.egg-info/PKG-INFO
+splatplost.egg-info/SOURCES.txt
+splatplost.egg-info/dependency_links.txt
+splatplost.egg-info/requires.txt
+splatplost.egg-info/top_level.txt
