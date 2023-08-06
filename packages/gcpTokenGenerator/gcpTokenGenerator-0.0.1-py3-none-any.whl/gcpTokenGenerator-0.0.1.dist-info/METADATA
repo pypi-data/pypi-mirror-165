@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: gcpTokenGenerator
+Version: 0.0.1
+Summary: google token generator
+Author: oribrau@gmail.com
+License: MIT
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: google-api-python-client
+Requires-Dist: oauth2client
+
+# how to use
+````
+
+from gcpTokenGenerator import tokenGenerator
+
+conf = {
+    "STG_Conf": {
+        "account": '{your service account}',  # need to get from dev ops
+        "host": '{your project id}',
+        "target_audience": '{your client id}',
+        "iap": True,
+    },
+    "PRD_Conf": {
+        "account": '{your service account}',  # need to get from dev ops
+        "host": '{your project id}',
+        "target_audience": '{your client id}',
+        "iap": True,
+    }
+}
+instance = tokenGenerator(conf)
+token = instance.generateToken('STG_Conf')
+print('token', token)
+```
