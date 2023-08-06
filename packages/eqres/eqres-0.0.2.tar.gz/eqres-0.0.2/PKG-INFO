@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: eqres
+Version: 0.0.2
+Summary: 接口统一返回工具
+Home-page: https://github.com/enqiangjing/eqres
+Author: enqiang
+Author-email: enqiangjing@163.com
+License: MIT Licence
+Description: 接口统一返回工具
+Keywords: eqres,response
+Platform: any
