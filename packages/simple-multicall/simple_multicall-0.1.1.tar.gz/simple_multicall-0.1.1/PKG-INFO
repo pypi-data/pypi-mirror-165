@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: simple_multicall
+Version: 0.1.1
+Summary: Simple Web3 multicall
+Author: Igor Lapshin
+Author-email: igorlapshin@list.ru
+License: MIT
+Keywords: multicall,web3
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires: Web3
+License-File: LICENSE
+
+Simple multicall implementation for use with Web3 library
