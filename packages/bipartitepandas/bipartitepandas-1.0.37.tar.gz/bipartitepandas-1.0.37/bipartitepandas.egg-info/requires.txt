@@ -1,0 +1,8 @@
+paramsdict>=0.03
+numpy
+pandas
+scipy
+scikit-learn
+statsmodels
+igraph
+tqdm
