@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: git-backup-tool
+Version: 0.1.0
+Summary: Backup Github, Bitbucket or Gitlab repositories
+License: MIT
+Author: Alexander Hieser
+Author-email: Alexander.Hieser@online.de
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: argparse
+Requires-Dist: gitpython
+Requires-Dist: progress
+Requires-Dist: pylint
+Requires-Dist: requests
+Description-Content-Type: text/markdown
+
+[![Python application](https://github.com/AlexanderHieser/git-backup/actions/workflows/pylint.yml/badge.svg)](https://github.com/AlexanderHieser/git-backup/actions/workflows/pylint.yml)
+
+# Git Backup
+
+![Welcome](/docu/git_backup_header.png)
+Small CLI which helps to clone all user repositories on github.com, gitlab.com, bitbucket.com.
+
+## Usage
+
+Provide the following parameters to the cmd:
+
+```bash
+-h, --help    Show this help message and exit
+-t ACCESS_TOKEN  Your Github API Access Token
+-p DESTINATION   Backup destination path
+--mirror         Mirror repositories
+-u USERNAME      Username filtering
+```
+
+## Contribution
+Just create a PR, no guidlines at the moment ;)
+
