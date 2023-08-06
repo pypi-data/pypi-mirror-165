@@ -1,0 +1,6 @@
+emmet-core[all]
+fastapi
+uvicorn
+gunicorn
+boto3
+maggma
