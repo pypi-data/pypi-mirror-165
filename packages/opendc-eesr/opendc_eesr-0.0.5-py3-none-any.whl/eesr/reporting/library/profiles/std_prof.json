@@ -1,0 +1,5 @@
+{
+    "name" : "Standard 0.0.1",
+    "builtin_metrics" : ["TUE", "GEC", "APCr"],
+    "graph" : "metric_cmp_dppe"
+}

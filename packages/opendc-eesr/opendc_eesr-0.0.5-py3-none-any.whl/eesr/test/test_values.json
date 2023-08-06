@@ -1,0 +1,24 @@
+{
+    "builtin_metrics" : {
+        "TUE" : 2.33,
+        "GEC" : 0.68,
+        "APCr" : 0.575  
+    },
+    "metadata" : {
+        "start_date" : "2018-11-13",
+        "end_date" : "2019-4-23",
+        "environment" : "OpenDC Simulator",
+        "environment_link" : "https://opendc.org/"
+    },
+    "graph_comment" : "No significant adaptation of energy consumption.",
+    "domain" : [
+        {
+            "name" : "SLA Violations",
+            "value" : 5
+        },
+        {
+            "name" : "Job Success Ratio (%)",
+            "value" : 98.96
+        }
+    ]
+}

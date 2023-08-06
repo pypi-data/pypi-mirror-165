@@ -1,0 +1,22 @@
+TYPE,CO2 [gCO2/kWh]
+Mixed,0
+Fossil Brown coal/Lignite,1093
+Fossil Coal-derived gas,849
+Fossil Gas,434
+Fossil Hard coal,1023
+Fossil Oil,900
+Fossil Oil shale,385
+Fossil Peat,262
+Geothermal,47
+Hydro Pumped Storage,0
+Hydro Run-of-river and poundage,5
+Hydro Water Reservoir,11
+Marine,0
+Nuclear,5.13
+Other renewable,0
+Solar,36.7
+Waste,376
+Wind Offshore,14.2
+Wind Onshore,12.4
+Other,0
+Biomass,230
