@@ -1,0 +1,3 @@
+[console_scripts]
+simtex = src.main:main
+
