@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: poetry-plugin-sort
+Version: 0.1.0b3
+Summary: Poetry plugin to sort the dependencies alphabetically
+Home-page: https://github.com/andrei-shabanski/poetry-plugin-sort
+License: MIT
+Keywords: poetry,plugin,dependencies sorting
+Author: Andrei Shabanski
+Author-email: shabanski.andrei@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: poetry (>=1.2.0,<2.0.0)
+Project-URL: Repository, https://github.com/andrei-shabanski/poetry-plugin-sort
+Description-Content-Type: text/markdown
+
+# Poetry Plugin: Dependencies sorting
+
+[![PyPI Version](https://img.shields.io/pypi/v/poetry-plugin-sort?label=PyPI)](https://pypi.org/project/poetry-plugin-sort/)
+
+This package is a plugin that sort dependencies alphabetically in pyproject.toml
+after running `poetry init`, `poetry add`, or `poetry remove`.
+Since [Introduce dependency sorting #3996](https://github.com/python-poetry/poetry/pull/3996) pull request still open
+this plugin is a workaround for [!312](https://github.com/python-poetry/poetry/issues/312) issue.
+
+**Note**: the plugin is in the beta version!
+
+# Installation
+
+Just use `poetry self add` command to add this plugin.
+
+```bash
+poetry self add poetry-plugin-sort
+```
+
+If you used pipx to install Poetry, add the plugin via `pipx inject` command.
+
+```bash
+pipx inject poetry poetry-plugin-sort
+```
+
+And if you installed Poetry using pip, you can install the plugin the same way.
+
+```bash
+pip install poetry poetry-plugin-sort
+```
+
