@@ -1,0 +1,9 @@
+LICENSE
+README.md
+confluent.py
+setup.py
+py_confluent_cli.egg-info/PKG-INFO
+py_confluent_cli.egg-info/SOURCES.txt
+py_confluent_cli.egg-info/dependency_links.txt
+py_confluent_cli.egg-info/requires.txt
+py_confluent_cli.egg-info/top_level.txt

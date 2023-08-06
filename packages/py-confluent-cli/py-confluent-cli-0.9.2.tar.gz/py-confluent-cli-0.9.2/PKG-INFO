@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: py-confluent-cli
+Version: 0.9.2
+Summary: Simple Python library wrapping the Confluent Cloud CLI v2
+Home-page: https://github.com/saucelabs/py-confluent
+Author: Pawel Dudzinski
+Author-email: pawel.dudzinski@saucelabs.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+Simple Python library wrapping the Confluent Cloud CLI v2
