@@ -1,0 +1,3 @@
+[backendai_accelerator_v20]
+cuda_mock = ai.backend.accelerator.cuda_mock.plugin:CUDAPlugin
+
