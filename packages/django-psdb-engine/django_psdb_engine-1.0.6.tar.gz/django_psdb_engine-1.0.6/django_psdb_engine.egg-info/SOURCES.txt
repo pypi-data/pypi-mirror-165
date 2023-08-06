@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+django_psdb_engine/__init__.py
+django_psdb_engine/base.py
+django_psdb_engine/features.py
+django_psdb_engine.egg-info/PKG-INFO
+django_psdb_engine.egg-info/SOURCES.txt
+django_psdb_engine.egg-info/dependency_links.txt
+django_psdb_engine.egg-info/not-zip-safe
+django_psdb_engine.egg-info/requires.txt
+django_psdb_engine.egg-info/top_level.txt
+tests/__init__.py
+tests/test_django_psdb_engine.py
