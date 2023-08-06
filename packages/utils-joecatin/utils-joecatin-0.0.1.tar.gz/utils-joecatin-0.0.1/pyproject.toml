@@ -1,0 +1,30 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry]
+authors = ["joe <catinjoe@gmail.com>"]
+description = "personal utility package for Python3"
+homepage = "https://github.com/joecatin/utils-py"
+keywords = ["utils", "python3"]
+license = "MIT"
+name = "utils-joecatin"
+readme = "README.md"
+repository = "https://github.com/joecatin/utils-py"
+version = "0.0.1"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+[tool.poetry.dev-dependencies]
+flake8 = "^5.0.4"
+pytest = "^7.1.2"
+pytest-cov = "^3.0.0"
+
+[tool.pytest.ini_options]
+addopts = "--cov=utils_joecatin"
+testpaths = [
+    "tests",
+]
+
