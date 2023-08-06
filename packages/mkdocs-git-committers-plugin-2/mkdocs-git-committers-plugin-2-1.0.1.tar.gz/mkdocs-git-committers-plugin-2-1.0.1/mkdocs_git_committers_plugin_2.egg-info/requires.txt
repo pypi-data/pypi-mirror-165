@@ -1,0 +1,4 @@
+beautifulsoup4
+gitpython
+mkdocs>=1.0.3
+requests
