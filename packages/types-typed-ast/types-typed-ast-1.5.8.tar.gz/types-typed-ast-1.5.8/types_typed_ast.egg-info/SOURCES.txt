@@ -1,0 +1,12 @@
+CHANGELOG.md
+MANIFEST.in
+setup.py
+typed_ast-stubs/METADATA.toml
+typed_ast-stubs/__init__.pyi
+typed_ast-stubs/ast27.pyi
+typed_ast-stubs/ast3.pyi
+typed_ast-stubs/conversions.pyi
+types_typed_ast.egg-info/PKG-INFO
+types_typed_ast.egg-info/SOURCES.txt
+types_typed_ast.egg-info/dependency_links.txt
+types_typed_ast.egg-info/top_level.txt
