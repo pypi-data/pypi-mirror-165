@@ -1,0 +1,3 @@
+tippo<4,>=3
+basicco<7,>=6
+six<2,>=1
