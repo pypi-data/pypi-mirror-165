@@ -1,0 +1,11 @@
+requests
+boto3
+aiohttp
+zappa
+python-dotenv
+authlib
+pillow
+flask
+mtlibs
+pyyaml
+docker
