@@ -1,0 +1,8 @@
+Change Log
+==========
+
+0.0.3 (8/28/2022)
+-------------------
+- Corrected README.txt
+- Corrected Changelog.txt 
+

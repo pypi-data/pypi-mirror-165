@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: HelloworldJohnson
+Version: 0.0.3
+Summary: A hello world with a few functions
+Home-page: 
+Author: Najeb Johnson
+Author-email: Najebjohnson@gmail.com
+License: MIT
+Keywords: Helloworld
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+License-File: LICENCE.txt
+
+Test file
+
+Change Log
+==========
+
+0.0.3 (8/28/2022)
+-------------------
+- Corrected README.txt
+- Corrected Changelog.txt 
+
