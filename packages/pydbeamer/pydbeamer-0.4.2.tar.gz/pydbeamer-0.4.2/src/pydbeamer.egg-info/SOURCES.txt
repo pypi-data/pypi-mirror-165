@@ -1,0 +1,15 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/pydbeamer/__init__.py
+src/pydbeamer/baseA4.tex
+src/pydbeamer/basebeamer.tex
+src/pydbeamer/pydbeamer.pyc
+src/pydbeamer/pythonhighlight.sty
+src/pydbeamer.egg-info/PKG-INFO
+src/pydbeamer.egg-info/SOURCES.txt
+src/pydbeamer.egg-info/dependency_links.txt
+src/pydbeamer.egg-info/top_level.txt
