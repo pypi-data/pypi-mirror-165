@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: leanapi
+Version: 0.0.6
+Summary: Lean Api is a class layer for FastApi
+Home-page: http://github.com/developerkitchentr/leanapi
+Author: developerkitchen python team
+Author-email: topluluk@developerkitchen.dev
+License: MIT
+Keywords: api,leanapi,fastapi
+Classifier: Development Status :: 1 - Planning
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+
+
+# Lean Api for FastApi
+
+LeanAPI is an interface that allows you to create a FastAPI router as a Class.
+
+## An example class structure
+
+``` python
+
+from leanapi.path import controller
+from leanapi.server import router
+
+
+@controller("personnel", router)
+class Personnel:
+
+    @router.get("/get/{personnel_id}")
+    def get_personel(self, personnel_id: int) -> dict:
+        return {"personnel_id": personnel_id}
+
+```
+
+As a result definition the "/personnel/get/:personnel_id" address becomes active.
+"personnel_id" is a path parameter and is a of type *int*
+
