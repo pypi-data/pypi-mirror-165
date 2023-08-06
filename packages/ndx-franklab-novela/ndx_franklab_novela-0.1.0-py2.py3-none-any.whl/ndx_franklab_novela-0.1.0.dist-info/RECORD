@@ -1,0 +1,16 @@
+ndx_franklab_novela/__init__.py,sha256=az0_216MDmqsCOWp3EFs0Q2ZlAYs7-7KfgnIC93a8sg,1416
+ndx_franklab_novela/spec/ndx-franklab-novela.extensions.yaml,sha256=RFL12bviYG7sLaq9LIqqTFQZfBhUjAjfh-Sg_HZzUp0,5025
+ndx_franklab_novela/spec/ndx-franklab-novela.namespace.yaml,sha256=BktfjDkKhJLkx7te787JW6aYZ9jlTUAoZKExBDWA3KI,487
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_associated_files.py,sha256=BpPzUU6hYmeJCkjtKyIagl8NyI3_9O8cWwcLu7K6PK0,822
+tests/test_cameraDevice.py,sha256=OT7eUJFZCJOE30KrbQuWIOFM9apBP1vx-Tpco513lfw,649
+tests/test_dataAcqDevice.py,sha256=3_ooZLSxFT4A3chRit-tUGTAduMncWejlmXjcjTmttI,1567
+tests/test_header_device.py,sha256=mYo2RYPsraUlgvMauExQSiLw-T8PJWo_q4sAS-KUazY,5153
+tests/test_nwbElectrodeGroup.py,sha256=f5vIWzuID--3X7ritTX1Oe1mw2XyP80aQd_2oTDPm-s,1689
+tests/test_probe.py,sha256=iCvc3bRmbfjXaKhRYQ_SgzQqMbkQOqVVxEhgNFLeodo,3677
+tests/test_read_nwb.py,sha256=YkQsYJHT3C2TgTtXmrNbTt1sthSLdwtRuT4gUiCec2o,8240
+ndx_franklab_novela-0.1.0.dist-info/LICENSE.md,sha256=BIpnMrFpPYxoAYZQB_LU9T0Mmyfl5IUWmO4YgrrJ_VA,2978
+ndx_franklab_novela-0.1.0.dist-info/METADATA,sha256=CE4eekNw0-AiVZVgfeZ4zLBFTgVDVGhozULLHyUmm9U,4784
+ndx_franklab_novela-0.1.0.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+ndx_franklab_novela-0.1.0.dist-info/top_level.txt,sha256=BdUDvE5eyfQmWDTWJJF7P5Vf2ZYqKHcegMQs6mDuOIM,26
+ndx_franklab_novela-0.1.0.dist-info/RECORD,,
