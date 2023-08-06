@@ -1,0 +1,9 @@
+cloudist/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+cloudist/meadowrun_session.py,sha256=Q6qR-2VJ6-OhgHPOmrTol9JoZ3bKIxTfqkJYMagWvaI,5759
+cloudist/plugin.py,sha256=G1hQUe4QuEzAEgdSmlYtLYks3j8zVma9-lMvs3hX_qU,4354
+cloudist/remote_function.py,sha256=5m3qzmdm-Imlp7wELKHDNS9RWuAfUlMCuHl_0_EcOGM,4275
+pytest_cloudist-0.1.0a1.dist-info/entry_points.txt,sha256=emH-fma-mJsdo4-bUm7TVeJBq1y0tYX3AvofCvDicFI,37
+pytest_cloudist-0.1.0a1.dist-info/LICENSE,sha256=pU9y7mnj5abF0Jgnywd5KwkgFgSprUJgYHH3umOXatQ,1052
+pytest_cloudist-0.1.0a1.dist-info/WHEEL,sha256=bbU3AyvhQ312rVm7zzRQjs6axI1UYWC3nmFA2E6FFSI,88
+pytest_cloudist-0.1.0a1.dist-info/METADATA,sha256=8s0KdXqGQZnD_G3SYmHg5CpNYuXfL0Tx31EYJ4Xk_K0,3862
+pytest_cloudist-0.1.0a1.dist-info/RECORD,,
