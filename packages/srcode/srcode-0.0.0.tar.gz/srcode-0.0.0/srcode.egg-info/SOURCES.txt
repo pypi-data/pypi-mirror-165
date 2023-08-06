@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+sr/__init__.py
+sr/code.py
+sr/decode.py
+sr/image.py
+sr/message.py
+sr/sr.py
+srcode.egg-info/PKG-INFO
+srcode.egg-info/SOURCES.txt
+srcode.egg-info/dependency_links.txt
+srcode.egg-info/entry_points.txt
+srcode.egg-info/requires.txt
+srcode.egg-info/top_level.txt

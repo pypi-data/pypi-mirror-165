@@ -1,0 +1,11 @@
+click
+numpy
+opencv-python
+
+[dev]
+flake8
+isort
+pip-tools
+pytest
+pytest-snapshot
+pre-commit

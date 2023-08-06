@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: srcode
+Version: 0.0.0
+Summary: A simplified 'QR code'-like reader and generator
+Author: Tomas R.
+Project-URL: Homepage, https://github.com/tomasr8/SR-Code
+Project-URL: Github, https://github.com/tomasr8/SR-Code
+Keywords: QR,QR code,Image processing,Augmented reality,Computer vision,opencv
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Education
+Classifier: Topic :: Scientific/Engineering :: Image Processing
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+License-File: LICENSE
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/tomasr8/SR-Code/main/assets/logo.svg">
+</p>
+
+## A simplified `QR code`-like reader and generator
+
+### Check the Github repo for a full description
+
+## Examples
+
+- Standard Hello world example
+
+![](https://github.com/tomasr8/SR-Code/blob/126cc266296f758bc016962853ae3929680e7148/assets/decoded/hello.png)
+- Error correction can handle [Lena](https://en.wikipedia.org/wiki/Lenna)
+
+![](https://github.com/tomasr8/SR-Code/blob/126cc266296f758bc016962853ae3929680e7148/assets/decoded/lena.png)
+- Thresholding can even handle other (sufficiently dark) colors
+
+![](https://github.com/tomasr8/SR-Code/blob/126cc266296f758bc016962853ae3929680e7148/assets/decoded/colors.png)
+- Codeception, why yes
+
+![](https://github.com/tomasr8/SR-Code/blob/126cc266296f758bc016962853ae3929680e7148/assets/decoded/codeception.png)
+- And now everything combined together
+
+![](https://github.com/tomasr8/SR-Code/blob/126cc266296f758bc016962853ae3929680e7148/assets/decoded/all.png)
