@@ -1,0 +1,3 @@
+[console_scripts]
+tap-redcap=tap_redcap.tap:TapRedCap.cli
+
