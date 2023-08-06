@@ -1,0 +1,10 @@
+LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+README.md,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+weevils/__init__.py,sha256=EUo-24pU8nbnkfas1gTCXLfNLkqzDikTHeA_bUG3Ehw,629
+weevils/client.py,sha256=j5UplDhqZiwbT9oa9j7EX2lD8vN3HUueSHb1Vp7chTE,5402
+weevils/exceptions.py,sha256=7z58vIEFvDBbjrztmv62PQoGenNN_IiPCZsEzdCJwys,658
+weevils/models.py,sha256=L1sTClAXjSoHriGXqJLW37znKXNV3YZ4K7LDzToiGpo,5782
+weevils-0.0.2a0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+weevils-0.0.2a0.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+weevils-0.0.2a0.dist-info/METADATA,sha256=gsRGqNbdiedhv98c8QOFCUbda_MquCj5c_06BpqODTE,672
+weevils-0.0.2a0.dist-info/RECORD,,
