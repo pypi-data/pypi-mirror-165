@@ -1,0 +1,9 @@
+README.md
+setup.py
+vk_api_lite/__init__.py
+vk_api_lite/vk_api_lite.py
+vk_api_lite.egg-info/PKG-INFO
+vk_api_lite.egg-info/SOURCES.txt
+vk_api_lite.egg-info/dependency_links.txt
+vk_api_lite.egg-info/requires.txt
+vk_api_lite.egg-info/top_level.txt
