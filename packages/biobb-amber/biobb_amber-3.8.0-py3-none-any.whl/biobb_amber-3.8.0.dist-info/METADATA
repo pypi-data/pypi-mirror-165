@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: biobb-amber
+Version: 3.8.0
+Summary: Biobb_amber is a BioBB category for AMBER MD package.
+Home-page: https://github.com/bioexcel/biobb_amber
+Author: Biobb developers
+Author-email: adam.hospital@irbbarcelona.org
+License: UNKNOWN
+Project-URL: Documentation, http://biobb_amber.readthedocs.io/en/latest/
+Project-URL: Bioexcel, https://bioexcel.eu/
+Keywords: Bioinformatics Workflows BioExcel Compatibility MD Amber
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: biobb-common (==3.8.1)
+
+Biobb_amber allows setup and simulation of atomistic MD simulations using AMBER MD package and its associated AMBER tools.
+
