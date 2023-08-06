@@ -1,0 +1,7 @@
+galaxy-util>=22.1
+galaxy-containers>=22.1
+lxml
+pydantic
+pyyaml
+sortedcontainers
+typing-extensions
