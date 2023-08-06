@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+
+[project]
+name = "AR_NLP_TopicModling"
+version = "0.0.5"
+authors = [
+  { name="Hisham", email="20hishamibrahim@gmail.com" },
+]
+description = "Topic modling package"
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies  = [
+    "pandas",
+    "re",
+    "string",
+    "argparse",
+    "camel_tools",
+    "nltk",
+    "sklearn"
+    ]
