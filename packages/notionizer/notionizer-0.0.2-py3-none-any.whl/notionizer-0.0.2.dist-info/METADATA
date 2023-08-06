@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: notionizer
+Version: 0.0.2
+Summary: Python wrapper for Notion API
+Home-page: https://github.com/kimsg1984/notionizer
+Author: SeonGyo Kim
+Author-email: kimsg1984@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+
+# notionizer
+
+Notionize your life with python module **notionizer**!
+
+
+# Installation
+
+**PIP Install(stable)**
+```bash
+pip Install notionizer 
+```
+
+
+**Github(develop)**
+
+```
+git clone https://github.com/kimsg1984/notionizer.git
+cd notionizer
+python3 setup.py install
+```
+
+
+# Usage
+
+```
+from notionizer import Notion
+notion = Notion('notion_api_key')
+
+
+```
+
+# Reference
