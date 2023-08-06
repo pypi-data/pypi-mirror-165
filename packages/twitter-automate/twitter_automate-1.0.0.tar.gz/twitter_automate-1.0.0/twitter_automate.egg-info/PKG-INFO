@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: twitter-automate
+Version: 1.0.0
+Summary: This library allow to do automatisation actions like, share and comment on social network
+Home-page: https://gitlab.kaisens.fr/amouhite02/automatisation-rs
+Author: ADEBO
+Author-email: madebo@kaisensdata.fr
+License: MIT
+Description: # PACKAGE - KAI_AUOMATE
+        
+        ### **But**
+        Ce packages permet d'automatiser les tâches de like, partage et commentaire sur les réseaux sociaux tels que twitter et linkedIn.
+        
+        ### **Pour importer**
+        > from bot_twitter.automate_twitter import AutomateTwitter
+        
+        ### **Fonctions**
+        > 
+        - Pour twitter
+        
+            > twitter_auth_api(self): This function allow to authentificate on Twitter API
+        
+            > twitter_auth_client(self): This function allow to authentificate on Twitter Client
+        
+            > twitter_get_last_post(self, user_api: twitter_auth_api, pseudo_twitter: str) -> dict: This function return a dictionary contain id of last tweet and date creation
+        
+            > twitter_get_posts(self, user_api: twitter_auth_api, pseudo_twitter: str, nb_tweet: int) -> list: This function return last tweets in function value of variable 'nb_tweet'
+        
+            > twitter_like (self, user_client: twitter_auth_client, id_post: str): This function allow to like a tweet
+        
+            > twitter_retweet(self, user_client: twitter_auth_client, id_post: str): This function allow to retweet a tweet
+        
+            > twitter_comment(self, user_client: twitter_auth_client, id_post: str, text_comment: str): This function allow to comment a tweet  
+        
+        ### **Informations**
+        - Dans le dossier **dist/** nous avons notre package qui sera déplyer sur PyPi
+        
+        - Utiliser la commande suivante **pip install -r requirements.txt** pour installer les librairies neccessaires
+        
+        - Vous trouverez les différents class permettant d'automatiser les tâches sont dans le dossier **src/**
+        
+        - Pour ce qui concerne la phase de tests j'utilise la librairie **pytest** pour tester mes class. Les fichiers contenant mes tests unitaires sont dans le dossier **tests/unit_test_xxx.py**. Pour exécuter les tests taper la commande **pytest unit_test_xxx.py**.
+        
+        > NB: Soyez dans le répectoire tests/ pour exécuter
+        
+        ### **Informations supplémentaire**
+        Pour déployer le package utiliser twine en taper les commandes suivantes:
+        
+            - python setup.py sdist bdist
+        
+            - twine upload dist/*
+        
+                > Taper le username de votre compte PyPi
+        
+                > Taper le mot de passe de votre compte PyPi
+        
+        ### **Pour installer une fois déployer**
+        > pip install twitter-bot
+Keywords: kaisens,kai,automate,kai_automate,kai-automate,linkedin,twitter,automatisation
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
