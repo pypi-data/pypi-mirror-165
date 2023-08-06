@@ -1,0 +1,138 @@
+{% extends 'public/base.html' %}
+{% block index %}
+    <section class="py-5">
+        <div class="container px-5 my-5">
+            <div class="text-center mb-5">
+                <h1 class="fw-bolder">Frequently Asked Questions</h1>
+            </div>
+            <div class="row gx-5">
+                <div class="col-xl-8">
+                    <h2 class="fw-bolder mb-3"><i class="bi bi-list-task"></i> Task</h2>
+                    <div class="accordion mb-5" id="accordionExample">
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    Submit a Task
+                                </button>
+                            </h3>
+                            <div class="accordion-collapse collapse" id="collapseOne" aria-labelledby="headingOne"
+                                 data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <ol>
+                                        <li>Click &quot;Submit a new task&quot; to load a task. <strong>We recommend you
+                                            create an account to manage tasks and upload private plugins.</strong></li>
+                                        <li>Input task information and upload images.
+                                            <ul>
+                                                <li>Task Name: set a name to distinguish different tasks.</li>
+                                                <li>Description: set some information about this task.</li>
+                                                <li>Pixel-to-cm Conversion Factor (CF): ![[Pasted image
+                                                    20220701154801.png]]
+                                                </li>
+                                                <li>Segmentation Plugin: select a model to segment root images (default:
+                                                    RootSeg). You can upload a private plugin to segment more types of
+                                                    crops and imaging backgrounds (click here to study how to develop
+                                                    it).
+                                                </li>
+                                                <li>E-mail (Optional): receive task notification emails.</li>
+                                                <li>Upload:
+                                                    <ul>
+                                                        <li>Only several formats (<code>jpg / png / zip</code>) are
+                                                            allowed to upload.
+                                                        </li>
+                                                        <li>A single task can only upload the same format.</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>Submit your task and it will automatically redirect to the schedule page.
+                                        </li>
+                                        <li>You will be redirected to the result page and receive a task notification
+                                            email.
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    View results
+                                </button>
+                            </h3>
+                            <div class="accordion-collapse collapse" id="collapseTwo" aria-labelledby="headingTwo"
+                                 data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <ol>
+                                        <li>When the task is completed, you will receive a notification email with a
+                                            link to the result page.
+                                        </li>
+                                        <li>You can viste each results online or download them as a zipfile.</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 class="fw-bolder mb-3"><i class="bi bi-bezier"></i> Plugin</h2>
+                    <div class="accordion mb-5 mb-xl-0" id="accordionExample2">
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                    Upload private plugin
+                                </button>
+                            </h3>
+                            <div class="accordion-collapse collapse" id="collapseThree" aria-labelledby="headingThree"
+                                 data-bs-parent="#accordionExample2">
+                                <div class="accordion-body">
+                                    <p>⚠️<strong>Before uploading, you must create an account.</strong></p>
+                                    <ol>
+                                        <li>Click &quot;Add a plugin&quot; in the &quot;My Plugin&quot; page.</li>
+                                        <li>Input plugin information and upload files.</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFour" aria-expanded="false"
+                                        aria-controls="collapseFour">
+                                    Use private plugin
+                                </button>
+                            </h3>
+                            <div class="accordion-collapse collapse" id="collapseFour" aria-labelledby="headingFour"
+                                 data-bs-parent="#accordionExample2">
+                                <div class="accordion-body">
+                                    <p>Select each plugin in the "add task" page.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="fw-bolder mt-5"><i class="bi bi-box-arrow-up-right"></i> Get more documentations on the <a
+                            href="https://github.com/njauzrn/faCRSA/blob/main/readme.md" rel="noopener" target="_blank">Github
+                        page</a></h2>
+                </div>
+                <div class="col-xl-4">
+                    <div class="card border-0 bg-light mt-xl-5">
+                        <div class="card-body p-4 py-lg-5">
+                            <div class="d-flex align-items-center justify-content-center">
+                                <div class="text-center">
+                                    <div class="h6 fw-bolder">Have more questions?</div>
+                                    <p class="text-muted mb-4">
+                                        Contact us at
+                                        <br/>
+                                        <a href="#!">2020801253@stu.njau.edu.cn</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

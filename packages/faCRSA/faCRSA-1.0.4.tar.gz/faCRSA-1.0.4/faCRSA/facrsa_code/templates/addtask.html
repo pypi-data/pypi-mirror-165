@@ -1,0 +1,106 @@
+{% extends 'public/base.html' %}
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'layui/css/layui.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'css/form-validation.css') }}">
+{% endblock %}
+{% block index %}
+    <section class="py-5">
+        <div class="container px-5">
+            <div class="bg-light rounded-3 py-5 px-4 px-md-5 mb-5">
+                <div class="text-center mb-5">
+                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3">
+                        <i class="bi bi-plus-circle"></i>
+                    </div>
+                    <h1 class="fw-bolder">New Task</h1>
+                </div>
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-6 mb-5 mb-lg-0">
+                        <form id="addTaskFrom">
+                            <div class="form-outline mb-4">
+                                <label class="form-label" for="name">* Task Name</label>
+                                <input type="text" id="name" name="name" class="form-control"/>
+                            </div>
+                            <div class="form-outline mb-4">
+                                <label class="form-label" for="des">* Description</label>
+                                <input type="text" id="des" name="des" class="form-control"/>
+                            </div>
+                            <div class="form-outline mb-4">
+                                <label class="form-label" for="cf">* Pixel-to-cm Conversion Factor</label>
+                                <input type="text" id="cf" name="cf" class="form-control"/>
+                            </div>
+                            <div class="form-outline mb-4">
+                                <label class="form-label" for="cf">* Segmentation Plugin</label>
+                                <select id="plugin" name="plugin" class="form-control form-control-placeholder">
+                                    <option value="1">Default (RootSeg)</option>
+                                    {% for plugin in plugin_list %}
+                                        <option value="{{ plugin.pid }}"
+                                                style="color: black;">{{ plugin.plugin_name }}</option>
+                                    {% endfor %}`
+                                </select>
+                                <a href="https://github.com/njauzrn/facrsa#1-submit-a-task" rel="noopener" target="_blank">
+                                    <span style="font-size: 14px; color:rgba(0, 150, 136, 0.83) ">* Click here for details about segmentation plugin. </span>
+                                </a>
+                            </div>
+                            <div class="form-outline mb-4">
+                                <label class="form-label" for="mail">E-mail <code>Optional</code></label>
+                                <input type="text" id="mail" name="mail" class="form-control"/>
+                                <p style="font-size: 14px">* Receive task notification emails. </p>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="form-label">* Upload</label>
+                                <blockquote class="layui-elem-quote" style="font-size: 14px">
+                                    Only several formats (<code>jpg / png / zip</code>) are allowed to upload.
+                                    <br>
+                                    A single task can only upload the same format (image or zip file).
+                                    <br> Max 1 zip file / 10 image files
+                                </blockquote>
+                                <div class="mb-1">
+                                    <div class="layui-upload">
+                                        <div class="layui-upload-list" style="max-width: 1000px;margin: 0;">
+                                            <table class="layui-table" style="margin:0;">
+                                                <colgroup>
+                                                    <col>
+                                                    <col>
+                                                    <col>
+                                                </colgroup>
+                                                <thead>
+                                                <tr style="background-color:#ffffff;color: #0c0c0c">
+                                                    <th>File Name</th>
+                                                    <th>Size</th>
+                                                    <th>Actions</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody id="imgList"></tbody>
+                                            </table>
+                                        </div>
+                                        <br>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-icon btn-outline-success"
+                                        id="selectImg">
+                                    Select File
+                                </button>
+                            </div>
+                            <input type="hidden" name="tid" id="tid" value="{{ tid }}">
+                            <div class="layui-form-item">
+                                <button id="submitTaskForm" class="btn btn-primary btn-block mb-4"
+                                        disabled="true">
+                                    Submit
+                                </button>
+                                <button type="reset" class="btn btn-default btn-block mb-4">
+                                    Reset
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+{% block js %}
+    <script src="{{ url_for('static', filename = 'js/vendors.min.js') }}"></script>
+    <script src="{{ url_for('static', filename = 'js/jquery.validate.min.js') }}"></script>
+    <script src="{{ url_for('static', filename = 'layui/layui.js') }}"></script>
+    <script src="{{ url_for('static', filename = 'js/page/addtask.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,100 @@
+<!--
+ * @Author: Ruinan Zhang
+ * @Version: v1.2
+ * @LastEditTime: 2022-07-01 09:39:00
+ * @E-mail: 2020801253@stu.njau.edu.cn
+ * Copyright (c) 2022 by Ruinan Zhang, All Rights Reserved. Licensed under the GPL v3.0.
+-->
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="description" content="An automated pipeline for high-throughput analysis of crop root system
+architecture"/>
+    <meta name="author" content="Ruinan Zhang"/>
+    <title>
+        {% block title %}{{ title }} | faCRSA - An automated pipeline for high-throughput analysis of crop root system
+            architecture.{% endblock %}</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename = 'assets/favicon.ico') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'css/bootstrap-icons.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'css/styles.css') }}">
+    {% block css %}{% endblock %}
+</head>
+<body class="d-flex flex-column h-100">
+<main class="flex-shrink-0">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container px-5">
+            <a class="navbar-brand" href="/"><img src="{{ url_for('static', filename = 'assets/favicon.ico') }}"
+                                                  width="36" height="36"/> faCRSA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation"><span
+                    class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="/examples"><i class="bi bi-card-image"></i> Examples</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="/faq"><i class="bi bi-question-circle"></i> FAQ</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="/install"><i class="bi bi-cloud-download"></i>
+                        Install</a></li>
+                </ul>
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="/addtask"><i class="bi bi-plus-circle"></i>
+                        Submit a new task</a></li>
+                    {% if uid %}
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
+                               data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-person"></i> My
+                                faCRSA</a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="/mytask"><i class="bi bi-list-task"></i> My Task</a>
+                                </li>
+                                <li><a class="dropdown-item" href="/myplugin"><i class="bi bi-bezier"></i> My Plugin</a>
+                                </li>
+                                <li><a class="dropdown-item" href="/setting"><i class="bi bi-gear"></i> Account Setting</a>
+                                </li>
+                                <hr>
+                                <li><a class="dropdown-item" href="/logout"><i class="bi bi-person"></i> LogOut</a></li>
+                            </ul>
+                        </li>
+
+                    {% else %}
+                        <li class="nav-item"><a class="nav-link" href="/login"><i class="bi bi-person"></i> Login</a>
+                        </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+    {% block index %}{% endblock %}
+</main>
+<footer class="bg-dark py-4 mt-auto">
+    <div class="container px-5">
+        <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+            <div class="col-auto">
+                <div class="small m-0 text-white">
+                    COPYRIGHT © 2020-2022. faCRSA. All rights Reserved.
+                    <br>
+                    <b>
+                        Regional Technique Innovation Center for
+                        Wheat Production, Nanjing Agricultural University. Nanjing, China
+                    </b>
+                </div>
+            </div>
+            <div class="col-auto">
+                <a href="http://www.njau.edu.cn/" rel="noopener" target="_blank"><img width="48" height="48"
+                                                                                      src="../../static/assets/njau.png"
+                                                                                      alt="NJAU"></a>
+                <a href="https://aiphenomics.com/" rel="noopener" target="_blank"><img width="53" height="48"
+                                                                                       src="../../static/assets/aiphenomics.png"
+                                                                                       alt="aiPhenomics"></a>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="{{ url_for('static', filename = 'js/bootstrap.bundle.js') }}"></script>
+{% block js %}{% endblock %}
+</body>
+</html>

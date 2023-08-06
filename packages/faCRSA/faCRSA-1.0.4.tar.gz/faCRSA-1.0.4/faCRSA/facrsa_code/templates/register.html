@@ -1,0 +1,59 @@
+{% extends 'public/base.html' %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'css/page-auth.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'css/form-validation.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'css/sweetalert2.css') }}">
+{% endblock %}
+{% block index %}
+<section class="py-5">
+    <div class="container px-5">
+        <div class="rounded-3 py-5 px-4 px-md-5 mb-5">
+            <div class="text-center mb-5">
+                <h1 class="fw-bolder">Register</h1>
+                <p class="lead fw-normal text-muted mb-0">Make root phenotyping analyze automated and easy! 🚀
+                </p>
+            </div>
+            <div>
+                <div class="row gx-lg-5 justify-content-center align-items-center">
+                    <div class="col-lg-6 mb-5 mb-lg-0">
+                        <div class="card">
+                            <div class="card-body py-5 px-md-5">
+                                <form id="regform">
+                                    <div class="form-outline mb-4">
+                                        <label class="form-label" for="username">* User Name</label>
+                                        <input type="text" id="username" name="username" class="form-control"/>
+                                    </div>
+                                    <div class="form-outline mb-4">
+                                        <label class="form-label" for="password">* Password</label>
+                                        <input type="password" id="password" name="password" class="form-control"/>
+                                    </div>
+                                    <div class="form-outline mb-4">
+                                        <label class="form-label" for="con-password">* Confirm password</label>
+                                        <input type="password" id="con-password" name="con-password" class="form-control"/>
+                                    </div>
+                                    <button id="register" class="btn btn-primary btn-block mb-4">
+                                        Submit
+                                    </button>
+                                    <button type="reset" class="btn btn-default btn-block mb-4">
+                                        Reset
+                                    </button>
+                                </form>
+                                <hr>
+                                <div class="text-center">
+                                    <p>Already have an account? <a href="/login"> Sign in</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+{% block js %}
+<script src="{{ url_for('static', filename = 'js/vendors.min.js') }}"></script>
+<script src="{{ url_for('static', filename = 'js/jquery.validate.min.js') }}"></script>
+<script src="{{ url_for('static', filename = 'js/auth-validate.js') }}"></script>
+<script src="{{ url_for('static', filename = 'js/sweetalert2.all.min.js') }}"></script>
+{% endblock %}

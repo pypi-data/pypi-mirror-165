@@ -1,0 +1,3 @@
+[console_scripts]
+facrsa-queue = faCRSA.start_queue:start_queue
+facrsa-web = faCRSA.start_web:start_web

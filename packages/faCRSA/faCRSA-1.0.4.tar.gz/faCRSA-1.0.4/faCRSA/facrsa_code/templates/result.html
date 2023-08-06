@@ -1,0 +1,35 @@
+{% extends 'public/base.html' %}
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'layui/css/layui.css') }}">
+{% endblock %}
+{% block index %}
+    <section class="py-5">
+        <div class="container px-5">
+            <div class="text-center mb-5">
+                <div class="badge bg-success bg-gradient rounded-pill mb-2">Success</div>
+                <h1 class="fw-bolder">{{ name }}</h1>
+                <p class="lead fw-normal text-muted mb-0">{{ des }}</p>
+            </div>
+            <div class="bg-light rounded-3 py-5 px-4 px-md-5 mb-5">
+                <div class="row gx-5 justify-content-center">
+                    <table class="layui-hide" id="result" lay-filter="result"></table>
+                    <script type="text/html" id="toolbarDemo">
+                        <div class="layui-btn-container">
+                            <button class="btn btn-sm btn-primary"
+                                    onclick="window.location.href='{{ download }}'">Download
+                            </button>
+                        </div>
+                    </script>
+                </div>
+            </div>
+            <input type="hidden" value="{{ tid }}" id="tid">
+        </div>
+    </section>
+
+{% endblock %}
+{% block js %}
+    <script src="{{ url_for('static', filename = 'layui/layui.js') }}"></script>
+    <script src="{{ url_for('static', filename = 'js/vendors.min.js') }}"></script>
+    <script src="{{ url_for('static', filename = 'js/jquery.validate.min.js') }}"></script>
+    <script src="{{ url_for('static', filename = 'js/page/result.js') }}"></script>
+{% endblock %}

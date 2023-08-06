@@ -1,0 +1,48 @@
+{% extends 'public/base.html' %}
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'layui/css/layui.css') }}">
+{% endblock %}
+{% block index %}
+    <section class="py-5">
+        <div class="container px-5">
+            <div class="text-center mb-5">
+                <i class="layui-icon layui-icon-loading layui-icon layui-anim layui-anim-rotate layui-anim-loop"
+                   style="font-size: 30px; color: #1E9FFF;"></i>
+                <h3 class="fw-bolder">Your task <code>{{ name }}</code> is analyzing.</h3>
+            </div>
+            <div class="text-center mb-5">
+                <p class="lead fw-normal text-muted mb-0"> Upon task completes, a notification with the URL to access
+                    the results will be sent to your mail
+                    box
+                    (<code>{{ mail }}</code>).
+                    <br>
+                    Or you can save the URL to check the results later. The results will remain on the server for 7
+                    days.
+                    <br>
+
+                    If you have login in the faCRSA, the results will be saved forever.
+                </p>
+            </div>
+            <div class="text-center mb-5">
+                <a class="text-decoration-none text-center" style="color: #2B80FD" href="#" id="clipboard"
+                   data-clipboard-text="{{ url }}">
+                    Click to copy link
+                    <i class="layui-icon layui-icon-link"></i>
+                </a>
+                <br>
+                <a class="text-decoration-none text-center" style="color: #2B80FD" href="#" id="clipboard"
+                   data-clipboard-text="{{ url }}">
+                    ({{ url }})
+                </a>
+                <input type="hidden" value="{{ tid }}" id="tid">
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+{% block js %}
+    <script src="{{ url_for('static', filename = 'js/vendors.min.js') }}"></script>
+    <script src="{{ url_for('static', filename = 'js/clipboard.min.js') }}"></script>
+    <script src="{{ url_for('static', filename = 'layui/layer/layer.js') }}"></script>
+    <script src="{{ url_for('static', filename = 'js/page/schedule.js') }}"></script>
+{% endblock %}

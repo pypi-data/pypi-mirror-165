@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <title>Initialize | faCRSA - A fully automated pipeline for root phenotyping
+        analysis</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename = 'assets/favicon.ico') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'css/bootstrap-icons.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'css/styles.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'css/page-auth.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'css/form-validation.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'css/sweetalert2.css') }}">
+</head>
+<body class="d-flex flex-column h-100">
+<main class="flex-shrink-0">
+
+    <section class="py-5">
+        <div class="container px-5">
+            <div class="bg-light rounded-3 py-5 px-4 px-md-5 mb-5">
+                <div class="text-center mb-5">
+                    <div class="feature"><i class="bi bi-heart-fill" style="color: #dc3545"></i></div>
+                    <h1 class="fw-bolder">Initialize faCRSA </h1>
+                    <p class="lead fw-normal text-muted mb-0">Initialize database and set SMTP server.
+                    <p>
+                </div>
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-8 col-xl-6">
+                        <div class="alert alert-danger" role="alert" style="display: {{ error_msg }}">
+                            <i class="bi bi-bug-fill"></i> Database initialization failed!
+                        </div>
+                        <div class="alert alert-success" role="alert" style="display: {{ success_msg }}">
+                            <i class="bi bi-check2-circle"></i> Database initialization successful!
+                        </div>
+                        <p>Please set the SMTP server information, which used to notify teh task status. If you don't
+                            need this function, please don't input the following fields. </p>
+                        <a href="/api/skipInitial"><p>Or click here to skip setting server information </p></a>
+                        <form id="initialForm">
+                            <div class="form-outline mb-3">
+                                <label class="form-label" for="user">SMTP User</label>
+                                <input class="form-control" id="user" name="user" type="text"/>
+                            </div>
+                            <div class="form-outline mb-3">
+                                <label class="form-label" for="password">SMTP Password</label>
+                                <input class="form-control" id="password" name="password" type="password"/>
+                            </div>
+                            <div class="form-outline mb-3">
+                                <label class="form-label" for="host">SMTP Host</label>
+                                <input class="form-control" id="host" name="host" type="text"/>
+                            </div>
+                            <div class="d-grid">
+                                <button id="initial" class="btn btn-primary btn-lg">Submit
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="row gx-5 row-cols-2 row-cols-lg-4 py-5">
+                <div class="col">
+                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i
+                            class="bi bi-lightning"></i></div>
+                    <div class="h5 mb-2">Faster</div>
+                    <p class="text-muted mb-0">No manual intervention required.</p>
+                </div>
+                <div class="col">
+                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i
+                            class="bi bi-emoji-smile"></i></div>
+                    <div class="h5">Simpler</div>
+                    <p class="text-muted mb-0">Without needing to adjust parameters.</p>
+                </div>
+                <div class="col">
+                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i
+                            class="bi bi-bounding-box-circles"></i></div>
+                    <div class="h5">More Accurate</div>
+                    <p class="text-muted mb-0">Deep learning algorithm greatly improves segmentation accuracy.</p>
+                </div>
+                <div class="col">
+                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i
+                            class="bi bi-plus-circle"></i></div>
+                    <div class="h5">High Expandability</div>
+                    <p class="text-muted mb-0">Analyze more types of crops and imaging backgrounds through private
+                        plugins.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="bg-dark py-4 mt-auto">
+    <div class="container px-5">
+        <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+            <div class="col-auto">
+                <div class="small m-0 text-white">
+                    COPYRIGHT © 2020-2022. faCRSA. All rights Reserved.
+                    <br>
+                    <b>
+                        Regional Technique Innovation Center for
+                        Wheat Production, Nanjing Agricultural University. Nanjing, China
+                    </b>
+                </div>
+            </div>
+            <div class="col-auto">
+                <a href="http://www.njau.edu.cn/" rel="noopener" target="_blank"><img width="48" height="48"
+                                                                                      src="../../static/assets/njau.png"
+                                                                                      alt="NJAU"></a>
+                <a href="https://aiphenomics.com/" rel="noopener" target="_blank"><img width="53" height="48"
+                                                                                       src="../../static/assets/aiphenomics.png"
+                                                                                       alt="aiPhenomics"></a>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+<script src="{{ url_for('static', filename = 'js/vendors.min.js') }}"></script>
+<script src="{{ url_for('static', filename = 'js/jquery.validate.min.js') }}"></script>
+<script src="{{ url_for('static', filename = 'js/page/initial.js') }}"></script>
+<script src="{{ url_for('static', filename = 'js/sweetalert2.all.min.js') }}"></script>
+</html>

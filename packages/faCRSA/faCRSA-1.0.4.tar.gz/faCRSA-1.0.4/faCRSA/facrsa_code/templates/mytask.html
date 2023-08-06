@@ -1,0 +1,47 @@
+{% extends 'public/base.html' %}
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'layui/css/layui.css') }}">
+{% endblock %}
+{% block index %}
+    <section class="py-5">
+        <div class="container px-5">
+            <div class="bg-light rounded-3 py-5 px-4 px-md-5 mb-5">
+                <div class="text-center mb-5">
+                    <h1 class="fw-bolder"><i class="bi bi-list-task"></i> My Task</h1>
+                </div>
+                <div class="row gx-5 justify-content-center">
+                    <table class="layui-hide" id="task" lay-filter="task"></table>
+                    <script type="text/html" id="toolbarDemo">
+                        <div class="layui-btn-container">
+                            <button class="btn btn-sm btn-primary" lay-event="getCheckData"
+                                    onclick="window.location.href='/addtask'">Add a task
+                            </button>
+                        </div>
+                    </script>
+                    <script type="text/html" id="barDemo">
+                        <a href="javascript:;" lay-event="view">
+                            <svg t="1628661863248" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                                 xmlns="http://www.w3.org/2000/svg" p-id="1955" width="16" height="16">
+                                <path d="M998.4 800l-140.8-89.6c6.4-25.6 12.8-44.8 12.8-70.4 0-121.6-96-217.6-217.6-217.6S435.2 512 435.2 633.6s96 217.6 217.6 217.6c70.4 0 134.4-32 172.8-89.6l134.4 89.6c6.4 6.4 12.8 6.4 19.2 6.4 12.8 0 19.2-6.4 25.6-12.8 12.8-12.8 12.8-38.4-6.4-44.8z m-345.6-12.8c-83.2 0-153.6-70.4-153.6-153.6s70.4-153.6 153.6-153.6c83.2 0 153.6 70.4 153.6 153.6 0 89.6-64 153.6-153.6 153.6zM768 896c0 32-25.6 64-64 64H134.4c-32 0-64-25.6-64-64V128c0-32 25.6-64 64-64H704c32 0 64 25.6 64 64v268.8c25.6 12.8 44.8 25.6 64 44.8V128c0-70.4-57.6-128-128-128H134.4C64 0 6.4 57.6 6.4 128v768c0 70.4 57.6 128 128 128H704c70.4 0 128-57.6 128-128v-64c-19.2 19.2-44.8 32-64 44.8v19.2zM614.4 371.2H185.6c-19.2 0-32 12.8-32 32s12.8 32 32 32h294.4c32-25.6 83.2-51.2 134.4-64z m76.8-134.4c0-19.2-12.8-32-32-32H185.6c-19.2 0-32 12.8-32 32s12.8 32 32 32h473.6c12.8 6.4 32-12.8 32-32zM153.6 576c0 19.2 12.8 32 32 32h211.2c0-25.6 6.4-44.8 12.8-64H185.6c-19.2 0-32 12.8-32 32z"
+                                      fill="#2c2c2c" p-id="1956"></path>
+                            </svg>
+                        </a>
+                        <a href="javascript:;" lay-event="del">
+                            <svg t="1627569829385" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                                 xmlns="http://www.w3.org/2000/svg" p-id="6508" width="16" height="16">
+                                <path
+                                        d="M438.144 833.792V341.504a37.376 37.376 0 0 0-36.864-37.824 37.376 37.376 0 0 0-36.928 37.824v492.288c0 20.928 16.512 37.888 36.928 37.888a37.376 37.376 0 0 0 36.864-37.888zM364.352 76.416h295.04a37.376 37.376 0 0 0 36.864-37.824A37.376 37.376 0 0 0 659.392 0.704h-295.04a37.376 37.376 0 0 0-36.864 37.888c0 20.928 16.512 37.824 36.864 37.824z m479.424 189.376a37.376 37.376 0 0 0-36.864 37.888v568c0 41.792-33.024 75.712-73.728 75.712H290.56c-40.704 0-73.728-33.92-73.728-75.712v-568a37.376 37.376 0 0 0-36.864-37.888 37.376 37.376 0 0 0-36.928 37.888v643.712c0 41.792 33.024 75.712 73.792 75.712h590.016c40.704 0 73.728-33.92 73.728-75.712V303.68a37.376 37.376 0 0 0-36.864-37.888z m110.656-151.488H69.312a37.376 37.376 0 0 0-36.8 37.888c0 20.928 16.512 37.888 36.864 37.888h885.056a37.376 37.376 0 0 0 36.864-37.888 37.376 37.376 0 0 0-36.864-37.888z m-295.04 719.488V341.504a37.376 37.376 0 0 0-36.864-37.824 37.376 37.376 0 0 0-36.864 37.824v492.288c0 20.928 16.448 37.888 36.864 37.888a37.376 37.376 0 0 0 36.864-37.888z"
+                                        p-id="6509"></path>
+                            </svg>
+                        </a>
+                    </script>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+{% block js %}
+    <script src="{{ url_for('static', filename = 'js/vendors.min.js') }}"></script>
+    <script src="{{ url_for('static', filename = 'layui/layui.js') }}"></script>
+    <script src="{{ url_for('static', filename = 'js/page/mytask.js') }}"></script>
+{% endblock %}

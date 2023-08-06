@@ -1,0 +1,93 @@
+{% extends 'public/base.html' %}
+{% block title %}faCRSA - An automated pipeline for high-throughput analysis of crop root system
+    architecture.{% endblock %}
+{% block index %}
+    <header class="bg-dark py-5">
+        {% if update %}
+            <div class="container px-5">
+                <div class="row gx-5 align-items-center justify-content-center">
+                    <div class="alert alert-success" style="width:40%;text-align: center">
+                        <a href="https://github.com/zrnupping/faCRSA#update" style="text-decoration:none"><strong>New
+                            version!</strong> Click here to view more information.</a>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+        <div class="container px-5">
+            <div class="row gx-5 align-items-center justify-content-center">
+
+                <div class="col-lg-8 col-xl-7 col-xxl-6">
+                    <div class="my-5 text-center text-xl-start">
+                        <h1 class="display-5 fw-bolder text-white mb-2">
+                            faCRSA
+                        </h1>
+                        <p class="lead fw-normal text-white-50">
+                            We represent the following functions to researchers.
+                        <ul class="text-white-50">
+                            <li>Enable researchers to analyze RSA traits online.</li>
+                            <li>Analyze more types of crop roots by developing private plugins.</li>
+                        </ul>
+                        </p>
+                        <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                            <a class="btn btn-lg btn-primary" href="/addtask">Try it now!</a>
+                            <a class="btn btn-outline-light btn-lg px-4" href="https://github.com/njauzrn/facrsa"
+                               rel="noopener" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                     class="icon icon-tabler icon-tabler-brand-github"
+                                     width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                                     fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
+                                </svg>
+                                Source Code</a>
+                        </div>
+                        <p class="fw-normal text-white-50 mb-4 mt-3">
+                            Or <a href="/login">login</a> to manage your tasks and add private plugins.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5"
+                                                                                   src="../static/assets/facrsa.png"
+                                                                                   alt="facrsa"/></div>
+            </div>
+        </div>
+    </header>
+    <section class="py-5" id="features">
+        <div class="container px-5 my-5">
+            <div class="row gx-5">
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h2 class="fw-bolder mb-0">A better way to research root phenotype.</h2>
+                </div>
+                <div class="col-lg-8">
+                    <div class="row gx-5 row-cols-1 row-cols-md-2">
+                        <div class="col mb-5 h-100">
+                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i
+                                    class="bi bi-lightning"></i></div>
+                            <h2 class="h5">Faster</h2>
+                            <p class="mb-0">No manual intervention required.</p>
+                        </div>
+                        <div class="col mb-5 h-100">
+                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i
+                                    class="bi bi-emoji-smile"></i></div>
+                            <h2 class="h5">Simpler</h2>
+                            <p class="mb-0">Without needing to adjust parameters.</p>
+                        </div>
+                        <div class="col mb-5 mb-md-0 h-100">
+                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i
+                                    class="bi bi-bounding-box-circles"></i></div>
+                            <h2 class="h5">More Accurate</h2>
+                            <p class="mb-0">Deep learning algorithm greatly improves segmentation accuracy.</p>
+                        </div>
+                        <div class="col h-100">
+                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i
+                                    class="bi bi-plus-circle"></i></div>
+                            <h2 class="h5">High Expandability</h2>
+                            <p class="mb-0">Analyze more types of crops and imaging backgrounds through private
+                                plugins.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

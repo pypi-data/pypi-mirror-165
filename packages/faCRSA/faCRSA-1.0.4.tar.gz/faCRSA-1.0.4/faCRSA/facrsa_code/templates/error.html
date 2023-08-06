@@ -1,0 +1,18 @@
+{% extends 'public/base.html' %}
+{% block index %}
+    <section class="py-5">
+        <div class="container px-5">
+            <div class="text-center mb-5">
+                 <div class="badge bg-danger bg-gradient rounded-pill mb-2">Error</div>
+                <h3 class="fw-bolder">Your task <code>{{ name }}</code> executed failed.</h3>
+            </div>
+            <div class="text-center mb-5">
+                <p class="lead fw-normal text-muted mb-0">
+                    Please try again later!
+                    <br>
+                    Or contact us (E-mail: 2020801253@stu.njau.edu.cn).
+                </p>
+            </div>
+        </div>
+    </section>
+{% endblock %}

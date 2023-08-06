@@ -1,0 +1,88 @@
+{% extends 'public/base.html' %}
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'layui/css/layui.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'css/form-validation.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'css/sweetalert2.css') }}">
+{% endblock %}
+{% block index %}
+    <section class="py-5">
+        <div class="container px-5">
+            <div class="row gx-5">
+                <div class="col-lg-4 mb-5">
+                    <div class="p-2">
+                        <div class="badge bg-primary bg-gradient rounded-pill mb-2">Change Username</div>
+                    </div>
+                    <div class="card  border-0">
+                        <div class="bg-light rounded-3 py-5 px-4 px-md-5 mb-5">
+                            <form id="changeUserNameForm">
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="username">* User Name</label>
+                                    <input type="text" id="username" name="username" class="form-control"
+                                           placeholder="{{ user }}"/>
+                                </div>
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="co-username">* Confirm User Name</label>
+                                    <input type="text" id="co-username" name="co-username"
+                                           class="form-control" placeholder="{{ user }}"/>
+                                </div>
+                                <button id="changeUserName" class="btn btn-primary btn-block mb-4">
+                                    Submit
+                                </button>
+                                <button type="reset" class="btn btn-default btn-block mb-4">
+                                    Reset
+                                </button>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-5">
+                    <div class="p-2">
+                        <div class="badge bg-primary bg-gradient rounded-pill mb-2">Change Password</div>
+                    </div>
+                    <div class="card  border-0">
+                        <div class="bg-light rounded-3 py-5 px-4 px-md-5 mb-5">
+                            <form id="changePWDForm">
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="password">* Password</label>
+                                    <input type="password" id="password" name="password"
+                                           class="form-control"/>
+                                </div>
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="con-password">* Confirm password</label>
+                                    <input type="password" id="con-password" name="con-password"
+                                           class="form-control"/>
+                                </div>
+                                <button id="changePWD" class="btn btn-primary btn-block mb-4">
+                                    Submit
+                                </button>
+                                <button type="reset" class="btn btn-default btn-block mb-4">
+                                    Reset
+                                </button>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-5">
+                    <div class="p-2">
+                        <div class="badge bg-primary bg-gradient rounded-pill mb-2">Login Status</div>
+                    </div>
+                    <div class="p-2">
+                        <button class="btn btn-primary btn-sm btn-block mb-4"
+                                onclick="window.location.href='/logout'">
+                            LogOut
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+{% block js %}
+    <script src="{{ url_for('static', filename = 'js/vendors.min.js') }}"></script>
+    <script src="{{ url_for('static', filename = 'js/jquery.validate.min.js') }}"></script>
+    <script src="{{ url_for('static', filename = 'layui/layui.js') }}"></script>
+    <script src="{{ url_for('static', filename = 'js/sweetalert2.all.min.js') }}"></script>
+    <script src="{{ url_for('static', filename = 'js/page/setting.js') }}"></script>
+{% endblock %}

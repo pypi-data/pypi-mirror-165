@@ -1,0 +1,47 @@
+{% extends 'public/base.html' %}
+{% block index %}
+    <section class="py-5">
+        <div class="container px-5 my-5">
+            <div class="text-center mb-5">
+                <h1 class="fw-bolder">faCRSA Stable Version</h1>
+                <p class="lead fw-normal text-muted mb-0">Please follow the installation instructions on the <a
+                        href="https://github.com/njauzrn/facrsa" rel="noopener" target="_blank">Github page</a>.</p>
+            </div>
+            <div class="row gx-5 row-cols-sm-2 row-cols-sm-3 py-5 bg-light">
+                <div class="col">
+                    <div class="text-center" style="padding: 0 56px;padding-top: 50px;">
+                        <img src="../static/assets/windows.svg">
+                        <p style="font-size: 30px;">Windows</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="text-center" style="padding: 0 56px;padding-top: 50px;">
+                        <img src="../static/assets/linux.svg">
+                        <p style="font-size: 30px;">Linux</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="text-center" style="padding: 0 56px; padding-top: 50px;">
+                        <img src="../static/assets/mac.svg">
+                        <p style="font-size: 30px;">MacOS</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row gx-5 row-cols-2 row-cols-lg-3 py-5 align-items-center justify-content-center pb-5 bg-light">
+                <button type="button" class="btn btn-large" style="  border: 1px solid #dae0e5;color: #6c757d;"
+                        id="clipboard" data-clipboard-text="pip install faCRSA">
+                    <code class="h4">
+                        <span class="text-muted">$</span> pip install faCRSA
+                    </code>
+                    <i class="bi bi-clipboard"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+{% block js %}
+    <script src="{{ url_for('static', filename = 'js/vendors.min.js') }}"></script>
+    <script src="{{ url_for('static', filename = 'js/clipboard.min.js') }}"></script>
+    <script src="{{ url_for('static', filename = 'layui/layer/layer.js') }}"></script>
+    <script src="{{ url_for('static', filename = 'js/page/install.js') }}"></script>
+{% endblock %}

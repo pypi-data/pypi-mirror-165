@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>showImg</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'css/styles.css') }}">
+</head>
+<body>
+<section class="py-5">
+    <div class="container px-5">
+        <div class="row gx-5">
+            <div class="col-lg-4 mb-5">
+                <div class="p-2">
+                    <div class="badge bg-primary bg-gradient rounded-pill mb-2">Initial Image</div>
+                </div>
+                <div class="card  shadow border-0">
+                    <img class="card-img-top" src="{{ url_for('static', filename = 'upload/' + initial_img) }}"
+                         alt="Initial"/>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-5">
+                <div class="p-2">
+                    <div class="badge bg-primary bg-gradient rounded-pill mb-2">Masked Image</div>
+                </div>
+                <div class="card  shadow border-0">
+                    <img class="card-img-top" src="{{ url_for('static', filename = 'upload/' + masked_img_BM) }}"
+                         alt="Masked"/>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-5">
+                <div class="p-2">
+                    <div class="badge bg-primary bg-gradient rounded-pill mb-2">Segmented Image</div>
+                </div>
+                <div class="card shadow border-0">
+                    <img class="card-img-top" src="{{ url_for('static', filename = 'upload/' + seg_img_BM) }}"
+                         alt="Segmented"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
