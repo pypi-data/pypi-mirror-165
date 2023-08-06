@@ -1,0 +1,3 @@
+[console_scripts]
+rpc_reader = rpc_reader.rpc_reader:main
+
