@@ -1,0 +1,12 @@
+napari_proofread_brainbow/__init__.py,sha256=LUX-6W6ScxEPRtNi8j4KICRTxItT6dE0ILjTXney3h4,153
+napari_proofread_brainbow/_version.py,sha256=VXMsUGvL-QSZ4ThZfbIskASxdOeDpV66YxuZqzQ8bo0,176
+napari_proofread_brainbow/_widget.py,sha256=akvZTKtxRiAJM6Bgi5tHEL7qjz2IT4MVe8ks9ad-K7A,12522
+napari_proofread_brainbow/napari.yaml,sha256=yGq1y_3VpR4hw6MEwq8TFGAFUSA7sJVTvvOsNo0efc4,617
+napari_proofread_brainbow/_tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+napari_proofread_brainbow/_tests/test_widget.py,sha256=x6--zpPhnZgP-nZb55LYa_KlRBPRN1qlB_zFS-Nk7O0,1259
+napari_proofread_brainbow-0.2.5.dist-info/LICENSE,sha256=CKi_S-HGIXaAmQoypUFSSk_TbLY8ISd9Fpd4meLFufQ,1080
+napari_proofread_brainbow-0.2.5.dist-info/METADATA,sha256=APJIue8njh7cLIxqWheooYfFd_X59KeYtYEup2hOeRw,3735
+napari_proofread_brainbow-0.2.5.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+napari_proofread_brainbow-0.2.5.dist-info/entry_points.txt,sha256=O_tPbkgHMQIK5ucNdd_S8C0DdkRQ7Yw9aMClnCF9Opc,84
+napari_proofread_brainbow-0.2.5.dist-info/top_level.txt,sha256=n0_wXe54KptEbBge8EQ45CK5XnqwuYO8rDkciWfEr0Q,26
+napari_proofread_brainbow-0.2.5.dist-info/RECORD,,
