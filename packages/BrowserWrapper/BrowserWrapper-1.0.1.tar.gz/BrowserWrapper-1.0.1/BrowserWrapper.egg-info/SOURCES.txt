@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+BrowserWrapper/__init__.py
+BrowserWrapper/browserwrapper.py
+BrowserWrapper/version.py
+BrowserWrapper.egg-info/PKG-INFO
+BrowserWrapper.egg-info/SOURCES.txt
+BrowserWrapper.egg-info/dependency_links.txt
+BrowserWrapper.egg-info/requires.txt
+BrowserWrapper.egg-info/top_level.txt
