@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/TransientAnalyzer/LinearGibbs.py
+src/TransientAnalyzer/TransientAnalyzer.py
+src/TransientAnalyzer/__init__.py
+src/TransientAnalyzer.egg-info/PKG-INFO
+src/TransientAnalyzer.egg-info/SOURCES.txt
+src/TransientAnalyzer.egg-info/dependency_links.txt
+src/TransientAnalyzer.egg-info/top_level.txt
