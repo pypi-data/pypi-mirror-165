@@ -1,0 +1,1 @@
+System.register([],(function(t){"use strict";return{execute:function(){t("g",(t=>{if(t){if(t.startsWith("#")){var e;const r=null===(e=document.querySelector(t))||void 0===e?void 0:e.textContent;return r?JSON.parse(r):void 0}return JSON.parse(t)}}))}}}));

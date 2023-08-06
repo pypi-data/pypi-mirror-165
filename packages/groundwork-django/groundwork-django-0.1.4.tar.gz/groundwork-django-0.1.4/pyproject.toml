@@ -1,0 +1,117 @@
+# Poetry pyproject.toml: https://python-poetry.org/docs/pyproject/
+[build-system]
+requires = ["poetry_core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "groundwork-django"
+version = "0.1.4"
+description = "An integrated Django and Javascript framework for people who build tools for organisers."
+readme = "README.md"
+authors = ["Common Knowledge <hello@commonknowledge.coop>"]
+license = "GNU GPL v3.0"
+repository = "https://github.com/commonknowledge/groundwork"
+homepage = "https://groundwork.commonknowledge.coop/"
+packages = [
+    { include = "groundwork" }
+]
+exclude = []
+
+# Keywords description https://python-poetry.org/docs/pyproject/#keywords
+keywords = []  #! Update me
+
+# Pypi classifiers: https://pypi.org/classifiers/
+classifiers = [  #! Update me
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Operating System :: OS Independent",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+schedule = "^1.1.0"
+djangorestframework-camel-case = "^1.2.0"
+djangorestframework-dataclasses = "^1.0.0"
+
+[tool.poetry.dev-dependencies]
+django = '^4.1'
+django-vite = "^2.0.2"
+bandit = "^1.7.0"
+black = {version = "^22.3.0", allow-prereleases = true}
+dj-database-url = '>=0.5.0'
+darglint = "^1.8.0"
+isort = {extras = ["colors"], version = "^5.9.3"}
+mkdocs = "^1.2.3"
+mkdocs-material = "^8.2.8"
+pdoc3 = "^0.10.0"
+pre-commit = "^2.17.0"
+psycopg2 = '^2.8.6'
+pydocstyle = "^6.1.1"
+pylint = "^2.10.2"
+pytest = "^7.1.1"
+pytest-django = "^4.4.0"
+pyupgrade = "^2.24.0"
+safety = "^1.10.3"
+
+[tool.black]
+# https://github.com/psf/black
+target-version = ["py39"]
+line-length = 88
+color = true
+
+exclude = '''
+/(
+    \.git
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | _build
+    | buck-out
+    | node_modules
+    | build
+    | dist
+    | env
+    | venv
+)/
+'''
+
+[tool.isort]
+# https://github.com/timothycrosley/isort/
+py_version = 39
+line_length = 88
+
+known_typing = ["typing", "types", "typing_extensions", "mypy", "mypy_extensions"]
+sections = ["FUTURE", "TYPING", "STDLIB", "THIRDPARTY", "FIRSTPARTY", "LOCALFOLDER"]
+include_trailing_comma = true
+profile = "black"
+multi_line_output = 3
+indent = 4
+color_output = true
+
+
+[tool.pytest.ini_options]
+# https://docs.pytest.org/en/6.2.x/customize.html#pyproject-toml
+# Directories that are not visited by pytest collector:
+norecursedirs =["hooks", "*.egg", ".eggs", "dist", "build", "docs", ".tox", ".git", "__pycache__"]
+doctest_optionflags = ["NUMBER", "NORMALIZE_WHITESPACE", "IGNORE_EXCEPTION_DETAIL"]
+
+# Extra options:
+addopts = [
+  "--strict-markers",
+  "--tb=short",
+  "--doctest-modules",
+  "--doctest-continue-on-failure",
+]
+
+markers = [
+    "integration_test: marks tests as integrtation tests (not run in make lint)",
+]
+
+DJANGO_SETTINGS_MODULE = "settings"
+python_files = "tests.py test_*.py *_tests.py"

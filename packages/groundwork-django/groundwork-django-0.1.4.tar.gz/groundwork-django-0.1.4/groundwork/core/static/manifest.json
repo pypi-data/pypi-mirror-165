@@ -1,0 +1,118 @@
+{
+  "frontend/index.bundled-legacy.ts": {
+    "file": "assets/main-legacy.d84db568.js",
+    "src": "frontend/index.bundled-legacy.ts",
+    "isEntry": true,
+    "imports": [
+      "_vendor-legacy.a2df6578.js"
+    ],
+    "dynamicImports": [
+      "frontend/geo/controllers/map-controller-legacy.ts",
+      "frontend/geo/controllers/map-layer-controller-legacy.ts",
+      "frontend/geo/controllers/map-source-controller-legacy.ts"
+    ]
+  },
+  "_vendor-legacy.a2df6578.js": {
+    "file": "assets/vendor-legacy.a2df6578.js"
+  },
+  "frontend/geo/controllers/map-controller-legacy.ts": {
+    "file": "assets/map-controller-legacy.c416ec87.js",
+    "src": "frontend/geo/controllers/map-controller-legacy.ts",
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-legacy.a2df6578.js",
+      "_stimulus-utils-legacy.1e2c92a4.js"
+    ]
+  },
+  "_stimulus-utils-legacy.1e2c92a4.js": {
+    "file": "assets/stimulus-utils-legacy.1e2c92a4.js"
+  },
+  "frontend/geo/controllers/map-layer-controller-legacy.ts": {
+    "file": "assets/map-layer-controller-legacy.e18a0a84.js",
+    "src": "frontend/geo/controllers/map-layer-controller-legacy.ts",
+    "isDynamicEntry": true,
+    "imports": [
+      "_stimulus-utils-legacy.1e2c92a4.js",
+      "_map-utils-legacy.14d316bf.js",
+      "_vendor-legacy.a2df6578.js"
+    ]
+  },
+  "_map-utils-legacy.14d316bf.js": {
+    "file": "assets/map-utils-legacy.14d316bf.js",
+    "imports": [
+      "_vendor-legacy.a2df6578.js"
+    ]
+  },
+  "frontend/geo/controllers/map-source-controller-legacy.ts": {
+    "file": "assets/map-source-controller-legacy.cbc01fc9.js",
+    "src": "frontend/geo/controllers/map-source-controller-legacy.ts",
+    "isDynamicEntry": true,
+    "imports": [
+      "_stimulus-utils-legacy.1e2c92a4.js",
+      "_map-utils-legacy.14d316bf.js",
+      "_vendor-legacy.a2df6578.js"
+    ]
+  },
+  "vite/legacy-polyfills": {
+    "file": "assets/polyfills-legacy.e02ff3bf.js",
+    "src": "vite/legacy-polyfills",
+    "isEntry": true
+  },
+  "frontend/index.bundled.ts": {
+    "file": "assets/main.a39ffbad.js",
+    "src": "frontend/index.bundled.ts",
+    "isEntry": true,
+    "imports": [
+      "_vendor.0af78d00.js"
+    ],
+    "dynamicImports": [
+      "frontend/geo/controllers/map-controller.ts",
+      "frontend/geo/controllers/map-layer-controller.ts",
+      "frontend/geo/controllers/map-source-controller.ts"
+    ]
+  },
+  "_vendor.0af78d00.js": {
+    "file": "assets/vendor.0af78d00.js"
+  },
+  "frontend/geo/controllers/map-controller.ts": {
+    "file": "assets/map-controller.9c6921a6.js",
+    "src": "frontend/geo/controllers/map-controller.ts",
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor.0af78d00.js",
+      "_stimulus-utils.0a5b2692.js"
+    ],
+    "css": [
+      "assets/map-controller.dda420b9.css"
+    ]
+  },
+  "_stimulus-utils.0a5b2692.js": {
+    "file": "assets/stimulus-utils.0a5b2692.js"
+  },
+  "frontend/geo/controllers/map-layer-controller.ts": {
+    "file": "assets/map-layer-controller.ceb4fa75.js",
+    "src": "frontend/geo/controllers/map-layer-controller.ts",
+    "isDynamicEntry": true,
+    "imports": [
+      "_stimulus-utils.0a5b2692.js",
+      "_map-utils.29a36188.js",
+      "_vendor.0af78d00.js"
+    ]
+  },
+  "_map-utils.29a36188.js": {
+    "file": "assets/map-utils.29a36188.js",
+    "imports": [
+      "_vendor.0af78d00.js"
+    ]
+  },
+  "frontend/geo/controllers/map-source-controller.ts": {
+    "file": "assets/map-source-controller.7418fbb5.js",
+    "src": "frontend/geo/controllers/map-source-controller.ts",
+    "isDynamicEntry": true,
+    "imports": [
+      "_stimulus-utils.0a5b2692.js",
+      "_map-utils.29a36188.js",
+      "_vendor.0af78d00.js"
+    ]
+  }
+}

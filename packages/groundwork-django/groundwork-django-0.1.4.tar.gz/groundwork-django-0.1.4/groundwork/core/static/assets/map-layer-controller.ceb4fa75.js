@@ -1,0 +1,1 @@
+import{g as a}from"./stimulus-utils.0a5b2692.js";import{M as e}from"./map-utils.29a36188.js";import"./vendor.0af78d00.js";class s extends e{connectMap(a){const e=this.layer;e&&!a.getLayer(e.id)&&a.addLayer(e)}disconnectMap(a){const e=this.layer;e&&a.removeLayer(e.id)}get layer(){return a(this.layerValue)}}s.values={layer:String};export{s as default};
