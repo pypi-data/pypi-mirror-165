@@ -1,0 +1,3 @@
+[console_scripts]
+omicvarsel = omicvarsel.cli:main
+
