@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: django-watch
+Version: 0.4.1
+Summary: Simple and useful django middleware for real-time logging.
+Home-page: https://github.com/Sobolev5/django-watch/
+Author: Sobolev Andrey
+Author-email: email.asobolev@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.4
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: django (>=1.11)
+
+# django-watch
+
+Simple and useful django middleware for real-time logging.
+
+```no-highlight
+https://github.com/Sobolev5/django-watch
+```
+
+# How to use it
+
+To install run:
+```no-highlight
+pip install django-watch
+```
+
+
+Add the following lines at the end of **settings.py** file:
+```python
+INSTALLED_APPS = INSTALLED_APPS + ('django_watch',)
+MIDDLEWARE = ( MIDDLEWARE + ('django_watch.middleware.WatchMiddleware',) )  
+```
+
+
+Open your development console and see the result:
+```python
+""" START /my_project/news/views.py => news_list: Line number 15 """
+kwargs: {'news_id': '2'}
+request.GET: <QueryDict: {'published_at': ['today']}>
+
+""" END /my_project/news/views.py => news_list: Line number 15 """
+sql queries time: 0.17
+total time: 7.29
+```
+
+That's all.
+
+## P.S.
+Try my free service for developers [Workhours.space](https://workhours.space/). 
+It's time tracker with simple interface, powerful functionality such as automatic payroll calculation, 
+telegram bot timer, easy web2 and web3 auth and more. Enjoy. 
+
