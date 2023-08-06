@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: logistics-or-gym
+Version: 0.1.0
+Summary: or-problems formulated as gym environments to solve logisitcal-problems
+Home-page: https://github.com/HublyGroup/logistics-or-gym
+License: MIT
+Keywords: logistics-or-gym,or,gym,logistics,logistics-or,or-gym
+Author: hadisdev
+Author-email: hadi.salameh@hotmail.com
+Requires-Python: >=3.8,<3.11
+Classifier: Environment :: Console
+Classifier: Framework :: Flake8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Data Science :: envs
+Classifier: Topic :: Machine Learnning :: Reinforcement Learning
+Classifier: Topic :: gym :: logistics
+Requires-Dist: gym
+Requires-Dist: numpy (>=1.23.2,<1.24.0)
+Project-URL: Repository, https://github.com/HublyGroup/logistics-or-gym
+Description-Content-Type: text/markdown
+
+
