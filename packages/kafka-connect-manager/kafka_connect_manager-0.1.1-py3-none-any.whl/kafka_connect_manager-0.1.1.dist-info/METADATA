@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: kafka-connect-manager
+Version: 0.1.1
+Summary: A tool to manage Apache Kafka Connect connectors and tasks using asyncio
+Home-page: https://github.com/khan-ajamal/kafka-connect-manager
+License: MIT
+Keywords: kafka,kafka connect
+Author: Ajamal Khan
+Author-email: 13559558+khan-ajamal@users.noreply.github.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: httpx (>=0.23.0,<0.24.0)
+Requires-Dist: typer[all] (>=0.6.1,<0.7.0)
+Project-URL: Repository, https://github.com/khan-ajamal/kafka-connect-manager
+Description-Content-Type: text/markdown
+
+<h1 align="center">Kafka Connect Manager</h1>
+<p align="center">A tool to manage Apache Kafka Connect connectors and tasks</p>
+
+**Usage**:
+
+```console
+$ kcm [OPTIONS] COMMAND [ARGS]...
+```
+
+**Options**:
+
+-   `--host TEXT`: Connect worker host [env var: CONNECT_HOST; default: http://localhost:8083]
+-   `--install-completion`: Install completion for the current shell.
+-   `--show-completion`: Show completion for the current shell, to copy it or customize the installation.
+-   `--help`: Show this message and exit.
+
+**Commands**:
+
+-   `list`: List all connectors
+
+## `kcm list`
+
+List all connectors
+
+**Usage**:
+
+```console
+$ kcm list [OPTIONS]
+```
+
+**Options**:
+
+-   `--type [all|sink|source]`: Type of connectors to list [default: all]
+-   `--help`: Show this message and exit.
+
