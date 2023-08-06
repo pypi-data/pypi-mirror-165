@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+mathco/__init__.py
+mathco/basic.py
+mathco/fibonacci.py
+mathco.egg-info/PKG-INFO
+mathco.egg-info/SOURCES.txt
+mathco.egg-info/dependency_links.txt
+mathco.egg-info/top_level.txt
