@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+casdoor_auth/__init__.py
+casdoor_auth/apps.py
+casdoor_auth/tests.py
+casdoor_auth/urls.py
+casdoor_auth/user.py
+casdoor_auth/views.py
+django_casdoor_auth.egg-info/PKG-INFO
+django_casdoor_auth.egg-info/SOURCES.txt
+django_casdoor_auth.egg-info/dependency_links.txt
+django_casdoor_auth.egg-info/requires.txt
+django_casdoor_auth.egg-info/top_level.txt
