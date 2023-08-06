@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: zhaogang-collec
+Version: 0.0.2
+Summary: decode unicode-eacape
+Home-page: https://github.com/pypa/sampleproject
+Author: zuiqiu
+Author-email: zhangqi_xxs@163.com
+License: proprietary
+Keywords: pytest,py.test,zhaogang_collec
+Classifier: Framework :: Pytest
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+Requires-Dist: pytest
+
+no long_description
