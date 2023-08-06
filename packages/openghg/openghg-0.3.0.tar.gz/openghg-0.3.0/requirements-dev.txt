@@ -1,0 +1,17 @@
+# Required for testing
+cfchecker @ git+https://github.com/openghg/cf-checker@master#egg=cf-checker
+flake8
+pre-commit
+pytest >= 6.2.5
+pytest-tornasync
+pytest-cov
+pytest-mock
+requests-mock
+# For mypy
+mypy==0.971
+# For Python 3.7
+typing-extensions
+types-paramiko
+types-PyYAML
+types-requests
+msgpack-types

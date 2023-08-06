@@ -1,0 +1,5 @@
+# Server specific
+fdk
+uvloop
+msgpack
+oci
