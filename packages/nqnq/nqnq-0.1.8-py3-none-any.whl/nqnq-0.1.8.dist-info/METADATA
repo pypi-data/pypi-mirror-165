@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: nqnq
+Version: 0.1.8
+Author: nanangqq
+Author-email: gingggg@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: six
+Requires-Dist: pyhwp
+Requires-Dist: pandas
+
+## install
+
+```bash
+pip install nqnq
+```
+
+## build
+
+```bash
+python -m build
+```
+
+## distribute
+
+```bash
+python -m twine upload dist/* --verbose
+```
