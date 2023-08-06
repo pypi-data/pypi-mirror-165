@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: ediff
+Version: 0.0.2
+Summary: Processing of powder electron diffraction patterns
+Home-page: https://github.com/mirekslouf/ediff/
+Author: Mirek Slouf
+Author-email: mirek.slouf@gmail.com
+License: MIT
+Project-URL: Documentation, https://mirekslouf.github.io/ediff/
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENCE
+
+EDIFF :: processing of powder electron diffraction patterns
+-----------------------------------------------------------
+
+* EDIFF is under development, but some modules do work:
+    - pxrd = calculation of theoretical powder X-ray diffraction patterns
+
+Documentation, help and examples
+--------------------------------
+
+More detailed help, demo and source code including documentation *will be*
+in [GitHub](https://mirekslouf.github.io/ediff).
+
+Versions of EDIFF
+-----------------
+
+* Version 0.0.1 = just draft
+* Version 0.0.2 = pxrd module works
