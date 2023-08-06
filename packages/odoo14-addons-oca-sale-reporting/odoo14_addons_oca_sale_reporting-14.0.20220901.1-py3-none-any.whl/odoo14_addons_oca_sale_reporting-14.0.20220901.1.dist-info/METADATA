@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: odoo14-addons-oca-sale-reporting
+Version: 14.0.20220901.1
+Summary: Meta package for oca-sale-reporting Odoo addons
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Classifier: Framework :: Odoo :: 14.0
+Requires-Dist: odoo14-addon-sale-comment-template
+Requires-Dist: odoo14-addon-sale-layout-category-hide-detail
+Requires-Dist: odoo14-addon-sale-order-line-position
+Requires-Dist: odoo14-addon-sale-order-report-product-image
+Requires-Dist: odoo14-addon-sale-order-weight
+Requires-Dist: odoo14-addon-sale-outgoing-product
+Requires-Dist: odoo14-addon-sale-report-crossed-out-original-price
+Requires-Dist: odoo14-addon-sale-report-delivered-subtotal
+
+UNKNOWN
+
