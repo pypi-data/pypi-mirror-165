@@ -1,0 +1,8 @@
+setup.py
+cheeseoyes/__init__.py
+cheeseoyes/main.py
+cheeseoyes/setup.py
+cheeseoyes.egg-info/PKG-INFO
+cheeseoyes.egg-info/SOURCES.txt
+cheeseoyes.egg-info/dependency_links.txt
+cheeseoyes.egg-info/top_level.txt
