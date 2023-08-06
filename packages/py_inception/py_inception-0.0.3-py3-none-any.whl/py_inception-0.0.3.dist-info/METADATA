@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: py_inception
+Version: 0.0.3
+Summary: Python introspection tool 
+Author-email: Sergey Shirobokih <divetoh@yandex.ru>
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: MIT License
+Project-URL: Home, https://github.com/divetoh/py-inception
+
+# py-inception
+## Description
+Python introspection tool.
+
+Generate html page with information about object and classes.
+
+![Screen](/doc/example.png)
+
+## Installation
+```
+pip install py-inception
+```
+
+## Usage
+
+`py_inception.extract(varlist, out=filename)`
+* `varlist` - list of variables for inspect
+* `filename` - output file name (must ends with ".html")
+
+example:
+```
+import py_inception
+py_inception.extract([__builtins__,], out="test.html")
+```
