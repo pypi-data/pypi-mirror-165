@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/paper_secret/__init__.py
+src/paper_secret/depaper.py
+src/paper_secret/enpaper.py
+src/paper_secret/util.py
+src/paper_secret.egg-info/PKG-INFO
+src/paper_secret.egg-info/SOURCES.txt
+src/paper_secret.egg-info/dependency_links.txt
+src/paper_secret.egg-info/entry_points.txt
+src/paper_secret.egg-info/top_level.txt
