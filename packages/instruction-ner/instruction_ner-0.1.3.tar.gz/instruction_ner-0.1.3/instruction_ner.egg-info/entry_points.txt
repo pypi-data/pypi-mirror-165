@@ -1,0 +1,5 @@
+[console_scripts]
+instruction_ner-evaluate = instruction_ner.evaluate:main
+instruction_ner-prepare-data = instruction_ner.prepare_data:main
+instruction_ner-train = instruction_ner.train:main
+
