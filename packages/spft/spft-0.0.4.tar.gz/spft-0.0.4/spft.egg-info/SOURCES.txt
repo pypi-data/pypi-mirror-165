@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+spft/__init__.py
+spft/multiprocess.py
+spft.egg-info/PKG-INFO
+spft.egg-info/SOURCES.txt
+spft.egg-info/dependency_links.txt
+spft.egg-info/top_level.txt
