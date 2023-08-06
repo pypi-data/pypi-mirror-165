@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: lucky-commit
+Version: 0.0.2
+Summary: FIXME desc written in Python
+Home-page: https://github.com/excitoon/lucky-commit
+Author: Vladimir Chebotarev
+Author-email: vladimir.chebotarev@gmail.com
+License: MIT
+Project-URL: Documentation, https://github.com/excitoon/lucky-commit/blob/master/README.md
+Project-URL: Source, https://github.com/excitoon/lucky-commit
+Project-URL: Tracker, https://github.com/excitoon/lucky-commit/issues
+Description: # `lucky-commit`
+        
+        TODO
+        
+        ## Usage
+        
+        ```
+        LUCKY_COMMIT_PREFIX=0000000 lucky-commit
+        ```
+        
+        ## Install
+        
+        ```
+        pip3 install lucky-commit
+        ```
+        
+        ## Credits
+        
+        - https://github.com/not-an-aardvark/lucky-commit by Teddy Katz
+        
+Keywords: git,lucky,hash,commit
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development
+Classifier: Topic :: Terminals
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown

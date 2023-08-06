@@ -1,0 +1,62 @@
+#!/usr/bin/env python3
+
+import hashlib
+import itertools
+import os
+import subprocess
+import zlib
+
+
+prefix = os.environ.get("LUCKY_COMMIT_PREFIX", "")
+
+
+def split(message):
+    # If the commit has a GPG signature (detected by the presence of "gpgsig " at the start
+    # of the fifth line), then add the padding whitespace immediately after the text "gpgsig ".
+    # Otherwise, add the padding whitespace right before the end of the commit message.
+    # If a signature is present, modifying the commit message would make the signature invalid.
+
+    lines = message.split(b"\n")
+    if len(lines) > 4 and lines[4].startswith(b"gpgsig "):
+        return b"\n".join(lines[:4] + [lines[4][:7]]), b"\n".join([lines[4][7:].lstrip(b" \t")] + lines[5:])
+
+    else:
+        return message[:-1].rstrip(b" \t"), message[-1:]  # Last symbol must be newline.
+
+
+def get_match(message, prefix, git_path):
+    assert message.endswith(b"\n"), "Error: expected the current commit message to end in a newline."
+    message_prefix, message_suffix = split(message)
+    objects_path = os.path.join(git_path, "objects")
+    for extension_size in itertools.count():
+        data_prefix = (
+            f"commit {len(message_prefix)+len(message_suffix)+extension_size}".encode() + b"\x00" + message_prefix
+        )
+        for extension in itertools.product(b" \t", repeat=extension_size):
+            data = data_prefix + bytes(extension) + message_suffix
+            sha = hashlib.sha1(data).hexdigest()
+            if sha.startswith(prefix) and not os.path.isfile(os.path.join(objects_path, sha[:2], sha[2:])):
+                return sha, data
+
+
+def write_git_object(sha, data, git_path):
+    dir_path = os.path.join(git_path, "objects", sha[:2])
+    os.makedirs(dir_path, exist_ok=True)
+
+    path = os.path.join(dir_path, sha[2:])
+    with open(path, "wb") as f:
+        f.write(data)
+
+
+assert len(prefix) <= 40 and set(prefix) <= set("01234567890abcdef"), "Usage: LUCKY_COMMIT_PREFIX=1432 lucky-commit"
+
+if prefix:
+    commit = subprocess.run(["git", "cat-file", "commit", "HEAD"], stdout=subprocess.PIPE)
+    assert commit.returncode == 0
+    git_dir = subprocess.run(["git", "rev-parse", "--git-dir"], universal_newlines=True, stdout=subprocess.PIPE)
+    assert git_dir.returncode == 0
+    git_path = git_dir.stdout.strip()
+    sha, result = get_match(commit.stdout, prefix, git_path)
+    write_git_object(sha, zlib.compress(result), git_path)
+    p = subprocess.run(["git", "reset", sha])
+    assert p.returncode == 0
