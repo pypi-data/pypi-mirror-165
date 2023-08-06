@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: My-little-test-here
+Version: 1.0
+Summary: Test deploy
+Author: BohdanSvisyuk
+Author-email: bodi4ka115@ukr.net
+License: MIT
+Requires-Python: >=3.6
+
