@@ -1,0 +1,6 @@
+[console_scripts]
+
+
+[nbdev]
+ez_kaggle = ez_kaggle._modidx:d
+

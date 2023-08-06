@@ -1,0 +1,11 @@
+ez_kaggle/__init__.py,sha256=sXLh7g3KC4QCFxcZGBTpG2scR7hmmBsMjq6LqRptkRg,22
+ez_kaggle/_modidx.py,sha256=gatojRuFaAgDxOJtc32oVfe6kozti-gayRPC0Gv-zA0,2603
+ez_kaggle/dataset.py,sha256=5Esu6xlDl7qM0puN9crqsC-PZLg_U8zLIvuB6GRX3FU,8113
+ez_kaggle/kernel.py,sha256=cP0KAzBW01KB27GsBIvBst3ewBwk47PXFghsFmFPsQc,2179
+ez_kaggle/setup.py,sha256=PaK_0HtGa_ZSESgT-JJNpnG4WY0ktHhFKuTqptsPVw0,3513
+ez_kaggle-0.0.1.dist-info/LICENSE,sha256=xV8xoN4VOL0uw9X8RSs2IMuD_Ss_a9yAbtGNeBWZwnw,11337
+ez_kaggle-0.0.1.dist-info/METADATA,sha256=4jZIBErUClK4iWMF_QsmSSX0lUCvocAbU8j7x2-K30o,5652
+ez_kaggle-0.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+ez_kaggle-0.0.1.dist-info/entry_points.txt,sha256=ELFT-OakH8ztX11_qJ3S7txM46FFUpk0z9q7pnirWC0,61
+ez_kaggle-0.0.1.dist-info/top_level.txt,sha256=lkOZYGzukgXf1z9vpC0m85_OD36hqAw56OAN2Rt3d5E,10
+ez_kaggle-0.0.1.dist-info/RECORD,,
