@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: isda
+Version: 1.0.20
+Summary: Package that delivers high performance pricing and risk for credit derivatives
+Home-page: https://github.com/bakera1/CreditDefaultSwapPricer/
+Author: Alexander Baker
+Author-email: baker.alexander@gmail.com
+License: MIT
+Keywords: credit derivative pricing risk
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+
+UNKNOWN
+
+
