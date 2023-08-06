@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  dataset-format-benchmark:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: dataset-format-benchmark
+    container_name: dataset-format-benchmark
+    environment:
+      LOGGING_LEVEL: "${LOGGING_LEVEL:-DEBUG}"
