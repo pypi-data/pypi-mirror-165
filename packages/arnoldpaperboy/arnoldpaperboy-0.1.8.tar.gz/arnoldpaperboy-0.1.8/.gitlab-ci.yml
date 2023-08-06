@@ -1,0 +1,33 @@
+image: "python:3.8"
+
+stages:
+  - testlint
+  - release
+  - deploy
+
+before_script:
+  - pip install -r requirements-tst.txt
+  - pip install -r requirements.txt
+
+lint:
+  stage: testlint
+  tags:
+    - k8s
+  script:
+    - pylint arnoldpaperboy
+
+test:
+  stage: testlint
+  tags:
+    - k8s
+  script:
+    - pytest --cov-report term-missing --cov=arnoldpaperboy tests
+    - coverage xml
+    - coverage report --fail-under $TEST_COVERAGE_FAIL_UNDER
+    - echo "Test coverage threshold is $TEST_COVERAGE_FAIL_UNDER"
+  coverage: '/^TOTAL.+?(\d+\%)$/'
+  artifacts:
+    reports:
+      coverage_report:
+        coverage_format: cobertura
+        path: coverage.xml
