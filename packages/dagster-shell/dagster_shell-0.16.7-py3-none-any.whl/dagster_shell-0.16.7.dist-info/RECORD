@@ -1,0 +1,9 @@
+dagster_shell/__init__.py,sha256=IT6qSh-M202yNR5Nhd8zqbMaho2-XUIxXbu_1x2DgnA,499
+dagster_shell/solids.py,sha256=PAdKnOyPa69iHfU8Fl2qHNq8yMk9KLVfzyAQ6aBctg0,6728
+dagster_shell/utils.py,sha256=tzorSqpFUxfen-Y-1gkBIaoK-wL9oWYnQOTPtYgFVJU,7168
+dagster_shell/version.py,sha256=d1jssHDng02ej4s_3Yzl--DPqN1B-xx2byinKhvGh94,23
+dagster_shell-0.16.7.dist-info/LICENSE,sha256=tAkwu8-AdEyGxGoSvJ2gVmQdcicWw3j1ZZueVV74M-E,11357
+dagster_shell-0.16.7.dist-info/METADATA,sha256=93s-v84HBsrTSmVoR3LyOjLOqFsDlDFbL-8ya6uhyU4,723
+dagster_shell-0.16.7.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+dagster_shell-0.16.7.dist-info/top_level.txt,sha256=vo3NkC6EbIRXBIPyzvQtyoj5eghx_YPdi5ciV6hI6cY,14
+dagster_shell-0.16.7.dist-info/RECORD,,
