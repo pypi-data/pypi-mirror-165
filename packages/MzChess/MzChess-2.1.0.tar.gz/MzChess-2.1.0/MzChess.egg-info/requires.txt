@@ -1,0 +1,6 @@
+chess>=1.4
+ply>=3.11
+
+[:platform_system == "Windows"]
+PyQt6>=6.2
+PyQt6-Charts>=6.2
