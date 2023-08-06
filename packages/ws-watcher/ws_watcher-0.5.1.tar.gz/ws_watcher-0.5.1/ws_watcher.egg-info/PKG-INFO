@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: ws-watcher
+Version: 0.5.1
+Summary: Minimalistic file watcher with ability to send WebSocket msgs and execute commands.
+Home-page: https://github.com/SergeiMinaev/ws_watcher
+Author: Sergei Minaev
+Author-email: i@zenux.ru
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+Not ready yet.
+
+Branching model:\
+`dev` - Default branch.Fresh and unstable. Preferred branch to work with as a developer.\
+`current` - current stable code. Preferred branch to work with as a user.
