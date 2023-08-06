@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: psycopg2-logical-decoding-json-consumer
+Version: 2.6
+Summary: Asynchronous PostgreSQL logical replication consumer library for the logical-decoding-json logical decoding output plugin
+Author: Graham Clinch
+Author-email: g.clinch@lancaster.ac.uk
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Topic :: Database
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: psycopg2 (>=2.8.4)
+
+PsycoPG2-Logical-Decoding-JSON-Consumer
+=======================================
+
+psycopg2-logical-decoding-json-consumer is an asynchronous library that consumes
+PostgreSQL logical replication created by the logical-decoding-json output
+plugin.
+
+The library supports fast filtering of events and allows individual transactions
+to be acknowledged out of order.
+
+Transactions can be read one-by-one with read_transaction(), or collected in
+batches (simplifying de-duplication) with read_transaction_batch()
