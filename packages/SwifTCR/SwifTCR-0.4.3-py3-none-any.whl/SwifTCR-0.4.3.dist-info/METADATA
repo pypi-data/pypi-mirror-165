@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: SwifTCR
+Version: 0.4.3
+Summary: Cluster sequences by distance one.
+Author: ido
+Author-email: ido.hasson.5@gmail.com
+Keywords: cluster,TCR,edit,distance
+License-File: LICENSE
+Requires-Dist: more-itertools
+
+Cluster sequences based on edit distance (hamming/levenshtein) equal to one.
