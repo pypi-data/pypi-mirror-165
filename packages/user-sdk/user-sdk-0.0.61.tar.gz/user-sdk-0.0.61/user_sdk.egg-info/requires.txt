@@ -1,0 +1,12 @@
+requests
+pyshuttlis
+shuttl-geo
+python-jose
+cachetools
+
+[test]
+pytest
+pytest-runner
+pytest-cov
+pytest-pep8
+responses
