@@ -1,0 +1,36 @@
+{% load tags %}
+{% if request.user.is_authenticated and not request.GET.modal %}
+    <nav class="navbar navbar-expand" style="box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/app/">
+          {% if settings.SLOTH.HEADER.LOGO %}
+            <img height="30" src="{{ settings.SLOTH.HEADER.LOGO }}">
+          {% endif %}
+          {% if settings.SLOTH.HEADER.TITLE %}
+            <span>{{ settings.SLOTH.HEADER.TITLE }}</span>
+          {% endif %}
+        </a>
+        {% if dashboard.data.actions %}
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav">
+            {% for action in dashboard.data.actions %}
+              <li class="nav-item">
+                <a class="nav-link" href="{{ action.url }}">
+                  {{ action.icon|icontag }}
+                  {{ action.label }}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+        <div class="collapse navbar-collapse">
+          {% include "app/dashboard/search.html" %}
+          {% include "app/dashboard/tools.html" %}
+          {% include "app/dashboard/apps.html" %}
+          {% include "app/dashboard/settings.html" %}
+        </div>
+
+      </div>
+    </nav>
+{% endif %}

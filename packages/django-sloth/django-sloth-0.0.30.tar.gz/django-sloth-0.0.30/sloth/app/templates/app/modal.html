@@ -1,0 +1,23 @@
+{% load tags %}
+<!-- Modal -->
+<div class="modal fade" id="modal" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" style="max-width:90%">
+    <div class="modal-content">
+      <div class="modal-body">
+
+      </div>
+    </div>
+  </div>
+</div>
+{% if request|mobile %}
+  <style>
+    .modal-dialog{
+        margin: 0;
+        min-width:100%;
+    }
+    .modal-content {
+        border:0;
+        border-radius: 0;
+    }
+  </style>
+{% endif %}
