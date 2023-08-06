@@ -1,0 +1,10 @@
+LICENSE
+README.rst
+setup.py
+jreq/__init__.py
+jreq/jreq.py
+jreq.egg-info/PKG-INFO
+jreq.egg-info/SOURCES.txt
+jreq.egg-info/dependency_links.txt
+jreq.egg-info/requires.txt
+jreq.egg-info/top_level.txt
