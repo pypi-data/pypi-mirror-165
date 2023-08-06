@@ -1,0 +1,4 @@
+allianceauth>=2.15.1
+django-ckeditor>=6.5.0
+django-ckeditor-youtube-plugin>=0.0.1
+unidecode
