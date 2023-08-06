@@ -1,0 +1,5 @@
+cdk8s<3.0.0,>=2.4.12
+constructs<11.0.0,>=10.1.89
+jsii<2.0.0,>=1.65.0
+publication>=0.0.3
+typeguard~=2.13.3
