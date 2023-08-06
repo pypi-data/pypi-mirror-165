@@ -1,0 +1,13 @@
+LICENSE
+README.md
+README_pypi.rst
+individual_average.png
+nmb_eeg.py
+plot_paralysed_EEG_PSD.py
+setup.py
+nmb_eeg.egg-info/PKG-INFO
+nmb_eeg.egg-info/SOURCES.txt
+nmb_eeg.egg-info/dependency_links.txt
+nmb_eeg.egg-info/not-zip-safe
+nmb_eeg.egg-info/requires.txt
+nmb_eeg.egg-info/top_level.txt
