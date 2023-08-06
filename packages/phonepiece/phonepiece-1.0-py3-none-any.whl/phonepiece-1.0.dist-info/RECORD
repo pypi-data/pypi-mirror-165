@@ -1,0 +1,16 @@
+phonepiece/__init__.py,sha256=jHySGv03nl1Ube3B9nsVwSwEN6kRMRWik2BQAUXvS-Q,47
+phonepiece/allophone.py,sha256=0lNCdyAinVssTjvgv_cT-lE8sgleVTZnjtuvMenbgyM,3120
+phonepiece/articulatory.py,sha256=jlfdlyohexMdkUHXJh7GT3udkes89pbJJ7NxTqvIJeU,2888
+phonepiece/config.py,sha256=bnvzmaPl2iVHmK2uf_Afoxtfj4_FSOlja89uCQfRihw,194
+phonepiece/edit_distance.py,sha256=biSeI-EZwinMjl8-BjRzZo_uFc1g9eBIX8OINaweWDM,8547
+phonepiece/inventory.py,sha256=hG_k-K-9anhp_L973XmcC3J1BlNvKT4ZiOj9W4ihAkI,4255
+phonepiece/phone_tokenizer.py,sha256=WT4HZtFpM9LOuIBAK_25vQkTClVhhIq2Ek7WRvdO5O0,1249
+phonepiece/phoneme.py,sha256=hdkdG7CU_UNFte7AD60PR85606SO5wJ2f84ladKC8cc,1441
+phonepiece/segmenter.py,sha256=WDbAuGy_EHGRBF-kr6Dlgu_pGLfZXYRrhftLJq-tH3E,380
+phonepiece/transliterator.py,sha256=fYZvr7p3c-2X8lthYsHXZ6LgveJQfubIO6F0jv9Hh20,3463
+phonepiece/tree.py,sha256=y0jQd1828vEihAR3X0e4DBRFFXhFT9G9FgN-bwlUnXs,2373
+phonepiece/unit.py,sha256=W6ydyJKrJmwJeYOWTit5UpfZiXZFMSI5F8c6vcmb3-k,5523
+phonepiece-1.0.dist-info/METADATA,sha256=n5VmDsk5TV9RlhfwHi2YVaYRKE8juuUJ2d8-flyxlS8,238
+phonepiece-1.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+phonepiece-1.0.dist-info/top_level.txt,sha256=zEoUTh6YauhVVTqSxFDIcDTFqJtuTzAS9lu-J7jXM0Y,11
+phonepiece-1.0.dist-info/RECORD,,
