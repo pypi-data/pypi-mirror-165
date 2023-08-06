@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: kde
+Version: 0.0.3
+Summary: Kernel Density implementation (Gaussian Kernel) supporting truncating the estimated CDF
+Home-page: https://github.com/dagobash/kde
+Download-URL: https://github.com/dagobash/kde/archive/refs/tags/0.0.3.tar.gz
+Author: plwk
+Author-email: plwk@protonmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# kde
+
+This is an implementation of kernel density estimation using Gaussian Kernels.
+
+While many other libraries implement this functionality, none of them support specifying truncated estimated CDFs, which was the reason for the creation of this package.
