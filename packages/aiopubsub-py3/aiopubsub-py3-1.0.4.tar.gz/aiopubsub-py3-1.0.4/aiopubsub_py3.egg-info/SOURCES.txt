@@ -1,0 +1,15 @@
+LICENSE
+README.rst
+setup.cfg
+setup.py
+aiopubsub/__init__.py
+aiopubsub/base.py
+aiopubsub/serializer.py
+aiopubsub/backend/__init__.py
+aiopubsub/backend/redis.py
+aiopubsub/backend/redis2.py
+aiopubsub_py3.egg-info/PKG-INFO
+aiopubsub_py3.egg-info/SOURCES.txt
+aiopubsub_py3.egg-info/dependency_links.txt
+aiopubsub_py3.egg-info/requires.txt
+aiopubsub_py3.egg-info/top_level.txt
