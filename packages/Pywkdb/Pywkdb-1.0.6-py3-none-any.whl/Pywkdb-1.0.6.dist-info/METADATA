@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: Pywkdb
+Version: 1.0.6
+Summary: wangkai python db tools
+Home-page: http://blog.wangkaicn.cn
+Author: wangkai
+Author-email: 1719456@qq.com
+License: MIT License
+Keywords: wangkai python db tools
+Platform: any
+Requires-Dist: pandas
+Requires-Dist: kombu
+Requires-Dist: pywkmisc
+
+UNKNOWN
+
