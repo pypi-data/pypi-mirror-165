@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+pretty_verbose/__init__.py
+pretty_verbose.egg-info/PKG-INFO
+pretty_verbose.egg-info/SOURCES.txt
+pretty_verbose.egg-info/dependency_links.txt
+pretty_verbose.egg-info/requires.txt
+pretty_verbose.egg-info/top_level.txt
