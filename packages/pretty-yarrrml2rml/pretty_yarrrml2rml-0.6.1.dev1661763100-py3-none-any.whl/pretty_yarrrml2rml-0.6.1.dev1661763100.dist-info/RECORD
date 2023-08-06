@@ -1,0 +1,12 @@
+pretty_yarrrml2rml/__init__.py,sha256=dXtMncTnptZCZw4WbK0oIJHkAiT-hy7QvXsayXR48lo,2529
+pretty_yarrrml2rml/__main__.py,sha256=d4Le3YLjNMXQiFxJVarjLqAZyYixkaAw8lXc2RcChtg,1235
+pretty_yarrrml2rml/constants.py,sha256=lHzicGDahxRsjMA3ICR66RyREILzbSb7SaG1MAMPGvE,3455
+pretty_yarrrml2rml/mapping.py,sha256=3ONfRS0swKPyU88WxFbxohHvFeGUWYdAhP5IAub1nXc,1996
+pretty_yarrrml2rml/predicateobject.py,sha256=Cfy0ioipzy9mZuYY1RLIsuIrHVdNZPI_rXb52xtM3ps,9005
+pretty_yarrrml2rml/source.py,sha256=dptQlBZhpWpg6xvR6vtnr-i3teKcLXNTOMZPjSp4TSM,8543
+pretty_yarrrml2rml/subject.py,sha256=yv2mAYJ_pU-mDQux9ozAKtIbNRMfKMIodYXB1W9l6Pw,1948
+pretty_yarrrml2rml/termmap.py,sha256=i82LUIS8NfKsJxcxJd9ri4NRhR3GoYx7jcKtHtbKcJA,1315
+pretty_yarrrml2rml-0.6.1.dev1661763100.dist-info/METADATA,sha256=hnUclNfFg1pWGmPiFYg2D5a-7DZwmJY9jDbKBsORuF4,2089
+pretty_yarrrml2rml-0.6.1.dev1661763100.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+pretty_yarrrml2rml-0.6.1.dev1661763100.dist-info/top_level.txt,sha256=J1CfQeaAHv-eKmZk2dbIF6T6SR5lUd_hWK-Dte8NuzA,19
+pretty_yarrrml2rml-0.6.1.dev1661763100.dist-info/RECORD,,
