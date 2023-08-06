@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: archipelago
+Version: 0.0.10
+Summary: Fast CGRA PnR based on thunder and cyclone
+Home-page: https://github.com/Kuree/archipelago
+Author: Keyi Zhang
+Author-email: keyi@stanford.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: pycyclone
+Requires-Dist: pythunder
+
+UNKNOWN
+
+
