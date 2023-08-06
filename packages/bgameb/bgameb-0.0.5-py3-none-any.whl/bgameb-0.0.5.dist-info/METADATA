@@ -1,0 +1,113 @@
+Metadata-Version: 2.1
+Name: bgameb
+Version: 0.0.5
+Summary: Board Game Builder
+Home-page: https://github.com/KonstantinKlepikov/BoardGameBuilder
+Author: Konstantin Klepikov
+Author-email: oformleno@gmail.com
+License: MIT
+Keywords: framework
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8.10
+Description-Content-Type: text/markdown
+Requires-Dist: incremental (==21.3.0)
+Provides-Extra: dev
+Requires-Dist: asttokens (==2.0.8) ; extra == 'dev'
+Requires-Dist: attrs (==22.1.0) ; extra == 'dev'
+Requires-Dist: Automat (==20.2.0) ; extra == 'dev'
+Requires-Dist: backcall (==0.2.0) ; extra == 'dev'
+Requires-Dist: bleach (==5.0.1) ; extra == 'dev'
+Requires-Dist: build (==0.8.0) ; extra == 'dev'
+Requires-Dist: certifi (==2022.6.15) ; extra == 'dev'
+Requires-Dist: cffi (==1.15.1) ; extra == 'dev'
+Requires-Dist: charset-normalizer (==2.1.1) ; extra == 'dev'
+Requires-Dist: click (==8.1.3) ; extra == 'dev'
+Requires-Dist: click-default-group (==1.2.2) ; extra == 'dev'
+Requires-Dist: commonmark (==0.9.1) ; extra == 'dev'
+Requires-Dist: constantly (==15.1.0) ; extra == 'dev'
+Requires-Dist: cryptography (==37.0.4) ; extra == 'dev'
+Requires-Dist: decorator (==5.1.1) ; extra == 'dev'
+Requires-Dist: docutils (==0.19) ; extra == 'dev'
+Requires-Dist: executing (==1.0.0) ; extra == 'dev'
+Requires-Dist: hyperlink (==21.0.0) ; extra == 'dev'
+Requires-Dist: idna (==3.3) ; extra == 'dev'
+Requires-Dist: importlib-metadata (==4.12.0) ; extra == 'dev'
+Requires-Dist: incremental (==21.3.0) ; extra == 'dev'
+Requires-Dist: ipython (==8.4.0) ; extra == 'dev'
+Requires-Dist: jedi (==0.18.1) ; extra == 'dev'
+Requires-Dist: jeepney (==0.8.0) ; extra == 'dev'
+Requires-Dist: Jinja2 (==3.1.2) ; extra == 'dev'
+Requires-Dist: keyring (==23.8.2) ; extra == 'dev'
+Requires-Dist: MarkupSafe (==2.1.1) ; extra == 'dev'
+Requires-Dist: matplotlib-inline (==0.1.6) ; extra == 'dev'
+Requires-Dist: packaging (==21.3) ; extra == 'dev'
+Requires-Dist: parso (==0.8.3) ; extra == 'dev'
+Requires-Dist: pep517 (==0.13.0) ; extra == 'dev'
+Requires-Dist: pexpect (==4.8.0) ; extra == 'dev'
+Requires-Dist: pickleshare (==0.7.5) ; extra == 'dev'
+Requires-Dist: pkginfo (==1.8.3) ; extra == 'dev'
+Requires-Dist: prompt-toolkit (==3.0.30) ; extra == 'dev'
+Requires-Dist: ptyprocess (==0.7.0) ; extra == 'dev'
+Requires-Dist: pure-eval (==0.2.2) ; extra == 'dev'
+Requires-Dist: pycparser (==2.21) ; extra == 'dev'
+Requires-Dist: Pygments (==2.13.0) ; extra == 'dev'
+Requires-Dist: pyparsing (==3.0.9) ; extra == 'dev'
+Requires-Dist: readme-renderer (==37.0) ; extra == 'dev'
+Requires-Dist: requests (==2.28.1) ; extra == 'dev'
+Requires-Dist: requests-toolbelt (==0.9.1) ; extra == 'dev'
+Requires-Dist: rfc3986 (==2.0.0) ; extra == 'dev'
+Requires-Dist: rich (==12.5.1) ; extra == 'dev'
+Requires-Dist: SecretStorage (==3.3.3) ; extra == 'dev'
+Requires-Dist: six (==1.16.0) ; extra == 'dev'
+Requires-Dist: stack-data (==0.5.0) ; extra == 'dev'
+Requires-Dist: tomli (==2.0.1) ; extra == 'dev'
+Requires-Dist: towncrier (==21.9.0) ; extra == 'dev'
+Requires-Dist: traitlets (==5.3.0) ; extra == 'dev'
+Requires-Dist: twine (==4.0.1) ; extra == 'dev'
+Requires-Dist: Twisted (==22.4.0) ; extra == 'dev'
+Requires-Dist: typing-extensions (==4.3.0) ; extra == 'dev'
+Requires-Dist: urllib3 (==1.26.12) ; extra == 'dev'
+Requires-Dist: wcwidth (==0.2.5) ; extra == 'dev'
+Requires-Dist: webencodings (==0.5.1) ; extra == 'dev'
+Requires-Dist: zipp (==3.8.1) ; extra == 'dev'
+Requires-Dist: zope.interface (==5.4.0) ; extra == 'dev'
+
+# BoardGameBuilder
+
+Object-oriented framework for build boardgame logic on python
+
+`pip install bgameb`
+
+## Development
+
+`pip install bgameb[dev]`. Use ipython for development from env: `python -m IPython`
+
+### Build the docs
+
+`make create-docs`
+
+### Changelog
+
+`towncrier create 123.feature`
+
+[towncrier](https://pypi.org/project/towncrier/)
+
+> .feature: Signifying a new feature.
+> .bugfix: Signifying a bug fix.
+> .doc: Signifying a documentation improvement.
+> .removal: Signifying a deprecation or removal of public API.
+> .misc: A ticket has been closed, but it is not of interest to users.
+> .cicd: Integration tasks
+
+### Release
+
+Test send to pypi: `make test-pypi`
+
+- stage diffs
+- `towncrier build --draft`
+- `make release`
+
+
