@@ -1,0 +1,7 @@
+README.md
+setup.py
+fundamentus/__init__.py
+fundamentus_py.egg-info/PKG-INFO
+fundamentus_py.egg-info/SOURCES.txt
+fundamentus_py.egg-info/dependency_links.txt
+fundamentus_py.egg-info/top_level.txt
