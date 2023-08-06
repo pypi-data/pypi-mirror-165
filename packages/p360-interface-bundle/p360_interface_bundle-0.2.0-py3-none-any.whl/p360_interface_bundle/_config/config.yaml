@@ -1,0 +1,142 @@
+parameters:
+  p360_interface_bundle:
+    featurestore:
+      post_actions:
+        metadata_adjustment:
+          export_path:
+          mapping:
+            general:
+            category:
+    clickhouse:
+      host:
+      port: 8123
+      credentials:
+        user:
+          secret_scope: unit-kv
+          secret_key: clickhouse-user
+        password:
+          secret_scope: unit-kv
+          secret_key: clickhouse-pass
+    export:
+      featurestore:
+        sampling_rate: 0.01
+      bins:
+        numerical:
+          lower_percentile_percentage: 0.05
+          higher_percentile_percentage: 0.95
+          bin_count: 8
+          accuracy: 100
+        categorical:
+          reduction_percentage: 0.1
+          minimum_categories_to_apply_reduction: 20
+      tables:
+        features_main: 'featurestore_%kernel.environment%'
+        features_temp: 'featurestore_%kernel.environment%_temp'
+        features_backup: 'featurestore_%kernel.environment%_backup'
+        sampled_main: 'sampled_featurestore_%kernel.environment%'
+        sampled_temp: 'sampled_featurestore_%kernel.environment%_temp'
+        sampled_backup: 'sampled_featurestore_%kernel.environment%_backup'
+        bins_main: 'bins_%kernel.environment%'
+        bins_temp: 'bins_%kernel.environment%_temp'
+        bins_backup: 'bins_%kernel.environment%_backup'
+
+services:
+  p360_interface_bundle.logger:
+    class: logging.Logger
+    factory: ['@loggerbundle.LoggerFactory', 'create']
+    arguments:
+      - 'p360_interface_bundle'
+
+  p360_interface_bundle.featurestore.post_actions.metadata_adjustment.FolderContentRemover:
+
+  p360_interface_bundle.featurestore.post_actions.metadata_adjustment.MetadataJsonGetter:
+    arguments:
+      general_mapping: "%p360_interface_bundle.featurestore.post_actions.metadata_adjustment.mapping.general%"
+      category_mapping: "%p360_interface_bundle.featurestore.post_actions.metadata_adjustment.mapping.category%"
+
+  p360_interface_bundle.featurestore.post_actions.metadata_adjustment.MetadataDatetimeToStringConverter:
+
+  p360_interface_bundle.featurestore.post_actions.metadata_adjustment.MetadataWriter:
+
+  p360_interface_bundle.featurestore.post_actions.metadata_adjustment.StatisticsComputer:
+
+  p360_interface_bundle.featurestore.post_actions.metadata_adjustment.CreateMetadataJsonFiles:
+    arguments:
+      export_path: "%p360_interface_bundle.featurestore.post_actions.metadata_adjustment.export_path%"
+
+  p360_interface_bundle.clickhouse.ClickHouseContext:
+    arguments:
+      clickhouse_config: '%p360_interface_bundle.clickhouse%'
+
+  p360_interface_bundle.clickhouse.ClickHouseQueryExecutor:
+
+  p360_interface_bundle.clickhouse.ClickHouseTableExistenceChecker:
+
+  p360_interface_bundle.clickhouse.ClickHouseTableUploader:
+
+  p360_interface_bundle.export.bins.FloatingPointBinsGenerator:
+
+  p360_interface_bundle.export.bins.IntegralBinsGenerator:
+
+  p360_interface_bundle.export.bins.CategoricalBinsReducer:
+
+  p360_interface_bundle.export.tasks.FeatureStoreLoader:
+    arguments:
+      logger: '@p360_interface_bundle.logger'
+
+  p360_interface_bundle.export.tasks.FeatureStoreMetadataLoader:
+    arguments:
+      logger: '@p360_interface_bundle.logger'
+
+  p360_interface_bundle.export.tasks.SampledFeatureStoreLoader:
+    arguments:
+      logger: '@p360_interface_bundle.logger'
+      sampling_rate: '%p360_interface_bundle.export.featurestore.sampling_rate%'
+
+  p360_interface_bundle.export.tasks.ExportCollisionChecker:
+    arguments:
+      logger: '@p360_interface_bundle.logger'
+      export_tables: '%p360_interface_bundle.export.tables%'
+
+  p360_interface_bundle.export.tasks.ExportTablesUploader:
+    arguments:
+      logger: '@p360_interface_bundle.logger'
+      export_tables: '%p360_interface_bundle.export.tables%'
+
+  p360_interface_bundle.export.tasks.ExportCommitter:
+    arguments:
+      logger: '@p360_interface_bundle.logger'
+      export_tables: '%p360_interface_bundle.export.tables%'
+
+  p360_interface_bundle.export.tasks.ExportConsistencyChecker:
+    arguments:
+      logger: '@p360_interface_bundle.logger'
+      export_tables: '%p360_interface_bundle.export.tables%'
+
+  p360_interface_bundle.export.tasks.CheckpointDirSetter:
+    arguments:
+      logger: '@p360_interface_bundle.logger'
+
+  p360_interface_bundle.export.tasks.CheckpointDirCleaner:
+    arguments:
+      logger: '@p360_interface_bundle.logger'
+
+  p360_interface_bundle.export.tasks.BinsGenerator:
+    arguments:
+      logger: '@p360_interface_bundle.logger'
+      bin_params: '%p360_interface_bundle.export.bins%'
+
+  p360_interface_bundle.export.ExportRunner:
+    arguments:
+      export_tasks: [
+        '@p360_interface_bundle.export.tasks.CheckpointDirSetter',
+        '@p360_interface_bundle.export.tasks.FeatureStoreLoader',
+        '@p360_interface_bundle.export.tasks.FeatureStoreMetadataLoader',
+        '@p360_interface_bundle.export.tasks.SampledFeatureStoreLoader',
+        '@p360_interface_bundle.export.tasks.ExportCollisionChecker',
+        '@p360_interface_bundle.export.tasks.BinsGenerator',
+        '@p360_interface_bundle.export.tasks.ExportTablesUploader',
+        '@p360_interface_bundle.export.tasks.ExportCommitter',
+        '@p360_interface_bundle.export.tasks.ExportConsistencyChecker',
+        '@p360_interface_bundle.export.tasks.CheckpointDirCleaner',
+      ]
