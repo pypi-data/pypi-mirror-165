@@ -1,0 +1,292 @@
+Metadata-Version: 2.1
+Name: pre-commit-vauxoo
+Version: 3.2.4
+Summary: pre-commit script to run automatically the configuration and variables custom from Vauxoo
+Home-page: https://github.com/Vauxoo/pre-commit-vauxoo
+Author: Vauxoo
+Author-email: info@vauxoo.com
+License: LGPL-3.0-or-later
+Project-URL: Documentation, https://pre-commit-vauxoo.readthedocs.io/
+Project-URL: Changelog, https://pre-commit-vauxoo.readthedocs.io/en/latest/changelog.html
+Project-URL: Issue Tracker, https://github.com/Vauxoo/pre-commit-vauxoo/issues
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Utilities
+Requires-Python: >=3.5
+License-File: LICENSE
+License-File: AUTHORS.rst
+Requires-Dist: click
+Requires-Dist: pre-commit
+
+========
+Overview
+========
+
+.. image:: https://www.vauxoo.com/logo.png
+   :alt: Vauxoo
+   :target: https://www.vauxoo.com/
+
+
+
+
+pre-commit script to run automatically the configuration and variables custom from Vauxoo
+
+* Free software: GNU Lesser General Public License v3 or later (LGPLv3+)
+
+Installation
+============
+
+Using pypi
+
+    pip install -U pre-commit-vauxoo
+
+Using github directly
+
+    pip install -U git+https://github.com/Vauxoo/pre-commit-vauxoo.git@main
+
+Usage
+=====
+
+Run pre-commit-vauxoo command in git repository where you want to run our lints
+
+The autofixes are disabled by default you can use the following option to enable it
+
+  pre-commit-vauxoo -f
+
+Full --help command result:
+
+::
+
+  Usage: pre-commit-vauxoo [OPTIONS]
+
+    pre-commit-vauxoo run pre-commit with custom validations and configuration
+    files
+
+  Options:
+    -p, --paths PATH CSV            PATHS are the specific filenames to run
+                                    hooks on separated by commas.  [env var:
+                                    INCLUDE_LINT; default: .]
+
+    -w, --overwrite TEXT            Overwrite configuration files.
+
+                                    *If True, existing configuration files into
+                                    the project will be overwritten.
+
+                                    *If False, then current files will be used,
+                                    if they exist.  [env var:
+                                    PRECOMMIT_OVERWRITE_CONFIG_FILES; default:
+                                    True]
+
+    -x, --exclude-autofix PATH CSV  Exclude paths on which to run the autofix
+                                    pre-commit configuration, separated by
+                                    commas  [env var: EXCLUDE_AUTOFIX]
+
+    -l, --exclude-lint PATH CSV     Paths to exclude checks, separated by
+                                    commas.  [env var: EXCLUDE_LINT]
+
+    -d, --disable-pylint-checks TEXT
+                                    Pylint checks to disable, separated by
+                                    commas.  [env var: DISABLE_PYLINT_CHECKS]
+
+    -f, --autofix                   Run pre-commit with autofix configuration to
+                                    change the source code.
+
+                                    Overwrite '-t mandatory,optional,fix'  [env
+                                    var: PRECOMMIT_AUTOFIX; default: False]
+
+    -t, --precommit-hooks-type [mandatory|optional|fix|all]
+                                    Pre-commit configuration file to run hooks,
+                                    separated by commas.
+
+                                    *Mandatory: Stable hooks that needs to be
+                                    fixed (Affecting build status).
+
+                                    *Optional: Optional hooks that could be
+                                    fixed later. (No affects build status).
+
+                                    *Fix: Hooks auto fixing source code (Affects
+                                    build status).
+
+                                    *All: All configuration files to run hooks.
+                                    [env var: PRECOMMIT_HOOKS_TYPE; default:
+                                    mandatory, optional]
+
+    --help                          Show this message and exit.
+
+
+.. Documentation
+.. =============
+
+
+.. https://pre-commit-vauxoo.readthedocs.io/
+
+
+Development
+===========
+
+To run all the tests run::
+
+    tox
+
+Note, to combine the coverage data from all the tox environments run:
+
+.. list-table::
+    :widths: 10 90
+    :stub-columns: 1
+
+    - - Windows
+      - ::
+
+            set PYTEST_ADDOPTS=--cov-append
+            tox
+
+    - - Other
+      - ::
+
+            PYTEST_ADDOPTS=--cov-append tox
+
+CHANGES
+=======
+
+v3.2.4
+------
+
+* Bump version: 3.2.3 → 3.2.4
+* [ADD] requirements.txt: Add requirements.txt file and setup.py read this file (#32)
+* [REF] cli: Show env var for INCLUDE\_LINT and add help to path option (#31)
+* [REF] docs: Clean dummy files and add docs badge and logo (#30)
+
+v3.2.3
+------
+
+* Bump version: 3.2.2 → 3.2.3
+* [REF] CI: Generates ChangeLog with pbr installed (#29)
+
+v3.2.2
+------
+
+* Bump version: 3.2.1 → 3.2.2
+* [REF] setup.py: Autogenerate ChangeLog (#28)
+
+v3.2.1
+------
+
+* Bump version: 3.2.0 → 3.2.1
+* [REF] cli: Bypassing errors if git repo is not found allow to run --help (#27)
+
+v3.2.0
+------
+
+* Bump version: 3.1.0 → 3.2.0
+* [REF] README: Better help output with newlines (#26)
+* [REF] cli: Small refactoring, typos and py3.5 compatibility (#25)
+
+v3.1.0
+------
+
+* Bump version: 3.0.0 → 3.1.0
+* [FIX] click: Compatibility with click==8.0.1 used by big image (#24)
+
+v3.0.0
+------
+
+* Bump version: 2.1.1 → 3.0.0
+* [REF] click: Use standard parameters, envvar and callback transformation and a few refactoring and more (#23)
+
+v2.1.1
+------
+
+* Bump version: 2.1.0 → 2.1.1
+* [REF] CI: Add test to run with dockerv vauxoo image (#22)
+* [REF] click: Remove incompatible parameter for all click versions (#21)
+
+v2.1.0
+------
+
+* Bump version: 2.0.0 → 2.1.0
+* [FIX] CI: Auto deploy pypi
+
+v2.0.0
+------
+
+* Bump version: 1.3.2 → 2.0.0
+* [IMP] pre-commit-vauxoo: Add params, help, default and environment variable matches (#20)
+* [FIX] prettierrc: Enable only for js and xml files (#19)
+* [REF] CI: Order builds by OS and add py3.10 (#17)
+* [REF] tests: Create dummy repo in tmp folder
+* [REF] CI: Fix covtest
+* [REF] tests: Migrating tests to unittest
+
+v1.3.2
+------
+
+* Bump version: 1.3.1 → 1.3.2
+* [REF] CI: Build package before to publish it (#15)
+
+v1.3.1
+------
+
+* Bump version: 1.3.0 → 1.3.1
+* [REF] gh-actions: Publish package (#14)
+* [FIX] pre\_commit\_vauxoo: typos in log messages (#13)
+
+v1.3.0
+------
+
+* Bump version: 1.2.1 → 1.3.0
+* [REF] CI: Enable py3.10 (#12)
+* [REF] github: Set pre-commit cache
+* [REF] tests: Fixing test
+* [FIX] pre\_commit\_vauxoo: Fix current path
+* [REF] pre\_commit\_vauxoo: Use INCLUDE\_LINT and EXCLUDE\_AUTOFIX
+* [REF] pre\_commit\_vauxoo: Add logging colorized and summary result
+* [REF] pre\_commit\_vauxoo: Small refactoring
+* [REF] config: Add flake8 optional checks includes bugbear (#8)
+
+v1.2.1
+------
+
+* Bump version: 1.2.0 → 1.2.1
+* [REF] README: Fix installation command and version (#9)
+* [FIX] pre\_commit\_vauxoo: Return the same type of object (#7)
+* [REF] pre\_commit\_vauxoo: Add verbose subprocess.call wrapper in order to know what command was executed (#6)
+
+v1.2.0
+------
+
+* Bump version: 1.1.0 → 1.2.0
+* [REF] pre\_commit\_vauxoo: Run pre-commit only in current path (#5)
+
+v1.1.0
+------
+
+* Bump version: 1.0.1 → 1.1.0
+* [REF] prettierrc.yml: Enable xmlSelfClosingSpace (#3)
+
+v1.0.1
+------
+
+* Bump version: 1.0.0 → 1.0.1
+* [REF] pre\_commit\_vauxoo: Look for .git dir in parent dirs and allow to run the command in any subfolder (#2)
+* [REF] cfg: Update configuration from vx/mqt (remove flake8 bugbear)
+* [REF] eslintrc: Support syntax "??="
+* [ADD] pre-commit-vauxoo: first code
+
+v1.0.0
+------
+
+* Add initial project skeleton
+
+
