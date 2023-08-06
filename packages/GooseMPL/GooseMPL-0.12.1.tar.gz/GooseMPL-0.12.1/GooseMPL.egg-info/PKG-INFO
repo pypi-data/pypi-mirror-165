@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: GooseMPL
+Version: 0.12.1
+Summary: Style and extension functions for matplotlib
+Home-page: https://github.com/tdegeus/GooseMPL
+Author: Tom de Geus
+Author-email: tom@geus.me
+License: MIT
+Keywords: matplotlib,style
+License-File: LICENSE
+
+Style and extension functions for matplotlib
