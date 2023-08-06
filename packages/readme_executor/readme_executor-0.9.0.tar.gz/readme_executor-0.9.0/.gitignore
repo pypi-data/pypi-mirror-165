@@ -1,0 +1,6 @@
+*.pyc
+.gitignore
+venv/*
+.idea
+demo-out.md
+.pypirc
