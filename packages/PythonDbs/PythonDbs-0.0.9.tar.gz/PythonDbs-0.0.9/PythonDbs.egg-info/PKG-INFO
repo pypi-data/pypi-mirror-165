@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: PythonDbs
+Version: 0.0.9
+Summary: sqlite3 extension
+Author: Jordan
+Author-email: <jordybhunter10@outlook.com>
+Keywords: python,irst package
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Other Audience
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Microsoft :: Windows
+
+allows sqlite3 to be used in a diffrent way
