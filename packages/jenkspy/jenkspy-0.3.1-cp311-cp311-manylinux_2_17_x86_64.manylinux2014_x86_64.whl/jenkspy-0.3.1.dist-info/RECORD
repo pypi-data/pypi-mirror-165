@@ -1,0 +1,11 @@
+jenkspy-0.3.1.dist-info/top_level.txt,sha256=E2-lCywkT4CoCVZzI9ByTlag11BHyIxbLUNGPJNIvhA,8
+jenkspy-0.3.1.dist-info/WHEEL,sha256=MXkSmZj-ucMvJEZe-5F9uGaWQfgqj_gRjwLyMfC10Vs,152
+jenkspy-0.3.1.dist-info/METADATA,sha256=uqncjT-gS7vMIJAF8_Yqf0LC8Md5h1HIiHijikdcLAc,5931
+jenkspy-0.3.1.dist-info/RECORD,,
+jenkspy-0.3.1.dist-info/LICENSE,sha256=Bu3JDikfOqQRoi5OgvAKckt4fKK_jAYAywIZLj2NYMQ,1075
+jenkspy/jenks.cpython-311-x86_64-linux-gnu.so,sha256=rWyALrseMy4BxPFMorLyMZE2b44aq58E7_3iImTUhFc,1471816
+jenkspy/core.py,sha256=f9LttKNoHjpth8-ehvlfW2VuH3JWCd6H-CFZMW2dhTY,7453
+jenkspy/__init__.py,sha256=zn3qv0whZoGk-dR9XCJ73-hKl2dghO7nJ6_VIoqni84,241
+jenkspy/src/jenks.c,sha256=um3vOk8wVbYUrRevtBeHsn4vfqX1zJn1MTS2Cuu_gSI,837386
+jenkspy/src/jenks.pyx,sha256=delzYmhXSHu_RpQc_edxn0M75oixfCE1IV6j85KFry8,4150
+jenkspy/src/_jenks.c,sha256=Yz27zk2w2spqIfN5d_RVddUfnse5uqtRuezyAmWF7Zo,5730
