@@ -1,0 +1,15 @@
+cellshape_helper/__init__.py,sha256=q1_lDolg4MTVTbqhEm1YEKdYtpWmDMVieUuoTkzAae8,161
+cellshape_helper/conversions.py,sha256=2LqdkbZ_I8np69STOeWSBapd75SwXiA6t1Iruo1t0yA,1774
+cellshape_helper/segmentation.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cellshape_helper/util.py,sha256=QyHqtTsP8TOwoX390iLdxcfYAkgT85cx4tC1fb6WxFg,149
+cellshape_helper/vendor/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cellshape_helper/vendor/pytorch_geometric_files.py,sha256=MyYDcMnVAXPxHHIUJdMOj8i1YcJCM5b9p5kDbDPlWCE,2361
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_integration/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_unit/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_unit/test_placeholder.py,sha256=9OBU4nWtu0rrJ2VC6adSFER2405hhpVVMHTtes78QOc,40
+cellshape_helper-0.0.18rc0.dist-info/LICENSE,sha256=V2XKHcUYltaYyvUsOY35fD80MeYuaQ_nRJBhJsFIdFA,1518
+cellshape_helper-0.0.18rc0.dist-info/METADATA,sha256=3MR9dZ32h_wdJq6AhSCZfwcv4Se93DS8f8RpbNbtxg4,3811
+cellshape_helper-0.0.18rc0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+cellshape_helper-0.0.18rc0.dist-info/top_level.txt,sha256=tEwd26DYWbld7uqRGg0zWMke6ZUASe__6A0OJgkJ_eQ,23
+cellshape_helper-0.0.18rc0.dist-info/RECORD,,
