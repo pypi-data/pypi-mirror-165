@@ -1,0 +1,19 @@
+3.0.16 - add possible outputs, use logging, allow pointers
+3.0.15 - minor changes
+3.0.14 - minor changes
+3.0.13:
+    - better error handling
+    - use abs link for tmp files
+    - omit output box files
+3.0.12 - add Github actions
+3.0.11 - add missing files to pypi distr
+3.0.10 - changed version to reflect Scipion 3 support
+1.0.10 - binaries updated
+1.0.8 - Migrated to python3
+1.0.7 - run in tmp folder, fix batch processing, clean up after done
+1.0.6 - fixed wizard (thanks @pconesa)
+1.0.5 - Updated binary version and fixed tests.
+1.0.4 - Include protocol.conf to create the source distribution
+1.0.3 - Fix binary path, add protocols.conf
+1.0.2 - Fix getProgram and environ
+1.0.0 - First version of the plugin
