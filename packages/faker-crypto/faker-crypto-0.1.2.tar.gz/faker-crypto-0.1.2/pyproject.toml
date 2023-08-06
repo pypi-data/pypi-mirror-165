@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "faker-crypto"
+version = "0.1.2"
+description = "faker_crypto is a Faker provider for crytoaddreses."
+authors = ["Karambir Singh Nain <me@karambir.in>"]
+license = "MIT"
+readme = "README.md"
+keywords = [
+    "Faker",
+    "Cryptocurrency"
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+Faker = "^14.2.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+flake8 = "^5.0.4"
+black = "^22.8.0"
+isort = "^5.10.1"
+pytest-cov = "^3.0.0"
+bumpversion = "^0.6.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 120
+
+[tool.isort]
+line_length = 120
+profile = "black"
+src_paths = ["src", "tests"]
+
+[tool.pytest.ini_options]
+addopts = "--color=yes --verbosity=2 --cov"
+testpaths = ["faker_crypto", "tests"]
