@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "djmix-dataset"
+version = "0.1.0"
+description = ""
+authors = ["Taejun Kim <taejun@kaist.ac.kr>"]
+packages = [
+    { include = "djmix", from = "src" },
+]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.11"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
