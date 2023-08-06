@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: cijoe-pkg-qemu
+Version: 6.1.0.dev1
+Summary: UNKNOWN
+Home-page: https://github.com/refenv/joe-pkg-qemu/
+Author: Simon A. F. Lund
+Author-email: os@safl.dk
+License: BSD
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Framework :: Pytest
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Testing
+Classifier: Topic :: Software Development
+Classifier: Topic :: Text Processing
+Classifier: Topic :: Utilities
+Requires-Python: >=3.9
+License-File: LICENSE
+
+UNKNOWN
+
