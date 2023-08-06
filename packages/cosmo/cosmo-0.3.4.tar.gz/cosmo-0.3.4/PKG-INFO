@@ -1,0 +1,71 @@
+Metadata-Version: 2.1
+Name: cosmo
+Version: 0.3.4
+Summary: A web server implementation that uses raw sockets.
+Home-page: https://github.com/kronifer/cosmo
+License: Apache-2.0
+Author: Kronifer
+Author-email: 44979306+Kronifer@users.noreply.github.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: loguru (>=0.5.3,<0.6.0)
+Description-Content-Type: text/markdown
+
+# Cosmo
+
+Cosmo is a multithreaded python webserver that I'm developing in my spare time. Cosmo utilizes a TCP socket to send and receive data.
+
+## Examples
+
+### Simple Server
+
+```py
+from cosmo import App, Request, Response
+
+app = App("0.0.0.0", 8080)
+
+@app.route("/", "text/html")
+def index(request: Request):
+    return Response(f"<h1>{request.address}</h1>")
+
+app.serve()
+```
+
+### Using Custom Headers
+
+```py
+from cosmo import App, Request, Response
+
+app = App("0.0.0.0", 8080)
+
+@app.route("/", "text/html")
+def index(request: Request):
+    headers = {"x-custom-header": "custom"}
+    content = "<h1>Custom Headers: </h1>\n<ul>"
+    for header in headers.keys():
+        content += f"<li>{header}: {headers[header]}</li>\n"
+    content += "</ul>"
+    return Response(content, headers)
+
+app.serve()
+```
+
+### Returning an HTML Page
+
+```py
+from cosmo import App, html_page, Request, Response
+
+app = App("0.0.0.0", 8080)
+
+@app.route("/", "text/html")
+def index(request: Request):
+    return Response(html_page("path/to/page.html"))
+```
+
+## Docs
+
+Coming soon...
