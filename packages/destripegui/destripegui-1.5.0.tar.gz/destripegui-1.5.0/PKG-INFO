@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: destripegui
+Version: 1.5.0
+Summary: A GUI for automatic pystripe destriping
+Home-page: https://github.com/lifecanvastechnologies
+Author: LifeCanvas Technologies
+License: MIT
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+
+Destripe GUI
+==============
+Destripe GUI Readme
