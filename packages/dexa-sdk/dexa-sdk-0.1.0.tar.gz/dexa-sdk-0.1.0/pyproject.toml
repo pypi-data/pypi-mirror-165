@@ -1,0 +1,43 @@
+[tool.poetry]
+name = "dexa-sdk"
+version = "0.1.0"
+description = "Store and manage Data Exchange Agreements (DEXA)"
+authors = ["George J Padayatti <george.padayatti@igrant.io>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+asynctest = "^0.13.0"
+pytest = "^7.1.2"
+green = "^3.4.2"
+rich = "^12.5.1"
+merkletools = "^1.0.3"
+jcs = "^0.2.1"
+merklelib = "^1.0"
+semver = "^2.13.0"
+loguru = "^0.6.0"
+pydantic = "^1.9.1"
+PyLD = "2.0.1"
+rdflib = "^6.2.0"
+requests = ">=2.23.0, <2.24.0"
+py-multibase = "^1.0.3"
+py-multicodec = "^0.2.1"
+aries-cloudagent = "0.5.6"
+marshmallow = "3.5.1"
+uvloop = "^0.16.0"
+MarkupSafe = "2.0.1"
+python3-indy = "^1.16.0"
+ipykernel = "^6.15.1"
+
+[tool.poetry.dev-dependencies]
+autopep8 = "^1.6.0"
+ipykernel = "^6.15.1"
+pylint = "^2.14.5"
+flake8 = "^5.0.4"
+setuptools = "^64.0.3"
+mypy = "^0.971"
+black = "^22.6.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
