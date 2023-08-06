@@ -1,0 +1,16 @@
+PYRIANDX MAKES NO GUARANTEE OF VALIDITY WITH "PierianDx" CGW REST API WEB SERVICES
+
+0. "pyriandx" is community driven, independent Open Source project, MIT license
+   Python CLI and SDK/Library for "PierianDx" CGW REST API web services.
+
+1. "pyriandx" makes no promises regarding the outcome of using its to produce
+   "correct behaviour" when interfacing "PierianDx" CGW REST API web services and endpoints.
+
+2. As "pyriandx" project sought to maintain most upto date upstream API compatible with
+   "PierianDx" CGW REST API web services, however, project does not guarantee this is the case all the time.
+
+3. "pyriandx" makes no guarantee about any damages to your data due to any mis-use/mis-configure
+   or unintentional and/or un-discovered potential software bug. See "AS IS" clause, MIT license.
+
+4. Project also does not able to provide any support, if, discerning issue is
+   thought to be solely related to "PierianDx" CGW REST API web services.
