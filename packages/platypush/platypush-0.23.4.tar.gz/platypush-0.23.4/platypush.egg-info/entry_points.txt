@@ -1,0 +1,3 @@
+[console_scripts]
+platydock = platypush.platydock:main
+platypush = platypush:main
