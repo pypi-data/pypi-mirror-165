@@ -1,0 +1,11 @@
+grammar_rebuild.py,sha256=63u3xINlQHX6LN4XiBLq7vJZANFXOUE9hw2799PlXXY,547
+usfm_grammar-3.0.0a4.dist-info/top_level.txt,sha256=YC5n05QjjZlG6fS0pXSq9qVU83CnzMKgK_itjkKBNgw,29
+usfm_grammar-3.0.0a4.dist-info/WHEEL,sha256=ogCTRyjHDpGGFvF35n-cpV4SlFzxF7w5DeXJyxGbBi8,113
+usfm_grammar-3.0.0a4.dist-info/METADATA,sha256=f2ohYIDsgtBsbC6UXe-FwY1iRyneTy4ye4VNnSQJk1g,3816
+usfm_grammar-3.0.0a4.dist-info/entry_points.txt,sha256=4cmMtPgfaaRylQQz4_97G-ORYOr7StOuMP1QsTFeCWM,60
+usfm_grammar-3.0.0a4.dist-info/RECORD,,
+usfm_grammar-3.0.0a4.dist-info/LICENSE,sha256=n89EsxLlGypQjtflM_4CbbfFodzxsQbGxYHggUjRNg8,1068
+usfm_grammar/my-languages.so,sha256=-1oxBc58YWIRrwjaMzzUlg8ZjTl5c7_LXUx4iJ1oXSU,4670680
+usfm_grammar/__main__.py,sha256=fsqNpbXJhhFfKl80KZI2SJHxNu3hIAseIegy-vPIcSU,2377
+usfm_grammar/usfm_parser.py,sha256=CrhlYJVrujIF6yB14Pj1_sJQUbK7hTLdWPKJqvtbtmw,20126
+usfm_grammar/__init__.py,sha256=vAPBMkHlJxTrdvTm_mzgAahJia2ijKDPbA_THFl8XYg,176
