@@ -1,0 +1,43 @@
+# Unless explicitly stated otherwise all files in this repository are licensed under the Apache-2.0 License.
+# This product includes software developed at Datadog (https://www.datadoghq.com/).
+# Copyright 2019-Present Datadog, Inc.
+
+
+from datadog_api_client.model_utils import (
+    ModelSimple,
+    cached_property,
+)
+
+
+class SyntheticsCheckType(ModelSimple):
+    """
+    Type of assertion to apply in an API test.
+
+    :param value: Must be one of ["equals", "notEquals", "contains", "notContains", "startsWith", "notStartsWith", "greater", "lower", "greaterEquals", "lowerEquals", "matchRegex", "between", "isEmpty", "notIsEmpty"].
+    :type value: str
+    """
+
+    allowed_values = {
+        "value": {
+            "EQUALS": "equals",
+            "NOT_EQUALS": "notEquals",
+            "CONTAINS": "contains",
+            "NOT_CONTAINS": "notContains",
+            "STARTS_WITH": "startsWith",
+            "NOT_STARTS_WITH": "notStartsWith",
+            "GREATER": "greater",
+            "LOWER": "lower",
+            "GREATER_EQUALS": "greaterEquals",
+            "LOWER_EQUALS": "lowerEquals",
+            "MATCH_REGEX": "matchRegex",
+            "BETWEEN": "between",
+            "IS_EMPTY": "isEmpty",
+            "NOT_IS_EMPTY": "notIsEmpty",
+        },
+    }
+
+    @cached_property
+    def openapi_types(_):
+        return {
+            "value": (str,),
+        }
