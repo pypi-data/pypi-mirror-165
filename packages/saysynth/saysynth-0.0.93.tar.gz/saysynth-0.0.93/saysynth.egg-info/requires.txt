@@ -1,0 +1,7 @@
+charset-normalizer
+click
+mido
+midi-utils
+pyyaml
+g2p_en
+nltk
