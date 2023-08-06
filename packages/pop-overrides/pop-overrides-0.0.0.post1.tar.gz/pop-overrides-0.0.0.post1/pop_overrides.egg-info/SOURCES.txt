@@ -1,0 +1,12 @@
+LICENSE
+README.rst
+setup.cfg
+setup.py
+overrides/conf.py
+overrides/version.py
+overrides/states/recursive_contracts/recreate.py
+pop_overrides.egg-info/PKG-INFO
+pop_overrides.egg-info/SOURCES.txt
+pop_overrides.egg-info/dependency_links.txt
+pop_overrides.egg-info/requires.txt
+pop_overrides.egg-info/top_level.txt
