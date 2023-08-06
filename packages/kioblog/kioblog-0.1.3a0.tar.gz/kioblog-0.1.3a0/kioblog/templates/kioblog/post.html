@@ -1,0 +1,29 @@
+{% extends "kioblog/base.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block title %}{{ post.title }}{% endblock %}
+{% block meta_title %}{{ post.meta_title }}{% endblock %}
+{% block meta_description %}{{ post.meta_description }}{% endblock %}
+
+{% block content %}
+    <div id="content">
+        <section class="kioblog-post">
+            <h4 class="text-secondary mb0 regular">
+                {{ post.category.title }}
+            </h4>
+            <h2 class="mt1 mb0">
+                {{ post.title }}
+            </h2>
+            <div class="mb1">
+                <small>{{ post.user.get_full_name }} {{ post.created|date:'Y/m/d' }}</small>
+            </div>
+            {% if post.image %}
+            <img src="{{ post.image.url }}" alt="{{ post.title }}">
+            {% endif %}
+            <article>
+                {{ post.content|safe }}
+            </article>
+        </section>
+    </div>
+{% endblock %}
