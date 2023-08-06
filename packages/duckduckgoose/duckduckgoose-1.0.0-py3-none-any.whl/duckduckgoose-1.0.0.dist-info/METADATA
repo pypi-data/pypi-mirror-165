@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: duckduckgoose
+Version: 1.0.0
+Summary: Client library for the DuckDuckGoose/DeepDetector API
+Author-email: DuckDuckGoose <info@duckduckgoose.nl>
+Project-URL: homepage, https://deepdetector.docs.duckduckgoose.ai/
+Keywords: deepfake,api,detection
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Requires-Dist: ubiops
+
+# DuckDuckGoose/DeepDetector API client library
+
+For examples of usage please consult the DeepDetector documentation ([here](https://deepdetector.docs.duckduckgoose.ai/)).
+
