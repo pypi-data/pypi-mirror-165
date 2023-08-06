@@ -1,0 +1,1 @@
+from ejabberdapi.Ejabberdapi import Ejabberd, EjabberdAPIConfigError, EjabberdError, EjabberdIOError, EjabberdNetworkError, EjabberdAPIError, EjabberdServerError, EjabberdInternalServerError, EjabberdBadGatewayError, EjabberdServiceUnavailableError, EjabberdGatewayTimeoutError, EjabberdNotFoundError, EjabberdUnauthorizedError

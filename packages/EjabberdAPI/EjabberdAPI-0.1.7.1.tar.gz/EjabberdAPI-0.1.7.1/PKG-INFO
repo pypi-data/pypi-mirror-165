@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: EjabberdAPI
+Version: 0.1.7.1
+Summary: Python wrapper for Ejabberd API.
+Home-page: https://git.mastodont.cat/spla/EjabberdAPI.py
+Author: spla
+Author-email: llemena_obrer.0u@icloud.com
+Project-URL: Bug Tracker, https://git.mastodont.cat/spla/EjabberdAPI.py/issues
+Keywords: ejabberd xmpp chat omemo
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Communications
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Internet :: XMPP
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# EjabberdAPI
+
+Python wrapper for the [Ejabberd](https://www.ejabberd.im) API (WIP).  
+
+# Sample usage:  
+
+```
+from ejabberdapi import Ejabberd  
+
+ejabberd = Ejabberd("ejabberd_secrets_file")  
+```
+
+`ejabberd_secrets_file` is a txt file you must create with the following parameters:  
+
+api_base_url: local Ejabberd node, API listening port. In ex. http://127.0.0.1:5280  
+local_vhost: your local ejabberd vhost, in ex. ejabberd@localhost  
+admin_account: the ejabberd admin account, in ex. admin@ejabberd.server  
+admin_pass: ejabberd admin account password  
+
+# Current implemented Ejabberd endpoints:  
+
+- [check_account](https://docs.ejabberd.im/developer/ejabberd-api/admin-api/#check-account)  
+- [register](https://docs.ejabberd.im/developer/ejabberd-api/admin-api/#register)  
+- [unregister](https://docs.ejabberd.im/developer/ejabberd-api/admin-api/#unregister)  
+- [stats](https://docs.ejabberd.im/developer/ejabberd-api/admin-api/#stats)  
+- [status](https://docs.ejabberd.im/developer/ejabberd-api/admin-api/#status)  
+- [user_sessions_info](https://docs.ejabberd.im/developer/ejabberd-api/admin-api/#user-sessions-info)  
+
+* 29.8.2022. Added setup attribute
+

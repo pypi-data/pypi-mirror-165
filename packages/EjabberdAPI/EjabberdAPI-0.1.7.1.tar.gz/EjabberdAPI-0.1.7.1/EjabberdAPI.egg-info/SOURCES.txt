@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+EjabberdAPI.egg-info/PKG-INFO
+EjabberdAPI.egg-info/SOURCES.txt
+EjabberdAPI.egg-info/dependency_links.txt
+EjabberdAPI.egg-info/requires.txt
+EjabberdAPI.egg-info/top_level.txt
+ejabberdapi/Ejabberdapi.py
+ejabberdapi/__init__.py
