@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.cfg
+pyvdo/__init__.py
+pyvdo/playlist.py
+pyvdo.egg-info/PKG-INFO
+pyvdo.egg-info/SOURCES.txt
+pyvdo.egg-info/dependency_links.txt
+pyvdo.egg-info/top_level.txt
