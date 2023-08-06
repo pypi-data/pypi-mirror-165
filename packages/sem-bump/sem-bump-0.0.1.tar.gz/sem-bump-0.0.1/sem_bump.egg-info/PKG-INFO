@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: sem-bump
+Version: 0.0.1
+Summary: A CLI tool for bumping semantic versions
+Home-page: https://github.com/mathewmoon/sem-bump
+Author: Mathew Moon
+Author-email: me@mathewmoon.net
+License: Apache 2.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown

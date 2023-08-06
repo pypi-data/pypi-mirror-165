@@ -1,0 +1,2 @@
+[console_scripts]
+sem-bump = sem_bump:main
