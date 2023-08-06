@@ -1,0 +1,128 @@
+Metadata-Version: 2.1
+Name: compute-tf-idf-vectors
+Version: 1.0.3.202208310829
+Summary: Utility to compute sparse TF-IDF vector representation for dataset in the document_tracking_resources format based on a feature file.
+Home-page: https://gitlab.univ-lr.fr/cross-lingual-event-tracking/datasets/dataset_manipulation_tools/compute_tf_idf_weights
+Author: Guillaume Bernard
+Author-email: contact@guillaume-bernard.fr
+License: UNKNOWN
+Project-URL: Bug Tracker, https://gitlab.univ-lr.fr/cross-lingual-event-tracking/datasets/dataset_manipulation_tools/compute_tf_idf_weights/-/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Intended Audience :: Science/Research
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: AUTHORS
+Requires-Dist: pandas (~=1.3.5)
+Requires-Dist: scikit-learn (~=1.0.2)
+Requires-Dist: tqdm (~=4.62.3)
+Requires-Dist: numpy (~=1.19.5)
+Requires-Dist: scipy (~=1.7.3)
+Requires-Dist: document-processing (~=1.0.0)
+Requires-Dist: document-tracking-resources (~=1.0.0)
+
+# Compute TF-IDF weights for texts
+
+Compute TF-IDF weights for tokens, lemmas, entities, etc. of your datasets from a file that contains features.
+
+## Installation
+
+```bash
+pip install compute_tf_idf_weights
+```
+
+## Pre-requisites
+
+### Dependencies
+
+This project relies on two other packages: [`document_tracking_resources`](https://gitlab.univ-lr.fr/cross-lingual-event-tracking/developpement/from-documents-to-events/documents_tracking_resources) and [`document_processing`](https://gitlab.univ-lr.fr/cross-lingual-event-tracking/developpement/from-documents-to-events/document_processing). This code needs to have access to those packages.
+
+## Data
+
+### spaCy resources
+
+As this package uses the `document_processing` package, spaCy models are given in order to process the documents of the corpus. You then need to install [spaCy models](https://spacy.io/usage/models) for your languages.
+
+The following mapping is used, and you should download the models if you want to process those languages.
+
+```python
+model_names = {
+    "deu": "de_core_news_md",
+    "spa": "es_core_news_md",
+    "eng": "en_core_web_md",
+}
+```
+
+### The feature files
+
+This program computes TF-IDF vectors according to an external database of document features. You can get them by looking at the two projects below:
+
+- [`twitter_tf_idf_dataset`](https://gitlab.univ-lr.fr/cross-lingual-event-tracking/datasets/tf_idf_datasets/twitter_tf_idf_dataset): used to create a features document to compute vectors using a database of thousands of Tweets from many press agencies or online newspapers.
+- [`news_tf_idf_dataset`](https://gitlab.univ-lr.fr/cross-lingual-event-tracking/datasets/tf_idf_datasets/news_tf_idf_dataset): used to create a features document to compute vectors using thousands of scrapped Deutsche Welle articles from which the content is extracted.
+
+Those two project will help you produce the document required by the `--features_file` option of the `compute_tf_idf_weights_of_corpus.py` program. 
+
+**Please, note that all the language of the original corpus must be present in the same file, with a `lang` column to indicate which feature belong to which language.**
+
+**For each document text content (either `title`, `text` or both) should have at least three features: `tokens`, `entities` and `lemmas`. If the corpus contains only a `text` feature, the features file will contain for instance `tokens_text`, `lemmas_text`, `entitites_text`.**
+
+Below is the header of the file of features:
+```csv
+,tokens_title,lemmas_title,entities_title,tokens_text,lemmas_text,entities_text,lang
+[…]
+```
+
+### The corpus to process
+
+The script can process two different types of Corpus from `document_tracking_resources`. The one for News (`NewsCorpusWithSparseFeatures`), the other one for Tweets (`TwitterCorpusWithSparseFeatures`). The datafiles should be loaded by `document_tracking_resources` in order to have this project to work.
+
+For instance, below an example of a `TwitterCorpusWithSparseFeatures`:
+
+```text
+                                         date lang                                text               source  cluster
+1218234203361480704 2020-01-17 18:10:42+00:00  eng  Q: What is a novel #coronavirus...      Twitter Web App   100141
+1218234642186297346 2020-01-17 18:12:27+00:00  eng  Q: What is a novel #coronavirus...                IFTTT   100141
+1219635764536889344 2020-01-21 15:00:00+00:00  eng  A new type of #coronavirus     ...            TweetDeck   100141
+...                                       ...  ...                                 ...                  ...      ...
+1298960028897079297 2020-08-27 12:26:19+00:00  eng  So you come in here WITHOUT A M...   Twitter for iPhone   100338
+1310823421014573056 2020-09-29 06:07:12+00:00  eng  Vitamin and mineral supplements...            TweetDeck   100338
+1310862653749952512 2020-09-29 08:43:05+00:00  eng  FACT: Vitamin and mineral suppl...  Twitter for Android   100338
+```
+
+And an example of a `NewsCorpusWithSparseFeatures`:
+```text
+                              date lang                     title               text                     source  cluster
+24290965 2014-11-02 20:09:00+00:00  spa  Ponta gana la prim   ...  Las encuestas...                    Publico     1433
+24289622 2014-11-02 20:24:00+00:00  spa  La cantante Katie Mel...  La cantante b...          La Voz de Galicia      962
+24290606 2014-11-02 20:42:00+00:00  spa  Los sondeos dan ganad...  El Tribunal  ...                    RTVE.es     1433
+...                            ...  ...                       ...               ...                        ...      ...
+47374787 2015-08-27 12:32:00+00:00  deu  Microsoft-Betriebssys...  San Francisco...               Handelsblatt      170
+47375011 2015-08-27 12:44:00+00:00  deu  Microsoft-Betriebssy ...  San Francisco...               WiWo Gründer      170
+47394969 2015-08-27 20:35:00+00:00  deu  Windows 10: Mehr als ...  In zwei Tagn ...                  gamona.de      170
+```
+
+## Command line arguments
+
+Once installed, the command `compute_tf_idf_vectors` can be used directly, as registered in your PATH.
+
+```text
+usage: compute_tf_idf_vectors [-h] --corpus CORPUS --dataset-type {twitter,news} --features-file FEATURES_FILE --output-corpus OUTPUT_CORPUS
+
+Take a document corpus (in pickle format) and perform TF-IDF lookup in order to extract the feature weights.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --corpus CORPUS       Path to the pickle file containing the corpus to process.
+  --dataset-type {twitter,news}
+                        The kind of dataset to process. ‘twitter’ will use the ’TwitterCorpusWithSparseFeatures’ class, the ‘NewsCorpusWithSparseFeatures’ class otherwise
+  --features-file FEATURES_FILE
+                        Path to the CSV file that contains the learning document features in all languages.
+  --output-corpus OUTPUT_CORPUS
+                        Path where to export the new corpus with computed TF-IDF vectors.
+```
+
+

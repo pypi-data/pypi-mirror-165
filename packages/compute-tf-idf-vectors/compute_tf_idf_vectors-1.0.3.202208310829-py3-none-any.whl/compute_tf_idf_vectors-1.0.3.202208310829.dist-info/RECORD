@@ -1,0 +1,9 @@
+compute_tf_idf_vectors/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+compute_tf_idf_vectors/cli.py,sha256=rAomLObptC2NYjplrkxg4atUtTdA7FfnESd5MOdGcSg,14559
+compute_tf_idf_vectors-1.0.3.202208310829.dist-info/AUTHORS,sha256=mboVZoMRBgkkMYC-DCGkKardwXnr0Yz52VJSZ0SVp1o,49
+compute_tf_idf_vectors-1.0.3.202208310829.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+compute_tf_idf_vectors-1.0.3.202208310829.dist-info/METADATA,sha256=a1tBeMEndwBglN608kT1s31qYf4KtXefdxJOoCd4y7A,7267
+compute_tf_idf_vectors-1.0.3.202208310829.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+compute_tf_idf_vectors-1.0.3.202208310829.dist-info/entry_points.txt,sha256=-DT2UbTvfQqZ-G0mvftixWotrR1nHtfAl83w62qeZWU,76
+compute_tf_idf_vectors-1.0.3.202208310829.dist-info/top_level.txt,sha256=VuK4WfZr8grdtEk87841Bt9N1-ABV_1gI0wUlRwcf40,23
+compute_tf_idf_vectors-1.0.3.202208310829.dist-info/RECORD,,

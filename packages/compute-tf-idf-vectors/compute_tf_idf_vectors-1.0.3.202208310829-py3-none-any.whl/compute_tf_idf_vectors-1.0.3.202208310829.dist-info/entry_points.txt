@@ -1,0 +1,3 @@
+[console_scripts]
+compute_tf_idf_vectors = compute_tf_idf_vectors.cli:main
+
