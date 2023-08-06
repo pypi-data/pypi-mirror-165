@@ -1,0 +1,16 @@
+inaccel_keras-2.7.0.1-py3.10-nspkg.pth,sha256=HFJQQjsayTBtX4THfmpEuvbpxvpxnS6QzmjlbIrpPCI,544
+inaccel/keras/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+inaccel/keras/applications/__init__.py,sha256=LCEPbjDGp-8EIpUOGhJqN-0czHyLCNLghp_G8JqBcj4,64
+inaccel/keras/applications/imagenet_utils.py,sha256=N9K3_1dXZaw_-bh6lOmcXsOWQITJxOJq4MByOoIG884,1621
+inaccel/keras/applications/mobilenet.py,sha256=Ix7VTWLyIoAsOhFuLj9F9RydOXH3eA-awodfwGnKAWo,7166
+inaccel/keras/applications/resnet50.py,sha256=Uzjj8j7gDSQmyp5DrmEYqXnm-z10ee6xXW8yUarmjTA,9123
+inaccel/keras/preprocessing/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+inaccel/keras/preprocessing/image.py,sha256=NflFhL0HwmUF3BfSe-SUlnE5U1K5KbvzaCF1SsBEmIE,24404
+inaccel_keras-2.7.0.1.dist-info/LICENSE,sha256=DVQuDIgE45qn836wDaWnYhSdxoLXgpRRKH4RuTjpRZQ,10174
+inaccel_keras-2.7.0.1.dist-info/METADATA,sha256=qG6zUZM2WVaWIjn0JqBBIceinY3zzd6l2mdh670yDEI,1141
+inaccel_keras-2.7.0.1.dist-info/NOTICE,sha256=wbovs-EyebC1qYs7IZOjBrLDW-TLgWV55JdcRibBwqk,121
+inaccel_keras-2.7.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+inaccel_keras-2.7.0.1.dist-info/namespace_packages.txt,sha256=mEtI1J9uUWktjAq_9Bj1x0_unZ4ubkU525epbXPFmnA,8
+inaccel_keras-2.7.0.1.dist-info/top_level.txt,sha256=mEtI1J9uUWktjAq_9Bj1x0_unZ4ubkU525epbXPFmnA,8
+inaccel_keras-2.7.0.1.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+inaccel_keras-2.7.0.1.dist-info/RECORD,,
