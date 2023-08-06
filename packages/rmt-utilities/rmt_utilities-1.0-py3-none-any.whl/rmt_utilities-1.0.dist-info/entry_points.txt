@@ -1,0 +1,9 @@
+[console_scripts]
+cross_sec = rmt_utilities.cross_sec:main
+data_recon = rmt_utilities.data_recon:recon
+gen_hhg = rmt_utilities.gen_hhg:main
+gen_tas = rmt_utilities.gen_tas:main
+plot_den = rmt_utilities.plot_dist:plot_den
+plot_mom = rmt_utilities.plot_dist:plot_mom
+rmt_compare = rmt_utilities.rmt_compare:main
+

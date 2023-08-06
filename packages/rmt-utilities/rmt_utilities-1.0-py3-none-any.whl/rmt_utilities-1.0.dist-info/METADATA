@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: rmt-utilities
+Version: 1.0
+Summary: Python package for interacting with the high performance,                 parallel fortran code R-matrix with Time
+Home-page: https://gitlab.com/abrown41/rmt-utilities
+Author: Andrew Brown
+Author-email: andrew.brown@qub.ac.uk
+License: BSD (3-clause)
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+License-File: LICENSE
+License-File: AUTHORS.rst
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: pathlib
+Requires-Dist: f90nml
+Requires-Dist: pyyaml
+Requires-Dist: pytest
+
+=============
+RMT utilities
+=============
+
+.. image:: https://gitlab.com/abrown41/rmt-utilities/badges/master/pipeline.svg
+        :target: https://gitlab.com/abrown41/rmt-utilities/-/commits/master
+
+.. image:: https://gitlab.com/abrown41/rmt-utilities/badges/master/coverage.svg
+        :target: https://gitlab.com/abrown41/rmt-utilities/-/commits/master
+
+.. image:: https://img.shields.io/pypi/v/rmt-utilities.svg
+        :target: https://pypi.python.org/pypi/rmt-utilities
+
+
+Python package for interacting with the high performance, parallel fortran code R-matrix with Time `(RMT) <https://gitlab.com/Uk-amor/RMT/rmt>`_
+
+
+* Free software: `GPL-v3 <https://www.gnu.org/licenses/gpl-3.0.en.html>`_
+* `Package repository <https://gitlab.com/abrown41/rmt-utilities>`_
+
+
