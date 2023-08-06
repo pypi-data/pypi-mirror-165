@@ -1,0 +1,10 @@
+libretranslate_neon_plugin/__init__.py,sha256=YfRV6ay0zhmm1ucd3ZsK0HhIfZCoRjVbc8DIwCzp8C4,4344
+libretranslate_neon_plugin/constants/__init__.py,sha256=HOw5Qi3sm6hk5kVj6i7LTqFDKGlf1vg67OfppkgG4L0,1914
+libretranslate_neon_plugin/constants/url_constants.py,sha256=yCFFNbW_TL0QFD_EteL9aFuHLp1eEEYAiIapWQhxho0,1886
+neon_lang_plugin_libretranslate-0.1.3a1.dist-info/LICENSE.md,sha256=gxKa3HnxC7fSIlGFpLAiSAhQS22pIyVEyXmPQR2KlXM,1634
+neon_lang_plugin_libretranslate-0.1.3a1.dist-info/METADATA,sha256=rpA6Sl495KSIif2cwYCBrg6-dEa97geC3u4FsZWU-Xc,1344
+neon_lang_plugin_libretranslate-0.1.3a1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+neon_lang_plugin_libretranslate-0.1.3a1.dist-info/entry_points.txt,sha256=pUlKDDjgDnu1oSUXsaZ2V1HhrDBDQzJ_irgFDtrNuOQ,213
+neon_lang_plugin_libretranslate-0.1.3a1.dist-info/top_level.txt,sha256=7-e0W1AE9Ka3r3_XU3waGJlbdBGUq60u8oVWveoHn30,27
+neon_lang_plugin_libretranslate-0.1.3a1.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+neon_lang_plugin_libretranslate-0.1.3a1.dist-info/RECORD,,
