@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "recipientgsheets"
+version = "0.0.3"
+description = "Модуль, который позволяет использовать данные из Google Таблицы, а также перевести её в csv файл"
+readme = 'README.md'
+authors = ["DaniEruDai"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[project.urls]
+'Homepage' = 'https://github.com/DaniEruDai/recipientgsheets'
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
