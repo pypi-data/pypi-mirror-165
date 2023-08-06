@@ -1,0 +1,2 @@
+[kedro.hooks]
+multinode_enabler = kedro_partitioned.plugin:multinode_enabler
