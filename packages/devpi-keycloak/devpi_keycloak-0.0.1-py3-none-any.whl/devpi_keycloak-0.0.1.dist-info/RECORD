@@ -1,0 +1,8 @@
+devpi_keycloak/__init__.py,sha256=07NzQXBgNlnw5kSN6ZYxE9By-_RuH3Jyy58Z74sIio0,21
+devpi_keycloak/entrypoint.py,sha256=H4Vf2-W7YAuWKAdRvPTrui4MVbkbU0VL-uS72hqVR_c,630
+devpi_keycloak-0.0.1.dist-info/LICENSE.txt,sha256=YFnFUvvzejooehNm9cn0lHP1uN4nr-sh2EbjIrGjUyQ,1061
+devpi_keycloak-0.0.1.dist-info/METADATA,sha256=f4Qapeh2P_N396rXMHPi240Czgoy_Hy0RxER2KCIRo4,1281
+devpi_keycloak-0.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+devpi_keycloak-0.0.1.dist-info/entry_points.txt,sha256=mZSW9DIfV7rx99zcwVjwcB-cRTAiiR0qzt643Yq2hUM,58
+devpi_keycloak-0.0.1.dist-info/top_level.txt,sha256=NRoLOo64HV1YvgXvjxCjGe-6mJUWYCZgNScFTXaln_8,15
+devpi_keycloak-0.0.1.dist-info/RECORD,,
