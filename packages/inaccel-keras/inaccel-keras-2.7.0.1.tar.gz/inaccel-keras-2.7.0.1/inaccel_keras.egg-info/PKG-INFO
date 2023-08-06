@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: inaccel-keras
+Version: 2.7.0.1
+Summary: InAccel keras-like package
+Home-page: https://docs.inaccel.com
+Author: InAccel
+Author-email: info@inaccel.com
+License: Apache-2.0
+Keywords: InAccel Coral,FPGA,inaccel,keras
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: NOTICE
+
+# `keras`-like Package
+
+[![InAccel](https://img.shields.io/static/v1?label=InAccel&message=FPGA&color=important)](https://inaccel.com)
+[![PyPI version](https://badge.fury.io/py/inaccel-keras.svg)](https://badge.fury.io/py/inaccel-keras)

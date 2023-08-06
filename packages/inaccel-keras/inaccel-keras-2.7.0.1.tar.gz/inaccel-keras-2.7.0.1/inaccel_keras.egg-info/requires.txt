@@ -1,0 +1,5 @@
+coral-api==2.*
+keras==2.7.0
+h5py
+keras-preprocessing
+opencv-python
