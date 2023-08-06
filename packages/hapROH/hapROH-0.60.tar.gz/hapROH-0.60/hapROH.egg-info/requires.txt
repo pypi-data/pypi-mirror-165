@@ -1,0 +1,9 @@
+numpy
+pandas
+scipy
+h5py
+psutil
+numdifftools
+cython
+matplotlib
+pysam
