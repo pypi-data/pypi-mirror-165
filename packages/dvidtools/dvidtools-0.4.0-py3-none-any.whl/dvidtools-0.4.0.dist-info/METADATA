@@ -1,0 +1,102 @@
+Metadata-Version: 2.1
+Name: dvidtools
+Version: 0.4.0
+Summary: Fetch data from DVID server
+Home-page: https://github.com/flyconnectome/dvid_tools
+Author: Philipp Schlegel
+Author-email: pms70@cam.ac.uk
+License: GNU GPL V3
+Project-URL: Documentation, https://dvidtools.readthedocs.io
+Project-URL: Source, https://github.com/flyconnectome/dvid_tools
+Keywords: DVID API fetch neuron segmentation
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy (>=1.15.3)
+Requires-Dist: pandas (>=0.23.4)
+Requires-Dist: setuptools (>=40.5.0)
+Requires-Dist: tqdm (>=4.28.1)
+Requires-Dist: scikit-image (>=0.14.1)
+Requires-Dist: scipy
+Requires-Dist: requests
+Requires-Dist: trimesh
+Requires-Dist: networkx
+Provides-Extra: extras
+Requires-Dist: scikit-learn (==0.20.3) ; extra == 'extras'
+
+[![Documentation Status](https://readthedocs.org/projects/dvidtools/badge/?version=latest)](http://dvidtools.readthedocs.io/en/latest/?badge=latest)[![Tests](https://github.com/flyconnectome/dvid_tools/actions/workflows/test-package.yml/badge.svg)](https://github.com/flyconnectome/dvid_tools/actions/workflows/test-package.yml)
+
+# dvidtools
+Python tools to fetch data from [DVID](https://github.com/janelia-flyem/dvid) servers.
+
+Find the documentation [here](https://dvidtools.readthedocs.io).
+
+Want to query a neuPrint server instead? Check out
+[neuprint-python](https://github.com/connectome-neuprint/neuprint-python).
+
+## What can `dvidtools` do for you?
+
+- get/set user bookmarks
+- get/set neuron annotations (names)
+- download precomputed meshes, skeletons (SWCs) and ROIs
+- get basic neuron info (# of voxels/synapses)
+- get synapses
+- get connectivity (adjacency matrix, connectivity table)
+- retrieve labels (TODO, to split, etc)
+- map positions to body IDs
+- mesh or skeletonize sparsevols
+- detect potential open ends (based on a script by [Stephen Plaza](https://github.com/stephenplaza))
+
+## Install
+
+Make sure you have [Python 3](https://www.python.org) (3.6 or later),
+[pip](https://pip.pypa.io/en/stable/installing/). Then run this:
+
+```bash
+pip3 install dvidtools
+```
+
+To install the dev version straight from Github:
+
+```bash
+pip3 install git+https://github.com/flyconnectome/dvid_tools@master
+```
+
+## Optional dependencies
+Necessary dependencies will be installed automatically.
+
+If you plan to use the tip detector with classifier-derived confidence, you
+will also need [sciki-learn](https://scikit-learn.org):
+
+```shell
+pip3 install scikit-learn
+```
+
+For from-scratch skeletonization you need to install `skeletor`:
+
+```shell
+pip3 install skeletor
+```
+
+## Examples
+Please see the [documentation](https://dvidtools.readthedocs.io) for examples.
+
+## Testing
+
+For testing you need to have two environment variables set: `DVID_TEST_SERVER`
+and `DVID_TEST_NODE`. These should point to a DVID server/node that contain
+the Janelia hemibrain dataset. Then run:
+
+```bash
+$ pytest -v
+```
