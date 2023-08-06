@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/SentimentDetection.py
+src/Tools.py
+src/__init__.py
+src/nlp_for_mlf.egg-info/PKG-INFO
+src/nlp_for_mlf.egg-info/SOURCES.txt
+src/nlp_for_mlf.egg-info/dependency_links.txt
+src/nlp_for_mlf.egg-info/requires.txt
+src/nlp_for_mlf.egg-info/top_level.txt
