@@ -1,0 +1,9 @@
+{% if es_membership %}
+<a href="{% url 'plugins:nautobot_evpn:leave-es' es_membership.pk %}" class="btn btn-danger">
+  <span class="glyphicon glyphicon-resize-full" aria-hidden="true"></span> Leave Ethernet Segment {{ es_membership.segment.name }}
+</a>
+{% else %}
+<a href="{% url 'plugins:nautobot_evpn:join-es' interface.pk %}" class="btn btn-primary">
+  <span class="glyphicon glyphicon-resize-small" aria-hidden="true"></span> Join Ethernet Segment
+</a>
+{% endif %}

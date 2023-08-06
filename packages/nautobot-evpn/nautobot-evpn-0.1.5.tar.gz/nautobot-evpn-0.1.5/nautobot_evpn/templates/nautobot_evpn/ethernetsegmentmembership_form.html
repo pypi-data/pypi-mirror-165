@@ -1,0 +1,21 @@
+{% extends 'generic/object_edit.html' %}
+{% load form_helpers %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block form %}
+    <div class="panel panel-default">
+      <div class="panel-heading"><strong>Ethernet Segement for Interface {{ form.interface.name }}</strong></div>
+      <div class="panel-body">
+        {% render_field form.segment %}
+        {{ form.interface }}
+      </div>
+    </div>
+{% endblock %}
+
+{% block buttons %}
+    <button type="submit" name="_create" class="btn btn-primary">Create</button>
+    <a href="{{ return_url }}" class="btn btn-default">Cancel</a>
+{% endblock %}

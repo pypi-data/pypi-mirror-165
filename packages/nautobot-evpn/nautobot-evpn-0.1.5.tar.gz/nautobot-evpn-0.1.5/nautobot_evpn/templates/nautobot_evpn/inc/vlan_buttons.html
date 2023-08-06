@@ -1,0 +1,12 @@
+<a href="{% url 'plugins:nautobot_evpn:anycast-ips' vlan.pk %}" class="btn btn-primary">
+  <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Manage Anycast IPs
+</a>
+{% if vlanvrf %}
+<a href="{% url 'plugins:nautobot_evpn:remove-vrf' vlan.pk %}" class="btn btn-danger">
+  <span class="glyphicon glyphicon-resize-full" aria-hidden="true"></span> Disconnect from VRF {{ vlanvrf.vrf.name }}
+</a>
+{% else %}
+<a href="{% url 'plugins:nautobot_evpn:add-vrf' vlan.pk %}" class="btn btn-primary">
+  <span class="glyphicon glyphicon-resize-small" aria-hidden="true"></span> Connect
+</a>
+{% endif %}

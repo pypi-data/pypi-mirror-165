@@ -1,0 +1,30 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <strong>Other Members of Ethernet Segment {{es.name}}</strong>
+  </div>
+  <table class="table table-hover panel-body">
+    <thead>
+      <tr>
+        <th>Device</th>
+        <th>Interface</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for member in members %}
+          <tr>
+            <td>
+              <a href="{% url 'dcim:device' pk=member.interface.device.pk %}">
+                {{member.interface.device}}
+              </a>
+            </td>
+            <td>
+              <a href="{% url 'dcim:interface' pk=member.interface.pk %}">
+                {{member.interface}}
+              </a>
+            </td>
+          </tr>
+        </a>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>

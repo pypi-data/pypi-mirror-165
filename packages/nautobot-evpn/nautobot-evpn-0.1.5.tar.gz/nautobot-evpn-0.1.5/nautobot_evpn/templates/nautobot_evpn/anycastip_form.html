@@ -1,0 +1,28 @@
+{% extends 'generic/object_edit.html' %}
+{% load form_helpers %}
+
+{% block title %}
+  Manage Anycast IPs
+{% endblock %}
+
+{% block form %}
+    <div class="panel panel-default">
+        <div class="panel-heading"><strong>Anycast IPs for VLAN {{form.vlan.vid }}</strong></div>
+        <div class="panel-body">
+            {% render_field form.ips %}
+            {{ form.vlan }}
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading"><strong>Dummy IPs for VLAN {{form.vlan.vid }}</strong></div>
+        <div class="panel-body">
+            {% render_field form.dummy_ips %}
+            {{ form.vlan }}
+        </div>
+    </div>
+{% endblock %}
+
+{% block buttons %}
+    <button type="submit" name="_create" class="btn btn-primary">Create</button>
+    <a href="{{ return_url }}" class="btn btn-default">Cancel</a>
+{% endblock %}

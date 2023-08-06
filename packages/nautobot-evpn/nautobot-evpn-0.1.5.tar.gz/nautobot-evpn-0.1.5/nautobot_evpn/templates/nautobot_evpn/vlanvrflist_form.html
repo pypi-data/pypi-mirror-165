@@ -1,0 +1,22 @@
+{% extends 'generic/object_edit.html' %}
+{% load form_helpers %}
+
+{% block title %}
+  Connect VLAN
+{% endblock %}
+
+
+{% block form %}
+    <div class="panel panel-default">
+      <div class="panel-heading"><strong>Connect VLAN {{form.vlan.vid }} to VRF</strong></div>
+      <div class="panel-body">
+        {% render_field form.vrf %}
+        {{ form.vlan }}
+      </div>
+    </div>
+{% endblock %}
+
+{% block buttons %}
+    <button type="submit" name="_create" class="btn btn-primary">Create</button>
+    <a href="{{ return_url }}" class="btn btn-default">Cancel</a>
+{% endblock %}

@@ -1,0 +1,26 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <strong>SVIs</strong>
+  </div>
+  <table class="table table-hover panel-body">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>IPs</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for svi in svis %}
+          <tr>
+            <td>
+              vlan{{svi.vlan.vid}}
+            </td>
+            <td>
+              {% for ip in svi.ips %}{{ip}} {% endfor %}
+            </td>
+          </tr>
+        </a>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
