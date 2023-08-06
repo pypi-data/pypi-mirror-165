@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: cal-star
+Version: 0.1.1
+Summary: This project is used for standard star filed calibration.
+Home-page: https://github.com/git-yuliang/standard_star.git
+Author: ('Yu Liang',)
+Author-email: yuliang@shao.ac.cn
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.7.0
+Description-Content-Type: text/markdown
+
+This project is used for standard star filed calibration.
+
