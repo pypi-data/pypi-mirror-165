@@ -1,0 +1,23 @@
+.truncate {
+    display: inline-block;
+    width: 20em;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+}
+
+.state-retry {
+    color: deepskyblue
+}
+
+.state-failure {
+    color: crimson
+}
+
+.field-_runtime {
+    text-align: right;
+}
+
+.text-right {
+    text-align: right;
+}
