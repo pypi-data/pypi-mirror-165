@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: ya360
+Version: 3.1.1
+Summary: ya360 - Yandex 360 admin cli tool
+Home-page: https://ya360.uh.net.ru
+Download-URL: https://github.com/imercury13/ya360
+Author: Igor Kuptsov
+Author-email: ya360@uh.net.ru
+Maintainer: Igor Kuptsov
+Maintainer-email: ya360@uh.net.ru
+License: MIT
+Project-URL: Documentation, https://ya360.readthedocs.io/ru/3.1.1/
+Project-URL: Bug Tracker, https://github.com/imercury13/ya360/issues
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python
+Classifier: Environment :: Console
+Classifier: Intended Audience :: System Administrators
+Requires-Python: >=3.6.9
+License-File: LICENSE
+Requires-Dist: yandex-oauth (>=1.1.2)
+Requires-Dist: yandex-360 (>=1.3.0)
+
+ya360
+=====
+
+Утилита командной строки для Yandex 360
+
+    | *Для фанатов автоматизации UNIX/Linux - style или тех, кто устал курлить*
+
+Автоматизируйте процессы администрирования Yandex 360 как вам удобно и откуда угодно, везде, где есть доступ к командной строке
+
+Процесс установки и настройки описан в главе `Перед началом работы <https://ya360.readthedocs.io/ru/3.1.1/befo.html>`_
+
+Документация на `ya360.readthedocs.io <https://ya360.readthedocs.io/ru/3.1.1>`_, но она вряд ли вам нужна, если знаете как пользоваться командой:
+
+.. code-block:: console
+    
+    ya360 -h
+
+Если вы вдруг обнаружили ошибку, то желательно "сдать" ее нам через `форму на github'е <https://github.com/imercury13/ya360/issues/new?assignees=&labels=&template=bug_report.md&title=>`_, а просто оставить свои пожелания и "хотелки" можно `здесь <https://github.com/imercury13/ya360/issues/new?assignees=&labels=&template=feature_request.md&title=>`_
+
+   | *Автоматизируйте и админте. Админте и автоматизируйте. Да прибудет с вами CLI!*
