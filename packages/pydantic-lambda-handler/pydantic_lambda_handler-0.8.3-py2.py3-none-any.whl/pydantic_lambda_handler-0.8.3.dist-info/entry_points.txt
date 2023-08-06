@@ -1,0 +1,4 @@
+[console_scripts]
+gen-cdk-conf=pydantic_lambda_handler.gen_open_api_inspect:cdk_conf
+gen-open-api-spec=pydantic_lambda_handler.gen_open_api_inspect:main
+
