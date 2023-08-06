@@ -1,0 +1,3 @@
+[console_scripts]
+oliver=oliver.__main__:main
+
