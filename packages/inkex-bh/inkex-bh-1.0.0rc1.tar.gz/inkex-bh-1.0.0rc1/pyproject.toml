@@ -1,0 +1,151 @@
+[project]
+name = "inkex-bh"
+description = "Inkscape extensions for Barn Hunt"
+keywords = ["inkscape", "barn hunt", "barnhunt"]
+license = {text = "GNU GPLv3"}
+requires-python = ">=3.7"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Plugins",
+    "Intended Audience :: End Users/Desktop",
+    "Intended Audience :: Other Audience",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Programming Language :: Python :: 3",
+    "Topic :: Artistic Software",
+    "Topic :: Multimedia :: Graphics",
+    "Topic :: Multimedia :: Graphics :: Editors",
+    "Topic :: Multimedia :: Graphics :: Editors :: Vector-Based",
+    "Typing :: Typed",
+]
+dynamic = ["version", "readme"]
+dependencies = [
+    # FIXME: not installable from PyPI?
+    # "inkex",
+    "lxml",
+    "typing_extensions; python_version < '3.8'",
+]
+
+[project.urls]
+Homepage = "https://github.com/barnhunt/inkex-bh"
+
+[[project.authors]]
+name = "Jeff Dairiki"
+email = "dairiki@dairiki.org"
+
+[build-system]
+requires = ["setuptools>=61", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.dynamic.readme]
+file = ["README.md", "CHANGES.md"]
+content-type = "text/markdown"
+
+[tool.setuptools.packages.find]
+include = ["inkex_bh"]
+
+[tool.setuptools.package-data]
+inkex_bh = ["extensions/*.inx", "extensions/*.py"]
+
+[tool.setuptools_scm]
+
+
+
+
+################################################################
+#
+# pytest
+#
+[tool.pytest.ini_options]
+norecursedirs = ["venv", ".tox", ".git", "node_modules"]
+addopts = "--strict-markers"
+#markers = [
+#    "requiresinternet: marks tests requiring an internet connection",
+#]
+
+
+################################################################
+#
+# coverage
+#
+[tool.coverage.paths]
+paths = [
+    "inkex_bh",
+    ".tox/py*/*/inkex_bh",
+    # Attempt to match source files on various GitHub Windows/macOS runners
+    '*:*\inkex-bh\inkex_bh',
+    '*/inkex-bh/inkex_bh',
+    "*/.tox/*/site-packages/inkex_bh",
+]
+
+[tool.coverage.run]
+# Generate unique names for .coverage.* file
+parallel = true
+source_pkgs = [
+    "inkex_bh",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "if TYPE_CHECKING:",
+    'if __name__ == "__main__"',
+    '^\s*\.\.\.\s*$',
+]
+
+################################################################
+#
+# NOTE: flake8 configuration is in tox.ini
+#
+
+
+################################################################
+#
+# pylint
+#
+[tool.pylint.MASTER]
+ignore = [".git", "tests"]
+ignore-paths = [".*/tests/.*"]
+extension-pkg-allow-list = ["lxml"]
+
+[tool.pylint.FORMAT]
+#max-line-length = 91
+#max-module-lines = 2000
+
+[tool.pylint.DESIGN]
+max-attributes = 20
+max-locals = 30
+max-branches = 20
+max-nested-blocks = 8
+max-returns = 8
+
+[tool.pylint.'MESSAGES CONTROL']
+disable = [
+     "missing-docstring",
+     "invalid-name",
+     "fixme",
+]
+
+[tool.mypy]
+files = "$MYPY_CONFIG_FILE_DIR/inkex_bh"
+
+show_error_codes = true
+error_summary = true
+warn_unused_configs = true
+warn_unused_ignores = true
+warn_redundant_casts = true
+
+strict = true
+#implicit_reexport = true
+
+[[tool.mypy.overrides]]
+module = [
+    "inkex.*",
+]
+ignore_missing_imports = true
+
+
+[[tool.mypy.overrides]]
+module = [
+    "tests.*",
+]
+disallow_untyped_calls = false
