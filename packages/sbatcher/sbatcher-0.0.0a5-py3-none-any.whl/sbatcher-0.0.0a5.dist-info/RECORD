@@ -1,0 +1,10 @@
+sbatcher/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sbatcher/array_job.py,sha256=EfF6NNXMvc_OcC6yHHaisFHk7JcPkGwFoHdh2Rj3aWE,5735
+sbatcher/example.sbatcher.json,sha256=T7GO7ybBnXB763FK6fvaeGsznYfWNt-whyqbOmupIJE,260
+sbatcher/logs.py,sha256=-CH5TqrYY9DuflxVgPgrhUBsYLvnjjAH_07oEpRTBE8,260
+sbatcher/bin/sbatcher-array-job,sha256=AY5CL9HKT9orNp0ZvuZcWTB5YpX9gvuEgZ7uBYcyejI,198
+sbatcher-0.0.0a5.data/scripts/sbatcher-array-job,sha256=TQZ4NTILbiORlYfQYUYlge_XQ0CwSwaoGVZ-mUQeV8E,185
+sbatcher-0.0.0a5.dist-info/METADATA,sha256=OBNuzoWvLlYhgIkQ-W0z_82njAZtM2LnupmbZ1ah_iA,118
+sbatcher-0.0.0a5.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+sbatcher-0.0.0a5.dist-info/top_level.txt,sha256=SbEnv_ETDmV1WTHkaZvzfTXdkqN3oxJKhoz59Wa4Gxw,9
+sbatcher-0.0.0a5.dist-info/RECORD,,
