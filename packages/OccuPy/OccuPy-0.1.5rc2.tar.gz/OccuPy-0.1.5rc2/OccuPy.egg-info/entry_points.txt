@@ -1,0 +1,2 @@
+[console_scripts]
+occupy = occupy.occupy:app
