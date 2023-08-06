@@ -1,0 +1,20 @@
+Metadata-Version: 1.2
+Name: djingles
+Version: 0.1.20
+Summary: Set of django utilities
+Home-page: https://github.com/vivsh/djingles
+License: BSD
+Description: 
+        
+        Set of django utilities for python3
+Keywords: django utilities
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Text Processing :: Markup :: HTML
+Requires-Python: >=3

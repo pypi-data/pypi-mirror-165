@@ -1,0 +1,3 @@
+[console_scripts]
+djingles = djingles.commands.main:cli
+
