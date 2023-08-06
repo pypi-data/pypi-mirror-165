@@ -1,0 +1,9 @@
+patmlkit/__init__.py,sha256=IMjkMO3twhQzluVTo8Z6rE7Eg-9U79_LGKMcsWLKBkY,22
+patmlkit/coco/coco.py,sha256=w77B2MVbNzqW8OMWZo9U3YGTOjib75tJ2PYc_msCDGQ,8487
+patmlkit/image/read_image.py,sha256=pFYA20J0NVakluVykHS4rlMVgO1c-C8MS3PqVZObi_Y,311
+patmlkit/image/write_image.py,sha256=J4MjX8etLVMUeCu_6UDbZZLk_lG1JgDI8nh6OHdDFU4,331
+patmlkit/json/read_json_file.py,sha256=9GgXi7dcinJMoSPeekymnK-93zq1mzGrNBr_LHe8Cxs,142
+patmlkit/json/write_json_file.py,sha256=EqtbBgJ7wnw0iNS_8bVXSXMtjkM83YU4UzQQ1iwtuZI,161
+patmlkit-0.1.1.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+patmlkit-0.1.1.dist-info/METADATA,sha256=kkaVVrA5AH6V8JQcDkxFVNw820a9KhH93kYR2VCgf2w,319
+patmlkit-0.1.1.dist-info/RECORD,,
