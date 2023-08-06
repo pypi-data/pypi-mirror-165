@@ -1,0 +1,12 @@
+# Misc
+include README.md
+include LICENSE
+include requirements.txt
+
+# Compiled module
+include dimredtools/dimredtools*.pyd
+include dimredtools/dimredtools*.so
+include dimredtools_pybind*.so
+
+# Exclude
+global-exclude *.py[co]
