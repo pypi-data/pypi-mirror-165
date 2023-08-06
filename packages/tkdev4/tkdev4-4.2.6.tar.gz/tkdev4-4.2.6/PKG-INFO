@@ -1,0 +1,94 @@
+Metadata-Version: 2.1
+Name: tkdev4
+Version: 4.2.6
+Summary: tkinterDev超级工具库，仅为Windows开发支持。
+Home-page: https://xiangqinxidevelopment.jetbrains.space/p/tkinterdev
+Author: XiangQinxi
+Author-email: XiangQinxi@outlook.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# tkdev4
+
+`tkinter`高级工具包，实现了许多高级功能，我会持续更新的。😁😁😁
+tkinterDev的4.0版本。
+
+关于文档的更多内容请查看[我的主页](https:/xiangqinxi.github.io/tkinterDev/%E5%AE%89%E8%A3%85/)
+关于超详细文档请查看[tkinterDev Docs](https://tkdev-docs.netlify.app/)
+____
+## 依赖问题
+这个库拥有许多好用的功能，但是很多功能的代价就是需要依赖库，如果想要体验到完整内容就可以使用pip下载以下所有的库。
+
+- [pywin32](https://pypi.org/project/pywin/) 实现诸多高级功能需要的
+- [win32mica](https://pypi.org/project/win32mica/) 实现云母高级特效需要的
+- [BlurWindow](https://pypi.org/project/BlurWindow/) 实现亚克力高级特效需要的
+- [darkdetect](https://pypi.org/project/darkdetect/) 用于检测是否是深色主题或是浅色主题
+- [Deprecated](https://pypi.org/project/Deprecated/) 用于标记一些废弃的组件
+- [tkcap](https://pypi.org/project/tkcap) 用于截取窗口图片
+- [plyer](https://pypi.org/project/plyer) 用于高级功能
+```bash
+pip install pywin32
+```
+```bash
+pip install win32mica
+```
+```bash
+pip install BlurWindow
+```
+```bash
+pip install darkdetect
+```
+```bash
+pip install tkcap
+```
+```bash
+pip install Deprecated
+```
+```bash
+pip install plyer
+```
+____
+## 版本信息
+4.0.0b0
+测试发布
+
+4.0.0b1
+tkdev库更名为tkdev4
+
+4.0.b2
+修复导入错误
+
+4.0.0
+补充一些注释
+
+4.0.1
+修复bug
+
+4.0.2
+清理
+  
+4.2.0
+常量补充，添加dwm设置圆角功能。
+
+4.2.1
+修复错误
+
+4.2.2
+更新功能
+
+4.2.3
+修复
+
+4.2.4
+可以使用dwm_set_window_attribute_caption_color设置标题栏颜色。
+
+4.2.5
+补充
+
+4.2.6
+可以使用DevManage的get_rgb和get_hex获取到bgr。
+____
+
