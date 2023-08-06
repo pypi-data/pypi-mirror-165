@@ -1,0 +1,2 @@
+coral-api==2.*
+tf-quant-finance==0.0.1.dev26
