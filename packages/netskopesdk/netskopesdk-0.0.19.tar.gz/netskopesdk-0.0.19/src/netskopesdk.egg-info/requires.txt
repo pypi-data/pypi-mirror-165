@@ -1,0 +1,4 @@
+requests==2.27.1
+pytest==5.3.5
+protobuf==3.20.1
+google-cloud-pubsublite==1.4.2
