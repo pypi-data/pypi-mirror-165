@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: PToolkit
+Version: 1.0
+Summary: A set of tools than is usefull in lots of diffrent fields. This toolkit contains functions to make professional looking matplotlib plot without spending time on the looks of the plot. Not only that this toolkit also provides functions for rounding and determining errors.
+Home-page: https://github.com/JDVHA/PToolkit
+Download-URL: https://github.com/JDVHA/PToolkit/archive/refs/tags/1.0.tar.gz
+Author: H.A.J de Vries
+Author-email: 
+License: MIT
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: sympy
+
