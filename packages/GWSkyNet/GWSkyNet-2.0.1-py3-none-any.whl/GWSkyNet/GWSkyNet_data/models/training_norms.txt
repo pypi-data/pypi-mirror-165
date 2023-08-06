@@ -1,0 +1,4 @@
+#version        distance        skymap          distmu          distnorm        distsigma		logbci_min		logbci_max		logbsn_min		logbsn_max
+GWSkyNet_v1     10320           0.005           11553           863800          12065          	NA				NA				NA				NA
+GWSkyNet_v2     10480.384       0.011           79253.031       1427079.97      16591.257     	NA				NA				NA				NA
+GWSkyNet_v3		10480.384		0.011			79253.031		1427079.97		16591.257		-102.238		47.243			-3.291			4134471.057
