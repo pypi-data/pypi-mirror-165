@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: ansys-grpc-dpf
+Version: 0.6.0
+Summary: Package for ansys-grpc-dpf python gRPC client
+Home-page: UNKNOWN
+Author: ANSYS
+Author-email: ramdane.lagha@ansys.com
+Maintainer-email: pyansys.maintainers@ansys.com
+License: Ansys Redistribution License
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.7.*
+Requires-Dist: grpcio
+Requires-Dist: google-api-python-client
+
+This module contains the python gRPC client for ansys-dpf-gate (dependency of ansys-dpf-core). It communicates directly with the DPF server. It allows backward compatibility with old DPF servers (strictly older than Ansys 2022 R2).
+
+
