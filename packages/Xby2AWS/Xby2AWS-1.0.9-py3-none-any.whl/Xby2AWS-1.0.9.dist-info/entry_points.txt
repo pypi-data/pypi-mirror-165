@@ -1,0 +1,3 @@
+[console_scripts]
+help = bin:help.bat
+init = bin:init.bat
