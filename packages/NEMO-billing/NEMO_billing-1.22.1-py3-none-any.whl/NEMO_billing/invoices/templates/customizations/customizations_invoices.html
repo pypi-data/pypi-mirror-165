@@ -1,0 +1,68 @@
+<div class="panel-body" style="padding-bottom: 0">
+    <h3 class="customization-section-title">Invoices settings</h3>
+    <form method="POST" action="{% url 'customize' 'invoices' %}" class="form-horizontal">
+        {% csrf_token %}
+        <div class="form-group {% if errors.invoice_number_format %}has-error{% endif %}">
+            <label class="control-label col-md-2" for="invoice_number_format">Invoice number format</label>
+            <div class="col-md-5">
+                <input type="text" id="invoice_number_format" name="invoice_number_format" class="form-control" value="{% if errors.invoice_number_format %}{{ errors.invoice_number_format.value }}{% else %}{{ invoice_number_format }}{% endif %}"/>
+            </div>
+            <div class="col-md-5 help-block light-grey">
+                {% if errors.invoice_number_format %}
+                    {{ errors.invoice_number_format.error }}
+                {% else %}
+                    The format to use when creating invoice numbers. See <a href="https://docs.python.org/3/library/string.html#formatstrings">Python Format String Syntax</a> for more details.
+                {% endif %}
+            </div>
+        </div>
+		<div class="form-group">
+            <label class="control-label col-md-2" for="invoice_number_current">Current invoice number</label>
+            <div class="col-md-5">
+                <input type="number" min="0" step="1" id="invoice_number_current" name="invoice_number_current" class="form-control" value="{{ invoice_number_current }}">
+            </div>
+            <div class="col-md-5 help-block light-grey">
+                The current invoice number.
+            </div>
+        </div>
+		<div class="form-group">
+			<label class="control-label col-md-2" for="invoice_number_formatted">Formatted result</label>
+            <div class="col-md-5">
+                <div class="form-control-static">{{ invoice_number_formatted }}</div>
+            </div>
+		</div>
+		<div class="form-group">
+			<div class="col-md-2"></div>
+			<div class="col-md-5">
+				<input type="submit" value="Save settings" class="btn btn-success">
+			</div>
+		</div>
+	</form>
+	<div class="customization-separation" style="clear: both"></div>
+	<div class="form-group form-horizontal" style="margin-top: 15px">
+		<h3 class="customization-section-title" id="email_send_invoice_message_id">Invoice email subject & message</h3>
+		<p>This is the email the project contact will receive with his invoice. The following context variables are provided when the email is rendered:</p>
+		<ul style="margin-bottom: 25px">
+			<li><b>invoice</b> - the project's invoice</li>
+		</ul>
+		<div class="col-md-6">
+			{% include 'customizations/customizations_upload.html' with element=email_send_invoice_subject name='email send invoice subject' button_name='Upload invoice email subject' extension='txt' key='invoices' %}
+		</div>
+		<div class="col-md-6">
+			{% include 'customizations/customizations_upload.html' with element=email_send_invoice_message name='email send invoice message' button_name='Upload invoice email' key='invoices' %}
+		</div>
+	</div>
+	<div class="customization-separation" style="clear: both"></div>
+	<div class="form-group form-horizontal" style="margin-top: 15px;">
+		<h3 class="customization-section-title" id="email_send_invoice_reminder_message_id">Invoice reminder email subject & message</h3>
+		<p>This is the email the project contact will receive as a reminder when his invoice has an outstanding balance. The following context variables are provided when the email is rendered:</p>
+		<ul style="margin-bottom: 25px">
+			<li><b>invoice</b> - the project's invoice</li>
+		</ul>
+		<div class="col-md-6">
+			{% include 'customizations/customizations_upload.html' with element=email_send_invoice_reminder_subject name='email send invoice reminder subject' button_name='Upload invoice reminder email subject' extension='txt' key='invoices' %}
+		</div>
+		<div class="col-md-6">
+			{% include 'customizations/customizations_upload.html' with element=email_send_invoice_reminder_message name='email send invoice reminder message' button_name='Upload invoice reminder email' key='invoices' %}
+		</div>
+	</div>
+</div>
