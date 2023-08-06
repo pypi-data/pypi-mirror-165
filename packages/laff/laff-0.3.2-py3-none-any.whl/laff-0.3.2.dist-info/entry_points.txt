@@ -1,0 +1,2 @@
+[console_scripts]
+laff = laff.laff:main
