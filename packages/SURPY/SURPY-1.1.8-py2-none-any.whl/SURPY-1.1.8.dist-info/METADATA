@@ -1,0 +1,77 @@
+Metadata-Version: 2.1
+Name: SURPY
+Version: 1.1.8
+Summary: SURPY python for surgical data analysis
+Home-page: https://github.com/sasurasa/Surgical-Outcome-Analysis-on-Python/tree/SURG-package
+Author: Surasak Sangkhathat
+Author-email: s.sangkhathat@gmail.com
+License: Prince of Songkla University
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+Surgical-Python (soap) is a collection of Python commands intended to be used for Surgical Outcome Data Analysis, from data importing, cleaning-up, merging data-frame, analysis and visualization. (from SURPY import soap as sp)
+
+Data importing from Excel file, followed by data exploration. (sp.soapsheetin(path))
+
+Data scan. (sp.soaplore(data, oc))
+
+Comparison of parametric/non-parametric data between 2 groups of the outcome (sp.soap_TU(data,oc,var)), soap_multi_T(data, oc) [fixed binary outcome tested on multiple continuous var] and soap_T_for_multibinary(data, var) [fixed continuous var tested against multiple binary variables at a time].
+
+Comparison of distribution between groups using Chi-square test. (sp.soap_x_tab(data, var_a, var_b)) and (sp.soap_x_across(data,outcome))
+
+Survival curve drawing (sp.single_kmc(data, status, interval)) and survival comparisons (sp.compare_kmc(data, factor, status, interval)) 
+
+for manual, go to:
+https://github.com/sasurasa/Surgical-Outcome-Analysis-on-Python/blob/SURPY/SURPY%20manual%20190321SS.pdf
+
+
+THIP is a package used for basic data analysis from Thai Health Information Portal (THIP) which is a large database of in-hospital patients in Thailand. (https://thip.nbt.or.th)
+
+The package contain commands for data import (from .csv)
+path = 'yourpath'
+thip = thipimport(path)
+
+#Age selection
+thip = set_age(thip, lower, upper)
+
+#Format correction 
+thip = clean_datetime(thip)
+
+#Select based on ICD-10
+q_disease = ['Q123', 'Q234']
+anom = select_Q(source, condition, dupdel = True) 
+##Set dupdel = False if do not want to remove personal ID duplication
+
+#Find sex ratio
+sex_ratio(anom)
+
+#Count the matched records by year and estimate crude incidence/10,000 livebirths
+count_by_year(anom)
+count_by_month(anom)
+
+#Count the matched records by health region (Thai-Health region)
+count_by_region(anom)
+
+#Export PD to .csv
+export(anom, filename)
+
+#Find mortality and mortality rate (count records with 'death_date')
+
+#Count associate Down syndrome/Congenital heart disease
+count_down(anom)
+count_heart(anom)
+count_assoc(anom, assoc)
+
+#Explore the procedure code and return procedure_dict
+dict = procdict(anom)
+
+
+
+
+
+
+
+
+
+
+
