@@ -1,0 +1,1 @@
+uto_scale_lr = dict(enable=False, base_batch_size=16)
