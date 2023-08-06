@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: django4-above-oss-storage
+Version: 0.0.1
+Summary: 修复django4.0以后文本转换格式BUG报错
+Author: ss
+License: UNKNOWN
+Platform: UNKNOWN
+
+UNKNOWN
+
