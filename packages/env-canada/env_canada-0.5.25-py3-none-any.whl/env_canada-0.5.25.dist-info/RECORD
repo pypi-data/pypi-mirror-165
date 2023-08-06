@@ -1,0 +1,16 @@
+env_canada/10x20.pbm,sha256=ClKTs2WUmhUhTHAQzPuGwPTICGVBzCvos5l-vHRBE5M,2463
+env_canada/10x20.pil,sha256=Oki6-TD7b0xFtfm6vxCKsmpEpsZ5Jaia_0v_aDz8bfE,5143
+env_canada/__init__.py,sha256=wQpbGVmwROrIR06RWinatD-qX7fbJvxBFOd6U0xoek4,126
+env_canada/constants.py,sha256=PzGm49iMEIdbcQ4snmybdACkfROtOcjq0xfefSS_lE0,33
+env_canada/ec_aqhi.py,sha256=d2n2bUu628Fxk2jpv6L-vlKijp3mVB35Ern_1MtaC5M,7759
+env_canada/ec_cache.py,sha256=qoFxmO-kOBT8jhgPeNWtVBRmguXcARIIOI54OaDh-20,1171
+env_canada/ec_exc.py,sha256=SBJwzmLf94lTx7KYVLfQYrMXYNYUoIxeVXc-BLkuXoE,67
+env_canada/ec_historical.py,sha256=hF8waHcS4JKGnfxWriF9Nxy0VXvkxFS0haHNNlsfUV8,15741
+env_canada/ec_hydro.py,sha256=A3VG_935ax96JHoM59pi7yFn3kKu5U12B3jghhJd_48,4814
+env_canada/ec_radar.py,sha256=Ej4qPx2JaMXWAR0oH97mCx2zedhEF4KtGHfvlNCGCJk,12051
+env_canada/ec_weather.py,sha256=wJzBxvbk9Zh0xvYm8oUpr3VqS6yX-AxX0mIhtjP_VDY,15486
+env_canada-0.5.25.dist-info/LICENSE,sha256=c037dTHQWAgRgDqZNN-5d-CZvcteSYN37u39SNklO0I,1072
+env_canada-0.5.25.dist-info/METADATA,sha256=tfW77Dk8a4WZrT8r1EDYjbEzeY-6xb0otGzfj8quzI4,8521
+env_canada-0.5.25.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+env_canada-0.5.25.dist-info/top_level.txt,sha256=fw7Pcl9ULBXYvqnAdyBdmwPXW8GSRFmhO0sLZWVfOCc,11
+env_canada-0.5.25.dist-info/RECORD,,
