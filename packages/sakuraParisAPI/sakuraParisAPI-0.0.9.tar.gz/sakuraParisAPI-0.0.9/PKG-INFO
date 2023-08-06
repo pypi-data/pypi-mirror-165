@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: sakuraParisAPI
+Version: 0.0.9
+Summary: for accessing the Sakura Paris dictionary API
+Home-page: https://github.com/shur1m/sakuraParisPythonAPI
+Author: Anson Xu
+Author-email: AXu2@scu.edu
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# sakuraParisPythonAPI
+ A Python wrapper for the Sakura Paris Dictionary API. WIP
