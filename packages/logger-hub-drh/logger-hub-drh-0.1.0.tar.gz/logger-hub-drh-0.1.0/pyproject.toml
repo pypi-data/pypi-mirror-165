@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "logger-hub-drh"
+version = "0.1.0"
+description = ""
+authors = ["daniel-rodriguez-hernandez <daniel.rodriguez.hernandez@pwc.com>"]
+readme = "README.md"
+packages = [{include = "logger_hub_drh"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+requests = "^2.28.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
