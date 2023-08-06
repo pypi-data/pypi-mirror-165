@@ -1,0 +1,9 @@
+__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sql_data/__init__.py,sha256=aZjzEbaqir2HKUs4sx0PrSQ-Iu4ngPZC3ykfhq8cEbs,251
+sql_data/date_formatting.py,sha256=MLH8FtOT2xSNWVVBQkFfCw07BDPNUWfO_t3OMttAYgk,2628
+sql_data/mysql_operate.py,sha256=UDEx6OkKmgoxioVyLax124TonCNhVmnIdChCl3xPez0,5543
+sql_data-0.1.5.dist-info/LICENSE,sha256=Qv2ilebwoUtMJnRsZwRy729xS5JZQzLauJ0tQzkAkTA,1088
+sql_data-0.1.5.dist-info/METADATA,sha256=DsTn75jOFqOuuh1T2ndL3FgUFoN-GM6BNeO4K7zuf_o,3266
+sql_data-0.1.5.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+sql_data-0.1.5.dist-info/top_level.txt,sha256=oGDdphNAnCzHG7HOJPRY3JpcS7b7oC3R8UXBxWtVouo,18
+sql_data-0.1.5.dist-info/RECORD,,
