@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+dtptcpy/__init__.py
+dtptcpy/client.py
+dtptcpy/server.py
+dtptcpy.egg-info/PKG-INFO
+dtptcpy.egg-info/SOURCES.txt
+dtptcpy.egg-info/dependency_links.txt
+dtptcpy.egg-info/top_level.txt
+dtptcpy.egg-info/zip-safe
