@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: tdviewer
+Version: 0.0.1
+Summary: 点云数据可视化模块
+Home-page: https://github.com/hide-in-code
+Author: hejinlong
+Author-email: 2969921454@qq.com
+License: MIT Licence
+Keywords: pip,3d,pcd,pointcloud
+Platform: any
+
+点云数据可视化模块
+
