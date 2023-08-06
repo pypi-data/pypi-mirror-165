@@ -1,0 +1,2 @@
+[console_scripts]
+hm3u8dl_cli = hm3u8dl_cli.cli:main
