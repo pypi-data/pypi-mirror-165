@@ -1,0 +1,5 @@
+project_name: LaminDB
+description: Manage data & analyses
+project_slug: db
+repository_name: lamindb
+package_name: lamindb
