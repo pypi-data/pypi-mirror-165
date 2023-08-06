@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+snapper/snapper.py
+snapper/src/data_processing.py
+snapper/src/methods.py
+snapper/src/motif_extraction.py
+snapper/src/plotting.py
+snapper/src/seq_processing.py
+snapper/src/statistics.py
+snapper_ont.egg-info/PKG-INFO
+snapper_ont.egg-info/SOURCES.txt
+snapper_ont.egg-info/dependency_links.txt
+snapper_ont.egg-info/entry_points.txt
+snapper_ont.egg-info/requires.txt
+snapper_ont.egg-info/top_level.txt

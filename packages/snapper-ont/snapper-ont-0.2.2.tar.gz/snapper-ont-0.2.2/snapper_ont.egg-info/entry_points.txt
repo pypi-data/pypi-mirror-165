@@ -1,0 +1,2 @@
+[console_scripts]
+snapper = snapper.snapper:main

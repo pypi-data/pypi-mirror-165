@@ -1,0 +1,4 @@
+h5py
+biopython
+matplotlib
+scipy
