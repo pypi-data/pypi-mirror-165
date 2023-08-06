@@ -1,0 +1,2 @@
+[console_scripts]
+calculate-charcut = charcut.commands.calculate_charcut:main

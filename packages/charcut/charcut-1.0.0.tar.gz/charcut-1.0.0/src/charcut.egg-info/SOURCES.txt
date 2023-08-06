@@ -1,0 +1,15 @@
+CITATION
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+src/charcut/__init__.py
+src/charcut/charcut.py
+src/charcut/html.py
+src/charcut.egg-info/PKG-INFO
+src/charcut.egg-info/SOURCES.txt
+src/charcut.egg-info/dependency_links.txt
+src/charcut.egg-info/entry_points.txt
+src/charcut.egg-info/requires.txt
+src/charcut.egg-info/top_level.txt
