@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: fake-blender-api-2.79
+Version: 0.4.0
+Summary: Fake Blender 2.79 Python API for code completion, including BGE
+Home-page: https://github.com/bgempire/fake-blender-api-2.79
+Download-URL: https://github.com/bgempire/fake-blender-api-2.79/archive/0.3.tar.gz
+Author: Joel Gomes da Silva
+Author-email: joelgomes1994@hotmail.com
+License: GPLv3
+Keywords: blender,bge,upbge,api,3d,bpy,mathutils,code,completion,autocomplete
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Multimedia :: Graphics :: 3D Modeling
+Classifier: Topic :: Multimedia :: Graphics :: 3D Rendering
+Classifier: Topic :: Text Editors :: Integrated Development Environments (IDE)
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/x-rst
+License-File: LICENSE.txt
+Requires-Dist: typing
+
+Fake Blender 2.79 Python API
+=============================
+
+Fake Blender 2.79 Python API for code completion, including all modules documented on API.
+
+To use this API you just need a Python 3.x distribution and a text editor with advanced 
+code completion (PyCharm, PyScripter, Visual Studio Code with Python plugins, etc).
+
+This project is based on nutti's fake-bpy-module_, however it's not auto-generated as the 
+former. It also includes some missing modules of the fake-bpy-module such as bge and id_prop, 
+and it aims to be more accurate in the data types.
+
+Installation
+-------------
+
+Just type in the command line of your computer:
+
+``pip install fake-blender-api-2.79``
+
+And you're ready to take advantage of Blender code completion on your favorite text editor!
+Just make sure you installed it on the same Python interpreter that your text is using.
+
+Enjoy!
+
+.. _fake-bpy-module: https://github.com/nutti/fake-bpy-module
