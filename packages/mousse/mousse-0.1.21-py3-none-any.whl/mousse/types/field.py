@@ -1,0 +1,71 @@
+from collections import OrderedDict
+from functools import lru_cache
+from typing import *
+
+__all__ = ["Field", "get_fields_info"]
+
+
+class Function(NamedTuple):
+    func: Callable
+    static: bool = False
+
+    def __call__(self, *args: Any, **kwargs: Dict[str, Any]) -> Any:
+        return self.func(*args, **kwargs)
+
+
+class Field:
+    def __init__(
+        self,
+        default: Any = Ellipsis,
+        alias: str = None,
+        freeze: bool = False,
+        exclude: bool = None,
+    ) -> None:
+        self.default = default
+        self.alias = alias
+        self.freeze = freeze
+        self.annotation = None
+        self.exclude = exclude
+
+        self.validators = OrderedDict()
+        self.setters = OrderedDict()
+        self.getters = OrderedDict()
+
+    def validator(self, func: Callable = None, static: bool = True):
+        def decorator(func: Callable):
+            self.validators[id(func)] = Function(func, static)
+            return func
+
+        if func is not None:
+            return decorator(func)
+
+        return decorator
+
+    def setter(self, func: Callable = None, static: bool = True):
+        def decorator(func: Callable):
+            self.setters[id(func)] = Function(func, static)
+            return func
+
+        if func is not None:
+            return decorator(func)
+
+        return decorator
+
+    def getter(self, func: Callable = None, static: bool = True):
+        def decorator(func: Callable):
+            self.getters[id(func)] = Function(func, static)
+            return func
+
+        if func is not None:
+            return decorator(func)
+
+        return decorator
+
+
+def get_fields_info(cls: Any) -> Dict[str, Field]:
+    return _get_fields_info(cls)
+
+
+@lru_cache(typed=True)
+def _get_fields_info(cls: Any) -> Dict[str, Field]:
+    return {}
