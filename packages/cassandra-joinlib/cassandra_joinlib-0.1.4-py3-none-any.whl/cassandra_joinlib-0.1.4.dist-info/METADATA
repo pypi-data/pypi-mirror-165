@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: cassandra-joinlib
+Version: 0.1.4
+Summary: Cassandra client-side join operation for Python
+Home-page: https://github.com/Rainburn/Cassandra-Join-Library
+Author: Rafi Adyatma
+Author-email: rafi.adyatma47@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: cassandra-driver (==3.25.0)
+Requires-Dist: memory-profiler (==0.60.0)
+Requires-Dist: numpy (==1.22.3)
+Requires-Dist: psutil (==5.9.1)
+Requires-Dist: Pympler (==1.0.1)
+Requires-Dist: tabulate (==0.8.9)
+Requires-Dist: twine (==4.0.1)
+
+# Cassandra-Join
+Cassandra Join Extension for Final Project
