@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: micropython-dweeter
+Version: 0.2.0
+Summary: A python module for messaging through the free dweet service.
+Home-page: https://github.com/jacklinquan/micropython-dweeter
+Author: Quan Lin
+Author-email: jacklinquan@gmail.com
+License: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: Implementation :: MicroPython
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+https://github.com/jacklinquan/micropython-dweeter
