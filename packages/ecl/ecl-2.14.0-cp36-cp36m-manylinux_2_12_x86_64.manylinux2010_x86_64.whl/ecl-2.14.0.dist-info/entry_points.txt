@@ -1,0 +1,19 @@
+[console_scripts]
+CF_dump = ecl.bin:main
+convert.x = ecl.bin:main
+ecl_pack.x = ecl.bin:main
+ecl_unpack.x = ecl.bin:main
+grdecl_grid = ecl.bin:main
+grdecl_test.x = ecl.bin:main
+grid_dump.x = ecl.bin:main
+grid_dump_ascii.x = ecl.bin:main
+grid_info.x = ecl.bin:main
+kw_extract = ecl.bin:main
+kw_list.x = ecl.bin:main
+load_test.x = ecl.bin:main
+make_grid = ecl.bin:main
+ri_well_test = ecl.bin:main
+segment_info = ecl.bin:main
+select_test.x = ecl.bin:main
+summary.x = ecl.bin:main
+
