@@ -1,0 +1,4 @@
+numpy>=1.13
+zhinst-toolkit>=0.4.0
+qcodes>=0.30.0
+typing_extensions>=4.1.1
