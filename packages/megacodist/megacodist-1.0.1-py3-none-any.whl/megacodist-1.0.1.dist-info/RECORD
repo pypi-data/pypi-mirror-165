@@ -1,0 +1,15 @@
+megacodist/ErrorHandling.py,sha256=xvsNtZ24t5XjC7LuO8RyPH-ydvNb3PoDW7l4lkgdcT8,1354
+megacodist/__init__.py,sha256=9xJk9T-s0V7JtPhkq6annbvBXZVQaNJgNpQPHAjORP8,82
+megacodist/exceptions.py,sha256=PxG66eholR_hSeO8e8ornpGmwLB3VhMUBKUij-3XRUw,1031
+megacodist/fonts.py,sha256=lxgY_dwz036CFDMxYvfRZi5Vi-SolwWcYrUjUt4lUeU,908
+megacodist/html.py,sha256=9lFs_Jph3mOWQ7H6pAMDn34tyG3d3b57bzs_ZrAiilo,8168
+megacodist/keyboard.py,sha256=H3Zxvm3vwbRqRG2CuKCaE9qOrwKX8vFWj_UM9JV8KUg,693
+megacodist/singleton.py,sha256=1iiPKipg4nYuATygK-RTW6x7u27EbaRHjJnJSrKrKfI,492
+megacodist/text.py,sha256=wDAIlvzrxp59gInaFvoLpoSs7uiO7jv5CQ5ELSDTX-s,13468
+megacodist/collections/__init__.py,sha256=ffldkeUglTL1oGv7aMhxKJOMW7Zp6nHItJCCar6dB_Y,13968
+megacodist/console/__init__.py,sha256=FkR5tKpiIt-mLcUo7nzYXPdljf-MhFK6u1tDb73W_5s,2358
+megacodist-1.0.1.dist-info/LICENSE,sha256=hWdRwsrKfU5vbbRFMbrc4mSeH5BfhtqKa69JbxUpe2c,1087
+megacodist-1.0.1.dist-info/METADATA,sha256=dki0HNT62VzP1puHx7LDX1NLSDpZRxz1HpppVMM79fw,521
+megacodist-1.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+megacodist-1.0.1.dist-info/top_level.txt,sha256=yQSUJ1A-E9pe51Fvct26XPxdHkSZkNjO872abk5Om6w,11
+megacodist-1.0.1.dist-info/RECORD,,
