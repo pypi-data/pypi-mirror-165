@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: pyrosenium
+Version: 0.1.2
+Summary: A example Python package
+Home-page: https://gitlab.com/pyrosenium/pyrosenium
+Author: Namdy Yeung
+Author-email: dropicode@protonmail.com
+License: MIT
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+License-File: LICENSE
