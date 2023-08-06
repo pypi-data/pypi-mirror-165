@@ -1,0 +1,123 @@
+Metadata-Version: 2.1
+Name: neural-pipeline-search
+Version: 0.5.1
+Summary: Neural Pipeline Search helps deep learning experts find the best neural pipeline.
+Home-page: https://github.com/automl/neps
+License: MIT
+Keywords: Neural Pipeline Search,Neural Architecture Search,Hyperparameter Optimization,AutoML
+Author: Danny Stoll
+Author-email: stolld@cs.uni-freiburg.de
+Requires-Python: >=3.7.1,<3.8
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: System :: Distributed Computing
+Requires-Dist: ConfigSpace (>=0.4.19,<0.5.0)
+Requires-Dist: grakel (>=0.1.8,<0.2.0)
+Requires-Dist: matplotlib (>=3.4,<4.0)
+Requires-Dist: metahyper (>=0.5.3,<0.6.0)
+Requires-Dist: networkx (>=2.6.3,<3.0.0)
+Requires-Dist: nltk (>=3.6.4,<4.0.0)
+Requires-Dist: numpy (>=1.21.1,<2.0.0)
+Requires-Dist: pandas (>=1.3.1,<2.0.0)
+Requires-Dist: path (>=16.2.0,<17.0.0)
+Requires-Dist: scipy (>=1.7,<2.0)
+Requires-Dist: termcolor (>=1.1.0,<2.0.0)
+Requires-Dist: torch (>=1.7.0)
+Requires-Dist: types-termcolor (>=1.1.2,<2.0.0)
+Requires-Dist: typing-extensions (>=4.0.1,<5.0.0)
+Project-URL: Documentation, https://automl.github.io/neps/
+Project-URL: Repository, https://github.com/automl/neps
+Description-Content-Type: text/markdown
+
+# Neural Pipeline Search (NePS)
+
+[![PyPI version](https://img.shields.io/pypi/v/neural-pipeline-search?color=informational)](https://pypi.org/project/neural-pipeline-search/)
+[![Python versions](https://img.shields.io/pypi/pyversions/neural-pipeline-search)](https://pypi.org/project/neural-pipeline-search/)
+[![License](https://img.shields.io/pypi/l/neural-pipeline-search?color=informational)](LICENSE)
+[![Tests](https://github.com/automl/neps/actions/workflows/tests.yaml/badge.svg)](https://github.com/automl/neps/actions)
+
+NePS helps deep learning experts find the best neural pipeline by helping with setting hyperparameters and designing neural architectures.
+
+Please have a look at our **[documentation](https://automl.github.io/neps/)** and **[examples](neps_examples)**.
+
+## Note
+
+As indicated with the `v0.x.x` version number, NePS is early stage code and APIs might change in the future.
+
+## Overview
+
+NePS helps you by performing:
+
+- Hyperparameter optimization (HPO) ([example](neps_examples/hyperparameters))
+- (Hierarchical) Neural architecture search (NAS) ([example](neps_examples/hierarchical_architecture))
+- Joint Architecture and Hyperparameter Search (JAHS) ([example](neps_examples/hyperparameters_architecture))
+
+For efficiency and convenience NePS allows you to
+
+- Leverage DL expert intuition to speed-up HPO, NAS, and JAHS ([example HPO](neps_examples/user_priors), [example JAHS](neps_examples/user_priors_also_architecture), [paper](https://openreview.net/forum?id=MMAeCXIa89))
+- Asynchronously parallelize without code changes ([documentation](https://automl.github.io/neps/parallelization/))
+- Continue runs across job time limits
+
+## Installation
+
+Using pip
+
+```bash
+pip install neural-pipeline-search
+```
+
+for more details see [the documentation](https://automl.github.io/neps/).
+
+## Usage
+
+Using `neps` always follows the same pattern:
+
+1. Define a `run_pipeline` function that evaluates architectures/hyperparameters for your problem
+1. Define a search space `pipeline_space` of architectures/hyperparameters
+1. Call `neps.run` to optimize `run_pipeline` over `pipeline_space`
+
+In code the usage pattern can look like this:
+
+```python
+import neps
+import logging
+
+# 1. Define a function that accepts hyperparameters and computes the validation error
+def run_pipeline(hyperparameter_a: float, hyperparameter_b: int):
+    validation_error = -hyperparameter_a * hyperparameter_b
+    return validation_error
+
+
+# 2. Define a search space of hyperparameters; use the same names as in run_pipeline
+pipeline_space = dict(
+    hyperparameter_a=neps.FloatParameter(lower=0, upper=1),
+    hyperparameter_b=neps.IntegerParameter(lower=1, upper=100),
+)
+
+# 3. Call neps.run to optimize run_pipeline over pipeline_space
+logging.basicConfig(level=logging.INFO)
+neps.run(
+    run_pipeline=run_pipeline,
+    pipeline_space=pipeline_space,
+    root_directory="usage_example",
+    max_evaluations_total=5,
+)
+```
+
+For more details and features please have a look at our [documentation](https://automl.github.io/neps/) and [examples](neps_examples).
+
+## Analysing runs
+
+See our [documentation on analysing runs](https://automl.github.io/neps/analyse).
+
+## Contributing
+
+Please see the [documentation for contributors](https://automl.github.io/neps/contributing/).
+
