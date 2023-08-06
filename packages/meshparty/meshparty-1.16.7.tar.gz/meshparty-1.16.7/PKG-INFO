@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: meshparty
+Version: 1.16.7
+Summary: a service to work with meshes
+Home-page: https://github.com/sdorkenw/MeshParty.git
+Author: Sven Dorkenwald, Forrest Collman, Casey Schneider-Mizell
+Author-email: svenmd@princeton.edu, forrestc@alleninstitute.org, caseys@alleninstitute.org
+License: UNKNOWN
+Platform: UNKNOWN
+Provides-Extra: SDF
+Provides-Extra: REPAIR
+License-File: LICENSE
+
+UNKNOWN
+
