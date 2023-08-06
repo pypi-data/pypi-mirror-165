@@ -1,0 +1,5 @@
+[console_scripts]
+e3-aws-assume-role = e3.aws:assume_role_main
+
+[e3.event.handler]
+s3-boto3 = e3.aws.handler.s3:S3Handler

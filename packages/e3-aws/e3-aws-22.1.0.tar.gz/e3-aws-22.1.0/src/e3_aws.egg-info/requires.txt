@@ -1,0 +1,8 @@
+boto3
+botocore
+pyyaml
+troposphere
+e3-core
+
+[:platform_system == "Linux"]
+docker
