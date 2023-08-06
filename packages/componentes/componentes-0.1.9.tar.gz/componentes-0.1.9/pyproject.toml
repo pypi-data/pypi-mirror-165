@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "componentes"
+version = "0.1.9"
+description = "Componetes de uso de teste"
+authors = ["Bruno S. <bruno@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+numpy = "^1.22.2"
+pandas = "^1.4.1"
+pycarol = "^2.54.0"
+pymongo = "^4.1.0"
+
+
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
