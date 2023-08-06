@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+retico_hftranslate/__init__.py
+retico_hftranslate/hftranslate.py
+retico_hftranslate/version.py
+retico_hftranslate.egg-info/PKG-INFO
+retico_hftranslate.egg-info/SOURCES.txt
+retico_hftranslate.egg-info/dependency_links.txt
+retico_hftranslate.egg-info/requires.txt
+retico_hftranslate.egg-info/top_level.txt
