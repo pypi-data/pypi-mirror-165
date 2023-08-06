@@ -1,0 +1,2 @@
+cython>=0.29.32
+tokenize-rt>=3.2.0
