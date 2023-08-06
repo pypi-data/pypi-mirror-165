@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: ACETH
+Version: 0.0.10
+Summary: Analytics Club ETHZ helper package
+Home-page: UNKNOWN
+Author: Karim Galal, Walid Chatt
+Author-email: karim.galal@analytics-club.org, walid.chatt@analytics-club.org
+License: MIT
+Description: UNKNOWN
+Keywords: ETHZ,Analytics Club,AI,Artificial intelligence,Machine Learning,Data processing,Chatbot,Education,ML
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
