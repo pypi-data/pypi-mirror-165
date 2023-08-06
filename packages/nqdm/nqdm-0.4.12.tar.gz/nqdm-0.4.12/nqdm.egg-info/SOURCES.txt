@@ -1,0 +1,8 @@
+README.md
+setup.py
+nqdm/__init__.py
+nqdm.egg-info/PKG-INFO
+nqdm.egg-info/SOURCES.txt
+nqdm.egg-info/dependency_links.txt
+nqdm.egg-info/requires.txt
+nqdm.egg-info/top_level.txt
