@@ -1,0 +1,8 @@
+xnatutils
+openpyxl>="3.0.10"
+pydicom>="2.3.0"
+tqdm
+
+[test]
+pytest
+xnat4tests
