@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+device/__init__.py
+windows_capture_device_list.egg-info/PKG-INFO
+windows_capture_device_list.egg-info/SOURCES.txt
+windows_capture_device_list.egg-info/dependency_links.txt
+windows_capture_device_list.egg-info/top_level.txt
