@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "lupo"
+version = "0.0.2.1"
+authors = [
+  { name="Anthony Hofmeister", email="me@anthonyhfm.dev" },
+]
+dependencies = [
+  'pyobjc-core >= 0.8.5; sys_platform == "darwin"',
+  'pyobjc-framework-Cocoa >= 0.8.5; sys_platform == "darwin"'
+]
+description = "A Python Framework for creating Cross-Platform Desktop Applications"
+readme = "README.MD"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]

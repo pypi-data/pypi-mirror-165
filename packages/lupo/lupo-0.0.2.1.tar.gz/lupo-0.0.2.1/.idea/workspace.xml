@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f24b740b-b72a-4a1c-9175-104373683cf6" name="Changes" comment="OnClick Argument (yet to be implemented) and basic Styling for Button">
+      <change beforePath="$PROJECT_DIR$/dist/lupo-0.0.2.tar.gz" beforeDir="false" afterPath="$PROJECT_DIR$/dist/lupo-0.0.2.tar.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lupo/core/lupo_window.py" beforeDir="false" afterPath="$PROJECT_DIR$/lupo/core/lupo_window.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lupo/core/view.py" beforeDir="false" afterPath="$PROJECT_DIR$/lupo/core/view.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_window.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_window.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2Do2CtNlUOh93vM734MQQoBF2HS" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;
+  }
+}</component>
+  <component name="RunManager" selected="Python.test_window">
+    <configuration name="build" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/Makefile" target="build" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
+    <configuration name="upload" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/Makefile" target="upload" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
+    <configuration name="osx_window_manager" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Lupo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lupo/core/osx" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lupo/core/osx/osx_window_manager.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test_window" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="Lupo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/test_window.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Makefile Target.build" />
+      <item itemvalue="Makefile Target.upload" />
+      <item itemvalue="Python.test_window" />
+      <item itemvalue="Python.osx_window_manager" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.osx_window_manager" />
+        <item itemvalue="Makefile Target.build" />
+        <item itemvalue="Makefile Target.upload" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f24b740b-b72a-4a1c-9175-104373683cf6" name="Changes" comment="" />
+      <created>1661350991624</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1661350991624</updated>
+      <workItem from="1661350992745" duration="5278000" />
+      <workItem from="1661370321526" duration="835000" />
+      <workItem from="1661410363430" duration="105000" />
+      <workItem from="1661424422875" duration="855000" />
+      <workItem from="1661535158722" duration="7359000" />
+      <workItem from="1661711056470" duration="7380000" />
+      <workItem from="1661766595728" duration="35000" />
+      <workItem from="1661785426657" duration="172000" />
+      <workItem from="1661791154654" duration="5290000" />
+      <workItem from="1661838375903" duration="696000" />
+      <workItem from="1661936606995" duration="867000" />
+      <workItem from="1661938395703" duration="730000" />
+      <workItem from="1661960308264" duration="14177000" />
+      <workItem from="1662018527676" duration="1080000" />
+      <workItem from="1662052480825" duration="1231000" />
+      <workItem from="1662061010430" duration="2174000" />
+      <workItem from="1662117958926" duration="3729000" />
+      <workItem from="1662121753334" duration="24000" />
+    </task>
+    <task id="LOCAL-00001" summary="Removed homepage">
+      <created>1661351289372</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1661351289372</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Removed Verbose mode from twine">
+      <created>1661351465009</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1661351465009</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Removed test from makefile">
+      <created>1661351497409</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1661351497409</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Lupo 0.0.1 for creating a very basic Window (macOS Support Only for this version)">
+      <created>1661538277369</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1661538277369</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Corrected Version to 0.0.2 because of pypi">
+      <created>1661538532728</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1661538532728</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Readme Test">
+      <created>1661538775748</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1661538775748</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Added information to the README.MD">
+      <created>1661540851847</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1661540851847</updated>
+    </task>
+    <task id="LOCAL-00008" summary="OSX Window Centered">
+      <created>1661714997333</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1661714997333</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Column View and very basic View Styling">
+      <created>1661982055157</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1661982055157</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Column and Row fix">
+      <created>1662120150361</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1662120150361</updated>
+    </task>
+    <task id="LOCAL-00011" summary="OnClick Argument (yet to be implemented) and basic Styling for Button">
+      <created>1662121501169</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1662121501169</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Removed homepage" />
+    <MESSAGE value="Removed Verbose mode from twine" />
+    <MESSAGE value="Removed test from makefile" />
+    <MESSAGE value="Lupo 0.0.1 for creating a very basic Window (macOS Support Only for this version)" />
+    <MESSAGE value="Corrected Version to 0.0.2 because of pypi" />
+    <MESSAGE value="Readme Test" />
+    <MESSAGE value="Added information to the README.MD" />
+    <MESSAGE value="OSX Window Centered" />
+    <MESSAGE value="Column View and very basic View Styling" />
+    <MESSAGE value="Column and Row fix" />
+    <MESSAGE value="OnClick Argument (yet to be implemented) and basic Styling for Button" />
+    <option name="LAST_COMMIT_MESSAGE" value="OnClick Argument (yet to be implemented) and basic Styling for Button" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Lupo$osx_window_manager.coverage" NAME="osx_window_manager Coverage Results" MODIFIED="1661537187776" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lupo/core/osx" />
+    <SUITE FILE_PATH="coverage/Lupo$osx_window.coverage" NAME="osx_window Coverage Results" MODIFIED="1661371100995" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lupo/core/osx" />
+    <SUITE FILE_PATH="coverage/Lupo$test_window.coverage" NAME="test_window Coverage Results" MODIFIED="1662121649216" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+  </component>
+</project>
