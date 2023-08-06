@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: postschema
+Version: 0.17.30
+Summary: Async python ORM for postgres
+Home-page: https://github.com/kriskavalieri/postschema
+Author: Kris Kavalieri
+Author-email: kris.kavalieri@gmail.com
+License: AGPL-3.0-only
+Platform: UNKNOWN
+Requires-Python: >=3.7
+Requires-Dist: aiohttp (>=3.6.1)
+Requires-Dist: aiojobs (==0.2.2)
+Requires-Dist: aiopg (>=1.0.0)
+Requires-Dist: aioredis (>=1.3.0)
+Requires-Dist: alembic (>=1.2.1)
+Requires-Dist: aiohttp-jinja2 (>=1.1.1)
+Requires-Dist: async-property (==0.2.1)
+Requires-Dist: marshmallow (>=3.2.0)
+Requires-Dist: psycopg2-binary (>=2.8.3)
+Requires-Dist: SQLAlchemy (>=1.3.8)
+Requires-Dist: aiosmtplib (>=1.1.0)
+Requires-Dist: bcrypt (>=3.1.7)
+Requires-Dist: cryptography (>=2.7)
+Requires-Dist: colorama (==0.4.1)
+Requires-Dist: structlog (>=19.2.0)
+Requires-Dist: apispec (>=3.1.0)
+Requires-Dist: cached-property (>=1.5.1)
+Requires-Dist: pyotp (>=2.3.0)
+Requires-Dist: orjson (>=2.2.0)
+Requires-Dist: sqlalchemy-utils (>=0.36.1)
+
+UNKNOWN
+
+
