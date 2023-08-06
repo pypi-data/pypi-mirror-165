@@ -1,0 +1,39 @@
+# -*- coding: utf-8 -*-
+from setuptools import setup
+
+packages = \
+['geowrangler', 'geowrangler.datasets']
+
+package_data = \
+{'': ['*']}
+
+install_requires = \
+['fastcore>=1.4,<2.0',
+ 'geopandas>=0.10,<0.11',
+ 'h3>=3.7.4,<4.0.0',
+ 'morecantile>=3.1.2,<4.0.0',
+ 'numpy>=1.21,<2.0',
+ 'pandas>=1.2,<2.0',
+ 'pygeos>=0.12.0,<0.13.0',
+ 'rasterstats>=0.17.0,<0.18.0',
+ 'requests>=2.28.1,<3.0.0',
+ 'scikit-learn>=1.0.0,<2.0.0']
+
+setup_kwargs = {
+    'name': 'geowrangler',
+    'version': '0.1.0',
+    'description': 'Tools for dealing with geospatial data',
+    'long_description': "# Geowrangler\n[![License: MIT](https://img.shields.io/github/license/thinkingmachines/geowrangler?style=flat-square)](./LICENSE)\n[![Code style: black](https://img.shields.io/badge/code-black-black?style=flat-square)](https://github.com/psf/black)\n[![Code style: isort](https://img.shields.io/badge/style-isort-yellow?style=flat-square)](https://pycqa.github.io/isort/)\n[![Code style: flake8](https://img.shields.io/badge/lint-flake8-orange?style=flat-square)](https://flake8.pycqa.org/en/latest/)\n[![Versions](https://img.shields.io/pypi/pyversions/geowrangler.svg?style=flat-square)](https://pypi.org/project/geowrangler/)\n[![Docs](https://img.shields.io/badge/docs-passing-green?style=flat-square)](https://geowrangler.thinkingmachin.es)\n\n> Tools for wrangling with geospatial data\n\n\n## Overview\n\n**Geowrangler** is a python package for geodata wrangling. It helps you build data transformation workflows with no out-of-the-box solutions from other geospatial libraries.\n\nWe have surveyed our past geospatial projects to extract these solutions for our work and hope it will be useful for others as well.\n\nOur audience are researchers, analysts and engineers delivering geospatial projects.\n\nWe [welcome your comments, suggestions, bug reports and code contributions](https://github.com/thinkingmachines/geowrangler/discussions) to make **Geowrangler** better. \n\n### Modules\n\n* Grid Tile Generation\n* Geometry Validation \n* Vector Zonal Stats \n* Raster Zonal Stats\n* Area Zonal Stats \n* Distance Zonal Stats \n* Demographic and Health Survey (DHS) Processing Utils \n* Geofabrik (OSM) Data Download\n* Ookla Data Download\n\n_Check [this page for more details about our Roadmap](https://github.com/orgs/thinkingmachines/projects/17)_\n\n## Installation\n\n```\npip install git+https://github.com/thinkingmachines/geowrangler.git\n```\n\n## Documentation\n\nThe documentation for [the package is available here](https://geowrangler.thinkingmachin.es)\n\n## Development\n\n### Development Setup\n\nIf you want to learn more about **Geowrangler** and explore its inner workings,\nyou can setup a local development environment. You can run geowrangler's jupyter notebooks\nto see how the different modules are built and how they work. \n\n\n#### Pre-requisites\n\n* OS: Linux, MacOS, Windows Subsystem for Linux (WSL) on Windows\n\n* Requirements:\n   - python 3.7 or higher\n   - virtualenv, venv or conda for python environment virtualization\n   - poetry for dependency management\n\n#### Github Repo Fork\n\nIf you plan to make contributions to geowrangler, we encourage you to\n[create your fork](https://github.com/thinkingmachines/geowrangler/fork) of the Geowrangler repo. \n\nThis will then allow you to push commits to your forked repo and \nthen create a Pull Request (PR) from your repo to the main geowrangler \nrepo for approval by geowrangler's maintainers.\n\n#### Development Installation\n\nWe recommend creating a virtual python environment via [virtualenv](https://pypi.org/project/virtualenv/) or \n[conda](https://docs.conda.io/projects/conda/en/latest/user-guide/index.html) for your geowrangler development environment. Please see the relevant\ndocumentation for more details.\n\nThe example below uses `virtualenv` to create a separate environment on Linux or WSL\nusing `python3.9`.\n\nThis next command will install `libgeos` ( version >=3.8 required for building pygeos/shapely). See [libgeos documentation](https://libgeos.org/usage/install/) for installation details on other systems.\n\n```\nsudo apt install libgeos-dev  # skip this if you already have GEOS\n```\n\nReplace the github url below with `git@github.com:<your-github-id>/geowrangler.git` if you created a fork.\n\n```\ngit clone https://github.com/thinkingmachines/geowrangler.git\ncd geowrangler\nvirtualenv -p /usr/bin/python3.9 .venv\nsource .venv/bin/activate\npip install pre-commit poetry==1.2.0b3\npre-commit install\npoetry config --local installer.no-binary pygeos,shapely\npoetry install\n```\n\nThis completes the installation and setup of a local geowrangler environment.\n#### Activating the geowrangler environment\n\nTo activate the geowrangler environment, you can `cd <your-local-geowrangler-folder>`\nand  run `poetry shell` to activate the environment.\n\n\n### Jupyter Notebook Development\n\nThe code for the **geowrangler** python package resides in Jupyter notebooks located in the `notebooks` folder.\n\nUsing [nbdev](https://nbdev.fast.ai), we generate the python modules residing in the `geowrangler` folder from code cells in jupyter notebooks marked with an `#export` comment. A `#default_exp <module_name>` comment at the first code cell of each notebook directs `nbdev` to put the code in a module named `<module_name>` in the `geowrangler` folder. \n\nSee the [nbdev cli](https://nbdev.fast.ai/cli.html) documentation for more details on the commands to generate the package as well as the documentation.\n### Running notebooks\n\nRun the following to view the jupyter notebooks in the `notebooks` folder\n\n```\npoetry run jupyter lab\n```\n### Generating and viewing the documentation site\n\nTo generate and view the documentation site on your local machine, the quickest way is to setup [Docker](https://docs.docker.com/get-started/). The following assumes that you have setup docker on your system.\n```\npoetry run nbdev_build_docs --mk_readme False --force_all True\ndocker-compose up jekyll\n```\n\nAs an alternative if you don't want to use _Docker_ you can [install jekyll](https://jekyllrb.com/docs/installation/) to view the documentation site locally.\n\n`nbdev` converts notebooks within the `notebooks/` folder into a jekyll site.\n\nFrom this jekyll site, you can then create a static site.\n\nTo generate the docs, run the following\n\n```\n\npoetry run nbdev_build_docs -mk_readme False --force_all True\ncd docs && bundle i && cd ..\n\n```\n\nTo run the jekyll site, run the following\n\n```\ncd docs\nbundle exec jekyll serve\n```\n\n### Running tests\n\nWe are using `pytest` as our test framework. To run all tests and generate a generate a coverage report, run the following.\n\n```\npoetry run pytest --cov --cov-config=.coveragerc -n auto\n```\n\n\nTo run a single test or test file\n\n```shell\n# for a single test function\npoetry run pytest tests/test_grids.py::test_create_grids\n# for a single test file\npoetry run pytest tests/test_grids.py\n```\n### Contributing\n\nPlease read [CONTRIBUTING.md](https://github.com/thinkingmachines/geowrangler/blob/master/CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](https://github.com/thinkingmachines/geowrangler/blob/master/CODE_OF_CONDUCT.md) before anything.\n\n### Development Notes\n\nFor more details regarding our development standards and processes, please see [our wiki](https://github.com/thinkingmachines/geowrangler/wiki/DeveloperNotes).\n\n\n",
+    'author': 'Thinking Machines',
+    'author_email': 'geowrangler@thinkingmachin.es',
+    'maintainer': 'None',
+    'maintainer_email': 'None',
+    'url': 'https://github.com/thinkingmachines/geowrangler',
+    'packages': packages,
+    'package_data': package_data,
+    'install_requires': install_requires,
+    'python_requires': '>=3.7.1,<4.0.0',
+}
+
+
+setup(**setup_kwargs)
