@@ -1,0 +1,11 @@
+{  
+  "runId":"runID12345",
+  "type":"pairedEnd",
+  "specimens":[  
+     {  
+        "accessionNumber":"api_test_1",
+        "lane":"1",
+        "barcode":"AAACAT"
+     }
+  ]
+}

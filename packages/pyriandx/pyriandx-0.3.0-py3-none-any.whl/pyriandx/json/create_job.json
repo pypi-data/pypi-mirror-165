@@ -1,0 +1,14 @@
+{
+    "input": [
+        {
+            "accessionNumber": "SJB_NUM_1",
+            "sequencerRunInfos": [
+                {
+                    "barcode": "AAACAT",
+                    "lane": "1",
+                    "runId": "runID12345"
+                }
+            ]
+        }
+    ]
+}
