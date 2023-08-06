@@ -1,0 +1,10 @@
+data_manager_metadata/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+data_manager_metadata/annotation_utils.py,sha256=8DbTyMNC4za3bjVj5wb3bUGEh5-E3Plo0i7SgA1bR3c,1942
+data_manager_metadata/data_tier_api.py,sha256=UbZetY6vmDxJ-WDHEVZ3WOpBy0X0IKBIHKV1U6u7Pik,24227
+data_manager_metadata/exceptions.py,sha256=_JsUyYP6uxYodV-0vFUw3ibY-TuxGY7dEIwgwASciew,4004
+data_manager_metadata/metadata.py,sha256=VMjjDGLOVtTveKO3zI8x3z8SNMEHLusNbZvMK9zalHw,30926
+im_data_manager_metadata-1.0.0.dist-info/LICENSE,sha256=aPo-a09Zp9KzKrL5Spr6s59gb3b4cro7mJ3igSBbqrQ,1080
+im_data_manager_metadata-1.0.0.dist-info/METADATA,sha256=fD8mFzSajR9pZdylboKnV17KmEaQP4MWgRF-4q_AQ08,4300
+im_data_manager_metadata-1.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+im_data_manager_metadata-1.0.0.dist-info/top_level.txt,sha256=ayBYnZrfzouPELqGB79YSQ0oyvL6RonH4kGerlGt5yk,22
+im_data_manager_metadata-1.0.0.dist-info/RECORD,,
