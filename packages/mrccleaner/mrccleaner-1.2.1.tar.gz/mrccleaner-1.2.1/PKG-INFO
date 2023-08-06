@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: mrccleaner
+Version: 1.2.1
+Summary: MRCcleaner: a simple script for MRC transformation when they are not centered.
+Home-page: https://github.com/tubiana/MRCcleaner
+Author: Thibault Tubiana
+Author-email: tubiana.thibault@gmail.com
+License: MIT
+Platform: Linux
+Platform: Solaris
+Platform: Mac OS-X
+Platform: darwin
+Platform: Unix
+Platform: win32
+License-File: LICENSE
+
+UNKNOWN
+
