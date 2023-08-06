@@ -1,0 +1,8 @@
+grequests>=0.6.0
+numpy>=1.17
+pandas>=1.3
+requests>=2.27
+urllib3>=1.26.5
+jinja2>=2.11.3
+hypothesis>=6.54.3
+jedi>=0.10
