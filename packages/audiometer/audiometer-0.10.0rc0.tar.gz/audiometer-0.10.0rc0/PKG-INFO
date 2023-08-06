@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: audiometer
+Version: 0.10.0rc0
+Summary: Calculate audio level meter.
+Author: novdov
+Author-email: sunwoong@pozalabs.com
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Multimedia :: Sound/Audio
+Classifier: Topic :: Multimedia :: Sound/Audio :: Analysis
+Classifier: Topic :: Software Development :: Libraries
+Requires-Dist: Cython (>=0.29.32,<0.30.0)
+Requires-Dist: pydub (>=0.25.1,<0.26.0)
