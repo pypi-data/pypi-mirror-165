@@ -1,0 +1,12 @@
+starlark_go/__init__.py,sha256=kfZitWyl_kliH5owmpC-vGTwgVYNs0ZOi0h5IpUykUs,450
+starlark_go/errors.py,sha256=93gTwo24wLTitu2DFHcoXGArlfmRQdFIVW1HjK1riic,3941
+starlark_go/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+starlark_go/scmversion.py,sha256=nkpJWNhZG088UIilJnK3QfQPp4tSBCY0YZSjDD_cLMY,176
+starlark_go/starlark_go.cpython-310-darwin.h,sha256=D1T5M7VWbHRJj_ux7ikr7lX_V91pUheAlaL3acKmKXY,3066
+starlark_go/starlark_go.cpython-310-darwin.so,sha256=x5Khta2qJYdqhesqbZd5MqnAQwPoBOEqrVz76_vHV3c,3342448
+starlark_go/starlark_go.pyi,sha256=g_hJ8UsXY4_Tzlw3z3opjUHURpmwqkhlGLaFSgTxkWg,1208
+starlark_go-0.1.1.dist-info/LICENSE,sha256=z-f3j4Bf-7GG4vd_ZW24a-MJ1GwUbVSMTRoJWeWSqoI,11341
+starlark_go-0.1.1.dist-info/METADATA,sha256=xbeBNs9u2Gx6LrLRu-SxYHRsohHCOXyYOON-jzry8nU,3082
+starlark_go-0.1.1.dist-info/WHEEL,sha256=wHXPjcF1PbvralrZAZffaBRfMW8u_7d-L-q3slIS7Go,111
+starlark_go-0.1.1.dist-info/top_level.txt,sha256=EX1pxSBSU53KBHj0pQF4Oq3lcBBNB3nYU7bX_5xPADk,36
+starlark_go-0.1.1.dist-info/RECORD,,
