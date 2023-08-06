@@ -1,0 +1,75 @@
+Metadata-Version: 2.1
+Name: monobinpy
+Version: 0.0.1
+Summary: Monotonic Binning for Credit Rating Models
+Author-email: Andrija Djurovic <djandrija@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2018 Real Python
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: repository, https://github.com/andrija-djurovic/monobinpy
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
+Provides-Extra: build
+License-File: LICENSE
+
+## monobinpy
+The goal of the monobinpy package is to perform monotonic binning of numeric risk factor in credit 
+rating models (PD, LGD, EAD) development. All functions handle both binary and 
+continuous target variable. Missing values and other possible special values are treated 
+separately from so-called complete cases.
+This is replica of monobin R package.
+
+## Installation
+To install pypi.org version run the following code:
+```cmd
+pip install monobinpy
+```
+and to install development (github) version run:
+```cmd
+pip install git+https://github.com/andrija-djurovic/monobinpy.git#egg=monobinpy
+```
+
+## Example
+
+This is a basic example which shows you how to solve a problem of monotonic binning of numeric risk factors:
+
+```python
+import monobinpy as mb
+import pandas as pd
+import numpy as np
+
+url = "https://raw.githubusercontent.com/andrija-djurovic/monobinpy/main/gcd.csv"
+gcd = pd.read_csv(filepath_or_buffer = url)
+gcd.head()
+
+res = mb.sts_bin(x = gcd.age.copy(), y = gcd.qual.copy())
+res[0]
+res[1].value_counts().sort_index()
+
+```
+Besides above example, additional five binning  algorithms are available. For details and additional description please check:
+```python
+help(mb) 
+```

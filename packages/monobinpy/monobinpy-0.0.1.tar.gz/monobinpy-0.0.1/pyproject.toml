@@ -1,0 +1,24 @@
+[build-system]
+requires      = ["setuptools >= 61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "monobinpy"
+version = "0.0.1"
+description = "Monotonic Binning for Credit Rating Models"
+readme = "README.md"
+authors = [{ name = "Andrija Djurovic", email = "djandrija@gmail.com" }]
+license = { file = "LICENSE" }
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+dependencies = ["numpy", "pandas", "scipy", "scikit-learn", "statsmodels"]
+requires-python = ">=3.0"
+
+[project.optional-dependencies]
+build = ["build", "twine"]
+
+[project.urls]
+repository = "https://github.com/andrija-djurovic/monobinpy"
