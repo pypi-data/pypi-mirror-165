@@ -1,0 +1,3 @@
+[console_scripts]
+xby2-help = BaseAWS.helper:help
+xby2-init = BaseAWS.helper:init
