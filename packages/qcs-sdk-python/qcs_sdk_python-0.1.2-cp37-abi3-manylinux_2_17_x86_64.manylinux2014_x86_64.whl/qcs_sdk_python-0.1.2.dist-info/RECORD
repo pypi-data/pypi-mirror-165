@@ -1,0 +1,14 @@
+qcs_sdk_python-0.1.2.dist-info/METADATA,sha256=_0AZ1awQCDFkQ2hUb3Lw4egPkG_-o1BrlrrIyYmJwbk,297
+qcs_sdk_python-0.1.2.dist-info/WHEEL,sha256=ti9D3mB-DTXqVSBchdI2Pudjet_vOt_b88cfCTBAnKg,136
+qcs_sdk.libs/libkeyutils-68db41cc.so.1,sha256=xCrVko1IQ-l_EgRwpDz-O5a9FHukx_HPMgEi2KBl6jA,13232
+qcs_sdk.libs/libgssapi_krb5-bb73e344.so.2,sha256=ycI8SDFsa4UdEVetobtVLfboVjRK2g-TFzqT2APBZlk,348296
+qcs_sdk.libs/libkrb5support-2ce1fd50.so.0,sha256=CZQvvPFmWTbnSiWF9lSJbgzgkPnByCexGIOdPZCLB7A,55536
+qcs_sdk.libs/libselinux-d72a37e2.so.1,sha256=csbTpz3OctXm90cQbOnqZYggwwiuWHWA6sdHbgk1qlk,130168
+qcs_sdk.libs/libk5crypto-ab4ddf4c.so.3,sha256=BX3RaEihMC6HHBtMT0QdaPGnia5fO1qhlWXZQrStwXo,187176
+qcs_sdk.libs/libcom_err-f79b9776.so.2,sha256=jglLJZ0qFXFwNMIVJJ9V9qHOug-kIk3RjPYMq7cCBRs,17400
+qcs_sdk.libs/libcrypto-142cf8a3.so.10,sha256=wtXy99XuN9I0KsAtm6ZQs9qToYE2FaruZxdNX8byh98,2089824
+qcs_sdk.libs/libssl-09014658.so.10,sha256=262hxdpgIq51pbux0R5wKbDUCvuHwIcvcMy_fjkLivw,571376
+qcs_sdk.libs/libkrb5-7e4170ab.so.3,sha256=9akaeCBy2ZRl_Wc6RWXKaxpAE7hg3WRN7jPpKgzaMl4,1050640
+qcs_sdk/__init__.py,sha256=Ko4T43MVajAfZvVCs4WkM_UFdcszSGnQgcFAx24Kqo0,50
+qcs_sdk/qcs_sdk.abi3.so,sha256=PICBvKw90BFVMvLN0DFy18-eyu_ZTMM8TisuwlKYvs0,6717080
+qcs_sdk_python-0.1.2.dist-info/RECORD,,
