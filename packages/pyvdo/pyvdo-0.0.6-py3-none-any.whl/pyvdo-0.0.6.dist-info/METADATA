@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: pyvdo
+Version: 0.0.6
+Summary: Downloads youtube playlist videos at highest resolution.
+Home-page: https://github.com/devrayat000/pyvid
+Author: Zul Ikram Musaddik Rayat
+Author-email: dev.rayat000@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: pytube
+Requires-Dist: click
+
+# PyVDO
+Youtube video downloader.
+
+## Commands
+- [playlist](#playlist)
+
+### Playlist
+```ps1
+python -m pyvdo playlist [playlist_url]
+```
+example:
+```ps1
+python -m pyvdo playlisthttps://www.youtube.com/playlist?list=PL3eAkoh7fypr8zrkiygiY1e9osoqjoV9wF
+```
