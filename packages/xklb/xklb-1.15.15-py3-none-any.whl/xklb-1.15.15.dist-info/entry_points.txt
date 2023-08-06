@@ -1,0 +1,4 @@
+[console_scripts]
+lb=xklb.lb:main
+library=xklb.lb:main
+
