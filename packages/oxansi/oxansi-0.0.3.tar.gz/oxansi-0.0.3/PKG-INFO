@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: oxansi
+Version: 0.0.3
+Summary: A Handy Python package to Use ANSI Escape Sequences
+Author: 0x68616469
+Keywords: ansi,sequence
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+
+A handy package to use ansi escape sequences without having to know all possible sequences by heart
