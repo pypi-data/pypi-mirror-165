@@ -1,0 +1,16 @@
+eco2ai/MLTracker.py,sha256=GCp6ATi4PtvhbNeAfy3kUOXnu1lfKlQRC8QaQpiNnnM,38
+eco2ai/__init__.py,sha256=1yFsVGdwAInv2Wzw5AcnST5D-mCZ4rDRo0WmrKEiZ_o,345
+eco2ai/data/carbon_index.csv,sha256=C1zk6-zeXFqJpGh9SnYW1tMHVuUs40Xvutax1vpAFUY,166742
+eco2ai/data/config.txt,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+eco2ai/data/cpu_names.csv,sha256=EFKCpeOlzX0vap4oqNw37U0loFEqdTxI19G-ks66mRA,93293
+eco2ai/emission_track.py,sha256=lAb6GxmVgshCBOSY-JWSI6FJ7hlNbxtBNe5PwpFkzPM,31059
+eco2ai/tools/.DS_Store,sha256=XM6xItdrlaMA1vHplsQrEgGLGcUYYVOiztvc7_rZZjQ,6148
+eco2ai/tools/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+eco2ai/tools/tools_cpu.py,sha256=J2wHx80bE-GG-F6r_aa8QtArGz3nJVzdGZWH5SkXuO8,16930
+eco2ai/tools/tools_gpu.py,sha256=ah9FdO8YEgpleuoHWWuC_4PFtRL_U-ju10Jz6DhT-Bs,8508
+eco2ai/tools/tools_ram.py,sha256=FKzix2WHr30nB1mObAIiDLyd4O9KiBBLpOS1NiPw_ks,2785
+eco2ai/utils.py,sha256=WhfvSbqmmcFBEbfYPIIE8chhjcxR3q8Y13ETu9AYf8M,19948
+eco2ai-0.3.0.dist-info/LICENSE,sha256=FIy3EKVs51RckFwrBE6QI2ZqAbHRCdlis7Pcd4grR5o,11405
+eco2ai-0.3.0.dist-info/WHEEL,sha256=wycAfLpmmoS0r5FEKIVwKB-iEMUiIZXv6P5GBpfA1-Q,87
+eco2ai-0.3.0.dist-info/METADATA,sha256=ZM0bzy0cAEG8426kc_7_QE5PUNFKmwEbJ3afDQ_SNaY,7719
+eco2ai-0.3.0.dist-info/RECORD,,
