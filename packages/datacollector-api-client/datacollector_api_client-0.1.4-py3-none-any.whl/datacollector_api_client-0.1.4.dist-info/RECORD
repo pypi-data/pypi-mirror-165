@@ -1,0 +1,8 @@
+datacollector_api_client/__init__.py,sha256=IMjkMO3twhQzluVTo8Z6rE7Eg-9U79_LGKMcsWLKBkY,22
+datacollector_api_client/client.py,sha256=ms5pEPGuWC3bChOZOZMzUaTnWMBq9y1T5PxVtbwyNRM,4722
+datacollector_api_client/dbutils_proxy.py,sha256=5PhZwQ0pUx4gTV6_nR7eT5HWsXz4HG-8RlFedVqVqts,646
+datacollector_api_client/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+datacollector_api_client-0.1.4.dist-info/LICENSE,sha256=O6YhOCw25sDuv-92UfxGP5LRX9bKD3tQw4XwYtEf2kQ,1078
+datacollector_api_client-0.1.4.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+datacollector_api_client-0.1.4.dist-info/METADATA,sha256=sRl_QYHuc79-EL7a5Czl4innoMMb8ueuYCCWCQrfRvE,2690
+datacollector_api_client-0.1.4.dist-info/RECORD,,
