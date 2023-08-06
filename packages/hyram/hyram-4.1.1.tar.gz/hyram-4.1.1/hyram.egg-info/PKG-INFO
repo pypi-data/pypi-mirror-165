@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: hyram
+Version: 4.1.1
+Summary: Hydrogen Plus Other Alternative Fuels Risk Assessment Models Python Package
+Home-page: https://hyram.sandia.gov/
+Author: Brian D. Ehrhart, Cianan Sims, Ethan S. Hecht, Benjamin B. Schroeder, Katrina M. Groth, John T. Reynolds, and Gregory W. Walkup
+License: GNU General Public License v3 (GPLv3)
+Keywords: hydrogen,methane,propane,flame,plume,jet,overpressure,quantitiave risk assessment,risk
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: <3.9,>3.6
+Description-Content-Type: text/markdown
+
+# HyRAM+ Python Library
+
+The HyRAM+ library contains Python modules for physics and QRA calculations.
+
+
+# Installation
+
+To install this Python module, navigate to this directory on your machine and type:
+
+~~~~~~~~~
+pip install .
+~~~~~~~~~
+
+
+# Usage
+
+The HyRAM+ package can be utilized after installation using a standard Python import:
+```python
+import hyram
+```
+
+Specific models can be accessed within the HyRAM+ package. The main calculations for the physics models can be accessed using `hyram.phys.api`. This includes models such as:
+* `create_fluid`
+* `compute_mass_flow`
+* `compute_tank_mass`
+* `compute_thermo_param`
+* `compute_equivalent_tnt_mass`
+* `analyze_jet_plume`
+* `analyze_accumulation`
+* `jet_flame_analysis`
+* `compute_overpressure`
+
+The following are the main model objects that can be accessed using `hyram.phys`:
+* `Fluid`
+* `Orifice`
+* `Jet`
+* `Flame`
+* `Source`
+* `Enclosure`
+* `Vent`
+* `IndoorRelease`
+* `BST_method`
+* `TNT_method`
+* `Bauwens_method`
+
+The main risk calculations are located in `hyram.qra.analysis.conduct_analysis`.
+
+More information about the specific models and the inputs/outputs for each one can be found in the specific modules themselves. 
+
+
+# Development/Modifications
+
+To make changes to the source code, either for a specific need or to contribute to HyRAM+, please follow the instructions in the [CONTRIBUTING](./CONTRIBUTING.md) file for the HyRAM+ Python library. 
