@@ -1,0 +1,3 @@
+[console_scripts]
+yolov4 = yolov4:main
+
