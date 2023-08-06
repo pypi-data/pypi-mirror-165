@@ -1,0 +1,9 @@
+namur/__init__.py,sha256=cJAEs21qquR1YTPMNUUKR0Ofv5dYmWfYTRm21HYKzxs,416
+namur/exceptions.py,sha256=qmdPVR1HXmeEbZB7mqDdO5LuWwEckH2jL07mAwk_c70,477
+namur/models.py,sha256=wGXpanZ_mgy4MtQh04un4Wn1HqTQB9MDRoTjrzbgDNI,1164
+namur/namur.py,sha256=0bHYWsWFprejKuN6kML0GI9qWFAZpZZopI__xIN3zQU,5626
+namur/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+namur-0.1.0.dist-info/LICENSE,sha256=wb5TNK9VxJkbYmLd_-9Y4fhmuNYgiWrEhA2K-Dr_LP8,1072
+namur-0.1.0.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+namur-0.1.0.dist-info/METADATA,sha256=fd1wrlfeXL0uzrR5_FGTqrA_1ByuwgHgeijX1iOPGZE,9139
+namur-0.1.0.dist-info/RECORD,,
