@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+huscy.consents.egg-info/PKG-INFO
+huscy.consents.egg-info/SOURCES.txt
+huscy.consents.egg-info/dependency_links.txt
+huscy.consents.egg-info/requires.txt
+huscy.consents.egg-info/top_level.txt
+huscy/consents/__init__.py
+huscy/consents/apps.py
+huscy/consents/forms.py
+huscy/consents/urls.py
+huscy/consents/views.py

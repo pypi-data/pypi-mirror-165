@@ -1,0 +1,10 @@
+Django>=3.2
+django-jsignature
+weasyprint
+
+[development]
+psycopg2-binary
+
+[testing]
+tox
+watchdog
