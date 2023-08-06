@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/cylinderocr/__init__.py
+src/cylinderocr/ocr.py
+src/cylinderocr.egg-info/PKG-INFO
+src/cylinderocr.egg-info/SOURCES.txt
+src/cylinderocr.egg-info/dependency_links.txt
+src/cylinderocr.egg-info/requires.txt
+src/cylinderocr.egg-info/top_level.txt

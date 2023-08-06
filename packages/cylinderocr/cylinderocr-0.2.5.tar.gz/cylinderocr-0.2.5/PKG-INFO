@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: cylinderocr
+Version: 0.2.5
+Summary: cylinder  ocr package
+Home-page: https://github.com/Codebugged-Research/cylinderocr
+Author: Codebugged-Research
+Author-email: thecodebugged@gmail.com
+License: MIT
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: Chinese (Simplified)
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Utilities
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Utilities
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# cylinderocr
