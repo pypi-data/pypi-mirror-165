@@ -1,0 +1,7 @@
+certbot_dns_metaname/dns_metaname.py,sha256=Hcws1m3VW5dqA19XGzLlHvYIRef7xzaBv516Na7VIPI,2524
+certbot_dns_metaname/dns_metaname_test.py,sha256=6wgaVE0KlCv7DnQTWDQf-XNKpLoxCgE83v7G0vPIJd0,2283
+certbot_dns_metaname/metaname.py,sha256=_lJ53t16mt6TlQ0dbNhwkXxPpwDCNUfBT2mFczA8VRM,1931
+certbot_dns_metaname-0.1.1.dist-info/LICENSE.txt,sha256=J_okiIJPd_NAmEodvraRHVg9ZAiPnZ2tYwpTdGNT6YM,10974
+certbot_dns_metaname-0.1.1.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+certbot_dns_metaname-0.1.1.dist-info/METADATA,sha256=OnP8iPdFpn48-cYpMomZwTzZBXIa-bk53PsLKiwCqIg,482
+certbot_dns_metaname-0.1.1.dist-info/RECORD,,
