@@ -1,0 +1,3 @@
+recursive-include i2b2rls/config.default/ *
+include README.md
+include i2b2rls/tables.json

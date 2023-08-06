@@ -1,0 +1,462 @@
+# i2b2rls
+
+[![pipeline status](https://gitlab.com/mds-imbi-freiburg/i2b2/i2b2rls/badges/master/pipeline.svg)](https://gitlab.com/mds-imbi-freiburg/i2b2/i2b2rls/-/commits/master)
+[![coverage report](https://gitlab.com/mds-imbi-freiburg/i2b2/i2b2rls/badges/master/coverage.svg)](https://gitlab.com/mds-imbi-freiburg/i2b2/i2b2rls/-/commits/master)
+[![License: MIT](https://img.shields.io/gitlab/license/24181795)](https://gitlab.com/mds-imbi-freiburg/i2b2/i2b2rls/-/blob/master/LICENSE)
+
+
+This package provides a cli and python api to manage users and projects
+in the dockerized [i2b2](https://www.i2b2.org/) clinical data warehousing platform
+using PostgreSQL Row Level Security (RLS) templates.
+
+The key functionality is registering a single database schema
+as multiple Data Repositories (CRC) in i2b2.
+Each CRC connects to the same database as a different user with its own RLS policies defined.
+This enables the usage of a single datasource for multiple projects to
+circumvent the costly and complex replication of data into project specific databases,
+by utilising PostgreSQL's Row Level Security feature.
+
+In the examples each project connects with a role that has RLS policies enabled,
+which allows access only to patients with the `provider_id` set in the project configuration.
+The required data is defined in and derived from `i2b2.yaml`, the central config file.
+
+The corresponding docker-compose based project is the [i2b2-stack](https://gitlab.com/mds-imbi-freiburg/i2b2/i2b2-stack)
+
+## Getting Started
+### Prerequisites
+#### Dependencies
+
+~~~bash
+# On Ubuntu / Debian
+sudo apt install -y python3 python3-pip gcc postgresql postgresql-server-dev-all
+# On Manjaro / Arch
+sudo pacman -S python3 python-pip gcc postgresql postgresql-libs libffi
+~~~
+
+#### Install repository
+~~~bash
+# pip install from pypi
+python3 -m pip install i2b2rls
+# pip install from gitlab repository
+python -m pip install git+https://gitlab.com/mds-imbi-freiburg/i2b2/i2b2rls.git
+~~~
+
+## Usage
+Create a folder and initiate the i2b2 project dir:
+~~~bash
+mkdir i2b2-demo && cd i2b2-demo/
+i2b2rls --conf=. --init
+~~~
+
+Create a new project in `i2b2.yaml`:
+
+~~~yaml
+subdepartment1:  # Name of project
+  crc: # Register a new CRC
+    ds-user: dep1  # Create role in database & datasource
+    ds-pass: demouser # Password for databse role
+    provider-filter: LCS-I2B2:D000109075%  # Filter for observation_facts provider
+    members:
+      user1:
+~~~
+
+Register the project:
+~~~bash
+i2b2rls project register subdepartment1
+~~~
+
+This creates all required resources for an i2b2 project:
+* i2b2 __Project__ `subdepartment1`
+* i2b2 __Frontend User__ `user1`
+* i2b2 __Project Roles__ for `user1` (based on default-project-roles in [i2b2.yaml](i2b2rls/config.default/i2b2.yaml))
+* Postgres __Database User__ `dep1` with password `demouser` (based on [example sql files](i2b2rls/config.default/roles/example))
+* Wildfly __Datasource__ using `dep1` user to connect to the Database (based on [template datasource](i2b2rls/config.default/template-ds.xml))
+
+
+__NOTE:__ You may need to restart the stack for all settings to apply.
+
+### Manual steps
+To manually run the steps for a project one can use the API from the command line:
+
+```bash
+# Run SQL scripts in user folder
+i2b2rls project run_rls subdepartment1 --script=main.sql
+
+# Generate and deploy datasource to Wildfly container
+i2b2rls project generate_ds subdepartment1 deploy=True
+
+# Register project in PM cell
+i2b2rls project add_pm_project_data subdepartment1
+
+# Register project members and their roles
+i2b2rls project register_members subdepartment1
+
+# Add Project roles for Service user (AGG_SERVICE_ACCOUNT)
+i2b2rls project add_service_roles subdepartment1
+
+# Register Cells (crc, ont, im, work) for new Project
+i2b2rls project create_db_lookups subdepartment1
+```
+
+
+## Help
+CLI and API are built with the awesome [Fire](https://google.github.io/python-fire/guide/) library.
+It provides a help page for every possible command:
+
+~~~bash
+i2b2rls - --help
+~~~
+
+For example:
+~~~bash
+$ i2b2rls project register --help
+> NAME
+>     i2b2rls project register - Create all resources for a RLS project
+>
+> SYNOPSIS
+>     i2b2rls project register PROJECT_ID <flags>
+>
+> DESCRIPTION
+>     Steps:
+>     * (Optional) Create SQL script from template
+>     * Run SQL files in role folder
+>     * Create & deploy Datasource file for CRC cell
+>     * Create the project in i2b2pm.pm_project_data
+>     * Create mandatory i2b2-roles for AGG_SERVICE_ACCOUNT
+>     * Register project db_lookups in i2b2hive.{im,ont,work,crc}_db_lookup
+>
+> POSITIONAL ARGUMENTS
+>     PROJECT_ID
+>         Type: str
+>         ID of project as in i2b2.yaml
+>
+> FLAGS
+>     --cell_id=CELL_ID
+>         Type: str
+>         Default: 'crc'
+>         The cell data to deploy (Default: 'crc')
+>     --force=FORCE
+>         Type: bool
+>         Default: False
+>         Delete Existing resources and recreate them
+>     --ignore_errors=IGNORE_ERRORS
+>         Type: bool
+>         Default: False
+>         Ignore errors and continue creating resources
+>     --add_i2b2=ADD_I2B2
+>         Type: bool
+>         Default: True
+>         Add 'i2b2' user to project with default roles
+>     --deploy_ds=DEPLOY_DS
+>         Type: bool
+>         Default: True
+>         Copy Datasource file to wildfly server and reload
+>     --extract_ds=EXTRACT_DS
+>         Type: bool
+>         Default: True
+>         Pull Datasource file from wildfly server to local folder
+~~~
+
+
+## Configuration
+#### Folder layout
+The init command creates the template files for an i2b2rls instance structure:
+~~~bash
+i2b2-demo/
+├── i2b2.yaml            # Central project definition and configuration
+├── template-ds.xml      # Template for XML Datasource Objects
+├── datasources/         # Temporary folder for wildfly datasources
+├── roles/               # Each RLS user has a folder here
+│   ├── template         # Template folder other roles inherit from
+│   │   └── main.sql     # Main file, write RLS struff or reference other files
+│   ├── example          # demouser example RLS files
+│   │   └── main.sql     # Main file, includes other sql files with \ir
+│   │   ├── drop.sql     # Script for dropping all sql resources
+│   │   ├── test.sql     # Contains PgTAP tests
+└── └── └── rls.sql      # Creates roles and RLS policies
+~~~
+
+Start by editing the file `i2b2.yaml` and change the basic settings for your i2b2 instance in the `default` section.
+These settings will be inherited by any further project you define and can be overwritten by setting the value explicitly.
+
+#### General
+~~~yaml
+log-level: DEBUG                                                  # Application logging level: INFO, WARN, ERROR, DEBUG
+log-file: /tmp/i2b2rls.log                                        # Log to file - Off by default
+changeby-user: i2b2rls                                            # Will appear in database entries at changeby_user
+wildfly-container: i2b2-wildfly                                   # Name of wildfly docker container
+wildfly-datasources: /opt/jboss/wildfly/standalone/deployments/   # Path to datasources in container
+~~~
+
+#### Configuration Levels
+Any configuration option from `i2b2.yaml` has sane defaults configured in [conf.py](i2b2rls/conf.py)
+to ensure every possible configuration option has a value. This is the `code-level` config.
+The values there are recursively overwritten by settings you make in `i2b2.yaml`.
+
+In `i2b2.yaml` is a default configuration tree for projects, the `default` project.
+Every option there is inherited by other projects, and can be overwritten by them.
+The hierarchy of overriding values for projects looks like this:
+`code-level < default-project-level < project-level`
+
+For the deeper nested LDAP-settings of a user:
+`code-level < default-project-level < project-level < user-level`
+
+
+#### Default Project
+As mentioned above the default project holds configurations that apply to all projects,
+and can be overridden by settings them explicitly on a project.
+~~~yaml
+domain: i2b2demo                            # i2b2 domain (c_domain_id in db_lookups)
+owner: "@"                                  # Owner (c_owner_id in db_lookups)
+default-project-roles: [USER, EDITOR, ...]  # Default roles each user in each project gets, if not overridden
+crc:
+  host: other-pg-host
+~~~
+
+
+#### Cell Configurations
+Each project needs access to the core modules (cells) of i2b2.
+For that, each project's cells are registered in the corresponding `db_lookup` table in the
+`i2b2hive` schema.
+
+Each Cell type (except Project Management) has its own db_lookup table:
++ __Ontology__: ont_db_lookup
++ __Workplace__: work_db_lookup
++ __Identity Management (IM)__: im_db_lookup
++ __Data Repository (CRC)__: crc_db_lookup
++ __Project Management (PM)__: Tables in schema `i2b2pm`
+
+As these can be hosted on various postgres servers, the connection details from
+the wildfly server need to be configured in the datasources.
+
+If the Datasource already exists in wildfly, `ds-user` and `ds-pass` can be omitted.
+If the Datasource should be created, `admin-user` and `admin-pass` must be set,
+so the application can connect to the postgres instance and create the db_lookup entry.
+
+~~~yaml
+ont:
+  host: i2b2-pg  # Postgres server
+  port: 5432
+  database: i2b2
+  schema: i2b2metadata
+  pool-name: OntologyDemoDS
+  jndi-name: java:/OntologyDemoDS
+  ds-user: i2b2metadata
+  ds-pass: demouser
+~~~
+
+#### Users, Roles and Members
+There are several types of roles, users and groups involved, so here is an overview:
+
+##### Postgres Roles
+Postgres does not differentiate between users and groups, both are summarized in the concept `role`.
+This way a user can inherit privileges from any other user and group, or vice versa.
+The only difference is that some roles have the `LOGIN` flag and a password set,
+which technically makes them users.
+
+In context of `i2b2rls` there are the config objects `ds-user` and `admin-user`,
+each referring to a `role` in the Postgres database:
+* __ds-user__: Role that is created in the target Data Repository (Postgres server) by the application.
+  It enables the overlying project to connect to the CRC through a Wildfly Datasource, limited by your RLS rules.
+* __admin-user__: Used to connect to the Postgres server to create the Datasource user above.
+  Must be highly privileged to create resources like roles, policies and grants.
+
+##### i2b2 Users
+Users of the i2b2 frontend are registered in the table `pm_user_data` of the Project Management cell.
+They are identified by their `user_id` (username) and may have a password, full name, email address and status (active/disabled).
+In `i2b2.yaml` users of a project are defined in the `members` section:
+
+~~~yaml
+your_project:
+  members:
+    rls:  # Username
+      password: demouser  # Login password
+      fullname: RLS Demo User  # Users full name
+      email: demouser@example.com  # User email address
+      project-roles: [USER, DATA_OBFSC, MANAGER]
+~~~
+
+If a user already exists in the database it can simply be referred by the user_id as a key without values:
+~~~yaml
+other_project:
+  members:
+    rls:
+    demo:
+    i2b2:
+~~~
+
+##### Project Roles
+To login to a project a user needs __Project Roles__, defined by the key `project-roles`.
+Roles are inherited by a project's `default-project-roles` if a user has no explicit project-roles set.
+The command `ì2b2rls project register_members yourproject user_name` collects these settings and creates
+the database resources in `pm_user_data` and `pm_project_user_roles`.
+
+##### User LDAP
+To enable LDAP authentication for a project, make sure you have the correct ldap settings in your Postgres `pg_hba.conf`
+and the ldap object in your `i2b2.yaml` populated with corresponding values.
+
+Just like any setting LDAP can be configured for all projects in the default project
+and overridden by your specific project.
+The project-level settings can then be overridden by user-level settings:
+~~~yaml
+projects:
+  your_project:
+    ldap:  # LDAP Settings used in i2b2pm.pm_user_params
+      authentication-method: LDAP  # LDAP / LDAPS
+      connection-url: ldap.mycompany.com  # LDAP Server
+      distinguished-name: uid=  # Field to user for login
+      search-base: ou=people,dc=mycompany,dc=com  # Where to find users
+      security-authentication: simple  # Auth mechanism (none/simple/sasl)
+    members:
+      rls:
+        ldap:
+          # Override project-level search-base
+          search-base: ou=department,ou=people,dc=example,dc=org
+~~~
+
+To enable the LDAP login for a user _on project registration_ set at least an empty `ldap:` key.
+
+To enable LDAP login manually use:
+~~~
+i2b2rls project set_user_ldap rlsdemo rls
+~~~
+
+To manually register LDAP for a user while setting a certain value explicitly:
+~~~bash
+i2b2rls project set_user_ldap rlsdemo rls --data='{"search-base":""}'
+~~~
+
+
+### SQL Templates
+The example folder features a set of scripts that split the creation of Postgres Roles and its RLS policies into multiple steps:
+
+* __main.sql__:
+  Incorporates the .sql files into a single transaction. A SAVEPOINT is created before the tests and rolled back to after the tests.
+  If any of the tests fail, the whole transaction is rolled back.
+* __drop.sql__:
+  Used to remove any (preexisting) objects in the database that should be created by the application.
+  This should be called before the Role and the Policies are created, and can be called if the Role is to be removed.
+* __init.sql__:
+  Initialisation script that ensures the extension `pgtap` exists and the view `v_observation_facts` is present and contains the required fields.
+* __rls.sql__:
+  Contains the statements for creating the Role and its privileges: `CREATE ROLE, GRANT, CREATE POLICY`.
+* __test.sql__:
+  PgTAP tests that validate the role is created with necessary privileges and the RLS policies filter correctly.
+
+The SQL scripts are called with the `psql` Commandline client for postgres.
+This enables the usage of variables in the scripts that are passed by the application (e.g. :variable_name).
+By default the following variables are passed to the client and can be used in scripts:
+
+* **project_id:** Project id, the object name of a project
+* **role_name:** Name of postgres role defined in `ds-user`
+* **role_pass:** Password of postgres role, defined in `ds-pass`
+* **db:** Database name of datasource defined in `crc > database` (default i2b2)
+* **cell_schema:** Schema of i2b2 data defined in `crc > schema` (default i2b2demodata)
+* Any `key: value` pair in `pg-vars`. The keys __must__ only contain lower dashes as seperator!
+  Also, any of the above values can be overwritten by setting it in `pg-vars`!
+
+A full call from the application to psql may look like this:
+
+```bash
+psql postgresql://i2b2:demouser@i2b2-pg:5432/i2b2 \
+    -v project_id=rlsdemo \
+    -v role_name=rlsuser \
+    -v role_pass=rlsuserpass \
+    -v db=i2b2 \
+    -v cell_schema=i2b2demodata \
+    -v provider_filter=LCS-I2B2:D000109061% \
+    -f "/path/to/config/roles/example/main.sql"
+```
+
+__NOTE:__ The view `v_observation_fact` is required for the RLS policies.
+ It joins the clinic's departments table `provider_dimension` to the patients observations `observation_fact` by the `provider_id`.
+
+
+#### Ressources
+To sum up, following resources are managed by the tool:
+* i2b2 Project and User Management (i2b2pm)
+  * Frontend users (pm_user_data)
+  * Frontent user LDAP settings (pm_user_params)
+  * Project roles (pm_project_user_roles)
+  * Project data (pm_project_data)
+* i2b2 Cells
+  * Datasource's manipulation and deployment to Wildfly
+  * Cell db_lookups in i2b2hive
+* PostgreSQL resources
+  * Executor for SQL templates via `psql` client
+  * Instantiation of custom SQL templates
+  * Definition of postgres database roles
+
+### Simple CLI
+The cli features a set of simplified commands for management of users and groups.
+These commands are accessed through the subcommand `i2b2rls cmd [user|group]`
+and will return 1 on error or 0 on success.
+These commands are designed for use in CI processes.
+
+### Docker.
+As `i2b2rls` is built to work with a dockerized setup it needs access to the docker daemon.
+For this work, the image is built on top of `docker-in-docker` and requires
+the docker socket as a volume:
+
+~~~bash
+docker run \
+  -v /tmp/data:/data \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  --network i2b2-stack_i2b2-net \
+  -ti i2b2rls \
+  i2b2rls --init --conf=/data
+~~~
+
+
+
+### Development
+```bash
+pip install -r requirements.dev.txt
+pre-commit install
+pre-commit install --hook-type commit-msg
+```
+
+#### Test
+Start the i2b2 postgres backend:
+```bash
+docker run -p 5432:5432 i2b2/i2b2-pg:p1
+```
+
+Run tests:
+```bash
+python -m pytest --cov=.
+```
+
+To simulate the hostname of the postgres server on your machine for testing it in `/etc/hosts`:
+~~~bash
+sudo echo "127.0.0.1    i2b2-pg" >> /etc/hosts
+~~~
+
+
+#### Debugging
+##### Enable logging in Wildfly
+~~~bash
+docker exec -it -u root i2b2-wildfly bash -c "sed -i 's/INFO/DEBUG/g' /opt/jboss/wildfly/standalone/configuration/standalone.xml"
+~~~
+
+##### Logging in Postgres backend
+~~~
+client_min_messages = debug1
+log_line_prefix = '%m [%p] %q%u@%d '
+log_statement = 'all'
+~~~
+
+
+### How it works
+First the application parses the i2b2.yaml file and creates a full configuration tree for every project.
+
+
+#### Glossary
+
+| Short  | Long               | Explanation
+|:------ |:-----------------  |:---------------------------------------------- |
+| RLS    | Row Level Security | PostgresSQL access policies based on row values. Allows granular filtering of user access to patient/observation information
+| CRC    | Data Repository    | Database schema and REST API (cell) for i2b2 medical data, e.g. the tables `observation_facts`, patient_dimension etc.
+| PM     | Project Management | Database schema (cell) for i2b2 project data: users, projects, project_roles  etc.
+| ONT    | Ontology           | Database schema and REST API (cell) for i2b2 ontologies. Used to query patient data by diagnosis
+| DS     | Datasources        | XML object (e.g. crc-ds.xml) that defines a database connection for the i2b2 wildfly server
