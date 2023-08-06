@@ -1,0 +1,10 @@
+verbump/__init__.py,sha256=HfjVOrpTnmZ-xVFCYSVmX50EXaBQeJteUHG-PD6iQs8,22
+verbump/cli.py,sha256=sIJ_3oXtCZEg8EJUCzA_nBuJ7jDTcTdkyn8ohu1osZA,2308
+verbump/constants.py,sha256=8aI1KMCyylT8E2k2au4NnYANB4C6xY5tF7Zp2bxd9Tw,475
+verbump/git.py,sha256=MuO1g1Tu2w6ZcmP2I-NfDvRzgevZ9TmgwiN82JP0qOQ,354
+verbump/version.py,sha256=hnVh-0HS3HcArz3Vh45tPdtRX68L9Ngkk2wqqy2cI6o,992
+verbump-0.2.1.dist-info/METADATA,sha256=uynQ1neP1ZeoM1hBnlW8Y6NFrBXq53xmNFl8t52ku-o,2047
+verbump-0.2.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+verbump-0.2.1.dist-info/entry_points.txt,sha256=_vwUCViaSMLuGXmjsPXuvJd9t8ccnAbhJZyCya1BXq8,46
+verbump-0.2.1.dist-info/top_level.txt,sha256=7XJfWZOANycbCanXmw3iyGKSuzAF6dQltLoX2GHZc6U,8
+verbump-0.2.1.dist-info/RECORD,,
