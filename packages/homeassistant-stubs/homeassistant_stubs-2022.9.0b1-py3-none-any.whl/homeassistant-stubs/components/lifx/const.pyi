@@ -1,0 +1,15 @@
+from _typeshed import Incomplete
+
+DOMAIN: str
+TARGET_ANY: str
+DISCOVERY_INTERVAL: int
+MESSAGE_TIMEOUT: float
+MESSAGE_RETRIES: int
+OVERALL_TIMEOUT: int
+UNAVAILABLE_GRACE: int
+CONF_SERIAL: str
+IDENTIFY_WAVEFORM: Incomplete
+IDENTIFY: str
+RESTART: str
+DATA_LIFX_MANAGER: str
+_LOGGER: Incomplete
