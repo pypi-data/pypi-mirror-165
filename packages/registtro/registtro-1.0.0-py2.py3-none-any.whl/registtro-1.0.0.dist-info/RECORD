@@ -1,0 +1,10 @@
+registtro/__init__.py,sha256=el4kT23glljFk5mkerR3aOXjX-nvj5cS37ZXPf3JQMI,260
+registtro/_exceptions.py,sha256=wpukft6CmYnfWH1WHd8zV9ZP1S4Gw-g4szGa5X-sqiQ,160
+registtro/_protocol.py,sha256=EsA3qnIut0jK457nsKmSyfdwqpWn-56O3PG2U5alBlc,824
+registtro/_registry.py,sha256=t1YfRtujWT5Rrr_06gBh1jTUPEyjnqYgXmCs_O7Fnoo,7617
+registtro/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+registtro-1.0.0.dist-info/LICENSE,sha256=ItKR_tYlKxnPQ5mVzbe1YRs8uDevTAcwT4DgrPXPPMs,1068
+registtro-1.0.0.dist-info/METADATA,sha256=2Iw7YstxRs0kHczdpsohdnwSi5hCIkhLdVOJ3ZKvUOQ,3220
+registtro-1.0.0.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+registtro-1.0.0.dist-info/top_level.txt,sha256=P4Dq3D2kz5eAZXN-YPtkW0W19W2eA9jVvliZCEHr8w4,10
+registtro-1.0.0.dist-info/RECORD,,
