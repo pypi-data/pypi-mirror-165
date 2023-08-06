@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+mission_naming/__init__.py
+mission_naming/command_line.py
+mission_naming/mission_naming.py
+mission_naming.egg-info/PKG-INFO
+mission_naming.egg-info/SOURCES.txt
+mission_naming.egg-info/dependency_links.txt
+mission_naming.egg-info/entry_points.txt
+mission_naming.egg-info/top_level.txt

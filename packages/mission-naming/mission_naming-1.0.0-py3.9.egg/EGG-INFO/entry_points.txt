@@ -1,0 +1,3 @@
+[console_scripts]
+mission_name = mission_naming.command_line:main
+
