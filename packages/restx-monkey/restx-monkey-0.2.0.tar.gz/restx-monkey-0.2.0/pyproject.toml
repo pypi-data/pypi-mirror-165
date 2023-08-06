@@ -1,0 +1,58 @@
+[build-system]
+requires = ["setuptools>=65"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "restx-monkey"
+version = "0.2.0"
+authors = [
+    { name = " Tom Trval", email = "thandeus@gmail.com" },
+]
+description = "Monkey patches to keep flask-restx working with latest flask and werkzeug."
+readme = "README.md"
+license = { text = "GPLv3" }
+requires-python = ">=3.7"
+dependencies = [
+    'flask-restx',
+]
+keywords = [
+    "restx",
+    "flask-restx",
+    "api",
+    "rest",
+    "flask",
+    "restplus",
+    "json",
+    "openapi",
+    "python",
+]
+classifiers = [
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Topic :: Internet :: WWW/HTTP :: WSGI :: Server",
+    "Framework :: Flask",
+    "Programming Language :: Python :: 3",
+    "Typing :: Typed",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/Ryu-CZ/restx-monkey"
+"Bug Tracker" = "https://github.com/Ryu-CZ/restx-monkey/issues"
+
+[options]
+test_suite = "tests"
+
+[tool.setuptools]
+packages = ["restx_monkey"]
+
+[coverage.run]
+branch = true
+source = [
+    "restx_monkey",
+    "tests",
+]
+
+[coverage.paths]
+source = "restx_monkey"

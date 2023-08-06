@@ -1,0 +1,68 @@
+Metadata-Version: 2.1
+Name: restx-monkey
+Version: 0.2.0
+Summary: Monkey patches to keep flask-restx working with latest flask and werkzeug.
+Author-email:  Tom Trval <thandeus@gmail.com>
+License: GPLv3
+Project-URL: Homepage, https://github.com/Ryu-CZ/restx-monkey
+Project-URL: Bug Tracker, https://github.com/Ryu-CZ/restx-monkey/issues
+Keywords: restx,flask-restx,api,rest,flask,restplus,json,openapi,python
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI :: Server
+Classifier: Framework :: Flask
+Classifier: Programming Language :: Python :: 3
+Classifier: Typing :: Typed
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# restx-monkey
+
+Monkey patches for unmaintained [flask-restx](https://github.com/python-restx/flask-restx) python package to keep it
+restx compatible with the latest [flask](https://github.com/pallets/flask) and [werkzeug](https://github.com/pallets/werkzeug).
+
+### Usage
+
+To install restx_monkey, use [pip](https://pip.pypa.io/en/stable/):
+
+```shell
+pip install -U restx-monkey
+```
+
+Before importing `flask-restx` apply all patches in your main module:
+
+```python
+# app main file
+import restx_monkey as monkey
+
+monkey.patch_restx()
+
+# after patch import other modules 
+import flask_restx
+# your other code
+```
+
+or select which patches you do not want to apply
+
+```python
+# app main file
+import restx_monkey as monkey
+
+monkey.patch_restx(fix_restx_api=False)
+
+# after patch import other modules 
+import flask_restx
+# your other code
+```
+
+## Goal of project
+
+Keep [flask-restx](https://github.com/python-restx/flask-restx) compatible with the latest [flask](https://github.com/pallets/flask) and [werkzeug](https://github.com/pallets/werkzeug) as long as it is reasonable simple to monkey patch it.
+
+## What this project is not
+
+This project does not solve incompatibilities of other python packages using [flask-restx](https://github.com/python-restx/flask-restx).
+
