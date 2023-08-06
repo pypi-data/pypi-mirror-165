@@ -1,0 +1,9 @@
+faceType: textOrImage
+faceParams:
+  token: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+  channelId: XXXXXXXXXXXXXXXXXX
+  scoringType: reactions
+  scrapingType: basic
+serverParams:
+  host: localhost
+  port: 10000
