@@ -1,0 +1,81 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+exclude = ["tests*"]
+
+[tool.setuptools.package-data]
+openseries = ["*.json", "*.png"]
+
+[project]
+name = "openseries"
+version = "0.6.9"
+description = "Package for simple financial time series analysis."
+readme = "README.md"
+license = {text = "BSD 3-Clause License"}
+authors = [
+    { name = "Martin Karrin", email = "martin.karrin@captor.se" }
+]
+requires-python = ">=3.10"
+dependencies = [
+        "jsonschema>=3.2.0",
+        "numpy>=1.22.4",
+        "pandas>=1.4.2",
+        "plotly>=4.14.1",
+        "python-dateutil>=2.8.1",
+        "python-stdnum>=1.17",
+        "requests>=2.25.1",
+        "scipy>=1.8.1",
+        "statsmodels>=0.12.1"
+]
+classifiers=[
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "License :: OSI Approved :: BSD License",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Topic :: Office/Business :: Financial :: Investment",
+    "Natural Language :: English",
+    "Development Status :: 5 - Production/Stable",
+    "Operating System :: OS Independent",
+]
+keywords = [
+    "python",
+    "python3",
+    "plotly",
+    "pandas",
+    "finance",
+    "fintech",
+    "data-science",
+    "timeseries",
+    "timeseries-data",
+    "timeseries-analysis",
+    "investment",
+    "investment-analysis",
+    "investing"
+]
+
+[project.optional-dependencies]
+test = [
+    "coverage>=5.5",
+    "pytest>=7.1.2"
+]
+dev = [
+    "coverage>=5.5",
+    "pytest>=7.1.2",
+    "black==22.6.0",
+    "flake8==5.0.4",
+    "flake8-black==0.3.3"
+]
+build = [
+    "coverage>=5.5",
+    "pytest>=7.1.2",
+    "build",
+    "twine"
+]
+
+[project.urls]
+repository = "https://github.com/CaptorAB/OpenSeries"
+
+[tool.black]
+line-length = 88
