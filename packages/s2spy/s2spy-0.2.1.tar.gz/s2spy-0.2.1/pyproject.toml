@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.coverage.run]
+branch = true
+source = ["s2spy"]
+command_line = "-m pytest"
+
+[tool.tox]
+legacy_tox_ini = """
+
+[tox]
+envlist = py38,py39,py310
+skip_missing_interpreters = true
+
+[testenv]
+commands = pytest
+extras = dev
+
+"""
