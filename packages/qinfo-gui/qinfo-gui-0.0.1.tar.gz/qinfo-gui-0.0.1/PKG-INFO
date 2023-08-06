@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: qinfo-gui
+Version: 0.0.1
+Summary: A gui for qinfo
+Home-page: https://github.com/El-Wumbus/qinfo-gui
+Author: Decator (Aidan Neal)
+Author-email: decator.c@proton.me
+License: LGPLv3
+Keywords: python,gui,gtk
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Operating System :: Unix
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+
+
+# qinfo-gui
+
+A gui for [qinfo](https://github.com/el-wumbus/qinfo) using [qinfo-python](https://github.com/el-wumbus/qinfo-python) and [GTK 3.0](https://docs.gtk.org/gtk3/)
+
+

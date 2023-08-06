@@ -1,0 +1,12 @@
+LICENSE.md
+README.md
+setup.cfg
+setup.py
+src/defines.py
+src/main.py
+src/qinfo_gui.egg-info/PKG-INFO
+src/qinfo_gui.egg-info/SOURCES.txt
+src/qinfo_gui.egg-info/dependency_links.txt
+src/qinfo_gui.egg-info/entry_points.txt
+src/qinfo_gui.egg-info/requires.txt
+src/qinfo_gui.egg-info/top_level.txt

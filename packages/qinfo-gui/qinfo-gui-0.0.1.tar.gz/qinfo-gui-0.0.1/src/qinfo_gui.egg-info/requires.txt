@@ -1,0 +1,1 @@
+qinfo-python==0.1.2
