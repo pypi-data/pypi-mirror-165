@@ -1,0 +1,12 @@
+requests>=2.27.0
+pydantic>=1.9.1
+
+[docs]
+sphinx<5.1.0
+sphinx-autodoc-typehints
+sphinx-automodapi
+sphinx-book-theme
+
+[tests]
+pytest-astropy>=0.10
+pytest>=6.0
