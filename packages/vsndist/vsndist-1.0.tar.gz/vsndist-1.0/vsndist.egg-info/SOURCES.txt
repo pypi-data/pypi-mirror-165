@@ -1,0 +1,10 @@
+setup.py
+vsndist/Binomialdistribution_challenge.py
+vsndist/Gaussiandistribution.py
+vsndist/Generaldistribution.py
+vsndist/__init__.py
+vsndist.egg-info/PKG-INFO
+vsndist.egg-info/SOURCES.txt
+vsndist.egg-info/dependency_links.txt
+vsndist.egg-info/not-zip-safe
+vsndist.egg-info/top_level.txt
