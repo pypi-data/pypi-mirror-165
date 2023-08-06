@@ -1,0 +1,13 @@
+include *.so
+include *.dll
+include *.dylib
+
+include *.h
+include chain/*.h
+include p2p/*.h
+include doc/*
+include test/*
+
+include conanfile.py
+
+include version.py
