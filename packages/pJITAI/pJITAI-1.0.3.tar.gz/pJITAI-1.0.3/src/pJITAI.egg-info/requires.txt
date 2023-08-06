@@ -1,0 +1,9 @@
+typing
+dataclasses
+requests
+responses
+
+[dev]
+bumpver
+isort
+pip-tools

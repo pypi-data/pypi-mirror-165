@@ -1,0 +1,14 @@
+LICENSE.md
+MANIFEST.in
+README.md
+pyproject.toml
+src/pJITAI/__init__.py
+src/pJITAI/client.py
+src/pJITAI/codes.py
+src/pJITAI/datatypes.py
+src/pJITAI/util.py
+src/pJITAI.egg-info/PKG-INFO
+src/pJITAI.egg-info/SOURCES.txt
+src/pJITAI.egg-info/dependency_links.txt
+src/pJITAI.egg-info/requires.txt
+src/pJITAI.egg-info/top_level.txt
