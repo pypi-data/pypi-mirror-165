@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: jqlite
+Version: 0.4.1
+Summary: An implementation of jq for learning purposes.
+Home-page: https://github.com/christianzzz/jqlite
+Keywords: jq,json,jqlite
+Author: Christian
+Author-email: xian.tuxoid@qq.com
+Requires-Python: >=3.7.0,<4.0.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: termcolor (>=1.1.0,<2.0.0)
+Requires-Dist: typer[all] (>=0.6.1,<0.7.0)
+Project-URL: Repository, https://github.com/christianzzz/jqlite
+Description-Content-Type: text/markdown
+
+# jqlite
+
+An implementation of [jq](https://stedolan.github.io/jq/), the commandline JSON processor, for learning and fun.
+
+## Installation
+
+```shell
+> pip install jqlite
+```
+
+## Examples:
+```sh
+> echo '{"foo": 0}' | jqlite
+{
+  "foo": 0
+}
+
+> echo '{"foo": [1, 2, 3, 4]}' | jqlite '[.foo | .[] | select(. % 2 == 0) | . * 2]'
+[
+  4.0,
+  8.0
+]
+```
