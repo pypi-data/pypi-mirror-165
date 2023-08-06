@@ -1,0 +1,11 @@
+metadata_tagger/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+metadata_tagger/object_tagger.py,sha256=M318d1IlEyaJu1IAtMk6dIGuLNzhHCl7R2R7wb_yv1w,2664
+metadata_tagger/pdf_metadata_extractor/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+metadata_tagger/pdf_metadata_extractor/pdf_metadata_extractor.py,sha256=DD1cFq5kCViHbk9a1lhFndD5kRRlen8ELOWCI4B3RLg,409
+metadata_tagger/picture_metadata_extractor/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+metadata_tagger/picture_metadata_extractor/picture_metadata_extractor.py,sha256=-28Fc90TZGMQ3AJmitfjBWdkAd5NH-S8POsbEJRBdvY,555
+s3_metadata_tagger-0.0.3.dist-info/LICENSE,sha256=ROrtg_8fbLEpt9JUCel1tOWC-_IKDitOR4TE0z59oCE,1523
+s3_metadata_tagger-0.0.3.dist-info/METADATA,sha256=FS5MEp0Csm3bq39hTLZYXTJU0XDjuu4AAjQWupNv6Os,4147
+s3_metadata_tagger-0.0.3.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+s3_metadata_tagger-0.0.3.dist-info/top_level.txt,sha256=k-BBBtvcKE2XH8Vn_GBZC2IsL2_miPEJQZCJLAL2dS8,16
+s3_metadata_tagger-0.0.3.dist-info/RECORD,,
