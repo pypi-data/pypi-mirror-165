@@ -1,0 +1,4 @@
+include *.txt
+global-include *.ini
+global-include udev_rules.sh
+prune .tox
