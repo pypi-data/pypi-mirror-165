@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: pyroborock_fork
+Version: 1.1.10
+Summary: Communicate with roborock over tuya protocol
+Home-page: https://github.com/89jd/pyroborock
+Author: jd89
+Author-email: jd89.dev@gmail.com
+License: UNKNOWN
+Description: # pyroborock_fork
+
+        This is a fork of the pyroborock package which attempts to update dependancies and requirements so vacuums can be added to homeassitant.
+        
+        From the original author who really deserves all the credit:
+        
+        See https://github.com/89jd/roborock_comms for details on how I go to this point.
+        
+        Using the keys from roborock app, it is possible to communicate with the roborock without needing to use the Xiamoi Miio app.
+        
+        It creates a new class overriding the python-miio vacuum class, but uses the tuya-ipc library to communicate
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown

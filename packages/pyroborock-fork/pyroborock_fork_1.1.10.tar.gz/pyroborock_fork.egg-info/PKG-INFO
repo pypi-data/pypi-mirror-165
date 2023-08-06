@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: pyroborock_fork
+Version: 1.1.10
+Summary: Communicate with roborock over tuya protocol
+Description-Content-Type: text/markdown
+
+# pyroborock_fork
+
+This is a fork of the pyroborock package which attempts to update dependancies and requirements so vacuums can be added to homeassitant.
