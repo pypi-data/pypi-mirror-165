@@ -1,0 +1,17 @@
+odoo/addons/l10n_de_toponyms/README.rst,sha256=mChgQMznN89Y04tBeIgQ5HHCGR4RIj4zqFTnKIwQh0w,1531
+odoo/addons/l10n_de_toponyms/__init__.py,sha256=3ixS49ZLBKAIH_NVywTK03J9LYTjGv8oI6q2nyrbGNw,199
+odoo/addons/l10n_de_toponyms/__manifest__.py,sha256=g3TnDkSshsX4lgJdg5wDCkUBaRA8dv3kkBIGRr6oG34,670
+odoo/addons/l10n_de_toponyms/i18n/de.po,sha256=jYBD4PQNWb6P_I_r9ifGlF3-157kxMMhLUBU-A2GFXA,3914
+odoo/addons/l10n_de_toponyms/i18n/l10n_de_toponyms.pot,sha256=DzsW6wUPyoYgBH_8KvoDusxH8mOJcgQo6amaVbimb8Q,3091
+odoo/addons/l10n_de_toponyms/security/ir.model.access.csv,sha256=9XGzGqxZBkMMcyaFUNRtwMEhzDPujXm7uYl3KZs5a7U,178
+odoo/addons/l10n_de_toponyms/static/description/icon.png,sha256=dwrw6lKdJ77yq-04L-7J9dcOtQRy0twljhoOHCzaUKQ,194785
+odoo/addons/l10n_de_toponyms/tests/__init__.py,sha256=2OyoQ_AGmpx1fir1bd-hQtfIi8_Xac6hIa4GNI_bCf0,214
+odoo/addons/l10n_de_toponyms/tests/test_l10n_de_toponyms.py,sha256=VNWzLr7QpxzOyAIoZdp3pUJLdLtx6NF7-nVuDKpwPwo,789
+odoo/addons/l10n_de_toponyms/wizard/__init__.py,sha256=Q_nFK0UitS3uaL0cCSfExELUXkc_qvZYue0cdsfrmUI,139
+odoo/addons/l10n_de_toponyms/wizard/geonames_import.py,sha256=tlEyB_1vK7Vm1yRM4JqBsL4GZIApJmMMybNI2kqJu48,753
+odoo/addons/l10n_de_toponyms/wizard/l10n_de_toponyms_wizard.py,sha256=3V4bx2yjRGj3jOsP-GR-nRX9a3-ZgzC4FWmf3tROCys,776
+odoo/addons/l10n_de_toponyms/wizard/l10n_de_toponyms_wizard.xml,sha256=86xMZ9zQ_kQpeEjMaRUuYaXx_0IehoieaVKLxHJ_p6k,1994
+odoo14_addon_l10n_de_toponyms-14.0.1.0.1.dev2.dist-info/METADATA,sha256=QVQgpsTaAdqJUOI7enJNq7ADqN9M3pii0B3qC9FU2Ms,2194
+odoo14_addon_l10n_de_toponyms-14.0.1.0.1.dev2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+odoo14_addon_l10n_de_toponyms-14.0.1.0.1.dev2.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+odoo14_addon_l10n_de_toponyms-14.0.1.0.1.dev2.dist-info/RECORD,,
