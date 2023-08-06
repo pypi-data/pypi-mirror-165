@@ -1,0 +1,13 @@
+golfer/__init__.py,sha256=Ttua5TZ7vvIksp_DZBTB24QgHV1GHvqzpvP-cUFxTyE,158
+golfer/__version__.py,sha256=sOIYY6HZm-MWQhSWnYCjOrgZbmcKoy6J54phZiW57Qo,80
+golfer/dir_ast.py,sha256=fKuLodmWp9WCg8eynIPzf-HYAuuWGbg_3XMjCYZoUw0,655
+golfer/golf.py,sha256=fHpM5SXYpvD_F6BN27aHtW7sNAVBf0i1nzJ6o7AjNv4,119
+golfer/golfer.py,sha256=4_HIUzYbZZZzh5XWIzAX1DIcxz8jwkqK_XKBwFnMGHU,35114
+golfer/main.py,sha256=-bSJlAvCmpgqRduaTEeKNNldAyXCZZjprZpzk_OpStE,1291
+golfer/variable_searcher.py,sha256=wJvErXweFoWSa3aKbGnvAmjtRLvKGWUKjaUhX4Bif18,2475
+golfer_py-0.2.1.dist-info/LICENSE,sha256=6oEu5HY0mHxZrnRo_C6IXgy2AL2RUGwdrv7aDLYQPhU,1086
+golfer_py-0.2.1.dist-info/METADATA,sha256=3iPZvCIG3erJvM-GSkCY92msoqHtRCJkRtVuehhMRcY,526
+golfer_py-0.2.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+golfer_py-0.2.1.dist-info/entry_points.txt,sha256=Typckv2DbkcUZ4QMrul6zNvDJACVP5Mz45t7VrSZ5y0,44
+golfer_py-0.2.1.dist-info/top_level.txt,sha256=Ev5IR--dIMFC4-l-mfIVw64j7gvmiX5SVqN4tRoKPzo,7
+golfer_py-0.2.1.dist-info/RECORD,,
