@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: pygta-data-collector
+Version: 0.0.1
+Summary: Collecting images for GTA sel-driving car project
+Author: MrKubul (Jakub Dryka)
+Author-email: <szanowac@dziekana.com
+Keywords: python,gta,ai,deep learning,dataset,dziekan
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+
+A package that allows to setup automated script to easily collect dataset for training neural networks on in game images
