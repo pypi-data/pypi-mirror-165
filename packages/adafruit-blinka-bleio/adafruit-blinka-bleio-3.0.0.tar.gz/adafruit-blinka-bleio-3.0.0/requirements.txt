@@ -1,0 +1,7 @@
+# SPDX-FileCopyrightText: Copyright (c) 2020 Dan Halbert for Adafruit Industries
+#
+# SPDX-License-Identifier: MIT
+
+Adafruit-Blinka
+# Pin bleak version because its API is still somewhat in flux.
+bleak==0.11.0
