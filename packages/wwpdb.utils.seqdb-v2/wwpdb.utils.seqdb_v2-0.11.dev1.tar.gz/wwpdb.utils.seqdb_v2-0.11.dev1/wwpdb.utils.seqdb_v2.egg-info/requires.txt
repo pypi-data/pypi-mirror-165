@@ -1,0 +1,10 @@
+mmcif
+mmcif.utils
+wwpdb.utils.config~=0.24
+requests
+
+[dev]
+check-manifest
+
+[test]
+coverage
