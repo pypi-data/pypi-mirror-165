@@ -1,0 +1,3 @@
+PyJWT
+simplejson
+requests

@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: odoo_rest_framework
+Version: 1.0.0
+Summary: Store user access token for one-time-login
+Home-page: UNKNOWN
+Author: Han Zaw Nyein
+Author-email: hanzawnyineonline@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+### Odoo REST Framework
+    Version : 1.0.0
+
+### Description : 
+    Store user access token for one-time-login
+
+### Package : 
+    pip install odoo_rest_framework
+
+###### package link :
+
+###### github link :
+
+###### Author : 
+    Han Zaw Nyein
+
+###### Author_email: 
+    hanzawnyineonline@gmail.com
+

@@ -1,0 +1,13 @@
+README.md
+setup.py
+odoo_rest_framework/JwtHttp.py
+odoo_rest_framework/Util.py
+odoo_rest_framework/Validator.py
+odoo_rest_framework/__init__.py
+odoo_rest_framework/firebase.py
+odoo_rest_framework.egg-info/PKG-INFO
+odoo_rest_framework.egg-info/SOURCES.txt
+odoo_rest_framework.egg-info/dependency_links.txt
+odoo_rest_framework.egg-info/not-zip-safe
+odoo_rest_framework.egg-info/requires.txt
+odoo_rest_framework.egg-info/top_level.txt
