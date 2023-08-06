@@ -1,0 +1,34 @@
+Metadata-Version: 1.1
+Name: Forge-Games
+Version: 0.0.1
+Summary: A aid for developing text based games.
+Home-page: UNKNOWN
+Author: Blake Leslie
+Author-email: blakeleslie4607@gmail.com
+License: MIT
+Description: The ultimate helper for console based text games.
+        V0.0.1 Includes:
+        A Time Function
+        A Typing Effect Function
+        A Clear Function
+        Console Colors Class
+        Show All Colors Function
+        Loading Bar Function
+        Title Screen Function
+        Boot Splash Function
+        Reboot Function
+        And Much More To Come.
+        
+        Change Log
+        ==========
+        
+        0.0.1: (8/28/22)
+        ----------------
+        - First Release
+Keywords: engine
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
