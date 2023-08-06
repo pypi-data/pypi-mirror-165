@@ -1,0 +1,123 @@
+[project]
+name = "barnhunt"
+description = "Helpers for drawing Barn Hunt course maps using Inkscape"
+keywords = ["barn hunt", "inkscape", "course maps"]
+license = {text = "GPL-3.0-only"}
+requires-python = ">= 3.7"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: BSD License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Multimedia :: Graphics :: Graphics Conversion",
+    "Topic :: Printing",
+    "Topic :: Utilities",
+]
+dynamic = ["version", "readme"]
+dependencies = [
+    "atomicwrites",
+    "click >= 8.1",
+    "importlib_metadata; python_version < '3.8'",
+    "jinja2 >= 3",
+    "lxml",
+    "pexpect >= 4.8",
+    "pikepdf",
+    "tinycss2",
+    "typing_extensions; python_version < '3.10'",
+]
+
+[project.entry-points.console_scripts]
+barnhunt = "barnhunt.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/barnhunt/barnhunt"
+
+[[project.authors]]
+name = "Jeff Dairiki"
+email = "dairiki@dairiki.org"
+
+[build-system]
+requires = ["setuptools>=61", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.dynamic.readme]
+file = ["README.md", "CHANGES.md"]
+content-type = "text/markdown"
+
+[tool.setuptools.packages.find]
+include = ["barnhunt"]
+
+[tool.setuptools_scm]
+
+[tool.coverage.paths]
+paths = [
+    "barnhunt",
+    ".tox/*/site-packages/barnhunt",
+    # Attempt to match source files on various GitHub Windows/macOS runners
+    '*:*\barnhunt\barnhunt\barnhunt',
+    '*/barnhunt/barnhunt/barnhunt',
+    "*/.tox/*/site-packages/barnhunt",
+]
+
+[tool.coverage.run]
+# Generate unique names for .coverage.* file
+parallel = true
+source_pkgs = [
+    "barnhunt",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: (?i:no cover)",
+    "if TYPE_CHECKING:",
+    'if __name__ == "__main__"',
+    '^\s*\.\.\.\s*$',
+    '^\s*raise NotImplementedError()',
+]
+
+[tool.pytest.ini_options]
+norecursedirs = [
+    ".tox",
+    "build",
+]
+filterwarnings = [
+    # pexpect (as of 4.8) still supports py27, so uses setDaemon
+    "ignore:setDaemon.*deprecated:DeprecationWarning:pexpect",
+]
+
+################################################################
+#
+# mypy
+#
+[tool.mypy]
+mypy_path = [
+    "$MYPY_CONFIG_FILE_DIR/stubs",
+    "$MYPY_CONFIG_FILE_DIR/tests",
+]
+files = [
+    "$MYPY_CONFIG_FILE_DIR/barnhunt",
+    "$MYPY_CONFIG_FILE_DIR/tests",
+]
+exclude = [
+    'conftest\.py$',
+]
+
+show_error_codes = true
+error_summary = true
+
+strict = true
+
+[[tool.mypy.overrides]]
+module = [
+    # Mypy doesn't like that pikepdf dynamically generates it's __all__ list
+    "pikepdf",
+]
+implicit_reexport = true
+
+[[tool.mypy.overrides]]
+module = [
+    # FIXME: should replace most of these
+    "tinycss2",
+]
+ignore_missing_imports = true
