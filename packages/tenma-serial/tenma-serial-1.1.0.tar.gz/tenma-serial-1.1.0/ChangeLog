@@ -1,0 +1,76 @@
+CHANGES
+=======
+
+v1.1.0
+------
+
+* Cleanup code and improved README.md a bit
+* Updated Readme
+* Basic formatting cleanup
+* 72-13330 3-channel PSU support (#10)
+* windows does not accept calling serial.Serial constructor twice if not closing the connection in between
+
+1.0.0
+-----
+
+* marking tag 1.0.0 in documentation
+* setup.cfg pointing to readthedocs documentation
+* fix on docs/conf.py
+* Added conf.py marking 0.2.2 version
+* Added docs version
+* Improved and prepared documentation code for sphinx
+* added graph plotting example using matplotlib
+* Added simple example
+* setup.cfg with more suitable system names for tenmaControl and gtkindicator
+* tenma-applet with Memory handling
+* gtkindicator named tenma-applet for pip installations
+* Basic try/catch on import to work from sourcetree + pip installation
+* fixed a couple of check and incorrect docstrings
+* Do not mask error exceptions
+* Feat: Fix setCurrent response to check int against int
+* fix readme list
+
+0.2.0
+-----
+
+* Updated README
+* feat: Added beep support
+* feat: Added automatic selection of power suply model by response
+* Added definitions for other Tenma72 variants
+* Fixes #4. Ensures that on-save the currently loaded memory is not overwritten
+* Updated readme
+
+0.1.0
+-----
+
+* Fixed setup.cfg
+* Add packaging, tests and pep8 fixes
+* added python3 support to library
+* Added reading of running current and voltage with --actualCurrent and --actualVoltage flags. Alongside a --script flag to run without printing the TenmaVersion every time
+* Small cleanup of unused code
+* Save conf flow. Because SAV<X> does not work as expected or advertised
+* Added OVP and OCP control
+* TenmaControl with channel and Status command line arguments
+* Tenma Dc Lib reading status
+* README fix: on/off commands
+* Update license terms
+* Fixed icon path to load properly in multiple cases
+* GTK gui can reload serial ports, not only present the ones at boot
+* Updated the name to gtkIndicator
+* Small unity graphical indicator to control the DC power supply from the graphical desktop
+* Added URL in readme
+* Re-ordered on off to be able to call with --off --on and effectively reset the power
+* Readme fixes
+* Added basic Readme
+* Fixed small problem, cleaned up function
+* Added exception error message
+* Added tenmaControl
+* Tenma Control program DEBUG mode
+* Load and recall
+* renamed to tenmaDcLib
+* Saving and storing
+* ON/OFF mode
+* Added setVoltage
+* tenma control set current
+* tenma set maximum current
+* First version of tenmaDcPower supply UART controller
