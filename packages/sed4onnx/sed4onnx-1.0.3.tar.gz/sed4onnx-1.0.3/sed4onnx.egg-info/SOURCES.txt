@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+sed4onnx/__init__.py
+sed4onnx/__main__.py
+sed4onnx/onnx_constant_encoder_decoder.py
+sed4onnx.egg-info/PKG-INFO
+sed4onnx.egg-info/SOURCES.txt
+sed4onnx.egg-info/dependency_links.txt
+sed4onnx.egg-info/entry_points.txt
+sed4onnx.egg-info/top_level.txt
