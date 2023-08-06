@@ -1,0 +1,17 @@
+skippy/__init__.py,sha256=S9xCfsv5wFTiYQjersnuFbkL-e9vYJlOJvABHhUtVOE,16
+skippy/core/__init__.py,sha256=2vuYctPClt3KJedbBkrCRjhY73eyAGmYAfH4wAKQHKA,14
+skippy/core/clustercontext.py,sha256=Qg_3gmq8lHpe0kDzDbbw3OZnfkN6SCkYvbN1KsC9_m0,5490
+skippy/core/model.py,sha256=VH3mUhwddWokGzt6lsHqv3qL-NeZNMAT7P_i74QNVIk,5023
+skippy/core/predicates.py,sha256=g02HA9Ex-S5BG71kpsIhg65c1H3mtFJDhpu-e7tsCHY,5177
+skippy/core/priorities.py,sha256=2hS0HxLQIOIA3JpWilmIVDql973iwnGKOu1ZQqlkmww,14727
+skippy/core/scheduler.py,sha256=Uw2oorf_-YQgxTK26obsdiWiEVbqmsMFBGD_3898itU,8053
+skippy/core/storage.py,sha256=OZCxvXgMzWsLCXVwO7PgQc6a1qy2o4RuOYCmzdXh2Qs,2202
+skippy/core/utils.py,sha256=h4ChPwD-rGb0iCuXr4bz5Qdz9tCeaUE5f3J12_h7IWE,1683
+tests/__init__.py,sha256=qPMtwpsln8cQOqhImR5YecoV5WYDJjhu9HACRSir56c,15
+tests/skippy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/skippy/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/skippy/core/test_utils.py,sha256=B8G4ZKACVBvfeaqoyp0kP9NlRDt5domOtQYHrFz9UUE,553
+edgerun_skippy_core-0.2.0.dev1.dist-info/METADATA,sha256=wXQURLRtM3eANhWFlri6a0W1tEvkS2WX_82I4bZFaYs,682
+edgerun_skippy_core-0.2.0.dev1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+edgerun_skippy_core-0.2.0.dev1.dist-info/top_level.txt,sha256=pazVpPjkCJ0T8FCZ1akDXazTgNkIPw3tCxlhjR-19bk,13
+edgerun_skippy_core-0.2.0.dev1.dist-info/RECORD,,
