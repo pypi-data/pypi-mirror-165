@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: valcheck
+Version: 0.0.1
+Summary: Package for quick data validation (in Python)
+Home-page: https://github.com/Nishant173/valcheck
+Author: Nishant Rao
+Author-email: nishant.rao173@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: ISC License (ISCL)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+License-File: LICENSE
+
+Package for quick data validation (in Python). Our repository: https://github.com/Nishant173/valcheck
+
