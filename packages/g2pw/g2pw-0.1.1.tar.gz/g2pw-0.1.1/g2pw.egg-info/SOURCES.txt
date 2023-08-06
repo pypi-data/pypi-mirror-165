@@ -1,0 +1,17 @@
+LICENCE
+MANIFEST.in
+README.md
+setup.py
+g2pw/__init__.py
+g2pw/api.py
+g2pw/bert-base-chinese_s2t_dict.txt
+g2pw/bopomofo_to_pinyin_wo_tune_dict.json
+g2pw/char_bopomofo_dict.json
+g2pw/dataset.py
+g2pw/module.py
+g2pw/utils.py
+g2pw.egg-info/PKG-INFO
+g2pw.egg-info/SOURCES.txt
+g2pw.egg-info/dependency_links.txt
+g2pw.egg-info/requires.txt
+g2pw.egg-info/top_level.txt
