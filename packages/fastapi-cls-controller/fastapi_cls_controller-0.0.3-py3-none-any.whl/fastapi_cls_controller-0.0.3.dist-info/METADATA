@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: fastapi-cls-controller
+Version: 0.0.3
+Summary: fastapi_cls_controller
+Author: Horváth Dániel
+Author-email: nitedani@gmail.com
+Keywords: fastapi,controller
+Classifier: Development Status :: 3 - Alpha
+Description-Content-Type: text/markdown
+Requires-Dist: fastapi
+
+A decorator based router for FastAPI
+---
+
+```python
+# fruit_controller.py
+from fastapi_cls_controller import controller, delete, get, post, put, ...
+
+@controller(
+    prefix="/fruits",
+)
+class FruitController:
+    @post("")
+    async def create(self, body: CreateFruit):
+        ...
+
+
+    @get("/{fruit_id}")
+    async def get(self, fruit_id: str):
+        ...
+
+
+```
+
+```python
+# main.py
+app.include_router(FruitController())
+```
