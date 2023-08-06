@@ -1,0 +1,8 @@
+AnyQt
+confapp
+logging-bootstrap
+ONE-api
+opencv-python==4.3.0.36
+PyQtWebEngine
+PyYAML
+safe-and-collaborative-architecture
