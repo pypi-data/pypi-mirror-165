@@ -1,0 +1,10 @@
+include *.rst
+include *.md
+include LICENSE
+
+recursive-include tests *
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]
+
+recursive-exclude *.jpg *.png *.gif
+recursive-include docs conf.py *.cfg *.yml Makefile kubify examples .github
