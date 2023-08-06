@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: pubweb
+Version: 0.3.2
+Summary: CLI tool for interacting with the PubWeb platform
+Home-page: https://github.com/FredHutch/PubWeb-client
+Author: Fred Hutch
+Author-email: viz@fredhutch.org
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Provides-Extra: all
+Provides-Extra: analysis
