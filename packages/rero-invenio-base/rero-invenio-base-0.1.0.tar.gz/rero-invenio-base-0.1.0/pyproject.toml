@@ -1,0 +1,43 @@
+[tool.poetry]
+name = "rero-invenio-base"
+version = "0.1.0"
+description = "Generic backend libraries for RERO Invenio instances."
+readme = "README.rst"
+authors = ["RERO <software@rero.ch>"]
+license = "GNU Affero General Public License v3.0"
+
+[tool.poetry.dependencies]
+python = ">3.7, <3.10"
+PyYAML = "^6.0"
+invenio-search = {version = "^1.4.2", extras = ["elasticsearch7"]}
+jsonpatch = "^1.32"
+invenio-db = "^1.0.14"
+invenio-records-rest = "*"
+Mako = ">=1.2.2"
+dparse = ">=0.5.2"
+
+[tool.poetry.dev-dependencies]
+safety = "^1.10.3"
+pytest-invenio = "^1.4.11"
+ipython = "^8.3.0"
+autoflake = "^1.4"
+Sphinx = "^4.5.0"
+
+[tool.poetry.scripts]
+check_license = "rero_invenio_base.cli.utils:check_license"
+check_json = "rero_invenio_base.cli.utils:check_json"
+rero = "rero_invenio_base.cli:rero"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.plugins."flask.commands"]
+rero = "rero_invenio_base.cli:rero"
+
+[tool.poetry.plugins."invenio_base.apps"]
+rero-invenio-base-export = "rero_invenio_base.modules.export.ext:ReroInvenioBaseExportApp"
+
+[tool.poetry.plugins."invenio_base.api_blueprints"]
+rero_ils_exports = "rero_invenio_base.modules.export.views:create_blueprint_from_app"
+
