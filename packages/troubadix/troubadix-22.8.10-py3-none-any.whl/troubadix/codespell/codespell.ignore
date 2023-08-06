@@ -1,0 +1,13 @@
+# This file is used together with the -I flag of codespell to exclude specific words from the check.
+referer
+webp
+keyserver
+keyservers
+keypair
+keypairs
+files'
+packages'
+process'
+# covert and complies are currently included in dictionary_rare.txt and are prone to false positives
+covert
+complies
