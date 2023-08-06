@@ -1,0 +1,10 @@
+unicornsdk/__init__.py,sha256=Ano5TagmbDuXHdQQGddgAUYl-SnA0mBAi_Pokc3bpqU,273
+unicornsdk/devicesession.py,sha256=NzuczNIYBbLf5AetZsJOUsY3OKtmRDuQT4IRjYbj-8Q,1038
+unicornsdk/kasada.py,sha256=KeHewxq8V2LCMJ6tl8lBd53BZdzh_EbZrme2CCAxsT4,2936
+unicornsdk/sdk.py,sha256=LpczkjDPERFge3RsbHUoZUqafkyNRhesMW36ruE6ZNI,1206
+unicornsdk/session.py,sha256=sgDFYNQTjZaLvqvuzAV7vNRDIWDjBCmdUcPFbNptL1k,6287
+unicornsdk/utils.py,sha256=nHuga5dI1-4c8oj0Ydm0n6mwQMJe9WcyHjnyK51AJ2Y,1252
+unicorn_sdk-0.0.1.dist-info/METADATA,sha256=aesMLLVFbVn4cZmFnoPneTeRJ-WyNuWUjhH3umpkt-w,88
+unicorn_sdk-0.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+unicorn_sdk-0.0.1.dist-info/top_level.txt,sha256=van2Pep_JYvmBIS7ia3ZaVOFZgaCO27ZR_HewyvZGrQ,11
+unicorn_sdk-0.0.1.dist-info/RECORD,,
