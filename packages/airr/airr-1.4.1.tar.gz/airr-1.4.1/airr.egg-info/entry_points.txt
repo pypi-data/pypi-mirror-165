@@ -1,0 +1,3 @@
+[console_scripts]
+airr-tools = airr.tools:main
+
