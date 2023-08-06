@@ -1,0 +1,8 @@
+setup.py
+ducksouplol/__init__.py
+ducksouplol/main.py
+ducksouplol/setup.py
+ducksouplol.egg-info/PKG-INFO
+ducksouplol.egg-info/SOURCES.txt
+ducksouplol.egg-info/dependency_links.txt
+ducksouplol.egg-info/top_level.txt

@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: ducksouplol
+Version: 0.1
+Summary: This is a package uploaded with OTC PyPI Uploader!
+Home-page: https://www.google.com
+Author: oliverstech
+Author-email: imrolii9876@gmail.com
+License: LICENSE.txt
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
