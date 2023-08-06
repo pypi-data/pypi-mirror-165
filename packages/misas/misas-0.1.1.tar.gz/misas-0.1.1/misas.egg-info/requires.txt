@@ -1,0 +1,12 @@
+matplotlib
+pillow
+altair
+pydicom
+torchio
+
+[dev]
+fastai
+tensorflow
+kornia
+scikit-image
+ipywidgets
