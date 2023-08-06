@@ -1,0 +1,10 @@
+LICENSE
+setup.py
+SingleLog/__init__.py
+SingleLog/log.py
+SingleLog.egg-info/PKG-INFO
+SingleLog.egg-info/SOURCES.txt
+SingleLog.egg-info/dependency_links.txt
+SingleLog.egg-info/top_level.txt
+SingleLog/__pycache__/__init__.cpython-310.pyc
+SingleLog/__pycache__/log.cpython-310.pyc
