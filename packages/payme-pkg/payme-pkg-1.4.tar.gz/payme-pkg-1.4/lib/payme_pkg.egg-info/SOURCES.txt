@@ -1,0 +1,14 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+lib/payme/__init__.py
+lib/payme/cards/__init__.py
+lib/payme/cards/subscribe_cards.py
+lib/payme/receipts/__init__.py
+lib/payme/receipts/subscribe_receipts.py
+lib/payme_pkg.egg-info/PKG-INFO
+lib/payme_pkg.egg-info/SOURCES.txt
+lib/payme_pkg.egg-info/dependency_links.txt
+lib/payme_pkg.egg-info/requires.txt
+lib/payme_pkg.egg-info/top_level.txt
