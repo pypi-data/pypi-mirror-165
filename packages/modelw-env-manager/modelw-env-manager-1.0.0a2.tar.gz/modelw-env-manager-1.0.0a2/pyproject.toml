@@ -1,0 +1,45 @@
+[tool.poetry]
+name = "modelw-env-manager"
+version = "1.0.0-alpha.2"
+packages = [
+    {  include = "model_w/env_manager", from = "src" }
+]
+
+description = "A tool to simplify reading environment variables and .env files"
+authors = ["Rémy Sanchez <remy.sanchez@hyperthese.net>"]
+license = "WTFPL"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Framework :: Django",
+    "Framework :: Django :: 3.2",
+    "Framework :: Django :: 4",
+    "Framework :: Django :: 4.0",
+    "Framework :: Django :: 4.1",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries",
+    "Typing :: Typed",
+]
+
+readme = "README.md"
+
+repository = "https://github.com/ModelW/py-env-manager"
+homepage = "https://github.com/ModelW/py-env-manager"
+
+keywords = ["django", "env", "configuration"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+PyYAML = ">=6.0"
+python-dotenv = "^0.11.0"
+
+[tool.poetry.dev-dependencies]
+isort = "*"
+black = "*"
+pytest = "^7.1.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+profile = "black"
