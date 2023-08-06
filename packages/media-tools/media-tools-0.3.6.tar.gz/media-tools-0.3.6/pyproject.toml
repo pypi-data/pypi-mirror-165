@@ -1,0 +1,51 @@
+[tool.poetry]
+name = "media-tools"
+version = "0.3.6"
+description = "Creating and managing playlists, and managing the filenames and directory structure for large numbers of music files."
+authors = ["Lene Preuss <lene.preuss@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://gitlab.com/lilacashes/music-library-tools"
+repository = "https://gitlab.com/lilacashes/music-library-tools.git"
+keywords = ["music", "audio"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+lxml = ">=4.8.0"
+tinytag = ">=1.8.1"
+pydub = ">=0.24.1"
+requests = ">=2.27.1"
+pylast = ">=5.0.0"
+python-magic = ">=0.4.25"
+audioread = ">=2.1.9"
+mutagen = ">=1.45.1"
+coloredlogs = ">=15.0.1"
+SoundFile = "^0.10.3"
+eyed3 = "^0.9.6"
+
+[tool.poetry.dev-dependencies]
+mypy = ">=0.942"
+flake8 = ">=4.0.1"
+coverage = ">=5.0"
+pylint = ">=2.13.5"
+flake8-codeclimate = ">=0.3.0"
+pylint-gitlab = ">=1.0.0"
+py-spy = "^0.3.11"
+requests-mock = "^1.8.0"
+types-requests = ">=2.27.16"
+pytest = ">=7.1.1"
+pytest-cov = ">=3.0.0"
+ptpython = "^3.0.20"
+pytest-xdist = "^2.5.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+mixcloud_upload = "media_tools.mixcloud_upload:main"
+buy_most_played = "media_tools.buy_most_played:main"
+clean_filenames = "media_tools.clean_filenames:main"
+backup_lastfm_data = "media_tools.backup_lastfm_data:entry"
+copy_from_playlist = "media_tools.copy_from_playlist:main"
+print_length = "media_tools.print_length:main"
