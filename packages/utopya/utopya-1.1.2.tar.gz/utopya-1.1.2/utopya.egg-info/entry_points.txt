@@ -1,0 +1,2 @@
+[console_scripts]
+utopya = utopya_cli.cli:cli
