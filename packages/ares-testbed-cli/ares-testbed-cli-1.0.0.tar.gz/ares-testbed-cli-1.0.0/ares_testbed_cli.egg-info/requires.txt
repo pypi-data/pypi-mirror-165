@@ -1,0 +1,6 @@
+python-dotenv
+requests
+pyyaml
+tabulate
+numpy
+munch
