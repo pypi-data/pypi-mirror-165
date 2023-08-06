@@ -1,0 +1,27 @@
+{%- set default = get_enum_default(model) %}
+
+class {{ name }}(ModelSimple):
+    """
+    {{ model.description|indent(8) }}
+
+    :param value: {%- if default != None %} If omitted defaults to {{ default|format_value }}.{%- endif %} Must be one of [{%- for value in model.enum %}{{ value|format_value }}{% if not loop.last %}, {% endif %}{%- endfor %}].
+    :type value: {{ get_enum_type(model) }}
+    """
+
+    allowed_values = {
+        "value": {
+{%- for index, value in enumerate(model.enum) %}
+            "{{ model["x-enum-varnames"][index] or value.upper() }}": {{ value|format_value(quotes='"') }},
+{%- endfor %}
+        },
+    }
+
+{% if model.nullable %}
+    _nullable = True
+{%- endif %}
+
+    @cached_property
+    def openapi_types(_):
+        return {
+            "value": ({{ get_enum_type(model) }},),
+        }

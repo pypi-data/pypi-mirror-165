@@ -1,0 +1,32 @@
+# Unless explicitly stated otherwise all files in this repository are licensed under the Apache-2.0 License.
+# This product includes software developed at Datadog (https://www.datadoghq.com/).
+# Copyright 2019-Present Datadog, Inc.
+
+
+from datadog_api_client.model_utils import (
+    ModelSimple,
+    cached_property,
+)
+
+
+class MonitorFormulaAndFunctionEventsDataSource(ModelSimple):
+    """
+    Data source for event platform-based queries.
+
+    :param value: Must be one of ["rum", "ci_pipelines", "ci_tests"].
+    :type value: str
+    """
+
+    allowed_values = {
+        "value": {
+            "RUM": "rum",
+            "CI_PIPELINES": "ci_pipelines",
+            "CI_TESTS": "ci_tests",
+        },
+    }
+
+    @cached_property
+    def openapi_types(_):
+        return {
+            "value": (str,),
+        }
