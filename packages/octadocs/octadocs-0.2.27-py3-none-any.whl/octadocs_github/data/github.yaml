@@ -1,0 +1,80 @@
+$context:
+  $import: github
+
+  # Support `octadocs-table` natively
+  table: https://octadocs.io/table/
+
+$included:
+  - $id: github:owner
+    domain: github:Repo
+    range: github:Owner
+
+  - $id: github:Repo
+    label: GitHub Repository
+    ≡:
+      onProperty: iolanta:facet
+      hasValue:
+        $id: python://octadocs_github.facets.GithubRepo
+        iolanta:supports:
+          - iolanta:html
+          - table:td
+
+  - $id: github:Owner
+    label: GitHub Repository Owner
+
+  - $id: github:stargazers_count
+    title: ⭐
+    rdfs:comment: GitHub Stars
+    domain: github:Repo
+    range: xsd:integer
+
+  - $id: github:lastCommitDate
+    label: Last Commit Date
+    domain: github:Repo
+    range: xsd:date
+
+  - $id: github:license
+    label: License
+    range: github:License
+
+  - $id: github:spdx_id
+    domain: github:License
+
+  - $id: github:License
+    iolanta:instanceFacet:
+      $id: python://octadocs_github.facets.GithubLicense
+      iolanta:supports:
+        - iolanta:html
+        - table:td
+
+  - $id: spdx:MIT
+    label: MIT
+
+  - $id: spdx:GPL-2.0
+    label: GPLv2
+
+  - $id: spdx:GPL-3.0
+    label: GPLv3
+
+  - $id: spdx:Apache-2.0
+    label: Apache 2.0
+
+  - $id: github:hasLatestRelease
+    title: Latest Release
+    rdfs:comment: Latest release published on GitHub
+    ∘:
+      - github:releases
+      - rdf:first
+
+  - $id: github:tarball_url
+    domain: github:Release
+
+  - $id: github:Release
+    iolanta:instanceFacet:
+      $id: python://octadocs_github.facets.Release
+      iolanta:supports:
+        - iolanta:html
+        - table:td
+
+  - $id: github:pushed_at
+    label: Last Commit Date

@@ -1,0 +1,108 @@
+- $id: onProperty
+  domain: owl:Restriction
+
+- $id: octa:File
+  $type: rdfs:Class
+
+- $id: octa:Page
+  subClassOf:
+    - schema:WebPage
+    - octa:File
+
+- $id: octa:title
+  label: Title
+  subPropertyOf:
+    - schema:name
+    - rdfs:label
+
+- $id: octa:url
+  label: Web-accessible URL path (usually relative, without the hostname) the page will have when the site is built.
+  subPropertyOf: schema:url
+
+- $id: octa:subjectOf
+  label: Link from a Thing to the Page which describes it.
+  subPropertyOf: schema:subjectOf
+  domain: octa:PageSubject
+
+- $id: octa:position
+  label: Position of the page in lists and directories.
+  subPropertyOf: schema:position
+
+- $id: octa:about
+  label: Link from a Page to the Thing this page describes.
+  subPropertyOf: schema:about
+  inverseOf: octa:subjectOf
+
+- $id: octa:template
+  domain: octa:HasTemplate
+  range: rdfs:Literal
+  label: HTML/Jinja2 template
+  comment: Path to an MkDocs template file used to render particular page, relative to the `templates` directory.
+
+- $id: octa:isParentOf
+- $id: octa:isChildOf
+  inverseOf: octa:isParentOf
+
+- $id: octa:IndexPage
+  ⊂: octa:Page
+  ≡:
+    onProperty: octa:fileName
+    hasValue: "index.md"
+
+- $id: https://octadocs.io/
+  $type: iolanta:Environment
+
+- $id: octa:PageFacet
+  ⊂: iolanta:Facet
+  label: Class of Iolanta facets which, instead of pointing to a piece of executable code, direct us to a template using `octa:template` property. Those are used to render MkDocs pages.
+  ≡:
+    - $type: owl:Restriction
+      onProperty: iolanta:supports
+      hasValue:
+        $id: "octa:"
+    - ∩:
+        - iolanta:Facet
+        - octa:hasTemplate
+
+- $id: octa:link
+  subClassOf: iolanta:html
+  label: If a facet supports this environment, it must render an HTML link (<a> tag) pointing to the object that the facet is rendering.
+  iolanta:hasDefaultFacet:
+    $id: python://octadocs.facets.Default
+
+- $id: iolanta:facet
+  range: iolanta:Facet
+
+# Facet that defines which template to use for an MkDocs page.
+- $id: octa:PageFacet
+  ≡:
+    ∩:
+      - iolanta:Facet      # Should be a Facet of course
+      - octa:HasTemplate   # And should have an octa:template defined
+
+# Each such facet by definition supports Octadocs as environment
+- $id: octa:PageFacet
+  ≡:
+    onProperty: iolanta:supports
+    hasValue:
+      $id: "octa:"
+
+- $id: xsd:boolean
+  iolanta:datatypeFacet:
+    $id: python://octadocs.facets.bool_literal.BoolLiteral
+    iolanta:supports: iolanta:html
+
+- $id: owl:propertyChainAxiom
+  domain: owl:ObjectProperty
+
+- $id: python://octadocs.facets.DateLiteral
+
+- $id: rdfs:Literal
+  iolanta:instanceFacet:
+    $id: python://octadocs.facets.Default
+    iolanta:supports: iolanta:html
+
+- $id: octa:url
+  ∘:
+    - octa:subjectOf
+    - octa:url

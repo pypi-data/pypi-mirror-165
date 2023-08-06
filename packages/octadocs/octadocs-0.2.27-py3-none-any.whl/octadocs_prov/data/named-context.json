@@ -1,0 +1,185 @@
+{
+  "@context": {
+    "prov": "http://www.w3.org/ns/prov#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "prov:actedOnBehalfOf": {
+      "@type": "prov:Agent"
+    },
+    "prov:activity": {
+      "@type": "prov:Activity"
+    },
+    "prov:agent": {
+      "@type": "prov:Agent"
+    },
+    "prov:alternateOf": {
+      "@type": "prov:Entity"
+    },
+    "prov:asInBundle": {
+      "@type": "prov:Bundle"
+    },
+    "prov:atLocation": {
+      "@type": "prov:Location"
+    },
+    "prov:atTime": {
+      "@type": "xsd:dateTime"
+    },
+    "prov:derivedByInsertionFrom": {
+      "@type": "prov:Dictionary"
+    },
+    "prov:derivedByRemovalFrom": {
+      "@type": "prov:Dictionary"
+    },
+    "prov:dictionary": {
+      "@type": "prov:Dictionary"
+    },
+    "prov:endedAtTime": {
+      "@type": "xsd:dateTime"
+    },
+    "prov:entity": {
+      "@type": "prov:Entity"
+    },
+    "prov:generated": {
+      "@type": "prov:Entity"
+    },
+    "prov:generatedAtTime": {
+      "@type": "xsd:dateTime"
+    },
+    "prov:hadActivity": {
+      "@type": "prov:Activity"
+    },
+    "prov:hadDictionaryMember": {
+      "@type": "prov:KeyEntityPair"
+    },
+    "prov:hadGeneration": {
+      "@type": "prov:Generation"
+    },
+    "prov:hadMember": {
+      "@type": "prov:Entity"
+    },
+    "prov:hadPlan": {
+      "@type": "prov:Plan"
+    },
+    "prov:hadPrimarySource": {
+      "@type": "prov:Entity"
+    },
+    "prov:hadRole": {
+      "@type": "prov:Role"
+    },
+    "prov:hadUsage": {
+      "@type": "prov:Usage"
+    },
+    "prov:influencer": {
+      "@type": "owl:Thing"
+    },
+    "prov:insertedKeyEntityPair": {
+      "@type": "prov:KeyEntityPair"
+    },
+    "prov:invalidated": {
+      "@type": "prov:Entity"
+    },
+    "prov:invalidatedAtTime": {
+      "@type": "xsd:dateTime"
+    },
+    "prov:mentionOf": {
+      "@type": "prov:Entity"
+    },
+    "prov:pairEntity": {
+      "@type": "prov:Entity"
+    },
+    "prov:qualifiedAssociation": {
+      "@type": "prov:Association"
+    },
+    "prov:qualifiedAttribution": {
+      "@type": "prov:Attribution"
+    },
+    "prov:qualifiedCommunication": {
+      "@type": "prov:Communication"
+    },
+    "prov:qualifiedDelegation": {
+      "@type": "prov:Delegation"
+    },
+    "prov:qualifiedDerivation": {
+      "@type": "prov:Derivation"
+    },
+    "prov:qualifiedEnd": {
+      "@type": "prov:End"
+    },
+    "prov:qualifiedGeneration": {
+      "@type": "prov:Generation"
+    },
+    "prov:qualifiedInfluence": {
+      "@type": "prov:Influence"
+    },
+    "prov:qualifiedInsertion": {
+      "@type": "prov:Insertion"
+    },
+    "prov:qualifiedInvalidation": {
+      "@type": "prov:Invalidation"
+    },
+    "prov:qualifiedPrimarySource": {
+      "@type": "prov:PrimarySource"
+    },
+    "prov:qualifiedQuotation": {
+      "@type": "prov:Quotation"
+    },
+    "prov:qualifiedRemoval": {
+      "@type": "prov:Removal"
+    },
+    "prov:qualifiedRevision": {
+      "@type": "prov:Revision"
+    },
+    "prov:qualifiedStart": {
+      "@type": "prov:Start"
+    },
+    "prov:qualifiedUsage": {
+      "@type": "prov:Usage"
+    },
+    "prov:specializationOf": {
+      "@type": "prov:Entity"
+    },
+    "prov:startedAtTime": {
+      "@type": "xsd:dateTime"
+    },
+    "prov:used": {
+      "@type": "prov:Entity"
+    },
+    "prov:wasAssociatedWith": {
+      "@type": "prov:Agent"
+    },
+    "prov:wasAttributedTo": {
+      "@type": "prov:Agent"
+    },
+    "prov:wasDerivedFrom": {
+      "@type": "prov:Entity"
+    },
+    "prov:wasEndedBy": {
+      "@type": "prov:Entity"
+    },
+    "prov:wasGeneratedBy": {
+      "@type": "prov:Activity"
+    },
+    "prov:wasInformedBy": {
+      "@type": "prov:Activity"
+    },
+    "prov:wasInvalidatedBy": {
+      "@type": "prov:Activity"
+    },
+    "prov:wasQuotedFrom": {
+      "@type": "prov:Entity"
+    },
+    "prov:wasRevisionOf": {
+      "@type": "prov:Entity"
+    },
+    "prov:wasStartedBy": {
+      "@type": "prov:Entity"
+    },
+    "=": {
+      "@id": "prov:value"
+    },
+    "⇐": {
+      "@id": "prov:wasDerivedFrom",
+      "@type": "prov:Entity"
+    }
+  }
+}

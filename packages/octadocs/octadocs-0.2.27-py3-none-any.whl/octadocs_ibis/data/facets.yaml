@@ -1,0 +1,109 @@
+$context:
+  - $import: ibis
+  - $import: iolanta
+  - $import: owl
+  - ru:
+      $id: rdfs:label
+      $language: ru
+
+$included:
+  - $id: ibis:Breadcrumbs
+    iolanta:hasDefaultFacet:
+      $id: python://octadocs_ibis.facets.Breadcrumbs
+      iolanta:supports:
+        $id: ibis:Breadcrumbs
+        rdfs:comment: Render issues for a given position. Used in page header.
+
+  - $id: ibis:Position
+    octa:position: 0
+    octa:symbol: 💬
+    ru: Мнение
+    iolanta:instanceFacet:
+      - $id: templates://octadocs-ibis/position.html
+        iolanta:supports: "octa:"
+      - $id: python://octadocs_ibis.facets.ArgumentsForPosition
+        iolanta:supports:
+          $id: ibis:ArgumentsForPosition
+          rdfs:comment: Render arguments for a position.
+      - $id: python://octadocs_ibis.facets.PositionEvaluation
+        iolanta:supports:
+          $id: ibis:PositionEvaluation
+          rdfs:comment: Render evaluation for a given position page. Used below arguments.
+      - $id: python://octadocs_ibis.facets.SuggestedNextSteps
+        iolanta:supports:
+          $id: ibis:SuggestedNextSteps
+          rdfs:comment: If we accept a given Position, show what Issues arise from it.
+      - $id: python://octadocs_ibis.facets.SourcesForPosition
+        iolanta:supports:
+          $id: ibis:SourcesForPosition
+          rdfs:comment: Sources for a Position.
+          iolanta:hasDefaultFacet:
+            $id: python://octadocs_ibis.facets.SourceForPosition
+            iolanta:supports: ibis:SourcesForPosition
+      - $id: python://octadocs_ibis.facets.IBISGraph
+        iolanta:supports:
+          $id: ibis:IBISGraph
+          rdfs:comment: IBIS graph.
+          iolanta:hasDefaultFacet:
+            $id: python://octadocs_ibis.facets.IBISGraph
+            iolanta:supports: ibis:IBISGraph
+      - $id: python://octadocs_ibis.facets.IBISNode
+        iolanta:supports:
+          $id: ibis:IBISNode
+          rdfs:comment: IBIS node.
+          iolanta:hasDefaultFacet:
+            $id: python://octadocs_ibis.facets.IBISNode
+            iolanta:supports: ibis:IBISNode
+
+  - $id: ibis:Issue
+    octa:position: 10
+    ru: Вопрос
+    octa:symbol: ❓
+    ≡:
+      owl:onProperty: octa:symbol
+      owl:hasValue: ❓
+
+    iolanta:instanceFacet:
+      - $id: templates://octadocs-ibis/issue.html
+        iolanta:supports: "octa:"
+      - $id: python://octadocs_ibis.facets.PositionsForIssue
+        iolanta:supports: ibis:PositionsForIssue
+
+  - $id: ibis:Argument
+    octa:position: 0
+    ru: Аргумент
+    ≡:
+      owl:onProperty: octa:symbol
+      owl:hasValue: ☝
+    iolanta:instanceFacet:
+      - $id: python://octadocs_ibis.facets.Argument
+        iolanta:supports: ibis:ArgumentsForPosition
+      - $id: templates://octadocs-ibis/argument.html
+        iolanta:supports: "octa:"
+      - $id: python://octadocs_ibis.facets.SourcesForPosition
+
+  - $id: schema:Image
+    iolanta:instanceFacet:
+      - $id: python://octadocs_ibis.facets.Image
+        iolanta:supports:
+          - iolanta:html
+          - ibis:ArgumentsForPosition
+
+  - $id: ibis:supports
+    ru: ➕ За
+
+  - $id: ibis:supported-by
+    title: ⊕
+    # ru: ➕ За
+
+  - $id: ibis:opposes
+    ru: ➖ Против
+
+  - $id: ibis:opposed-by
+    ru: ➖ Против
+
+  - $id: ibis:response
+    ru: Ответ
+
+  - $id: ibis:suggests
+    ru: Далее

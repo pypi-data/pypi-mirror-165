@@ -1,0 +1,15 @@
+$context:
+  - $import: rdfs
+  - $import: prov
+  - $import: iolanta
+
+$included:
+  - $id: prov:Entity
+    iolanta:instanceFacet:
+      $id: python://octadocs_prov.facets.prov_value.ProvEntity
+      iolanta:supports:
+        - iolanta:HTML
+        - table:td
+
+  - $id: prov:value
+    rdfs:domain: prov:Entity

@@ -1,0 +1,153 @@
+$context:
+  $base: "local:"
+  xsd: https://www.w3.org/2001/XMLSchema#
+  adr: https://adr.octadocs.io/
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  octa: https://octadocs.io/
+  owl: http://www.w3.org/2002/07/owl#
+  iolanta: https://iolanta.tech/
+
+  # Shorthands
+  label: rdfs:label
+  symbol: octa:symbol
+  facet: iolanta:facet
+  position: octa:position
+
+$included:
+  - $id: "adr:"
+    octa:url:
+      $id: "adr:"
+
+  - $id: adr:adr
+    $type: octa:PageFacet
+    label: Architecture Decision Record.
+    octa:template: "octadocs-decisions/adr.html"
+    iolanta:supports:
+      $id: "octa:"
+
+  - $id: adr:adr-list
+    $type: octa:PageFacet
+    label: List of Architecture Decision Records.
+    octa:template: "octadocs-decisions/adr-list.html"
+
+  - $id: adr:DecisionPage
+    iolanta:facet:
+      $id: python://octadocs_adr.facets.adr_list
+      iolanta:supports:
+        $id: iolanta:html
+    iolanta:instanceFacet:
+      - $id: templates:octadocs-decisions/adr.html
+        iolanta:supports: "octa:"
+      - $id: python://octadocs_adr.facets.link.LinkToADR
+        iolanta:supports:
+          - $id: octa:link
+          - $id: adr:sidebar-property-value
+      - $id: python://octadocs_adr.facets.sidebar.PageSidebar
+        iolanta:supports: adr:sidebar
+
+  - $id: adr:Directory
+    label: Directory with ADR pages.
+    owl:equivalentClass:
+      $type: owl:Restriction
+      owl:onProperty:
+        $id: octa:isParentOf
+      owl:someValuesFrom:
+        $id: adr:DecisionPage
+
+  - $id: adr:Index
+    label: Index of an ADR directory.
+    iolanta:instanceFacet:
+      $id: templates:octadocs-decisions/adr-list.html
+      iolanta:supports: "octa:"
+    owl:equivalentClass:
+      - ∩:
+          - $id: octa:IndexPage
+          - $type: owl:Restriction
+            owl:onProperty:
+              $id: octa:isChildOf
+            owl:someValuesFrom:
+              $id: adr:Directory
+      - $type: owl:Restriction
+        owl:onProperty:
+          $id: octa:title
+        owl:hasValue: "Decisions"
+
+  - $id: adr:number
+    rdfs:subPropertyOf:
+      # Thus, Octadocs will sort by ADR number in navigation.
+      $id: octa:position
+    rdfs:domain:
+      # Allows to automatically consider a page to mean an ADR when it has a `number` defined.
+      $id: adr:DecisionPage
+
+  - $id: accepted
+    $type: adr:Status
+    label: Accepted
+    symbol: ✔️
+
+  - $id: rejected
+    $type: adr:Status
+    label: Rejected
+    symbol: ❌
+
+  - $id: created
+    $type: adr:Status
+    label: Created
+    symbol: 💡
+
+  - $id: adr:ADRProperty
+    label: Class of properties that will be displayed in an ADR page sidebar.
+
+  - $id: adr:author
+    $type: adr:ADRProperty
+    label: Author
+    position: -40
+
+  - $id: adr:date
+    $type: adr:ADRProperty
+    label: Date
+    position: -30
+
+  - $id: adr:status
+    $type: adr:ADRProperty
+    rdfs:range:
+      $id: adr:Status
+    label: Status
+    position: -50
+
+  - $id: adr:Status
+    iolanta:facet:
+      $id: python://octadocs_adr.facets.status_class
+      iolanta:supports:
+        $id: iolanta:html
+    owl:equivalentClass:
+      $type: owl:Restriction
+      owl:onProperty:
+        $id: iolanta:facet
+      owl:hasValue:
+        $id: python://octadocs_adr.facets.status
+        iolanta:supports:
+          $id: iolanta:html
+
+  - $id: schema:name
+    # This is only needed before we have schema.org vocabulary imported.
+    rdfs:subPropertyOf:
+      $id: rdfs:label
+
+  # Now go the environments
+  - $id: adr:sidebar
+    label: Environment for the page sidebar, to list properties of current page.
+    $type: iolanta:Environment
+    iolanta:hasDefaultFacet:
+      $id: python://octadocs_adr.facets.sidebar
+
+  - $id: adr:sidebar-property
+    label: Environment for property names in ADR page sidebar
+    $type: iolanta:Environment
+    iolanta:hasDefaultFacet:
+      $id: python://octadocs_adr.facets.sidebar_property
+
+  - $id: adr:sidebar-property-value
+    label: Environment for property values in ADR page sidebar
+    iolanta:hasDefaultFacet:
+      $id: python://octadocs.facets.Default

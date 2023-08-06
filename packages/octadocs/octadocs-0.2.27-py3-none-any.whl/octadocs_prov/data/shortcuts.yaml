@@ -1,0 +1,8 @@
+$context:
+  prov: "http://www.w3.org/ns/prov#"
+  autocontext: "https://octadocs.io/autocontext/"
+$included:
+  - $id: prov:value
+    autocontext:shortcut: "="
+  - $id: prov:wasDerivedFrom
+    autocontext:shortcut: ⇐

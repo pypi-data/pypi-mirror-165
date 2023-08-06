@@ -1,0 +1,20 @@
+SELECT ?prov_value ?comment (COUNT(?prov_value) AS ?count) WHERE {
+    ?instance $column ?node .
+
+    {
+        FILTER isLiteral(?node) .
+    } UNION {
+        FILTER (isIRI(?node) || isBlank(?node)) .
+        ?node prov:value+ ?prov_value .
+
+        OPTIONAL {
+            {
+                ?prov_value rdfs:comment ?comment .
+            } UNION {
+                ?node rdfs:comment ?comment .
+            }
+        }
+    }
+}
+GROUP BY ?prov_value ?comment
+ORDER BY DESC(?count)

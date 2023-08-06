@@ -1,0 +1,20 @@
+{% extends "octadocs-ibis/main.html" %}
+
+
+{% block content %}
+  {{ super() }}
+
+  {% if page.meta.description %}
+    <blockquote>
+      <p>
+        {{ page.meta.description }}
+      </p>
+    </blockquote>
+  {% endif %}
+
+  {{ render(page.id, environments=ibis.SourcesForPosition) }}
+  {{ render(page.id, environments=ibis.ArgumentsForPosition) }}
+  {{ render(page.id, environments=ibis.PositionEvaluation) }}
+
+  {{ render(page.id, environments=ibis.SuggestedNextSteps) }}
+{% endblock %}

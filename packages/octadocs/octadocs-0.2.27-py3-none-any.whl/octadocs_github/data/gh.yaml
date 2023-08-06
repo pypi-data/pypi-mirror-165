@@ -1,0 +1,12 @@
+$context:
+  github: https://octadocs.io/github/
+  spdx: http://spdx.org/licenses/
+
+  github:updated_at:
+    $type: xsd:dateTime
+
+  github:pushed_at:
+    $type: xsd:dateTime
+
+  github:published_at:
+    $type: xsd:date
