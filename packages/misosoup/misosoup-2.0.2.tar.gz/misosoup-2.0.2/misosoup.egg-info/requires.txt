@@ -1,0 +1,10 @@
+reframed>=1.2.1
+gurobipy
+pyyaml>=6.0
+pandas
+
+[dev]
+pylint
+pytest
+tox
+black
