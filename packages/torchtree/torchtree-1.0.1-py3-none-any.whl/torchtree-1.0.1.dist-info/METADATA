@@ -1,0 +1,73 @@
+Metadata-Version: 2.1
+Name: torchtree
+Version: 1.0.1
+Summary: Phylogenetic inference with pytorch
+Home-page: https://github.com/4ment/torchtree
+Author: Mathieu Fourment
+Author-email: mathieu.fourment@uts.edu.au
+License: GPL3
+Keywords: phylogenetics,variational,Bayes,pytorch
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: dendropy
+Requires-Dist: numpy (>=1.7)
+Requires-Dist: torch (>=1.9)
+Provides-Extra: dev
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: flake8 ; extra == 'dev'
+Requires-Dist: isort ; extra == 'dev'
+Requires-Dist: pylint ; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+
+# torchtree
+
+[![Python package](https://github.com/4ment/torchtree/actions/workflows/python-package.yml/badge.svg)](https://github.com/4ment/torchtree/actions/workflows/python-package.yml)
+
+## Installation
+
+### Use an Anaconda environment (Optional)
+```bash
+conda env create -f environment.yml
+conda activate torchtree
+```
+
+### The easy way
+To install the latest stable version, run
+```bash
+pip install torchtree
+```
+
+### Using the source code
+```bash
+git clone https://github.com/4ment/torchtree
+cd torchtree
+pip install .
+```
+
+## Check install
+```bash
+torchtree --help
+```
+
+## Quick start
+torchtree will approximate the posterior distribution of an unrooted tree with a JC69 substitution model using variational inference 
+```bash
+torchtree examples/advi/fluA.json
+```
+
+The JSON file can be generated using the torchtree CLI
+```bash
+torchtree-cli advi -i data/fluA.fa -t data/fluA.tree > fluA.json
+```
+
