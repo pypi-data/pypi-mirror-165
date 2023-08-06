@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: ml-dataloader
+Version: 0.5.8
+Summary: UNKNOWN
+Home-page: https://github.com/ericxsun/ml-dataloader.git
+License: UNKNOWN
+Description: 
+        **ml-dataloader** is an **efficient** and **flexible** data loading pipeline for deep learning, written in pure Python.
+        
+Keywords: machine learning,deep learning,neural network,data processing
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Provides-Extra: all
