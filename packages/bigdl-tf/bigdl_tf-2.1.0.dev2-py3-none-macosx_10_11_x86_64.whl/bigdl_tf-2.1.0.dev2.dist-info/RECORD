@@ -1,0 +1,6 @@
+bigdl/share/tflibs/darwin-x86_64/libtensorflow_framework.dylib,sha256=JoYAuu53efhas7Lbg4EZt1ss2o6crTPB4cBbwD6JaJ8,43939060
+bigdl/share/tflibs/darwin-x86_64/libtensorflow_jni.dylib,sha256=2fbNJM0hLK4NRx3QZJUozx0dZjyAzx0dezP-oSmlUwQ,283172852
+bigdl_tf-2.1.0.dev2.dist-info/METADATA,sha256=diAgGOzmfAQSonXSxihuBGXgXx1ZcUeTPS9VC5F3N5Q,271
+bigdl_tf-2.1.0.dev2.dist-info/WHEEL,sha256=ByEe5lZ1e0kpMnloMPDgyyEbX_1Z_K5iNFXhG0bV_5I,108
+bigdl_tf-2.1.0.dev2.dist-info/top_level.txt,sha256=iGuLfZARD_qANcIMfy0tbbrC3EtCg6BSiH8icc3dLWs,6
+bigdl_tf-2.1.0.dev2.dist-info/RECORD,,
