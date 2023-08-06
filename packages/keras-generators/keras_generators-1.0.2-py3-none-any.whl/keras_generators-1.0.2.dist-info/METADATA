@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: keras-generators
+Version: 1.0.2
+Summary: Multi-dimensional/Multi-input/Multi-output Data preprocessing and Batch Generators for Keras models
+Home-page: https://github.com/asuiu/keras-generators
+Author: Andrei Suiu
+Author-email: andrei.suiu@gmail.com
+License: Apache License 2.0
+Keywords: ML,DataGenerators,Keras,tensorflow
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: packaging
+Requires-Dist: tensorflow (>=2.8.0)
+Requires-Dist: scikit-learn (>=0.22.2)
+Requires-Dist: numpy (>=1.20)
+Provides-Extra: tests
+
+# keras-generators
+Multi-dimensional/Multi-input/Multi-output Data preprocessing and Batch Generators for Keras models
