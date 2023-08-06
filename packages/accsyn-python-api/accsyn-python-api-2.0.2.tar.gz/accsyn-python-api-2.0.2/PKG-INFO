@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: accsyn-python-api
+Version: 2.0.2
+Summary: A Python API for accsyn programmable fast and secure data delivery software
+Home-page: https://github.com/accsyn/accsyn-python-api.git
+Author: Henrik Norin
+Author-email: henrik.norin@accsyn.com
+License: Apache License (2.0)
+Description: # accsyn-python-api
+        Official accsyn fast film delivery Python API
+        
+        Complete Python API reference can be found [here](https://support.accsyn.com/python-api).
+        
+        
+        Changelog:
+        ----------
+        
+        See doc/release_notes.rst
+        
+        
+        Henrik Norin, HDR AB, 2022
+        accsyn(r) - secure data delivery and workflow sync
+        https://accsyn.com 
+        https://support.accsyn.com
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=2.7.9, <4.0
+Description-Content-Type: text/markdown
