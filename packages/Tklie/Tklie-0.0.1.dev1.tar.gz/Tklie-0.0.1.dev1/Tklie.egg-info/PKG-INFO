@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: Tklie
+Version: 0.0.1.dev1
+Summary: 使用tkinter和tkdev4开发的功能库。
+Home-page: https://xiangqinxidevelopment.jetbrains.space/p/tkinterdev
+Author: XiangQinxi
+Author-email: XiangQinxi@outlook.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
