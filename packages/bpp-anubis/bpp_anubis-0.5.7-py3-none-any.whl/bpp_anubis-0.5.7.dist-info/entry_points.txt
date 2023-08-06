@@ -1,0 +1,4 @@
+[console_scripts]
+anubis = anubis.__main__:main
+anubis-combine-results = anubis.results_utils.__main__:main
+anubis-json-to-junit = anubis.results_utils.json_to_junit:main
