@@ -1,0 +1,2 @@
+include src/pydbeamer/*.sty
+include src/pydbeamer/*.tex
