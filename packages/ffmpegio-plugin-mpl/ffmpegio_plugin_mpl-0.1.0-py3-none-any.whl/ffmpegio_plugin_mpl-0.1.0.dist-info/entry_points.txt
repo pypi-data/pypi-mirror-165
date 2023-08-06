@@ -1,0 +1,2 @@
+[ffmpegio]
+rawdata_mpl = ffmpegio_plugin_mpl
