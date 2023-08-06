@@ -1,0 +1,2 @@
+[console_scripts]
+nibe-mqtt = nibe_mqtt.console_scripts.nibe_mqtt_service:main
