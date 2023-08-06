@@ -1,0 +1,3 @@
+pyacoustid
+audioread
+tqdm

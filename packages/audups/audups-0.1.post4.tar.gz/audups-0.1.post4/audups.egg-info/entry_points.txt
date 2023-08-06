@@ -1,0 +1,2 @@
+[console_scripts]
+audups = audups:main
