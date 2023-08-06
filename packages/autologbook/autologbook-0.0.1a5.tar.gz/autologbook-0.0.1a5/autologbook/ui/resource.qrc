@@ -1,0 +1,17 @@
+<RCC>
+  <qresource>
+    <file>resources/icons8-edit-user-30.png</file>
+    <file>resources/icons8-close-30.png</file>
+    <file>resources/icons8-edit-30.png</file>
+    <file>resources/icons8-high-importance-30.png</file>
+    <file>resources/icons8-internet-folder-30.png</file>
+    <file>resources/icons8-ok-30.png</file>
+    <file>resources/icons8-opened-folder-30.png</file>
+    <file>resources/icons8-open-envelope-30.png</file>
+    <file>resources/icons8-pictures-folder-30.png</file>
+    <file>resources/icons8-save-30.png</file>
+    <file>resources/icons8-start-30.png</file>
+    <file>resources/icons8-stop-sign-30.png</file>
+    <file>resources/icons8-logbook-64.png</file>
+  </qresource>
+</RCC>

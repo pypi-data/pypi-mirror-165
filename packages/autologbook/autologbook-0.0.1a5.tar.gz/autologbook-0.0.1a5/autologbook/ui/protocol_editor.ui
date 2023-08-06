@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>tree_viewer_dialog</class>
+ <widget class="QDialog" name="tree_viewer_dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>686</width>
+    <height>834</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Protocol editor</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resource.qrc">
+    <normaloff>:/resources/icons8-logbook-64.png</normaloff>:/resources/icons8-logbook-64.png</iconset>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_3">
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QTreeView" name="autolog_tree_viewer">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QLabel" name="image_preview">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>400</width>
+             <height>300</height>
+            </size>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::Box</enum>
+           </property>
+           <property name="text">
+            <string>Image preview not available for this element</string>
+           </property>
+           <property name="scaledContents">
+            <bool>false</bool>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="margin">
+            <number>0</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="caption_label">
+           <property name="text">
+            <string>Caption</string>
+           </property>
+           <property name="buddy">
+            <cstring>caption_field</cstring>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="caption_field"/>
+         </item>
+         <item>
+          <widget class="QLabel" name="description_label">
+           <property name="text">
+            <string>Description</string>
+           </property>
+           <property name="buddy">
+            <cstring>description_input</cstring>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPlainTextEdit" name="description_input">
+           <property name="layoutDirection">
+            <enum>Qt::LeftToRight</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="extrainfo_label">
+           <property name="text">
+            <string>Extra information</string>
+           </property>
+           <property name="buddy">
+            <cstring>extrainfo_input</cstring>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPlainTextEdit" name="extrainfo_input"/>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QPushButton" name="refresh_view_button">
+         <property name="text">
+          <string>Refresh view</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="update_protocol_button">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="text">
+          <string>Update protocol</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QDialogButtonBox" name="buttonBox">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="standardButtons">
+          <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+  <action name="actionsave_fields">
+   <property name="text">
+    <string>save_fields</string>
+   </property>
+   <property name="toolTip">
+    <string>Save the current contents of the input fileds and force a protocol updates</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>tree_viewer_dialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>228</x>
+     <y>813</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>tree_viewer_dialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>296</x>
+     <y>819</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>autolog_tree_viewer</sender>
+   <signal>clicked(QModelIndex)</signal>
+   <receiver>tree_viewer_dialog</receiver>
+   <slot>get_values(QModelIndex)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>38</x>
+     <y>202</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>4</x>
+     <y>727</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>update_protocol_button</sender>
+   <signal>clicked()</signal>
+   <receiver>tree_viewer_dialog</receiver>
+   <slot>update_protocol()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>115</x>
+     <y>809</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>48</x>
+     <y>796</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>update_protocol_button</sender>
+   <signal>clicked()</signal>
+   <receiver>tree_viewer_dialog</receiver>
+   <slot>update_protocol()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>160</x>
+     <y>812</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>7</x>
+     <y>810</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>tree_viewer_dialog</receiver>
+   <slot>update_protocol()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>528</x>
+     <y>812</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>478</x>
+     <y>796</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionsave_fields</sender>
+   <signal>triggered()</signal>
+   <receiver>tree_viewer_dialog</receiver>
+   <slot>update_protocol()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>342</x>
+     <y>415</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>refresh_view_button</sender>
+   <signal>clicked()</signal>
+   <receiver>tree_viewer_dialog</receiver>
+   <slot>refresh_view()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>49</x>
+     <y>813</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1</x>
+     <y>647</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>get_values(QModelIndex)</slot>
+  <slot>caption_updated()</slot>
+  <slot>description_updated()</slot>
+  <slot>update_protocol()</slot>
+  <slot>extra_updated()</slot>
+  <slot>refresh_view()</slot>
+ </slots>
+</ui>

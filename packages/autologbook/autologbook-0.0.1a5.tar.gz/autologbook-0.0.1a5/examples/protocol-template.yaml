@@ -1,0 +1,45 @@
+#
+# Use this file as a template for additional imformation to be added to the automatic protocol generation
+#
+# toto (antonio.bulgheroni@ec.europa.eu)
+#
+# 2022-05-18
+#
+# Each section has a description long string field that can contain Markdown codes plus all
+# additional fileds you may want to add. The additional fields will be rendered as an itemized
+# list in the final HTML document.
+#
+#Introduction:
+   #Description: | ## write here below the description. It will appeare just below the main title. You can use MD
+   #Extra:
+      #Field1: text1
+#
+# The navigation image:
+#NavCam:
+   #Description: | ## write here below the description. You can use MD
+   #Extra:
+      #Field1: text1
+#
+# Use the navcam filename to add a specific caption
+#navcamfilename:
+   #Caption:
+   #Extra:
+      #Field1: text
+
+# Sample part. Each sample must have a section with the corresponding name
+#Sample1:
+   #Description: | ## write here below the sample description. It will appeare before the image list
+   #Extra:
+      #Filed1: text1
+#
+#001: # Use the picture ID (number, without the 0s in front) to add something specific to that image
+   #Description: |
+   #  A test
+   #Caption: nice! # Add here an optional caption
+   #Extra:
+      #Field1: text1 # All additional fields will appeare as a bullet list in an extra full span row of the table.
+
+#Conclusion:
+   #Description: | ## write the below the protocol conclusive description. It will appeare at the end of the page. You can use MD
+   #Extra:
+      #Field1: text1 # All additional elements will be rendered as a bullet list after the description.
