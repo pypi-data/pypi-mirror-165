@@ -1,0 +1,3 @@
+[console_scripts]
+qgis-plugin-dev-tools = qgis_plugin_dev_tools.cli:run
+qpdt = qgis_plugin_dev_tools.cli:run
