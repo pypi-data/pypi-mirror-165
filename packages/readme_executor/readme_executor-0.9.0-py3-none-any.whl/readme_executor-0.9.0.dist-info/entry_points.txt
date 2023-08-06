@@ -1,0 +1,3 @@
+[console_scripts]
+readme-executor=readme_executor:_app
+
