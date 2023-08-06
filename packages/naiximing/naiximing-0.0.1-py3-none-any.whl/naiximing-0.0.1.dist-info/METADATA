@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: naiximing
+Version: 0.0.1
+Summary: 各种有趣的工具合集.
+Home-page: https://github.com/AxsPlayer/Tool_AI-Task
+Author: kexi
+Author-email: 498100059@qq.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Pillow
+
+# AI-Task-Tool
+End-to-end Tools for AI Tasks, which could be used without any development else.

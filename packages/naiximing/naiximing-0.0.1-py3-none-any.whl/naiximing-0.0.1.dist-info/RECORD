@@ -1,0 +1,16 @@
+naiximing/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+naiximing/core/__init__.py,sha256=hHHkA6qmojSU-5L1uDC_4A-EYfT38nbiYclZqKDdktI,14
+naiximing/core/cv_tool/__init__.py,sha256=S9HTlQwVHq0DkNrQu_EYq8W1UNBoldTA4YW0aQRe9G8,18
+naiximing/core/cv_tool/cut_image/__init__.py,sha256=NQMR4Mjkeh22unD3PkNTkakU2hwabM7wl5RK3FWFSIk,19
+naiximing/core/cv_tool/cut_image/cut_convert.py,sha256=7fESOji7eoAAAbMcvYvo4KU1a4ECref6pok2RiIeiDU,1826
+naiximing/core/cv_tool/pdf_ocr/__init__.py,sha256=yXg9YcjOoY-Z6NdZe1nbaiOhlHoO_RoZHRNh8712XRo,60
+naiximing/core/cv_tool/pdf_ocr/script/__init__.py,sha256=yXg9YcjOoY-Z6NdZe1nbaiOhlHoO_RoZHRNh8712XRo,60
+naiximing/core/cv_tool/pdf_ocr/script/pdf_ocr.py,sha256=Kwu4hLKroSRd1dht-YznM4kaBRQ0n5SCD-UraYOwPAQ,645
+naiximing/core/ml_tool/__init__.py,sha256=yXg9YcjOoY-Z6NdZe1nbaiOhlHoO_RoZHRNh8712XRo,60
+naiximing/core/nlp_tool/__init__.py,sha256=yXg9YcjOoY-Z6NdZe1nbaiOhlHoO_RoZHRNh8712XRo,60
+naiximing/utils/__init__.py,sha256=dqX5XHq6Rsv_vvg_TITjEqwE6ScJEMR167u9Fp4m_T8,97
+naiximing-0.0.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+naiximing-0.0.1.dist-info/METADATA,sha256=lJBvnzh8AszYzLQycSxH2cpax5h0xW7Ta1v9ifVlziM,515
+naiximing-0.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+naiximing-0.0.1.dist-info/top_level.txt,sha256=8oitBh4PgtqjLL8-NE0A04hJCHuiV07hdlwc0qQ9D-k,10
+naiximing-0.0.1.dist-info/RECORD,,
