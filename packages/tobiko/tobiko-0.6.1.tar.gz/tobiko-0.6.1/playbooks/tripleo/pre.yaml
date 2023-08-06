@@ -1,0 +1,12 @@
+---
+
+- hosts: all
+  roles:
+    - tobiko-ensure-ssh-keys
+
+- hosts: primary
+  roles:
+    - tobiko-zuul
+    - tobiko-configure
+    - ci-common-vars
+    - run-test
