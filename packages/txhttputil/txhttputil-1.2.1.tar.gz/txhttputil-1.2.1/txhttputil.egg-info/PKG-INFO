@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: txhttputil
+Version: 1.2.1
+Summary: Synerty utility classes for serving a static site with twisted.web with user permissions.
+Home-page: https://github.com/Synerty/txhttputil
+Download-URL: https://github.com/Synerty/txhttputil/tarball/1.2.1
+Author: Synerty
+Author-email: contact@synerty.com
+Keywords: twisted,resource,file,download,synerty
+Classifier: Programming Language :: Python :: 3.9
+License-File: LICENSE

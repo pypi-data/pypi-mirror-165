@@ -1,0 +1,6 @@
+pytz
+txwebsocket>=1.0.1
+filetype
+pem
+pytmpdir
+treelib<2.0,>=1.6.1
