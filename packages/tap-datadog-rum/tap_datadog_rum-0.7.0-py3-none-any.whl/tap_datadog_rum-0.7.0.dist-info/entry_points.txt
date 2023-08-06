@@ -1,0 +1,2 @@
+[console_scripts]
+tap-datadog-rum = tap_datadog_rum:main
