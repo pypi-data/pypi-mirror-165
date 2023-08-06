@@ -1,0 +1,14 @@
+---
+display_name: Relay # human readable name
+job_name: relay
+display: true  # true to display on the /Pioreactors card
+source: Relay
+description: Turn your add-on (light source, pump) on or off.
+published_settings:
+  - key: on   # as defined in Python
+    unit:
+    label: Relay on # human readable name
+    description: 
+    type: boolean  # one of numeric, boolean, text
+    default: null
+    display: true # true to display on the /Pioreactors card
