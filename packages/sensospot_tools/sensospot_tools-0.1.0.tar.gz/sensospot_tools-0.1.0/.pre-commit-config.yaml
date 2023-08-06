@@ -1,0 +1,43 @@
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v2.4.0
+    hooks:
+    -   id: check-added-large-files
+    -   id: check-byte-order-marker
+    -   id: check-json
+    -   id: check-merge-conflict
+    -   id: check-toml
+    -   id: debug-statements
+    -   id: detect-private-key
+-   repo: local
+    hooks:
+    -   id: isort-project
+        name: isort project
+        entry: isort -rc src
+        language: system
+        pass_filenames: false
+    -   id: isort-test
+        name: isort test
+        entry: isort -rc tests
+        language: system
+        pass_filenames: false
+    -   id: black
+        name: black
+        entry: black src tests
+        language: system
+        pass_filenames: false
+    -   id: flake8
+        name: flake8 project
+        entry: flake8 src
+        language: system
+        pass_filenames: false
+    -   id: flake8
+        name: flake8 tests
+        entry: flake8 --ignore S101 tests
+        language: system
+        pass_filenames: false
+    -   id: pytest
+        name: pytest
+        entry: pytest tests
+        pass_filenames: false
+        language: system
