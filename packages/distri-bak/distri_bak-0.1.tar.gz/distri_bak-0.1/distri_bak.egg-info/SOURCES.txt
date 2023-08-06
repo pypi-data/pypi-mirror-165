@@ -1,0 +1,10 @@
+setup.py
+distri_bak/Binomialdistribution.py
+distri_bak/Gaussiandistribution.py
+distri_bak/Generaldistribution.py
+distri_bak/__init__.py
+distri_bak.egg-info/PKG-INFO
+distri_bak.egg-info/SOURCES.txt
+distri_bak.egg-info/dependency_links.txt
+distri_bak.egg-info/not-zip-safe
+distri_bak.egg-info/top_level.txt
