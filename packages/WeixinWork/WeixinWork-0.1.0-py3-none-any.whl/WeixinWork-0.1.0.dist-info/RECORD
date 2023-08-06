@@ -1,0 +1,10 @@
+weixinwork/__init__.py,sha256=n2ZL1jHTGT3mjP-KhWF960KX94qfIEggxHu_3-tBTjU,37
+weixinwork/__version__.py,sha256=QTYqXqSTHFRkM9TEgpDFcHvwLbvqHDqvqfQ9EiXkcAM,23
+weixinwork/bot.py,sha256=KnoUnSUKVq9v3SZ7HPakUEKpHKUSyxpSlem_gzMdmlw,3003
+weixinwork/errors.py,sha256=ti8Zl3VhISc2HTW9LEU_G5Bgi5EA1LLB-SB0sIlikNA,330
+weixinwork/log.py,sha256=h-tieC5J-J3hOY7VyE1AbQzYChU5qD1FLnIcH7fySeA,56
+WeixinWork-0.1.0.dist-info/LICENSE,sha256=JXgOR9MuQIGQqdvgDz9EqrVDc0QcTSmgnv-BB1-5MrE,1085
+WeixinWork-0.1.0.dist-info/METADATA,sha256=gOSACy0QGtJIoz-kKe-MPyvpwM6riXcPbjmfiA5LUJA,3722
+WeixinWork-0.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+WeixinWork-0.1.0.dist-info/top_level.txt,sha256=N9RtfkIEuokaGgRc_EQIkjc0n0QJ-2YJLDNb23dj7po,11
+WeixinWork-0.1.0.dist-info/RECORD,,
