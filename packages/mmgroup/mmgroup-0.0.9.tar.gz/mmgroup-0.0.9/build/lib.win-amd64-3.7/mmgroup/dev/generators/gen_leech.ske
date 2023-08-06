@@ -1,0 +1,518 @@
+/** @file gen_leech.c
+The functions in file ``gen_leech.c`` implement operations on the
+vectors of the Leech lattice modulo 2 and on the
+subgroup \f$Q_{x0}\f$. We use the terminology defined in
+the document *The C interface of the mmgroup project*, 
+section *Description of the mmgroup.generators extension*.
+*/
+
+
+/*************************************************************************
+** External references 
+*************************************************************************/
+
+/// @cond DO_NOT_DOCUMENT 
+#include <string.h>
+#include "mat24_functions.h"
+#define MMGROUP_GENERATORS_INTERN
+#include "mmgroup_generators.h"
+/// @endcond 
+
+
+
+
+// %%EXPORT_KWD MAT24_API
+
+
+// %%GEN ch
+#ifdef __cplusplus
+extern "C" {
+#endif
+// %%GEN c
+
+
+//  %%GEN h
+
+
+// %%GEN h
+
+
+/**
+ @def gen_leech2_def_mul(x1, x2, result)
+ @brief Macro version of function ``gen_leech2_mul``.
+
+ Macro ``gen_leech2_def_mul(x1, x2, result)`` is equivalent to
+ the statement ``result = gen_leech2_mul(x1, x2)``.
+ The macro generates a sequence of statements!
+
+ Caution:
+
+ Here ``result`` must be an integer lvalue that is different
+ from both integers, ``x1`` and ``x2``!
+
+*/
+#define gen_leech2_def_mul(x1, x2, result) \
+    result = ((x2) >> 12) & (x1); \
+    mat24_def_parity12(result); \
+    result = ((result) << 24) ^ (x1) ^(x2); 
+
+
+/// @cond DO_NOT_DOCUMENT 
+//  %%GEN c
+
+
+/*************************************************************************
+*** Multiplication and exponentiation in the group Q_{x0}
+*************************************************************************/
+
+
+/**
+  @brief Return product of two elements the group \f$Q_{x0}\f$.
+
+  Here all elements of the group \f$Q_{x0}\f$ are encoded in
+  ``Leech lattice encoding``. The function returns the
+  product of the elements ``x1`` and ``x2`` of \f$Q_{x0}\f$.
+*/
+// %%EXPORT px
+uint32_t gen_leech2_mul(uint32_t x1, uint32_t x2)
+{
+    uint_fast32_t result;
+    gen_leech2_def_mul(x1, x2, result);
+    return result;
+}
+
+
+/**
+  @brief Return power of element the group \f$Q_{x0}\f$.
+
+  Here all elements of the group \f$Q_{x0}\f$ are encoded in
+  ``Leech lattice encoding``. The function returns the
+  power ``x1**e`` of the element ``x1`` of \f$Q_{x0}\f$.
+*/
+// %%EXPORT px
+uint32_t gen_leech2_pow(uint32_t x1, uint32_t e)
+{
+    uint_fast32_t scalar = 0; 
+    x1 &= 0x1ffffff;
+    if (e & 2) {
+        scalar = (x1 >> 12) &  x1 & 0xfff;
+        mat24_def_parity12(scalar);
+        scalar <<= 24;
+    }
+    return (e & 1) ? x1 ^ scalar : scalar;
+}
+
+
+
+/**
+  @brief Return scalar product in the Leech lattice modulo 2.
+
+  Here all elements of Leech lattice modulo 2 are encoded in
+  ``Leech lattice encoding``. The function returns the
+  scalar product of the vectors ``x1`` and ``x2`` in the
+  Leech lattice modulo 2, which may be 0 or 1.
+*/
+// %%EXPORT px
+uint32_t gen_leech2_scalprod(uint32_t x1, uint32_t x2)
+{
+    uint_fast32_t scalar; 
+    scalar = (((x1 >> 12) & x2) ^ ((x2 >> 12) & x1)) & 0xfff; 
+    mat24_def_parity12(scalar);
+    return scalar;
+}
+
+
+
+
+/************************************************************************
+*************************************************************************
+*** Leech lattice mod 2
+*************************************************************************
+*************************************************************************/
+
+
+/*************************************************************************
+*** Operation of monomial generators on the extraspecial group Q{x0}
+*************************************************************************/
+
+
+/// @cond DO_NOT_DOCUMENT 
+
+/**
+  @brief Perform operation \f$x_d x_\delta\f$ on \f$Q_{x0}\f$
+
+  The function returns the element \f$q_0 x_d x_\delta\f$ for
+  \f${q_0} \in Q_{x0}\f$. Here  parameters ``d`` and 
+  ``delta`` are the numbers of the Golay code element \f$d\f$
+  and the cocode element \f$\delta\f$ defined in the API reference  
+  in section **The Golay code and its cocode**.
+  
+  Parameter \f${q_0}\f$ and the result are given Leech lattice 
+  encoding.
+*/
+static inline
+uint32_t op_x_d_delta(uint32_t q0, uint32_t d, uint32_t delta)
+{
+    uint32_t s;
+    delta ^= MAT24_THETA_TABLE[d & 0x7ff];
+    s = ((q0 >> 12) & delta) ^ (q0 & d);
+    mat24_def_parity12(s);
+    return q0 ^ (s << 24);
+}
+
+
+/**
+  @brief Perform operation \f$x_\delta x_\pi\f$ on \f$Q_{x0}\f$
+
+  The function returns the element \f$q_0 x_\delta x_\pi\f$ for
+  \f${q_0} \in Q_{x0}\f$. Here  parameter ``pi`` is the number 
+  of the permutation \f$\pi\f$  in \f$_{24}\f$, and ``d`` is the
+  number of the cocode element \f$\delta x\f$. These numbers are 
+  defined in the API reference  in sections **Automorphisms of the 
+  Parker loop** and  **The Golay code and its cocode**, respectively.
+  
+  Parameter \f${q_0}\f$ and the result are given Leech lattice 
+  encoding.
+*/
+static inline
+uint32_t op_delta_pi(uint32_t q0, uint32_t delta, uint32_t pi)
+{
+    uint32_t xd, xdelta;
+    uint8_t perm[24];
+    uint32_t autpl[12];
+    
+    xd = (q0 >> 12) & 0x1fff;
+    xdelta =  (q0 ^ MAT24_THETA_TABLE[(q0 >> 12) & 0x7ff]) & 0xfff;
+    if (pi == 0 || mat24_m24num_to_perm(pi, perm)) {
+        xd ^=  mat24_scalar_prod(xd, delta) << 12;
+    } else {
+        mat24_perm_to_autpl(delta, perm, autpl);
+        xd = mat24_op_ploop_autpl(xd, autpl);
+        xdelta =  mat24_op_cocode_perm(xdelta, perm);
+    }
+    return (xd << 12) ^ xdelta ^ (MAT24_THETA_TABLE[xd & 0x7ff] & 0xfff);
+}
+
+
+/**
+  @brief Inverse of function ``op_delta_pi``
+
+  We have 
+  ``op_delta_pi(op_delta_pi_inv(q0, delta , pi), delta, pi) = q0``.
+*/
+static inline
+uint32_t op_delta_pi_inv(uint32_t q0, uint32_t delta, uint32_t pi)
+{
+    uint32_t xd, xdelta;
+    uint8_t perm[24], inv_perm[24];
+    uint32_t inv_autpl[12];
+    
+    xd = (q0 >> 12) & 0x1fff;
+    xdelta =  (q0 ^ MAT24_THETA_TABLE[(q0 >> 12) & 0x7ff]) & 0xfff;
+    if (pi == 0 || mat24_m24num_to_perm(pi, perm)) {
+        xd ^=  mat24_scalar_prod(xd, delta) << 12;
+    } else {
+        mat24_perm_to_iautpl(delta, perm, inv_perm, inv_autpl);
+        xd = mat24_op_ploop_autpl(xd, inv_autpl);
+        xdelta =  mat24_op_cocode_perm(xdelta, inv_perm);
+    }
+    return (xd << 12) ^ xdelta ^ (MAT24_THETA_TABLE[xd & 0x7ff] & 0xfff);
+}
+
+/**
+  @brief Perform operation \f$x_d\f$ on \f$Q_{x0}\f$
+
+  The function returns the element \f$q_0 y_d\f$ for
+  \f${q_0} \in Q_{x0}\f$. Here  parameter ``d`` is the number
+  of the Golay code element \f$d\f$ defined in the API reference  
+  in section **The Golay code and its cocode**.
+  
+  Parameter \f${q_0}\f$ and the result are given Leech lattice 
+  encoding.
+*/
+static inline
+uint32_t op_y(uint32_t q0, uint32_t d)
+{
+    // We use the formula for conjugation of 
+    // \f$`\tilde{x}_d x_\delta\f$ with \f$y_e\f$ 
+    // in the **guide**, section 
+    // **Implementing generators of the Monster group**.
+    uint32_t s, o, theta_q0, theta_y, odd, eps;
+    odd = 0 - ((q0 >> 11) & 1);
+    theta_q0 = MAT24_THETA_TABLE[(q0 >> 12) & 0x7ff];
+    theta_y = MAT24_THETA_TABLE[d & 0x7ff];
+    s =  (theta_q0 & d) ^ (~odd &  q0 & d); 
+    mat24_def_parity12(s);
+    o = (theta_y & (q0 >> 12)) ^ (q0 & d);
+    o ^= (theta_y >> 12) & 1 & odd;
+    mat24_def_parity12(o);
+    eps = theta_q0 ^ (theta_y & ~odd) 
+           ^  MAT24_THETA_TABLE[((q0 >> 12) ^ d) & 0x7ff]; 
+    q0 ^= (eps & 0xfff) ^ ((d << 12) & 0x1fff000 & odd);
+    q0 ^= (s << 24) ^ (o << 23);
+    return q0;
+}
+
+/// @endcond 
+
+
+/*************************************************************************
+*** Conjugating a vector in the extraspecial group 2^{1+24}
+*************************************************************************/
+
+
+/**
+  @brief Perform operation of \f$G_{x0}\f$ on \f$Q_{x0}\f$
+
+  The function returns the element \f$g^{-1} q_0 g\f$ for
+  \f$q_0 \in Q_{x0}\f$ and \f$g \in G_{x0}\f$. Here \f$g\f$
+  is given as a word of genenators of length \f$n\f$ in the 
+  array ``pg``. Each atom of the word \f$g\f$ is encoded as 
+  defined in the header file ``mmgroup_generators.h``.
+  
+  Parameter \f${q_0}\f$ and the result are given Leech lattice 
+  encoding.
+*/
+// %%EXPORT px
+uint32_t gen_leech2_op_word(uint32_t q0, uint32_t *pg, uint32_t n)
+// Conjugate the element ``q0`` of the Pauli group with element 
+// ``e`` of the group ``G_{x1}`` with the atom
+// given by ``v``. Atom ``v`` is interpreted as follows:
+// Bit 31:      sign of exponent
+// Bit 30..28   tag
+// Bit 27..0    operarand
+// Tag are as follows:
+//
+//                bit
+// Tag  word     length   operand
+//  0:  1         -       unit of the group, no operand
+//  1:  x_delta   12      delta in C* in 'cocode' rep
+//  2:  x_pi      28      pi a permutation number  
+//  3:  x_d       13      d an element of the parker loop
+//  4:  y_d       13      d an element of the parker loop
+//  5:  t**e      28      exponent e, legal in special cases only
+//  6:  xi**e     28      exponent e
+//  7   illegal                  
+// 
+// 
+{
+    uint_fast32_t tag, i, v, y;
+    static uint8_t  o[2][4] = {{0,2,3,1},{0,3,1,2}};
+ 
+    q0 &= 0x1ffffff;
+    for (i = 0; i < n; ++i) {
+        v = pg[i];
+        tag = v & MMGROUP_ATOM_TAG_ALL;
+        v  &= MMGROUP_ATOM_DATA;
+        y = 0;
+        switch(tag) {
+            case MMGROUP_ATOM_TAG_1:
+            case MMGROUP_ATOM_TAG_I1:
+               break;
+            case MMGROUP_ATOM_TAG_ID:
+            case MMGROUP_ATOM_TAG_D:
+               q0 = op_x_d_delta(q0, 0, v & 0xfff);
+               break;
+            case MMGROUP_ATOM_TAG_IP:
+               q0 = op_delta_pi_inv(q0, 0, v);
+               break;
+            case MMGROUP_ATOM_TAG_P:
+               q0 = op_delta_pi(q0, 0, v);
+               break;
+            case MMGROUP_ATOM_TAG_IX:
+            case MMGROUP_ATOM_TAG_X:
+               q0 = op_x_d_delta(q0, v & 0xfff, 0);
+               break;
+            case MMGROUP_ATOM_TAG_IY:
+               y ^= (MAT24_THETA_TABLE[v & 0x7ff] & 0x1000);
+            case MMGROUP_ATOM_TAG_Y:
+               y ^= v & 0x1fffUL;
+               q0 = op_y(q0, y & 0x1fff);
+               break;
+            case MMGROUP_ATOM_TAG_IT:
+               v ^= 0xfffffff;
+            case MMGROUP_ATOM_TAG_T:
+               v = v % 3;
+               if (v) {
+                   if (q0 & 0x7ff800UL) return (uint32_t)(0-1UL);
+                   q0 = ((uint32_t)(o[v-1][(q0 >> 23) & 3]) << 23UL)
+                         ^  (q0 & 0x7ff);
+               }
+               break;
+            case MMGROUP_ATOM_TAG_IL:
+               v ^= 0xfffffff;
+            case MMGROUP_ATOM_TAG_L:
+               q0 = gen_xi_op_xi(q0, v);
+               break;
+            default:
+               return (uint32_t)(0-1UL);
+        }
+    }
+    return q0;
+}
+
+
+/**
+  @brief Atomic operation of \f$G_{x0}\f$ on \f$Q_{x0}\f$
+
+  Equivalent to ``gen_leech2_op_word(q0, &g, 1)``.
+*/
+// %%EXPORT px
+uint32_t gen_leech2_op_atom(uint32_t q0, uint32_t g)
+{
+    return  gen_leech2_op_word(q0, &g, 1);
+}
+
+
+
+/**
+  @brief Scan prefix in \f$G_{x0}\f$ of a word in the monster group
+
+  Let \f$g \in G_{x0}\f$ be stored in the array ``g`` of
+  length ``len_g`` as a word of generators of the
+  subgroup \f$G_{x0}\f$ of the  monster. The function returns the
+  maximum length ``len_g`` such that every prefix of the word
+  in  ``g`` of length ``<= len_g`` is in the group  \f$G_{x0}\f$.
+*/
+// %%EXPORT px
+uint32_t gen_leech2_prefix_Gx0(uint32_t *g, uint32_t len_g)
+{
+    uint32_t i;
+
+    for (i = 0; i < len_g; ++i) {
+        uint32_t tag = (g[i] >> 28) & 7;
+        if (tag == 7 || (tag == 5 && (g[i] & 0xfffffff) % 3 != 0)) {
+            return i;
+        }
+    }
+    return len_g;
+}
+
+
+ 
+/*************************************************************************
+*** Operation of generators of G{x0} on a subframe
+*************************************************************************/
+
+/// @cond DO_NOT_DOCUMENT 
+
+
+#define N_OPS_MAP_STD_SUBFRAME %{ShortCocode_NumOps}
+
+static const uint8_t TABLE_IN_MAP_STD_SUBFRAME[11] = {
+// %%TABLE ShortCocode_InTable, uint8
+};
+
+static const 
+uint8_t TABLE_OP_MAP_STD_SUBFRAME[3 * N_OPS_MAP_STD_SUBFRAME] = {
+// %%TABLE ShortCocode_OpTable, uint8
+};
+
+/// @endcond 
+
+
+
+/** Transform the standard subframe of Leech lattice mod 2
+
+ A **frame** in the Leech lattice \f$\Lambda\f$ is a maximal
+ set of pairwise orthogonal vectors of type 4. In
+ \f$\Lambda / 2 \Lambda\f$ (which is the Leech lattice mod 2)
+ a frame is mapped to a unique vector of type 4. The standard
+ frame \f$\Omega\f$ in \f$\Lambda\f$ consists of the type-8
+ vectors parallel to the basis vectors in \f$\Lambda\f$.
+
+ The subframe \f$S(F)\f$ of a frame \f$F\f$ in \f$\Lambda\f$
+ is the set \f$\{ (u + v)/2 \mid u, v \in F, u \neq \pm v\}\f$.
+ Any frame \f$S(F)\f$ in \f$\Lambda\f$ contains \f$48\f$
+ type-4 vectors, and its subframe contains \f$48 \cdot 46\f$
+ type-2 vectors.
+
+ The image of \f$S(F)\f$ in \f$\Lambda / 2 \Lambda\f$ spans a
+ 12-dimensional maximal isotropic
+ subpace \f$\langle S(F) \rangle\f$ of \f$\Lambda / 2 \Lambda\f$,
+ and the type-2 vectors in  \f$\langle S(F) \rangle\f$ are
+ precisely images of \f$S(F)\f$.
+ 
+ Then for the standard frame \f$\Omega\f$ we have
+
+ \f$ \langle S(\Omega) \rangle =
+ \{ \lambda_\delta, \lambda_\Omega + \lambda_\delta \mid
+ \delta \in \mathcal{C}^*, \delta \, \mbox{even} \} \f$ .
+
+ Here \f$\mathcal{C}^*\f$ is the Golay cocode, and 
+ and \f$\lambda_c\f$ is the element of \f$\Lambda / 2 \Lambda\f$
+ corresponding to the Golay code or cocode element \f$c\f$.
+
+ Then \f$\langle S(\Omega) \rangle\f$ is spanned by \f$\lambda_\Omega\f$
+ and  \f$\lambda_{\{0,j\}}, 1 \leq j < 24\f$. Here \f$\{i,j\}\f$
+ is the Golay cocode word corresponding to the sum of basis
+ vectors \f$i\f$ and \f$j\f$ of \f$\mbox{GF}_2^{24}\f$.
+
+ The elements \f$x_\Omega\f$ and \f$x_{\{0,j\}}\f$ of the
+ group \f$Q_{x0}\f$ are preimages of  \f$\lambda_\Omega\f$
+ and  \f$\lambda_{\{0,j\}}\f$ under the natural homomorphism
+ from \f$Q_{x0}\f$ to \f$\Lambda / 2 \Lambda\f$. These elements
+ of \f$Q_{x0}\f$ play an important role in the
+ representation \f$196883_x\f$ of the monster group. For
+ computations in the subgroup \f$G_{x0}\f$ of the monster
+ we sometimes want to compute the images of these elements
+ of \f$Q_{x0}\f$ under conjugation by an element \f$g\f$
+ of \f$G_{x0}\f$.
+ 
+ Let \f$g \in  G_{x0}\f$ be stored in the array ``g`` of
+ length ``len_g`` as a word of generators of the
+ subgroup \f$G_{x0}\f$ of the  monster. Then this function
+ computes the following 24 elements of \f$Q_{x0}\f$:
+
+ \f$ x_\Omega^g, x_{\{0,1\}}^ g, \ldots, x_{\{0,23\}}^g\f$.
+
+ The function stores these 24 elements in the array ``a`` 
+ (in that order) in **Leech lattice encoding**.
+
+ In case of success the function returns the number of entries of 
+ the word ``g`` being processed. It returns a negative value in 
+ case of failure.
+*/
+// %%EXPORT px
+int32_t gen_leech2_map_std_subframe(uint32_t *g, uint32_t len_g, uint32_t *a)
+{
+    uint32_t i, q0;
+
+    len_g = gen_leech2_prefix_Gx0(g, len_g);
+
+    for (i = 0; i < 11; ++i) {
+        q0 = 1UL << i;
+        if ((q0 = gen_leech2_op_word(q0, g, len_g)) & 0x80000000UL) return -1;
+        a[TABLE_IN_MAP_STD_SUBFRAME[i]] = q0;
+    }
+
+    for (i = 0; i < 3 * N_OPS_MAP_STD_SUBFRAME; i += 3) {
+        uint32_t op1 = a[TABLE_OP_MAP_STD_SUBFRAME[i]];
+        uint32_t op2 = a[TABLE_OP_MAP_STD_SUBFRAME[i + 1]];
+        gen_leech2_def_mul(op1, op2, q0);
+        a[TABLE_OP_MAP_STD_SUBFRAME[i + 2]] = q0;
+    }
+    
+    q0 = 0x800000;
+    if ((q0 = gen_leech2_op_word(q0, g, len_g)) & 0x80000000UL) return -1;
+    a[0] = q0;
+    return len_g;
+}
+
+
+
+
+//  %%GEN h
+/// @endcond 
+//  %%GEN c
+
+
+
+// %%GEN ch
+#ifdef __cplusplus
+}
+#endif
+
+
+
+

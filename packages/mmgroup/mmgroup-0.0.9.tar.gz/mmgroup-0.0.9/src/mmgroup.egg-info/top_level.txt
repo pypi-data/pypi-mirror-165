@@ -1,0 +1,6 @@
+Code generation for modules mm and mm_op
+Code generation for modules mm_reduce
+Generating code for extension 'mat24'
+Starting code generation
+import_all
+mmgroup

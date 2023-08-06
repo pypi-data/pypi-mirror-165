@@ -1,0 +1,314 @@
+/** @file mm_order_vector.c
+
+ File ``mm_order_vector`` contains the precomuted ``order_vector``
+ and data related to that ``order_vector``,
+
+ It also contains functions for retrieving these data.
+
+*/
+
+
+#include "mat24_functions.h"
+#include "clifford12.h"
+#include "mm_op15.h"   
+#include "mm_reduce.h"   
+   
+// %%EXPORT_KWD MM_REDUCE_API
+
+
+
+
+//  %%GEN h
+/// @cond DO_NOT_DOCUMENT 
+//  %%GEN c
+
+
+/************************************************************************
+** order vector tag table
+************************************************************************/
+
+/// @cond DO_NOT_DOCUMENT 
+
+// %%EXPORT_TABLE p
+const uint32_t MM_ORDER_VECTOR_TAG_DATA[] = {
+// %%TABLE ORDER_VECTOR_TAG_DATA, uint32
+};
+
+
+// %%USE_TABLE
+static const uint16_t TAG_INDICES[] = {
+// %%TABLE ORDER_VECTOR_TAG_INDICES, uint16
+};
+
+
+/// @endcond 
+
+
+
+
+/** 
+  @brief Load data from tables to a buffer
+
+  The propose of this function is to provide the information for checking
+  the correctness of the precomuted order vector \f$v_1\f$ stored
+  in this module.
+  
+  This function stores precomputed data in a buffer ``buf`` of
+  type ``uint32_t[buf_size]``, where ``buf_size`` is the size of
+  the buffer. Parameter ``n`` specifies the value to be stored
+  in the buffer. The function returns the length of the data in
+  buffer. If the buffer is too short for that data then the
+  function returns -1. A size parameter ``buf_size = 128`` is
+  sufficient for all cases of ``n``.
+  
+  In case ``n = 0`` the function returns the array ``TAG_VECTOR``
+  of length 97. The tag vector is documented in file ``mm_order.c``.
+
+  In case ``n > 0`` the function returns data required for verifying
+  the precomputed order vector \f$v_1\f$. The order vector is discussed
+  in [Sey22].
+
+  In case ``n = 1,2,3`` the function returns the 
+  values \f$g_{71} \in \mathbb{M}, v^0_{71} \in \rho_{3}, g \in \mathbb{M} \f$,
+  respecively, in the internal sparse format. With these data we can compute:
+
+
+  \f$v_{71} = \sum_{i=0}^{70} v^0_{71} \cdot g_{71}^i g\pmod{3}\f$.
+
+  In case ``n = 4`` the function returns the integer \f$D\f$ in
+  entry 0 of the buffer.  In case ``n = 5, 6`` the function returns the
+  values \f$g_{94} \in \mathbb{M}, v^0_{94}\f$, respectively.
+  With this data we can compute:
+
+
+  \f$v_{94} = \sum_{i=0}^{93} (-1)^i \cdot v^0_{94} \cdot g_{94}^i  \pmod{5}\f$.
+
+  \f$v_1 = 10 \cdot v_{71}  + 6 \cdot v_{94} + 5 \cdot D \cdot 1_\rho  \pmod{15}\f$.
+
+   Here \f$1_\rho\f$ is defined as in [Sey22].
+   We can also check that the order vector \f$v_1\f$ satisfies the
+   properties required in [Sey22].
+
+   In case ``n = 7, 8, 9``, the function returnes the
+   parts ``TAGS_Y``, ``TAGS_X``, and  ``TAG_SIGN``, respectively,
+   of the ``TAG_VECTOR``. For a description of the ``TAG_VECTOR``
+   see the description of ``enum tag_offsets`` in
+   file ``order_vector.c``. 
+*/
+// %%EXPORT px
+int32_t mm_order_load_tag_data(uint32_t n, uint32_t *buf, uint32_t buf_size)
+{
+     uint_fast32_t data_size, start,i;
+     const uint32_t *ptr;
+     if (n >= %{ORDER_VECTOR_NUM_TAG_DATA}) return 0;
+     start = TAG_INDICES[n];
+     data_size = TAG_INDICES[n+1] - start;
+     if (data_size > buf_size) return -1;
+     ptr = MM_ORDER_VECTOR_TAG_DATA  + start;
+     for (i = 0; i < data_size; ++i) buf[i] = ptr[i];
+     return data_size;
+}
+
+
+
+
+/************************************************************************
+** order vector table
+************************************************************************/
+
+/// @cond DO_NOT_DOCUMENT 
+
+// %%IF* INT_BITS != 64
+#error A %{P}-Bit version of this module is not supported
+// %%END IF
+
+// %%USE_TABLE
+static const uint32_t ORDER_VECTOR[] = {
+// %%TABLE ORDER_VECTOR_DATA, uint32
+};
+
+/// @endcond 
+
+
+/************************************************************************
+** load order vector
+************************************************************************/
+
+/// @cond DO_NOT_DOCUMENT 
+
+
+#define pair(h, l)  (((uint_mmv_t)(h) << 32) + (uint_mmv_t)(l))
+
+
+
+static inline void load24(uint32_t offset, uint_mmv_t *p_dest, uint32_t n)
+{
+     uint_fast32_t i;
+     const uint32_t *p_src = ORDER_VECTOR + offset;
+     for (i = 0; i < n; ++i) {
+         // %%IF* INT_BITS == 64
+         p_dest[0] = pair(p_src[1], p_src[0]);
+         p_dest[1] = pair(0, p_src[2]);
+         p_src += 3;
+         p_dest += 2;
+         // %%ELSE
+         // %%END IF
+     }
+}
+
+
+static inline void load64(uint32_t offset, uint_mmv_t *p_dest, uint32_t n)
+{
+     uint_fast32_t i;
+     const uint32_t *p_src = ORDER_VECTOR + offset;
+     for (i = 0; i < 2*n; ++i) {
+         // %%IF* INT_BITS == 64
+         p_dest[0] = pair(p_src[1], p_src[0]);
+         p_dest[1] = pair(p_src[3], p_src[2]);
+         p_src += 4;
+         p_dest += 2;
+         // %%ELSE
+         // %%END IF
+     }
+}
+
+// Offsets in order vector stored in the table
+#define OFS_ABC  0
+#define OFS_T    72*3
+#define OFS_X    (OFS_T + 759*8)
+#define OFS_ZY   (OFS_X + 2048*3)
+
+
+
+
+/// @endcond 
+
+/** 
+  @brief Load order vector from tables to a buffer
+
+  The function stores the precomputed order vector \f$v_1\f$ into the
+  array referred by ``p_dest``. That array must must be sufficiently
+  long to store a vector of the representation  \f$\rho_{15}\f$.
+
+  See [Sey22] for a decription of the properties of the vector \f$v_1\f$
+  in the representation  \f$\rho_{15}\f$ of the monster group.
+  
+  The standard way to obtain the number of entries of type ``unint_mmv_t``
+  required for a vector of the representation \f$\rho_{15}\f$
+  is to call function ``mm_aux_mmv_size(15)`` in file ``mm_aux.c``.
+  
+*/
+// %%EXPORT px
+void mm_order_load_vector(uint_mmv_t *p_dest)
+{
+    load24(OFS_ABC, p_dest + MM_OP15_OFS_A, 72);
+    load64(OFS_T, p_dest + MM_OP15_OFS_T, 759);
+    load24(OFS_X, p_dest + MM_OP15_OFS_X, 3*2048);
+}
+
+
+/************************************************************************
+** Check if a vector is equal to the order vector
+************************************************************************/
+
+
+/// @cond DO_NOT_DOCUMENT 
+
+// Macro ``reduce_w(w, t)`` reduces the integers stored in the 4-bit 
+// fields of variable ``w`` (of type ``uint_mmv_t``) modulo 15.
+// It uses an auxiliary variable ``t`` of type ``uint_mmv_t``.
+#define reduce_w(w, t) \
+    t = (w) & ((w) >> 2);  \
+    t = (t) & ((t) >> 1) & 0x1111111111111111ULL; \
+    w = (w) + (t) - ((t) << 4)
+
+static inline int32_t check24(uint32_t offset, uint_mmv_t *p_v, uint32_t n)
+{
+     uint_fast32_t i;
+     const uint32_t *p_o = ORDER_VECTOR + offset;
+     uint_mmv_t o0, o1, o2, t;
+     for (i = 0; i < n; i += 2) {
+         // %%IF* INT_BITS == 64
+         o0 = p_v[0];
+         o1 = p_v[2];
+         o2 = (p_v[1] & 0xffffffffULL) + (p_v[3] << 32);
+         reduce_w(o0, t);
+         reduce_w(o1, t);
+         reduce_w(o2, t);
+         o0 ^= pair(p_o[1], p_o[0]);
+         o1 ^= pair(p_o[4], p_o[3]);
+         o2 ^= pair(p_o[5], p_o[2]);
+         if (o0 | o1 | o2) return 1;
+         p_v += 4;
+         p_o += 6;
+         // %%ELSE
+         // %%END IF
+     }
+     return 0;
+}
+
+
+static inline int32_t check64(uint32_t offset, uint_mmv_t *p_v, uint32_t n)
+{
+     uint_fast32_t i;
+     const uint32_t *p_o = ORDER_VECTOR + offset;
+     uint_mmv_t o0, o1, t;
+     for (i = 0; i < 2*n; ++i) {
+         // %%IF* INT_BITS == 64
+         o0 = p_v[0];
+         o1 = p_v[1];
+         reduce_w(o0, t);
+         reduce_w(o1, t);
+         o0 ^= pair(p_o[1], p_o[0]);
+         o1 ^= pair(p_o[3], p_o[2]);
+         if (o0 | o1) return 1;
+         p_v += 2;
+         p_o += 4;
+         // %%ELSE
+         // %%END IF
+     }
+     return 0;
+}
+
+/// @endcond 
+
+
+/** 
+  @brief Compare vector with precomputed order vector
+  
+  The function compares the vector \f$v\f$ in the
+  representation \f$\rho_{15}\f$ of the monster group referred
+  by ``p_v`` with the precomputed order vector \f$v_1\f$.
+
+  The function returns 0 in case of equality and 1 otherwise.
+*/
+// %%EXPORT px
+int32_t mm_order_compare_vector(uint_mmv_t *p_v)
+{  
+    if (check24(OFS_ZY, p_v + MM_OP15_OFS_Z, 2*2048)) return 1;
+    if (check24(OFS_ABC, p_v + MM_OP15_OFS_A, 72)) return 1;
+    if (check64(OFS_T, p_v + MM_OP15_OFS_T, 759)) return 1;
+    if (check24(OFS_X, p_v + MM_OP15_OFS_X, 2048)) return 1;
+    return 0;
+}
+
+
+/** 
+  @brief Compare A part of vector with precomputed order vector
+  
+  The function compares the A part the vector \f$v\f$ in the
+  representation \f$\rho_{15}\f$ of the monster group referred
+  by ``p_v`` with the A part of the precomputed order
+  vector \f$v_1\f$.
+
+  The function returns 0 in case of equality and 1 otherwise.
+*/
+// %%EXPORT px
+int32_t mm_order_compare_vector_part_A(uint_mmv_t *p_v)
+{  
+    return check24(OFS_ABC, p_v + MM_OP15_OFS_A, 24);
+}
+
+//  %%GEN h
+/// @endcond 
+//  %%GEN c

@@ -1,0 +1,788 @@
+/** @file bitmatrix64.c
+  File ``bitmatrix64.c`` contains  functions for computing with
+  bit matrices. A bit matrix of up to 64 columns is stored in
+  an array of integers of type ``uint64_t``.  If matrix ``m`` is
+  stored in the array ``a`` then entry ``m[i,j]`` is given
+  by bit ``j`` of the entry ``a[i]`` of the array ``a``. 
+  Here bit ``j`` has valence \f$2^j\f$.
+  
+  In functions dealing with bit matrices we always give the number
+  of rows as a parameter. In some functions we also give the 
+  number of columns. In other functions we assume that there
+  are 64 columns, with unused columns ignored.
+*/
+
+/*************************************************************************
+** External references 
+*************************************************************************/
+
+/// @cond DO_NOT_DOCUMENT 
+#include <string.h>
+#define CLIFFORD12_INTERN
+#include "clifford12.h"
+/// @endcond  
+
+
+// %%EXPORT_KWD CLIFFORD12_API
+
+// %%GEN h
+
+/// @cond DO_NOT_DOCUMENT 
+
+
+// %%GEN ch
+#ifdef __cplusplus
+extern "C" {
+#endif
+// %%GEN c
+
+
+/*************************************************************************
+*** Basic definitions
+*************************************************************************/
+
+/// @cond DO_NOT_DOCUMENT 
+
+
+
+// If ERROR_POOL is defined then function xsp2co1_error_pool() can
+// read data from an "error pool" that contains debug information
+// for certain functions after calling them.
+// #define ERROR_POOL
+
+// Number of entries of type uit64_t of the ERROR_POOL
+#define LEN_ERROR_POOL 20
+
+
+/// @endcond 
+
+
+/*************************************************************************
+*** Using a pool for recording errors (for debugging)
+*************************************************************************/
+
+
+/// @cond DO_NOT_DOCUMENT 
+
+#ifdef  ERROR_POOL
+static uint64_t error_pool[LEN_ERROR_POOL];
+#endif
+
+/**
+@brief Used for debugging only
+*/
+// %%EXPORT px
+uint32_t bitmatrix64_error_pool(uint64_t *dest, uint32_t length)
+{
+  #ifdef ERROR_POOL
+    uint32_t i;
+    if (length > LEN_ERROR_POOL) length = LEN_ERROR_POOL;
+    for (i = 0; i < length; ++i) dest[i] = error_pool[i];   
+    return length;
+  #else
+    return 0;  // Dummy if  ERROR_POOL is not #defined.
+  #endif   // #ifdef  ERROR_POOL 
+}
+
+/// @endcond 
+
+
+/*************************************************************************
+*** Static auxuliary functions
+*************************************************************************/
+
+/// @cond DO_NOT_DOCUMENT 
+
+/**
+ @brief Returns the parity of a 64-bit integer ``v``.      
+*/ 
+static inline uint32_t parity64(uint64_t v)
+{
+   v ^= v >> 32; v ^= v >> 16; v ^= v >> 8; v ^= v >> 4; 
+   return (uint32_t)((0x6996 >> (v & 0xf)) & 1);
+}    
+
+
+/**
+ @brief Returns the bit weight of a 64-bit integer ``v``.      
+*/ 
+static inline uint32_t bw64(uint64_t v)
+{
+   v = (v & 0x5555555555555555ULL) + ((v & 0xaaaaaaaaaaaaaaaaULL) >> 1); 
+   v = (v & 0x3333333333333333ULL) + ((v & 0xccccccccccccccccULL) >> 2);
+   v = (v + (v >> 4)) & 0xf0f0f0f0f0f0f0fULL;
+   v = (v + (v >> 8)) &  0xff00ff00ff00ffULL;
+   v = (v + (v >> 16)) &   0xffff0000ffffULL;
+   return (uint32_t)((v + (v >> 32)) & 0x7f); 
+}    
+
+/**
+ @brief Returns the bit length of a 64-bit integer ``v``.      
+*/ 
+static inline uint32_t bitlen64(uint64_t v)
+{
+   uint32_t result = 0;
+   if (v & 0xffffffff00000000ULL) {result += 32; v >>= 32;}
+   if (v & 0xffff0000UL) {result += 16; v >>= 16;}
+   if (v & 0xff00) {result += 8; v >>= 8;}
+   if (v & 0xf0) {result += 4; v >>= 4;}
+   return result + (uint32_t)((0x4444444433332210ULL >> (v << 2)) & 0xf); 
+}
+
+/// @endcond 
+
+
+
+/*************************************************************************
+*** Integer operations
+*************************************************************************/
+
+
+
+/**
+ @brief Returns the parity of a 64-bit integer ``v``.      
+*/ 
+// %%EXPORT px
+uint32_t uint64_parity(uint64_t v)
+{
+   return parity64(v);
+}   
+
+
+/*************************************************************************
+*** Simple bit matrix operations
+*************************************************************************/
+
+/**
+  @brief Add a diagonal matrix to a bit matrix
+
+  Here bit matrix ``m`` has ``i`` rows.
+  
+  We add one to all entries  ``m[k, j+k]`` for `0 <= k < i``.
+
+*/
+// %%EXPORT p
+void bitmatrix64_add_diag(uint64_t *m, uint32_t i, uint32_t j)
+{
+    uint64_t mask;
+    uint_fast32_t k;
+    if (j >= 64) return;
+    mask = ONE << j;
+    for (k = 0; k < i; ++k) {
+        m[k] ^= mask;
+        mask <<= 1;
+    }
+}
+
+/**
+  @brief Mask rows of a bit matrix
+
+  Here bit matrix ``m`` has ``i`` rows.
+  
+  We replace all rows ``m[k]`` of ``m`` by  ``m[k] & mask``. So we
+  zero the entries ``m[i,j]`` for all ``j`` where bit ``j`` is zero
+  in parameter ``mask``.  
+
+*/
+// %%EXPORT p
+void bitmatrix64_mask_rows(uint64_t *m, uint32_t i, uint64_t mask)
+{
+    uint_fast32_t k;
+    for (k = 0; k < i; ++k)  m[k] &= mask;
+}
+
+
+/**
+  @brief Find (masked) row of a bit matrix with a certain value
+
+  Here bit matrix ``m`` has ``i`` rows.
+  
+  The function returns the lowest index ``k`` such that
+  ``m[k] & mask == v`` holds. The function returns 
+  ERR_QSTATE12_NOTFOUND if no such ``k`` exists.  
+
+*/
+// %%EXPORT p
+int32_t bitmatrix64_find_masked_row(uint64_t *m, uint32_t i, uint64_t mask, uint64_t v)
+{
+    uint_fast32_t k;
+    for (k = 0; k < i; ++k)  {
+        if ((m[k] & mask) == v) return k;
+    }
+    return ERR_QSTATE12_NOTFOUND;
+}
+
+
+/*************************************************************************
+*** Bit matrix multiplication
+*************************************************************************/
+
+
+/**
+  @brief Bit matrix multiplication
+
+  Here ``m1`` and ``m2`` have ``i1`` and ``i2`` rows, respectively.
+  Only the lowest ``i2`` columns of ``m1`` are inspected. Matrix
+  ``m2`` may have any number of columns, up to 64.
+
+  The function computes the matrix product ``m1 * m2`` in the
+  array ``m3``. Matrix ``m3`` has ``i1`` rows and the same number
+  of columns as ``m2``.
+
+  Array ``m3`` may be equal to array ``m1``; but it may not overlap
+  with ``m2``.
+*/
+// %%EXPORT p
+void bitmatrix64_mul(uint64_t *m1,  uint64_t *m2, uint32_t i1, uint32_t i2, uint64_t *m3)
+{
+    uint_fast32_t i, j; 
+    uint64_t mi, mo;
+    if (i2 > 64) i2 = 64;
+    for (i = 0; i < i1; ++i) {
+         mi = m1[i]; mo = 0;
+         for (j = 0; j < i2; ++j) {
+             mo ^= (0 - ((mi >> j) & ONE)) & m2[j];
+         }
+         m3[i] = mo;
+    }
+}
+
+
+
+
+
+
+/*************************************************************************
+*** Permuting columns of a bit matrix
+*************************************************************************/
+
+
+/**
+  @brief Rotate columns of a bit matrix.
+
+  Here bit matrix ``m`` has ``i`` rows.
+
+  For ``n0 <= j < n0 + nrot``  we map column ``j`` of matrix
+  ``m`` to column  ``n0 + (j + rot) % nrot``.
+   E.g. ``nrot = 3, rot = 1, n0 = 0`` 
+  means that columns are mapped as ``0->1, 1->2, 2->0``. 
+
+  The function returns 0 in case of success and a negative
+  value if any column with index >= 64 is involved in the
+  rotation.
+*/
+// %%EXPORT p
+int32_t bitmatrix64_rot_bits(uint64_t *m, uint32_t i, int32_t rot, uint32_t nrot, uint32_t n0)
+{
+    uint64_t mask_h, mask_l, mask;
+    uint32_t k, sh, nmax;
+    if (nrot + n0 > 64) return ERR_QSTATE12_QUBIT_INDEX;
+    if (nrot < 2) return 0;
+    if (rot < 0) rot += nrot * (-rot / nrot) + nrot;
+    rot %= nrot;
+    if (rot == 0) return 0;
+    nmax = nrot + n0; 
+    mask_l = (ONE << (nmax - rot));
+    mask_h = nmax < 64 ? (ONE << nmax) : 0;
+    mask_h -=  mask_l;
+    mask_l -= (ONE << n0);
+    mask = ~(mask_l | mask_h);
+    sh = nrot - rot;
+    for (k = 0; k < i; ++k) {
+         m[k] = (m[k] & mask) | ((m[k] & mask_l) << rot) 
+                              | ((m[k] & mask_h) >> sh);
+    }
+    return 0;    
+}
+
+
+/**
+  @brief Exchange columns of a bit matrix.
+
+  Here bit matrix ``m`` has ``i`` rows.
+
+  Exchange column ``j`` with column ``j + sh`` of the bit matrix 
+  ``m``, if bit ``j`` of ``mask`` is set. If bit ``j``  of 
+  ``mask`` is  set then bit  ``j + sh`` of ``mask`` must not be 
+  set. No bit of ``mask`` at  position greater or equal to 
+  ``64 - sh`` may be set.
+  
+  E.g. ``qstate12_xch_bits(``m``, 1, 0x11)`` maps columns
+  (...,6,5,4,3,2,1,0) to columns (...,6,4,5,3,2,0,1).
+
+  The function returns 0 in case of success and a negative
+  value if any column with index >= 64 is involved in the
+  operation.
+
+*/
+// %%EXPORT p
+int32_t bitmatrix64_xch_bits(uint64_t *m, uint32_t i, uint32_t sh, uint64_t mask)
+{
+    uint64_t v;
+    uint_fast32_t k;
+    if (mask == 0) return 0;
+    if (sh >= 64 || mask & (mask >> sh))  return ERR_QSTATE12_QUBIT_INDEX;
+
+    for (k = 0; k < i; ++k) {
+        v = (m[k] ^ (m[k] >> sh)) & mask;
+        m[k] ^= v ^ (v << sh);   
+    }
+    return 0;
+}
+
+
+/**
+  @brief Reverse columns of a bit matrix.
+
+  Here bit matrix ``m`` has ``i`` rows.
+
+  The function reverses ``n`` columns of the bit matrix ``m`` 
+  starting at column ``n0``. So it exchanges bit ``m[k, n0 + j]`` 
+  with bit ``m[k, n0 + n - 1 - j]`` for ``0 <= j < n``
+  and `0 <= k < i``.
+  
+  The function returns 0 in case of success and a negative
+  value if any column with index >= 64 is involved in the
+  operation.
+*/
+// %%EXPORT p
+int32_t bitmatrix64_reverse_bits(uint64_t *m, uint32_t i, uint32_t n, uint32_t n0)
+{
+    uint64_t mask, v, w;
+    uint_fast32_t k;
+    int_fast32_t sh;
+    if (n + n0 > 64)  return ERR_QSTATE12_QUBIT_INDEX;
+    if (n < 2) return 0;
+
+    for (k = 0; k < i; ++k) {
+        mask = ONE << n0;
+        v = m[k];
+        for (sh = n - 1; sh > 0; sh -= 2) {
+            w = (v ^ (v >> sh)) & mask;
+            v ^= w ^ (w << sh);
+            mask <<= 1;
+        }
+        m[k] = v; 
+    }
+    return 0;
+}
+
+
+/*************************************************************************
+*** Bit matrix transposition
+*************************************************************************/
+
+
+/**
+   @brief Transpose a bit matrix
+   
+   Here ``m1`` is an ``i`` times ``j`` bit matrix. Here bit ``m1[m,n]``
+   is given by ``(m1[m] >> n) & 1``. The function writes the transposed
+   bit matrix of ``m1`` to ``m2``.
+*/
+// %%EXPORT p
+int32_t bitmatrix64_t(uint64_t *m1, uint32_t i, uint32_t j, uint64_t *m2)
+{
+    uint64_t v;
+    uint32_t i1, j1;
+    if (i > 64 || j > 64) return ERR_QSTATE12_BUFFER_OVFL;
+    for (j1 = 0; j1 < j; ++j1) {
+        v = 0;
+        for (i1 = 0; i1 < i; ++i1) v |= ((m1[i1] >> j1) & ONE) << i1;
+        m2[j1] = v;
+    }
+    return 0;
+}
+
+
+
+/*************************************************************************
+*** Echelonize a bit matrix 
+*************************************************************************/
+
+/**
+   @brief Convert bit matrix ``m`` to reduced row echelon form.
+
+   Matrix ``m`` has ``i`` rows. Here we assume that the leading bit 
+   of a row of matrix ``m`` is the most significant bit in that row.
+   For echelonizing ``m``, we pivot over nolumns
+   ``j0-1,...,j0-n`` in that order, ignoring the other columns.
+   We perform row operations (on all possible columns 0,...,63) 
+   for changing matrix ``m``.
+   
+   The function returns the number of rows in the (echelonized)
+   matrix ``m`` that have a nonzero bit in at least one of the
+   pivoted columns.
+*/
+// %%EXPORT px
+uint32_t bitmatrix64_echelon_h(uint64_t *m, uint32_t i, uint32_t j0, uint32_t n)
+{
+
+    int_fast32_t row_pos = 0, col, k1, k2;
+    uint64_t v, col_mask ;
+    if (j0 > 64) j0 = 64;
+    if (n > j0) n = j0;
+    if (i == 0 || n == 0) return 0;
+    for (col = (int_fast32_t)j0 - 1; col >= (int_fast32_t)(j0 - n); --col) {
+        col_mask = ONE << col;
+        for (k1 = (int_fast32_t)i - 1; k1 >= row_pos; --k1) {
+            if (m[k1] &  col_mask) {
+                v = m[k1];
+                for (k2 = k1 - 1; k2 >= 0; --k2) {
+                    m[k2] ^= (0 - ((m[k2] >> col) & ONE)) & v;
+                }
+                m[k1] = m[row_pos]; m[row_pos++] = v;
+                break;
+            }
+        }
+    }   
+    return row_pos;    
+}
+
+
+/**
+   @brief Convert bit matrix ``m`` to reduced row echelon form.
+
+   Matrix ``m`` has ``i`` rows. Here we assume that the leading bit 
+   of a row of matrix ``m`` is the least significant bit in that row.
+   For echelonizing ``m``, we pivot over columns
+   ``j0,...,j0+n-1`` in that order, ignoring the other columns.
+   We perform row operations (on all possible columns 0,...,63) 
+   for changing matrix ``m``.
+   
+   The function returns the number of rows in the (echelonized)
+   matrix ``m`` that have a nonzero bit in at least one of the
+   pivoted columns.
+*/
+// %%EXPORT px
+uint32_t bitmatrix64_echelon_l(uint64_t *m, uint32_t i, uint32_t j0, uint32_t n)
+{
+
+    int_fast32_t row_pos = 0, col, k1, k2;
+    uint64_t v, col_mask;
+    if (j0 >= 64 || i == 0 || n == 0) return 0;
+    if (j0 + n > 64) n = 64 - j0;
+    for (col = j0; col < (int_fast32_t)(j0 + n); ++col) {
+        col_mask = ONE << col;
+        for (k1 = (int_fast32_t)i - 1; k1 >= row_pos; --k1) {
+            if (m[k1] &  col_mask) {
+                 v = m[k1];
+                 for (k2 = k1 - 1; k2 >= 0; --k2) {
+                     m[k2] ^= (0 - ((m[k2] >> col) & ONE)) & v;
+                 }
+                 m[k1] = m[row_pos]; m[row_pos++] = v;
+                 break;
+            }
+        }
+    }     
+    return row_pos;    
+}
+
+
+/*************************************************************************
+*** Intersection of row spaces of two bit matrices
+*************************************************************************/
+
+/// @cond DO_NOT_DOCUMENT 
+
+static int32_t restore_cap_h(uint64_t *ma, uint64_t *m, 
+    uint64_t rows_used,  uint64_t rows_cap, int32_t max_rows)
+{
+    int i_max, n_used, n_cap, i, row = 0, row_h;
+    i_max = bitlen64(rows_used);
+    n_used = bw64(rows_used);
+    rows_cap &= rows_used;
+    n_cap = bw64(rows_cap);
+    row_h = n_used - n_cap;
+  #ifdef ERROR_POOL
+     error_pool[18] =  i_max;
+     error_pool[19] =  row_h;
+  #endif
+    if (max_rows < n_used) return ERR_QSTATE12_INTERN_PAR; 
+    for (i = 0; i < i_max; ++i) if ((rows_used >> i) & 1) {
+        if ((rows_cap >> i) & 1)  m[row_h++] = ma[i];
+        else  m[row++] = ma[i];
+    } 
+    return n_cap;
+}
+
+/// @endcond  
+
+
+/**
+   @brief Compute intersection of row spaces of two bit matrices
+ 
+   Bit matrix ``m1`` has ``i1`` rows, and bit matrix ``m2`` has ``i2`` rows.
+   Both matrices, ``m1`` and ``m2``, must be given in reduced echelon form
+   in the sense of function ``bitmatrix64_echelon_h``.
+
+   The function changes  ``m1`` and ``m2`` using row operations in such a
+   way that the lower rows of ``m1`` and ``m2`` contain the intersection
+   of the rows spaces of the two matrices. For computing that intersection
+   we consider only columns ``j0-1,...,j0-n`` of matrices ``m1`` and ``m2``.
+   However, we do each row operation on all possible columns ``63,...,0``.
+   
+   The function returns the dimension ``n_cap`` of the intersection
+   of the row spaces of ``m1`` and ``m2``, ignoring all columns
+   except for columns ``j0-1,...,j0-n``.
+   
+   Assume that the echelonized input matrices ``m1`` (and ``m2``) have 
+   ``r1`` (and  ``r2``) leading rows that have at least one nonzero bit 
+   in columns ``j0-1,...,j0-n``, respectively. Then the function changes
+   the leading ``r1`` rows  of ``m1`` and the leading ``r2`` rows  of 
+   ``m2`` only. These rows are changed in such a way that the last
+   ``n_cap`` of these rows of the two matrices are equal in columns
+   ``j0-1,...,j0-n``. So these last rows contain the intersection of
+   the row spaces of ``m1`` and `m2``, ignoring all columns but   
+   ``j0-1,...,j0-n``.
+   
+   Parameters ``j0`` and ``n`` must be the same  in this function, and 
+   in the previous two calls to function ``bitmatrix64_echelon_h`` used 
+   for echelonizing  matrices ``m1`` and ``m2``. This function computes 
+   garbage in the arrays ``m1`` and ``m2``, unless both matrices, ``m1`` 
+   and ``m2``, have been echelonized in that way before calling this 
+   function.
+   
+   A negative return value ``n_cap`` means that at least one of the 
+   input matrices ``m1`` and ``m2`` has not been echelonized correctly.
+   This function may or may not detect an incorrect echelonization
+   of an input matrix.
+   
+*/
+// %%EXPORT px
+int32_t bitmatrix64_cap_h(uint64_t *m1, uint64_t *m2, uint32_t i1, uint32_t i2, uint32_t j0, uint32_t n)
+{
+    
+    uint64_t m1a[64];          // local copy of ``m1`` as decribed below
+    uint64_t m2a[64];          // local copy of ``m2`` as decribed below
+    uint64_t rows_used1 = 0;   // bit list of used rows in ``m1a``
+    uint64_t rows_used2 = 0;   // bit list of used rows in ``m2a``
+    uint64_t rows_equ = 0;     // bit list indicating rows that are
+                               // equal in  ``m1a```and ``m2a``
+    int_fast32_t col;          // current column processed in the main loop
+    int_fast32_t row_pos1 = 0; // row of ``m1``  being processed
+    int_fast32_t row_pos2 = 0; // row of ``m2``  being processed
+    int_fast32_t row_pos = 0;  // row of ``m1a``, ``m2a`` being processed
+    int_fast32_t row;          // row counter for pivting a column
+    int_fast32_t res;          // contains result of a called function
+    uint64_t b1, b2;           // nonzero if ``m1`` (or ``m2``) has a row  
+                               // with leading column ``col``, respectively
+    uint64_t v1 = 0, v2 = 0;   // row of ``m1`` (or ``m2``) used for pivoting
+    uint64_t mask;             // mask for relevant columns
+
+    // Adjust ``j0`` and ``n`` to the maximal number of colums 
+    if (j0 > 64) j0 = 64;
+    if (n > j0) n = j0;
+    if (n == 0) return 0;
+
+    // Delete trailing zero rows of ``m1`` and ``m2``.
+    mask = (((ONE + ONE) << (n - 1)) - 1) << (j0 -n);
+    while (i1 > 0 && (m1[i1 - 1] & mask) == 0) --i1;
+    while (i2 > 0 && (m2[i2 - 1] & mask) == 0) --i2;
+    // Return 0 if zero rows remaining for ``m1`` or ``m2``
+    if (i1 == 0 || i2 == 0) return 0;
+    
+    // We copy the rows of matrices ``m1`` and ``m2`` into the rows of the 
+    // local arrays ``m1a`` and ``m2a`` in such a way that corresponding 
+    // rows of ``m1a``  and ``m2a`` have the same leading column. Then 
+    // some rows if ``m1a`` and m2a my be unused. We mark the used 
+    // rows of ``m1a`` and ``m2a`` in the bit arrays ``rows_used1``
+    // and ``row_use21``.
+    // We pivot over columns ``j0-1,...,j0-n`` (in that order), trying
+    // to equalize the columns of ``m1a`` and ``m2a`` so that the 
+    // leading columns of ``m1a`` and ``m2a``, up to and including
+    // the current column being pivoted ,will be equal. We mark the
+    // the rows of matrices ``m1a`` and ``m2a``, where the leading
+    // columns can be equalized, in the bit array ``rows_equ``.
+    //
+    // An operation similar to this main loop is described  
+    // in  'The mmgroup API reference',
+    // section 'An algorithm for multiplying quadratic mappings'.
+    for (col = (int)j0 - 1; col >= (int)(j0 - n); --col) {
+        b1 = row_pos1 < (int)i1 ? ((m1[row_pos1] >> col) & 1) : 0;
+        b2 = row_pos2 < (int)i2 ? ((m2[row_pos2] >> col) & 1) : 0;
+        rows_used1 |= b1 << row_pos; rows_used2 |= b2 << row_pos;
+
+        if (b1) {
+            if (b2) {
+                // b1 = b2 = 1
+                // Row with leading column ``col`` in ``m1`` and ``m2``.
+                // Copy these two rows to ``m1a`` and ``m2a`` and mark
+                // he as bing used and equal.
+                m1a[row_pos] = m1[row_pos1++];
+                m2a[row_pos] = m2[row_pos2++];
+                rows_equ |= ONE << row_pos;
+                ++row_pos;  
+            } else { 
+                // b1 = 1,  b2 = 0
+                // Row with leading column ``col`` in ``m1`` only.
+                // Copy that row to ``m1a`` and mark the corresponding
+                // row in ``m2a`` as unused.
+                // Pivot ``m1a`` with that row to make column ``col`` in
+                // in ``m1a`` equal to the column ``col`` in ``m2a``.
+                m1a[row_pos] = v1 = m1[row_pos1++];
+                for (row = row_pos - 1; row >= 0; --row) { 
+                    m1a[row] ^= v1 &
+                       (0 - ((rows_equ >> row) & (m2a[row] >> col) & ONE));
+                }       
+                ++row_pos;
+            }
+        } else {
+            if (b2) {
+                // b1 = 0,  b2 = 1
+                // Row with leading column ``col`` in ``m1`` only.
+                // This is symmetric to the case b1 = 1,  b2 = 0.
+                m2a[row_pos] = v2 = m2[row_pos2++];
+                for (row = row_pos - 1; row >= 0; --row) { 
+                    m2a[row] ^= v2 &
+                       (0 - ((rows_equ >> row) & (m1a[row] >> col) & ONE));
+                }       
+                ++row_pos;
+            } else {
+                 // b1 = b2 = 0
+                 // No row with leading column ``col`` in ``m1`` or ``m2``
+                 // Find the highest row ``r`` with 
+                 // ``m1a[r,col] != m2a[r,col]``, such that ``m1a`` and
+                 // ``m2a`` are marked equal in row ``r``. 
+                 // Then mark ``m1a`` and ``m2a`` as unequal in row ``r``.                  
+                 for (row = row_pos - 1; row >= 0; --row) { 
+                    if (((m1a[row] ^ m2a[row]) >> col) & 
+                        (rows_equ >> row) &  ONE)  {
+                            rows_equ &= ~(ONE << row);
+                            v1 = m1a[row]; v2 = m2a[row];
+                            break;
+                    }
+                }
+                // Pivot ``m1a`` and ``m2a`` with row ``r`` in all rows 
+                // ``r0`` where ``m1a[r0,col] != m2a[r0,col]``, and
+                // ``m1a`` and ``m2a`` are marked equal in row ``r1``. 
+                for (--row; row >= 0; --row) { 
+                    if (((m1a[row] ^ m2a[row]) >> col) & 
+                        (rows_equ >> row) &  ONE)  {
+                            m1a[row] ^= v1; m2a[row] ^= v2;
+                    }
+                }       
+            }
+        } 
+    }   
+    // Now ``m1a`` is a matrix obtained from ``m1`` by row operations.
+    // Only the rows of ``m1a`` which are marked in the array 
+    // ``rows_used1`` are in use. A similar statement holds if 
+    // (``m1a``, ``m1`,  ``rows_used1``) is replaced by
+    // (``m2a``, ``m2`,  ``rows_used2``).
+    // Bit array ``rows_equ`` marks the rows in ``m1a`` and ``m2a``
+    // that are equal in columns ``j0-1,...,j0-n``.
+    
+  #ifdef ERROR_POOL
+    for (row = 0; row < 4; ++row) {
+        error_pool[row] = m1a[row]; 
+        error_pool[row+4] = m2a[row];
+     }
+     error_pool[8] =  rows_used1;
+     error_pool[9] =  rows_used2;   
+     error_pool[10] =  rows_equ;
+     error_pool[11] =  row_pos1;
+     error_pool[12] =  row_pos2;
+     error_pool[13] =  row_pos;
+     error_pool[14] =  j0;
+     error_pool[15] =  n;
+     error_pool[16] =  i1;
+     error_pool[17] =  i2;
+  #endif
+  
+    // Restore the rows of ``m1`` from the used rows of ``m1a``; put
+    // the rows equal to corresponing rows of ``m2a`` at the bottom.
+    res = restore_cap_h(m1a, m1, rows_used1, rows_equ, i1);
+    // Abort in case of failure
+    if (res < 0) return res;
+    // Restore the rows of ``m2`` from the used rows of ``m2a``; put
+    // the rows equal to corresponing rows of ``m1a`` at the bottom.
+    return restore_cap_h(m2a, m2, rows_used2, rows_equ, i2);
+}
+
+
+/*************************************************************************
+*** Bit matrix inversion
+*************************************************************************/
+
+/**
+  @brief Bit matrix inversion
+
+  Here ``m``has ``i`` rows and ``i`` columns. ``i <= 32`` must hold. 
+  The function inverts matrix ``m`` in place. 
+  
+  It returns 0 in case of success and ``ERR_QSTATE12_MATRIX_INV``
+  if ``m`` is not invertible.
+*/
+// %%EXPORT px
+int32_t bitmatrix64_inv(uint64_t *m, uint32_t i)
+{
+    int_fast32_t res;
+    if (i > 32) return ERR_QSTATE12_TOOLARGE;
+    if (i == 0) return 0;
+    bitmatrix64_mask_rows(m, i, (ONE << i) - 1);
+    bitmatrix64_add_diag(m, i, i);
+    res = bitmatrix64_echelon_l(m, i, 0, 2*i);
+    if (res < 0) return res;
+    if ((m[i-1] & ((ONE << i) - 1)) == 0) return ERR_QSTATE12_MATRIX_INV;
+    res = bitmatrix64_rot_bits(m, i, i, 2*i, 0);
+    if (res < 0) return res;
+    bitmatrix64_mask_rows(m, i, (ONE << i) - 1);
+    return 0;
+}
+
+
+/*************************************************************************
+*** Solve a linar bit equation 
+*************************************************************************/
+
+/**
+  @brief Solve a linear bit equation
+
+  Let ``M`` be the bit matrix with ``i`` rows and ``j`` columns stored
+  in the array ``m`` in the usual way. Let ``v`` be the column bit 
+  vector stored in column ``j`` of the array ``m``.
+
+  Then the function tries to solve the equation ``transpose(v) * m = x``
+  If such a solution ``x`` exists then the function returns the transposed
+  vector of the column vector ``x`` as a nonnegative integer.
+  
+  The function returns ``ERR_QSTATE12_MATRIX_INV`` if no solution ``x``
+  exists. As a side effect, it echelonizes the lowest ``j + 1`` columns
+  of matrix ``m`` with function ``bitmatrix64_echelon_h``.
+*/
+// %%EXPORT px
+int64_t bitmatrix64_solve_equation(uint64_t *m, uint32_t i, uint32_t j)
+{
+    int_fast32_t n, k;
+    uint64_t res = 0, mask;
+    if (j > 63) return ERR_QSTATE12_TOOLARGE;
+    mask = ((ONE << j) << 1) - 1;
+    n = bitmatrix64_echelon_l(m, i, 0, j+1);
+    if (n == 0) return 0;
+    if ((m[n-1] & mask) == (ONE << j)) return ERR_QSTATE12_MATRIX_INV;
+    for (k = 0; k < n; ++k) {
+        if ((m[k] >> j) & 1) res |= m[k] & (0 - m[k]);
+    }
+    return (int64_t)res;
+}
+
+/*************************************************************************
+*** End of of C code
+*************************************************************************/
+
+
+//  %%GEN h
+/// @endcond  
+//  %%GEN c
+
+
+
+// %%GEN ch
+#ifdef __cplusplus
+}
+#endif
+
+
+
+

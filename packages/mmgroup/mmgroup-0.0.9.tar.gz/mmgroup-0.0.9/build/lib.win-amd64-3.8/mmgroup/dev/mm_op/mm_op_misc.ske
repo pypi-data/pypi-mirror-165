@@ -1,0 +1,232 @@
+/** @file mm%{P}_op_misc.c
+
+ File ``mm%{P}_op_misc.c`` implements the operations on
+ vectors in the representation \f$\rho_{%{P}}\f$ of the
+ monster.
+
+ The representation \f$\rho_{%{P}}\f$ is equal to the
+ 196884-dimensional representation  \f$\rho\f$ of the monster,
+ with coefficients taken modulo %{P}, as defined in
+ section **The representation of the monster group**
+ in the **API reference**.
+
+ An element of \f$\rho_{%{P}}\f$ is implemented as an array
+ of integers of type ``uint_mmv_t`` as described in
+ section **Description of the mmgroup.mm extension**
+ in this document.
+*/
+
+#include "mm_op%{P}.h"
+
+// %%EXPORT_KWD MM_OP%{P}_API
+
+
+//  %%GEN h
+/// @cond DO_NOT_DOCUMENT 
+//  %%GEN c
+
+/** 
+  @brief Copy vector ``mv1`` in \f$\rho_{%{P}}\f$ to ``mv2``
+*/
+// %%EXPORT px
+uint32_t mm_op%{P}_copy(uint_mmv_t *mv1, uint_mmv_t *mv2)
+// Copy mv1 to mv2. Here mv1 and mv2 are vectors of the
+// monster group representation modulo %{P}.
+{
+    uint_fast32_t len = %{MMV_INTS}; 
+    do {
+       *mv2++ = *mv1++;
+    } while(--len);
+    return 0; 
+}
+
+
+/** 
+  @brief Compare arrays ``mv1`` and ``mv2`` of integers
+
+  The function compares parts of the two vectors ``mv1``
+  and ``mv2``of the representation \f$\rho_{%{P}}\f$.
+
+  Here the function compares ``len`` integers of type
+  ``uint_mmv_t`` starting at the pointers ``mv1`` and ``mv2``.
+  These integers are interpreted as arrays of bit fields
+  containing integers modulo %{P}.
+
+  The function returns 0 in case of equality and 1 otherwise.
+*/
+// %%EXPORT px
+uint32_t mm_op%{P}_compare_len(uint_mmv_t *mv1, uint_mmv_t *mv2, uint32_t len)
+{
+    uint_mmv_t a, b, t, c;
+    while (len--) {
+        a = *mv1++;
+        b = *mv2++;
+        // Next we compare integers a and b modulo p. 
+        // Idea for p = %{hex:P} and unsigned %{P_BITS}-bit integers a, b:
+        // t is in [0, p] iff (t ^ (t >> 1)) & %{hex:P>>1} == 0 
+        // We have a = +- b (mod p)  iff  a ^ b in [0, p].
+        t = a ^ b;
+        c = (t ^ (t >> 1)) & %{smask:P>>1}; // c = 0 iff a = +- b (mod p)
+        // In case c != 0 we already know that a != b holds.
+        // So assume c == 0 and hence a = +-b, i.e.  t in [0, p].
+        // Then a == b (mod p) iff t == 0 or (t & a) in [0, p].
+        // Thus is suffices to check if (t & a) is in [0, p]. 
+        t &= a;
+        t = (t ^ (t >> 1)) & %{smask:P>>1}; // t = 0 iff old t in [0,p]
+        if (c | t) return 1;
+    }
+    return 0; 
+}
+
+/** 
+  @brief Compare vectors ``mv1`` and ``mv2`` of \f$\rho_{%{P}}\f$
+
+  The function compares two vectors ``mv1`` and ``mv2`` of 
+  the representation \f$\rho_{%{P}}\f$.
+
+  It returns 0 in case of equality and 1 otherwise.
+*/
+// %%EXPORT px
+uint32_t mm_op%{P}_compare(uint_mmv_t *mv1, uint_mmv_t *mv2)
+//  Compare two vectors of the monster group representation modulo %{P}..
+//  Comparison is done modulo %{P}.
+//  The function returns 0 in case of equality and 1 otherwise.
+{
+    return mm_op%{P}_compare_len(mv1, mv2, %{MMV_INTS}); 
+}
+   
+    
+
+/** 
+  @brief Add vectors ``mv1`` and ``mv2`` of \f$\rho_{%{P}}\f$
+
+  The function adds the two vectors ``mv1`` and ``mv2`` of 
+  the representation \f$\rho_{%{P}}\f$ and stores the
+  result in the vector ``mv1``.
+*/
+// %%EXPORT px
+void mm_op%{P}_vector_add(uint_mmv_t *mv1, uint_mmv_t *mv2)
+//  Vector addition in the monster group representation modulo %{P}.
+//  Put mv1 = mv1 + mv2.
+{
+    uint_fast32_t len = %{MMV_INTS};
+    uint_mmv_t a1, b1;
+    // %%IF* FIELD_BITS == P_BITS
+    uint_mmv_t a2;
+    // %%END IF
+    do {
+        a1 = *mv1;
+        b1 = *mv2++;
+        // %%IF* FIELD_BITS == P_BITS
+        a2 = ((a1 >> %{FIELD_BITS}) & %{smask:P, -1, 2*FIELD_BITS})
+           + ((b1 >> %{FIELD_BITS}) & %{smask:P, -1, 2*FIELD_BITS});
+        a1 = (a1 & %{smask:P, -1, 2*FIELD_BITS})
+           + (b1 & %{smask:P, -1, 2*FIELD_BITS});
+        a1 = (a1 & %{smask:P, -1, 2*FIELD_BITS}) 
+              + ((a1 >> %{P_BITS}) & %{smask:1, -1, 2*FIELD_BITS});
+        a2 = (a2 & %{smask:P, -1, 2*FIELD_BITS}) 
+              + ((a2 >> %{P_BITS}) & %{smask:1, -1, 2*FIELD_BITS});
+        a1 = a1 + (a2 << %{FIELD_BITS});
+        // %%ELSE 
+        a1 = (a1 & %{smask:P}) 
+              + (b1 & %{smask:P});                     
+        a1 = (a1 & %{smask:P}) 
+              + ((a1 >> %{P_BITS}) & %{smask:1});
+        // %%END IF
+        *mv1++ = a1;
+    } while (--len);
+}
+
+
+/** 
+  @brief Multiply vector ``mv1`` of \f$\rho_{%{P}}\f$ with scalar
+
+  The function multiplies the vector ``mv1`` of the 
+  representation \f$\rho_{%{P}}\f$ and with the (signed)
+  integer ``factor`` and stores the result in the vector ``mv1``.
+*/
+// %%EXPORT px
+void mm_op%{P}_scalar_mul(int32_t factor, uint_mmv_t *mv1)
+//  Scalar multiplication in the monster group representation modulo %{P}.
+//  Put mv1 = factor * mv1.
+{
+    uint_fast32_t len = %{MMV_INTS};
+    uint_mmv_t a1, a2;
+    factor %= %{P};
+    if (factor < 0) factor += %{P};
+    do {
+        a1 = *mv1;
+        a2 = ((a1 >> %{FIELD_BITS}) & %{smask:P, -1, 2*FIELD_BITS});
+        a1 = (a1 & %{smask:P, -1, 2*FIELD_BITS});
+        a1 *= factor;
+        a1 = (a1 & %{smask:P, -1, 2*FIELD_BITS}) 
+              + ((a1 >> %{P_BITS}) & %{smask:P, -1, 2*FIELD_BITS});
+        a1 = (a1 & %{smask:P, -1, 2*FIELD_BITS}) 
+              + ((a1 >> %{P_BITS}) & %{smask:1, -1, 2*FIELD_BITS});
+        a2 *= factor;
+        a2 = (a2 & %{smask:P, -1, 2*FIELD_BITS}) 
+              + ((a2 >> %{P_BITS}) & %{smask:P, -1, 2*FIELD_BITS});
+        a2 = (a2 & %{smask:P, -1, 2*FIELD_BITS}) 
+              + ((a2 >> %{P_BITS}) & %{smask:1, -1, 2*FIELD_BITS});
+        a1 = a1 + (a2 << %{FIELD_BITS});
+        *mv1++ = a1;
+    } while (--len);
+}
+
+
+
+/** 
+  @brief Compare two vectors of \f$\rho_{%{P}}\f$ modulo \f$q\f$
+
+  The function compares two vectors ``mv1`` and ``mv2`` of 
+  the representation \f$\rho_{%{P}}\f$ modulo a number \f$q\f$.
+  Here \f$q\f$ should divide \f$p\f$.
+
+  It returns 0 in case of equality, 1 in case of inequality,
+  and 2 if  \f$q\f$ does not divide \f$p\f$.
+*/
+// %%EXPORT px
+uint32_t mm_op%{P}_compare_mod_q(uint_mmv_t *mv1, uint_mmv_t *mv2, uint32_t q)
+//  Compare two vectors of the monster group representation modulo %{P}.
+//  Comparison is done modulo q. q must divide %{P}. The function returns:
+//  0  if mmv1 == mmv2 (mod q) 
+//  1  if mmv1 != mmv2 (mod q) 
+//  2  if q does not divide %{P}
+{
+    // %%IF* P in [1,3,7,31,127]
+    if (q == %{P}) return mm_op%{P}_compare(mv1, mv2);
+    return q == 1 ? 0 : 2;
+    // %%ELSE 
+    uint_fast32_t d1, d2, len = %{MMV_INTS};
+    if (q == %{P}) return mm_op%{P}_compare(mv1, mv2);
+    if (q <= 1) return 2 - 2 * q;
+    d1 = %{P} / q;
+    if (d1 * q != %{P}) return 2;
+    d2 = %{P} - d1;
+    // %%WITH* MASK = '%{smask:P, -1, 2*FIELD_BITS}'
+    do {
+        uint_mmv_t a, b;
+        a = (*mv1 & %{MASK}) * d1 
+          + (*mv2 & %{MASK}) * d2;
+        a = (a & %{MASK}) + ((a >> %{P_BITS}) & %{MASK});
+        a = (a & %{MASK}) + ((a >> %{P_BITS}) & %{MASK});
+
+        b = ((*mv1++ >> %{FIELD_BITS}) & %{MASK}) * d1
+          + ((*mv2++ >> %{FIELD_BITS}) & %{MASK}) * d2;
+        b = (b & %{MASK}) + ((b >> %{P_BITS}) & %{MASK});
+        b = (b & %{MASK}) + ((b >> %{P_BITS}) & %{MASK});
+
+        a += b << %{FIELD_BITS};
+        a ^= a >> 1;
+        if (a & %{smask:P//2}) return 1;
+    } while (--len);
+    // %%END WITH
+    return 0;
+    // %%END IF
+}
+
+
+
+//  %%GEN h
+/// @endcond
+//  %%GEN c

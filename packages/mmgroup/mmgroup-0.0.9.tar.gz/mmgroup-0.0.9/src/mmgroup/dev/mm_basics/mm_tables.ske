@@ -1,0 +1,637 @@
+/** @file mm_tables.c
+
+ File ``mm_tables.c`` contains functions for supporting the 
+ operations \f$x_\epsilon x_\pi\f$ and \f$y_f x_e x_\epsilon\f$ on 
+ the vectors of the 198884-dimesional represention  \f$\rho_p\f$
+ modulo a small number \f$p\f$. These operations are implemented
+ in separate packages for the differnet values of \f$p\f$. But
+ there are commom preprocessing steps required for all
+ values \f$p\f$. These common preprocessing steps are 
+ implemented here. 
+ 
+ The monomial operations \f$x_\epsilon, x_\pi, y_f, x_e\f$ are as
+ defined in the **API Reference**, section **The monster group**.
+ Here \f$\epsilon\f$ is an element of the Golay cocode represented
+ as a 12-bit integer. \f$f\f$ and \f$e\f$ are elements of the
+ Parker loop represented as 13-bit integers.  \f$\pi\f$ is
+ a automorphism of the Parker loop. In the **API Reference**,
+ section **Automorphisms of the Parker loop**  we number
+ a certain set of these automorphisms in the same way as the
+ elements of the Mathieu group \f$M_{24}\f$. We denote
+ such an automorphism  \f$\pi\f$ by its number.
+*/
+#include <stdlib.h>
+#include <stdint.h>
+
+#include "mat24_functions.h"
+#include "mm_basics.h"
+
+// %%EXPORT_KWD MM_BASICS_API
+
+
+// %%GEN h
+
+
+/** @struct mm_sub_op_pi64_type "mm_basics.h"
+
+ @brief Auxiliary structure for the structure ``mm_sub_op_pi_type``
+
+
+ An array of type ``mm_sub_op_pi64_type[759]`` encodes the operation
+ of  \f$x_\epsilon x_\pi\f$ on the representation of the monster group
+ for entries with tag ``T``. Assume that entry ``(T, i, j)`` is mapped
+ to entry ``+-(T, i1, j1)``. Then ``i1`` depends on ``i`` only, and ``j1``
+ depends on ``i`` and ``j``. For fixed ``i`` the mapping ``j -> j1`` is
+ linear if we consider the binary numbers ``j`` and ``j1`` as bit vectors.
+
+ Entry ``i1`` of the array of type ``mm_sub_op_pi64_type[759]``
+ describes the preimage of ``(T, i1, j1)`` for all ``0 <= j1 < 64``
+ as documented in the description of the members ``preimage``
+ and  ``perm``.
+ 
+ Note that the values 1, 3, 7, 15, 31, 63 occur as
+ differences `` j1 ^ (j1 - 1)`` when counting ``j1`` from 0 up to 63. So the
+ preimage of ``(T, i1, j1)`` can be computed from the preimage
+ of ``(T, i1, j1 - 1)`` using linearity and the approprate entry in
+ member perm.
+
+ We remark that in case of an odd value epsilon the mapping for tag ``T``
+ requires a postprocessing step that cannot be derived from the
+ infomration in this structure. Then entry ``(T, i, j)`` has to be negated
+ if the bit weight of the subset of octade ``i`` corresponding to
+ index ``j`` has bit weight 2 modulo 4.
+ 
+ In the sequel we describe the meaning of entry ``i1`` an an array of 
+ elements of type ``mm_sub_op_pi64_type``.
+*/
+typedef struct {
+   /**
+   Bits 9...0 : preimage ``i`` such that ``(T, i, .)`` maps to ``+-(T, i1, .)``
+
+   Bit 12: sign bit: ``(T, i, .)`` maps to ``-(T, i1, .)`` if bit 12 is set
+   */
+   uint16_t preimage;
+   /**
+   Member ``perm[k]`` is a value ``v ``such that ``(T, i, v)`` maps 
+   to ``+-(T, i1, 2 * 2**k - 1)``
+   */
+   uint8_t perm[6];
+} mm_sub_op_pi64_type;
+
+
+/** @struct mm_sub_op_pi_type "mm_basics.h"
+
+ @brief Structure used for preparing an operation \f$x_\epsilon  x_\pi\f$
+
+ Function ``mm_sub_prep_pi`` computes some tables required for the operation
+ of \f$x_\epsilon  x_\pi\f$ on the representation of the monster group, and
+ stores these tables in a structure of type ``mm_sub_op_pi_type``.
+
+ The structure of type ``mm_sub_op_pi_type`` has the following members:
+*/
+typedef struct {
+    /**
+       A 12-bit integer describing an element  \f$\epsilon\f$ of
+       the Golay cocode.
+    */
+    uint32_t eps; 
+    /**
+      An integer describing the element \f$\pi\f$ of the Mathieu
+      group \f$M_{24}\f$ as in module ``mat24_functions.c``.
+    */    
+    uint32_t pi;
+    /**
+      The permutation ``0...23 -> 0...23`` given by the
+      element \f$\pi\f$ of \f$M_{24}\f$.
+    */
+    uint8_t perm[24];
+    /**
+      The inverse of the permutation ``perm``.
+    */
+    uint8_t inv_perm[24];
+    /**
+      A representation of Benes network for computing permutationperm, as
+      described in function ``mat24_perm_to_net`` in
+      file ``mat24_functions.c``.    
+    */
+    uint32_t benes_net[9];
+    
+    /**
+      For tags ``A, B, C, X, Y, Z``, an entry ``(tag, i, j)`` of the
+      representation of the monster is mapped to entry ``(tag1, i1, j1)``,
+      with ``i1`` depending on ``i`` (and the tag), and ``j1``
+      depending on ``j`` only.
+
+      If ``tbl_perm24_big[i1] & 0x7ff = i`` for ``0 <= i1 < 2048``
+      then ``(tag, i, j)`` ia mapped to ``(Tag, i1, perm[j])``, up to sign,
+      for tags ``X``, ``Y`` and ``Z``. In case of an odd \f$\epsilon\f$,
+      tags ``Y`` and ``Z`` have to be exchanged. The
+      value ``tbl_perm24_big[2048 + 24*k + i1] & 0x7ff`` describes the
+      preimage of ``(tag, i1, j1)`` in a similar way,
+      where ``tag = A, B, C``, for ``k = 0, 1, 2``.
+
+      Bits 12,...,15 of ``tbl_perm24_big[i1]`` encode the signs of the
+      preimages of the corresponding entry of the rep. Bits 12, 13, and 14
+      refer to the signs for the preimages for the tags ``X``, ``Z``
+      and ``Y``, respectively. Bit 15 refers to the signs for the preimages
+      for tags ``A``, ``B`` and ``C``. If the corresponding bit is set,
+      the preimage has to be negated.
+
+      Note that function ``mat24_op_all_autpl`` in
+      module ``mat24_functions.c computes``the first 2048 entries of
+      the table.
+    */
+    uint16_t tbl_perm24_big[2048+72];
+    
+    /**
+       A description of the operation of \f$x_\epsilon  x_\pi\f$ on the
+       entries with tag ``T``,  see structure ``mm_sub_op_pi64_type``.
+       Entry ``d`` of the Arrary refers to the octad ``o(d)`` with 
+       number ``d``. It contains the followint information_
+       
+       Bits 5,...,0: Associator ``\delta' = A(o(d), f))`` encoded as a suboctad
+       
+       Bits 11,...,6: Associator ``a = A(o(d), ef))`` encoded as a suboctad.
+
+       Caution:
+
+       Pointer ``tbl_perm64`` must be initialized with an array 
+       of type ``mm_sub_op_pi64_type a_tbl_perm64[759]``.
+    */
+    mm_sub_op_pi64_type *tbl_perm64;
+} mm_sub_op_pi_type;
+
+// %%GEN c
+
+
+
+// %%GEN h
+
+/** @struct mm_sub_op_xy_type "mm_basics.h"
+
+  @brief Structure used for preparing an operation \f$y_f x_e x_\epsilon\f$
+  
+  The operation of \f$g = y_f x_e x_\epsilon\f$, (or, more precisely, of its 
+  inverse \f$g^{-1}\f$) on the representation of the monster group is 
+  described in section **Implementing generators of the Monster group** in 
+  the **The mmgroup guide for developers**. 
+  
+  Function ``mm_sub_prep_xy`` in file ``mm_tables.c`` collects the data
+  required for this operation in a structure of type ``mm_sub_op_xy_type``.
+
+*/
+typedef struct {
+    /**
+       A 13-bit integer describing an element  \f$f\f$ of the Parker loop.
+    */
+    uint32_t f;            
+    /**
+       A 13-bit integer describing an element  \f$e\f$ of the Parker loop.
+    */
+    uint32_t e;
+    /**
+       A 12-bit integer describing an element  \f$\epsilon\f$ of
+       the Golay cocode.
+    */
+    uint32_t eps;
+    /**
+       Bit \f$i\f$ of member ``f_i`` is the scalar product of \f$f\f$ and
+       the singleton cocode word  \f$(i)\f$.
+       
+       These bits are used for the operation of  \f$g^{-1}\f$ on
+       entries with tag ``A``.
+    */
+    uint32_t f_i;
+    /**
+       Bit \f$i\f$ of member ``ef_i`` is the scalar product of \f$ef\f$ and
+       the singleton cocode word  \f$(i)\f$.
+       
+       These bits are used for the operation of  \f$g^{-1}\f$ on
+       entries with tags ``B``, and ``C``.
+    */
+    uint32_t ef_i;
+    /**
+       Put  \f$g_0 = e\f$,  \f$g_1 = g_2 = f\f$.
+       For ``k = 0, 1,2``, the bit \f$i\f$ of member ``lin_i[k]`` is the scalar
+       product of \f$g_k\f$ and  the singleton cocode word  \f$(i)\f$.
+       
+       These bits are used for the operation of  \f$g^{-1}\f$ on
+       entries with tags ``X``, ``Z``, and ``Y``.
+    */
+    uint32_t lin_i[3];
+    /**
+       Let ``U_k = X, Z, Y`` for ``k = 0, 1, 2``. If the cocode
+       element \f$\epsilon\f$ is even then we put ``U'_k = U_k``, otherwise 
+       we put  ``U'_k = X, Y, Z``   for ``k = 0, 1, 2``. The
+       operation \f$g^{-1}\f$ maps the vector with tag ``(U_k, d, i)`` 
+       to ``(-1)**s`` times the vector with tag ``(U'_k, d ^ lin[d], i)``. 
+       Here ``**`` denotes exponentiation and we have
+       
+       ``s`` =  ``s(k, d, i)`` = ``(lin_i[k] >> i) + (sign_XYZ[d] >> k)``.
+
+       If ``k = 0`` and \f$\epsilon\f$  is odd then we have to 
+       correct ``s(k, d, i)``  by a  term ``<d, i>``.
+    */
+    uint32_t lin_d[3];
+    /**
+       Pointer ``sign_XYZ`` refers to an array of length 2048. This is
+       used for calculations of signs as described above. Here we use the
+       formula in section **Implementing generators of the Monster group**
+       of the  **mmgroup guide for developers**, dropping all terms
+       depending on ``i``.
+    */
+    uint8_t *sign_XYZ;
+    /**
+       Pointer ``s_T`` refers to an array of length 759.  Entry ``d`` 
+       of this array refers to the octad ``o(d)``  with number ``d``. 
+       The bits of entry ``d`` are interpreted as follows: 
+    
+       Bits 5,...,0: The asscociator ``delta' = A(o(d), f)`` encoded
+       as a suboctad of octad ``o(d))``.
+       
+       Bits 13,...,8: The asscociator ``alpha = A(o(d), ef)`` encoded
+       as a suboctad of octad ``o(d))``. From his information we can
+       compute the scalar product ``<ef, \delta>`` for each suboctad 
+       ``delta`` of ``o(d)`` as an  intersection of tow suboctads.
+       Here we assume that ``delta`` is represented as such a suboctad.
+       
+       Bit 14: The sign bit ``s(d) = P(d) + P(de) + <d, eps>``, where
+       ``P(.)`` is the squaring map in the Parker loop.
+       
+       Bit 15: Parity bit ``|eps|`` of the cocode word ``eps``.
+       
+       Then \f$g^{-1}\f$ maps the vector with tag ``(T, d, delta)`` 
+       to ``(-1)**s'`` times  the vector with 
+       tag ``(T, d, \delta ^ delta')``. 
+       Here ``**`` denotes exponentiation and we have
+       
+       ``s'`` = ``s'(T, d, delta)`` 
+       = ``s(d)`` + ``<\alpha, \delta>`` + ``|delta| * |eps| / 2``. 
+       
+       Here the product ``<\alpha, \delta>`` must be computed as the
+       bit length of an intersection of two suboctads.        
+    */
+    uint16_t *s_T;
+} mm_sub_op_xy_type;
+
+// %%GEN c
+
+
+
+// %%GEN ch
+#ifdef __cplusplus
+extern "C" {
+#endif
+// %%GEN c
+
+//  %%GEN h
+/// @cond DO_NOT_DOCUMENT 
+//  %%GEN c
+
+
+
+
+/**
+  @var MM_SUB_OCTAD_ELEMENT_TABLE
+
+  For ``0 <= i < 759``, the entries ``8*i,...8*i+7`` in the
+  table ``MM_SUB_OCTAD_ELEMENT_TABLE`` are the bit positions of the
+  octad with the number ``i`` (in natural order).
+*/
+// %%EXPORT_TABLE
+const uint8_t MM_SUB_OCTAD_ELEMENT_TABLE[759*8] = { 
+    // %%TABLE MM_OctadElementsTable, uint8
+};
+
+
+/// @cond DO_NOT_DOCUMENT 
+
+
+// Let o be an octad. Let {i},{j}, i != j be the even cocode word 
+// which is a subset of octad  o,  such that precisely the i1-th and 
+// the i2-th bit  of octad  o  is set, as in module mm_aux.c. Then 
+// entry  8 * i + j  in the folllowing table is the number of the
+// subocatad  {i},{j} in the standard numbering given in module
+// mm_aux.c.
+static const uint8_t MM_SUB_PERM64_TABLE[64] = { 
+    // %%TABLE MM_PERM64_TABLE, uint8
+};
+
+
+// Let o be an octad. Let b_0,...,b_7 be the elements of octad 
+// o in natural order. Let x = sum 2**i * x_i, i = 0,...,7.
+// Then sum (x_i * b_i) is a suboctad as defined in function
+// mat24_suboctad_to_cocode() in module mat24_functions.c.  
+// In that function we also define a natural numbering of the
+// suboctads of an octad. Entry x of following table is the
+// number of the suboctad sum (x_i * b_i) for 0 <= x < 128.
+// Note that bit b_7 can be computed from bits b_0,...,b_6
+// as the even parity bit.
+static const uint8_t MM_SUBOCTAD_TABLE[128] = { 
+    // %%TABLE MM_SUBOCTAD_TABLE, uint8
+};
+
+
+/// @endcond 
+
+
+
+/**********************************************************************
+*** Subroutines for mm*_op_pi
+**********************************************************************/
+
+/**
+  @brief Compute information for operation \f$x_\epsilon  x_\pi\f$
+  
+  Given an element  \f$x_\epsilon  x_\pi\f$ of the monster by 
+  parameters ``eps`` and ``pi``, the function computes the
+  relevant data for performing that operation on the representation
+  of the monster. These data are stored in the structure of
+  type ``mm_sub_op_pi_type`` referred by parameter ``p_op``.
+
+  Caution:
+
+  Component ``p_op->tbl_perm64`` must be initialized with an array 
+  of type ``mm_sub_op_pi64_type a_tbl_perm64[759]`` befor aclling 
+  this function!!!.
+
+*/
+// %%EXPORT 
+void  mm_sub_prep_pi(uint32_t eps, uint32_t pi, mm_sub_op_pi_type *p_op)
+{
+    uint16_t *p_24big = p_op->tbl_perm24_big;
+
+
+    // Prepare permutation of the 2048 rows of 24 entries for tags X, Z, Y
+    {
+        uint32_t rep_autpl[12];
+        p_op->eps = eps & 0xfff;
+        p_op->pi = pi % MAT24_ORDER;
+        mat24_m24num_to_perm(p_op->pi, p_op->perm);
+        mat24_perm_to_iautpl(p_op->eps, p_op->perm, p_op->inv_perm, rep_autpl);
+        mat24_op_all_autpl(rep_autpl, p_24big); 
+    }
+
+    // Prepare permutation of the 3 * 24 rows of 24 entries for tags A, B, C
+    {
+        uint_fast16_t i;
+        for (i = 0; i < 24; ++i) {
+            uint_fast16_t t = p_op->inv_perm[i];
+            p_24big[i + 2048] = (uint16_t)t;   
+            p_24big[i + 2048 + 24] = (uint16_t)(t + 24);   
+            p_24big[i + 2048 + 48] 
+                = (uint16_t)((t + 48) | ((eps & 0x800) << 4));  
+        }
+    }
+
+    // Compute Benes network
+    mat24_perm_to_net(p_op->perm, p_op->benes_net); 
+
+
+    // Next deal with rows of 64 entries 
+    {
+        uint_fast16_t i, src;
+        uint_fast8_t p_inv[24];
+        mm_sub_op_pi64_type *p_out;
+        const uint8_t *p0 = MM_SUB_OCTAD_ELEMENT_TABLE;
+
+        p_out = p_op->tbl_perm64;
+        for (i = 0; i < 24; ++i) p_inv[i] = p_op->inv_perm[i];
+        eps &= 0x800;
+        for (i = 0; i < 759; ++i) {
+            {
+                uint_fast16_t sign, dest;
+                dest = mat24_def_octad_to_gcode(i);
+                src =  ((dest & eps) << 1)
+                      ^ p_24big[dest & 0x7ff];
+                sign = src & 0x1000;
+                src = src  & 0xfff;
+                src = mat24_def_gcode_to_octad(src);
+                p_out->preimage = (uint16_t)(src | sign);
+            }
+            {  // deal with permutation inside a row of 64 entries
+                uint_fast8_t qi[24], acc;
+                const uint8_t *p1 = MM_SUB_OCTAD_ELEMENT_TABLE + (src << 3);
+                qi[p1[0]] = 0; qi[p1[1]] = 1; 
+                qi[p1[2]] = 2; qi[p1[3]] = 3;
+                qi[p1[4]] = 4; qi[p1[5]] = 5; 
+                qi[p1[6]] = 6; qi[p1[7]] = 7;
+                p1 = MM_SUB_PERM64_TABLE + (qi[p_inv[p0[0]]] << 3);
+                acc =  p1[qi[p_inv[p0[1]]]];
+                p_out->perm[0] = acc;
+                acc ^=  p1[qi[p_inv[p0[2]]]];
+                p_out->perm[1] = acc;
+                acc ^=  p1[qi[p_inv[p0[3]]]];
+                p_out->perm[2] = acc;
+                acc ^=  p1[qi[p_inv[p0[4]]]];
+                p_out->perm[3] = acc;
+                acc ^=  p1[qi[p_inv[p0[5]]]];
+                p_out->perm[4] = acc;
+                acc ^=  p1[qi[p_inv[p0[6]]]];
+                p_out->perm[5] = acc;
+            }
+            p0 += 8;
+            ++p_out;
+        }
+    }
+
+}
+
+/**
+  @brief For internal use only!
+  
+  This is an auxiliary function for testing function ``mm_sub_prep_pi``.
+
+  Given ``eps`` and ``pi`` as in function ``mm_sub_prep_pi``, 
+  this function executes function ``mm_sub_prep_p(eps, pi, p_op)``
+  and stores the output ``p_op->tbl_perm64`` (as an array
+  of  length  759 * (1 + 6)) in the array referred by ``p_tbl``. 
+
+*/
+// %%EXPORT px
+int32_t mm_sub_test_prep_pi_64(uint32_t eps, uint32_t pi, uint32_t *p_tbl)
+{
+    mm_sub_op_pi_type op_pi;
+    uint_fast32_t i,j;
+    mm_sub_op_pi64_type *tbl_perm64;
+
+    tbl_perm64 = calloc(759, sizeof(mm_sub_op_pi64_type));
+    if (tbl_perm64 == NULL) return -1;
+    op_pi.tbl_perm64 = tbl_perm64;
+    mm_sub_prep_pi(eps, pi, &op_pi);
+    for (i = 0; i < 759; ++i) {
+        p_tbl[0] = op_pi.tbl_perm64[i].preimage;
+        for (j = 0; j < 6; ++j)  p_tbl[j+1] = op_pi.tbl_perm64[i].perm[j];
+        p_tbl += 7;
+    }
+    return 0;
+}
+
+
+
+
+/**********************************************************************
+*** Subroutines for mm*_op_xy
+**********************************************************************/
+
+/// @cond DO_NOT_DOCUMENT 
+
+#define PwrMapH(d) (MAT24_THETA_TABLE[d])
+#define PwrMap(d) ((MAT24_THETA_TABLE[(d) & 0x7ff] >> 12) & 1)
+    
+// Compute interssection of vector ``v`` in ``{0,1}^24`` and the
+// octad referred by the pointer ``po`` to an antry of the
+// octad table ``MM_SUB_OCTAD_ELEMENT_TABLEE``. Return the
+// result as a 6-bit number denoting a suboctad.
+#define to_suboctad(v, po) MM_SUBOCTAD_TABLE[ \
+    ((v >> po[0]) & 1) + ((v >> (po[1] - 1)) & 2) \
+    + ((v >> (po[2] - 2)) & 4) + ((v >> (po[3] - 3)) & 8) \
+    + ((v >> (po[4] - 4)) & 16) + ((v >> (po[5] - 5)) & 32) \
+    + ((v >> (po[6] - 6)) & 64) ]
+
+/// @endcond  
+
+/**
+  @brief Compute information for operation \f$y_f x_e x_\epsilon\f$
+  
+  Given an element  \f$y_f x_e x_\epsilon\f$ of the monster by 
+  parameters ``f``, ``e``, and ``eps``, the function computes the
+  relevant data for performing that operation on the representation
+  of the monster. These data are stored in the structure of
+  type ``mm_sub_op_xy_type`` referred by parameter ``p_op``.
+
+  Caution!
+
+  Component ``p_op->sign_XYZ`` must either be NULL or refer to an
+  array of type ``uint8_t`` of length 2048.
+  Component ``p_op->s_T`` must either be NULL or refer to an
+  array of type ``uint8_t`` of length 759.
+*/
+// %%EXPORT 
+void  mm_sub_prep_xy(uint32_t f, uint32_t e, uint32_t eps, mm_sub_op_xy_type *p_op)
+{
+    p_op->f = f = f & 0x1fff;            
+    p_op->e = e = e & 0x1fff; 
+    p_op->eps = eps = eps & 0xfff; 
+
+    p_op->lin_i[0] = mat24_gcode_to_vect(e);
+    p_op->lin_i[1] = p_op->lin_i[2] = p_op->f_i = mat24_gcode_to_vect(f);
+    p_op->ef_i = p_op->lin_i[0] ^ p_op->f_i;
+
+    if (p_op->sign_XYZ != NULL) {
+        {
+            uint_fast16_t ld0 = eps ^ mat24_ploop_cap(e, f) 
+                                ^ mat24_ploop_theta(f);
+            uint_fast16_t ld2 = eps ^ mat24_ploop_theta(e);
+            uint_fast16_t ld1 = ld2 ^ mat24_ploop_theta(f);
+            uint_fast8_t *p_XYZ = p_op->sign_XYZ;
+            uint_fast16_t li, i, v, j;
+
+            p_XYZ[0] = (uint_fast8_t)(
+              (PwrMap(f) ^ PwrMap(e ^ f) ^ (f >> 12) ) 
+              ^ ((mat24_ploop_cocycle(f, e) ^ ((e ^ f) >> 12)) << 1)
+              ^ (((PwrMap(f) ^ (e >> 12) ^ (e >> 11)) & 1) << 2) 
+            );
+
+            for (li = 0; li < 11; ++li) {
+                i = 1 << li ;
+                v = ((ld0 >> li) & 1) + (((ld1 >> li) & 1) << 1)
+                  + (((ld2 >> li) & 1) << 2);
+                for (j = 0; j < i; ++j) {
+                    p_XYZ[i + j] = (uint_fast8_t)(p_XYZ[j] ^ v);
+                }
+            }
+        }
+
+        {
+            uint_fast16_t e1 = (e & 0x7ff);
+            uint_fast16_t ef1 = ((e ^ f) & 0x7ff);
+            uint_fast16_t eps1 = ((eps & 0x800) ^ 0x800) << 1; 
+            uint_fast8_t *p_XYZ = p_op->sign_XYZ;
+            uint_fast16_t d;
+
+            for (d = 0; d < 2048; ++d) {
+              p_XYZ[d] ^= ((-(PwrMapH(d ^ ef1) & 0x1000)) >> 12)
+                       ^ ((-(PwrMapH(d ^ e1) & 0x1000)) >> 11) 
+                       ^  ((PwrMapH(d) & eps1) >> 12);
+            }
+            p_op->lin_d[0] = e1 ^ ef1;
+            p_op->lin_d[1] = ef1;
+            p_op->lin_d[2] = e1;
+        }
+    }
+
+    if (p_op->s_T != NULL) {
+        uint_fast32_t vf =  p_op->lin_i[1]; 
+        uint_fast32_t vef = vf ^ p_op->lin_i[0];
+        uint_fast16_t sign_e = PwrMap(e);
+        uint_fast16_t oct, d, res, sign;
+        const uint8_t* p_oct = MM_SUB_OCTAD_ELEMENT_TABLE;
+        uint16_t* p_res = p_op->s_T;
+
+        for (oct = 0; oct < 759; ++oct) {
+            d = mat24_def_octad_to_gcode(oct);
+            res = to_suboctad(vf, p_oct); 
+            res ^= (to_suboctad(vef, p_oct)) << 8;
+            sign = d & eps;
+            mat24_def_parity12(sign);
+            sign ^= sign_e ^ PwrMap(d ^ e);
+            *p_res++ = (uint16_t)(
+                res + (sign << 14) + ((eps & 0x800) << (15-11)));
+            p_oct += 8;
+        }
+    }
+}
+
+
+
+
+/// @cond DO_NOT_DOCUMENT 
+
+// %%EXPORT px
+void  mm_sub_test_prep_xy(uint32_t f, uint32_t e, uint32_t eps, uint32_t n, uint32_t *p_tbl)
+// Auxiliary function for debugging. Given eps and pi as in 
+// function mm_sub_prep_pi(), various components (dependding
+// on n) in structure mm_sub_prep_p are stored to p_tbl[]. 
+{
+    uint16_t s_T[759];
+    uint8_t sign_XYZ[2048];
+    mm_sub_op_xy_type op_xy;
+    op_xy.sign_XYZ = sign_XYZ;
+    op_xy.s_T = s_T;
+    uint_fast32_t i;
+    mm_sub_prep_xy(f, e, eps, &op_xy);
+    switch(n) {
+        case 1:
+            for (i = 0; i < 3; ++i) {
+                p_tbl[i] = op_xy.lin_i[i];
+                p_tbl[i + 3] = op_xy.lin_d[i];
+            }
+            break;
+        case 2:
+            for (i = 0; i < 2048; ++i) p_tbl[i] = op_xy.sign_XYZ[i];
+            break;
+        case 3:
+            for (i = 0; i < 759; ++i) p_tbl[i] = op_xy.s_T[i];
+            break;
+        default:
+            break;
+    } 
+}
+
+/// @endcond 
+
+
+//  %%GEN h
+/// @endcond 
+//  %%GEN c
+
+
+// %%GEN ch
+#ifdef __cplusplus
+}
+#endif
+//  %%GEN c
+
+
+

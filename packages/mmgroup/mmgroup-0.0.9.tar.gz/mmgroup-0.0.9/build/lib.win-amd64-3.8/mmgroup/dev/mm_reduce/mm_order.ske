@@ -1,0 +1,453 @@
+/** @file mm_order.c
+
+ File ``mm_order.c`` contains functions for checking if an element is
+ in the subgroup \f$G_{x0}\f$ (or \f$Q_{x0}\f$) of the moster group.
+ If this is the case, the element is expressed as a word in the
+ generators of the corresponding subgroup.
+
+ File ``mm_order.c`` also contains functions for computing the order
+ of an element of the monster.
+
+ All these function use the precomputed ``order_vector`` in
+ file ``mm_order_vector.c``
+*/
+
+
+
+#include "mat24_functions.h"
+#include "clifford12.h"
+#include "mm_op15.h"   
+#include "mm_reduce.h"   
+   
+// %%EXPORT_KWD MM_REDUCE_API
+
+
+
+/**
+   The following enumeration contains the offsets of the (static)
+   array ``TAG_VECTOR`` of unsigned 32-bit integers stored in this
+   module. This array contains data that are required for dealing
+   with the precomputed order vector \f$v_1\f$ stored in this
+   module. That order vector can be obtained by calling
+   function ``mm_order_load_vector`` in module ``mm_order_vector.c``.
+   The data in the array ``TAG_VECTOR`` can be obtained by calling
+   function ``mm_order_load_tag_data(0, buf, 97)`` in the same
+   module, with ``buf`` of type ``uint32_t[97]``.
+
+   The purpose of the order vector \f$v_1\f$ is to identify an
+   element \f$g\f$ of the subgroup \f$G_{x0}\f$ of the monster
+   from  \f$v_1 \cdot g\f$, as described in [Sey22]. The basic
+   steps of this identification process are:
+
+   1. Given \f$v_1 \cdot g\f$, reduce \f$g\f$ to an
+   element \f$g_1\f$ of \f$N_{x0}\f$,
+   see [Sey22] for background.
+
+   2. Given \f$v_1 \cdot g_1\f$, reduce \f$g_1 \in N_{x0}\f$
+   to \f$g_2\f$, where\f$g_2\f$ is in a certain 2 group of
+   structure \f$2^{1+24+11}\f$. Therefore we have to watermark
+   of the A part of \f$v_1 \cdot g_1\f$ with
+   function ``mm_op15_watermark_A`` in module ``mm15_op_eval_A.c``.
+   Then we have to check that watermark against the precomputed
+   watermark of the A part of \f$v_1\f$ using
+   function ``mm_op15_watermark_A_perm_num`` in the same module.
+   That precomputed watermark (of length 24) is stored in the
+   array ``TAG_VECTOR`` at offset ``OFS_WATERMARK_PERM``.
+
+   3. Given \f$v_1 \cdot g_2\f$, with \f$g_2\f$ as above,
+   we want to present  \f$g_2\f$ as a product of
+   generators \f$g_2 = x_d x_\delta  y_e\f$.
+   For computing the factor \f$y_e\f$ we have to extract
+   (the signs of) 11 entries of \f$v_1 \cdot g_2\f$,
+   with function ``mm_aux_mmv_extract_sparse_signs`` in
+   module ``mm_aux.c``. The coordinates and the expected
+   values of these 11 entries are stored at the ``TAG_VECTOR``
+   at offset ``OFS_TAGS_Y``. Once having extracted these
+   sign bits we have to solve the linear equation system
+   given by the 11 entries at the ``TAG_VECTOR`` at
+   offset ``OFS_SOLVE_Y``. This solution gives the
+   value \f$e\f$ of the factor \f$y_e\f$.
+   
+   4. For computing the part  \f$x_d x_\delta\f$ of
+   \f$g_2\f$ (up to sign) we have to extract (the signs of)
+   24 more entries of the vector \f$v_1 \cdot g_2 y_e^{-1}\f$
+   and to solve another equation system as in the previous step.
+   Here the relevant coordinates are stored at the ``TAG_VECTOR``
+   at offset ``OFS_TAGS_X``, and the equation system is stored
+   at offset ``OFS_SOLVE_X``.
+
+   5. To correct the sign in the part \f$x_d  x_\delta\f$,
+   we have to extract another sign
+   from \f$v_1 \cdot g_2 \cdot y_e^{-1} (x_d x_\delta)^{-1}\f$
+   at the coordinate given by ``OFS_TAGS_SIGN``.
+   
+*/
+enum tag_offsets {
+    OFS_NORM_A = 0,  /**< Sum of the squares of the A part of \f$v_1\f$ (mod 15) */
+    OFS_DIAG_VA = 1, /**< For compatiiliy with older versions, always equal to 0 */
+    OFS_WATERMARK_PERM = 2,  /**< Watermark of  the A part of \f$v_1\f$ (mod 15) */
+    OFS_TAGS_Y = 26,  /**< Entries of \f$v_1\f$ used for computing \f$y_e\f$ */
+    OFS_SOLVE_Y = 37, /**< Equation system used for computing  \f$y_e\f$ */
+    OFS_TAGS_X = 48,  /**< Entries of \f$v_1\f$ used for computing \f$x_d\f$ */
+    OFS_SOLVE_X = 72, /**< Equation system used for computing  \f$x_e\f$ */
+    OFS_TAG_SIGN = 96, /**< Entry of \f$v_1\f$ used for computing sign of \f$x_d\f$ */
+};
+
+
+
+/************************************************************************
+** Load ORDER_VECTOR and ORDER_TAG_VECTOR
+************************************************************************/
+
+
+//  %%GEN h
+/// @cond DO_NOT_DOCUMENT 
+//  %%GEN c
+
+
+
+
+
+/// @cond DO_NOT_DOCUMENT 
+
+#define TAG_VECTOR ((uint32_t*)MM_ORDER_VECTOR_TAG_DATA)
+
+/// @endcond 
+
+
+
+/************************************************************************
+** Auxiliary functions for checking if a monster group element is in G_x0
+************************************************************************/
+
+/// @cond DO_NOT_DOCUMENT 
+
+/**
+  @brief Auxiliary function for function ``mm_order_check_in_Gx0``
+
+  Assume that the vector \f$v\f$ in \f$\rho_{15}\f$ referred by ``v``
+  is the image of the  precomputed order vector \f$v_1\f$ under an
+  (unknown) element \f$g\f$ of the monster. We want to find that
+  element \f$g\f$ if it is in the subgroup \f$G_{x0}\f$ of the monster.
+
+  The function computes an element \f$g_1\f$ such
+  that \f$g^{-1} g_1\in Q_{x0}\f$ holds in case \f$g \in G_{x0}\f$.
+  If \f$g \notin G_{x0}\f$  then the function detects this
+  fact with high probability.
+
+  In case of success the function writes the element \f$g_1\f$ into the
+  array ``g`` is the same way as function ``mm_order_check_in_Gx0``
+  writes its result int that array. Return value of this function is
+  as in function ``mm_order_check_in_Gx0``.
+  
+  The function does not change the input \f$v\f$ referred by ``v``.
+*/
+static inline int32_t 
+find_in_Gx0(uint_mmv_t *v, uint32_t *g, uint32_t mode, uint_mmv_t *work)
+{
+    uint64_t w3;
+    int32_t res, v_y;
+    uint_fast32_t w_type4, i, len, perm_num, y;
+
+
+    if ((uint32_t)mm_op15_norm_A(v) 
+         != TAG_VECTOR[OFS_NORM_A]) return 0x101;
+
+    w3 = mm_op15_eval_A_rank_mod3(v, TAG_VECTOR[OFS_DIAG_VA]);
+    w3 &= 0xffffffffffffULL;
+    if (w3 == 0) return 0x102;
+    w_type4 = (uint_fast32_t)(gen_leech3to2_type4((uint64_t)w3));
+    if (w_type4 == 0) return 0x103;
+
+    res = gen_leech2_reduce_type4(w_type4, g);
+    if (res < 0) return res;
+    len = res;
+
+    for (i = 0; i < 24 * %{V24_INTS}; ++i) work[i] = v[i];
+    res = mm_op15_word_tag_A(work, g, len, 1);
+    if (res < 0) return res;
+
+    if (mode & 2) g[len++] = 0x82000000 + (w_type4 & 0xffffff);
+    
+    res = mm_op15_watermark_A_perm_num( 
+        TAG_VECTOR + OFS_WATERMARK_PERM, work);
+    if (res < 0) return 0x104;
+    perm_num = res;
+    if (perm_num) {
+        g[len] = 0xA0000000 + perm_num;
+        res = mm_op15_word_tag_A(work, g + len, 1, 1);
+        if (res < 0) return res;
+        len += 1;
+    }
+
+    v_y = mm_aux_mmv_extract_sparse_signs(15, work, 
+        TAG_VECTOR + OFS_TAGS_Y, 11);
+    if (v_y < 0) return 0x105;
+    y = leech2matrix_solve_eqn(TAG_VECTOR + OFS_SOLVE_Y, 11, v_y);
+    if (y > 0) {
+        g[len] = 0xC0000000 + y;
+        res = mm_op15_word_tag_A(work, g + len, 1, 1);
+        if (res < 0) return res;
+        len += 1;
+    }
+
+    if (mm_order_compare_vector_part_A(work)) return 0x106;
+    for (i = len; i <10; ++i) g[i] = 0;
+
+    return len;
+}
+
+
+
+
+
+
+/**
+  @brief Auxiliary function for function ``mm_order_check_in_Gx0``
+
+
+  Input ``v``, and the return value are as in
+  function ``mm_order_check_in_Gx0``.  Parameter ``g`` must contain
+  the corrsponding output of function ``find_in_Gx0``, when
+  called successfully with the same input parameters. The function also
+  requires an array ``work`` of length %{MMV_INTS} as a work buffer.
+
+  Assume that ``v`` is an image of the precomputed order vector \f$v_1\f$.
+  under an (unknown) element \f$g\f$ of the monster. We want to find that
+  element \f$g\f$ if it is in the subgroup \f$G_{x0}\f$ of the monster.
+
+  In case of success the function writes the element \f$g^{-1}\f$ into 
+  the  array ``g`` in the same way as function ``mm_order_check_in_Gx0``
+  writes its result int that array.
+
+  Caution:
+
+  This function destroys the input \f$v\f$ referred by ``v``. !
+*/
+static uint32_t 
+find_in_Qx0(uint_mmv_t *v, uint32_t *g, uint64_t *work)
+{
+    int32_t v_x, sign, len = 10, res, len1;
+    uint_fast32_t x, v_sign;
+    uint32_t aa;
+    
+
+    while (len && g[len-1] == 0) --len;
+    if (g[0]) {
+        res = mm_op15_word(v, g, len, 1, work);
+        if (res < 0) return res;
+    }
+
+    v_x = mm_aux_mmv_extract_sparse_signs(15, v, TAG_VECTOR + OFS_TAGS_X, 24);
+    if (v_x < 0) return 0x107;
+
+    x = leech2matrix_solve_eqn(TAG_VECTOR + OFS_SOLVE_X, 24, v_x) &  0xffffff;
+    v_sign = ((x >> 12) & 0x7ff) ^ (x & 0x800);
+    aa = TAG_VECTOR[OFS_TAG_SIGN] ^ (v_sign << 14);
+    sign = mm_aux_mmv_extract_sparse_signs(15, v, &aa, 1);
+    if (v_x < 0) return 0x108;
+
+    sign ^= uint64_parity(x & (x >> 12) & 0x7ff);
+    x ^=  (sign & 1) << 24;
+    x ^= mat24_ploop_theta(x >> 12);
+    
+    len1 = len;
+    if (x & 0xfff) g[len1++] = 0x90000000 + (x & 0xfff); 
+    x = (x >> 12) & 0x1fff;
+    if (x) g[len1++] = 0xB0000000 + x;
+
+    if (len1 > len) {
+        res = mm_op15_word(v, g + len, len1 - len, 1, work);  
+        if (res < 0) return res;
+    }    
+    res = mm_order_compare_vector(v);
+    if (res)  return  0x209;
+    return len1;   
+}
+
+
+/// @endcond  
+
+/************************************************************************
+** Check if element of monster group is in subgroup G_x0
+************************************************************************/
+
+
+/**
+  @brief Check if a vector is an image under an element of \f$G_{x0}\f$
+
+  Assume that the vector \f$v\f$ in \f$\rho_{15}\f$ referred by ``v``
+  is the image of the  precomputed order vector \f$v_1\f$ under an
+  (unknown) element \f$g\f$ of the monster. We want to find that
+  element \f$g\f$ if it is in the subgroup \f$G_{x0}\f$ of the monster.
+
+  We first describe the action of the function in the standard case
+  that parameter ``mode`` is zero.
+
+  The function computes the element\f$g\f$ if it is in the
+  subgroup \f$G_{x0}\f$ of the monster; otherwise it fails.
+
+  In case of success the function writes the element \f$g\f$ into the
+  array ``g`` as a word in the generators of \f$G_{x0}\f$ of length at
+  most 11; and the function returns the length of that word.
+
+  If no such element \f$g_1\f$ has been found then the function returns
+  a number greater than 256. Then the exact return value gives some
+  indication why no such element \f$g\f$ has been found; this is for
+  debugging only.
+
+  A negative return value indicates an internal error.
+
+  The function also requires an array ``work`` of length %{MMV_INTS}
+  as a work buffer. This is the capacity required for storing a
+  vector in the representation \f$\rho_{15}\f$.
+
+  Parameter ``mode`` is a bit field that modifies the action of
+  the function as follows:
+
+  If bit 0 is set, then the inverse of the result \f$g\f$ is returned
+  in buffer ``g``.
+
+  If bit 1 is set then we insert an atom into the word in ``g`` that
+  indicates the image of the vector \f$\Omega \in \Lambda / 2 \Lambda\f$
+  under conjugation with \f$g_0\f$. Such an atom is considered as a
+  comment, acting as the neutral element of the monster group.
+  This is required for function ``mm_reduce_M`` in file ``mm_reduce.c``.
+  See documentation in that file for details.
+
+  If bit 2 is set then we perform an action to be used for internal
+  tests only. Then the function computes an element \f$g_1\f$ such
+  that \f$g^{-1} g_1\in Q_{x0}\f$ holds in case \f$g \in G_{x0}\f$.
+  If \f$g \notin G_{x0}\f$ then the function detects this fact with
+  high probability. Usually, \f$g_1\f$ is a shorter word in the
+  generators of the monster than \f$g\f$.
+
+  If bit 3 is set then input vector ``v`` is preserved; but the work
+  buffer ``work`` must have the (doubled) length  %{int:2*MMV_INTS}
+  for storing an additional temporary copy of vector ``v``.
+*/
+// %%EXPORT px
+int32_t mm_order_check_in_Gx0(uint_mmv_t *v, uint32_t *g, uint32_t mode, uint_mmv_t *work)
+{
+    int32_t res;
+
+    res = find_in_Gx0(v, g, mode, work);
+    if (res >= 0x100 || res < 0 || mode & 4) return res;
+    if (mode & 8) {
+        mm_op15_copy(v, work + %{MMV_INTS});
+        v = work + %{MMV_INTS};
+    }
+    res = find_in_Qx0(v, g, work);
+    if (res >= 0x100 || res < 0) return res;
+    if ((mode & 1) == 0) mm_group_invert_word(g, res);
+    return res;    
+}
+
+
+
+
+/**
+  @brief Compute exponent \f$e\f$ such that \f$g^e \in G_{x0}\f$
+
+  Let \f$g\f$ be the element of the monster group stored in the
+  array ``g`` as a word of generators of the monster group of
+  length ``n``.
+
+  The function computes the smallest exponent \f$e\f$ such
+  that  \f$g^e\f$ is in \f$G_{x0}\f$. Then the function
+  writes \f$h = g^e\f$ into the buffer ``h`` as a word of
+  generators of \f$G_{x0}\f$ of length at most 10. Let \f$k\f$ be the
+  length of the word representing \f$h\f$. Then the function returns
+  the value \f$\mbox{0x100} \cdot e + k\f$; here we
+  have \f$1 \leq e \leq 119\f$ and \f$0 \leq  k \leq  10\f$.
+   
+  Computation of \f$e\f$  is time consuming, and in some cases we
+  are interested in small values of \f$e\f$  only.
+  Parameter ``o`` is an upper bound for the exponent \f$e\f$ .
+  The function may abort and return 0 in if \f$e\f$  is greater
+  than ``o``; then the data in buffer ``h`` are invalid.
+
+  A negative return value indicates an internal error.
+*/
+// %%EXPORT px
+int32_t mm_order_element_Gx0(uint32_t *g, uint32_t n, uint32_t *h, uint32_t o)
+{
+    int32_t res;
+    uint_fast32_t i;
+    uint64_t *w = NULL,  *work;
+    uint64_t elem[26];
+
+    if (o < 1) o = 1;
+    if (o > 119) o = 119;
+    res = xsp2co1_check_word_g_x0(g, n);
+    if (res == 0) {
+        if (n == 0) {
+            return 0x100;
+        } else {
+            res = xsp2co1_set_elem_word(elem, g, n);
+            if (res < 0) return res;
+            res = xsp2co1_elem_to_word(elem, h);
+            if (res < 0) return res;
+            return res + 0x100;
+        }
+    }
+    if (res == 1 && o == 1) return 0;
+
+    w = calloc(3 * %{MMV_INTS}, sizeof(uint64_t));
+    if (w == NULL) return ERR_QSTATE12_BUFFER_OVFL;
+    work = w + %{MMV_INTS};
+
+    mm_order_load_vector(w); 
+    for (i = 1; i <= o; ++i) {   
+        res = mm_op15_word(w, g, n, 1, work);
+        res = mm_order_check_in_Gx0(w, h, 8, work);
+        if (res < 0) goto done;
+        if (res < 0x100) {
+            res += i << 8;
+            goto done;
+        } 
+    }  
+    res = 0;
+
+  done:
+    if (w) free(w);
+    return res;
+}
+
+
+
+
+/**
+  @brief Compute order of an element \f$g\f$ of the monster
+
+  Let \f$g\f$ be the element of the monster group stored in the
+  array ``g`` as a word of generators of the monster group of
+  length ``n``.
+
+  The function returns the order of \f$g\f$.
+   
+  Computation of the order is time consuming, and in some cases
+  we are interested in small orders only.
+  Parameter ``o`` is an upper bound for the order. The function
+  may return 0 if the order is greater than ``o``.
+
+  A negative return value indicates an error.
+*/
+// %%EXPORT px
+int32_t mm_order_element_M(uint32_t *g, uint32_t n, uint32_t o)
+{
+    int32_t res, e;
+    uint32_t h[10];
+
+    res = mm_order_element_Gx0(g, n, h, o);
+    if (res <= 0) return res;
+    e =  res >> 8;
+    if ((res & 0xff) > 10) return ERR_QSTATE12_BUFFER_OVFL;
+    res = xsp2co1_order_word(h, res & 0xff);
+    if (res <= 0) return res ? res : ERR_QSTATE12_SCALAR_OVFL;
+    return e * res;
+}
+
+//  %%GEN h
+/// @endcond 
+//  %%GEN c
