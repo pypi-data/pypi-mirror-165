@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: zenodo-rest
+Version: 0.0.0b11
+Summary: ("A python wrapper of Zenodo's REST API", 'for python and the command line.')
+Home-page: https://github.com/kykrueger/zenodo-rest-python.git
+Author: Kyle Krueger
+Author-email: kyle.s.krueger@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+License-File: LICENSE
+
+# zenodo-rest
+
+A python wrapper of Zenodo's REST API for python and the command line.
+
+## Installation
+
+For usage as a module, install with your preferred env manager (pip, pipenv, conda, . . . ).
+For CLI usage [pipx](https://pypa.github.io/pipx/) is recommended.
+
+``` bash
+pip --user pipx
+pipx install zenodo-rest
+```
+
+## Usage
+
+The CLI has built in documentation. 
+``` bash
+zenodo-rest --help
+zenodo-rest depositions --help
+```
+
+For information about the module or more details about the CLI, see the source-code or [readthedocs](https://zenodo-rest.readthedocs.io/en/latest/zenodo_rest.depositions.html).
+
+
+
