@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+sqlite3py/__init__.py
+sqlite3py/databaseManager.py
+sqlite3py.egg-info/PKG-INFO
+sqlite3py.egg-info/SOURCES.txt
+sqlite3py.egg-info/dependency_links.txt
+sqlite3py.egg-info/top_level.txt
