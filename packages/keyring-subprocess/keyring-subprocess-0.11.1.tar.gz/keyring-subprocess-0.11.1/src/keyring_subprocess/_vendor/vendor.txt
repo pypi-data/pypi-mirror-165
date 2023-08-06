@@ -1,0 +1,4 @@
+keyring==23.7
+importlib_metadata==4.12
+zipp==3.8.1
+typing_extensions==4.3.0

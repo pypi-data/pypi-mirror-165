@@ -1,0 +1,61 @@
+[tool.poetry]
+name = "keyring-subprocess"
+version = "0.11.1" # poetry-dynamic-versioning maintains this
+description = ""
+license = "MIT"
+authors = ["Dos Moonen <darsstar@gmail.com>"]
+readme = "README.md"
+homepage = "https://keyring-subprocess.darsstar.dev/"
+repository = "https://github.com/Darsstar/keyring-subprocess"
+packages = [{include = "keyring_subprocess", from = "src"}]
+include = ["keyring-subprocess.pth", "keyring_subprocess.LICENSE"]
+
+[tool.poetry.plugins."keyring.backends"]
+keyring-subprocess = "keyring_subprocess.backend:SubprocessBackend"
+
+[tool.poetry.plugins."sitecustomize"]
+keyring-subprocess = "keyring_subprocess._internal:sitecustomize"
+
+[tool.poetry.plugins."virtualenv.seed"]
+keyring-subprocess = "keyring_subprocess._internal.seeder:KeyringSubprocessFromAppData"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+keyring-subprocess-landmark = { version = "*", optional = true }
+sitecustomize-entrypoints = { version = "*", optional = true }
+
+[tool.poetry.extras]
+landmark = ["keyring-subprocess-landmark"]
+sitecustomize = ["sitecustomize-entrypoints"]
+
+[tool.vendoring]
+destination = "src/keyring_subprocess/_vendor/"
+requirements = "src/keyring_subprocess/_vendor/vendor.txt"
+namespace = ""
+
+protected-files = ["__init__.py", "README.rst", "vendor.txt"]
+
+[tool.vendoring.transformations]
+drop = [
+  # contains unnecessary scripts
+  "bin/",
+  "keyring/testing/",
+]
+
+[tool.vendoring.typing-stubs]
+six = []
+distro = []
+
+[tool.vendoring.license.directories]
+
+[tool.vendoring.license.fallback-urls]
+
+[tool.poetry-dynamic-versioning]
+enable = false
+
+[tool.poetry-dynamic-versioning.substitution]
+files = ["src/*/__init__.py"]
+
+[build-system]
+requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning>=0.15.0"]
+build-backend = "poetry.core.masonry.api"
