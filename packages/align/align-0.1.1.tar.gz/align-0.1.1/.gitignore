@@ -1,0 +1,15 @@
+*/.ipynb_checkpoints/*
+align.egg-info
+*/build
+dist
+*__pycache__*
+*.swp
+*.swo
+*.ipynb_checkpoints
+*.pyc
+MANIFEST
+docs/
+*.DS_Store
+build/
+sandbox/
+venv/
