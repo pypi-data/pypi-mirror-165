@@ -1,0 +1,6 @@
+treedir/__init__.py,sha256=aBkcvbRaZ4mm9IVHjEsdya_uagRBCjdWO-XvmDfyD8c,80
+treedir/base.py,sha256=3HwPhySsXSwJWIxrYSb9rEO1Zqj9Xrk7XyeWFcqWUbI,2362
+treedir/builder.py,sha256=mHijnd6J8xdL9GWFwHh-ItTm_zpT0eA-rwomKfuAnks,6268
+treedir-29082022.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+treedir-29082022.dist-info/METADATA,sha256=Ox-R0XxUHcKamtTcYNcasxmd5QN2T2d4eJluLBGkKdI,528
+treedir-29082022.dist-info/RECORD,,
