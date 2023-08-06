@@ -1,0 +1,113 @@
+[build-system]
+requires = ["setuptools >= 62.1.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "optom_tools"
+version = "0.0.7"
+authors = [
+  { name = "Shivan Sivakumaran" },
+  { email = "<shivan.sivakumaran@gmail.com>" },
+]
+requires-python = ">=3.7"
+description = "Providing tools for optometrists."
+readme = { file = "README.md", content-type = "text/markdown" }
+license = { text = "MIT" }
+keywords = ["optom", "optometry", "optometrist", "calculations"]
+dependencies = ["rich"]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Development Status :: 2 - Pre-Alpha",
+  "Intended Audience :: Healthcare Industry",
+  "Natural Language :: English",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: Implementation :: CPython",
+]
+
+[project.urls]
+homepage = "https://github.com/shivan-s/optom-tools"
+repository = "https://github.com/shivan-s/optom-tools"
+changelog = "https://github.com/shivan-s/optom-tools/blob/main/CHANGELOG.md"
+documentation = "https://shivan-s.github.io/optom-tools"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["optom_tools*"]
+exclude = ["tests"]
+
+[tool.pyright]
+include = "src"
+venv = ".venv"
+venvPath = "."
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+line_length = 79
+default_section = "THIRDPARTY"
+known_first_party = ["optom_tools"]
+known_third_party = ["pytest", "setuptools"]
+
+[tool.black]
+line-length = 79
+include = '.pyi?%'
+
+[tool.pytest.ini_options]
+addopts = "--cov-report=html --cov=src"
+testpaths = ["tests"]
+
+[tool.mypy]
+mypy_path = "src"
+ignore_missing_imports = true
+
+[tool.pydocstyle]
+match = '.*\.py'
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+version_files = ["src/optom_tools/__init__.py", "pyproject.toml"]
+version = "0.0.7"
+tag_format = "$version"
+style = [
+  [
+    "qmark",
+    "fg:#ff9d00 bold",
+  ],
+  [
+    "question",
+    "bold",
+  ],
+  [
+    "answer",
+    "fg:#ff9d00 bold",
+  ],
+  [
+    "pointer",
+    "fg:#ff9d00 bold",
+  ],
+  [
+    "highlighted",
+    "fg:#ff9d00 bold",
+  ],
+  [
+    "selected",
+    "fg:#cc5454",
+  ],
+  [
+    "separator",
+    "fg:#cc5454",
+  ],
+  [
+    "instruction",
+    "",
+  ],
+  [
+    "text",
+    "",
+  ],
+  [
+    "disabled",
+    "fg:#858585 italic",
+  ],
+]
