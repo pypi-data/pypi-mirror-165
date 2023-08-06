@@ -1,0 +1,2 @@
+[console_scripts]
+seqlink = SEQLinkage.Main:main
