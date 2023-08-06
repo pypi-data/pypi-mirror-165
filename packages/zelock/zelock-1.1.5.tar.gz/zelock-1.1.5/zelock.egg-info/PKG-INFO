@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: zelock
+Version: 1.1.5
+Summary: Package zelock
+Author: zenalyse
+Author-email: <thanat.th@zenalyse.co.th>
+Keywords: zenalyse
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown

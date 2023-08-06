@@ -1,0 +1,8 @@
+README.md
+setup.py
+zelock/__init__.py
+zelock/zelock.py
+zelock.egg-info/PKG-INFO
+zelock.egg-info/SOURCES.txt
+zelock.egg-info/dependency_links.txt
+zelock.egg-info/top_level.txt
