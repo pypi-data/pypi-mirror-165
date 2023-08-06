@@ -1,0 +1,4 @@
+[console_scripts]
+csr2cbioportal = csr2cbioportal.csr2cbioportal:main
+csr2transmart = csr2transmart.csr2transmart:main
+sources2csr = sources2csr.sources2csr:main
