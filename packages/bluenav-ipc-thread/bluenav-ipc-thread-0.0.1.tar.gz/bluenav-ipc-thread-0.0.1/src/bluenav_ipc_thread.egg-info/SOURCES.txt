@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/bluenav_ipc_thread.egg-info/PKG-INFO
+src/bluenav_ipc_thread.egg-info/SOURCES.txt
+src/bluenav_ipc_thread.egg-info/dependency_links.txt
+src/bluenav_ipc_thread.egg-info/top_level.txt
+src/ipc_thread/IPC.py
+src/ipc_thread/IPCThread.py
+src/ipc_thread/SingletonMeta.py
+src/ipc_thread/__init__.py
