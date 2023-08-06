@@ -1,0 +1,103 @@
+Metadata-Version: 2.1
+Name: wilderness
+Version: 0.1.8
+Summary: Easy multi-level command line applications with man pages
+Home-page: https://github.com/GjjvdBurg/wilderness
+Author: Gertjan van den Burg
+Author-email: gertjanvandenburg@gmail.com
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: dev
+Requires-Dist: sphinx ; extra == 'dev'
+Requires-Dist: sphinx-rtd-theme ; extra == 'dev'
+Requires-Dist: m2r2 ; extra == 'dev'
+Requires-Dist: green ; extra == 'dev'
+Requires-Dist: mypy ; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: sphinx ; extra == 'docs'
+Requires-Dist: sphinx-rtd-theme ; extra == 'docs'
+Requires-Dist: m2r2 ; extra == 'docs'
+Provides-Extra: tests
+Requires-Dist: green ; extra == 'tests'
+Requires-Dist: mypy ; extra == 'tests'
+
+
+# Wilderness
+
+[![PyPI version](https://badge.fury.io/py/wilderness.svg)](https://pypi.org/project/wilderness)
+[![Build status](https://github.com/GjjvdBurg/wilderness/workflows/build/badge.svg)](https://github.com/GjjvdBurg/wilderness/actions)
+[![Downloads](https://pepy.tech/badge/wilderness)](https://pepy.tech/project/wilderness)
+[![Documentation Status](https://readthedocs.org/projects/wilderness/badge/?version=latest)](https://wilderness.readthedocs.io/en/latest/?badge=latest)
+
+<p align="right"><i>In wildness is the salvation of the world.</i> &mdash; 
+Aldo Leopold</p>
+
+Wilderness is a light wrapper around [argparse][argparse] for creating command 
+line applications with multiple subcommands, in the style of [Git][git]. 
+Wilderness also makes it easy to generate man pages for your application.
+
+Wilderness is heavily inspired by [Cleo][cleo] and 
+[argparse-manpage][argparse-manpage], but aims to stick as closely as possible 
+to [argparse][argparse] to avoid users having to learn a new API.
+
+## Installation
+
+Wilderness is available on PyPI:
+
+```
+$ pip install wilderness
+```
+
+## Usage
+
+Building command line applications with Wilderness is straightforward, but it 
+does expect a certain structure of the application. You can create 
+applications with or without subcommands, as illustrated with the 
+[fakegit][fakegit] and [fakedf][fakedf] examples, respectively.
+
+Creating wilderness applications consist of the following steps:
+
+1. Subclassing the ``wilderness.Application`` class to hold the main 
+   application.
+
+2. Adding one or more ``wilderness.Command`` objects for each of the 
+   subcommands, optionally organized into ``wilderness.Group``s.
+
+3. Minor changes to ``setup.py`` to build the manpages.
+
+## Examples
+
+Here are some examples that use Wilderness to build command line applications:
+
+| Repository | Description |
+|------------|-------------|
+| [fakegit][fakegit] | A multi-level command line application similar to Git |
+| [fakedf][fakedf] | An application without subcommands similar to df |
+| [CleverCSV][CleverCSV] | CleverCSV is a package for handling messy CSV files |
+| [Veld][Veld] | Easy command line analytics |
+
+> Add your example here by opening a pull request!
+
+## Notes
+
+License: See the LICENSE file.
+
+Author: [Gertjan van den Burg][gertjan]
+
+[argparse-manpage]: https://github.com/praiskup/argparse-manpage
+[argparse]: https://docs.python.org/3/library/argparse.html
+[cleo]: https://github.com/sdispater/cleo
+[fakedf]: https://github.com/GjjvdBurg/wilderness/tree/master/examples/fakedf
+[fakegit]: https://github.com/GjjvdBurg/wilderness/tree/master/examples/fakegit
+[gertjan]: https://gertjanvandenburg.com
+[git]: https://git-scm.com/
+[CleverCSV]: https://github.com/alan-turing-institute/CleverCSV
+[Veld]: https://github.com/GjjvdBurg/Veld/
