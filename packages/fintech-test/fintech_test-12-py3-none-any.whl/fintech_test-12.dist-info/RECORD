@@ -1,0 +1,12 @@
+fintech_test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fintech_test/__main__.py,sha256=fVkX__nxCpWNNx-lPTsFxbX4zpKxIVe4An2nrzz01iA,1812
+fintech_test/jupyter_notebook_config.py,sha256=BRu0mzd-EQ75AYSrU6cILhNGMyLNHNzGON2IzD560hE,29723
+fintech_test/quanturf.ipynb,sha256=pTTadqwBC55kpfiJ4zr40AiYh3ouK_dPXeFL4ictveA,8593
+fintech_test/quanturf_test.ipynb,sha256=pTTadqwBC55kpfiJ4zr40AiYh3ouK_dPXeFL4ictveA,8593
+fintech_test-12.data/data/version.py,sha256=xnMZYjEyAAYGwMEi6w4AtOMFCjEUSlWD1ryUq8vqT_Q,329
+fintech_test-12.dist-info/LICENCE.txt,sha256=WJ7YI-moTFb-uVrFjnzzhGJrnL9P2iqQe8NuED3hutI,35141
+fintech_test-12.dist-info/METADATA,sha256=HuYSyLkRJGglsCVsHUQHBuDM6z8sC3UiM469VAHJ72g,894
+fintech_test-12.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+fintech_test-12.dist-info/entry_points.txt,sha256=D_Off2TiTMtmcUR9xtTlVtzVg_HBY7cvs3721geARdo,56
+fintech_test-12.dist-info/top_level.txt,sha256=tLUuB4iHlDvaIgfk0bjY8nT2UUHL-aGQAs9DQohR-PE,13
+fintech_test-12.dist-info/RECORD,,
