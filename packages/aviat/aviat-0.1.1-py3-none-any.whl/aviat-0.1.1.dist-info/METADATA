@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: aviat
+Version: 0.1.1
+Summary: 
+License: MIT
+Author: RedMooner
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
