@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/__init__.py
+src/sql_data/__init__.py
+src/sql_data/date_formatting.py
+src/sql_data/mysql_operate.py
+src/sql_data.egg-info/PKG-INFO
+src/sql_data.egg-info/SOURCES.txt
+src/sql_data.egg-info/dependency_links.txt
+src/sql_data.egg-info/top_level.txt

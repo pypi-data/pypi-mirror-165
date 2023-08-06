@@ -1,0 +1,19 @@
+[project]
+name = "sql_data"
+version = "0.1.5"
+description = "Used for SQL data queries."
+license = { file="LICENSE" }
+authors = [
+  { name="cwj", email="17800372351@163.com" },
+]
+readme = "README.md"
+keywords = ["sql", "mysql"]
+
+
+[tool.poetry.dependencies]
+python = "^3.6"
+pymysql = "^1.0.2"
+
+# [tool.poetry.extras]
+# mysql = ["mysqlclient"]
+# pgsql = ["psycopg2"]
