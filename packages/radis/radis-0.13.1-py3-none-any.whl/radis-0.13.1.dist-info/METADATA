@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: radis
+Version: 0.13.1
+Summary: A fast line-by-line code for high-resolution infrared molecular spectra
+Home-page: https://github.com/radis/radis
+Author: Erwan Pannier
+Author-email: erwan.pannier@gmail.com
+License: GNU Lesser General Public License v3 (LGPLv3)
+Keywords: spectrum,infrared,spectra,radiation,nonequilibrium,spectroscopy,molecules,HITRAN,hitemp,exomol,line-by-line
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Topic :: Scientific/Engineering
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: astropy
+Requires-Dist: astroquery (>=0.3.9)
+Requires-Dist: beautifulsoup4
+Requires-Dist: configparser
+Requires-Dist: cython
+Requires-Dist: hitran-api
+Requires-Dist: lxml
+Requires-Dist: numpy (<=1.22.3)
+Requires-Dist: matplotlib
+Requires-Dist: habanero
+Requires-Dist: h5py
+Requires-Dist: hjson
+Requires-Dist: ipython (>=7.0.0)
+Requires-Dist: joblib
+Requires-Dist: json-tricks (>=3.15.0)
+Requires-Dist: pandas (>=1.0.5)
+Requires-Dist: plotly (>=2.5.1)
+Requires-Dist: progressbar2
+Requires-Dist: numba
+Requires-Dist: mpldatacursor
+Requires-Dist: publib (>=0.3.2)
+Requires-Dist: peakutils
+Requires-Dist: termcolor
+Requires-Dist: tables
+Requires-Dist: pytest
+Requires-Dist: psutil
+Requires-Dist: seaborn
+Requires-Dist: scipy (>=1.4.0)
+Requires-Dist: vaex (>=4.9.2)
+Provides-Extra: dev
+Requires-Dist: numpydoc ; extra == 'dev'
+Requires-Dist: black (>=20.8b1) ; extra == 'dev'
+Requires-Dist: isort ; extra == 'dev'
+Requires-Dist: pre-commit ; extra == 'dev'
+
+A fast line-by-line code for high-resolution infrared molecular spectra
