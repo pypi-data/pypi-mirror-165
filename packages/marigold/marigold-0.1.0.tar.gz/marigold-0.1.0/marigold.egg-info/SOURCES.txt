@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+marigold.egg-info/PKG-INFO
+marigold.egg-info/SOURCES.txt
+marigold.egg-info/dependency_links.txt
+marigold.egg-info/requires.txt
+marigold.egg-info/top_level.txt
