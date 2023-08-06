@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+havoc/__init__.py
+havoc.egg-info/PKG-INFO
+havoc.egg-info/SOURCES.txt
+havoc.egg-info/dependency_links.txt
+havoc.egg-info/requires.txt
+havoc.egg-info/top_level.txt
