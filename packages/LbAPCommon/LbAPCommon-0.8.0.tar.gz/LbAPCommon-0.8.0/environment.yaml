@@ -1,0 +1,27 @@
+name: lbaplocal-dev
+
+channels:
+  - conda-forge
+  - nodefaults
+
+dependencies:
+  - python =3.9
+  - pip
+  # Runtime dependencies
+  - strictyaml
+  - jinja2
+  - lxml
+  - pyyaml
+  - setuptools
+  - boost-histogram
+  - hist
+  - requests
+  - uproot >=4.0.0
+  - awkward >=1.0.0
+  - matplotlib
+  # Development dependencies
+  - pre-commit
+  - pytest
+  - pytest-cov
+  - pytest-mock
+  - pytest-timeout
