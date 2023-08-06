@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: aicns-raw-data-loader
+Version: 0.0.2
+Summary: Raw data loader library package in AICNS project
+Home-page: https://github.com/Youngmin-An/aicns-raw-data-loader
+Author: Youngmin An
+Author-email: youngmin.develop@gmail.com
+License: Apache License 2.0
+Platform: UNKNOWN
+License-File: LICENSE
+Requires-Dist: pendulum
+Requires-Dist: pyspark (>=3.0.3)
+Requires-Dist: aicns-feature-metadata
+
+UNKNOWN
+
