@@ -1,0 +1,35 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pygame_chess_api"
+version = "0.2.2"
+authors = [
+  { name="LupyXev", email="lupyxev@protonmail.com" },
+]
+description = "A chess API in python, provided with a fancy Pygame GUI"
+keywords = ["chess-engine", "chess", "pygame", "chessboard", "chess-game"]
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "pygame"
+]
+
+[project.urls]
+"Documentation" = "https://pygame-chess-api.readthedocs.io/"
+"Homepage" = "https://github.com/LupyXev/pygame_chess_api"
+
+[tool.hatch.build.targets.sdist]
+exclude = [
+  "/docs"
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/foo"]
