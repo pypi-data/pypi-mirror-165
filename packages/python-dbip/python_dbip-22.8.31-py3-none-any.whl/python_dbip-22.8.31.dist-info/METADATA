@@ -1,0 +1,127 @@
+Metadata-Version: 2.1
+Name: python-dbip
+Version: 22.8.31
+Summary: This is an IP database with verification and supports IP dual stack protocol
+Home-page: https://mengyuns.com
+Author: mxlbb(萌小狸宝宝)
+Author-email: admin@mengyuns.com
+Maintainer: mxlbb(萌小狸宝宝)
+Maintainer-email: admin@mengyuns.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# What is `dbip`?
+
+
+
+dbip is a library for IP authentication in Python that focuses on authentication security. It builds algorithms written in pure Python and can be ported to other languages.
+
+
+
+
+
+
+
+## **`dbip` infrastructure**
+
+
+
+```shell
+
+dbip			# library name
+
+│ __init__.py	# function table
+
+└─ dbip.py		# system call table
+
+````
+
+
+
+
+
+
+
+## **`dbip` function usage method**
+
+
+
+
+
+
+
+```shell
+
+File function: IP database that supports IPv6 and IPv4 dual-stack protocols.
+
+File Description: Add, delete, verify IP information
+
+File author: mxlbb(cute baby fox)
+
+File Date: August 22, 2022
+
+File function: 	dbip.add(ip)
+
+				dbip.update(ip)
+
+				dbip.remove(ip)
+
+				dbip.verify(ip)
+
+				dbip.printf()
+
+```
+
+
+
+
+
+
+
+# Why use `dbip`?
+
+
+
+`dbip` development principles:
+
+
+
+1. **Security**: `dbip` (used with `websockets`) is used as authentication, the transmitted data can be in plain text and illegal users can only view it and cannot change it;
+
+2. **Defense**: `dbip` (used in conjunction with `websockets`) will form an almost absolute elimination of all illegal user connections and brute force cracking;
+
+3. **Performance**: `dbip` (used with `websockets`) will reduce the performance consumption of the server authentication process and greatly improve the resource allocation of productivity.
+
+
+
+
+
+
+
+# Why not use `dbip`?
+
+
+
+- If you often use web-provided libraries or have your own set of authentication methods, you can deprecate the library functions provided by `dbip`.
+
+
+
+
+
+
+
+# what else?
+
+
+
+Bug reports, patches and suggestions welcome!
+
+
+
+To report a security vulnerability, please contact the author: Admin@mengyuns.com.
+
+
+
+For anything else please open an [issue](https://github.com/aaugustin/websockets/issues/new) or send a [pull request](https://github.com/aaugustin/websockets/compare/) .
