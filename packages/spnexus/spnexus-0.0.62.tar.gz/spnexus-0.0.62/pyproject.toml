@@ -1,0 +1,23 @@
+[project]
+name = "spnexus"
+version = "0.0.62"
+authors = [
+  { name="Matt Scott", email="matt@azorian.solutions" },
+]
+description = "SPNexus or Service Provider Nexus is an aggregation library of mini-framework solutions used in various Azorian Solutions software projects."
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://gitlab.azorian.solutions/as-libs/spnexus"
+"Bug Tracker" = "https://gitlab.azorian.solutions/as-libs/spnexus/-/issues"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
