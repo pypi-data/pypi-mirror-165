@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: preprocessing_helper
+Version: 1.2.3
+Home-page: 
+Author: Joshua Spear
+Author-email: josh.spear9@gmail.com
+License: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# preprocessing-helper
+
+Library container generic helper functionality for preprocessing in machine learning projects
