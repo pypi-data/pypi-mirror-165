@@ -1,0 +1,3 @@
+PyFastNER>=1.0.8
+spacy>=3.0.0
+quicksectx>=0.3.1

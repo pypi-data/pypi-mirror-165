@@ -1,0 +1,17 @@
+README.rst
+setup.cfg
+setup.py
+PyRuSH/PyRuSHSentencizer.py
+PyRuSH/RuSH.py
+PyRuSH/StaticSentencizerFun.c
+PyRuSH/StaticSentencizerFun.pyx
+PyRuSH/__init__.py
+PyRuSH/version.py
+PyRuSH.egg-info/PKG-INFO
+PyRuSH.egg-info/SOURCES.txt
+PyRuSH.egg-info/dependency_links.txt
+PyRuSH.egg-info/not-zip-safe
+PyRuSH.egg-info/requires.txt
+PyRuSH.egg-info/top_level.txt
+conf/logging.ini
+conf/rush_rules.tsv
