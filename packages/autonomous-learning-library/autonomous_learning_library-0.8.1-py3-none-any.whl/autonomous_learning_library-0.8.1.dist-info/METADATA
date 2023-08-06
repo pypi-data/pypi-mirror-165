@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: autonomous-learning-library
+Version: 0.8.1
+Summary: A library for building reinforcement learning agents in Pytorch
+Home-page: https://github.com/cpnota/autonomous-learning-library.git
+Author: Chris Nota
+Author-email: cnota@cs.umass.edu
+License: UNKNOWN
+Platform: UNKNOWN
+License-File: LICENSE
+Requires-Dist: gym (~=0.23.1)
+Requires-Dist: numpy (>=1.22.3)
+Requires-Dist: matplotlib (>=3.5.1)
+Requires-Dist: opencv-python (~=3.4.0)
+Requires-Dist: torch (>=1.11.0)
+Requires-Dist: tensorboard (>=2.8.0)
+Requires-Dist: cloudpickle (>=2.0.0)
+Provides-Extra: all
+Requires-Dist: gym[accept-rom-license,atari] (~=0.23.1) ; extra == 'all'
+Requires-Dist: gym[box2d] (~=0.23.1) ; extra == 'all'
+Requires-Dist: pybullet (>=3.2.2) ; extra == 'all'
+Requires-Dist: PettingZoo[atari] (~=1.17.0) ; extra == 'all'
+Requires-Dist: supersuit (~=3.3.5) ; extra == 'all'
+Requires-Dist: comet-ml (>=3.28.3) ; extra == 'all'
+Provides-Extra: atari
+Requires-Dist: gym[accept-rom-license,atari] (~=0.23.1) ; extra == 'atari'
+Provides-Extra: box2d
+Requires-Dist: gym[box2d] (~=0.23.1) ; extra == 'box2d'
+Provides-Extra: comet
+Requires-Dist: comet-ml (>=3.28.3) ; extra == 'comet'
+Provides-Extra: dev
+Requires-Dist: gym[accept-rom-license,atari] (~=0.23.1) ; extra == 'dev'
+Requires-Dist: gym[box2d] (~=0.23.1) ; extra == 'dev'
+Requires-Dist: pybullet (>=3.2.2) ; extra == 'dev'
+Requires-Dist: PettingZoo[atari] (~=1.17.0) ; extra == 'dev'
+Requires-Dist: supersuit (~=3.3.5) ; extra == 'dev'
+Requires-Dist: comet-ml (>=3.28.3) ; extra == 'dev'
+Requires-Dist: flake8 (>=3.8) ; extra == 'dev'
+Requires-Dist: autopep8 (>=1.5) ; extra == 'dev'
+Requires-Dist: torch-testing (>=0.0.2) ; extra == 'dev'
+Requires-Dist: sphinx (>=3.2.1) ; extra == 'dev'
+Requires-Dist: sphinx-autobuild (>=2020.9.1) ; extra == 'dev'
+Requires-Dist: sphinx-rtd-theme (>=0.5.0) ; extra == 'dev'
+Requires-Dist: sphinx-automodapi (>=0.13) ; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: sphinx (>=3.2.1) ; extra == 'docs'
+Requires-Dist: sphinx-autobuild (>=2020.9.1) ; extra == 'docs'
+Requires-Dist: sphinx-rtd-theme (>=0.5.0) ; extra == 'docs'
+Requires-Dist: sphinx-automodapi (>=0.13) ; extra == 'docs'
+Provides-Extra: ma-atari
+Requires-Dist: PettingZoo[atari] (~=1.17.0) ; extra == 'ma-atari'
+Requires-Dist: supersuit (~=3.3.5) ; extra == 'ma-atari'
+Provides-Extra: pybullet
+Requires-Dist: pybullet (>=3.2.2) ; extra == 'pybullet'
+Provides-Extra: test
+Requires-Dist: flake8 (>=3.8) ; extra == 'test'
+Requires-Dist: autopep8 (>=1.5) ; extra == 'test'
+Requires-Dist: torch-testing (>=0.0.2) ; extra == 'test'
+
+UNKNOWN
+
