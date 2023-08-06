@@ -1,0 +1,6 @@
+pydantic
+
+[dev]
+pytest
+pytest-cov
+coverage
