@@ -1,0 +1,8 @@
+matplotlib
+pytest
+scipy
+pyyaml
+mendeleev
+mpi4py
+pylammpsmpi
+tqdm
