@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+flythings/__init__.py
+flythings/client.py
+flythings.egg-info/PKG-INFO
+flythings.egg-info/SOURCES.txt
+flythings.egg-info/dependency_links.txt
+flythings.egg-info/requires.txt
+flythings.egg-info/top_level.txt
