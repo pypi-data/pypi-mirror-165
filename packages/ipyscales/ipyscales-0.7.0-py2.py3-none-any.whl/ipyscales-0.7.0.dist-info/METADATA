@@ -1,0 +1,72 @@
+Metadata-Version: 2.1
+Name: ipyscales
+Version: 0.7.0
+Summary: A widget library for scales
+Home-page: https://github.com/vidartf/ipyscales
+Author: Vidar T Fauske
+Author-email: vidartf@gmail.com
+License: BSD-3-Clause
+Keywords: Jupyter,Widgets,IPython
+Platform: Linux
+Platform: Mac OS X
+Platform: Windows
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Framework :: Jupyter
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: ipywidgets (>=7.0.0)
+Provides-Extra: docs
+Requires-Dist: sphinx (>=1.5) ; extra == 'docs'
+Requires-Dist: recommonmark ; extra == 'docs'
+Requires-Dist: sphinx-rtd-theme ; extra == 'docs'
+Requires-Dist: nbsphinx (>=0.2.13) ; extra == 'docs'
+Requires-Dist: nbsphinx-link ; extra == 'docs'
+Requires-Dist: pypandoc ; extra == 'docs'
+Provides-Extra: examples
+Requires-Dist: ipydatawidgets (>=4.2) ; extra == 'examples'
+Provides-Extra: test
+Requires-Dist: ipydatawidgets (>=4.2) ; extra == 'test'
+Requires-Dist: ipywidgets (>=7.6) ; extra == 'test'
+Requires-Dist: nbval ; extra == 'test'
+Requires-Dist: pytest (>=4.6) ; extra == 'test'
+Requires-Dist: pytest-cov ; extra == 'test'
+Requires-Dist: pytest-check-links ; extra == 'test'
+
+
+# ipyscales
+
+[![codecov](https://codecov.io/gh/vidartf/ipyscales/branch/master/graph/badge.svg)](https://codecov.io/gh/vidartf/ipyscales)
+[![Documentation Status](https://readthedocs.org/projects/ipyscales/badge/?version=latest)](http://ipyscales.readthedocs.io/en/latest/?badge=latest)
+
+
+A Jupyter widgets library for scales.
+
+## Installation
+
+You can install using `pip`:
+
+```bash
+pip install ipyscales
+```
+
+If you are using Jupyter Notebook 5.2 or earlier, you may also need to enable
+the nbextension:
+
+```bash
+jupyter nbextension enable --py [--sys-prefix|--user|--system] ipyscales
+```
+
+## Acknowledgements
+
+ipyscales is developed with financial support from:
+
+- OpenDreamKit Horizon 2020 European Research Infrastructures project (#676541), https://opendreamkit.org
