@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: ktplotspy
+Version: 0.1.0
+Summary: Python library for plotting Cellphonedb results. Ported from ktplots R package.
+License: MIT
+Author: Kelvin Tuong
+Author-email: 26215587+zktuong@users.noreply.github.com
+Requires-Python: >=3.8,<4.0
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Provides-Extra: docs
+Provides-Extra: test
+Requires-Dist: anndata (>=0.7.6,<0.8.0); extra == "test"
+Requires-Dist: black; extra == "test"
+Requires-Dist: nbsphinx; extra == "docs"
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: plotnine
+Requires-Dist: pytest-cov; extra == "test"
+Requires-Dist: readthedocs-sphinx-ext; extra == "docs"
+Requires-Dist: recommonmark; extra == "docs"
+Requires-Dist: seaborn
+Requires-Dist: sphinx-autodoc-typehints; extra == "docs"
+Requires-Dist: sphinx_rtd_theme; extra == "docs"
