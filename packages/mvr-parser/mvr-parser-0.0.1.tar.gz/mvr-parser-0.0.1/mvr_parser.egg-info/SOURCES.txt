@@ -1,0 +1,8 @@
+setup.py
+mvr-parser/__init__.py
+mvr-parser/main.py
+mvr-parser/mvr.py
+mvr_parser.egg-info/PKG-INFO
+mvr_parser.egg-info/SOURCES.txt
+mvr_parser.egg-info/dependency_links.txt
+mvr_parser.egg-info/top_level.txt
