@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: cndi
+Version: 2.1.6a2
+Author: Mayank Shinde
+Author-email: mayank31313@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Install
+
+    pip install -U git+https://github.com/mayank31313/python-dependency-injection.git
+    
+# Example    
+Follow the below code to simplify understanding, or can also refer to [main.py](main.py)
+    
+    from cndi.annotations import Bean, Autowired, AppInitilizer
+    
+    class TestBean:
+        def __init__(self, name):
+            self.name = name
+    
+    
+    @Bean()
+    def getTestBean() -> TestBean:
+        return TestBean("Test 123")
+    
+    testBean = None
+    
+    app = AppInitilizer()
+    if __name__ == "__main__":
+        @Autowired()
+        def setTestBean(bean: TestBean):
+            global testBean
+            testBean = bean
+    
+        app.run()
+    
+        print(testBean.name)
