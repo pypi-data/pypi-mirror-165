@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+scldemo.egg-info/PKG-INFO
+scldemo.egg-info/SOURCES.txt
+scldemo.egg-info/dependency_links.txt
+scldemo.egg-info/top_level.txt
