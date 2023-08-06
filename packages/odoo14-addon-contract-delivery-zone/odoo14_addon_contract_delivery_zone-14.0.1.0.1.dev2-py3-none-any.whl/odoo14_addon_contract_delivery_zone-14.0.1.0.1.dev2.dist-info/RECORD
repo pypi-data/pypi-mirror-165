@@ -1,0 +1,17 @@
+odoo/addons/contract_delivery_zone/README.rst,sha256=kedqYy-lxS2749DM2U-x3SXs1vXbTYKrjP5HnhLeOL8,2657
+odoo/addons/contract_delivery_zone/__init__.py,sha256=X9EJGOE2GtZbS0G82PtSXmWSZ_R8jEM0rlJTDliQjp4,21
+odoo/addons/contract_delivery_zone/__manifest__.py,sha256=ILJwbloIob3cmf-R9VFhm_ajj771uC62Tb8CTiL57xQ,534
+odoo/addons/contract_delivery_zone/i18n/contract_delivery_zone.pot,sha256=5LieiIX294itx5mx2DEOi8Foyq12GnUZkvM80wq2qB4,1598
+odoo/addons/contract_delivery_zone/models/__init__.py,sha256=PILt-kFuWsxj_joOgJ3sk9_HDV0vDmkLxjJqgyP0e80,32
+odoo/addons/contract_delivery_zone/models/contract_contract.py,sha256=lq0lRvNciYbQSbsPdPZgR11TZRoorcV7tsYmGECAQRI,806
+odoo/addons/contract_delivery_zone/readme/CONTRIBUTORS.rst,sha256=XOvmvmWVvuDVPNluyCog8zXbQ0wLwHqru-igToeRxwU,42
+odoo/addons/contract_delivery_zone/readme/DESCRIPTION.rst,sha256=cAshIWKELwgMG8YHPq5tmdjIkBVku2psIzgjPBHyCFw,75
+odoo/addons/contract_delivery_zone/static/description/icon.png,sha256=6xBPJauaFOF0KDHfHgQopSc28kKvxMaeoQFQWZtfZDo,9455
+odoo/addons/contract_delivery_zone/static/description/index.html,sha256=895M1wtK3gYM5aJqqAvVZ6lkWiDrGA16-9chY1x-S_8,11770
+odoo/addons/contract_delivery_zone/tests/__init__.py,sha256=qLk5ITIfUwn6T7D1i6hCxmzqcXEWlV9N5v6K6lbI5Hg,42
+odoo/addons/contract_delivery_zone/tests/test_contract_delivery_zone.py,sha256=9GPW7NDYVPl4YUdeYKZSPWX10WDZVuAsvU_xoOhIbWg,1475
+odoo/addons/contract_delivery_zone/views/contract_contract.xml,sha256=Datv8VatttRxUUtt4ma7c23rTVKCr4CLjvBRVofRy_o,2033
+odoo14_addon_contract_delivery_zone-14.0.1.0.1.dev2.dist-info/METADATA,sha256=RY1IKwkYoI4PdkcXgh9kCdbAh52NDs72czcz-3HLOoI,3343
+odoo14_addon_contract_delivery_zone-14.0.1.0.1.dev2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+odoo14_addon_contract_delivery_zone-14.0.1.0.1.dev2.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+odoo14_addon_contract_delivery_zone-14.0.1.0.1.dev2.dist-info/RECORD,,
