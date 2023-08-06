@@ -1,0 +1,11 @@
+timm>=0.4.9
+einops>=0.3
+openpifpaf>=0.13.4
+
+[dev]
+wheel
+
+[test]
+pylint<2.9.4
+pycodestyle
+pytest

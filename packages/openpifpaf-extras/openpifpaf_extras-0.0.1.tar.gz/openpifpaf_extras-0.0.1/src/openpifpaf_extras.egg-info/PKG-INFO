@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: openpifpaf-extras
+Version: 0.0.1
+Summary: Extensions to OpenPifPaf
+Home-page: https://github.com/openpifpaf/openpifpaf_extras
+Author: Sven Kreiss
+Author-email: research@svenkreiss.com
+License: UNKNOWN
+Description: # openpifpafextras
+        
+        Extensions to OpenPifPaf
+        
+Platform: UNKNOWN
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Provides-Extra: test
