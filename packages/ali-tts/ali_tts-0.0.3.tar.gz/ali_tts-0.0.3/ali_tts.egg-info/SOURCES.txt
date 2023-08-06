@@ -1,0 +1,8 @@
+README.md
+setup.py
+ali_tts/__init__.py
+ali_tts/version.py
+ali_tts.egg-info/PKG-INFO
+ali_tts.egg-info/SOURCES.txt
+ali_tts.egg-info/dependency_links.txt
+ali_tts.egg-info/top_level.txt

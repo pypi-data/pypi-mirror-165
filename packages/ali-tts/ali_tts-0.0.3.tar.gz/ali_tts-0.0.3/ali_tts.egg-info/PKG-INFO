@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: ali-tts
+Version: 0.0.3
+Summary: ali_tts is a ali tts driver for unitts engine
+Home-page: https://github.com/yumoqing/ali_tts
+Author: yumoqing
+Author-email: yumoqing@gmail.com
+Platform: any
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+
+# ali_tts
+alibaba tts driver for units
