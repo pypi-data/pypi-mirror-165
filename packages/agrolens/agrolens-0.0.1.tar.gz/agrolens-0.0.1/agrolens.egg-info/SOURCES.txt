@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+agrolens/__init__.py
+agrolens/main.py
+agrolens.egg-info/PKG-INFO
+agrolens.egg-info/SOURCES.txt
+agrolens.egg-info/dependency_links.txt
+agrolens.egg-info/requires.txt
+agrolens.egg-info/top_level.txt
