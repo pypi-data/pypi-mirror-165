@@ -1,0 +1,11 @@
+kubernetes_client/__init__.py,sha256=I4i1RE9rUTsbkzgoVbqcP2cP-pveQFBruZzgfUCAbpA,35
+kubernetes_client/__version__.py,sha256=a_wFl1D2Jy4uql98T2nPtAeNBXzWknBt3nkwpU8g8uI,165
+kubernetes_client/base.py,sha256=NlmEP-BW0Jigt4Km-fLAL4XR8n8wA9uBbwUhCJQCR-s,20748
+kubernetes_client/enums.py,sha256=nK4H1y1bOuyPwZldqcLjtnKsa_HDJvow1_nbOhrBo7k,4658
+kubernetes_client/kfserving.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kubernetes_client/schema.py,sha256=mrMU4lYzK0Sj6nMc2mDWUkQHwW60HP5QDfZbvVWBuSs,1760
+kubernetes_client/utils.py,sha256=NTqpvvWpzANV_WlY4D7VVr2o1SGFnCbsUmuXnrAFn_w,97
+kubernetes_client-0.1.7.dist-info/METADATA,sha256=X044xG_T6cNajQi8Lajh-Bu1QxVHvGrX9Nrkxamt6Uw,452
+kubernetes_client-0.1.7.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+kubernetes_client-0.1.7.dist-info/top_level.txt,sha256=j-1gzg5W4QCdOPRChIOk-qQQWJY5Yj1fmLlTVG1AiK8,18
+kubernetes_client-0.1.7.dist-info/RECORD,,
