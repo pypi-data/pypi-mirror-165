@@ -1,0 +1,78 @@
+# -*- coding: utf-8 -*-
+#
+# Copyright 2017-2020 - Swiss Data Science Center (SDSC)
+# A partnership between École Polytechnique Fédérale de Lausanne (EPFL) and
+# Eidgenössische Technische Hochschule Zürich (ETHZ).
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+[tool.poetry]
+name = "calamus"
+version = "0.4.1"
+description = "calamus is a library built on top of marshmallow to allow (de-)Serialization of Python classes to JSON-LD."
+authors = ["Swiss Data Science Center <contact@datascience.ch>"]
+license = "Apache-2.0"
+readme = "README.rst"
+homepage = "https://github.com/SwissDataScienceCenter/calamus/"
+repository = "https://github.com/SwissDataScienceCenter/calamus/"
+classifiers = [
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Development Status :: 4 - Beta",
+]
+
+[tool.poetry.dependencies]
+python = "^3.7.1"
+marshmallow = "^3.14.0"
+pyld = "^2.0.2"
+Jinja2 = {version = ">=3.0.0,<3.1.0", optional = true}
+sphinx = {version = "^3.0.3", optional = true}
+sphinx-rtd-theme = {version = "^0.4.3", optional = true}
+sphinxcontrib-spelling = {version = "^5.0.0", optional = true}
+lazy-object-proxy = "^1.4.3"
+rdflib = {version = "^6.0.0"}
+
+[tool.poetry.dev-dependencies]
+black = "^21.7b0"
+click = ">=8.0.0,<8.1.0"
+flake8 = "^3.7.9"
+pre-commit = "^2.3.0"
+pytest = "^5.2"
+pytest-black = "^0.3.9"
+
+[tool.poetry.extras]
+docs = ["Jinja2", "sphinx", "sphinx-rtd-theme", "sphinxcontrib-spelling"]
+
+[tool.black]
+line-length = 120
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+    | \.venv
+    | build
+    | dist
+)/
+'''
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
