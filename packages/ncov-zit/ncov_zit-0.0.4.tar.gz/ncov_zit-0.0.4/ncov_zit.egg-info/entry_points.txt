@@ -1,0 +1,3 @@
+[console_scripts]
+oh_my-zit = ncov_zit.main:main
+
