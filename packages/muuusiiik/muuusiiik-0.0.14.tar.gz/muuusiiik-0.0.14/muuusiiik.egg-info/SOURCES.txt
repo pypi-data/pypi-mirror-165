@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+muuusiiik/__init__.py
+muuusiiik/util.py
+muuusiiik.egg-info/PKG-INFO
+muuusiiik.egg-info/SOURCES.txt
+muuusiiik.egg-info/dependency_links.txt
+muuusiiik.egg-info/requires.txt
+muuusiiik.egg-info/top_level.txt
