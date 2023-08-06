@@ -1,0 +1,2 @@
+[alembic]
+migrations = pypn_habref_api.migrations:versions
