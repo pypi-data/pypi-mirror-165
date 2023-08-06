@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+SwifTCR/__init__.py
+SwifTCR/cluster.py
+SwifTCR/random_data.py
+SwifTCR/spark.py
+SwifTCR.egg-info/PKG-INFO
+SwifTCR.egg-info/SOURCES.txt
+SwifTCR.egg-info/dependency_links.txt
+SwifTCR.egg-info/requires.txt
+SwifTCR.egg-info/top_level.txt
