@@ -1,0 +1,3 @@
+[console_scripts]
+repod-file=repod.cli:repod_file
+
