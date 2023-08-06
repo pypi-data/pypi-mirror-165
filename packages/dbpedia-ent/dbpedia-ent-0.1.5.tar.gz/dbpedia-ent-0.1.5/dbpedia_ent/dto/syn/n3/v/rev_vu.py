@@ -1,0 +1,42 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_rev_vu = {'vu_ha_van': 'van_h._vu',
+ 'vu_quang_bovid': 'saola',
+ 'vu_quang_ox': 'saola',
+ 'vu_thi_huong': 'thi_huong_vu',
+ 'vu_university_amsterdam': 'vrije_universiteit',
+ 'vue_5_infinite': 'e-on_vue',
+ 'vuelo_spanair_jk-5022': 'spanair_flight_5022',
+ 'vuelta_a_algarve': 'volta_ao_algarve',
+ 'vuelta_a_cataluna': 'volta_a_catalunya',
+ 'vuelta_a_levante': 'volta_a_la_comunitat_valenciana',
+ 'vuelta_a_valencia': 'volta_a_la_comunitat_valenciana',
+ 'vuelta_ciclista_asturias': 'vuelta_a_asturias',
+ 'vuelta_de_chile': 'vuelta_ciclista_de_chile',
+ 'vufflens_la_ville': 'vufflens-la-ville',
+ 'vugelles-la_mothe_vd': 'vugelles-la_mothe',
+ 'vugelles_la_mothe': 'vugelles-la_mothe',
+ 'vuisternens_devant_romont': 'vuisternens-devant-romont',
+ 'vuisternens_en_ogoz': 'vuisternens-en-ogoz',
+ 'vulcan_automatic_cannon': 'm61_vulcan',
+ 'vulcan_death_grip': 'vulcan_nerve_pinch',
+ 'vulcan_hand_salute': 'vulcan_salute',
+ 'vulcan_materials_co.': 'vulcan_materials_company',
+ 'vulcan_neck_pinch': 'vulcan_nerve_pinch',
+ 'vulcan_rubber_company': 'vulcan_corporation',
+ 'vulcanism_on_io': 'volcanism_on_io',
+ 'vulgate_merlin_continuation': 'lancelot-grail',
+ 'vulnerable_floating_charge': 'voidable_floating_charge',
+ 'vulpecula_cum_ansere': 'vulpecula',
+ 'vulpecula_et_anser': 'vulpecula',
+ 'vulpes_vulpes_arabica': 'arabian_red_fox',
+ 'vulpes_vulpes_fulva': 'american_red_fox',
+ 'vulpes_vulpes_fulvus': 'american_red_fox',
+ 'vultee_a-31_vengeance': 'a-31_vengeance',
+ 'vultee_aircraft_company': 'vultee_aircraft',
+ 'vulvar_lichen_sclerosus': 'lichen_sclerosus',
+ 'vuze_hd_network': 'vuze'}
+        

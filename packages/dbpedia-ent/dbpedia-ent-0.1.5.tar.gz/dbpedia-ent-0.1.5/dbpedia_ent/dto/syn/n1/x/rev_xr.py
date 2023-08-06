@@ -1,0 +1,40 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_rev_xr = {'xr-3': 'kellett_kd-1',
+ 'xr-budd': 'xr-400',
+ 'xr311': 'fmc_xr311',
+ 'xr400': 'xr-400',
+ 'xr4ti': 'merkur_xr4ti',
+ 'xr4x4': 'ford_sierra',
+ 'xr650l': 'honda_xr650l',
+ 'xr808g': 'the_dark_nest_trilogy',
+ 'xramort': 'khramort',
+ 'xrandr': 'randr',
+ 'xrank': 'bing_xrank',
+ 'xrated': 'x-rated',
+ 'xray': 'xray_model_racing_cars',
+ 'xrays': 'x-ray',
+ 'xrbl': 'xbrl',
+ 'xrcc5': 'ku80',
+ 'xrcc6': 'ku70',
+ 'xrcc7': 'dna-pkcs',
+ 'xrcd': 'extended_resolution_compact_disc',
+ 'xrcd2': 'extended_resolution_compact_disc',
+ 'xrcd24': 'extended_resolution_compact_disc',
+ 'xrco': 'x-rated_critics_organization',
+ 'xref': 'cross-reference',
+ 'xrefer': 'credo_reference',
+ 'xres': 'macromedia_xres',
+ 'xridoli': 'khridoli',
+ 'xrii': 'x-ray_image_intensifier',
+ 'xrio': 'xhrio-tv',
+ 'xrispa': 'chrispa',
+ 'xrite': 'x-rite',
+ 'xroshtag': 'xroshtag_and_padvaxtag',
+ 'xrpd': 'powder_diffraction',
+ 'xrun': 'buffer_overflow',
+ 'xryspa': 'chrispa'}
+        

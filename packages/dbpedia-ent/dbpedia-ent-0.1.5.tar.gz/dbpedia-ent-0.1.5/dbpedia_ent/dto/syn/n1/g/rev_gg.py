@@ -1,0 +1,43 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_rev_gg = {'gg-1': 'prr_gg1',
+ 'gg-45': 'gg45',
+ 'gg20b': 'railpower_gg20b',
+ 'ggaht': 'green_grass_and_high_tides',
+ 'ggakdugi': 'kkakdugi',
+ 'ggangpae': 'kkangpae',
+ 'ggbs': 'ground_granulated_blast_furnace_slag',
+ 'ggbts': 'golden_gate_baptist_theological_seminary',
+ 'ggcc': 'wyndham_championship',
+ 'ggcd': 'golden_grove_central_districts_baseball_club',
+ 'ggcl': 'girls_greater_cincinnati_league',
+ 'ggcx': 'gamma-glutamyl_carboxylase',
+ 'ggea': 'google',
+ 'ggep': 'european_green_party',
+ 'ggfh': 'g.g.f.h.',
+ 'gggarth': 'garth_richardson',
+ 'gggn': 'utilitarianism',
+ 'gghw': 'genie_gets_her_wish',
+ 'ggie': 'golden_gate_international_exposition',
+ 'ggmx': 'golden_gate_railroad_museum',
+ 'ggnra': 'golden_gate_national_recreation_area',
+ 'ggoc': 'governor_general_of_canada',
+ 'ggogle': 'google',
+ 'ggotip': 'a_petal',
+ 'ggp2007': 'nprotect_gameguard_personal_2007',
+ 'ggpl': 'gnu_general_public_license',
+ 'ggrobar': 'grandma_got_run_over_by_a_reindeer',
+ 'ggse': 'gevirtz_graduate_school_of_education',
+ 'ggsipu': 'guru_gobind_singh_indraprastha_university',
+ 'ggsn': 'gprs_core_network',
+ 'ggswa': 'guildford_grammar_school',
+ 'ggtp': 'gamma-glutamyl_transpeptidase',
+ 'gguerra': 'gustavo_guerra',
+ 'ggulu': 'mugulu',
+ 'ggws': 'the_great_global_warming_swindle',
+ 'ggxx': 'guilty_gear_xx',
+ 'ggyc': 'golden_gate_yacht_club'}
+        

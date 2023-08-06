@@ -1,0 +1,35 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_trie_hh = {'_': ['hh_prahladananda_maharaj',
+       'hh_sachinandana_maharaj',
+       'hh_sacinandana_maharaj',
+       'hh_prahladananda_swami',
+       'hh_prahladanada_swami',
+       'hh_jayadvaita_maharaj',
+       'hh_richardson_complex',
+       'hh_sachinandana_swami',
+       'hh_radhanath_maharaj',
+       'hh_sacinandana_swami',
+       'hh_devamrita_maharaj',
+       'hh_sacinandan_swami',
+       'hh_jayadvaita_swami',
+       'hh_romapada_maharaj',
+       'hh_giriraja_maharaj',
+       'hh_giriraj_maharaj',
+       'hh_devamrita_swami',
+       'hh_radhanath_swami',
+       'hh_giriraja_swami',
+       'hh_antigen_system',
+       'hh_bennett_studio',
+       'hh_romapada_swami',
+       'hh-60g_pave_hawk',
+       'hh_giriraj_swami',
+       'hh-60j_jay_hawk',
+       'hh-60_pave_hawk',
+       'hh_blood_group',
+       'hh-3e_sea_king',
+       'hh3e_sea_king'],
+ 'p': ['hhpred_/_hhsearch']}

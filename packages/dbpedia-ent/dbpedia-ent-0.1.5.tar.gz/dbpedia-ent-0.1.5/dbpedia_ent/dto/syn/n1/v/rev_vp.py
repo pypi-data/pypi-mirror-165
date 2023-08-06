@@ -1,0 +1,41 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_rev_vp = {'vp-104': 'vpb-104',
+ 'vp-16': 'etoposide',
+ 'vp-168': 'vasp_flight_168',
+ 'vp-sem': 'esem',
+ 'vp16': 'herpes_simplex_virus_protein_vmw65',
+ 'vp6f': 'vp6',
+ 'vpac': 'victorian_partnership_for_advanced_computing',
+ 'vpap': 'positive_airway_pressure',
+ 'vpb-114': 'vp-26',
+ 'vpchat': 'virtual_places_chat',
+ 'vpci': 'victoria_park_collegiate_institute',
+ 'vpdn': 'virtual_private_network',
+ 'vpisu': 'virginia_polytechnic_institute_and_state_university',
+ 'vpl.': 'viipuri_province',
+ 'vpls': 'virtual_private_lan_service',
+ 'vpms': 'vp/ms',
+ 'vpn-1': 'check_point_vpn-1',
+ 'vpns': 'virtual_private_network',
+ 'vpod': 'comparison_of_ipod_managers',
+ 'vpointer': 'virtual_method_table',
+ 'vport': 'rca',
+ 'vpost': 'singapore_post',
+ 'vpotus': 'vice_president_of_the_united_states',
+ 'vppa': 'video_privacy_protection_act',
+ 'vprintf': 'printf',
+ 'vpro': 'intel_vpro',
+ 'vps-2': 'm163_vads',
+ 'vps2': 'm163_vads',
+ 'vps23': 'tsg101',
+ 'vps34': 'class_iii_pi_3-kinase',
+ 'vpshr': 'voluntary_principles_on_security_and_human_rights',
+ 'vpup': 'vanguard_unionist_progressive_party',
+ 'vpvp': 'vantagepoint_venture_partners',
+ 'vpwa': 'volunteer_partnerships_for_west_africa',
+ 'vpws': 'virtual_leased_line'}
+        

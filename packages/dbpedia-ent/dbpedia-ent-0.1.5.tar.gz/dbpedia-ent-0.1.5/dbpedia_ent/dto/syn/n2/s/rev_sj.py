@@ -1,0 +1,42 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_rev_sj = {'sj_austria': 'socialist_youth_austria',
+ 'sj_browne': 'sam_browne',
+ 'sj_day': 'sylvia_day',
+ 'sj_dm': 'sj_dm3',
+ 'sj_earthquakes': 'san_jose_earthquakes',
+ 'sj_games': 'steve_jackson_games',
+ 'sj_joshi': 'shrikrishna_janardan_joshi',
+ 'sj_klein': 'one_laptop_per_child',
+ 'sj_michaels': 's._j._michaels',
+ 'sj_perelman': 's._j._perelman',
+ 'sj_rc4': 'sj_rc',
+ 'sj_revich': 's._j._revich',
+ 'sj_sharks': 'san_jose_sharks',
+ 'sj_simon': 's._j._simon',
+ 'sj_snooke': 'tip_snooke',
+ 'sj_stealth': 'san_jose_stealth',
+ 'sj_suryah': 's._j._suryaah',
+ 'sj_t': 'super_junior-t',
+ 'sj_trot': 'super_junior-t',
+ 'sj_tucker': 's._j._tucker',
+ 'sj_warmington': 's._j._warmington',
+ 'sj_y7': 'sj_y6',
+ 'sjaastad_syndrome': 'chronic_paroxysmal_hemicrania',
+ 'sjalfstaett_folk': 'independent_people',
+ 'sjeng_kremers': 'johan_kremers',
+ 'sjenica_municipality': 'sjenica',
+ 'sjeverin_case': 'sjeverin_massacre',
+ 'sjeverni_velebit': 'national_park_sjeverni_velebit',
+ 'sjir_nijssen': 'g.m._nijssen',
+ 'sjis_art': 'shift_jis_art',
+ 'sjl_broadcasting': 'montecito_broadcast_group',
+ 'sjoukie_dijkstra': 'sjoukje_dijkstra',
+ 'sjsu_football': 'san_jose_state_spartans_football',
+ 'sjunde_himlen': 'show_me_heaven',
+ 'sjunde_inseglet': 'the_seventh_seal',
+ 'sjv_chelvanayakam': 's._j._v._chelvanayakam'}
+        

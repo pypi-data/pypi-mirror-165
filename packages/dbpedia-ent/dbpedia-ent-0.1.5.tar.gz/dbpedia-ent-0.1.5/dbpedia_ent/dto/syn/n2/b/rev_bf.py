@@ -1,0 +1,43 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_rev_bf = {'bf-109_fighter': 'messerschmitt_bf_109',
+ 'bf:_bc': 'battlefield:_bad_company',
+ 'bf:_v': 'battlefield_vietnam',
+ 'bf:bc_2': 'battlefield:_bad_company_2',
+ 'bf_108': 'messerschmitt_bf_108',
+ 'bf_109': 'messerschmitt_bf_109',
+ 'bf_110': 'messerschmitt_bf_110',
+ 'bf_1942': 'battlefield_1942',
+ 'bf_2': 'battlefield_2',
+ 'bf_2142': 'battlefield_2142',
+ 'bf_falcon': 'ford_bf_falcon',
+ 'bf_goodrich': 'bfgoodrich',
+ 'bf_hastings': 'brian_hastings',
+ 'bf_heroes': 'battlefield_heroes',
+ 'bf_reed': 'b._f._reed',
+ 'bf_shelton': 'b._f._shelton',
+ 'bf_skinner': 'b._f._skinner',
+ 'bf_theory': 'bf_model',
+ 'bfc_dynamo': 'berliner_fc_dynamo',
+ 'bfc_goshawk': 'f11c_goshawk',
+ 'bfc_norden-west': 'norden-nordwest_berlin',
+ 'bfg_4': 'bound_for_glory_iv',
+ 'bfi_100': 'bfi_top_100_british_films',
+ 'bfi_canada': 'iesi-bfc_ltd.',
+ 'bfi_imax': 'london_imax',
+ 'bfi_screenonline': 'screenonline',
+ 'bfme2_rotwk': 'the_lord_of_the_rings:_the_battle_for_middle-earth_ii:_the_rise_of_the_witch-king',
+ 'bfme_2': 'the_lord_of_the_rings:_the_battle_for_middle-earth_ii',
+ 'bfme_ii': 'the_lord_of_the_rings:_the_battle_for_middle-earth_ii',
+ 'bfs_algorithm': 'breadth-first_search',
+ 'bfs_nummer': 'community_identification_number',
+ 'bfw_22': 'bfw_m.22',
+ 'bfw_flamingo': 'udet_u_12',
+ 'bfw_m.17': 'messerschmitt_m_17',
+ 'bfw_m.24': 'messerschmitt_m_24',
+ 'bfw_m.36': 'iar_36',
+ 'bfw_m23': 'bfw_m.23'}
+        

@@ -1,0 +1,36 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_trie_ld = {'_': ['ld50_poisoning_test',
+       'ld_postcode_area',
+       'ld_reagin_house',
+       'ld&ecr_class_a',
+       'ld&ecr_class_d',
+       'ld&ecr_class_b',
+       'ld&ecr_class_c',
+       'ld_+_3'],
+ 'a': ['ldap_account_manager'],
+ 'c': ['ldcc_rna_motif'],
+ 'e': ['lde_-_columbus', 'lde_-_brussel', 'lde_-_pegasus', 'lde_-_comet'],
+ 'k': ['ldk_solar_co'],
+ 'l': ['ldl-receptor-related_protein-associated_protein',
+       'ldlr-related_protein_1'],
+ 'r': ['ldrd-rdld_toxin-antitoxin_system'],
+ 's': ['lds_humanitarian_services',
+       'lds_student_association',
+       'lds_conference_center',
+       'lds_conference_centre',
+       'lds_and_christianity',
+       'lds_business_college',
+       'lds_church_president',
+       'lds_millennial_star',
+       'lds_family_services',
+       'lds_social_services',
+       'lds_church_archives',
+       'lds_relief_society',
+       'lds_high_school',
+       'lds_church_news'],
+ 'u': ['ldu_de_quito'],
+ 'v': ['ldv_group_limited', 'ldv_vans_trophy']}

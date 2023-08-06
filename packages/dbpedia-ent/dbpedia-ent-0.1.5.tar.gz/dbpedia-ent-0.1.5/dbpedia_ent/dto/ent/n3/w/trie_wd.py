@@ -1,0 +1,35 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_trie_wd = {'_': ['wd_austerity_2-10-0',
+       'wd_austerity_2-8-0',
+       'wd_anywhere_access',
+       'wd_postcode_area',
+       'wd_postal_area',
+       'wd_1145+017_b',
+       'wd_raptor_x'],
+ 'a': ['wda,_pomeranian_voivodeship',
+       'wda_landscape_park',
+       'wdaz_tv_tower',
+       'wday_tv_tower'],
+ 'c': ['wdcp-tv_and_wdcq-tv'],
+ 'e': ['wdecki_park_krajobrazowy', 'wdecki_landscape_park'],
+ 'f': ['wdf_asia-pacific_cup',
+       'wdf_americas_cup',
+       'wdf_europe_cup',
+       'wdf_world_cup'],
+ 'j': ['wdjr-fm_country_96.9'],
+ 'm': ['wdm_radio_awards'],
+ 'r': ['wdr_rundfunkorchester_koln',
+       'wdr_symphony_orchestra',
+       'wdr_rundfunkchor_koln',
+       'wdr_symphony_cologne',
+       'wdr_paper_computer',
+       'wdre_new_york',
+       'wdr_2_klassik'],
+ 'y': ['wdydze_landscape_park'],
+ 'z': ['wdzydzki_park_krajobrazowy',
+       'wdzydzki_landscape_park',
+       'wdzydze_landscape_park']}

@@ -1,0 +1,43 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_rev_hg = {'hg-mn_star': 'mercury-manganese_star',
+ 'hg-mn_stars': 'mercury-manganese_star',
+ 'hg_bissinger': 'h._g._bissinger',
+ 'hg_callan': 'h._g._callan',
+ 'hg_clouzot': 'henri-georges_clouzot',
+ 'hg_cochran': 'h._g._cochran',
+ 'hg_lewis': 'herschell_gordon_lewis',
+ 'hg_liddell': 'henry_liddell',
+ 'hg_nelson': 'h._g._nelson',
+ 'hg_pelissier': 'h._g._pelissier',
+ 'hg_peter': 'h._g._peter',
+ 'hg_pound': 'h._g._pound',
+ 'hg_salsinger': 'h._g._salsinger',
+ 'hg_selfridge': 'harry_gordon_selfridge',
+ 'hg_stephenson': 'h._g._stephenson',
+ 'hg_wells': 'h._g._wells',
+ 'hgam_1148': 'hd_223229',
+ 'hgam_351': 'omega_aurigae',
+ 'hgam_379': 'eo_aurigae',
+ 'hgam_380': 'ar_aurigae',
+ 'hgam_384': 'mz_aurigae',
+ 'hgam_399': 'iu_aurigae',
+ 'hgam_407': 'ly_aurigae',
+ 'hgam_460': 'v433_aurigae',
+ 'hgam_768': 'sigma_aquilae',
+ 'hgam_772': 'qs_aquilae',
+ 'hgam_861': 'theta_aquilae',
+ 'hgam_94': 'gamma_arietis',
+ 'hgam_95': 'gamma_arietis',
+ 'hgcc_rna': 'hgcc_family_rna',
+ 'hgh_quackery': 'growth_hormone_treatment',
+ 'hgj_moseley': 'henry_moseley',
+ 'hgm-16_atlas': 'sm-65_atlas',
+ 'hgm-25_titan': 'hgm-25a_titan_i',
+ 'hgmn_star': 'mercury-manganese_star',
+ 'hgmn_stars': 'mercury-manganese_star',
+ 'hgv_shuttle': 'eurotunnel_shuttle'}
+        

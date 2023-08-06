@@ -1,0 +1,42 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_rev_nr = {'nr_madhava_menon': 'n._r._madhava_menon',
+ 'nr_narayana_murthy': 'n._r._narayana_murthy',
+ 'nrc_records_artists': 'national_recording_corporation',
+ 'nrc_region_1': 'nuclear_regulatory_commission_region_i',
+ 'nrc_region_3': 'nuclear_regulatory_commission_region_iii',
+ 'nrc_region_4': 'nuclear_regulatory_commission_region_iv',
+ 'nrc_region_four': 'nuclear_regulatory_commission_region_iv',
+ 'nrc_region_i': 'nuclear_regulatory_commission_region_i',
+ 'nrc_region_ii': 'nuclear_regulatory_commission_region_ii',
+ 'nrc_region_iii': 'nuclear_regulatory_commission_region_iii',
+ 'nrc_region_iv': 'nuclear_regulatory_commission_region_iv',
+ 'nrc_region_one': 'nuclear_regulatory_commission_region_i',
+ 'nrc_region_three': 'nuclear_regulatory_commission_region_iii',
+ 'nrc_region_two': 'nuclear_regulatory_commission_region_ii',
+ 'nrc_time_signal': 'national_research_council_time_signal',
+ 'nrhp_dab_issues': 'wikipedia:wikiproject_national_register_of_historic_places/disambiguation',
+ 'nrhp_in_oklahoma': 'national_register_of_historic_places_listings_in_oklahoma',
+ 'nri_medical_college': 'nri_academy_of_medical_sciences',
+ 'nris_info_issue': 'wikipedia:wikiproject_national_register_of_historic_places/nris_information_issues',
+ 'nris_info_issues': 'wikipedia:wikiproject_national_register_of_historic_places/nris_information_issues',
+ 'nrj_music_award': 'nrj_music_awards',
+ 'nrl_footy_show': 'the_nrl_footy_show',
+ 'nrl_grand_final': 'national_rugby_league',
+ 'nrl_heritage_round': 'national_rugby_league',
+ 'nrl_season_1998': 'national_rugby_league_season_1998',
+ 'nrl_season_1999': 'national_rugby_league_season_1999',
+ 'nrl_season_2000': 'national_rugby_league_season_2000',
+ 'nrl_season_2001': 'national_rugby_league_season_2001',
+ 'nrl_season_2002': 'national_rugby_league_season_2002',
+ 'nrl_season_2003': 'national_rugby_league_season_2003',
+ 'nrl_season_2004': 'national_rugby_league_season_2004',
+ 'nrl_season_2005': 'national_rugby_league_season_2005',
+ 'nrl_season_2006': 'national_rugby_league_season_2006',
+ 'nrmls_wlcm_records': 'shout_out_out_out_out',
+ 'nrs_mill_cove': 'cfs_mill_cove',
+ 'nrs_social_grades': 'nrs_social_grade'}
+        

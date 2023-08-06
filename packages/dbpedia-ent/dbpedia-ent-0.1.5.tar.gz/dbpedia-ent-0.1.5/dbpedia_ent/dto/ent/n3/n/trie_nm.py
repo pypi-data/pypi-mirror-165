@@ -1,0 +1,36 @@
+
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+
+d_trie_nm = {'_': ['nm_english_open'],
+ 'a': ['nmai_kha_valley'],
+ 'b': ['nmbs/sncb_i11_coach',
+       'nmbs/sncb_class_73',
+       'nmb_bank_limited',
+       'nmb_bank_nepal',
+       'nmbs_class_41'],
+ 'd': ['nmda_receptor_antagonists',
+       'nmda_receptor_antagonist',
+       'nmda_receptor_modulator',
+       'nmda_receptor_blocker'],
+ 'e': ['nme_compilation_albums',
+       "nme's_cool_list",
+       'nme_awards_2012',
+       'nme_awards_2020',
+       'nme_awards_2022',
+       'nme_awards_2017',
+       'nme_awards_tour'],
+ 'r': ['nmr-star_file_format',
+       'nmr_in_biomedicine',
+       'nmr_shift_reagent',
+       'nmr_tube_cleaner'],
+ 's': ['nms_sublocotenent_ghiculescu',
+       'nms_mihail_kogalniceanu',
+       'nms_enterprises_limited',
+       'nms-x07po_gel_finieto',
+       'nms_regele_ferdinand',
+       'nms_amiral_murgescu',
+       'nmsu_practice_field',
+       'nms_regina_maria'],
+ 't': ['nmt1_rna_motif']}
