@@ -1,0 +1,5 @@
+eventlet==0.33.1
+ua-headers
+requests
+torpy==1.1.6
+pyproxify
