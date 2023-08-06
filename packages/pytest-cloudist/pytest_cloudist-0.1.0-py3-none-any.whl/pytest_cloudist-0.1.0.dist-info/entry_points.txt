@@ -1,0 +1,3 @@
+[pytest11]
+cloudist=cloudist.plugin
+
