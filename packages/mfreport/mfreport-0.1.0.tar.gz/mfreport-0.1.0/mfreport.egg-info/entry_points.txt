@@ -1,0 +1,2 @@
+[console_scripts]
+mfreport = mfreport.main:main
