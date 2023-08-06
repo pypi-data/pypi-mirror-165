@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+canvassyncer/__init__.py
+canvassyncer/__main__.py
+canvassyncer.egg-info/PKG-INFO
+canvassyncer.egg-info/SOURCES.txt
+canvassyncer.egg-info/dependency_links.txt
+canvassyncer.egg-info/entry_points.txt
+canvassyncer.egg-info/requires.txt
+canvassyncer.egg-info/top_level.txt
