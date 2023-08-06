@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+ArabicNormalization/ArNormalization.py
+ArabicNormalization/__init__.py
+ArabicTextNormlzation.egg-info/PKG-INFO
+ArabicTextNormlzation.egg-info/SOURCES.txt
+ArabicTextNormlzation.egg-info/dependency_links.txt
+ArabicTextNormlzation.egg-info/top_level.txt
