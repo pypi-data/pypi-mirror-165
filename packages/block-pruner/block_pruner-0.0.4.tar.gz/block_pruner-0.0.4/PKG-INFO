@@ -1,0 +1,74 @@
+Metadata-Version: 2.1
+Name: block_pruner
+Version: 0.0.4
+Summary: Block Pruner
+Home-page: https://github.com/nymann/block-pruner
+Maintainer: Kristian Nymann Jakobsen
+Maintainer-email: kristian@nymann.dev
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Provides-Extra: all
+Provides-Extra: dev
+Provides-Extra: tests
+
+# Block Pruner
+
+How would you go about deleting blocks of `[start;end]` if the block contains `615` in _example.txt_ ?
+
+_example.txt_
+
+```txt
+a
+2
+start
+a
+b
+615 b
+d
+end
+f
+a
+g
+start
+610
+h
+i
+end
+b
+3
+start
+e
+e
+615
+s
+s
+end
+a
+```
+
+```
+$ block_pruner --start start --end end --needle 615 example.txt
+a
+2
+f
+a
+g
+start
+610
+h
+i
+end
+b
+3
+a
+```
+
+## Usage
+
+```sh
+block_pruner --start start --end end --needle 615 example.txt > out.txt
+```
+
+## Development
+
+For help getting started developing check [DEVELOPMENT.md](DEVELOPMENT.md)
