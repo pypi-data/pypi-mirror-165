@@ -1,0 +1,5 @@
+setup.py
+django3_oss_gstorage.egg-info/PKG-INFO
+django3_oss_gstorage.egg-info/SOURCES.txt
+django3_oss_gstorage.egg-info/dependency_links.txt
+django3_oss_gstorage.egg-info/top_level.txt
