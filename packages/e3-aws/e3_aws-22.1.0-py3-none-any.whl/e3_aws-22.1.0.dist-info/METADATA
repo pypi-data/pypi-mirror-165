@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: e3-aws
+Version: 22.1.0
+Summary: E3 Cloud Formation Extension
+Author: AdaCore's Production Team
+License-File: LICENSE
+Requires-Dist: boto3
+Requires-Dist: botocore
+Requires-Dist: pyyaml
+Requires-Dist: troposphere
+Requires-Dist: e3-core
+Requires-Dist: docker ; platform_system == "Linux"
+
