@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: MergePythonSDK
+Version: 2.1.0
+Summary: Merge Unified API
+Home-page: 
+Author: Merge Team
+Author-email: hello@merge.dev
+Keywords: OpenAPI,OpenAPI-Generator,Merge Unified API
+Requires-Python: >=3.6
+License-File: LICENSE.md
+
+    The unified API for building rich integrations with multiple integration platforms.  # noqa: E501
+    
