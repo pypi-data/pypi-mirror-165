@@ -1,0 +1,10 @@
+__pycache__/
+.DS_Store
+dist/
+build/
+*egg-info/
+sonouno-lhc-outputs/
+profile.pstats
+profile.svg
+venv/
+
