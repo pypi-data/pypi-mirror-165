@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/pypinyin_g2pw/__init__.py
+src/pypinyin_g2pw/g2pw.py
+src/pypinyin_g2pw.egg-info/PKG-INFO
+src/pypinyin_g2pw.egg-info/SOURCES.txt
+src/pypinyin_g2pw.egg-info/dependency_links.txt
+src/pypinyin_g2pw.egg-info/requires.txt
+src/pypinyin_g2pw.egg-info/top_level.txt
