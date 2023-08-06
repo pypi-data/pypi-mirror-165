@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: speiseplan
+Version: 0.3.0
+Summary: 
+License: MIT
+Author: Markus Quade
+Author-email: info@markusqua.de
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
