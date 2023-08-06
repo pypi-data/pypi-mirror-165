@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: DIgging
+Version: 0.0.0.1
+Summary: Decision AI searching and optimization platform
+Author: OpenDILab Contributors
+License: Apache License, Version 2.0
+Keywords: searching
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.6
+Provides-Extra: doc
+Provides-Extra: test
+Provides-Extra: style
+License-File: LICENSE
+
+DIgging: 
