@@ -1,0 +1,10 @@
+tree_sitter/__init__.py,sha256=-3tGqm4Aux8TSTe8s029ii1a6j_9rZSbhp43tb0LfVM,3442
+tree_sitter/binding.cpython-38-darwin.so,sha256=yFhUoNjjK-nKNdfbQaWbMk1DECK3Gf7XULdnyrA1K1o,277232
+tree_sitter_languages/__init__.py,sha256=hQ-P_BgH0vHUC0sxnE95HowK1rU8CjRDL6REIyH6WVQ,227
+tree_sitter_languages/core.cpython-38-darwin.so,sha256=Gj0yaP8mTs-vAljzDsY3RrsuVyI0G83HEuEmbvr4vak,47296
+tree_sitter_languages/languages.so,sha256=s1vKhH6BnPgsO4lELhFI-RkHKDfGXgyqpKvMVauOges,65126872
+tree_sitter_builds-2022.8.29.dist-info/LICENSE,sha256=u8BqZQWU6Dz2I-eZWEIMD1VJMOL3vW6zNPWsHd9TGLM,546
+tree_sitter_builds-2022.8.29.dist-info/METADATA,sha256=soisDTrFZ20slctX2bgUSTqfOmhWiK-UHnpy_INOU28,3350
+tree_sitter_builds-2022.8.29.dist-info/WHEEL,sha256=pXLpj1wTvqlD6RVUEKOuGQGeFX0NOPyDrsC-9xVDmYU,109
+tree_sitter_builds-2022.8.29.dist-info/top_level.txt,sha256=_HRrA9sauZSHQqyWB11YHqgn0givlXbg5_cUDlBss7A,34
+tree_sitter_builds-2022.8.29.dist-info/RECORD,,
