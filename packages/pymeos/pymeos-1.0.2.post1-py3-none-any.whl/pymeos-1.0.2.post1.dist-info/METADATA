@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: pymeos
+Version: 1.0.2.post1
+Summary: Python wrapper for the MEOS C Library.
+Author-email: Víctor Diví <vdiviloper@gmail.com>, Zhicheng Luo <zhicheng.luo@ulb.be>, Krishna Chaitanya Bommakanti <bkchaitan94@gmail.com>
+License: PostgreSQL
+Project-URL: Homepage, https://github.com/MobilityDB/PyMEOS
+Project-URL: Bug Tracker, https://github.com/MobilityDB/PyMEOS/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pymeos-cffi
+Requires-Dist: python-dateutil
+Requires-Dist: spans
+Requires-Dist: postgis
+Requires-Dist: shapely
+Requires-Dist: geopandas
+
