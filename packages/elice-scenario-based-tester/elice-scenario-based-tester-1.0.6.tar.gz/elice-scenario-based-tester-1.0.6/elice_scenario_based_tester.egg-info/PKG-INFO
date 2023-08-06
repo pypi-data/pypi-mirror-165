@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: elice-scenario-based-tester
+Version: 1.0.6
+Summary: Components for scenario based tester elice-backend projects.
+Home-page: https://git.elicer.io/elice/elice-scenario-based-tester
+Author: elice.io
+Author-email: contact@elice.io
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: MacOS :: MacOS X
+Requires-Python: >=3.9, <3.10
+Provides-Extra: dev
