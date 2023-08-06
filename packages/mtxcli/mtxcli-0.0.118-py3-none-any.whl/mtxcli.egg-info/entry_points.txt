@@ -1,0 +1,8 @@
+[console_scripts]
+dc = dc:main
+dockerdev = dockerdev:main
+gitup = gitup:main
+mtdp = mtdp:main
+mtgp = mtgp_init:main
+mtpublish = mtpublish:main
+
