@@ -1,0 +1,6 @@
+PyYAML
+requests_toolbelt
+
+[dev]
+pytest
+ipython
