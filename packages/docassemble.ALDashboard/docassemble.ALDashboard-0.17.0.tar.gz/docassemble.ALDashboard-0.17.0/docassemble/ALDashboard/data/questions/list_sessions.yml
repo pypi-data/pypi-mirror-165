@@ -1,0 +1,51 @@
+---
+include:
+  - nav.yml
+---
+modules:
+  - .aldashboard
+---
+#mandatory: True # Use while developing in playground
+continue button field: playground_splash
+question: |
+  Splash screen
+---
+code: |
+  interviews = {interview['filename']:interview for interview in interview_menu()}
+---
+question: |
+  What interview do you want to view sessions for?  
+fields:
+  - Filename: filename
+    required: False
+    code: |
+      [{interview: interviews[interview].get('title')} for interview in interviews]
+  - User (leave blank to view all sessions): chosen_user
+    required: False
+    datatype: integer
+    input type: combobox
+    code: |
+      speedy_get_users()
+---
+# next((item.get('title') for item in interviews if item.get('filename') == interview['filename']), interview['filename'] )
+---
+code: |
+  sessions_list = speedy_get_sessions(user_id=chosen_user, filename=filename)
+---
+mandatory: True
+event: load_answer
+question: |
+  Recently generated sessions for ${ filename }
+subquestion: |
+  
+  % for interview in sessions_list:
+  * <a href="${ interview_url(i=interview['filename'], session=interview['key']) }">
+      ${ interviews.get(interview['filename'],{'title': interview['filename']}).get('title') }
+    </a>
+    (Modified ${ format_date(interview['modtime']) }), on page **${ interview['num_keys'] }**
+      * [View variables](${ interview_url_action('view_session_variables', session_id=interview['key']) })
+  % endfor
+---
+event: view_session_variables
+code: |
+  json_response(get_session_variables(filename, action_argument('session_id'),  simplify=True))
