@@ -1,0 +1,16 @@
+appollo/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+appollo/__main__.py,sha256=-neRuWgMGwNz93po9lGGgME_E8HBO09MUGh_WiVgtyM,2058
+appollo/api.py,sha256=SrW5olTmoefdO6HlvCT7_L2l-0HIBg0RSCUPsW1q1Bk,8620
+appollo/helpers.py,sha256=4jlx4zoDzhkpmXp4RZa7v7L56yAAuElJwfGqLuDGU2U,6774
+appollo/settings.py,sha256=a_xq7y--cAquYsg-dkmyYiEnkYjv7UMPH54a_Ay8vmk,1954
+appollo/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+appollo/commands/app.py,sha256=av6vpq48A7EfsR7MCtyHrz0Y1jJrl1lxe3VCeDmimd4,7598
+appollo/commands/apple.py,sha256=sjYCrAIcDAJW5KABBowAS5LqY3Q0dmvxnDSRIdOpfu8,13234
+appollo/commands/build.py,sha256=mWZ6ZF8R8k6tAG1jwLylGkc4sdK9QDGRdTD-IrJ9Tzg,26294
+appollo/commands/team.py,sha256=yFCuPrm4XmW5_irWjty_3hCCq6SSibbr9atASFmtKmQ,5246
+appollo/commands/user.py,sha256=gxXq8TSzVci9vV3fM4UtGNSv88o6QLYfcGubDKfzxMs,4122
+appollo-0.2.1.dist-info/METADATA,sha256=Z0rudOgTCvA_lmqEMkbVmK2YVd9LAh7LkIODrURtkgk,6183
+appollo-0.2.1.dist-info/WHEEL,sha256=sb4ZHsmozXdkdXRvpMHZmhxsxQvL8DERDUEGA9tAfc8,83
+appollo-0.2.1.dist-info/entry_points.txt,sha256=3v4vK-ToYThIz2S-UbcKoMMofK-Npu68dtz2hF0BrK0,53
+appollo-0.2.1.dist-info/license_files/LICENSE,sha256=_wGA7NVNhnkl-7S-rQ5QD_PNRZcrVsUapBf_0deXljI,1050
+appollo-0.2.1.dist-info/RECORD,,
