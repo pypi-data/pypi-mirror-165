@@ -1,0 +1,8 @@
+README.md
+setup.py
+mpylogs/__init__.py
+mpylogs/functions.py
+mpylogs.egg-info/PKG-INFO
+mpylogs.egg-info/SOURCES.txt
+mpylogs.egg-info/dependency_links.txt
+mpylogs.egg-info/top_level.txt
