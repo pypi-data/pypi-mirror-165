@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+pysecspy/__init__.py
+pysecspy/const.py
+pysecspy/errors.py
+pysecspy/secspy_data.py
+pysecspy/secspy_server.py
+pysecspy.egg-info/PKG-INFO
+pysecspy.egg-info/SOURCES.txt
+pysecspy.egg-info/dependency_links.txt
+pysecspy.egg-info/requires.txt
+pysecspy.egg-info/top_level.txt
