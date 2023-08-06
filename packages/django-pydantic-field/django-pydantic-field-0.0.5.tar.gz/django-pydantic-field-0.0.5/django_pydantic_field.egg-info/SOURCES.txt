@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+django_pydantic_field/__init__.py
+django_pydantic_field/base.py
+django_pydantic_field/fields.py
+django_pydantic_field/rest_framework.py
+django_pydantic_field.egg-info/PKG-INFO
+django_pydantic_field.egg-info/SOURCES.txt
+django_pydantic_field.egg-info/dependency_links.txt
+django_pydantic_field.egg-info/requires.txt
+django_pydantic_field.egg-info/top_level.txt
