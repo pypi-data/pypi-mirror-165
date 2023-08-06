@@ -1,0 +1,27 @@
+package:
+  name: abqpy
+  version: "{{ GIT_DESCRIBE_TAG }}"
+
+build:
+  script: python setup.py install --single-version-externally-managed --record=record.txt
+  skip: True # [py<37]
+
+source:
+  git_url: .
+
+requirements:
+  build:
+    - python
+    - setuptools_scm
+  run:
+    - python
+
+test:
+  import:
+    - abaqus
+    - mesh
+    - abaqusConstants
+about:
+  summary: Type hints for Abaqus/Python scripting
+  home: https://github.com/haiiliin/abqpy
+  license: MIT
