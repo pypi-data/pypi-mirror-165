@@ -1,0 +1,11 @@
+PyYAML
+click<9.0,>=7.0
+dagster==1.0.7
+dagster-graphql==1.0.7
+requests
+watchdog>=0.8.3
+starlette
+uvicorn[standard]
+
+[notebook]
+nbconvert
