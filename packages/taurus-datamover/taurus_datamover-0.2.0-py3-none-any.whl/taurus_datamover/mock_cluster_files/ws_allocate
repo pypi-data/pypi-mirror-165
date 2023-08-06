@@ -1,0 +1,6 @@
+#!/bin/bash
+dir=$(dirname "$0")
+dir=$(dirname "$dir")
+dir="$dir/scratch/$1"
+mkdir -p "$dir"
+echo "$dir"
