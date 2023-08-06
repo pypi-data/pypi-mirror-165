@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: decanter-ai-sdk
+Version: 0.1.0
+Summary: 
+Author: senchao
+Author-email: senchao@mobagel.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: black (>=22.6.0,<23.0.0)
+Requires-Dist: pandas (>=1.4.3,<2.0.0)
+Requires-Dist: poethepoet (>=0.16.0,<0.17.0)
+Requires-Dist: pydantic (>=1.9.2,<2.0.0)
+Requires-Dist: pytest (>=7.1.2,<8.0.0)
+Requires-Dist: requests-toolbelt (>=0.9.1,<0.10.0)
+Requires-Dist: tqdm (>=4.64.0,<5.0.0)
