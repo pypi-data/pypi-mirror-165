@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: pytest-wake
+Version: 0.2.3
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: vic.wang
+Author-email: 
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Framework :: Pytest
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+# Info
+Now or Never.
+
