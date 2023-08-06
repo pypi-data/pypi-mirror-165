@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: spx-color
+Version: 1.1.1
+Summary: A Project can help you To Use The Color in Python
+Home-page: https://github.com/SpYRx0/spx-color
+Author: Spyrx
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+License-File: LICENSE
+
