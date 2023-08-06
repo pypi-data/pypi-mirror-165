@@ -1,0 +1,5 @@
+torch>=1.6
+torchaudio>=0.10.0
+data-science-types>=0.2
+requests
+tqdm
