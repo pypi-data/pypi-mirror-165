@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+bbripper.egg-info/PKG-INFO
+bbripper.egg-info/SOURCES.txt
+bbripper.egg-info/dependency_links.txt
+bbripper.egg-info/requires.txt
+bbripper.egg-info/top_level.txt
