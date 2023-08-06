@@ -1,0 +1,9 @@
+README.md
+setup.py
+fastapi_cls_controller/__init__.py
+fastapi_cls_controller/controller.py
+fastapi_cls_controller.egg-info/PKG-INFO
+fastapi_cls_controller.egg-info/SOURCES.txt
+fastapi_cls_controller.egg-info/dependency_links.txt
+fastapi_cls_controller.egg-info/requires.txt
+fastapi_cls_controller.egg-info/top_level.txt
