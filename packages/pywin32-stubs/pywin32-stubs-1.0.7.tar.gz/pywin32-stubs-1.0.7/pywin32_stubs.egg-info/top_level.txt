@@ -1,0 +1,4 @@
+pythonwin-stubs
+win32-stubs
+win32comext-stubs
+win32helper
