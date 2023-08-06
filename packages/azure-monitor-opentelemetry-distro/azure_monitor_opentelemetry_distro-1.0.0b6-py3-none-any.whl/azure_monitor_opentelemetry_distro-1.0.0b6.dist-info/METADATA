@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: azure-monitor-opentelemetry-distro
+Version: 1.0.0b6
+Summary: Azure Monitor Distro for OpenTelemetry Python
+Home-page: https://github.com/microsoft/ApplicationInsights-Python
+Author: Microsoft Corporation
+License: MIT License
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Typing :: Typed
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: azure-monitor-opentelemetry-exporter (==1.0.0b7)
+Requires-Dist: opentelemetry-instrumentation (==0.32b0)
+
