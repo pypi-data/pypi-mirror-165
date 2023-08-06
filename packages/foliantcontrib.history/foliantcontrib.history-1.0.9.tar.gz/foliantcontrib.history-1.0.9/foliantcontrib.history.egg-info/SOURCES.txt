@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+foliant/preprocessors/history.py
+foliantcontrib.history.egg-info/PKG-INFO
+foliantcontrib.history.egg-info/SOURCES.txt
+foliantcontrib.history.egg-info/dependency_links.txt
+foliantcontrib.history.egg-info/requires.txt
+foliantcontrib.history.egg-info/top_level.txt
