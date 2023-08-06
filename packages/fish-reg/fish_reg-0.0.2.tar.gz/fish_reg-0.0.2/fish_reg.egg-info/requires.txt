@@ -1,0 +1,4 @@
+tqdm
+SimpleITK
+SimpleITK-SimpleElastix
+numpy

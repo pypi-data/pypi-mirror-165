@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+fish_reg/__init__.py
+fish_reg/registration.py
+fish_reg/run.py
+fish_reg.egg-info/PKG-INFO
+fish_reg.egg-info/SOURCES.txt
+fish_reg.egg-info/dependency_links.txt
+fish_reg.egg-info/entry_points.txt
+fish_reg.egg-info/requires.txt
+fish_reg.egg-info/top_level.txt

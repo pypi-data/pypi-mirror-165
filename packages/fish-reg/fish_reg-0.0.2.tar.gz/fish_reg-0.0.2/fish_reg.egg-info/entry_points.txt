@@ -1,0 +1,2 @@
+[console_scripts]
+fish_reg_execute = fish_reg.run:main
