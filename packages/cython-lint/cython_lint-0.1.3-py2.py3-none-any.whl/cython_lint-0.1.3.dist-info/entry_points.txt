@@ -1,0 +1,2 @@
+[console_scripts]
+cython-lint = cython_lint:main
