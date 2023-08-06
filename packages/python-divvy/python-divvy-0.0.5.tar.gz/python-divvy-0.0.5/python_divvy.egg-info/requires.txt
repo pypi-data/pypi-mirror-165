@@ -1,0 +1,6 @@
+requests
+pandas
+
+[test]
+pytest
+pytest-cov
