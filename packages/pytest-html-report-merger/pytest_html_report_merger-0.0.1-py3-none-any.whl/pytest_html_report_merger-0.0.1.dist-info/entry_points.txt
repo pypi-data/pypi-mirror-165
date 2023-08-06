@@ -1,0 +1,3 @@
+[console_scripts]
+pytest-html-report-merger=pytest_html_report_merger.__main__:cli
+
