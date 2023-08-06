@@ -1,0 +1,9 @@
+README.md
+setup.py
+BlockFiRates.egg-info/PKG-INFO
+BlockFiRates.egg-info/SOURCES.txt
+BlockFiRates.egg-info/dependency_links.txt
+BlockFiRates.egg-info/requires.txt
+BlockFiRates.egg-info/top_level.txt
+blockfirates/__init__.py
+blockfirates/client.py

@@ -1,0 +1,8 @@
+cloudscraper==1.2.60
+
+[dev]
+build==0.8.0
+pre-commit==2.19.0
+setuptools==62.3.4
+twine==4.0.1
+pytest==7.1.2
