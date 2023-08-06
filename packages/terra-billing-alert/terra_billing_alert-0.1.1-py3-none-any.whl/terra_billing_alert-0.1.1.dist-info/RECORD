@@ -1,0 +1,17 @@
+terra_billing_alert/__init__.py,sha256=ls1camlIoMxEZz9gSkZ1OJo-MXqHWwKPtdPbZJmwp7E,22
+terra_billing_alert/__main__.py,sha256=sFvtVq9q6GOEPnmFPVARIfEd9r0sEgNgOOmPADtc4t4,61
+terra_billing_alert/alert_item.py,sha256=yTNCerNQaPu88jk22-omvcqEWD_bdjKIBDC5Io27N3M,4743
+terra_billing_alert/alert_sender.py,sha256=JtyNu_2xeHqRGjbJnaRrUCDBgE2fOOHivwP8dgxazKY,669
+terra_billing_alert/bucket.py,sha256=M_QHQISlrTiBZQfECn-g0X-sOlj597XWTTQd43RvPCA,3424
+terra_billing_alert/cli.py,sha256=YcVuofLFg00j0bjYnHssiwEN8Xs2GPj8wCz5W19KuHU,3422
+terra_billing_alert/datetime_util.py,sha256=GIDm0xvi4TF3PeIg-RoJuAhToqYlsvCVxehK_jRhTB4,681
+terra_billing_alert/gcp_machine_type.py,sha256=hQGuxF8kk5fzE_ikfRI1SOv4gzsvm9D8pvyJ-Gz2V_A,15275
+terra_billing_alert/instance.py,sha256=sgzrKNoVsizJQmDuaZwrIwt-SMVtgiCom3S43fTcRug,5231
+terra_billing_alert/terra_util.py,sha256=5360FyQ-4wgX4bcZKx5-jCY1pLge35zqqAujovrWAKI,2535
+terra_billing_alert/workflow.py,sha256=4OgrgngVLKin-tb6fZLVL6akF5reql7tKHWLZiiIOQg,5712
+terra_billing_alert-0.1.1.data/scripts/terra_billing_alert,sha256=IC0IWNzgy2Y2A53mzEMzqwNZQPhye4lD4bWke_K7Xp8,309
+terra_billing_alert-0.1.1.dist-info/LICENSE,sha256=C952c9b0MBhG4o4PO-dnkqh-z-MayFNq-KJA3YfBJAA,1066
+terra_billing_alert-0.1.1.dist-info/METADATA,sha256=GE4Qt5gncG2cSb9WoPUjZo3oiHvRcEy2fwDA-Ii9CrU,767
+terra_billing_alert-0.1.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+terra_billing_alert-0.1.1.dist-info/top_level.txt,sha256=BaPWZAzSuwl1E1zgv0UDfDwWxXnBBinMraXXOvamDHU,20
+terra_billing_alert-0.1.1.dist-info/RECORD,,
