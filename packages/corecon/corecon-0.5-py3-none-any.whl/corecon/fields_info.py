@@ -1,0 +1,17 @@
+
+__fields_info__ = {  "ionized_fraction"                : { "symbol" : r"$x_\mathrm{HII}$"                                                          , "description" : "Ionized fraction"                                            }  ,
+                     "Lya_flux_power_spectrum"         : { "symbol" : r"$P\, [\mathrm{km/s}]$"                                                     , "description" : "Ly-alpha flux power spectrum"                                }  , 
+                     "mean_free_path"                  : { "symbol" : r"$\lambda_\mathrm{mfp} \, [h^{-1} \, \mathrm{Mpc}]$"                        , "description" : "Mean free path of ionising photons"                          }  , 
+                     "effective_optical_depth_HI_Lya"  : { "symbol" : r"$\tau_\mathrm{eff, HI}$"                                                   , "description" : "HI Ly-alpha effective optical depth"                         }  , 
+                     "effective_optical_depth_HeII_Lya": { "symbol" : r"$\tau_\mathrm{eff, HeII}$"                                                 , "description" : "HeII Ly-alpha effective optical depth"                       }  , 
+                     "HeII_to_HI_column_density_ratio" : { "symbol" : r"$\eta$"                                                                    , "description" : "HeII-to-HI column density ratio"                             }  , 
+                     "quasar_luminosity_function"      : { "symbol" : r"$\log_{10} (phi_\mathrm{QSO}) \, [\mathrm{Mpc}^{-3} \, \mathrm{mag}^{-1}]$", "description" : "Quasar luminosity function"                                  }  , 
+                     "UV_luminosity_function"          : { "symbol" : r"$\log_{10} (phi_\mathrm{UV}) \, [\mathrm{Mpc}^{-3} \, \mathrm{mag}^{-1}]$" , "description" : "Galaxy UV luminosity function"                               }  , 
+                     "IGM_temperature_mean_density"    : { "symbol" : r"T0 [K]"                                                                    , "description" : "IGM temperature at mean density"                             }  , 
+                     "optical_depth_CMB"               : { "symbol" : r"$\tau_\mathrm{CMB}$"                                                       , "description" : "CMB optical depth"                                           }  , 
+                     "sfrd"                            : { "symbol" : r"$\log \Psi \, [\mathrm{M}_\odot \mathrm{yr}^{-1} \mathrm{Mpc}^{-3}]$"      , "description" : "Star-formation-rate density"                                 }  , 
+                     "Lya_spike_galaxy_correlation"    : { "symbol" : r"$\langle f \rangle / \bar{f} - 1$"                                         , "description" : "Ly-alpha spike - galaxy correlation"                         }  ,
+                     "mass_metallicity_relation"       : { "symbol" : r"$\log(O/H) + 12$"                                                          , "description" : "Gas-phase O/H metallicity as function of galaxy stellar mass"}  ,
+                     "galaxy_main_sequence"            : { "symbol" : r"SFR [M$_\odot$/yr]"                                                        , "description" : "Star formation rate  as function of galaxy stellar mass"     }  ,
+                     "UV_slope"                        : { "symbol" : r"$\beta$"                                                                   , "description" : "Slope of the galaxy UV log flux density"                     }  ,
+                  }
