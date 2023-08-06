@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: premium
+Version: 0.0.9
+Summary: Python AI toolkits
+Home-page: https://github.com/GaoangLiu/premium
+Author: sK9xTFBq0H
+Author-email: GaoangLau@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: smart-open
+Requires-Dist: optuna
+Requires-Dist: jieba
+Requires-Dist: matplotlib
+Requires-Dist: sklearn
+Requires-Dist: tensorflow
+Requires-Dist: transformers
+Requires-Dist: codefast
+Requires-Dist: jiwer
+Requires-Dist: pandas
+Requires-Dist: numpy
+
+UNKNOWN
+
