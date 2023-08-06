@@ -1,0 +1,8 @@
+transformers/__init__.py,sha256=AfJgRqmvi2A0yzGk1tyodOzQXa7-qonmLoN8HD9M1sk,37
+transformers/models/__init__.py,sha256=pQKdGJ4mTQl0anc8GQKhVGUZAiK9tZuPnesIiMrQryE,59
+transformers/models/timeSformer.py,sha256=ql7emwH4r5GxcsTAFlig2lyRGfrxnmkke4cbS8dHM8E,8504
+transformers/models/vit.py,sha256=geS5o5BNb_LllXMhlmpI05xIx0O8qSWu1_lIQQL0QJo,5536
+DecepticonsInAlexandria-0.0.1.dist-info/METADATA,sha256=fGNwwwQu0IS44QLyft_5Q9h6xuFt1KmKZOcmf53V9Cc,217
+DecepticonsInAlexandria-0.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+DecepticonsInAlexandria-0.0.1.dist-info/top_level.txt,sha256=GLBaeTo_CSdhnHvbxQ0kzpEHdlLuA_33foIogaWxntI,13
+DecepticonsInAlexandria-0.0.1.dist-info/RECORD,,
