@@ -1,0 +1,151 @@
+# French (France) translations for TracMercurial.
+# Copyright (C) 2008-2012 Edgewall Software
+# This file is distributed under the same license as the TracMercurial
+# project.
+#
+# Christian Boos <cboos@edgewall.org>, 2008-2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: TracMercurial 0.12.0.4\n"
+"Report-Msgid-Bugs-To: cboos@edgewall.org\n"
+"POT-Creation-Date: 2014-12-03 19:55+0100\n"
+"PO-Revision-Date: 2009-11-19 16:22+0100\n"
+"Last-Translator: Christian Boos <cboos@edgewall.org>\n"
+"Language-Team: fr_FR <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+
+#: tracext/hg/backend.py:216
+msgid "no such changeset"
+msgstr "pas de révision"
+
+#: tracext/hg/backend.py:234
+msgid "Graft:"
+msgstr "Greffe :"
+
+#: tracext/hg/backend.py:235
+msgid ":"
+msgstr " :"
+
+#: tracext/hg/backend.py:257
+msgid "Diff against this parent (show the changes merged from the other parents)"
+msgstr ""
+"Différences vis-à-vis de ce parent (montre les changements apportés par "
+"l'autre parent)"
+
+#: tracext/hg/backend.py:267
+#, python-format
+msgid ""
+"Note: this is a %(merge)s changeset, the changes displayed below "
+"correspond to the merge itself."
+msgstr ""
+"Note: ceci est un changeset de type %(merge)s, les modifications ci-"
+"dessous correspondent au merge lui-même."
+
+#: tracext/hg/backend.py:275
+#, python-format
+msgid ""
+"Use the %(diff)s links above to see all the changes relative to each "
+"parent."
+msgstr ""
+"Utilisez les liens %(diff)s ci-dessus pour voir les modifications "
+"relatives à chaque parent."
+
+#: tracext/hg/backend.py:292
+msgid "Transplant:"
+msgstr "Transplant :"
+
+#: tracext/hg/backend.py:305
+msgid "Changeset in source repository"
+msgstr "Modification dans le dépôt d'origine"
+
+#: tracext/hg/backend.py:307
+msgid "Convert:"
+msgstr "Conversion :"
+
+#: tracext/hg/backend.py:332
+msgid "(binary, size greater than 100 bytes)"
+msgstr "(binaire, taille supérieure à 100 octets)"
+
+#: tracext/hg/backend.py:496
+#, python-format
+msgid "Repository '%(repo)s' not found"
+msgstr "Dépôt « %(repo)s »' non trouvé"
+
+#: tracext/hg/backend.py:562
+#, python-format
+msgid "Repository path '%(path)s' does not exist."
+msgstr "Chemin du dépôt « %(path)s » inexistant."
+
+#: tracext/hg/backend.py:570
+#, python-format
+msgid ""
+"'%(path)s' does not appear to contain a repository (Mercurial %(version)s"
+" says %(error)s)"
+msgstr ""
+"%(path)s ne semble pas contenir un dépôt Mercurial (Mercurial %(version)s"
+" reporte l'erreur suivante : %(error)s)"
+
+#: tracext/hg/backend.py:674
+msgid "Bookmarks"
+msgstr "Signets"
+
+#: tracext/hg/backend.py:677
+msgid "Branches"
+msgstr "Branches"
+
+#: tracext/hg/backend.py:684
+msgid "Extra heads"
+msgstr "Têtes supplémentaires"
+
+#: tracext/hg/backend.py:688
+msgid "Tags"
+msgstr "Étiquettes"
+
+#: tracext/hg/backend.py:694
+msgid "closed branches"
+msgstr "Branches closes"
+
+#: tracext/hg/backend.py:764
+msgid "Unsupported \"Show only adds and deletes\""
+msgstr "L'option « Afficher uniquement les ajouts et suppressions » n'est "
+"pas supportée"
+
+#: tracext/hg/backend.py:814
+#, python-format
+msgid ""
+"Diff mismatch: Base is a %(okind)s (%(opath)s in revision %(orev)s) and "
+"Target is a %(nkind)s (%(npath)s in revision %(nrev)s)."
+msgstr ""
+"Différences incompatibles : Source est un %(okind)s (%(opath)s dans la "
+"révision %(orev)s) et Destination est un %(nkind)s (%(npath)s dans la "
+"révision %(nrev)s)."
+
+#: tracext/hg/backend.py:1076
+#, python-format
+msgid "Can't read from directory %(path)s"
+msgstr "Lecture du répertoire %(path)s impossible"
+
+#: tracext/hg/backend.py:1254
+msgid "Parents:"
+msgstr "Ascendants :"
+
+#: tracext/hg/backend.py:1254
+msgid "Children:"
+msgstr "Descendants :"
+
+#: tracext/hg/backend.py:1254
+msgid "Branch:"
+msgstr "Branche :"
+
+#: tracext/hg/backend.py:1254
+msgid "Tags:"
+msgstr "Étiquettes :"
+
+#: tracext/hg/backend.py:1255
+msgid "Bookmarks:"
+msgstr "Signets :"
+

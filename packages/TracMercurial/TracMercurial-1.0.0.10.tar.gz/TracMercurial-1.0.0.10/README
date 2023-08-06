@@ -1,0 +1,94 @@
+= Mercurial Plugin for Trac (#1847) =
+
+Please see the online Wiki page for this extension:
+
+  http://trac.edgewall.org/wiki/TracMercurial
+
+== Minimal Installation Instructions ==
+
+=== Trac ===
+
+This plugin works with Trac 1.0.x.
+
+You can also use the trunk version (1.1.x):
+{{{
+svn co http://svn.edgewall.org/repos/trac/trunk
+}}}
+
+and install from there:
+{{{
+$ cd trunk
+$ python setup.py egg_info
+$ python setup.py install
+}}}
+
+=== TracMercurial ===
+
+Go into the working copy root (i.e. the folder containing this README file),
+then:
+ - either do `python setup.py bdist_egg`, which creates
+   an .egg file in the `dist` subfolder. Copy that .egg file in the
+   `plugins` subfolder of your Trac environment
+ - or do `python setup.py install`, which creates the .egg and install it
+   below the site-packages folder of your Python installation.
+   You'll then need to enable the plugin in the `[components]` section of
+   your trac.ini file, see below.
+
+
+== Configuration ==
+
+The configuration has to be done on the Trac side, 
+there's nothing to do on the Mercurial repository side,
+except for the fact that the repository should be made 
+accessible as a local repository. 
+Thanks to the distributed nature of Mercurial, that's
+always possible (if the repository is not already local,
+simply `hg clone` it).
+
+
+=== Setting up the mercurial plugin ===
+
+For general instructions about plugins, see also TracPlugins.
+
+If you installed the egg globally and you're modifying an 
+existing Trac environment to use the Mercurial backend,
+then you have to explicitely ''enable'' the plugin in TracIni:
+{{{
+[components]
+tracext.hg.* = enabled
+}}}
+
+
+=== Setting up a Trac environment ===
+
+It is now recommended to use the new set of trac-admin commands 
+`repository ...` to create, delete and rename references to repositories
+(note that Trac will never do anything to the actual Mercurial repositories 
+beyond accessing them for read operations).
+
+The old default settings for defining the default repository are still
+supported but deprecated (use an empty repository name or create an empty 
+alias, see `trac-admin help repository alias`).
+
+(Old-style) the trac.ini file contains `[trac]` section similar to the 
+following:
+{{{
+[trac]
+repository_type = hg
+repository_dir = /path/to/my/hg/repository
+}}}
+
+There's also a few Mercurial specific settings in TracIni:
+{{{
+[hg]
+# -- Show revision number in addition to the changeset hash
+show_rev = yes
+
+# -- Changeset hash format
+node_format = short
+# hex:   Show the full SHA1 hash 
+# short: Show a shortened hash for the changesets 
+}}}
+
+
+'' -- ChristianBoos ''
