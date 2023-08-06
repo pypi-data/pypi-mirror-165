@@ -1,0 +1,10 @@
+LICENSE.txt
+setup.py
+clonekin/__init__.py
+clonekin/request.py
+clonekin/snpool.py
+tcb_project.egg-info/PKG-INFO
+tcb_project.egg-info/SOURCES.txt
+tcb_project.egg-info/dependency_links.txt
+tcb_project.egg-info/requires.txt
+tcb_project.egg-info/top_level.txt

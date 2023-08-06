@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: tcb_project
+Version: 0.0.1
+Summary: Collecting C.elegans WGS Data with obvious phenotype
+Author: Guo_Zhengyang
+Author-email: guozhengyang980525@yahoo.co.jp
+License: MIT License
+Platform: all
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 4 - Beta
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# TCB-Project
+
+#### Collecting C.elegans WGS Data with obvious phenotype
+
+##### Please see http://166.111.153.73/olmb/ for detailed information
+
+
+
