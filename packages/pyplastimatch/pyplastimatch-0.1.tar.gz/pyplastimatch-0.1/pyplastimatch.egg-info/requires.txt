@@ -1,0 +1,6 @@
+numpy
+scikit-image>=0.14
+SimpleITK
+pydicom
+pandas
+matplotlib
