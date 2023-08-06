@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: arhmm
+Version: 0.0.5
+Author: Hirokazu Ishida
+Author-email: h-ishida@jsk.imi.i.u-tokyo.ac.jp
+License: MIT
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: dataclasses ; python_version < "3.7"
+
