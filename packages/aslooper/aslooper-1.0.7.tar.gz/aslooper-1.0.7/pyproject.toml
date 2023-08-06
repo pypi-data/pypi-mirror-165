@@ -1,0 +1,21 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "aslooper"
+authors = [{name = "vastxiao", email = "vastxiao@gmail.com"}]
+license = {file = "LICENSE"}
+classifiers = ["License :: OSI Approved :: MIT License"]
+dynamic = ["version", "description"]
+readme = "README.md"
+keywords = ["async", "asyncio", "loop"]
+requires-python = ">=3.6"
+
+[project.urls]
+Author = "https://vastxiao.github.io/"
+
+[tool.flit.sdist]
+include = ["README_zh.md"]
+exclude = ["__init__.py"]
+

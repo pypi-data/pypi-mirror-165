@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: aslooper
+Version: 1.0.7
+Summary: [aslooper]
+Keywords: async,asyncio,loop
+Author-email: vastxiao <vastxiao@gmail.com>
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: MIT License
+Project-URL: Author, https://vastxiao.github.io/
+
+# aslooper
+
+> looper 
+> Used to cancel all running tasks after catching SIGINT, SIGTERM signals,
+> Quit running without raise asyncio error.
+
+## 使用
+
+```python
+import asyncio
+from aslooper import looper
+
+
+async def run(i):
+    while True:
+        print(f"{i} running.")
+        await asyncio.sleep(1)
+
+
+@looper
+async def main():
+    tasks = [run(i) for i in range(3)]
+    await asyncio.gather(*tasks)
+
+
+asyncio.run(main())
+```
+
