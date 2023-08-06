@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+unishox2_module.c
+/home/runner/work/unishox2-py3/unishox2-py3/unishox2_module.c
+/home/runner/work/unishox2-py3/unishox2-py3/Unishox2/unishox2.c
+Unishox2/unishox2.c
+Unishox2/unishox2.h
+unishox2_py3.egg-info/PKG-INFO
+unishox2_py3.egg-info/SOURCES.txt
+unishox2_py3.egg-info/dependency_links.txt
+unishox2_py3.egg-info/top_level.txt
