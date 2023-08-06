@@ -1,0 +1,64 @@
+\documentclass[aspectratio=1610, 10pt, hyperref={colorlinks = false,linkcolor = blue, urlcolor = orange}, xcolor=dvipsnames]{beamer}
+\usepackage{pythonhighlight}
+\usepackage{setspace}
+\usepackage{ctex}
+\usepackage{amsmath, amsfonts, amssymb, amsthm}
+\usepackage{graphicx}
+\usepackage{fontspec}
+\usepackage{ulem} %解决下划线换行紊乱
+\usepackage{caption} %添加图、表的标题
+\usepackage{subfigure}
+\usepackage{theorem}
+\usepackage{smartdiagram}
+\usepackage[backend=bibtex,sorting=none]{biblatex} %不列出所有作者
+\addbibresource{ref.bib} %BibTeX数据文件及位置
+\setbeamerfont{footnote}{size=\tiny} %设置脚注引用文献的字体大小
+%\setbeamertemplate{bibliography item}[text] %设置参考文献图标样式数字标号
+\usepackage{appendix} %增加附录
+\usepackage{multicol} %分栏
+\usepackage{syntonly} %只编译文件是否成功，省时省力
+\usepackage{enumerate}
+\usepackage{animate}
+\usepackage{listings} %代码包
+\usepackage{xcolor} %代码高亮包
+\usepackage{color} %代码高亮包
+\usepackage{framed} %代码高亮包
+\definecolor{shadecolor}{rgb}{0.92,0.92,0.92}
+\usepackage[most]{tcolorbox}
+\definecolor{cred}{RGB}{116,23,82}
+% \usepackage[colorlinks,linkcolor=red]{hyperref}
+\newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}} %放在导言区
+\newcommand{\blue}[1]{\textcolor{blue}{{}#1}}
+\newcommand{\green}[1]{\textcolor{green}{{}#1}}
+\newcommand{\typecolor}[1]{{\textcolor{cred}{{}#1}}}
+\newcommand{\black}[1]{\textbf{\textcolor{black}{{}#1}}}
+\newcommand{\red}[1]{\textcolor{red}{{}#1}}
+\newcommand{\purple}[1]{\textcolor{purple}{{}#1}}
+\newcommand{\orange}[1]{\textbf{\textcolor{orange}{{}#1}}}
+\newcommand{\pic}[2]{\includegraphics[width=#2\textwidth]{#1}}
+\lstset{
+ language=python, %代码语言使用的是matlab
+ keywordstyle=\color{blue}\bfseries, %代码关键字的颜色为蓝色，粗体
+ commentstyle=\color{orange}\ttfamily, %设置代码注释的颜色,原字体样式\textit
+ backgroundcolor=\color{darkgray!6}, %背景色
+ showstringspaces=false, %不显示代码字符串中间的空格标记
+ numbers=left, %显示行号
+ numberstyle=\tiny, %行号字体
+ basicstyle=\ttfamily,
+ stringstyle=\ttfamily, %代码字符串的特殊格式
+ breaklines=true, %过长的代码自动换行
+ extendedchars=false,  %解决代码跨页时，章节标题，页眉等汉字不显示的问题
+ escapebegin=\begin{CJK*}{GBK}{hei},escapeend=\end{CJK*} %防止中文报错
+ texcl=true,
+ morekeywords={classdef,function,global,parfor,persistent,spmd,plot}} %设置更多关键词
+\usetheme{Antibes}
+\usecolortheme{default}
+\usefonttheme{serif} %已有的字体default professionalfonts serif structurebold 
+\hypersetup{pdfpagemode=FullScreen}
+\AtBeginSection[]{
+	\begin{frame}<beamer>{主要内容}
+		\tableofcontents[currentsection,currentsubsection]
+	\end{frame}
+}
+\setbeamertemplate{title page}[default][colsep=-4bp,rounded=true]
+\usetheme{Boadilla}
