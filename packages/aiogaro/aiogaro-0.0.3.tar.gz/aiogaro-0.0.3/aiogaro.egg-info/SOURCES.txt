@@ -1,0 +1,9 @@
+LICENSE
+setup.py
+aiogaro/__init__.py
+aiogaro/chargebox.py
+aiogaro.egg-info/PKG-INFO
+aiogaro.egg-info/SOURCES.txt
+aiogaro.egg-info/dependency_links.txt
+aiogaro.egg-info/requires.txt
+aiogaro.egg-info/top_level.txt
