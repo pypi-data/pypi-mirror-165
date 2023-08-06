@@ -1,0 +1,3 @@
+[console_scripts]
+scircm = scircm.__main__:main
+
