@@ -1,0 +1,11 @@
+bokehlab/__init__.py,sha256=1Zjf6Xdk_FFqVcNfsG13B_WzBXvnqgPOS0kGidbJByk,50810
+bokehlab/bokehlab_magic.py,sha256=-Lce-fkxhnKTLryiHbNPPlpSQclAzjp51Xw8CezXcds,1900
+bokehlab/config.py,sha256=0yk7vSvGszKsrbn4q5NFy5xUrWh__1fCsp4P0HXNUbo,8258
+bokehlab/fix_copy_paste.py,sha256=YUnKU27rTAlZiUd3jQHC17pHkSChW2WFF5re6HQxA2E,731
+bokehlab/install_magic.py,sha256=OIFf_oDL1jddxIK_HiJF9ff7MywJDYCAZeRdpFr8qP0,295
+bokehlab/palettes.py,sha256=qY6kKDveQcgx6IOdMBv-qinVWa60NBZtycc2qNJob4c,272
+bokehlab-0.2.5.dist-info/LICENSE,sha256=6S_h2hAe_CtJJU8QOKW9NzwtDUYkG8Ip7svwfn_xUVM,1060
+bokehlab-0.2.5.dist-info/METADATA,sha256=UhMriYRb3x258BF1E5WqvCVym1nx3NBg-8OgiJFsq0g,7616
+bokehlab-0.2.5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+bokehlab-0.2.5.dist-info/top_level.txt,sha256=9Ue7eB5c25xUFKT3t10cz5aJQc074q7g_1uEK8PKH6k,9
+bokehlab-0.2.5.dist-info/RECORD,,
