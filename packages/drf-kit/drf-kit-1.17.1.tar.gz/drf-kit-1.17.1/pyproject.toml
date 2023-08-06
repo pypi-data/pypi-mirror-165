@@ -1,0 +1,64 @@
+[tool.poetry]
+name = "drf-kit"
+version = "1.17.1"
+description = "DRF Toolkit"
+authors = ["Nilo Saude <tech@nilo.co>"]
+packages = [
+    { include = "drf_kit" },
+]
+
+
+[tool.poetry.dependencies]
+python = ">=3.8,<3.11"
+Django = ">=3,<5"
+djangorestframework = "^3"
+django-filter = "^22.0"
+django-ordered-model = "^3.5"
+drf-extensions = "^0.7"
+
+
+[tool.poetry.dev-dependencies]
+pylint = "*"
+pylint-django = "*"
+coverage = "*"
+black = "*"
+isort = "*"
+safety = "*"
+factory-boy = "*"
+freezegun = "*"
+
+
+[tool.black]
+line-length = 120
+target-version = ['py310']
+
+
+[tool.isort]
+profile = "black"
+line_length = 120
+include_trailing_comma = true
+multi_line_output = 3
+
+
+[tool.pylint.master]
+ignore = "migrations"
+
+[tool.pylint.messages_control]
+disable = "C0114, C0115, C0116, W0212, W0511, W0613, W1203, R0401, R0901, R0903, R0913, R0801, R0902, R0911, R0914, R0912"
+
+[tool.pylint.format]
+max-line-length = "120"
+
+[tool.pylint.basic]
+good-names= "i, j, k, m, n, dt, db, pk, tz, qs, ex, _, s, fk, ct, id, at"
+
+
+[tool.coverage.run]
+branch = true
+source = ["drf_kit"]
+omit = ["*/manage.py", "*/settings.py", "*/wsgi.py"]
+
+
+[build-system]
+requires = ["poetry"]
+build-backend = "poetry.masonry.api"
