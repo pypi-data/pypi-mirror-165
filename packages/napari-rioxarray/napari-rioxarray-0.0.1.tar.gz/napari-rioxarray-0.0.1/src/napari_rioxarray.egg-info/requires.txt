@@ -1,0 +1,8 @@
+numpy
+napari
+rioxarray
+
+[testing]
+tox
+pytest
+pytest-cov
