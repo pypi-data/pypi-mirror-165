@@ -1,0 +1,9 @@
+requests
+websocket-client==1.3.1
+setuptools
+json_minify
+six
+aiohttp
+pysocks
+poetry
+websockets
