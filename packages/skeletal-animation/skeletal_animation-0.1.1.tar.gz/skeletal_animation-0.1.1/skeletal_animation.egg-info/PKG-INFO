@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: skeletal-animation
+Version: 0.1.1
+Summary: Standalone package for skeletal animation
+Home-page: https://gitlab-etu.ing.he-arc.ch/isc/2021-22/niveau-3/tb-iscdlm/226/tb-animation-squelettale
+Author: Dimitri "Kerzoum" Kohler
+Author-email: dimitri.kohler@he-arc.ch
+License: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Multimedia :: Graphics
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# This is a work in progrees
