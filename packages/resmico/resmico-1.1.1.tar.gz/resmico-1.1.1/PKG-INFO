@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: resmico
+Version: 1.1.1
+Summary: Increasing the quality of metagenome-assembled genomes with deep learning
+Home-page: https://github.com/leylabmpi/resmico
+Author: Nick Youngblut, Olga Mineeva, Daniel Danciu
+Author-email: nyoungb2@gmail.com
+License: MIT license
+Requires-Python: >=3.8
+License-File: LICENSE
+
+Increasing the quality of metagenome-assembled genomes with deep learning
+ See README for more information.
