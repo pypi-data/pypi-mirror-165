@@ -1,0 +1,7 @@
+pygum/__init__.py,sha256=FWAorVb2bPz0BT8i8tOuW9h4cmqK4XiUGj61SF9UMMI,45
+pygum/_command_wrapper.py,sha256=BrhWcrQYRM6c9vyme_TAjn_h6PTsKj8Bkvbo37rZ3p0,898
+pygum/_gum.py,sha256=97ZzW9_qg7oE0XTeKIBIS14gFgm61xIlY9fKBOt81P4,3356
+pygum-0.1.0.dist-info/LICENSE,sha256=EfMW5HhDfcUAWD9akR6q4oXmTpylmwZtilHta8Yim5o,1068
+pygum-0.1.0.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+pygum-0.1.0.dist-info/METADATA,sha256=L-mvWVxlHFKJB6ZvqiCl_81w3P8G-HbVU9lprxdR-O0,506
+pygum-0.1.0.dist-info/RECORD,,

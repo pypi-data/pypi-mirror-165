@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: pygum
+Version: 0.1.0
+Summary: A wrapper around Gum: https://github.com/charmbracelet/gum
+License: MIT
+Author: Sam Phinizy
+Author-email: sam@phin.tech
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
