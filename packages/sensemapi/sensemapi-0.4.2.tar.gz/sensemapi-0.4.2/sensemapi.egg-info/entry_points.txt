@@ -1,0 +1,5 @@
+[console_scripts]
+sensemapi = sensemapi.cli.commands.main:cli
+
+[sensemapi.commands]
+route-mqtt = sensemapi.cli.commands.route_mqtt:route_mqtt [mqtt]
