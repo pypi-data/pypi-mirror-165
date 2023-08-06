@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: opencmiss.importer
+Version: 0.4.0
+Summary: OpenCMISS Import functions.
+Home-page: https://github.com/OpenCMISS-Bindings/opencmiss.importer
+Author: Hugh Sorby
+Author-email: h.sorby@auckland.ac.nz
+License: Apache Software License
+Platform: UNKNOWN
+Description-Content-Type: text/x-rst
+Provides-Extra: mbfxml
+Provides-Extra: svg
+Provides-Extra: common
+Provides-Extra: all
+License-File: LICENSE
+
+
+==================
+OpenCMISS Importer 
+==================
+
+OpenCMISS importer is a library for importing data into OpenCMISS-Zinc.  This software can be found on PyPi and installed with the following command::
+
+  pip install opencmiss.importer
+
+To support import of common mesh types: stl, obj, ply, and dxf install additional requirements with::
+
+  pip install opencmiss.importer['common']
+
+To support import of svg files install additional requirements with::
+
+  pip install opencmiss.importer['svg']
+
+To support import of MBF XML files install additional requirements with::
+
+  pip install opencmiss.importer['mbfxml']
+
+To support import of all supported formats install with::
+
+  pip install opencmiss.importer['all']
+
+License
+=======
+
+::
+
+
+   Copyright 2021 University of Auckland
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+
