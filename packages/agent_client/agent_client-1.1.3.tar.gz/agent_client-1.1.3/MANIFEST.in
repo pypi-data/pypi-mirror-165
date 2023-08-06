@@ -1,0 +1,2 @@
+include agent_client\configuration\database.yaml
+include LICENSE.txt
