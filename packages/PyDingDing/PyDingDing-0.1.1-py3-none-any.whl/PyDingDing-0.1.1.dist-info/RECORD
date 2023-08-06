@@ -1,0 +1,10 @@
+pydingding/__init__.py,sha256=Sgky9lcOHxRkC82PTfvAuGM3Mqvhi26_ygBhNEKx6fs,37
+pydingding/__version__.py,sha256=5xvN_gb61nKeq5TER5dSfcArTP3DVasZGN_MQq5dNpA,23
+pydingding/bot.py,sha256=WT_0iD-uxKXLj_MP_Oq7rrbuZj6mMZQAYr-7Hftr31Q,3264
+pydingding/errors.py,sha256=y86-zuMAaO2WZlg5h5hS8-Nk4gr6TDj9FTqV6PCuKaY,500
+pydingding/log.py,sha256=rosnoT0IUsdiK8gQRXi9YxYqB5xa6X5hzqdJm1x5kSo,58
+PyDingDing-0.1.1.dist-info/LICENSE,sha256=JXgOR9MuQIGQqdvgDz9EqrVDc0QcTSmgnv-BB1-5MrE,1085
+PyDingDing-0.1.1.dist-info/METADATA,sha256=vfkzgFYe6CXrP8uiu9hmI9KI2GlmHXVXC_d2pyTlW-0,3229
+PyDingDing-0.1.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+PyDingDing-0.1.1.dist-info/top_level.txt,sha256=vxgODNCAgkVrgrHHSV5j-C68qoV15RJXEv2WUXrJnFI,11
+PyDingDing-0.1.1.dist-info/RECORD,,
