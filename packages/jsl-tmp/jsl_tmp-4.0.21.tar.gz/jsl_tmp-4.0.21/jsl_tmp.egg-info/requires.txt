@@ -1,0 +1,9 @@
+spark-nlp
+nlu
+spark-nlp-display
+numpy
+dataclasses
+requests
+databricks-api
+pyspark
+implicits
