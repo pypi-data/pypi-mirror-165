@@ -1,0 +1,14 @@
+shinylive/__init__.py,sha256=E8seZN7FmvRO2vBciRgCodjRhE_0qV-wqohdnWOPT0w,158
+shinylive/_app_json.py,sha256=opqqy0qAa78duxyVa0lWJrMxP4IcdHa6qj8Ks4ykqLc,4219
+shinylive/_assets.py,sha256=1EvaH9zla3FitJjMcK4qoqXnUNAWzy-qCJeMIDMIODg,5729
+shinylive/_deploy.py,sha256=c39ShJ8rV8805ea66msel1hz0VZgXzMa5OCOSLf7S_o,4127
+shinylive/_deps.py,sha256=NEscbHBmAMNvFSgBXgXLRLXx0dr8EuAEc82a80nl0qk,12806
+shinylive/_main.py,sha256=mE-EEdOEiExg12RG7u3qvEqqmx2xVeZ-puX0zpiN6h0,4919
+shinylive/_utils.py,sha256=GaPdT3nuH4kMU4mbsSkuAynqOZl6G_ZoCSEP8bJ2Ei4,2888
+shinylive/_version.py,sha256=1yv3lnu4hCrHeX_kKOkIIL5GL3SeCw8gAyoZYd--vD0,164
+shinylive-0.0.1.dist-info/LICENSE,sha256=uOLOFmzkcce-Kror0BF7peaSOkAMT5mavMssKLpSi5M,1069
+shinylive-0.0.1.dist-info/METADATA,sha256=mvwZhRmKuXLmbO8bU2Pqy2oVn_KKGVQ2PBjOKDrmNy4,4381
+shinylive-0.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+shinylive-0.0.1.dist-info/entry_points.txt,sha256=tvFaVBF4jhd7H-iNW0TsIpQ7GEBfTjtUmVVGYLSrWrE,51
+shinylive-0.0.1.dist-info/top_level.txt,sha256=Hcj98L3o7GSkGAMNkBsjaGxVIpvR-VAoXGoly6lx8Wc,10
+shinylive-0.0.1.dist-info/RECORD,,
