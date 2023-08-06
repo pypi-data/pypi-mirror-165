@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: basic-pitch
+Version: 0.2.0
+Summary: Basic Pitch, a lightweight yet powerful audio-to-MIDI converter with pitch bend detection.
+Home-page: https://github.com/spotify/basic-pitch
+Author: Spotify
+Author-email: basic-pitch@spotify.com
+Maintainer: Spotify
+Maintainer-email: basic-pitch@spotify.com
+License: Apache 2.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Provides-Extra: test
+Provides-Extra: docs
+Provides-Extra: dev
+License-File: LICENSE
+License-File: NOTICE
+
+Basic Pitch, a lightweight yet powerful audio-to-MIDI converter with pitch bend detection. See https://github.com/spotify/basic-pitch for more details.
