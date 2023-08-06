@@ -1,0 +1,7 @@
+[console_scripts]
+donv-build = donv.build:main
+donv-info = donv.base:main
+donv-run = donv.run:main
+donvb = donv.build:main
+donvi = donv.base:main
+donvr = donv.run:main
