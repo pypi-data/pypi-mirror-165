@@ -1,0 +1,4 @@
+[build-system]
+# Minimum requirements for the build system to execute.
+requires = ["jupyterlab==3.*","setuptools", "wheel", "jupyter-packaging"]
+build-backend = "setuptools.build_meta"

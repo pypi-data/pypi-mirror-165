@@ -1,0 +1,15 @@
+
+name: ipyscales_docs
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+- nodejs
+- numpy
+- sphinx
+- pip
+- ipywidgets
+- pypandoc
+- ipydatawidgets
+- pip:
+  - git+https://github.com/spatialaudio/nbsphinx.git@master#egg=nbsphinx
