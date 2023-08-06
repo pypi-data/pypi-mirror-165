@@ -1,0 +1,187 @@
+name: build
+on: [push, pull_request]
+jobs:
+  deployv:
+    runs-on: ubuntu-latest
+    container:
+      image: quay.io/vauxoo/dockerv:latest
+      options: --user root
+    name: docker vauxoo image
+    env:
+      PIP_CACHE_DIR: "/root/.cache/pip"
+      PRE_COMMIT_HOME: "/root/.cache/pre-commit"
+    steps:
+      - uses: actions/checkout@v2
+      - name: Upgrade pre-commit-vauxoo to the latest version (w/o update dependencies if not needed)
+        run: >-
+          pip3 install -U . &&
+          pip3 install --force-reinstall --no-deps .
+      - name: Run pre-commit-vauxoo
+        run: pre-commit-vauxoo
+
+  test:
+    name: ${{ matrix.name }}
+    needs: deployv
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: 'check'
+            python: '3.9'
+            toxpython: 'python3.9'
+            tox_env: 'check'
+            os: 'ubuntu-latest'
+          - name: 'docs'
+            python: '3.9'
+            toxpython: 'python3.9'
+            tox_env: 'docs'
+            os: 'ubuntu-latest'
+
+          # ubuntu
+          - name: 'py36-cover (ubuntu)'
+            python: '3.6'
+            toxpython: 'python3.6'
+            python_arch: 'x64'
+            tox_env: 'py36-cover,codecov'
+            os: 'ubuntu-latest'
+          - name: 'py37-cover (ubuntu)'
+            python: '3.7'
+            toxpython: 'python3.7'
+            python_arch: 'x64'
+            tox_env: 'py37-cover,codecov'
+            os: 'ubuntu-latest'
+          - name: 'py38-cover (ubuntu)'
+            python: '3.8'
+            toxpython: 'python3.8'
+            python_arch: 'x64'
+            tox_env: 'py38-cover,codecov'
+            os: 'ubuntu-latest'
+          - name: 'py39-cover (ubuntu) + pypi release'
+            python: '3.9'
+            toxpython: 'python3.9'
+            python_arch: 'x64'
+            tox_env: 'py39-cover,codecov'
+            os: 'ubuntu-latest'
+          - name: 'py310-cover (ubuntu)'
+            python: '3.10'
+            toxpython: 'python3.10'
+            python_arch: 'x64'
+            tox_env: 'py310-cover,codecov'
+            os: 'ubuntu-latest'
+
+          # windows
+          - name: 'py36-cover (windows)'
+            python: '3.6'
+            toxpython: 'python3.6'
+            python_arch: 'x64'
+            tox_env: 'py36-cover,codecov'
+            os: 'windows-latest'
+          - name: 'py37-cover (windows)'
+            python: '3.7'
+            toxpython: 'python3.7'
+            python_arch: 'x64'
+            tox_env: 'py37-cover,codecov'
+            os: 'windows-latest'
+          - name: 'py38-cover (windows)'
+            python: '3.8'
+            toxpython: 'python3.8'
+            python_arch: 'x64'
+            tox_env: 'py38-cover,codecov'
+            os: 'windows-latest'
+          - name: 'py39-cover (windows)'
+            python: '3.9'
+            toxpython: 'python3.9'
+            python_arch: 'x64'
+            tox_env: 'py39-cover,codecov'
+            os: 'windows-latest'
+          - name: 'py310-cover (windows)'
+            python: '3.10'
+            toxpython: 'python3.10'
+            python_arch: 'x64'
+            tox_env: 'py310-cover,codecov'
+            os: 'windows-latest'
+
+          # macos
+          - name: 'py36-cover (macos)'
+            python: '3.6'
+            toxpython: 'python3.6'
+            python_arch: 'x64'
+            tox_env: 'py36-cover,codecov'
+            os: 'macos-latest'
+          - name: 'py37-cover (macos)'
+            python: '3.7'
+            toxpython: 'python3.7'
+            python_arch: 'x64'
+            tox_env: 'py37-cover,codecov'
+            os: 'macos-latest'
+          - name: 'py38-cover (macos)'
+            python: '3.8'
+            toxpython: 'python3.8'
+            python_arch: 'x64'
+            tox_env: 'py38-cover,codecov'
+            os: 'macos-latest'
+          - name: 'py39-cover (macos)'
+            python: '3.9'
+            toxpython: 'python3.9'
+            python_arch: 'x64'
+            tox_env: 'py39-cover,codecov'
+            os: 'macos-latest'
+          - name: 'py310-cover (macos)'
+            python: '3.10'
+            toxpython: 'python3.10'
+            python_arch: 'x64'
+            tox_env: 'py310-cover,codecov'
+            os: 'macos-latest'
+
+    steps:
+    - name: Set git to not change EoL
+      if: runner.os == 'Windows'
+      run: |
+        git config --global core.autocrlf false
+    - name: Cache pre-commit packages
+      id: cache-pre-commit
+      uses: actions/cache@v3
+      with:
+        path: ~/.cache/pre-commit
+        key: ${{ runner.os }}-py${{ matrix.python }}-${{ matrix.python_arch }}-pre-commit
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+    - uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python }}
+        architecture: ${{ matrix.python_arch }}
+        cache: 'pip'
+    - name: install dependencies
+      run: |
+        python -mpip install --progress-bar=off -r ci/requirements.txt
+        virtualenv --version
+        pip --version
+        tox --version
+        pip list --format=freeze
+    - name: test
+      env:
+        TOXPYTHON: '${{ matrix.toxpython }}'
+      run: >
+        tox -e ${{ matrix.tox_env }} -v
+    - name: Build a binary wheel and a source tarball
+      if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags') && runner.os == 'Linux' && startsWith(matrix.tox_env, 'py39-cover')
+      run: >-
+        python -m pip install build && python -m
+        build
+        --sdist
+        --wheel
+        --outdir dist/
+    - name: Publish package
+      if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags') && runner.os == 'Linux' && startsWith(matrix.tox_env, 'py39-cover')
+      uses: pypa/gh-action-pypi-publish@release/v1
+      with:
+        password: ${{ secrets.PYPI_API_TOKEN }}
+    - name: codecov
+      if: startsWith(matrix.tox_env, 'py')  # only coveralls in python tests
+      uses: codecov/codecov-action@v3
+      with:
+        fail_ci_if_error: false  # TODO: Set true after fix token for win&macosx
+        verbose: true

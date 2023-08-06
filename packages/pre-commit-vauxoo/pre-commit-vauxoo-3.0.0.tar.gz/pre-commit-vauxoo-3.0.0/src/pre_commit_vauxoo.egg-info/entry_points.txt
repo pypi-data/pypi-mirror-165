@@ -1,0 +1,2 @@
+[console_scripts]
+pre-commit-vauxoo = pre_commit_vauxoo.cli:main
