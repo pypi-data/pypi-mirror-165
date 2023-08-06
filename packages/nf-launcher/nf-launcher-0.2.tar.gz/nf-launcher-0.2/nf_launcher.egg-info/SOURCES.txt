@@ -1,0 +1,7 @@
+README.md
+setup.py
+launcher/nextflow
+nf_launcher.egg-info/PKG-INFO
+nf_launcher.egg-info/SOURCES.txt
+nf_launcher.egg-info/dependency_links.txt
+nf_launcher.egg-info/top_level.txt
