@@ -1,0 +1,7 @@
+openpyxl>=3
+
+[dev]
+pre-commit
+
+[test]
+coverage

@@ -1,0 +1,16 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/superspreader/__init__.py
+src/superspreader/exceptions.py
+src/superspreader/fields.py
+src/superspreader/i18n.py
+src/superspreader/messages.py
+src/superspreader/sheets.py
+src/superspreader.egg-info/PKG-INFO
+src/superspreader.egg-info/SOURCES.txt
+src/superspreader.egg-info/dependency_links.txt
+src/superspreader.egg-info/requires.txt
+src/superspreader.egg-info/top_level.txt
