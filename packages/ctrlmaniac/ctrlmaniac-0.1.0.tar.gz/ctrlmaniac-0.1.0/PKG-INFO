@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: ctrlmaniac
+Version: 0.1.0
+Summary: Davide DC's GitHub Readme profile
+License: MIT
+Author: Davide Di Criscito
+Author-email: davide.dicriscito@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
