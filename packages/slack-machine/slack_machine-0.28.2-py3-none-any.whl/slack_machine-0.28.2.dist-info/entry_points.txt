@@ -1,0 +1,4 @@
+[console_scripts]
+slack-machine=machine.bin.run:main
+slack-machine-async=machine.bin.run_async:main
+
