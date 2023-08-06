@@ -1,0 +1,3 @@
+[backendai_accelerator_v20]
+cuda = ai.backend.accelerator.cuda_open.plugin:CUDAPlugin
+
