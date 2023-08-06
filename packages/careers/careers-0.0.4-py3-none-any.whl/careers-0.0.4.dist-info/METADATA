@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: careers
+Version: 0.0.4
+Summary: Careers Game game engine and server
+Home-page: https://github.com/dwbzen/careers.git
+Author: Donald Bacon
+Author-email: dwbzen@gmail.com
+Maintainer: Donald Bacon
+Maintainer-email: dwbzen@gmail.com
+License: MIT
+Keywords: careers game
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Environment :: Console
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# Careers
+Careers Game Editions - game model and engine.
+
+
+
