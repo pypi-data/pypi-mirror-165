@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: drfasyncview
+Version: 0.0.1
+Summary: AsyncAPIView allows you to use async handlers keeping the compatibility with django-rest-framework
+Home-page: https://github.com/hisdream86/drf-async-view
+License: MIT
+Keywords: django,djangorestframework,async
+Author: hisdream86
+Author-email: hisdream86@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: django (>=4.1.0,<5.0.0)
+Requires-Dist: djangorestframework (<=3.13.1)
+Project-URL: Repository, https://github.com/hisdream86/drf-async-view
+Description-Content-Type: text/markdown
+
+# drf-async-view
+AsyncAPIView allows you to use async handlers keeping the compatibility with django-rest-framework
+
