@@ -1,0 +1,13 @@
+imagecodecs
+fsspec
+pillow
+tifffile>=2021.6.14
+zarr
+typing_extensions>=4.0
+
+[dev]
+pre-commit
+black
+pytest>=6
+pytest-cov
+mypy
