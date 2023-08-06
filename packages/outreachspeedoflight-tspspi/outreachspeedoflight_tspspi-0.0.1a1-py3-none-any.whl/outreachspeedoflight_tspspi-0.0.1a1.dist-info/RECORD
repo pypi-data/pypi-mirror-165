@@ -1,0 +1,9 @@
+outreachspeedoflight/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+outreachspeedoflight/daq.py,sha256=s0_-gp8GVM7lHooNZ9Nax8-164N6dKhGY_Yr--H4k10,13849
+outreachspeedoflight/speedoflightgui.py,sha256=YIYj4XCxQeQdmM2OV_6Y0FvunJktxYzqitFk7bl-w0o,15239
+outreachspeedoflight_tspspi-0.0.1a1.dist-info/LICENSE.md,sha256=wiGiYkY3ZiN8dNHiZMqDH9zJ_CscFWcrzhQ6EPnq3xM,1411
+outreachspeedoflight_tspspi-0.0.1a1.dist-info/METADATA,sha256=LY0ny2bvVOdPLLVV2IIWZZaWiysJJiXGfxgxKUUT4J8,3461
+outreachspeedoflight_tspspi-0.0.1a1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+outreachspeedoflight_tspspi-0.0.1a1.dist-info/entry_points.txt,sha256=6THsia7JWU_KWpboiu1RV2tCYDTZen5TVcIIaOaQJJg,93
+outreachspeedoflight_tspspi-0.0.1a1.dist-info/top_level.txt,sha256=2Od4DjgLWx52srwFOkbmmnq6X9lnNvGE0Ct5KEP5mx0,21
+outreachspeedoflight_tspspi-0.0.1a1.dist-info/RECORD,,
