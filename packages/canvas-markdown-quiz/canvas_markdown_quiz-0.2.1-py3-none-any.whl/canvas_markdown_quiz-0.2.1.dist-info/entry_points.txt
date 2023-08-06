@@ -1,0 +1,2 @@
+[console_scripts]
+cvs-makequiz = cvs.command_line:main
