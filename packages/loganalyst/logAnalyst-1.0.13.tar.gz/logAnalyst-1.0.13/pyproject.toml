@@ -1,0 +1,61 @@
+[build-system]
+requires = [
+    "poetry_core>=1.0.0",
+    ]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "logAnalyst"
+version = "1.0.13"
+description = "Analyse some log files"
+authors = [ "fdev31 <fdev31@gmail.com>" ]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/fdev31/loganalyst"
+classifiers = [
+        'Environment :: Console',
+        'Development Status :: 4 - Beta',
+        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
+]
+
+packages = [
+    { include = "loganalyst" },
+]
+
+
+[tool.poetry.scripts]
+loga = 'loganalyst.cli:cli'
+
+[tool.poetry.dependencies]
+python = ">=3.8"
+python-dateutil = "^2.8.2"
+termcolor = "^1.1.0"
+tomli = "^2.0.1"
+pydantic = "^1.9.2"
+typed-argument-parser = "^1.7.2"
+
+[tool.poetry.dev-dependencies]
+types-termcolor = "^1.1.5"
+
+[tool.black]
+line-length = 120
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+
+[tool.mypy]
+strict = true
+plugins = "pydantic.mypy"
+warn_return_any = true
+warn_unused_configs = true
+warn_unused_ignores = true
+warn_unreachable = true
+
+[tool.vulture]
+exclude = ["tests/"]
+min_confidence = 70
+paths = ["mkrst"]
+sort_by_size = true
