@@ -1,0 +1,12 @@
+.gitignore
+LICENSE.md
+README.md
+githist
+githist.cmd
+pyproject.toml
+requirements.txt
+setup.py
+githist.egg-info/PKG-INFO
+githist.egg-info/SOURCES.txt
+githist.egg-info/dependency_links.txt
+githist.egg-info/top_level.txt

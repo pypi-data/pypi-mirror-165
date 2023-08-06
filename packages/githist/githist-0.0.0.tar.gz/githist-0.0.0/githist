@@ -1,0 +1,25 @@
+#!/usr/bin/env python3
+
+import subprocess
+
+
+r = subprocess.run(
+    "git reflog --date=relative",
+    shell=True,
+    universal_newlines=True,
+    stdout=subprocess.PIPE,
+)
+r.check_returncode()
+
+moving_from = {
+    (line_parts := l.split(": ", maxsplit=1))[1]
+    .split(": ", maxsplit=1)[1]
+    .split(" ")[-1]: line_parts[0]
+    .split(" ", maxsplit=1)[1]
+    .split("{")[1]
+    .split("}")[0]
+    for l in r.stdout.splitlines()
+    if "moving from" in l
+}
+for h, d in reversed(moving_from.items()):
+    print(d, h)
