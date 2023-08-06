@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: GooseSLURM
+Version: 0.9.1
+Summary: Support functions for SLURM
+Home-page: https://github.com/tdegeus/GooseSLURM
+Author: Tom de Geus
+Author-email: tom@geus.me
+License: MIT
+Keywords: SLURM
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# GooseSLURM
+
+[![CI](https://github.com/tdegeus/GooseSLURM/workflows/CI/badge.svg)](https://github.com/tdegeus/GooseSLURM/actions)
+[![Documentation Status](https://readthedocs.org/projects/gooseslurm/badge/?version=latest)](http://gooseslurm.geus.me/en/latest/?badge=latest)
+
+**Project's website: [gooseslurm.rtfd.io](https://gooseslurm.rtfd.io)**
