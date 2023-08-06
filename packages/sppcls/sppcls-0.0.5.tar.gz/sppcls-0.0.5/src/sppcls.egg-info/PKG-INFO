@@ -1,0 +1,87 @@
+Metadata-Version: 2.1
+Name: sppcls
+Version: 0.0.5
+Summary: Accessing and processing data from the DFG-funded SPP Computational Literary Studies
+Author-email: Robert Jäschke <jaeschke@L3S.de>, Frederik Anrold <frederik.arnold@hu-berlin.de>
+License: MIT License
+        
+        Copyright (c) 2022 SPP Computational Literary Studies
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://cls-gitlab.phil.uni-wuerzburg.de/spp-cls-data-exchange/spp-cls_annotationtables_code
+Project-URL: Bug Tracker, https://cls-gitlab.phil.uni-wuerzburg.de/spp-cls-data-exchange/spp-cls_annotationtables_code/-/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+Python code for working with [the data](https://cls-gitlab.phil.uni-wuerzburg.de/spp-cls-data-exchange/spp-cls_annotationtables_data)
+of the DFG-funded [SPP Computational Literary Studies](https://dfg-spp-cls.github.io/).
+
+- **sppcls.py**: the [sppcls](https://pypi.org/project/sppcls/) Python
+  module to access the data:
+  - blocking:
+  ```python
+  from sppcls import sppcls
+  df = sppcls.load_df(work="test", projects=["project"])
+  print(df.describe())
+  ```
+  - non blocking: 
+  ```python
+  from sppcls import sppcls
+  df = await sppcls.load_df_async(work="test", projects=["project"])
+  print(df.describe())
+  ```
+
+## Installation
+
+### PyPI
+
+`pip install sppcls`
+
+### From source
+
+Setup an virtual environment, if necessary:
+
+```sh
+python3 -m venv env
+source env/bin/activate
+```
+
+Install dependencies:
+
+```sh
+pip install -r requirements.txt
+python -m spacy download de_core_news_lg
+```
+
+## Usage
+
+### tokenise.py
+
+```sh
+python tokenise.py path_to_input_txt path_to_output_folder
+```
+
+TODO: fix character offset to be byte instead
+
+### check.py

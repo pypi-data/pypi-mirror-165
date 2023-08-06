@@ -1,0 +1,30 @@
+[build-system]
+requires = [
+    "setuptools>=42",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sppcls"
+version = "0.0.5"
+authors = [
+    { name = "Robert Jäschke", email = "jaeschke@L3S.de" },
+    { name = "Frederik Anrold", email = "frederik.arnold@hu-berlin.de"}
+]
+description = "Accessing and processing data from the DFG-funded SPP Computational Literary Studies"
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.7"
+dependencies = [
+    "pandas>=1.1.5"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://cls-gitlab.phil.uni-wuerzburg.de/spp-cls-data-exchange/spp-cls_annotationtables_code"
+"Bug Tracker" = "https://cls-gitlab.phil.uni-wuerzburg.de/spp-cls-data-exchange/spp-cls_annotationtables_code/-/issues"

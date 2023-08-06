@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+src/__init__.py
+src/event_data.py
+src/check/__init__.py
+src/check/check.py
+src/sppcls/__init__.py
+src/sppcls/sppcls.py
+src/sppcls.egg-info/PKG-INFO
+src/sppcls.egg-info/SOURCES.txt
+src/sppcls.egg-info/dependency_links.txt
+src/sppcls.egg-info/requires.txt
+src/sppcls.egg-info/top_level.txt
+src/tokenise/__init__.py
+src/tokenise/tokenise.py
