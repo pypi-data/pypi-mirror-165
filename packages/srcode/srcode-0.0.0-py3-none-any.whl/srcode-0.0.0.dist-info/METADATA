@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: srcode
+Version: 0.0.0
+Summary: A simplified 'QR code'-like reader and generator
+Author: Tomas R.
+Project-URL: Homepage, https://github.com/tomasr8/SR-Code
+Project-URL: Github, https://github.com/tomasr8/SR-Code
+Keywords: QR,QR code,Image processing,Augmented reality,Computer vision,opencv
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Education
+Classifier: Topic :: Scientific/Engineering :: Image Processing
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: click
+Requires-Dist: numpy
+Requires-Dist: opencv-python
+Provides-Extra: dev
+Requires-Dist: flake8 ; extra == 'dev'
+Requires-Dist: isort ; extra == 'dev'
+Requires-Dist: pip-tools ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: pytest-snapshot ; extra == 'dev'
+Requires-Dist: pre-commit ; extra == 'dev'
+
