@@ -1,0 +1,12 @@
+njet/__init__.py,sha256=2roQM6mp9cbzeLDH59ozPhxoRuWYI6UZ8CKpRRH-j1E,891
+njet/_version.py,sha256=W_9dCm49nLvZulVAvvsafxLJjVBSKDBHz9K7szFZllo,22
+njet/ad.py,sha256=6JKEk74T3CxIMbKNWezKlCNA-KW59Bs1KQMphwKHWGA,5007
+njet/common.py,sha256=uGhhrTjEF8h-KWJCMneHnhw8-yu9Nle3BT_OlgZ6H7I,1814
+njet/functions.py,sha256=H10vZw--Sagoeeu4xdW79Cd44vjAxQ0CKkxX4jnzE78,5179
+njet/jet.py,sha256=8qjBEvdXtANPv3M-6YkY4FMvQuTZvf3Mwz164UavaYI,16179
+njet/poly.py,sha256=BScWbkGzAdx9WOKyaYXXdSoEqjR0pRuRkH1a98JL1ME,10121
+njet-0.3.6.dist-info/LICENSE.txt,sha256=j_f4LOp0rTE3W4hX4BOAPFdbjeIHoLez5KuPzPtf5Gw,718
+njet-0.3.6.dist-info/METADATA,sha256=qJwKJoubIxhGLKuVNWO-DY0ewvjtdnyGg7TxLkliSOM,3579
+njet-0.3.6.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+njet-0.3.6.dist-info/top_level.txt,sha256=E9NKPB7XFbRXJS3ho-vIJN9yzjp4_kbfNumhMLmvEyQ,5
+njet-0.3.6.dist-info/RECORD,,
