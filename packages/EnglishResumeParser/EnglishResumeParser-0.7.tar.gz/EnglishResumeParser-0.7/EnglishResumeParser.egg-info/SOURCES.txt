@@ -1,0 +1,6 @@
+EnglishResumeParser.py
+setup.py
+EnglishResumeParser.egg-info/PKG-INFO
+EnglishResumeParser.egg-info/SOURCES.txt
+EnglishResumeParser.egg-info/dependency_links.txt
+EnglishResumeParser.egg-info/top_level.txt
