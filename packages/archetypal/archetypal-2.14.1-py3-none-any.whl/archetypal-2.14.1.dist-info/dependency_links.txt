@@ -1,0 +1,1 @@
+https://github.com/samuelduchesne/geomeppy.git@v0.12#egg=geomeppy
