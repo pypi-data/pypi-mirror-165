@@ -1,0 +1,7 @@
+README
+setup.py
+PlotDot.egg-info/PKG-INFO
+PlotDot.egg-info/SOURCES.txt
+PlotDot.egg-info/dependency_links.txt
+PlotDot.egg-info/top_level.txt
+plotdot/__init__.py
