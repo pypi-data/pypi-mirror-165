@@ -1,0 +1,3 @@
+jtype: {{exec_name}}
+py_modules:
+  - executor.py
