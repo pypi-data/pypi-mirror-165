@@ -1,0 +1,89 @@
+#!/usr/bin/env python3
+
+import os
+import subprocess
+import sys
+
+
+if "--edit" in sys.argv:
+    path = sys.argv[sys.argv.index("--edit") + 1]
+    lines = []
+    new_lines = []
+    separator = "# Please enter the commit message for your changes. Lines starting"
+
+    with open(path) as f:
+        everything = f.read().splitlines()
+        if everything[0].startswith("# This is a combination of") and separator in everything:
+            assert everything[1] == "# This is the 1st commit message:"
+            assert everything[2] == ""
+            everything = everything[3:]
+            new_lines = everything[: everything.index("# This is the commit message #2:")]
+            assert new_lines[-1:] == [""]
+            del new_lines[-1]
+            assert new_lines
+
+        else:
+            for line in everything:
+                if line.startswith("# Rebase"):
+                    break
+                if line.startswith("pick"):
+                    lines.append(line)
+            else:
+                print(all_lines)
+                assert False
+
+            commits = sorted(map(int, sys.argv[1 : sys.argv.index("--edit")]))
+            min_commits = min(commits)
+            min_ago = 1 - min_commits
+            assert len(lines) == min_ago
+            squash_lines = [-min_commits + commit for commit in commits if commit != min_commits]
+            new_lines += [lines[0]] + [lines[i].replace("pick", "squash") for i in squash_lines]
+            used = {0} | set(squash_lines)
+            for i, line in enumerate(lines):
+                if i not in used:
+                    new_lines.append(line)
+
+    print("\n".join(new_lines))
+
+    with open(path, "w") as f:
+        print("\n".join(new_lines), file=f)
+
+else:
+    commits = []
+    if len(sys.argv) == 1:
+        commits.append(0)
+        commits.append(-1)
+
+    else:
+        for i in sys.argv[1:]:
+            if ".." in i:
+                k, l = i.split("..")
+                k = k or "0"
+                l = l or "0"
+                k, l = sorted(map(int, (k, l)))
+                i = list(range(k, l + 1))
+            else:
+                i = [int(i)]
+            assert max(i) <= 0
+            commits.extend(i)
+        assert len(commits) > 1
+        assert sorted(set(commits)) == sorted(commits)
+
+    min_ago = 1 - min(commits)
+
+    edit_cmd = " ".join([os.path.abspath(sys.argv[0])] + list(map(str, commits)) + ["--edit"])
+    os.environ["GIT_EDITOR"] = edit_cmd
+    print(edit_cmd)
+    subprocess.run("git rebase -i HEAD~{}".format(min_ago), shell=True).check_returncode()
+
+historical_variable = """
+#!/bin/bash
+
+NL=$1;
+if [ "$NL" = "" ]; then
+	NL=1
+fi
+let NL=NL+1
+export GIT_EDITOR="sed -i.bak '2,$NL s/pick/squash/; /# This is the commit message #2/,$ d'"
+git rebase -i HEAD~$NL;
+"""
