@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/cordapi.egg-info/PKG-INFO
+src/cordapi.egg-info/SOURCES.txt
+src/cordapi.egg-info/dependency_links.txt
+src/cordapi.egg-info/top_level.txt
+src/cordapi_Credsz/__init__.py
+src/cordapi_Credsz/cordapi.py
