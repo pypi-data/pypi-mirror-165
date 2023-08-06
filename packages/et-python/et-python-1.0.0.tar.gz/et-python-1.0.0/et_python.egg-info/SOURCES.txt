@@ -1,0 +1,12 @@
+.gitignore
+LICENSE.md
+README.md
+et
+et.cmd
+pyproject.toml
+requirements.txt
+setup.py
+et_python.egg-info/PKG-INFO
+et_python.egg-info/SOURCES.txt
+et_python.egg-info/dependency_links.txt
+et_python.egg-info/top_level.txt
