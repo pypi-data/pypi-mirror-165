@@ -1,0 +1,2 @@
+[console_scripts]
+cx_releaser = cx_releaser.scripts.command:main
