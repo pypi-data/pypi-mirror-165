@@ -1,0 +1,23 @@
+{% extends "base.html.jinja2" %}
+{% import 'macros.html.jinja2' as macros %}
+
+{% block content %}
+
+    <div class="columns is-multiline">
+        <div class="column is-full">
+            {{ macros.pagination(paginated_books ) }}
+        </div>
+        <div class="column is-full">
+            {% for book in paginated_books['items'] %}
+                <div class="box">
+                    {{ macros.book(book) }}
+                </div>
+            {% endfor %}
+        </div>
+        <div class="column is-full">
+            {{ macros.pagination(paginated_books ) }}
+        </div>
+
+    </div>
+
+{% endblock %}
