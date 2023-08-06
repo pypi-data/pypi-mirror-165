@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/RNApolis.egg-info/PKG-INFO
+src/RNApolis.egg-info/SOURCES.txt
+src/RNApolis.egg-info/dependency_links.txt
+src/RNApolis.egg-info/entry_points.txt
+src/RNApolis.egg-info/requires.txt
+src/RNApolis.egg-info/top_level.txt
+src/rnapolis/annotator.py
+src/rnapolis/common.py
+src/rnapolis/parser.py
+src/rnapolis/tertiary.py
