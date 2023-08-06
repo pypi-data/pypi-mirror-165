@@ -1,0 +1,5 @@
+[console_scripts]
+cnext-init=cnext_server.__main__:main
+cnext-path=cnext_server.__main__:path
+cnext-run=cnext_server.__main__:start
+
