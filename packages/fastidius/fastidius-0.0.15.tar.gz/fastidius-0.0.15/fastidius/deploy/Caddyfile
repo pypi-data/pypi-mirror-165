@@ -1,0 +1,9 @@
+{
+    email johnckealy.dev@gmail.com
+    acme_ca https://acme-staging-v02.api.letsencrypt.org/directory
+    local_certs
+}
+
+johnkealy.com {
+    reverse_proxy johnkealy-frontend:3000
+}
