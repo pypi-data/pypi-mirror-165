@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+chfs/__init__.py
+chfs/core.py
+chfs/dask/__init__.py
+chfs/dask/distributed.py
+fsspec_chfs.egg-info/PKG-INFO
+fsspec_chfs.egg-info/SOURCES.txt
+fsspec_chfs.egg-info/dependency_links.txt
+fsspec_chfs.egg-info/entry_points.txt
+fsspec_chfs.egg-info/requires.txt
+fsspec_chfs.egg-info/top_level.txt
