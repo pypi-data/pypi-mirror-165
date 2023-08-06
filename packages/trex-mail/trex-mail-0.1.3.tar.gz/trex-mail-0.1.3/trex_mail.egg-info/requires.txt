@@ -1,0 +1,3 @@
+Flask-Mail
+mailjet_rest
+sendgrid

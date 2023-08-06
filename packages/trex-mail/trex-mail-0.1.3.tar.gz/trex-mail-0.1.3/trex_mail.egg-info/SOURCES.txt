@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+trex_mail.egg-info/PKG-INFO
+trex_mail.egg-info/SOURCES.txt
+trex_mail.egg-info/dependency_links.txt
+trex_mail.egg-info/requires.txt
+trex_mail.egg-info/top_level.txt
+trexmail/__init__.py
+trexmail/conf.py
+trexmail/email_helper.py
+trexmail/flask_mail.py
+trexmail/mailjet.py
+trexmail/sendgrid.py
