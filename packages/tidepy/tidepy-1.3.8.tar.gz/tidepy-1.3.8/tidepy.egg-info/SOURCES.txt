@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+bin/tidepy
+tidepy/__init__.py
+tidepy/model.py
+tidepy/pred.py
+tidepy/utils.py
+tidepy.egg-info/PKG-INFO
+tidepy.egg-info/SOURCES.txt
+tidepy.egg-info/dependency_links.txt
+tidepy.egg-info/requires.txt
+tidepy.egg-info/top_level.txt
+tidepy/data/Gene_Ref.pkl
+tidepy/data/model.pkl
