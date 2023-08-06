@@ -1,0 +1,6 @@
+LICENSE-BSD3
+MANIFEST.in
+README.md
+setup.py
+dataclass_jsonable/__init__.py
+dataclass_jsonable/py.typed
