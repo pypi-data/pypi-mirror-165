@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: jestor
+Version: 1.0.1
+Summary: Jestor Python Client
+License: MIT License        
+        Copyright (C) 2022, Jestor, Inc. <hi@jestor.com>        
+        Permission is hereby granted, free of charge, to any person obtaining a copy of
+        this software and associated documentation files (the "Software"), to deal in
+        the Software without restriction, including without limitation the rights to
+        use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+        of the Software, and to permit persons to whom the Software is furnished to do
+        so, subject to the following conditions:        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.        
+Project-URL: Homepage, https://github.com/Jestor-Tecnologia/python-client
+Project-URL: Bug Tracker, https://github.com/Jestor-Tecnologia/python-client/issues
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Jestor SDK for Python - Version Beta
+
+[![PyPI](https://img.shields.io/pypi/v/jestor.svg)](https://pypi.python.org/pypi/jestor)
+[![PyPI](https://img.shields.io/pypi/pyversions/jestor.svg)](https://pypi.python.org/pypi/jestor)
+
+Jestor client library for python.
+
+
+## Documentation
+
+Documentation with all available functions can be found [here](https://docs.jestor.com/docs/jestor-sdk-for-python)
+
+## Installation
+
+Install from PyPi using [pip](https://pip.pypa.io/en/latest/), a package manager for Python.
+
+`pip install jestor`
+
+If pip install fails on Windows, check the path length of the directory. If it is greater 260 characters then enable [Long Paths](https://docs.microsoft.com/en-us/windows/win32/fileio/maximum-file-path-limitation) or choose other shorter location.
+
+Don't have pip installed? Try installing it, by running this from the command
+line:
+
+    $ curl https://bootstrap.pypa.io/get-pip.py | python
+
+
+## Getting Started
+
+Getting started with the Jestor API couldn't be easier. Create a
+`Jestor` instance and you're ready to go.
+
+```python
+from jestor.Jestor import Jestor
+
+jestor_client = Jestor('<api token>', '<account>')
+
+result = jestor_client.table('sample_tab').get(limit=3) # result will be a python array with values
+```
