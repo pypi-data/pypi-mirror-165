@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: QueryStateLib
+Version: 1.1.3
+Home-page: https://github.com/thanhnv2303/QueryStateLib
+Author: LinLin
+Author-email: nguyenthanh2303@gmail.com
+Project-URL: Bug Tracker, https://github.com/thanhnv2303/QueryStateLib
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: web3 (>=5.23.0)
+Requires-Dist: requests (<=2.26.0)
+Requires-Dist: pbkdf2 (==1.3)
+
+# Query State Lib
+
+### Install 
+ 
+> pip3 install QueryStateLib
+
+### Example do query state batch at client
+
+* [Example used](_test/test_client_querier.py)
+
+Github :https://github.com/TravaDataAnalysis/QueryStateLib
+
+* Use [Ethereum Json-pc](https://documenter.getpostman.com/view/4117254/ethereum-json-rpc/RVu7CT5J#23129825-2012-07dd-66bb-c0d76b4e28dc)
+
