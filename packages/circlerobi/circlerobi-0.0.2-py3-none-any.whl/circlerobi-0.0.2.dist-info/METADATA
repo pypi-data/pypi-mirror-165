@@ -1,0 +1,251 @@
+Metadata-Version: 2.1
+Name: circlerobi
+Version: 0.0.2
+Summary: A small Robi Airtel Circle Project.
+Home-page: https://github.com/pypa/sampleproject
+Author: Ariful Islam Arman
+Author-email: aru.ofc@yahoo.com
+Project-URL: Bug Tracker, https://github.com/pypa/sampleproject/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Version-0.0.2-orange?style=for-the-badge">
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Author-ARU-green?style=flat-square">
+  <img src="https://img.shields.io/badge/Open%20Source-Yes-green?style=flat-square">
+  <img src="https://img.shields.io/badge/Written%20In-Python-green?style=flat-square">
+</p>
+
+<br>
+<br>
+<h3><p align="center">Disclaimer</p></h3>
+<p><i>This script is create only for enhancing <b>Robi and Airtel Circle</b> experience and personally for keeping everything in practice with a realtime project.
+</i></p>
+<br>
+<br>
+
+
+
+
+
+## Install
+```
+pip install circlerobi
+```
+
+## How To Import
+
+
+
+<p> Use This Code In your Python Code </p>
+
+
+
+```
+from circle import robicircle
+```
+<br>
+<br>
+
+
+## How to Use
+
+``Get Circle Id to number easily ..``
+
+```
+robicircle.idtonumber(cicleID)
+```
+``Example``
+```
+from circle import robicircle
+robicircle.idtonumber("Hungry****")
+```
+``Output``
+```
+    Nickname: Hungry****
+    Number: +88018947*****
+    Name: Arif Chowdhury  
+    Shout: 4
+    Comments: 4
+    Points: 2
+    Friends: 3
+    Followings: 9
+    Followers: 7
+    Gender: M
+    Agent: 3
+    Language: en
+    Last Shout: $$$
+
+
+
+    Sent From ARU"s System.
+    https://bit.ly/3PVwOXQ
+
+    Last Shout Time: 2022-08-26 23:04:00
+    Birthday: 2003-02-03 00:00:00
+    Start Date : 2022-07-15 00:26:57
+    Start Date : 2022-08-27 00:17:58
+    App Access : ON
+
+
+
+    Made With ❤️   by  ARU
+
+   ```
+
+``Get Number to Circle Id easily ..``
+
+```
+robicircle.numberto(cicleID)
+```
+``Example``
+
+```
+from circle import robicircle
+robicircle.idnumbertoid("01832******")
+```
+``Output``
+```
+    Nickname: CraZy*****
+    Number: +8801832******
+    Name: MrAru
+    Shout: 1581
+    Comments: 365
+    Points: 2586
+    Friends: 28
+    Followings: 113       
+    Followers: 69
+    Gender: M
+    Agent: 3
+    Language: en
+    Last Shout: hello 
+
+
+
+    Sent From ARU"s System.
+    https://bit.ly/3PVwOXQ
+
+    Last Shout Time: 2022-08-26 18:41:20
+    Birthday: 2003-02-03 00:00:00
+    Start Date : 2022-06-26 22:02:52
+    Start Date : 2022-07-27 19:14:47
+    App Access : OFF
+
+
+
+    Made With ❤️   by  ARU
+    
+   ```
+   
+``Get Latest Update In app ..``
+
+```
+robicircle.updateInapp()
+```
+``Example``
+
+```
+from circle import robicircle
+robicircle.updateInapp()
+```
+``Output``
+  ```
+    Nickname: MuSicaL*****  Number: +88018********
+    Status: DocTor Er OvaaaB.?? UPDATEBOYS Osusto. MUSICALGIIRL KenO UPDATEBOYS Vallagena- MUSICALGIIRL kEw eKKhaaN gaaN ShuNaaN
+
+
+    Nickname: 4ajoam******  Number: +88018********
+    Status: -P3bir S0bceYe Nirl0jjo VosTu H0lo K0sto"J0t0y Tmi Dure Tek0na Kn.?Se Bar Bar Tmr Kace Fire Asbe"Suker K0ta Ki R B0lb0 Se Tw B0r0y Sart0p0r
+
+
+    Nickname: CuTeRaZ*****  Number: +88018********
+    Status: : ApniiO BuzLen..? CUTEBALIKA SesH PorZonTo ETaiii BuzLam, Mon TheKe KhuB Kore Chawa PriiiYo JiiiniisH GuLo KokhonU NiiZer HoiiiNa.....
+
+
+    Nickname: Ebu**  Number: +88018*****
+    Status: kew free takla cp korta paro
+
+
+    Nickname: CuTeRaZ*****  Number: +88018********
+    Status: : ApniiO BuzLen..? CUTEBALIKA SesH PorZonTo ETaiii BuzLam, Mon TheKe KhuB Kore Chawa PriiiYo JiiiniisH GuLo KokhonU NiiZer HoiiiNa.....
+
+
+    Nickname: mahim****  Number: +88018********
+    Status: good night
+
+
+    Nickname: md  Number: +88018********
+    Status: 50balL e 73 Runs Lagbe! 7wckt Ekh0n0 Ache! Eta K0n0 bepar na Kutta Rendia Team er J0nNo!
+
+
+    Nickname: MDiRf*****  Number: +88018********
+    Status: 50 tk.....Denmohor koriya....tmk Bibaho korilam.....Bolo.... Kobul? Kobul Kobul Kobul....Thanks,....aj Tumi amr Bou...Fazil chele
+
+
+    Nickname: Apra**  Number: +88018********
+    Status: Cacchu aree daw na,kono problem hobe na...bon na. *parbo Nago Number Dite..Jader Kace Amr Number Ace..Tara Tw Deina
+
+
+    Nickname: Nilpori***  Number: +88018********
+    Status: Majhe Majhe Nije'K Khub Obak Lage.OlpoTei Kichu Manush'K Onek Apon Kore Feli.But KkhoNo Bujhte Chaina J,Se Amy Koto Ta Apon Vabe....
+
+
+
+
+
+    Made With ❤️   by  ARU      
+```
+
+
+
+
+
+<h2>For More description contract with me</h2>
+<a href="https://m.me/1R13A14" target="_blank"><img src="https://img.shields.io/badge/MESSENGER-4267B2.svg?&style=flat-square&logo=messenger&logoColor=white" alt="Messenger"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h1> Note : It is made for educational purposes only. Please don't abuse anyone. </h1>
+
+
+
+
+
+
+
+
+
+
+`` 📡 Get in Touch `` 
+<br>
+
+<a href="https://www.facebook.com/Aru.Ofc" target="_blank"><img src="https://img.shields.io/badge/FACEBOOK-4267B2.svg?&style=flat-square&logo=facebook&logoColor=white" alt="Facebook"></a>
+<a href="https://www.instagram.com/Aru.Ofc.Ins" target="_blank"><img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?&style=flat-square&logo=instagram&logoColor=white" alt="Instagram"></a>
+<a href="https://twitter.com/aru_ofc_twiter" target="_blank"><img src="https://img.shields.io/badge/Twitter-%231DA1F2.svg?&style=flat-square&logo=twitter&logoColor=white" alt="Twitter"></a>
+<a href="https://open.spotify.com/user/rwvotqr02yuzpyfmkkri3b5k1?si=X4sohjMTTCmIMuniDJ5ECA&utm_source=copy-link" target="_blank"><img src="https://img.shields.io/badge/Spotify-%231ED760.svg?&style=flat-square&logo=spotify&logoColor=white" alt="Spotify"></a>
+<a href="https://www.youtube.com/c/arulyrics1" target="_blank"><img src="https://img.shields.io/badge/YouTube-FF0000.svg?&style=flat-square&logo=youtube&logoColor=white" alt="YouTube"></a>
+<a href="https://dev.to/aruofc" target="_blank"><img src="https://img.shields.io/badge/DEV-%230A0A0A.svg?&style=flat-square&logo=DEV.to&logoColor=white" alt="DEV.to"></a>
+<a href="mailto: aru.ofc@yahoo.com" target="_blank"><img src="https://img.shields.io/badge/Email-BB001B.svg?&style=flat-square&logo=gmail&logoColor=white" alt="Gmail"></a>
+<a href="https://github.com/Aru-Ofc-git" target="_blank"><img src="https://img.shields.io/badge/GitHub-171515.svg?&style=flat-square&logo=github&logoColor=white" alt="Github"></a>
+
+
+
+<p align="center">Made With ❤️ by <a href="https://www.facebook.com/Siillent.Killer.Arman">ARU</a> </p>
