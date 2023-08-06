@@ -1,0 +1,9 @@
+README.md
+pourcupine
+pourcupine.cmd
+pyproject.toml
+setup.py
+pourcupine.egg-info/PKG-INFO
+pourcupine.egg-info/SOURCES.txt
+pourcupine.egg-info/dependency_links.txt
+pourcupine.egg-info/top_level.txt
