@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: ludicrous
+Version: 0.2.0
+Summary: ludicrous speed Python web framework
+Home-page: https://github.com/joshiemoore/ludicrous/
+Author: Joshua Moore
+Author-email: jxm5210@g.rit.edu
+License: GPLv2
+License-File: LICENSE.txt
