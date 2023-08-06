@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: solmate-sdk
+Version: 0.1.0
+Summary: Software Development Kit for the EET SolMate
+License: MIT
+Author: EET
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: websockets (>=10.3,<11.0)
+Description-Content-Type: text/markdown
+
+# solmate-sdk
+
+All you need to integrate SolMate into your home automation system and more (coming soon)
+
