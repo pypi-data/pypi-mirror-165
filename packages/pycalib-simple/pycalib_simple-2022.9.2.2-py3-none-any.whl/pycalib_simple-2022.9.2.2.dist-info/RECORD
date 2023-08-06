@@ -1,0 +1,12 @@
+pycalib/__init__.py,sha256=6Z5pkpyk0xT8pFnEolE4kn9l-tgfW493x1xjP_hC0J0,210
+pycalib/ba.py,sha256=4jjax-hjT_AXDBIxqGcwGRIOdvoXX0VRZLeWpCZ6yYU,10299
+pycalib/bal.py,sha256=--VFphpgm_JRpBmb6-ZNNHYadvjt3k4CHOdCfR36-Yw,4395
+pycalib/calib.py,sha256=z9rXfY-NYBHeeWLdUD2UWdNNZMRFEZZOoDgZEkcW1BI,16977
+pycalib/plot.py,sha256=8luQRgvpuYWQytOpz0cAkXEoEXYm82hlBFRJANfpIuw,2207
+pycalib/sphere.py,sha256=3VaPby1mbcc9D-lcI7P6a9mkgSUzW6LOrkoD4duSsb0,3212
+pycalib/util.py,sha256=dTPHijAKoE6au1ZsIv2VUg2w6xN_NX6qeJq9ifd70lo,3601
+pycalib_simple-2022.9.2.2.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+pycalib_simple-2022.9.2.2.dist-info/METADATA,sha256=CjlH2oAri3LuKkkWoHAzDGRDTxMVzTLbpF8y2qsQUj0,8158
+pycalib_simple-2022.9.2.2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+pycalib_simple-2022.9.2.2.dist-info/top_level.txt,sha256=HBmIildkvEjTh-Uod2cUU-sd9aCMvj32h-BMw7hp1Tg,8
+pycalib_simple-2022.9.2.2.dist-info/RECORD,,
