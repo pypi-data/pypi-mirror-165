@@ -1,0 +1,14 @@
+aiohttp>=3.8.1
+
+[discord]
+discord.py>=2.0.0
+
+[docs]
+sphinx
+sphinxcontrib_trio
+sphinxcontrib-websupport
+sphinx-autoapi
+typing-extensions
+
+[speed]
+aiohttp[speedups]>=3.8.1
