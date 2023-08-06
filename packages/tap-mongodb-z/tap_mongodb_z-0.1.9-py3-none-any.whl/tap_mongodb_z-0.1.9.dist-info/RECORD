@@ -1,0 +1,8 @@
+tap_mongodb_z/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tap_mongodb_z/tap.py,sha256=jRrGp65fUf5jGJlLos5u4wvpZGKJXqYUq0e0shUQYJM,7358
+tap_mongodb_z/tests/__init__.py,sha256=-2B3oqGHYiOxibTz462MXl3aNcRYbUdGche2oCsMRwI,34
+tap_mongodb_z/tests/test_core.py,sha256=kDUPMSZGOwx0KSHEJfO2yUudqu87ccGZWW6aLEXZg0s,631
+tap_mongodb_z-0.1.9.dist-info/entry_points.txt,sha256=D-ai4sfdkrgMyezWS_-0LTXqAC5HwWd3HQ7asSInViU,64
+tap_mongodb_z-0.1.9.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+tap_mongodb_z-0.1.9.dist-info/METADATA,sha256=Uf0JkFLKQA00TSI7kfRqPq03Qy_Ecgh5UIRXGkY2Xag,658
+tap_mongodb_z-0.1.9.dist-info/RECORD,,
