@@ -1,0 +1,7 @@
+setup.py
+roman to urdu/__init__.py
+roman to urdu/lig_to_rom.py
+urdu2roman.egg-info/PKG-INFO
+urdu2roman.egg-info/SOURCES.txt
+urdu2roman.egg-info/dependency_links.txt
+urdu2roman.egg-info/top_level.txt
