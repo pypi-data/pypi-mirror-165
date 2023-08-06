@@ -1,0 +1,13 @@
+snouty_viewer/__init__.py,sha256=jznaNFMElxdKN_MA0U0IH4mdSZBNY_sqBDH8cEpCfvk,153
+snouty_viewer/_reader.py,sha256=vTiEqkePZ5mK14iD22Kkp_YkL-TqwFlXYB-6fAk4D7w,2694
+snouty_viewer/_widget.py,sha256=TWS4l0SBjVmAD1YvoMzNC2RtU5WE7z_riNfXAVT63tA,1226
+snouty_viewer/napari.yaml,sha256=fJlaE08DM9y3yNGraim8dEUMmNHYDHrx0BalpQ3nw1Y,547
+snouty_viewer/_tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+snouty_viewer/_tests/test_reader.py,sha256=TVIl09bjzkQ2ba61ouUKNeKbmZ2w_RaeNQpYMune3C8,8010
+snouty_viewer/_tests/test_widget.py,sha256=6P6rrfPHS8C0uiXrJeo3g0e7ZBWW45dq8f98p-nwtWs,664
+snouty_viewer-0.0.1.dist-info/LICENSE,sha256=9F9mH4mSgRcikNXFRyW-eE0oxX5Wbpg97Sm48_Dn2_Q,1092
+snouty_viewer-0.0.1.dist-info/METADATA,sha256=pi5jGukKWKPdBgKsDwuys7ycLYXzB12eyI3O_N8iRls,4202
+snouty_viewer-0.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+snouty_viewer-0.0.1.dist-info/entry_points.txt,sha256=4a31ezG96ZBL99AmbNSgiFFGFja2iUMfKh3imIqtrSs,60
+snouty_viewer-0.0.1.dist-info/top_level.txt,sha256=vYIpFSprPRaOqQjpFmDiq1xyHmKTNaKYNvl1UGcdmZI,14
+snouty_viewer-0.0.1.dist-info/RECORD,,
