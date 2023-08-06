@@ -1,0 +1,2 @@
+[console_scripts]
+create-rosepom-app = pyrosenium.rosepom.core.rosepom_app:create_rosepom_app
