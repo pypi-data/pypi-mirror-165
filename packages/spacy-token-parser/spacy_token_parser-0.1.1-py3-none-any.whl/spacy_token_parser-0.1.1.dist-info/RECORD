@@ -1,0 +1,15 @@
+spacy_token_parser/__init__.py,sha256=QhZPHsKBi5Csm3Pt_rx-ZDHx0u0FJN0QZxNyTXqnIQQ,207
+spacy_token_parser/dmo/__init__.py,sha256=giI89meglxUctuWCAGuesqYkX9VxpoJbDITmCqheCoA,410
+spacy_token_parser/dmo/graffl_parser_coordinates.py,sha256=F-xt5Lbc2au0pmzzltydsxiw_LM-0MlV6rd7sCXoDno,1910
+spacy_token_parser/dmo/graffl_parser_normalize.py,sha256=Wz_duuG9cqHYaQNHKWBFg7nESymSGw_tgSSUezTSgEI,3047
+spacy_token_parser/dmo/graffl_parser_punctuation.py,sha256=_tlPrCxnAC4Gp3G49cyOq2KvOlvZMUo9yYcHGSsvYVU,1141
+spacy_token_parser/dmo/graffl_parser_resultset.py,sha256=46b_u4yTwq__xlszJ3-0F38BTuulucq2Su6BXOpJ37k,4207
+spacy_token_parser/dmo/graffl_parser_spacy.py,sha256=j5bnmUfdqWUy7ekDam-0zXy1yu7ZE7Qe6sNz8B6DXaM,1486
+spacy_token_parser/dmo/graffl_parser_squots.py,sha256=VNvxccKfNp7KgPM9EB0W-jAzYFYVoYib7RgH4m1-jPM,1101
+spacy_token_parser/dmo/graffl_parser_wordnet.py,sha256=T-qjyacPOM-YxLD0etdX54_n2IZOIAT7N4dFaayx2kw,1465
+spacy_token_parser/svc/__init__.py,sha256=ufh2OqJXh2ztwEEBAfKzcqGBR6unGX6hQlAJvDnnSXw,112
+spacy_token_parser/svc/generate_displacy_output.py,sha256=9_M8XfFiW91CCGVGaiHKi_NvvUnYz9SB7AHTO1tLpDs,2309
+spacy_token_parser/svc/parse_input_tokens.py,sha256=ERVRPBnISJbgFei2NIfVq1iY1gQs3ByEdPl18FgPTPg,1812
+spacy_token_parser-0.1.1.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+spacy_token_parser-0.1.1.dist-info/METADATA,sha256=QCspHoTKBE7dNXypEJXYyA1-sbGCI8bgvR_cu9pTQ8Q,313
+spacy_token_parser-0.1.1.dist-info/RECORD,,
