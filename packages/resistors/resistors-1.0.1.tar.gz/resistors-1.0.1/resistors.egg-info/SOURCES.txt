@@ -1,0 +1,9 @@
+README.md
+setup.py
+resistors/__init__.py
+resistors/errors.py
+resistors/util.py
+resistors.egg-info/PKG-INFO
+resistors.egg-info/SOURCES.txt
+resistors.egg-info/dependency_links.txt
+resistors.egg-info/top_level.txt

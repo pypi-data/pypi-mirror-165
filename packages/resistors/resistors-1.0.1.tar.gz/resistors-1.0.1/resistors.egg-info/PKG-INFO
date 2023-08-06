@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: resistors
+Version: 1.0.1
+Summary: Decode resistor color codes and encode resistance values
+Home-page: https://github.com/gadhagod/resistors
+Author: Aarav Borthakur
+Author-email: gadhaguy13@gmail.com
+License: UNKNOWN
+Description: # Resistors
+        A Python library for decoding resistor color codes and encoding resistance values.
+        
+        * Converts colors to value
+        * Converts value to colors
+        * Supports four and five-band resistors
+        * Zero dependencies
+        
+        The library *strictly* follows the following chart:
+        ![](https://github.com/gadhagod/resistors/raw/master/docs/chart.jpg)
+        
+        Any colors used in a program not included in this chart will result in a `KeyError`.
+        
+        ## Installation
+        
+            pip3 install resistors
+        
+        ## Usage
+        
+        ```
+        from resistors import Resistor
+        
+        r1 = Resistor("red", "red", "black", "black", "brown")
+        print(r1.get_resistance())  # {'value': 220.0, 'tolerance': 1.0}
+        r2 = Resistor.with_resistance(1230, 2, 5)   # create resistor object with value of 1230Ω, tolerance of +-2%, and 5 bands
+        print(r2.get_colors())  # ['brown', 'red', 'orange', 'brown', 'red']
+        ```
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
