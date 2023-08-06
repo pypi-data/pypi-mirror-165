@@ -1,0 +1,37 @@
+# pywb config file
+# ========================================
+#
+debug: true
+ui:
+    vue_calendar_ui: false
+    vue_timeline_banner: false
+    logo: /static/pywb-logo-sm.png
+
+collections:
+    all: $all
+    pywb:
+        index_paths: ./sample_archive/cdx/
+        archive_paths: ./sample_archive/warcs/
+
+    ukwa: cdx+https://www.webarchive.org.uk/wayback/archive/cdx
+
+# Settings for each collection
+use_js_obj_proxy: true
+
+# Memento support, enable
+enable_memento: true
+
+# Replay content in an iframe
+framed_replay: true
+
+redirect_to_exact: true
+
+
+# uncomment and change to set default locale
+# default_locale: en
+
+# uncomment to set available locales
+locales:
+  - en
+  - fr
+
