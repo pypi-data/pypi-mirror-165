@@ -1,0 +1,15 @@
+numbalsoda/__init__.py,sha256=ugcqHMrl7xjCoC8bx6zstofHkGb_g_MghgMF7_6S4Ls,146
+numbalsoda/driver.py,sha256=5DcvvKkdPxBEl9WvkbuCr2w1-AzLHSg1Fmn-21NPdJQ,1724
+numbalsoda/driver_dop853.py,sha256=L-j2Dbnco3iCY1Hlmaxz-U50FcwmYbj_ztORG5JcXMw,1181
+numbalsoda/driver_solve_ivp.py,sha256=GB8rshRDcBRjjOYEhp7hEyFB2I4EMPphcJS3KBhUOdU,6233
+numbalsoda/libdop853.dll,sha256=LsZQI4qqAghBwd0ktjo0bwSSfksU1oFtBpE07URiVFg,102110
+numbalsoda/libdop853.dll.a,sha256=9HtPKtmK47MT3d958lTpXXNV1Pxv4PkwW1yXN4tVc_8,13524
+numbalsoda/liblsoda.dll,sha256=pdcHM2T60b0trAGNMDSMYqixUlEp2uWJMGik5gfjZoc,148692
+numbalsoda/liblsoda.dll.a,sha256=Q39zspJjEjN-nS8f92K9U0Cep5iEdQJOI0AmsQTkVcE,29244
+numbalsoda/libsolve_ivp.dll,sha256=la4kNj0WOJTzvAsXuLyuR2aG4fhr6zL8KpfdaV9_8xA,124685
+numbalsoda/libsolve_ivp.dll.a,sha256=ZHPCzt5CATKcwZEjx4uPRjXLj1cpGRJsJtYJ7GmRGNE,20532
+numbalsoda-0.3.3.dist-info/LICENSE.txt,sha256=S7D5W-ZQfOI101QWO90uiIkBZZVFhkBxqPJqyVYZ4tM,1070
+numbalsoda-0.3.3.dist-info/METADATA,sha256=m95WmROnmzbmQt2ZcMkvcBk14VWlINPdpHcGlroyKrw,4638
+numbalsoda-0.3.3.dist-info/WHEEL,sha256=dt5yRGeA5qnl3_iynMqK4liosrYejYyUcj-F42-RswU,96
+numbalsoda-0.3.3.dist-info/top_level.txt,sha256=dWxEuRQxUprOcml1BgbRxWrI8c6kGmUjcHb9-hJw7kU,11
+numbalsoda-0.3.3.dist-info/RECORD,,
