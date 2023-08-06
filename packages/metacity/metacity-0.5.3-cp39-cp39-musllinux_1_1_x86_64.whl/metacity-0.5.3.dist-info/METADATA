@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: metacity
+Version: 0.5.3
+Summary: Python toolkit for Urban Data processing
+Home-page: https://github.com/MetacitySuite/Metacity
+Author: Metacity
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: orjson (>=3.6.4)
+
+# Metacity
+
+[![Build Status](https://github.com/MetacitySuite/Metacity/workflows/Metacity%20CI/badge.svg)](https://github.com/MetacitySuite/Metacity/actions?query=workflow%3A%22Metacity+CI%22)
+[![Coverage Status](https://coveralls.io/repos/github/MetacitySuite/Metacity/badge.svg?branch=release)](https://coveralls.io/github/MetacitySuite/Metacity?branch=release)
+[![Pypi version](https://badge.fury.io/py/metacity.svg)](https://pypi.org/project/metacity/)
+
+Toolkit for Urban Data Preprocessing
+
+### Documentation
+
+Please see out [GitBook](https://docs.metacity.cc/metacity/tools/metacity)!
+
+
+
