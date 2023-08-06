@@ -1,0 +1,5 @@
+project_name: erdiagram
+description: Entity relationship diagrams for biology
+project_slug: erdiagram
+repository_name: erdiagram
+package_name: erdiagram
