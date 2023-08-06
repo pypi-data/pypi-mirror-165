@@ -1,0 +1,13 @@
+LICENSE.txt
+README.md
+setup.py
+src/pysofar/__init__.py
+src/pysofar/sofar.py
+src/pysofar/spotter.py
+src/pysofar/tools.py
+src/pysofar/wavefleet_exceptions.py
+src/pysofar.egg-info/PKG-INFO
+src/pysofar.egg-info/SOURCES.txt
+src/pysofar.egg-info/dependency_links.txt
+src/pysofar.egg-info/requires.txt
+src/pysofar.egg-info/top_level.txt
