@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+SingleLog/SingleLog.py
+SingleLog/__init__.py
+SingleLog/bible.txt
+SingleLog/log.py
+SingleLog/utils.py
+SingleLog.egg-info/PKG-INFO
+SingleLog.egg-info/SOURCES.txt
+SingleLog.egg-info/dependency_links.txt
+SingleLog.egg-info/requires.txt
+SingleLog.egg-info/top_level.txt
