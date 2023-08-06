@@ -1,0 +1,3 @@
+
+class SillyDbError(Exception):
+    pass
