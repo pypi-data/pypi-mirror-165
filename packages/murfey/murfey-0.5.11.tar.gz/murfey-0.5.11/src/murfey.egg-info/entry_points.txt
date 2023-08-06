@@ -1,0 +1,3 @@
+[console_scripts]
+murfey = murfey.client:run
+murfey.server = murfey.server:run
