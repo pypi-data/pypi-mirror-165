@@ -1,0 +1,15 @@
+pgx/__init__.py,sha256=4jbFULjP2gm75Ud4SuiaXcFD0F7rUdL0pDfi9LdoAtE,38
+pgx/animal_shogi.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pgx/envs.py,sha256=EmLfAxJcTrXHg-FW4IsRtY2rReAvj5w6Gem9liW1gkc,2424
+pgx/minatar/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pgx/minatar/asterix.py,sha256=JX7bQ7-5QZyCzdX1Jdee1WT7wjQoK0t_60aAz0RIoqE,17561
+pgx/minatar/breakout.py,sha256=JcUehZUoCqeah8DJDMekgH9ogOCu9FOW_ip-vylJEN8,15299
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/minatar_utils.py,sha256=DMe7hJqBR-dxI_iX6Sf74VDhgEvQKWEsS-KF-ZSvJME,2061
+tests/test_asterix.py,sha256=XKEgRXEzngTemx19-B3QSnIwEFW4GLacHZYkYKMtk14,2978
+tests/test_breakout.py,sha256=ohz51CUzlkQtr7lkJqbQZ-x87y12l4VhRHrsDKfhGmU,2409
+tests/test_hello.py,sha256=A6i3tb87HOzJZ8amWg1yZpwYZvF55W4Mt5bDlL2vh8o,77
+pgx-0.0.5.dist-info/METADATA,sha256=ORh-YT9en3yggkooMyIgxn808cAo-Vt4GUulVy-IJPw,234
+pgx-0.0.5.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+pgx-0.0.5.dist-info/top_level.txt,sha256=O9YIhKsR1EYdN8Gt2hbl6rCDAbcj9V96aIBgA841Ov8,10
+pgx-0.0.5.dist-info/RECORD,,
