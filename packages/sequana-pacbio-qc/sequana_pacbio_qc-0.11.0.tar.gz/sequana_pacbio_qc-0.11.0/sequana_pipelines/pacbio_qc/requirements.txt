@@ -1,0 +1,4 @@
+kraken2
+multiqc
+sequana
+samtools

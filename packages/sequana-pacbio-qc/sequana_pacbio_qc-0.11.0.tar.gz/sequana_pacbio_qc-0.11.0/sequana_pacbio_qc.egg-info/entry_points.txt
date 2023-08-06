@@ -1,0 +1,3 @@
+[console_scripts]
+sequana_pacbio_qc = sequana_pipelines.pacbio_qc.main:main
+
