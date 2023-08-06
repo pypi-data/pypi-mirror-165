@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: opendc-eesr
+Version: 0.0.1
+Summary: An instrument for reporting data center energy efficiency and sustanability.
+Home-page: https://github.com/philippsommer27/opendc-eesr
+Author: Philipp Sommerhalter
+Author-email: philippsommerhalter@gmail.com
+License: Apache Software License 2.0
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+License-File: LICENSE
+Requires-Dist: domonic
+Requires-Dist: html5lib
+Requires-Dist: plotly
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: entsoe-py
+
+UNKNOWN
+

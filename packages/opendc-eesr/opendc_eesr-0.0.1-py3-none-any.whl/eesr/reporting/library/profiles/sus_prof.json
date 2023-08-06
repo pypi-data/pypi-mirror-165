@@ -1,0 +1,5 @@
+{
+    "name" : "Sustainability 0.0.1",
+    "builtin_metrics" : ["GEC (green)", "GEC (ren)", "APCr", "CO2 (kg)", "CUE"],
+    "graph" : "energy_sources_comp"
+}

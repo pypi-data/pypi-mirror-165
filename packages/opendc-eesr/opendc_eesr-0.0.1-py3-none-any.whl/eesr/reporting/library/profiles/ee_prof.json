@@ -1,0 +1,5 @@
+{
+    "name" : "Energy 0.0.1",
+    "builtin_metrics" : ["TUE", "DCeP"],
+    "graph" : "metric_cmp_dppe"
+}
