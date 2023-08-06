@@ -1,0 +1,9 @@
+fish_reg/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fish_reg/registration.py,sha256=o9BJ_0ki6olnJGoFLT6z3PkRq126R-aUocF5GybvI8Y,5925
+fish_reg/run.py,sha256=0EkDXEW_b1DPJh4btHFqy6-yq5mNg9kAflHpRmoDeLQ,1908
+fish_reg-0.0.2.dist-info/LICENSE,sha256=CKf_jQulkWkagzbYY4MB5zjeu7zHQ8yVo39L-S6cXWY,10942
+fish_reg-0.0.2.dist-info/METADATA,sha256=ldA3Xjan2IvObWEJvvePitW3W1lq-QzaefNmqXrAW3M,1386
+fish_reg-0.0.2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+fish_reg-0.0.2.dist-info/entry_points.txt,sha256=gU3kFqWBavf1L3LMqzFHEYVChIqa4zYjd-FZGfl2Oiw,55
+fish_reg-0.0.2.dist-info/top_level.txt,sha256=I3vDkf4ktA04paxehj7c9dlE0McTv7lzuHfciJYalxA,9
+fish_reg-0.0.2.dist-info/RECORD,,
