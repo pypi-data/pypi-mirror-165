@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<fs000xparms>
+    <parameter index="0"  readonly="1" showhex="0" initval="0">Device ID</parameter>
+    <parameter index="1"  readonly="1" showhex="0" initval="0">Version</parameter>
+    <parameter index="2"  readonly="1" showhex="0" initval="0">Status Byte</parameter>
+    <parameter index="3"  readonly="1" showhex="0" initval="0">Acc. Flow (L)</parameter>
+    <parameter index="4"  readonly="1" showhex="0" initval="0">Inst. Flow (L)</parameter>
+    <parameter index="5" readonly="1" showhex="0" initval="0">Acc. Time (h)</parameter>
+    <parameter index="6" readonly="1" showhex="0" initval="0">Temperature (°C)</parameter>
+    <parameter index="7" readonly="1" showhex="0" initval="0">Checksum</parameter>
+</fs000xparms>
+
