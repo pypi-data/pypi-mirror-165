@@ -1,0 +1,17 @@
+LICENSE.md
+README.md
+setup.py
+imgtovar/ImgtoVar.py
+imgtovar/__init__.py
+imgtovar.egg-info/PKG-INFO
+imgtovar.egg-info/SOURCES.txt
+imgtovar.egg-info/dependency_links.txt
+imgtovar.egg-info/requires.txt
+imgtovar.egg-info/top_level.txt
+imgtovar/models/Age.py
+imgtovar/models/Background.py
+imgtovar/models/Chart.py
+imgtovar/models/Inverted.py
+imgtovar/models/__init__.py
+imgtovar/utils/__init__.py
+imgtovar/utils/functions.py
