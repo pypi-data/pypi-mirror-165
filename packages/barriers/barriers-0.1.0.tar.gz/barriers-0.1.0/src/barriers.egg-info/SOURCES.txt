@@ -1,0 +1,10 @@
+LICENSE
+README.rst
+pyproject.toml
+src/barriers/__init__.py
+src/barriers/barriers.py
+src/barriers.egg-info/PKG-INFO
+src/barriers.egg-info/SOURCES.txt
+src/barriers.egg-info/dependency_links.txt
+src/barriers.egg-info/requires.txt
+src/barriers.egg-info/top_level.txt
