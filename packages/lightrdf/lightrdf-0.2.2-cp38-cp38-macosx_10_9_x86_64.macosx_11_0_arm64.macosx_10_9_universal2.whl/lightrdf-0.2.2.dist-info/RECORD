@@ -1,0 +1,9 @@
+lightrdf-0.2.2.dist-info/METADATA,sha256=lXr2_gU2y4NjL8Im1It0Wzf7QZ8HPHH0TiPvDdAJu28,6597
+lightrdf-0.2.2.dist-info/WHEEL,sha256=ne1E58APSJ4XPBxCxABDzX1x4TYyExT0VAux59P1mvg,145
+lightrdf/python_module/xml.py,sha256=w9V3UdR87x5jqSBSm33YqdNCoL-ZLxyHIhc-fYbl3F8,810
+lightrdf/python_module/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lightrdf/python_module/turtle.py,sha256=2vB6Fjgjcyxoj72TOKgc-QdDCH8C_NZiaO-EIZwTjwk,828
+lightrdf/python_module/nt.py,sha256=9Ipzy_2meMD9n8889QMjukhg-YTQpJsWaLNChKQdLA8,734
+lightrdf/__init__.py,sha256=nsiuBGlovfcKjIxHXNY9xQD9OQrqs--XKFLfx3l3Nzs,3469
+lightrdf/lightrdf.cpython-38-darwin.so,sha256=Vo0qCGDFQpuCbN-qyPMbkXCnSkgJh1H78Jd9CO-u4SA,2276254
+lightrdf-0.2.2.dist-info/RECORD,,
