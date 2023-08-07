@@ -1,0 +1,14 @@
+google-api-python-client==2.4.0
+oauth2client==4.1.3
+pandas==1.4.4
+pygsheets==2.0.5
+google-cloud-bigquery==3.3.0
+pandas-gbq==0.17.8
+pdcompare==0.1.5
+
+[testing]
+pytest>=6.0
+pytest-cov>=2.0
+mypy>=0.910
+flake8>=3.9
+tox>=3.24
